@@ -1727,12 +1727,12 @@
       ]
     },
     {
-      "name": "MOSS (Mod Organizer for StarSector) 0.6.0",
-      "description": "**MOSS (Mod Organizer for StarSector) 0.6.0**\n*Formerly known as Starsector Mod Manager*\n\n**Features:**\n- Batch mod installation (no fiddling with nested mods either)\n  - Supports all major archive types: zip, tar, rar, 7z\n- Version checking out of game\n- One click mod updates (aka: mod auto-updates)\n- Mod x Starsector compatibility checks\n- VMParams editor (Windows only)\n- Direct launch (optionally bypassing vanilla launcher)\n- Mod search\n- Install stats\n\n**Changes:**\n- Complete rewrite of application in Druid.\n- Feature parity achieved with 0.5.x\n- **New**\n  - Added new side panel: contains `Tools & Filters` and `Launch`\n  - Filters\n    - Filters are activated by unchecking a condition in the new `Tools & Filters` pane\n    - Conditions include version checker support, update availability, semver difference between local and available version, etc\n  - Toggles\n    - Toggles are available in the `Tools & Filters` panel\n    - Currently only two toggles: `Enable All` and `Disable All`\n  - Launch\n    - The `Launch` panel contains the previous launch and starsector version widgets\n    - It also now contains a widget displaying the selected installation directory and a browse button for faster access.\n  - Sort indicators\n    - Sorting is now indicated by arrow icons indicating the direction of sorting (ascending/descending)\n  - Icons\n    - Icons have been utilised throughout the application to improve user experience\n  - Dark Theme\n    - The default (and only) theming is now dark\n    - Light theme is not currently a priority\n    - Your retinas can thank me later\n  - Installation log\n    - Tracks various install events, such as when they start, if they succeed, or error\n  - (Dormant) App self updating\n    - MOSS (aka: this app) will be able to update itself whenever a new version is release.\n    - Only available on Windows and Linux, aka: *not supported on macOS*\n- **Fixed**\n  - VMParams editing is now only available on Windows\n    - It never worked on other platforms *anyway*\n    - May be implemented for other platforms in the future\n\n||To download, open the `Download` link, then open the assets folder/accordion/thing and pick your platform||\n\n**Download**: <https://github.com/atlanticaccent/starsector-mod-manager-rust/releases/tag/0.6.0>\n**Sources**: <https://github.com/atlanticaccent/starsector-mod-manager-rust>\n**Forum**: <https://fractalsoftworks.com/forum/index.php?topic=21995.0>",
+      "name": "MOSS (Mod Organizer for StarSector) 0.6.1",
+      "description": "**MOSS (Mod Organizer for StarSector) 0.6.1**\n*Formerly known as Starsector Mod Manager*\n\n**Features:**\n- Batch mod installation (no fiddling with nested mods either)\n  - Supports all major archive types: zip, rar, 7z, tar\n- Version checking out of game\n- One click mod updates (aka: mod auto-updates)\n- Mod x Starsector compatibility checks\n- VMParams editor (Windows only)\n- Direct launch (optionally bypassing vanilla launcher)\n- Local mod search\n- Install stats\n- Duplicate mod install detection\n\n**Changes:**\n- **New**\n  - Duplicate mod detection\n    - Presents a new modal window when duplicate mod installs are detected\n    - The modal will include a list of all known duplicate mods. \n    - Each entry will present details about the duplicates, including their version, path, last modification date and creation date\n  - Overwrite requests are now grouped into a single window, preventing new window spam when updating many mods at once\n    - You may need to scroll the window to view all updates/conflicts, but \"Overwrite All\" and \"Cancel All\" are provided for convenience\n- **Fixes**\n  - When updating/overwriting a mod the existing install is now deleted correctly in all cases\n    - The duplicate detection/deletion code was incorrectly bypassing itself, and assuming there were no conflicts so long as no folder named with the mod's ID\n    - This means that updates should correctly remove existing versions now, however previously failed removals may need cleanup\n  - All modals (logs, overwrite requests, etc) now scroll their contents instead of it going out of view\n  - Updates/overwrites now preserve enable state in the UI (enable state was still set correctly in enabled.json)\n\n||To download, open the `Download` link, then open the assets folder/accordion/thing and pick your platform||\n\n**Download**: <https://github.com/atlanticaccent/starsector-mod-manager-rust/releases/tag/0.6.1>\n**Sources**: <https://github.com/atlanticaccent/starsector-mod-manager-rust>\n**Forum**: <https://fractalsoftworks.com/forum/index.php?topic=21995.0>",
       "gameVersionReq": "",
       "authors": "AtlanticAccent",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=21995.0",
-      "discordMessageLink": "https://discord.com/channels/187635036525166592/825068217361760306/944401401243652106",
+      "discordMessageLink": "https://discord.com/channels/187635036525166592/825068217361760306/953113007486025799",
       "source": "Discord",
       "categories": []
     },
@@ -2153,7 +2153,7 @@
       "categories": []
     },
     {
-      "name": "Philip Andrada Gas Station Manager",
+      "name": "Philip Andrada Gas Station Manager v1.1",
       "gameVersionReq": "0.95.1a",
       "authors": "WMGreywind",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24215.0",
@@ -2795,6 +2795,16 @@
       ]
     },
     {
+      "name": "Sunrider x Starsector [0.95.1a]",
+      "description": "Sunrider x Starsector [0.95.1a]\n\nWhat is \"Sunrider?\" - A game franchise, by Love in Space inc. All I did was a mod to starsector that adds the carrier with 7 (playable at least once) mechs from their original universe.\n\nWhat does the mod do? - Adds a small content expansion with a quest, a one-of-a-kind ship carrying 7 one-of-a-kind fighters and a new boss battle. \n\nIs it safe to add to ongoing saves? - Yes, but removing it afterwards is not.\n\nI got the mod, but I can't find a clue about the ship. What happened? - The NPC that triggers the mission can only appear about a cycle after the starting date of the game. If you activated the mod in an ongoing playthrough where that much time or more has passed, the quest can be started immediately.\n\nforums: <https://fractalsoftworks.com/forum/index.php?topic=24274.0>",
+      "gameVersionReq": "",
+      "authors": "Alex Sans",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24274.0",
+      "discordMessageLink": "https://discord.com/channels/187635036525166592/825068217361760306/953376110740111430",
+      "source": "Discord",
+      "categories": []
+    },
+    {
       "name": "Superweapons Arsenal",
       "gameVersionReq": "0.95a",
       "authors": "Mira Lendin",
@@ -2931,6 +2941,14 @@
       "categories": [
         "Faction Mods"
       ]
+    },
+    {
+      "name": "The Sunrider",
+      "gameVersionReq": "0.95.1a",
+      "authors": "Alex_Sans",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24274.0",
+      "source": "ModdingSubforum",
+      "categories": []
     },
     {
       "name": "Tiandong Heavy Industries",
@@ -3415,5 +3433,5 @@
       "categories": []
     }
   ],
-  "lastUpdated": "2022-03-15T01:13:00Z"
+  "lastUpdated": "2022-03-15T22:23:00Z"
 }
