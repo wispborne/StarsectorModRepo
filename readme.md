@@ -160,30 +160,31 @@ Uses a developer account to read all Starsector mods on NexusMods using their of
 ```
 
 ### Mod
-|Field          |Type (? for nullable)   |Notes                                                                         |
-|---------------|------------------------|------------------------------------------------------------------------------|
-|name           |String                  |                                                                              |
-|summary        |String?                 |                                                                              |
-|description    |String?                 |                                                                              |
-|modVersion     |String?                 |                                                                              |
-|gameVersionReq |String?                 |                                                                              |
-|authorsList    |List<String>?           |                                                                              |
-|urls           |Map<ModUrlType, String>?|ModUrlTypes: "Forum", "Discord", "NexusMods", "DirectDownload", "DownloadPage" May contain any or none.|
-|sources        |List<ModSource>?        |ModSources: "Index", "ModdingSubforum", "Discord", "NexusMods"                |
-|categories     |List<String>?           |                                                                              |
-|images         |Map<String, Image>?     |See Image section                                                             |
-|dateTimeCreated|Date?                   |ISO-8601                                                                      |
-|dateTimeEdited |Date?                   |ISO-8601                                                                      |
 
+| Field                     | Type (? for nullable)      | Notes                                                                                     | 
+|---------------------------|----------------------------|-------------------------------------------------------------------------------------------| 
+| name                      | String                     |                                                                                           | 
+| summary                   | String?                    |                                                                                           | 
+| description               | String?                    |                                                                                           | 
+| modVersion                | String?                    |                                                                                           | 
+| gameVersionReq            | String?                    |                                                                                           | 
+| authorsList               | List<String>?              |                                                                                           | 
+| urls                      | "Map<ModUrlType, String>?" | "ModUrlTypes: ""Forum"", ""Discord"", ""NexusMods"", ""DirectDownload"", ""DownloadPage"" | 
+| May contain any or none." |                            |                                                                                           | 
+| sources                   | List<ModSource>?           | "ModSources: ""Index"", ""ModdingSubforum"", ""Discord"", ""NexusMods"""                  | 
+| categories                | List<String>?              |                                                                                           | 
+| images                    | "Map<String, Image>?"      | See Image section                                                                         | 
+| dateTimeCreated           | Date?                      | ISO-8601                                                                                  | 
+| dateTimeEdited            | Date?                      | ISO-8601                                                                                  | 
 
 
 ### Image
 |Field          |Type (? for nullable)   |Notes                                                                         |
 |---------------|------------------------|------------------------------------------------------------------------------|
-|id             |String,                 |                                                                              |
-|filename       |String?,                |                                                                              |
-|description    |String?,                |                                                                              |
-|content_type   |String?,                |                                                                              |
-|size           |Int?,                   |                                                                              |
-|url            |String?,                |                                                                              |
+|id             |String                  |                                                                              |
+|filename       |String?                 |                                                                              |
+|description    |String?                 |                                                                              |
+|content_type   |String?                 |                                                                              |
+|size           |Int?                    |                                                                              |
+|url            |String?                 |                                                                              |
 |proxy_url      |String?                 |                                                                              |
