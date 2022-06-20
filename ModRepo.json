@@ -2563,6 +2563,9 @@
     },
     {
       "name": "Custom Battle Music",
+      "summary": "This mod is made in order to add custom battle music to the game.",
+      "description": "This mod is made in order to add custom battle music to the game.\n<br />You can now add songs that fit factions for the base game or even from mods.\n<br />It is very easy to modify and implement.[left]Now contains music for every major faction in the game.\n<br />[/left]\n<br />[left][img]https://img.shields.io/github/downloads/Laroustine/mod-starsector-battle-music/total?style=flat-square[/img][/left]\n<br />[left][b][u][size=4]For Developers:[/size][/u][/b][/left]To add compatibility for your mod you just need to add this in your [b].faction[/b]\n<br />[code]\n<br />\"music\": {\n<br />  \"battle\": \"music_faction_battle\"\n<br />}\n<br />[/code]\n<br />and you also need to add the list of songs for your faction in the config file [b]sounds.json[/b].\n<br />[code]\n<br />{\n<br />  \"music\": {\n<br />    \"music_faction_battle\": [\n<br />      {\n<br />        \"source\": \"sounds/music/\",\n<br />        \"volume\": 0.15,\n<br />        \"file\": \"song1.ogg\"\n<br />      }\n<br />    ]\n<br />  }\n<br />}\n<br />[/code]\n<br />The name of the list of songs can be different from the one above and need to be different from any other existing list.\n<br />You can also use song lists present in the game already.\n<br />\n<br />[size=4][color=blue][u][url=https://github.com/Laroustine/mod-starsector-battle-music/releases]Changelog[/url][/u][/color][/size]",
+      "modVersion": "1.2.2",
       "gameVersionReq": "0.95.1a",
       "authors": "Laroustine",
       "authorsList": [
@@ -2571,14 +2574,26 @@
       "link": "https://fractalsoftworks.com/forum/index.php?topic=24663.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24663.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24663.0"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24663.0",
+        "NexusMods": "https://www.nexusmods.com/starsector/mods/74"
       },
       "source": "ModdingSubforum",
       "sources": [
+        "NexusMods",
         "ModdingSubforum"
       ],
-      "categories": [],
-      "images": {}
+      "categories": [
+        "Overhauls"
+      ],
+      "images": {
+        "banner": {
+          "id": "https://staticdelivery.nexusmods.com/mods/2672/images/74/74-1655732984-1091850422.png",
+          "filename": "https://staticdelivery.nexusmods.com/mods/2672/images/74/74-1655732984-1091850422.png",
+          "url": "https://staticdelivery.nexusmods.com/mods/2672/images/74/74-1655732984-1091850422.png"
+        }
+      },
+      "dateTimeCreated": "2022-06-20T13:49:59Z",
+      "dateTimeEdited": "2022-06-20T13:49:59Z"
     },
     {
       "name": "DIY Planets - Terraforming and more!",
@@ -2925,6 +2940,36 @@
         "Content Expansions"
       ],
       "images": {}
+    },
+    {
+      "name": "Dohna Dohna Industries",
+      "summary": "This mod adds three industries and three commodities themed after the Alicesoft RPG Dohna Dohna. This mod does not contain any explicit NSFW material, however the content alludes to NSFW actions.",
+      "description": "[b][size=3]Disclaimer: This mod contains references to human trafficking. As the author of this mod, I would like to make it abundantly clear that in any real life setting, human trafficking is not something I support nor will I ever support it. There is a firm line between reality and fiction that should never be crossed. Let us keep it uncrossed.[/size]\n<br />\n<br />[/b]\n<br />[center]﻿[/center][center][img]https://i.imgur.com/8b8FH5Q.png[/img]\n<br />\n<br />[/center]﻿\n<br />[size=3]Welcome to the Dohna Dohna Industries mod. This mod adds three industries to the game themed after activities in Dohna Dohna and three commodities to support them. It also installs these industries on a few pirate locations on new game. Despite the NSFW themes, there is no explicit NSFW content (such as full frontal nudity) in this mod.\n<br />\n<br />[/size]At present, the mod is relatively barebones and has a couple issues I'm looking to solve as I get better at making mods.\n<br />Currently Known Issues:\n<br />The icon for the commodity \"Capture Girls\" is too tall.\n<br />Adding all three industries to the few pirate locations causes them to have too many industries and suffer a massive stability penalty.\n<br />Commodities lack descriptions (I'll get to it eventually).",
+      "modVersion": "0.0.01",
+      "authors": "DegenerativeLilith",
+      "authorsList": [
+        "DegenerativeLilith"
+      ],
+      "link": "https://www.nexusmods.com/starsector/mods/73",
+      "urls": {
+        "NexusMods": "https://www.nexusmods.com/starsector/mods/73"
+      },
+      "source": "NexusMods",
+      "sources": [
+        "NexusMods"
+      ],
+      "categories": [
+        "Utilities"
+      ],
+      "images": {
+        "banner": {
+          "id": "https://staticdelivery.nexusmods.com/mods/2672/images/73/73-1655718985-120868350.png",
+          "filename": "https://staticdelivery.nexusmods.com/mods/2672/images/73/73-1655718985-120868350.png",
+          "url": "https://staticdelivery.nexusmods.com/mods/2672/images/73/73-1655718985-120868350.png"
+        }
+      },
+      "dateTimeCreated": "2022-06-20T10:00:23Z",
+      "dateTimeEdited": "2022-06-20T10:00:23Z"
     },
     {
       "name": "Dohna Dohna Portraits",
@@ -4263,18 +4308,22 @@
     {
       "name": "Gundam Iron-Blooded Orphan - Factions",
       "summary": "A mod that adds content from the show Gundam Iron-Blooded Orphan, such as ships and factions.",
-      "description": "This is not filed in.",
+      "description": "[left]This mod plans to add every faction seen in the anime [b][u]Gundam: Iron-Blooded Orphan[/u][/b].\n<br />It also now adds [url=https://fractalsoftworks.com/forum/index.php?topic=11997.0]Mobile Suits from IBO[/url]\n<br />Now compatible with [url=https://fractalsoftworks.com/forum/index.php?topic=9175.0]Nexerelin[/url].[/left]\n<br />[center][url=https://github.com/Laroustine/mod-starsector-ibo-faction/releases/download/v2.3.0/IBO-Faction-2.3.0.zip][img]https://img.shields.io/github/downloads/Laroustine/mod-starsector-ibo-faction/total?style=flat-square[/img][/url][/center]\n<br />[size=5][u]Images[/u]:[/size]\n<br />Halfbeak - Ship:\n<br />[img]https://user-images.githubusercontent.com/47363827/159108452-521090f9-88f0-4314-a761-9a467dde0545.png[/img]\n<br />Biscoe - Ship;\n<br />[img]https://user-images.githubusercontent.com/47363827/166315329-d5e3feed-57b3-4668-8718-6f513c3e7444.png[/img]\n<br />Isarabi - Ship:\n<br />[img]https://user-images.githubusercontent.com/47363827/159598838-5da2b13d-b839-443c-9a2d-186124f32c38.png[/img]\n<br />Graze - Mobile Suit:\n<br />[img]https://user-images.githubusercontent.com/47363827/159598805-d75a0503-de81-4eed-b9f1-6ddd5b012cea.png[/img]\n<br />Shiden - Mobile Suit:\n<br />[img]https://user-images.githubusercontent.com/47363827/164999800-e91a5144-10da-47b9-9619-4f07f232e868.png[/img]\n<br />Rodi - Mobile Suit:\n<br />[img]https://user-images.githubusercontent.com/47363827/159598832-51885010-e9c0-4d51-affd-14f42f90669a.png[/img]\n<br />Saisei - Station:\n<br />[img]https://user-images.githubusercontent.com/47363827/159108456-b41b12c3-91cb-404c-be63-04edc55414dc.png[/img]\n<br />\n<br />\n<br />[size=5][u]Faction Information[/u]:\n<br />[/size][list]\n<br />[*][b][u][size=4]Teiwaz[/size][/u][/b]: They only have a single space station, they don't have a black market but have a reduced tariff.\n<br />[*][b][u][size=4]Gjallarhorn[/size][/u][/b]: They have a space stations almost everywhere. They have their own system but next to enemy. They think you are suspicious. You \n<br />can barely buy anything from them.[/list]\n<br />[size=5][u]Latest Information[/u]:\n<br />[/size][list]\n<br />[*][b]Biscoe[/b] is a small ship carrying 1 compliment of fighters\n<br />[*][b]Nanolaminate[/b] [b]Armor[/b] as now a drawback with Flux Increase for each weapon fired\n<br />[*]Packages have been added to [b]GJA[/b] and [b]Tewaz[/b]\n<br />[*]Packages have been added for each type of Mobile-Suits\n<br />[*][b]Ryusei-Go[/b] is now a ship with more armor than the [b]Custom Shiden[/b]\n<br />[*]Balancing as been done on the [b]Halfbeack[/b]\n<br />[*][b]Nexelerin[/b] is now fully compatible\n<br />[/list]\n<br />[center][/center][size=5][b]==Present Feature==[/b][/size]\n<br />[list]\n<br />[*]Teiwaz Faction (Music/Portrait/Fleet Composition)\n<br />[*]Gjallarhorn Faction (Music/Portrait/Fleet Composition)\n<br />[*]9 mobile suits added\n<br />[*]2 ship added\n<br />[*]4 hullmods added\n<br />[/list][left][b][size=5]==Future Feature==[/size][/b][/left][list]\n<br />[*]New ship Variant\n<br />[/list][left][list]\n<br />[*]Tekkadan Faction\n<br />[*]Dawn Horizon Corps Faction\n<br />[*]New ships\n<br />[*]Always taking suggestion\n<br />[*][url=https://github.com/Laroustine/mod-starsector-ibo-faction/issues]Github Ideas[/url]\n<br />[/list][/left][size=5][b]\n<br />[/b][/size][left][size=5][b]==Potential Feature==[/b][/size][/left][list]\n<br />[*](Those features are just ideas, I don't know how to implement them and if they would fit this mod)\n<br />[*]Adding specific missions\n<br />[*]Adding Mobile Armor\n<br />[*]Adding Pluma\n<br />[/list]\n<br />[left]Thanks to [url=https://fractalsoftworks.com/forum/index.php?action=profile;u=5425]Buttery[/url] to let me do a continuation of their mod\n<br />\n<br />﻿[color=blue][size=4][u][url=https://github.com/Laroustine/mod-starsector-ibo-faction/releases]Changelog[/url][/u][/size][/color][/left][left][/left]",
       "modVersion": "2.3.0",
-      "authors": "Laroustine and Credit to Buttery",
+      "gameVersionReq": "0.95.1a",
+      "authors": "Laroustine",
       "authorsList": [
-        "Laroustine and Credit to Buttery"
+        "Laroustine"
       ],
       "link": "https://www.nexusmods.com/starsector/mods/70",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24234.0",
       "urls": {
-        "NexusMods": "https://www.nexusmods.com/starsector/mods/70"
+        "NexusMods": "https://www.nexusmods.com/starsector/mods/70",
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24234.0"
       },
       "source": "NexusMods",
       "sources": [
+        "ModdingSubforum",
         "NexusMods"
       ],
       "categories": [
@@ -4282,32 +4331,13 @@
       ],
       "images": {
         "banner": {
-          "id": "https://staticdelivery.nexusmods.com/mods/2672/images/70/70-1652191471-216393464.png",
-          "filename": "https://staticdelivery.nexusmods.com/mods/2672/images/70/70-1652191471-216393464.png",
-          "url": "https://staticdelivery.nexusmods.com/mods/2672/images/70/70-1652191471-216393464.png"
+          "id": "https://staticdelivery.nexusmods.com/mods/2672/images/70/70-1655734326-870300866.png",
+          "filename": "https://staticdelivery.nexusmods.com/mods/2672/images/70/70-1655734326-870300866.png",
+          "url": "https://staticdelivery.nexusmods.com/mods/2672/images/70/70-1655734326-870300866.png"
         }
       },
       "dateTimeCreated": "2022-05-10T14:11:51Z",
       "dateTimeEdited": "2022-05-10T14:11:51Z"
-    },
-    {
-      "name": "Gundam Iron-Blooded Orphan - Factions - 2.3.0",
-      "gameVersionReq": "0.95.1a",
-      "authors": "Laroustine",
-      "authorsList": [
-        "Laroustine"
-      ],
-      "link": "https://fractalsoftworks.com/forum/index.php?topic=24234.0",
-      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24234.0",
-      "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24234.0"
-      },
-      "source": "ModdingSubforum",
-      "sources": [
-        "ModdingSubforum"
-      ],
-      "categories": [],
-      "images": {}
     },
     {
       "name": "Gundam UC",
@@ -9390,6 +9420,25 @@
       "dateTimeEdited": "2022-04-05T09:54:39.256Z"
     },
     {
+      "name": "Star Phantasy 0.01",
+      "gameVersionReq": "0.95.1a",
+      "authors": "greenspade",
+      "authorsList": [
+        "greenspade"
+      ],
+      "link": "https://fractalsoftworks.com/forum/index.php?topic=24781.0",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24781.0",
+      "urls": {
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24781.0"
+      },
+      "source": "ModdingSubforum",
+      "sources": [
+        "ModdingSubforum"
+      ],
+      "categories": [],
+      "images": {}
+    },
+    {
       "name": "Star Trek Eras",
       "gameVersionReq": "0.95.1a",
       "authors": "superjosh250",
@@ -11895,6 +11944,6 @@
       "images": {}
     }
   ],
-  "totalCount": 420.0,
-  "lastUpdated": "2022-06-20T06:12:00Z"
+  "totalCount": 421.0,
+  "lastUpdated": "2022-06-20T18:11:00Z"
 }
