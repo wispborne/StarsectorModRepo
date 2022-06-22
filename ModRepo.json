@@ -2599,8 +2599,8 @@
     },
     {
       "name": "Custom Battle Music",
-      "summary": "This mod is made in order to add custom battle music to the game.",
-      "description": "This mod is made in order to add custom battle music to the game.\n<br />You can now add songs that fit factions for the base game or even from mods.\n<br />It is very easy to modify and implement.[left]Now contains music for every major faction in the game.\n<br />[/left]\n<br />[left][img]https://img.shields.io/github/downloads/Laroustine/mod-starsector-battle-music/total?style=flat-square[/img][/left]\n<br />[left][b][u][size=4]For Developers:[/size][/u][/b][/left]To add compatibility for your mod you just need to add this in your [b].faction[/b]\n<br />[code]\n<br />\"music\": {\n<br />  \"battle\": \"music_faction_battle\"\n<br />}\n<br />[/code]\n<br />and you also need to add the list of songs for your faction in the config file [b]sounds.json[/b].\n<br />[code]\n<br />{\n<br />  \"music\": {\n<br />    \"music_faction_battle\": [\n<br />      {\n<br />        \"source\": \"sounds/music/\",\n<br />        \"volume\": 0.15,\n<br />        \"file\": \"song1.ogg\"\n<br />      }\n<br />    ]\n<br />  }\n<br />}\n<br />[/code]\n<br />The name of the list of songs can be different from the one above and need to be different from any other existing list.\n<br />You can also use song lists present in the game already.\n<br />\n<br />[size=4][color=blue][u][url=https://github.com/Laroustine/mod-starsector-battle-music/releases]Changelog[/url][/u][/color][/size]",
+      "summary": "\nAdds the ability for faction music during battles. You can add custom music for modded factions too. Comes in 2 version.",
+      "description": "Adds the ability for faction music during battles. You can add custom music for modded factions too. Comes in 2 version.\n\nDownload (No Music Added) : https://github.com/Laroustine/mod-starsector-battle-music/releases/download/v.1.2.2/Battle_Music_Vanilla.zip\nDownload (Custom music for Vanilla Factions) : https://github.com/Laroustine/mod-starsector-battle-music/releases/download/v.1.2.2/Battle_Music_Custom.zip\nForum : https://fractalsoftworks.com/forum/index.php?topic=24663\nSource Code : https://github.com/Laroustine/mod-starsector-battle-music",
       "modVersion": "1.2.2",
       "gameVersionReq": "0.95.1a",
       "authors": "Laroustine",
@@ -2610,12 +2610,16 @@
       "link": "https://fractalsoftworks.com/forum/index.php?topic=24663.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24663.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24663.0",
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24663",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/989109030742028338",
+        "DirectDownload": "https://github.com/Laroustine/mod-starsector-battle-music/releases/download/v.1.2.2/Battle_Music_Vanilla.zip",
+        "DownloadPage": "https://github.com/Laroustine/mod-starsector-battle-music",
         "NexusMods": "https://www.nexusmods.com/starsector/mods/74"
       },
       "source": "ModdingSubforum",
       "sources": [
         "NexusMods",
+        "Discord",
         "ModdingSubforum"
       ],
       "categories": [
@@ -2628,7 +2632,7 @@
           "url": "https://staticdelivery.nexusmods.com/mods/2672/images/74/74-1655732984-1091850422.png"
         }
       },
-      "dateTimeCreated": "2022-06-20T13:49:59Z",
+      "dateTimeCreated": "2022-06-22T10:06:09.686Z",
       "dateTimeEdited": "2022-06-20T13:49:59Z"
     },
     {
@@ -5432,7 +5436,8 @@
         "Forum": "http://fractalsoftworks.com/forum/index.php?topic=6649.0",
         "NexusMods": "https://www.nexusmods.com/starsector/mods/20",
         "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/825500178995085342",
-        "DownloadPage": "https://drive.google.com/uc?authuser=0&id=1cBtUSfKUNf3NM7sL-5JrDasWWaj1OfDo&export=download"
+        "DirectDownload": "https://drive.google.com/uc?authuser=0&id=1cBtUSfKUNf3NM7sL-5JrDasWWaj1OfDo&export=download",
+        "DownloadPage": "http://fractalsoftworks.com/forum/index.php?topic=6649.0"
       },
       "source": "Index",
       "sources": [
@@ -11325,7 +11330,8 @@
       "urls": {
         "Forum": "http://fractalsoftworks.com/forum/index.php?topic=16059.0",
         "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/825216400506486784",
-        "DownloadPage": "https://drive.google.com/uc?authuser=0&id=1SD7NdTkErv1EzzvEgrbzc4u0H385crC3&export=download"
+        "DirectDownload": "https://drive.google.com/uc?authuser=0&id=1SD7NdTkErv1EzzvEgrbzc4u0H385crC3&export=download",
+        "DownloadPage": "http://fractalsoftworks.com/forum/index.php?topic=16059.0"
       },
       "source": "Index",
       "sources": [
@@ -11987,5 +11993,5 @@
     }
   ],
   "totalCount": 422.0,
-  "lastUpdated": "2022-06-22T06:11:00Z"
+  "lastUpdated": "2022-06-22T18:12:00Z"
 }
