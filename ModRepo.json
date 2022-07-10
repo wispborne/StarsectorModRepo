@@ -775,8 +775,8 @@
     },
     {
       "name": "Arma Armatura",
-      "summary": "**Requires MagicLib + LazyLib**\n**Save compat with all v2.0x versions**",
-      "description": "**Requires MagicLib + LazyLib**\n**Save compat with all v2.0x versions**\n\nMechs n' fighters.\nsee forum for full info\n```\nv2.07\n-------------------\n- fixed flickering arrow bug on command ui for strikecraft\n- restricted curvy laser use for remnant to a specific variant that appears infrequently\n- Misc changes/fixes\n- Fixed crash caused by carriers that somehow dont have launchbays, for real this time\n- WINGCOM\n    - Previously, fighters with wingcom installed on parent ship would get increased RoF + damage bonus. the damage bonus has been removed.\n\n- Fixed huge supply consumption by salvage gunhazard \n- Fixed description bug with valkazard\n- Valkazard\n    - High Intensity Beam\n    - Max Ammo: 8\n    - Ammo/Sec : 0.13->0\n    - Burst Delay : 4->20\nv2.06\n-------------------\n- Added some more dialogue text\n- Fixed another potential crash caused by carriers that somehow don't have launchbays\n- fixed crash caused by transferring command to wingcom ship using officer that never was assigned a wingcom ship before\n- Fix bug with aleste swordsman variant\n- Fix bug with hullmod order on Leynos\n- Leynos Railgun Flux Cost: 225->90 (2.25 ->.9)\n    - EMP Damage: 100-> 175\n- fixed typo with mobile armor tag\n- fixed watchdog weapon swapping\n- adjusted watchdog system AI\n    - Should be a bit smarter with using it\n- Fixed incorrect display of elite skills for wingcom pilots\n- Added small chance for wingcom hullmod to appear for sale on submarket @ meshan\n- Increased engagement range reduction for wingcom by 10% for all hullsizes\n- Strikecraft can no longer use fighter clamps from Roider Union\n- Enemy ships with WINGCOM hullmod that have a squadron will now use the correct colors to identify them instead of friendly/player colors (currently possible due to mod shenanigans only ... for now)\n```\n\n\nDL: https://github.com/gomarz/SS-armaa/archive/refs/tags/v2.07.zip\nFORUM:https://fractalsoftworks.com/forum/index.php?topic=18751.0",
+      "summary": "**Requires MagicLib + LazyLib**\nsave compat",
+      "description": "**Requires MagicLib + LazyLib**\nsave compat\nhotfix 1: fixed buggy valkenx blade attack\nSee forum post for all the other mods that I cant fit here that add addtl strikecraft\n```\nv2.083\n-------------------\n= New Features =\n- ships with WINGCOM and an officer piloting will have pilots assigned to their fighters like the player\n\n- New ship, VX Custom\n\n- Added two tags: strikecraft_medium and strikecraft_large\n    - ships with strikecraft_medium can only land on cruisers and capitals\n    - ships with strikecraft_large can only land on capitals\n\n= Bugfixes / QoL =\n- AI strikecraft should launch from their own carriers properly\n\n- Strikecraft should no longer 'clown car' from carriers\n    - Basically, the number of strikecraft that can deploy from carriers is equal to the number valid launch bays on the field at time of deployment\n    - Once all slots are taken remaining strikecraft will deploy from edge like normal ships\n\n- Fixed pilotable kouto never appearing for sale\n- Fixed strikecraft not being affected by CR Reduction / Reduced PPT in coronas/event horizon\n- Fixed visual bug with Valkazard Combat Stims appearing disabled on hullmod, even when recreational drugs present\n- Fixed bug where WINGCOM fighters would land on parent ship with no native bays if no other carriers were present instead of retreating\n- Fixed strikecraft being locked in an invisible/uncontrollable state if player tried ordering one while docked \n\nWatchdog\n- Watchdog sprite revised by Selkie\n    - Removed 2 medium turrets\n    - Added WINGCOM\n    - Adjusted AI to better attempt to keep distance\n\n- Garegga sprite revised by Selkie\n\n- Curvy Laser subprojectiles are now interceptable targets (versus only the parent projectile being interceptable)\n    - fixed outdated description text stating impact damage was 4500, should be 3000\n```\n\nDL: https://github.com/gomarz/SS-armaa/archive/refs/tags/v2.083.zip\nFORUM: https://fractalsoftworks.com/forum/index.php?topic=18751.0",
       "gameVersionReq": "0.95a",
       "authors": "shoi",
       "authorsList": [
@@ -787,8 +787,8 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=18751.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=18751.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/970976492181917726",
-        "DirectDownload": "https://github.com/gomarz/SS-armaa/archive/refs/tags/v2.07.zip",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/995434311362818159",
+        "DirectDownload": "https://github.com/gomarz/SS-armaa/archive/refs/tags/v2.083.zip",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=18751.0"
       },
       "source": "Index",
@@ -801,16 +801,17 @@
         "Content Expansions"
       ],
       "images": {
-        "970976492328730694": {
-          "id": "970976492328730694",
-          "filename": "f1p780A.png",
+        "995434311429914664": {
+          "id": "995434311429914664",
+          "filename": "arma2.png",
           "content_type": "image/png",
           "size": 211884.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/970976492328730694/f1p780A.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/970976492328730694/f1p780A.png"
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/995434311429914664/arma2.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/995434311429914664/arma2.png"
         }
       },
-      "dateTimeCreated": "2022-05-03T09:13:55.607Z"
+      "dateTimeCreated": "2022-07-09T21:00:34.104Z",
+      "dateTimeEdited": "2022-07-10T00:10:42.779Z"
     },
     {
       "name": "Armor Blitz Portrait Pack",
@@ -4192,7 +4193,6 @@
       },
       "source": "Index",
       "sources": [
-        "ModdingSubforum",
         "Index"
       ],
       "categories": [
@@ -5652,8 +5652,8 @@
     },
     {
       "name": "Kyeltziv Technocracy",
-      "summary": "Kyeltziv Technocracy is a small faction mod that includes a selection of ships and weapons with a focus on drone shipsystems and long range combat.\n```Update 1.7.1",
-      "description": "Kyeltziv Technocracy is a small faction mod that includes a selection of ships and weapons with a focus on drone shipsystems and long range combat.\n```Update 1.7.1\n-- Minor compatibility patch For Linux users\n\nUpdate 1.7\n\nNew Ships:\n-- Paimen\n-- Zlatko\n\nNew Weapons:\n-- Smart Blaster\n-- ESP Beam\n-- Compact Shock-Driver\n\nNew MagicBounty Chain:\n-- The Symmetrist Bureau\n\nOther Changes:\n- Mod now Features Industrial.Evolution Compatibility.\n- Removed Commerce from Kuzminki and Yasenevo.\n- Refining moved from Yasenevo to Solntsevo.\n- Kiusa Drone weapon swapped from Niitti Autogun to Piikki Burst Rifle.\n- Perennis Shock Missile Pod - New Sprite.\n- Katsoja - Sprite Updated.\n- Minor Station tweaks, altered armament on \"blocker\" and should be more aggressive with missile usage.\n- Shock-Driver and Shock Palliser shield/hull OnHit vfx improved.\n- Shock-Driver shells no longer turn into funny hyper knockback projectiles when hit by an EMP arc or in the \"fizzled\" state past max range.\n- Lorentz Rifle (both single and twin)\n-- Kinetic Subprojectile range from 850 to 800```\n\nTwo new ships and three new weapons. Alongside various smaller updates, being a combination of QoL and balance. Also Ind.Evo support and a Magicbounty Chain.\n\nUpdate is Save Compatible.\n\n**Download:** \nhttps://cdn.discordapp.com/attachments/911115745671413820/989354475854635068/Kyeltziv_Technocracy_1.7.1.zip\n**Forum Thread:** \nhttps://fractalsoftworks.com/forum/index.php?topic=22995.0",
+      "summary": "Kyeltziv Technocracy is a small faction mod that includes a selection of ships and weapons with a focus on drone shipsystems and long range combat.\n",
+      "description": "Kyeltziv Technocracy is a small faction mod that includes a selection of ships and weapons with a focus on drone shipsystems and long range combat.\n\n```Update 1.7.2\n\n- Garaj\n-- Trail VFX Added.\n-- Reworked:\n--- Now constantly deploys chaff while in flight, rather than a single burst shortly before impact.\n\n- Zlatko\n-- Missile Mounts changed from being erroneously sized as medium to being correctly sized as small.\n-- Shield flux/damage from 0.5 to 0.6\n\n- Kiilto\n-- DP from 11 to 10\n-- Armour from 550 to 600\n-- Flux Capacity from 4000 to 4500\n-- Shield Arc from 70 to 80\n\n- Shock Springald\n-- EMP Damage from 200 to 180\n\n- Light Shock Springald (Drone mounted)\n-- Damage from 100 to 90\n-- EMP Damage from 180 to 100\n-- Spread from 5-10 to 6-12\n\nHeavy Killcloud Projector\n-- Range Increased from 400 to 450\n-- Reload from 1.0 to 0.8 (DPS from 800 to 1000)\n-- Projectile spread Reduced.\n-- Pellet count halved, per-pellet damage increased. (total per \"shot\" damage is unchanged)```\n\nQoL, Balance and Tweaking patch.\n\nUpdate is Save Compatible.\n\n**Download:** \nhttps://cdn.discordapp.com/attachments/911115745671413820/995435777855066272/Kyeltziv_Technocracy_1.7.2.zip\n**Forum Thread:** \nhttps://fractalsoftworks.com/forum/index.php?topic=22995.0",
       "gameVersionReq": "0.95a",
       "authors": "Amazigh",
       "authorsList": [
@@ -5663,7 +5663,7 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=22995.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=22995.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/989282291459182632",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/995438026564063284",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=22995.0"
       },
       "source": "Index",
@@ -5676,8 +5676,7 @@
         "Faction Mods"
       ],
       "images": {},
-      "dateTimeCreated": "2022-06-22T21:34:38.26Z",
-      "dateTimeEdited": "2022-06-23T02:25:23.356Z"
+      "dateTimeCreated": "2022-07-09T21:15:19.877Z"
     },
     {
       "name": "LazyLib",
@@ -6309,7 +6308,7 @@
       "images": {}
     },
     {
-      "name": "Mayasuran Fighter Expansion",
+      "name": "Mayasuran Fighter Expansion 1.0",
       "summary": "Add-on mod for Mayasuran Navy adding 1 brand new mayasuran corvette, 1 brand new gunship, 2 elite mayasuran strikecraft wings and 12 pilotable strikecrafts.\nFeedback is very welcome!",
       "description": "Add-on mod for Mayasuran Navy adding 1 brand new mayasuran corvette, 1 brand new gunship, 2 elite mayasuran strikecraft wings and 12 pilotable strikecrafts.\nFeedback is very welcome!\n\n**Requires *Mayasuran Navy* and *Arma Armatura*.**\n**Kadur sub-submod additionally requires *Kadur Remnant*.**\n\nEnjoy!\n\n```MFE v1.0\n====================================================\n-Added: Crossbow (AA), Crow (AA), Didymoi (AA), Ferox (AA), Khopesh (AA), Owstoni (AA), Shri (M) and Viper (AA)\n-Also added sub-submod with Kadur-Mayasuran strikecraft: Hoplite (M) (AA) and Phalanx (M) (AA)\n-Further reduced DP required for all pilotable variants\n-Removed ability for strikecraft to carry fuel\n-Fixed bug where non-pilotable variants were available for production as normal ships\n\nFuture plans: More distinct sprites for (AA) variants, more corvettes - ships that live in limbo between strikecraft and frigate. Figuring out how to make the damn Nex start.```",
       "gameVersionReq": "0.95.1a",
@@ -7708,7 +7707,9 @@
       "images": {}
     },
     {
-      "name": "Phillip Andrada Gas Station Manager v1.7 Buy Sindrian. Or Else",
+      "name": "Phillip Andrada Gas Station Manager",
+      "summary": "*AKA: Buy Sindrian! Or Else!*\n***NOT*** save game compatible. You must start a new save to see all changes.",
+      "description": "*AKA: Buy Sindrian! Or Else!*\n***NOT*** save game compatible. You must start a new save to see all changes.\n\n1.7 changes\n- Added the Hydria HA-150 Phase Tanker Destroyer. (Thanks Yunru!)\n- Added the Menoetius MS-15000 Command Ship (Thanks Pogre!)\n- Added the Nephropoidea Superfighter. (Thanks Quartofel!)\n- All Sindrian Fuel Company Militarized Tankers have a new paint job!\n- Added a new commissioned crew bonus for the Sindrian Fuel Company, to go with the regular Commissioned Crew bonus.\n- Added Three new NPCs, two to Cruror and one to Volturn. Currently NPCs don't provide contacts.\n- 1 new random captain portrait.\n- Updated Andrada's Portrait.\n- Notos NS-15000 turret arcs modified.\n- Iapetus IS-15000 rear energy turret is now a hybrid turret.\n- Added a new batch of weapons available to the Sindrian Fuel Company\n- Ship blueprints have been split up to different blueprint package. Sindrian Fuel Company start still starts with blueprint to unlock almost all ships, fighters, and weapons.\n- Added extra features for Diktat Enhancement.\n- Updated the flag for the Sindrian Fuel Company.\n\nCome down to your local SFC gas station franchise today: https://fractalsoftworks.com/forum/index.php?topic=24215\n\nOr Download it direct here: https://dl.dropbox.com/s/ffs1d1fhco54fpj/PAGSM%20v1.7.zip?dl=0",
       "gameVersionReq": "0.95.1a",
       "authors": "WMGreywind",
       "authorsList": [
@@ -7717,37 +7718,20 @@
       "link": "https://fractalsoftworks.com/forum/index.php?topic=24215.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24215.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24215.0"
-      },
-      "source": "ModdingSubforum",
-      "sources": [
-        "ModdingSubforum"
-      ],
-      "categories": [],
-      "images": {}
-    },
-    {
-      "name": "Phillip Andrada: Gas Station Manager v1.7",
-      "summary": "*AKA: Buy Sindrian! Or Else!*\n***NOT*** save game compatible. You must start a new save to see all changes.",
-      "description": "*AKA: Buy Sindrian! Or Else!*\n***NOT*** save game compatible. You must start a new save to see all changes.\n\n1.7 changes\n- Added the Hydria HA-150 Phase Tanker Destroyer. (Thanks Yunru!)\n- Added the Menoetius MS-15000 Command Ship (Thanks Pogre!)\n- Added the Nephropoidea Superfighter. (Thanks Quartofel!)\n- All Sindrian Fuel Company Militarized Tankers have a new paint job!\n- Added a new commissioned crew bonus for the Sindrian Fuel Company, to go with the regular Commissioned Crew bonus.\n- Added Three new NPCs, two to Cruror and one to Volturn. Currently NPCs don't provide contacts.\n- 1 new random captain portrait.\n- Updated Andrada's Portrait.\n- Notos NS-15000 turret arcs modified.\n- Iapetus IS-15000 rear energy turret is now a hybrid turret.\n- Added a new batch of weapons available to the Sindrian Fuel Company\n- Ship blueprints have been split up to different blueprint package. Sindrian Fuel Company start still starts with blueprint to unlock almost all ships, fighters, and weapons.\n- Added extra features for Diktat Enhancement.\n- Updated the flag for the Sindrian Fuel Company.\n\nCome down to your local SFC gas station franchise today: https://fractalsoftworks.com/forum/index.php?topic=24215\n\nOr Download it direct here: https://dl.dropbox.com/s/ffs1d1fhco54fpj/PAGSM%20v1.7.zip?dl=0",
-      "gameVersionReq": "",
-      "authors": "WMGreywind",
-      "authorsList": [
-        "WMGreywind"
-      ],
-      "link": "https://dl.dropbox.com/s/ffs1d1fhco54fpj/PAGSM%20v1.7.zip?dl=0",
-      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24215",
-      "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24215",
         "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/994881474715205692",
         "DirectDownload": "https://dl.dropbox.com/s/ffs1d1fhco54fpj/PAGSM%20v1.7.zip?dl=0",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=24215"
       },
-      "source": "Discord",
+      "source": "Index",
       "sources": [
-        "Discord"
+        "Discord",
+        "ModdingSubforum",
+        "Index"
       ],
-      "categories": [],
+      "categories": [
+        "Content Expansions"
+      ],
       "images": {
         "994881475470176266": {
           "id": "994881475470176266",
@@ -11334,7 +11318,7 @@
       "dateTimeCreated": "2022-01-04T21:37:41.294Z"
     },
     {
-      "name": "Vanilla Armatura",
+      "name": "Vanilla Armatura 0.22",
       "summary": "This mod adds all of the crewed fighters and bombers from vanilla game as pilotable Arma Armatura variants and adds them to the spawnlists. \nAlso, one silly pirate hack of a broadsword and 8 variants of the standard strikecraft that support modular weapons.",
       "description": "This mod adds all of the crewed fighters and bombers from vanilla game as pilotable Arma Armatura variants and adds them to the spawnlists. \nAlso, one silly pirate hack of a broadsword and 8 variants of the standard strikecraft that support modular weapons.\n\nFeedback (especially regarding balance) is very welcome, either ping me or DM me for best results.\n\n**Obviously requires *Arma Armatura*.**\nEnjoy!\n\n```VAA v0.22\n====================================================\n-Reduced DP for all strikecraft by 1\n-Removed \"Rugged Construction\" hullmod from most of the strikecraft\n-Added modular variant to Piranha (AA)\n-Modular variants should now sometimes spawn in fleets\n-Updated sprites for Broadsword (P) (AA), Broadsword Mod. (P) (AA), Xyphos (AA) and Xyphos Mod. (AA)\n-Fixed missing descriptions```\n\nForum link: https://fractalsoftworks.com/forum/index.php?topic=24800.0 ~~(I need to update that at some point)~~",
       "gameVersionReq": "0.95.1a",
@@ -12145,6 +12129,6 @@
       "images": {}
     }
   ],
-  "totalCount": 428.0,
-  "lastUpdated": "2022-07-09T18:11:00Z"
+  "totalCount": 427.0,
+  "lastUpdated": "2022-07-10T06:12:00Z"
 }
