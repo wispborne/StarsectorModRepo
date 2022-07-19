@@ -757,7 +757,7 @@
     {
       "name": "Arma Armatura",
       "summary": "**Requires MagicLib + LazyLib**\nsave compat",
-      "description": "**Requires MagicLib + LazyLib**\nsave compat\nSee forum post for all the other mods that I cant fit here that add addtl strikecraft\n```\nv2.084\n-------------------\n- Fixed Valkazard being locked in an invisible/uncontrollable state if docking while under player control\n\n- Adusted refit logic so that ships w/ loadout consisting of weapons w/ finite ammo will immediately attempt to resupply when exhausted\n\n- Fixed ships w/ strikecraft_large & strikecraft_medium still being able to land on banned ship sizes\n\n- Fixed some weirdness w/ takeoff script\n\nv2.083\n-------------------\n= New Features =\n-AI ships with WINGCOM and an officer piloting will have pilots assigned to their fighters like the player\n\n- New ship, VX Custom\n\n- Added two tags: strikecraft_medium and strikecraft_large\n\n= Bugfixes / QoL =\n- AI strikecraft should launch from their own carriers properly\n\n- Strikecraft should no longer 'clown car' from carriers\n\n- Fixed pilotable kouto never appearing for sale\n- Fixed strikecraft not being affected by CR Reduction / Reduced PPT in coronas/event horizon\n- Fixed visual bug with Valkazard Combat Stims appearing disabled on hullmod, even when recreational drugs present\n- Fixed bug where WINGCOM fighters would land on parent ship with no native bays if no other carriers were present instead of retreating\n- Fixed strikecraft being locked in an invisible/uncontrollable state if player tried ordering one while docked \n\nWatchdog\n- Watchdog sprite revised by Selkie\n    - Removed 2 medium turrets\n    - Added WINGCOM\n    - Adjusted AI to better attempt to keep distance\n\n- Garegga sprite revised by Selkie\n\n- Curvy Laser subprojectiles are now interceptable targets (versus only the parent projectile being interceptable)\n    - fixed outdated description text stating impact damage was 4500, should be 3000\n```\n\nDL: https://github.com/gomarz/SS-armaa/archive/refs/tags/v2.084.zip\nFORUM: https://fractalsoftworks.com/forum/index.php?topic=18751.0",
+      "description": "**Requires MagicLib + LazyLib**\nsave compat\nSee forum post for all the other mods that I cant fit here that add addtl strikecraft\n```\nv2.084\n-------------------\n- Fixed Valkazard being locked in an invisible/uncontrollable state if docking while under player control\n\n- Adusted refit logic so that ships w/ loadout consisting of weapons w/ finite ammo will immediately attempt to resupply when exhausted\n\n- Fixed ships w/ strikecraft_large & strikecraft_medium still being able to land on banned ship sizes\n\n- Fixed some weirdness w/ takeoff script\n\nv2.083\n-------------------\n= New Features =\n-AI ships with WINGCOM and an officer piloting will have pilots assigned to their fighters like the player\n\n- New ship, VX Custom\n\n- Added two tags: strikecraft_medium and strikecraft_large\n\n= Bugfixes / QoL =\n- AI strikecraft should launch from their own carriers properly\n\n- Strikecraft should no longer 'clown car' from carriers\n\n- Fixed pilotable kouto never appearing for sale\n- Fixed strikecraft not being affected by CR Reduction / Reduced PPT in coronas/event horizon\n- Fixed visual bug with Valkazard Combat Stims appearing disabled on hullmod, even when recreational drugs present\n- Fixed bug where WINGCOM fighters would land on parent ship with no native bays if no other carriers were present instead of retreating\n- Fixed strikecraft being locked in an invisible/uncontrollable state if player tried ordering one while docked \n\nWatchdog\n- Watchdog sprite revised by Selkie\n    - Removed 2 medium turrets\n    - Added WINGCOM\n    - Adjusted AI to better attempt to keep distance\n\n- Garegga sprite revised by Selkie\n\n- Curvy Laser subprojectiles are now interceptable targets (versus only the parent projectile being interceptable)\n    - fixed outdated description text stating impact damage was 4500, should be 3000\n```\n\nDL: https://github.com/gomarz/SS-armaa/archive/refs/tags/v2.09.zip\nFORUM: https://fractalsoftworks.com/forum/index.php?topic=18751.0",
       "gameVersionReq": "0.95a",
       "authors": "shoi",
       "authorsList": [
@@ -769,7 +769,7 @@
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=18751.0",
         "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/995434311362818159",
-        "DirectDownload": "https://github.com/gomarz/SS-armaa/archive/refs/tags/v2.084.zip",
+        "DirectDownload": "https://github.com/gomarz/SS-armaa/archive/refs/tags/v2.09.zip",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=18751.0"
       },
       "source": "Index",
@@ -792,7 +792,7 @@
         }
       },
       "dateTimeCreated": "2022-07-09T21:00:34.104Z",
-      "dateTimeEdited": "2022-07-11T17:16:43.302Z"
+      "dateTimeEdited": "2022-07-18T18:53:12.577Z"
     },
     {
       "name": "Armor Blitz Portrait Pack",
@@ -8647,8 +8647,8 @@
     },
     {
       "name": "Scan Those Gates",
-      "summary": "\nScans all gates that do not have 'Inactive' in their name at the beginning of a save when Nexerelin 'Skip Story' option or the Skip Story mod is enabled.",
-      "description": "Scans all gates that do not have 'Inactive' in their name at the beginning of a save when Nexerelin 'Skip Story' option or the Skip Story mod is enabled.\n**Has no effect if you complete the Galatia quests yourself.** This mod is safe to remove from an active game.\n\nA very big thank you to Wispborne, Timid, SafariJohn and ruddygreat for their help getting this working and fixing bugs.\n\n```Changelog:\nv1.3: Added support for the Skip Story mod, fixed a crash caused by not having Nexerelin enabled.\n\nv1.2: Added version checker integration.\n\nv1.1: Fixed crash caused by some gates added by mods, added error logging to starsector.log to identify which gates are causing issues.```\nDownload: https://github.com/AEROassault/ScanThoseGates/releases/download/v1.3/ScanThoseGates.zip\nForum: https://fractalsoftworks.com/forum/index.php?topic=24651",
+      "summary": "\nScans all gates that are located in systems with at least one non-hidden market at save start when Nexerelin Skip Story or the Skip Story mod is enabled (hidden markets are pirate/pather bases).",
+      "description": "Scans all gates that are located in systems with at least one non-hidden market at save start when Nexerelin Skip Story or the Skip Story mod is enabled (hidden markets are pirate/pather bases).\n\n**Only affects games during startup of a new save, and only works if Nexerelin 'Skip Story' or the Skip Story mod are enabled. Has no effect if you complete the Galatia quests yourself.**\n\n```Changelog:\nv1.4: Scanning function now activates gates in systems with at least one non-hidden market (not pirate/pather), regardless of what the gate name is.```\nDownload: https://github.com/AEROassault/ScanThoseGates/releases/download/v1.4/ScanThoseGates.zip\nForum: https://fractalsoftworks.com/forum/index.php?topic=24651",
       "gameVersionReq": "0.95.1a",
       "authors": "AERO",
       "authorsList": [
@@ -8658,8 +8658,8 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24651.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24651",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/981005334242005032",
-        "DirectDownload": "https://github.com/AEROassault/ScanThoseGates/releases/download/v1.3/ScanThoseGates.zip",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/998652396320333934",
+        "DirectDownload": "https://github.com/AEROassault/ScanThoseGates/releases/download/v1.4/ScanThoseGates.zip",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=24651"
       },
       "source": "Index",
@@ -8672,17 +8672,16 @@
         "Utility mods"
       ],
       "images": {
-        "981005334380433418": {
-          "id": "981005334380433418",
+        "998652396446167060": {
+          "id": "998652396446167060",
           "filename": "ScanThoseGates.png",
           "content_type": "image/png",
           "size": 28590.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/981005334380433418/ScanThoseGates.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/981005334380433418/ScanThoseGates.png"
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/998652396446167060/ScanThoseGates.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/998652396446167060/ScanThoseGates.png"
         }
       },
-      "dateTimeCreated": "2022-05-31T01:24:57.881Z",
-      "dateTimeEdited": "2022-05-31T04:00:33.483Z"
+      "dateTimeCreated": "2022-07-18T18:08:05.347Z"
     },
     {
       "name": "Scrapyard Armories 0.0.7 Still not on forums edition",
@@ -12158,5 +12157,5 @@
     }
   ],
   "totalCount": 427.0,
-  "lastUpdated": "2022-07-18T18:03:00Z"
+  "lastUpdated": "2022-07-19T06:03:00Z"
 }
