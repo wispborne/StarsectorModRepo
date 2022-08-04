@@ -385,7 +385,7 @@
     {
       "name": "Advanced Gunnery Control",
       "summary": "Forum Thread: https://fractalsoftworks.com/forum/index.php?topic=21280.0",
-      "description": "Forum Thread: https://fractalsoftworks.com/forum/index.php?topic=21280.0\nDownload: https://github.com/DesperatePeter/starsector-advanced-weapon-control/releases\n\nThis mod gives you more control over the way weapon groups behave when on autofire. For each weapon group, you can select one or more tags, such as holding fire when flux > X% or avoiding shields, to customise how that group should behave. Also features basic ship modes (e.g. LowerShields when Flux > 50%) and two ~~badly ~~ expertly done GUIs.\nCan be added/removed to/from an ongoing campaign.\n\n1.0.0 reworks how weapon modes work and how you assign them in combat.\nWeapon modes/suffixes are replaced with a tag-based system, where you can add any number of combatible tags to a weapon group.\nModes are no longer assigned via hotkeys but instead through a custom in-combat GUI (cf. attached picture)\n\n*Note* for faction/content extensio*n mod authors*: Instead of suggested modes/suffixes, you can now list suggested tags for your weapons in modSettings.json. If you had already added weapon modes/suffxies, feel free to leave them in for compatibility  with older versions.  (refer to https://github.com/DesperatePeter/starsector-advanced-weapon-control/blob/1.0.0-alpha/data/config/modSettings.json#L15 for an example). \n\n<@&646627562986143744> \nAs this is an alpha version and I'm not currently actively playing Starsector, I would much appreciate any feedback regarding bugs, usability issues, etc. Feel free to post in the forum thread, create a github issue or send me a DM on Discord.\n\nThanks in advance and happy gaming/modding!\n\nKnown issues:\n- repeated clicking noise in campaign-level GUI when hovering over disabled buttons\n- many of the settings, such as the mode-list, only affect legacy mode -> settings need cleanup",
+      "description": "Forum Thread: https://fractalsoftworks.com/forum/index.php?topic=21280.0\nDownload: https://github.com/DesperatePeter/starsector-advanced-weapon-control/releases\n\nThis mod gives you more control over the way weapon groups behave when on autofire. For each weapon group, you can select one or more tags, such as holding fire when flux > X% or avoiding shields, to customise how that group should behave. Also features basic ship modes (e.g. LowerShields when Flux > 50%) and two ~~badly ~~ expertly done GUIs.\nCan be added/removed to/from an ongoing campaign.\n\n1.0.0 reworks how weapon modes work and how you assign them in combat.\nWeapon modes/suffixes are replaced with a tag-based system, where you can add any number of combatible tags to a weapon group.\nModes are no longer assigned via hotkeys but instead through a custom in-combat GUI (cf. attached picture)\n\n1.1.0 mainly fixes some issues, but also adds customizable thresholds in the settings-file\n\n*Note* for faction/content extensio*n mod authors*: Instead of suggested modes/suffixes, you can now list suggested tags for your weapons in modSettings.json. If you had already added weapon modes/suffxies, feel free to leave them in for compatibility  with older versions.  (refer to https://github.com/DesperatePeter/starsector-advanced-weapon-control/blob/1.0.0-alpha/data/config/modSettings.json#L15 for an example). \n\n<@&646627562986143744> \nAs this is an alpha version and I'm not currently actively playing Starsector, I would much appreciate any feedback regarding bugs, usability issues, etc. Feel free to post in the forum thread, create a github issue or send me a DM on Discord.\n\nThanks in advance and happy gaming/modding!",
       "gameVersionReq": "0.95a",
       "authors": "DesperatePeter",
       "authorsList": [
@@ -419,7 +419,7 @@
         }
       },
       "dateTimeCreated": "2022-08-01T17:12:20.271Z",
-      "dateTimeEdited": "2022-08-01T19:53:09.801Z"
+      "dateTimeEdited": "2022-08-03T19:16:00.424Z"
     },
     {
       "name": "Advanced Hullmods",
@@ -3794,15 +3794,15 @@
     {
       "name": "Domain Historical Society",
       "summary": "Faction mod of lowtech and midline ships belonging to a group intending to return not only domain law, but domain history and culture to the sector.",
-      "description": "Faction mod of lowtech and midline ships belonging to a group intending to return not only domain law, but domain history and culture to the sector.\n\nCredits to Amazingh for implementation and coding\n\nSmall update, Charing Cross has a new shield overload ship system\n\nhttps://drive.google.com/file/d/1CyakxzqfmlYIIR2ZBqGDD3w8FfAeJ9F8/view?usp=sharing",
+      "description": "Faction mod of lowtech and midline ships belonging to a group intending to return not only domain law, but domain history and culture to the sector.\n\nCredits to Amazingh for implementation and coding\n\nCharing Cross system is now called Z Pulse Battery, and works with shield shunt. The Paddinton, a mobile battleship with a huge central cannon, is now added to the roster\n\n~~WARNING: PROBABLY NOT SAVE FRIENDLY~~ It is save friendly, amazingh is a god\n\nhttps://drive.google.com/file/d/1usgIP_vGyOupjKFjKkP7_EMqCWPhaFZ4/view?usp=sharing",
       "gameVersionReq": "",
       "authors": "Oshlet",
       "authorsList": [
         "Oshlet"
       ],
       "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1002960121443389542",
-        "DownloadPage": "https://drive.google.com/file/d/1CyakxzqfmlYIIR2ZBqGDD3w8FfAeJ9F8/view?usp=sharing"
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1004471676945305743",
+        "DownloadPage": "https://drive.google.com/file/d/1usgIP_vGyOupjKFjKkP7_EMqCWPhaFZ4/view?usp=sharing"
       },
       "source": "Discord",
       "sources": [
@@ -3810,16 +3810,17 @@
       ],
       "categories": [],
       "images": {
-        "1002960121523085393": {
-          "id": "1002960121523085393",
+        "1004471677209563226": {
+          "id": "1004471677209563226",
           "filename": "Domhist_Colour_3.png",
           "content_type": "image/png",
-          "size": 786982.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1002960121523085393/Domhist_Colour_3.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1002960121523085393/Domhist_Colour_3.png"
+          "size": 935137.0,
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1004471677209563226/Domhist_Colour_3.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1004471677209563226/Domhist_Colour_3.png"
         }
       },
-      "dateTimeCreated": "2022-07-30T15:25:27.05Z"
+      "dateTimeCreated": "2022-08-03T19:31:49.965Z",
+      "dateTimeEdited": "2022-08-03T19:49:27.502Z"
     },
     {
       "name": "Dream Daddy Portrait Pack",
@@ -4107,8 +4108,8 @@
     },
     {
       "name": "Exotica Technologies",
-      "summary": "v1.0.12",
-      "description": "v1.0.12\n\nUpgrade your ships using resources and credits, and install exotics on them for drastic changes to any ship's power!\nNPC fleets and derelicts now spawn with Exotica technologies on them, which you can salvage or recover to put on your own ships.\n\n**Version 1.0.12 is save-compatible, all the way back to 1.0.0**.\n\nForum: https://fractalsoftworks.com/forum/index.php?topic=24660.0\nDownload: https://github.com/scardwell15/ExoticaTechnologies/releases/download/v1.0.12/Exotica-Technologies-v1.0.12.zip\nFull changelog: https://github.com/scardwell15/ExoticaTechnologies/releases/tag/v1.0.12",
+      "summary": "v1.1.0 *UI Update*\nme, three weeks ago: this is the first update without any feature creep!",
+      "description": "v1.1.0 *UI Update*\nme, three weeks ago: this is the first update without any feature creep!\nme, the next day: histidine PRed a new UI for the scanning dialog, better use that to create a whole new shop UI!\nUpgrade your ships using resources and credits, and install exotics on them for drastic changes to any ship's power!\nNPC fleets and derelicts now spawn with Exotica technologies on them, which you can salvage or recover to put on your own ships.\nNow featuring much, much improved UI! I can't wait to hotfix this because I got bored of just sitting on the update for three weeks!\n\n**Version 1.1.0 is save-compatible, all the way back to 1.0.0**.\n\nForum: https://fractalsoftworks.com/forum/index.php?topic=24660.0\nDownload: https://github.com/scardwell15/ExoticaTechnologies/releases/download/v1.1.0/Exotica-Technologies-v1.1.0.zip\nFull changelog: https://github.com/scardwell15/ExoticaTechnologies/releases/tag/v1.1.0",
       "gameVersionReq": "0.95.1a",
       "authors": "presidentmattdamon",
       "authorsList": [
@@ -4132,6 +4133,14 @@
         "Content Expansions"
       ],
       "images": {
+        "1004514064371822682": {
+          "id": "1004514064371822682",
+          "filename": "banner.png",
+          "content_type": "image/png",
+          "size": 150630.0,
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1004514064371822682/banner.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1004514064371822682/banner.png"
+        },
         "982159848802234388": {
           "id": "982159848802234388",
           "filename": "banner.png",
@@ -4139,17 +4148,9 @@
           "size": 149609.0,
           "url": "https://cdn.discordapp.com/attachments/825068217361760306/982159848802234388/banner.png",
           "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/982159848802234388/banner.png"
-        },
-        "996168631530561676": {
-          "id": "996168631530561676",
-          "filename": "banner.png",
-          "content_type": "image/png",
-          "size": 149609.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/996168631530561676/banner.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/996168631530561676/banner.png"
         }
       },
-      "dateTimeCreated": "2022-07-11T21:38:29.635Z"
+      "dateTimeCreated": "2022-08-03T22:20:15.818Z"
     },
     {
       "name": "Experimental Hull Modifications 0.2.0 - Preview",
@@ -14458,5 +14459,5 @@
     }
   ],
   "totalCount": 520.0,
-  "lastUpdated": "2022-08-03T18:04:00Z"
+  "lastUpdated": "2022-08-04T06:03:00Z"
 }
