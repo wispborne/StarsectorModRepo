@@ -386,7 +386,7 @@
     {
       "name": "Advanced Gunnery Control",
       "summary": "Forum Thread: https://fractalsoftworks.com/forum/index.php?topic=21280.0",
-      "description": "Forum Thread: https://fractalsoftworks.com/forum/index.php?topic=21280.0\nDownload: https://github.com/DesperatePeter/starsector-advanced-weapon-control/releases\n\nThis mod gives you more control over the way weapon groups behave when on autofire. For each weapon group, you can select one or more tags, such as holding fire when flux > X% or avoiding shields, to customise how that group should behave. Also features basic ship modes (e.g. LowerShields when Flux > 50%) and two ~~badly ~~ expertly done GUIs.\nCan be added/removed to/from an ongoing campaign.\n\n1.0.0 reworks how weapon modes work and how you assign them in combat.\nWeapon modes/suffixes are replaced with a tag-based system, where you can add any number of combatible tags to a weapon group.\nModes are no longer assigned via hotkeys but instead through a custom in-combat GUI (cf. attached picture)\n\n1.1.0 mainly fixes some issues, but also adds customizable thresholds in the settings-file\n\n*Note* for faction/content extensio*n mod authors*: Instead of suggested modes/suffixes, you can now list suggested tags for your weapons in modSettings.json. If you had already added weapon modes/suffxies, feel free to leave them in for compatibility  with older versions.  (refer to https://github.com/DesperatePeter/starsector-advanced-weapon-control/blob/1.0.0-alpha/data/config/modSettings.json#L15 for an example). \n\n<@&646627562986143744> \nAs this is an alpha version and I'm not currently actively playing Starsector, I would much appreciate any feedback regarding bugs, usability issues, etc. Feel free to post in the forum thread, create a github issue or send me a DM on Discord.\n\nThanks in advance and happy gaming/modding!",
+      "description": "Forum Thread: https://fractalsoftworks.com/forum/index.php?topic=21280.0\nDownload: https://github.com/DesperatePeter/starsector-advanced-weapon-control/releases\n\nThis mod gives you more control over the way weapon groups behave when on autofire. For each weapon group, you can select one or more tags, such as holding fire when flux > X% or avoiding shields, to customise how that group should behave. Also features basic ship modes (e.g. LowerShields when Flux > 50%) and two ~~badly ~~ expertly done GUIs.\nCan be added/removed to/from an ongoing campaign.\n\n1.2.0 fixes lots of issues with weird weapon AI behaviour, adds more tags (most of them optionally enabled in Settings.editme)\n\n*Note* for faction/content extensio*n mod authors*: Instead of suggested modes/suffixes, you can now list suggested tags for your weapons in modSettings.json. If you had already added weapon modes/suffxies, feel free to leave them in for compatibility  with older versions.  (refer to https://github.com/DesperatePeter/starsector-advanced-weapon-control/blob/1.0.0-alpha/data/config/modSettings.json#L15 for an example). \n\n<@&646627562986143744> \nI believe that 1.2.0 fixes most bugs, but I would also be very surprised if my beliefs were right 😛 I much appreciate any bug reports. Feel free to post in the forum thread, PM me on Discord or create a Github-Issue.\n\nThanks in advance and happy gaming/modding!",
       "gameVersionReq": "0.95a",
       "authors": "DesperatePeter",
       "authorsList": [
@@ -397,7 +397,7 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=21280.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=21280.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1003711796173078538",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1006507956164116552",
         "DownloadPage": "https://github.com/DesperatePeter/starsector-advanced-weapon-control/releases"
       },
       "source": "Index",
@@ -410,17 +410,16 @@
         "Utility mods"
       ],
       "images": {
-        "1003711797112610847": {
-          "id": "1003711797112610847",
+        "1006507956247986226": {
+          "id": "1006507956247986226",
           "filename": "unknown.png",
           "content_type": "image/png",
-          "size": 323747.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1003711797112610847/unknown.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1003711797112610847/unknown.png"
+          "size": 473775.0,
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1006507956247986226/unknown.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1006507956247986226/unknown.png"
         }
       },
-      "dateTimeCreated": "2022-08-01T17:12:20.271Z",
-      "dateTimeEdited": "2022-08-03T19:16:00.424Z"
+      "dateTimeCreated": "2022-08-09T10:23:16.763Z"
     },
     {
       "name": "Advanced Hullmods",
@@ -3456,7 +3455,7 @@
     {
       "name": "Detailed Combat Results",
       "summary": "```",
-      "description": "```\nBugfix Release:\n  Ship count limit now configurable via JSON (for intel display)\n  Updated wording for enemy fleet damage dealt\n  Lightning gun from SWP now has its damage recorded correctly\n  Don't process missile damages 2x (was caused by processing explosion damage and then missile damage)\n  Don't count launched missiles as a part of a fleet\n\nSave Compatible\n```\n\nForum Thread: https://fractalsoftworks.com/forum/index.php?topic=11551\nDownload: https://bitbucket.org/NickWWest/starsectorcombatanalytics/downloads/DetailedCombatResults.5.2.2.zip",
+      "description": "```\nMinor Feature Release:\n Supports having damage values supplied by mods (specifically Realistic Combat)\n\nSave Compatible\n```\n\nForum Thread: https://fractalsoftworks.com/forum/index.php?topic=11551\nDownload: https://bitbucket.org/NickWWest/starsectorcombatanalytics/downloads/DetailedCombatResults.5.2.3.zip",
       "gameVersionReq": "0.95a",
       "authors": "Nick XR",
       "authorsList": [
@@ -3467,8 +3466,8 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=11551.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=11551.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/995085144828412015",
-        "DirectDownload": "https://bitbucket.org/NickWWest/starsectorcombatanalytics/downloads/DetailedCombatResults.5.2.2.zip",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1006610229171064943",
+        "DirectDownload": "https://bitbucket.org/NickWWest/starsectorcombatanalytics/downloads/DetailedCombatResults.5.2.3.zip",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=11551"
       },
       "source": "Index",
@@ -3481,16 +3480,16 @@
         "Utility mods"
       ],
       "images": {
-        "995085144924889168": {
-          "id": "995085144924889168",
+        "1006610229305290882": {
+          "id": "1006610229305290882",
           "filename": "DCRWithMissile.png",
           "content_type": "image/png",
           "size": 321934.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/995085144924889168/DCRWithMissile.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/995085144924889168/DCRWithMissile.png"
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1006610229305290882/DCRWithMissile.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1006610229305290882/DCRWithMissile.png"
         }
       },
-      "dateTimeCreated": "2022-07-08T21:53:06.315Z"
+      "dateTimeCreated": "2022-08-09T17:09:40.548Z"
     },
     {
       "name": "Diable Avionics",
@@ -14490,5 +14489,5 @@
     }
   ],
   "totalCount": 520.0,
-  "lastUpdated": "2022-08-09T06:03:00Z"
+  "lastUpdated": "2022-08-09T18:03:00Z"
 }
