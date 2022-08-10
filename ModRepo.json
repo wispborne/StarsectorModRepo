@@ -865,6 +865,27 @@
       "dateTimeCreated": "2021-04-09T09:50:12.419Z"
     },
     {
+      "name": "Arkships V0.1 Beta",
+      "summary": "This mod adds \"Arkships\" in to the Sector.\nArkships behave similar to a Station, but with the twist that they can warp through Space. Using an ability, the player can summon it to wherever they want.",
+      "description": "This mod adds \"Arkships\" in to the Sector.\nArkships behave similar to a Station, but with the twist that they can warp through Space. Using an ability, the player can summon it to wherever they want.\nThe Station does not interact with the games economy, but through its compartments it offers other features. So its far more limited than a real colony, but it has other usefull abilities.\nThe Compartments are installed through dialogue options in the Stations Main Screen. The selection of currently available Components:\n\n-> **Arkship Storage Module**: Lets you store Wares & Ships that get stored even through warps.\n--> **More Modules** will be added in later updates\n\nHowever, Arkships come at a hefty credit price, both for Warping and for Maintanance. To reduce Maintanance Costs, you can disable any Compartment whenever you want to, but loose the effect that they would usually give. Warp Costs increase over the distance traveled, with a warp from one corner to the other costing around 400.000 Credits.\n\n**How to Aqquire an Arkship**\nTo Aqquire an Arkship, you have to locate its derelict first. The mod spawns one Arkship per Sector. It always generates in ||a system with a [REDACTED] Beacon ||\nOnce you interact with it, you gain the ability to summon it to your location and to add Compartments to it.\n\nIf you want to skip the Exploration Part and have one from the beginning of the game, go to the mod folder under \"data/campaign/\" and open \"abilities.csv\"\n->If you have a sheet editor, open it with that and go to \"unlockedAtStart\" and change \"FALSE\" to \"TRUE\"\n->If you only have text editors, open it with that and find the only \"FALSE\" and replace it with \"TRUE\"\n\nAlternatively you can use the Console Command mod and run this Code to Spawn the Derelict station in your current star system, in case you want to add it to an existing save\n```RunCode SectorEntityToken Arkship = Global.getSector().getPlayerFleet().getStarSystem().addCustomEntity(\"AS_Arkship_ship_derelict\", \"Derelict Arkship\", \"station_hightech2\", \"independent\"); Arkship.setCircularOrbitPointingDown(Global.getSector().getPlayerFleet().getStarSystem().getStar(), 0, 4000, 100); ```\n**Known Issues**\n-> If you dont have the Storage Module Installed and open the inventory at the Arkship, do not rightclick a Blueprint or your Game will Crash.\n-> You can bombard your own Arkship, just, dont do it, but im looking for a way to fix that.\n-> Some items are counted as illegal by the storage\n-> Arkship storage can be built on colonies\n\n-> If you encounter more issues, please ping me with them on the Discord or send me a PM.\n\nThe Video Below showcases how the mod currently functions:\nhttps://cdn.discordapp.com/attachments/425991523017162754/1006699384177688686/Untitled.mp4",
+      "gameVersionReq": "",
+      "authors": "Lukas04",
+      "authorsList": [
+        "Lukas04"
+      ],
+      "urls": {
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1006706451491868782"
+      },
+      "source": "Discord",
+      "sources": [
+        "Discord"
+      ],
+      "categories": [],
+      "images": {},
+      "dateTimeCreated": "2022-08-09T23:32:01.737Z",
+      "dateTimeEdited": "2022-08-10T02:44:36.289Z"
+    },
+    {
       "name": "Arma Armatura",
       "summary": "**Requires MagicLib + LazyLib**\nsave compat",
       "description": "**Requires MagicLib + LazyLib**\nsave compat\nSee forum post for all the other mods that I cant fit here that add addtl strikecraft\n```\nv2.084\n-------------------\n- Fixed Valkazard being locked in an invisible/uncontrollable state if docking while under player control\n\n- Adusted refit logic so that ships w/ loadout consisting of weapons w/ finite ammo will immediately attempt to resupply when exhausted\n\n- Fixed ships w/ strikecraft_large & strikecraft_medium still being able to land on banned ship sizes\n\n- Fixed some weirdness w/ takeoff script\n\nv2.083\n-------------------\n= New Features =\n-AI ships with WINGCOM and an officer piloting will have pilots assigned to their fighters like the player\n\n- New ship, VX Custom\n\n- Added two tags: strikecraft_medium and strikecraft_large\n\n= Bugfixes / QoL =\n- AI strikecraft should launch from their own carriers properly\n\n- Strikecraft should no longer 'clown car' from carriers\n\n- Fixed pilotable kouto never appearing for sale\n- Fixed strikecraft not being affected by CR Reduction / Reduced PPT in coronas/event horizon\n- Fixed visual bug with Valkazard Combat Stims appearing disabled on hullmod, even when recreational drugs present\n- Fixed bug where WINGCOM fighters would land on parent ship with no native bays if no other carriers were present instead of retreating\n- Fixed strikecraft being locked in an invisible/uncontrollable state if player tried ordering one while docked \n\nWatchdog\n- Watchdog sprite revised by Selkie\n    - Removed 2 medium turrets\n    - Added WINGCOM\n    - Adjusted AI to better attempt to keep distance\n\n- Garegga sprite revised by Selkie\n\n- Curvy Laser subprojectiles are now interceptable targets (versus only the parent projectile being interceptable)\n    - fixed outdated description text stating impact damage was 4500, should be 3000\n```\n\nDL: https://github.com/gomarz/SS-armaa/archive/refs/tags/v2.1.zip\nFORUM: https://fractalsoftworks.com/forum/index.php?topic=18751.0",
@@ -14488,6 +14509,6 @@
       "dateTimeEdited": "2021-08-16T19:28:49.716Z"
     }
   ],
-  "totalCount": 520.0,
-  "lastUpdated": "2022-08-09T18:03:00Z"
+  "totalCount": 521.0,
+  "lastUpdated": "2022-08-10T06:03:00Z"
 }
