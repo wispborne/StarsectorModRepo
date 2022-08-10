@@ -865,25 +865,30 @@
       "dateTimeCreated": "2021-04-09T09:50:12.419Z"
     },
     {
-      "name": "Arkships V0.1 Beta",
-      "summary": "This mod adds \"Arkships\" in to the Sector.\nArkships behave similar to a Station, but with the twist that they can warp through Space. Using an ability, the player can summon it to wherever they want.",
-      "description": "This mod adds \"Arkships\" in to the Sector.\nArkships behave similar to a Station, but with the twist that they can warp through Space. Using an ability, the player can summon it to wherever they want.\nThe Station does not interact with the games economy, but through its compartments it offers other features. So its far more limited than a real colony, but it has other usefull abilities.\nThe Compartments are installed through dialogue options in the Stations Main Screen. The selection of currently available Components:\n\n-> **Arkship Storage Module**: Lets you store Wares & Ships that get stored even through warps.\n--> **More Modules** will be added in later updates\n\nHowever, Arkships come at a hefty credit price, both for Warping and for Maintanance. To reduce Maintanance Costs, you can disable any Compartment whenever you want to, but loose the effect that they would usually give. Warp Costs increase over the distance traveled, with a warp from one corner to the other costing around 400.000 Credits.\n\n**How to Aqquire an Arkship**\nTo Aqquire an Arkship, you have to locate its derelict first. The mod spawns one Arkship per Sector. It always generates in ||a system with a [REDACTED] Beacon ||\nOnce you interact with it, you gain the ability to summon it to your location and to add Compartments to it.\n\nIf you want to skip the Exploration Part and have one from the beginning of the game, go to the mod folder under \"data/campaign/\" and open \"abilities.csv\"\n->If you have a sheet editor, open it with that and go to \"unlockedAtStart\" and change \"FALSE\" to \"TRUE\"\n->If you only have text editors, open it with that and find the only \"FALSE\" and replace it with \"TRUE\"\n\nAlternatively you can use the Console Command mod and run this Code to Spawn the Derelict station in your current star system, in case you want to add it to an existing save\n```RunCode SectorEntityToken Arkship = Global.getSector().getPlayerFleet().getStarSystem().addCustomEntity(\"AS_Arkship_ship_derelict\", \"Derelict Arkship\", \"station_hightech2\", \"independent\"); Arkship.setCircularOrbitPointingDown(Global.getSector().getPlayerFleet().getStarSystem().getStar(), 0, 4000, 100); ```\n**Known Issues**\n-> If you dont have the Storage Module Installed and open the inventory at the Arkship, do not rightclick a Blueprint or your Game will Crash.\n-> You can bombard your own Arkship, just, dont do it, but im looking for a way to fix that.\n-> Some items are counted as illegal by the storage\n-> Arkship storage can be built on colonies\n\n-> If you encounter more issues, please ping me with them on the Discord or send me a PM.\n\nThe Video Below showcases how the mod currently functions:\nhttps://cdn.discordapp.com/attachments/425991523017162754/1006699384177688686/Untitled.mp4",
-      "gameVersionReq": "",
+      "name": "Arkships V0.3",
+      "summary": "This mod adds \"Arkships\" in to the Sector. Arkships are custom Stations that by using an Ability can be moved to any Starsystem.\nThey do not participate in the economy and you can’t build Industries on them, but you can activate and deactivate Compartments which enable Features as you do so.",
+      "description": "This mod adds \"Arkships\" in to the Sector. Arkships are custom Stations that by using an Ability can be moved to any Starsystem.\nThey do not participate in the economy and you can’t build Industries on them, but you can activate and deactivate Compartments which enable Features as you do so.\nThe Core Component is the Arkship-Storage, allowing you to move an entire Stations Inventory through the sector.\n\nMore details can be found on the Forum post.\nThis version should be quite stable now.\n\n**Changelog** (V0.3)\n-> Added Supply Assembly Compartment (creates supplies over time)\n-> Added Fuel Siphon Compartment (creates fuel over time)\n-> Fixed the ship repair option missing.\n-> Fixed the game adding \"Battlestation\" to the end of the Derelict Arkships mapname\n-> Fixed a potential mod-incompatibility\n\n**Changelog ** (V0.2)\n-> Improved the Compartment selection screen a bit to make the options clearer.\n-> Added a Placeholder Submarket to avoid a crash on an empty Station Inventory screen.\n-> Blocked the Military Menu from appearing on Arkships\n-> Fixed a few Grammar-Mistakes\n-> Fixed some items being illegal in the Arkship Storage\n-> Fixed Arkship-Storage being buildable on Colonies\n\n**Forum Post**: https://fractalsoftworks.com/forum/index.php?topic=25091.0\n**Download**: https://www.dropbox.com/s/n61vt3hwv4qj4v0/ArkshipsV0.3.zip?dl=1\nhttps://imgur.com/0MgRMR5",
+      "gameVersionReq": "0.95.1a",
       "authors": "Lukas04",
       "authorsList": [
         "Lukas04"
       ],
+      "link": "https://fractalsoftworks.com/forum/index.php?topic=25091.0",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=25091.0",
       "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1006706451491868782"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25091.0",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1006983587725324359",
+        "DirectDownload": "https://www.dropbox.com/s/n61vt3hwv4qj4v0/ArkshipsV0.3.zip?dl=1",
+        "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=25091.0"
       },
-      "source": "Discord",
+      "source": "ModdingSubforum",
       "sources": [
+        "ModdingSubforum",
         "Discord"
       ],
       "categories": [],
       "images": {},
-      "dateTimeCreated": "2022-08-09T23:32:01.737Z",
-      "dateTimeEdited": "2022-08-10T02:44:36.289Z"
+      "dateTimeCreated": "2022-08-10T17:53:16.164Z"
     },
     {
       "name": "Arma Armatura",
@@ -14510,5 +14515,5 @@
     }
   ],
   "totalCount": 521.0,
-  "lastUpdated": "2022-08-10T06:03:00Z"
+  "lastUpdated": "2022-08-10T18:04:00Z"
 }
