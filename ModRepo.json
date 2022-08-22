@@ -5012,8 +5012,8 @@
     },
     {
       "name": "FuzzyPack",
-      "summary": "v, 1.4.7 - hotfix 2, no more crash on startup and tpc-skipper now has working heatsink",
-      "description": "v, 1.4.7 - hotfix 2, no more crash on startup and tpc-skipper now has working heatsink\n\nDL: https://github.com/SirFuzzWuzz/Starsector_mods/raw/main/FuzzyPack.zip\n\nSaw I had a bit since last update so here is a new one.\n\n*Added the Overcharger medium energy weapon, plasma pewpew*\n*The Moth phase cruiser, technically a phase carrier *🗿 \n*The Mudskipper (TPC), why*\n*Excavator Drone, big boi mining drone with big boi dmg beam*\n*Probably tweaked some numbers*\n\nSave compatible, probably.\n*I'll update the forum eventually...*",
+      "summary": "v, 1.4.8 - fixed battery crash",
+      "description": "v, 1.4.8 - fixed battery crash\n\nDL: https://github.com/SirFuzzWuzz/Starsector_mods/raw/main/FuzzyPack.zip\n\nSaw I had a bit since last update so here is a new one.\n\n*Added the Overcharger medium energy weapon, plasma pewpew*\n*The Moth phase cruiser, technically a phase carrier *🗿 \n*The Mudskipper (TPC), why*\n*Excavator Drone, big boi mining drone with big boi dmg beam*\n*New phase ship armour regen hullmod*\n*Some faction files because that's what the big modders do*\n\nSave compatible, probably.\n*Forum link is updated*",
       "gameVersionReq": "0.95.1a",
       "authors": "SirFuzzWuzz",
       "authorsList": [
@@ -5046,16 +5046,16 @@
         }
       },
       "dateTimeCreated": "2022-08-21T10:41:44.776Z",
-      "dateTimeEdited": "2022-08-21T16:28:37.958Z"
+      "dateTimeEdited": "2022-08-22T11:44:54.445Z"
     },
     {
       "name": "G1GC vmparam Collection v.1.1.1 (0.95.1 Compatible)",
       "summary": "Note: the only compatible Java 8 are version 271, please check pinned post in <#512356777451323393>",
       "description": "Note: the only compatible Java 8 are version 271, please check pinned post in <#512356777451323393>\n\nDownload\nWindows:\nhttps://drive.google.com/uc?id=1tO6rxVPQQS4ICgWNzHUFbjiPa6AgXYhQ&export=download\nLinux Distro:\nhttps://drive.google.com/uc?id=1GmvL4H43r6PmvZbzKqzHNC7tHM7U0fZm&export=download\nMacOS:\nhttps://drive.google.com/uc?id=124yMChlacYYdosEngoDhQtOl7Kk1PCUb&export=download\n\nChangelogs :\n```\n-Disable SystemGC, its unnecessary (JRE7/JRE8)\n-Show Error Dialog instead of failing to launch silently (JRE8)\n-Now come in three different flavor for Windows, Linux-based Distro, MacOS\n```\n\nEver frustrated why your startup loading times is so awful?, got a high-end PC and want to use more of its memory size and speed?, or optimize your potato laptop to play this game?.. we got you covered with 1/2/3/4/6/8GB VMParam. Brought to you lovingly after a week of testing.\n\n```\nPacks Included:\n- JRE7 Safe Pack\n- JRE8 Safe/Aggresive/Dangerous Pack\n- For 1/2/3/4/6/8GB\n- G1GC Hide Leak Messages mods\n```\n\nKey differences between packs\nAll share the same trait of having a low latency multi-threaded GC (the janitor you may call it) to reclaim unused memory and make the game smooth. For starter I recommending the Safe pack but if you trust your high end PC to pack a punch do give Dangerous pack a go. As for people who're curious about what this do read the Documentation.txt included on each pack.\n\nKnown issues\n```\n- Due to how the mod works, the game may show \"Memory Leak! Campaign Duplicates\" over time. This is okay!\n\n- However if one of your mod list does have a memory leak.. this mod may fail to clean extra copies.\n```\n\nFully save compatible! If the game doesn't launch after you replace the `vmparam` and you're using JRE8 pack, make sure the `jre` folder is already swapped with JRE8!",
       "gameVersionReq": "",
-      "authors": "Yumihime",
+      "authors": "Himemi",
       "authorsList": [
-        "Yumihime"
+        "Himemi"
       ],
       "link": "https://drive.google.com/uc?id=1tO6rxVPQQS4ICgWNzHUFbjiPa6AgXYhQ&export=download",
       "urls": {
@@ -5150,10 +5150,10 @@
       "summary": "https://fossic.oss.jnxyp.cn/forum/202108/21/201548nb62uv5u.gif\nForum Link: https://fractalsoftworks.com/forum/index.php?topic=24580.0",
       "description": "https://fossic.oss.jnxyp.cn/forum/202108/21/201548nb62uv5u.gif\nForum Link: https://fractalsoftworks.com/forum/index.php?topic=24580.0\nMod that adds Touhou-inspired ships and hullmods to the game, in a faction called \"Gensoukyou Manufacture\"\nDownload Link: https://drive.google.com/uc?id=1TtNGjlXrf84c_yPMH_mnItrhz7RVdOQJ&export=download\n```\nFeaturing:\n-Touhou-inspired energy weapons and unique Sky Serpent missile\n-Recruitable officer Reimu with a skill unique to her\n-Star system called \"Gensoukyou\" with 4 planets (Hakurei, Kirisame, Blazing Hell, Inverted Castle)\n-8 faction-only hullmods\n-6 frigates, 6 destroyers, 5 cruisers, 2 capital ships\n-7 fighter wings\n-4 new missions\n```",
       "gameVersionReq": "0.95.1a",
-      "authors": "Yumihime",
+      "authors": "Himemi",
       "authorsList": [
-        "Himemiko",
-        "Yumihime"
+        "Himemi",
+        "Himemiko"
       ],
       "link": "https://drive.google.com/uc?id=1TtNGjlXrf84c_yPMH_mnItrhz7RVdOQJ&export=download",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24580.0",
@@ -5615,18 +5615,18 @@
       "images": {}
     },
     {
-      "name": "HMI Supervillains 0.0.3a: Luddic Experimental Completely Actually Reworked Ed.",
+      "name": "HMI Supervillains 0.0.4: Mini-Beta-Campaign-Layer-Update",
       "summary": "The Draco Group and the Fang Society are two truly deranged factions that inhabit the south-western part of the sector. Both organisations suffer from an obsession with gene-modding to go above conventional humanity in strength, speed, intelligence - and cruelty.",
-      "description": "The Draco Group and the Fang Society are two truly deranged factions that inhabit the south-western part of the sector. Both organisations suffer from an obsession with gene-modding to go above conventional humanity in strength, speed, intelligence - and cruelty.\n\nThe Draco Group, aristocratic and cold, harvest populations to imbibe their blood in their hedonistic rituals, reaving on high-speed high-tech ships from the system of Prester John. The Fang Society, animalistic and vicious, prey on defenseless peoples to consume, eat and torture, roaming the sector from heavily armoured ships.\n\nWhile their hatred for the Sector is well know, their loathing for each other is even greater. It is for this reason that their impact on the Sector at large is relatively minor, as they are more content to butcher each other.\n\n*0.0.3 Changes*\n\n-Fang Society now uses ~~the Luddic Experimental~~ a completely new and novel Damper Field system as a replacement for their shield; their hullmods now give less armour and less hull to compensate.\n-Draco Group now possesses a passive EMP arc system that zaps nearby enemies, with the zapping rate increasing with rising flux. Shields now take more damage, and the range clamp to 600 units is now more severe to compensate.\n-Fang and Draco now have rudimentary Nexerellin starting options\n\n*0.0.3a*\n-Fixed the Fang CTD\n-Fixed the Draco EMP hitting friendly missiles\n\n*Savegame Compatible*\n\n\nDOWNLOAD:\nhttps://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/HMI_Supervillains_0_0_3a.zip",
+      "description": "The Draco Group and the Fang Society are two truly deranged factions that inhabit the south-western part of the sector. Both organisations suffer from an obsession with gene-modding to go above conventional humanity in strength, speed, intelligence - and cruelty.\n\nThe Draco Group, aristocratic and cold, harvest populations to imbibe their blood in their hedonistic rituals, reaving on high-speed high-tech ships from the system of Prester John. The Fang Society, animalistic and vicious, prey on defenseless peoples to consume, eat and torture, roaming the sector from heavily armoured ships.\n\nWhile their hatred for the Sector is well know, their loathing for each other is even greater. It is for this reason that their impact on the Sector at large is relatively minor, as they are more content to butcher each other.\n\n*0.0.4 Changes*\n\n-Both Fang and Draco have had their markets beefed up, and their faction stats overhauled.\n-Added spicy boss-ish fleets to Phylum and Prestor John systems.\n-Added Two MagicBounties, giving you a chance to find and use some truly despicable boats.\n-Fiddled with a lot of the stats.\n-Lots of tiny little fixes.\n\n*Savegame Compatible, but beyond the MagicBounties you won't see new stuff without a new game*\n\nDOWNLOAD:\nhttps://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/HMI_Supervillains_0_0_4.zip",
       "gameVersionReq": "",
       "authors": "King Alfonzo",
       "authorsList": [
         "King Alfonzo"
       ],
-      "link": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/HMI_Supervillains_0_0_3a.zip",
+      "link": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/HMI_Supervillains_0_0_4.zip",
       "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/925289961626955816",
-        "DirectDownload": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/HMI_Supervillains_0_0_3a.zip"
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1011211183145111563",
+        "DirectDownload": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/HMI_Supervillains_0_0_4.zip"
       },
       "source": "Discord",
       "sources": [
@@ -5634,16 +5634,16 @@
       ],
       "categories": [],
       "images": {
-        "925289961983459338": {
-          "id": "925289961983459338",
+        "1011211183216410766": {
+          "id": "1011211183216410766",
           "filename": "supervillians.png",
           "content_type": "image/png",
           "size": 197073.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/925289961983459338/supervillians.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/925289961983459338/supervillians.png"
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1011211183216410766/supervillians.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1011211183216410766/supervillians.png"
         }
       },
-      "dateTimeCreated": "2021-12-28T07:31:57.908Z"
+      "dateTimeCreated": "2022-08-22T09:52:13.457Z"
     },
     {
       "name": "Half Maintenance Costs",
@@ -8326,9 +8326,9 @@
       "summary": "Original Post: https://discord.com/channels/187635036525166592/825068217361760306/905762234175725580\nOriginal Description:",
       "description": "Original Post: https://discord.com/channels/187635036525166592/825068217361760306/905762234175725580\nOriginal Description:\n```\nIt is what it says it is. Currently adds 32 portraits from MSG The Origin, MSG Hathaway, MSG Unicorn, and MS Zeta Gundam.\n\nNext on the list is Thunderbolt and Char's Counterattack.\n\nCompatible with ArmaA, FPE and The Star Federation.\n\nPlease no bulli Hathaway.\n\nCan be added to saves but will break them if removed.\n\nDM me character requests and I'll do my best to add them.\n```\nWhats Changed?\n1.0.1: Added Portrait Faction Compability for Gundam UC Mod v.0.1.0 mods, also bump version file to 0.95.1-rc6",
       "gameVersionReq": "",
-      "authors": "Yumihime",
+      "authors": "Himemi",
       "authorsList": [
-        "Yumihime"
+        "Himemi"
       ],
       "urls": {
         "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/946928926779928636",
@@ -12064,7 +12064,7 @@
       "name": "Stinger Shipyards",
       "summary": "A small but growing ship pack adding many ships along with 4 weapond and a new modular fighter wing!",
       "description": "Stinger Shipyards aims to fill many combat roles not filled by both vanilla and most other mods. From missile cruisers to drone carrier, you're guaranteed to find something that fits your fleet.\n<br />\n<br />The mod has been reviewed by Moshi, check it out!\n<br />[youtube]A9_Jlxw5s-o[/youtube]\n<br />\n<br />If you have any feedback, you can directly message me through discord, turkler#4348. Alternatively, you can find me in the [url=https://discord.gg/EWcH2P8JHv]Starport Corvus[/url] discord!\n<br />\n<br />List of ships, in the order of addition:\n<br />\n<br />[b]* Champion-class (c) Converted Battlecarrier -[/b] A carrier conversion of the baseline Champion hull, this modification gets rid of the large missile mount and two smaller front mounts in exchange of a fighter bay. The ship has been up-armored as well, even thought at the cost of acceleration and strafing speed.\n<br />\n<br />[b]* Lilim-class Missile Destroyer - [/b]The Lilim is a dedicated missile destroyer designed to provide a mobile platform for missile fire support. Being much more sluggish compared to other hulls of its size, the Lilim-class serves a great escort role as the hammer against the anvil. Despite the ship’s great performance as a support platform, it is rarely used in the post-Collapse sector due to the ship’s overbearing maintenance costs.\n<br />\n<br />[b]* Lilith-class Missile Cruiser - [/b]A missile-focused cruiser with a Paladin Point Defense System built-into the hull. Like it's sister ship Lilim, it's impressive firepower is only held back by it's fragile hull and it's overbearing maintenance costs.\n<br />\n<br />[b]* Brynhildr-class Missile Cruiser - [/b]An ancient ship pre-dating even the Onslaught-class battleships we see today, the Brynhildr is an ancient missile cruiser featuring robust construction and no modern shields. Instead, the Brynhildr is equipped with an integrated Damper Field of archaic design but tuned to modern standards. This allows the Brynhildr to shrug off what would otherwise be lethal damage during combat.\n<br />\n<br />[b]* Tartarus-class Missile Frigate -[/b] A favorite of pirates and private armies due to the missile support it can provide along with its non-demanding support profile, the ancient Tartarus-class frigates pack a respectable amount of missile firepower. The ship’s suprising agility allows a wise commander to shift missile support to wherever it is needed.\n<br />\n<br />[b]* Laplace-class Proximity Support Destroyer -[/b] The Laplace is a rare, experimental hull developed by the Tri-Tachyon Corporation in an attempt to weaponize the relatively niche Proximity Charge Launcher. The ship includes a unique Heavy Proximity Charge Launcher built into the hull, along with ordnance assembly facilities that can rearm its unique weapons during extended deployments.\n<br />\n<br />[b]* Adramelech-class Minelayer -[/b] The bigger sister of the Laplace-class, the Adramelech is a rare, experimental hull developed by the Tri-Tachyon Corporation in an attempt to weaponize the relatively weak Proximity Charge Launcher. The ship includes two unique Heavy Proximity Charge Launchers built into the hull, along with ordnance assembly facilities that can rearm its unique weapons during extended deployments. Vast amounts of hull space have been dedicated to the assembly and storage of the built-in phase mine deployment systems, leaving little room for other mounts.\n<br />\n<br />[b]* Morrigan-class Mining Frigate -[/b] The Morrigan is a remarkably simple and reliable dedicated mining frigate. Multiple post-collapse combat upgrades have been installed aboard the nimble frigate, including a particularly exotic one which allows its hardcoded LPC mining drones to overload their reactors and disable range limiters to engage in kamikaze attacks.\n<br />\n<br />[b]* Whiskey Pete-class Mining Auxiliary -[/b] The Whiskey Pete is a drone carrier designed to lead civilian mining operations. Featuring no modular fighter bays, the ship instead includes an array of drones designed to assist in cracking open asteroids which have been modified in cycles post-Collapse to assist during combat situations as well. Nonetheless, the Whiskey Pete is not a combat ship and works bests as a support ship behind the frontlines.\n<br />\n<br />[b]* Perigee-class Destroyer -[/b] The Perigee-class vessel is an effective mix of advanced scientific and military technologies, perfect for long-range exploration of hostile space. The ship features relatively flexible weapon mounts, allowing the ship to fill whatever role is needed in combat engagements. Although the ship excels at support roles it is nonetheless capable at any other role it might be given.\n<br />\n<br />[b]* Mora (DEMIL)-class Auxiliary Platform -[/b] An unmodified original civilian model before the Mora-class hulls were refitted into carriers, demilitarized variants of the Mora-class are still used by salvage crews and prospectors alike.\n<br />\n<br />[b]* Starliner (S)-class Civilian Liner -[/b] An unmodified original civilian model in pristine stock condition, this ship is a collector's item from a more civilized age.\n<br />\n<br />[b]* Jackass-class Combat Freighter  - [/b]An ancient combat superfreighter built to resupply fleets and outpost where combat engagements are expected. Being designed and built before the Colossus series of hulls, the ship lacks the efficiency and cost-effectiveness expected from freighters in the modern realities of the sector. Still, the ship's massive pressurized cargo holds are protected by heavy armor plating and an impressive amount of armaments letting the ship hold its own in combat, making it the ship a solid option for fleets requiring protection against the attention brought from transporting a large volume of cargo.\n<br />\n<br />[spoiler]Although automated machines of war were forbidden in core Domain space, war drones were quietly employed outside of officially incorporated volume. Frontier garrisons were often bolstered by drone ships, and they were deployed liberally against rebellious worlds to tip the terrible balance of attrition, setting the industrial might of the Domain versus the lives of 'freedom fighters'. The Stronghold drone is one of the heaviest drones deployed in drone units. Lacking most regular armament the Stronghold instead includes many missile-type weapon mounts to provide unmatched firepower in the few drone units which were expected to face the heaviest of resistance. Not being much more than a support platform meant that the Stronghold drones were anticipated to regularly be disabled in combat, so the heavy drone was designed with highly modular components which allowed badly damaged hulls to be rapidly cannibalized to repair lightly damaged hulls up to combat capacity without the need for shipyard facilities.[/spoiler]\n<br />\n<br />Along with new hulls, Stinger Shipyards introduces a new modular fighter wing into the sector as well:\n<br />\n<br />[b]* Peridot-class EMP Bomber - [/b]A technologically advanced fighter armed with a single Lapis Lazuli-class EMP torpedo. The payload is enough to knock out most weapon systems and severely cripple shield projectors.\n<br />\n<br />This mod also comes with a handful of new weapons;\n<br />\n<br />[b]* Mephisto CIWS Platform -[/b] A medium-range defensive weapon system that fires at an astonishing rate of a thousand rounds per minute. Standard ship armor is spaced and thus the small rounds fired from the Mephisto are only effective against small targets such as fighters and torpedoes.\n<br />\n<br />[b]* Spica Giga Launcher -[/b] A torpedo launcher designed to fire Giga-class torpedoes in two-round bursts. Makes up for its limited damage potentional with unmatched strike damage.\n<br />\n<br />[b]* Quadruple Giga - [/b]Quad launcher system capable of launching a devastating torpedo barrage. the Quadruple Giga-class torpedo platform offers a devastating four-launch burst of Giga-class torpedoes, but is held back by its hefty logistical profile and a disappointing damage potential during extended deployments due to a limited magazine size.",
-      "modVersion": "2.7.0-based",
+      "modVersion": "2.7.1-based",
       "authors": "turkler",
       "authorsList": [
         "turkler"
@@ -12088,7 +12088,7 @@
         }
       },
       "dateTimeCreated": "2022-04-17T22:04:27Z",
-      "dateTimeEdited": "2022-08-20T06:34:11Z"
+      "dateTimeEdited": "2022-08-22T16:03:51Z"
     },
     {
       "name": "Stop Gap Measure",
@@ -14705,5 +14705,5 @@
     }
   ],
   "totalCount": 529.0,
-  "lastUpdated": "2022-08-22T06:03:00Z"
+  "lastUpdated": "2022-08-22T18:04:00Z"
 }
