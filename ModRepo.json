@@ -1974,6 +1974,26 @@
       "dateTimeEdited": "2022-03-24T08:37:17.167Z"
     },
     {
+      "name": "BlockTags",
+      "summary": "*Currently incompatible with BDSM, because their scripts are uncompiled (but otherwise fully compatible).*",
+      "description": "*Currently incompatible with BDSM, because their scripts are uncompiled (but otherwise fully compatible).*\n\nWith BlockTags, all you need to make a vanilla hullmod incompatible with one of your own is a tag with the vanilla hullmod's id, and \"_block\" at the end of it.\n\nTwo mods because vanilla's loose script hullmods need to be compiled, but also need to be loaded *first* so mods like BDSM can overwrite them.\n\n(Please tell me if I missed any vanilla incompatibilities, I had a headache by the end of this so my concetration wasn't the greatest.)",
+      "gameVersionReq": "",
+      "authors": "Yunru",
+      "authorsList": [
+        "Yunru"
+      ],
+      "urls": {
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1025860814932033606"
+      },
+      "source": "Discord",
+      "sources": [
+        "Discord"
+      ],
+      "categories": [],
+      "images": {},
+      "dateTimeCreated": "2022-10-01T20:04:37.852Z"
+    },
+    {
       "name": "Blockade Heavy Cruiser v0.11",
       "summary": "Adds a heavy cruiser with not one, but **two** TPCs! What more could you want?",
       "description": "Adds a heavy cruiser with not one, but **two** TPCs! What more could you want?\n\nNow featuring: less guns! Yes! Less of them! You already have enough you greedy guts\nForum: https://fractalsoftworks.com/forum/index.php?topic=24453.0\nLink: https://drive.google.com/file/d/1LYMIUQsZW0_C3KP-EcHiVnO0NGZS6GfI/view?usp=sharing",
@@ -8688,7 +8708,7 @@
     {
       "name": "More Planetary Conditions",
       "summary": "Adds a number of custom planetary conditions, each with their own unique mechanics, scripting, and behavior, that hopefully set them apart from everything else.",
-      "description": "Adds a number of custom planetary conditions, each with their own unique mechanics, scripting, and behavior, that hopefully set them apart from everything else.\n\nThis has been tested SOMEWHAT thoroughly. I don't expect it to break critically, but expect some jank!\n\nProbably not safe to put in a existing save. I mean, it won't even generate the conditions.\nProbably save compatable with previous versions, but I'm not 100% sure.\n\n```\nChangelog\n\n1.0.3\nAdded a few config options for enabling/disabling a few features\nReworked some of the backend\nSatellites now always defend markets and stations if you interact with them\nUpgraded debugging\nMore station compatibility\n```\nIf you want to quickly experience the satellites, make a new game and run FindPlanetsWithConditionId niko_MPC_antiAsteroidSatellites , then go to a provided location.\n\nhttps://fractalsoftworks.com/forum/index.php?topic=25205",
+      "description": "Adds a number of custom planetary conditions, each with their own unique mechanics, scripting, and behavior, that hopefully set them apart from everything else.\n\nTested to a good extent, although there are still reports of strange gamebreaking bugs, albiet very rare and unreplicable. I'd say it's safe to use, but be cautious.\n\nProbably not safe to put in a existing save. I mean, it won't even generate the conditions.\nNot compatable with previous versions.\n\n```\nChangelog\n\n1.0.4\nINCOMPATABLE WITH PREVIOUS SAVES\n\nAdded a few config options for discovering every satellite at once\nAdded a stopgap for the satellite fleet drift issue by forcing the satellite fleet on fleets interacting with the planet to orbit the planet\nImproved station digging code so that it almost always finds the satellite entity and returns important data, even if the entity we interact with isnt a station\nAdded a lot more debug code that should hopefully catch and resolve scenarios where entity is null apon application of the satellite condition\nImproved code for fighting your own faction's satellites to use a better method\nIncreased satellite sensor profile to 3 from 1\n\nBackend:\nDocumented campaignplugin heavily\nMisc documentation and annotations\nMisc nullchecks\nMisc naming improvements\nDeleted unneccessary files, renamed a few to be more descriptive and accurate\n```\nIf you want to quickly experience the satellites, make a new game and run FindPlanetsWithConditionId niko_MPC_antiAsteroidSatellites , then go to a provided location.\n\nhttps://fractalsoftworks.com/forum/index.php?topic=25205",
       "gameVersionReq": "0.95.1a",
       "authors": "NikoTheGuyDude",
       "authorsList": [
@@ -8699,7 +8719,7 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=25205",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25205.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1025477333613822023",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1025870615606997052",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=25205"
       },
       "source": "Index",
@@ -8712,7 +8732,7 @@
         "Miscellaneous Mods"
       ],
       "images": {},
-      "dateTimeCreated": "2022-09-30T18:40:48.781Z"
+      "dateTimeCreated": "2022-10-01T20:43:34.515Z"
     },
     {
       "name": "More Ship Names",
@@ -15044,6 +15064,6 @@
       "dateTimeEdited": "2021-08-16T19:28:49.716Z"
     }
   ],
-  "totalCount": 538.0,
-  "lastUpdated": "2022-10-01T18:03:00Z"
+  "totalCount": 539.0,
+  "lastUpdated": "2022-10-02T06:03:00Z"
 }
