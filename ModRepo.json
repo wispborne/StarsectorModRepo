@@ -8688,7 +8688,7 @@
     {
       "name": "More Planetary Conditions",
       "summary": "Adds a number of custom planetary conditions, each with their own unique mechanics, scripting, and behavior, that hopefully set them apart from everything else.",
-      "description": "Adds a number of custom planetary conditions, each with their own unique mechanics, scripting, and behavior, that hopefully set them apart from everything else.\n\nTested to a good extent, although there are still reports of strange gamebreaking bugs, albiet very rare and unreplicable. I'd say it's safe to use, but be cautious.\n\nProbably not safe to put in a existing save. I mean, it won't even generate the conditions.\nNot compatable with previous versions.\n\n```\nChangelog\n\n1.0.4\nINCOMPATABLE WITH PREVIOUS SAVES\n\nAdded a few config options for discovering every satellite at once\nAdded a stopgap for the satellite fleet drift issue by forcing the satellite fleet on fleets interacting with the planet to orbit the planet\nImproved station digging code so that it almost always finds the satellite entity and returns important data, even if the entity we interact with isnt a station\nAdded a lot more debug code that should hopefully catch and resolve scenarios where entity is null apon application of the satellite condition\nImproved code for fighting your own faction's satellites to use a better method\nIncreased satellite sensor profile to 3 from 1\n\nBackend:\nDocumented campaignplugin heavily\nMisc documentation and annotations\nMisc nullchecks\nMisc naming improvements\nDeleted unneccessary files, renamed a few to be more descriptive and accurate\n```\nIf you want to quickly experience the satellites, make a new game and run FindPlanetsWithConditionId niko_MPC_antiAsteroidSatellites , then go to a provided location.\n\nhttps://fractalsoftworks.com/forum/index.php?topic=25205",
+      "description": "Adds a number of custom planetary conditions, each with their own unique mechanics, scripting, and behavior, that hopefully set them apart from everything else.\n\nTested to a good extent, although there are still reports of strange gamebreaking bugs, albiet very rare and unreplicable. I'd say it's safe to use, but be cautious.\n\nProbably not safe to put in a existing save. I mean, it won't even generate the conditions.\n\n```\nChangelog\n\n1.0.5\n\nHOPEFULLY SAVE COMPATBLE\n\nLaid very initial groundwork for next condition\nMade a workaround for a bug that caused a crash when a game was loaded\n```\nIf you want to quickly experience the satellites, make a new game and run FindPlanetsWithConditionId niko_MPC_antiAsteroidSatellites , then go to a provided location.\n\nhttps://fractalsoftworks.com/forum/index.php?topic=25205",
       "gameVersionReq": "0.95.1a",
       "authors": "NikoTheGuyDude",
       "authorsList": [
@@ -8699,7 +8699,7 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=25205",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25205.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1025870615606997052",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1026326735907733575",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=25205"
       },
       "source": "Index",
@@ -8712,7 +8712,7 @@
         "Miscellaneous Mods"
       ],
       "images": {},
-      "dateTimeCreated": "2022-10-01T20:43:34.515Z"
+      "dateTimeCreated": "2022-10-03T02:56:02.069Z"
     },
     {
       "name": "More Ship Names",
@@ -11050,8 +11050,6 @@
     },
     {
       "name": "Scrapyard Armories",
-      "summary": "\"A ship and weapon pack of kitbashed and mostly balanced starships and weaponry, meme tips, and a few portraits\"\nMaybe save compatible?",
-      "description": "\"A ship and weapon pack of kitbashed and mostly balanced starships and weaponry, meme tips, and a few portraits\"\nMaybe save compatible?\n```Fixed faction files\n(Hopefully) Fixed Linux crashes due to inconsistent capitalization\nAdded Polyphemus Class Augmented Cruiser\nAdded Panoptes Class Bomber Wing\nAlmas\n-Added Automated Subsystems\n-Armor reduced from 950 to 800\n-Hull reduced from 6500 to 6000\nShoggoth\n-Added Automated Subsystems\nAdded Automated Subsystems hullmod, massive help from Harmful Mechanic, Lukas04, Wisp, and Lortus on making it run\nAdded Infernium Ejector, a hybrid slot radiation cannon utilized by pirates and pathers\nAdded Hypermatter Condenser, An extremely energetic crystal used as the focal point of a laser assembly to shred armor```\n\nIf you have any issues or feedback please let me know!\n**Forum**\nhttps://fractalsoftworks.com/forum/index.php?topic=25165.0\n**Direct**\nhttps://github.com/Fellout2/Scrapyard-Armories-0.0.2/raw/main/Scrapyard%20Armories.zip",
       "gameVersionReq": "0.95.1a",
       "authors": "Fellout",
       "authorsList": [
@@ -11060,22 +11058,39 @@
       "link": "https://fractalsoftworks.com/forum/index.php?topic=25165.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=25165.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25165.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1020564824465350666",
-        "DirectDownload": "https://github.com/Fellout2/Scrapyard-Armories-0.0.2/raw/main/Scrapyard%20Armories.zip",
-        "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=25165.0"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25165.0"
       },
       "source": "Index",
       "sources": [
         "Index",
-        "ModdingSubforum",
-        "Discord"
+        "ModdingSubforum"
       ],
       "categories": [
         "Content Expansions"
       ],
+      "images": {}
+    },
+    {
+      "name": "Scrapyard Armories 0.0.9a An Attempt to Hotfix",
+      "summary": "0.0.9a Hotfixings\n-Fixed overscaled mount on Shoggoth",
+      "description": "0.0.9a Hotfixings\n-Fixed overscaled mount on Shoggoth\n-Attempted to fix Linux crashes again\nMaybe save compatible?\n0.0.9\n```Fixed faction files\n(Hopefully) Fixed Linux crashes due to inconsistient capitalization\nAdded Polyphemus Class Augmented Cruiser\nAdded Panoptes Class Bomber Wing\nAlmas\n-Added Automated Subsystems\n-Armor reduced from 950 to 800\n-Hull reduced from 6500 to 6000\nShoggoth\n-Added Automated Subsystems\nAdded Automated Subsystems hullmod, massive help from Harmful Mechanic, Lukas04, Wisp, and Lortus on making it run\nAdded Infernium Ejector, a hybrid slot radition cannon utilized by pirates and pathers\nAdded Hypermatter Condenser, An extremely energetic crystal used as the focal point of a laser assembly to shred armor```\n\nIf you have any issues or feedback please let me know!\nhttps://github.com/Fellout2/Scrapyard-Armories-0.0.2/raw/main/Scrapyard%20Armories.zip",
+      "gameVersionReq": "",
+      "authors": "Fellout",
+      "authorsList": [
+        "Fellout"
+      ],
+      "link": "https://github.com/Fellout2/Scrapyard-Armories-0.0.2/raw/main/Scrapyard%20Armories.zip",
+      "urls": {
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1026294141656764447",
+        "DirectDownload": "https://github.com/Fellout2/Scrapyard-Armories-0.0.2/raw/main/Scrapyard%20Armories.zip"
+      },
+      "source": "Discord",
+      "sources": [
+        "Discord"
+      ],
+      "categories": [],
       "images": {},
-      "dateTimeCreated": "2022-09-17T05:20:15.33Z"
+      "dateTimeCreated": "2022-10-03T00:46:30.994Z"
     },
     {
       "name": "Scy",
@@ -11681,8 +11696,7 @@
       },
       "source": "Index",
       "sources": [
-        "Index",
-        "ModdingSubforum"
+        "Index"
       ],
       "categories": [
         "Utility mods"
@@ -11848,7 +11862,7 @@
     {
       "name": "Special Hullmod Upgrades v1.1",
       "summary": "Enables the installation of colony items on your ship through hullmod. It gives more usability for these items and options for those who doesn't play the colony game.",
-      "description": "Enables the installation of colony items on your ship through hullmod. It gives more usability for these items and options for those who doesn't play the colony game.\n\n**Requires LazyLib and MagicLib.**\n\n**Requires a new save.**\n*Redownload it if the version checker crashes your game.*\n```\nHow to obtain:\n- Visit Port Tse Franchise Station at Mayasura star system and look out for the academician drinking in the bar.\n- Simply reach level 9 or above and bring at least 100k credits.\n```\n**Forum Post:**\nhttps://fractalsoftworks.com/forum/index.php?topic=25424.0\n\n**Changelog:**\nhttps://github.com/CremeDeFramboise/Special-Hullmod-Upgrades/releases/tag/v1.1\n\n**Download:**\nhttps://github.com/CremeDeFramboise/Special-Hullmod-Upgrades/releases/download/v1.1/Special.Hullmod.Upgrades.zip",
+      "description": "Enables the installation of colony items on your ship through hullmod. It gives more usability for these items and options for those who doesn't play the colony game.\n\n**Requires LazyLib and MagicLib.**\n\n**Requires a new save.**\n*Redownload it if the version checker crashes your game.*\n\n```\nHow to obtain:\n- Visit Port Tse Franchise Station at Mayasura star system and look out for the academician drinking in the bar.\n- Simply reach level 9 or above and bring at least 100k credits.\n```\n**Forum Post:**\nhttps://fractalsoftworks.com/forum/index.php?topic=25424.0\n\n**Changelog:**\nhttps://github.com/CremeDeFramboise/Special-Hullmod-Upgrades/releases/tag/v1.1\n\n**Download:**\nhttps://github.com/CremeDeFramboise/Special-Hullmod-Upgrades/releases/download/v1.1/Special.Hullmod.Upgrades.zip",
       "gameVersionReq": "0.95.1a",
       "authors": "Mayu",
       "authorsList": [
@@ -11879,7 +11893,7 @@
         }
       },
       "dateTimeCreated": "2022-10-02T14:33:04.024Z",
-      "dateTimeEdited": "2022-10-02T15:25:32.807Z"
+      "dateTimeEdited": "2022-10-03T04:35:19.357Z"
     },
     {
       "name": "SpeedUp",
@@ -12446,41 +12460,6 @@
         "Utility mods"
       ],
       "images": {}
-    },
-    {
-      "name": "Sunrider x Starsector [0.95.1a] 0.2.1 patch",
-      "summary": "`What is \"Sunrider?\" - A game franchise, by Love in Space inc. All I did was a mod to starsector that adds a few of their ships and mech fighters. Part of Love in Space staff is aware of the existence of this mod and they are fine with it!`",
-      "description": "`What is \"Sunrider?\" - A game franchise, by Love in Space inc. All I did was a mod to starsector that adds a few of their ships and mech fighters. Part of Love in Space staff is aware of the existence of this mod and they are fine with it!`\n\n`If you have any questions, check forum post or feel free to dm/ping me.`\n`Requires: MagicLib, LazyLib and GraphicsLib;`\n`Has Custom Battle Music integration;`\n`WhichMod recommended too;`\n\n`Known issues`\n`Only Sunrider herself and PACT Battleship have finished sprites;`\n`If Jinta Suzuki tells you that the derelict is in an inhabited system (pirate and pather bases do not count), it will not spawn.`\n\n**Safe to add to an ongoing save, but updating from previous versions OR removing will break saves!**\n\nPlease, refer to forum page for changelog:  <https://fractalsoftworks.com/forum/index.php?topic=24274.0>\n\n||45 minutes later: I have 0/10 memory and forgot a little detail that could be mildly annoying, but it's fixed||",
-      "gameVersionReq": "0.95.1a",
-      "authors": "Alex Sans",
-      "authorsList": [
-        "Alex Sans"
-      ],
-      "link": "https://fractalsoftworks.com/forum/index.php?topic=24274.0",
-      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24274.0",
-      "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24274.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1023767465995546644",
-        "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=24274.0"
-      },
-      "source": "Discord",
-      "sources": [
-        "ModdingSubforum",
-        "Discord"
-      ],
-      "categories": [],
-      "images": {
-        "1023767465701953597": {
-          "id": "1023767465701953597",
-          "filename": "unknown.png",
-          "content_type": "image/png",
-          "size": 109763.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1023767465701953597/unknown.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1023767465701953597/unknown.png"
-        }
-      },
-      "dateTimeCreated": "2022-09-26T01:26:24.573Z",
-      "dateTimeEdited": "2022-09-26T02:15:06.544Z"
     },
     {
       "name": "Super Cool Factions",
@@ -13072,6 +13051,44 @@
       "categories": [
         "Faction Mods"
       ],
+      "images": {}
+    },
+    {
+      "name": "The Sunrider",
+      "gameVersionReq": "0.95.1a",
+      "authors": "Alex_Sans",
+      "authorsList": [
+        "Alex_Sans"
+      ],
+      "link": "https://fractalsoftworks.com/forum/index.php?topic=24274.0",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24274.0",
+      "urls": {
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24274.0"
+      },
+      "source": "ModdingSubforum",
+      "sources": [
+        "ModdingSubforum"
+      ],
+      "categories": [],
+      "images": {}
+    },
+    {
+      "name": "The Vass, Time-Manipulating mini \"faction\" (hotfix 31/12)",
+      "gameVersionReq": "0.8.1a",
+      "authors": "Nicke535",
+      "authorsList": [
+        "Nicke535"
+      ],
+      "link": "https://fractalsoftworks.com/forum/index.php?topic=13170.0",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=13170.0",
+      "urls": {
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=13170.0"
+      },
+      "source": "ModdingSubforum",
+      "sources": [
+        "ModdingSubforum"
+      ],
+      "categories": [],
       "images": {}
     },
     {
@@ -15048,6 +15065,6 @@
       "dateTimeEdited": "2021-08-16T19:28:49.716Z"
     }
   ],
-  "totalCount": 538.0,
-  "lastUpdated": "2022-10-02T18:03:00Z"
+  "totalCount": 540.0,
+  "lastUpdated": "2022-10-03T06:03:00Z"
 }
