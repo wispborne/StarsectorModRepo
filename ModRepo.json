@@ -1286,9 +1286,8 @@
     },
     {
       "name": "Autosave",
-      "summary": "This mod reminds you when you haven't saved in a while, and can optionally save automatically for you.",
-      "description": "This mod will warn you when you haven't saved in a while, and give a short description of how much has happened since your last save. By default it won't force a save (as Starsector's saving process can take quite a while with many mods installed), but you can enable autosaves by editing [i]saves/common/lw_autosave_settings.json.data[/i] after running the mod once.",
-      "modVersion": "1.1c",
+      "summary": "This adds support for autosaves after every hyperspace jump, lets you make each autosave use its own save slot, and cleans up the code a bit.",
+      "description": "This adds support for autosaves after every hyperspace jump, lets you make each autosave use its own save slot, and cleans up the code a bit.",
       "gameVersionReq": "0.95.1a",
       "authors": "LazyWizard",
       "authorsList": [
@@ -1300,29 +1299,19 @@
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=9748.0",
         "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/996397065477300265",
-        "NexusMods": "https://www.nexusmods.com/starsector/mods/5",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=9748.msg369707#msg369707"
       },
       "source": "Index",
       "sources": [
         "Index",
         "ModdingSubforum",
-        "Discord",
-        "NexusMods"
+        "Discord"
       ],
       "categories": [
-        "Factions",
         "Utility mods"
       ],
-      "images": {
-        "banner": {
-          "id": "https://staticdelivery.nexusmods.com/mods/2672/images/5/5-1544658281-1546571089.png",
-          "filename": "https://staticdelivery.nexusmods.com/mods/2672/images/5/5-1544658281-1546571089.png",
-          "url": "https://staticdelivery.nexusmods.com/mods/2672/images/5/5-1544658281-1546571089.png"
-        }
-      },
-      "dateTimeCreated": "2018-12-12T23:45:08Z",
-      "dateTimeEdited": "2021-10-04T00:30:48Z"
+      "images": {},
+      "dateTimeCreated": "2022-07-12T12:46:12.572Z"
     },
     {
       "name": "Azur Lane Portrait Pack",
@@ -2803,9 +2792,6 @@
     },
     {
       "name": "Common Radar",
-      "summary": "This mod adds a simple, classically-styled radar to the combat interface.",
-      "description": "This mod adds a simple radar to the combat user interface.\n<br />\n<br />[size=4][b]Legend:[/b][/size]\n<br />[list]\n<br />[*][b]Zoom level[/b] is shown as four small white lines perpendicular to the cardinal directions. How close they are to the radar's center depends on the current zoom level. Zoom is controlled with [b]+/-[/b].\n<br />[*][b]Ships[/b] are drawn as solid-colored shapes. Phased ships will appear faded on the radar, and your ship's current target will have a white marker drawn around it.\n<br />[*][b]Shields[/b] will have their active arcs shown in blue.\n<br />[*][b]Missiles[/b] are small colored dots; purple for enemy missiles, dark green for allied ones. \n<br />The brightness of the dot varies based on how much damage that missile deals, so an Atropos torpedo (2,000 damage) is much more noticeable than an Annihilator swarm (200 damage each). Missiles that are locked onto the player ship are colored orange. Missiles that have burnt out are considered enemies as they can hit either side at that point.[*][b]Missile lock status[/b] is displayed at the top left of the radar box. If any guided missiles are in view and locked onto the player \n<br />ship, an orange missile icon will appear here. The brightness of this icon depends on the most threatening missile currently locked on.[*][b]Asteroids[/b] are small white dots.\n<br />[*][b]Objectives[/b] are large hollow diamonds.\n<br />[*][b]Retreat areas[/b] are shaded yellow.\n<br />[*][b]Map borders[/b] are shown as red lines, with a gray void beyond to show inaccessible areas.\n<br />[*][b]Combat readiness[/b] for the player ship is shown as a vertical bar to the right of the radar. Current CR is shown in [b][color=#00ffff]cyan[/color][/b], CR lost in the current battle in [b][color=#0000ff]dark blue[/color][/b], and unobtained CR in [b][color=#404040]dark gray[/color][/b]. The bar will slowly flash if you are currently losing CR and flash \n<br />faster as malfunction risk rises. For ships that don't lose CR this bar will be faded to be less obtrusive. If you are playing in campaign, your ship's maximum CR given the current captain and crew is shown as a horizontal white line.[*][b]Battle progress[/b] is shown as a bar along the bottom of the radar. It's based on the fleet points remaining on each side, so the larger the \n<br />green portion is, the closer to victory you are. Allied ships are shown as a darker portion of each side's bar. A side's portion of the bar will flash if they are in full retreat. The relative fleet strengths at battle start is shown as a vertical white line so you can quickly tell if you're doing better than your opponent.[/list]",
-      "modVersion": "2.5b",
       "gameVersionReq": "0.9.1a",
       "authors": "LazyWizard",
       "authorsList": [
@@ -2814,28 +2800,17 @@
       "link": "https://fractalsoftworks.com/forum/index.php?topic=7526.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=7526.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=7526.0",
-        "NexusMods": "https://www.nexusmods.com/starsector/mods/4"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=7526.0"
       },
       "source": "Index",
       "sources": [
         "Index",
-        "ModdingSubforum",
-        "NexusMods"
+        "ModdingSubforum"
       ],
       "categories": [
-        "Factions",
         "Utility mods"
       ],
-      "images": {
-        "banner": {
-          "id": "https://staticdelivery.nexusmods.com/mods/2672/images/4/4-1544733400-229016397.png",
-          "filename": "https://staticdelivery.nexusmods.com/mods/2672/images/4/4-1544733400-229016397.png",
-          "url": "https://staticdelivery.nexusmods.com/mods/2672/images/4/4-1544733400-229016397.png"
-        }
-      },
-      "dateTimeCreated": "2018-12-12T23:35:37Z",
-      "dateTimeEdited": "2020-08-29T04:48:12Z"
+      "images": {}
     },
     {
       "name": "Concord",
@@ -2882,9 +2857,6 @@
     },
     {
       "name": "Console Commands",
-      "summary": "An unofficial developer's console for Starsector.",
-      "description": "This mod adds a developer's console to Starsector that can be summoned with [b]control+backspace[/b]. This (along with many other settings) can be changed by running the Settings command. Other mods can add their own console commands or override base commands; instructions for adding custom commands can be found in a document in the root of the mod folder.\n<br />\n<br />A list of commands that work in the current game context can be found with \"help\", or a full list of commands with \"help all\". Multiple commands can be run by separating them with a semicolon (;), and a new line can be started with shift+enter.\n<br />\n<br />This mod should be compatible with all other mods, and can be added to or removed from a save at any time.",
-      "modVersion": "2021.12.25",
       "gameVersionReq": "0.95a",
       "authors": "LazyWizard",
       "authorsList": [
@@ -2896,29 +2868,19 @@
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=4106.0",
         "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/924478468182388796",
-        "NexusMods": "https://www.nexusmods.com/starsector/mods/2",
         "DirectDownload": "https://github.com/LazyWizard/console-commands/releases/download/dev-2021-12-25/Console_Commands_2021.12.25.zip"
       },
       "source": "Index",
       "sources": [
         "Index",
         "ModdingSubforum",
-        "Discord",
-        "NexusMods"
+        "Discord"
       ],
       "categories": [
-        "Factions",
         "Utility mods"
       ],
-      "images": {
-        "banner": {
-          "id": "https://staticdelivery.nexusmods.com/mods/2672/images/2/2-1544656787-212403408.png",
-          "filename": "https://staticdelivery.nexusmods.com/mods/2672/images/2/2-1544656787-212403408.png",
-          "url": "https://staticdelivery.nexusmods.com/mods/2672/images/2/2-1544656787-212403408.png"
-        }
-      },
-      "dateTimeCreated": "2018-12-12T23:20:05Z",
-      "dateTimeEdited": "2021-12-26T02:07:52Z"
+      "images": {},
+      "dateTimeCreated": "2021-12-26T01:47:22.794Z"
     },
     {
       "name": "Content Unlocking Missions",
@@ -3335,25 +3297,33 @@
       "dateTimeCreated": "2022-08-09T17:09:40.548Z"
     },
     {
-      "name": "DevUtils V1.2 (Most features require a new save)",
-      "summary": "A small Quality of Life mod that focuses on giving Mod Developers an overview of Campaign Data and some conveniences when working within the Campaign layer of the game.\nNot recommended for non-modders, if you look to cheat, use Console Commands instead.",
-      "description": "A small Quality of Life mod that focuses on giving Mod Developers an overview of Campaign Data and some conveniences when working within the Campaign layer of the game.\nNot recommended for non-modders, if you look to cheat, use Console Commands instead.\n\n**Content**\n-> Configureable Devmode Hotkey (data/config/modSettings.json)\n-> Intel Windows of Loaded Factions and all of their Content (With Buttons to spawn their Ships/Weapons/Hullmods in).\n-> Intel Window of all Planets, Entities and Fleets within a Starsystem, displaying all of their internal values.\n\n**Changelog**\n-> Intel windows are a bit more dynamic, before you had to re-enter a system to include newly spawned entities.\n-> Added Intel Windows for Entities and Ships within a system.\n-> System and Fleets show their attached Scripts.\n-> Changed Planet Icons to use the planets texture.\n\nNote: Factions without either ships, weapons or hullmods wont appear in the faction panel.",
+      "name": "DevUtils V1.3 (Requires new Save)",
+      "summary": "A Quality of Life mod that focuses on giving Mod Developers an overview of Campaign Data and some conveniences when working within the Campaign layer of the game.\nNot recommended for non-modders, if you look to cheat, use Console Commands instead.",
+      "description": "A Quality of Life mod that focuses on giving Mod Developers an overview of Campaign Data and some conveniences when working within the Campaign layer of the game.\nNot recommended for non-modders, if you look to cheat, use Console Commands instead.\n\n**Content**\n-> Configureable Devmode Hotkey (data/config/modSettings.json)\n-> A large amount of Intel windows displaying everything from memory, tags, scripts and more for all either fleets, custom entities or factions.\n-> Ability to cheat in all ships/weapons/hullmods of all faction or a selected one\n\n**Changelog**\n-> Added an Intel Window for sector-wide Listeners, Intel and Everyframe Scripts.\n-> Added an intel window that lets you filter through all fleets, custom entities and planets in the sector.\n-> DevUtils intel windows are now hidden if not in devmode, can be configured in the modSettings file.",
       "gameVersionReq": "",
       "authors": "Lukas04",
       "authorsList": [
         "Lukas04"
       ],
       "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1033561991425564702"
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1034987673267478529"
       },
       "source": "Discord",
       "sources": [
         "Discord"
       ],
       "categories": [],
-      "images": {},
-      "dateTimeCreated": "2022-10-23T02:06:21.409Z",
-      "dateTimeEdited": "2022-10-23T02:37:53.298Z"
+      "images": {
+        "1034987672587993088": {
+          "id": "1034987672587993088",
+          "filename": "unknown.png",
+          "content_type": "image/png",
+          "size": 1410988.0,
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1034987672587993088/unknown.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1034987672587993088/unknown.png"
+        }
+      },
+      "dateTimeCreated": "2022-10-27T00:31:30.448Z"
     },
     {
       "name": "Diable Avionics",
@@ -6846,9 +6816,8 @@
     },
     {
       "name": "LazyLib",
-      "summary": "LazyLib is a library required by most other Starsector mods.",
-      "description": "LazyLib is not a regular mod. It doesn't add any ships, weapons or factions. In fact, it doesn't change anything at all in your game! All it does is make writing code for mods easier. It contains methods to deal with otherwise complicated tasks like collision detection and formatted sector messages, among many other things.\n<br />\n<br />Some mods may require LazyLib to run. If you are ever running a mod and get an error along the lines of 'Imported class \"org.lazywizard.lazylib.&lt;whatever&gt;\" could not be loaded', then this mod is required. Just make sure you have the latest version installed and that it is tagged in the launcher and everything should work.\n<br />\n<br />[b][size=4]Installation Instructions[/size][/b]\n<br />\n<br />This is installed the same way as a normal mod. Simply extract the zip into your mods folder and tag it in the launcher. As this mod does nothing until its classes are called, there is no harm in leaving it tagged in the launcher at all times even if your currently active mods don't require it.",
-      "modVersion": "2.7b",
+      "summary": "Thread: https://fractalsoftworks.com/forum/index.php?topic=5444.0",
+      "description": "Thread: https://fractalsoftworks.com/forum/index.php?topic=5444.0\nDirect download: https://github.com/LazyWizard/lazylib/releases/download/2.7b/LazyLib.2.7b.zip",
       "gameVersionReq": "0.95.1a",
       "authors": "LazyWizard",
       "authorsList": [
@@ -6860,29 +6829,19 @@
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=5444.0",
         "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/918955026070794320",
-        "NexusMods": "https://www.nexusmods.com/starsector/mods/1",
         "DirectDownload": "https://github.com/LazyWizard/lazylib/releases/download/2.7b/LazyLib.2.7b.zip",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=5444.0"
       },
       "source": "Index",
       "sources": [
         "Index",
-        "Discord",
-        "NexusMods"
+        "Discord"
       ],
       "categories": [
-        "Factions",
         "Libraries"
       ],
-      "images": {
-        "banner": {
-          "id": "https://staticdelivery.nexusmods.com/mods/2672/images/1/1-1544644560-1375850005.png",
-          "filename": "https://staticdelivery.nexusmods.com/mods/2672/images/1/1-1544644560-1375850005.png",
-          "url": "https://staticdelivery.nexusmods.com/mods/2672/images/1/1-1544644560-1375850005.png"
-        }
-      },
-      "dateTimeCreated": "2018-12-12T23:07:22Z",
-      "dateTimeEdited": "2021-12-10T20:00:24Z"
+      "images": {},
+      "dateTimeCreated": "2021-12-10T19:59:11.574Z"
     },
     {
       "name": "Leading Pip",
@@ -7467,36 +7426,6 @@
       },
       "dateTimeCreated": "2022-05-09T06:55:30.056Z",
       "dateTimeEdited": "2022-05-09T06:55:55.18Z"
-    },
-    {
-      "name": "MagicLib",
-      "summary": "The goal of MagicLib is to create an Open Source, community driven \"library\" of useful (and well documented) scripts and plugins that can be leveraged and contributed to by every modder.",
-      "description": "[url=http://starsector.wikia.com/wiki/MagicLib]The functions are fully documented here.[/url]\n<br />\n<br />[url=https://bitbucket.org/CodingTartiflette/magiclib]And you can contribute to the public repository here.[/url]\n<br />\n<br />[url=http://fractalsoftworks.com/forum/index.php?topic=13718]Link to the forum Thread to report issues or suggest additions.[/url]\n<br />[size=4]\n<br />[/size][size=5][b]Curent content:[/b][/size]\n<br />\n<br />[u][size=4][b]Functions   \n<br />[/b][/size][/u]\n<br />    [b]MagicSettings[/b] \n<br />Offers classes to load merged settings and lists from a shared modSettings.json file. Intended to make cross-mod integration and compatibility much easier to manage.\n<br />\n<br />    [b]MagicIncompatibleHullmod[/b]\n<br />A uniform solution for the \"incompatible hullmod\" issue with vanilla hullmods.\n<br />\n<br />    [b]MagicInterference[/b]\n<br />Adds a cross-mod mechanic to balance very powerful weapons.\n<br />\n<br />    [b]MagicAnim[/b]\n<br />A collection of functions to make smooth animations. \n<br />\n<br />    [b]MagicFakeBeam[/b]\n<br />Creates convincing punctual beams from arbitrary coordinates. \n<br />\n<br />    [b]MagicLensFlare[/b]\n<br />Creates \"cinematic\" lens flares.\n<br />\n<br />    [b]MagicRender[/b]\n<br />Draw arbitrary sprites on-screen with constraints to entities/camera when needed. (aka \"SpriteRenderManager\")\n<br />\n<br />    [b]MagicTargeting[/b]\n<br />Allows \"smart\" target selection for systems and missiles within distance and search cone parameters, plus it can use ship-class preferences. \n<br />\n<br />    [b]MagicTrails[/b]\n<br />Allows to create missile-style trails anywhere, from ships to bullets, with a lot of customization options. Also includes a CSV based manager \n<br />that should be able to handle most projectile use cases with negligible overhead.\n<br />\n<br />    [b]MagicUI[/b]\n<br />Draws UI elements such as a system-like charge-bar/tick box next to the normal ship-system for special systems, or an extra status bar above the flux/hull bars.\n<br />\n<br />[u][size=4][b]Loose scripts[/b][/size][/u]\n<br />[i]Scripts that can be used \"as it is\" or can be copied to individual mods to personalize the result.[/i]\n<br />\n<br />    [b]MagicVectorThruster[/b]\n<br />Manages vectoring or vernier-style attitude thrusters. \n<br />\n<br />    [b]MagicMissileAI[/b]\n<br />A very customizable and lightweight missile AI script usable without any java knowledge.\n<br />\n<br />    [b]MagicGuidedProjectileScript[/b]\n<br />A weapon script that allows regular projectiles to track their target.",
-      "modVersion": "0.42.1rc3",
-      "authors": "Community",
-      "authorsList": [
-        "Community"
-      ],
-      "link": "https://www.nexusmods.com/starsector/mods/10",
-      "urls": {
-        "NexusMods": "https://www.nexusmods.com/starsector/mods/10"
-      },
-      "source": "NexusMods",
-      "sources": [
-        "NexusMods"
-      ],
-      "categories": [
-        "Factions"
-      ],
-      "images": {
-        "banner": {
-          "id": "https://staticdelivery.nexusmods.com/mods/2672/images/10/10-1544690681-294093911.jpeg",
-          "filename": "https://staticdelivery.nexusmods.com/mods/2672/images/10/10-1544690681-294093911.jpeg",
-          "url": "https://staticdelivery.nexusmods.com/mods/2672/images/10/10-1544690681-294093911.jpeg"
-        }
-      },
-      "dateTimeCreated": "2018-12-13T08:56:38Z",
-      "dateTimeEdited": "2022-02-07T08:56:07Z"
     },
     {
       "name": "Magnetar!: The Mission",
@@ -12044,16 +11973,16 @@
       "dateTimeCreated": "2022-10-12T19:24:59.438Z"
     },
     {
-      "name": "Take No Prisoners beta 3",
-      "summary": "Capture officers from enemy fleets and have actual meaningful discussions with them! Hire them, release them, kill them, or ransom them! Make sure to add the ability to your hotbar.",
-      "description": "Capture officers from enemy fleets and have actual meaningful discussions with them! Hire them, release them, kill them, or ransom them! Make sure to add the ability to your hotbar.\n\nThis is meant to replace CaptureCrews which can break your save. It is save-compatible with any previous release of this mod, but you should not install it in combination with CaptureCrews. This mod does not interact with prisoners captured through that mod, and removing either one will break your save.\n\nthis is a beta ~~but as far as i'm aware nothing is broken~~. ransoming can only be done near a faction planet and i can't remember if there's a tooltip for that. enjoy. i'll keep updating until everyone uses my mods, and until everyone gets rid of Extra System Reloaded and uses Exotica instead.\n\n```\nbeta 3:\nuses new method to get officers from destroyed enemy fleet\nwill block capturing officers if you leave battle early (too dangerous) or did not win battle (you retreated)\n\nbeta 2:\nadded base capture chance as mod setting. you can set it to 2 to have 100% capture chance. just don't set your max prisoners too high or you'll run into the same memory limit that CaptureCrews had.\n```",
+      "name": "Take No Prisoners beta 5",
+      "summary": "Capture officers from enemy fleets and have actual meaningful discussions with them! Hire them, release them, kill them, or ransom them! Make sure to add the ability to your hotbar. This is meant to replace the officer capturing from CaptureCrews, which had somewhat of a memory leak.",
+      "description": "Capture officers from enemy fleets and have actual meaningful discussions with them! Hire them, release them, kill them, or ransom them! Make sure to add the ability to your hotbar. This is meant to replace the officer capturing from CaptureCrews, which had somewhat of a memory leak.\n\nthis is a beta ~~but as far as i'm aware nothing is broken~~. ransoming can only be done near a faction planet and i can't remember if there's a tooltip for that. enjoy. \n**i'll keep updating until everyone uses my mods, and until everyone gets rid of Extra System Reloaded and uses Exotica instead. punks.**\n\n```\nbeta 5:\nuses new method to get officers from destroyed enemy fleet (this fixes a bug and makes you get more officers)\nwill block capturing officers if you leave battle early (too dangerous)\nfix bug with chasing enemy fleet after first engage\n\nbeta 2:\nadded base capture chance as mod setting. you can set it to 2 to have 100% capture chance. just don't set your max prisoners too high or you'll run into the same memory limit that CaptureCrews had.\n```",
       "gameVersionReq": "",
       "authors": "President Matt Damon",
       "authorsList": [
         "President Matt Damon"
       ],
       "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1034886924885835888"
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1035059531740356619"
       },
       "source": "Discord",
       "sources": [
@@ -12061,7 +11990,7 @@
       ],
       "categories": [],
       "images": {},
-      "dateTimeCreated": "2022-10-26T17:51:10.162Z"
+      "dateTimeCreated": "2022-10-27T05:17:02.843Z"
     },
     {
       "name": "Target Practice",
@@ -12199,7 +12128,7 @@
       "dateTimeCreated": "2021-12-18T06:31:19.722Z"
     },
     {
-      "name": "The Dalcassian League of Associated Planets v0.00",
+      "name": "The Dalcassian League of Associated Planets v0.01",
       "gameVersionReq": "0.95a-RC15",
       "authors": "WiC2021",
       "authorsList": [
@@ -13092,29 +13021,25 @@
     },
     {
       "name": "Upgraded Rotary Weapons",
-      "summary": "This utility mod is pretty straightforward: it only replaces the vanilla rotary weapons' animations with (imo) smoother ones that spin-up and down progressively, and rotate faster when using Accelerated Ammo Feeder. Nothing more.",
-      "description": "Take a look at Vanilla vs Modded:\n<br />\n<br />[center][img]http://imgur.com/41DJdRe.gif[/img]     [img]http://i.imgur.com/T2ajg4U.gif[/img]\n<br />\n<br />[img]http://i.imgur.com/kbShFd2.gif[/img]     [img]http://i.imgur.com/HgyEhPP.gif[/img]\n<br />\n<br />[img]http://i.imgur.com/EMSPmDF.gif[/img]     [img]http://i.imgur.com/puuWZRO.gif[/img][/center]\n<br />Please note that this mods induce a small lag before the weapons start firing to accommodate the spin-up animation.",
-      "modVersion": "1.50",
+      "summary": "_This mod add spin-up and down animations to all vanilla rotary weapons, as well as tweaked visual and sounds._",
+      "description": "_This mod add spin-up and down animations to all vanilla rotary weapons, as well as tweaked visual and sounds._\n\n```I totally forgot the Thumper had seen some changes in 0.95.1a...```\n\n**Download:** <https://www.patreon.com/posts/61943989> \n\n**Forum:** <http://fractalsoftworks.com/forum/index.php?topic=9446>\n**Nexus:** <https://www.nexusmods.com/starsector/mods/11/>\n**MagicLab** discord: <https://discord.gg/tK3JWBbQ>\n**Bug report/feedback:** <https://forms.gle/YbQ8cYUA5QaJBCYV8>",
       "gameVersionReq": "0.95a",
       "authors": "Tartiflette",
       "authorsList": [
-        "Tartiflette",
-        "TheTartiflette"
+        "Tartiflette"
       ],
       "link": "https://fractalsoftworks.com/forum/index.php?topic=9446.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=9446.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=9446.0",
         "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/937980118389887006",
-        "NexusMods": "https://www.nexusmods.com/starsector/mods/11",
         "DownloadPage": "https://discord.gg/tK3JWBbQ"
       },
       "source": "Index",
       "sources": [
         "Index",
         "ModdingSubforum",
-        "Discord",
-        "NexusMods"
+        "Discord"
       ],
       "categories": [
         "Utility mods"
@@ -13127,15 +13052,9 @@
           "size": 131455.0,
           "url": "https://cdn.discordapp.com/attachments/825068217361760306/937980118196965396/urw.jpg",
           "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/937980118196965396/urw.jpg"
-        },
-        "banner": {
-          "id": "https://staticdelivery.nexusmods.com/mods/2672/images/11/11-1544692900-914155162.jpeg",
-          "filename": "https://staticdelivery.nexusmods.com/mods/2672/images/11/11-1544692900-914155162.jpeg",
-          "url": "https://staticdelivery.nexusmods.com/mods/2672/images/11/11-1544692900-914155162.jpeg"
         }
       },
-      "dateTimeCreated": "2018-12-13T09:28:18Z",
-      "dateTimeEdited": "2022-02-01T07:53:08Z"
+      "dateTimeCreated": "2022-02-01T07:58:07.052Z"
     },
     {
       "name": "Va11 Hall-A Portrait Pack",
@@ -13424,9 +13343,6 @@
     },
     {
       "name": "Version Checker",
-      "summary": "This mod lets you know when an update is available for your game or installed mods.",
-      "description": "This mod lets you know when an update is available for your game or installed mods. Press [b]V[/b] on the campaign map to pop up a dialog that will show any available updates, as well as let you launch directly to a mod's update thread.",
-      "modVersion": "2.0b",
       "gameVersionReq": "0.9.1a",
       "authors": "LazyWizard",
       "authorsList": [
@@ -13435,27 +13351,16 @@
       "link": "https://fractalsoftworks.com/forum/index.php?topic=8181.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=8181.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=8181.0",
-        "NexusMods": "https://www.nexusmods.com/starsector/mods/3"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=8181.0"
       },
       "source": "Index",
       "sources": [
-        "Index",
-        "NexusMods"
+        "Index"
       ],
       "categories": [
-        "Factions",
         "Utility mods"
       ],
-      "images": {
-        "banner": {
-          "id": "https://staticdelivery.nexusmods.com/mods/2672/images/3/3-1544646248-1359369998.png",
-          "filename": "https://staticdelivery.nexusmods.com/mods/2672/images/3/3-1544646248-1359369998.png",
-          "url": "https://staticdelivery.nexusmods.com/mods/2672/images/3/3-1544646248-1359369998.png"
-        }
-      },
-      "dateTimeCreated": "2018-12-12T23:29:31Z",
-      "dateTimeEdited": "2020-08-29T04:40:33Z"
+      "images": {}
     },
     {
       "name": "Vesperon Combine",
@@ -14375,6 +14280,6 @@
       "dateTimeEdited": "2021-08-16T19:28:49.716Z"
     }
   ],
-  "totalCount": 533.0,
-  "lastUpdated": "2022-10-26T18:02:00Z"
+  "totalCount": 532.0,
+  "lastUpdated": "2022-10-27T06:03:00Z"
 }
