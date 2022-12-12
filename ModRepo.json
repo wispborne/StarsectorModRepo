@@ -748,7 +748,7 @@
     {
       "name": "Apex Design Collective",
       "summary": "Save compatible.",
-      "description": "Save compatible.\n\n1.0.11a: Fixed a collision box issue with the new bounty.\n1.0.11b: Fixed a crash when using guns that fired interceptable projectiles on the Python, a description error with the Iguana's VLS, and some floating pixels.\n1.0.11c: Fixed yet another description error, and reduced the weapon glow from using the Goanna's system.\n\n1.0.11 changes:\n- New ships, Iguana-class frigate and Goanna-class cruiser.\n- Externalized strings for translation.\n- Actually reduced Komodo's dissipation.\n- Komodo/Caiman's system now fires projectiles at the end of the activation, instead of during it.\n- Apotheosis should be a bit more common.\n- Light Burst Coilgun had its burst DPS nerfed.\n- Significant AI improvements for Inertial Skimmer, Travel Drive, Temporal Damper, and Entropy Consolidator\n\nForum: https://fractalsoftworks.com/forum/index.php?topic=22704\nDirect Download: https://github.com/theDragn/ApexDesignCollective/releases/download/1.0.11/Apex.Design.Collective_1.0.11c.zip",
+      "description": "Save compatible.\n\nNew:\n- Anaconda-class phase battlecruiser: Phase capital. It's pretty fast and has very heavy armor. System is Gravitic Shield, which decelerates or diverts incoming projectiles, and reduces incoming beam damage for a short duration.\n\nChanges:\n- Reduced some stat creep that had snuck in over time:\n-- Gharial: Reduced dissipation (400 -> 375).\n-- Caiman: Reduced dissipation (425 -> 400) and speed (85 -> 80).\n-- Mamba: Reduced dissipation (350 -> 300) and speed (155 -> 120).\n-- Lacerta: Reduced speed (150 -> 130).\n-- Alligator: Reduced speed (65 -> 55).\n-- Apotheosis: Reduced dissipation (950 -> 900).\n-- Sunbeam: Reduced speed (40 -> 35).\n- Entropy Consolidator (System on Caiman/Komodo): Further reduced projectile damage (150 -> 100), EMP (300 -> 250), and HP (300 -> 200). Turns out firing all the retaliation projectiles at once is a major upgrade.\n- Fixed an issue where the Iguana and Goanna didn't have any visible variants for autofit.\n- Arcspike Pod: Reduced range (1500 -> 1200). Dunno why these had more range than sabots.\n- Toroid Mortar: Projectiles no longer arc to phased targets. Halved turn rate.\n- Tachyon Inverter: Reduced sustained dps (360 -> 300), burst DPS (990 -> 800), and magazine size (4 shots -> 3 shots).\n- Missiles no longer track phased targets unless ECCM is installed.\n- Fixed a number of weapons that would create fork bombs when used on the Python.\n- Phase ships (Anaconda, Python, Mamba) now have 50% increased CR degradation after PPT runs out to match vanilla phase ships.\n- Range Synchronizer: Was a bit too niche (especially with Apex's generally rangematched guns), so now it works across all weapon sizes.\n\nForum: https://fractalsoftworks.com/forum/index.php?topic=22704\nDirect Download: https://github.com/theDragn/ApexDesignCollective/releases/download/1.0.12/Apex.Design.Collective_1.0.12.zip",
       "gameVersionReq": "0.95.1a",
       "authors": "theDragn",
       "authorsList": [
@@ -758,8 +758,8 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=22704.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=22704.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1049408374296555620",
-        "DirectDownload": "https://github.com/theDragn/ApexDesignCollective/releases/download/1.0.11/Apex.Design.Collective_1.0.11c.zip",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1051773572877647882",
+        "DirectDownload": "https://github.com/theDragn/ApexDesignCollective/releases/download/1.0.12/Apex.Design.Collective_1.0.12.zip",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=22704"
       },
       "source": "Index",
@@ -771,9 +771,18 @@
       "categories": [
         "Faction Mods"
       ],
-      "images": {},
-      "dateTimeCreated": "2022-12-05T19:34:13.497Z",
-      "dateTimeEdited": "2022-12-06T18:12:36.518Z"
+      "images": {
+        "1051773573024452638": {
+          "id": "1051773573024452638",
+          "filename": "apex_lineup.png",
+          "content_type": "image/png",
+          "size": 1110446.0,
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1051773573024452638/apex_lineup.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1051773573024452638/apex_lineup.png"
+        }
+      },
+      "dateTimeCreated": "2022-12-12T08:12:40.782Z",
+      "dateTimeEdited": "2022-12-12T08:14:57.479Z"
     },
     {
       "name": "Appro-Light Plus (Unofficial Translation) 0.5.4-B5",
@@ -2843,9 +2852,9 @@
       "images": {}
     },
     {
-      "name": "Combat Misc Utilities v0.3.1",
+      "name": "Combat Misc Utilities v0.3.2",
       "summary": "A collection of miscellaneous utilities for combat modding.\n```",
-      "description": "A collection of miscellaneous utilities for combat modding.\n```\nv0.3.1\n-fixed crash related to drone AI null vector\n```\nDownload: https://github.com/automatopaste/CMUtils/releases/download/v0.3.0/CMUtils_v0.3.1.zip\nForum: https://fractalsoftworks.com/forum/index.php?topic=25740.0",
+      "description": "A collection of miscellaneous utilities for combat modding.\n```\nv0.3.2\n-fixed crash from vbo buffer conflict\n```\nDownload: https://github.com/automatopaste/CMUtils/releases/download/v0.3.0/CMUtils_v0.3.2.zip\nForum: https://fractalsoftworks.com/forum/index.php?topic=25740.0",
       "gameVersionReq": "0.95.1a-RC6",
       "authors": "tomatopaste",
       "authorsList": [
@@ -2855,8 +2864,8 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=25740.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25740.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1049473576362848336",
-        "DirectDownload": "https://github.com/automatopaste/CMUtils/releases/download/v0.3.0/CMUtils_v0.3.1.zip",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1051794634784903188",
+        "DirectDownload": "https://github.com/automatopaste/CMUtils/releases/download/v0.3.0/CMUtils_v0.3.2.zip",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=25740.0"
       },
       "source": "ModdingSubforum",
@@ -2866,16 +2875,16 @@
       ],
       "categories": [],
       "images": {
-        "1049473576404787250": {
-          "id": "1049473576404787250",
+        "1051794634843631626": {
+          "id": "1051794634843631626",
           "filename": "CMUtils_logo.png",
           "content_type": "image/png",
           "size": 29740.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1049473576404787250/CMUtils_logo.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1049473576404787250/CMUtils_logo.png"
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1051794634843631626/CMUtils_logo.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1051794634843631626/CMUtils_logo.png"
         }
       },
-      "dateTimeCreated": "2022-12-05T23:53:18.881Z"
+      "dateTimeCreated": "2022-12-12T09:36:22.332Z"
     },
     {
       "name": "Combat Multiplayer Project",
@@ -3886,7 +3895,7 @@
     {
       "name": "ED Shipyard",
       "summary": "```",
-      "description": "```\nSave compatible with anything after 2.4.X\nSafe to add mid playthrough\n\nFix for Wurg shield toggle oscillation (thanks emto demto for the feedback)\nWurg MAW reload time increased by 50%\nWurg is a bit more careful about freindly fire with the Maw\nDetonator drones now spawn a bunch of arcs when they teleport to make them just a bit more survivable.\nFix for MagicBounty CME (problem is in MagicLib itself)\nFix for player owned ED Markets not working\n\n```\n\nForum Thread: https://fractalsoftworks.com/forum/index.php?topic=24976.0\nDownload: https://bitbucket.org/NickWWest/edshipyard/downloads/EDShipyard.2.5.5.zip",
+      "description": "```\nSave compatible with anything after 2.4.X\nSafe to add mid playthrough\n\nFix for Magic Bounty issue\nPrevent Wurg from venting while Maw is firing\n```\n\nForum Thread: https://fractalsoftworks.com/forum/index.php?topic=24976.0\nDownload: https://bitbucket.org/NickWWest/edshipyard/downloads/EDShipyard.2.5.6.zip",
       "gameVersionReq": "0.95.1a",
       "authors": "Ed, Nick XR",
       "authorsList": [
@@ -3898,8 +3907,8 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24976.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24976.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1050136836330225724",
-        "DirectDownload": "https://bitbucket.org/NickWWest/edshipyard/downloads/EDShipyard.2.5.5.zip",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1051750257274404914",
+        "DirectDownload": "https://bitbucket.org/NickWWest/edshipyard/downloads/EDShipyard.2.5.6.zip",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=24976.0"
       },
       "source": "Index",
@@ -3912,16 +3921,16 @@
         "Content Expansions"
       ],
       "images": {
-        "1050136836518977598": {
-          "id": "1050136836518977598",
+        "1051750257475715143": {
+          "id": "1051750257475715143",
           "filename": "EDRosterWhiteBackground.png",
           "content_type": "image/png",
           "size": 3981754.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1050136836518977598/EDRosterWhiteBackground.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1050136836518977598/EDRosterWhiteBackground.png"
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1051750257475715143/EDRosterWhiteBackground.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1051750257475715143/EDRosterWhiteBackground.png"
         }
       },
-      "dateTimeCreated": "2022-12-07T19:48:52.38Z"
+      "dateTimeCreated": "2022-12-12T06:40:01.909Z"
     },
     {
       "name": "ED Shipyard 2.1.2 (crash fix)",
@@ -5430,7 +5439,7 @@
     {
       "name": "Gudalanmu 0.22",
       "summary": "Mod by: Linskentry AKA fire_turtle",
-      "description": "Mod by: Linskentry AKA fire_turtle\n\n\"Aliens from a distant galaxy, the Gudalanmu's homeworlds had been completely destroyed by an unknown enemy. They formed three wandering fleets, which each fled to a different direction; the second of those fleets was destined for the safety of the Persean Sector. The second fleet finally arrived in the Sector after a voyage of dozens of centuries. In order to get a firm foothold in the Sector, the Gudalanmu began to have dealings with humans, but it became clear that humanity is not unified; so the conflicts with the Gudalanmu are still ongoing.\"\n\nGudalanmu ships specialize in energy and missile weapons, with very few ballistic-capable mounts and fewer in-faction ballistic weapons. They can be located in the Mosta system, northeast of the Core Worlds.\n\nThis is an approved translation done by me(credits are in a text file in the mod root directory); please report text issues to me. The only non-text changes that this translation makes to the mod is fixing of the `default_ship_roles.json` file and adding the dependencies for GraphicsLib, LazyLib, and MagicLib to `mod_info.json`.\n\nDownload link:\nhttps://drive.google.com/file/d/14ofSbuB1RQIlq_NLoBQAJ40x7GZiptv9/view\n\n(gif shamelessly stolen from the fossic page ~~much like the mod itself~~)",
+      "description": "Mod by: Linskentry AKA fire_turtle\n\n\"Aliens from a distant galaxy, the Gudalanmu's homeworlds had been completely destroyed by an unknown enemy. They formed three wandering fleets, which each fled to a different direction; the second of those fleets was destined for the safety of the Persean Sector. The second fleet finally arrived in the Sector after a voyage of dozens of centuries. In order to get a firm foothold in the Sector, the Gudalanmu began to have dealings with humans, but it became clear that humanity is not unified; so the conflicts with the Gudalanmu are still ongoing.\"\n\nGudalanmu ships specialize in energy and missile weapons, with very few ballistic-capable mounts and fewer in-faction ballistic weapons. They can be located in the Mosta system, northeast of the Core Worlds.\n\nThis is an approved translation done by me(credits are in a text file in the mod root directory); please report text issues to me. The only non-text changes that this translation makes to the mod is fixing of the `default_ship_roles.json` file and adding the dependencies for GraphicsLib, LazyLib, and MagicLib to `mod_info.json`.\n\nHotfix uploaded: Fixed variant names and changed Pursuit Mode to Chaser Mode to avoid conflict with Apex\n\nDownload link:\nhttps://drive.google.com/file/d/14ofSbuB1RQIlq_NLoBQAJ40x7GZiptv9/view\n\n(gif shamelessly stolen from the fossic page ~~much like the mod itself~~)",
       "gameVersionReq": "",
       "authors": "mrmagolor",
       "authorsList": [
@@ -5455,7 +5464,8 @@
           "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1051261786797645994/gudalanmugif1.gif"
         }
       },
-      "dateTimeCreated": "2022-12-10T22:19:01.44Z"
+      "dateTimeCreated": "2022-12-10T22:19:01.44Z",
+      "dateTimeEdited": "2022-12-12T17:51:30.191Z"
     },
     {
       "name": "Gundam Iron-Blooded Orphans",
@@ -8479,8 +8489,8 @@
     },
     {
       "name": "More Combat Terrain Effects",
-      "summary": "REQUIRES MAGICLIB, LAZYLIB, LUNALIB",
-      "description": "REQUIRES MAGICLIB, LAZYLIB, LUNALIB\n\nAdds custom combat effects to all terrain that did not have an effect previously, and spruces up the rest.\n\nCurrently implemented: \nMagnetic field - Reduces weapon range, fighter range, missile maneuverability/guidance, vision range, and adds a small chance for missiles to have guidance scrambled.\nSlipstream - Force SO on all ships, fighters, and MISSILES, (venting allowed but with reduced effectiveness, for things like excelsior), slowly passively generate hardflux.\nNebula: Nebula clouds reduce weapon range, vision, speed, and disable zero-flux boost while inside of them.\nDeep hyperspace: Spawn nebula clouds. Hyperstorms will cause these clouds to zap anyone who draws near them, periodically, with a very powerful EMP bolt.\nBlack Holes: Drags all entities in combat towards the black hole, and increases time dilation of all ships.\nPulsars: Pushes all entities in combat away from the pulsar, reduces shield stats (efficiency, more upkeep, emp arc pierce chance), slowly generates hardflux, randomly EMPs ships, and charges all projectiles with a flat bonus to EMP damage.\n\nSafe to add and remove from saves. \n\nhttps://fractalsoftworks.com/forum/index.php?topic=25567\n\n```Changelog:\n1.1.1:\nSAVE COMPATABLE\nRemoves redundant feature that doesnt work\nAdjusts some values in settings, notably hyperstorm lightning delay\nMakes things like hardflux gen and gravity respect time dilation better\n```",
+      "summary": "REQUIRES LAZYLIB, LUNALIB",
+      "description": "REQUIRES LAZYLIB, LUNALIB\n\nAdds custom combat effects to all terrain that did not have an effect previously, and spruces up the rest.\n\nCurrently implemented: \nMagnetic field - Reduces weapon range, fighter range, missile maneuverability/guidance, vision range, and adds a small chance for missiles to have guidance scrambled.\nSlipstream - Force SO on all ships, fighters, and MISSILES, (venting allowed but with reduced effectiveness, for things like excelsior), slowly passively generate hardflux.\nNebula: Nebula clouds reduce weapon range, vision, speed, and disable zero-flux boost while inside of them.\nDeep hyperspace: Spawn nebula clouds. Hyperstorms will cause these clouds to zap anyone who draws near them, periodically, with a very powerful EMP bolt.\nBlack Holes: Drags all entities in combat towards the black hole, and increases time dilation of all ships.\nPulsars: Pushes all entities in combat away from the pulsar, reduces shield stats (efficiency, more upkeep, emp arc pierce chance), slowly generates hardflux, randomly EMPs ships, and charges all projectiles with a flat bonus to EMP damage.\n\nSafe to add and remove from saves. \n\nhttps://fractalsoftworks.com/forum/index.php?topic=25567\n\n```Changelog:\n1.1.1a:\nRemoves magiclib dependency\n```",
       "gameVersionReq": "0.95.1a",
       "authors": "NikoTheGuyDude",
       "authorsList": [
@@ -8491,7 +8501,7 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=25567",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25567",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1051289496597041242",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1051702132203585648",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=25567"
       },
       "source": "Index",
@@ -8504,7 +8514,7 @@
         "Miscellaneous Mods"
       ],
       "images": {},
-      "dateTimeCreated": "2022-12-11T00:09:08.003Z"
+      "dateTimeCreated": "2022-12-12T03:28:47.998Z"
     },
     {
       "name": "More Conquests 1.0.0",
@@ -8615,7 +8625,7 @@
     {
       "name": "More Planetary Conditions",
       "summary": "Adds a number of custom planetary conditions, each with their own unique mechanics, scripting, and behavior, that hopefully set them apart from everything else.",
-      "description": "Adds a number of custom planetary conditions, each with their own unique mechanics, scripting, and behavior, that hopefully set them apart from everything else.\n\nProbably not safe to put into a existing save.\nDEFINITELY not safe to remove from a existing save.\n\nAfter a month of refactoring, I've finally figured out what was killing saves. Sadly, the update isnt save compatable. I've tested it with a good chunk of real playtime-nothing seems to be out of the ordinary.\n\n**MAYBE SAVE COMPATABLE WITH PREVIOUS VERSIONS?**\n\nhttps://fractalsoftworks.com/forum/index.php?topic=25205\n\n```Changelog\n2.1.0\nMAYBE SAVE COMPATABLE I DONT REMEMBER\nMakes satellites work a bit more consistantly\nRaesvelg now starts with satellites (You can generate satellites on planets via the config)\nHopefully fixed an edge case crash```",
+      "description": "Adds a number of custom planetary conditions, each with their own unique mechanics, scripting, and behavior, that hopefully set them apart from everything else.\n\nProbably not safe to put into a existing save.\nDEFINITELY not safe to remove from a existing save.\n\nAfter a month of refactoring, I've finally figured out what was killing saves. Sadly, the update isnt save compatable. I've tested it with a good chunk of real playtime-nothing seems to be out of the ordinary.\n\n**SAVE COMPATABLE WITH PREVIOUS VERSIONS**\n\nhttps://fractalsoftworks.com/forum/index.php?topic=25205\n\n```Changelog\n2.1.0a\nRemoves magiclib dependency\n```",
       "gameVersionReq": "0.95.1a",
       "authors": "NikoTheGuyDude",
       "authorsList": [
@@ -8626,7 +8636,7 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=25205",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25205",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1051246144707112980",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1051701871817011220",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=25205"
       },
       "source": "Index",
@@ -8639,7 +8649,7 @@
         "Miscellaneous Mods"
       ],
       "images": {},
-      "dateTimeCreated": "2022-12-10T21:16:52.107Z"
+      "dateTimeCreated": "2022-12-12T03:27:45.917Z"
     },
     {
       "name": "MoreVentsCaps",
@@ -14884,5 +14894,5 @@
     }
   ],
   "totalCount": 549.0,
-  "lastUpdated": "2022-12-11T20:33:00Z"
+  "lastUpdated": "2022-12-12T20:32:00Z"
 }
