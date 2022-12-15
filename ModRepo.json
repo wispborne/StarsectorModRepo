@@ -3157,7 +3157,7 @@
     {
       "name": "Crew Replacer",
       "summary": "an modders utility library thing.\nForum:",
-      "description": "an modders utility library thing.\nForum:\nhttps://fractalsoftworks.com/forum/index.php?topic=24249.msg360489#msg360489\nwhat is Crew Replacer?\nCrew Replacer is a mod library built with one goal in mind: to make it easy and quick to mod in new items to be used in jobs. crew replacer lets multiple modders modify the same tasks, by adding a system that lets a modder add an 'crew'(really any type of commodity) to an 'job'. were said 'job's replace all the instances of crew I could find in code.\n\nbut what dose that mean? it means that modders now have a system to to change what is used/required when the one tries to 'salvage' or 'survey' or 'raid'. it also means that modders have a system to add new jobs into the game, then let other modders change what is used/required in said task.\nupdated to version 0.3.4\n```\nV0.3.4\n    -fixes:\n        fixed supplyDemandChange crashing the \ngame because of bad code when supply change was ran.\n    please dont get used supplyDemandClass being in \ncrewReplacer. its going to be moved into its own project in an month or 3. so if you do need it for something it might be better to wait for that\n```",
+      "description": "an modders utility library thing.\nForum:\nhttps://fractalsoftworks.com/forum/index.php?topic=24249.msg360489#msg360489\nwhat is Crew Replacer?\nCrew Replacer is a mod library built with one goal in mind: to make it easy and quick to mod in new items to be used in jobs. crew replacer lets multiple modders modify the same tasks, by adding a system that lets a modder add an 'crew'(really any type of commodity) to an 'job'. were said 'job's replace all the instances of crew I could find in code.\n\nbut what dose that mean? it means that modders now have a system to to change what is used/required when the one tries to 'salvage' or 'survey' or 'raid'. it also means that modders have a system to add new jobs into the game, then let other modders change what is used/required in said task.\nupdated to version 0.4\n```\nV0.4\n    -new jobs:\n        task: steal a starship mission\n            job name: Mission_hijack_marines: replaces: marines\n        task: repair Coronal HyperShunt\n            job name: CoronalHyperShunt_repair_Metals: replaces: metals\n            job name: CoronalHyperShunt_repair_RareMetals: replaces: rare_metals\n            job name: CoronalHyperShunt_repair_Crew: replaces: crew\n    -issues:\n        steal a starship mission has no feedback on what crews can do a mission. will be fixed later\n        repair Coronal HyperShunt's fancy looking display that shows what is available/required dose not respect crew replacer yet. will be fixed in a week or so\n```",
       "gameVersionReq": "0.95.1a",
       "authors": "alaricdragon",
       "authorsList": [
@@ -3167,7 +3167,7 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24249.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24249.msg360489#msg360489",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1025198131295572058",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1052711302268719124",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=24249.msg360489#msg360489"
       },
       "source": "Index",
@@ -3180,8 +3180,7 @@
         "Libraries"
       ],
       "images": {},
-      "dateTimeCreated": "2022-09-30T00:11:21.761Z",
-      "dateTimeEdited": "2022-09-30T00:12:21.366Z"
+      "dateTimeCreated": "2022-12-14T22:18:52.891Z"
     },
     {
       "name": "CrossCode portrait pack v1.1",
@@ -7597,7 +7596,7 @@
     {
       "name": "LunaLib",
       "summary": "A Library for Mod Developers. There is not much of a reason to download it unless a mod requires it.\nAdds an ingame Settings UI that modders can extend, and a variety of utility functions.",
-      "description": "A Library for Mod Developers. There is not much of a reason to download it unless a mod requires it.\nAdds an ingame Settings UI that modders can extend, and a variety of utility functions.\n\n**Download**: <https://github.com/Lukas22041/LunaLib/releases/latest/download/LunaLib.zip>\n**Forum Thread**: <https://fractalsoftworks.com/forum/index.php?topic=25658.msg381423#msg381423>\n**Github**: <https://github.com/Lukas22041/LunaLib>\n**Documentation**: <https://github.com/Lukas22041/LunaLib/wiki>\n\n**V1.1.1 Changelog**\nSmall update for UI improvements and the removal of the \"newGame\" column for LunaSettings.\n\n__For Users__\nMade the LunaSettings UI more compact and made some setting types clearer to read.\n\n__For Modders__\nRemoved the \"newGame\" column in the LunaSettings.CSV. Mods that still have it should run fine, aslong as they didnt make use of it.\nThe LunaSettings class now has new methods with only 2 parameters, with the methods using 3 parameters being deprecated.\n\nhttps://imgur.com/axudbRa",
+      "description": "A Library for Mod Developers. There is not much of a reason to download it unless a mod requires it.\nAdds an ingame Settings UI that modders can extend, and a variety of utility functions.\n\n**Download**: <https://github.com/Lukas22041/LunaLib/releases/latest/download/LunaLib.zip>\n**Changelog & Older Versions**: <https://github.com/Lukas22041/LunaLib/releases>\n\n**Forum Thread**: <https://fractalsoftworks.com/forum/index.php?topic=25658.msg381423#msg381423>\n**Github**: <https://github.com/Lukas22041/LunaLib>\n**Documentation**: <https://github.com/Lukas22041/LunaLib/wiki>\n\nhttps://imgur.com/axudbRa",
       "gameVersionReq": "0.95.1a",
       "authors": "Lukas04",
       "authorsList": [
@@ -7620,8 +7619,8 @@
         "Libraries"
       ],
       "images": {},
-      "dateTimeCreated": "2022-12-10T17:21:53.121Z",
-      "dateTimeEdited": "2022-11-27T17:52:56.567Z"
+      "dateTimeCreated": "2022-12-14T23:11:46.294Z",
+      "dateTimeEdited": "2022-12-14T23:14:27.809Z"
     },
     {
       "name": "Machina Void Shipyards v.0.59",
@@ -8942,6 +8941,25 @@
       ],
       "images": {},
       "dateTimeCreated": "2021-08-07T16:33:13.209Z"
+    },
+    {
+      "name": "Northern Expedition (WIP)",
+      "gameVersionReq": "0.95.1a-RC6",
+      "authors": ".Wav",
+      "authorsList": [
+        ".Wav"
+      ],
+      "link": "https://fractalsoftworks.com/forum/index.php?topic=25772.0",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=25772.0",
+      "urls": {
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25772.0"
+      },
+      "source": "ModdingSubforum",
+      "sources": [
+        "ModdingSubforum"
+      ],
+      "categories": [],
+      "images": {}
     },
     {
       "name": "Nutella Jar Rebalance Mod v2",
@@ -14917,6 +14935,6 @@
       "dateTimeEdited": "2021-08-16T19:28:49.716Z"
     }
   ],
-  "totalCount": 549.0,
-  "lastUpdated": "2022-12-14T20:31:00Z"
+  "totalCount": 550.0,
+  "lastUpdated": "2022-12-15T08:38:00Z"
 }
