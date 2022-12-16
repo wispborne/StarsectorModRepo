@@ -747,8 +747,8 @@
     },
     {
       "name": "Apex Design Collective",
-      "summary": "Save compatible.",
-      "description": "Save compatible.\n\nNew:\n- Anaconda-class phase battlecruiser: Phase capital. It's pretty fast and has very heavy armor. System is Gravitic Shield, which decelerates or diverts incoming projectiles, and reduces incoming beam damage for a short duration.\n\nChanges:\n- Reduced some stat creep that had snuck in over time:\n-- Gharial: Reduced dissipation (400 -> 375).\n-- Caiman: Reduced dissipation (425 -> 400) and speed (85 -> 80).\n-- Mamba: Reduced dissipation (350 -> 300) and speed (155 -> 120).\n-- Lacerta: Reduced speed (150 -> 130).\n-- Alligator: Reduced speed (65 -> 55).\n-- Apotheosis: Reduced dissipation (950 -> 900).\n-- Sunbeam: Reduced speed (40 -> 35).\n- Entropy Consolidator (System on Caiman/Komodo): Further reduced projectile damage (150 -> 100), EMP (300 -> 250), and HP (300 -> 200). Turns out firing all the retaliation projectiles at once is a major upgrade.\n- Fixed an issue where the Iguana and Goanna didn't have any visible variants for autofit.\n- Arcspike Pod: Reduced range (1500 -> 1200). Dunno why these had more range than sabots.\n- Toroid Mortar: Projectiles no longer arc to phased targets. Halved turn rate.\n- Tachyon Inverter: Reduced sustained dps (360 -> 300), burst DPS (990 -> 800), and magazine size (4 shots -> 3 shots).\n- Missiles no longer track phased targets unless ECCM is installed.\n- Fixed a number of weapons that would create fork bombs when used on the Python.\n- Phase ships (Anaconda, Python, Mamba) now have 50% increased CR degradation after PPT runs out to match vanilla phase ships.\n- Range Synchronizer: Was a bit too niche (especially with Apex's generally rangematched guns), so now it works across all weapon sizes.\n\nForum: https://fractalsoftworks.com/forum/index.php?topic=22704\nDirect Download: https://github.com/theDragn/ApexDesignCollective/releases/download/1.0.12/Apex.Design.Collective_1.0.12.zip",
+      "summary": "This mod is now feature complete. I will, of course, continue maintaining it, but there will be no more major content additions unless I feel particularly inspired.",
+      "description": "This mod is now feature complete. I will, of course, continue maintaining it, but there will be no more major content additions unless I feel particularly inspired.\n\nSave compatible, and can be added to an existing save- it will generate the faction and systems on its own. \n\nNew:\n- Boa-class phase destroyer: An aggressive phase destroyer with good turret coverage. System is Pursuit Mode, which increases forward speed and weapon damage.\n- Mission (\"Black Ops\"). Completing it will unlock a start option with the Anaconda. Completing it with a perfect score will unlock a *special* start option.\n\nChanges:\n- Networked Targeting Array: Fighter range bonus is now based on the average range bonus affecting your weapons instead of the smallest bonus.\n- Augmented Range Synchronizer: No longer excludes beam weapons. The modular version is unchanged.\n- Limited Magazines (builtin on phase ships): No longer reduces fire rate. Instead, reduces missile ammo capacity.\n- Mamba: Added Limited Magazines. Removed Augmented Range Synchronizer.\n- Goanna: Added Augmented Range Synchronizer.\n- Najash: Increased DP/supply cost (8 -> 9).\n\nBug fixes:\n- Toroid Mortar: The projectile's arc rate is no longer affected by the firing ship's timeflow.\n- [secret thing] should no longer trigger [surprise event] on fleets that do not affect faction reputation, like deserter bounties.\n\nForum: https://fractalsoftworks.com/forum/index.php?topic=22704\nDirect Download: https://github.com/theDragn/ApexDesignCollective/releases/download/1.1.0/Apex.Design.Collective_1.1.0.zip",
       "gameVersionReq": "0.95.1a",
       "authors": "theDragn",
       "authorsList": [
@@ -758,8 +758,8 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=22704.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=22704.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1051773572877647882",
-        "DirectDownload": "https://github.com/theDragn/ApexDesignCollective/releases/download/1.0.12/Apex.Design.Collective_1.0.12.zip",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1053269812614266961",
+        "DirectDownload": "https://github.com/theDragn/ApexDesignCollective/releases/download/1.1.0/Apex.Design.Collective_1.1.0.zip",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=22704"
       },
       "source": "Index",
@@ -772,17 +772,17 @@
         "Faction Mods"
       ],
       "images": {
-        "1051773573024452638": {
-          "id": "1051773573024452638",
+        "1053269812790448168": {
+          "id": "1053269812790448168",
           "filename": "apex_lineup.png",
           "content_type": "image/png",
-          "size": 1110446.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1051773573024452638/apex_lineup.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1051773573024452638/apex_lineup.png"
+          "size": 1138574.0,
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1053269812790448168/apex_lineup.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1053269812790448168/apex_lineup.png"
         }
       },
-      "dateTimeCreated": "2022-12-12T08:12:40.782Z",
-      "dateTimeEdited": "2022-12-12T08:14:57.479Z"
+      "dateTimeCreated": "2022-12-16T11:18:12.134Z",
+      "dateTimeEdited": "2022-12-16T11:18:52.143Z"
     },
     {
       "name": "Appro-Light Plus (Unofficial Translation) 0.5.4-B5",
@@ -6090,6 +6090,36 @@
       "images": {}
     },
     {
+      "name": "Hybrasil Gate",
+      "summary": "A simple mod that adds a Gate to Hybrasil for quick and easy access to all the drugs you could ever need.",
+      "description": "A simple mod that adds a Gate to Hybrasil for quick and easy access to all the drugs you could ever need.\nSafe to add to existing saves and removing the mod will keep the Gate in the system but shouldn't cause any issues otherwise.\n\nShould be compatible with everything, even mods that change Hybrasil and Random Core Worlds from Nexerelin.\n\n<https://drive.google.com/file/d/1rQx0NNNXSr9ISZhddsuutP-mbgRTpiUe/view?usp=sharing>",
+      "gameVersionReq": "",
+      "authors": "JamesTripleQ",
+      "authorsList": [
+        "JamesTripleQ"
+      ],
+      "urls": {
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1053374719027585134",
+        "DownloadPage": "https://drive.google.com/file/d/1rQx0NNNXSr9ISZhddsuutP-mbgRTpiUe/view?usp=sharing"
+      },
+      "source": "Discord",
+      "sources": [
+        "Discord"
+      ],
+      "categories": [],
+      "images": {
+        "1053374718805291029": {
+          "id": "1053374718805291029",
+          "filename": "Hybrasil_Gaming.jpg",
+          "content_type": "image/jpeg",
+          "size": 50387.0,
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1053374718805291029/Hybrasil_Gaming.jpg",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1053374718805291029/Hybrasil_Gaming.jpg"
+        }
+      },
+      "dateTimeCreated": "2022-12-16T18:15:03.772Z"
+    },
+    {
       "name": "Hyperdrive",
       "summary": "```Fixed an incompatibility with Vayra's Sector's \"bountyDuration\" setting, which resulted in 1 day long bounties\nFixed sometimes displaying a hint message at inappropriate times",
       "description": "```Fixed an incompatibility with Vayra's Sector's \"bountyDuration\" setting, which resulted in 1 day long bounties\nFixed sometimes displaying a hint message at inappropriate times\nAdded \"minBurnLevelToJump\" setting```\nFull change log: <https://github.com/NateNBJ/Hyperdrive/wiki/Change-Log>\nDownload: <https://github.com/NateNBJ/Hyperdrive/releases/download/v2.2.1/Hyperdrive.zip>",
@@ -8866,8 +8896,8 @@
     },
     {
       "name": "Nexerelin",
-      "summary": "Want to get this tested and released before I do the next round of major changes. No new strategy AI yet , but does have some other stuff.",
-      "description": "Want to get this tested and released before I do the next round of major changes. No new strategy AI yet , but does have some other stuff.\n\nDownload: <https://www.dropbox.com/s/odrq571kco86gwx/Nexerelin_0.10.5x.zip?dl=1>\nChangelog: <https://github.com/Histidine91/Nexerelin/wiki/Changelog>",
+      "summary": "4X in Starsector\n_Discord pre-release, forum/Nexus update tomorrow_",
+      "description": "4X in Starsector\n_Discord pre-release, forum/Nexus update tomorrow_\n\nNo new strategy AI yet, but there are a range of new features and mod compatibility updates in this one, along with crash and other fixes.\n\nDownload: <https://github.com/Histidine91/Nexerelin/releases/download/v0.10.6/Nexerelin_0.10.6.zip>\nChangelog: <https://github.com/Histidine91/Nexerelin/wiki/Changelog>\nForum thread: http://fractalsoftworks.com/forum/index.php?topic=9175\nNexus: https://www.nexusmods.com/starsector/mods/28\n\nChanges from beta 0.10.5x:\n```markdown\n* Custom fleet: Don't allow picking ships with no default variants\n    * Also take no action if zero ships are selected\n* Fleets can be requested from allied markets\n* Fix number format exception when not enough raid strength\n* Fix Hegemony not inspecting colonies of player with Hegemony commission\n* Remove Crew Replacer debug code that was left in\n```",
       "gameVersionReq": "0.95.1a",
       "authors": "Histidine, Zaphide",
       "authorsList": [
@@ -8877,9 +8907,9 @@
       "link": "https://fractalsoftworks.com/forum/index.php?topic=9175.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=9175.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=9175.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1020521506066923540",
-        "DirectDownload": "https://github.com/Histidine91/Nexerelin/releases/download/v0.10.5b/Nexerelin_0.10.5b.zip",
+        "Forum": "http://fractalsoftworks.com/forum/index.php?topic=9175",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1053311042542895225",
+        "DirectDownload": "https://github.com/Histidine91/Nexerelin/releases/download/v0.10.6/Nexerelin_0.10.6.zip",
         "DownloadPage": "https://github.com/Histidine91/Nexerelin/wiki/Changelog"
       },
       "source": "Index",
@@ -8892,7 +8922,7 @@
         "Megamods"
       ],
       "images": {},
-      "dateTimeCreated": "2022-12-11T02:52:24.812Z"
+      "dateTimeCreated": "2022-12-16T14:02:02.115Z"
     },
     {
       "name": "Nijigen Extend v.0.3.2 || Standalone Pack || Update 02/28 [YREX]",
@@ -14935,6 +14965,6 @@
       "dateTimeEdited": "2021-08-16T19:28:49.716Z"
     }
   ],
-  "totalCount": 550.0,
-  "lastUpdated": "2022-12-16T08:36:00Z"
+  "totalCount": 551.0,
+  "lastUpdated": "2022-12-16T20:30:00Z"
 }
