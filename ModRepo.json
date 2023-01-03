@@ -209,7 +209,7 @@
     {
       "name": "AI-Retrofits",
       "summary": "this is an download link to my supper experimental branch of AI-Retrofits. DOWNLOAD AT YOUR OWN RISK, as there are lots of missing textures and features.",
-      "description": "this is an download link to my supper experimental branch of AI-Retrofits. DOWNLOAD AT YOUR OWN RISK, as there are lots of missing textures and features. \n\nhas a new requirement as well. it is *required* to run the experimental version of this mod. it dose nothing noticeable to your game, but its the project I moved supply demand library to, so its required for this alpha version.\nhttps://github.com/Alaricdragon/MarketRetrofits\n\nchange log:\nhttps://github.com/Alaricdragon/AIRetrofits/blob/experimental-001/jars/src/change_log\n```\nv0.7.4.2:\nsave compatible with 0.7.3+\nfixes:\n    removed a broken reference that was causing a crash at the end of every month i swore i test my updates before posing them\n\n```\n\nDOWNLOAD AT YOUR OWN RISK\ndownload for experimental branch:\nhttps://github.com/Alaricdragon/AIRetrofits/tree/experimental-001\nand if you want to play the mod in its more stable form, there is an download or two here.\nForum\nhttps://fractalsoftworks.com/forum/index.php?topic=22261.msg335242#msg335242",
+      "description": "this is an download link to my supper experimental branch of AI-Retrofits. DOWNLOAD AT YOUR OWN RISK, as there are lots of missing textures and features. \n\nhas a new requirement as well. it is *required* to run the experimental version of this mod. it dose nothing noticeable to your game, but its the project I moved supply demand library to, so its required for this alpha version.\nhttps://github.com/Alaricdragon/MarketRetrofits\n\nchange log:\nhttps://github.com/Alaricdragon/AIRetrofits/blob/experimental-001/jars/src/change_log\n```\nv0.7.5:\nRequires the latest version of crew replacer.\nsave compatible with 0.7.3+\n    new:\n        added a way to see what power a given robot has, so no more guessing on why they are so weak/strong today.\n        added a setting to toggle weather or not your ships that launch from AI-Pop worlds have there 'marines' and 'crew' replaced with 'combat robots' and 'salvage robots'\n    balance:\n        'robotic worker assembely' build time:      60 -> 30\n        'robot worker factory' build time:          90 -> 60\n        'robot worker production center' build time:120 -> 90\n        reason: building the pop growth buildings took far to long. especially the first one.\n    fixes:\n        removed a testing crewReplacer crew\n        fixed combat robots power and priority for nex invasions and hijack marines being swapped\n        updated robots custom crew power to the crewReplacer system.\n    background work:\n        started work on the last missing market buildings.\n\n```\n\nDOWNLOAD AT YOUR OWN RISK\ndownload for experimental branch:\nhttps://github.com/Alaricdragon/AIRetrofits/tree/experimental-001\nand if you want to play the mod in its more stable form, there is an download or two here.\nForum\nhttps://fractalsoftworks.com/forum/index.php?topic=22261.msg335242#msg335242",
       "gameVersionReq": "0.95a",
       "authors": "alaricdragon",
       "authorsList": [
@@ -219,7 +219,7 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=22261.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=22261.msg335242#msg335242",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1055611330050150531",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1059595742563537047",
         "DownloadPage": "https://github.com/Alaricdragon/MarketRetrofits"
       },
       "source": "Index",
@@ -232,7 +232,8 @@
         "Miscellaneous Mods"
       ],
       "images": {},
-      "dateTimeCreated": "2022-12-22T22:22:33.394Z"
+      "dateTimeCreated": "2023-01-02T22:15:11.364Z",
+      "dateTimeEdited": "2023-01-02T22:59:45.944Z"
     },
     {
       "name": "Accelerated Construction V1.1",
@@ -431,7 +432,7 @@
       "images": {}
     },
     {
-      "name": "Adversary: Customizable Star Systems (v0.7.0)",
+      "name": "Adversary: Customizable Star Systems (v0.8.0)",
       "gameVersionReq": "0.95.1a",
       "authors": "Tranquility",
       "authorsList": [
@@ -8530,7 +8531,7 @@
     {
       "name": "More Combat Terrain Effects",
       "summary": "REQUIRES LAZYLIB, LUNALIB",
-      "description": "REQUIRES LAZYLIB, LUNALIB\n\nAdds custom combat effects to all terrain that did not have an effect previously, and spruces up the rest.\n\nCurrently implemented: \nMagnetic field - Reduces weapon range, fighter range, missile maneuverability/guidance, vision range, and adds a small chance for missiles to have guidance scrambled.\nSlipstream - Force SO on all ships, fighters, and MISSILES, (venting allowed but with reduced effectiveness, for things like excelsior), slowly passively generate hardflux.\nNebula: Nebula clouds reduce weapon range, vision, speed, and disable zero-flux boost while inside of them.\nDeep hyperspace: Spawn nebula clouds. Hyperstorms will cause these clouds to zap anyone who draws near them, periodically, with a very powerful EMP bolt.\nBlack Holes: Drags all entities in combat towards the black hole, and increases time dilation of all ships.\nPulsars: Pushes all entities in combat away from the pulsar, reduces shield stats (efficiency, more upkeep, emp arc pierce chance), slowly generates hardflux, randomly EMPs ships, and charges all projectiles with a flat bonus to EMP damage.\n\nSafe to add and remove from saves. \n\nhttps://fractalsoftworks.com/forum/index.php?topic=25567\n\n```Changelog:\n1.1.3:\nInternal:\nReplaces most timers with intervalutils\n\nFeatures:\nAll effects now constantly re-apply their stat changes, to allow for dynamic changes, such as the slipstream change\nSlipstreams no longer affect intangible ships\nIf solar shielding/ECCM/whatever changes during combat, terrain effects will now change their values to account for it\n\nConfig:\nNew config option: Determine if slipstreams affect intangible entities or not\n\nBugfixes:\nFixed a bug where pulsars kept their EMP damage increase applied even after the battle ends, and applied it to all weapons\nPlease watch pulsar battles for excessive EMP damage as I realized a flaw in my implementation that may still be broke\n```",
+      "description": "REQUIRES LAZYLIB, LUNALIB\n\nAdds custom combat effects to all terrain that did not have an effect previously, and spruces up the rest.\n\nCurrently implemented: \nMagnetic field - Reduces weapon range, fighter range, missile maneuverability/guidance, vision range, and adds a small chance for missiles to have guidance scrambled.\nSlipstream - Force SO on all ships, fighters, and MISSILES, (venting allowed but with reduced effectiveness, for things like excelsior), slowly passively generate hardflux.\nNebula: Nebula clouds reduce weapon range, vision, speed, and disable zero-flux boost while inside of them.\nDeep hyperspace: Spawn nebula clouds. Hyperstorms will cause these clouds to zap anyone who draws near them, periodically, with a very powerful EMP bolt.\nBlack Holes: Drags all entities in combat towards the black hole, and increases time dilation of all ships.\nPulsars: Pushes all entities in combat away from the pulsar, reduces shield stats (efficiency, more upkeep, emp arc pierce chance), slowly generates hardflux, randomly EMPs ships, and charges all projectiles with a flat bonus to EMP damage.\n\nSafe to add and remove from saves. \n\nhttps://fractalsoftworks.com/forum/index.php?topic=25567\n\n```Changelog:\n1.1.4:\nOnce again, changed how the OS detection works to maybe fix the fucking classnotfound crash\n```",
       "gameVersionReq": "0.95.1a",
       "authors": "NikoTheGuyDude",
       "authorsList": [
@@ -8541,7 +8542,7 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=25567",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25567",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1057788617168277646",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1059594882164998195",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=25567"
       },
       "source": "Index",
@@ -8554,7 +8555,7 @@
         "Miscellaneous Mods"
       ],
       "images": {},
-      "dateTimeCreated": "2022-12-28T22:34:19.095Z"
+      "dateTimeCreated": "2023-01-02T22:11:46.229Z"
     },
     {
       "name": "More Conquests 1.0.0",
@@ -15041,5 +15042,5 @@
     }
   ],
   "totalCount": 554.0,
-  "lastUpdated": "2023-01-02T20:29:00Z"
+  "lastUpdated": "2023-01-03T08:28:00Z"
 }
