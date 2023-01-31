@@ -7991,8 +7991,6 @@
     },
     {
       "name": "MagicLib",
-      "summary": "This is way too late of an update with some bug fixes:",
-      "description": "This is way too late of an update with some bug fixes:\n\n__Important disclaimer__: This will be my last update for that mod as I have become an unreliable maintainer which is prohibitive for a library. From now on <@142592906178330624> will be the custodian of MagicLib, and I am grateful for his eagerness to pick up my slack.\n\nI have to apologize to all modders and players that had to use a flawed mod for months when I should have arranged this a lot sooner. For that I am sorry.\n\n```\n0.45.1\n\nMagicAsteroid plugins updated for SafaryJohn\n\nMagicCampaign/MagicBounty: Finding target objects now supports defaulting to any system if requested themes could not be found.\n```\n\nCheck the Wiki for all the details: <https://starsector.fandom.com/wiki/MagicLib>\n\n**Download:** <https://www.patreon.com/posts/magiclib-0-45-1-76912071>\n\n**Forum:** <http://fractalsoftworks.com/forum/index.php?topic=13718>\n**Nexus:** <https://www.nexusmods.com/starsector/mods/10?tab=files>\n**MagicLab discord:** <https://discord.gg/EVQZaD3naU>\n**Bug report/feedback:** <https://forms.gle/YbQ8cYUA5QaJBCYV8>",
       "gameVersionReq": "0.95.1a",
       "authors": "Tartiflette",
       "authorsList": [
@@ -8001,49 +7999,53 @@
       "link": "https://fractalsoftworks.com/forum/index.php?topic=13718.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=13718.0",
       "urls": {
-        "Forum": "http://fractalsoftworks.com/forum/index.php?topic=13718",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1061265466779258882",
-        "DownloadPage": "https://starsector.fandom.com/wiki/MagicLib"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=13718.0"
       },
       "source": "Index",
       "sources": [
-        "Index",
-        "Discord"
+        "Index"
       ],
       "categories": [
         "Libraries"
       ],
-      "images": {
-        "1061265466934444082": {
-          "id": "1061265466934444082",
-          "filename": "magicLib.jpg",
-          "content_type": "image/jpeg",
-          "size": 335450.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1061265466934444082/magicLib.jpg",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1061265466934444082/magicLib.jpg"
-        }
-      },
-      "dateTimeCreated": "2023-01-07T12:50:04.639Z",
-      "dateTimeEdited": "2023-01-07T14:21:50.404Z"
+      "images": {}
     },
     {
       "name": "MagicLib v0.45.2 (2023/01/07)",
+      "summary": "Hello hello! This is a *release candidate* for 0.46.0.",
+      "description": "Hello hello! This is a *release candidate* for 0.46.0.\nIt should be **save compatible** and ok to upgrade to (but if something breaks, let me know, that's what prereleases are for!)\n\n*Note: it's much easier to read the changelog here* <https://github.com/MagicLibStarsector/MagicLib/releases/tag/0.46.0-rc01>.\n```md\n**Other**\n  - Changed MagicLib's `mod_info.json` version format to the `major/minor/patch` object format instead of just a string.\n    - Mod authors: I recommend changing to `\"version\": {\"major\":0, \"minor\":46, \"patch\":0}` in your `dependencies` section, as it fixes MagicLib updates showing as incompatible when only the minor version changes.\n**New: Kotlin Extensions**\n  - Added a new jar, `MagicLib-Kotlin.jar`, containing Kotlin-only extension methods.\n**MagicAsteroids**\n  - No longer added to the save file.\n  - Fixes a bug causing asteroid impacts to stop happening.\n**MagicBounty**\n  - HVBs no longer have a time limit of 1 cycle (they have no time limit in Vayra's Sector).\n  - `job_reputation_reward` may now be negative. Failing a bounty with a negative rep reward will result in 0 rep change.\n  - `job_show_distance` has a new option, `system`. \"The target is located in the <system> system.\"\n  - `MagicLib_ListBounties <bountyKey>` now displays details for that bounty.\n  - Bug fixes, see full changelog.\n**MagicCampaign**\n  - Added `org.magiclib.campaign.MagicFleetBuilder`, a new, more configurable way to build a fleet. \n  - Added default values for all parameters in `createFleet`.\n```\n**Known issues** (to be fixed, probably)\n- Incompatible with BetterVariants\n\n**Download**: <https://github.com/MagicLibStarsector/MagicLib/releases/download/0.46.0-rc01/MagicLib-0.46.0-rc01.zip>\n**0.45.2 download**: https://www.patreon.com/posts/magiclib-0-45-1-76912071\n**Forum**: <https://fractalsoftworks.com/forum/index.php?topic=25868.0>\n**MagicLab discord**: <https://discord.gg/EVQZaD3naU>\n\n**Got issues?** Make a ticket (or just ping me): <https://github.com/MagicLibStarsector/MagicLib/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc>",
       "gameVersionReq": "0.95.1a",
       "authors": "Wispborne",
       "authorsList": [
+        "Wisp",
         "Wispborne"
       ],
       "link": "https://fractalsoftworks.com/forum/index.php?topic=25868.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=25868.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25868.0"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25868.0",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1069730719024292002",
+        "DirectDownload": "https://github.com/MagicLibStarsector/MagicLib/releases/download/0.46.0-rc01/MagicLib-0.46.0-rc01.zip",
+        "DownloadPage": "https://github.com/MagicLibStarsector/MagicLib/releases/tag/0.46.0-rc01"
       },
       "source": "ModdingSubforum",
       "sources": [
-        "ModdingSubforum"
+        "ModdingSubforum",
+        "Discord"
       ],
       "categories": [],
-      "images": {}
+      "images": {
+        "1069730718747480134": {
+          "id": "1069730718747480134",
+          "filename": "magicLib.png",
+          "content_type": "image/png",
+          "size": 882357.0,
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1069730718747480134/magicLib.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1069730718747480134/magicLib.png"
+        }
+      },
+      "dateTimeCreated": "2023-01-30T21:27:58.051Z",
+      "dateTimeEdited": "2023-01-30T23:01:19.603Z"
     },
     {
       "name": "Magnetar!: The Mission",
@@ -15409,5 +15411,5 @@
     }
   ],
   "totalCount": 568.0,
-  "lastUpdated": "2023-01-30T20:34:00Z"
+  "lastUpdated": "2023-01-31T08:27:00Z"
 }
