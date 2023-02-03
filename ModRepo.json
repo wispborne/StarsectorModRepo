@@ -99,6 +99,26 @@
       "dateTimeEdited": "2021-05-09T17:02:13.188Z"
     },
     {
+      "name": "0.96 Ship Changes",
+      "summary": "I wanted to try out the ship balance changes in the 0.96a change logs so I modded them all into the game. The ids of the hulls with balance changes are the ids of the regular hull with \"new_\" added to the front (ie. new_hyperion). Not safe to remove.",
+      "description": "I wanted to try out the ship balance changes in the 0.96a change logs so I modded them all into the game. The ids of the hulls with balance changes are the ids of the regular hull with \"new_\" added to the front (ie. new_hyperion). Not safe to remove.",
+      "gameVersionReq": "",
+      "authors": "itBeABruhMoment",
+      "authorsList": [
+        "itBeABruhMoment"
+      ],
+      "urls": {
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1070901007338451034"
+      },
+      "source": "Discord",
+      "sources": [
+        "Discord"
+      ],
+      "categories": [],
+      "images": {},
+      "dateTimeCreated": "2023-02-03T02:58:16.528Z"
+    },
+    {
       "name": "A New Level",
       "gameVersionReq": "0.95.1a",
       "authors": "Panteradactyl",
@@ -313,26 +333,6 @@
       },
       "dateTimeCreated": "2023-01-10T08:18:31.721Z",
       "dateTimeEdited": "2023-01-16T08:20:53.173Z"
-    },
-    {
-      "name": "Accelerated Construction V1.1",
-      "summary": "Tiny QoL mod that heavily decreases the Construction Times of several Colony Buildings.\nMade this mod for the sole reason that repeat playthroughs felt like a slog whenever i had to wait for a Colony Building to finish.",
-      "description": "Tiny QoL mod that heavily decreases the Construction Times of several Colony Buildings.\nMade this mod for the sole reason that repeat playthroughs felt like a slog whenever i had to wait for a Colony Building to finish.\n\n__Changelog:__\n-Now Supports some Industrial Evolution Buildings if the mod is active.\n\nClick on \"Expand\" on the .txt below to see all changes.",
-      "gameVersionReq": "",
-      "authors": "Lukas04",
-      "authorsList": [
-        "Lukas04"
-      ],
-      "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/992434421124845649"
-      },
-      "source": "Discord",
-      "sources": [
-        "Discord"
-      ],
-      "categories": [],
-      "images": {},
-      "dateTimeCreated": "2022-07-01T14:20:04.536Z"
     },
     {
       "name": "Ace combat flag pack version 1.1",
@@ -1135,8 +1135,6 @@
     },
     {
       "name": "Arkships V1.4",
-      "summary": "This mod adds \"Arkships\" in to the Sector. Arkships are custom Stations that by using an Ability can be moved to any Starsystem.\nThey do not participate in the economy and you can’t build Industries on them, but you can activate and deactivate Compartments which enable Features as you do so.",
-      "description": "This mod adds \"Arkships\" in to the Sector. Arkships are custom Stations that by using an Ability can be moved to any Starsystem.\nThey do not participate in the economy and you can’t build Industries on them, but you can activate and deactivate Compartments which enable Features as you do so.\nThe Core Component is the Arkship-Storage, allowing you to move an entire Stations Inventory through the sector.\nMore details can be found on the Forum post.\n\n**Changelog** :\n\n-> Fixed a bug that due to an oversight wiped the arkships inventory when the player hovered over the storage industries icon in the colony tab\n--> The update also removes the compartments industries, the compartments are now added without them, updating the mod should automaticly remove them.\n\n(Oh my god tracking this down was annoying)\n\n**Forum Post**: <https://fractalsoftworks.com/forum/index.php?topic=25091.0>\n**Download**: <https://github.com/Lukas22041/Arkship/raw/main/Arkships.zip>\nhttps://imgur.com/MI7sY5O.gif",
       "gameVersionReq": "0.95.1a",
       "authors": "Lukas04",
       "authorsList": [
@@ -1145,20 +1143,14 @@
       "link": "https://fractalsoftworks.com/forum/index.php?topic=25091.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=25091.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25091.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1013955362761744415",
-        "DirectDownload": "https://github.com/Lukas22041/Arkship/raw/main/Arkships.zip",
-        "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=25091.0"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25091.0"
       },
       "source": "ModdingSubforum",
       "sources": [
-        "ModdingSubforum",
-        "Discord"
+        "ModdingSubforum"
       ],
       "categories": [],
-      "images": {},
-      "dateTimeCreated": "2022-08-29T23:36:36.862Z",
-      "dateTimeEdited": "2022-08-29T23:42:31.574Z"
+      "images": {}
     },
     {
       "name": "Arma Armatura",
@@ -1239,14 +1231,14 @@
     {
       "name": "Armour Grid Visualiser",
       "summary": "A small mod that renders the current state of the player ship's and targeted ship's armour grids beneath them.",
-      "description": "A small mod that renders the current state of the player ship's and targeted ship's armour grids beneath them.\nboth always start combat disabled and can be toggled with f5 and f6 (by default) respectively.\nrequires lazylib, safe to add & remove to a save at will.\n\nif anything breaks, I'll be shocked but ping me\n```diff\nfixed ally grid colour, removed some duplicate code\nadded friendly grid colour\nadded dead / neutral grid colour\nadded optional lunalib integration for keybindings, ping me next time it updates for colour selection\n+no longer has a version_files.csv so version checker doesn't choke on it\n```",
+      "description": "A small mod that renders the current state of the player ship's and targeted ship's armour grids beneath them.\nboth always start combat disabled and can be toggled with f5 and f6 (by default) respectively.\nrequires lazylib & has optional lunalib integration, is safe to add & remove to a save at will.\n\nif anything breaks, I'll be shocked but ping me\n```diff\n+now has pickers for each grid colour in lunalib\n+updated for lunalib 1.3.0\n```",
       "gameVersionReq": "",
       "authors": "ruddygreat",
       "authorsList": [
         "ruddygreat"
       ],
       "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1054877667117240440"
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1070791219199877190"
       },
       "source": "Discord",
       "sources": [
@@ -1254,17 +1246,16 @@
       ],
       "categories": [],
       "images": {
-        "1054877665959624836": {
-          "id": "1054877665959624836",
+        "1070791218700763167": {
+          "id": "1070791218700763167",
           "filename": "image.png",
           "content_type": "image/png",
-          "size": 148557.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1054877665959624836/image.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1054877665959624836/image.png"
+          "size": 148583.0,
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1070791218700763167/image.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1070791218700763167/image.png"
         }
       },
-      "dateTimeCreated": "2022-12-20T21:47:14.52Z",
-      "dateTimeEdited": "2022-12-20T21:50:18.122Z"
+      "dateTimeCreated": "2023-02-02T19:42:00.996Z"
     },
     {
       "name": "Arsenal Expansion",
@@ -2719,7 +2710,7 @@
     {
       "name": "Carter's Freetraders",
       "summary": "Forum: https://fractalsoftworks.com/forum/index.php?topic=24433.0",
-      "description": "Forum: https://fractalsoftworks.com/forum/index.php?topic=24433.0\n\nNew lore friendly ship descriptions thanks to KMS who kindly wrote them, a new fast corvette, fixed some errors, a new line of HE energy based mining weapons, prettied up the Barkentine and Pinnacle and added 20 new portraits all in CFT white and red  (see below) . The forum OP images have been updated with the new changed sprites and added a spoiler link that shows the new portraits. Sorry I am a day later than anticipated but I do hope you enjoy the changes/additions.\n\nhttps://i.imgur.com/nrwYhao.png\n\nChangelog on the forum OP and in the RAR has all the details.\nAs always I am thankful to the kind players who help me fine tune my mods with special thanks this update to KMS, Noobishnoob and Severian Void.\n\n**Download:** https://drive.google.com/file/d/1kf_U1hKWCJ_M03pfm9ti4r15Ox1gEOhA/view?usp=sharing",
+      "description": "Forum: https://fractalsoftworks.com/forum/index.php?topic=24433.0\n\nSet all the CFT ships to use midline engine exhaust and adjusted some boundary lines.\n\nChangelog on the forum OP and in the RAR has the details.\n\n**Download:** https://drive.google.com/file/d/1kf_U1hKWCJ_M03pfm9ti4r15Ox1gEOhA/view?usp=sharing",
       "gameVersionReq": "0.95.1a",
       "authors": "Dazs",
       "authorsList": [
@@ -2730,7 +2721,7 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24433.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24433.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1069660357284597831",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1070800097681604741",
         "DownloadPage": "https://drive.google.com/file/d/1kf_U1hKWCJ_M03pfm9ti4r15Ox1gEOhA/view?usp=sharing"
       },
       "source": "Index",
@@ -2743,8 +2734,7 @@
         "Faction Mods"
       ],
       "images": {},
-      "dateTimeCreated": "2023-01-30T16:48:22.505Z",
-      "dateTimeEdited": "2023-01-30T16:48:47.87Z"
+      "dateTimeCreated": "2023-02-02T20:17:17.791Z"
     },
     {
       "name": "Carter's Junk Hull Mods",
@@ -5391,8 +5381,7 @@
       },
       "source": "Index",
       "sources": [
-        "Index",
-        "ModdingSubforum"
+        "Index"
       ],
       "categories": [
         "Portrait Packs"
@@ -7866,8 +7855,8 @@
     },
     {
       "name": "LunaLib",
-      "summary": "A Library for Mod Developers. There is not much of a reason to download it unless a mod requires it.\nAdds an ingame Settings UI that modders can extend, and a variety of utility functions.",
-      "description": "A Library for Mod Developers. There is not much of a reason to download it unless a mod requires it.\nAdds an ingame Settings UI that modders can extend, and a variety of utility functions.\n\n**Download**: <https://github.com/Lukas22041/LunaLib/releases/latest/download/LunaLib.zip>\n**Changelog & Older Versions**: <https://github.com/Lukas22041/LunaLib/releases>\n\n**Forum Thread**: <https://fractalsoftworks.com/forum/index.php?topic=25658.msg381423#msg381423>\n**Github**: <https://github.com/Lukas22041/LunaLib>\n**Documentation**: <https://github.com/Lukas22041/LunaLib/wiki>",
+      "summary": "A Library for Mod Developers.\nAdds an ingame mod settings panel that can be extended by modders, a debugging screen and Kotlin related utilities.",
+      "description": "A Library for Mod Developers.\nAdds an ingame mod settings panel that can be extended by modders, a debugging screen and Kotlin related utilities.\n```fix\nV1.3.0\nComplete visual rework of the Settings and Debug UI.\nNote: Some mods may not change their setting values without a restart until they are updated for this release.\n\nWill break: \"Parallel Construction\" V1.0, make sure to update it.\nMore Information under \"Changelog & Older Versions\"\n```\n**Download**: <https://github.com/Lukas22041/LunaLib/releases/latest/download/LunaLib.zip>\n**Changelog & Older Versions**: <https://github.com/Lukas22041/LunaLib/releases>\n\n**Forum Thread**: <https://fractalsoftworks.com/forum/index.php?topic=25658.msg381423#msg381423>\n**Github**: <https://github.com/Lukas22041/LunaLib>\n**Documentation**: <https://github.com/Lukas22041/LunaLib/wiki>\nhttps://imgur.com/pWpsXTG",
       "gameVersionReq": "0.95.1a",
       "authors": "Lukas04",
       "authorsList": [
@@ -7877,7 +7866,7 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=25658",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25658.msg381423#msg381423",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1061645066067779617",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1070784323499872379",
         "DirectDownload": "https://github.com/Lukas22041/LunaLib/releases/latest/download/LunaLib.zip",
         "DownloadPage": "https://github.com/Lukas22041/LunaLib/releases"
       },
@@ -7889,18 +7878,9 @@
       "categories": [
         "Libraries"
       ],
-      "images": {
-        "1061645065652535346": {
-          "id": "1061645065652535346",
-          "filename": "image.png",
-          "content_type": "image/png",
-          "size": 1054204.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1061645065652535346/image.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1061645065652535346/image.png"
-        }
-      },
-      "dateTimeCreated": "2022-12-27T00:00:06.379Z",
-      "dateTimeEdited": "2023-01-08T13:58:54.237Z"
+      "images": {},
+      "dateTimeCreated": "2023-02-02T19:13:53.173Z",
+      "dateTimeEdited": "2023-02-02T19:40:42.165Z"
     },
     {
       "name": "Machina Void Shipyards v.0.60",
@@ -7959,16 +7939,16 @@
       "images": {}
     },
     {
-      "name": "Magellan Shenanigans 0.4",
-      "summary": "Adds a random assortment of *stuff* for Harmful Mechanic's Magellan Protectorate faction mod.",
-      "description": "Adds a random assortment of *stuff* for Harmful Mechanic's Magellan Protectorate faction mod.\n\nRequires **Magellan Protectorate**!\nOptional content available when played with **Arma Armature**!\nSave compatible!\n\n***Temporarily removed due to incompatibility with new Magellan update***\n\n```\n0.4 release\nShips:\n- Added Sung-C [Herd], a Herd missile cruiser\n- Added Sung-M [Herd], a Herd missile cruiser\n- Added a relic from the past\nOptional Content - Requires Arma Armature\n- Added Edger [MOD], a uniquely dangerous foe\n- Added Jitte [MOD], a unique strikecraft\n- Added Bastardsword [MOD], a unique strikecraft\n- Added Bastardsword [LV], a Leveller strikecraft\n\nWeapons:\n- Added Voidshatter Lance\n- Updated Bonesaw weapons to match new values\n- Updated Ripfire weapons to match new values\n- Updated Barrage Flenser CIWS to use new Light Flenser projectiles, now uses magazine system\n\nFighters:\n- Bastardsword [Herd] Bomber Dirty Fusion Bombs Energy damage from 2000 to 1000, added 800-1200 HE damage on hull hit effect\n- Lochaber [BCR] Missile Bomber OP cost from 18 to 20, Ripfire missile count from 20 to 16, modified Ripfire fire pattern, increased firing arc of missile mounts\n- Modified Lochaber [BCR] Missile Bomber and Bastardsword [BCR] Gunship attack patterns\n\nMisc:\n- Added optional \"The Wrathful Flame\" MagicBounties mission arc if Arma Armature is enabled\n- Added Advanced Gunnery Controls suggested weapon modes support\n- Removed Shenanigans ships and weapons from Nex agent pool and Prism Freeport\n```",
+      "name": "Magellan Shenanigans 1.1.2",
+      "summary": "This is **not** save compatible with any previous version.",
+      "description": "This is **not** save compatible with any previous version.\n\nIt is safe to add to an ongoing game.\n\nVarious Magellan Protectorate shenanigans, including new weapons, mod-ships, MagicBounty quests, and a mystery or two. Optional content enabled by playing with Arma Armatura and Dassault-Mikoyan Engineering.\n\nView changelog for full list of content and changes.",
       "gameVersionReq": "",
       "authors": "CrashToDesktop",
       "authorsList": [
         "CrashToDesktop"
       ],
       "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/947003858113163304"
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1070860259003994183"
       },
       "source": "Discord",
       "sources": [
@@ -7976,17 +7956,17 @@
       ],
       "categories": [],
       "images": {
-        "947003857593073704": {
-          "id": "947003857593073704",
-          "filename": "shenanigans3.gif",
+        "1070860258144161852": {
+          "id": "1070860258144161852",
+          "filename": "shenanigans5.gif",
           "content_type": "image/gif",
-          "size": 1392459.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/947003857593073704/shenanigans3.gif",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/947003857593073704/shenanigans3.gif"
+          "size": 316645.0,
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1070860258144161852/shenanigans5.gif",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1070860258144161852/shenanigans5.gif"
         }
       },
-      "dateTimeCreated": "2022-02-26T05:35:14.255Z",
-      "dateTimeEdited": "2022-10-08T03:38:29.156Z"
+      "dateTimeCreated": "2023-02-03T00:16:21.368Z",
+      "dateTimeEdited": "2023-02-03T03:47:48.804Z"
     },
     {
       "name": "MagicLib",
@@ -12400,8 +12380,6 @@
     },
     {
       "name": "Starfarers Workshop 1.5.1",
-      "summary": "A content mod that specializes in adding new Hullmods to the game.\nThose hullmods change the way you use your ships and give them unique abilities",
-      "description": "A content mod that specializes in adding new Hullmods to the game.\nThose hullmods change the way you use your ships and give them unique abilities\nMore information on added content can be found on the Forum Thread. \n\n__Changes & Additions__\n-Vampirisms Visual effects have been slightly improved\n-Several changes to the secret system (changed primary star, market doesnt require an active transponder anymore, changed descriptions)\n\n__Balance__\n-Vampirism now applies its health over time, instead of instantly. Unused Health (i.e if the ship gets to max health) now gets stored and will heal the ship when it suffers future damage\n->This should make the ability decent now, instead of highly situational as it was before.\n\n__Fixes__\n-Fixed AI spamming ability activation sounds.\n\n**Download Link:** <https://www.dropbox.com/s/1enl5plked7ypbz/StarfarersWorkshopV1.5.1.zip?dl=1>\n**Forum Link:** <https://fractalsoftworks.com/forum/index.php?topic=24847.msg369111#msg369111>\nhttps://imgur.com/WuaU1vR.gif",
       "gameVersionReq": "0.95.1a",
       "authors": "Lukas04",
       "authorsList": [
@@ -12410,20 +12388,14 @@
       "link": "https://fractalsoftworks.com/forum/index.php?topic=24847.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24847.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24847.msg369111#msg369111",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/999306098324549676",
-        "DirectDownload": "https://www.dropbox.com/s/1enl5plked7ypbz/StarfarersWorkshopV1.5.1.zip?dl=1",
-        "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=24847.msg369111#msg369111"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24847.0"
       },
       "source": "ModdingSubforum",
       "sources": [
-        "ModdingSubforum",
-        "Discord"
+        "ModdingSubforum"
       ],
       "categories": [],
-      "images": {},
-      "dateTimeCreated": "2022-07-20T13:25:40.05Z",
-      "dateTimeEdited": "2022-07-20T13:28:59.546Z"
+      "images": {}
     },
     {
       "name": "Starpocalypse",
@@ -14388,7 +14360,8 @@
       },
       "source": "Index",
       "sources": [
-        "Index"
+        "Index",
+        "ModdingSubforum"
       ],
       "categories": [
         "Utility mods"
@@ -15420,5 +15393,5 @@
     }
   ],
   "totalCount": 568.0,
-  "lastUpdated": "2023-02-02T20:31:00Z"
+  "lastUpdated": "2023-02-03T08:30:00Z"
 }
