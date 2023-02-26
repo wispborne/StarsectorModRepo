@@ -10550,9 +10550,9 @@
       "dateTimeEdited": "2022-02-19T10:52:32.617Z"
     },
     {
-      "name": "Random Assortment of Things (RAT) v0.3.1 Beta",
+      "name": "Random Assortment of Things (RAT) v0.3.2 Beta",
       "summary": "```diff\n- Probably not save compatible with previous mod versions of v0.2.2 and below.",
-      "description": "```diff\n- Probably not save compatible with previous mod versions of v0.2.2 and below. \n- Requires LunaLib v1.3.1\n```A mod i made since i'm to lazy to keep multiple mods updated. Includes a collection of features that i will expand on whenever i wanna make something.\nEvery feature can be toggled on and off in the Mod Settings Menu ingame, so you can pick and choose what aspects of the mod you want to use.\n```fix\nContent:\n-> Expanded Themes: adds a little more variety to System Generation. Currently adds three new themes.\n-> Procedual Generation Config: a simplified Adjusted Sector, less configs, more idiot proof. (Disabled if AS is installed)\n---> Not thought of as an AS replacement, but more so a simplified version for those that dont want to do anything but get more systems.\n-> Parallel Construction: allows Colonies to build multiple Constructions at the same time, removing the queue system.\n-> Some more miscellaneous configs that change the game behaviour.\n``````fix\nChangelog v0.3.1\n-> Replaced the Misc-Skip config with a \"Improved Miscellaneous Theme\" option, making sure that you will barely find any empty systems if enabled.\n-> improved the description for the config that lets you increase the amount of systems.\n-> the amount of derelict motherships now scale with amount of generated systems, also increasing the amount of derelict themes generating.\n-> hypershunts, cryosleepers and rare derelict ships (i.e Legion XIV) now scale with the amount of systems generated.\n-> fixed a wrong number of minimum gates spawning per sector.\n-> replaced spacers gambits faction with a dummy faction to avoid conflicts with other mods.\n-> added version checker file.\n``````fix\nCredits:\n-> GMan: Worked on the custom sprites in the mod. \n```\n**Download**: <https://github.com/Lukas22041/Random-Assortment-of-Things/releases/latest/download/Random-Assortment-of-Things.zip>\n**Older Versions and Changelogs**:  <https://github.com/Lukas22041/Random-Assortment-of-Things/releases>",
+      "description": "```diff\n- Probably not save compatible with previous mod versions of v0.2.2 and below. \n- Requires LunaLib v1.3.1\n```A mod i made since i'm to lazy to keep multiple mods updated. Includes a collection of features that i will expand on whenever i wanna make something.\nEvery feature can be toggled on and off in the Mod Settings Menu ingame, so you can pick and choose what aspects of the mod you want to use.\n```fix\nContent:\n-> Expanded Themes: adds a little more variety to System Generation. Currently adds three new themes.\n-> Procedual Generation Config: a simplified Adjusted Sector, less configs, more idiot proof. (Disabled if AS is installed)\n---> Not thought of as an AS replacement, but more so a simplified version for those that dont want to do anything but get more systems.\n-> Parallel Construction: allows Colonies to build multiple Constructions at the same time, removing the queue system.\n-> Some more miscellaneous configs that change the game behaviour.\n``````fix\nChangelog v0.3.2\n-> fixed some wrong weapons being used in certain ship variants.\n-> fixed a crash that happened when hovering over an incompatible hullmod warning.\n-> fixed a crash with ICE. The fix only works for new saves, but the runcode below can be used to prevent the crash from happening randomly in existing saves.\n\nruncode for (StarSystemAPI system : Global.getSector().getStarSystems())\n        {\n            if (!system.getTags().contains(\"theme_chiral_copy\")) continue;\n            system.addTag(\"theme_hidden\");\n        }\n\n``````fix\nCredits:\n-> GMan: Worked on the custom sprites in the mod. \n```\n**Download**: <https://github.com/Lukas22041/Random-Assortment-of-Things/releases/latest/download/Random-Assortment-of-Things.zip>\n**Older Versions and Changelogs**:  <https://github.com/Lukas22041/Random-Assortment-of-Things/releases>",
       "gameVersionReq": "",
       "authors": "Lukas04",
       "authorsList": [
@@ -10560,7 +10560,7 @@
       ],
       "link": "https://github.com/Lukas22041/Random-Assortment-of-Things/releases/latest/download/Random-Assortment-of-Things.zip",
       "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1077165972747718738",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1079380556762062920",
         "DirectDownload": "https://github.com/Lukas22041/Random-Assortment-of-Things/releases/latest/download/Random-Assortment-of-Things.zip",
         "DownloadPage": "https://github.com/Lukas22041/Random-Assortment-of-Things/releases"
       },
@@ -10570,8 +10570,8 @@
       ],
       "categories": [],
       "images": {},
-      "dateTimeCreated": "2023-02-20T09:53:00.679Z",
-      "dateTimeEdited": "2023-02-20T09:54:33.674Z"
+      "dateTimeCreated": "2023-02-26T12:32:58.653Z",
+      "dateTimeEdited": "2023-02-26T12:33:19.077Z"
     },
     {
       "name": "Rate of Fire Hullmod",
@@ -10945,16 +10945,16 @@
       "dateTimeCreated": "2021-06-01T18:03:45.705Z"
     },
     {
-      "name": "RogueliteSector v1.3.8 - Discord Beta",
+      "name": "RogueliteSector v1.3.9 - Discord Beta",
       "summary": "*Requires LazyLib*",
-      "description": "*Requires LazyLib*\n\n**v1.3.8 is save compatible with all previous versions and is safe to add to existing saves, but not safe to remove from an ongoing playthrough.**\n\n```1.3.0 (Major Content Release):\n    - Added the ability to unlock hull mods\n    - Added fragment drops to the Plague Bearer bosses if the player has Seeker enabled\n    - Fixed a rare crash that occurred if an item type was null\n    - Fixed the last of the MagicBounty bugs (hopefully)\n    - Major code refactor & optimization\n\n1.3.8:\n    - Increased the chance of the player receiving Fragments from salvaging certain Domain-era wrecks (i.e. survey ships)\n    - Fixed an issue where certain swappable built-in weapons (i.e. mech arms) could show up in the unlock menu\n    - Tied the logging of invalid unlocks to an entry in settings.json; default is false\n    - Fixed an issue that made the current and/or potential unlock pages inaccessible under specific conditions```\n\nPermanent Progression!\n\nRogueliteSector allows you to utilize a rare new resource found throughout the sector to permanently unlock ships, weapons and fighter LPCs. Upon starting a new game, you'll be presented with the opportunity to add said ships/items to your fleet. Adds one new star system with a custom station; more info is available in the Quick Reference Guide included in the zip.\n\nFor those who need help finding Ouroboros: ||look for an uninhabited blue star in the southeast section of the core||\n\n**RogueliteSector does not alter the game's core mechanics; its main design philosophy involved allowing players to make tangible progress even in the face of mod updates/save corruption, as well as letting them earn the ability to start playthroughs with any of the awesome ships/weapons/fighters they worked hard to obtain.**\n\n__Please feel free to @ or DM me with feedback, bug reports, or suggestions.__\n\n**Enjoy!**",
+      "description": "*Requires LazyLib*\n\n**v1.3.9 is save compatible with all previous versions and is safe to add to existing saves, but not safe to remove from an ongoing playthrough.**\n\n```1.3.9:\n    - Substantially increased the Fragment drop chance for Domain-era wrecks\n    - Increased Plague Bearer Fragment drop amounts\n    - Slightly modified Fragment drop calculation to increase the relative value of commodities (i.e. AI cores, Relics, etc)\n    - Slightly lowered the upper RNG bound of bounty Fragment payouts\n    - Fixed an issue where some extremely low OP hull mods could be selected for free\n    - Fixed menu filter text disappearing when the search bar is used\n    - Fixed the hull mod select screen search bar interfering with the list of currently selected hull mods```\n\nPermanent Progression!\n\nRogueliteSector allows you to utilize a rare new resource found throughout the sector to permanently unlock ships, weapons, fighter LPCs and hull mods. Upon starting a new game, you'll be presented with the opportunity to add said ships/items/hull mods to your fleet. Adds one new star system with two custom stations; more info is available in the Quick Reference Guide included in the zip.\n\nFor those who need help finding Ouroboros: ||look for an uninhabited blue star in the southeast section of the core||\n\n**RogueliteSector does not alter the game's core mechanics; its main design philosophy involved allowing players to make tangible progress even in the face of mod updates/save corruption, as well as letting them earn the ability to start playthroughs with any of the awesome ships/weapons/fighters they worked hard to obtain.**\n\n__Please feel free to @ or DM me with feedback, bug reports, or suggestions.__\n\n**Enjoy!**",
       "gameVersionReq": "",
       "authors": "SteelSirokos",
       "authorsList": [
         "SteelSirokos"
       ],
       "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1078607594115039282"
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1079426832832659486"
       },
       "source": "Discord",
       "sources": [
@@ -10962,16 +10962,16 @@
       ],
       "categories": [],
       "images": {
-        "1078607593557200896": {
-          "id": "1078607593557200896",
+        "1079426832606171166": {
+          "id": "1079426832606171166",
           "filename": "promo1.png",
           "content_type": "image/png",
           "size": 267783.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1078607593557200896/promo1.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1078607593557200896/promo1.png"
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1079426832606171166/promo1.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1079426832606171166/promo1.png"
         }
       },
-      "dateTimeCreated": "2023-02-24T09:21:29.997Z"
+      "dateTimeCreated": "2023-02-26T15:36:51.728Z"
     },
     {
       "name": "Roider Armatura",
@@ -15658,5 +15658,5 @@
     }
   ],
   "totalCount": 577.0,
-  "lastUpdated": "2023-02-26T08:27:00Z"
+  "lastUpdated": "2023-02-26T20:28:00Z"
 }
