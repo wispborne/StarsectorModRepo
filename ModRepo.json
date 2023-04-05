@@ -1739,7 +1739,6 @@
       "source": "Index",
       "sources": [
         "Index",
-        "ModdingSubforum",
         "Discord"
       ],
       "categories": [
@@ -3307,7 +3306,7 @@
     },
     {
       "name": "Concord",
-      "gameVersionReq": "0.95.1a",
+      "gameVersionReq": "0.95.1a - reported as unstable",
       "authors": "Sutopia",
       "authorsList": [
         "Sutopia"
@@ -4641,7 +4640,7 @@
     {
       "name": "Exotica Technologies",
       "summary": "Upgrade your ships with chips you find from enemy fleets, or purchase them. Further specialize the loadouts of every ship you own. Enemy fleets use the upgrades that you can put on your own ships, and some factions even have their own unique upgrades!",
-      "description": "Upgrade your ships with chips you find from enemy fleets, or purchase them. Further specialize the loadouts of every ship you own. Enemy fleets use the upgrades that you can put on your own ships, and some factions even have their own unique upgrades!\n\nchangelog for this update is way too big to post here!!! most important thing: i added 4 upgrades and 2 exotics, and reworked a ton of them!! please read the changelog for other notes!!\n\nthis now requires the above lib, which requires lunalib!!\n\n__**This should absolutely be save compatible.**__\nchangelog: https://github.com/scardwell15/ExoticaTechnologies/releases/tag/v1.5.0\nhttps://github.com/scardwell15/ExoticaTechnologies/releases/download/v1.5.0/Exotica-Technologies-v1.5.0.zip",
+      "description": "Upgrade your ships with chips you find from enemy fleets, or purchase them. Further specialize the loadouts of every ship you own. Enemy fleets use the upgrades that you can put on your own ships, and some factions even have their own unique upgrades!\n\nchangelog for this update is way too big to post here!!! most important thing: i added 4 upgrades and 2 exotics, and reworked a ton of them!! please read the changelog for other notes!!\n\nthis now requires the above lib, which requires lunalib!!\n\n__**This should absolutely be save compatible.**__\nchangelog: https://github.com/scardwell15/ExoticaTechnologies/releases/tag/v1.5.1\nhttps://github.com/scardwell15/ExoticaTechnologies/releases/download/v1.5.1/Exotica-Technologies-v1.5.1.zip",
       "gameVersionReq": "0.95.1a",
       "authors": "presidentmattdamon",
       "authorsList": [
@@ -4651,9 +4650,9 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24660.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24660.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1092920614806880377",
-        "DirectDownload": "https://github.com/scardwell15/ExoticaTechnologies/releases/download/v1.5.0/Exotica-Technologies-v1.5.0.zip",
-        "DownloadPage": "https://github.com/scardwell15/ExoticaTechnologies/releases/tag/v1.5.0"
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1093216747018002433",
+        "DirectDownload": "https://github.com/scardwell15/ExoticaTechnologies/releases/download/v1.5.1/Exotica-Technologies-v1.5.1.zip",
+        "DownloadPage": "https://github.com/scardwell15/ExoticaTechnologies/releases/tag/v1.5.1"
       },
       "source": "Index",
       "sources": [
@@ -4664,9 +4663,17 @@
       "categories": [
         "Content Expansions"
       ],
-      "images": {},
-      "dateTimeCreated": "2023-04-04T21:16:20.053Z",
-      "dateTimeEdited": "2023-04-04T21:16:49.627Z"
+      "images": {
+        "1093216751740784761": {
+          "id": "1093216751740784761",
+          "filename": "banner.png",
+          "content_type": "image/png",
+          "size": 179214.0,
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1093216751740784761/banner.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1093216751740784761/banner.png"
+        }
+      },
+      "dateTimeCreated": "2023-04-05T16:53:03.474Z"
     },
     {
       "name": "Experimental Hull Modifications 0.2.0 - Preview",
@@ -8157,7 +8164,7 @@
     {
       "name": "LunaLib",
       "summary": "A Library for Mod Developers.\nAdds an ingame mod settings panel that can be extended by modders, a debugging screen and Kotlin related utilities.",
-      "description": "A Library for Mod Developers.\nAdds an ingame mod settings panel that can be extended by modders, a debugging screen and Kotlin related utilities.\n```fix\nv1.5.6\n-> The version checker changelogs now highlight any lines beginning with \"Version\" \n-> Slightly Reduced Memory Useage from Loaded Settings\n\nFor Modders:\n-> The LunaSettings CSV does not need the mod id column anymore.\n-> The LunaSettings CSV now loads each csv per mod instead of merging all together, so ids from different mods wont overwrite eachother anymore.\n-> The Settings data will now be be loaded if a mod requests data from it before Lunalib got the chance to load it (i.e in case a mod loads before lunalib in OnApplicationLoad)\n```\n**Download**: <https://github.com/Lukas22041/LunaLib/releases/latest/download/LunaLib.zip>\n**Changelog & Older Versions**: <https://github.com/Lukas22041/LunaLib/releases>\n\n**Forum Thread**: <https://fractalsoftworks.com/forum/index.php?topic=25658.msg381423#msg381423>\n**Github**: <https://github.com/Lukas22041/LunaLib>\n**Documentation**: <https://github.com/Lukas22041/LunaLib/wiki>",
+      "description": "A Library for Mod Developers.\nAdds an ingame mod settings panel that can be extended by modders, a debugging screen and Kotlin related utilities.\n```fix\nv1.5.7\n\n-> Keybind configs now accept L-Shift, L-CTRL and L-ALT\n-> The version checker screen now has a link refering to the USC Discord for the #mod_updates channel.\n-> Expanded the \"About\" section in the Mod Settings a bit.\n-> Potentialy fixed a version checker crash (again)\n```\n**Download**: <https://github.com/Lukas22041/LunaLib/releases/latest/download/LunaLib.zip>\n**Changelog & Older Versions**: <https://github.com/Lukas22041/LunaLib/releases>\n\n**Forum Thread**: <https://fractalsoftworks.com/forum/index.php?topic=25658.msg381423#msg381423>\n**Github**: <https://github.com/Lukas22041/LunaLib>\n**Documentation**: <https://github.com/Lukas22041/LunaLib/wiki>",
       "gameVersionReq": "0.95.1a",
       "authors": "Lukas04",
       "authorsList": [
@@ -8180,8 +8187,8 @@
         "Libraries"
       ],
       "images": {},
-      "dateTimeCreated": "2023-04-04T14:01:19.425Z",
-      "dateTimeEdited": "2023-04-04T14:22:58.827Z"
+      "dateTimeCreated": "2023-04-05T13:16:33.183Z",
+      "dateTimeEdited": "2023-02-07T18:21:20.372Z"
     },
     {
       "name": "Machina Void Shipyards v.0.60",
@@ -10765,12 +10772,15 @@
         "DirectDownload": "https://github.com/Lukas22041/Random-Assortment-of-Things/releases/latest/download/Random-Assortment-of-Things.zip",
         "DownloadPage": "https://github.com/Lukas22041/Random-Assortment-of-Things/releases"
       },
-      "source": "ModdingSubforum",
+      "source": "Index",
       "sources": [
+        "Index",
         "ModdingSubforum",
         "Discord"
       ],
-      "categories": [],
+      "categories": [
+        "Utility mods"
+      ],
       "images": {},
       "dateTimeCreated": "2023-04-02T02:43:20.362Z",
       "dateTimeEdited": "2023-03-14T17:52:05.022Z"
@@ -16052,5 +16062,5 @@
     }
   ],
   "totalCount": 589.0,
-  "lastUpdated": "2023-04-05T07:32:00Z"
+  "lastUpdated": "2023-04-05T19:32:00Z"
 }
