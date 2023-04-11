@@ -5474,8 +5474,8 @@
     },
     {
       "name": "FuzzyPack",
-      "summary": "Shieldgen crash is fixed!\n```",
-      "description": "Shieldgen crash is fixed!\n```\nUpdate:\n-External shield generators for large and medium slots\n-Zapgun, large unreliable energy weapon\n-\"Faction\" ships implemented, find their bp package\n-Autofit should now use FuzzyPack weapons\n-Balans?\n-Added the \":\"\n```\nNot save compatible  \nRequires LazyLib, GraphicsLib.\nLemme know if anything breaks 🙏 \n\nDL: https://github.com/SirFuzzWuzz/Starsector_mods/raw/main/FuzzyPack.zip",
+      "summary": "```",
+      "description": "```\nMinor update:\n-Fixed crashing in case Homebrew fuel injector is somehow added to ships with no engines mid combat (hopefully).\n-Changed to the correct game version in the mod info.\n```\nSave compatible with other 1.5.5x versions.\nRequires LazyLib, GraphicsLib.\nLemme know if anything breaks 🙏 \n\nDL: https://github.com/SirFuzzWuzz/Starsector_mods/raw/main/FuzzyPack.zip",
       "gameVersionReq": "0.95.1a",
       "authors": "SirFuzzWuzz",
       "authorsList": [
@@ -5485,7 +5485,7 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24596.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24596.0",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1091086797850816622",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1095046914820542637",
         "DirectDownload": "https://github.com/SirFuzzWuzz/Starsector_mods/raw/main/FuzzyPack.zip"
       },
       "source": "Index",
@@ -5497,18 +5497,8 @@
       "categories": [
         "Content Expansions"
       ],
-      "images": {
-        "1091086798152798208": {
-          "id": "1091086798152798208",
-          "filename": "shieldgenexample.png",
-          "content_type": "image/png",
-          "size": 155586.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1091086798152798208/shieldgenexample.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1091086798152798208/shieldgenexample.png"
-        }
-      },
-      "dateTimeCreated": "2023-03-30T19:49:24.02Z",
-      "dateTimeEdited": "2023-04-01T18:21:05.739Z"
+      "images": {},
+      "dateTimeCreated": "2023-04-10T18:05:29.481Z"
     },
     {
       "name": "G1GC vmparam Collection v.1.1.1 (0.95.1 Compatible)",
@@ -9733,6 +9723,7 @@
       "gameVersionReq": "0.95a",
       "authors": "this_is_a_username",
       "authorsList": [
+        "float",
         "this_is_a_username"
       ],
       "link": "https://fractalsoftworks.com/forum/index.php?topic=23928.0",
@@ -10036,6 +10027,25 @@
       },
       "dateTimeCreated": "2022-10-16T05:13:44.932Z",
       "dateTimeEdited": "2022-10-16T05:20:48.485Z"
+    },
+    {
+      "name": "Particle Engine (4/10/23)",
+      "gameVersionReq": "0.95.1a",
+      "authors": "float",
+      "authorsList": [
+        "float"
+      ],
+      "link": "https://fractalsoftworks.com/forum/index.php?topic=26453.0",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=26453.0",
+      "urls": {
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=26453.0"
+      },
+      "source": "ModdingSubforum",
+      "sources": [
+        "ModdingSubforum"
+      ],
+      "categories": [],
+      "images": {}
     },
     {
       "name": "Payout Tweaker",
@@ -10554,6 +10564,7 @@
       "gameVersionReq": "0.95a",
       "authors": "this_is_a_username",
       "authorsList": [
+        "float",
         "this_is_a_username"
       ],
       "link": "https://fractalsoftworks.com/forum/index.php?topic=23006.0",
@@ -11658,8 +11669,8 @@
     },
     {
       "name": "Scan Those Gates",
-      "summary": "Scans all gates that are located in systems with at least one non-hidden market at save start when Nexerelin Skip Story or the Skip Story mod is enabled. Scanned gates are added to the intel screen. Options are available in the settings.json for adding inactive gates to intel or scanning inactive gates during game startup.",
-      "description": "Scans all gates that are located in systems with at least one non-hidden market at save start when Nexerelin Skip Story or the Skip Story mod is enabled. Scanned gates are added to the intel screen. Options are available in the settings.json for adding inactive gates to intel or scanning inactive gates during game startup.\n\n**Only affects games during startup of a new save, and only works if Nexerelin 'Skip Story' or the Skip Story mod are enabled. Has no effect if you complete the Galatia quests yourself.**\n\n```Changelog:\nv1.4.1: Now adds scanned gates to the intel screen. settings.json options are available for adding inactive gates to intel or scanning inactive gates during game startup.```\nDownload: https://github.com/AEROassault/ScanThoseGates/releases/download/v1.4.1/ScanThoseGates.zip\nForum: https://fractalsoftworks.com/forum/index.php?topic=24651",
+      "summary": "Remote gate scans can be triggered via an ability, which can optionally scan gates in marketless systems or add them to intel. Adds two new abilities that can be used to reveal the location of hypershunts and cryosleepers on the intel screen.",
+      "description": "Remote gate scans can be triggered via an ability, which can optionally scan gates in marketless systems or add them to intel. Adds two new abilities that can be used to reveal the location of hypershunts and cryosleepers on the intel screen. \n\n**Cryosleepers and Hypershunts that are found while exploring will now be automatically added to the ``Megastructures`` Intel tab.**\n\n**If you have an active save, run the console command \"RemoveScanThoseGates\" and save the game before closing and updating to v1.5.1.**\n\nIf the mod is added after a game has been started, the abilities will be automatically added. Scan Those Gates can be safely removed from an active game by running the console command \"RemoveScanThoseGates\", saving the game, and then removing the mod.\n\n```Changelog:\nv1.5.1: Added listeners that will add Cryosleepers and Hypershunts to the \"Megastructures\" intel tab when discovered by exploring.```\nDownload: https://github.com/AEROassault/ScanThoseGates/releases/download/v1.5.1/ScanThoseGates.zip\nForum: https://fractalsoftworks.com/forum/index.php?topic=24651",
       "gameVersionReq": "0.95.1a",
       "authors": "AERO",
       "authorsList": [
@@ -11669,8 +11680,8 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24651.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24651",
-        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1005237477558210600",
-        "DirectDownload": "https://github.com/AEROassault/ScanThoseGates/releases/download/v1.5.0/ScanThoseGates.zip",
+        "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1095083651068346399",
+        "DirectDownload": "https://github.com/AEROassault/ScanThoseGates/releases/download/v1.5.1/ScanThoseGates.zip",
         "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=24651"
       },
       "source": "Index",
@@ -11683,25 +11694,17 @@
         "Utility mods"
       ],
       "images": {
-        "1000553499433648219": {
-          "id": "1000553499433648219",
-          "filename": "ScanThoseGates.png",
-          "content_type": "image/png",
-          "size": 28590.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1000553499433648219/ScanThoseGates.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1000553499433648219/ScanThoseGates.png"
-        },
-        "1005237477684023327": {
-          "id": "1005237477684023327",
+        "1095083651127058514": {
+          "id": "1095083651127058514",
           "filename": "ScanThoseGates_Banner.png",
           "content_type": "image/png",
-          "size": 8119.0,
-          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1005237477684023327/ScanThoseGates_Banner.png",
-          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1005237477684023327/ScanThoseGates_Banner.png"
+          "size": 8145.0,
+          "url": "https://cdn.discordapp.com/attachments/825068217361760306/1095083651127058514/ScanThoseGates_Banner.png",
+          "proxy_url": "https://media.discordapp.net/attachments/825068217361760306/1095083651127058514/ScanThoseGates_Banner.png"
         }
       },
-      "dateTimeCreated": "2022-07-24T00:02:23.634Z",
-      "dateTimeEdited": "2022-08-08T19:30:04.727Z"
+      "dateTimeCreated": "2023-04-10T20:31:28.085Z",
+      "dateTimeEdited": "2023-04-10T20:48:19.037Z"
     },
     {
       "name": "Scrapyard Armories",
@@ -11882,9 +11885,10 @@
       "authorsList": [
         "Nes"
       ],
+      "link": "https://www.dropbox.com/s/jfsam0elobioyuj/Secrets%20of%20the%20Frontier%20-%20Sparkle.zip?dl=1",
       "urls": {
         "Discord": "https://discord.com/channels/187635036525166592/825068217361760306/1088558242411585646",
-        "DownloadPage": "https://www.dropbox.com/s/jfsam0elobioyuj/Secrets%20of%20the%20Frontier%20-%20Sparkle.zip?dl=1"
+        "DirectDownload": "https://www.dropbox.com/s/jfsam0elobioyuj/Secrets%20of%20the%20Frontier%20-%20Sparkle.zip?dl=1"
       },
       "source": "Discord",
       "sources": [
@@ -16168,6 +16172,6 @@
       "dateTimeEdited": "2021-08-16T19:28:49.716Z"
     }
   ],
-  "totalCount": 592.0,
-  "lastUpdated": "2023-04-10T19:34:00Z"
+  "totalCount": 593.0,
+  "lastUpdated": "2023-04-11T07:32:00Z"
 }
