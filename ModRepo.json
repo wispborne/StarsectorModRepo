@@ -8227,7 +8227,7 @@
     {
       "name": "LunaLib",
       "summary": "A Library for Mod Developers.\nAdds an ingame mod settings panel that can be extended by modders, a debugging screen and Kotlin related utilities.",
-      "description": "A Library for Mod Developers.\nAdds an ingame mod settings panel that can be extended by modders, a debugging screen and Kotlin related utilities.\n```fix\nv1.5.9\n\n-> Fixes a single crash on startup that happens on some hardware, yup thats it, dont bother to update if you dont get crashes on startup.\nThis f*cking crash can die in a pit, alone, without any friends, as it deserves to, as it wasted my time.\n\n```\n**Download**: <https://github.com/Lukas22041/LunaLib/releases/latest/download/LunaLib.zip>\n**Changelog & Older Versions**: <https://github.com/Lukas22041/LunaLib/releases>\n\n**Forum Thread**: <https://fractalsoftworks.com/forum/index.php?topic=25658.msg381423#msg381423>\n**Github**: <https://github.com/Lukas22041/LunaLib>\n**Documentation**: <https://github.com/Lukas22041/LunaLib/wiki>",
+      "description": "A Library for Mod Developers.\nAdds an ingame mod settings panel that can be extended by modders, a debugging screen and Kotlin related utilities.\n```diff\n- Will crash with \"Random Assortment of Things\" 1.2.0 or prior when using its secondary shipsystems screen. RAT will get a patch within the next hour.\n``````fix\nv1.6.0\n\nFor Devs:\nAll features in this patch are kotlin related, sorry java people.\n\n-> Added 5 new UI Elements, can be accessed from TooltipMakerAPI through the TooltipMakerExtensions class.\n - LunaChargeButton, a button that needs to be hold for a short time to be activated.\n - LunaProgressBar, a simple bar that fills from left to right depending on its value.\n - LunaColorPicker, allows to select a color from a hue-based picker.\n - LunaTextField, a recreation of the vanilla textfield that allows multiline text.\n - LunaSpriteElement, a simple element displaying a sprite that can be modified unlike the vanilla equievalance.\n\n-> Added a new config option under \"Debug\" that lets you bind a hotkey that opens a custom panel that displays all Lunalib UI elements.\n-> LunaElements now hold a \"CustomData\" variable to store data.\n\n-> Added the \"LunaCustomPanelPlugin\" class.\n - A Simple Class that can be used to easily open a custom panel.\n - Used through SectorAPI.openLunaCustomPanel() or InteractionDialogAPI.openLunaCustomPanel()\n\nExtension Functions\n - Removed \"addScript\" and \"addTransientScript\" as they dont fit the context of the lib.\n - Added SectorAPI.openLunaCustomPanel() & InteractionDialogAPI.openLunaCustomPanel()\n - Added Extenstion Functions to TooltipMakerAPI for each new UI element.\n - Fixed TooltipMakerExtensions being inside an object.\n\n```\n**Download**: <https://github.com/Lukas22041/LunaLib/releases/latest/download/LunaLib.zip>\n**Changelog & Older Versions**: <https://github.com/Lukas22041/LunaLib/releases>\n\n**Forum Thread**: <https://fractalsoftworks.com/forum/index.php?topic=25658.msg381423#msg381423>\n**Github**: <https://github.com/Lukas22041/LunaLib>\n**Documentation**: <https://github.com/Lukas22041/LunaLib/wiki>",
       "gameVersionReq": "0.95.1a",
       "authors": "Lukas04",
       "authorsList": [
@@ -8250,7 +8250,7 @@
         "Libraries"
       ],
       "images": {},
-      "dateTimeCreated": "2023-04-07T21:32:10.566Z",
+      "dateTimeCreated": "2023-04-29T17:59:49.051Z",
       "dateTimeEdited": "2023-02-07T18:21:20.372Z"
     },
     {
@@ -16314,5 +16314,5 @@
     }
   ],
   "totalCount": 600.0,
-  "lastUpdated": "2023-04-28T19:52:00Z"
+  "lastUpdated": "2023-04-29T19:44:00Z"
 }
