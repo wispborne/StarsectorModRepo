@@ -353,8 +353,8 @@
     },
     {
       "name": "Advanced Gunnery Control",
-      "summary": "1.12.0:\n```",
-      "description": "1.12.0:\n```\nThis update will reset ship modes!\nfix: possible crash when switching between advanced and simple mode\nAdd BlockBeams tag (only relevant for very specific weapons, mainly a weapon from an upcoming mod release)\nAdd Charge ship mode\nInternal refactoring of ship modes. The way they were previously stored was kind of stupid. The main\neffect of this is that you can now customize which ship modes will be available in the settings.\nNote that, by default, the ForceAF and DEFAULT ship modes got removed, you can re-add them in settings.editme if you want to use them.\nFor mod authors, it's now also possible to assign ship modes via custom ship data.\n```",
+      "summary": "Upgrading from pre-1.12.x:\nWill reset all configured ship modes (not weapon tags)!",
+      "description": "Upgrading from pre-1.12.x:\nWill reset all configured ship modes (not weapon tags)!\nSome ship modes have been removed by default but can be re-added in the settings-file. \n\n1.12.1:\n```\n- fix: removing ForceAF as the last tag no longer makes it stick around.\n- fix: There should be less UI flicker now when setting all weapons to ForceAF tag. It doesn't seem possible to completely get rid of flicker.\n- fix: Combat GUI won't open anymore when an invalid ship (e.g. command shuttle) is selected.\n- fix: Crash when clicking suggested button on a ship with no fleet member value (doesn't matter that much because of previous point).\n- fix: suggested tags applied to ship modules would not get stored properly if exiting GUI after only pressing that button.\n- fix: Weapons that only have the PD_ALSO-tag no longer qualify as PD weapons\n- fix/feat: Selecting a ship in the command HUD (TAB-Key) now lets you open their GUI (experimental, uses reflection as this is not exposed by API). This is mainly relevant if you like to play combats without deploying a flahsip.\n```\nWhile the last point is technically a feature, I feel like it still doesn't really justify a minor increment. So I'll just claim that it was always intended to work that way and this is a fix 😛",
       "gameVersionReq": "0.96a",
       "authors": "DesperatePeter",
       "authorsList": [
@@ -364,7 +364,7 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=21280.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=21280.0",
-        "Discord": "https://discord.com/channels/187635036525166592/1116452011899093125/1118262118492426301"
+        "Discord": "https://discord.com/channels/187635036525166592/1116452011899093125/1119959616273535068"
       },
       "source": "Index",
       "sources": [
@@ -376,8 +376,8 @@
         "Utility mods"
       ],
       "images": {},
-      "dateTimeCreated": "2023-06-13T19:34:25.354Z",
-      "dateTimeEdited": "2023-06-14T06:14:39.154Z"
+      "dateTimeCreated": "2023-06-18T11:59:40.363Z",
+      "dateTimeEdited": "2023-06-18T15:20:57.561Z"
     },
     {
       "name": "Adversary: Customizable Star Systems",
@@ -1413,6 +1413,26 @@
       ],
       "categories": [],
       "images": {}
+    },
+    {
+      "name": "Block Tags",
+      "summary": "Now functional, aren't typos fun?",
+      "description": "Now functional, aren't typos fun?",
+      "gameVersionReq": "",
+      "authors": "yunru",
+      "authorsList": [
+        "yunru"
+      ],
+      "urls": {
+        "Discord": "https://discord.com/channels/187635036525166592/1119898622243377243/1119994302223880223"
+      },
+      "source": "Discord",
+      "sources": [
+        "Discord"
+      ],
+      "categories": [],
+      "images": {},
+      "dateTimeCreated": "2023-06-18T14:17:30.138Z"
     },
     {
       "name": "Blue",
@@ -5574,6 +5594,25 @@
       "dateTimeCreated": "2023-06-11T01:55:45.703Z"
     },
     {
+      "name": "Mayasuran Fighter Expansion 1.2a",
+      "gameVersionReq": "0.95.1a",
+      "authors": "Quartofel",
+      "authorsList": [
+        "Quartofel"
+      ],
+      "link": "https://fractalsoftworks.com/forum/index.php?topic=24799.0",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24799.0",
+      "urls": {
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24799.0"
+      },
+      "source": "ModdingSubforum",
+      "sources": [
+        "ModdingSubforum"
+      ],
+      "categories": [],
+      "images": {}
+    },
+    {
       "name": "Mayasuran Navy",
       "summary": "Need a faction with 10 plus capitals? Come here! <:fac_mayasura:648933870074331155>  <:skySsmug:1102191752531685416>",
       "description": "Need a faction with 10 plus capitals? Come here!   \n\n10.0.0 RC2\n-Fixed Didymoi Minelayer\nNew missile behavior means it activates as soon as it gets in range rather than a timer. While unfortunate, I can't change this I think.\n-Added pass through to the Mark VII projectiles, Caliburnus Railgun projectiles, Charged UV Pulse Cannon Projectiles.\nThese are all big projectiles with a lot of damage. So have fun sniping multiple fighters at once!\n-Increased refire time of Mark VII to 12 seconds.\n-Increased refire time of Armored Box Launcher to 12 seconds.\nBoth of these weapons will be keeping their massive alpha damage, however, you will have to be more deliberate with your shots.\n-Increased the damage of the Orbital Howitzer from 1200 to 2000.\nWith how unwieldy this gun is, it deserves MORE damage.\n\nhttps://github.com/KnightShii/Starsector/raw/master/Mayasuran%20Navy%2010.0.0%20RC2.7z",
@@ -8053,6 +8092,25 @@
       "dateTimeCreated": "2023-06-07T13:09:53.195Z"
     },
     {
+      "name": "Shield Shunt Rework",
+      "gameVersionReq": "0.96a",
+      "authors": "Killer of Fate",
+      "authorsList": [
+        "Killer of Fate"
+      ],
+      "link": "https://fractalsoftworks.com/forum/index.php?topic=27339.0",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=27339.0",
+      "urls": {
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=27339.0"
+      },
+      "source": "ModdingSubforum",
+      "sources": [
+        "ModdingSubforum"
+      ],
+      "categories": [],
+      "images": {}
+    },
+    {
       "name": "Shielded Holds For All",
       "gameVersionReq": "0.95a",
       "authors": "SOLDIER First",
@@ -9663,8 +9721,7 @@
       },
       "source": "Index",
       "sources": [
-        "Index",
-        "ModdingSubforum"
+        "Index"
       ],
       "categories": [
         "Utility mods"
@@ -10572,6 +10629,6 @@
       "images": {}
     }
   ],
-  "totalCount": 461.0,
-  "lastUpdated": "2023-06-18T06:01:00Z"
+  "totalCount": 464.0,
+  "lastUpdated": "2023-06-18T18:01:00Z"
 }
