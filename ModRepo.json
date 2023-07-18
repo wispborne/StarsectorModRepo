@@ -1349,29 +1349,6 @@
       "images": {}
     },
     {
-      "name": "Block Tags",
-      "summary": "Now functional, aren't typos fun?",
-      "description": "Now functional, aren't typos fun?",
-      "gameVersionReq": "",
-      "authors": "yunru",
-      "authorsList": [
-        "yunru"
-      ],
-      "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/1119898622243377243/1119994302223880223"
-      },
-      "source": "Discord",
-      "sources": [
-        "Discord"
-      ],
-      "categories": [
-        "Library",
-        "Other/Miscellaneous"
-      ],
-      "images": {},
-      "dateTimeCreated": "2023-06-18T14:17:30.138Z"
-    },
-    {
       "name": "Blue",
       "gameVersionReq": "0.96a",
       "authors": "Protonus",
@@ -2543,19 +2520,15 @@
     },
     {
       "name": "EHM: Experimental Hull Modifications v0.8.2",
-      "summary": "Dependency links:\n<https://fractalsoftworks.com/forum/index.php?topic=25658.0>",
-      "description": "Dependency links:\n<https://fractalsoftworks.com/forum/index.php?topic=25658.0>\n<https://fractalsoftworks.com/forum/index.php?topic=5444.0>\n\nA small maintenance update that fixes/prevents a few potential issues, and adds a new, better way to access the slot shunts. Oh also, adds a way to disable the DP penalty for certain hullmods. Enjoy!\n\n0.8.2 change log:\n\n- Added a new setting for slot shunt availability, both options* rely on the ability\n- Added a new setting to control deployment point penalty for the hull modifications\n- Missile Slot Retrofit suppresses built-in HBI if present\n- Adjusted some icons and text colours, fixed a few tooltips\n- Prevented a vanilla issue with the weapon groups\n- Prevented a potential problem with a listener\n\n* \"Always\" (new, default) option makes slot shunts available whenever refit tab is opened\n* \"Submarket\" (old) option makes slot shunts available only when docked at a port",
+      "summary": "It seems one potential fix didn't take. I've attempted to prevent it as I wasn't able to reproduce it at all. If anyone is experiencing a crash that says something like this in the log, please use this WIP version and send me the log that this one generates\n```com.fs.starfarer.combat.CombatMain  - java.lang.NullPointerException",
+      "description": "It seems one potential fix didn't take. I've attempted to prevent it as I wasn't able to reproduce it at all. If anyone is experiencing a crash that says something like this in the log, please use this WIP version and send me the log that this one generates\n```com.fs.starfarer.combat.CombatMain  - java.lang.NullPointerException\n    at lyravega.listeners.lyr_tabListener.attach(lyr_tabListener.java:29)\n    at lyravega.plugin.lyr_ehm.attachShuntAccessListener(lyr_ehm.java:133)\n    at lyravega.plugin.lyr_ehm.onGameLoad(lyr_ehm.java:40)```",
       "gameVersionReq": "",
       "authors": "lyravega",
       "authorsList": [
         "lyravega"
       ],
-      "link": "https://fractalsoftworks.com/forum/index.php?topic=25658.0",
-      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=25658.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25658.0",
-        "Discord": "https://discord.com/channels/187635036525166592/1115980328415268884/1130152563493310564",
-        "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=25658.0"
+        "Discord": "https://discord.com/channels/187635036525166592/1115980328415268884/1130914715850260520"
       },
       "source": "Discord",
       "sources": [
@@ -2565,8 +2538,7 @@
         "Modular Hullmods"
       ],
       "images": {},
-      "dateTimeCreated": "2023-07-16T15:02:48.356Z",
-      "dateTimeEdited": "2023-07-17T10:09:38.451Z"
+      "dateTimeCreated": "2023-07-18T17:31:19.638Z"
     },
     {
       "name": "ElvenSector 0.1.0",
@@ -4319,25 +4291,6 @@
       "images": {}
     },
     {
-      "name": "Kiith Nabaal Shipyard 1.3.1 - Hiigaran Marine & Assault Frigates",
-      "gameVersionReq": "0.9.1a",
-      "authors": "Armithaig",
-      "authorsList": [
-        "Armithaig"
-      ],
-      "link": "https://fractalsoftworks.com/forum/index.php?topic=16360.0",
-      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=16360.0",
-      "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=16360.0"
-      },
-      "source": "ModdingSubforum",
-      "sources": [
-        "ModdingSubforum"
-      ],
-      "categories": [],
-      "images": {}
-    },
-    {
       "name": "Kingdom of Terra",
       "gameVersionReq": "0.95a",
       "authors": "Sinosauropteryx",
@@ -4828,6 +4781,32 @@
         "Libraries"
       ],
       "images": {}
+    },
+    {
+      "name": "Machina Void Shipyards 0.61",
+      "summary": "0.61.1, final version for now, exactly like 0.61 but  no longer breaks graphicslib. I might be back when Alex releases a finished game, but for now, so long, and thanks for all the fish.",
+      "description": "0.61.1, final version for now, exactly like 0.61 but  no longer breaks graphicslib. I might be back when Alex releases a finished game, but for now, so long, and thanks for all the fish.",
+      "gameVersionReq": "0.96a-RC8",
+      "authors": "unit9461",
+      "authorsList": [
+        "unit9461"
+      ],
+      "link": "https://fractalsoftworks.com/forum/index.php?topic=21113.0",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=21113.0",
+      "urls": {
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=21113.0",
+        "Discord": "https://discord.com/channels/187635036525166592/1116507611630665819/1130746371390062633"
+      },
+      "source": "Discord",
+      "sources": [
+        "ModdingSubforum",
+        "Discord"
+      ],
+      "categories": [
+        "Faction"
+      ],
+      "images": {},
+      "dateTimeCreated": "2023-07-18T06:22:23.191Z"
     },
     {
       "name": "MagicLib",
@@ -8638,7 +8617,8 @@
       },
       "source": "Index",
       "sources": [
-        "Index"
+        "Index",
+        "ModdingSubforum"
       ],
       "categories": [
         "Utility mods"
@@ -9422,6 +9402,6 @@
       "images": {}
     }
   ],
-  "totalCount": 434.0,
-  "lastUpdated": "2023-07-18T06:01:00Z"
+  "totalCount": 433.0,
+  "lastUpdated": "2023-07-18T18:01:00Z"
 }
