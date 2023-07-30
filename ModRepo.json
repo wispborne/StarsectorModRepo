@@ -665,15 +665,17 @@
     },
     {
       "name": "Apex Design Collective",
-      "summary": "if you want to generate relics in an existing save, copy and paste the following into the console:\n```runcode import world.ApexRelicPlacer; (new ApexRelicPlacer()).generate(Global.getSector());``` This will also work more than once but you shouldn't do that cause, yknow, it's cheating",
-      "description": "if you want to generate relics in an existing save, copy and paste the following into the console:\n```runcode import world.ApexRelicPlacer; (new ApexRelicPlacer()).generate(Global.getSector());``` This will also work more than once but you shouldn't do that cause, yknow, it's cheating",
+      "summary": "updated to version 1.2.3\nFleshing out the relic guns and adding some relic hulls. I don't have anything else planned for the relic stuff at the moment, but I'll add more if inspiration strikes.",
+      "description": "updated to version 1.2.3\nFleshing out the relic guns and adding some relic hulls. I don't have anything else planned for the relic stuff at the moment, but I'll add more if inspiration strikes.\nNew:\n||- MHD Driver\n- Plasmatic Repeater\n- Shrieker Torpedo Silo\n- Shrieker Torpedo Rack\n- Dadras-class destroyer\n- Aizawa-class dreadnought||\n- Several relic weapon caches and hulls will be placed during sector generation.\n- LunaLib settings integration\n\nChanges:\n- Changed relic weapon/hull spawning- they now show up only in mercenary and scavenger fleets. Historians can find blueprints for them too.\n- added a loot cargo listener to ensure that Taipan VLS cells (and any other weapons with the SYSTEM tag) never end up in anyone's cargo, ever\n-|| Rotary AM Flak||: new sounds courtesy of meso, and significantly reworked explosion visual effects\n- ||Wailer MRM Pod||: increased flight time by 2 seconds to ensure it reaches its listed range even if fired directly away from the target. Reduced homing spread amount.\n- Consolidated the Kommok and Odomodo bounties into a single bounty with a higher level requirement, difficulty, and a third weird Komodo. \n- Reduced the power of the Odomodo's damper to 90%. \n- Kommok and Odomodo are no longer guaranteed recoveries.\n- Kommok now has Temporal Damper instead of Temporal Shell.\n\nBugs Squashed:\n- Fixed a rare crash with the Wailer MRM missile AI.\n\ndirect download: https://github.com/theDragn/ApexDesignCollective/releases/download/1.2.3/Apex.Design.Collective_v1.2.3.zip\n\nif you want to generate relics in an existing save, copy and paste the following into the console:\n``runcode import world.ApexRelicPlacer; (new ApexRelicPlacer()).generate(Global.getSector());``\n This will also work more than once but you shouldn't do that cause, yknow, it's cheating",
       "gameVersionReq": "",
       "authors": "iryx.",
       "authorsList": [
         "iryx."
       ],
+      "link": "https://github.com/theDragn/ApexDesignCollective/releases/download/1.2.3/Apex.Design.Collective_v1.2.3.zip",
       "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/1116503021921255545/1134722620084977694"
+        "Discord": "https://discord.com/channels/187635036525166592/1116503021921255545/1134721626454360164",
+        "DirectDownload": "https://github.com/theDragn/ApexDesignCollective/releases/download/1.2.3/Apex.Design.Collective_v1.2.3.zip"
       },
       "source": "Discord",
       "sources": [
@@ -683,7 +685,8 @@
         "Faction"
       ],
       "images": {},
-      "dateTimeCreated": "2023-07-29T05:42:34.755Z"
+      "dateTimeCreated": "2023-07-29T05:38:37.855Z",
+      "dateTimeEdited": "2023-07-30T07:23:21.979Z"
     },
     {
       "name": "Appro-Light 1.1.2 (Authorized Translation)",
@@ -871,8 +874,8 @@
     },
     {
       "name": "Ashes of The Domain",
-      "summary": "Vaults Of Knowledge 1.3.6 Patch dropped fixing another cricital error that has been missed , research cost reseting for non researched , but researches that are ongoing  ....... ehhhh  <:death:1104114836889149563>  and somehow biotics with capital B again slipped through files. Sorry for those mistakes , being here honest with you , i did not had time to test them to hell and back as now i simply dont want to risk burnout , where there is much more to do in future",
-      "description": "Vaults Of Knowledge 1.3.6 Patch dropped fixing another cricital error that has been missed , research cost reseting for non researched , but researches that are ongoing  ....... ehhhh    and somehow biotics with capital B again slipped through files. Sorry for those mistakes , being here honest with you , i did not had time to test them to hell and back as now i simply dont want to risk burnout , where there is much more to do in future",
+      "summary": "Fix for Lost Glory 0.0.4 : Thank you again that somehow during moving data market conditions got obliterated but now everything should be fine , btw  slowly but steady returning to modding",
+      "description": "Fix for Lost Glory 0.0.4 : Thank you again that somehow during moving data market conditions got obliterated but now everything should be fine , btw  slowly but steady returning to modding",
       "gameVersionReq": "0.96a",
       "authors": "Kaysaar",
       "authorsList": [
@@ -882,7 +885,7 @@
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=26307.0",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=26307.0",
-        "Discord": "https://discord.com/channels/187635036525166592/1116659417396559933/1134639682240659646"
+        "Discord": "https://discord.com/channels/187635036525166592/1116659417396559933/1135193618710265948"
       },
       "source": "Index",
       "sources": [
@@ -895,9 +898,17 @@
         "Exploration",
         "Miscellaneous Mods"
       ],
-      "images": {},
-      "dateTimeCreated": "2023-07-29T00:13:00.832Z",
-      "dateTimeEdited": "2023-07-29T00:14:13.609Z"
+      "images": {
+        "1135193618517348513": {
+          "id": "1135193618517348513",
+          "filename": "image.png",
+          "content_type": "image/png",
+          "size": 1270181.0,
+          "url": "https://cdn.discordapp.com/attachments/1116659417396559933/1135193618517348513/image.png",
+          "proxy_url": "https://media.discordapp.net/attachments/1116659417396559933/1135193618517348513/image.png"
+        }
+      },
+      "dateTimeCreated": "2023-07-30T12:54:09.578Z"
     },
     {
       "name": "Asteroid Ship Pack",
@@ -9380,5 +9391,5 @@
     }
   ],
   "totalCount": 435.0,
-  "lastUpdated": "2023-07-30T06:00:00Z"
+  "lastUpdated": "2023-07-30T18:01:00Z"
 }
