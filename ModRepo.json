@@ -665,17 +665,17 @@
     },
     {
       "name": "Apex Design Collective",
-      "summary": "updated to version 1.2.3\nFleshing out the relic guns and adding some relic hulls. I don't have anything else planned for the relic stuff at the moment, but I'll add more if inspiration strikes.",
-      "description": "updated to version 1.2.3\nFleshing out the relic guns and adding some relic hulls. I don't have anything else planned for the relic stuff at the moment, but I'll add more if inspiration strikes.\nNew:\n||- MHD Driver\n- Plasmatic Repeater\n- Shrieker Torpedo Silo\n- Shrieker Torpedo Rack\n- Dadras-class destroyer\n- Aizawa-class dreadnought||\n- Several relic weapon caches and hulls will be placed during sector generation.\n- LunaLib settings integration\n\nChanges:\n- Changed relic weapon/hull spawning- they now show up only in mercenary and scavenger fleets. Historians can find blueprints for them too.\n- added a loot cargo listener to ensure that Taipan VLS cells (and any other weapons with the SYSTEM tag) never end up in anyone's cargo, ever\n-|| Rotary AM Flak||: new sounds courtesy of meso, and significantly reworked explosion visual effects\n- ||Wailer MRM Pod||: increased flight time by 2 seconds to ensure it reaches its listed range even if fired directly away from the target. Reduced homing spread amount.\n- Consolidated the Kommok and Odomodo bounties into a single bounty with a higher level requirement, difficulty, and a third weird Komodo. \n- Reduced the power of the Odomodo's damper to 90%. \n- Kommok and Odomodo are no longer guaranteed recoveries.\n- Kommok now has Temporal Damper instead of Temporal Shell.\n\nBugs Squashed:\n- Fixed a rare crash with the Wailer MRM missile AI.\n\ndirect download: https://github.com/theDragn/ApexDesignCollective/releases/download/1.2.3/Apex.Design.Collective_v1.2.3.zip\n\nif you want to generate relics in an existing save, copy and paste the following into the console:\n``runcode import world.ApexRelicPlacer; (new ApexRelicPlacer()).generate(Global.getSector());``\n This will also work more than once but you shouldn't do that cause, yknow, it's cheating",
+      "summary": "1.2.4 released. Just some fixes.\n- Added version requirement for Combat Activators to prevent a crash if you didn't update it to at least 1.1.0.",
+      "description": "1.2.4 released. Just some fixes.\n- Added version requirement for Combat Activators to prevent a crash if you didn't update it to at least 1.1.0.\n- Toroid Mortars: somehow 0.96 broke the projectile glow on these? fuckin weird. anyway, it's fixed\n- Shrieker Torpedoes: Reduced damage to 600 HE + 400 frag and increased targeting spread by about 20%.\n- Aizawa and Dadras now have custom system AI and should be much more aggressive about using their dampers.\n\ndirect download: https://github.com/theDragn/ApexDesignCollective/releases/download/1.2.4/Apex.Design.Collective_v1.2.4.zip",
       "gameVersionReq": "",
       "authors": "iryx.",
       "authorsList": [
         "iryx."
       ],
-      "link": "https://github.com/theDragn/ApexDesignCollective/releases/download/1.2.3/Apex.Design.Collective_v1.2.3.zip",
+      "link": "https://github.com/theDragn/ApexDesignCollective/releases/download/1.2.4/Apex.Design.Collective_v1.2.4.zip",
       "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/1116503021921255545/1134721626454360164",
-        "DirectDownload": "https://github.com/theDragn/ApexDesignCollective/releases/download/1.2.3/Apex.Design.Collective_v1.2.3.zip"
+        "Discord": "https://discord.com/channels/187635036525166592/1116503021921255545/1136202424525279305",
+        "DirectDownload": "https://github.com/theDragn/ApexDesignCollective/releases/download/1.2.4/Apex.Design.Collective_v1.2.4.zip"
       },
       "source": "Discord",
       "sources": [
@@ -685,8 +685,7 @@
         "Faction"
       ],
       "images": {},
-      "dateTimeCreated": "2023-07-29T05:38:37.855Z",
-      "dateTimeEdited": "2023-07-30T07:23:21.979Z"
+      "dateTimeCreated": "2023-08-02T07:42:47.627Z"
     },
     {
       "name": "Appro-Light 1.1.2 (Authorized Translation)",
@@ -1447,16 +1446,16 @@
       "images": {}
     },
     {
-      "name": "Brighton Federation; Version 0.0.3",
-      "summary": "Brighton Federation; Version 0.0.3",
-      "description": "Brighton Federation; Version 0.0.3",
+      "name": "Brighton Federation; Version 0.0.3a",
+      "summary": "Brighton Federation; Version 0.0.3a",
+      "description": "Brighton Federation; Version 0.0.3a",
       "gameVersionReq": "",
       "authors": "kingalfonzo",
       "authorsList": [
         "kingalfonzo"
       ],
       "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/1116641975123333191/1135896958658150421"
+        "Discord": "https://discord.com/channels/187635036525166592/1116641975123333191/1136208293602275338"
       },
       "source": "Discord",
       "sources": [
@@ -1466,7 +1465,7 @@
         "Faction"
       ],
       "images": {},
-      "dateTimeCreated": "2023-08-01T11:28:58.889Z"
+      "dateTimeCreated": "2023-08-02T08:06:06.924Z"
     },
     {
       "name": "Bultach Coalition",
@@ -9484,5 +9483,5 @@
     }
   ],
   "totalCount": 438.0,
-  "lastUpdated": "2023-08-02T06:01:00Z"
+  "lastUpdated": "2023-08-02T18:01:00Z"
 }
