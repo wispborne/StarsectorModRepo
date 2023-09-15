@@ -118,6 +118,51 @@
       "images": {}
     },
     {
+      "name": "A modified offline version of starsearcher or \"Persean Commercial Realty Group\"",
+      "summary": "Based on https://gomtuu.org/starsearcher/ \nThings I have added:",
+      "description": "Based on https://gomtuu.org/starsearcher/ \nThings I have added:\n1. Search for planets based on certain conditions (resources etc)\n2. Search for planets based on distance to core world\n3. Show a flag to indicated if a planet has a gate or domain comm array in the system\n4. Increase the search timeout to 120 seconds\n5. Fixed a bug that causes all planets' ruin conditions show as \"Scattered Ruins\" \n6. Display Techmining Multplier; if the text is bold, the ruin has not been explored - June 13, 2023\n7. Add some exception handling when reading the save file, probably better compatibility with mods. If you have some issue with your save, send it to me and I would take a look. - June 20, 2023\n8. Added a filter for planet type - September 15, 2023\nForum link: https://fractalsoftworks.com/forum/index.php?topic=27210.0 \nDownload link: https://drive.google.com/file/d/1C3wJHxt1p6bYcxDc00-4JOFEAwo9TTTm/view?usp=sharing\n\nhttps://media.discordapp.net/attachments/1116918398992011284/1152157317383602206/image.png",
+      "gameVersionReq": "",
+      "authors": "sycspy",
+      "authorsList": [
+        "sycspy"
+      ],
+      "link": "https://fractalsoftworks.com/forum/index.php?topic=27210.0",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=27210.0",
+      "urls": {
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=27210.0",
+        "Discord": "https://discord.com/channels/187635036525166592/1116918398992011284/1116918398992011284",
+        "DownloadPage": "https://drive.google.com/file/d/1C3wJHxt1p6bYcxDc00-4JOFEAwo9TTTm/view?usp=sharing"
+      },
+      "source": "Discord",
+      "sources": [
+        "Discord"
+      ],
+      "categories": [
+        "Colonies",
+        "Utility"
+      ],
+      "images": {
+        "1118062065752481833": {
+          "id": "1118062065752481833",
+          "filename": "image.png",
+          "content_type": "image/png",
+          "size": 15373.0,
+          "url": "https://cdn.discordapp.com/attachments/1116918398992011284/1118062065752481833/image.png",
+          "proxy_url": "https://media.discordapp.net/attachments/1116918398992011284/1118062065752481833/image.png"
+        },
+        "1152157317383602206": {
+          "id": "1152157317383602206",
+          "filename": "image.png",
+          "content_type": "image/png",
+          "size": 236667.0,
+          "url": "https://cdn.discordapp.com/attachments/1116918398992011284/1152157317383602206/image.png",
+          "proxy_url": "https://media.discordapp.net/attachments/1116918398992011284/1152157317383602206/image.png"
+        }
+      },
+      "dateTimeCreated": "2023-06-10T02:34:57.66Z",
+      "dateTimeEdited": "2023-09-15T08:23:41.635Z"
+    },
+    {
       "name": "A small mod regarding lobster proliferation",
       "gameVersionReq": "0.96a",
       "authors": "baguette",
@@ -2630,19 +2675,20 @@
       "dateTimeEdited": "2023-08-25T06:51:13.2Z"
     },
     {
-      "name": "EHM: Experimental Hull Modifications v0.8.2",
+      "name": "EHM: Experimental Hull Modifications v0.8.3",
       "summary": "Unparalleled ship customization at your fingertips. Customize shields & engines, change systems, alter slot types / sizes with these new hull modifications and slot shunts!\n` `",
-      "description": "Unparalleled ship customization at your fingertips. Customize shields & engines, change systems, alter slot types / sizes with these new hull modifications and slot shunts!\n` `\n**FOREWARNING**\nThe 'Experimental' in the title is not just for novelty. Please use \"Save Copy\" before using this mod; in other words, back your save up.\nThe goal of this mod is providing extreme customization; balance isn't on any priority list. Extreme cases will be adjusted but that's pretty much it.\n\n**Hull Modifications:** Will become available immediately\n• Experimental Hull Modifications: Provides a base to all other hull modifications in this mod\n• Over-Engineered: Provides 15% OP bonus and some slot-points to the ship when built-in\n• Auxiliary Generators: Provides some slot-points in exchange for ordnance points\n• AI Switch: Turns automated ships into normal, or normal ships into automated ones\n\n**Hull Modification Categories:** Will become available immediately\n• Systems: Most vanilla systems are turned into hull modifications\n• Retrofits: Alters the weapon slots of a ship all together\n• Cosmetics: Fully customizable hull modifications to change shield and engine colours. Customization is done through the mod settings menu\n• Activators: Uses slot shunts to provide the ship with various enhancements by altering the slot they're installed on\n\n**Slot Shunt Categories:** These are utilities that can be equipped on weapon slots. Each require its own activator to do what it's supposed to do. May be obtained after activating the new ability\n• Adapters: Turns a bigger slot into smaller versions (3 large, 1 medium types)\n• Converters: Turns a smaller slot into a bigger one by using slot points (1 medium, 1 small types)\n• Diverters: Turns a slot inactive and yield slot points to be used by above (1 small type)\n• Capacitors: Enhances the total flux capacity of the ship (1 small type)\n• Dissipators: Enhances the total flux dissipation of the ship (1 small type)\n• Launch Tubes: Turns a large slot into a fighter hangar (1 large type)\n\n```diff\nRequires LunaLib & LazyLib\n+ Save compatible; safe to install/update\n- Cannot be removed; back your save up\n```\nWIP Release & Changelog: https://discord.com/channels/187635036525166592/1115980328415268884/1150390871536193649\nRelease & Changelog: <https://github.com/lyravega/lyr_ehm/releases/>\nForum Thread: <https://fractalsoftworks.com/forum/index.php?topic=24291>",
+      "description": "Unparalleled ship customization at your fingertips. Customize shields & engines, change systems, alter slot types / sizes with these new hull modifications and slot shunts!\n` `\n**FOREWARNING**\nThe 'Experimental' in the title is not just for novelty. Please use \"Save Copy\" before using this mod; in other words, back your save up.\nThe goal of this mod is providing extreme customization; balance isn't on any priority list. Extreme cases will be adjusted but that's pretty much it.\n\n**Hull Modifications:** Will become available immediately\n• Experimental Hull Modifications: Provides a base to all other hull modifications in this mod\n• Over-Engineered: Provides 15% OP bonus and some slot-points to the ship when built-in\n• Logistics Overhaul: Strips the ship of all combat capabilities in favour of logistics\n• Auxiliary Generators: Provides some slot-points in exchange for ordnance points\n• AI Switch: Turns automated ships into normal, or normal ships into automated ones\n\n**Hull Modification Categories:** Will become available immediately\n• Systems: Most vanilla systems are turned into hull modifications\n• Retrofits: Alters the weapon slots of a ship all together\n• Cosmetics: Fully customizable hull modifications to change shield and engine colours. Customization is done through the mod settings menu\n• Activators: Uses slot shunts to provide the ship with various enhancements by altering the slot they're installed on\n\n**Slot Shunt Categories:** These are utilities that can be equipped on weapon slots. Each require its own activator to do what it's supposed to do. May be obtained after activating the new ability\n• Adapters: Turns a bigger slot into smaller versions (3 large, 1 medium types)\n• Converters: Turns a smaller slot into a bigger one by using slot points (1 medium, 1 small types)\n• Diverters: Turns a slot inactive and yield slot points to be used by above (1 small type)\n• Capacitors: Enhances the total flux capacity of the ship (1 small type)\n• Dissipators: Enhances the total flux dissipation of the ship (1 small type)\n• Launch Tubes: Turns a large slot into a fighter hangar (1 large type)\n\n```diff\nRequires LunaLib & LazyLib\n+ Save compatible; safe to install/update\n- Cannot be removed; back your save up\n```\nRelease & Changelog: <https://github.com/lyravega/lyr_ehm/releases/>\nForum Thread: <https://fractalsoftworks.com/forum/index.php?topic=24291>",
       "gameVersionReq": "",
       "authors": "lyravega",
       "authorsList": [
         "lyravega"
       ],
-      "link": "https://fractalsoftworks.com/forum/index.php?topic=24291",
+      "link": "https://github.com/lyravega/lyr_ehm/releases/download/0.8.3/ExperimentalHullModifications.0.8.3.zip",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=24291",
       "urls": {
         "Forum": "https://fractalsoftworks.com/forum/index.php?topic=24291",
         "Discord": "https://discord.com/channels/187635036525166592/1115980328415268884/1115980328415268884",
+        "DirectDownload": "https://github.com/lyravega/lyr_ehm/releases/download/0.8.3/ExperimentalHullModifications.0.8.3.zip",
         "DownloadPage": "https://github.com/lyravega/lyr_ehm/releases/"
       },
       "source": "Discord",
@@ -2654,7 +2700,7 @@
       ],
       "images": {},
       "dateTimeCreated": "2023-06-07T12:27:24.206Z",
-      "dateTimeEdited": "2023-09-10T11:24:21.651Z"
+      "dateTimeEdited": "2023-09-15T15:15:18.888Z"
     },
     {
       "name": "ElvenSector",
@@ -8234,6 +8280,68 @@
       "images": {}
     },
     {
+      "name": "Symbiotic Void Creatures 0.1.2-alpha",
+      "summary": "This mod adds creatures you can encounter during your travels.\nGraphics, sound, writing: Tecrys",
+      "description": "This mod adds creatures you can encounter during your travels.\nGraphics, sound, writing: Tecrys\nCo-Author, Coder and Writer: <@615999112692891658> \nFor additional credits see Readme file in mod folder.\nhttps://github.com/DesperatePeter/starsector-symbiotic-void-creatures/releases/tag/0.1.2-alpha",
+      "gameVersionReq": "0.96a",
+      "authors": "Tecrys",
+      "authorsList": [
+        "Tecrys"
+      ],
+      "link": "https://fractalsoftworks.com/forum/index.php?topic=28010.0",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=28010.0",
+      "urls": {
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=28010.0",
+        "Discord": "https://discord.com/channels/187635036525166592/1151544376670040074/1151544376670040074",
+        "DownloadPage": "https://github.com/DesperatePeter/starsector-symbiotic-void-creatures/releases/tag/0.1.2-alpha"
+      },
+      "source": "ModdingSubforum",
+      "sources": [
+        "ModdingSubforum",
+        "Discord"
+      ],
+      "categories": [
+        "Exploration",
+        "Faction"
+      ],
+      "images": {
+        "1151544377202712586": {
+          "id": "1151544377202712586",
+          "filename": "redactedSVCthin.png",
+          "content_type": "image/png",
+          "size": 298176.0,
+          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151544377202712586/redactedSVCthin.png",
+          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151544377202712586/redactedSVCthin.png"
+        },
+        "1151571190872289290": {
+          "id": "1151571190872289290",
+          "filename": "SPOILER_GIF_25.05.2023_13-33-29.gif",
+          "content_type": "image/gif",
+          "size": 943418.0,
+          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151571190872289290/SPOILER_GIF_25.05.2023_13-33-29.gif",
+          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151571190872289290/SPOILER_GIF_25.05.2023_13-33-29.gif"
+        },
+        "1151571191262351422": {
+          "id": "1151571191262351422",
+          "filename": "SPOILER_GIF_04.06.2023_17-31-12.gif",
+          "content_type": "image/gif",
+          "size": 5245498.0,
+          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151571191262351422/SPOILER_GIF_04.06.2023_17-31-12.gif",
+          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151571191262351422/SPOILER_GIF_04.06.2023_17-31-12.gif"
+        },
+        "1151571191925067817": {
+          "id": "1151571191925067817",
+          "filename": "SPOILER_GIF_26.07.2023_12-28-06.gif",
+          "content_type": "image/gif",
+          "size": 1.0680455E7,
+          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151571191925067817/SPOILER_GIF_26.07.2023_12-28-06.gif",
+          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151571191925067817/SPOILER_GIF_26.07.2023_12-28-06.gif"
+        }
+      },
+      "dateTimeCreated": "2023-09-13T15:46:14.058Z",
+      "dateTimeEdited": "2023-09-13T22:23:28.849Z"
+    },
+    {
       "name": "Symmetrical Ship Pack",
       "summary": "Updated with permission. Insomuch as I updated the version number. Nothing else has been changed whatsoever.",
       "description": "Updated with permission. Insomuch as I updated the version number. Nothing else has been changed whatsoever.",
@@ -9747,68 +9855,6 @@
       "images": {}
     },
     {
-      "name": "[Hotfix]  Symbiotic Void Creatures 0.1.2-alpha",
-      "summary": "This mod adds creatures you can encounter during your travels.\nGraphics, sound, writing: Tecrys",
-      "description": "This mod adds creatures you can encounter during your travels.\nGraphics, sound, writing: Tecrys\nCo-Author, Coder and Writer: <@615999112692891658> \nFor additional credits see Readme file in mod folder.\nhttps://github.com/DesperatePeter/starsector-symbiotic-void-creatures/releases/tag/0.1.2-alpha",
-      "gameVersionReq": "0.96a",
-      "authors": "Tecrys",
-      "authorsList": [
-        "Tecrys"
-      ],
-      "link": "https://fractalsoftworks.com/forum/index.php?topic=28010.0",
-      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=28010.0",
-      "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=28010.0",
-        "Discord": "https://discord.com/channels/187635036525166592/1151544376670040074/1151544376670040074",
-        "DownloadPage": "https://github.com/DesperatePeter/starsector-symbiotic-void-creatures/releases/tag/0.1.2-alpha"
-      },
-      "source": "ModdingSubforum",
-      "sources": [
-        "ModdingSubforum",
-        "Discord"
-      ],
-      "categories": [
-        "Exploration",
-        "Faction"
-      ],
-      "images": {
-        "1151544377202712586": {
-          "id": "1151544377202712586",
-          "filename": "redactedSVCthin.png",
-          "content_type": "image/png",
-          "size": 298176.0,
-          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151544377202712586/redactedSVCthin.png",
-          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151544377202712586/redactedSVCthin.png"
-        },
-        "1151571190872289290": {
-          "id": "1151571190872289290",
-          "filename": "SPOILER_GIF_25.05.2023_13-33-29.gif",
-          "content_type": "image/gif",
-          "size": 943418.0,
-          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151571190872289290/SPOILER_GIF_25.05.2023_13-33-29.gif",
-          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151571190872289290/SPOILER_GIF_25.05.2023_13-33-29.gif"
-        },
-        "1151571191262351422": {
-          "id": "1151571191262351422",
-          "filename": "SPOILER_GIF_04.06.2023_17-31-12.gif",
-          "content_type": "image/gif",
-          "size": 5245498.0,
-          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151571191262351422/SPOILER_GIF_04.06.2023_17-31-12.gif",
-          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151571191262351422/SPOILER_GIF_04.06.2023_17-31-12.gif"
-        },
-        "1151571191925067817": {
-          "id": "1151571191925067817",
-          "filename": "SPOILER_GIF_26.07.2023_12-28-06.gif",
-          "content_type": "image/gif",
-          "size": 1.0680455E7,
-          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151571191925067817/SPOILER_GIF_26.07.2023_12-28-06.gif",
-          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151571191925067817/SPOILER_GIF_26.07.2023_12-28-06.gif"
-        }
-      },
-      "dateTimeCreated": "2023-09-13T15:46:14.058Z",
-      "dateTimeEdited": "2023-09-13T22:23:28.849Z"
-    },
-    {
       "name": "[WIP] Doc's Needless Economic Expansion Pack 0.2.1 \"Mann Co\"",
       "gameVersionReq": "0.96a-RC8",
       "authors": "PlagueDocBoi",
@@ -9964,6 +10010,6 @@
       "images": {}
     }
   ],
-  "totalCount": 426.0,
-  "lastUpdated": "2023-09-15T06:01:00Z"
+  "totalCount": 427.0,
+  "lastUpdated": "2023-09-15T18:01:00Z"
 }
