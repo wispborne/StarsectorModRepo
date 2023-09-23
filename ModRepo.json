@@ -484,7 +484,7 @@
       "dateTimeEdited": "2023-06-13T19:58:39.691Z"
     },
     {
-      "name": "Adversary: Customizable Star Systems",
+      "name": "Adversary",
       "summary": "Adds a player-like faction in an ideal star system, using most vanilla ships and weapons.",
       "description": "Adds a player-like faction in an ideal star system, using most vanilla ships and weapons.\n\n*v5.0.0 Summary*\n```\n* Split off the custom star system feature to the Customizable Star Systems mod\n  - Adversary portion now has a dependency on this split-off mod\n\n* Added a non-default, game-breaking, modded Adversary system to customStarSystems.json\n  - Requires both Industrial.Evolution and Unknown Skies to successfully enable\n\n* Changed source code and package names\n```\n*v5.1.0 Patch Notes*\n```\n* Add 4 silly MagicBounties centered around extremely lethal station battles.\n\n* Fixed Paradiso system not being a Core system and having a misplaced sensor array.\n```\n```Not save-compatible with v4.4.1 or earlier```\n**Download (requires Customizable Star Systems, plus either LunaLib or Java 8):** <https://github.com/Tranquiliti/Adversary/releases/download/v5.1.0/Adversary-v5.1.0.zip>\nReleases and Changelogs: <https://github.com/Tranquiliti/Adversary/releases>\nForum Thread: https://fractalsoftworks.com/forum/index.php?topic=25821.0",
       "gameVersionReq": "0.96a",
@@ -2337,10 +2337,10 @@
       "images": {}
     },
     {
-      "name": "Customizable Star Systems (v1.0.1)",
+      "name": "Customizable Star Systems",
       "summary": "Create your own custom star systems via a JSON file in this mod's config folder! Includes a default custom star system, with superb candidates for colonization.",
       "description": "Create your own custom star systems via a JSON file in this mod's config folder! Includes a default custom star system, with superb candidates for colonization.\n\n*v1.0.0 Summary*\n```\n* Split off from Adversary mod\n\n* Revamped the customStarSystem.json format\n\n* Updated referenceStarSystem.json and presetStarSystems.json with the updated format\n\n* Added \"SpawnCustomStarSystems\" and \"ListCustomStarSystems\" commands\n\n* Added a LunaSnippet for spawning in custom star systems\n\n* Updated source code and package names\n```\n*v1.0.1 Patch Notes*\n```\n* Changed \"setLocation\" Core World centroid point to the actual centroid point of all vanilla Core systems.\n\n* Added a check to ensure that the \"entities\" list has at least 1 entry in it.\n\n* Version Checker now points to the right forum thread\n```\n```Save-compatible```\n**Download (requires either LunaLib or Java 8):** <https://github.com/Tranquiliti/CustomizableStarSystems/releases/download/v1.0.1/CustomizableStarSystems-v1.0.1.zip>\nReleases and Changelogs: <https://github.com/Tranquiliti/CustomizableStarSystems/releases>\nForum Thread: https://fractalsoftworks.com/forum/index.php?topic=27785.0",
-      "gameVersionReq": "0.96a-RC10",
+      "gameVersionReq": "0.96a",
       "authors": "Tranquility",
       "authorsList": [
         "Tranquility",
@@ -2354,13 +2354,15 @@
         "DirectDownload": "https://github.com/Tranquiliti/CustomizableStarSystems/releases/download/v1.0.1/CustomizableStarSystems-v1.0.1.zip",
         "DownloadPage": "https://github.com/Tranquiliti/CustomizableStarSystems/releases"
       },
-      "source": "ModdingSubforum",
+      "source": "Index",
       "sources": [
+        "Index",
         "ModdingSubforum",
         "Discord"
       ],
       "categories": [
-        "Misc. Campaign Mods"
+        "Misc. Campaign Mods",
+        "Utility mods"
       ],
       "images": {
         "1138233155057356901": {
@@ -5418,7 +5420,7 @@
       "images": {}
     },
     {
-      "name": "Loulan Industries 1.8.6",
+      "name": "Loulan Industries 1.8.7",
       "summary": "A PL breakaway faction with a varied lineup of ships, weapons, and fighters.",
       "description": "A PL breakaway faction with a varied lineup of ships, weapons, and fighters.\n\nWhile Loulan ships cover a wide variety of design philosophies, they all benefit from the same \"LLI Protocol\" hullmods which can either offer unique bonuses or simple stat increases. Furthermore, the \"Cliff System\" common to all of their ships enhances a ship's performance based on its flux level.\n\nChangelog for 1.8.3:\n```\n1 new fighter\n1 new ship\n1 new weapon\n\nLoulan fighters on Traverser ships get altered paintjob to match Traverser's\n\nSeaquake has been resprited (overall weapon mounts remain the same)\nMeteorologist system reworked, renamed to \"Vectored Eruption Drive\"\nSystem Reboot reworked and renamed into \"Phase Transfer Field\"\n\nVarious stat buffs/nerfs\n```\n\nForum thread: https://fractalsoftworks.com/forum/index.php?topic=26367.msg391551#msg391551\nDownload link: https://drive.google.com/uc?export=download&id=1w3YPr-rl1ASJY4C_JKOmpYdcPKcZIig0\n\nhttps://cdn.discordapp.com/attachments/824910699415207937/1116465734470606898/ssp_LLIfaction_logo.png\nhttps://cdn.discordapp.com/attachments/824910699415207937/1116465734726451391/ssp_all3.png",
       "gameVersionReq": "",
@@ -6087,9 +6089,9 @@
         "Discord"
       ],
       "categories": [
-        "Miscellaneous Mods",
         "Quests and Bars",
-        "Utility"
+        "Utility",
+        "Utility mods"
       ],
       "images": {},
       "dateTimeCreated": "2023-06-08T17:28:05.274Z",
@@ -7349,8 +7351,7 @@
       "gameVersionReq": "0.95.1a",
       "authors": "AnyIDElse",
       "authorsList": [
-        "AnyIDElse",
-        "Iriscoral"
+        "AnyIDElse"
       ],
       "link": "https://fractalsoftworks.com/forum/index.php?topic=17822.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=17822.0",
@@ -7359,8 +7360,7 @@
       },
       "source": "Index",
       "sources": [
-        "Index",
-        "ModdingSubforum"
+        "Index"
       ],
       "categories": [
         "Faction Mods"
@@ -8635,38 +8635,6 @@
         "Flag Packs"
       ],
       "images": {}
-    },
-    {
-      "name": "Simple random flags v1.1",
-      "summary": "Just a bunch of random flags I got from the Internet, will add more in the future\nDownload: https://drive.google.com/file/d/1kfJGf73q9PyrdtoxcN-_FQSfq6B8RbJa/view",
-      "description": "Just a bunch of random flags I got from the Internet, will add more in the future\nDownload: https://drive.google.com/file/d/1kfJGf73q9PyrdtoxcN-_FQSfq6B8RbJa/view",
-      "gameVersionReq": "",
-      "authors": "real_octodude",
-      "authorsList": [
-        "real_octodude"
-      ],
-      "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/1126928425148494025/1126928425148494025",
-        "DownloadPage": "https://drive.google.com/file/d/1kfJGf73q9PyrdtoxcN-_FQSfq6B8RbJa/view"
-      },
-      "source": "Discord",
-      "sources": [
-        "Discord"
-      ],
-      "categories": [
-        "Portrait/Flag Pack"
-      ],
-      "images": {
-        "1126928425379188806": {
-          "id": "1126928425379188806",
-          "filename": "2i3wu6.jpg",
-          "content_type": "image/jpeg",
-          "size": 113909.0,
-          "url": "https://cdn.discordapp.com/attachments/1126928425148494025/1126928425379188806/2i3wu6.jpg",
-          "proxy_url": "https://media.discordapp.net/attachments/1126928425148494025/1126928425379188806/2i3wu6.jpg"
-        }
-      },
-      "dateTimeCreated": "2023-07-07T17:31:13.873Z"
     },
     {
       "name": "Skill Edit 1.2",
@@ -11419,6 +11387,6 @@
       "images": {}
     }
   ],
-  "totalCount": 439.0,
-  "lastUpdated": "2023-09-22T18:02:00Z"
+  "totalCount": 438.0,
+  "lastUpdated": "2023-09-23T06:02:00Z"
 }
