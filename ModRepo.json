@@ -447,7 +447,7 @@
     {
       "name": "Advanced Gunnery Control",
       "summary": "*Requires 0.96a-RC10+*",
-      "description": "*Requires 0.96a-RC10+*\n\n**A utility mod allowing you to customize weapon behavior on autofire, such as e.g. targeting/avoiding shields.**\n\nFeatures:     \n- Many tags, such as targeting or avoiding shields, PD mode and many many more\n- GUI-based configuration in combat or on the campaign map\n- Tags are automatically saved between combats and reloads\n- Seamlessly switch between simple mode (6 tags) and advanced mode (over 20 tags)\n- Customize AI-controlled ship behavior through ship modes\n- Create your own default tags with the option to automatically apply them\n- Customize most aspects of the mod through an extensive settings file\n- Manually control multiple weapon groups at once using the Merge tag\n\n```\nCan be updated/added/removed to/from ongoing campaigns.\n```\nAGC in 60s (Youtube): https://youtu.be/2T3xNqy2HQA\nAGC in-depth (Youtube, long and rambly, watch at 1.5~2x speed): https://youtu.be/WRH66z4EYcc\nAGC showcase (Youtube, slightly outdated): https://youtu.be/Zg4sxRj9V8I\n\nForum: https://fractalsoftworks.com/forum/index.php?topic=21280.0\nDownload: https://github.com/DesperatePeter/starsector-advanced-weapon-control/releases",
+      "description": "*Requires 0.96a-RC10+*\n\n**A utility mod allowing you to customize weapon behavior on autofire, such as e.g. targeting/avoiding shields.**\n\nFeatures:     \n- Many tags, such as targeting or avoiding shields, PD mode and many many more\n- GUI-based configuration in combat or on the campaign map\n- Tags are automatically saved between combats and reloads\n- Seamlessly switch between simple mode (6 tags) and advanced mode (over 20 tags)\n- Customize AI-controlled ship behavior through ship modes\n- Create your own default tags with the option to automatically apply them\n- Customize most aspects of the mod through an extensive settings file\n- Manually control multiple weapon groups at once using the Merge tag\n\n```\nCan be updated/added/removed to/from ongoing campaigns.\n```\n\n```\nTo mod-authors:\nIf you want to integrate with AGC to improve ship/weapon AI behavior of your faction, check the readme. Feel free to ping me if you need help or want to request a special mode.\nExample integration code: https://github.com/DesperatePeter/starsector-symbiotic-void-creatures/blob/main/src/tecrys/svc/hullmods/BGECarapace.kt#L98\n```\n\nAGC in 60s (Youtube): https://youtu.be/2T3xNqy2HQA\nAGC in-depth (Youtube, long and rambly, watch at 1.5~2x speed): https://youtu.be/WRH66z4EYcc\nAGC showcase (Youtube, slightly outdated): https://youtu.be/Zg4sxRj9V8I\n\nForum: https://fractalsoftworks.com/forum/index.php?topic=21280.0\nDownload: https://github.com/DesperatePeter/starsector-advanced-weapon-control/releases",
       "gameVersionReq": "0.96a",
       "authors": "DesperatePeter",
       "authorsList": [
@@ -481,7 +481,7 @@
         }
       },
       "dateTimeCreated": "2023-06-08T19:41:42.312Z",
-      "dateTimeEdited": "2023-06-13T19:58:39.691Z"
+      "dateTimeEdited": "2023-09-23T09:49:32.57Z"
     },
     {
       "name": "Adversary",
@@ -4609,6 +4609,25 @@
       "images": {}
     },
     {
+      "name": "Industrial evolution query",
+      "gameVersionReq": "0.96a",
+      "authors": "Renegade888",
+      "authorsList": [
+        "Renegade888"
+      ],
+      "link": "https://fractalsoftworks.com/forum/index.php?topic=28061.0",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=28061.0",
+      "urls": {
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=28061.0"
+      },
+      "source": "ModdingSubforum",
+      "sources": [
+        "ModdingSubforum"
+      ],
+      "categories": [],
+      "images": {}
+    },
+    {
       "name": "Industrial.Evolution",
       "summary": "`A massive campaign content expansion for colonies and exploration.`",
       "description": "`A massive campaign content expansion for colonies and exploration.`\n\nIndustrial Evolution aims to deepen the colonisation and exploration aspect of the game, bringing new gameplay features not available anywhere else, to support whatever playstyle you choose.\nCan not be installed on an ongoing save.\n\n```diff\nChangelog: \n3.3.c\nFixed all the problems with specialized industries\n\n3.3.b\nFixed the immortal artillery\nFixed the Pet Store soft brick when pressing esc\nAdded images to most pets\nAdded a larp mode to governments, making them cosmetic\n\n3.3.a\nAdded 33 Pets\nAdded 5 Planet Governments\nAdded 4 new World Wonders\nLunaLib Settings integration\nToo many bugfixes and improvements to list, check the forum changelog.\n``````diff\n+ SAVE COMPATIBLE WITH 3.3\n- Can NOT be installed on an ongoing save\nThis means: The mod can't be added if it was not present on game start, but the update is safe to install over the old one if you started the save with IndEvo 3.3 present.\n```\n# [Support my Efforts](https://ko-fi.com/sirhartley)\n# [Download](https://bitbucket.org/SirHartley/deconomics/downloads/Industrial.Evolution3.3.c.zip)\n# [Forum Thread](https://fractalsoftworks.com/forum/index.php?topic=18011.0)\n\n`_________________________________`\n\n_I thought it was gonna be a 20 minute adventure to fix that. It wasn't. Send help, please._",
@@ -8598,7 +8617,7 @@
     },
     {
       "name": "SideshowDogs German Translation gefixt",
-      "gameVersionReq": "0.95.1a-RC6",
+      "gameVersionReq": "0.96a-RC10",
       "authors": "Mortrag",
       "authorsList": [
         "Mortrag"
@@ -9307,68 +9326,6 @@
       ],
       "categories": [],
       "images": {}
-    },
-    {
-      "name": "Symbiotic Void Creatures 0.1.2-alpha",
-      "summary": "This mod adds creatures you can encounter during your travels.\nGraphics, sound, writing: Tecrys",
-      "description": "This mod adds creatures you can encounter during your travels.\nGraphics, sound, writing: Tecrys\nCo-Author, coding and writing: <@615999112692891658> \nFor additional credits see Readme file in mod folder.\nDownload: <https://github.com/DesperatePeter/starsector-symbiotic-void-creatures/releases/tag/0.1.2-alpha>",
-      "gameVersionReq": "0.96a",
-      "authors": "Tecrys",
-      "authorsList": [
-        "Tecrys"
-      ],
-      "link": "https://fractalsoftworks.com/forum/index.php?topic=28010.0",
-      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=28010.0",
-      "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=28010.0",
-        "Discord": "https://discord.com/channels/187635036525166592/1151544376670040074/1151544376670040074",
-        "DownloadPage": "https://github.com/DesperatePeter/starsector-symbiotic-void-creatures/releases/tag/0.1.2-alpha"
-      },
-      "source": "ModdingSubforum",
-      "sources": [
-        "ModdingSubforum",
-        "Discord"
-      ],
-      "categories": [
-        "Exploration",
-        "Faction"
-      ],
-      "images": {
-        "1151544377202712586": {
-          "id": "1151544377202712586",
-          "filename": "redactedSVCthin.png",
-          "content_type": "image/png",
-          "size": 298176.0,
-          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151544377202712586/redactedSVCthin.png",
-          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151544377202712586/redactedSVCthin.png"
-        },
-        "1151571190872289290": {
-          "id": "1151571190872289290",
-          "filename": "SPOILER_GIF_25.05.2023_13-33-29.gif",
-          "content_type": "image/gif",
-          "size": 943418.0,
-          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151571190872289290/SPOILER_GIF_25.05.2023_13-33-29.gif",
-          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151571190872289290/SPOILER_GIF_25.05.2023_13-33-29.gif"
-        },
-        "1151571191262351422": {
-          "id": "1151571191262351422",
-          "filename": "SPOILER_GIF_04.06.2023_17-31-12.gif",
-          "content_type": "image/gif",
-          "size": 5245498.0,
-          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151571191262351422/SPOILER_GIF_04.06.2023_17-31-12.gif",
-          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151571191262351422/SPOILER_GIF_04.06.2023_17-31-12.gif"
-        },
-        "1151571191925067817": {
-          "id": "1151571191925067817",
-          "filename": "SPOILER_GIF_26.07.2023_12-28-06.gif",
-          "content_type": "image/gif",
-          "size": 1.0680455E7,
-          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151571191925067817/SPOILER_GIF_26.07.2023_12-28-06.gif",
-          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151571191925067817/SPOILER_GIF_26.07.2023_12-28-06.gif"
-        }
-      },
-      "dateTimeCreated": "2023-09-13T15:46:14.058Z",
-      "dateTimeEdited": "2023-09-18T21:30:46.857Z"
     },
     {
       "name": "Symmetrical Ship Pack",
@@ -10392,6 +10349,68 @@
       "images": {}
     },
     {
+      "name": "UPDATE  Symbiotic Void Creatures 0.2.0-alpha",
+      "summary": "This mod adds creatures you can encounter during your travels.\nGraphics, sound, writing: Tecrys",
+      "description": "This mod adds creatures you can encounter during your travels.\nGraphics, sound, writing: Tecrys\nCo-Author, coding and writing: <@615999112692891658> \nFor additional credits see Readme file in mod folder.\n# ***Not Save Compatible***\nDownload: <https://github.com/DesperatePeter/starsector-symbiotic-void-creatures/releases/tag/v0.2.0-alpha>",
+      "gameVersionReq": "0.96a",
+      "authors": "Tecrys",
+      "authorsList": [
+        "Tecrys"
+      ],
+      "link": "https://fractalsoftworks.com/forum/index.php?topic=28010.0",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=28010.0",
+      "urls": {
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=28010.0",
+        "Discord": "https://discord.com/channels/187635036525166592/1151544376670040074/1151544376670040074",
+        "DownloadPage": "https://github.com/DesperatePeter/starsector-symbiotic-void-creatures/releases/tag/v0.2.0-alpha"
+      },
+      "source": "ModdingSubforum",
+      "sources": [
+        "ModdingSubforum",
+        "Discord"
+      ],
+      "categories": [
+        "Exploration",
+        "Faction"
+      ],
+      "images": {
+        "1151544377202712586": {
+          "id": "1151544377202712586",
+          "filename": "redactedSVCthin.png",
+          "content_type": "image/png",
+          "size": 298176.0,
+          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151544377202712586/redactedSVCthin.png",
+          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151544377202712586/redactedSVCthin.png"
+        },
+        "1151571190872289290": {
+          "id": "1151571190872289290",
+          "filename": "SPOILER_GIF_25.05.2023_13-33-29.gif",
+          "content_type": "image/gif",
+          "size": 943418.0,
+          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151571190872289290/SPOILER_GIF_25.05.2023_13-33-29.gif",
+          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151571190872289290/SPOILER_GIF_25.05.2023_13-33-29.gif"
+        },
+        "1151571191262351422": {
+          "id": "1151571191262351422",
+          "filename": "SPOILER_GIF_04.06.2023_17-31-12.gif",
+          "content_type": "image/gif",
+          "size": 5245498.0,
+          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151571191262351422/SPOILER_GIF_04.06.2023_17-31-12.gif",
+          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151571191262351422/SPOILER_GIF_04.06.2023_17-31-12.gif"
+        },
+        "1151571191925067817": {
+          "id": "1151571191925067817",
+          "filename": "SPOILER_GIF_26.07.2023_12-28-06.gif",
+          "content_type": "image/gif",
+          "size": 1.0680455E7,
+          "url": "https://cdn.discordapp.com/attachments/1151544376670040074/1151571191925067817/SPOILER_GIF_26.07.2023_12-28-06.gif",
+          "proxy_url": "https://media.discordapp.net/attachments/1151544376670040074/1151571191925067817/SPOILER_GIF_26.07.2023_12-28-06.gif"
+        }
+      },
+      "dateTimeCreated": "2023-09-13T15:46:14.058Z",
+      "dateTimeEdited": "2023-09-23T14:55:47.455Z"
+    },
+    {
       "name": "Unconventional Armaments",
       "gameVersionReq": "0.96a",
       "authors": "ve",
@@ -11387,6 +11406,6 @@
       "images": {}
     }
   ],
-  "totalCount": 438.0,
-  "lastUpdated": "2023-09-23T06:02:00Z"
+  "totalCount": 439.0,
+  "lastUpdated": "2023-09-23T18:02:00Z"
 }
