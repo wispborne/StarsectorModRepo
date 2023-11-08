@@ -2009,7 +2009,7 @@
     {
       "name": "Chairsector v1.0",
       "summary": "Ever wanted to smuggle furniture? Now you can. \nAdds a luxury commodity only produced on Tartessus for you to ~~smuggle into Askonia~~ trade.",
-      "description": "Ever wanted to smuggle furniture? Now you can. \nAdds a luxury commodity only produced on Tartessus for you to ~~smuggle into Askonia~~ trade.",
+      "description": "Ever wanted to smuggle furniture? Now you can. \nAdds a luxury commodity only produced on Tartessus for you to ~~smuggle into Askonia~~ trade.\n\nCurrently breaks with Nex Random Sector, a fix will be out eventually.",
       "gameVersionReq": "",
       "authors": "birdwanderer",
       "authorsList": [
@@ -2033,19 +2033,20 @@
           "filename": "furniture.png",
           "content_type": "image/png",
           "size": 9854.0,
-          "url": "https://cdn.discordapp.com/attachments/1166492749512573018/1166492749709725786/furniture.png?ex=6553ea87&is=65417587&hm=8b304ebadb2fe4c380fa8c54bf762ccccda17cd9ac093ba4e4d2ef4c40d4707b&",
-          "proxy_url": "https://media.discordapp.net/attachments/1166492749512573018/1166492749709725786/furniture.png?ex=6553ea87&is=65417587&hm=8b304ebadb2fe4c380fa8c54bf762ccccda17cd9ac093ba4e4d2ef4c40d4707b&"
+          "url": "https://cdn.discordapp.com/attachments/1166492749512573018/1166492749709725786/furniture.png?ex=655d2507&is=654ab007&hm=56e44208b6b09b9f0a6dd7718d58bd6a0eea46bad6e8989d29d5f747aa77fe48&",
+          "proxy_url": "https://media.discordapp.net/attachments/1166492749512573018/1166492749709725786/furniture.png?ex=655d2507&is=654ab007&hm=56e44208b6b09b9f0a6dd7718d58bd6a0eea46bad6e8989d29d5f747aa77fe48&"
         },
         "1166492772354768896": {
           "id": "1166492772354768896",
           "filename": "screenshot272.png",
           "content_type": "image/png",
           "size": 2693652.0,
-          "url": "https://cdn.discordapp.com/attachments/1166492749512573018/1166492772354768896/screenshot272.png?ex=6553ea8d&is=6541758d&hm=5bfb858db6a8e769f1cd45507e329956d58f12c52da82f04887e21512f0a9983&",
-          "proxy_url": "https://media.discordapp.net/attachments/1166492749512573018/1166492772354768896/screenshot272.png?ex=6553ea8d&is=6541758d&hm=5bfb858db6a8e769f1cd45507e329956d58f12c52da82f04887e21512f0a9983&"
+          "url": "https://cdn.discordapp.com/attachments/1166492749512573018/1166492772354768896/screenshot272.png?ex=655d250d&is=654ab00d&hm=a60532f9047ca986accc25cd9b01006c51e0b70313885e0f03b7b752cdf10883&",
+          "proxy_url": "https://media.discordapp.net/attachments/1166492749512573018/1166492772354768896/screenshot272.png?ex=655d250d&is=654ab00d&hm=a60532f9047ca986accc25cd9b01006c51e0b70313885e0f03b7b752cdf10883&"
         }
       },
-      "dateTimeCreated": "2023-10-24T21:45:43.871Z"
+      "dateTimeCreated": "2023-10-24T21:45:43.871Z",
+      "dateTimeEdited": "2023-11-07T20:53:59.282Z"
     },
     {
       "name": "Charmingly Wearisome Additions",
@@ -2497,25 +2498,44 @@
     },
     {
       "name": "Customizable Star Systems",
+      "summary": "Create your own custom star systems via a JSON file in this mod's config folder! Includes a default custom star system, with superb candidates for colonization.",
+      "description": "Create your own custom star systems via a JSON file in this mod's config folder! Includes a default custom star system, with superb candidates for colonization.\n\n*v1.0.2 Patch Notes*\n```\n* \"marketSize\" option now supports numbers greater than 10 if bigger population conditions exists due to other mods\n  - If no such conditions exist (or their IDs do not match the \"population_##\" string), \"marketSize\" will continue to cap population size at 10, as before.\n\n* Added \"systemLightColor\" option for custom star systems\n\n* Added \"orbitRadius\" support for \"accretion_disk\" entities\n  - Also scaled the default, randomly-generated orbit radius to fix it being smaller than typical proc-gen accretion disks\n\n* Custom star systems with a center black hole no longer auto-generate an accretion disk entity\n\n* Added \"orbitDays\" support for \"ring\" and \"asteroid_belt\" entities\n\n* Fixed an outdated error message\n\n* \"ListCustomStarSystems\" and \"SpawnCustomStarSystems\" commands now print the exception message when syntax errors in customStarSystems.json are found\n```\n```Save-compatible```\n**Download (requires either LunaLib or Java 8):** <https://github.com/Tranquiliti/CustomizableStarSystems/releases/download/v1.0.2/CustomizableStarSystems-v1.0.2.zip>\nReleases and Changelogs: <https://github.com/Tranquiliti/CustomizableStarSystems/releases>\nForum Thread: https://fractalsoftworks.com/forum/index.php?topic=27785.0",
       "gameVersionReq": "0.96a",
       "authors": "Tranquility",
       "authorsList": [
-        "Tranquility"
+        "Tranquility",
+        "tranquil_light"
       ],
       "link": "https://fractalsoftworks.com/forum/index.php?topic=27785.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=27785.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=27785.0"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=27785.0",
+        "Discord": "https://discord.com/channels/187635036525166592/1138233154851852288/1138233154851852288",
+        "DirectDownload": "https://github.com/Tranquiliti/CustomizableStarSystems/releases/download/v1.0.2/CustomizableStarSystems-v1.0.2.zip",
+        "DownloadPage": "https://github.com/Tranquiliti/CustomizableStarSystems/releases"
       },
       "source": "Index",
       "sources": [
         "Index",
-        "ModdingSubforum"
+        "ModdingSubforum",
+        "Discord"
       ],
       "categories": [
+        "Misc. Campaign Mods",
         "Utility mods"
       ],
-      "images": {}
+      "images": {
+        "1138233155057356901": {
+          "id": "1138233155057356901",
+          "filename": "screenshot259.png",
+          "content_type": "image/png",
+          "size": 41653.0,
+          "url": "https://cdn.discordapp.com/attachments/1138233154851852288/1138233155057356901/screenshot259.png?ex=655bd9bb&is=654964bb&hm=e804483e596eabb02e0f26544e5bd33665a5d44f9fe6c7d549cad4dfd88c91ed&",
+          "proxy_url": "https://media.discordapp.net/attachments/1138233154851852288/1138233155057356901/screenshot259.png?ex=655bd9bb&is=654964bb&hm=e804483e596eabb02e0f26544e5bd33665a5d44f9fe6c7d549cad4dfd88c91ed&"
+        }
+      },
+      "dateTimeCreated": "2023-08-07T22:12:11.466Z",
+      "dateTimeEdited": "2023-11-07T20:40:44.195Z"
     },
     {
       "name": "D-MOD Services",
@@ -3058,16 +3078,16 @@
           "filename": "logo_ed_small.png",
           "content_type": "image/png",
           "size": 4113.0,
-          "url": "https://cdn.discordapp.com/attachments/1131034215882952794/1131036233099907152/logo_ed_small.png?ex=65542013&is=6541ab13&hm=0b13475347a06718d8c39e0ea721a555f40d62c9b56fe01f9a8551a7bc639a76&",
-          "proxy_url": "https://media.discordapp.net/attachments/1131034215882952794/1131036233099907152/logo_ed_small.png?ex=65542013&is=6541ab13&hm=0b13475347a06718d8c39e0ea721a555f40d62c9b56fe01f9a8551a7bc639a76&"
+          "url": "https://cdn.discordapp.com/attachments/1131034215882952794/1131036233099907152/logo_ed_small.png?ex=655d5a93&is=654ae593&hm=43db2ca45d3d7d9939d2c9f1134ee43c0dd37e0d00fcd8e36e2d7ded9f2621ca&",
+          "proxy_url": "https://media.discordapp.net/attachments/1131034215882952794/1131036233099907152/logo_ed_small.png?ex=655d5a93&is=654ae593&hm=43db2ca45d3d7d9939d2c9f1134ee43c0dd37e0d00fcd8e36e2d7ded9f2621ca&"
         },
         "1131036300007440524": {
           "id": "1131036300007440524",
           "filename": "EDRosterWhiteBackground.png",
           "content_type": "image/png",
           "size": 3981780.0,
-          "url": "https://cdn.discordapp.com/attachments/1131034215882952794/1131036300007440524/EDRosterWhiteBackground.png?ex=65542023&is=6541ab23&hm=371db54a79fe6841af6e04dc20469519f33c9312b0d47b521316b2ded994945b&",
-          "proxy_url": "https://media.discordapp.net/attachments/1131034215882952794/1131036300007440524/EDRosterWhiteBackground.png?ex=65542023&is=6541ab23&hm=371db54a79fe6841af6e04dc20469519f33c9312b0d47b521316b2ded994945b&"
+          "url": "https://cdn.discordapp.com/attachments/1131034215882952794/1131036300007440524/EDRosterWhiteBackground.png?ex=655d5aa3&is=654ae5a3&hm=573e89a3ba98c13ec065663e59c309fd376514b90c049ac19036a02f95191a2f&",
+          "proxy_url": "https://media.discordapp.net/attachments/1131034215882952794/1131036300007440524/EDRosterWhiteBackground.png?ex=655d5aa3&is=654ae5a3&hm=573e89a3ba98c13ec065663e59c309fd376514b90c049ac19036a02f95191a2f&"
         }
       },
       "dateTimeCreated": "2023-07-19T01:26:10.666Z",
@@ -6234,8 +6254,8 @@
           "filename": "Ingria_XIV.png",
           "content_type": "image/png",
           "size": 109921.0,
-          "url": "https://cdn.discordapp.com/attachments/1116880500917809202/1138667632468426802/Ingria_XIV.png?ex=655433df&is=6541bedf&hm=1f7766b07f32fd21fddec881201f8069bdaa2e30b45fd6c78f49f5adfc391044&",
-          "proxy_url": "https://media.discordapp.net/attachments/1116880500917809202/1138667632468426802/Ingria_XIV.png?ex=655433df&is=6541bedf&hm=1f7766b07f32fd21fddec881201f8069bdaa2e30b45fd6c78f49f5adfc391044&"
+          "url": "https://cdn.discordapp.com/attachments/1116880500917809202/1138667632468426802/Ingria_XIV.png?ex=655d6e5f&is=654af95f&hm=4072752b6b898bddb21593e37b6049d07e087e9d01f0c7b4e2eae02f3109802b&",
+          "proxy_url": "https://media.discordapp.net/attachments/1116880500917809202/1138667632468426802/Ingria_XIV.png?ex=655d6e5f&is=654af95f&hm=4072752b6b898bddb21593e37b6049d07e087e9d01f0c7b4e2eae02f3109802b&"
         },
         "1139823582797643777": {
           "id": "1139823582797643777",
@@ -7171,8 +7191,8 @@
           "filename": "display.png",
           "content_type": "image/png",
           "size": 633971.0,
-          "url": "https://cdn.discordapp.com/attachments/1144807471446245376/1148816415911071755/display.png?ex=655435a9&is=6541c0a9&hm=5803cec22861708e4d64715ac089c4df5ca3ce2d850759ba04a9cea7ed16d339&",
-          "proxy_url": "https://media.discordapp.net/attachments/1144807471446245376/1148816415911071755/display.png?ex=655435a9&is=6541c0a9&hm=5803cec22861708e4d64715ac089c4df5ca3ce2d850759ba04a9cea7ed16d339&"
+          "url": "https://cdn.discordapp.com/attachments/1144807471446245376/1148816415911071755/display.png?ex=655d7029&is=654afb29&hm=36adedc7d13d843c92435c861faf7af4cdb3727662434f892d85e6f0cfc78298&",
+          "proxy_url": "https://media.discordapp.net/attachments/1144807471446245376/1148816415911071755/display.png?ex=655d7029&is=654afb29&hm=36adedc7d13d843c92435c861faf7af4cdb3727662434f892d85e6f0cfc78298&"
         },
         "1152974950890737806": {
           "id": "1152974950890737806",
@@ -8373,8 +8393,6 @@
     },
     {
       "name": "San-Iris Federation",
-      "summary": "[0.96a-RC10]",
-      "description": "[0.96a-RC10]\n\nAdd a small faction with 2 water world south of the core world. \nSan-Iris ships are made to defend their home world and as such are very defense oriented. The ship emulate biological life in their design, with high armor and low hp, they have a bonus in flux dissipation but get weaker as hull go down.\n\n**Feature**\n- Tentacle thruster\n- Ballistic weapon with 2 stage mechanics\n- Defense oriented system\n\n**update**\n0.9.9\n- New frigate with a heavy autocannon built-in : Vine\n- Small balance change\n- Really nice music made by Haplogynae\n\n*probably some oversight, send feedback if you find something*\n\n**download**\nhttps://drive.google.com/file/d/10DPDhlYsdxqaDaiB6W65mCnWd5NcG1EI/view?usp=sharing\n\nForum : https://fractalsoftworks.com/forum/index.php?topic=25775.0\nHaplogynae soundcloud : https://soundcloud.com/haplogynae/sets/san-iris-faction-music",
       "gameVersionReq": "0.96a",
       "authors": "Sikair",
       "authorsList": [
@@ -8383,40 +8401,17 @@
       "link": "https://fractalsoftworks.com/forum/index.php?topic=25775.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=25775.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25775.0",
-        "Discord": "https://discord.com/channels/187635036525166592/1118533154244939796/1118533154244939796",
-        "DownloadPage": "https://drive.google.com/file/d/10DPDhlYsdxqaDaiB6W65mCnWd5NcG1EI/view?usp=sharing"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25775.0"
       },
       "source": "Index",
       "sources": [
         "Index",
-        "ModdingSubforum",
-        "Discord"
+        "ModdingSubforum"
       ],
       "categories": [
-        "Faction",
         "Faction Mods"
       ],
-      "images": {
-        "1118533154836320287": {
-          "id": "1118533154836320287",
-          "filename": "sikr_saniris_crest.png",
-          "content_type": "image/png",
-          "size": 19415.0,
-          "url": "https://cdn.discordapp.com/attachments/1118533154244939796/1118533154836320287/sikr_saniris_crest.png?ex=6554c82d&is=6542532d&hm=dc54e28a70c124a70cee81137fcd5013b61633019179c4b7e4ee0d4ab01f1ad3&",
-          "proxy_url": "https://media.discordapp.net/attachments/1118533154244939796/1118533154836320287/sikr_saniris_crest.png?ex=6554c82d&is=6542532d&hm=dc54e28a70c124a70cee81137fcd5013b61633019179c4b7e4ee0d4ab01f1ad3&"
-        },
-        "1118533155264155809": {
-          "id": "1118533155264155809",
-          "filename": "SanIrisShips2.png",
-          "content_type": "image/png",
-          "size": 1179711.0,
-          "url": "https://cdn.discordapp.com/attachments/1118533154244939796/1118533155264155809/SanIrisShips2.png?ex=6554c82d&is=6542532d&hm=061f7b62f7b66da0ffcf10e383bd06de543d2d188c65ec5edd5f0b438e909f5d&",
-          "proxy_url": "https://media.discordapp.net/attachments/1118533154244939796/1118533155264155809/SanIrisShips2.png?ex=6554c82d&is=6542532d&hm=061f7b62f7b66da0ffcf10e383bd06de543d2d188c65ec5edd5f0b438e909f5d&"
-        }
-      },
-      "dateTimeCreated": "2023-06-14T13:31:25.313Z",
-      "dateTimeEdited": "2023-08-20T20:53:57.557Z"
+      "images": {}
     },
     {
       "name": "Sanguinary Autonomist Defectors",
@@ -8778,24 +8773,24 @@
           "filename": "image.png",
           "content_type": "image/png",
           "size": 30323.0,
-          "url": "https://cdn.discordapp.com/attachments/1115991019650023445/1123476841806708766/image.png?ex=65544f58&is=6541da58&hm=f846c6feb3e050fa5c5a584a094872ae7549aaa2a608e293addae6783641574a&",
-          "proxy_url": "https://media.discordapp.net/attachments/1115991019650023445/1123476841806708766/image.png?ex=65544f58&is=6541da58&hm=f846c6feb3e050fa5c5a584a094872ae7549aaa2a608e293addae6783641574a&"
+          "url": "https://cdn.discordapp.com/attachments/1115991019650023445/1123476841806708766/image.png?ex=655d89d8&is=654b14d8&hm=f26f00210aa6fd6ba0b7c941f27ef78a132fbb18a5903f421c9924dcc930c303&",
+          "proxy_url": "https://media.discordapp.net/attachments/1115991019650023445/1123476841806708766/image.png?ex=655d89d8&is=654b14d8&hm=f26f00210aa6fd6ba0b7c941f27ef78a132fbb18a5903f421c9924dcc930c303&"
         },
         "1123476854674817085": {
           "id": "1123476854674817085",
           "filename": "image-1.png",
           "content_type": "image/png",
           "size": 100501.0,
-          "url": "https://cdn.discordapp.com/attachments/1115991019650023445/1123476854674817085/image-1.png?ex=65544f5b&is=6541da5b&hm=3af3045ee1fae6468e377442b017a59736e32e9045f89ccb45eee6ba97fe4673&",
-          "proxy_url": "https://media.discordapp.net/attachments/1115991019650023445/1123476854674817085/image-1.png?ex=65544f5b&is=6541da5b&hm=3af3045ee1fae6468e377442b017a59736e32e9045f89ccb45eee6ba97fe4673&"
+          "url": "https://cdn.discordapp.com/attachments/1115991019650023445/1123476854674817085/image-1.png?ex=655d89db&is=654b14db&hm=dfa976f0d642c36e316e2d809cc772ad930ce77316225b8c1e8cf28d33392ee5&",
+          "proxy_url": "https://media.discordapp.net/attachments/1115991019650023445/1123476854674817085/image-1.png?ex=655d89db&is=654b14db&hm=dfa976f0d642c36e316e2d809cc772ad930ce77316225b8c1e8cf28d33392ee5&"
         },
         "1123476863369613332": {
           "id": "1123476863369613332",
           "filename": "image.png",
           "content_type": "image/png",
           "size": 40800.0,
-          "url": "https://cdn.discordapp.com/attachments/1115991019650023445/1123476863369613332/image.png?ex=65544f5d&is=6541da5d&hm=f7ec07fa8987c5284a3bf6338d9dabf5c1ae9c86590ca23650a03247da360ddc&",
-          "proxy_url": "https://media.discordapp.net/attachments/1115991019650023445/1123476863369613332/image.png?ex=65544f5d&is=6541da5d&hm=f7ec07fa8987c5284a3bf6338d9dabf5c1ae9c86590ca23650a03247da360ddc&"
+          "url": "https://cdn.discordapp.com/attachments/1115991019650023445/1123476863369613332/image.png?ex=655d89dd&is=654b14dd&hm=9cc734386a2ac5ef89c7cf98d1439eb9ffc40f7ac5481f35972dfa3741a78a4e&",
+          "proxy_url": "https://media.discordapp.net/attachments/1115991019650023445/1123476863369613332/image.png?ex=655d89dd&is=654b14dd&hm=9cc734386a2ac5ef89c7cf98d1439eb9ffc40f7ac5481f35972dfa3741a78a4e&"
         }
       },
       "dateTimeCreated": "2023-06-07T13:09:53.195Z",
@@ -11033,39 +11028,6 @@
       "images": {}
     },
     {
-      "name": "Vexx's Bonus Content",
-      "summary": "A bunch of XIV'd modded boats, a handful of weapons painted orange and black, and a pile of symmetrical doritos for a quest chain I've not started yet.\nAll modded ships used with permission, thanks to Connortron for the Catapult, to G4R5vb5r3H for the Pankrator and Chokeslam names, to Tart for the Gryphon (XIV), and Nes for the Hammerfall! You're all Cool Dudes ™️",
-      "description": "A bunch of XIV'd modded boats, a handful of weapons painted orange and black, and a pile of symmetrical doritos for a quest chain I've not started yet.\nAll modded ships used with permission, thanks to Connortron for the Catapult, to G4R5vb5r3H for the Pankrator and Chokeslam names, to Tart for the Gryphon (XIV), and Nes for the Hammerfall! You're all Cool Dudes ™️\n\n*\"Admiral, what... Are, all of those?*\"\n*\"A bunch of weird back orders.\"*\n\nNotes:\nI am not a big Numbers Man. I heartily accept input on numbers.\n\nYes, the Lord is silly. \n\nIf you tell me the Doritos are overpowered or shouldn't be symmetrical, I will laugh, agree with you, and do nothing about them- They're there to be overpowered and fun, and aren't normally accessible. The quest they'll belong to (eventually) will be very post game.\n\nYes the fixed smalls on the Turul and Harpy Eagle are universals. You're going to put missiles on them anyway. \n\nTell me about bugs you find! Please! *I have no idea what I'm doing but I'm willing to learn!*\n\nAn enormous thank you to the starsector community for giving me somewhere to be and something to focus my effort on. You're all Cool Dudes ™️\n\nEspecially thanks to Laharl; the myth, the legend, the person who *wholesale taught me how to mod this game.* I never would have got this far without you. \n\nhttps://drive.google.com/file/d/1JG6Ejkez_D8GQ8MNX6dDlLY4lFwMne2B/view?usp=sharing\n\n```Changelog: Version 1\nreleased mod```",
-      "gameVersionReq": "",
-      "authors": "leviathan_5000",
-      "authorsList": [
-        "leviathan_5000"
-      ],
-      "urls": {
-        "Discord": "https://discord.com/channels/187635036525166592/1142700577688653966/1142700577688653966",
-        "DownloadPage": "https://drive.google.com/file/d/1JG6Ejkez_D8GQ8MNX6dDlLY4lFwMne2B/view?usp=sharing"
-      },
-      "source": "Discord",
-      "sources": [
-        "Discord"
-      ],
-      "categories": [
-        "Ship Pack"
-      ],
-      "images": {
-        "1142700577881587753": {
-          "id": "1142700577881587753",
-          "filename": "image.png",
-          "content_type": "image/png",
-          "size": 302490.0,
-          "url": "https://cdn.discordapp.com/attachments/1142700577688653966/1142700577881587753/image.png?ex=6559a558&is=65473058&hm=da4933d602f4eb45ced7537a29aac133927c16446acf04fea8adab9520599f5f&",
-          "proxy_url": "https://media.discordapp.net/attachments/1142700577688653966/1142700577881587753/image.png?ex=6559a558&is=65473058&hm=da4933d602f4eb45ced7537a29aac133927c16446acf04fea8adab9520599f5f&"
-        }
-      },
-      "dateTimeCreated": "2023-08-20T06:04:08.071Z",
-      "dateTimeEdited": "2023-08-20T07:45:12.499Z"
-    },
-    {
       "name": "Volantian Reclamation Initiative 0.4.1: \"Bultashes of the Coalition\"",
       "summary": "The Volantian Reclamation Initiative is the newly-reformed successor to an ancient, long dead polity with deep roots in the Persean Sector. Set to reclaim their heritage, they utilize a variety of reverse engineered, ancestral, and scavenged technology.",
       "description": "The Volantian Reclamation Initiative is the newly-reformed successor to an ancient, long dead polity with deep roots in the Persean Sector. Set to reclaim their heritage, they utilize a variety of reverse engineered, ancestral, and scavenged technology.\n\nAdds a wide variety of ships, weapons, unique characters, industries, and oddities to be found around the sector, alongside a faction!\n\nThank you, everyone, for your continued support!\n\n**Please fill out this user feedback form!!!**\n<https://forms.gle/zzjSWe9b2B3j8nQo8>\n\n```Changelog:\n-Fixed VI Description and Hullmod bonuses\n-Added Glare-Class heavy cruiser\n-Added alpha core bonuses for Volgen and Aegis industries\n-Fixed too small scintilla (vri) mounts\n-Added a unique bar event\n-Gave Milasha and Blanche contact tags so they offer normal missions\n-Added a new oddity system to find in the sector\n-Gave the Trident proper weapon typing, now affected by weapon and range modifiers```\n\n0.3.1b Download:<https://cdn.discordapp.com/attachments/1071562139975811112/1117521239846682684/Volantian-Starsector-Mod.zip>\n\nRequires Graphiclib, Lazylib, and Magiclib.\nShould be update and save compatible.",
@@ -11756,6 +11718,6 @@
       "images": {}
     }
   ],
-  "totalCount": 454.0,
-  "lastUpdated": "2023-11-07T19:02:00Z"
+  "totalCount": 453.0,
+  "lastUpdated": "2023-11-08T07:02:00Z"
 }
