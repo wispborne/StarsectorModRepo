@@ -421,7 +421,7 @@
     {
       "name": "Advanced Gunnery Control",
       "summary": "**A utility mod allowing you to customize weapon behavior on autofire, such as e.g. targeting/avoiding shields.**",
-      "description": "**A utility mod allowing you to customize weapon behavior on autofire, such as e.g. targeting/avoiding shields.**\n\nRequires MagicLib and LazyLib.\n\nInstall and press J in combat, in refit, or on the world map to open a GUI.\n\nFeatures:\n- Many tags, such as targeting or avoiding shields, PD mode and many many more\n- GUI-based configuration in combat/refit or on the campaign map\n- Tags are automatically saved between combats and reloads\n- Seamlessly switch between simple mode (6 tags) and advanced mode (over 20 tags)\n- Customize AI-controlled ship behavior through ship modes in advanced mode\n- Create your own default tags with the option to automatically apply them\n- Customize most aspects of the mod through an extensive settings file\n- Manually control multiple weapon groups at once using the Merge tag\n\nCan be updated/added/removed to/from ongoing campaigns.\n\n```\nTo mod-authors:\nIf you want to integrate with AGC to improve ship/weapon AI behavior of your faction, check the readme. Feel free to ping me if you need help or want to request a special mode.\nExample integration code: https://github.com/DesperatePeter/starsector-symbiotic-void-creatures/blob/main/src/tecrys/svc/hullmods/BGECarapace.kt#L98\n```\n\nVideos:\nAGC in 60s: https://youtu.be/2T3xNqy2HQA\nAGC in-depth (long and rambly, watch at 1.5~2x speed and/or use chapters): https://youtu.be/WRH66z4EYcc\nAGC showcase (slightly outdated): https://youtu.be/Zg4sxRj9V8I\n\nForum: https://fractalsoftworks.com/forum/index.php?topic=21280.0\nDownload: https://github.com/DesperatePeter/starsector-advanced-weapon-control/releases",
+      "description": "**A utility mod allowing you to customize weapon behavior on autofire, such as e.g. targeting/avoiding shields.**\n\nNow with LunaLib integration and tag storage modes for more QoL (Tab Tags in LunaSettings). Please let me know if the new tag storage modes work as intended! \n\nRequires MagicLib and LazyLib. LunaLib is not required but recommended.\n\nInstall and press J in combat, in refit, or on the world map to open a GUI.\n\nFeatures:\n- Many tags, such as targeting or avoiding shields, PD mode and many many more\n- GUI-based configuration in combat/refit or on the campaign map\n- Tags are automatically saved between combats and reloads\n- Seamlessly switch between simple mode (6 tags) and advanced mode (over 20 tags)\n- Customize AI-controlled ship behavior through ship modes in advanced mode\n- Create your own default tags with the option to automatically apply them\n- Customize most aspects of the mod through an extensive settings file\n- Manually control multiple weapon groups at once using the Merge tag\n\nCan be updated/added/removed to/from ongoing campaigns.\n\n```\nTo mod-authors:\nIf you want to integrate with AGC to improve ship/weapon AI behavior of your faction, check the readme. Feel free to ping me if you need help or want to request a special mode.\nExample integration code: https://github.com/DesperatePeter/starsector-symbiotic-void-creatures/blob/main/src/tecrys/svc/hullmods/BGECarapace.kt#L98\n```\n\nVideos:\nAGC in 60s: https://youtu.be/2T3xNqy2HQA\nAGC in-depth (long and rambly, watch at 1.5~2x speed and/or use chapters): https://youtu.be/WRH66z4EYcc\nAGC showcase (slightly outdated): https://youtu.be/Zg4sxRj9V8I\n\nForum: https://fractalsoftworks.com/forum/index.php?topic=21280.0\nDownload: https://github.com/DesperatePeter/starsector-advanced-weapon-control/releases",
       "gameVersionReq": "0.97a",
       "authors": "DesperatePeter",
       "authorsList": [
@@ -455,7 +455,7 @@
         }
       },
       "dateTimeCreated": "2024-02-02T20:29:38.239Z",
-      "dateTimeEdited": "2024-02-02T20:34:22.471Z"
+      "dateTimeEdited": "2024-02-10T22:36:48.05Z"
     },
     {
       "name": "Adversary",
@@ -1385,8 +1385,8 @@
           "filename": "image.png",
           "content_type": "image/png",
           "size": 115252.0,
-          "url": "https://cdn.discordapp.com/attachments/1203467390352883752/1203467390520791081/image.png?ex=65d13359&is=65bebe59&hm=2b32586b471934ffa0df099abf05e5bc2fa30ff1bc44ec166b95856f9326e88a&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203467390352883752/1203467390520791081/image.png?ex=65d13359&is=65bebe59&hm=2b32586b471934ffa0df099abf05e5bc2fa30ff1bc44ec166b95856f9326e88a&"
+          "url": "https://cdn.discordapp.com/attachments/1203467390352883752/1203467390520791081/image.png?ex=65da6dd9&is=65c7f8d9&hm=6655b16727132fbeacbc8ccfc30a17040e89a4f319b66e08cd30b8ba871e1fc5&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203467390352883752/1203467390520791081/image.png?ex=65da6dd9&is=65c7f8d9&hm=6655b16727132fbeacbc8ccfc30a17040e89a4f319b66e08cd30b8ba871e1fc5&"
         }
       },
       "dateTimeCreated": "2024-02-03T22:29:45.203Z"
@@ -1588,6 +1588,41 @@
       ],
       "categories": [],
       "images": {}
+    },
+    {
+      "name": "Brighton Federation 0.0.3c",
+      "summary": "A faction comprised of refugees from beyond the Core worlds dedicated to the protection and ferrying of the poor and desperate to the Core Worlds. This polity uses ships cobbled together from Derelict and Remnant scrap, with a strong emphasis on missile alpha strike.",
+      "description": "A faction comprised of refugees from beyond the Core worlds dedicated to the protection and ferrying of the poor and desperate to the Core Worlds. This polity uses ships cobbled together from Derelict and Remnant scrap, with a strong emphasis on missile alpha strike.\n\n```-Updated for 0.97a\n-Fixed Missile Reload being incorrect (Thanks chdcl!)\n-Moved Dieman down on the star map to get away from another mod's Boss Faction system (will need a new game)```\n\n```Of Dubious Savegame Compatibility```\n\nDownload: https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/HMI_brighton_0_03c.zip",
+      "gameVersionReq": "",
+      "authors": "kingalfonzo",
+      "authorsList": [
+        "kingalfonzo"
+      ],
+      "link": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/HMI_brighton_0_03c.zip",
+      "urls": {
+        "Discord": "https://discord.com/channels/187635036525166592/1206094185426591844/1206094185426591844",
+        "DirectDownload": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/HMI_brighton_0_03c.zip"
+      },
+      "source": "Discord",
+      "sources": [
+        "Discord"
+      ],
+      "categories": [
+        "Exploration",
+        "Ship Pack",
+        "Faction"
+      ],
+      "images": {
+        "1206094185590165524": {
+          "id": "1206094185590165524",
+          "filename": "crest_brighton.png",
+          "content_type": "image/png",
+          "size": 10778.0,
+          "url": "https://cdn.discordapp.com/attachments/1206094185426591844/1206094185590165524/crest_brighton.png?ex=65dac1bd&is=65c84cbd&hm=7eca44644ded3510c9bb1a17bbb683ddd5729c0da2b3d57d2be704ba9e8abdaf&",
+          "proxy_url": "https://media.discordapp.net/attachments/1206094185426591844/1206094185590165524/crest_brighton.png?ex=65dac1bd&is=65c84cbd&hm=7eca44644ded3510c9bb1a17bbb683ddd5729c0da2b3d57d2be704ba9e8abdaf&"
+        }
+      },
+      "dateTimeCreated": "2024-02-11T04:27:41.952Z"
     },
     {
       "name": "Bultach Coalition",
@@ -2405,16 +2440,16 @@
           "filename": "banner4.png",
           "content_type": "image/png",
           "size": 908665.0,
-          "url": "https://cdn.discordapp.com/attachments/1203420710136053812/1203420710735847464/banner4.png?ex=65d107df&is=65be92df&hm=49502b2786827cf268877ae2d7bb1e136e8d96a7541714e44d4242c3700a3e7b&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203420710136053812/1203420710735847464/banner4.png?ex=65d107df&is=65be92df&hm=49502b2786827cf268877ae2d7bb1e136e8d96a7541714e44d4242c3700a3e7b&"
+          "url": "https://cdn.discordapp.com/attachments/1203420710136053812/1203420710735847464/banner4.png?ex=65da425f&is=65c7cd5f&hm=14996622587a7fc88774529ed08e5b99b7cb128ee64c6c8f416ccaadf26791ab&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203420710136053812/1203420710735847464/banner4.png?ex=65da425f&is=65c7cd5f&hm=14996622587a7fc88774529ed08e5b99b7cb128ee64c6c8f416ccaadf26791ab&"
         },
         "1203420711117660180": {
           "id": "1203420711117660180",
           "filename": "lineup.png",
           "content_type": "image/png",
           "size": 870889.0,
-          "url": "https://cdn.discordapp.com/attachments/1203420710136053812/1203420711117660180/lineup.png?ex=65d107e0&is=65be92e0&hm=d9c5ec0a8e21b3bb65d9e9b7e1a95a8128fd33eb4266d6dc3c64abf61766598d&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203420710136053812/1203420711117660180/lineup.png?ex=65d107e0&is=65be92e0&hm=d9c5ec0a8e21b3bb65d9e9b7e1a95a8128fd33eb4266d6dc3c64abf61766598d&"
+          "url": "https://cdn.discordapp.com/attachments/1203420710136053812/1203420711117660180/lineup.png?ex=65da4260&is=65c7cd60&hm=caab6520b05780efd61f4ec9fe4d07ab5ce331c2353b61d81a98334b34fbf2d4&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203420710136053812/1203420711117660180/lineup.png?ex=65da4260&is=65c7cd60&hm=caab6520b05780efd61f4ec9fe4d07ab5ce331c2353b61d81a98334b34fbf2d4&"
         }
       },
       "dateTimeCreated": "2024-02-03T19:24:15.772Z",
@@ -2578,8 +2613,8 @@
           "filename": "DiscoBalls_icon.png",
           "content_type": "image/png",
           "size": 4829.0,
-          "url": "https://cdn.discordapp.com/attachments/1203463417965445120/1203463418191810610/DiscoBalls_icon.png?ex=65d12fa6&is=65bebaa6&hm=35a218631bace5b9fc67944890e3dc9ab36b6bc302b0ad86d365d14629297bda&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203463417965445120/1203463418191810610/DiscoBalls_icon.png?ex=65d12fa6&is=65bebaa6&hm=35a218631bace5b9fc67944890e3dc9ab36b6bc302b0ad86d365d14629297bda&"
+          "url": "https://cdn.discordapp.com/attachments/1203463417965445120/1203463418191810610/DiscoBalls_icon.png?ex=65da6a26&is=65c7f526&hm=46196735ca58ea18a4eab9655dbb18de5c7cae8d27329d784173afafe3da4a6b&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203463417965445120/1203463418191810610/DiscoBalls_icon.png?ex=65da6a26&is=65c7f526&hm=46196735ca58ea18a4eab9655dbb18de5c7cae8d27329d784173afafe3da4a6b&"
         }
       },
       "dateTimeCreated": "2024-02-03T22:13:58.112Z"
@@ -2978,8 +3013,8 @@
           "filename": "exalted_slgun.png",
           "content_type": "image/png",
           "size": 236455.0,
-          "url": "https://cdn.discordapp.com/attachments/1203478416159023235/1203478416825782382/exalted_slgun.png?ex=65d13d9e&is=65bec89e&hm=98ab4e5b6dea10b2b3630a198b774adad067097f493b7cc4942ec34264db2fa0&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203478416159023235/1203478416825782382/exalted_slgun.png?ex=65d13d9e&is=65bec89e&hm=98ab4e5b6dea10b2b3630a198b774adad067097f493b7cc4942ec34264db2fa0&"
+          "url": "https://cdn.discordapp.com/attachments/1203478416159023235/1203478416825782382/exalted_slgun.png?ex=65da781e&is=65c8031e&hm=85833f697054ff765d1d1585da0f0d5ee147e6e1ac9ae93df8ea769d470bbbdb&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203478416159023235/1203478416825782382/exalted_slgun.png?ex=65da781e&is=65c8031e&hm=85833f697054ff765d1d1585da0f0d5ee147e6e1ac9ae93df8ea769d470bbbdb&"
         }
       },
       "dateTimeCreated": "2024-02-03T23:13:33.96Z",
@@ -3165,6 +3200,50 @@
       ],
       "categories": [],
       "images": {}
+    },
+    {
+      "name": "First Persean Empire: 1.1.1e",
+      "summary": "On the surface this militaristic, totalitarian Empire promotes an image of power and dominance, with a strong emphasis on low-tech adjacent midline ships. In reality, it is an unstable regime beset by enemies within and without, that only continues to exist due to a quirk of sector politics - a situation that is not likely to continue.",
+      "description": "On the surface this militaristic, totalitarian Empire promotes an image of power and dominance, with a strong emphasis on low-tech adjacent midline ships. In reality, it is an unstable regime beset by enemies within and without, that only continues to exist due to a quirk of sector politics - a situation that is not likely to continue.\n\n```-Updated for 0.97a\n-Added some content if Industrial Evolution is also installed.\n```\n\n```Of Dubious Savegame Compatibility```\nDownload: https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/FPE_1_1_1e.zip",
+      "gameVersionReq": "",
+      "authors": "kingalfonzo",
+      "authorsList": [
+        "kingalfonzo"
+      ],
+      "link": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/FPE_1_1_1e.zip",
+      "urls": {
+        "Discord": "https://discord.com/channels/187635036525166592/1206070823476265010/1206070823476265010",
+        "DirectDownload": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/FPE_1_1_1e.zip"
+      },
+      "source": "Discord",
+      "sources": [
+        "Discord"
+      ],
+      "categories": [
+        "Weapon/Fighter Pack",
+        "Discord Only",
+        "Faction",
+        "Ship Pack"
+      ],
+      "images": {
+        "1206070824210141225": {
+          "id": "1206070824210141225",
+          "filename": "crest_fpe.png",
+          "content_type": "image/png",
+          "size": 9292.0,
+          "url": "https://cdn.discordapp.com/attachments/1206070823476265010/1206070824210141225/crest_fpe.png?ex=65daabfc&is=65c836fc&hm=2fe87ff71590c586816ffb1ec070042494c23a346393b9f0d1e99041767f0ddc&",
+          "proxy_url": "https://media.discordapp.net/attachments/1206070823476265010/1206070824210141225/crest_fpe.png?ex=65daabfc&is=65c836fc&hm=2fe87ff71590c586816ffb1ec070042494c23a346393b9f0d1e99041767f0ddc&"
+        },
+        "1206104902623952916": {
+          "id": "1206104902623952916",
+          "filename": "FPE_Lineup.png",
+          "content_type": "image/png",
+          "size": 2869220.0,
+          "url": "https://cdn.discordapp.com/attachments/1206070823476265010/1206104902623952916/FPE_Lineup.png?ex=65dacbb9&is=65c856b9&hm=d1fe9b9355533666e277f06fac8768d49fb0539fb815a33db7ec15c7370bde06&",
+          "proxy_url": "https://media.discordapp.net/attachments/1206070823476265010/1206104902623952916/FPE_Lineup.png?ex=65dacbb9&is=65c856b9&hm=d1fe9b9355533666e277f06fac8768d49fb0539fb815a33db7ec15c7370bde06&"
+        }
+      },
+      "dateTimeCreated": "2024-02-11T02:54:52.029Z"
     },
     {
       "name": "Fleet Action History",
@@ -3594,8 +3673,8 @@
           "filename": "mod_post_icon_grand_colonies.png",
           "content_type": "image/png",
           "size": 4050.0,
-          "url": "https://cdn.discordapp.com/attachments/1203464810537291806/1203464810696806430/mod_post_icon_grand_colonies.png?ex=65d130f2&is=65bebbf2&hm=d9db1c7406291783e5477a3226cf3bab32dc0aef8d95c08193ec1185ac5d71b4&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203464810537291806/1203464810696806430/mod_post_icon_grand_colonies.png?ex=65d130f2&is=65bebbf2&hm=d9db1c7406291783e5477a3226cf3bab32dc0aef8d95c08193ec1185ac5d71b4&"
+          "url": "https://cdn.discordapp.com/attachments/1203464810537291806/1203464810696806430/mod_post_icon_grand_colonies.png?ex=65da6b72&is=65c7f672&hm=f86a68b2d09d154c6c00ed130f7aae8c0023f6f8066261d77aec063e61e23e1c&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203464810537291806/1203464810696806430/mod_post_icon_grand_colonies.png?ex=65da6b72&is=65c7f672&hm=f86a68b2d09d154c6c00ed130f7aae8c0023f6f8066261d77aec063e61e23e1c&"
         }
       },
       "dateTimeCreated": "2024-02-03T22:19:30.127Z",
@@ -3712,6 +3791,41 @@
       "images": {}
     },
     {
+      "name": "HMI Supervillians 0.0.4e",
+      "summary": "Adds two psychotic factions on the fringes of the Core.",
+      "description": "Adds two psychotic factions on the fringes of the Core.\n\n```-Updated to 0.97a (Quick and dirty)\n-Fixed problems with incorrect engines on Wolf and Fury Prototype ships (Thanks vicegrip!)```\n\n```Of Dubious Savegame Compatibility```\n\nDownload:https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/HMI_Supervillains_0_0_4e.zip",
+      "gameVersionReq": "",
+      "authors": "kingalfonzo",
+      "authorsList": [
+        "kingalfonzo"
+      ],
+      "link": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/HMI_Supervillains_0_0_4e.zip",
+      "urls": {
+        "Discord": "https://discord.com/channels/187635036525166592/1206093104143409162/1206093104143409162",
+        "DirectDownload": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/HMI_Supervillains_0_0_4e.zip"
+      },
+      "source": "Discord",
+      "sources": [
+        "Discord"
+      ],
+      "categories": [
+        "Ship Pack",
+        "Faction"
+      ],
+      "images": {
+        "1206093104457711667": {
+          "id": "1206093104457711667",
+          "filename": "supervillians.png",
+          "content_type": "image/png",
+          "size": 197099.0,
+          "url": "https://cdn.discordapp.com/attachments/1206093104143409162/1206093104457711667/supervillians.png?ex=65dac0bc&is=65c84bbc&hm=b9089a3f6fb5789e56806c35fbe5555f9e0f6fe13d4afa4aaddb58b2561f47ea&",
+          "proxy_url": "https://media.discordapp.net/attachments/1206093104143409162/1206093104457711667/supervillians.png?ex=65dac0bc&is=65c84bbc&hm=b9089a3f6fb5789e56806c35fbe5555f9e0f6fe13d4afa4aaddb58b2561f47ea&"
+        }
+      },
+      "dateTimeCreated": "2024-02-11T04:23:24.154Z",
+      "dateTimeEdited": "2024-02-11T04:25:45.353Z"
+    },
+    {
       "name": "Halo - UNSC Pelican Troop Transport",
       "gameVersionReq": "0.9.1a",
       "authors": "caymon",
@@ -3811,6 +3925,8 @@
     },
     {
       "name": "Hazard Mining Incorporated",
+      "summary": "```\n-Beta Patch is now Official Version",
+      "description": "```\n-Beta Patch is now Official Version\n-Updated for 0.97a\n-Mulligan has been changed\n-Khorkoi's Jackhammer reloads\n-Added content that appears if InDevo is also installed; not required.\n-Tweaked existing hidden content\n```\n\n\n```Of Dubious Savegame Compatibility```\n\nDownload: https://www.dropbox.com/scl/fi/zla5s59wn2esm9th99yer/HMI_0_3_7.zip?rlkey=f7gv1g3p5uala7ic32eovqjod&dl=1",
       "gameVersionReq": "0.96a",
       "authors": "King Alfonzo",
       "authorsList": [
@@ -3819,17 +3935,27 @@
       "link": "https://fractalsoftworks.com/forum/index.php?topic=13236.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=13236.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=13236.0"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=13236.0",
+        "Discord": "https://discord.com/channels/187635036525166592/1206094995438706698/1206094995438706698",
+        "DirectDownload": "https://www.dropbox.com/scl/fi/zla5s59wn2esm9th99yer/HMI_0_3_7.zip?rlkey=f7gv1g3p5uala7ic32eovqjod&dl=1"
       },
       "source": "Index",
       "sources": [
         "Index",
-        "ModdingSubforum"
+        "ModdingSubforum",
+        "Discord"
       ],
       "categories": [
-        "Megamods"
+        "Exploration",
+        "Faction",
+        "Megamod",
+        "Megamods",
+        "Ship Pack",
+        "Weapon/Fighter Pack"
       ],
-      "images": {}
+      "images": {},
+      "dateTimeCreated": "2024-02-11T04:30:55.074Z",
+      "dateTimeEdited": "2024-02-11T04:52:29.329Z"
     },
     {
       "name": "Hegemony Fleet Expansion",
@@ -3949,23 +4075,42 @@
       "dateTimeEdited": "2024-02-03T19:36:33.773Z"
     },
     {
-      "name": "Holy Covenant of Kemet 0.0.4d (Fixing2 Ed.)",
-      "gameVersionReq": "0.96a",
-      "authors": "King Alfonzo",
+      "name": "Holy Covenant of Kemet 0.0.4f",
+      "summary": "An isolationist, strictly hierarchical polity with a strong emphasis on high tech weaponry and incredibly garish ship designs, this Egyptian-themed faction is slowly emerging onto the wider Persean scene with strong suspicions by the hegemony of rampant AI utilisation.",
+      "description": "An isolationist, strictly hierarchical polity with a strong emphasis on high tech weaponry and incredibly garish ship designs, this Egyptian-themed faction is slowly emerging onto the wider Persean scene with strong suspicions by the hegemony of rampant AI utilisation.\n\n```-Updated for 0.97a\n-Seshat Systems, in addition to giving Ka and Ma'at weapons a 200 range boost, now also gives a 100 unit range boost for all other energy projectile weapons. This should, hopefully, make using non-Kemet weaponry on Kemet ships more attractive.\n-Added some content if Industrial Evolution is also installed.\n-May have tweaked some stats to fix some AI issues.```\n\n\n```Of Dubious Savegame Compatibility```\n\n\nDownload: https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/holy_covenant_of_kemet_0_0_4f.zip",
+      "gameVersionReq": "0.97a",
+      "authors": "kingalfonzo",
       "authorsList": [
-        "King Alfonzo"
+        "kingalfonzo"
       ],
-      "link": "https://fractalsoftworks.com/forum/index.php?topic=23050.0",
+      "link": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/holy_covenant_of_kemet_0_0_4f.zip",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=23050.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=23050.0"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=23050.0",
+        "Discord": "https://discord.com/channels/187635036525166592/1206069792625266758/1206069792625266758",
+        "DirectDownload": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/holy_covenant_of_kemet_0_0_4f.zip"
       },
-      "source": "ModdingSubforum",
+      "source": "Discord",
       "sources": [
-        "ModdingSubforum"
+        "ModdingSubforum",
+        "Discord"
       ],
-      "categories": [],
-      "images": {}
+      "categories": [
+        "Faction",
+        "Ship Pack",
+        "Weapon/Fighter Pack"
+      ],
+      "images": {
+        "1206069792797102121": {
+          "id": "1206069792797102121",
+          "filename": "hcok_crest.png",
+          "content_type": "image/png",
+          "size": 10249.0,
+          "url": "https://cdn.discordapp.com/attachments/1206069792625266758/1206069792797102121/hcok_crest.png?ex=65daab06&is=65c83606&hm=c9f73d901139abf8e3394b2b67bc63b63635ae97318f40628dbbed7731b1ed79&",
+          "proxy_url": "https://media.discordapp.net/attachments/1206069792625266758/1206069792797102121/hcok_crest.png?ex=65daab06&is=65c83606&hm=c9f73d901139abf8e3394b2b67bc63b63635ae97318f40628dbbed7731b1ed79&"
+        }
+      },
+      "dateTimeCreated": "2024-02-11T02:50:46.255Z"
     },
     {
       "name": "Hostile Intercept (and Autopause!)",
@@ -4133,8 +4278,8 @@
           "filename": "image.png",
           "content_type": "image/png",
           "size": 4612.0,
-          "url": "https://cdn.discordapp.com/attachments/1203463725475176478/1203463725722632252/image.png?ex=65d12fef&is=65bebaef&hm=f7537ee46e8acff964789a189192e2dcd2d1d96664b276891be22415988f1e72&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203463725475176478/1203463725722632252/image.png?ex=65d12fef&is=65bebaef&hm=f7537ee46e8acff964789a189192e2dcd2d1d96664b276891be22415988f1e72&"
+          "url": "https://cdn.discordapp.com/attachments/1203463725475176478/1203463725722632252/image.png?ex=65da6a6f&is=65c7f56f&hm=41b1bd5b219998f556ee44037338321ba2a96405a12455e61ad15f956bd32e95&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203463725475176478/1203463725722632252/image.png?ex=65da6a6f&is=65c7f56f&hm=41b1bd5b219998f556ee44037338321ba2a96405a12455e61ad15f956bd32e95&"
         }
       },
       "dateTimeCreated": "2024-02-03T22:15:11.428Z",
@@ -4294,8 +4439,8 @@
           "filename": "mod_post_icon_indevo.png",
           "content_type": "image/png",
           "size": 4641.0,
-          "url": "https://cdn.discordapp.com/attachments/1203465418463776899/1203465418967224371/mod_post_icon_indevo.png?ex=65d13183&is=65bebc83&hm=9ae716fc14791c4459bb91df24e484ccc666ef790ed00c3de13ea7c66e7b06d1&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203465418463776899/1203465418967224371/mod_post_icon_indevo.png?ex=65d13183&is=65bebc83&hm=9ae716fc14791c4459bb91df24e484ccc666ef790ed00c3de13ea7c66e7b06d1&"
+          "url": "https://cdn.discordapp.com/attachments/1203465418463776899/1203465418967224371/mod_post_icon_indevo.png?ex=65da6c03&is=65c7f703&hm=5510898945d51370e0f9b273239fb872d63fc8d21ae3bcdda6a6663234a0befd&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203465418463776899/1203465418967224371/mod_post_icon_indevo.png?ex=65da6c03&is=65c7f703&hm=5510898945d51370e0f9b273239fb872d63fc8d21ae3bcdda6a6663234a0befd&"
         }
       },
       "dateTimeCreated": "2024-02-03T22:21:55.068Z"
@@ -5138,6 +5283,75 @@
       "images": {}
     },
     {
+      "name": "Luddic Enhancement 1.2.6e",
+      "summary": "A small mod to enhance the Luddic Church's position in Nexerellin, and enhance Luddic Church and Luddic Path fleets with new, lore-friendly ships.",
+      "description": "A small mod to enhance the Luddic Church's position in Nexerellin, and enhance Luddic Church and Luddic Path fleets with new, lore-friendly ships.\n\n```-Updated for 0.97```\n\n```Of Dubious Savegame Compatibility```\n\nDownload: https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/Luddic_Enhancement_1_2_6e.zip",
+      "gameVersionReq": "",
+      "authors": "kingalfonzo",
+      "authorsList": [
+        "kingalfonzo"
+      ],
+      "link": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/Luddic_Enhancement_1_2_6e.zip",
+      "urls": {
+        "Discord": "https://discord.com/channels/187635036525166592/1206066843702267944/1206066843702267944",
+        "DirectDownload": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/Luddic_Enhancement_1_2_6e.zip"
+      },
+      "source": "Discord",
+      "sources": [
+        "Discord"
+      ],
+      "categories": [
+        "Ship Pack",
+        "Faction"
+      ],
+      "images": {
+        "1206066844222619668": {
+          "id": "1206066844222619668",
+          "filename": "fasces_lc.png",
+          "content_type": "image/png",
+          "size": 46835.0,
+          "url": "https://cdn.discordapp.com/attachments/1206066843702267944/1206066844222619668/fasces_lc.png?ex=65daa847&is=65c83347&hm=31c832fb1fc9dd12fb18a3d67c0c32c320202787cdb3f784981d16410c2fc728&",
+          "proxy_url": "https://media.discordapp.net/attachments/1206066843702267944/1206066844222619668/fasces_lc.png?ex=65daa847&is=65c83347&hm=31c832fb1fc9dd12fb18a3d67c0c32c320202787cdb3f784981d16410c2fc728&"
+        }
+      },
+      "dateTimeCreated": "2024-02-11T02:39:03.177Z",
+      "dateTimeEdited": "2024-02-11T02:40:35.661Z"
+    },
+    {
+      "name": "Luddic Enhancement: IED Edition 1.2.6a",
+      "summary": "Boom.",
+      "description": "Boom.\n\n\n```ONLY contains the IED ships. Does not need base Luddic Enhancement.```\n\n```-Updated for 0.97a```\n\nDownload: https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/Luddic_Enhancement_IED_1_2_6a.zip",
+      "gameVersionReq": "",
+      "authors": "kingalfonzo",
+      "authorsList": [
+        "kingalfonzo"
+      ],
+      "link": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/Luddic_Enhancement_IED_1_2_6a.zip",
+      "urls": {
+        "Discord": "https://discord.com/channels/187635036525166592/1206067162716839936/1206067162716839936",
+        "DirectDownload": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/Luddic_Enhancement_IED_1_2_6a.zip"
+      },
+      "source": "Discord",
+      "sources": [
+        "Discord"
+      ],
+      "categories": [
+        "Ship Pack",
+        "Faction"
+      ],
+      "images": {
+        "1206067162943586384": {
+          "id": "1206067162943586384",
+          "filename": "dram_lp_ied.png",
+          "content_type": "image/png",
+          "size": 23947.0,
+          "url": "https://cdn.discordapp.com/attachments/1206067162716839936/1206067162943586384/dram_lp_ied.png?ex=65daa893&is=65c83393&hm=65f77586a30c4c4601f2d88b6b7a0ec105e902c62718f7bec3a4ab6720ef09ed&",
+          "proxy_url": "https://media.discordapp.net/attachments/1206067162716839936/1206067162943586384/dram_lp_ied.png?ex=65daa893&is=65c83393&hm=65f77586a30c4c4601f2d88b6b7a0ec105e902c62718f7bec3a4ab6720ef09ed&"
+        }
+      },
+      "dateTimeCreated": "2024-02-11T02:40:19.236Z"
+    },
+    {
       "name": "LunaLib",
       "summary": "A Library including utilities for players and mod developers.\nAdds ingame mod configs, version checker ui, debug tools and utilities for mod developers.",
       "description": "A Library including utilities for players and mod developers.\nAdds ingame mod configs, version checker ui, debug tools and utilities for mod developers.\n```fix\nVersion 1.8.4\n\n- Updated for 0.97a (Mostly just changed version number)\n- Updated Version checker to display the new latest game version\n- Will require updated Lazylib, version change may be sufficient\n\n```\n**Download**: <https://github.com/Lukas22041/LunaLib/releases/latest/download/LunaLib.zip>\n**Changelog & Older Versions**: <https://github.com/Lukas22041/LunaLib/releases>\n\n**Forum Thread**: <https://fractalsoftworks.com/forum/index.php?topic=25658.msg381423#msg381423>\n**Github**: <https://github.com/Lukas22041/LunaLib>\n**Documentation**: <https://github.com/Lukas22041/LunaLib/wiki>",
@@ -5820,26 +6034,38 @@
     },
     {
       "name": "Nexerelin",
+      "summary": "4X in Starsector.",
+      "description": "4X in Starsector.\n\nChangelog: <https://github.com/Histidine91/Nexerelin/wiki/Changelog>\nForum thread: http://fractalsoftworks.com/forum/index.php?topic=9175.0\nNexus: https://www.nexusmods.com/starsector/mods/28\n\nDownload: <https://github.com/Histidine91/Nexerelin/releases/download/v0.11.1b/Nexerelin_0.11.1b.zip>\n\nKo-Fi: <https://ko-fi.com/R6R5Q52DU>",
       "gameVersionReq": "0.96a",
       "authors": "Histidine, Zaphide",
       "authorsList": [
         "Histidine",
-        "Histidine, Zaphide"
+        "Histidine, Zaphide",
+        "histidine_my"
       ],
       "link": "https://fractalsoftworks.com/forum/index.php?topic=9175.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=9175.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=9175.0"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=9175.0",
+        "Discord": "https://discord.com/channels/187635036525166592/1206072102009049159/1206072102009049159",
+        "DirectDownload": "https://github.com/Histidine91/Nexerelin/releases/download/v0.11.1b/Nexerelin_0.11.1b.zip",
+        "DownloadPage": "https://github.com/Histidine91/Nexerelin/wiki/Changelog"
       },
       "source": "Index",
       "sources": [
         "Index",
-        "ModdingSubforum"
+        "ModdingSubforum",
+        "Discord"
       ],
       "categories": [
-        "Megamods"
+        "Colonies",
+        "Exploration",
+        "Megamod",
+        "Megamods",
+        "Quests and Bars"
       ],
-      "images": {}
+      "images": {},
+      "dateTimeCreated": "2024-02-11T02:59:56.855Z"
     },
     {
       "name": "Nijigen Extend v.0.3.2 || Standalone Pack || Update 02/28 [YREX]",
@@ -5953,6 +6179,42 @@
       ],
       "categories": [],
       "images": {}
+    },
+    {
+      "name": "Obvious Neutron",
+      "summary": "Changes the campaign map icon for Neutron Stars to make them  more obvious.",
+      "description": "Changes the campaign map icon for Neutron Stars to make them  more obvious.\n\nThat's it.\n\nhttps://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/ObviousNeutron.zip",
+      "gameVersionReq": "0.97a",
+      "authors": "kingalfonzo",
+      "authorsList": [
+        "kingalfonzo"
+      ],
+      "link": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/ObviousNeutron.zip",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=25950.0",
+      "urls": {
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=25950.0",
+        "Discord": "https://discord.com/channels/187635036525166592/1206063212248961095/1206063212248961095",
+        "DirectDownload": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/ObviousNeutron.zip"
+      },
+      "source": "Discord",
+      "sources": [
+        "ModdingSubforum",
+        "Discord"
+      ],
+      "categories": [
+        "Utility"
+      ],
+      "images": {
+        "1206063212450156574": {
+          "id": "1206063212450156574",
+          "filename": "neutron.png",
+          "content_type": "image/png",
+          "size": 9288.0,
+          "url": "https://cdn.discordapp.com/attachments/1206063212248961095/1206063212450156574/neutron.png?ex=65daa4e5&is=65c82fe5&hm=6263ec0633135b21f49ed276f3810eb5f634afc7d90b8e55d699a6cd1f83d900&",
+          "proxy_url": "https://media.discordapp.net/attachments/1206063212248961095/1206063212450156574/neutron.png?ex=65daa4e5&is=65c82fe5&hm=6263ec0633135b21f49ed276f3810eb5f634afc7d90b8e55d699a6cd1f83d900&"
+        }
+      },
+      "dateTimeCreated": "2024-02-11T02:24:37.371Z"
     },
     {
       "name": "Officer Extension",
@@ -6798,16 +7060,16 @@
           "filename": "test_onslaught.png",
           "content_type": "image/png",
           "size": 183364.0,
-          "url": "https://cdn.discordapp.com/attachments/1203054429927120996/1203469018275516416/test_onslaught.png?ex=65d134dd&is=65bebfdd&hm=4221f1cb41212cc40fac24b7539174c9e2c49a3a9c37cc240a418a88c5303e4a&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203054429927120996/1203469018275516416/test_onslaught.png?ex=65d134dd&is=65bebfdd&hm=4221f1cb41212cc40fac24b7539174c9e2c49a3a9c37cc240a418a88c5303e4a&"
+          "url": "https://cdn.discordapp.com/attachments/1203054429927120996/1203469018275516416/test_onslaught.png?ex=65da6f5d&is=65c7fa5d&hm=abb741cbb9ed599d90251dc3c9ec0b9074e5f6d37ccfc0feb6f2f28164262fe8&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203054429927120996/1203469018275516416/test_onslaught.png?ex=65da6f5d&is=65c7fa5d&hm=abb741cbb9ed599d90251dc3c9ec0b9074e5f6d37ccfc0feb6f2f28164262fe8&"
         },
         "1203469018548408400": {
           "id": "1203469018548408400",
           "filename": "double_heron.png",
           "content_type": "image/png",
           "size": 89064.0,
-          "url": "https://cdn.discordapp.com/attachments/1203054429927120996/1203469018548408400/double_heron.png?ex=65d134dd&is=65bebfdd&hm=c818ffe66f23ace18cf2ea6f6e4af3e255bd517e4b73b4112b188c7ebfa67a38&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203054429927120996/1203469018548408400/double_heron.png?ex=65d134dd&is=65bebfdd&hm=c818ffe66f23ace18cf2ea6f6e4af3e255bd517e4b73b4112b188c7ebfa67a38&"
+          "url": "https://cdn.discordapp.com/attachments/1203054429927120996/1203469018548408400/double_heron.png?ex=65da6f5d&is=65c7fa5d&hm=0e61123442d670aa51e8f9f5155f84cf488d6e86f8598e4e94677289f517957c&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203054429927120996/1203469018548408400/double_heron.png?ex=65da6f5d&is=65c7fa5d&hm=0e61123442d670aa51e8f9f5155f84cf488d6e86f8598e4e94677289f517957c&"
         },
         "1204659570136453160": {
           "id": "1204659570136453160",
@@ -7292,6 +7554,8 @@
     },
     {
       "name": "Secrets of the Frontier (Prerelease 13.2a) - indev campaign mod",
+      "summary": "NOTE: This update is in an unfinished but playable state. Testing has been done to make sure there are no obviously-broken elements but there's still a couple of TODO items and it has not been playtested for balance as much as I'd like. It's a stopgap while I finish off a few bits of content.",
+      "description": "NOTE: This update is in an unfinished but playable state. Testing has been done to make sure there are no obviously-broken elements but there's still a couple of TODO items and it has not been playtested for balance as much as I'd like. It's a stopgap while I finish off a few bits of content.\n\nDance amongst the void. Discover the secrets of the frontier.\n\nAn in-dev campaign mod featuring new quests and encounters, alongside station-building and expansion to the game's tactical mechanics such as new combat objectives.\n\n0.14 adds ~~2~~ 1 new campaign encounter~~s~~ (\"A Lost Thread\"), two new Dustkeeper flagships, a partial rework of Cyberwarfare Protocols, a Sierra writing pass, more consequences for atrocities and updates to existing \"consequences\" and many smaller changes and fixes\n\n(as usual, requires LazyLib, MagicLib and GraphicsLib, and can be added mid-save with full functionality). Requires 0.97a-RC**8**\n\nThread: https://fractalsoftworks.com/forum/index.php?topic=15820.0\nDirect download: <https://github.com/InventRaccoon/secrets-of-the-frontier/raw/main/Secrets%20of%20the%20Frontier%20Prerelease%2014%20BETA.zip>",
       "gameVersionReq": "0.96a",
       "authors": "Inventor Raccoon",
       "authorsList": [
@@ -7300,14 +7564,33 @@
       "link": "https://fractalsoftworks.com/forum/index.php?topic=15820.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=15820.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=15820.0"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=15820.0",
+        "Discord": "https://discord.com/channels/187635036525166592/1205963592248328193/1205963592248328193",
+        "DirectDownload": "https://github.com/InventRaccoon/secrets-of-the-frontier/raw/main/Secrets%20of%20the%20Frontier%20Prerelease%2014%20BETA.zip",
+        "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=15820.0"
       },
       "source": "ModdingSubforum",
       "sources": [
-        "ModdingSubforum"
+        "ModdingSubforum",
+        "Discord"
       ],
-      "categories": [],
-      "images": {}
+      "categories": [
+        "Exploration",
+        "Misc. Campaign Mods",
+        "Quests and Bars"
+      ],
+      "images": {
+        "1205963593258901614": {
+          "id": "1205963593258901614",
+          "filename": "sotf_sierra.png",
+          "content_type": "image/png",
+          "size": 19418.0,
+          "url": "https://cdn.discordapp.com/attachments/1205963592248328193/1205963593258901614/sotf_sierra.png?ex=65da481e&is=65c7d31e&hm=ff90a8eb04756719a05f71962e02e19fccfbceee04accf8177536a96c11fc2ca&",
+          "proxy_url": "https://media.discordapp.net/attachments/1205963592248328193/1205963593258901614/sotf_sierra.png?ex=65da481e&is=65c7d31e&hm=ff90a8eb04756719a05f71962e02e19fccfbceee04accf8177536a96c11fc2ca&"
+        }
+      },
+      "dateTimeCreated": "2024-02-10T19:48:46.112Z",
+      "dateTimeEdited": "2024-02-10T22:00:55.477Z"
     },
     {
       "name": "Seeker - Unidentified Contact 0.53rc1 (2023/02/27)",
@@ -7836,6 +8119,8 @@
     },
     {
       "name": "Stardust Ventures",
+      "summary": "A ship and equipment pack designed to facilitate exploration and movement through hyperspace. All SDV ships have built-in environmental shielding and provide a boost to fleet hyperspace agility.",
+      "description": "A ship and equipment pack designed to facilitate exploration and movement through hyperspace. All SDV ships have built-in environmental shielding and provide a boost to fleet hyperspace agility.\n\nSDV Shops can be found on Agreus, Baetis, and Ilm. (More can be added to indy markets by adjusting the configs)\n\nSafe to add mid-save.\n\nDirect: https://github.com/Mephansteras/Stardust_Ventures/releases/download/stardust_ventures_v0.8.3/Stardust.Ventures.zip\nForum thread: https://fractalsoftworks.com/forum/index.php?topic=22966.0\n\nhttps://i.imgur.com/eDRviol.png",
       "gameVersionReq": "0.96a",
       "authors": "Mephansteras",
       "authorsList": [
@@ -7844,17 +8129,33 @@
       "link": "https://fractalsoftworks.com/forum/index.php?topic=22966.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=22966.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=22966.0"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=22966.0",
+        "Discord": "https://discord.com/channels/187635036525166592/1206007400335675422/1206007400335675422",
+        "DirectDownload": "https://github.com/Mephansteras/Stardust_Ventures/releases/download/stardust_ventures_v0.8.3/Stardust.Ventures.zip",
+        "DownloadPage": "https://fractalsoftworks.com/forum/index.php?topic=22966.0"
       },
       "source": "Index",
       "sources": [
         "Index",
-        "ModdingSubforum"
+        "ModdingSubforum",
+        "Discord"
       ],
       "categories": [
-        "Content Expansions"
+        "Content Expansions",
+        "Ship Pack",
+        "Weapon/Fighter Pack"
       ],
-      "images": {}
+      "images": {
+        "1206007400726011944": {
+          "id": "1206007400726011944",
+          "filename": "All_Ships.png",
+          "content_type": "image/png",
+          "size": 2075942.0,
+          "url": "https://cdn.discordapp.com/attachments/1206007400335675422/1206007400726011944/All_Ships.png?ex=65da70ea&is=65c7fbea&hm=295842d23d91589b70b2682eae39d3e118d9a3d4cbef16c86c186e9c4156a317&",
+          "proxy_url": "https://media.discordapp.net/attachments/1206007400335675422/1206007400726011944/All_Ships.png?ex=65da70ea&is=65c7fbea&hm=295842d23d91589b70b2682eae39d3e118d9a3d4cbef16c86c186e9c4156a317&"
+        }
+      },
+      "dateTimeCreated": "2024-02-10T22:42:50.774Z"
     },
     {
       "name": "Stargate Ship And Weapon Pack V1.0.0",
@@ -8052,8 +8353,8 @@
           "filename": "mod_post_icon_substance_abuse.png",
           "content_type": "image/png",
           "size": 5330.0,
-          "url": "https://cdn.discordapp.com/attachments/1203464439656087632/1203464439903297617/mod_post_icon_substance_abuse.png?ex=65d13099&is=65bebb99&hm=7493ae12a4b9ec21c98c91ce7dad487eef1fa99b134324efabd054300bd185fd&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203464439656087632/1203464439903297617/mod_post_icon_substance_abuse.png?ex=65d13099&is=65bebb99&hm=7493ae12a4b9ec21c98c91ce7dad487eef1fa99b134324efabd054300bd185fd&"
+          "url": "https://cdn.discordapp.com/attachments/1203464439656087632/1203464439903297617/mod_post_icon_substance_abuse.png?ex=65da6b19&is=65c7f619&hm=7636237a64d31fd401899b3f42896b76bc24389369a7b4f887caec589224d9fc&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203464439656087632/1203464439903297617/mod_post_icon_substance_abuse.png?ex=65da6b19&is=65c7f619&hm=7636237a64d31fd401899b3f42896b76bc24389369a7b4f887caec589224d9fc&"
         }
       },
       "dateTimeCreated": "2024-02-03T22:18:01.702Z",
@@ -9268,6 +9569,43 @@
       "images": {}
     },
     {
+      "name": "Volkov Industrial Conglomerate (VIC) 1.6.2 \"Räumpage\" - 0.97a-RC8",
+      "summary": "*A transhumanist Megacorporation from the Human Domain era, hell-bent on helping humanity survive and evolve through extensive genetic modification, ardently enforcing their views and regime either by pen, or by sword.*",
+      "description": "*A transhumanist Megacorporation from the Human Domain era, hell-bent on helping humanity survive and evolve through extensive genetic modification, ardently enforcing their views and regime either by pen, or by sword.*\n\nNOT SAVE COMPATIBLE WITH VERSIONS PRIOR TO 1.6.0\n\n**Download on Boosty:**\nhttps://boosty.to/astarat_starsector/posts/df9a9922-e3ae-4b91-a5b8-c7d99aa4cf92?share=post_link\n**Forums:**\nhttps://fractalsoftworks.com/forum/index.php?topic=19603\n**Direct download from GitHub:**\nhttps://github.com/AstaratStarsector/VIC/releases/download/1.6.2/VIC.1.6.2.zip\n\nAs requested by PureTilt, I quote:\n\"Give me your money 🔫 \"\nhttps://boosty.to/puretilt\nOr in other words, support the co-author of the mod :>",
+      "gameVersionReq": "",
+      "authors": "astarat.",
+      "authorsList": [
+        "astarat."
+      ],
+      "link": "https://github.com/AstaratStarsector/VIC/releases/download/1.6.2/VIC.1.6.2.zip",
+      "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=19603",
+      "urls": {
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=19603",
+        "Discord": "https://discord.com/channels/187635036525166592/1205989768232570880/1205989768232570880",
+        "DirectDownload": "https://github.com/AstaratStarsector/VIC/releases/download/1.6.2/VIC.1.6.2.zip",
+        "DownloadPage": "https://boosty.to/astarat_starsector/posts/df9a9922-e3ae-4b91-a5b8-c7d99aa4cf92?share=post_link"
+      },
+      "source": "Discord",
+      "sources": [
+        "Discord"
+      ],
+      "categories": [
+        "Faction"
+      ],
+      "images": {
+        "1205989768647802960": {
+          "id": "1205989768647802960",
+          "filename": "LogoCrest.png",
+          "content_type": "image/png",
+          "size": 9315.0,
+          "url": "https://cdn.discordapp.com/attachments/1205989768232570880/1205989768647802960/LogoCrest.png?ex=65da607f&is=65c7eb7f&hm=4dc3c247143f3405712b4e412478c1e53b7fc086e65bc6b8d9b653e3a961b98c&",
+          "proxy_url": "https://media.discordapp.net/attachments/1205989768232570880/1205989768647802960/LogoCrest.png?ex=65da607f&is=65c7eb7f&hm=4dc3c247143f3405712b4e412478c1e53b7fc086e65bc6b8d9b653e3a961b98c&"
+        }
+      },
+      "dateTimeCreated": "2024-02-10T21:32:46.953Z",
+      "dateTimeEdited": "2024-02-10T21:49:26.107Z"
+    },
+    {
       "name": "WIP Aardwolf & Zenith: ARRUS Hullmods 0.65",
       "gameVersionReq": "0.96a-RC10",
       "authors": "ctuncks",
@@ -9789,6 +10127,6 @@
       "images": {}
     }
   ],
-  "totalCount": 414.0,
-  "lastUpdated": "2024-02-10T19:01:00Z"
+  "totalCount": 421.0,
+  "lastUpdated": "2024-02-11T07:02:00Z"
 }
