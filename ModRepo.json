@@ -421,7 +421,7 @@
     {
       "name": "Advanced Gunnery Control",
       "summary": "**A utility mod allowing you to customize weapon behavior on autofire, such as e.g. targeting/avoiding shields.**",
-      "description": "**A utility mod allowing you to customize weapon behavior on autofire, such as e.g. targeting/avoiding shields.**\n\nRequires MagicLib and LazyLib. LunaLib is not required but recommended.\n\nInstall and press J in combat, in refit, or on the world map to open a GUI.\n\nFeatures:\n- Many tags, such as targeting or avoiding shields, PD mode and many many more\n- GUI-based configuration in combat/refit or on the campaign map\n- Ability to automate tags via automatic customizable suggested tags and fleet-wide weapon-composition based tags\n- Tags are automatically saved between combats and reloads\n- Seamlessly switch between simple mode (6 tags) and advanced mode (over 20 tags)\n- Customize AI-controlled ship behavior through ship modes in advanced mode\n- Customize most aspects of the mod through LunaLib settings\n- Manually control multiple weapon groups at once using the Merge tag\n\nCan be updated/added/removed to/from ongoing campaigns.\n\n```\nTo mod-authors:\nIf you want to integrate with AGC to improve ship/weapon AI behavior of your faction, check the readme. Feel free to ping me if you need help or want to request a special mode.\nExample integration code: https://github.com/DesperatePeter/starsector-symbiotic-void-creatures/blob/main/src/tecrys/svc/hullmods/BGECarapace.kt#L98\n```\n\nVideos:\nAGC 1.15 Showcase: https://youtu.be/N5SIRMo7Pxc\nAGC in 60s: https://youtu.be/2T3xNqy2HQA\n\nForum: https://fractalsoftworks.com/forum/index.php?topic=21280.0\nDownload: https://github.com/DesperatePeter/starsector-advanced-weapon-control/releases",
+      "description": "**A utility mod allowing you to customize weapon behavior on autofire, such as e.g. targeting/avoiding shields.**\n\nRequires MagicLib and LazyLib. LunaLib is required to use LunaSettings (though Settings.editme still works)\n\nInstall and press J in combat, in refit, or on the world map to open a GUI.\n\nFeatures:\n- Many tags, such as targeting or avoiding shields, PD mode and many many more\n- GUI-based configuration in combat/refit or on the campaign map\n- Ability to automate tags via automatic customizable suggested tags and fleet-wide weapon-composition based tags\n- Tags are automatically saved between combats and reloads\n- Seamlessly switch between simple mode (6 tags) and advanced mode (over 20 tags)\n- Customize AI-controlled ship behavior through ship modes in advanced mode\n- Customize most aspects of the mod through LunaLib settings\n- Manually control multiple weapon groups at once using the Merge tag\n\nCan be updated/added/removed to/from ongoing campaigns.\n\n```\nTo mod-authors:\nIf you want to integrate with AGC to improve ship/weapon AI behavior of your faction, check the readme. Feel free to ping me if you need help or want to request a special mode.\nExample integration code: https://github.com/DesperatePeter/starsector-symbiotic-void-creatures/blob/main/src/tecrys/svc/hullmods/BGECarapace.kt#L98\n```\n\nVideos:\nAGC 1.15 Showcase: https://youtu.be/N5SIRMo7Pxc\nAGC in 60s: https://youtu.be/2T3xNqy2HQA\n\nForum: https://fractalsoftworks.com/forum/index.php?topic=21280.0\nDownload: https://github.com/DesperatePeter/starsector-advanced-weapon-control/releases",
       "gameVersionReq": "0.97a",
       "authors": "DesperatePeter",
       "authorsList": [
@@ -455,12 +455,12 @@
         }
       },
       "dateTimeCreated": "2024-02-02T20:29:38.239Z",
-      "dateTimeEdited": "2024-02-15T15:43:20.374Z"
+      "dateTimeEdited": "2024-02-25T21:30:57.235Z"
     },
     {
       "name": "Adversary",
       "summary": "Adds a player-like faction in an ideal star system, using most vanilla ships and weapons.",
-      "description": "Adds a player-like faction in an ideal star system, using most vanilla ships and weapons.\n\n*v6.0.0 Patch Notes*\n```\n* Updated to Starsector 0.97\n\n* Added Grendel to Adversary's known ship list\n```\n```Save-compatible (probably)```\n**Download (requires Customizable Star Systems https://discord.com/channels/187635036525166592/1203405672146800690):** <https://github.com/Tranquiliti/Adversary/releases/download/v6.0.0/Adversary-v6.0.0.zip>\nReleases and Changelogs: <https://github.com/Tranquiliti/Adversary/releases>\nForum Thread: https://fractalsoftworks.com/forum/index.php?topic=25821.0",
+      "description": "Adds a player-like faction in an ideal star system, using most vanilla ships and weapons.\n\n*v6.1.0 Patch Note Summary*\n```\n* Added a Colony Crisis for the Adversary faction\n\n* Adjusted Adversary configs\n\n* Adjusted MagicBounties\n```\n```NOT save-compatible with v6.0.0```\n**Download (requires Customizable Star Systems https://discord.com/channels/187635036525166592/1203405672146800690):** <https://github.com/Tranquiliti/Adversary/releases/download/v6.1.0/Adversary-v6.1.0.zip>\nReleases and Changelogs: <https://github.com/Tranquiliti/Adversary/releases>\nForum Thread: https://fractalsoftworks.com/forum/index.php?topic=25821.0",
       "gameVersionReq": "0.97a",
       "authors": "Tranquility",
       "authorsList": [
@@ -495,7 +495,7 @@
         }
       },
       "dateTimeCreated": "2024-02-03T18:27:06.118Z",
-      "dateTimeEdited": "2024-02-03T18:28:01.871Z"
+      "dateTimeEdited": "2024-02-26T00:06:22.001Z"
     },
     {
       "name": "Aerial Combat Suit",
@@ -1410,7 +1410,7 @@
     },
     {
       "name": "Better Variants",
-      "gameVersionReq": "0.96a",
+      "gameVersionReq": "0.97a",
       "authors": "itBeABruhMoment",
       "authorsList": [
         "itBeABruhMoment"
@@ -2547,16 +2547,16 @@
           "filename": "logo.jpg",
           "content_type": "image/jpeg",
           "size": 12353.0,
-          "url": "https://cdn.discordapp.com/attachments/1203812855816917002/1203812856244469800/logo.jpg?ex=65e4ea16&is=65d27516&hm=fbd60dcb79993369c892764c0a0f6bbb0e7c47f59c6524812b0e7cca647cbe3d&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203812855816917002/1203812856244469800/logo.jpg?ex=65e4ea16&is=65d27516&hm=fbd60dcb79993369c892764c0a0f6bbb0e7c47f59c6524812b0e7cca647cbe3d&"
+          "url": "https://cdn.discordapp.com/attachments/1203812855816917002/1203812856244469800/logo.jpg?ex=65ee2496&is=65dbaf96&hm=a3a898df54af79daaace96a4077a1fa3f5dad35a246885e44461c772f2ab0568&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203812855816917002/1203812856244469800/logo.jpg?ex=65ee2496&is=65dbaf96&hm=a3a898df54af79daaace96a4077a1fa3f5dad35a246885e44461c772f2ab0568&"
         },
         "1203812884493115433": {
           "id": "1203812884493115433",
           "filename": "DCA_PewPew.jpg",
           "content_type": "image/jpeg",
           "size": 265039.0,
-          "url": "https://cdn.discordapp.com/attachments/1203812855816917002/1203812884493115433/DCA_PewPew.jpg?ex=65e4ea1d&is=65d2751d&hm=205bbdcd42466bc077e6354318772ba1254244ab3f3e4758f13479c0dad4ac08&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203812855816917002/1203812884493115433/DCA_PewPew.jpg?ex=65e4ea1d&is=65d2751d&hm=205bbdcd42466bc077e6354318772ba1254244ab3f3e4758f13479c0dad4ac08&"
+          "url": "https://cdn.discordapp.com/attachments/1203812855816917002/1203812884493115433/DCA_PewPew.jpg?ex=65ee249d&is=65dbaf9d&hm=883d0614e8b224e699f375fc608ffa7fcc9e2ac2f6660e741e605f5a640d82fe&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203812855816917002/1203812884493115433/DCA_PewPew.jpg?ex=65ee249d&is=65dbaf9d&hm=883d0614e8b224e699f375fc608ffa7fcc9e2ac2f6660e741e605f5a640d82fe&"
         }
       },
       "dateTimeCreated": "2024-02-04T21:22:30.588Z",
@@ -3603,8 +3603,8 @@
           "filename": "portrait.png",
           "content_type": "image/png",
           "size": 294544.0,
-          "url": "https://cdn.discordapp.com/attachments/1203898704562753586/1203898704822534184/portrait.png?ex=65e53a0a&is=65d2c50a&hm=997dc7b2200b31c4cbddf94f60dc82fb64a50d2ce8aa61e7f04939bb3a3c4a70&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203898704562753586/1203898704822534184/portrait.png?ex=65e53a0a&is=65d2c50a&hm=997dc7b2200b31c4cbddf94f60dc82fb64a50d2ce8aa61e7f04939bb3a3c4a70&"
+          "url": "https://cdn.discordapp.com/attachments/1203898704562753586/1203898704822534184/portrait.png?ex=65ee748a&is=65dbff8a&hm=1b211f67f4888e267eeb1b0b73d60571075262928874e5bc71d163e06e020837&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203898704562753586/1203898704822534184/portrait.png?ex=65ee748a&is=65dbff8a&hm=1b211f67f4888e267eeb1b0b73d60571075262928874e5bc71d163e06e020837&"
         }
       },
       "dateTimeCreated": "2024-02-05T03:03:38.524Z",
@@ -3976,8 +3976,8 @@
           "filename": "Halo_HomeSystems_Finalv2.png",
           "content_type": "image/png",
           "size": 1453019.0,
-          "url": "https://cdn.discordapp.com/attachments/1203906866560630815/1203906867189907486/Halo_HomeSystems_Finalv2.png?ex=65e541a4&is=65d2cca4&hm=228f72b7e9d7d90ca02accc619117aec8798251c4a5cebeb5e09c4cc3593aac5&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203906866560630815/1203906867189907486/Halo_HomeSystems_Finalv2.png?ex=65e541a4&is=65d2cca4&hm=228f72b7e9d7d90ca02accc619117aec8798251c4a5cebeb5e09c4cc3593aac5&"
+          "url": "https://cdn.discordapp.com/attachments/1203906866560630815/1203906867189907486/Halo_HomeSystems_Finalv2.png?ex=65ee7c24&is=65dc0724&hm=718e3ebff6cb43d49563094e862fa11e0ee6ce923dc5da1e8af07bef389fb712&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203906866560630815/1203906867189907486/Halo_HomeSystems_Finalv2.png?ex=65ee7c24&is=65dc0724&hm=718e3ebff6cb43d49563094e862fa11e0ee6ce923dc5da1e8af07bef389fb712&"
         }
       },
       "dateTimeCreated": "2024-02-05T03:36:04.496Z",
@@ -4707,40 +4707,40 @@
           "filename": "banner_ico.png",
           "content_type": "image/png",
           "size": 6153.0,
-          "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975008177717318/banner_ico.png?ex=65e53cb7&is=65d2c7b7&hm=bc8d3de8744621f55fe63984eb00a445de3eee0c062bee4cecc04f82fbec16c5&",
-          "proxy_url": "https://media.discordapp.net/attachments/1208975007993176094/1208975008177717318/banner_ico.png?ex=65e53cb7&is=65d2c7b7&hm=bc8d3de8744621f55fe63984eb00a445de3eee0c062bee4cecc04f82fbec16c5&"
+          "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975008177717318/banner_ico.png?ex=65ee7737&is=65dc0237&hm=5f234a1747d2229d345d7495a649c1e13b96dae880b3de6e1fbe509762e4f4d9&",
+          "proxy_url": "https://media.discordapp.net/attachments/1208975007993176094/1208975008177717318/banner_ico.png?ex=65ee7737&is=65dc0237&hm=5f234a1747d2229d345d7495a649c1e13b96dae880b3de6e1fbe509762e4f4d9&"
         },
         "1208975049718243368": {
           "id": "1208975049718243368",
           "filename": "meme.png",
           "content_type": "image/png",
           "size": 259844.0,
-          "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975049718243368/meme.png?ex=65e53cc1&is=65d2c7c1&hm=a6ea83252604a77a48bb851dd6a7e0b0a276a6115c4c7eea72752669ddd096a7&",
-          "proxy_url": "https://media.discordapp.net/attachments/1208975007993176094/1208975049718243368/meme.png?ex=65e53cc1&is=65d2c7c1&hm=a6ea83252604a77a48bb851dd6a7e0b0a276a6115c4c7eea72752669ddd096a7&"
+          "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975049718243368/meme.png?ex=65ee7741&is=65dc0241&hm=e314ed843cdcca8a89ab00bfc6576ad2946f6760eae454e3a36bb2260be9188d&",
+          "proxy_url": "https://media.discordapp.net/attachments/1208975007993176094/1208975049718243368/meme.png?ex=65ee7741&is=65dc0241&hm=e314ed843cdcca8a89ab00bfc6576ad2946f6760eae454e3a36bb2260be9188d&"
         },
         "1208975186255151154": {
           "id": "1208975186255151154",
           "filename": "campaign_speed_up.png",
           "content_type": "image/png",
           "size": 25063.0,
-          "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975186255151154/campaign_speed_up.png?ex=65e53ce2&is=65d2c7e2&hm=d80c8d05913480f782494b3515e95334b5c62f2968b754fce160488fea56dfca&",
-          "proxy_url": "https://media.discordapp.net/attachments/1208975007993176094/1208975186255151154/campaign_speed_up.png?ex=65e53ce2&is=65d2c7e2&hm=d80c8d05913480f782494b3515e95334b5c62f2968b754fce160488fea56dfca&"
+          "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975186255151154/campaign_speed_up.png?ex=65ee7762&is=65dc0262&hm=b2d805456fe285dd2ab8928713244c9a8334754571390fd3339bb56ccdd0d41d&",
+          "proxy_url": "https://media.discordapp.net/attachments/1208975007993176094/1208975186255151154/campaign_speed_up.png?ex=65ee7762&is=65dc0262&hm=b2d805456fe285dd2ab8928713244c9a8334754571390fd3339bb56ccdd0d41d&"
         },
         "1208975219109400627": {
           "id": "1208975219109400627",
           "filename": "campaign_speed_up_2.png",
           "content_type": "image/png",
           "size": 107119.0,
-          "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975219109400627/campaign_speed_up_2.png?ex=65e53ce9&is=65d2c7e9&hm=253ebb2c8c5a09eedf3fdac57221034e6f8206645d4bba5375c8e59ddc872754&",
-          "proxy_url": "https://media.discordapp.net/attachments/1208975007993176094/1208975219109400627/campaign_speed_up_2.png?ex=65e53ce9&is=65d2c7e9&hm=253ebb2c8c5a09eedf3fdac57221034e6f8206645d4bba5375c8e59ddc872754&"
+          "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975219109400627/campaign_speed_up_2.png?ex=65ee7769&is=65dc0269&hm=5f32d8eaf31e1ebb33e6265867f64b6fe1eaa135b172d647e730d0e97c64dcf7&",
+          "proxy_url": "https://media.discordapp.net/attachments/1208975007993176094/1208975219109400627/campaign_speed_up_2.png?ex=65ee7769&is=65dc0269&hm=5f32d8eaf31e1ebb33e6265867f64b6fe1eaa135b172d647e730d0e97c64dcf7&"
         },
         "1208975237056569404": {
           "id": "1208975237056569404",
           "filename": "campaign_speed_up_3.png",
           "content_type": "image/png",
           "size": 30678.0,
-          "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975237056569404/campaign_speed_up_3.png?ex=65e53cee&is=65d2c7ee&hm=e1bab4c63952466d0785ac2e79356d47ad4ab26258fa1404f234c4ce5ea301c5&",
-          "proxy_url": "https://media.discordapp.net/attachments/1208975007993176094/1208975237056569404/campaign_speed_up_3.png?ex=65e53cee&is=65d2c7ee&hm=e1bab4c63952466d0785ac2e79356d47ad4ab26258fa1404f234c4ce5ea301c5&"
+          "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975237056569404/campaign_speed_up_3.png?ex=65ee776e&is=65dc026e&hm=d646f8d9e75bd593408cab78b85dbf023a3aef051d760321f42e23a4b3f5e409&",
+          "proxy_url": "https://media.discordapp.net/attachments/1208975007993176094/1208975237056569404/campaign_speed_up_3.png?ex=65ee776e&is=65dc026e&hm=d646f8d9e75bd593408cab78b85dbf023a3aef051d760321f42e23a4b3f5e409&"
         },
         "1209311649790431265": {
           "id": "1209311649790431265",
@@ -6199,8 +6199,8 @@
           "filename": "mm_description-01.jpg",
           "content_type": "image/jpeg",
           "size": 521674.0,
-          "url": "https://cdn.discordapp.com/attachments/1203800763785158716/1203800764238139532/mm_description-01.jpg?ex=65e4ded3&is=65d269d3&hm=1dac7a575e9367891bd4f48e429e52866097f4c1267d49f66a261fecd2e07b8b&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203800763785158716/1203800764238139532/mm_description-01.jpg?ex=65e4ded3&is=65d269d3&hm=1dac7a575e9367891bd4f48e429e52866097f4c1267d49f66a261fecd2e07b8b&"
+          "url": "https://cdn.discordapp.com/attachments/1203800763785158716/1203800764238139532/mm_description-01.jpg?ex=65ee1953&is=65dba453&hm=c298dc06fe86f63c94ce299ddef5e1892b60cbc64e7b1eb52e61740082bb18b4&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203800763785158716/1203800764238139532/mm_description-01.jpg?ex=65ee1953&is=65dba453&hm=c298dc06fe86f63c94ce299ddef5e1892b60cbc64e7b1eb52e61740082bb18b4&"
         }
       },
       "dateTimeCreated": "2024-02-04T20:34:27.623Z",
@@ -6208,6 +6208,8 @@
     },
     {
       "name": "Neoteric Advent - 0.1.5",
+      "summary": "A small collection of ships, with some conceptual ideas not used in Epta Consortium, perhaps I'll add more. By now, I'm working on a new project for the future.",
+      "description": "A small collection of ships, with some conceptual ideas not used in Epta Consortium, perhaps I'll add more. By now, I'm working on a new project for the future.\n\nForum post: https://fractalsoftworks.com/forum/index.php?topic=27850.msg410017#msg410017\nDownload Link:\nhttps://www.mediafire.com/file/5symc41cvov1vfa/Neoteric_Advent_-_0.1.5.rar/file",
       "gameVersionReq": "0.97a",
       "authors": "xSevenG7x",
       "authorsList": [
@@ -6216,14 +6218,31 @@
       "link": "https://fractalsoftworks.com/forum/index.php?topic=27850.0",
       "forumPostLink": "https://fractalsoftworks.com/forum/index.php?topic=27850.0",
       "urls": {
-        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=27850.0"
+        "Forum": "https://fractalsoftworks.com/forum/index.php?topic=27850.msg410017#msg410017",
+        "Discord": "https://discord.com/channels/187635036525166592/1211389835517100112/1211389835517100112",
+        "DownloadPage": "https://www.mediafire.com/file/5symc41cvov1vfa/Neoteric_Advent_-_0.1.5.rar/file"
       },
       "source": "ModdingSubforum",
       "sources": [
-        "ModdingSubforum"
+        "ModdingSubforum",
+        "Discord"
       ],
-      "categories": [],
-      "images": {}
+      "categories": [
+        "Modular Hullmods",
+        "Other/Misc.",
+        "Ship Pack"
+      ],
+      "images": {
+        "1211389835718172672": {
+          "id": "1211389835718172672",
+          "filename": "mod_forum_cleaner.png",
+          "content_type": "image/png",
+          "size": 129350.0,
+          "url": "https://cdn.discordapp.com/attachments/1211389835517100112/1211389835718172672/mod_forum_cleaner.png?ex=65ee05b3&is=65db90b3&hm=6e60df545d25037763fbb0d7fb3f638f68a1342e015925c96a6b2bda7708cd72&",
+          "proxy_url": "https://media.discordapp.net/attachments/1211389835517100112/1211389835718172672/mod_forum_cleaner.png?ex=65ee05b3&is=65db90b3&hm=6e60df545d25037763fbb0d7fb3f638f68a1342e015925c96a6b2bda7708cd72&"
+        }
+      },
+      "dateTimeCreated": "2024-02-25T19:10:43.322Z"
     },
     {
       "name": "Nerf Arms Dealers 1.0.1",
@@ -7275,8 +7294,8 @@
           "filename": "pscrest.png",
           "content_type": "image/png",
           "size": 28888.0,
-          "url": "https://cdn.discordapp.com/attachments/1203892896844095569/1203892897418711050/pscrest.png?ex=65e534a1&is=65d2bfa1&hm=411348bb3cebb48f242d865cd5f88c0223353c674851a04ca276829079ab1bc9&",
-          "proxy_url": "https://media.discordapp.net/attachments/1203892896844095569/1203892897418711050/pscrest.png?ex=65e534a1&is=65d2bfa1&hm=411348bb3cebb48f242d865cd5f88c0223353c674851a04ca276829079ab1bc9&"
+          "url": "https://cdn.discordapp.com/attachments/1203892896844095569/1203892897418711050/pscrest.png?ex=65ee6f21&is=65dbfa21&hm=ec33fc8be610a71c28b1898eaf291c8f695d6261831ebd1ee944b044ba941763&",
+          "proxy_url": "https://media.discordapp.net/attachments/1203892896844095569/1203892897418711050/pscrest.png?ex=65ee6f21&is=65dbfa21&hm=ec33fc8be610a71c28b1898eaf291c8f695d6261831ebd1ee944b044ba941763&"
         }
       },
       "dateTimeCreated": "2024-02-05T02:40:33.856Z",
@@ -8009,8 +8028,8 @@
           "filename": "banner.jpg",
           "content_type": "image/jpeg",
           "size": 104414.0,
-          "url": "https://cdn.discordapp.com/attachments/1206453481926299669/1206453482358579240/banner.jpg?ex=65e54add&is=65d2d5dd&hm=11273659a2c0a270c6c869209fcb3af6f08035436d827f281e3218e462687763&",
-          "proxy_url": "https://media.discordapp.net/attachments/1206453481926299669/1206453482358579240/banner.jpg?ex=65e54add&is=65d2d5dd&hm=11273659a2c0a270c6c869209fcb3af6f08035436d827f281e3218e462687763&"
+          "url": "https://cdn.discordapp.com/attachments/1206453481926299669/1206453482358579240/banner.jpg?ex=65ee855d&is=65dc105d&hm=2cee57d7e439b3ea294768697194aa96266d0fb07d48a3be8ab332887c9cbe6a&",
+          "proxy_url": "https://media.discordapp.net/attachments/1206453481926299669/1206453482358579240/banner.jpg?ex=65ee855d&is=65dc105d&hm=2cee57d7e439b3ea294768697194aa96266d0fb07d48a3be8ab332887c9cbe6a&"
         }
       },
       "dateTimeCreated": "2024-02-12T04:15:24.913Z"
@@ -10092,7 +10111,7 @@
     },
     {
       "name": "Variants Lib",
-      "gameVersionReq": "0.96a",
+      "gameVersionReq": "0.97a",
       "authors": "itBeABruhMoment",
       "authorsList": [
         "itBeABruhMoment"
@@ -10182,8 +10201,8 @@
           "filename": "VRI_Crest.png",
           "content_type": "image/png",
           "size": 55937.0,
-          "url": "https://cdn.discordapp.com/attachments/1206380276423327844/1206380276570132550/VRI_Crest.png?ex=65e506af&is=65d291af&hm=0a0576b97ee786e119257fb5d54b0bf99ad08386ee16cd2b6f6c78f9e6e9ac38&",
-          "proxy_url": "https://media.discordapp.net/attachments/1206380276423327844/1206380276570132550/VRI_Crest.png?ex=65e506af&is=65d291af&hm=0a0576b97ee786e119257fb5d54b0bf99ad08386ee16cd2b6f6c78f9e6e9ac38&"
+          "url": "https://cdn.discordapp.com/attachments/1206380276423327844/1206380276570132550/VRI_Crest.png?ex=65ee412f&is=65dbcc2f&hm=8ec5299aca00e3d56551f80a17b87072e71a31ec77e538f76b65d95717fe2708&",
+          "proxy_url": "https://media.discordapp.net/attachments/1206380276423327844/1206380276570132550/VRI_Crest.png?ex=65ee412f&is=65dbcc2f&hm=8ec5299aca00e3d56551f80a17b87072e71a31ec77e538f76b65d95717fe2708&"
         }
       },
       "dateTimeCreated": "2024-02-11T23:24:31.361Z"
@@ -10771,5 +10790,5 @@
     }
   ],
   "totalCount": 425.0,
-  "lastUpdated": "2024-02-25T19:02:00Z"
+  "lastUpdated": "2024-02-26T07:02:00Z"
 }
