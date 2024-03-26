@@ -10,7 +10,7 @@ together.
 It's free for anybody to use, although I would love to hear if you are using it so we can talk about breaking changes if
 needed.
 
-The source code is located here: <https://github.com/davidwhitman/SMOL/tree/dev/Mod_Repo>. I accept ideas and consider
+The source code is located here: <https://github.com/wispborne/SMOL/tree/dev/Mod_Repo>. I accept ideas and consider
 pull requests.
 
 ## Opting Out
