@@ -4,7 +4,7 @@
 
 This is a big json file of many Starsector mods. It is automatically updated twice a day.
 
-It is created by gathering data from the USC Discord server, the official Forum, and NexusMods, then merging it all
+It is created by gathering data from the USC Discord server and the official Forum, then merging it all
 together.
 
 It's free for anybody to use, although I would love to hear if you are using it so we can talk about breaking changes if
