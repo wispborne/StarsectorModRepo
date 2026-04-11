@@ -26,7 +26,7 @@ Opting out is a work in progress and is currently just possible for Discord post
 - My mod is Discord-only, does this let anyone download it?
   - Depends. If the files were only uploaded to Discord, then no, users will need a USC Discord account to download it. However, if you linked to a website like GitHub for the download (which is public), then anyone can download it.
 - What is this used for?
-  - SMOL and MOSS, so far.
+  - TriOS, MOSS, [Starmodder](https://starmodder.pages.dev/), and QB's Mod Manager. Maybe others.
 - How is it updated?
   - I have a Raspberry Pi that auto-runs the program twice a day and commits the result to GitHub. My contributions streak has never been better.
 
