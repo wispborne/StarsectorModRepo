@@ -28,7 +28,7 @@ Opting out is a work in progress and is currently just possible for Discord post
 - What is this used for?
   - TriOS, MOSS, [Starmodder](https://starmodder.pages.dev/), and QB's Mod Manager. Maybe others.
 - How is it updated?
-  - I have a Raspberry Pi that auto-runs the program twice a day and commits the result to GitHub. My contributions streak has never been better.
+  - I have a laptop server that auto-runs the program twice a day and commits the result to GitHub. My contributions streak has never been better.
 
 ## Mod Sources
 
