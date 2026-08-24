@@ -1,0 +1,84 @@
+{
+  "generatedAt": "2026-08-24T21:41:23.008749Z",
+  "listing": {
+    "id": "twitchbridge-chatters-crew-1-0-twitch-integration-and-example-mod",
+    "name": "TwitchBridge/Chatters' Crew 1.0 - Twitch Integration and example mod",
+    "authors": [
+      "eniteris"
+    ],
+    "otherAuthorNames": {},
+    "categories": [
+      "Libraries",
+      "Everything else"
+    ],
+    "sources": [
+      "forum",
+      "discord"
+    ],
+    "gameVersion": "0.98a",
+    "imageUrl": "https://raw.githubusercontent.com/eniteris/TwitchBridge/refs/heads/main/screenshot.png",
+    "summary": "A bad Twitch Integration library which connects anonymously via IRC. And gain or lose crew when your Twitch viewers join or leave.",
+    "summaryIsGenerated": false,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://github.com/eniteris/TwitchBridge/releases/download/release/ChattersCrew_1.0.zip",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35199",
+    "discordUrl": "https://discord.com/channels/187635036525166592/1491909593209639013/1491909593209639013",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2026-04-09",
+    "needs": []
+  },
+  "description": "TwitchBridge\n\nDownload\n\nSource\n\nThis mod requires\n\nLunaLib\n\n.\n\nAn IRC library that provides access to Twitch viewer information.\n\nOnly reliable on channels with less than 500 viewers\n\n, due to how Twitch IRC works.\n\nCheck LunaLib settings to change the channel name.\n\nTechnical DetailsThis library functions by anonymously logging into the Twitch IRC chat for the channel (using the username justinfan+5 random numbers, which may be depreciated at any time).\n\nThe library then asks to see who is in the channel, and tracks when users join or leave the channel.\n\nAs this tracks viewers based of the IRC, it can only count logged-in users in the chat room, not necessarily all viewers of the stream.\n\nThe IRC command NAMES is blocked in Twitch IRC (other than on initial join), and thus tracking JOIN and PART is the only way of keeping the viewer list up to date.\n\nNote that Twitch IRC often batches the JOIN/PART messages, and thus the tracked data can be delayed from realtime changes in viewership.[close]\n\nFuture Work\n\nImplementing proper oauth to actually log in properly, so the mod can send messages and/or ban users.Track and expose chat messages.Track used names and subscriber status.\n\n[close]\n\nand a demonstration mod\n\nChatters' Crew\n\nYour chat is your crew.\n\nDownload\n\nSource\n\nThis mod requires TwitchBridge.\n\nWhen docking at a market, you gain or lose crew based off your change in Twitch viewership.\n\nThe first time you dock at market after you start/load sets the baseline number. Any changes in viewership will result in crew joining or leaving the next time you dock at a market.\n\nLunaLib settings has toggles for showing total Twitch viewers and the names of the joining/leaving viewers.\n\nFuture Work\n\nRaids are converted into marines, not crew.Track crew lost to combat/salvaging/selling, and give them names from the viewer list.\n\n[close]\n\nThis mod was made with help from AI.\n\nCC0. All permissions granted to anyone to remix, modify, etc.",
+  "descriptionHtml": "<hr><strong>TwitchBridge</strong><br><hr><a href=\"https://github.com/eniteris/TwitchBridge/releases\" rel=\"nofollow noopener\" target=\"_blank\">Download</a><br><a href=\"https://github.com/eniteris/TwitchBridge/tree/main/TwitchBridge\" rel=\"nofollow noopener\" target=\"_blank\">Source</a><br>This mod requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a>.<hr>An IRC library that provides access to Twitch viewer information. <strong>Only reliable on channels with less than 500 viewers</strong>, due to how Twitch IRC works.<br>Check LunaLib settings to change the channel name.<br><br>Technical DetailsThis library functions by anonymously logging into the Twitch IRC chat for the channel (using the username justinfan+5 random numbers, which may be depreciated at any time).<br>The library then asks to see who is in the channel, and tracks when users join or leave the channel.<br>As this tracks viewers based of the IRC, it can only count logged-in users in the chat room, not necessarily all viewers of the stream.<br>The IRC command NAMES is blocked in Twitch IRC (other than on initial join), and thus tracking JOIN and PART is the only way of keeping the viewer list up to date.<br>Note that Twitch IRC often batches the JOIN/PART messages, and thus the tracked data can be delayed from realtime changes in viewership.[close]<br>Future Work<ul><li>Implementing proper oauth to actually log in properly, so the mod can send messages and/or ban users.</li><li>Track and expose chat messages.</li><li>Track used names and subscriber status.</li></ul>[close]<br>and a demonstration mod<br><hr><strong>Chatters' Crew</strong><br>Your chat is your crew.<br><hr><a href=\"https://github.com/eniteris/TwitchBridge/releases\" rel=\"nofollow noopener\" target=\"_blank\">Download</a><br><a href=\"https://github.com/eniteris/TwitchBridge/tree/main/ChattersCrew\" rel=\"nofollow noopener\" target=\"_blank\">Source</a><br>This mod requires TwitchBridge.<hr>When docking at a market, you gain or lose crew based off your change in Twitch viewership.<br><br>The first time you dock at market after you start/load sets the baseline number. Any changes in viewership will result in crew joining or leaving the next time you dock at a market.<br><br>LunaLib settings has toggles for showing total Twitch viewers and the names of the joining/leaving viewers.<br><br>Future Work<ul><li>Raids are converted into marines, not crew.</li><li>Track crew lost to combat/salvaging/selling, and give them names from the viewer list.</li></ul>[close]<br>This mod was made with help from AI.<br>CC0. All permissions granted to anyone to remix, modify, etc.",
+  "descriptionIsGenerated": false,
+  "rawCategories": [
+    "Libraries",
+    "Other/Misc."
+  ],
+  "gallery": [
+    {
+      "url": "https://raw.githubusercontent.com/eniteris/TwitchBridge/refs/heads/main/screenshot.png"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/eniteris/TwitchBridge/releases",
+      "directUrl": "https://github.com/eniteris/TwitchBridge/releases/download/release/ChattersCrew_1.0.zip",
+      "fileName": "ChattersCrew_1.0.zip",
+      "kind": "direct",
+      "label": "Download",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {},
+  "license": "CC0. All permissions granted to anyone to remix, modify, etc.",
+  "sourceCodeUrl": "https://github.com/eniteris/TwitchBridge",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35199",
+  "discordUrl": "https://discord.com/channels/187635036525166592/1491909593209639013/1491909593209639013",
+  "releases": [],
+  "olderVersions": [],
+  "addons": [
+    {
+      "name": "Chatters' Crew",
+      "requires": "TwitchBridge",
+      "downloads": [
+        {
+          "url": "https://github.com/eniteris/TwitchBridge/releases",
+          "directUrl": "https://github.com/eniteris/TwitchBridge/releases/download/release/ChattersCrew_1.0.zip",
+          "fileName": "ChattersCrew_1.0.zip",
+          "kind": "direct",
+          "label": "Download",
+          "host": "GitHub",
+          "needsAnotherStep": false
+        }
+      ]
+    }
+  ]
+}

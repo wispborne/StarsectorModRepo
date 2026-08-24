@@ -1,0 +1,108 @@
+{
+  "generatedAt": "2026-08-24T21:41:23.008749Z",
+  "listing": {
+    "id": "box-util",
+    "name": "Box Util",
+    "authors": [
+      "Mycophobia",
+      "Shiozakana"
+    ],
+    "otherAuthorNames": {
+      "Mycophobia": [
+        "yogurt fox",
+        "yogurtfox"
+      ]
+    },
+    "categories": [
+      "Utilities",
+      "Libraries"
+    ],
+    "sources": [
+      "forum",
+      "discord"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "1.5.4",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1356164516458528888/1356164516752396408/164853shhu89h0bu8un08k.png?ex=6a8d40a1&is=6a8bef21&hm=e41c9f617739552f9203bed0c60a13f4e612cf1c8ec926d9671f5558f794fc2c&",
+    "summary": "Made by Shiozakana",
+    "summaryIsGenerated": false,
+    "saveCompatible": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://github.com/MycophobiaSC/BoxUtill_Temp/releases/download/0.9-1.5.4/BoxUtil.zip",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 3,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=32003.msg469937#msg469937",
+    "discordUrl": "https://discord.com/channels/187635036525166592/1356164516458528888/1356164516458528888",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2025-03-31",
+    "needs": []
+  },
+  "description": "BoxUtil\n\nMade by Shiozakana\n\nSafe to add mid game, NOT safe to remove from a save IF YOU HAVE MADE A SAVE with it on.\n\nVer 1.4.7/1.4.8 can be safely removed from save of a new game made AFTER you have updated to 1.4.7, still not safe to remove from older saves and note other mod with BoxUtil as dependency generally cannot be safely removed.\n\n0.98 Ver 1.5.4 Download Link\n\nhttps://github.com/MycophobiaSC/BoxUtill_Temp/releases/download/0.9-1.5.4/BoxUtil.zip\n\nPlease note that there were some previously reported issue with version 1.5.0+ ver of Box Util with fast rendering, Genir advised that it seems to be okay now, though as a precaution I will keep the old ver 1.4.9 available.\n\n0.98 Ver Download Link\n\nhttps://github.com/MycophobiaSC/BoxUtill_Temp/releases/download/0.98-1.4.9/BoxUtil.zip\n\n0.97 Version Download Link\n\nhttps://github.com/MycophobiaSC/BoxUtill_Temp/releases/tag/0.97\n\nBoxUtil is developed based on OpenGL 4.2 and uses various core functions of OpenGL 4.2-4.3\n\nCN sector user manual (In Chinese)\n\nhttps://www.fossic.org/thread-15746-1-1.html\n\nBased around Instantiated rendering and GPU calculation, it allows for more efficient rendering option of higher quality, while still being usable on most player's setups.\n\nFor Modders - This mod provide various method for static and instance class, and provides parent API class where possible. It provides various simple to use rendering setting and further customization or rewrite methods. Together with several management class to allow for centralized data processing and rendering.\n\nFor players- Currently BoxUtil provide two types FXAA anti-aliasing option with different quality and spec requirement, this allows fairly good graphic experience when the base game anti-alising is turned off after using GraphicsLib.\n\nMain Functions\n\nPrimary Rendering:   org.boxutil.units.standard.entity\n\nMain class of BoxUtil, contains main rendering methods of the mod. See org.boxutil.base.api.RenderDataAPI\n\nCommonEntity   Mostly allows rendering of 3D Objects in the WaveFrontOBJ format; haves a built in light source but does not include shadows. supports Texture settings.\n\nSpriteEntity   Mostly allows flat texture rendering; similar to Sprite API, support Tiles and Texture settings.\n\nCurveEntity   Mostly allows for rendering of curved beam effects; supports texture settings.\n\nSegmentEntity   Branched version of CurveEntity, with different render and setting methods.\n\nTrailEntity Renders a series of trails or straight lines; supports texture settings.\n\nFlareEntity   Renders flash effects; similar to MagicLibs MagicLensFlare.\n\nTextFieldEntity   Renders textfield, similar to LazyLibs LazyFont, supports italic, underline, crossout and inversion setings, and supports up to four textfields being rendered together.\n\nDistortionEntity   Renders distortions; similar to GraphicsLibs DistortionAPI.\n\nSimple Rendering:  org.boxutil.units.standard.misc\n\nFunctions similar to the base game, the rendering classes that require VAO supports require OpenGL 3.1, rest requires only OpenGL 2.0; Helper functions for VAOs can be found under org.boxutil.base.api.SimpleVAOAPI\n\nArcObject   Renders curves/fans/elipses at any location.\n\nAtlasSprite   SpriteAPI that saves Vram, implements vanilla SpriteAPI class. Usually used to replaced default ship sprites.\n\nCurveObject Curve rendering that is compatible with lower OpenGL versions, supports basic texture/color settings.\n\nTexArcObject   Renders textured curves/fans/elipses at any location.\n\nNumberObject   Renders integer/float numbers at any location.\n\nUIBorderObject   Renders vanilla style UI at any location.\n\nPointObject   Renders a point object (requires VAO support).\n\nPublicFBO a public FBO that is not used by BoxUtil, used to prevent duplicate FBOs by various mods; can call ShaderCore to obtain an instance. A null check should be ran first before advance.\n\nLineObject    Renders a line object (requires VAO support).\n\nQuadObject    Renders a quad object (requires VAO support).\n\nResource Manager: org.boxutil.manager\n\nManages various resources for centralized rendering.\n\nCampaignRenderingManager: Manage campaign map rendering.\n\nCombatRenderingManager: Manage combat rendering.\n\nModelManager: Load WaveFrontOBJ 3D model and save them.\n\nShaderCore: Save BoxUtil shader programs and other similar OpenGL objects.\n\nUtility Tools: org.boxutil.util\n\nProvides easy ways to implement specific OpenGL related functionalities.\n\nCalculateUtil: Functions to easily calculate data, such as vectors.\n\nCommonUtil: Common rendering methods and other ungrouped methods.\n\nCurveUtil: Methods for curve related math and simple curved beam generation.\n\nRenderingUtil: Helper functions for creation of render entities.\n\nShaderUtil: Methods for cration of shader programs and other OpenGL related operations.\n\nTransformUtil: Matrix creation and calculation, mostly used for position/facing/resizing of main render entities.\n\nTrigUtil: Some trig calculation methods.\n\nNotes\n\nTo use most of the functionalitises ofBoxUtil, you must have a graphics card that support OpenGL 4.2 . Calculating data of Instantiated rendering on GPU will require at least OpenGL 4.3 support.\n\nYou can check the support of your graphics card using softwares like GPU-Z. For MacOS, you most likely cant use OpenGL functionalities of higher versions.\n\nIf you want to change games UI zoom, please try to change them in increments of 50%.\n\nNotes\n\nFor most function of BoxUtil, you must have a graphic card that support OpenGL 4.2 calculating data of Instantiated rendering on GPU will require at least OpenGL 4.3 support.\n\nYou can check your graphic cards using softwares like GPU-Z. For MacOS, most likely they would not be able to use OpenGL function of higher version.\n\nIf you would need to change game UI zoom, please try to change them in increments of 50%.\n\nSettings\n\nThe mod comes its own config panel on the bottom left, which include two icons, the left one governs basic functions and the right one governs OpenGL4.3 functions.\n\nNormally, if the icon is green, it is usable, if it is red, it is not operational. Clicking them opens a setting panel.\n\nGlobal setting option requires a full restart of the game to function, rest should work after saving the changes. If a setting is red, it is not functional given your current spec.\n\nTL Note\n\nUnfortunately for a dedicated lib like this, most of the more complex function are too complicated for me to understand, let alone translate, so most detailed function explanation may have some mistakes. I have tried my best to outline the main points of the original post, and an english Java doc is enclosed that could help. However, if anyone can provide a better overview, I'd greatly appreciate it.\n\nUpdates\n\nSpoiler\n\nVer 1.4.9\n\nSee github for log\n\nVer 1.4.8\n\nSee github for log\n\nVer 1.4.7\n\nSee github for log\n\nVer 1.3.5\n\nSee github for log\n\nVer 1.3.4\n\nSee Github for log\n\nVer 1.3.3\n\nIncorpated earlier CN update 1.3.0-1.3.3, see github for log\n\nVer 1.2.3\n\nAdjusted AtlasSprite for 0.98a_RC7\n\nAdded Public FBO ShaderCore\n\nAdded following new methods:\n\nPublicFBO getPublicFBO();\n\nboolean isPublicFBOValid();\n\nvoid refreshPublicFBO();\n\n[close]",
+  "descriptionHtml": "<strong>BoxUtil</strong><strong>Made by Shiozakana</strong><br><br>Safe to add mid game, NOT safe to remove from a save IF YOU HAVE MADE A SAVE with it on.<br><br>Ver 1.4.7/1.4.8 can be safely removed from save of a new game made AFTER you have updated to 1.4.7, still not safe to remove from older saves and note other mod with BoxUtil as dependency generally cannot be safely removed.<br><br><strong>0.98 Ver 1.5.4 Download Link</strong><br><a href=\"https://github.com/MycophobiaSC/BoxUtill_Temp/releases/download/0.9-1.5.4/BoxUtil.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/MycophobiaSC/BoxUtill_Temp/releases/download/0.9-1.5.4/BoxUtil.zip</a><br><br>Please note that there were some previously reported issue with version 1.5.0+ ver of Box Util with fast rendering, Genir advised that it seems to be okay now, though as a precaution I will keep the old ver 1.4.9 available. <br><br><strong>0.98 Ver Download Link</strong><br><a href=\"https://github.com/MycophobiaSC/BoxUtill_Temp/releases/download/0.98-1.4.9/BoxUtil.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/MycophobiaSC/BoxUtill_Temp/releases/download/0.98-1.4.9/BoxUtil.zip</a><br><br><strong>0.97 Version Download Link</strong><br><a href=\"https://github.com/MycophobiaSC/BoxUtill_Temp/releases/tag/0.97\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/MycophobiaSC/BoxUtill_Temp/releases/tag/0.97</a><br><br>BoxUtil is developed based on OpenGL 4.2 and uses various core functions of OpenGL 4.2-4.3<br><br><strong>CN sector user manual (In Chinese)</strong><br><a href=\"https://www.fossic.org/thread-15746-1-1.html\" rel=\"nofollow noopener\" target=\"_blank\">https://www.fossic.org/thread-15746-1-1.html</a> <br><br>Based around Instantiated rendering and GPU calculation, it allows for more efficient rendering option of higher quality, while still being usable on most player's setups.<br><br>For Modders - This mod provide various method for static and instance class, and provides parent API class where possible. It provides various simple to use rendering setting and further customization or rewrite methods. Together with several management class to allow for centralized data processing and rendering.<br><br>For players- Currently BoxUtil provide two types FXAA anti-aliasing option with different quality and spec requirement, this allows fairly good graphic experience when the base game anti-alising is turned off after using GraphicsLib.<br><br><strong>Main Functions</strong><br><strong>Primary Rendering:   org.boxutil.units.standard.entity</strong><br>Main class of BoxUtil, contains main rendering methods of the mod. See org.boxutil.base.api.RenderDataAPI<br><br>CommonEntity   Mostly allows rendering of 3D Objects in the WaveFrontOBJ format; haves a built in light source but does not include shadows. supports Texture settings.<br>SpriteEntity   Mostly allows flat texture rendering; similar to Sprite API, support Tiles and Texture settings.<br>CurveEntity   Mostly allows for rendering of curved beam effects; supports texture settings.<br>SegmentEntity   Branched version of CurveEntity, with different render and setting methods.<br>TrailEntity Renders a series of trails or straight lines; supports texture settings.<br>FlareEntity   Renders flash effects; similar to MagicLibs MagicLensFlare.<br>TextFieldEntity   Renders textfield, similar to LazyLibs LazyFont, supports italic, underline, crossout and inversion setings, and supports up to four textfields being rendered together.<br>DistortionEntity   Renders distortions; similar to GraphicsLibs DistortionAPI.<br><br><strong>Simple Rendering:  org.boxutil.units.standard.misc</strong><br>Functions similar to the base game, the rendering classes that require VAO supports require OpenGL 3.1, rest requires only OpenGL 2.0; Helper functions for VAOs can be found under org.boxutil.base.api.SimpleVAOAPI<br><br>ArcObject   Renders curves/fans/elipses at any location.<br>AtlasSprite   SpriteAPI that saves Vram, implements vanilla SpriteAPI class. Usually used to replaced default ship sprites.<br>CurveObject Curve rendering that is compatible with lower OpenGL versions, supports basic texture/color settings.<br>TexArcObject   Renders textured curves/fans/elipses at any location.<br>NumberObject   Renders integer/float numbers at any location.<br>UIBorderObject   Renders vanilla style UI at any location.<br>PointObject   Renders a point object (requires VAO support).<br>PublicFBO a public FBO that is not used by BoxUtil, used to prevent duplicate FBOs by various mods; can call ShaderCore to obtain an instance. A null check should be ran first before advance.<br>LineObject    Renders a line object (requires VAO support).<br>QuadObject    Renders a quad object (requires VAO support).<br><br><strong>Resource Manager: org.boxutil.manager</strong><br>Manages various resources for centralized rendering.<br><br>CampaignRenderingManager: Manage campaign map rendering.<br>CombatRenderingManager: Manage combat rendering.<br>ModelManager: Load WaveFrontOBJ 3D model and save them.<br>ShaderCore: Save BoxUtil shader programs and other similar OpenGL objects.<br><br><strong>Utility Tools: org.boxutil.util</strong><br>Provides easy ways to implement specific OpenGL related functionalities.<br><br>CalculateUtil: Functions to easily calculate data, such as vectors.<br>CommonUtil: Common rendering methods and other ungrouped methods.<br>CurveUtil: Methods for curve related math and simple curved beam generation.<br>RenderingUtil: Helper functions for creation of render entities.<br>ShaderUtil: Methods for cration of shader programs and other OpenGL related operations.<br>TransformUtil: Matrix creation and calculation, mostly used for position/facing/resizing of main render entities.<br>TrigUtil: Some trig calculation methods.<br><br>Notes<br>To use most of the functionalitises ofBoxUtil, you must have a graphics card that support OpenGL 4.2 . Calculating data of Instantiated rendering on GPU will require at least OpenGL 4.3 support.<br><br>You can check the support of your graphics card using softwares like GPU-Z. For MacOS, you most likely cant use OpenGL functionalities of higher versions.<br><br>If you want to change games UI zoom, please try to change them in increments of 50%.<br><br><strong>Notes</strong><br>For most function of BoxUtil, you must have a graphic card that support OpenGL 4.2 calculating data of Instantiated rendering on GPU will require at least OpenGL 4.3 support.<br><br>You can check your graphic cards using softwares like GPU-Z. For MacOS, most likely they would not be able to use OpenGL function of higher version.<br><br>If you would need to change game UI zoom, please try to change them in increments of 50%.<br><br><strong>Settings</strong><br>The mod comes its own config panel on the bottom left, which include two icons, the left one governs basic functions and the right one governs OpenGL4.3 functions.<br><br>Normally, if the icon is green, it is usable, if it is red, it is not operational. Clicking them opens a setting panel.<br><br>Global setting option requires a full restart of the game to function, rest should work after saving the changes. If a setting is red, it is not functional given your current spec. <br><br><strong>TL Note</strong><br>Unfortunately for a dedicated lib like this, most of the more complex function are too complicated for me to understand, let alone translate, so most detailed function explanation may have some mistakes. I have tried my best to outline the main points of the original post, and an english Java doc is enclosed that could help. However, if anyone can provide a better overview, I'd greatly appreciate it.<br><br><strong>Updates</strong><br>Spoiler<strong>Ver 1.4.9</strong><br>See github for log<br><br><strong>Ver 1.4.8</strong><br>See github for log<br><br><strong>Ver 1.4.7</strong><br>See github for log<br><br><strong>Ver 1.3.5</strong><br>See github for log<br><br><strong>Ver 1.3.4</strong><br>See Github for log<br><br><strong>Ver 1.3.3</strong><br>Incorpated earlier CN update 1.3.0-1.3.3, see github for log<br><br>Ver 1.2.3<br>Adjusted AtlasSprite for 0.98a_RC7<br><br>Added Public FBO ShaderCore<br>Added following new methods:<br>PublicFBO getPublicFBO();   <br>boolean isPublicFBOValid();   <br>void refreshPublicFBO();<br>[close]",
+  "descriptionIsGenerated": false,
+  "saveCompatibilityText": "Safe to add mid game, NOT safe to remove from a save IF YOU HAVE MADE A SAVE with it on.",
+  "rawCategories": [
+    "Libraries",
+    "Utility mods"
+  ],
+  "gallery": [
+    {
+      "url": "https://cdn.discordapp.com/attachments/1356164516458528888/1356164516752396408/164853shhu89h0bu8un08k.png?ex=6a8d40a1&is=6a8bef21&hm=e41c9f617739552f9203bed0c60a13f4e612cf1c8ec926d9671f5558f794fc2c&"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1356164516458528888/1356910586750832731/wXK85Hp.png?ex=6a8d5476&is=6a8c02f6&hm=00bdef3ef2571777f2c96f702f178b1d15335bf53c1a5ffb684a494cf9e7c3f0&"
+    },
+    {
+      "url": "https://i.imgur.com/IG2PGdD.png"
+    },
+    {
+      "url": "https://i.imgur.com/wXK85Hp.png"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/MycophobiaSC/BoxUtill_Temp/releases/download/0.9-1.5.4/BoxUtil.zip",
+      "directUrl": "https://github.com/MycophobiaSC/BoxUtill_Temp/releases/download/0.9-1.5.4/BoxUtil.zip",
+      "fileName": "BoxUtil.zip",
+      "kind": "direct",
+      "label": "https://github.com/MycophobiaSC/BoxUtill_Temp/releases/download/0.9-1.5.4/BoxUtil.zip",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/MycophobiaSC/BoxUtill_Temp/releases/download/0.98-1.4.9/BoxUtil.zip",
+      "directUrl": "https://github.com/MycophobiaSC/BoxUtill_Temp/releases/download/0.98-1.4.9/BoxUtil.zip",
+      "fileName": "BoxUtil.zip",
+      "kind": "direct",
+      "label": "",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/MycophobiaSC/BoxUtill_Temp/releases/tag/0.97",
+      "directUrl": "https://github.com/MycophobiaSC/BoxUtill_Temp/releases/download/0.98/BoxUtil.7z",
+      "fileName": "BoxUtil.7z",
+      "kind": "direct",
+      "label": "https://github.com/MycophobiaSC/BoxUtill_Temp/releases/tag/0.97",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {
+    "1.5.4": "See github for log",
+    "1.4.9": "See github for log",
+    "1.4.8": "See github for log"
+  },
+  "changelogUrl": "https://github.com/MycophobiaSC/BoxUtill_Temp/releases/download/0.9-1.5.4/BoxUtil.zip",
+  "sourceCodeUrl": "https://github.com/MycophobiaSC/BoxUtill_Temp",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=32003.msg469937#msg469937",
+  "discordUrl": "https://discord.com/channels/187635036525166592/1356164516458528888/1356164516458528888",
+  "releases": [],
+  "olderVersions": [],
+  "addons": []
+}

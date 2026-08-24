@@ -1,0 +1,662 @@
+{
+  "generatedAt": "2026-08-24T21:41:23.008749Z",
+  "listing": {
+    "id": "a-vanilla-balance-tweak",
+    "name": "A Vanilla Balance Tweak 1.4.0",
+    "displayName": "A Vanilla Balance Tweak",
+    "authors": [
+      "Rift"
+    ],
+    "otherAuthorNames": {},
+    "categories": [],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "1.4.0",
+    "imageUrl": "https://i.imgur.com/Mf4MP2Q.png",
+    "summary": "Adjusts the balance of vanilla ships, weapons, fighters, and hullmods to improve underperforming options and increase variety.",
+    "summaryIsGenerated": true,
+    "saveCompatible": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://github.com/RiftandRend/A-Vanilla-Balance-Tweak/releases/latest/download/A-Vanilla-Balance-Tweak.zip",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34806.0",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2026-01-14",
+    "needs": []
+  },
+  "description": "A Vanilla Balance Tweak1.4.0\n\nChanges many Vanilla shipsystems, weapons, fighters, and ships with the intent of improving underperforming options and increasing varietyShip variants have been adjusted to account for the adjusted weapons and ship stats\n\nExpect conflicts with mods that also change vanilla contentKnown to be incompatible with Emergent ThreatsShould be safe to add/remove from existing saves, though ships should be stripped of equipment before removal\n\nDownload\n\nhttps://github.com/RiftandRend/A-Vanilla-Balance-Tweak/releases/latest/download/A-Vanilla-Balance-Tweak.zip\n\nScreenshots\n\nSpoiler[close]\n\nSomewhat tested, so nothing should be egregiously overpowered. Feedback is appreciated.\n\nNotable changes made below, list is not exhaustive\n\nBallistics\n\nSpoiler\n\nThe 3 MGs are in an odd place in vanilla, while technically PD most of their use is as melee range\n\nkinetics on SO ships. As PD, they're not very effective, due to poor range and awkward burst timings.\n\nIncreasing range and projectile speed, while decreasing DPS and Efficiency allows them to\n\nfulfil a dual purpose PD/secondary shield pressure role on more ships.\n\nThe Vulcan is pretty good PD on larger ships with range boosts, but inconsistent when mounted on frigates and fighters.\n\nIncreasing range while reducing DPS and accuracy brings it's performance floor and ceiling closer together.\n\nA minor EMP component allows Vulcan armed fighters to harass otherwise immune armored targets.\n\nThe Thumper has been transformed into a super-Vulcan, gaining the ability to shoot at missiles\n\nalong with an efficiency buff and burst size reduction. Fills a true generalist role, being\n\nsomewhat effective against everything but armor.\n\nMore shots per burst, slight DPS increase. Longer delay between bursts presents gaps for a sustained missile barrage,\n\nbut much better at destroying massed or durable targets like torpedoes.\n\nThe Light Mortar is one of the few truly terrible weapons in vanilla, with poor range, damage, dps, and hitrate.\n\nDamage per shot and flux efficiency have been significantly increased, so the few shots that hit will be decently effective.\n\nMakes heavily armored low tech ships like Enforcer and Venture less insurmountable to ships without missiles.\n\nWhile not as useless as it's light counterpart, the Heavy Mortar is decidedly mediocre, and used\n\nonly when no alternative can be found. A minor increase to damage and efficiency make it less\n\ndisappointing without encroaching on the more expensive options.\n\nGiven the \"USE_LESS_VS_SHIELDS\" weapon tag to prevent it's limited DPS being wasted.\n\nEffectively punishes shield flickering.\n\nCost and DPS have both been reduced, giving ships with many mounts or limited OP\n\nan effective tool. DPS per mount and accuracy are poor, compared to alternatives.\n\nFlux efficiency returned to its .96 levels. Horrific accuracy reduces real flux/damage ratios\n\nat extended range, limiting it's effectiveness in BRF builds without recoil reduction.\n\nThe Arbalest is outclassed in most respects by small ballistics, which offer similar DPS and efficiency for less cost.\n\nThe efficiency has been increased, along with minor nerfs to small ballistics give it more of a role.\n\nThe Heavy Autocannon's accuracy is surprisingly poor, many shots missing cruiser sized targets without\n\nsignificant recoil/accuracy improvements. This makes it's effectiveness in the early game and on ships\n\nthat can't afford these enhancements (i.e. Carriers, Missile Ships) significantly worse. Increasing accuracy\n\nand efficiency with a counterbalancing DPS reduction makes it much more reliable on support ships.\n\nThe Mark IX has gone essentially unchanged since it's addition to the game over 10 years ago.\n\nDPS, efficiency, and accuracy slightly increased, competes with medium and small alternatives.\n\nThe Light Assault Gun has a tiny niche, as an HE tool for frigate duels. Outside of this, the low damage per shot makes it's practical DPS very low when shooting at larger ships. Improved damage and efficiency make it a tiny Hephaestus.\n\nAlmost exclusively used by SO builds, the Assault Chaingun is useless on most ships.\n\nExchanging 20% of its DPS for a massive range boost makes it a more deadly\n\nalternative to the Mauler and Mortar, while reducing the effectiveness of SO builds.\n\nDPS slightly decreased, alongside changed to other small kinetics.\n\nRefire delay now split between rapid charg-up and moderate cooldown, improving performance\n\nwhen autofiring. Minor EMP addition occasionally disables weapons if used en masse.\n\nThe HVEL driver can be oppressive when mounted on fast ships. Now fires a 2-shot burst\n\nwith slightly reduced DPS and Hitstrength but increased EMP.\n\nThe Gauss cannon is a very niche weapon, used on kiting Conquests and little else due to extreme flux costs.\n\nTo improve it's viability across more ships, it's been redesigned along similar lines to the HVEL driver, with\n\nreduced DPS and hitstrength in exchange for improved burst damage. Its also been made much more\n\nreliable, with an interruptible charge-up and much faster turning speed, which somewhat makes up for the loss in DPS.\n\nLike the Gauss, Mjolnir use is mostly limited to the Conquest. Flux efficiency is increased\n\nslightly, along with significant increases to the EMP damage and projectile speed (900->1100).\n\nThe Light Needler is slightly too strong, and is now exactly half a Heavy Needler in terms of dps.\n\nNerfed refire delay now exactly matches both the Heavy Mauler and Phase Lance, which\n\nmakes Phase anchor builds combining these weapons slightly better under AI control.\n\n[close]\n\nEnergy Weapons\n\nSpoiler\n\nThe Anti-matter Blaster overperforms on ships that can ignore the 1500 soft flux load, and is a\n\nmajor contributor to the success of the Afflictor. Reducing it's OP cost and damage while increasing\n\nefficiency and range makes it an option on more ships while weakening its main abusers.\n\nNow gains charges in sets of 15, rather than continuously. Noticeably better on ships with\n\nHEF, minimal difference elsewhere.\n\nA mediocre weapon, the IRPL limits ships that rely on small energies for shield pressure.\n\nRange, efficiency, and OP cost have been improved.\n\nProjectile velocity doubled, making it very accurate against fast moving targets.\n\nLess mediocre than the IRPL, but still a bit lacking.\n\nRange increased, now a genuinely medium-range weapon.\n\nViable choice on aggressive midline builds, great with EBC.\n\nThe Heavy Blaster is mostly restricted to SO ships due to the massive flux generation.\n\nAn efficiency improvement and a minor EMP component mitigate this somewhat.\n\nThe Kinetic Blaster often finds its place filled by the Pulse Laser or Heavy Blaster.\n\nTo set it apart, it now fires a more efficient 4-shot burst. On ships with HEF this can threaten smaller\n\nships with immediate overloads\n\nThe Ion Cannon's relatively low EMP output and low range make it the most\n\naffected by enemy EMP reduction. A buff to the EMP damage and flux efficiency\n\nbalances the risk vs reward.\n\nRanged and DPS increased, damage type switched to HE to match the Mining Blaster.\n\nAllows ships relying on Frag or Kinetic PD to handle armored fighters.\n\nThe PD Laser has been adjusted to be a dual purpose weapon, offering\n\naverage PD effectiveness alongside light-armor melting.\n\nThe Vanilla LRPD Laser's low DPS makes in unsuited for stopping much more than stray salamanders.\n\nAn increase in range and the ability to fire over allied ships makes massed LRPDs much more effective.\n\nA smidge of EMP makes many converging beams able to disable fighters somewhat reliably.\n\nThe Burst PD Lasers have been slightly adjusted, firing shorter more intense bursts.\n\nThis slightly improves effectiveness against armor and reduces overkill when engaging multiple targets.\n\nThe Paladin has been given a general statistical buff, but regains charges in blocks of 10 rather\n\nthan continuously. This presents windows of vulnerability if a ship has no other PD.\n\nAn OP decrease, efficiency increase, and minor EMP addition make the\n\nTactical Laser easier to mass and somewhat more effective.\n\nThe Phase Lance now fires without the chargup-chargedown period, dealing the entire\n\nburst's damage at the full hitstrength. Slight stat reduction to compensate.\n\n[close]\n\nMissiles\n\nSpoiler\n\nBoth launchers gain more ammo, rockets are faster and slightly more durability.\n\nPod now releases rockets at max speed, much better at leading moving targets.\n\nYears ago, in .8a the Atropos had it's speed nerfed from 500-400 but didn't gain any lifetime to compensate.\n\nThis, combined with it's lazy guidance leads to frequent burnouts and misses just before impact if fired near max range.\n\nRange and speed increased, now closer in performance to unguided torpedoes.\n\nAI hints adjusted to make ships more willing to fire in less perfect situations.\n\nPractical effectiveness increased somewhat.\n\nImplemented an unused vanilla weapon, essentially an HE bomblet shotgun.\n\nOnly effective at point blank or against stationary targets.\n\nIncreased HP, all launchers now release the torpedo at maximum speed.\n\nLarger launchers have slightly more ammo.\n\nFaster fire and reloading rate. Secondary stage has increased HP and\n\nspeed, still just as clumsy. Very effective at baiting missile PD.\n\nAmmo increased, cooldown of small slight increased.\n\nMore ammo, higher missile HP and lifetime.\n\nReworked, the Swarmer is now regenerates ammo and prefers missiles\n\nand fighters to ships. Missiles have a proximity warhead. Changes apply to the fighter version.\n\nReworked into a PD/Assault weapon, the PCL now provides\n\nexceptional PD, limited by very long ammo reloads.\n\nReworked into a regenerating PD/Suppression weapon, the Locust fires single missiles and provides area PD\n\nsimilarly to a Paladin. Lacks the splash damage of the other missile slot PD options.\n\nReworked into a regenerating MRM to give it a role not already filled by the Sabot. Essentially a 2500 range\n\nGraviton Beam with 75% of the DPS, dropping to 50% once reserves empty.\n\nMissiles are quite tough, and draw PD attention away from more valuable missiles.\n\nIncreased ammo alongside changes to other missiles.\n\nMuch more ammo for both medium and large Dragonfires. More lifetime, durability, greater\n\nstandoff range, and improved AI hints make it much more reliable.\n\nReworked; now regenerates ammo and builds flux to fire. Base damage decreased but\n\nbonus damage increased. Now flies very fast and deals significant EMP damage.\n\nIncreased ammo and adjusted AI hints. Should fire at vulnerable targets more often.\n\n[close]\n\nFighters\n\nSpoiler\n\nAll fighters have had their speed and maneuverability stats adjusted. A blanket deceleration\n\n…",
+  "descriptionHtml": "A Vanilla Balance Tweak1.4.0<br>Changes many Vanilla shipsystems, weapons, fighters, and ships with the intent of improving underperforming options and increasing varietyShip variants have been adjusted to account for the adjusted weapons and ship stats<br>Expect conflicts with mods that also change vanilla contentKnown to be incompatible with Emergent ThreatsShould be safe to add/remove from existing saves, though ships should be stripped of equipment before removal<br><br>Download<a href=\"https://github.com/RiftandRend/A-Vanilla-Balance-Tweak/releases/latest/download/A-Vanilla-Balance-Tweak.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/RiftandRend/A-Vanilla-Balance-Tweak/releases/latest/download/A-Vanilla-Balance-Tweak.zip</a><br><br>Screenshots<br>Spoiler[close]<br>Somewhat tested, so nothing should be egregiously overpowered. Feedback is appreciated.<br><br>Notable changes made below, list is not exhaustive<br><br>Ballistics<br>Spoiler<br><br>The 3 MGs are in an odd place in vanilla, while technically PD most of their use is as melee range <br>kinetics on SO ships. As PD, they're not very effective, due to poor range and awkward burst timings.<br>Increasing range and projectile speed, while decreasing DPS and Efficiency allows them to <br>fulfil a dual purpose PD/secondary shield pressure role on more ships.<br><br>The Vulcan is pretty good PD on larger ships with range boosts, but inconsistent when mounted on frigates and fighters. <br>Increasing range while reducing DPS and accuracy brings it's performance floor and ceiling closer together.<br>A minor EMP component allows Vulcan armed fighters to harass otherwise immune armored targets.<br><br>The Thumper has been transformed into a super-Vulcan, gaining the ability to shoot at missiles <br>along with an efficiency buff and burst size reduction. Fills a true generalist role, being <br>somewhat effective against everything but armor.<br><br>More shots per burst, slight DPS increase. Longer delay between bursts presents gaps for a sustained missile barrage,<br>but much better at destroying massed or durable targets like torpedoes.<br><br>The Light Mortar is one of the few truly terrible weapons in vanilla, with poor range, damage, dps, and hitrate. <br>Damage per shot and flux efficiency have been significantly increased, so the few shots that hit will be decently effective.<br>Makes heavily armored low tech ships like Enforcer and Venture less insurmountable to ships without missiles.<br><br>While not as useless as it's light counterpart, the Heavy Mortar is decidedly mediocre, and used <br>only when no alternative can be found. A minor increase to damage and efficiency make it less <br>disappointing without encroaching on the more expensive options.<br><br>Given the \"USE_LESS_VS_SHIELDS\" weapon tag to prevent it's limited DPS being wasted.<br>Effectively punishes shield flickering.<br><br>Cost and DPS have both been reduced, giving ships with many mounts or limited OP<br>an effective tool. DPS per mount and accuracy are poor, compared to alternatives.<br><br>Flux efficiency returned to its .96 levels. Horrific accuracy reduces real flux/damage ratios<br>at extended range, limiting it's effectiveness in BRF builds without recoil reduction.<br><br>The Arbalest is outclassed in most respects by small ballistics, which offer similar DPS and efficiency for less cost. <br>The efficiency has been increased, along with minor nerfs to small ballistics give it more of a role.<br><br>The Heavy Autocannon's accuracy is surprisingly poor, many shots missing cruiser sized targets without <br>significant recoil/accuracy improvements. This makes it's effectiveness in the early game and on ships <br>that can't afford these enhancements (i.e. Carriers, Missile Ships) significantly worse. Increasing accuracy <br>and efficiency with a counterbalancing DPS reduction makes it much more reliable on support ships.<br><br>The Mark IX has gone essentially unchanged since it's addition to the game over 10 years ago. <br>DPS, efficiency, and accuracy slightly increased, competes with medium and small alternatives.<br><br>The Light Assault Gun has a tiny niche, as an HE tool for frigate duels. Outside of this, the low damage per shot makes it's practical DPS very low when shooting at larger ships. Improved damage and efficiency make it a tiny Hephaestus. <br><br>Almost exclusively used by SO builds, the Assault Chaingun is useless on most ships. <br>Exchanging 20% of its DPS for a massive range boost makes it a more deadly <br>alternative to the Mauler and Mortar, while reducing the effectiveness of SO builds.<br><br>DPS slightly decreased, alongside changed to other small kinetics.<br>Refire delay now split between rapid charg-up and moderate cooldown, improving performance <br>when autofiring. Minor EMP addition occasionally disables weapons if used en masse.<br><br>The HVEL driver can be oppressive when mounted on fast ships. Now fires a 2-shot burst <br>with slightly reduced DPS and Hitstrength but increased EMP.<br><br>The Gauss cannon is a very niche weapon, used on kiting Conquests and little else due to extreme flux costs. <br>To improve it's viability across more ships, it's been redesigned along similar lines to the HVEL driver, with <br>reduced DPS and hitstrength in exchange for improved burst damage. Its also been made much more <br>reliable, with an interruptible charge-up and much faster turning speed, which somewhat makes up for the loss in DPS.<br><br>Like the Gauss, Mjolnir use is mostly limited to the Conquest. Flux efficiency is increased <br>slightly, along with significant increases to the EMP damage and projectile speed (900-&gt;1100).<br><br>The Light Needler is slightly too strong, and is now exactly half a Heavy Needler in terms of dps. <br>Nerfed refire delay now exactly matches both the Heavy Mauler and Phase Lance, which <br>makes Phase anchor builds combining these weapons slightly better under AI control.<br><br>[close]<br>Energy Weapons<br>Spoiler<br><br>The Anti-matter Blaster overperforms on ships that can ignore the 1500 soft flux load, and is a <br>major contributor to the success of the Afflictor. Reducing it's OP cost and damage while increasing <br>efficiency and range makes it an option on more ships while weakening its main abusers.<br><br>Now gains charges in sets of 15, rather than continuously. Noticeably better on ships with<br>HEF, minimal difference elsewhere.<br><br>A mediocre weapon, the IRPL limits ships that rely on small energies for shield pressure.<br>Range, efficiency, and OP cost have been improved.<br>Projectile velocity doubled, making it very accurate against fast moving targets.<br><br>Less mediocre than the IRPL, but still a bit lacking.<br>Range increased, now a genuinely medium-range weapon.<br>Viable choice on aggressive midline builds, great with EBC.<br><br>The Heavy Blaster is mostly restricted to SO ships due to the massive flux generation. <br>An efficiency improvement and a minor EMP component mitigate this somewhat.<br><br>The Kinetic Blaster often finds its place filled by the Pulse Laser or Heavy Blaster.<br>To set it apart, it now fires a more efficient 4-shot burst. On ships with HEF this can threaten smaller <br>ships with immediate overloads<br><br>The Ion Cannon's relatively low EMP output and low range make it the most <br>affected by enemy EMP reduction. A buff to the EMP damage and flux efficiency <br>balances the risk vs reward.<br><br>Ranged and DPS increased, damage type switched to HE to match the Mining Blaster.<br>Allows ships relying on Frag or Kinetic PD to handle armored fighters.<br><br>The PD Laser has been adjusted to be a dual purpose weapon, offering <br>average PD effectiveness alongside light-armor melting.<br><br>The Vanilla LRPD Laser's low DPS makes in unsuited for stopping much more than stray salamanders. <br>An increase in range and the ability to fire over allied ships makes massed LRPDs much more effective. <br>A smidge of EMP makes many converging beams able to disable fighters somewhat reliably.<br><br>The Burst PD Lasers have been slightly adjusted, firing shorter more intense bursts. <br>This slightly improves effectiveness against armor and reduces overkill when engaging multiple targets.<br><br>The Paladin has been given a general statistical buff, but regains charges in blocks of 10 rather <br>than continuously. This presents windows of vulnerability if a ship has no other PD.<br><br>An OP decrease, efficiency increase, and minor EMP addition make the <br>Tactical Laser easier to mass and somewhat more effective.<br><br>The Phase Lance now fires without the chargup-chargedown period, dealing the entire <br>burst's damage at the full hitstrength. Slight stat reduction to compensate.<br><br>[close]<br>Missiles<br>Spoiler<br><br>Both launchers gain more ammo, rockets are faster and slightly more durability.<br>Pod now releases rockets at max speed, much better at leading moving targets.<br><br>Years ago, in .8a the Atropos had it's speed nerfed from 500-400 but didn't gain any lifetime to compensate. <br>This, combined with it's lazy guidance leads to frequent burnouts and misses just before impact if fired near max range. <br>Range and speed increased, now closer in performance to unguided torpedoes.<br><br>AI hints adjusted to make ships more willing to fire in less perfect situations. <br>Practical effectiveness increased somewhat.<br><br>Implemented an unused vanilla weapon, essentially an HE bomblet shotgun. <br>Only effective at point blank or against stationary targets.<br><br>Increased HP, all launchers now release the torpedo at maximum speed. <br>Larger launchers have slightly more ammo.<br><br>Faster fire and reloading rate. Secondary stage has increased HP and <br>speed, still just as clumsy. Very effective at baiting missile PD.<br><br>Ammo increased, cooldown of small slight increased.<br><br>More ammo, higher missile HP and lifetime.<br><br>Reworked, the Swarmer is now regenerates ammo and prefers missiles <br>and fighters to ships. Missiles have a proximity warhead. Changes apply to the fighter version.<br><br>Reworked into a PD/Assault weapon, the PCL now provides <br>exceptional PD, limited by very long ammo reloads.<br><br>Reworked into a regenerating PD/Suppression weapon, the Locust fires single missiles and provides area PD <br>similarly to a Paladin. Lacks the splash damage of the other missile slot PD options.<br><br>Reworked into a regenerating MRM to give it a role not already filled by the Sabot. Essentially a 2500 range <br>Graviton Beam with 75% of the DPS, dropping to 50% once reserves empty.<br>Missiles are quite tough, and draw PD attention away from more valuable missiles.<br><br>Increased ammo alongside changes to other missiles.<br><br>Much more ammo for both medium and large Dragonfires. More lifetime, durability, greater <br>standoff range, and improved AI hints make it much more reliable.<br><br>Reworked; now regenerates ammo and builds flux to fire. Base damage decreased but <br>bonus damage increased. Now flies very fast and deals significant EMP damage.<br><br>Increased ammo and adjusted AI hints. Should fire at vulnerable targets more often.<br><br>[close]<br>Fighters<br>Spoiler<br>All fighters have had their speed and maneuverability stats adjusted. A blanket deceleration<p>…</p>",
+  "descriptionIsGenerated": false,
+  "saveCompatibilityText": "Should be safe to add/remove from existing saves, though ships should be stripped of equipment before removal",
+  "rawCategories": [],
+  "gallery": [
+    {
+      "url": "https://i.imgur.com/Mf4MP2Q.png"
+    },
+    {
+      "url": "https://i.imgur.com/7nrcQmf.png"
+    },
+    {
+      "url": "https://i.imgur.com/VKcauRF.png"
+    },
+    {
+      "url": "https://i.imgur.com/qOoNjhq.png"
+    },
+    {
+      "url": "https://i.imgur.com/hYKiQ42.png"
+    },
+    {
+      "url": "https://i.imgur.com/f618JSb.png"
+    },
+    {
+      "url": "https://i.imgur.com/wePIhlT.png"
+    },
+    {
+      "url": "https://i.imgur.com/KXSoFdR.png"
+    },
+    {
+      "url": "https://i.imgur.com/tRCtO0A.png"
+    },
+    {
+      "url": "https://i.imgur.com/5kg1w40.png"
+    },
+    {
+      "url": "https://i.imgur.com/C0ifHcC.png"
+    },
+    {
+      "url": "https://i.imgur.com/JInAJEd.png"
+    },
+    {
+      "url": "https://i.imgur.com/yBUMO5w.png"
+    },
+    {
+      "url": "https://i.imgur.com/789Yqea.png"
+    },
+    {
+      "url": "https://i.imgur.com/oVs7KvB.png"
+    },
+    {
+      "url": "https://i.imgur.com/LDZuCrH.png"
+    },
+    {
+      "url": "https://i.imgur.com/2jgd5uG.png"
+    },
+    {
+      "url": "https://i.imgur.com/PUCCcnv.png"
+    },
+    {
+      "url": "https://i.imgur.com/iMO39hV.png"
+    },
+    {
+      "url": "https://i.imgur.com/EF0vfRg.png"
+    },
+    {
+      "url": "https://i.imgur.com/ptMwCCr.png"
+    },
+    {
+      "url": "https://i.imgur.com/qCfcCgU.png"
+    },
+    {
+      "url": "https://i.imgur.com/zQdzQAM.png"
+    },
+    {
+      "url": "https://i.imgur.com/99YSdxp.png"
+    },
+    {
+      "url": "https://i.imgur.com/RdExVNO.png"
+    },
+    {
+      "url": "https://i.imgur.com/dB9wcqj.png"
+    },
+    {
+      "url": "https://i.imgur.com/fcP1ITM.png"
+    },
+    {
+      "url": "https://i.imgur.com/bG1HqsB.png"
+    },
+    {
+      "url": "https://i.imgur.com/JHTtD37.png"
+    },
+    {
+      "url": "https://i.imgur.com/WK1YeAL.png"
+    },
+    {
+      "url": "https://i.imgur.com/8iqKCgF.png"
+    },
+    {
+      "url": "https://i.imgur.com/2Vbs1x1.png"
+    },
+    {
+      "url": "https://i.imgur.com/pbhR4lB.png"
+    },
+    {
+      "url": "https://i.imgur.com/Qldd3FP.png"
+    },
+    {
+      "url": "https://i.imgur.com/PA9ZBFm.png"
+    },
+    {
+      "url": "https://i.imgur.com/xb86fqX.png"
+    },
+    {
+      "url": "https://i.imgur.com/4FUc4nD.png"
+    },
+    {
+      "url": "https://i.imgur.com/yGg9up9.png"
+    },
+    {
+      "url": "https://i.imgur.com/hgI4Aoy.png"
+    },
+    {
+      "url": "https://i.imgur.com/gKwN6e9.png"
+    },
+    {
+      "url": "https://i.imgur.com/0gR9uml.png"
+    },
+    {
+      "url": "https://i.imgur.com/dI7pQ2G.png"
+    },
+    {
+      "url": "https://i.imgur.com/nNcPVA3.png"
+    },
+    {
+      "url": "https://i.imgur.com/Vs2AplW.png"
+    },
+    {
+      "url": "https://i.imgur.com/Y5gIs8h.png"
+    },
+    {
+      "url": "https://i.imgur.com/QhIYEGX.png"
+    },
+    {
+      "url": "https://i.imgur.com/SfkU7g2.png"
+    },
+    {
+      "url": "https://i.imgur.com/lKPAOmm.png"
+    },
+    {
+      "url": "https://i.imgur.com/wlE9rbU.png"
+    },
+    {
+      "url": "https://i.imgur.com/yT9u3Qs.png"
+    },
+    {
+      "url": "https://i.imgur.com/xS6yBFw.png"
+    },
+    {
+      "url": "https://i.imgur.com/zbIWalA.png"
+    },
+    {
+      "url": "https://i.imgur.com/f9nTPWI.png"
+    },
+    {
+      "url": "https://i.imgur.com/i1ggMQA.png"
+    },
+    {
+      "url": "https://i.imgur.com/eoQbX8I.png"
+    },
+    {
+      "url": "https://i.imgur.com/5VEBPxI.png"
+    },
+    {
+      "url": "https://i.imgur.com/XLZ2xV8.png"
+    },
+    {
+      "url": "https://i.imgur.com/IK5QK8c.png"
+    },
+    {
+      "url": "https://i.imgur.com/jT5TXBo.png"
+    },
+    {
+      "url": "https://i.imgur.com/4lspvV2.png"
+    },
+    {
+      "url": "https://i.imgur.com/iVfujLU.png"
+    },
+    {
+      "url": "https://i.imgur.com/YsLRSdm.png"
+    },
+    {
+      "url": "https://i.imgur.com/OdjyJTA.png"
+    },
+    {
+      "url": "https://i.imgur.com/t9vnoKm.png"
+    },
+    {
+      "url": "https://i.imgur.com/0Xc1X0W.png"
+    },
+    {
+      "url": "https://i.imgur.com/oQiDGPv.png"
+    },
+    {
+      "url": "https://i.imgur.com/Vf27U6o.png"
+    },
+    {
+      "url": "https://i.imgur.com/SXYq11n.png"
+    },
+    {
+      "url": "https://i.imgur.com/0niFVe0.png"
+    },
+    {
+      "url": "https://i.imgur.com/sxDOJw8.png"
+    },
+    {
+      "url": "https://i.imgur.com/YEXH1PA.png"
+    },
+    {
+      "url": "https://i.imgur.com/2e8qOjV.png"
+    },
+    {
+      "url": "https://i.imgur.com/aDKYysr.png"
+    },
+    {
+      "url": "https://i.imgur.com/1NKjsh3.png"
+    },
+    {
+      "url": "https://i.imgur.com/L5Byelf.png"
+    },
+    {
+      "url": "https://i.imgur.com/2f5Ekv3.png"
+    },
+    {
+      "url": "https://i.imgur.com/JZH3K0P.png"
+    },
+    {
+      "url": "https://i.imgur.com/KpuDkux.png"
+    },
+    {
+      "url": "https://i.imgur.com/Vv53tk7.png"
+    },
+    {
+      "url": "https://i.imgur.com/1R8i7w0.png"
+    },
+    {
+      "url": "https://i.imgur.com/cZnyfnA.png"
+    },
+    {
+      "url": "https://i.imgur.com/u0UYQFW.png"
+    },
+    {
+      "url": "https://i.imgur.com/tyXSDYY.png"
+    },
+    {
+      "url": "https://i.imgur.com/VmP647A.png"
+    },
+    {
+      "url": "https://i.imgur.com/RphwTpt.png"
+    },
+    {
+      "url": "https://i.imgur.com/LavQ80U.png"
+    },
+    {
+      "url": "https://i.imgur.com/zbfMKZr.png"
+    },
+    {
+      "url": "https://i.imgur.com/1n4xE2m.png"
+    },
+    {
+      "url": "https://i.imgur.com/n7shJsl.png"
+    },
+    {
+      "url": "https://i.imgur.com/ay758Ms.png"
+    },
+    {
+      "url": "https://i.imgur.com/PycJzIw.png"
+    },
+    {
+      "url": "https://i.imgur.com/VoKHL0n.png"
+    },
+    {
+      "url": "https://i.imgur.com/YJAQgyd.png"
+    },
+    {
+      "url": "https://i.imgur.com/KxtP2sh.png"
+    },
+    {
+      "url": "https://i.imgur.com/5QDshJ4.png"
+    },
+    {
+      "url": "https://i.imgur.com/AFIKpVF.png"
+    },
+    {
+      "url": "https://i.imgur.com/AvJfVu8.png"
+    },
+    {
+      "url": "https://i.imgur.com/fdCnyaK.png"
+    },
+    {
+      "url": "https://i.imgur.com/xX0LQxE.png"
+    },
+    {
+      "url": "https://i.imgur.com/8dtaOA1.png"
+    },
+    {
+      "url": "https://i.imgur.com/qx6Bg3w.png"
+    },
+    {
+      "url": "https://i.imgur.com/e3O99Uo.png"
+    },
+    {
+      "url": "https://i.imgur.com/Dcp8zoU.png"
+    },
+    {
+      "url": "https://i.imgur.com/mHW8r1t.png"
+    },
+    {
+      "url": "https://i.imgur.com/ZjKuQcP.png"
+    },
+    {
+      "url": "https://i.imgur.com/q71pTlm.png"
+    },
+    {
+      "url": "https://i.imgur.com/ldZghPD.png"
+    },
+    {
+      "url": "https://i.imgur.com/NqwmZb1.png"
+    },
+    {
+      "url": "https://i.imgur.com/NlMDBRS.png"
+    },
+    {
+      "url": "https://i.imgur.com/aDZbyk1.png"
+    },
+    {
+      "url": "https://i.imgur.com/1fxtb14.png"
+    },
+    {
+      "url": "https://i.imgur.com/49JUqdi.png"
+    },
+    {
+      "url": "https://i.imgur.com/IabLNLm.png"
+    },
+    {
+      "url": "https://i.imgur.com/Gx10DH3.png"
+    },
+    {
+      "url": "https://i.imgur.com/jsZzhqC.png"
+    },
+    {
+      "url": "https://i.imgur.com/Sv6NWis.png"
+    },
+    {
+      "url": "https://i.imgur.com/AwE7fKV.png"
+    },
+    {
+      "url": "https://i.imgur.com/cGKYLnz.png"
+    },
+    {
+      "url": "https://i.imgur.com/aAmO5e3.png"
+    },
+    {
+      "url": "https://i.imgur.com/QLfkbHX.png"
+    },
+    {
+      "url": "https://i.imgur.com/RqmXxQH.png"
+    },
+    {
+      "url": "https://i.imgur.com/oL7byGZ.png"
+    },
+    {
+      "url": "https://i.imgur.com/yVUcOES.png"
+    },
+    {
+      "url": "https://i.imgur.com/ZCH1EbQ.png"
+    },
+    {
+      "url": "https://i.imgur.com/8k1Fo8e.png"
+    },
+    {
+      "url": "https://i.imgur.com/PXzFV9c.png"
+    },
+    {
+      "url": "https://i.imgur.com/ri7nmid.png"
+    },
+    {
+      "url": "https://i.imgur.com/IXJyFn3.png"
+    },
+    {
+      "url": "https://i.imgur.com/yRDlPMr.png"
+    },
+    {
+      "url": "https://i.imgur.com/9vex1oM.png"
+    },
+    {
+      "url": "https://i.imgur.com/t3jw2FL.png"
+    },
+    {
+      "url": "https://i.imgur.com/J7TGc0Q.png"
+    },
+    {
+      "url": "https://i.imgur.com/GET2ZtP.png"
+    },
+    {
+      "url": "https://i.imgur.com/ZN5HMhF.png"
+    },
+    {
+      "url": "https://i.imgur.com/ubnuJsb.png"
+    },
+    {
+      "url": "https://i.imgur.com/uVRO3Gx.png"
+    },
+    {
+      "url": "https://i.imgur.com/o5HATtQ.png"
+    },
+    {
+      "url": "https://i.imgur.com/P8JwPac.png"
+    },
+    {
+      "url": "https://i.imgur.com/eoGeVLL.png"
+    },
+    {
+      "url": "https://i.imgur.com/0fLdCNC.png"
+    },
+    {
+      "url": "https://i.imgur.com/IppvZQw.png"
+    },
+    {
+      "url": "https://i.imgur.com/QkhtjaG.png"
+    },
+    {
+      "url": "https://i.imgur.com/g15ljPI.png"
+    },
+    {
+      "url": "https://i.imgur.com/bFg144V.png"
+    },
+    {
+      "url": "https://i.imgur.com/qtLlsAB.png"
+    },
+    {
+      "url": "https://i.imgur.com/QtkFZT5.png"
+    },
+    {
+      "url": "https://i.imgur.com/wA3txPZ.png"
+    },
+    {
+      "url": "https://i.imgur.com/RSrKqK8.png"
+    },
+    {
+      "url": "https://i.imgur.com/F4bAft1.png"
+    },
+    {
+      "url": "https://i.imgur.com/Syl1g5u.png"
+    },
+    {
+      "url": "https://i.imgur.com/GoKCCL3.png"
+    },
+    {
+      "url": "https://i.imgur.com/BuoQqtd.png"
+    },
+    {
+      "url": "https://i.imgur.com/D8LiIzj.png"
+    },
+    {
+      "url": "https://i.imgur.com/z696172.png"
+    },
+    {
+      "url": "https://i.imgur.com/Hwuwsgq.png"
+    },
+    {
+      "url": "https://i.imgur.com/VGpMLne.png"
+    },
+    {
+      "url": "https://i.imgur.com/z98N53h.png"
+    },
+    {
+      "url": "https://i.imgur.com/uMnXLD0.png"
+    },
+    {
+      "url": "https://i.imgur.com/wEX3cjB.png"
+    },
+    {
+      "url": "https://i.imgur.com/P2SDc7T.png"
+    },
+    {
+      "url": "https://i.imgur.com/kAv0k3S.png"
+    },
+    {
+      "url": "https://i.imgur.com/0uqsLyy.png"
+    },
+    {
+      "url": "https://i.imgur.com/UTFF1D8.png"
+    },
+    {
+      "url": "https://i.imgur.com/OVVk0s0.png"
+    },
+    {
+      "url": "https://i.imgur.com/fjH110w.png"
+    },
+    {
+      "url": "https://i.imgur.com/eoLaWSP.png"
+    },
+    {
+      "url": "https://i.imgur.com/RUnBT6v.png"
+    },
+    {
+      "url": "https://i.imgur.com/eQkwQJn.png"
+    },
+    {
+      "url": "https://i.imgur.com/USuWXPr.png"
+    },
+    {
+      "url": "https://i.imgur.com/AiQqNb5.png"
+    },
+    {
+      "url": "https://i.imgur.com/5b52SY2.png"
+    },
+    {
+      "url": "https://i.imgur.com/saMhhYa.png"
+    },
+    {
+      "url": "https://i.imgur.com/sRNqkWm.png"
+    },
+    {
+      "url": "https://i.imgur.com/O5sMG7E.png"
+    },
+    {
+      "url": "https://i.imgur.com/NoaPySP.png"
+    },
+    {
+      "url": "https://i.imgur.com/8xjjPSn.png"
+    },
+    {
+      "url": "https://i.imgur.com/H5qP4j1.png"
+    },
+    {
+      "url": "https://i.imgur.com/8E6sn1c.png"
+    },
+    {
+      "url": "https://i.imgur.com/WNCAlDl.png"
+    },
+    {
+      "url": "https://i.imgur.com/DD2WA1I.png"
+    },
+    {
+      "url": "https://i.imgur.com/tVQUlf8.png"
+    },
+    {
+      "url": "https://i.imgur.com/A0if6bp.png"
+    },
+    {
+      "url": "https://i.imgur.com/80gTmVD.png"
+    },
+    {
+      "url": "https://i.imgur.com/VzkPPAW.png"
+    },
+    {
+      "url": "https://i.imgur.com/EjZBXc8.png"
+    },
+    {
+      "url": "https://i.imgur.com/cMpfGet.png"
+    },
+    {
+      "url": "https://i.imgur.com/n8TU6bJ.png"
+    },
+    {
+      "url": "https://i.imgur.com/5M1saXs.png"
+    },
+    {
+      "url": "https://i.imgur.com/wfroR0G.png"
+    },
+    {
+      "url": "https://i.imgur.com/3FXhmTS.png"
+    },
+    {
+      "url": "https://i.imgur.com/3ghiGA1.png"
+    },
+    {
+      "url": "https://i.imgur.com/Ry9rh79.png"
+    },
+    {
+      "url": "https://i.imgur.com/Na98La6.png"
+    },
+    {
+      "url": "https://i.imgur.com/PSWyUsW.png"
+    },
+    {
+      "url": "https://i.imgur.com/N6mFARd.png"
+    },
+    {
+      "url": "https://i.imgur.com/gDF9wGq.png"
+    },
+    {
+      "url": "https://i.imgur.com/JExca4j.png"
+    },
+    {
+      "url": "https://i.imgur.com/mv0LYXe.png"
+    },
+    {
+      "url": "https://i.imgur.com/xA6uRSx.png"
+    },
+    {
+      "url": "https://i.imgur.com/eEC2DvY.png"
+    },
+    {
+      "url": "https://i.imgur.com/CH67Uds.png"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/RiftandRend/A-Vanilla-Balance-Tweak/releases/latest/download/A-Vanilla-Balance-Tweak.zip",
+      "directUrl": "https://github.com/RiftandRend/A-Vanilla-Balance-Tweak/releases/latest/download/A-Vanilla-Balance-Tweak.zip",
+      "fileName": "A-Vanilla-Balance-Tweak.zip",
+      "kind": "direct",
+      "label": "https://github.com/RiftandRend/A-Vanilla-Balance-Tweak/releases/latest/download/A-Vanilla-Balance-Tweak.zip",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {},
+  "sourceCodeUrl": "https://github.com/RiftandRend/A-Vanilla-Balance-Tweak",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34806.0",
+  "releases": [],
+  "olderVersions": [],
+  "addons": []
+}

@@ -1,0 +1,82 @@
+{
+  "generatedAt": "2026-08-24T21:41:23.008749Z",
+  "listing": {
+    "id": "hullmods-renewed",
+    "name": "Hullmods Renewed",
+    "authors": [
+      "oddisz"
+    ],
+    "otherAuthorNames": {},
+    "categories": [
+      "Utilities"
+    ],
+    "sources": [
+      "forum",
+      "discord"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "1.6.1",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1518609652643004426/1518609652865171497/hullmods_renewed_1.0.0_icon.png?ex=6a8d9973&is=6a8c47f3&hm=e5e660939462ab97733ebfe3b22082e8caddceb11eb47a9aabcf5e8ff4b81bf3&",
+    "summary": "## Hullmods - Renewed Forum post: https://fractalsoftworks.com/forum/index.php?topic=35619.0",
+    "summaryIsGenerated": false,
+    "hasDirectDownload": false,
+    "bestDownload": {
+      "url": "https://github.com/andrzejsokolowski/starsector-hullmods-renewed/releases/latest",
+      "kind": "direct",
+      "needsAnotherStep": true
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35619.0",
+    "discordUrl": "https://discord.com/channels/187635036525166592/1518609652643004426/1518609652643004426",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2026-06-22",
+    "needs": []
+  },
+  "description": "Hullmods - Renewed\n\nWHAT DOES THIS MOD DO?\n- Extends the vanilla hullmod screen with better filters, search, custom groups, favourites/trashed hullmods, and has icons for their categorization.\n\nEver been annoyed by carrier mods cluttering the list on a ship with no hangar bays? Emergent threats likes adding 10 different hullmods that only apply under some conditions?\nCool, this mod adds an \"applicable only\" filter, on by default.\nEver wished you could just hide the junk you never install, and flag the handful you always do?\nCool, press ctrl+click and you will mark that mod as \"trash\" and it will be hidden unless you hold a button or enable the \"show disabled\" filter.\n\nThe code is fully open source. You don't have to credit me. Claude Code built this anyway.\nRequires LunaLib and LazyLib.\n\nScreenshots[close]\n\nThe Filter Panel\n\nReplaces the vanilla bottom filter bar with a full panel on the left (in the otherwise unused ship selector space).Search: live, matches hull mod name, any word in the description and design type as you type.\nExample: search for \"beam\" and you will get both \"adaptive beam emitter\" as well as \"advanced optics (because they have a beam range increase\")Toggles:\nFavourites only: show just the ones you flagged.Show blacklisted: temporarily reveal hidden mods.Applicable only (on by default): hides mods that can never go on the current hull (e.g. carrier mods on a ship with no bays).Multi select facets with live counts, built from the mods you actually own:\nType (defenses, logistics, weapons, etc.) and Design type (manufacturer / faction).Click = only that one. Shift/Ctrl+click = add to the selection. Click the only selected one again to clear.Everything scrolls and stacks, so it scales to heavily modded games.\n\nBlacklist & Favourites\n\nCtrl + click a mod: blacklist it (hidden from the list).Shift + click a mod: mark it a favourite.Saved per save game. Nothing ever edits hull_mods.csv. Mods are only hidden from the picker, never deleted.\n\nQuick Controls\n\nCtrl + click: blacklist a modShift + click: favourite a modHold ` (backtick): show favourites onlyHold Alt: reveal blacklistedReset filters button clears everything\n\nFAQ\n\nDoes it work with modded hull mods?\n\nYes. The Type and Design type facets are generated from whatever you have installed, so it scales with your modlist.\n\nAre my blacklist and favourites permanent?\n\nThey are stored per save game. Loading an old save restores exactly what you marked there.\n\nDoes hiding a mod delete it?\n\nNever. Blacklisting only hides a mod from the picker. It is still fully installable (just flip on \"Show blacklisted\" or hold Alt).\n\nPerformance?\n\nNegligible. It filters the list the game already builds. No extra ships, scripts, or simulation.\n\nCan I add or remove it mid save?\n\nYes. It is UI only and safe to add or remove at any time.\n\n[close]Version log1.6.1 — small fix: the title above the custom-group squares was stuck on whichever group was selected when the panel opened (very visible right after renaming one). It now updates as you click through the squares, and says MULTIPLE GROUPS when you've got more than one selected.\n\n1.6.0\n\nNow tracks preferences per-installation (saves inherit this, no longer need to define all preferences yourself per save)\n\n1.5.0\n\nSearch now searches descriptions as well as manufacturers too.\n\nHelpful if you wanna find everything that (for example) changes BEAMS.\n\nSearch \"beams\" - You don't have to know the hullmod name\n\n1.4.1\n\nClear search on every click\n\nSearch now un-focuses on hover - requested\n\nSearch now clears on \"build-in\"\n\n1.3.1\n\nAdded custom group naming, added icons for favourite/trash/custom groups (if you assign one hullmod to more than 5 custom groups, it will clip, but this will never happen to a real person probably)\n\n1.2.1\n\nFixed a bug with not re-applying the reload after removing\n\n1.2.0\n\nAdded custom group selections - Mark hullmods with 1 2 3 4 5 6 7 8 9 0 to allocate them to their group.\n\n1.1.2\n\nFixed all scrolling/input issues from feedback.\n\n1.0.3\n\nNow no longer scrolls the hullmod list up when you add a hullmod while being scrolled. I don't rebuild the list anymore, which makes it identical to the vanilla behaviour. I can't find anything more.\n\n1.0.2\n\nAdded version checker and direct download URL.\n\n1.0.1\n\nFixed bug with column desc/asc sorting and applying a hullmod resetting that column sort.\n\n1.0.0\n\nInitial public release. Left side filter panel (search, toggles, multi select Type and Design type facets with live counts), applicable to ship filter, Ctrl/Shift+click blacklist and favourites, hold key filters, vanilla bottom bar replaced. Per save storage.\n\n[close]",
+  "descriptionHtml": "<a href=\"https://github.com/andrzejsokolowski/starsector-hullmods-renewed/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><strong>Hullmods - Renewed</strong></a><br>  <br><strong><br>WHAT DOES THIS MOD DO?<br>- Extends the vanilla hullmod screen with better filters, search, custom groups, favourites/trashed hullmods, and has icons for their categorization.<br><br>Ever been annoyed by carrier mods cluttering the list on a ship with no hangar bays? Emergent threats likes adding 10 different hullmods that only apply under some conditions?<br>Cool, this mod adds an \"applicable only\" filter, on by default.<br>Ever wished you could just hide the junk you never install, and flag the handful you always do?<br>Cool, press ctrl+click and you will mark that mod as \"trash\" and it will be hidden unless you hold a button or enable the \"show disabled\" filter.<br><br>The code is fully open source. You don't have to credit me. Claude Code built this anyway.<br>Requires <strong>LunaLib</strong> and <strong>LazyLib</strong>.<br></strong>Screenshots[close]<hr><strong>The Filter Panel</strong><hr><ul><li>Replaces the vanilla bottom filter bar with a full panel on the left (in the otherwise unused ship selector space).</li><li><strong>Search</strong>: live, matches hull mod name, any word in the description and design type as you type.<br>Example: search for \"beam\" and you will get both \"adaptive beam emitter\" as well as \"advanced optics (because they have a beam range increase\")</li><li><strong>Toggles</strong>:<br><ul><li><em>Favourites only</em>: show just the ones you flagged.</li><li><em>Show blacklisted</em>: temporarily reveal hidden mods.</li><li><em>Applicable only</em> (on by default): hides mods that can never go on the current hull (e.g. carrier mods on a ship with no bays).</li></ul></li><li><strong>Multi select facets</strong> with live counts, built from the mods you actually own:<br><ul><li><strong>Type</strong> (defenses, logistics, weapons, etc.) and <strong>Design type</strong> (manufacturer / faction).</li><li>Click = only that one. Shift/Ctrl+click = add to the selection. Click the only selected one again to clear.</li></ul></li><li>Everything scrolls and stacks, so it scales to heavily modded games.</li></ul><hr><strong>Blacklist &amp; Favourites</strong><hr><ul><li><strong>Ctrl + click</strong> a mod: <strong>blacklist</strong> it (hidden from the list).</li><li><strong>Shift + click</strong> a mod: mark it a <strong>favourite</strong>.</li><li>Saved <strong>per save game</strong>. Nothing ever edits hull_mods.csv. Mods are only hidden from the picker, never deleted.</li></ul><hr><strong>Quick Controls</strong><hr><ul><li><strong>Ctrl + click</strong>: blacklist a mod</li><li><strong>Shift + click</strong>: favourite a mod</li><li><strong>Hold ` </strong>(backtick): show favourites only</li><li><strong>Hold Alt</strong>: reveal blacklisted</li><li><strong>Reset filters</strong> button clears everything</li></ul>FAQ<strong>Does it work with modded hull mods?</strong><br>Yes. The Type and Design type facets are generated from whatever you have installed, so it scales with your modlist.<br><strong>Are my blacklist and favourites permanent?</strong><br>They are stored per save game. Loading an old save restores exactly what you marked there.<br><strong>Does hiding a mod delete it?</strong><br>Never. Blacklisting only hides a mod from the picker. It is still fully installable (just flip on \"Show blacklisted\" or hold Alt).<br><strong>Performance?</strong><br>Negligible. It filters the list the game already builds. No extra ships, scripts, or simulation.<br><strong>Can I add or remove it mid save?</strong><br>Yes. It is UI only and safe to add or remove at any time.<br>[close]Version log1.6.1 — small fix: the title above the custom-group squares was stuck on whichever group was selected when the panel opened (very visible right after renaming one). It now updates as you click through the squares, and says MULTIPLE GROUPS when you've got more than one selected.<br><br>1.6.0<br>Now tracks preferences per-installation (saves inherit this, no longer need to define all preferences yourself per save) <br><br>1.5.0<br>Search now searches descriptions as well as manufacturers too.<br>Helpful if you wanna find everything that (for example) changes BEAMS.<br>Search \"beams\" - You don't have to know the hullmod name<br>1.4.1<br>Clear search on every click<br>Search now un-focuses on hover - requested<br>Search now clears on \"build-in\"<br>1.3.1<br>Added custom group naming, added icons for favourite/trash/custom groups (if you assign one hullmod to more than 5 custom groups, it will clip, but this will never happen to a real person probably)<br>1.2.1<br>Fixed a bug with not re-applying the reload after removing<br>1.2.0 <br>Added custom group selections - Mark hullmods with 1 2 3 4 5 6 7 8 9 0 to allocate them to their group. <br>1.1.2<br>Fixed all scrolling/input issues from feedback.<br>1.0.3<br>Now no longer scrolls the hullmod list up when you add a hullmod while being scrolled. I don't rebuild the list anymore, which makes it identical to the vanilla behaviour. I can't find anything more.<br>1.0.2<br>Added version checker and direct download URL.<br>1.0.1<br>Fixed bug with column desc/asc sorting and applying a hullmod resetting that column sort.<br>1.0.0<br>Initial public release. Left side filter panel (search, toggles, multi select Type and Design type facets with live counts), applicable to ship filter, Ctrl/Shift+click blacklist and favourites, hold key filters, vanilla bottom bar replaced. Per save storage.<br>[close]",
+  "descriptionIsGenerated": false,
+  "rawCategories": [
+    "Utility mods"
+  ],
+  "gallery": [
+    {
+      "url": "https://cdn.discordapp.com/attachments/1518609652643004426/1518609702735446119/Hullmods_Renewed_1.0.0.png?ex=6a8d997f&is=6a8c47ff&hm=04ff4e133f14205162a1eb7e2c1f5703b0631f61ad99d3e61daf419875d6ab75&"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1518609652643004426/1519097680868020374/image.png?ex=6a8d65b6&is=6a8c1436&hm=56edd70c461c69ad61665403d8bb52697b9d7a7700d5e831c9f256cfb563dd3f&"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1518609652643004426/1521645074889576560/image.png?ex=6a8d6fa8&is=6a8c1e28&hm=01d08bd243fdc7d77fb7307bc555e805e6ae98e8b84086d03d41fffe4de8059f&"
+    },
+    {
+      "url": "https://github.com/andrzejsokolowski/starsector-hullmods-renewed/blob/main/hullmods-renewed-1.0.0%20icon.png?raw=true"
+    },
+    {
+      "url": "https://github.com/andrzejsokolowski/starsector-hullmods-renewed/blob/main/Hullmods-renewed-1.0.0.png?raw=true"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/andrzejsokolowski/starsector-hullmods-renewed/releases/latest",
+      "kind": "direct",
+      "label": "Hullmods - Renewed",
+      "host": "github.com",
+      "needsAnotherStep": true
+    }
+  ],
+  "changelog": {
+    "1.6.1": "small fix: the title above the custom-group squares was stuck on whichever group was selected when the panel opened (very visible right after renaming one). It now updates as you click through the squares, and says MULTIPLE GROUPS when you've got more than one selected.",
+    "1.6.0": "Now tracks preferences per-installation (saves inherit this, no longer need to define all preferences yourself per save)",
+    "1.5.0": "Search now searches descriptions as well as manufacturers too.\nHelpful if you wanna find everything that (for example) changes BEAMS.\nSearch \"beams\" - You don't have to know the hullmod name"
+  },
+  "changelogUrl": "https://github.com/andrzejsokolowski/starsector-hullmods-renewed/releases/latest",
+  "license": "The code is fully open source. You don't have to credit me. Claude Code built this anyway.",
+  "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-hullmods-renewed",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35619.0",
+  "discordUrl": "https://discord.com/channels/187635036525166592/1518609652643004426/1518609652643004426",
+  "releases": [],
+  "olderVersions": [],
+  "addons": []
+}

@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-08-24T21:41:23.008749Z",
+  "listing": {
+    "id": "extra-system",
+    "name": "Extra System",
+    "authors": [
+      "Originem"
+    ],
+    "otherAuthorNames": {},
+    "categories": [
+      "Everything else"
+    ],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.7.2a",
+    "modVersion": "0.2.0a",
+    "imageUrl": "http://i.imgur.com/6BByqcq.png",
+    "summary": "Adds a ship leveling system with upgrade mechanics and an achievements tracker.",
+    "summaryIsGenerated": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "http://download1588.mediafire.com/q0ytqrps81pgpqlmVmm2L5GFoIvX8GOnkN7GH11bSsfIWM0J45dT6ajz57zv2t_FzzjBakDCti5Dh_U0pOJ9DdIq8Ftynmib6aNEtGH7ac7wej7M7R0De62gBsAWUd5MKZ_f_mVGbsoACh4teDQTPYykpnD-5V4-b8N8A0SfDZu2/7n0zdgigxi1uuau/0.7.2a+ExtraSystem+0.2.0a.rar",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 1,
+    "forumUrl": "http://fractalsoftworks.com/forum/index.php?topic=10578.0",
+    "sourceIsPublic": false,
+    "isWorkInProgress": false,
+    "addedOn": "2016-01-12",
+    "needs": []
+  },
+  "description": "A mod that make your ships stronger and stronger.\n\nDownLoad\n\nSupport\n\nVersion Checker\n\nPress Ctrl+Q to call the Interaction in campaign.\n\nUse different resources to upgrade your ship.\n\n*The ShipLevel System*\n\nEach ship has a random quality about 0.5~1.5. It decides the cost and the degree of upgrade.\n\nUpgrade has about 40% chance of success at the minimum.\n\n-What is decided by the abilities-\n\nThe efficiency-\n\nFrigate(10):100% Destroyer(15):80% Cruiser(20):60% Capital Ship(25):40%\n\n-\n\n(It means if one of the ship's ability is upgraded completely, frigate has 100% power of it, but capital ship only has 40%)\n\nDurability:\n\nHullpoints, armor, weapon health, engine health\n\nWeaponProficiency:\n\nWeapon range, weapon damage, rate of fire\n\nLogistics:\n\nCR per deployment, weapon ammo, crew, ship repair rate, CR recovery, fuel use\n\nMobility:\n\nMax speed, acceleration, deceleration, max turn rate, turn acceleration\n\nTechnology:\n\nFlux capacity and disspation, weapon flux cost, shield efficiency\n\n*Achievements System*\n\n(TEST)\n\nExamples:\n\nSpoiler\n\n[close]You will achieve some achievements when you finish doing something like \"Gain 10000 credits.\"\n\nUse \"Show Achievements\" to see the achievements you have ever got.\n\nYou can see these in \"data/config/achievements.csv\", and players or modders can use it to add your own achievements.\n\nJust put the following code in your mod (where the achievement were achieved) after you complete your csv's editing. And, don't forget to make this code just run for one time.\n\nSpoilerCode\n\nGlobal.getSector().getPersistentData().put(\"Your Achievement's id\", true);\n\n[close]\n\nScreenshots:\n\nSpoiler\n\n[close]\n\nChangeLog:\n\nSpoiler\n\n3.3\n\nUpdate to 0.7.2a, BUT IT NEEDS TO BE TEST.\n\nAdded Achievements System.\n\n1.23\n\nA bit sprites updated.\n\nMaybe some bugs fixed?Ugh.\n\n1.22\n\nFixed the bug that quality can only affect the upgrade cost.\n\nDecreased the resources' cost.\n\nMade some tooltips like:\n\n0.1.1f released\n\n1.17\n\nfixed some bug and translation mistakes.\n\n0.1.1a released\n\n1.13\n\n0.1.0f released\n\n[close]",
+  "descriptionHtml": "A mod that make your ships stronger and stronger.<br><strong><a href=\"http://www.mediafire.com/download/7n0zdgigxi1uuau/0.7.2a_ExtraSystem_0.2.0a.rar\" rel=\"nofollow noopener\" target=\"_blank\">DownLoad</a></strong>Support <strong><a href=\"http://fractalsoftworks.com/forum/index.php?topic=8181.0\" rel=\"nofollow noopener\" target=\"_blank\">Version Checker</a></strong><br>Press Ctrl+Q to call the Interaction in campaign.<br>Use different resources to upgrade your ship.<br><strong>*The ShipLevel System*</strong><br>Each ship has a random quality about 0.5~1.5. It decides the cost and the degree of upgrade.<br><br>Upgrade has about 40% chance of success at the minimum.<br><br>-What is decided by the abilities-<br><br>The efficiency-<br>      Frigate(10):100% Destroyer(15):80% Cruiser(20):60% Capital Ship(25):40%<br>         -<br>(It means if one of the ship's ability is upgraded completely, frigate has 100% power of it, but capital ship only has 40%)<br><br>Durability:<br>   Hullpoints, armor, weapon health, engine health<br>WeaponProficiency:<br>   Weapon range, weapon damage, rate of fire<br>Logistics:<br>   CR per deployment, weapon ammo, crew, ship repair rate, CR recovery, fuel use<br>Mobility:<br>   Max speed, acceleration, deceleration, max turn rate, turn acceleration<br>Technology:<br>   Flux capacity and disspation, weapon flux cost, shield efficiency<br><br><strong>*Achievements System*</strong>(TEST)<br>Examples:<br>Spoiler<br><br>[close]You will achieve some achievements when you finish doing something like \"Gain 10000 credits.\"<br>Use \"Show Achievements\" to see the achievements you have ever got.<br><br>You can see these in \"data/config/achievements.csv\", and players or modders can use it to add your own achievements.<br>Just put the following code in your mod (where the achievement were achieved) after you complete your csv's editing. And, don't forget to make this code just run for one time.<br>SpoilerCode<pre><code>Global.getSector().getPersistentData().put(\"Your Achievement's id\", true);</code></pre>[close]<br><strong>Screenshots:</strong><br>Spoiler<br><br>[close]<br><strong>ChangeLog:</strong><br>Spoiler<strong>3.3</strong><br>Update to 0.7.2a, BUT IT NEEDS TO BE TEST.<br>Added Achievements System.<br><strong>1.23</strong><br>A bit sprites updated.<br>Maybe some bugs fixed?Ugh.<br><strong>1.22</strong><br> Fixed the bug that quality can only affect the upgrade cost.<br> Decreased the resources' cost.<br> Made some tooltips like:<br>  <br> 0.1.1f released<br><strong>1.17</strong><br> fixed some bug and translation mistakes.<br> 0.1.1a released<br><strong>1.13</strong><br> 0.1.0f released<br>[close]",
+  "descriptionIsGenerated": false,
+  "rawCategories": [
+    "Miscellaneous Mods"
+  ],
+  "gallery": [
+    {
+      "url": "http://i.imgur.com/6BByqcq.png"
+    },
+    {
+      "url": "http://i.imgur.com/f57hhDX.png"
+    },
+    {
+      "url": "http://i.imgur.com/bk9rirU.png"
+    },
+    {
+      "url": "http://i.imgur.com/Hy99KDY.png"
+    },
+    {
+      "url": "http://i.imgur.com/4GL8goT.png"
+    },
+    {
+      "url": "http://i.imgur.com/TEe9EVv.png"
+    },
+    {
+      "url": "http://i.imgur.com/2NCp1vd.png"
+    },
+    {
+      "url": "http://i.imgur.com/CuipBrQ.png"
+    },
+    {
+      "url": "http://i.imgur.com/fJwQfpp.png"
+    },
+    {
+      "url": "http://i.imgur.com/GHnINbZ.png"
+    },
+    {
+      "url": "http://i.imgur.com/OFqz1s5.png"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "http://www.mediafire.com/download/7n0zdgigxi1uuau/0.7.2a_ExtraSystem_0.2.0a.rar",
+      "directUrl": "http://download1588.mediafire.com/q0ytqrps81pgpqlmVmm2L5GFoIvX8GOnkN7GH11bSsfIWM0J45dT6ajz57zv2t_FzzjBakDCti5Dh_U0pOJ9DdIq8Ftynmib6aNEtGH7ac7wej7M7R0De62gBsAWUd5MKZ_f_mVGbsoACh4teDQTPYykpnD-5V4-b8N8A0SfDZu2/7n0zdgigxi1uuau/0.7.2a+ExtraSystem+0.2.0a.rar",
+      "fileName": "0.7.2a+ExtraSystem+0.2.0a.rar",
+      "kind": "direct",
+      "label": "DownLoad",
+      "host": "MediaFire",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {
+    "3.3": "Update to 0.7.2a, BUT IT NEEDS TO BE TEST.\nAdded Achievements System .",
+    "1.23": "A bit sprites updated.\nMaybe some bugs fixed?Ugh.",
+    "1.22": "Fixed the bug that quality can only affect the upgrade cost.\nDecreased the resources' cost.\nMade some tooltips like:"
+  },
+  "supportLinks": [],
+  "forumUrl": "http://fractalsoftworks.com/forum/index.php?topic=10578.0",
+  "releases": [],
+  "olderVersions": [],
+  "addons": []
+}

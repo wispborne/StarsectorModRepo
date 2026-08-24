@@ -1,0 +1,91 @@
+{
+  "generatedAt": "2026-08-24T21:41:23.008749Z",
+  "listing": {
+    "id": "clearcommands",
+    "name": "ClearCommands",
+    "authors": [
+      "SirHartley"
+    ],
+    "otherAuthorNames": {},
+    "categories": [
+      "Utilities",
+      "Everything else"
+    ],
+    "sources": [
+      "forum",
+      "discord"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "1.0.g",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1355893179949387967/1355893180343517224/clearCommands_icon.png?ex=6a8d956d&is=6a8c43ed&hm=e8cd8ab4f1a16d908bb339bbc807958857bfb6fe54779f249a54b4816bcb9ff0&",
+    "summary": "A small set of additional console commands for save file cleanup.",
+    "summaryIsGenerated": false,
+    "saveCompatible": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSirHartley%2FClearCommands%2Fmaster%2FClearCommands.version%22%2C%22id%22%3A%22clearCommands%22%2C%22version%22%3A%221.0.g%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Fconsole-commands%2Fmaster%2Fconsole.version%22%2C%22id%22%3A%22lw_console%22%2C%22version%22%3A%224.0.9%22%7D",
+      "kind": "trios",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 2,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=19210.0",
+    "discordUrl": "https://discord.com/channels/187635036525166592/1355893179949387967/1355893179949387967",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2020-10-05",
+    "needs": []
+  },
+  "description": "ClearCommands\n\nManual Download\n\nRequires\n\nConsole Commands\n\nDependencies are automatically downloaded when installing with TriOS\n\nOlder versions and changelogs\n\nOr support me on\n\nKo-Fi\n\nA small amount of additional console commands to clear the fleet bloat that seems to be affecting many saves.\n\nSafe to add and remove to an ongoing save file.\n\nMight be able to fix your game if:\n\nYour game is stutteringYou have extremely low fpsYou are unable to saveYou are crashing when hovering over certain fleets\n\nTry [csmartClear] before using the more direct deletion commands!\n\nIf you are getting the \"crashing when mousing over a fleet\" problem, use [cclearModularShips]!\n\nCommands\n\ncfleetReport\n\nDisplays a report with information on the fleets currently in the game. This is useful to monitor the worst offenders of fleet bloat, and might be useful when checking for the cause of stutter.\n\ncfleetReport <FactionID>\n\nDisplays a report with information on the specific faction fleets. Mostly useful to get more info if a specific faction is misbehaving.\n\ncsmartClear\n\nChecks for factions with abnormal fleet count, and tries to clear them while attempting to skip any fleets with an impact on the campaign experience. Excludes stations, bounties, quest fleets, fleets with the \"orbiting\" assignment, trading fleets, and task forces.\n\ncclearAllFleets\n\nClears all fleets in the sector. Excludes stations, bounties and quest fleets (if they are marked important). This is the nuclear option, use with caution.\n\ncclearFleets <FactionID>\n\nClears the fleets of a specific faction. Requires either the Faction ID or the Faction name as argument. Excludes stations, bounties and quest fleets (if they are marked important).\n\nlistNearbyFleets [range]\n\nLists all Fleets and their fleet members in the star system. If a range is specified, lists them in the range in the star system. Denotes modular ships as such when listing them.\n\ncclearModularShips [all/allWithStations]\n\nClears all modular ships with the VariantSource.REFIT in the star system (\n\nhttps://fractalsoftworks.com/forum/index.php?topic=19655.0\n\n). Excludes player fleet, stations, bounties and quest fleets (if they are marked important). With [all], clears every modular ship in the star system, regardless of refit source (still excludes the above). With [allWithStations], also clears station fleets (does not destroy the station entity).\n\n[close]For Modders\n\nYou can exempt a fleet from being cleared by setting the fleet memory key (boolean) [$clearCommands_no_remove].\n\nWorks on all commands in here.\n\nUse this sparingly, we do not know the source of the problem yet.\n\n[close]Change Log\n\nChangelog post 1.0.g to be found\n\nhere.\n\nOlder versions\n\n1.0.f\n\nAdjusted - Added defending fleets to the exception list for cSmartClearAdjusted - Added fleets that are tagged to be ignored by other fleets to the exception list for cSmartClearAdjusted - Accounted for fleets with unique ships and ships with a forced loadout (likely mod-added bounties) to not be cleared by any commandFixed - No longer clears Seeker bosses\n\n1.0.e\n\nFixed - No longer clears Ziggurat Fleet\n\n1.0.d\n\nAdjusted - updated for 0.95a\n\n1.0.b\n\nAdded - csmartClear - clears any abnormal fleet counts while trying to cause minimal impact on the gameAdded - cfleetReport <FactionID> (displays detailed, faction specific report)Added - cfleetReport now displays listenersAdded - Fleet Report now reports routes by dynamic categories (Sometimes sorts wrong).Added - memory key to exclude fleet from being cleared [$clearCommands_no_remove]Adjusted - Fleet Report formattingAdjusted - Report now displays faction IDsFixed - Some inaccuracy\n\n[close][close]Credit\n\nIridescens\n\nlistNearbyFleets and cclearModularShips command code, thanks for the contribution! [close]",
+  "descriptionHtml": "ClearCommands<br><hr><br><br><strong><a href=\"https://github.com/SirHartley/ClearCommands/releases/download/1.0.g/ClearCommands1.0.g.zip\" rel=\"nofollow noopener\" target=\"_blank\">Manual Download</a></strong><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=4106.0\" rel=\"nofollow noopener\" target=\"_blank\">Console Commands</a>  <br><br>Dependencies are automatically downloaded when installing with TriOS<br><a href=\"https://github.com/SirHartley/ClearCommands/releases\" rel=\"nofollow noopener\" target=\"_blank\">Older versions and changelogs</a><br><br>Or support me on <a href=\"https://ko-fi.com/sirhartley\" rel=\"nofollow noopener\" target=\"_blank\">Ko-Fi</a><br><hr><br>A small amount of additional console commands to clear the fleet bloat that seems to be affecting many saves.<br>Safe to add and remove to an ongoing save file.<br><hr><br>Might be able to fix your game if:<br><ul><li>Your game is stuttering</li><li>You have extremely low fps</li><li>You are unable to save</li><li>You are crashing when hovering over certain fleets</li></ul><br>Try [csmartClear] before using the more direct deletion commands!<br>If you are getting the \"crashing when mousing over a fleet\" problem, use  [cclearModularShips]!<br><hr><br>Commands <br> <strong>cfleetReport</strong>Displays a report with information on the fleets currently in the game. This is useful to monitor the worst offenders of fleet bloat, and might be useful when checking for the cause of stutter. <br><hr> <strong>cfleetReport &lt;FactionID&gt;</strong>Displays a report with information on the specific faction fleets. Mostly useful to get more info if a specific faction is misbehaving. <br><hr> <strong>csmartClear</strong>Checks for factions with abnormal fleet count, and tries to clear them while attempting to skip any fleets with an impact on the campaign experience. Excludes stations, bounties, quest fleets, fleets with the \"orbiting\" assignment, trading fleets, and task forces. <br><hr> <strong>cclearAllFleets</strong>Clears all fleets in the sector. Excludes stations, bounties and quest fleets (if they are marked important). This is the nuclear option, use with caution.<br> <br><hr> <strong>cclearFleets &lt;FactionID&gt;</strong>Clears the fleets of a specific faction. Requires either the Faction ID or the Faction name as argument. Excludes stations, bounties and quest fleets (if they are marked important).<br><br><hr> <strong>listNearbyFleets [range]</strong>Lists all Fleets and their fleet members in the star system. If a range is specified, lists them in the range in the star system. Denotes modular ships as such when listing them.<br><br><hr> <strong>cclearModularShips [all/allWithStations]</strong>Clears all modular ships with the VariantSource.REFIT in the star system (<a href=\"https://fractalsoftworks.com/forum/index.php?topic=19655.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=19655.0</a>). Excludes player fleet, stations, bounties and quest fleets (if they are marked important). With [all], clears every modular ship in the star system, regardless of refit source (still excludes the above). With [allWithStations], also clears station fleets (does not destroy the station entity).<br>[close]For Modders <br>You can exempt a fleet from being cleared by setting the fleet memory key (boolean) [$clearCommands_no_remove].<br>Works on all commands in here.<br>Use this sparingly, we do not know the source of the problem yet.<br>[close]Change Log<br>Changelog post 1.0.g to be found <a href=\"https://github.com/SirHartley/ClearCommands/releases\" rel=\"nofollow noopener\" target=\"_blank\">here.</a><br><br>Older versions <strong>1.0.f</strong>  <ul><li>Adjusted - Added defending fleets to the exception list for cSmartClear</li><li>Adjusted - Added fleets that are tagged to be ignored by other fleets to the exception list for cSmartClear</li><li>Adjusted - Accounted for fleets with unique ships and ships with a forced loadout (likely mod-added bounties) to not be cleared by any command</li><li>Fixed - No longer clears Seeker bosses</li></ul><br> <strong>1.0.e</strong>  <ul><li>Fixed - No longer clears Ziggurat Fleet</li></ul><br> <strong>1.0.d</strong>  <ul><li>Adjusted - updated for 0.95a</li></ul><br> <strong>1.0.b</strong>  <ul><li>Added - csmartClear - clears any abnormal fleet counts while trying to cause minimal impact on the game</li><li>Added - cfleetReport &lt;FactionID&gt; (displays detailed, faction specific report)</li><li>Added - cfleetReport now displays listeners</li><li>Added - Fleet Report now reports routes by dynamic categories (Sometimes sorts wrong).</li><li>Added - memory key to exclude fleet from being cleared [$clearCommands_no_remove]</li><li>Adjusted - Fleet Report formatting</li><li>Adjusted - Report now displays faction IDs</li><li>Fixed - Some inaccuracy</li></ul>[close][close]Credit  <strong>Iridescens</strong>listNearbyFleets and cclearModularShips command code, thanks for the contribution! [close]",
+  "descriptionIsGenerated": false,
+  "saveCompatibilityText": "Safe to add and remove to an ongoing save file.",
+  "rawCategories": [
+    "Other/Misc.",
+    "Utility mods"
+  ],
+  "gallery": [
+    {
+      "url": "https://i.imgur.com/xQodpET.png"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSirHartley%2FClearCommands%2Fmaster%2FClearCommands.version%22%2C%22id%22%3A%22clearCommands%22%2C%22version%22%3A%221.0.g%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Fconsole-commands%2Fmaster%2Fconsole.version%22%2C%22id%22%3A%22lw_console%22%2C%22version%22%3A%224.0.9%22%7D",
+      "kind": "trios",
+      "label": "",
+      "host": "trilink.wispborne.com",
+      "needsAnotherStep": true
+    },
+    {
+      "url": "https://github.com/SirHartley/ClearCommands/releases/download/1.0.g/ClearCommands1.0.g.zip",
+      "directUrl": "https://github.com/SirHartley/ClearCommands/releases/download/1.0.g/ClearCommands1.0.g.zip",
+      "fileName": "ClearCommands1.0.g.zip",
+      "kind": "direct",
+      "label": "Manual Download",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {
+    "1.0.g": "Adjusted - Added defending fleets to the exception list for cSmartClear\nAdjusted - Added fleets that are tagged to be ignored by other fleets to the exception list for cSmartClear\nAdjusted - Accounted for fleets with unique ships and ships with a forced loadout (likely mod-added bounties) to not be cleared by any command\nFixed - No longer clears Seeker bosses",
+    "1.0.f": "Adjusted - Added defending fleets to the exception list for cSmartClear\nAdjusted - Added fleets that are tagged to be ignored by other fleets to the exception list for cSmartClear\nAdjusted - Accounted for fleets with unique ships and ships with a forced loadout (likely mod-added bounties) to not be cleared by any command\nFixed - No longer clears Seeker bosses",
+    "1.0.e": "Fixed - No longer clears Ziggurat Fleet"
+  },
+  "changelogUrl": "https://github.com/SirHartley/ClearCommands/releases/download/1.0.g/ClearCommands1.0.g.zip",
+  "sourceCodeUrl": "https://github.com/SirHartley/ClearCommands",
+  "supportLinks": [
+    {
+      "url": "https://www.patreon.com/join/SirHartley",
+      "type": "patreon"
+    },
+    {
+      "url": "https://ko-fi.com/sirhartley",
+      "type": "kofi"
+    }
+  ],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=19210.0",
+  "discordUrl": "https://discord.com/channels/187635036525166592/1355893179949387967/1355893179949387967",
+  "releases": [],
+  "olderVersions": [],
+  "addons": []
+}

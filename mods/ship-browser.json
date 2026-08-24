@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-08-24T21:41:23.008749Z",
+  "listing": {
+    "id": "ship-browser",
+    "name": "Ship Browser 1.3.1",
+    "displayName": "Ship Browser",
+    "authors": [
+      "itBeABruhMoment"
+    ],
+    "otherAuthorNames": {},
+    "categories": [
+      "Utilities"
+    ],
+    "sources": [
+      "forum",
+      "discord"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "1.3.1",
+    "summary": "Do you have a chronic mod addiction that makes the list ships command produce several pages of console output? Do you like testing out ideas for fleets but hate flicking though the variant editor for 5 minutes straight adding smods? I do, and I have spent hours automating parts of these minor inconveniences.",
+    "summaryIsGenerated": false,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://github.com/itBeABruhmoment/ShipBrowser/releases/download/1.3.1/ShipBrowser1.3.1.zip",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=26261.0",
+    "discordUrl": "https://discord.com/channels/187635036525166592/1203082554580934766/1203082554580934766",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2023-03-08",
+    "needs": []
+  },
+  "description": "Ship Browser 1.3.1\n\nDownload\n\nDo you have a chronic mod addiction that makes the list ships command produce several pages of console output? Well I do, so I took the logical step of spending several hours to automate a 5 minute task. This mod includes a ship browser that allows you to browse ships by mod and add them to your fleet via a gui. To use it simply open the console, enter the command \"ShipBrowser\" and close the console. This mod also contains some console commands for fleet building and entity searching.\n\nThe Commands:\n\nSpoiler\n\nShipBrowser\n\nOpen the ship browser. Opens after the console is closed.\n\nFindSystemsWithTags <manditory1stTag> [optionalAdditionalTags]\n\nList the star systems with all of the tags specified in the arguments. A list of tags can be found in com.fs.starfarer.api.impl.campaign.ids.Tags of the StarSector API. Input the string that corresponds to the tag obtained by viewing Constant Field Values.\n\nGetTagsCurrentSystem\n\nLists the tags of the system the player is in.\n\nFindNumConstellations\n\nFind the number of constellations in the sector with a totally not scuffed implementation.\n\nFindEntitiesByName  <nameOfEntity>\n\nList the location of every entity with a specified name. The name of a entity is usually the same as its in game description.\n\nFindEntitiesByType  <nameOfEntity>\n\nList the location of every entity with a specified custom entity type. Custom entity types can be found in custom_entities.json.\n\nListEntitiesCurrentLocation\n\nList the full name and custom entity type of every entity in the player's current location.\n\nFindDerelict <hullid>\n\nList the location of every derelict ship with of a specified hull type. Use the command \"list ships\" to see the names of hull types\n\nAddHullMods <shipSelection> <[hullModId1,hullModId2,hullModId3]>\n\nPermanently adds the hull mods specified in the second argument to the ships specified in \"shipSelection\". \"shipSelection\" can be a number (eg. 5), a range (eg, 5-10) or the word all. The numbers in \"ShipSelection\"  corresponds to the order ships appears in the fleet or refit screen. For example the fifth ship in the refit screen is ship 5. Then second argument is a list of any number of hull mod ids separated by commas and enclosed by square brackets WITH NO SPACES. Hull mod ids can be found in hull_mods.csv\n\nAddDMods <shipSelection> <numDmods>\n\nAdds \"numDmods\" dmods to the ships specified by \"shipSelection\". \"NumDmods\" is a number. \"shipSelection\" can be a number (eg. 5), a range (eg, 5-10) or the word all. The numbers in \"ShipSelection\"  corresponds to the order ships appears in the fleet or refit screen. For example the fifth ship in the refit screen is ship 5.\n\nCloneShip <shipNumber> [numberOfClones]\n\nClones a specified ship in the player fleet  \"shipNumber\" times. If no number of clones is specified one is made. \"shipNumber\" corresponds to the order ships appears in the fleet or refit screen. For example the fifth ship in the refit screen is ship 5. \"numberOfClones\" is the number of copies that will be made.\n\nNote that some of the fleet editing commands don't work in the refit screen for some reason under some circumstances. No clue why\n\n[close]\n\nChangelog:\n\nSpoiler1.3.1\n\n- Removed copy of Console Command mod default commands in commands.csv\n\n1.3\n\n-updated to 0.98a\n\n1.2\n\n-updated to 0.97a\n\n1.1\n\n-updated to 0.96a\n\n-fixed bug with cloneship command\n\n1.0\n\n- first release\n\n[close]",
+  "descriptionHtml": "Ship Browser 1.3.1<br><a href=\"https://github.com/itBeABruhmoment/ShipBrowser/releases/download/1.3.1/ShipBrowser1.3.1.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download</a><br><br>Do you have a chronic mod addiction that makes the list ships command produce several pages of console output? Well I do, so I took the logical step of spending several hours to automate a 5 minute task. This mod includes a ship browser that allows you to browse ships by mod and add them to your fleet via a gui. To use it simply open the console, enter the command \"ShipBrowser\" and close the console. This mod also contains some console commands for fleet building and entity searching.<br><br>The Commands:<br><br>Spoiler<strong>ShipBrowser</strong><br>Open the ship browser. Opens after the console is closed.<br><br><strong>FindSystemsWithTags &lt;manditory1stTag&gt; [optionalAdditionalTags]</strong><br><br>List the star systems with all of the tags specified in the arguments. A list of tags can be found in com.fs.starfarer.api.impl.campaign.ids.Tags of the StarSector API. Input the string that corresponds to the tag obtained by viewing Constant Field Values.<br><br><strong>GetTagsCurrentSystem</strong><br><br>Lists the tags of the system the player is in.<br><br><strong>FindNumConstellations</strong><br><br>Find the number of constellations in the sector with a totally not scuffed implementation.<br><br><strong>FindEntitiesByName  &lt;nameOfEntity&gt;</strong><br><br>List the location of every entity with a specified name. The name of a entity is usually the same as its in game description.<br><br><strong>FindEntitiesByType  &lt;nameOfEntity&gt;</strong><br><br>List the location of every entity with a specified custom entity type. Custom entity types can be found in custom_entities.json.<br><br><strong>ListEntitiesCurrentLocation</strong><br><br>List the full name and custom entity type of every entity in the player's current location.<br><br><strong>FindDerelict &lt;hullid&gt;</strong><br><br>List the location of every derelict ship with of a specified hull type. Use the command \"list ships\" to see the names of hull types<br><br><strong>AddHullMods &lt;shipSelection&gt; &lt;[hullModId1,hullModId2,hullModId3]&gt;</strong><br><br>Permanently adds the hull mods specified in the second argument to the ships specified in \"shipSelection\". \"shipSelection\" can be a number (eg. 5), a range (eg, 5-10) or the word all. The numbers in \"ShipSelection\"  corresponds to the order ships appears in the fleet or refit screen. For example the fifth ship in the refit screen is ship 5. Then second argument is a list of any number of hull mod ids separated by commas and enclosed by square brackets WITH NO SPACES. Hull mod ids can be found in hull_mods.csv<br><br><strong> AddDMods &lt;shipSelection&gt; &lt;numDmods&gt; </strong><br><br>Adds \"numDmods\" dmods to the ships specified by \"shipSelection\". \"NumDmods\" is a number. \"shipSelection\" can be a number (eg. 5), a range (eg, 5-10) or the word all. The numbers in \"ShipSelection\"  corresponds to the order ships appears in the fleet or refit screen. For example the fifth ship in the refit screen is ship 5. <br><br><strong>CloneShip &lt;shipNumber&gt; [numberOfClones]</strong><br><br>Clones a specified ship in the player fleet  \"shipNumber\" times. If no number of clones is specified one is made. \"shipNumber\" corresponds to the order ships appears in the fleet or refit screen. For example the fifth ship in the refit screen is ship 5. \"numberOfClones\" is the number of copies that will be made.<br><br>Note that some of the fleet editing commands don't work in the refit screen for some reason under some circumstances. No clue why<br>[close]<br>Changelog:<br><br>Spoiler1.3.1<br>- Removed copy of Console Command mod default commands in commands.csv<br><br>1.3<br>-updated to 0.98a<br><br>1.2<br>-updated to 0.97a<br><br>1.1<br>-updated to 0.96a<br>-fixed bug with cloneship command<br><br>1.0<br>- first release<br>[close]",
+  "descriptionIsGenerated": false,
+  "rawCategories": [
+    "Utility mods"
+  ],
+  "gallery": [],
+  "downloads": [
+    {
+      "url": "https://github.com/itBeABruhmoment/ShipBrowser/releases/download/1.3.1/ShipBrowser1.3.1.zip",
+      "directUrl": "https://github.com/itBeABruhmoment/ShipBrowser/releases/download/1.3.1/ShipBrowser1.3.1.zip",
+      "fileName": "ShipBrowser1.3.1.zip",
+      "kind": "direct",
+      "label": "Download",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {
+    "1.3.1": "Removed copy of Console Command mod default commands in commands.csv",
+    "1.3": "updated to 0.98a",
+    "1.2": "updated to 0.97a"
+  },
+  "sourceCodeUrl": "https://github.com/itBeABruhmoment/ShipBrowser",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=26261.0",
+  "discordUrl": "https://discord.com/channels/187635036525166592/1203082554580934766/1203082554580934766",
+  "releases": [],
+  "olderVersions": [],
+  "addons": []
+}

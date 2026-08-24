@@ -1,0 +1,193 @@
+{
+  "generatedAt": "2026-08-24T21:41:23.008749Z",
+  "listing": {
+    "id": "daedalus-forge-0-9-1-ship-skin-variant-editor",
+    "name": "Daedalus Forge 0.9.1 - ship/skin/variant editor",
+    "authors": [
+      "lepidosteus"
+    ],
+    "otherAuthorNames": {},
+    "categories": [],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.98a-RC8",
+    "modVersion": "0.9.1",
+    "imageUrl": "https://www.lepidosteus.com/starsector/daedalus_forge/icon.png?logo",
+    "summary": "Adds a comprehensive ship, skin, and variant editor with visual tools, mirroring, bounds optimization, and versioning for modding Starsector ships.",
+    "summaryIsGenerated": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/daedalus-forge_0.9.1.exe",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 2,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35782.0",
+    "sourceIsPublic": false,
+    "isWorkInProgress": false,
+    "addedOn": "2026-07-23",
+    "needs": []
+  },
+  "description": "Daedalus Forge\n\nA ship editor for Starsector that tries to be simple and pleasant to use\n\nThis is my own ship editor made for me to help me develop mods and custom ships that I liked, this was not quite intended to be released ever so please be super weary of NOT erasing data with it\n\nI've tried to make the save feature be super safe about what it saves where and warn you and basically refuse to overwrite anything, but still beware: here be dragons. And abyssal horrors. And probably lots of bugs.\n\n> Download here <\n\nOlder 0.9.0 version here\n\nCurrent version:\n\n0.9.1 for Starsector 0.98a-RC8\n\nDependencies:\n\nnone\n\nCompatibility:\n\nmade on and for Windows 11, runs fine on Windows 10 too as long as you have\n\nWebView 2\n\ninstalled (by default on latest updates)\n\nOk but I use Linux / I'm a superior MacOS being / whatever else: this runs on\n\nTauri\n\n, which runs basically everywhere by using the local web engine; so it probably runs fine on linux too, and same for the rest.\n\nBut then you get html/css/js compatibility issues and as such it might have some small issues (bounds not appearing quite where they should, etc ...) and I have done no debugging pass at all there.\n\nLicense:\n\npublic domain, or as far as your country allow. Free to redistribute or whatever. It's nicer if you put my name and a link back to here, but go wild if you want.\n\nAI use:\n\nsome code, lots of visuals (those icons didn't make themselves). Lots of translation too, english is not my native language.\n\nAlpha warning:\n\nThis is a first release to the public, I cleaned up but also edited a lot of code that is clearly not tested enough. This version will refuse to overwrite your vanilla starsector files but it can be tricked into saving over mods files; it's trying not to by default, the way it currently works is you save separate and then your overwrite yourself (and mostly, you double check the ship_data.csv, it will create/merge as needed but always makes a separate copy when saving then YOU decide to overwrite)\n\nI have some issues with vanilla ships, notably description loading.\n\nShield stats are correct but I broke shield preview at some point, the range and size of the shield is not always correct.\n\nI did a lot of cleanup on the slots hover/selector but a byproduct is that selecting ship center or shield center is a bit of a mess right now.\n\nWhat it does ?\n\nLoad a ship\n\n, either from a .ship file on disk, or automatically from your starsector directory. Or a mod you have installed. You can just search through the whole thing, show me the capitals, show me the ones that have \"cool\" in the name, show me the ones from that mod I love, show me only the cruisers, ... I have over 170 mods, and for most of those thanks to the magic of TriOS I have 3 to 5 versions, so there is a LOT of ships in my install. It's an intended goal of this tool to find what I want to tinker with fast and smoothly.\n\nscreenshots of a loading screen, oh yeah\n\n[close]\n\n... or create a new ship from scratch\n\n, just provide a sprite, use the tools to clean up that sprite (mirror it, delete the background, ...).\n\nyou can also use the same sprite tools later on an already loaded ship, to fix a wrong rotation or easily resize, just go in tools\n\n[close]\n\nView the ship your edited\n\n: move it around, zoom, dezoom, mousewheel zoom, woohoo this is the 90s all over again. Show the weapons, the engines, the bounding points, the shield, anything you want.\n\nEdit a ship\n\n: change its stats, its shield stats, it's builtin mods, its size, its speed ...\n\nAdd edit or remove it's engine or weapons, visually\n\n: move them, edit them, change their type, their size, move them around by drag'n'dropping, duplicate them in one click.\n\nship stats, slot (weapon, engine, ...) stats\n\n[close]\n\nEdit or Create Skins\n\n:\n\nCreate a new skin\n\nOpen an existing skin\n\nAutomatically find and open all the skins for the current opened hull\n\nOverride all the fields you want\n\nClean editor that try to help you figure out what you want to do\n\nSpoiler\n\n[close]\n\nEdit or Create Variants\n\n:\n\nCreate a new variant\n\nOpen an existing variant\n\nAutomatically find and open all the variant for the current opened hull or skin\n\nSet weapons, weapon groups, wings, hullmods, ...\n\nCalculate OP budget (including when hullmods affect it)\n\nSpoiler\n\n[close]\n\nCurrent Workshop helper\n\n:\n\nTo compliment to move from ship to ship/skin/variant : easily see what's open, what's not, what's to save, what's already saved\n\nQuickly open a variant for the current skin or hull, close a variant or skin without closing the hull, save each one independantly\n\nSpoiler\n\n[close]\n\nAssembly and module based ship\n\n:\n\nCreate or edit module ships.\n\nAdd or edit module slots\n\nAttach modules to a slot in a variant, change the module. Dedicated selector, only modules that match can be selected.\n\nView the full assembly view, jump from module to module in one click.\n\nChange the module anchor slot.\n\nSpoiler\n\n[close]\n\nIntuitive mirroring\n\n: you know the story right ? you edit something, and then you want to redo it on the other side of the ship, and it's just pain. Every change need to be synced, you always forgot something or are a couple pixel off and you end up burning vodoo dolls to counter your OCD. So because I ran out of vodoo dolls, I added a mirror linking.\n\nAny weapon, or engine, or bound, or anything, that look like it should be in sync, the editor will sync them, change one the other change. Move one the other moves. You can view the link easily, or disable it in one clic. Or you can duplicate pre-sync so the copy is sent at a mirror position. Or maybe there is a mirror but it's not quite there because it's a bit off, ask to find the best mirror candidate and after validating let the editor fix it and sync them.\n\nMirror linking is purely edit time, nothing is saved in the ship file or elsewhere, it's only a \"that makes sense\" feature.\n\nI edit the one on the left, and everything is applied to the right too\n\n[close]\n\nSet your ship's bounds\n\n: maybe there already are bounds, and you want to add some, or remove some, or move some. You can use the above sync system, or not.\n\nMaybe there are no bounds yet and you want to set good ones without the hassle of doing it by hand, auto-bounds does that for you.\n\nMaybe there already are bounds but they're not quite fitting the ship, \"refit current bounds\" will map them as close as possible to the sprite as it can.\n\nOr maybe there are just too many for no reason and you can use optimise bounds to delete and move as many as can be without making the game experience worse.\n\nThere is a \"normal/agressive/precise\" setting and that does exactly what it says.\n\npandemonium as loaded from the mod (82 bounds), then optimized agressive (23 bounds), then auto bound precise (40 bounds)\n\n[close]\n\nemperor as loaded from the mod (13 bounds), then auto bound aggressive (22 bounds)\n\n[close]\n\nReference point selector\n\n:\n\nEasily select and edit the ship center, the shield center, or the module anchor.\n\nSpoiler\n\n[close]\n\nHullmods / Weapon / Wings / Modules / Hint / Tags browsers\n\n:\n\nEverwhere you can edit one of those, add some, remove some, select some, a dedicated selector is now used, allowing to easily search, find and filter for whatever you want.\n\nSpoiler\n\n[close]\n\nEngineer's report\n\n: a simple info/warning/error system that tells you stuff it think you should know. You can look at it and its hint, or you can ignore it just fine. Except errors, it won't save if there are errors.\n\ninfo, warning, errors and suggested solution\n\n[close]\n\nAnd an automatic one click fix for some of them\n\n:\n\nBounds could be optimized for \"free\" ? Click and it's done (see a preview first, you decide)\n\nBounds have duplicate and collision error ? Click to clean it\n\nSome bounds or weapons have mistake level error and could be fixed and mirrored ? Click, see a preview and fix instantly.\n\nSpoiler\n\n[close]\n\nVersionning aka undo/redo\n\n: you play with it, you break stuff, and then it's annoying to go back. Sure you could restart, but things were really great ten minutes ago after an hour of work, and you really wish you could go back there. So you can.\n\nEvery change is versionned and you can go back in one click. It's sub versionned too, so if you make change A, B, C, then go back to B, make another change D, you can still go back to A, or B, or C, or D, in one click. I tried to make it look decent \"tree like\", I completly failed but then the AI took pity on me and fixed its look. It's not perfect but it works.\n\nAlso it stays after reload so if you close or crash and reload a ship your history is still there. We all make mistakes, I make a lot more than you, I need that. Number of versions to keep is in the settings, up to 500 by ship.\n\neach version says what change, easily find what you want\n\n[close]\n\nSave your work\n\n: I mean, DUH. It warns you what it will write and where, and you need to validate.\n\nsaving is unified in a single visual menu.\n\nAll the files that will be saved are shown BEFORE anything is saved, and those that won't be are shown too, so you can be sure what's going to be edited and what won't. Every save option (full, variant only, skin only ...) goes through the same menu and give full details.\n\nYou can still override, if you really want to save something, or if you really want to not save something, just (un)check it.\n\nFiles that are not changed are not saved, even if others are (eg if the stats are not changed, ship_stats.csv is not saved, even if the .ship is)\n\nyou will see what will be saved where, and if it's a create or an update, before validating\n\n[close]\n\nLatest mod version restriction\n\n:\n\nYou use TriOS or another manager and you have several copies of each mods ? Make it so only the latest version of each mod is valid (no more attaching an 0.0.3g weapon on a 0.0.4e variant).\n\nApplies to above browsers, and to every other parts, produce warnings in case something doesn't make sense.\n\nCross mod detection and warning\n\n:\n\nBy default when you pick weapons or hulls or ... You can either pick from vanilla or from the mod you're currently working on.\n\nYou can use the filters to go cross-mod, but then a warning is produced to keep track of it and inform you of the created dependancy.\n\nSpoiler\n\n[close]\n\nKnown limit:\n\nNO saving in vanilla. Nope. Not doing that.\n\nBounds optimising and fixing is not working well on assembly ship, mainly the core module, since the sprite is not a good match for the bounds we want (junctions are are often drawn).\n\nLoading is now a bit smaller due to processing all the variants, weapons and everything. A lot of it\n\n…",
+  "descriptionHtml": "<strong>Daedalus Forge</strong><br><br>A ship editor for Starsector that tries to be simple and pleasant to use<br><br>This is my own ship editor made for me to help me develop mods and custom ships that I liked, this was not quite intended to be released ever so please be super weary of NOT erasing data with it<br>I've tried to make the save feature be super safe about what it saves where and warn you and basically refuse to overwrite anything, but still beware: here be dragons. And abyssal horrors. And probably lots of bugs.<br><br><a href=\"https://www.lepidosteus.com/starsector/daedalus_forge/daedalus-forge_0.9.1.exe\" rel=\"nofollow noopener\" target=\"_blank\">&gt; Download here &lt;</a><br><br><a href=\"https://www.lepidosteus.com/starsector/daedalus_forge/daedalus-forge_0.9.0.exe\" rel=\"nofollow noopener\" target=\"_blank\">Older 0.9.0 version here</a><br><br><strong>Current version:</strong> 0.9.1 for Starsector 0.98a-RC8<br><br><strong>Dependencies:</strong> none<br><br><strong>Compatibility:</strong> made on and for Windows 11, runs fine on Windows 10 too as long as you have <a href=\"https://developer.microsoft.com/en-us/microsoft-edge/webview2/\" rel=\"nofollow noopener\" target=\"_blank\">WebView 2</a> installed (by default on latest updates)<br><br>Ok but I use Linux / I'm a superior MacOS being / whatever else: this runs on <a href=\"https://v2.tauri.app/\" rel=\"nofollow noopener\" target=\"_blank\">Tauri</a>, which runs basically everywhere by using the local web engine; so it probably runs fine on linux too, and same for the rest.<br>But then you get html/css/js compatibility issues and as such it might have some small issues (bounds not appearing quite where they should, etc ...) and I have done no debugging pass at all there.<br><br><strong>License:</strong> public domain, or as far as your country allow. Free to redistribute or whatever. It's nicer if you put my name and a link back to here, but go wild if you want.<br><br><strong>AI use:</strong> some code, lots of visuals (those icons didn't make themselves). Lots of translation too, english is not my native language.<br><br><strong>Alpha warning:</strong><br><br>This is a first release to the public, I cleaned up but also edited a lot of code that is clearly not tested enough. This version will refuse to overwrite your vanilla starsector files but it can be tricked into saving over mods files; it's trying not to by default, the way it currently works is you save separate and then your overwrite yourself (and mostly, you double check the ship_data.csv, it will create/merge as needed but always makes a separate copy when saving then YOU decide to overwrite)<br><br>I have some issues with vanilla ships, notably description loading.<br>Shield stats are correct but I broke shield preview at some point, the range and size of the shield is not always correct.<br>I did a lot of cleanup on the slots hover/selector but a byproduct is that selecting ship center or shield center is a bit of a mess right now.<br><br><strong>What it does ? </strong><br><br><strong>Load a ship</strong>, either from a .ship file on disk, or automatically from your starsector directory. Or a mod you have installed. You can just search through the whole thing, show me the capitals, show me the ones that have \"cool\" in the name, show me the ones from that mod I love, show me only the cruisers, ... I have over 170 mods, and for most of those thanks to the magic of TriOS I have 3 to 5 versions, so there is a LOT of ships in my install. It's an intended goal of this tool to find what I want to tinker with fast and smoothly.<br>screenshots of a loading screen, oh yeah<br><br>[close]<br><strong>... or create a new ship from scratch</strong>, just provide a sprite, use the tools to clean up that sprite (mirror it, delete the background, ...).<br>you can also use the same sprite tools later on an already loaded ship, to fix a wrong rotation or easily resize, just go in tools<br>[close]<br><strong>View the ship your edited</strong>: move it around, zoom, dezoom, mousewheel zoom, woohoo this is the 90s all over again. Show the weapons, the engines, the bounding points, the shield, anything you want.<br><strong>Edit a ship</strong>: change its stats, its shield stats, it's builtin mods, its size, its speed ...<br><strong>Add edit or remove it's engine or weapons, visually</strong>: move them, edit them, change their type, their size, move them around by drag'n'dropping, duplicate them in one click. <br><br>ship stats, slot (weapon, engine, ...) stats<br><br>[close]<br><strong>Edit or Create Skins</strong>: <br>Create a new skin<br>Open an existing skin<br>Automatically find and open all the skins for the current opened hull<br>Override all the fields you want<br>Clean editor that try to help you figure out what you want to do<br><br>Spoiler<br>   <br>[close]<br><strong>Edit or Create Variants</strong>: <br>Create a new variant<br>Open an existing variant<br>Automatically find and open all the variant for the current opened hull or skin<br>Set weapons, weapon groups, wings, hullmods, ...<br>Calculate OP budget (including when hullmods affect it)<br><br>Spoiler  <br><br>[close]<br><strong>Current Workshop helper</strong>: <br>To compliment to move from ship to ship/skin/variant : easily see what's open, what's not, what's to save, what's already saved<br>Quickly open a variant for the current skin or hull, close a variant or skin without closing the hull, save each one independantly<br><br>Spoiler<br><br>[close]<br><strong>Assembly and module based ship</strong>: <br>Create or edit module ships.<br>Add or edit module slots<br>Attach modules to a slot in a variant, change the module. Dedicated selector, only modules that match can be selected.<br>View the full assembly view, jump from module to module in one click.<br>Change the module anchor slot.<br><br>Spoiler<br><br>[close]<br><strong>Intuitive mirroring</strong>: you know the story right ? you edit something, and then you want to redo it on the other side of the ship, and it's just pain. Every change need to be synced, you always forgot something or are a couple pixel off and you end up burning vodoo dolls to counter your OCD. So because I ran out of vodoo dolls, I added a mirror linking. <br><br>Any weapon, or engine, or bound, or anything, that look like it should be in sync, the editor will sync them, change one the other change. Move one the other moves. You can view the link easily, or disable it in one clic. Or you can duplicate pre-sync so the copy is sent at a mirror position. Or maybe there is a mirror but it's not quite there because it's a bit off, ask to find the best mirror candidate and after validating let the editor fix it and sync them.<br><br>Mirror linking is purely edit time, nothing is saved in the ship file or elsewhere, it's only a \"that makes sense\" feature.<br><br>I edit the one on the left, and everything is applied to the right too<br>[close]<br><strong>Set your ship's bounds</strong>: maybe there already are bounds, and you want to add some, or remove some, or move some. You can use the above sync system, or not. <br><br>Maybe there are no bounds yet and you want to set good ones without the hassle of doing it by hand, auto-bounds does that for you. <br><br>Maybe there already are bounds but they're not quite fitting the ship, \"refit current bounds\" will map them as close as possible to the sprite as it can. <br><br>Or maybe there are just too many for no reason and you can use optimise bounds to delete and move as many as can be without making the game experience worse. <br><br>There is a \"normal/agressive/precise\" setting and that does exactly what it says.<br><br>pandemonium as loaded from the mod (82 bounds), then optimized agressive (23 bounds), then auto bound precise (40 bounds)<br><br>[close]<br>emperor as loaded from the mod (13 bounds), then auto bound aggressive (22 bounds)<br><br>[close]<br><strong>Reference point selector</strong>: <br>Easily select and edit the ship center, the shield center, or the module anchor.<br><br>Spoiler<br>[close]<br><strong>Hullmods / Weapon / Wings / Modules / Hint / Tags browsers</strong>: <br>Everwhere you can edit one of those, add some, remove some, select some, a dedicated selector is now used, allowing to easily search, find and filter for whatever you want.<br><br>Spoiler<br><br>[close]<br><strong>Engineer's report</strong>: a simple info/warning/error system that tells you stuff it think you should know. You can look at it and its hint, or you can ignore it just fine. Except errors, it won't save if there are errors.<br><br>info, warning, errors and suggested solution<br>[close]<br><strong>And an automatic one click fix for some of them</strong>: <br>Bounds could be optimized for \"free\" ? Click and it's done (see a preview first, you decide)<br>Bounds have duplicate and collision error ? Click to clean it<br>Some bounds or weapons have mistake level error and could be fixed and mirrored ? Click, see a preview and fix instantly.<br><br>Spoiler <br> <br>[close]<br><strong>Versionning aka undo/redo</strong>: you play with it, you break stuff, and then it's annoying to go back. Sure you could restart, but things were really great ten minutes ago after an hour of work, and you really wish you could go back there. So you can.<br><br>Every change is versionned and you can go back in one click. It's sub versionned too, so if you make change A, B, C, then go back to B, make another change D, you can still go back to A, or B, or C, or D, in one click. I tried to make it look decent \"tree like\", I completly failed but then the AI took pity on me and fixed its look. It's not perfect but it works.<br><br>Also it stays after reload so if you close or crash and reload a ship your history is still there. We all make mistakes, I make a lot more than you, I need that. Number of versions to keep is in the settings, up to 500 by ship.<br><br>each version says what change, easily find what you want<br> <br>[close]<br><strong>Save your work</strong>: I mean, DUH. It warns you what it will write and where, and you need to validate.<br><br>saving is unified in a single visual menu.<br>All the files that will be saved are shown BEFORE anything is saved, and those that won't be are shown too, so you can be sure what's going to be edited and what won't. Every save option (full, variant only, skin only ...) goes through the same menu and give full details.<br>You can still override, if you really want to save something, or if you really want to not save something, just (un)check it.<br>Files that are not changed are not saved, even if others are (eg if the stats are not changed, ship_stats.csv is not saved, even if the .ship is)<br><br>you will see what will be saved where, and if it's a create or an update, before validating<br>[close]<br><strong>Latest mod version restriction</strong>: <br>You use TriOS or another manager and you have several copies of each mods ? Make it so only the latest version of each mod is valid (no more attaching an 0.0.3g weapon on a 0.0.4e variant).<br>Applies to above browsers, and to every other parts, produce warnings in case something doesn't make sense.<br><br><strong>Cross mod detection and warning</strong>: <br>By default when you pick weapons or hulls or ... You can either pick from vanilla or from the mod you're currently working on.<br>You can use the filters to go cross-mod, but then a warning is produced to keep track of it and inform you of the created dependancy.<br><br>Spoiler<br>[close]<br><strong>Known limit:</strong><br><br>NO saving in vanilla. Nope. Not doing that.<br><br>Bounds optimising and fixing is not working well on assembly ship, mainly the core module, since the sprite is not a good match for the bounds we want (junctions are are often drawn).<br><br>Loading is now a bit smaller due to processing all the variants, weapons and everything. A lot of it<br><br><p>…</p>",
+  "descriptionIsGenerated": false,
+  "saveCompatibilityText": "NO saving in vanilla. Nope. Not doing that.",
+  "rawCategories": [],
+  "gallery": [
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/df21.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/df1.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/df3.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/df4.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/df20.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/df17.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/df18.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de1.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de3.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de2.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de4.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de5.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de6.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de7.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de8.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de9.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de10.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de15.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de16.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de17.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/df16.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/df10.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/df11.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/df13.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/df14.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/df15.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de14.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de18.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de19.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de20.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de21.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de22.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de23.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/df7.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de26.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de27.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de28.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de29.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/df6.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de11.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de12.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de13.jpg"
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/screen/de24.jpg"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/daedalus-forge_0.9.1.exe",
+      "directUrl": "https://www.lepidosteus.com/starsector/daedalus_forge/daedalus-forge_0.9.1.exe",
+      "kind": "direct",
+      "label": "> Download here <",
+      "host": "www.lepidosteus.com",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://www.lepidosteus.com/starsector/daedalus_forge/daedalus-forge_0.9.0.exe",
+      "directUrl": "https://www.lepidosteus.com/starsector/daedalus_forge/daedalus-forge_0.9.0.exe",
+      "kind": "direct",
+      "label": "Older 0.9.0 version here",
+      "host": "www.lepidosteus.com",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {},
+  "license": "public domain, or as far as your country allow. Free to redistribute or whatever. It's nicer if you put my name and a link back to here, but go wild if you want.",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35782.0",
+  "releases": [],
+  "olderVersions": [],
+  "addons": []
+}

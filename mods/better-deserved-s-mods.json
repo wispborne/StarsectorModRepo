@@ -1,0 +1,212 @@
+{
+  "generatedAt": "2026-08-24T21:41:23.008749Z",
+  "listing": {
+    "id": "better-deserved-s-mods",
+    "name": "Better Deserved S-Mods",
+    "authors": [
+      "Jackie"
+    ],
+    "otherAuthorNames": {},
+    "categories": [
+      "Utilities"
+    ],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.95a",
+    "modVersion": "1.64",
+    "imageUrl": "https://i.imgur.com/ods8Tnr.png",
+    "summary": "Adds enhanced S-Mod effects to vanilla hullmods, including improved bonuses, reduced penalties, and new stat adjustments.",
+    "summaryIsGenerated": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://github.com/JackieModMod/Better-Deserved-SMods/releases/download/1.64/Better.Deserved.S-Mods.zip",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22670",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2021-09-08",
+    "needs": []
+  },
+  "description": "Download here!\n\nS-mod in some hullmods, Get some bonuses/penalties. Only work with the selected vanilla hullmods below so far because I don't know what other effects to give for the rest or it's just a good smod in the first place to not need one. I'm open to any suggestions and balance feedback. I would not call myself an expert on vanilla balance, but this is just my opinion of it.\n\nInstructions\n\nIf you don't like any of the changes, remove the script! It'll default back to vanilla behavior. For those mods in the Support Package section, you may have to look at the hullmod.csv for further instructions to remove them.\n\nCan be installed or uninstalled through saves!\n\nIt does conflict with any mod that modifies the vanilla hullmods, but I have not found any so far. There is no current conflict with Gacha S-Mods, Progressive S-Mods, or Trophy S-Mods.\n\nBuilt-in bonuses can receive S-Mod bonuses by accessing the setting.json and enabling them.\n\nIncompatibility Issues\n\nThis mod is a semi-conversion of the following vanilla hullmods:\n\nAccelerated Shields, Additional Berthing, Advanced Optics, Advanced Turret Gyro, Armored Weapon Mounts, Augmented Engines, Automated Repair Units, Auxiliary Fuel Tanks, Auxiliary Thrusters, Ballistic Rangefinder, Blast Doors, Converted Fighter Bay, Converted Hangar, Dedicated Targeting Core, ECCM Package, ECM Package, Efficiency Overhaul, Expanded Cargo Holds, Expanded Deck Crew, Expanded Magazine, Extended Shields, Faulty Automated Systems, Flux Coil Adjunct, Flux Distributor, Front Shield Conversion, High Resolution Sensors, Makeshift Shield Generator, Hardened Subsystem, Heavy Armor, Heavy Scatter Amplifier, Insulated Engine Assembly, Integrated Point Defense AI, Militarized Subsystems, Nav Relay, Omni Shield Conversion, Operation Centers, Reinforced Bulkheads, Resistant Flux Conduits, Rugged Construction, Shield Shunt, Solar Shielding, Stabilized Shields, and Unstable Injector\n\nAny mod that interferes with these listed hullmods may mean you may not see the smod bonuses/penalties. What you may do is either delete the line of the corresponding hullmod in their hull_mod.csv or leave it as it is. No crashes should come from this mod.\n\nArmor/Hull Mods\n\n[close]\n\nEngine Mods[close]\n\nGeneral Mods[close]\n\nLogistic Mods\n\n[close]\n\nCarrier Mods\n\n[close]\n\nFlux Mods\n\n[close]\n\nShield Mods\n\n[close]\n\nPackage Mods\n\n[close]\n\nDepreciated Mods\n\n[close]\n\nCredits\n\nThanks to PureTilt for sharing code!\n\nChangelog1.64\n\n- Additional Berthing S-Mod Added: Doubled crew capacity bonus and negates maintenance cost!\n\n- Advanced Weapon Mount S-Mod reworked: +10% RoF for non-missile weapons!\n\n- Auxiliary Fuel Tanks S-Mod Added: Doubled fuel capacity bonus and negates maintenance cost!\n\n- Converted Fighter Bay S-Mod should correctly adjust for logistic hullmod limit!\n\n- ECM Package S-Mod adjusted: Removed ECM immunity and added +1% ECM Rating!\n\n- ECCM Package S-Mod reworked: ECM and flare immunity!\n\n- Expanded Cargo Holds S-Mod Added: Doubled cargo capacity bonus and negates maintenance cost!\n\n1.63\n\n- Added Rugged Construction buff from 0.96a (Reducing supply cost to recover from deployment by 50%)!\n\n- Added Faulty Automated Systems buff from 0.96a (Increases crew requirement by 50% instead of 100%)!\n\n- Added no_drop to Neural Integrator and Neural Interface modspecs should not longer drop from 0.96a changelog!\n\n- Adjusted Flux Coil Adjunct S-Mod wording to avoid confusion!\n\n- Adjusted HSA paragraphing!\n\n- Fixed Extended Shield being capped at 20x instead of 12x originally!\n\n- Fixed Shield Shunt bug of not providing the right s-mod effect!\n\n- Unstable Injector S-Mod bonus scales on hull size (25/20/15/15) from 20!\n\n1.62\n\n- Adjusted Converted Hangar S-Mod to further revisions: increased recovered carrier replacement rate on cruiser and larger!\n\n- Reworked Ballistic Rangefinder to 0.96a changes; removed s-mod effect!\n\n1.61\n\n- Fixed Advanced Turret Gyros S-Mod applying a 20x mult instead of a +20% bonus vs frigates!\n\n- Reworked Converted Hangar completely to a possible change by Alex! Feel free to revert, built-in Converted Hangars are unaffected.\n\n- Converted Fighter Bays S-Mod also reduces supplies to maintain.\n\n- Operation Centers S-Mod also reduces supplies to maintain.\n\n1.6\n\n- Advanced Turret Gyros reworked to 0.96a current change: damage bonus vs fighter/missiles and damage bonus vs smaller ship sizes of the ship!\n\n- Converted Fighter Bay S-Mod will also reduce deployment point of the ship!\n\n- Efficiency Overhaul S-Mod should properly detect if Phantom is a civilian ship and other ships!\n\n- Expanded Deck Crews S-Mod reworked: +25% faster replacement rate!\n\n- High-Resolution Sensors: Changed cost to 4/6/9/15 (was: 9/9/9/15) and gave s-mod effect with 0.96a changelog!\n\n- Nav Relay S-Mod reworked: Adds maneuverability based on the total nav rating of your fleet. Fighters gain +20% top speed and maneuverability!\n\n- Shield Conversion Omni S-Mod reworked: No longer reduces shield arcs!\n\n- Shield Shunt re-added as an S-Mod bonus with 0.96a changelog: Increasing the armor bonus to +30% armor!\n\n- Recovery Shuttle reworked: Reduces the rate at which the fighter replacement rate decreases due to fighter losses by 40% when engaging! (You gain -50% when on recall in vanilla behavior!)\n\n- Unstable Injector reworked: Increases the ship's zero-flux engine boost to top speed by 20!\n\n1.54\n\n- Accelerated Shield S-Mod no longer has beam damage reduction!\n\n- Accelerated Shield S-Mod now increases shield deployment and turn rate by +400%!\n\n- Front Shield Conversion S-Mod now adds +25% extra arc!\n\n- Omni Shield Conversion S-Mod now increases damage reduction taken by shield to 8%!\n\n- Adaptive Phase Coils S-Mod provides 25% speed and acceleration while phased instead of reducing flux usage from phase cloak activation!\n\n- Advanced Optic S-Mod no longer provides +5% Beam damage!\n\n- Automated Repair Units S-Mod reduces CR loss from deployment and restore 15% hull and armor damage taken during combat at the end of combat instead of a hull damage reduction!\n\n- ECM Package S-Mod grants +50% target leading accuracy to both fighters and ships!\n\n- Heavy Armor's armor penalty when smodded decreased: 150/300/400/500 -> 150/250/350/450!\n\n- Hardened Shield S-Mod now increases damage reduction taken by shield to 22%!\n\n- Hardened Subsystem S-Mod now reduces malfunction chances instead of providing increased CR reduction!\n\n- High Scatter Amplifier S-Mod now adds +5% Beam damage!\n\n- Nav Relay S-Mod now provides +20% top speed to fighters!\n\n- Operation Center S-Mod reworked: Granting DP reduction, ECM, and Nav rating when installed on the Flagship!\n\n1.53\n\n- Fixed S-Modded Reinforced Bulkhead bug with dmods!\n\n- Fixed S-Modded Efficiency Overhaul not applying its bonuses properly!\n\n1.52\n\n- Converted Fighter Bay S-Mod adds 100/200/250/300 Armor and +5% flux stats and an additional +2% per built-in cargo bay!\n\n- Efficiency Overhaul S-Mod has two new bonuses depending if the ship is civilian or combat: Reduced logistic usage or increased recovery and repair rates!\n\n- Extended Shield S-Mod converts excess shield arc beyond 360 arc up to 480 arc capped into flux capacity scaling on shield upkeep!\n\n- Fixed S-Mod ECM Package not providing immunity to weapon range penalty reduction from Electronic Warfare!\n\n- Fixed ECCM Package not providing weapon range penalty reduction from Electronic Warfare (Vanilla fix!)\n\n1.51\n\n- Advanced Optic S-Mod now replaces 200 bonus range with 200 base range increase!\n\n- Converted Hangar S-Mod should properly display stat changes!\n\n- Extended Shield S-Mod converts excess shield arc beyond 360 arc into flux capacity scaling on shield upkeep!\n\n1.5\n\n- Accelerated Shield S-Mod beam damage reduction increased from -15% to -20%!\n\n- Armored Weapon Mount S-Mod no longer increases armor by an additional 5%, but a flat +5 per weapon mount!\n\n- Blast Door S-Mod now reduces armor damage taken by -10%!\n\n- ECM Package S-Mod now grants immunity to Electronic Warfare penalties!\n\n- Insulated Engine Assembly S-Mod no longer grants additional hull integrity, but greatly reduces sensor profiles!\n\n- Flux Coil Adjunct S-Mod reworked: Adds 400/800/1200/2000 flux capacity and doubles flux dissipation when overloaded!\n\n- Flux Distributor S-Mod adds 15/30/40/50 flux dissipation and also reduces flux generated by missile weapons by -5%!\n\n- Nav Relay S-Mod now grants +5% Top Speed to Fighters of that Ship!\n\n- Reinforced Bulkhead S-Mod reworked: Adds 250/400/500/1000 hull integrity and reduce effects of D-mods by 50% (stacks with Rugged Construction)!\n\n- Resistant Flux Conduit S-Mod no longer increase EMP dmg reduction, but reduces overload duration by -20%!\n\n- Stabilized Shields S-Mod hard flux dissipation reduced from 15% to 12%!\n\n1.4\n\n- S-Mod Accelerated Shield no longer reduces high explosive damage and instead grants a -15% beam damage reduction taken by shields!\n\n- S-Mod Advanced Turret Gyro no longer grants recoil reduction and instead grants +100% target leading autoaccuracy!\n\n- S-Mod Adaptive Phase Coils reworked: Reduces flux usage from activating phase cloak by -75% and reduces phase cooldown by -25%!\n\n- Added S-Mod bonus for Augmented Drive Field: reduces fuel consumption by 30%!\n\n- Added S-Mod bonus for Ballistic Rangefinder: Grants any non-large ballistic weapons their bonuses regardless of what slot they're mounted on!\n\n- S-Mod Efficiency Overhaul grants +20% max CR instead of +10% max CR!\n\n- S-Mod Expanded Magazines reworked: Ammo capacity bonus increased to +100% and grants +50% reloading speed of ballistic and energy when there is no nearby significant enemy presence!\n\n- S-Mod Extended Shield no longer reduces kinetic damage and instead grants 120-degree arc of shields!\n\n- S-Mod HSA no longer increase base range threshold by 100 and instead reduces the range reduction to -25%!\n\n- S-Mod Insulated Engine Assembly reworked: +100% more engine health and +5% hull integrity!\n\n- S-Mod IPDAI now adds +50% damage to fighters!\n\n- S-Mod Makeshift Shield Generator removes the top speed reduction as well as grants an omni-directional shield with -20% upkeep and +10% improved efficiency!\n\n- S-Mod Operation Centers reworked: grants fighters +15% top speed and +33% target leading accuracy!\n\n- S-Mod Reinforced Bulkhead now adds 50 armor for damage reduction calculation instead of 30 armor!\n\n- S-Mod Solar Shielding's Energy Dmg reduction increased to -33%!\n\n1.33\n\n- Removed Shield Shunt S-Mod\n\n- Changed Resistant Flux Conduits\n\n- Changed High Scatter Amplifier\n\n1.32\n\n- Fixed Hardened Subsystem's bug\n\n- Fixed Armored Weapon Mount's tooltip\n\n1.31\n\n- Fixed Militarized Subsystem\n\n- Added Phase Adaptive Coils\n\n1.3 - New Smods!\n\n- There is now a setting in setting.json you must set to TRUE for built-in hullmods to function like S-Mods.\n\n- Removed Assault and Escort Package from selection (bonuses transferred to Militarized Subsystem)\n\n- Temporarily removed Augmented Drive Field S-Mod for the time being.\n\n- A lot of hullmods got changed. Check the forum thread to see what changed mostly.\n\n1.2 - New Smods!\n\n- Augmented Drive Field now has an S-Mod Bonus: reduces the ship's sensor profile by 20%.\n\n- Automated Repair Unit now repairs 1% of your hull integrity if it's below 40%.\n\n- Converted Fighter Bay now has an S-Mod Bonus: Adds +80 Armor and +40 Flux Dissipation per built-in cargo bay.\n\n- Converted Hangar now has an S-Mod Bonus: Buffed Fighter Speed and Reduced Fighter Damage Taken.\n\n- High\n\n…",
+  "descriptionHtml": "<a href=\"https://github.com/JackieModMod/Better-Deserved-SMods/releases/download/1.64/Better.Deserved.S-Mods.zip\" rel=\"nofollow noopener\" target=\"_blank\"><br>Download here!<br></a><br>S-mod in some hullmods, Get some bonuses/penalties. Only work with the selected vanilla hullmods below so far because I don't know what other effects to give for the rest or it's just a good smod in the first place to not need one. I'm open to any suggestions and balance feedback. I would not call myself an expert on vanilla balance, but this is just my opinion of it.<br><br><strong>Instructions</strong><br>If you don't like any of the changes, remove the script! It'll default back to vanilla behavior. For those mods in the Support Package section, you may have to look at the hullmod.csv for further instructions to remove them. <strong>Can be installed or uninstalled through saves!</strong> It does conflict with any mod that modifies the vanilla hullmods, but I have not found any so far. There is no current conflict with Gacha S-Mods, Progressive S-Mods, or Trophy S-Mods.<br><br>Built-in bonuses can receive S-Mod bonuses by accessing the setting.json and enabling them.<br><br><strong>Incompatibility Issues</strong><br>This mod is a semi-conversion of the following vanilla hullmods:<br>Accelerated Shields, Additional Berthing, Advanced Optics, Advanced Turret Gyro, Armored Weapon Mounts, Augmented Engines, Automated Repair Units, Auxiliary Fuel Tanks, Auxiliary Thrusters, Ballistic Rangefinder, Blast Doors, Converted Fighter Bay, Converted Hangar, Dedicated Targeting Core, ECCM Package, ECM Package, Efficiency Overhaul, Expanded Cargo Holds, Expanded Deck Crew, Expanded Magazine, Extended Shields, Faulty Automated Systems, Flux Coil Adjunct, Flux Distributor, Front Shield Conversion, High Resolution Sensors, Makeshift Shield Generator, Hardened Subsystem, Heavy Armor, Heavy Scatter Amplifier, Insulated Engine Assembly, Integrated Point Defense AI, Militarized Subsystems, Nav Relay, Omni Shield Conversion, Operation Centers, Reinforced Bulkheads, Resistant Flux Conduits, Rugged Construction, Shield Shunt, Solar Shielding, Stabilized Shields, and Unstable Injector<br><br>Any mod that interferes with these listed hullmods may mean you may not see the smod bonuses/penalties. What you may do is either delete the line of the corresponding hullmod in their hull_mod.csv or leave it as it is. No crashes should come from this mod.<br><br>Armor/Hull Mods<br>[close]<br>Engine Mods[close]<br>General Mods[close]<br>Logistic Mods<br><br>[close]<br>Carrier Mods<br>[close]<br>Flux Mods<br>[close]<br>Shield Mods<br>[close]<br>Package Mods<br>[close]<br>Depreciated Mods<br><br>[close]<br><strong>Credits</strong><br>Thanks to PureTilt for sharing code!<br><br>Changelog1.64<br>- Additional Berthing S-Mod Added: Doubled crew capacity bonus and negates maintenance cost!<br>- Advanced Weapon Mount S-Mod reworked: +10% RoF for non-missile weapons!<br>- Auxiliary Fuel Tanks S-Mod Added: Doubled fuel capacity bonus and negates maintenance cost!<br>- Converted Fighter Bay S-Mod should correctly adjust for logistic hullmod limit!<br>- ECM Package S-Mod adjusted: Removed ECM immunity and added +1% ECM Rating!<br>- ECCM Package S-Mod reworked: ECM and flare immunity!<br>- Expanded Cargo Holds S-Mod Added: Doubled cargo capacity bonus and negates maintenance cost!<br>1.63<br>- Added Rugged Construction buff from 0.96a (Reducing supply cost to recover from deployment by 50%)!<br>- Added Faulty Automated Systems buff from 0.96a (Increases crew requirement by 50% instead of 100%)!<br>- Added no_drop to Neural Integrator and Neural Interface modspecs should not longer drop from 0.96a changelog!<br>- Adjusted Flux Coil Adjunct S-Mod wording to avoid confusion!<br>- Adjusted HSA paragraphing!<br>- Fixed Extended Shield being capped at 20x instead of 12x originally!<br>- Fixed Shield Shunt bug of not providing the right s-mod effect!<br>- Unstable Injector S-Mod bonus scales on hull size (25/20/15/15) from 20!<br>1.62<br>- Adjusted Converted Hangar S-Mod to further revisions: increased recovered carrier replacement rate on cruiser and larger!<br>- Reworked Ballistic Rangefinder to 0.96a changes; removed s-mod effect!<br>1.61<br>- Fixed Advanced Turret Gyros S-Mod applying a 20x mult instead of a +20% bonus vs frigates!<br>- Reworked Converted Hangar completely to a possible change by Alex! Feel free to revert, built-in Converted Hangars are unaffected.<br>- Converted Fighter Bays S-Mod also reduces supplies to maintain.<br>- Operation Centers S-Mod also reduces supplies to maintain.<br>1.6<br>- Advanced Turret Gyros reworked to 0.96a current change: damage bonus vs fighter/missiles and damage bonus vs smaller ship sizes of the ship!<br>- Converted Fighter Bay S-Mod will also reduce deployment point of the ship!<br>- Efficiency Overhaul S-Mod should properly detect if Phantom is a civilian ship and other ships!<br>- Expanded Deck Crews S-Mod reworked: +25% faster replacement rate!<br>- High-Resolution Sensors: Changed cost to 4/6/9/15 (was: 9/9/9/15) and gave s-mod effect with 0.96a changelog!<br>- Nav Relay S-Mod reworked: Adds maneuverability based on the total nav rating of your fleet. Fighters gain +20% top speed and maneuverability!<br>- Shield Conversion Omni S-Mod reworked: No longer reduces shield arcs!<br>- Shield Shunt re-added as an S-Mod bonus with 0.96a changelog: Increasing the armor bonus to +30% armor!<br>- Recovery Shuttle reworked: Reduces the rate at which the fighter replacement rate decreases due to fighter losses by 40% when engaging! (You gain -50% when on recall in vanilla behavior!)<br>- Unstable Injector reworked: Increases the ship's zero-flux engine boost to top speed by 20!<br>1.54<br>- Accelerated Shield S-Mod no longer has beam damage reduction!<br>- Accelerated Shield S-Mod now increases shield deployment and turn rate by +400%!<br>- Front Shield Conversion S-Mod now adds +25% extra arc!<br>- Omni Shield Conversion S-Mod now increases damage reduction taken by shield to 8%!<br>- Adaptive Phase Coils S-Mod provides 25% speed and acceleration while phased instead of reducing flux usage from phase cloak activation!<br>- Advanced Optic S-Mod no longer provides +5% Beam damage!<br>- Automated Repair Units S-Mod reduces CR loss from deployment and restore 15% hull and armor damage taken during combat at the end of combat instead of a hull damage reduction!<br>- ECM Package S-Mod grants +50% target leading accuracy to both fighters and ships!<br>- Heavy Armor's armor penalty when smodded decreased: 150/300/400/500 -&gt; 150/250/350/450!<br>- Hardened Shield S-Mod now increases damage reduction taken by shield to 22%!<br>- Hardened Subsystem S-Mod now reduces malfunction chances instead of providing increased CR reduction!<br>- High Scatter Amplifier S-Mod now adds +5% Beam damage!<br>- Nav Relay S-Mod now provides +20% top speed to fighters!<br>- Operation Center S-Mod reworked: Granting DP reduction, ECM, and Nav rating when installed on the Flagship!<br>1.53<br>- Fixed S-Modded Reinforced Bulkhead bug with dmods!<br>- Fixed S-Modded Efficiency Overhaul not applying its bonuses properly!<br>1.52<br>- Converted Fighter Bay S-Mod adds 100/200/250/300 Armor and +5% flux stats and an additional +2% per built-in cargo bay!<br>- Efficiency Overhaul S-Mod has two new bonuses depending if the ship is civilian or combat: Reduced logistic usage or increased recovery and repair rates!<br>- Extended Shield S-Mod converts excess shield arc beyond 360 arc up to 480 arc capped into flux capacity scaling on shield upkeep!<br>- Fixed S-Mod ECM Package not providing immunity to weapon range penalty reduction from Electronic Warfare!<br>- Fixed ECCM Package not providing weapon range penalty reduction from Electronic Warfare (Vanilla fix!) <br>1.51<br>- Advanced Optic S-Mod now replaces 200 bonus range with 200 base range increase!<br>- Converted Hangar S-Mod should properly display stat changes!<br>- Extended Shield S-Mod converts excess shield arc beyond 360 arc into flux capacity scaling on shield upkeep!<br>1.5<br>- Accelerated Shield S-Mod beam damage reduction increased from -15% to -20%!<br>- Armored Weapon Mount S-Mod no longer increases armor by an additional 5%, but a flat +5 per weapon mount!<br>- Blast Door S-Mod now reduces armor damage taken by -10%!<br>- ECM Package S-Mod now grants immunity to Electronic Warfare penalties!<br>- Insulated Engine Assembly S-Mod no longer grants additional hull integrity, but greatly reduces sensor profiles!<br>- Flux Coil Adjunct S-Mod reworked: Adds 400/800/1200/2000 flux capacity and doubles flux dissipation when overloaded!<br>- Flux Distributor S-Mod adds 15/30/40/50 flux dissipation and also reduces flux generated by missile weapons by -5%!<br>- Nav Relay S-Mod now grants +5% Top Speed to Fighters of that Ship!<br>- Reinforced Bulkhead S-Mod reworked: Adds 250/400/500/1000 hull integrity and reduce effects of D-mods by 50% (stacks with Rugged Construction)!<br>- Resistant Flux Conduit S-Mod no longer increase EMP dmg reduction, but reduces overload duration by -20%!<br>- Stabilized Shields S-Mod hard flux dissipation reduced from 15% to 12%!<br>1.4<br>- S-Mod Accelerated Shield no longer reduces high explosive damage and instead grants a -15% beam damage reduction taken by shields!<br>- S-Mod Advanced Turret Gyro no longer grants recoil reduction and instead grants +100% target leading autoaccuracy!<br>- S-Mod Adaptive Phase Coils reworked: Reduces flux usage from activating phase cloak by -75% and reduces phase cooldown by -25%!<br>- Added S-Mod bonus for Augmented Drive Field: reduces fuel consumption by 30%!<br>- Added S-Mod bonus for Ballistic Rangefinder: Grants any non-large ballistic weapons their bonuses regardless of what slot they're mounted on!<br>- S-Mod Efficiency Overhaul grants +20% max CR instead of +10% max CR!<br>- S-Mod Expanded Magazines reworked: Ammo capacity bonus increased to +100% and grants +50% reloading speed of ballistic and energy when there is no nearby significant enemy presence!<br>- S-Mod Extended Shield no longer reduces kinetic damage and instead grants 120-degree arc of shields!<br>- S-Mod HSA no longer increase base range threshold by 100 and instead reduces the range reduction to -25%!<br>- S-Mod Insulated Engine Assembly reworked: +100% more engine health and +5% hull integrity!<br>- S-Mod IPDAI now adds +50% damage to fighters!<br>- S-Mod Makeshift Shield Generator removes the top speed reduction as well as grants an omni-directional shield with -20% upkeep and +10% improved efficiency!<br>- S-Mod Operation Centers reworked: grants fighters +15% top speed and +33% target leading accuracy!<br>- S-Mod Reinforced Bulkhead now adds 50 armor for damage reduction calculation instead of 30 armor!<br>- S-Mod Solar Shielding's Energy Dmg reduction increased to -33%!<br>1.33<br>- Removed Shield Shunt S-Mod<br>- Changed Resistant Flux Conduits<br>- Changed High Scatter Amplifier<br>1.32<br>- Fixed Hardened Subsystem's bug<br>- Fixed Armored Weapon Mount's tooltip<br>1.31<br>- Fixed Militarized Subsystem<br>- Added Phase Adaptive Coils<br>1.3 - New Smods!<br>- There is now a setting in setting.json you must set to TRUE for built-in hullmods to function like S-Mods.<br>- Removed Assault and Escort Package from selection (bonuses transferred to Militarized Subsystem)<br>- Temporarily removed Augmented Drive Field S-Mod for the time being.<br>- A lot of hullmods got changed. Check the forum thread to see what changed mostly.<br>1.2 - New Smods!<br>- Augmented Drive Field now has an S-Mod Bonus: reduces the ship's sensor profile by 20%.<br>- Automated Repair Unit now repairs 1% of your hull integrity if it's below 40%.<br>- Converted Fighter Bay now has an S-Mod Bonus: Adds +80 Armor and +40 Flux Dissipation per built-in cargo bay.<br>- Converted Hangar now has an S-Mod Bonus: Buffed Fighter Speed and Reduced Fighter Damage Taken.<br>- High<br><p>…</p>",
+  "descriptionIsGenerated": false,
+  "saveCompatibilityText": "Can be installed or uninstalled through saves!",
+  "rawCategories": [
+    "Utility mods"
+  ],
+  "gallery": [
+    {
+      "url": "https://i.imgur.com/ods8Tnr.png"
+    },
+    {
+      "url": "https://i.imgur.com/hh2TsIO.png"
+    },
+    {
+      "url": "https://i.imgur.com/Rge55PN.png"
+    },
+    {
+      "url": "https://i.imgur.com/ESEJkst.png"
+    },
+    {
+      "url": "https://i.imgur.com/4PG1Lyx.png"
+    },
+    {
+      "url": "https://i.imgur.com/PEGx4Fc.png"
+    },
+    {
+      "url": "https://i.imgur.com/SIHJFT3.png"
+    },
+    {
+      "url": "https://i.imgur.com/CqJAkqm.png"
+    },
+    {
+      "url": "https://i.imgur.com/avFHMba.png"
+    },
+    {
+      "url": "https://i.imgur.com/mi9hA79.png"
+    },
+    {
+      "url": "https://i.imgur.com/BEaXFqC.png"
+    },
+    {
+      "url": "https://i.imgur.com/hU9Zn50.png"
+    },
+    {
+      "url": "https://i.imgur.com/fJR6mDu.png"
+    },
+    {
+      "url": "https://i.imgur.com/14kp1e4.png"
+    },
+    {
+      "url": "https://i.imgur.com/qZxNsB9.png"
+    },
+    {
+      "url": "https://i.imgur.com/3LPQBuz.png"
+    },
+    {
+      "url": "https://i.imgur.com/JKUtccZ.png"
+    },
+    {
+      "url": "https://i.imgur.com/MZL03gz.png"
+    },
+    {
+      "url": "https://i.imgur.com/ZQ9JkUb.png"
+    },
+    {
+      "url": "https://i.imgur.com/4t8SFXl.png"
+    },
+    {
+      "url": "https://i.imgur.com/tFWLphT.png"
+    },
+    {
+      "url": "https://i.imgur.com/39jfwNZ.png"
+    },
+    {
+      "url": "https://i.imgur.com/rtLBBxu.png"
+    },
+    {
+      "url": "https://i.imgur.com/UpixRC8.png"
+    },
+    {
+      "url": "https://i.imgur.com/A7dpMhV.png"
+    },
+    {
+      "url": "https://i.imgur.com/vn0mCYG.png"
+    },
+    {
+      "url": "https://i.imgur.com/PZFexv2.png"
+    },
+    {
+      "url": "https://i.imgur.com/QXCx5w8.png"
+    },
+    {
+      "url": "https://i.imgur.com/HtbV2rQ.png"
+    },
+    {
+      "url": "https://i.imgur.com/jBdv51Q.png"
+    },
+    {
+      "url": "https://i.imgur.com/gmrR8mD.png"
+    },
+    {
+      "url": "https://i.imgur.com/jtLbdEZ.png"
+    },
+    {
+      "url": "https://i.imgur.com/LuJZmXD.png"
+    },
+    {
+      "url": "https://i.imgur.com/NRxmcG5.png"
+    },
+    {
+      "url": "https://i.imgur.com/mtEuVgb.png"
+    },
+    {
+      "url": "https://i.imgur.com/mZ3aI64.png"
+    },
+    {
+      "url": "https://i.imgur.com/rK1KXxh.png"
+    },
+    {
+      "url": "https://i.imgur.com/DdouIVd.png"
+    },
+    {
+      "url": "https://i.imgur.com/vlDPjMq.png"
+    },
+    {
+      "url": "https://i.imgur.com/bJGyuUB.png"
+    },
+    {
+      "url": "https://i.imgur.com/y4IlsjC.png"
+    },
+    {
+      "url": "https://i.imgur.com/Thii0v0.png"
+    },
+    {
+      "url": "https://i.imgur.com/mLL2xzC.png"
+    },
+    {
+      "url": "https://i.imgur.com/rqOmqZ8.png"
+    },
+    {
+      "url": "https://i.imgur.com/qO4zrq0.png"
+    },
+    {
+      "url": "https://i.imgur.com/AYsDpTR.png"
+    },
+    {
+      "url": "https://i.imgur.com/I7Miw0o.png"
+    },
+    {
+      "url": "https://i.imgur.com/67o7TX2.png"
+    },
+    {
+      "url": "https://i.imgur.com/YN97iZn.png"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/JackieModMod/Better-Deserved-SMods/releases/download/1.64/Better.Deserved.S-Mods.zip",
+      "directUrl": "https://github.com/JackieModMod/Better-Deserved-SMods/releases/download/1.64/Better.Deserved.S-Mods.zip",
+      "fileName": "Better.Deserved.S-Mods.zip",
+      "kind": "direct",
+      "label": "Download here!",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {
+    "1.64": "Additional Berthing S-Mod Added: Doubled crew capacity bonus and negates maintenance cost!\n- Advanced Weapon Mount S-Mod reworked: +10% RoF for non-missile weapons!\n- Auxiliary Fuel Tanks S-Mod Added: Doubled fuel capacity bonus and negates maintenance cost!\n- Converted Fighter Bay S-Mod should correctly adjust for logistic hullmod limit!\n- ECM Package S-Mod adjusted: Removed ECM immunity and added +1% ECM Rating!\n- ECCM Package S-Mod reworked: ECM and flare immunity!\n- Expanded Cargo Holds S-Mod Added: Doubled cargo capacity bonus and negates maintenance cost!",
+    "1.63": "Added Rugged Construction buff from 0.96a (Reducing supply cost to recover from deployment by 50%)!\n- Added Faulty Automated Systems buff from 0.96a (Increases crew requirement by 50% instead of 100%)!\n- Added no_drop to Neural Integrator and Neural Interface modspecs should not longer drop from 0.96a changelog!\n- Adjusted Flux Coil Adjunct S-Mod wording to avoid confusion!\n- Adjusted HSA paragraphing!\n- Fixed Extended Shield being capped at 20x instead of 12x originally!\n- Fixed Shield Shunt bug of not providing the right s-mod effect!\n- Unstable Injector S-Mod bonus scales on hull size (25/20/15/15) from 20!",
+    "1.62": "Adjusted Converted Hangar S-Mod to further revisions: increased recovered carrier replacement rate on cruiser and larger!\n- Reworked Ballistic Rangefinder to 0.96a changes; removed s-mod effect!"
+  },
+  "sourceCodeUrl": "https://github.com/JackieModMod/Better-Deserved-SMods",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22670",
+  "releases": [],
+  "olderVersions": [],
+  "addons": []
+}

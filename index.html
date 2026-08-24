@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Pictures come from wherever the mod's author put them. Several of those
+       hosts — Imgur most of all — answer 403 when they can see which page the
+       picture is being shown on, so no request from this site carries one. -->
+  <meta name="referrer" content="no-referrer">
+  <title>Starmodder 4: Starsector mods</title>
+  <meta name="description" content="Starsector mods, with recent releases, downloads, changelogs and screenshots.">
+  <link rel="stylesheet" href="style.css">
+  <!-- The reader's spacing choice, applied before anything is drawn so the
+       page does not change shape a moment after it appears. The same key
+       lib.js keeps it under. -->
+  <script>
+    try {
+      var spacing = localStorage.getItem('starmodderSpacing');
+      document.documentElement.dataset.spacing =
+        spacing === 'comfortable' ? 'comfortable' : 'dense';
+    } catch (e) { document.documentElement.dataset.spacing = 'dense'; }
+  </script>
+  <!-- The release feed, so a feed reader offers to subscribe on any page. -->
+  <link rel="alternate" type="application/atom+xml"
+        title="Starmodder: new Starsector mod releases" href="updates.xml">
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to the page</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#/home">Starmodder</a>
+      <nav id="nav" class="site-nav" aria-label="Main"></nav>
+      <div class="header-search">
+        <input type="search" id="site-search" class="search-box"
+               placeholder="Search mods…  (press /)"
+               aria-label="Search mods" autocomplete="off">
+        <div id="search-suggestions" class="suggestions" hidden></div>
+      </div>
+      <button type="button" id="open-settings" class="settings-button"
+              title="Settings">Settings</button>
+    </div>
+  </header>
+
+  <dialog id="settings" class="settings-dialog" aria-labelledby="settings-title">
+    <div class="settings-inner">
+      <div class="settings-head">
+        <h2 id="settings-title">Settings</h2>
+        <button type="button" class="settings-close" aria-label="Close settings">×</button>
+      </div>
+      <section class="settings-section" aria-labelledby="appearance-title">
+        <h3 id="appearance-title">Appearance</h3>
+        <p>How much room there is between things. The words and pictures stay the same size either way.</p>
+        <div class="choice-list" role="radiogroup" aria-label="Spacing">
+          <label class="choice">
+            <input type="radio" name="spacing" value="dense">
+            <span>
+              <span class="choice-name">Dense</span><br>
+              <span class="choice-note">Less room between things, so more fits on the screen.</span>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="spacing" value="comfortable">
+            <span>
+              <span class="choice-name">Comfortable</span><br>
+              <span class="choice-note">More room between things.</span>
+            </span>
+          </label>
+        </div>
+      </section>
+      <section class="settings-section" aria-labelledby="summaries-title">
+        <h3 id="summaries-title">Summaries</h3>
+        <p>Some mods have no description of their own, so an AI wrote one from the author's post. Those are marked with a sparkle.</p>
+        <div class="choice-list" role="radiogroup" aria-label="AI-written summaries">
+          <label class="choice">
+            <input type="radio" name="ai-summaries" value="on">
+            <span>
+              <span class="choice-name">Show AI-written summaries</span><br>
+              <span class="choice-note">Marked with a sparkle, and a line saying where the words came from.</span>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="ai-summaries" value="off">
+            <span>
+              <span class="choice-name">Never show them</span><br>
+              <span class="choice-note">A mod with only an AI summary reads as having no description.</span>
+            </span>
+          </label>
+        </div>
+      </section>
+    </div>
+  </dialog>
+
+  <main id="app" tabindex="-1"><div class="loading">Loading…</div></main>
+
+  <footer class="site-footer">
+    <span id="freshness" class="freshness"></span>
+    <a href="#/about">About this site</a>
+    <a href="updates.xml">Release feed</a>
+    <span class="footer-note">A read-only view of mods posted on the Starsector forum and Discord.</span>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

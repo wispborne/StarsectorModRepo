@@ -1,0 +1,857 @@
+/* Starmodder — the public site.
+   Cyan on navy, the same colours as the local results viewer, so the two read
+   as one project. A reader whose computer asks for light pages gets a light
+   version of the same colours further down.
+
+   Two rules worth keeping:
+
+   - Every colour is a name from the block below, and nothing writes a colour
+     out longhand. That is what makes the light version one short block rather
+     than a second stylesheet. The light block redefines every one of those
+     names but `--picture-backdrop`, which is meant to stay dark either way.
+   - Cyan means "you can do something here" — a link, a button, a chip. A mod's
+     name is not an action, so a mod's name is white. When every title was cyan
+     nothing stood out, because everything did.
+
+   Everything is laid out to fit a phone: nothing here scrolls sideways except
+   the odd wide table, which scrolls inside its own box. */
+
+:root {
+  --primary: rgb(73, 252, 255);
+  --secondary: rgb(59, 203, 232);
+  --surface: rgb(14, 22, 43);
+  --surface-container: rgb(32, 41, 65);
+  --surface-2: rgb(22, 30, 54);
+  --text: rgb(220, 225, 240);
+  --text-dim: rgb(140, 150, 170);
+  --warning: rgb(255, 183, 77);
+  --error: rgb(255, 100, 100);
+  --success: rgb(100, 255, 150);
+  --llm: rgb(196, 148, 255);
+  --border: rgba(73, 252, 255, 0.15);
+
+  /* Cyan at the strengths the page uses it: behind something switched on,
+     behind something under the pointer, and as the scrollbar. */
+  --primary-soft: rgba(73, 252, 255, 0.14);
+  --primary-faint: rgba(73, 252, 255, 0.05);
+  --primary-bar: rgba(73, 252, 255, 0.3);
+  /* The letter standing in for a mod with no picture, and the line round a
+     badge that carries the mod's own version. */
+  --primary-ghost: rgba(73, 252, 255, 0.35);
+  --primary-bar-lit: rgba(73, 252, 255, 0.55);
+
+  /* The line round each kind of badge, and the wash behind the line saying
+     what a mod needs. Each is its own colour at a strength that shows without
+     shouting. */
+  --edge-warning: rgba(255, 183, 77, 0.4);
+  --edge-success: rgba(100, 255, 150, 0.35);
+  --edge-llm: rgba(196, 148, 255, 0.4);
+  --edge-secondary: rgba(59, 203, 232, 0.35);
+  --warning-wash: rgba(255, 183, 77, 0.06);
+
+  /* A wash over a picture, for the round button that sits on a card. */
+  --over-picture: rgba(14, 22, 43, 0.82);
+  --lifted: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --badge-back: rgba(255, 255, 255, 0.02);
+
+  /* What separates a raised surface — a card, a panel, the releases list —
+     from the page behind it. In the dark version the two colours do that on
+     their own and this is nothing. In the light version they cannot: white on
+     near-white is invisible, so a hairline and the faintest lift stand in for
+     the border that used to be there. */
+  --raised: none;
+
+  /* Behind a screenshot shown over the page. This one is dark in both
+     versions on purpose: a picture is easier to look at against something
+     dark, whichever way round the rest of the site is. */
+  --picture-backdrop: rgba(6, 10, 22, 0.94);
+
+  /* How big the words are, from smallest to the title of a page. Every piece
+     of writing on the site is one of these seven, so the page has one scale
+     rather than forty separate decisions.
+     Four things set their own size instead, and all four are shapes rather
+     than writing: the front page's own title, the letter standing in for a
+     missing picture, the × that closes a screenshot, and the arrows either
+     side of one. */
+  --type-note: 0.68rem;
+  --type-tiny: 0.75rem;
+  --type-small: 0.85rem;
+  --type-normal: 1rem;
+  --type-big: 1.15rem;
+  --type-heading: 1.35rem;
+  --type-title: 2rem;
+
+  /* The gaps between things. A page reads by its spacing more than by its
+     lines, so most of the boxes that used to carry a border now carry one of
+     these instead.
+
+     These are the "Dense" numbers, which is the default. The reader can pick
+     "Comfortable" in Settings, which sets `data-spacing="comfortable"` on the
+     page and swaps in the roomier block further down. Only the room between
+     and around things changes — never the size of the words, the pictures or
+     the controls. Nothing outside these two blocks should write a gap or a
+     padding out longhand where one of these fits. */
+  --gap: 10px;             /* between things in one group */
+  --gap-wide: 22px;        /* between the sections of a page. It has to be
+                              clearly more than --gap, or a heading sits as
+                              close to the section above as to its own words */
+  --gap-cells: 10px;       /* between cards in a grid */
+  --pad-page: 16px 16px 40px;   /* round the whole page */
+  --pad-block: 12px 14px;  /* inside a panel or a notice */
+  --pad-cell: 6px 10px;    /* inside a card's words, a row, a release */
+  --pad-front: 8px 0 12px; /* above and below the front page's search box */
+  --pad-bar: 6px 16px;     /* the bar at the top */
+
+  --page-width: 1200px;
+}
+
+/* The same colours for a reader whose computer asks for light pages. Only the
+   names change; nothing else in this file knows the difference.
+
+   The cyan is darker here than the dark version's. Light cyan on white is
+   unreadable, and an action nobody can read is not an action. */
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary: rgb(0, 104, 119);
+    --secondary: rgb(0, 108, 127);
+    --surface: rgb(240, 244, 250);
+    --surface-container: rgb(232, 238, 245);
+    --surface-2: rgb(255, 255, 255);
+    --text: rgb(22, 30, 45);
+    --text-dim: rgb(92, 104, 124);
+    --warning: rgb(158, 96, 0);
+    --error: rgb(184, 38, 38);
+    --success: rgb(19, 116, 58);
+    --llm: rgb(107, 60, 176);
+    --border: rgba(0, 104, 119, 0.22);
+
+    --primary-soft: rgba(0, 104, 119, 0.1);
+    --primary-faint: rgba(0, 104, 119, 0.05);
+    --primary-bar: rgba(0, 104, 119, 0.3);
+    --primary-ghost: rgba(0, 104, 119, 0.4);
+    --primary-bar-lit: rgba(0, 104, 119, 0.55);
+
+    --edge-warning: rgba(158, 96, 0, 0.35);
+    --edge-success: rgba(19, 116, 58, 0.35);
+    --edge-llm: rgba(107, 60, 176, 0.35);
+    --edge-secondary: rgba(0, 108, 127, 0.35);
+    --warning-wash: rgba(158, 96, 0, 0.07);
+
+    --over-picture: rgba(255, 255, 255, 0.88);
+    --lifted: 0 8px 24px rgba(22, 30, 45, 0.16);
+    --badge-back: rgba(22, 30, 45, 0.03);
+    --raised: 0 0 0 1px rgba(22, 30, 45, 0.06), 0 1px 3px rgba(22, 30, 45, 0.05);
+  }
+}
+
+/* The roomier spacing, for a reader who picked "Comfortable" in Settings. */
+:root[data-spacing="comfortable"] {
+  --gap: 16px;
+  --gap-wide: 36px;
+  --gap-cells: 18px;
+  --pad-page: 28px 20px 64px;
+  --pad-block: 20px 22px;
+  --pad-cell: 10px 12px;
+  --pad-front: 18px 0 22px;
+  --pad-bar: 10px 16px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--surface);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  /* Nothing may push the page itself sideways, however narrow the screen. */
+  overflow-x: hidden;
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; }
+
+h1 { font-size: var(--type-title); line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.01em; }
+h2 { font-size: var(--type-heading); line-height: 1.2; margin: 0 0 12px; }
+h3 { font-size: var(--type-big); line-height: 1.25; margin: 0 0 6px; }
+
+* { scrollbar-width: thin; scrollbar-color: var(--primary-bar) var(--surface-2); }
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--surface-2); }
+::-webkit-scrollbar-thumb {
+  background: var(--primary-bar); border-radius: 7px;
+  border: 3px solid var(--surface-2);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--primary-bar-lit); }
+
+/* --- The bar across the top --- */
+
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--surface-container);
+  border-bottom: 1px solid var(--border);
+}
+.header-inner {
+  max-width: var(--page-width); margin: 0 auto;
+  display: flex; align-items: center; gap: 18px;
+  padding: var(--pad-bar); flex-wrap: wrap;
+}
+.brand {
+  color: var(--primary); font-weight: 700; font-size: var(--type-big);
+  letter-spacing: 0.02em;
+}
+.brand:hover { text-decoration: none; }
+.site-nav { display: flex; gap: 4px; flex: 1 1 auto; }
+.site-nav a {
+  padding: 6px 12px; color: var(--text-dim); font-size: var(--type-small);
+  border-bottom: 2px solid transparent;
+}
+.site-nav a:hover { color: var(--text); text-decoration: none; }
+.site-nav a.active { color: var(--primary); border-bottom-color: var(--primary); }
+.nav-count {
+  display: inline-block; margin-left: 6px; padding: 0 6px;
+  border-radius: 999px; background: var(--primary-soft);
+  color: var(--primary); font-size: var(--type-tiny);
+}
+
+.settings-button {
+  background: none; border: none; padding: 0; font: inherit;
+  font-size: var(--type-small); color: var(--text-dim); cursor: pointer;
+  white-space: nowrap;
+}
+.settings-button:hover { color: var(--primary); }
+
+/* --- The settings dialog --- */
+
+.settings-dialog {
+  background: var(--surface-container); color: var(--text);
+  border: 1px solid var(--border); border-radius: 10px;
+  padding: 0; width: min(440px, calc(100vw - 32px));
+  box-shadow: var(--lifted);
+}
+.settings-dialog::backdrop { background: var(--picture-backdrop); opacity: 0.7; }
+.settings-inner { padding: var(--pad-block); display: flex; flex-direction: column; gap: var(--gap-wide); }
+.settings-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.settings-head h2 { margin: 0; }
+.settings-close {
+  background: none; border: none; cursor: pointer; padding: 2px 8px;
+  color: var(--text-dim); font-family: inherit; font-size: var(--type-heading); line-height: 1;
+}
+.settings-close:hover { color: var(--primary); }
+.settings-section { display: flex; flex-direction: column; gap: var(--gap); }
+.settings-section > h3 {
+  margin: 0; font-size: var(--type-tiny); letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--text-dim);
+}
+.settings-section > p { margin: 0; color: var(--text-dim); font-size: var(--type-small); }
+.choice-list { display: flex; flex-direction: column; gap: 6px; }
+.choice {
+  display: flex; gap: 10px; align-items: flex-start; cursor: pointer;
+  padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--surface-2);
+}
+.choice:hover { border-color: var(--primary); }
+.choice:has(input:checked) { border-color: var(--primary); background: var(--primary-soft); }
+.choice input { accent-color: var(--primary); margin-top: 3px; cursor: pointer; }
+.choice-name { color: var(--text); font-size: var(--type-small); font-weight: 600; }
+.choice-note { color: var(--text-dim); font-size: var(--type-tiny); }
+
+.header-search { position: relative; flex: 0 1 260px; min-width: 0; }
+.header-search .search-box { width: 100%; }
+.suggestions {
+  position: absolute; top: calc(100% + 4px); left: 0; right: 0; z-index: 30;
+  background: var(--surface-container); border: 1px solid var(--primary);
+  border-radius: 8px; overflow: hidden;
+  box-shadow: var(--lifted);
+}
+.suggestion {
+  display: flex; gap: 9px; align-items: center; padding: 7px 9px;
+  color: inherit; border-bottom: 1px solid var(--border);
+}
+.suggestion:last-child { border-bottom: none; }
+.suggestion:hover { background: var(--primary-soft); text-decoration: none; }
+.suggestion-thumb {
+  width: 46px; height: 30px; object-fit: cover; flex-shrink: 0;
+  background: var(--surface-2);
+}
+.suggestion-main { min-width: 0; }
+.suggestion-group {
+  padding: 5px 9px 3px; font-size: var(--type-tiny); letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--text-dim);
+  background: var(--primary-faint);
+  border-bottom: 1px solid var(--border);
+}
+.person-thumb { background: var(--primary-faint); }
+.suggestion-name {
+  color: var(--text); font-size: var(--type-small);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.suggestion-by {
+  color: var(--text-dim); font-size: var(--type-tiny);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+/* The first thing a keyboard reaches, and out of the way until then. */
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  background: var(--surface-container); color: var(--primary);
+  padding: 8px 14px; border: 1px solid var(--primary);
+}
+.skip-link:focus { left: 8px; top: 8px; }
+main:focus { outline: none; }
+
+/* --- The page body --- */
+
+main {
+  max-width: var(--page-width); margin: 0 auto;
+  padding: var(--pad-page);
+  min-height: 60vh;
+}
+.stack { display: flex; flex-direction: column; gap: var(--gap-wide); }
+/* A stack inside a stack is one group inside a page, so its parts sit closer
+   together than the page's sections do. That difference is what makes a
+   heading read as belonging to what is under it rather than what is above. */
+.stack .stack { gap: var(--gap); }
+/* Inside a stack the gap is the space under a heading; a margin as well would
+   push the heading away from its own words. */
+.stack > h2, .stack > h3 { margin-bottom: 0; }
+.stack > .release-day { margin-bottom: 0; }
+.stack > .search-hint { margin-top: 0; }
+
+
+.loading { color: var(--text-dim); padding: 24px 0; }
+
+.notice {
+  background: var(--surface-2); padding: var(--pad-block); border-radius: 10px;
+  border-left: 3px solid var(--border); box-shadow: var(--raised);
+}
+.notice.error { border-color: var(--error); }
+.notice h3 { margin-top: 0; }
+.notice p { margin: 0; color: var(--text-dim); }
+
+.breadcrumbs { font-size: var(--type-small); color: var(--text-dim); margin-bottom: 12px; }
+.crumb-sep { margin: 0 6px; opacity: 0.6; }
+.crumb-current { color: var(--text); }
+
+.page-head { display: flex; flex-direction: column; gap: 4px; margin-bottom: 4px; }
+.page-head .sub { color: var(--text-dim); font-size: var(--type-small); }
+
+/* --- Buttons and form controls --- */
+
+.btn {
+  background: var(--surface-2); color: var(--text);
+  border: 1px solid var(--border); border-radius: 6px;
+  padding: 6px 12px; font-size: var(--type-small); cursor: pointer;
+  font-family: inherit;
+}
+.btn:hover:not([disabled]) { border-color: var(--primary); color: var(--primary); }
+.btn[disabled] { opacity: 0.4; cursor: default; }
+.btn-primary { border-color: var(--primary); color: var(--primary); }
+.btn.on { background: var(--primary-soft); border-color: var(--primary); color: var(--primary); }
+
+/* The one download button every list carries. A mod can offer a dozen
+   downloads; the builder has already put them in order, so the button shows the
+   first, and how many there are is said by a badge among the mod's other facts.
+   It is always the same width down a list, so a page of them has one straight
+   right edge — "Download" and "Install with TriOS" are different lengths, and
+   letting each button size itself left the edge ragged. */
+.download-btn {
+  text-align: center; white-space: nowrap;
+  flex-shrink: 0; box-sizing: border-box;
+}
+.download-btn:hover { text-decoration: none; }
+
+/* On a card it sits at the foot, under the badges, and spans the card: a
+   download is the card's main action and belongs in the reader's line of sight,
+   not in a small circle over a screenshot. The spacing names are whole padding
+   shorthands, so the top is zeroed after rather than written out longhand. */
+.mod-card > .download-btn {
+  margin: var(--pad-cell); margin-top: 0;
+}
+
+/* On a row it sits inline at the end, in a column of its own width so every
+   button in the list starts and ends in the same place. */
+.mod-row > .download-btn, .list-links > .download-btn { width: 148px; }
+.mod-row > .download-btn { margin-right: 10px; }
+
+/* On a release row it follows "Read changelog", so both of the row's actions
+   are together at its end. The summary spaces its own children, so this needs
+   no margin of its own — only a width, so the rows line up down the page. */
+.release > summary > .download-btn { width: 148px; }
+
+input[type="text"], input[type="search"], select {
+  background: var(--surface-2); color: var(--text);
+  border: 1px solid var(--border); border-radius: 6px;
+  padding: 7px 10px; font-size: var(--type-small); font-family: inherit;
+  max-width: 100%;
+}
+input:focus, select:focus { outline: none; border-color: var(--primary); }
+/* Something has to show where the keyboard is. The border alone is too faint. */
+:focus-visible {
+  outline: 2px solid var(--primary); outline-offset: 2px;
+}
+
+/* A button that reads as a link, for a choice inside a line of words. */
+.link-button {
+  background: none; border: none; padding: 0; font: inherit;
+  color: var(--primary); cursor: pointer; text-decoration: underline;
+}
+
+/* --- Search and filters --- */
+
+.search-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.search-box { flex: 1 1 280px; min-width: 0; }
+.search-hint { color: var(--text-dim); font-size: var(--type-small); margin: 6px 0 0; }
+
+/* No box around the filters any more. They are a row of controls, and each
+   one already looks like a control. */
+.filters { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.filter-label { display: flex; align-items: center; gap: 6px; font-size: var(--type-small); color: var(--text-dim); }
+.switches { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* The categories, as a row you can see all of at once. */
+.chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip {
+  display: flex; gap: 7px; align-items: center;
+  padding: 5px 12px; border: 1px solid var(--border);
+  background: var(--surface-2); border-radius: 999px;
+  color: var(--text); font-size: var(--type-small); font-family: inherit;
+  cursor: pointer;
+}
+.chip:hover { border-color: var(--primary); color: var(--primary); text-decoration: none; }
+.chip.on {
+  background: var(--primary-soft);
+  border-color: var(--primary); color: var(--primary);
+}
+.chip-count { color: var(--text-dim); font-size: var(--type-tiny); }
+.chip.on .chip-count { color: var(--primary); }
+.result-line { color: var(--text-dim); font-size: var(--type-small); }
+
+/* --- The mod list --- */
+
+.view-toggle { display: flex; gap: 4px; }
+
+.mod-grid {
+  display: grid; gap: var(--gap-cells);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.mod-card {
+  position: relative;
+  display: flex; flex-direction: column;
+  border: 1px solid var(--border); background: var(--surface-2);
+  border-radius: 8px; overflow: hidden;
+}
+.mod-card { box-shadow: var(--raised); }
+.mod-card:hover { border-color: var(--primary); }
+.card-inner {
+  display: flex; flex-direction: column; flex: 1; color: inherit;
+}
+.card-inner:hover { text-decoration: none; }
+
+/* The "add to my list" button, sitting on top of the card's own link. */
+.list-toggle {
+  position: absolute; top: 6px; right: 6px; z-index: 2;
+  width: 28px; height: 28px; padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border); border-radius: 999px;
+  background: var(--over-picture); color: var(--text-dim);
+  font-size: var(--type-normal); font-family: inherit; line-height: 1; cursor: pointer;
+}
+.list-toggle:hover { border-color: var(--primary); color: var(--primary); }
+.list-toggle.on {
+  background: var(--primary-soft);
+  border-color: var(--primary); color: var(--primary);
+}
+.card-image {
+  width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
+  background: var(--surface-container); display: block;
+}
+.card-image.placeholder {
+  display: flex; align-items: center; justify-content: center;
+  color: var(--primary-ghost); font-size: 2.6rem; font-weight: 700;
+  letter-spacing: 0.02em; user-select: none;
+}
+.card-body { padding: var(--pad-cell); display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.card-title {
+  font-weight: 600; color: var(--text); line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.card-authors { font-size: var(--type-small); color: var(--text-dim); overflow-wrap: anywhere; }
+.card-summary {
+  font-size: var(--type-small); color: var(--text);
+  /* Three lines at most, so one long summary cannot stretch a whole grid row.
+     Anything past that is on the mod's own page. */
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-when { font-size: var(--type-tiny); color: var(--text-dim); }
+/* A summary and the note under it are one thing, held closer together than the
+   card's other lines are. */
+.summary-block { display: flex; flex-direction: column; }
+/* A summary is often a line the author pasted in, addresses and all. It has to
+   break wherever it must rather than push the card sideways. */
+.card-summary, .card-title, .row-title { overflow-wrap: anywhere; }
+/* A mod with nothing written about it says so, quietly, so its card keeps the
+   same shape as every other card. */
+.card-summary.none { color: var(--text-dim); font-style: italic; }
+.no-description { margin: 0; color: var(--text-dim); font-style: italic; }
+
+/* The sparkle that marks words an AI wrote. It sits on the line with them and
+   takes their colour. */
+.ai-spark {
+  display: inline-block; vertical-align: -0.1em; flex-shrink: 0;
+}
+.card-foot { margin-top: auto; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+
+.mod-rows { display: flex; flex-direction: column; }
+.mod-row {
+  position: relative;
+  display: flex; gap: 12px; align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+.mod-row:hover { background: var(--primary-faint); }
+.row-inner {
+  flex: 1 1 auto; min-width: 0;
+  display: flex; gap: 12px; align-items: center;
+  padding: var(--pad-cell); color: inherit;
+}
+.row-inner:hover { text-decoration: none; }
+.mod-row .list-toggle { position: static; margin-right: 10px; flex-shrink: 0; }
+.row-thumb { width: 72px; height: 44px; object-fit: cover; flex-shrink: 0; background: var(--surface-container); }
+.row-main { flex: 1 1 auto; min-width: 0; }
+.row-title { font-weight: 600; color: var(--text); }
+.row-sub { font-size: var(--type-small); color: var(--text-dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row-side { flex-shrink: 0; display: flex; gap: 6px; align-items: center; }
+
+.badge {
+  display: inline-block; padding: 2px 8px; border-radius: 999px;
+  font-size: var(--type-tiny); border: 1px solid var(--border);
+  color: var(--text-dim); background: var(--badge-back);
+  white-space: nowrap;
+}
+.badge.version { color: var(--primary); border-color: var(--primary-ghost); }
+.badge.game { color: var(--text-dim); }
+.badge.game.current { color: var(--success); border-color: var(--edge-success); }
+.badge.game.one-behind { color: var(--warning); border-color: var(--edge-warning); }
+.badge.game.old { color: var(--text-dim); opacity: 0.75; }
+.badge.wip { color: var(--warning); border-color: var(--edge-warning); }
+.badge.save-ok { color: var(--success); border-color: var(--edge-success); }
+.badge.save-no { color: var(--warning); border-color: var(--edge-warning); }
+.badge.discord { color: var(--secondary); border-color: var(--edge-secondary); }
+
+.pager {
+  display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+  padding-top: 6px;
+}
+.pager-info { color: var(--text-dim); font-size: var(--type-small); }
+.pager-size-label { display: flex; align-items: center; gap: 6px; font-size: var(--type-small); color: var(--text-dim); margin-left: auto; }
+
+/* A heading that names a section without shouting over the page's own title. */
+.quiet-heading {
+  font-size: var(--type-big); color: var(--text-dim);
+  font-weight: 600; letter-spacing: 0.02em;
+}
+
+/* --- Home page --- */
+
+/* The front of the site: the search box. Everything else on Home comes after
+   it. */
+.front {
+  display: flex; flex-direction: column; align-items: center; gap: var(--gap);
+  text-align: center;
+  padding: var(--pad-front);
+}
+.front .search-row { width: 100%; max-width: 620px; }
+.front .search-box { font-size: var(--type-big); padding: 12px 16px; }
+.front-hint { color: var(--text-dim); font-size: var(--type-small); margin: 0; }
+
+.release-day { margin-bottom: var(--gap-wide); }
+.release-day > h3 { font-size: var(--type-normal); color: var(--text-dim); font-weight: 600; }
+.release-list {
+  background: var(--surface-2); border-radius: 10px; overflow: hidden;
+  box-shadow: var(--raised);
+}
+.release {
+  border-bottom: 1px solid var(--border);
+}
+.release:last-child { border-bottom: none; }
+.release > summary {
+  padding: var(--pad-cell); cursor: pointer; display: flex; gap: 10px;
+  align-items: center; flex-wrap: wrap; list-style: none;
+}
+.release > summary::-webkit-details-marker { display: none; }
+.release > summary:hover { background: var(--primary-faint); }
+.release-name { font-weight: 600; }
+.release-versions { color: var(--text-dim); font-size: var(--type-small); }
+.release-notes {
+  margin: 0; padding: 10px 14px 14px; white-space: pre-wrap;
+  font-size: var(--type-small); color: var(--text); border-top: 1px solid var(--border);
+  overflow-x: auto; overflow-wrap: anywhere;
+}
+.release.no-notes > summary { cursor: default; }
+.release-thumb {
+  width: 54px; height: 32px; object-fit: cover; flex-shrink: 0;
+  background: var(--surface-container);
+}
+.chevron {
+  color: var(--text-dim); transition: transform 0.12s ease;
+  display: inline-block; font-size: var(--type-big); line-height: 1;
+}
+.release[open] > summary .chevron { transform: rotate(90deg); }
+.release-read { color: var(--text-dim); font-size: var(--type-small); margin-left: auto; }
+/* Without notes there is no "Read changelog", so the download does the pushing. */
+.release.no-notes > summary > .download-btn { margin-left: auto; }
+.release > summary:hover .release-read { color: var(--primary); }
+
+.strip { display: grid; gap: var(--gap-cells); grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+
+/* A card past the rows on show. Said here because `.mod-card` sets its own
+   display, which would otherwise beat the `hidden` attribute. */
+.strip > [hidden] { display: none; }
+
+/* A section heading with a small control at its right end. */
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--gap); flex-wrap: wrap; }
+.section-head > h2 { margin: 0; }
+/* "1 · 2 · 3 rows" — three small buttons and a word, as quiet as the heading
+   beside it. The one in use is cyan; the rest wait until pointed at. */
+.rows-pick { display: inline-flex; align-items: baseline; gap: 2px; font-size: var(--type-small); color: var(--text-dim); }
+.rows-pick button {
+  background: none; border: none; padding: 2px 6px; font: inherit; line-height: 1;
+  color: var(--text-dim); cursor: pointer; border-radius: 4px;
+}
+.rows-pick button:hover { color: var(--primary); background: var(--primary-faint); }
+.rows-pick button.on { color: var(--primary); background: var(--primary-soft); }
+.rows-word { margin-left: 4px; }
+
+/* "Show all changelogs" — as quiet as the rows picker beside the other
+   heading, so it reads as a way to see more rather than a feature of its own. */
+.expand-all {
+  background: none; border: none; padding: 2px 6px; font: inherit; line-height: 1;
+  font-size: var(--type-small); color: var(--text-dim); cursor: pointer;
+  border-radius: 4px; white-space: nowrap;
+}
+.expand-all:hover { color: var(--primary); background: var(--primary-faint); }
+
+/* --- Mod page --- */
+
+/* The picture on one side, everything a reader decides on over on the other. */
+.mod-head { display: flex; gap: 20px; align-items: flex-start; }
+.mod-head-picture {
+  flex: 0 0 320px; max-width: 320px;
+  border: 1px solid var(--border); background: var(--surface-container);
+  border-radius: 8px; overflow: hidden;
+}
+.mod-head-picture img {
+  width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;
+}
+.mod-head-words {
+  flex: 1 1 320px; min-width: 0;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.mod-head-words h1 { margin: 0; }
+.mod-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+.mod-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+.btn-big { padding: 9px 18px; font-size: var(--type-normal); }
+/* A section of a mod's page. It used to be a bordered box with a ruled
+   heading — two lines to say what one gap says. */
+.panel {
+  background: var(--surface-2); border-radius: 10px;
+  padding: var(--pad-block); box-shadow: var(--raised);
+}
+.panel > h2 { margin-bottom: var(--gap); }
+.prose { overflow-wrap: anywhere; }
+/* Plain words that were never HTML keep the line breaks the author typed. */
+.prose.plain { white-space: pre-wrap; }
+.prose p { margin: 0 0 10px; }
+.prose p:last-child { margin-bottom: 0; }
+.prose ul, .prose ol { margin: 0 0 10px; padding-left: 22px; }
+.prose li { margin-bottom: 3px; }
+.prose h3, .prose h4, .prose h5, .prose h6 { margin: 14px 0 6px; }
+.prose blockquote {
+  margin: 0 0 10px; padding: 4px 0 4px 12px;
+  border-left: 2px solid var(--border); color: var(--text-dim);
+}
+.prose pre { white-space: pre-wrap; overflow-x: auto; }
+.prose a { overflow-wrap: anywhere; }
+
+/* The description starts cut off, fading out at the foot, with a "Show more"
+   line under it. The cut is only kept when the words really overrun it. */
+.prose-clip.clipped {
+  max-height: 14em; overflow: hidden; position: relative;
+}
+.prose-clip.clipped::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 4em;
+  background: linear-gradient(to bottom, transparent, var(--surface-2));
+  pointer-events: none;
+}
+.prose-more-row { margin: 0; }
+.prose-more { text-decoration: none; }
+.prose-more:hover, .prose-more:focus-visible { text-decoration: underline; }
+
+.thread-title { opacity: 0.8; }
+
+/* What a mod will not run without, right under its name. */
+.needs-line {
+  display: flex; gap: 6px; flex-wrap: wrap; align-items: baseline;
+  font-size: var(--type-small);
+  padding: 8px 12px; border: 1px solid var(--border);
+  background: var(--warning-wash); border-radius: 6px;
+}
+.needs-label {
+  color: var(--warning); font-weight: 600; font-size: var(--type-tiny);
+  letter-spacing: 0.05em; text-transform: uppercase;
+}
+.needs-list { min-width: 0; overflow-wrap: anywhere; }
+.needed.unknown { color: var(--text-dim); }
+.checked-on { color: var(--text-dim); font-size: var(--type-tiny); margin: 4px 0 0; }
+.feed-note { color: var(--text-dim); font-size: var(--type-small); margin: 0; }
+.about-line { margin: 0 0 10px; }
+.about-line:last-child { margin-bottom: 0; }
+
+/* --- People --- */
+
+.people { display: flex; gap: 8px; flex-wrap: wrap; }
+.person {
+  display: flex; gap: 7px; align-items: center;
+  padding: 5px 11px; border: 1px solid var(--border);
+  background: var(--surface-2); border-radius: 999px; color: inherit;
+}
+.person:hover { border-color: var(--primary); text-decoration: none; }
+.person-name { color: var(--text); font-size: var(--type-small); }
+
+/* A mod's name is plain text until you point at it. Said once here rather than
+   four times, once per place a name turns up. */
+.mod-card:hover .card-title,
+.mod-row:hover .row-title,
+a.row-title:hover,
+.suggestion:hover .suggestion-name,
+.person:hover .person-name { color: var(--primary); }
+.person-count { color: var(--text-dim); font-size: var(--type-tiny); }
+/* The line under an AI-written description. Dim rather than coloured — it is
+   a note about the words, not part of them. */
+.ai-note {
+  color: var(--text-dim); font-size: var(--type-note); font-style: italic;
+  margin: 1px 0 0;
+}
+
+.download-list { display: flex; flex-direction: column; gap: var(--gap); }
+.download {
+  display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+  padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--primary-faint);
+}
+.download .file { color: var(--text-dim); font-size: var(--type-small); word-break: break-all; }
+
+.gallery { display: grid; gap: var(--gap); grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.gallery img { width: 100%; display: block; }
+.shot {
+  padding: 0; border: 1px solid var(--border); background: var(--surface-2);
+  cursor: zoom-in; line-height: 0; border-radius: 6px; overflow: hidden;
+}
+.shot:hover { border-color: var(--primary); }
+
+/* A screenshot over the page, rather than a raw image in a new tab. */
+/* Nothing behind it scrolls while it is open. */
+body.picture-open { overflow: hidden; }
+.big-picture {
+  position: fixed; inset: 0; z-index: 100;
+  background: var(--picture-backdrop);
+  display: flex; flex-direction: column;
+  padding: 40px 56px 20px;
+}
+.big-picture-middle {
+  flex: 1 1 auto; min-height: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.big-picture-shot {
+  max-width: 100%; max-height: 100%; object-fit: contain;
+  border: 1px solid var(--border);
+}
+.big-picture-foot {
+  flex: 0 0 auto; padding-top: 12px; text-align: center;
+  color: var(--text); font-size: var(--type-small);
+}
+.big-picture-counter { color: var(--text-dim); font-size: var(--type-small); margin-top: 4px; }
+.big-picture-close, .big-picture-step {
+  position: absolute; background: none; border: none; cursor: pointer;
+  color: var(--text-dim); font-family: inherit; line-height: 1;
+}
+.big-picture-close:hover, .big-picture-step:hover { color: var(--primary); }
+.big-picture-close { top: 8px; right: 16px; font-size: 2.2rem; padding: 4px 10px; }
+.big-picture-step { top: 50%; transform: translateY(-50%); font-size: 3rem; padding: 8px 14px; }
+.big-picture-step.back { left: 4px; }
+.big-picture-step.forward { right: 4px; }
+
+.changelog-entry { border-bottom: 1px solid var(--border); }
+.changelog-entry:last-child { border-bottom: none; }
+.changelog-entry > summary { padding: 8px 0; cursor: pointer; font-weight: 600; }
+.changelog-entry pre {
+  margin: 0 0 10px; white-space: pre-wrap; font-size: var(--type-small);
+  overflow-x: auto; overflow-wrap: anywhere;
+}
+
+.link-list { display: flex; gap: 10px; flex-wrap: wrap; }
+.fact-list { display: grid; gap: 6px 18px; grid-template-columns: max-content 1fr; font-size: var(--type-small); }
+.fact-list dt { color: var(--text-dim); }
+.fact-list dd { margin: 0; }
+.fact-list .dim { color: var(--text-dim); }
+
+/* --- My mod list --- */
+
+.list-row {
+  display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+  padding: var(--pad-cell); border: 1px solid var(--border);
+  background: var(--surface-2); border-radius: 8px; box-shadow: var(--raised);
+}
+.list-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.list-row .row-main { flex: 1 1 200px; }
+
+/* --- The line at the foot --- */
+
+.site-footer {
+  max-width: var(--page-width); margin: 0 auto;
+  padding: 14px 16px 30px; border-top: 1px solid var(--border);
+  display: flex; gap: 14px; flex-wrap: wrap;
+  color: var(--text-dim); font-size: var(--type-small);
+}
+.footer-note { margin-left: auto; }
+
+/* --- Phones --- */
+
+@media (max-width: 640px) {
+  .header-inner { gap: 10px; padding: 8px 12px; }
+  .brand { font-size: var(--type-big); }
+  .site-nav { order: 3; flex-basis: 100%; }
+  .header-search { order: 4; flex: 1 1 100%; }
+  .release-thumb { display: none; }
+  .site-nav a { padding: 6px 10px; }
+  main { padding: 14px 12px 30px; }
+  .mod-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .fact-list { grid-template-columns: 1fr; }
+  .fact-list dt { margin-top: 6px; }
+  .row-thumb { display: none; }
+  /* On a phone the picture goes above the words rather than beside them. */
+  .mod-head { flex-direction: column; gap: 14px; }
+  .mod-head-picture { flex: 1 1 auto; max-width: 100%; width: 100%; }
+  .mod-actions .btn-big { flex: 1 1 100%; text-align: center; }
+  /* A narrow screen has no room for a column of its own. In a browse row it
+     also has no room beside the words: standing the button next to them left
+     the mod's name one letter wide, so it drops to a line of its own. */
+  .list-links > .download-btn,
+  .release > summary > .download-btn { width: auto; }
+  .mod-row { flex-wrap: wrap; }
+  /* The words take what is left of the first line rather than all of it, so
+     the "+" stays up there beside them and only the button drops. */
+  .mod-row > .row-inner { flex: 1 1 0; }
+  .mod-row > .download-btn {
+    width: auto; flex: 1 1 100%; margin: 0 10px 10px;
+  }
+  /* A browse row on a phone is already short of room for the mod's name, so
+     the least important badge stays off it. The card view still shows it. */
+  .mod-row .badge.downloads { display: none; }
+  .big-picture { padding: 40px 12px 16px; }
+  .big-picture-step { font-size: 2.2rem; padding: 6px 8px; }
+  .pager-size-label { margin-left: 0; }
+  .footer-note { margin-left: 0; }
+}

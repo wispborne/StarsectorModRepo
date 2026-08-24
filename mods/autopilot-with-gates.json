@@ -1,0 +1,84 @@
+{
+  "generatedAt": "2026-08-24T21:41:23.008749Z",
+  "listing": {
+    "id": "autopilot-with-gates",
+    "name": "Autopilot With Gates",
+    "authors": [
+      "rolfos"
+    ],
+    "otherAuthorNames": {},
+    "categories": [
+      "Utilities"
+    ],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "0.1.4",
+    "imageUrl": "https://i.imgur.com/JGebrVp.png",
+    "summary": "Adds gate-based autopilot routing with fuel optimization, gate blacklisting, and support for the Bifrost network.",
+    "summaryIsGenerated": true,
+    "saveCompatible": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://github.com/rolfosian/SS-AutopilotWithGates/releases/download/v0.1.4/Autopilot.With.Gates.0.1.4.zip",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34642.0",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2025-12-16",
+    "needs": []
+  },
+  "description": "Autopilot With Gates 0.1.4\n\nSpoilerSpoiler[close]\n\nSpoiler[close]\n\nSpoiler[close]\n\nSpoiler[close]\n\nSpoiler[close]\n\nSpoiler[close][close]\n\nChangelogVersion 0.0.3b\n\n- Mitigated random crash caused by null mapLocation\n\n- Fixed rare case of map course arrows not rendering on intel tab hyperspace map if player opens intel tab with interaction dialog open after user has selected an option that shows a smaller map >2 times in a row\n\n- Added changelog, version files\n\nVersion 0.0.3c\n\n- Added mouse scrolling for campaign ability bar with mouse over ability bar (Disabled by default, enable via LunaSettings or settings.json if lunalib isn't installed/enabled)\n\n- Fixed bug introduced with 0.0.3b where the course arrows would stop rendering on the intel map if the tab was opened again when it was already open\n\nVersion 0.0.4\n\n- Added console command \"AddGateAtPlayerLoc\" which spawns an inactive gate at the player's location (It doesn't orbit anything)\n\n- Added console command \"ScanAllGates\" which scans all gates in the sector\n\n- Changed map handling under the hood, improved course arrows movement on maps\n\n- Fixed crash that could occur if the game was launched with a different jre version than the one the game ships with\n\n- Fixed crash that could occur when LunaLib wasn't enabled\n\n- Fixed course arrows not rendering on the hyperspace map of the planet tab of the intel core tab\n\n- Fixed autopilot trying to use gates in systems with no viable entry point for entry gates, if the player is outside that location\n\n- Fixed \"go dark\" ability disabling the autopilot with gates ability\n\n- Fixed potential for rare silent concurrent modification exception on gate iterator thread which would have resulted in the autopilot missing gates that were scanned or added during gameplay until reload\n\nVersion 0.0.5\n\n- Added extra dialog prompt to confirm transponder status for jump when transponder is off and target gate system is populated similar to vanilla jump points behavior\n\n- Fixed bug with rare exception on gate iterator thread which could result in the autopilot missing gates that were scanned or added during gameplay until reload\n\nVersion 0.0.6\n\n- Made it so autopilot doesn't resume automated course after saving the game if player is manually navigating while having a course set\n\n- Stopped top middle \"course laid in for x\" messages showing on save\n\nVersion 0.0.6a\n\n- Made it so autopilot doesn't resume automated course after saving the game if player is manually navigating while having a course set to a target **in system**\n\nVersion 0.0.6b\n\n- Fixed bug introduced with last patch that made it so autopilot was overriding the interaction target if the player fleet was following a direct command when game saved\n\nVersion 0.1.3\n\n- Added blacklist for player to add gates to that they want the autopilot to ignore - accessed via hotkey with mouseover tooltip showing on ability bar\n\nThere is a lunalib or settings.json config option to change the hotkey for this if desired\n\n- Integrated the Ashes of the Domain - Vaults of Knowledge Bifrost gate network.\n\nIncludes backwards compatibility for pre-5.x versions.\n\nIf Bifrost gates are being used by the autopilot then the circles for the gate course on the hyperspace map will be colored cyan\n\n- Added settings option for the autopilot to prefer Bifrost Gates every time if the connection is off cooldown and they share the same entry/exit systems as the resolved route for normal gates\n\n- Added LunaSettingsListener, settings with lunalib enabled will now take immediately if saved during campaign gameplay and won't have to wait for save reload\n\n- Moved ability tooltip strings to settings.json for localization support (Can also be assigned programmatically by setting the appropriate static fields in data.scripts.autopilotwithgates.AutoPilotGatesAbility)\n\n- Polished ability tooltip, added some related codex entries\n\nVersion 0.1.4\n\n- Reworked gate blacklist dialog. Gates in systems not shown on the hyperspace map can now be picked via a different sub-dialog\n\n- Fixed regression crash on At the gates quest completion\n\n[close]\n\nDownload\nGithub repo\n\nQOL Mod that \"integrates\" the vanilla gate system into the campaign layer autopilot courses. Adds an ability that when toggled on, looks for the nearest (scanned) gate to the ultimate course target, and the nearest (scanned) gate to the player fleet, and will lay in a course to the nearest gate (if it's not the aforementioned target gate, or the ultimate target is closer) and link the two.\n\nIt then adds another course arrow for the regular non-gate course, which will be colored red or green depending on whether it's less or more fuel to use the gates, respectively. It will also display the gate course on the main map tab, the intel tab map, and hyperspace maps shown in interaction dialogs. The ability is only \"unlocked\" once the player can use the gates.\n\nAs of 0.0.3c now also adds the ability to mouse scroll ability bars. Disabled by default, enable via LunaSettings or settings.json if LunaLib isn't installed/is disabled.\n\nAs of 0.0.4 includes two console commands: \"AddGateAtPlayerLoc\" which spawns a gate at the player's location, and \"ScanAllGates\" which scans all gates in the sector.\n\nAs of 0.1.3 includes a blacklist to exclude gates, and support for the aotd vok bifrost gate network.\n\nSafe to add to save. To safely remove from a save, use the console command\n\nremoveapwg\n\nbefore disabling the mod. There is also an option in LunaSettings to use the entry gate automatically once it is reached with the ability enabled (and you have enough fuel).\n\nFeedback is welcome and encouraged.\n\nCredits:\n\nStarsector devs for this amazing game\nMan for the mod idea\nThe modding community as a whole for help with testing, help getting started out modding in general",
+  "descriptionHtml": "<strong>Autopilot With Gates 0.1.4</strong><br>SpoilerSpoiler[close]<br>Spoiler[close]<br>Spoiler[close]<br>Spoiler[close]<br>Spoiler[close]<br>Spoiler[close][close]<br>ChangelogVersion 0.0.3b<br><br>- Mitigated random crash caused by null mapLocation<br>- Fixed rare case of map course arrows not rendering on intel tab hyperspace map if player opens intel tab with interaction dialog open after user has selected an option that shows a smaller map &gt;2 times in a row<br>- Added changelog, version files<br><br>Version 0.0.3c<br><br>- Added mouse scrolling for campaign ability bar with mouse over ability bar (Disabled by default, enable via LunaSettings or settings.json if lunalib isn't installed/enabled)<br>- Fixed bug introduced with 0.0.3b where the course arrows would stop rendering on the intel map if the tab was opened again when it was already open<br><br>Version 0.0.4<br><br>- Added console command \"AddGateAtPlayerLoc\" which spawns an inactive gate at the player's location (It doesn't orbit anything)<br>- Added console command \"ScanAllGates\" which scans all gates in the sector<br><br>- Changed map handling under the hood, improved course arrows movement on maps<br>- Fixed crash that could occur if the game was launched with a different jre version than the one the game ships with<br>- Fixed crash that could occur when LunaLib wasn't enabled<br>- Fixed course arrows not rendering on the hyperspace map of the planet tab of the intel core tab<br>- Fixed autopilot trying to use gates in systems with no viable entry point for entry gates, if the player is outside that location<br>- Fixed \"go dark\" ability disabling the autopilot with gates ability<br>- Fixed potential for rare silent concurrent modification exception on gate iterator thread which would have resulted in the autopilot missing gates that were scanned or added during gameplay until reload<br><br>Version 0.0.5<br><br>- Added extra dialog prompt to confirm transponder status for jump when transponder is off and target gate system is populated similar to vanilla jump points behavior<br>- Fixed bug with rare exception on gate iterator thread which could result in the autopilot missing gates that were scanned or added during gameplay until reload<br><br>Version 0.0.6<br><br>- Made it so autopilot doesn't resume automated course after saving the game if player is manually navigating while having a course set<br>- Stopped top middle \"course laid in for x\" messages showing on save<br><br>Version 0.0.6a<br><br>- Made it so autopilot doesn't resume automated course after saving the game if player is manually navigating while having a course set to a target **in system**<br><br>Version 0.0.6b<br><br>- Fixed bug introduced with last patch that made it so autopilot was overriding the interaction target if the player fleet was following a direct command when game saved<br><br>Version 0.1.3<br><br>- Added blacklist for player to add gates to that they want the autopilot to ignore - accessed via hotkey with mouseover tooltip showing on ability bar<br>    There is a lunalib or settings.json config option to change the hotkey for this if desired<br><br>- Integrated the Ashes of the Domain - Vaults of Knowledge Bifrost gate network.<br>    Includes backwards compatibility for pre-5.x versions.<br>    If Bifrost gates are being used by the autopilot then the circles for the gate course on the hyperspace map will be colored cyan<br><br>- Added settings option for the autopilot to prefer Bifrost Gates every time if the connection is off cooldown and they share the same entry/exit systems as the resolved route for normal gates<br>- Added LunaSettingsListener, settings with lunalib enabled will now take immediately if saved during campaign gameplay and won't have to wait for save reload<br><br>- Moved ability tooltip strings to settings.json for localization support (Can also be assigned programmatically by setting the appropriate static fields in data.scripts.autopilotwithgates.AutoPilotGatesAbility)<br>- Polished ability tooltip, added some related codex entries<br><br>Version 0.1.4<br><br>- Reworked gate blacklist dialog. Gates in systems not shown on the hyperspace map can now be picked via a different sub-dialog<br>- Fixed regression crash on At the gates quest completion<br>[close]<br><strong><a href=\"https://github.com/rolfosian/SS-AutopilotWithGates/releases/download/v0.1.4/Autopilot.With.Gates.0.1.4.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download</a><br><strong><a href=\"https://github.com/rolfosian/SS-AutopilotWithGates/\" rel=\"nofollow noopener\" target=\"_blank\">Github repo</a></strong></strong><br>QOL Mod that \"integrates\" the vanilla gate system into the campaign layer autopilot courses. Adds an ability that when toggled on, looks for the nearest (scanned) gate to the ultimate course target, and the nearest (scanned) gate to the player fleet, and will lay in a course to the nearest gate (if it's not the aforementioned target gate, or the ultimate target is closer) and link the two.<br><br>It then adds another course arrow for the regular non-gate course, which will be colored red or green depending on whether it's less or more fuel to use the gates, respectively. It will also display the gate course on the main map tab, the intel tab map, and hyperspace maps shown in interaction dialogs. The ability is only \"unlocked\" once the player can use the gates.<br><br>As of 0.0.3c now also adds the ability to mouse scroll ability bars. Disabled by default, enable via LunaSettings or settings.json if LunaLib isn't installed/is disabled.<br><br>As of 0.0.4 includes two console commands: \"AddGateAtPlayerLoc\" which spawns a gate at the player's location, and \"ScanAllGates\" which scans all gates in the sector.<br><br>As of 0.1.3 includes a blacklist to exclude gates, and support for the aotd vok bifrost gate network.<br><br>Safe to add to save. To safely remove from a save, use the console command <em>removeapwg</em> before disabling the mod. There is also an option in LunaSettings to use the entry gate automatically once it is reached with the ability enabled (and you have enough fuel).<br><br>Feedback is welcome and encouraged.<br><br>Credits:<br><em>Starsector devs for this amazing game<br>Man for the mod idea<br>The modding community as a whole for help with testing, help getting started out modding in general</em>",
+  "descriptionIsGenerated": false,
+  "saveCompatibilityText": "Safe to add to save. To safely remove from a save, use the console command removeapwg before disabling the mod. There is also an option in LunaSettings to use the entry gate automatically once it is reached with the ability enabled (and you have enough fuel) .",
+  "rawCategories": [
+    "Utility mods"
+  ],
+  "gallery": [
+    {
+      "url": "https://i.imgur.com/JGebrVp.png"
+    },
+    {
+      "url": "https://i.imgur.com/G7Y026Z.png"
+    },
+    {
+      "url": "https://i.imgur.com/lBpCqvP.png"
+    },
+    {
+      "url": "https://i.imgur.com/6dOhgiy.png"
+    },
+    {
+      "url": "https://i.imgur.com/ohf4Zbx.png"
+    },
+    {
+      "url": "https://i.imgur.com/p734iLw.png"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/rolfosian/SS-AutopilotWithGates/releases/download/v0.1.4/Autopilot.With.Gates.0.1.4.zip",
+      "directUrl": "https://github.com/rolfosian/SS-AutopilotWithGates/releases/download/v0.1.4/Autopilot.With.Gates.0.1.4.zip",
+      "fileName": "Autopilot.With.Gates.0.1.4.zip",
+      "kind": "direct",
+      "label": "Download",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {
+    "0.1.4": "Reworked gate blacklist dialog. Gates in systems not shown on the hyperspace map can now be picked via a different sub-dialog\n- Fixed regression crash on At the gates quest completion",
+    "0.1.3": "- Added blacklist for player to add gates to that they want the autopilot to ignore - accessed via hotkey with mouseover tooltip showing on ability bar\n&nbsp; &nbsp; There is a lunalib or settings.json config option to change the hotkey for this if desired\n\n- Integrated the Ashes of the Domain - Vaults of Knowledge Bifrost gate network.\n&nbsp; &nbsp; Includes backwards compatibility for pre-5.x versions.\n&nbsp; &nbsp; If Bifrost gates are being used by the autopilot then the circles for the gate course on the hyperspace map will be colored cyan\n\n- Added settings option for the autopilot to prefer Bifrost Gates every time if the connection is off cooldown and they share the same entry/exit systems as the resolved route for normal gates\n- Added LunaSettingsListener, settings with lunalib enabled will now take immediately if saved during campaign gameplay and won't have to wait for save reload\n\n- Moved ability tooltip strings to settings.json for localization support (Can also be assigned programmatically by setting the appropriate static fields in data.scripts.autopilotwithgates.AutoPilotGatesAbility)\n- Polished ability tooltip, added some related codex entries",
+    "0.0.6b": "Fixed bug introduced with last patch that made it so autopilot was overriding the interaction target if the player fleet was following a direct command when game saved"
+  },
+  "sourceCodeUrl": "https://github.com/rolfosian/SS-AutopilotWithGates",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34642.0",
+  "releases": [],
+  "olderVersions": [],
+  "addons": []
+}

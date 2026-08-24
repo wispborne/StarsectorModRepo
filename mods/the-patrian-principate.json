@@ -1,0 +1,140 @@
+{
+  "generatedAt": "2026-08-24T21:41:23.008749Z",
+  "listing": {
+    "id": "the-patrian-principate",
+    "name": "The Patrian Principate",
+    "authors": [
+      "NikolaiLev"
+    ],
+    "otherAuthorNames": {},
+    "categories": [
+      "Factions"
+    ],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.65.1a",
+    "modVersion": "2.2",
+    "imageUrl": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/homer.png",
+    "summary": "Adds a new faction with a unique fleet design, new ships, and advanced weaponry inspired by terrestrial warships and real-world military technology.",
+    "summaryIsGenerated": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/Patria.zip",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 1,
+    "forumUrl": "http://fractalsoftworks.com/forum/index.php?topic=7329.0",
+    "sourceIsPublic": false,
+    "isWorkInProgress": false,
+    "addedOn": "2013-10-31",
+    "needs": []
+  },
+  "description": "Warning!  Campaign integration is still in progress.  It's there, but kinda sorta brokenish.  Please excuse the mess.   :D\n\nPatria needs you!\n\nIf you would like to help development on a couple niggling issues I cannot for the life of me seem to solve, don't hesitate to sign up!  In particular, here is a list of things beyond my ability:\n\nShip System: Small Battery Stabilizers\n\nSpoilerA system that increases the range of small ballistic and energy weapons in exchange for decreasing their turn rate.\n\nWhile increasing the range of ballistic and energy weapons and decreasing their turn rate was easy enough, what I haven't been able to implement is making the system only affect small weapons, as well as adjust the range bonus per hull size (like ITU does).  A nice touch would be to exclude PD weapons from the range bonus, but still applying the turn rate decrease to them (as gameplay wise, it's supposed to reduce the potency of any PD in exchange for range).[close]\n\nShip System: Micro Missile Fabricator\n\nSpoilerNot to be confused with a Micromissile Fabricator (I'm sure I'll implement a micromissile weapon at some point), this system shuts down weapons, engines, and/or shields in order to begin constructing and reloading missiles.  This I can likely do myself, but hey, help is always nice.[close]\n\nFighter AI\n\nSpoilerThis has always been the sticking point with Patria; aerospace fighters were always intended to lack lateral and reverse thrusters, relying on their superior speed and firepower to stay out of harm's way.  They should generally fly at maximum or close to maximum speed and use \"zoom and boom\" tactics to destroy enemy fighters and engage larger ships.  Serpentine maneuvers should also be available to more skilled pilots to evade incoming fire, as Patrian compact shield emitters are not [supposed to be] powerful enough to stop much damage.[close]\n\nAIM Autofire and Missile AI\n\nSpoilerAI for the missile itself to eschew usage of the new twisty missile behavior (I'm pretty sure this is already around somewhere).\n\nMore importantly, AI that would dictate the missiles NEVER be autofired at anything other than fighters.[close]\n\nCampaign Career Choice Integration\n\nSpoilerBecause I just can't seem to figure out the rules.csv language.  Not that I'm much of a coder anyway.\n\nSpecifically, a start that gives you favorable/welcoming reputation with Patria, adjusts other reps accordingly (enemies with Tri and Ludds), and starts you in Patria with Patrian ships.[close]\n\n-\n\nIt's back!  The Patrian Principate has finally not only been updated to current SS as well as given Exerelin compatibility (I think; not tested since it hasn't updated yet), it's received a major overhaul.  Forget everything you knew about Patria.\n\nMind you, this is still an early alpha; it's missing a lot of things I originally planned and due to my\n\nlaziness\n\nlack of professionalism\n\nunique release model I'll be adding these over time.  Among these are (still) weapon sprites, various ships, and ship systems.  Some things are pretty obviously placeholdery, but apparently some people actually want to play this mod.  So here it is!\n\nAnother note: This hasn't actually received constant work over the last year.  Development resumed as my interest picked back up with .65.  A few months ago it was in pretty much full swing and it's probably 75% complete.\n\nThe changes from the previous version are far too numerous to list.  But among them: new ships, new sounds, massive fighter re-work, general balancing, and a shift from Maser technology to plasma and magnetic acceleration technology.\n\nChangelog\n\nv2.2\n\n-Fighters given beam weapons\n\n-Potential fix to campaign OutOfMemory bug (thanks to Zaphide if it works!)\n\n-Homer-class T-O Battlecruiser!  Sprite is a WIP\n\n-New weaponry!  Phasers, kinetic beam weapons, and Photon torpedoes, burst-fire HE damage weapons.  Torpedoes are a heavy WIP, but are functional (and kinda sorta balanced).\n\nv2.1\n\nSpoiler-Fighter wing campaign bug addressed\n\n-Unique fighter guns removed (for now)\n\n[close]\n\nv2\n\nSpoiler-Mod overhaul (too\n\nlazy\n\ncomprehensive to list)[close]\n\nv1\n\nSpoiler-Release[close]\n\nAs a preface: Spoilerthe mod has numerous inspirations, most of which ought to be obvious; aside from IFed, I took a lot of cues from real-world vehicles and weapons, as well as things from Supreme Commander and Carrier Command: Gaia Mission (which I haven't actually played much of).  It's also heavily based on Stellar Impact, especially with how the initial fleet's role structure was designed.  Lastly, it's important to mention that the mod is intended to be vanilla balanced.  While I like to fancy myself a competent designer, there's of course no guarantee I succeeded, and thorough, brutally honest feedback is more than welcome.\n\n[close]\n\nV DOWNLOAD V\n\nRequires LazyLib\n\n^ DOWNLOAD ^\n\nPatria is a yellow star system home to a terran-class planet, home of the fledgling Patrian Principate.  A small settlement started hundreds of years before the collapse, it has grown over the years and has developed a distinct culture largely revolving around archives of Old Earth.  This cultural nostalgia has had a ubiquitous impact on every aspect of Patrian life, including its military.\n\nPatria's Navy was developed from the ground up consisting of Terrestrial-Orbital (T-O) Vessels; the historical Patrian Defense Initiative was designed to accomodate a defensive fleet that could offer orbital defensive capabilities as well as superiority while guarding Patria's shorelines and oceans.  Because all naval ships are designed for use on (or in) the sea, they all conform to a relatively standardized hull silhouette; predictably, they all look like battleships.  However, their roles and loadouts vary wildly depending on their intended usage.\n\nHowever, the real pride of the Patrian war machine lies in the Patrian Aeronautical Service; keeping with the trend of multi-environment assets, Patria relies on Aerospace Fighters that can operate both in atmosphere and in vacuum.  Using a hybrid turbofan-inertia engine equipped with aerosol hypercompressor modules to store air from atmosphere to slowly release during vacuum flight, they retain their excellent speed during the length of an engagement.\n\nThat said, because it was designed as a defensive fleet, and due to the constraints of multi-environment vessels, Patrian ships have a unifying weakness; they have atrocious logistical capabilities.  They're expensive and slow to repair, they consume many supplies and are extremely fuel inefficient.  For deep space warfare, they rely on imported logistical craft to support their offensive fleets.  Most ships are also very slow and lumbering, though tend to be well armored.\n\nThe Navy tends to rely on broadside weaponry, especially a mix of ballistic and energy weapons combined with offensive pulse laser batteries.  They tend to lack in point defense, using a modified version of the aged Sling Anti Ballistic Missile system to protect from ordnance.  Their shields are fairly inefficient, requiring high levels of flux to maintain.  However, Patrian technology is not always on the low-end; they make use of potent plasma-based energy systems and sophisticated ship systems, including comprehensive electronic warfare abilities.\n\nFinally, the Navy boasts excellent fighter support; its aerospace fighters are armed to the teeth with multiple missile or bomb hardpoints with a combination of energy and ballistic weaponry.  While they lack in maneuverability, are fragile and pose large targets, they boast shields in addition to their array of weaponry.  They are also extremely versatile as opposed to the more specialized ships; they come in various variants representing roles ranging from fighter-bomber to dedicated interceptor.  There are also specialized fightercraft, including the ASF-117 Stealth Bomber.\n\nSo, without further ado, let's get to the exciting bits!\n\nAerospace Fightercraft\n\nASF-4 Heavy Fighter-Bomber, ASF-104 Light Fighter-Bomber, ASF-90 Advanced Interceptor, ASF-16 Advanced Multirole Fighter\n\nGAC-47 Attack Craft, Hawkmoth VTOL (new!), ASF-117 Stealth Bomber, SRC-71 Reconnaisance Craft\n\nTerrestrial-Orbital Vessels\n\nKomar-class Torpedo Boat (new!), Valnad-class Corvette, Kortenaer-class Frigate, Magnanimous-class Light Carrier (new!), Valour-class Light Destroyer (new!), Cloak-class Subship\n\nCharger-class Destroyer, Kittyhawk-class Carrier, Groundhog-class Subship\n\nLithuania-class Cruiser, Danae-class Missile Carrier (new!), Bastion-class Heavy Carrier\n\nHomer-class Battlecruiser (new!), Yamato-class Battleship, Mayflower-class Dreadnought\n\nMind you, the mod is still in development!  This is, as mentioned, more of a \"pre-release.\"  I still have a to-do list:\n\n- More Weapon sprites\n\n- Support Destroyer\n\n- Assault Cruiser\n\n- Super Carrier\n\n- Logistical Ships\n\n- The Patrian Astratia (shhh)  ;)\n\nCANCELLED (probably)\n\nAnd, of course, the usual development tasks such as sprite polishing, balance tweaks (or overhauls if I derped somewhere), and so on.\n\nHope you enjoy it!\n\nCREDITS AND THANKS\n\nAlex Mosolov, for that wonderful game we all know and love and complain about\n\nKeptin, for making IFed which was an inspiration\n\nVayra, for Kadur Theocracy which was also an inspiration, as well as the Sling ABM\n\nValkyriaL, for the Hauberk Field code and AI code which was in Kadur Theocracy (borrowed with permission!)\n\nMayflower\n\n, for being a great friend, and an excellent helper and coder (too bad she doesn't play Starsector yet!)\n\nStar Trek, for inspiration and weapon sounds\n\nMuh pals, especially JB who was responsible for the TPC idea (you don't know him)\n\nMechWarrior Living Legends, for many of the missile and laser sounds\n\nMe, for being so awesome.\n\nYou!  For almost being as awesome as me for trying the mod.\n\nPERMISSIONS AND SUCH\n\nI don't believe in legalese.  I believe integrity should be self-evident.  That said, if you want to modify stuff, ask before publishing.  Doesn't mind me what you do with your personal copy of Patria, though.\n\nAs for mod compilations, go for it if you really think it'll improve the quality of the group!  Just make sure you credit the man behind the masterpiece.   ;D",
+  "descriptionHtml": "Warning!  Campaign integration is still in progress.  It's there, but kinda sorta brokenish.  Please excuse the mess.   :D<br><br><strong>Patria needs you!</strong>  If you would like to help development on a couple niggling issues I cannot for the life of me seem to solve, don't hesitate to sign up!  In particular, here is a list of things beyond my ability:<br><br>Ship System: Small Battery Stabilizers<br>SpoilerA system that increases the range of small ballistic and energy weapons in exchange for decreasing their turn rate.<br><br>While increasing the range of ballistic and energy weapons and decreasing their turn rate was easy enough, what I haven't been able to implement is making the system only affect small weapons, as well as adjust the range bonus per hull size (like ITU does).  A nice touch would be to exclude PD weapons from the range bonus, but still applying the turn rate decrease to them (as gameplay wise, it's supposed to reduce the potency of any PD in exchange for range).[close]<br>Ship System: Micro Missile Fabricator<br>SpoilerNot to be confused with a Micromissile Fabricator (I'm sure I'll implement a micromissile weapon at some point), this system shuts down weapons, engines, and/or shields in order to begin constructing and reloading missiles.  This I can likely do myself, but hey, help is always nice.[close]<br>Fighter AI<br>SpoilerThis has always been the sticking point with Patria; aerospace fighters were always intended to lack lateral and reverse thrusters, relying on their superior speed and firepower to stay out of harm's way.  They should generally fly at maximum or close to maximum speed and use \"zoom and boom\" tactics to destroy enemy fighters and engage larger ships.  Serpentine maneuvers should also be available to more skilled pilots to evade incoming fire, as Patrian compact shield emitters are not [supposed to be] powerful enough to stop much damage.[close]<br>AIM Autofire and Missile AI<br>SpoilerAI for the missile itself to eschew usage of the new twisty missile behavior (I'm pretty sure this is already around somewhere).<br><br>More importantly, AI that would dictate the missiles NEVER be autofired at anything other than fighters.[close]<br>Campaign Career Choice Integration<br>SpoilerBecause I just can't seem to figure out the rules.csv language.  Not that I'm much of a coder anyway.<br><br>Specifically, a start that gives you favorable/welcoming reputation with Patria, adjusts other reps accordingly (enemies with Tri and Ludds), and starts you in Patria with Patrian ships.[close]<br>-<br><br>It's back!  The Patrian Principate has finally not only been updated to current SS as well as given Exerelin compatibility (I think; not tested since it hasn't updated yet), it's received a major overhaul.  Forget everything you knew about Patria.<br><br>Mind you, this is still an early alpha; it's missing a lot of things I originally planned and due to my <del>laziness</del> <del>lack of professionalism</del> unique release model I'll be adding these over time.  Among these are (still) weapon sprites, various ships, and ship systems.  Some things are pretty obviously placeholdery, but apparently some people actually want to play this mod.  So here it is!<br><br>Another note: This hasn't actually received constant work over the last year.  Development resumed as my interest picked back up with .65.  A few months ago it was in pretty much full swing and it's probably 75% complete.<br><br>The changes from the previous version are far too numerous to list.  But among them: new ships, new sounds, massive fighter re-work, general balancing, and a shift from Maser technology to plasma and magnetic acceleration technology.<br><br><strong>Changelog</strong><br><br>v2.2<br>-Fighters given beam weapons<br>-Potential fix to campaign OutOfMemory bug (thanks to Zaphide if it works!)<br>-Homer-class T-O Battlecruiser!  Sprite is a WIP<br>-New weaponry!  Phasers, kinetic beam weapons, and Photon torpedoes, burst-fire HE damage weapons.  Torpedoes are a heavy WIP, but are functional (and kinda sorta balanced).<br><br>v2.1 <br>Spoiler-Fighter wing campaign bug addressed<br>-Unique fighter guns removed (for now)<br>[close]<br>v2 <br>Spoiler-Mod overhaul (too <del>lazy</del> comprehensive to list)[close]<br>v1<br>Spoiler-Release[close]<br>As a preface: Spoilerthe mod has numerous inspirations, most of which ought to be obvious; aside from IFed, I took a lot of cues from real-world vehicles and weapons, as well as things from Supreme Commander and Carrier Command: Gaia Mission (which I haven't actually played much of).  It's also heavily based on Stellar Impact, especially with how the initial fleet's role structure was designed.  Lastly, it's important to mention that the mod is intended to be vanilla balanced.  While I like to fancy myself a competent designer, there's of course no guarantee I succeeded, and thorough, brutally honest feedback is more than welcome.<br>[close]<br><strong>V DOWNLOAD V</strong><br><a href=\"http://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">Requires LazyLib</a><br><a href=\"https://dl.dropboxusercontent.com/u/43800264/Files/patria/Patria.zip\" rel=\"nofollow noopener\" target=\"_blank\"><br><br></a><br><strong>^ DOWNLOAD ^</strong><br><a href=\"http://fractalsoftworks.com/forum/index.php?topic=375.0\" rel=\"nofollow noopener\" target=\"_blank\"><br><br></a><br>Patria is a yellow star system home to a terran-class planet, home of the fledgling Patrian Principate.  A small settlement started hundreds of years before the collapse, it has grown over the years and has developed a distinct culture largely revolving around archives of Old Earth.  This cultural nostalgia has had a ubiquitous impact on every aspect of Patrian life, including its military.<br><br>Patria's Navy was developed from the ground up consisting of Terrestrial-Orbital (T-O) Vessels; the historical Patrian Defense Initiative was designed to accomodate a defensive fleet that could offer orbital defensive capabilities as well as superiority while guarding Patria's shorelines and oceans.  Because all naval ships are designed for use on (or in) the sea, they all conform to a relatively standardized hull silhouette; predictably, they all look like battleships.  However, their roles and loadouts vary wildly depending on their intended usage.<br><br>However, the real pride of the Patrian war machine lies in the Patrian Aeronautical Service; keeping with the trend of multi-environment assets, Patria relies on Aerospace Fighters that can operate both in atmosphere and in vacuum.  Using a hybrid turbofan-inertia engine equipped with aerosol hypercompressor modules to store air from atmosphere to slowly release during vacuum flight, they retain their excellent speed during the length of an engagement.<br><br>That said, because it was designed as a defensive fleet, and due to the constraints of multi-environment vessels, Patrian ships have a unifying weakness; they have atrocious logistical capabilities.  They're expensive and slow to repair, they consume many supplies and are extremely fuel inefficient.  For deep space warfare, they rely on imported logistical craft to support their offensive fleets.  Most ships are also very slow and lumbering, though tend to be well armored.<br><br>The Navy tends to rely on broadside weaponry, especially a mix of ballistic and energy weapons combined with offensive pulse laser batteries.  They tend to lack in point defense, using a modified version of the aged Sling Anti Ballistic Missile system to protect from ordnance.  Their shields are fairly inefficient, requiring high levels of flux to maintain.  However, Patrian technology is not always on the low-end; they make use of potent plasma-based energy systems and sophisticated ship systems, including comprehensive electronic warfare abilities.<br><br>Finally, the Navy boasts excellent fighter support; its aerospace fighters are armed to the teeth with multiple missile or bomb hardpoints with a combination of energy and ballistic weaponry.  While they lack in maneuverability, are fragile and pose large targets, they boast shields in addition to their array of weaponry.  They are also extremely versatile as opposed to the more specialized ships; they come in various variants representing roles ranging from fighter-bomber to dedicated interceptor.  There are also specialized fightercraft, including the ASF-117 Stealth Bomber.<br><br>So, without further ado, let's get to the exciting bits!<br><br><strong>Aerospace Fightercraft</strong><br><br>ASF-4 Heavy Fighter-Bomber, ASF-104 Light Fighter-Bomber, ASF-90 Advanced Interceptor, ASF-16 Advanced Multirole Fighter<br><br>GAC-47 Attack Craft, Hawkmoth VTOL (new!), ASF-117 Stealth Bomber, SRC-71 Reconnaisance Craft<br><br><strong>Terrestrial-Orbital Vessels</strong><br><br>Komar-class Torpedo Boat (new!), Valnad-class Corvette, Kortenaer-class Frigate, Magnanimous-class Light Carrier (new!), Valour-class Light Destroyer (new!), Cloak-class Subship<br><br>Charger-class Destroyer, Kittyhawk-class Carrier, Groundhog-class Subship<br><br>Lithuania-class Cruiser, Danae-class Missile Carrier (new!), Bastion-class Heavy Carrier<br><br>Homer-class Battlecruiser (new!), Yamato-class Battleship, Mayflower-class Dreadnought<br><br>Mind you, the mod is still in development!  This is, as mentioned, more of a \"pre-release.\"  I still have a to-do list:<br><br>- More Weapon sprites<br>- Support Destroyer<br>- Assault Cruiser<br>- Super Carrier<br>- Logistical Ships<br><del>- The Patrian Astratia (shhh)  ;)</del> CANCELLED (probably)<br><br>And, of course, the usual development tasks such as sprite polishing, balance tweaks (or overhauls if I derped somewhere), and so on.<br><br>Hope you enjoy it!<br><br><strong>CREDITS AND THANKS</strong><br><br>Alex Mosolov, for that wonderful game we all know and love and complain about<br>Keptin, for making IFed which was an inspiration<br>Vayra, for Kadur Theocracy which was also an inspiration, as well as the Sling ABM<br>ValkyriaL, for the Hauberk Field code and AI code which was in Kadur Theocracy (borrowed with permission!)<br><a href=\"http://enmoku.deviantart.com/\" rel=\"nofollow noopener\" target=\"_blank\">Mayflower</a>, for being a great friend, and an excellent helper and coder (too bad she doesn't play Starsector yet!)<br>Star Trek, for inspiration and weapon sounds<br>Muh pals, especially JB who was responsible for the TPC idea (you don't know him)<br>MechWarrior Living Legends, for many of the missile and laser sounds<br>Me, for being so awesome.<br>You!  For almost being as awesome as me for trying the mod.<br><br><strong>PERMISSIONS AND SUCH</strong><br><br>I don't believe in legalese.  I believe integrity should be self-evident.  That said, if you want to modify stuff, ask before publishing.  Doesn't mind me what you do with your personal copy of Patria, though.<br><br>As for mod compilations, go for it if you really think it'll improve the quality of the group!  Just make sure you credit the man behind the masterpiece.   ;D",
+  "descriptionIsGenerated": false,
+  "saveCompatibilityText": "Warning! &nbsp;Campaign integration is still in progress. &nbsp;It's there, but kinda sorta brokenish. &nbsp;Please excuse the mess. &nbsp; :D",
+  "rawCategories": [
+    "Faction Mods"
+  ],
+  "gallery": [
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/Smirnov.jpg"
+    },
+    {
+      "url": "http://i.imgur.com/1fLAi.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/asf4.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/asf104.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/asf90.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/asf16.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/gac47.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/hawkmoth.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/asf117.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/src71.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/komar.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/valnad.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/kortenaer.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/magnanimous.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/valour.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/cloak.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/charger.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/kittyhawk.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/groundhog.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/lithuania.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/danae.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/bastion.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/homer.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/yamato.png"
+    },
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/pics/mayflower.png"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/Patria.zip",
+      "directUrl": "https://dl.dropboxusercontent.com/u/43800264/Files/patria/Patria.zip",
+      "fileName": "Patria.zip",
+      "kind": "direct",
+      "label": "V DOWNLOAD V",
+      "host": "dl.dropboxusercontent.com",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {
+    "2.2": "Fighters given beam weapons\nPotential fix to campaign OutOfMemory bug (thanks to Zaphide if it works!)\nHomer-class T-O Battlecruiser! &nbsp;Sprite is a WIP\nNew weaponry! &nbsp;Phasers, kinetic beam weapons, and Photon torpedoes, burst-fire HE damage weapons. &nbsp;Torpedoes are a heavy WIP, but are functional (and kinda sorta balanced).",
+    "2.1": "Fighter wing campaign bug addressed\nUnique fighter guns removed (for now)",
+    "2": "Mod overhaul (too lazy comprehensive to list)"
+  },
+  "license": "I don't believe in legalese. &nbsp;I believe integrity should be self-evident. &nbsp;That said, if you want to modify stuff, ask before publishing. &nbsp;Doesn't mind me what you do with your personal copy of Patria, though.",
+  "supportLinks": [],
+  "forumUrl": "http://fractalsoftworks.com/forum/index.php?topic=7329.0",
+  "releases": [],
+  "olderVersions": [],
+  "addons": []
+}

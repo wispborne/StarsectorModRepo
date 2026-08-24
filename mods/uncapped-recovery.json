@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-08-24T21:41:23.008749Z",
+  "listing": {
+    "id": "uncapped-recovery",
+    "name": "Uncapped Recovery v1.0.0",
+    "displayName": "Uncapped Recovery",
+    "authors": [
+      "Pyrce"
+    ],
+    "otherAuthorNames": {},
+    "categories": [],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "1.0.0",
+    "imageUrl": "https://raw.githubusercontent.com/MSeal/starsector_uncapped_recovery/main/docs/forum/mudskipper-capture.png",
+    "summary": "Removes the 24-ship limit in post-battle recovery and replaces the fixed grid with a scrolling selector that supports large fleets.",
+    "summaryIsGenerated": true,
+    "saveCompatible": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://github.com/MSeal/starsector_uncapped_recovery/releases/download/v1.0.0/UncappedRecovery-1.0.0.zip",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35744.0",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2026-07-16",
+    "needs": []
+  },
+  "description": "Uncapped Recovery\n\nDo you ever want to fire your recovery crew for leaving half of your frigates behind as scrap metal? Scared of running that mudskipper fleet because you can only send half of them to their ultimate fate safely? Are your dreams of 500 frigate fleets ruined by UI limitations?\n\nWorry no more, with Uncapped Recovery!\n\nThe Uncapped Recovery mode lifts the vanilla cap on how many ships you can select from the post-battle recovery dialog, so fleets built from many small hulls are actually sustainable.\n\nWhat it does\n\nIn vanilla, when a battle leaves a large recoverable list, the post-combat dialog only lets you pick from the first ~24 ships. Fleets built from many small hulls suffer most: losses pile up faster than that fixed slot count can replace them, so lots of recoverable ships just get discarded.\n\nThis mod:\n\nRemoves the per-list cap so every recoverable ship the game generated is selectable (normal and story-point lists governed by a single configurable max).Replaces the fixed-width vanilla recovery grid with a scrolling selector that handles any number of ships.\nShows each hull's design type on its cell, highlights your own recoverable ships against enemy ones, and (optionally) shows the assigned captain on your own ships.\n\nScreenshot\n\nCoverage\n\nUses the mod's selector:\n\nNormal fleet-vs-fleet battles.Station and pirate-base fights (with or without Nexerelin).Dweller fights.Remnant and Threat encounters, and the Ziggurat quest fight.\n\nStays on the vanilla dialog:\n\nDefended salvage sites (derelicts, probes, caches, hypershunts with a guarding force).Special bounties and modded combat encounters that use their own scripted dialogs.\n\nCompatibility\n\nTargets Starsector 0.98a-RC7. Recovery internals can shift between game releases, so other versions may need an update.\nNexerelin-aware: preserves Nex's station-fight response-fleet handling when Nexerelin is installed. Detected automatically at load - no separate compat addon needed. If a future Nex release breaks the compat class, the mod defers to Nex's own station-engage rule, so your Nex install is never broken (at the cost of the uncapped selector for station fights until this mod is rebuilt against the new Nex).\nShould be save-compatible to add and remove: no persistent state introduced. Never change the mod id if this is ever forked.\n\nConfiguration\n\nAll options live in\n\ndata/config/uncapped_recovery.json\n\n:\n\nmaxRecoverablePerType (default 999999) - per-list cap on recoverable ships. Vanilla's hidden value is 24; values <= 0 fall back to the default.\ncellDesignType (default true) - show each hull's design type at the bottom of its cell (e.g. \"Hegemony\", \"Low Tech\"). Set false to hide.\nshowOwnCaptains (default true) - show the assigned captain on your own recoverable ships. Enemy ships never show a captain regardless.\n\nEdit and reload (or restart) to apply changes.\n\nDownload\n\nUncapped Recovery v1.0.0\n\n(for Starsector 0.98a-RC7)\n\nChangelog\n\nv1.0.0\n\n- Initial public release.\n\nLifts the vanilla 24-ship per-list recovery cap.Custom scrolling recovery selector.Nexerelin-aware station-fight routing with graceful fallback.Dweller-fight support.",
+  "descriptionHtml": "<strong>Uncapped Recovery</strong><br>Do you ever want to fire your recovery crew for leaving half of your frigates behind as scrap metal? Scared of running that mudskipper fleet because you can only send half of them to their ultimate fate safely? Are your dreams of 500 frigate fleets ruined by UI limitations?<br><br>Worry no more, with Uncapped Recovery!<br><br>The Uncapped Recovery mode lifts the vanilla cap on how many ships you can select from the post-battle recovery dialog, so fleets built from many small hulls are actually sustainable.<br><br><hr><br><strong>What it does</strong><br><br>In vanilla, when a battle leaves a large recoverable list, the post-combat dialog only lets you pick from the first ~24 ships. Fleets built from many small hulls suffer most: losses pile up faster than that fixed slot count can replace them, so lots of recoverable ships just get discarded.<br><br>This mod:<br><ul><li>Removes the per-list cap so every recoverable ship the game generated is selectable (normal and story-point lists governed by a single configurable max).</li><li>Replaces the fixed-width vanilla recovery grid with a <strong>scrolling selector</strong> that handles any number of ships.<br></li><li>Shows each hull's design type on its cell, highlights your own recoverable ships against enemy ones, and (optionally) shows the assigned captain on your own ships.</li></ul><strong>Screenshot</strong><br><br><strong>Coverage</strong><br><br>Uses the mod's selector:<br><ul><li>Normal fleet-vs-fleet battles.</li><li>Station and pirate-base fights (with or without Nexerelin).</li><li>Dweller fights.</li><li>Remnant and Threat encounters, and the Ziggurat quest fight.</li></ul>Stays on the vanilla dialog:<br><ul><li>Defended salvage sites (derelicts, probes, caches, hypershunts with a guarding force).</li><li>Special bounties and modded combat encounters that use their own scripted dialogs.</li></ul><strong>Compatibility</strong><br><br><ul><li>Targets <strong>Starsector 0.98a-RC7</strong>. Recovery internals can shift between game releases, so other versions may need an update.<br></li><li><strong>Nexerelin-aware:</strong> preserves Nex's station-fight response-fleet handling when Nexerelin is installed. Detected automatically at load - no separate compat addon needed. If a future Nex release breaks the compat class, the mod defers to Nex's own station-engage rule, so your Nex install is never broken (at the cost of the uncapped selector for station fights until this mod is rebuilt against the new Nex).<br></li><li>Should be save-compatible to add and remove: no persistent state introduced. Never change the mod id if this is ever forked.</li></ul><strong>Configuration</strong><br><br>All options live in <strong>data/config/uncapped_recovery.json</strong>:<br><br><ul><li><strong>maxRecoverablePerType</strong> (default <strong>999999</strong>) - per-list cap on recoverable ships. Vanilla's hidden value is 24; values &lt;= 0 fall back to the default.<br></li><li><strong>cellDesignType</strong> (default <strong>true</strong>) - show each hull's design type at the bottom of its cell (e.g. \"Hegemony\", \"Low Tech\"). Set false to hide.<br></li><li><strong>showOwnCaptains</strong> (default <strong>true</strong>) - show the assigned captain on your own recoverable ships. Enemy ships never show a captain regardless.<br></li></ul>Edit and reload (or restart) to apply changes.<br><br><strong>Download</strong><br><br><strong><a href=\"https://github.com/MSeal/starsector_uncapped_recovery/releases/download/v1.0.0/UncappedRecovery-1.0.0.zip\" rel=\"nofollow noopener\" target=\"_blank\">Uncapped Recovery v1.0.0</a></strong> (for Starsector 0.98a-RC7)<br><strong>Changelog</strong><br><br><strong>v1.0.0</strong> - Initial public release.<br><ul><li>Lifts the vanilla 24-ship per-list recovery cap.</li><li>Custom scrolling recovery selector.</li><li>Nexerelin-aware station-fight routing with graceful fallback.</li><li>Dweller-fight support.</li></ul>",
+  "descriptionIsGenerated": false,
+  "saveCompatibilityText": "Should be save-compatible to add and remove: no persistent state introduced. Never change the mod id if this is ever forked.",
+  "rawCategories": [],
+  "gallery": [
+    {
+      "url": "https://raw.githubusercontent.com/MSeal/starsector_uncapped_recovery/main/docs/forum/mudskipper-capture.png"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/MSeal/starsector_uncapped_recovery/releases/download/v1.0.0/UncappedRecovery-1.0.0.zip",
+      "directUrl": "https://github.com/MSeal/starsector_uncapped_recovery/releases/download/v1.0.0/UncappedRecovery-1.0.0.zip",
+      "fileName": "UncappedRecovery-1.0.0.zip",
+      "kind": "direct",
+      "label": "Uncapped Recovery v1.0.0",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {
+    "1.0.0": "Lifts the vanilla 24-ship per-list recovery cap.\nCustom scrolling recovery selector.\nNexerelin-aware station-fight routing with graceful fallback.\nDweller-fight support."
+  },
+  "sourceCodeUrl": "https://github.com/MSeal/starsector_uncapped_recovery",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35744.0",
+  "releases": [],
+  "olderVersions": [],
+  "addons": []
+}

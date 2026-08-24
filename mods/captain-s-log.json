@@ -1,0 +1,73 @@
+{
+  "generatedAt": "2026-08-24T21:41:23.008749Z",
+  "listing": {
+    "id": "captain-s-log",
+    "name": "Captain's Log",
+    "authors": [
+      "stormbringer951"
+    ],
+    "otherAuthorNames": {},
+    "categories": [
+      "Everything else"
+    ],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.96a",
+    "modVersion": "0.2.0",
+    "imageUrl": "https://github.com/stormbringer951/CaptainsLog/raw/master/resources/screenshot.png",
+    "summary": "Adds a customizable note-taking system for writing and displaying Captain's Logs with a GUI and keyboard shortcut.",
+    "summaryIsGenerated": true,
+    "saveCompatible": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://github.com/stormbringer951/CaptainsLog/releases/download/0.2.0/CaptainsLog-0.2.0.zip",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=20161.0",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2021-03-29",
+    "needs": []
+  },
+  "description": "Version Checker\n\n-compatible\n\nRequires\n\nLunaLib\n\nAutomatic Intel generation\n\nAutomatically creates intel entries for\n\ndiscovered cryosleepers and coronal hypershuntscomm relays discovered in non-Core systemssurveyed planets with unexplored ruinsunsurveyed planets with unexplored ruins that the player has flown close tosalvageable shipssalvageable stations, caches, etchas Stellar Networks integration to filter/hide intel categories\n\nNote-taking feature\n\nAdds custom note-taking feature to write and display Captain's Logs. Special thanks to Jaghaimo for the proof of concept code for multi-line text boxes.\n\nAccessible from the control panel in the intel screen or using the shortcut (default P) in the campaign\n\nThis is\n\nsafe\n\nto add to existing saves already in progress, but\n\nnot safe\n\nto remove from savegames.\n\nChangelog:\n\n0.2.0 - 2023-06-09\n\n- Add GUI with multi-line text editing for writing Captain's Log custom messages\n\n- Accessible from the control panel in the intel screen or using the shortcut (default P) in the campaign\n\n- Automatically log the location of Comm Relays located outside the Core Worlds\n\n- Automatically log the location of Coronal Hypershunts\n\n- Add version checker changelog support\n\n- Add LunaLib support\n\n- Add LunaLib settings to enable/disable each type of automated intel logging\n\n- Add LunaLib settings to set whether Captain's Log custom log messages should be marked as important by default\n\n- Rework intel reports to more closely follow vanilla style\n\n- Removed console command support (most functionality ported to GUI functions)\n\n- Change ignore hotkeys to use g rather than i\n\n- Updated salvageable ship intels to use the ship sprite as the icon rather than the map icon\n\n- Fix bug that allowed players to use \"lay in course\" button to repeatedly salvage the same object.\n\n0.1.6 - 2022-02-07\n\nBugfixes:\n\n- Fixed crash to desktop when hiding icons on a message intel\n\n0.1.5 - 2022-01-06\n\nFeatures:\n\n- Added intel reports noting the presence of ruins on unsurveyed planets with orbital debris visuals (PR from Jaghaimo)\n\n- Added lay in course button and shortcuts to intel reports (PR from Jaghaimo)\n\n- Added data/config/settings.json key\n\ncaptains_log_enable_automatic_logging\n\nfor controlling whether automated reports are generated for salvageables and ruins.\n\nBugfixes:\n\n- Inconsistent date calculation fixed\n\n0.1.4 - 2021-04-13\n\nFixes:\n\n- Nexerelin museum ships should not generate salvageable intels. Thanks to Avanitia for the report.\n\n- Unexplored systems should not generate intel reports (fixes Seeker issue). Thanks to island and niko on Discord for their reports.\n\nUsability improvements\n\n- Will no longer generate the same damn instructional log entry on every new game, since the forum topic exists now\n\n- All Captain's Log custom messages are set important on creation.\n\n- All Captain's Log intel entries (ruins/salvageables/captain's log entries) are no longer in default fleet log intel category\n\n0.1.3 - 2021-03-30\n\n- Fixes concurrent modification error when loading savegame with an older version of CaptainsLog\n\n0.1.2 - 2021-03-30\n\n- Actually include the correct .jar file this time\n\n- Fix crash with addstablepoint (thanks to JRG for reporting)\n\n0.1.1 - 2021-03-29\n\n- Change the build process to actually put the `config` and `console` folders inside the data folder when making a download zip file this time  :-X\n\n0.1.0 - 2021-03-29\n\n- Fixed bug which caused saves to not be portable across different OSes (thanks to Alex for this)\n\n- Temporarily removed support for deleting vanilla fleet logs that could not otherwise be removed (pending check that this logic is still needed/still all correct)\n\n- Update to confirm 0.95a compatibility\n\n0.0.1 - 2019-09-08\n\n- Discord beta",
+  "descriptionHtml": "<a href=\"https://fractalsoftworks.com/forum/index.php?topic=8181.0\" rel=\"nofollow noopener\" target=\"_blank\">Version Checker</a>-compatible<br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a><br><strong>Automatic Intel generation</strong><br>Automatically creates intel entries for<br><ul><li>discovered cryosleepers and coronal hypershunts</li><li>comm relays discovered in non-Core systems</li><li>surveyed planets with unexplored ruins</li><li>unsurveyed planets with unexplored ruins that the player has flown close to</li><li>salvageable ships</li><li>salvageable stations, caches, etc</li><li>has <a href=\"https://fractalsoftworks.com/forum/index.php?topic=20836.0\" rel=\"nofollow noopener\" target=\"_blank\">Stellar Networks</a> integration to filter/hide intel categories</li></ul><br><br><strong>Note-taking feature</strong><br>Adds custom note-taking feature to write and display Captain's Logs. Special thanks to Jaghaimo for the proof of concept code for multi-line text boxes.<br><br>Accessible from the control panel in the intel screen or using the shortcut (default P) in the campaign<br><br>This is <strong>safe</strong> to add to existing saves already in progress, but <strong>not safe</strong> to remove from savegames.<br><br><strong>Changelog:</strong><br><strong>0.2.0 - 2023-06-09</strong><br><br>- Add GUI with multi-line text editing for writing Captain's Log custom messages<br>  - Accessible from the control panel in the intel screen or using the shortcut (default P) in the campaign<br>- Automatically log the location of Comm Relays located outside the Core Worlds<br>- Automatically log the location of Coronal Hypershunts<br>- Add version checker changelog support<br>- Add LunaLib support<br>- Add LunaLib settings to enable/disable each type of automated intel logging<br>- Add LunaLib settings to set whether Captain's Log custom log messages should be marked as important by default<br>- Rework intel reports to more closely follow vanilla style<br>- Removed console command support (most functionality ported to GUI functions)<br>- Change ignore hotkeys to use g rather than i<br>- Updated salvageable ship intels to use the ship sprite as the icon rather than the map icon<br>- Fix bug that allowed players to use \"lay in course\" button to repeatedly salvage the same object.<br><br><strong>0.1.6 - 2022-02-07</strong><br>Bugfixes:<br>- Fixed crash to desktop when hiding icons on a message intel<br><br><strong>0.1.5 - 2022-01-06</strong><br>Features:<br>- Added intel reports noting the presence of ruins on unsurveyed planets with orbital debris visuals (PR from Jaghaimo)<br>- Added lay in course button and shortcuts to intel reports (PR from Jaghaimo)<br>- Added data/config/settings.json key <strong>captains_log_enable_automatic_logging</strong> for controlling whether automated reports are generated for salvageables and ruins.<br><br>Bugfixes:<br>- Inconsistent date calculation fixed<br><br><strong>0.1.4 - 2021-04-13</strong><br>Fixes:<br>- Nexerelin museum ships should not generate salvageable intels. Thanks to Avanitia for the report.<br>- Unexplored systems should not generate intel reports (fixes Seeker issue). Thanks to island and niko on Discord for their reports.<br><br>Usability improvements<br>- Will no longer generate the same damn instructional log entry on every new game, since the forum topic exists now<br>- All Captain's Log custom messages are set important on creation.<br>- All Captain's Log intel entries (ruins/salvageables/captain's log entries) are no longer in default fleet log intel category<br><br><strong>0.1.3 - 2021-03-30</strong><br>- Fixes concurrent modification error when loading savegame with an older version of CaptainsLog<br><br><strong>0.1.2 - 2021-03-30</strong><br>- Actually include the correct .jar file this time<br>- Fix crash with addstablepoint (thanks to JRG for reporting)<br><br><strong>0.1.1 - 2021-03-29</strong><br>- Change the build process to actually put the `config` and `console` folders inside the data folder when making a download zip file this time  :-X<br><br><strong>0.1.0 - 2021-03-29</strong><br>- Fixed bug which caused saves to not be portable across different OSes (thanks to Alex for this)<br>- Temporarily removed support for deleting vanilla fleet logs that could not otherwise be removed (pending check that this logic is still needed/still all correct)<br>- Update to confirm 0.95a compatibility<br><br><strong>0.0.1 - 2019-09-08 </strong><br>- Discord beta",
+  "descriptionIsGenerated": false,
+  "saveCompatibilityText": "This is safe to add to existing saves already in progress, but not safe to remove from savegames.",
+  "rawCategories": [
+    "Miscellaneous Mods"
+  ],
+  "gallery": [
+    {
+      "url": "https://github.com/stormbringer951/CaptainsLog/raw/master/resources/screenshot.png"
+    },
+    {
+      "url": "https://github.com/stormbringer951/CaptainsLog/raw/master/resources/message_gui_example.gif"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/stormbringer951/CaptainsLog/releases/download/0.2.0/CaptainsLog-0.2.0.zip",
+      "directUrl": "https://github.com/stormbringer951/CaptainsLog/releases/download/0.2.0/CaptainsLog-0.2.0.zip",
+      "fileName": "CaptainsLog-0.2.0.zip",
+      "kind": "direct",
+      "label": "",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {
+    "0.2.0": "- Add GUI with multi-line text editing for writing Captain's Log custom messages\n&nbsp; - Accessible from the control panel in the intel screen or using the shortcut (default P) in the campaign\n- Automatically log the location of Comm Relays located outside the Core Worlds\n- Automatically log the location of Coronal Hypershunts\n- Add version checker changelog support\n- Add LunaLib support\n- Add LunaLib settings to enable/disable each type of automated intel logging\n- Add LunaLib settings to set whether Captain's Log custom log messages should be marked as important by default\n- Rework intel reports to more closely follow vanilla style\n- Removed console command support (most functionality ported to GUI functions)\n- Change ignore hotkeys to use g rather than i\n- Updated salvageable ship intels to use the ship sprite as the icon rather than the map icon\n- Fix bug that allowed players to use \"lay in course\" button to repeatedly salvage the same object.",
+    "0.1.6": "Bugfixes:\n- Fixed crash to desktop when hiding icons on a message intel",
+    "0.1.5": "Features:\n- Added intel reports noting the presence of ruins on unsurveyed planets with orbital debris visuals (PR from Jaghaimo)\n- Added lay in course button and shortcuts to intel reports (PR from Jaghaimo)\n- Added data/config/settings.json key captains_log_enable_automatic_logging for controlling whether automated reports are generated for salvageables and ruins.\n\nBugfixes:\n- Inconsistent date calculation fixed"
+  },
+  "changelogUrl": "https://github.com/stormbringer951/CaptainsLog/releases/download/0.2.0/CaptainsLog-0.2.0.zip",
+  "sourceCodeUrl": "https://github.com/stormbringer951/CaptainsLog",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=20161.0",
+  "releases": [],
+  "olderVersions": [],
+  "addons": []
+}

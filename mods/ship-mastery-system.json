@@ -1,0 +1,85 @@
+{
+  "generatedAt": "2026-08-24T21:41:23.008749Z",
+  "listing": {
+    "id": "ship-mastery-system",
+    "name": "Ship Mastery System",
+    "authors": [
+      "float"
+    ],
+    "otherAuthorNames": {
+      "float": [
+        "this_is_a_username"
+      ]
+    },
+    "categories": [
+      "Content expansions"
+    ],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "0.98a-RC8",
+    "imageUrl": "https://raw.githubusercontent.com/qcwxezda/Starsector-Ship-Mastery-System/master/screenshots/mastery_screen.png",
+    "summary": "Adds a mastery system for ship hulls that unlocks S-mod slots, performance bonuses, and new refit and replay features.",
+    "summaryIsGenerated": true,
+    "saveCompatible": false,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://github.com/qcwxezda/Starsector-Ship-Mastery-System/releases/latest/download/Ship.Mastery.System.zip",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29682.0",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2024-04-02",
+    "needs": []
+  },
+  "description": "Ship Mastery System\n\nGain mastery in ship hulls to unlock S-mod slots and additional bonuses.\n\nRequires Particle Engine and MagicLib.\nNot save compatible with versions prior to 2.0.0.\n\nShip Masteries\n\nShip classes (a.k.a. hull specs) in your fleet gain mastery XP and can use that XP to level up.\nPlayer XP gained from combat grants mastery XP to the ship classes in your fleet that participated.Player XP gained from any other source grants mastery XP to civilian ship classes.\nFor this purpose, civilian ship classes are hull specs that have the CIVILIAN hint, but do not have the CARRIER hint.Mastery XP can also be acquired by consuming knowledge constructs, which appear as rare loot under certain circumstances.Mastery XP can be used to level up a ship class's mastery, upon which you may select a perk to unlock.\nEach ship class has its own mastery XP pool and level-up choices that are shared between all ships of that type.Mastery level and mastery selections (for levels that have more than one option) are also shared between all ships of a ship type.Advancing your mastery of a ship type improves its performance in a variety of ways. Some mastery levels have randomized bonuses, while others' are fixed.\n\nRevamped S-Mod System\n\nAll ships start with 0 S-mod capacity. Level up ship mastery to gain S-mod capacity.Each ship class has exactly 2 available S-mod capacity upgrades, available at levels 2 and 5.Building in hullmods costs credits instead of story points.You may still use story points to reduce the credit cost of building in hullmods.\n\nMastery Unlocks\n\nAs you progress your mastery level in a ship class, unlock additional options in the refit screen.By default, additional unlocks are available at levels 3, 4, 5, and 7. More details here.\n\nNPC Masteries\n\nNPC fleets follow the same general rules as player fleets, and may have mastery levels in some ship classes.Ships in an NPC fleet that have mastery effects applied will also have a marker hullmod added, so hovering over that ship will show its mastery level.Adds a post-inflation sequence to add S-mods to ships in generic NPC fleets, if they've unlocked mastery levels that grant them S-mod capacity.NPC fleets' average mastery levels can be changed in the difficulty subsection of the settings. Other difficulty options can be accessed via data/shipmastery/faction_difficulty.csv.\n\nMiscellaneous Features\n\nAdds a system for reclaiming ships lost in battle\n\nPlayer ships that are lost but not recovered, either by choice or due to disengaging early from or losing a battle, spawn as derelicts near the battle site.To spawn as a derelict, the ship must have been recoverable should the player have won (affected by reinforced bulkheads / hull restoration / etc.).If the player is given a post-battle salvage option, weapons and wings from the wrecks are stripped.The wrecks disappear permanently after 365 days, or if the player dismisses the fleet log entry.Greatly facilitates insurance fraud if using Nexerelin's ship insurance feature.\n\nAdds the ability to view details about and replay recent battles\n\nKeeps track of the 10 most recent battles you've won, displaying detailed enemy fleet and officer data.Replay battles in a simulation-like environment -- quit anytime, gain nothing, and lose nothing.Solo replay allows fighting against individual ships from recorded battles.Pin notable battles to keep them in the intel log permanently, allowing you to replay limited boss battles at any time.\n\nAdds an S-mods option to the refit screen autofit menu\n\nThis will attempt to copy S-mods from the goal variant, automatically spending the required credits.\n\nAlso adds some exploration content.\n\n[close]\n\nMod Integration and Advanced Config\n\nClick here\n\n[close]\n\nVersion log\n\nFull version log here\n\n[close]",
+  "descriptionHtml": "<a href=\"https://github.com/qcwxezda/Starsector-Ship-Mastery-System/releases/latest/download/Ship.Mastery.System.zip\" rel=\"nofollow noopener\" target=\"_blank\"><strong>Ship Mastery System</strong></a><br>  <br> <strong><br>Gain mastery in ship hulls to unlock S-mod slots and additional bonuses.<br><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=26453.0\" rel=\"nofollow noopener\" target=\"_blank\">Particle Engine</a> and <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25868.0\" rel=\"nofollow noopener\" target=\"_blank\">MagicLib</a>.<br>Not save compatible with versions prior to 2.0.0.<br></strong> <br><hr><strong>Ship Masteries</strong><hr><ul><li>Ship classes (a.k.a. hull specs) in your fleet gain mastery XP and can use that XP to level up.<br><ul><li>Player XP gained from combat grants mastery XP to the ship classes in your fleet that participated.</li><li>Player XP gained from any other source grants mastery XP to civilian ship classes.<br><ul><li>For this purpose, civilian ship classes are hull specs that have the CIVILIAN hint, but do not have the CARRIER hint.</li></ul></li></ul></li><li>Mastery XP can also be acquired by consuming knowledge constructs, which appear as rare loot under certain circumstances.</li><li>Mastery XP can be used to level up a ship class's mastery, upon which you may select a perk to unlock.<br><ul><li>Each ship class has its own mastery XP pool and level-up choices that are shared between all ships of that type.</li><li>Mastery level and mastery selections (for levels that have more than one option) are also shared between all ships of a ship type.</li></ul></li><li>Advancing your mastery of a ship type improves its performance in a variety of ways. Some mastery levels have randomized bonuses, while others' are fixed.</li></ul><br><hr><strong>Revamped S-Mod System</strong><hr><ul><li>All ships start with 0 S-mod capacity. Level up ship mastery to gain S-mod capacity.</li><li>Each ship class has exactly 2 available S-mod capacity upgrades, available at levels 2 and 5.</li><li>Building in hullmods costs credits instead of story points.</li><ul><li>You may still use story points to reduce the credit cost of building in hullmods.</li></ul></ul><br><hr><strong>Mastery Unlocks</strong><hr><ul><li>As you progress your mastery level in a ship class, unlock additional options in the refit screen.</li><li>By default, additional unlocks are available at levels 3, 4, 5, and 7. More details <a href=\"https://github.com/qcwxezda/Starsector-Ship-Mastery-System?tab=readme-ov-file#mastery-unlocks\" rel=\"nofollow noopener\" target=\"_blank\">here.</a></li></ul><br><hr><strong>NPC Masteries</strong><hr><ul><li>NPC fleets follow the same general rules as player fleets, and may have mastery levels in some ship classes.</li><li>Ships in an NPC fleet that have mastery effects applied will also have a marker hullmod added, so hovering over that ship will show its mastery level.</li><li>Adds a post-inflation sequence to add S-mods to ships in generic NPC fleets, if they've unlocked mastery levels that grant them S-mod capacity.</li><li>NPC fleets' average mastery levels can be changed in the difficulty subsection of the settings. Other difficulty options can be accessed via data/shipmastery/faction_difficulty.csv.</li></ul><br><br>Miscellaneous Features<strong>Adds a system for reclaiming ships lost in battle</strong><hr><ul><li>Player ships that are lost but not recovered, either by choice or due to disengaging early from or losing a battle, spawn as derelicts near the battle site.</li><li>To spawn as a derelict, the ship must have been recoverable should the player have won (affected by reinforced bulkheads / hull restoration / etc.).</li><li>If the player is given a post-battle salvage option, weapons and wings from the wrecks are stripped.</li><li>The wrecks disappear permanently after 365 days, or if the player dismisses the fleet log entry.</li><li>Greatly facilitates insurance fraud if using Nexerelin's ship insurance feature.</li></ul><br><hr><hr><strong>Adds the ability to view details about and replay recent battles</strong><hr><ul><li>Keeps track of the 10 most recent battles you've won, displaying detailed enemy fleet and officer data.</li><li>Replay battles in a simulation-like environment -- quit anytime, gain nothing, and lose nothing.</li><li>Solo replay allows fighting against individual ships from recorded battles.</li><li>Pin notable battles to keep them in the intel log permanently, allowing you to replay limited boss battles at any time.</li></ul><br><hr><hr><strong>Adds an S-mods option to the refit screen autofit menu</strong><br><hr><ul><li>This will attempt to copy S-mods from the goal variant, automatically spending the required credits.</li></ul><br><br>Also adds some exploration content.<br>[close]<br>Mod Integration and Advanced Config<a href=\"https://github.com/qcwxezda/Starsector-Ship-Mastery-System?tab=readme-ov-file#mod-integration-and-advanced-config\" rel=\"nofollow noopener\" target=\"_blank\">Click here</a>[close]<br>Version log<a href=\"https://raw.githubusercontent.com/qcwxezda/Starsector-Ship-Mastery-System/master/changelog.txt\" rel=\"nofollow noopener\" target=\"_blank\">Full version log here</a><br>[close]",
+  "descriptionIsGenerated": false,
+  "saveCompatibilityText": "Not save compatible with versions prior to 2.0.0.",
+  "rawCategories": [
+    "Feature overhauls"
+  ],
+  "gallery": [
+    {
+      "url": "https://i.imgur.com/I91H7Lj.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/qcwxezda/Starsector-Ship-Mastery-System/master/screenshots/hullmod_screen.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/qcwxezda/Starsector-Ship-Mastery-System/master/screenshots/mastery_screen.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/qcwxezda/Starsector-Ship-Mastery-System/master/screenshots/derelict_losses.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/qcwxezda/Starsector-Ship-Mastery-System/master/screenshots/recent_battles_intel.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/qcwxezda/Starsector-Ship-Mastery-System/master/screenshots/smods_in_fit.png"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/qcwxezda/Starsector-Ship-Mastery-System/releases/latest/download/Ship.Mastery.System.zip",
+      "directUrl": "https://github.com/qcwxezda/Starsector-Ship-Mastery-System/releases/latest/download/Ship.Mastery.System.zip",
+      "fileName": "Ship.Mastery.System.zip",
+      "kind": "direct",
+      "label": "Ship Mastery System",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {},
+  "changelogUrl": "https://raw.githubusercontent.com/qcwxezda/Starsector-Ship-Mastery-System/master/changelog.txt",
+  "sourceCodeUrl": "https://github.com/qcwxezda/Starsector-Ship-Mastery-System",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29682.0",
+  "releases": [],
+  "olderVersions": [],
+  "addons": []
+}

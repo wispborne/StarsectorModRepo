@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-08-24T21:41:23.008749Z",
+  "listing": {
+    "id": "m-s-mod",
+    "name": "M’s Mod",
+    "authors": [
+      "Monno"
+    ],
+    "otherAuthorNames": {},
+    "categories": [
+      "Everything else"
+    ],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "2.5.5",
+    "imageUrl": "https://i.imgur.com/tn55Sx9.png",
+    "summary": "Adds 26 new hullmods that let players trade ship stats for Ordnance Points, enabling more balanced and flexible ship customization.",
+    "summaryIsGenerated": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://drive.google.com/drive/folders/1kepn3jdSdpKX4mh4IOJPbSNEIJZDkJiK?usp=sharing",
+      "kind": "direct",
+      "needsAnotherStep": true
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=26388.0",
+    "sourceIsPublic": false,
+    "isWorkInProgress": false,
+    "addedOn": "2023-04-01",
+    "needs": []
+  },
+  "description": "M’s Mod\n\ndownload link\n\nRequires\n\nLazyLib\n\n,\n\nLunaLib\n\nDescription:\n\n26 new hullmods.\n\nThe plan was to allow players to trade ship stats for Ordnance Points.\n\nThis way, hullmods that would otherwise be too expensive to balance can now be added to the game without causing too many issues (probably).\n\nWarning:\n\nDue to the way I wrote the mod's code, the added hullmods may not work correctly when used during missions. I failed to test them in this context during development, and the issues are too deeply integrated into the code for a quick fix.\n\nFor now, I recommend not using these hullmods during missions, as I cannot guarantee they will function correctly. In the future, I will aim to rewrite the code to be fully compatible with missions.\n\nExplanation:\n\nSpoilerThings I've identified that cause problems in missions:\n\nThe line if(!isForModSpec && ship != null && Global.getSettings().getCurrentState() != GameState.TITLE) is used to check if the refit screen is open. The condition Global.getSettings().getCurrentState() != GameState.TITLE is false when the refit screen is open during a mission, as opposed to when it's open in the campaign.Global.getSector().getPlayerFleet() is always null. In the campaign, this method is used to check the ship's unused OP via:\nMutableCharacterStatsAPI playerStats = Global.getSector().getPlayerFleet().getCommander().getStats();\nint UnusedOP = ship.getVariant().getUnusedOP(playerStats);\nThis is what I use to enable or disable the Hullmods when the OP is above the maximum allowed.\n\n[close]\n\n-Some of the hullmod icons are AI-generated. If you prefer, I've included the original hand-drawn versions that the AI designs are based on in the graphics/hullmod/old graphics folder. To use them, simply drag the desired .png files into the main hullmod folder to replace the AI-generated icons.-\n\nHullmods prevew:\n\nSpoiler[close]\n\nThanks for checking out my mod! This is my first attempt at modding,\n\nso any suggestions from the community are more than welcome, especially regarding balancing and bug fixing.\n\nBugs\n\nSpoiler\n\nSometimes, when the fleet menu is open, it displays an amount of free OP on the ship that isn't actually there.\n\n[close]\n\nChangelog\n\nSpoiler2.5.5\n\nFixed a hover crash on OPtracker while viewing a module of a ship or station.\n\n2.5.4\n\nFixed Incompatability betwen AI server racks and Second in Command.\n\n2.5.3\n\nFixed Incompatability betwen AI server racks and progressive S-mods.\n\n2.5.2\n\nAdded Highlights to special and More OP Hullmods.\n\n2.5.1\n\nFixed AI server rack crash on game reload. Thanks to ShpunkY for reporting it\n\n2.5.0\n\nAdded LunaLib integration+1 New HullmodVarious rebalances\n\n2.4.5\n\n-1 bug, thanks to Rogi Ryabkov for the fix.\n\n2.4.4\n\nFixed the Engine Limiter Hullmod.\n\n2.4.3\n\nfixed 2 bugs:Cruise refit now displays the correct value of credits generated in the last engagement.Added a null cache exception for the Eyelander; it shouldn't crash now when killing a non-standard hull size ship.\n\n2.4.2\n\nrebalance and rework of some hullmods.Antimatter Shield: Damage reduction reduced from 60% to 45%.Assault Engine Package: Engine bonus reduced from 100% to 50%.Cargo Space Reclamation: The cargo space-to-OP conversion has been reduced. A bonus for civilian ships has been added.Depleted Uranium Bullets: A 50% flux cost increase has been added.Support Package: Now only works with ships of the same or smaller size.Domain Components Refit: Reworked to reduce peak performance time and CR (Combat Readiness) reduction instead of fuel and supplies consumption.\n\n2.4.1\n\nAdded a new hullmod.\n\n2.3.1\n\nThe in-fight bonuses now update correctly.\n\n2.3.0\n\nfixed the OP traker bugs\n\n2.2.0\n\nadded 4 new hullmods\n\n2.1.0\n\nBug fixesThe in-fight assault engine icon buff doesn't show up. Tanks to Ruddygreat (from Galacta accademy Discord)The Optimized hangar buff description should only be shown in the codex.Added 2 new hullmods\n\n2.0.0\n\nThis is essentially a brand-new mod. I've overhauled all the code and a significant number of the icons; only the name remains unchanged.\n\n1.0.1\n\nDownload link now should work correctly.\n\n1.0.0\n\nrelease.\n\n[/list][/list][close]",
+  "descriptionHtml": "<ul><ul></ul></ul><strong>M’s Mod</strong><br><em><a href=\"https://drive.google.com/drive/folders/1kepn3jdSdpKX4mh4IOJPbSNEIJZDkJiK?usp=sharing\" rel=\"nofollow noopener\" target=\"_blank\">download link</a></em><br><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a><br>          <strong>Description:</strong><br><br>26 new hullmods. <br>The plan was to allow players to trade ship stats for Ordnance Points. <br>This way, hullmods that would otherwise be too expensive to balance can now be added to the game without causing too many issues (probably).<br><br><strong>Warning:</strong><br>Due to the way I wrote the mod's code, the added hullmods may not work correctly when used during missions. I failed to test them in this context during development, and the issues are too deeply integrated into the code for a quick fix.<br>For now, I recommend not using these hullmods during missions, as I cannot guarantee they will function correctly. In the future, I will aim to rewrite the code to be fully compatible with missions.<br><br><strong>Explanation:</strong><br>SpoilerThings I've identified that cause problems in missions:<br><ul><li>The line if(!isForModSpec &amp;&amp; ship != null &amp;&amp; Global.getSettings().getCurrentState() != GameState.TITLE) is used to check if the refit screen is open. The condition Global.getSettings().getCurrentState() != GameState.TITLE is false when the refit screen is open during a mission, as opposed to when it's open in the campaign.</li><li>Global.getSector().getPlayerFleet() is always null. In the campaign, this method is used to check the ship's unused OP via:<br>MutableCharacterStatsAPI playerStats = Global.getSector().getPlayerFleet().getCommander().getStats();<br>int UnusedOP = ship.getVariant().getUnusedOP(playerStats);<br>This is what I use to enable or disable the Hullmods when the OP is above the maximum allowed.</li></ul><br>[close]<em>-Some of the hullmod icons are AI-generated. If you prefer, I've included the original hand-drawn versions that the AI designs are based on in the graphics/hullmod/old graphics folder. To use them, simply drag the desired .png files into the main hullmod folder to replace the AI-generated icons.-</em><br><br>          <strong>Hullmods prevew:</strong><br>Spoiler[close]<br>Thanks for checking out my mod! This is my first attempt at modding, <br>so any suggestions from the community are more than welcome, especially regarding balancing and bug fixing.<br><br>          <strong>Bugs</strong><br>Spoiler<ul><li>Sometimes, when the fleet menu is open, it displays an amount of free OP on the ship that isn't actually there.</li></ul>[close]        <br>          <strong>Changelog</strong><br><br>Spoiler2.5.5<br><ul><li>Fixed a hover crash on OPtracker while viewing a module of a ship or station.</li></ul>2.5.4<br><ul><li>Fixed Incompatability betwen AI server racks and Second in Command.</li></ul>2.5.3<br><ul><li>Fixed Incompatability betwen AI server racks and progressive S-mods.</li></ul>2.5.2<br><ul><li>Added Highlights to special and More OP Hullmods.</li></ul>2.5.1<br><ul><li>Fixed AI server rack crash on game reload. Thanks to ShpunkY for reporting it</li></ul>2.5.0<br><ul><li>Added LunaLib integration</li><li>+1 New Hullmod</li><li>Various rebalances</li></ul>2.4.5<br><ul><li>-1 bug, thanks to Rogi Ryabkov for the fix.</li></ul>2.4.4<br><ul><li>Fixed the Engine Limiter Hullmod.</li></ul>2.4.3<br><ul><li>fixed 2 bugs:<ul><li>Cruise refit now displays the correct value of credits generated in the last engagement.</li><li>Added a null cache exception for the Eyelander; it shouldn't crash now when killing a non-standard hull size ship.</li></ul></li></ul>2.4.2<br><ul><li>rebalance and rework of some hullmods.<ul><li>Antimatter Shield: Damage reduction reduced from 60% to 45%.</li><li>Assault Engine Package: Engine bonus reduced from 100% to 50%.</li><li>Cargo Space Reclamation: The cargo space-to-OP conversion has been reduced. A bonus for civilian ships has been added.</li><li>Depleted Uranium Bullets: A 50% flux cost increase has been added.</li><li>Support Package: Now only works with ships of the same or smaller size.</li><li>Domain Components Refit: Reworked to reduce peak performance time and CR (Combat Readiness) reduction instead of fuel and supplies consumption.</li></ul></li></ul>2.4.1<br><ul><li>Added a new hullmod.</li></ul>2.3.1<br><ul><li>The in-fight bonuses now update correctly.</li></ul>2.3.0<br><ul><li>fixed the OP traker bugs</li></ul>2.2.0<br><ul><li>added 4 new hullmods</li></ul>2.1.0 <br><ul><li>Bug fixes<ul><li>The in-fight assault engine icon buff doesn't show up. Tanks to Ruddygreat (from Galacta accademy Discord)</li><li>The Optimized hangar buff description should only be shown in the codex.</li></ul></li><li>Added 2 new hullmods</li></ul>2.0.0 <br><ul><li>This is essentially a brand-new mod. I've overhauled all the code and a significant number of the icons; only the name remains unchanged.</li></ul>1.0.1 <br><ul><li>Download link now should work correctly.</li></ul>1.0.0 <br><ul><li>release.</li></ul>[/list][/list][close]",
+  "descriptionIsGenerated": false,
+  "rawCategories": [
+    "Miscellaneous Mods"
+  ],
+  "gallery": [
+    {
+      "url": "https://i.imgur.com/tn55Sx9.png"
+    },
+    {
+      "url": "https://i.imgur.com/YfyJ4ed.png"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://drive.google.com/drive/folders/1kepn3jdSdpKX4mh4IOJPbSNEIJZDkJiK?usp=sharing",
+      "directUrl": "https://drive.google.com/drive/folders/1kepn3jdSdpKX4mh4IOJPbSNEIJZDkJiK?usp=sharing",
+      "kind": "direct",
+      "label": "download link",
+      "host": "Google Drive",
+      "needsAnotherStep": true
+    }
+  ],
+  "changelog": {
+    "2.5.5": "Fixed a hover crash on OPtracker while viewing a module of a ship or station.",
+    "2.5.4": "Fixed Incompatability betwen AI server racks and Second in Command.",
+    "2.5.3": "Fixed Incompatability betwen AI server racks and progressive S-mods."
+  },
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=26388.0",
+  "releases": [],
+  "olderVersions": [],
+  "addons": []
+}
