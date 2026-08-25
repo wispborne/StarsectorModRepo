@@ -174,8 +174,8 @@ function expandAllChangelogs(panel) {
 }
 
 /// One release. Where the post gave changelog notes for that version, the row
-/// opens to show them as the author wrote them, and says so — a row that opens
-/// with nothing to say it does is a row nobody clicks.
+/// opens to show them as the author wrote them. The arrow at the left is what
+/// says a row opens, so a row without notes does not get one.
 function releaseRow(release, byId) {
   const notes = release.changelogNotes;
   const mod = byId.get(release.modId);
@@ -200,11 +200,6 @@ function releaseRow(release, byId) {
     // would open the changelog on a stray press. The button stops its own click
     // from reaching the fold, the same way the "+" on a card does.
     mod ? downloadButton(mod) : null,
-    // "Read changelog" sits on a second line, under the picture. The summary is
-    // a wrapping flex row and this is given a full line of its own in the
-    // stylesheet, so it has to be built last — anything after it would be
-    // dragged down onto that second line with it.
-    notes ? el('span', { class: 'release-read', text: 'Read changelog' }) : null,
   ]);
 
   const row = el('details', { class: notes ? 'release' : 'release no-notes' }, [summary]);

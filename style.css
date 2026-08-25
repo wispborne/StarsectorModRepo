@@ -69,10 +69,10 @@
   /* How big the words are, from smallest to the title of a page. Every piece
      of writing on the site is one of these seven, so the page has one scale
      rather than forty separate decisions.
-     Four things set their own size instead, and all four are shapes rather
+     Five things set their own size instead, and all five are shapes rather
      than writing: the front page's own title, the letter standing in for a
-     missing picture, the × that closes a screenshot, and the arrows either
-     side of one. */
+     missing picture, the × that closes a screenshot, the arrows either
+     side of one, and the arrow that opens a release row. */
   --type-note: 0.68rem;
   --type-tiny: 0.75rem;
   --type-small: 0.85rem;
@@ -578,10 +578,6 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .release > summary {
   padding: var(--pad-cell); cursor: pointer; display: flex; gap: 10px;
   align-items: center; flex-wrap: wrap; list-style: none;
-  /* "Read changelog" wraps onto a line of its own, and a full 10px under the
-     row's words would read as a gap between two rows rather than one row's
-     second line. */
-  row-gap: 4px;
 }
 .release > summary::-webkit-details-marker { display: none; }
 .release > summary:hover { background: var(--primary-faint); }
@@ -592,30 +588,28 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
   font-size: var(--type-small); color: var(--text); border-top: 1px solid var(--border);
   overflow-x: auto; overflow-wrap: anywhere;
 }
+/* No notes means no arrow, which would leave that row's picture 26px left of
+   every other row's. It is indented by the arrow's column instead, so the
+   pictures line up all the way down the list. */
 .release.no-notes > summary { cursor: default; }
+.release.no-notes > summary > :first-child { margin-left: 26px; }
 .release-thumb {
   width: 54px; height: 32px; object-fit: cover; flex-shrink: 0;
   background: var(--surface-container);
 }
+/* The only thing on a release row that says the row opens, so it is drawn big
+   enough to be seen at a glance and turns cyan with the rest of the row under
+   the pointer. Its size is set here rather than from the scale because it is a
+   shape rather than writing. */
 .chevron {
-  color: var(--text-dim); transition: transform 0.12s ease;
-  display: inline-block; font-size: var(--type-big); line-height: 1;
-  /* A column of its own width, so "Read changelog" can be lined up under the
-     picture beside it without guessing how wide the arrow draws. */
-  width: 12px; text-align: center;
+  color: var(--text-dim); transition: transform 0.12s ease, color 0.12s ease;
+  display: inline-block; font-size: 1.6rem; line-height: 1;
+  width: 16px; text-align: center;
 }
+.release > summary:hover .chevron { color: var(--primary); }
 .release[open] > summary .chevron { transform: rotate(90deg); }
-/* Under the picture, on a line of its own: `flex-basis: 100%` is what takes
-   that line, and the padding puts it past the arrow's column so it starts
-   where the picture does. Small and dim, since it only says what a press on
-   the row would do. */
-.release-read {
-  flex-basis: 100%; padding-left: 22px;
-  color: var(--text-dim); font-size: var(--type-tiny);
-}
-.release > summary:hover .release-read { color: var(--primary); }
-/* The download button is the only thing at the right end of the row's first
-   line, with or without notes. */
+/* The download button is the only thing at the right end of the row, with or
+   without notes. */
 .release > summary > .download-btn { margin-left: auto; }
 
 .strip { display: grid; gap: var(--gap-cells); grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
