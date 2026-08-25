@@ -6,9 +6,10 @@
 // so a thin page reads as deliberate instead of broken.
 
 import {
-  aiSparkle, aiSummariesOn, aiSummaryNote, breadcrumbs, clear,
-  currentGameVersion, downloadButton, el, errorPanel, formatDay, joinNames,
-  listToggle,
+  AI_SUMMARY_TITLE, aiSparkle, aiSummaryMode, aiSummaryNote, aiSummaryOf,
+  breadcrumbs, clear,
+  currentGameVersion, downloadButton, el, errorPanel, formatDay, formatMoment,
+  joinNames, listToggle,
   modDetail, modList, modName, MOD_VERSION_NOTE, neededModsLine,
   NO_DESCRIPTION, picture, showPicture, sourceName,
   versionStanding, versionStandingNote,
@@ -54,7 +55,7 @@ export async function render(root, parts) {
 
   const mod = detail.listing || {};
   const shownName = modName(mod);
-  document.title = `${shownName} — Starmodder`;
+  document.title = `${shownName} | Starmodder`;
 
   // The list is also what the two "more like this" strips at the foot are
   // built from. A page that will not load it still draws everything else.
@@ -236,7 +237,7 @@ function downloads(detail) {
     detail.generatedAt
       ? el('p', {
           class: 'checked-on',
-          text: `Last checked ${formatDay(detail.generatedAt)}.`,
+          text: `Last checked ${formatMoment(detail.generatedAt)}.`,
           title: "When these links were last read off the mod's post.",
         })
       : null,
@@ -267,14 +268,28 @@ function downloadRow(download) {
 }
 
 /// The description, marked with a sparkle and a line underneath when an AI
-/// wrote the words rather than the author. With AI summaries off, an
-/// AI-written description is left out and the page says there is none.
+/// wrote the words rather than the author.
+///
+/// A whole forum post says more than one AI paragraph, so a reader who asks
+/// for AI summaries always gets the paragraph *above* the post rather than
+/// instead of it. With them off, an AI-written description is left out and the
+/// page says there is none.
 function description(detail) {
-  const formatted = detail.descriptionHtml;
-  const text = detail.description;
   const generated = Boolean(detail.descriptionIsGenerated);
-  const hidden = generated && !aiSummariesOn();
-  if ((!formatted && !text) || hidden) {
+  const formatted = generated ? null : detail.descriptionHtml;
+  const text = generated ? null : detail.description;
+  const ai = aiSummaryOf({
+    aiSummary: detail.aiDescription,
+    summary: detail.description,
+    summaryIsGenerated: generated,
+  });
+  const own = Boolean(formatted || text);
+  // On its own where the author wrote nothing; a lead paragraph above the
+  // post where the reader asked for it always.
+  const aiLead = ai && own && aiSummaryMode() === 'always' ? ai : null;
+  const aiAlone = ai && !own ? ai : null;
+
+  if (!own && !aiAlone) {
     return el('section', { class: 'panel' }, [
       el('h2', { text: 'About this mod' }),
       el('p', { class: 'no-description', text: NO_DESCRIPTION }),
@@ -286,11 +301,12 @@ function description(detail) {
   // is put into the page as it arrives. Anything else is shown as plain words.
   const body = formatted
     ? el('div', { class: 'prose', html: formatted })
-    : el('div', { class: 'prose plain', text });
+    : el('div', { class: 'prose plain', text: text || aiAlone });
 
   // The sparkle goes inside the first paragraph rather than above it, so it
   // reads as part of the words instead of as a picture of its own.
-  if (generated) {
+  if (aiAlone) {
+    body.title = AI_SUMMARY_TITLE;
     // Only into a block that holds words. A post that opens with a list or a
     // picture gets the sparkle above it instead, since a sparkle inside a
     // `<ul>` is not a list item and browsers place it anywhere they like.
@@ -354,9 +370,22 @@ function description(detail) {
 
   return el('section', { class: 'panel' }, [
     el('h2', { text: 'About this mod' }),
+    aiLead ? aiLeadBlock(aiLead) : null,
     clip,
     moreRow,
-    generated ? aiSummaryNote() : null,
+    aiAlone ? aiSummaryNote() : null,
+  ]);
+}
+
+/// The AI paragraph shown above the author's own post, for a reader who asked
+/// for AI summaries always. Marked the same way an AI description is: a
+/// sparkle before the words, and a line underneath saying who wrote them.
+function aiLeadBlock(words) {
+  return el('div', { class: 'summary-block ai-lead', title: AI_SUMMARY_TITLE }, [
+    el('div', { class: 'prose plain' }, [
+      el('p', {}, [aiSparkle(), ' ', words]),
+    ]),
+    aiSummaryNote(),
   ]);
 }
 

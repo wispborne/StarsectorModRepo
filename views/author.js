@@ -17,7 +17,7 @@ export async function render(root, parts) {
   const list = await modList();
   const mods = (list.mods || []).filter((mod) => creditedTo(mod, wanted));
 
-  document.title = `${wanted} — Starmodder`;
+  document.title = `${wanted} | Starmodder`;
   clear(root);
   root.append(breadcrumbs([
     { label: 'Browse mods', href: '#/browse' },
@@ -76,7 +76,7 @@ async function renderIndex(root) {
   const people = [...counts.values()]
     .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 
-  document.title = 'People — Starmodder';
+  document.title = 'People | Starmodder';
   clear(root);
   root.append(breadcrumbs([{ label: 'People' }]));
 

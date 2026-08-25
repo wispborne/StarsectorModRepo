@@ -68,20 +68,27 @@
         </div>
       </section>
       <section class="settings-section" aria-labelledby="summaries-title">
-        <h3 id="summaries-title">Summaries</h3>
-        <p>Some mods have no description of their own, so an AI wrote one from the author's post. Those are marked with a sparkle.</p>
+        <h3 id="summaries-title">Show AI mod summaries</h3>
+        <p>Where a mod's post has no short description in it, an AI wrote one from the post. Those are marked with a sparkle.</p>
         <div class="choice-list" role="radiogroup" aria-label="AI-written summaries">
           <label class="choice">
-            <input type="radio" name="ai-summaries" value="on">
+            <input type="radio" name="ai-summaries" value="always">
             <span>
-              <span class="choice-name">Show AI-written summaries</span><br>
-              <span class="choice-note">Marked with a sparkle, and a line saying where the words came from.</span>
+              <span class="choice-name">Always</span><br>
+              <span class="choice-note">The AI summary is shown even where the author wrote one.</span>
             </span>
           </label>
           <label class="choice">
-            <input type="radio" name="ai-summaries" value="off">
+            <input type="radio" name="ai-summaries" value="whenMissing">
             <span>
-              <span class="choice-name">Never show them</span><br>
+              <span class="choice-name">Only if missing</span><br>
+              <span class="choice-note">The author's own words come first; the AI fills the gaps.</span>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="ai-summaries" value="never">
+            <span>
+              <span class="choice-name">Never</span><br>
               <span class="choice-note">A mod with only an AI summary reads as having no description.</span>
             </span>
           </label>
@@ -94,6 +101,7 @@
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>
+    <span id="build" class="build"></span>
     <a href="#/about">About this site</a>
     <a href="updates.xml">Release feed</a>
     <span class="footer-note">A read-only view of mods posted on the Starsector forum and Discord.</span>

@@ -18,7 +18,7 @@ export async function render(root) {
   const mine = !shared.length;
   const ids = mine ? myList() : shared;
 
-  document.title = mine ? 'My mod list — Starmodder' : 'A mod list — Starmodder';
+  document.title = mine ? 'My mod list | Starmodder' : 'A mod list | Starmodder';
   clear(root);
   root.append(breadcrumbs([{ label: mine ? 'My list' : 'A shared list' }]));
 

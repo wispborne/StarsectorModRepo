@@ -177,17 +177,26 @@ export function replaceHash(hash) {
 
 const AI_COOKIE = 'starmodderAiSummaries';
 
-/// True when AI-written summaries should be shown. On unless the reader turned
-/// them off.
-export function aiSummariesOn() {
-  return readCookie(AI_COOKIE) !== 'off';
+/// The three choices, the same three TriOS offers and in the same order:
+/// prefer the AI summary, use it only where the author wrote nothing, or
+/// never show it.
+export const AI_SUMMARY_MODES = ['always', 'whenMissing', 'never'];
+
+/// What the reader picked, defaulting to "whenMissing".
+export function aiSummaryMode() {
+  const saved = readCookie(AI_COOKIE);
+  if (AI_SUMMARY_MODES.includes(saved)) return saved;
+  // The setting used to be a plain on/off, so a reader who turned it off
+  // before keeps that choice. "on" was the same as "whenMissing" is now.
+  if (saved === 'off') return 'never';
+  return 'whenMissing';
 }
 
 /// Remembers the reader's choice for a year, so it holds between visits.
-export function setAiSummaries(on) {
+export function setAiSummaryMode(mode) {
   const year = 365 * 24 * 60 * 60;
   document.cookie =
-    `${AI_COOKIE}=${on ? 'on' : 'off'}; path=/; max-age=${year}; SameSite=Lax`;
+    `${AI_COOKIE}=${mode}; path=/; max-age=${year}; SameSite=Lax`;
 }
 
 function readCookie(name) {
@@ -224,13 +233,46 @@ export function applySpacing() {
 }
 
 /// The summary to show for a mod, or null when there is nothing to show.
-/// A summary the LLM wrote is left out when the reader has AI summaries off,
-/// and the mod then reads as having no description at all — which is what
-/// [NO_DESCRIPTION] says in its place.
+///
+/// Two blocks of words may be on offer: the author's own, and the sentence an
+/// AI wrote from the post. Which one wins is the reader's choice — the AI
+/// sentence first, the author's first, or the AI summary not at all. The
+/// answer says which was picked, so a card can mark AI words as AI.
 export function summaryToShow(mod) {
-  if (!mod || !mod.summary) return null;
-  if (mod.summaryIsGenerated && !aiSummariesOn()) return null;
-  return mod.summary;
+  if (!mod) return null;
+  const own = mod.summaryIsGenerated ? null : mod.summary;
+  const ai = aiSummaryOf(mod);
+  const inOrder = aiSummaryMode() === 'always'
+    ? [[ai, true], [own, false]]
+    : [[own, false], [ai, true]];
+  for (const [text, generated] of inOrder) {
+    if (!text) continue;
+    // The one that lost, where it was the AI's and the reader asked for AI
+    // words only when the author wrote none. Some of those author summaries
+    // are a pasted line that says nothing about the mod, so the AI sentence is
+    // put on hover rather than thrown away. A reader who asked for no AI words
+    // at all never gets one: `aiSummaryOf` has already returned nothing.
+    const aiAside = !generated && ai && ai !== text ? ai : null;
+    return { text, generated, aiAside };
+  }
+  return null;
+}
+
+/// What the words of a summary say on hover: who wrote them where an AI did,
+/// and the AI's own sentence where the author's words are being shown instead.
+/// Null when there is nothing worth saying.
+export function summaryTitle(summary) {
+  if (!summary) return null;
+  if (summary.generated) return AI_SUMMARY_TITLE;
+  return summary.aiAside ? `AI summary: ${summary.aiAside}` : null;
+}
+
+/// The AI summary for a mod, or null when there is none or the reader has
+/// them off. Data published before `aiSummary` existed only carries the AI
+/// sentence as the summary itself, which is what the second half reads.
+export function aiSummaryOf(mod) {
+  if (aiSummaryMode() === 'never') return null;
+  return mod.aiSummary || (mod.summaryIsGenerated ? mod.summary : null) || null;
 }
 
 /// What stands in for a description a mod does not have — either because
@@ -245,6 +287,12 @@ const SPARKLE_SVG = '<svg viewBox="0 0 16 16" width="1em" height="1em" '
   + '9.5 8.6 8 13.6 6.5 8.6 1.5 7.1 6.5 5.6Z"/><path d="M13 10.4 13.7 12.3 '
   + '15.6 13 13.7 13.7 13 15.6 12.3 13.7 10.4 13 12.3 12.3Z"/></svg>';
 
+/// What the sparkle says on hover, and what the words beside it say on hover
+/// too — a reader is at least as likely to point at the sentence as at the
+/// 12-pixel star in front of it.
+export const AI_SUMMARY_TITLE = "Written by an AI from the mod's post. "
+  + 'Change this under Summaries in settings.';
+
 /// The little sparkle that marks words an AI wrote, shown just before them.
 /// It takes the colour of those words, says where they came from on hover, and
 /// is hidden from a screen reader — the line under the description says the
@@ -254,8 +302,7 @@ export function aiSparkle() {
     class: 'ai-spark',
     html: SPARKLE_SVG,
     'aria-hidden': 'true',
-    title: "Written by an AI from the mod's post. "
-      + 'Disable AI summaries in settings.',
+    title: AI_SUMMARY_TITLE,
   });
 }
 
@@ -649,8 +696,14 @@ const SOURCE_NAMES = {
 /// True when Discord is the only place this mod was found. Those used to be
 /// published under a category called "Discord Only", which said where a mod
 /// came from rather than what kind of mod it is.
+///
+/// A mod with a forum thread never counts, even where Discord is the only
+/// place we read it from. A lot of Discord posts link the mod's own forum
+/// thread, and telling a reader a mod is "Discord only" while its page offers
+/// them the forum thread is simply wrong.
 export function isDiscordOnly(mod) {
   const sources = (mod && mod.sources) || [];
+  if (mod && mod.forumUrl) return false;
   return sources.length === 1 && sources[0] === 'discord';
 }
 
@@ -797,12 +850,42 @@ export const MOD_VERSION_NOTE =
 
 /// A date written the way a reader reads it: "14 August 2026". Takes either a
 /// `YYYY-MM-DD` day or a full timestamp.
+///
+/// A timestamp is shown in the reader's own time zone, because it names a
+/// moment and the reader wants to know when that was for them: data collected
+/// at one in the morning UTC was the evening before in America. A bare
+/// `YYYY-MM-DD` is a day and nothing else, so it is shown exactly as written —
+/// turning it into local time would land it on the day before for every reader
+/// west of Greenwich.
 export function formatDay(value) {
   const when = readDate(value);
   if (!when) return '';
   return when.toLocaleDateString(undefined, {
-    day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
+    day: 'numeric', month: 'long', year: 'numeric',
+    timeZone: isDayOnly(value) ? 'UTC' : undefined,
   });
+}
+
+/// A moment written out in full: "24 August 2026 at 20:34", in the reader's
+/// own time zone and their own way of writing a date and a clock.
+///
+/// This is for the two lines that say how fresh what you are reading is. The
+/// scraper runs twice a day, so the day on its own leaves a reader wondering
+/// whether "today" means this morning or ten minutes ago. A bare `YYYY-MM-DD`
+/// has no time in it to show, so it falls back to the day alone.
+export function formatMoment(value) {
+  if (isDayOnly(value)) return formatDay(value);
+  const when = readDate(value);
+  if (!when) return '';
+  return when.toLocaleString(undefined, {
+    day: 'numeric', month: 'long', year: 'numeric',
+    hour: 'numeric', minute: '2-digit',
+  });
+}
+
+/// True for a bare `YYYY-MM-DD`, which names a day rather than a moment.
+function isDayOnly(value) {
+  return typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value);
 }
 
 /// How long ago something was, in plain words: "today", "3 days ago".

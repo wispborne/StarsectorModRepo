@@ -12,7 +12,8 @@ import {
   everyOtherName, formatDay, gameVersionFamily, gameVersions, hashQuery, howLongAgo,
   isDiscordOnly, joinNames, modHref, modList, modName, MOD_VERSION_NOTE,
   noteScrollPlaced, NO_DESCRIPTION, pageScrollWhenLeft, pager,
-  pageSizePreference, picture, replaceHash, summaryToShow, thumbnail,
+  pageSizePreference, picture, replaceHash, summaryTitle, summaryToShow,
+  thumbnail,
   versionStanding, versionStandingNote,
 } from '../lib.js';
 
@@ -200,10 +201,15 @@ function drawControls(into, mods, state, onChange) {
   const drawChips = () => {
     const wouldMatch = mods.filter(
         (mod) => matchesFilters(mod, { ...state, category: '' }));
-    clear(chips).append(categoryChips(wouldMatch, {
+    const row = categoryChips(wouldMatch, {
       chosen: state.category,
       onPick: (picked) => { state.category = picked; changed(); },
-    }));
+    });
+    clear(chips);
+    // Nothing matching means no chips to draw. `append` turns a null into the
+    // word "null" on the page, so the row has to be checked rather than handed
+    // straight over.
+    if (row) chips.append(row);
   };
   const changed = () => {
     drawChips();
@@ -245,7 +251,7 @@ function drawControls(into, mods, state, onChange) {
   into.append(el('p', {
     class: 'search-hint',
     text: 'Several things at once: separate them with commas. Put a minus in '
-      + 'front of one to leave those out — "faction, -portrait".',
+      + 'front of one to leave those out, like "faction, -portrait".',
   }));
 
   // The chips come before the dropdowns: picking a kind of mod is what most
@@ -529,7 +535,7 @@ export function modCard(mod, currentVersion, { when = null } = {}) {
         (mod.authors || []).length
           ? el('div', { class: 'card-authors', text: joinNames(mod.authors) })
           : null,
-        summaryLine(mod, summary),
+        summaryLine(summary),
         whenLine
           ? el('div', {
               class: 'card-when',
@@ -551,18 +557,21 @@ export function modRows(mods, currentVersion) {
   const rows = el('div', { class: 'mod-rows' });
   for (const mod of mods) {
     const summary = summaryToShow(mod);
-    const generated = Boolean(summary) && Boolean(mod.summaryIsGenerated);
+    const generated = Boolean(summary?.generated);
     const names = joinNames(mod.authors);
     rows.append(el('div', { class: 'mod-row' }, [
       el('a', { class: 'row-inner', href: modHref(mod.id) }, [
         thumbnail(mod.imageUrl, 'row-thumb'),
         el('div', { class: 'row-main' }, [
           el('div', { class: 'row-title', text: modName(mod) }),
-          el('div', { class: 'row-sub' }, [
-            names ? `${names} — ` : null,
+          el('div', {
+            class: 'row-sub',
+            title: summaryTitle(summary),
+          }, [
+            names ? `${names} · ` : null,
             generated ? aiSparkle() : null,
             generated ? ' ' : null,
-            summary || NO_DESCRIPTION,
+            summary?.text || NO_DESCRIPTION,
           ]),
         ]),
         el('div', { class: 'row-side' }, badges(mod, currentVersion)),
@@ -633,14 +642,19 @@ function badges(mod, currentVersion) {
 /// The summary on a card. An AI-written one is marked with a sparkle just
 /// before the words, and a mod with no summary at all says so rather than
 /// leaving a gap where every other card has a line.
-function summaryLine(mod, summary) {
-  const generated = Boolean(summary) && Boolean(mod.summaryIsGenerated);
+function summaryLine(summary) {
+  const generated = Boolean(summary?.generated);
   const words = el('div', {
     class: summary ? 'card-summary' : 'card-summary none',
+    // The same words the sparkle carries, on the whole sentence: a reader is
+    // far more likely to point at the words than at the star in front of them.
+    // On an author's own summary it is the AI's sentence instead, for the
+    // reader who wants a second opinion on a summary that says nothing.
+    title: summaryTitle(summary),
   }, [
     generated ? aiSparkle() : null,
     generated ? ' ' : null,
-    summary || NO_DESCRIPTION,
+    summary?.text || NO_DESCRIPTION,
   ]);
   if (!generated) return words;
   return el('div', { class: 'summary-block' }, [words, aiSummaryNote()]);

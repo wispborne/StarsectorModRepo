@@ -119,7 +119,7 @@ function releasesPanel(releases, byId) {
     // A day sits inside "Recent updates", so it is a step down from it. An
     // h2 inside an h2 reads to a screen reader as two things of equal weight.
     panel.append(el('section', { class: 'release-day' }, [
-      el('h3', { text: `${formatDay(day)} — ${howLongAgo(day)}` }),
+      el('h3', { text: `${formatDay(day)} (${howLongAgo(day)})` }),
       list,
     ]));
   }
@@ -196,11 +196,15 @@ function releaseRow(release, byId) {
     release.gameVersion
       ? el('span', { class: 'badge game', text: release.gameVersion })
       : null,
-    notes ? el('span', { class: 'release-read', text: 'Read changelog' }) : null,
     // The whole summary is the fold's own press area, so a download inside it
     // would open the changelog on a stray press. The button stops its own click
     // from reaching the fold, the same way the "+" on a card does.
     mod ? downloadButton(mod) : null,
+    // "Read changelog" sits on a second line, under the picture. The summary is
+    // a wrapping flex row and this is given a full line of its own in the
+    // stylesheet, so it has to be built last — anything after it would be
+    // dragged down onto that second line with it.
+    notes ? el('span', { class: 'release-read', text: 'Read changelog' }) : null,
   ]);
 
   const row = el('details', { class: notes ? 'release' : 'release no-notes' }, [summary]);

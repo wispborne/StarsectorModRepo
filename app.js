@@ -5,9 +5,10 @@
 // files, fetched off this site's own origin.
 
 import {
-  aiSummariesOn, buildHash, clear, el, errorPanel, everyOtherName, formatDay,
-  applySpacing, go, hashParts, loading, modHref, modList, modName, myList,
-  notePageScroll, setAiSummaries, setSpacingPreference, spacingPreference,
+  aiSummaryMode, buildHash, clear, el, errorPanel, everyOtherName, formatDay,
+  formatMoment, applySpacing, go, hashParts, loading, modHref, modList,
+  modName, myList,
+  notePageScroll, setAiSummaryMode, setSpacingPreference, spacingPreference,
   takeScrollPlaced, thumbnail, watchMyList,
 } from './lib.js';
 import * as home from './views/home.js';
@@ -16,6 +17,10 @@ import * as mod from './views/mod.js';
 import * as author from './views/author.js';
 import * as about from './views/about.js';
 import * as list from './views/list.js';
+
+/// Where this site's code lives. The commit in the footer links into it, so
+/// a bug report can name the exact build.
+const REPO_URL = 'https://github.com/wispborne/Mod_Repo_Scraper';
 
 const NAV = [
   { route: 'home', label: 'Home' },
@@ -116,10 +121,44 @@ async function showFreshness() {
   try {
     const list = await modList();
     if (!list || !list.generatedAt) return;
-    line.textContent = `Data collected ${formatDay(list.generatedAt)}`;
+    line.textContent = `Data collected ${formatMoment(list.generatedAt)}`;
     line.title = new Date(list.generatedAt).toString();
   } catch {
     // If the data would not load, the page itself already says so.
+  }
+}
+
+/// Says which build of the site this is: a number that goes up by one with
+/// every commit, the commit itself, and the day it was made. It is next to the
+/// "data collected" line at the foot, because both are things a reader only
+/// wants when something looks wrong — and the commit is the one thing that
+/// makes a bug report answerable.
+///
+/// `version.json` is written by the release workflow, so it is only there in a
+/// published copy of the site. Run straight from the repo there is no such
+/// file, the fetch fails, and the footer simply carries no version line.
+///
+/// It is fetched by hand rather than through `data()` because it is part of
+/// the site, not part of the published data: `?data=sample` must not send it
+/// looking in `sample-data/`, where it would never be.
+async function showBuild() {
+  const line = document.getElementById('build');
+  if (!line) return;
+  try {
+    const res = await fetch('./version.json', { credentials: 'omit' });
+    if (!res.ok) return;
+    const build = await res.json();
+    if (!build || !build.commit) return;
+
+    const commit = el('a', {
+      text: build.commit,
+      href: `${REPO_URL}/commit/${build.commit}`,
+      rel: 'nofollow noopener',
+    });
+    line.replaceChildren(`v${build.build} · `, commit, ` · ${build.date}`);
+    line.title = `Built from commit ${build.commit} on ${formatDay(build.date)}.`;
+  } catch {
+    // No version file, or one that would not read. Not worth a word on screen.
   }
 }
 
@@ -127,8 +166,8 @@ async function showFreshness() {
 /// that are about the reader rather than about any one page: how much room
 /// there is between things, and whether AI-written summaries are shown at all.
 /// Each choice takes effect the moment it is ticked — there is no Save button
-/// to find. Turning AI summaries off redraws the page underneath, so every
-/// summary disappears at once rather than on the next click.
+/// to find. Changing the summaries choice redraws the page underneath, so
+/// every summary on it changes at once rather than on the next click.
 function mountSettings() {
   const open = document.getElementById('open-settings');
   const dialog = document.getElementById('settings');
@@ -141,7 +180,7 @@ function mountSettings() {
   open.addEventListener('click', () => {
     const current = spacingPreference();
     for (const radio of radios) radio.checked = radio.value === current;
-    const ai = aiSummariesOn() ? 'on' : 'off';
+    const ai = aiSummaryMode();
     for (const radio of aiRadios) radio.checked = radio.value === ai;
     dialog.showModal();
   });
@@ -160,7 +199,7 @@ function mountSettings() {
   for (const radio of aiRadios) {
     radio.addEventListener('change', () => {
       if (!radio.checked) return;
-      setAiSummaries(radio.value === 'on');
+      setAiSummaryMode(radio.value);
       route();
     });
   }
@@ -316,6 +355,7 @@ window.addEventListener('DOMContentLoaded', () => {
   mountHeaderSearch();
   mountSkipLink();
   showFreshness();
+  showBuild();
   if (!location.hash) location.hash = '#/home';
   else route();
 });
