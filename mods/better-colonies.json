@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T01:02:57.729560Z",
+  "generatedAt": "2026-08-25T01:29:54.945441Z",
   "listing": {
     "id": "better-colonies",
     "name": "Better Colonies",
@@ -35,6 +35,7 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1539899418990481430/1539899418990481430",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "lastReleaseDate": "2026-08-25T00:00:00.000Z",
     "addedOn": "2019-10-29",
     "needs": []
   },
@@ -110,7 +111,17 @@
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=17103.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1539899418990481430/1539899418990481430",
-  "releases": [],
+  "releases": [
+    {
+      "modId": "better-colonies",
+      "modName": "Better Colonies",
+      "seenOn": "2026-08-25",
+      "oldVersion": "1.88",
+      "newVersion": "1.91",
+      "gameVersion": "0.98a",
+      "changelogNotes": "Compatibility\n Do not bother using this in a current save.\n FOR ADVANCED USERS : There are some custom stations made by faction mods that do not incorporate Better Colonies station code. This is easily fixed by redirecting the plugin in those industries.csv \"com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation\" to \"com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStationGD\".\n\n Max Industry Cap at Population 1/2/3/4/5/6/7/8/9/10 increased from 1/1/1/2/3/3/4/4/4/4 to 1/1/1/2/3/3/4/4/5/5.\n +1 Max Industry at Population 9+\n Commerce may even produce income... if the planetary conditions are mild.\n Orbital Stations are now commandeered by an officer up to a max level of 8 (from 0).\n An officer at this level may have up to 3 maxed skills.\n Battle Stations are now commandeered by an officer ranging from 8 up to a max level of 17 (from 6).\n An officer at this level may have up to 6 maxed skills.\n Star Fortresses are now commandeered by an officer ranging from 17 up to a max level of 26 (from 12).\n An officer at this level will have up to 9 maxed skills.\n Levels of Mercenary Officers are now determined by the market's size. The higher the market size, the higher the possible max officer level and so on for lower.\n A Station commandeered by an Alpha Core will be level 29 given Gunnery Implants as a guaranteed skill. (Alpha Core would be level 20 in vanilla, this value is now able to be changed in the mod folder's setting.json whereas vanilla is hardcoded.)\n Cryorevival Facility will now produce organs when the market is a Free Port and has a certain population size above 4."
+    }
+  ],
   "olderVersions": [],
   "addons": []
 }
