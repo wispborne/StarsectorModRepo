@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-27T03:06:38.091489Z",
+  "updatedAt": "2026-08-27T15:07:08.387726Z",
   "meta": {
-    "generatedAt": "2026-08-27T03:13:55.616066Z",
+    "generatedAt": "2026-08-27T15:14:21.452872Z",
     "totalMods": 1021,
     "totalDetails": 924,
     "totalAssumedDownloadEntries": 815,
     "placeholderDetailCount": 0,
-    "scrapeDurationSeconds": 32,
-    "modsScraped": 13,
+    "scrapeDurationSeconds": 140,
+    "modsScraped": 20,
     "imagesDownloaded": 0,
     "errors": 0
   },
@@ -8535,14 +8535,14 @@
       "isArchivedModIndex": false,
       "gameVersion": "0.98a",
       "author": "Histidine",
-      "replies": 7094,
-      "views": 4384621,
+      "replies": 7095,
+      "views": 4385087,
       "createdDate": "March 07, 2015, 12:40:41 AM",
-      "lastPostDate": "Today at 07:25:43 PM",
-      "lastPostBy": "Histidine",
+      "lastPostDate": "Today at 01:20:29 AM",
+      "lastPostBy": "Discgear",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=9175.0",
       "thumbnailPath": "ext:https://i.imgur.com/xFXACmR.png",
-      "scrapedAt": "2026-08-27T03:06:26.074171Z",
+      "scrapedAt": "2026-08-27T15:06:54.364862Z",
       "isWip": false,
       "sourceBoard": 8,
       "llm": {
@@ -10860,8 +10860,8 @@
               "license": "It must be for a Starsector mod, that mod must have a similarly permissive license, and I am credited.",
               "sourceCode": "https://www.patreon.com/posts/outer-rim-0-76912647",
               "summary": {
-                "sentence": "Adds a high-tech faction of broadsider ships with long-range energy weapons, deliberate fleet tactics, and a narrative of reconstruction and collective purpose.",
-                "paragraph": "Adds a high-tech faction composed mostly of broadsider ships that rely on long-range energy weapons and deliberate fleet tactics. The faction features a large cluster of systems with a strong industrial base and a unique narrative centered on reconstruction and collective purpose. It includes multiple ship variants, new weapons, and balance adjustments to enhance gameplay."
+                "sentence": "Adds a high-tech faction of broadsider ships that use long-range energy weapons and coordinated fleet tactics to rebuild the sector.",
+                "paragraph": "Adds a high-tech faction composed mostly of broadsider ships that rely on energy weapons and long-range artillery tactics. The faction features a large cluster of systems with a strong industrial base and a focus on reconstruction and collective purpose. It includes multiple ship classes, unique systems, and balance adjustments to support deliberate fleet combat."
               },
               "needs": [
                 "LazyLib",
@@ -10887,18 +10887,27 @@
             "image": "ext:https://i.imgur.com/XzdZxvxl.jpg",
             "extras": {
               "changelog": {
-                "link": "https://www.patreon.com/posts/61841796"
+                "entries": {
+                  "0.95": "BALANCING:\n\n&nbsp;- All ships with maneuvering systems now have reduced base acceleration.\n\n&nbsp;- Sempiternal Repeater: Range increased to 700su from 600.\n\nBUGFIXES/IMPROVEMENTS:\n\n&nbsp;- Eschewal Projector / Invocation Launcher:\n&nbsp; &nbsp;. Fixed a typo that made the slowing effect much more pronounced that it should have,\n&nbsp; &nbsp;. Added a multiplier that increase the effect with skills and systems that increase Energy weapon damage.\n&nbsp;- Prayer Sender missiles are now much smaller, more in line with their damage potential.\n&nbsp;- Fixed an error with the Xeno-Warfare Design hullmod that always gave the max debuff for asymmetric loadouts.\n&nbsp;- The Xeno-Warfare Design hullmod now displays the current engine debuff when using an asymmetric loadout.",
+                  "0.94": "NEW CONTENT:\n\n&nbsp;- New star system ambience musics courtesy of Mesotronik.\n\nBALANCING:\n\n&nbsp;- Attitude Jets system:\n&nbsp; &nbsp;. Duration reduced to 3s from 4, added a 2s charge-down,\n&nbsp; &nbsp;. Speed boost increased to 100 from 50, but only applies during the fully active time,\n&nbsp; &nbsp;. turn rate boost applies during the entire charge-up + active + charge-down duration.\n\n&nbsp;- Ships:\n&nbsp; &nbsp;. Many sideways energy turrets are now synergy,\n&nbsp; &nbsp;. Many spinal synergy turrets are now energy.\n&nbsp;> Ships have more missile-capable mounts overall.\n&nbsp;> Given that having projectile weapons in spinal mounts is important to make the AI broadside properly, this should eliminate pitfalls new users fall into.\n&nbsp; &nbsp;. All broadsider ships' Omni shields now have variable arcs, they get wider when pointed to the side and narrower to the front to catch fewer unnecessary shots.\n\n&nbsp;- Harmony destroyer:\n&nbsp; &nbsp;. System switched to Plasma Jets from Plasma Burn.\n\n&nbsp;- Grace destroyer:\n&nbsp; &nbsp;. Speed increased to 90 from 70.\n&nbsp; &nbsp;. Deployment/Maintenance cost increased to 13 supplies from 11.\n\n&nbsp;- Communion carrier:\n&nbsp; &nbsp;. Speed increased to 50 from 35.\n\n&nbsp;- Beatitude cruiser:\n&nbsp; &nbsp;. Speed increased to 65 from 50.\n\n&nbsp;- Elevation cruiser:\n&nbsp; &nbsp;. Speed increased to 75 from 65.\n\n&nbsp;- Revelation cruiser:\n&nbsp; &nbsp;. Shield changed to a Front bubble, from a 300 degrees Omni.\n&nbsp; &nbsp;. Now has built-in Accelerated Shields.\n\n&nbsp;- Discernment super-carrier:\n&nbsp; &nbsp;. System switched to Coordinated Engagement (+30CR to nearby ships) from Acausal Disruptor,\n&nbsp; &nbsp;. Deployment/Maintenance cost increased to 60 supplies from 50.\n\n&nbsp;- Choir Emitter:\n&nbsp; &nbsp;. Damage per shot increased to 25 from 10 (125 dps from 50)\n&nbsp; &nbsp;. EMP per shot increased to 80 from 40 (400 dps from 200)\n&nbsp;> This won't change much it's efficiency against missiles since most of the effect is scripted, but it might make it better than soaked porridge vs fighters.\n\n&nbsp;- Recital Deliverer:\n&nbsp; &nbsp;. Base fire-rate increased to 240 rpm from 120. Maximum fire-rate unchanged.\n\n&nbsp;- Litany Thrower:\n&nbsp; &nbsp;. Proj speed increased to 400 from 300.\n&nbsp; &nbsp;. Fires in bursts of 3 instead of having 6 ammo with regen.\n&nbsp;> Might be worse in player hands, but should work a lot better with the AI.\n\n&nbsp;- Eschewal Projector:\n&nbsp; &nbsp;. Now has a constant turn rate while firing or not.\n&nbsp; &nbsp;. Proj speed increased to 450 from 400.\n\n&nbsp;- Echoes Caster:\n&nbsp; &nbsp;. No longer affects friendly missiles.\n&nbsp;> Kind of necessary now with all the new missile mounts.\n\n&nbsp;- Calling Scatterer:\n&nbsp; &nbsp;. Proj speed increased to 350 from 300.\n\n&nbsp;- Incantation Horn:\n&nbsp; &nbsp;. Proj speed increased to 300 from 225.\n\nBUGFIXES/IMPROVEMENTS:\n\n&nbsp;- Xeno-warfare hullmod is now displayed to the top of all built-in hullmods",
+                  "0.93": "BALANCING:\n\n&nbsp;- Recital Deliverer:\n&nbsp; &nbsp;. Damage per shot decreased to 45 Energy damage from 60, flux reduced accordingly.\n&nbsp; &nbsp;. Rate of fire increases more rapidly to reach its full potential in 10 shots from 20. (4.5s of sustained fire from 5.6s)\n&nbsp; &nbsp;. Stat-card clarified.\n\n&nbsp;- Litany Thrower:\n&nbsp; &nbsp;. Burst firepower lowered to 600dps from 750.\n&nbsp; &nbsp;. Sustained firepower raised to 150dps from 75.\n\n&nbsp;- Eschewal Projector:\n&nbsp; &nbsp;. Range increased to 900 from 850.\n&nbsp; &nbsp;. Now fires in bursts of two shots.\n&nbsp; &nbsp;. Speed dampening effect now fixed to 25% from 0/20/40/60/80% depending on target size. (similar to cruiser effect if both projectiles connect)\n\n&nbsp;- Incantation Horn:\n&nbsp; &nbsp;. Range increased to 1000 from 900.\n&nbsp; &nbsp;. Firerate increased to 20 rpm from 17.\n\n&nbsp;- Sempiternal Repeater: Turn rate increased by 50% but added tag to not benefit from the idle turn boost.\n\n&nbsp;- Echoes Caster: Turn rate increased by 100% but added tag to not benefit from the idle turn boost.\n\n&nbsp;- Fervor-wing gunship:\n&nbsp; &nbsp;. Now only has a single Recital Repeater on a 360deg turret instead of two in 180deg turrets.\n&nbsp; &nbsp;. The fighters will now try to maintain some range off of their target's PD weapons instead of rushing in.\n\n&nbsp;- Communion-class carrier: System changed to Active flares from Long Range Fighters.\n\n&nbsp;- Felicity-class carrier: System changed to Sensor Drones from Entropy Amplifier.\n\n&nbsp;- Discernment-class carrier: System changed to Quantum Disruptor from Interdictor Array.\n\n&nbsp;- Attitude Jets system: Increased the speed boost to 50 from 25.\n\n&nbsp;- Commisioned Crew:\n&nbsp; &nbsp;. Removed the drawback of Alliance Conservation Methods.\n&nbsp; &nbsp;. Effect is now -15% or -4 supplies per month (whichever is smaller) instead of -25% or -2.\n\nBUGFIXES/IMPROVEMENTS:\n\n&nbsp;- Fixed ORA system spawning in Nexerelin random mode.\n&nbsp;- Calling Scatterer no longer uses its secondary PD function while phased.\n&nbsp;- Added the new Fury-class to ORA's spawn tables.\n&nbsp;- System's blue giant stars are now proper blue giants.\n&nbsp;- Solid State Capacitor system description adjusted to better reflect the effect.\n&nbsp;- Externalized a couple of strings that were missing.\n&nbsp;- Added missing fighter weapons descriptions."
+                }
               },
               "supportLinks": [
                 {
                   "url": "https://www.patreon.com/posts/61841796",
                   "type": "patreon"
+                },
+                {
+                  "url": "https://www.patreon.com/tartiflette",
+                  "type": "patreon"
                 }
               ],
+              "license": "It must be for a Starsector mod, that mod must have a similarly permissive license, and I am credited.",
               "sourceCode": "https://www.patreon.com/posts/61841796",
               "summary": {
-                "sentence": "Adds alternative visual skins for Outer Rim Alliance ships with updated weapon models and visual effects.",
-                "paragraph": "Provides alternative visual skins for the Outer Rim Alliance faction's ships, allowing players to customize their fleet's appearance. The skins are designed as standalone add-ons and can be swapped freely without affecting gameplay. They include updated weapon models and visual effects."
+                "sentence": "Adds alternative visual skins for the Outer Rim Alliance faction's ships.",
+                "paragraph": "Adds alternative visual skins for the Outer Rim Alliance faction's ships, allowing players to customize their fleet's appearance. The skins are provided as a separate mod and can be used alongside the main mod without conflict. Players can switch between skins freely in the launcher."
               }
             }
           }
@@ -16304,13 +16313,13 @@
       "gameVersion": "0.98a",
       "author": "Kris",
       "replies": 726,
-      "views": 591036,
+      "views": 591119,
       "createdDate": "November 25, 2019, 12:01:33 PM",
-      "lastPostDate": "Today at 08:20:16 AM",
+      "lastPostDate": "August 26, 2026, 08:20:16 AM",
       "lastPostBy": "Mora32",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=17331.0",
       "thumbnailPath": "ext:https://i.imgur.com/3qk9YqV.png",
-      "scrapedAt": "2026-08-27T03:06:33.084804Z",
+      "scrapedAt": "2026-08-27T15:07:01.353065Z",
       "isWip": false,
       "sourceBoard": 8,
       "llm": {
@@ -17659,14 +17668,14 @@
       "isArchivedModIndex": false,
       "gameVersion": "0.98a",
       "author": "shoi",
-      "replies": 2634,
-      "views": 1368829,
+      "replies": 2636,
+      "views": 1369313,
       "createdDate": "June 25, 2020, 05:09:27 AM",
-      "lastPostDate": "August 25, 2026, 08:11:05 AM",
-      "lastPostBy": "XJD",
+      "lastPostDate": "Today at 02:54:49 AM",
+      "lastPostBy": "Regis117",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=18751.0",
       "thumbnailPath": "ext:https://i.imgur.com/zYciRZg.png",
-      "scrapedAt": "2026-08-26T15:06:11.708958Z",
+      "scrapedAt": "2026-08-27T15:06:52.372606Z",
       "isWip": false,
       "sourceBoard": 8,
       "llm": {
@@ -22836,14 +22845,14 @@
       "isArchivedModIndex": false,
       "gameVersion": "0.98a",
       "author": "Dazs",
-      "replies": 897,
-      "views": 499371,
+      "replies": 899,
+      "views": 500732,
       "createdDate": "November 14, 2021, 06:27:18 PM",
-      "lastPostDate": "August 16, 2026, 12:46:46 PM",
+      "lastPostDate": "Today at 02:13:21 AM",
       "lastPostBy": "Dazs",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=22965.0",
       "thumbnailPath": "ext:https://i.imgur.com/uiXpsfj.png",
-      "scrapedAt": "2026-08-17T15:06:08.903467Z",
+      "scrapedAt": "2026-08-27T15:06:53.473842Z",
       "isWip": false,
       "sourceBoard": 8,
       "llm": {
@@ -29015,13 +29024,13 @@
       "gameVersion": "0.98a",
       "author": "chickenboy",
       "replies": 45,
-      "views": 87241,
+      "views": 87307,
       "createdDate": "March 03, 2023, 04:01:40 PM",
-      "lastPostDate": "Today at 04:23:24 PM",
+      "lastPostDate": "August 26, 2026, 04:23:24 PM",
       "lastPostBy": "Carcus",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=26229.0",
       "thumbnailPath": "ext:https://github.com/hamzah-hayat/ChickenTechShop/raw/master/media/ChickenTechIntel.png",
-      "scrapedAt": "2026-08-27T03:06:29.007785Z",
+      "scrapedAt": "2026-08-27T15:06:57.293104Z",
       "isWip": false,
       "sourceBoard": 8,
       "llm": {
@@ -29771,13 +29780,13 @@
       "gameVersion": "0.98",
       "author": "SparraNova",
       "replies": 247,
-      "views": 292793,
+      "views": 292896,
       "createdDate": "April 07, 2023, 02:57:22 PM",
-      "lastPostDate": "Today at 06:38:39 PM",
+      "lastPostDate": "August 26, 2026, 06:38:39 PM",
       "lastPostBy": "SparraNova",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=26432.0",
       "thumbnailPath": "ext:https://i.postimg.cc/zf3Kg9m2/DEX-new-promo-image.png",
-      "scrapedAt": "2026-08-27T03:06:28.080247Z",
+      "scrapedAt": "2026-08-27T15:06:56.350719Z",
       "isWip": false,
       "sourceBoard": 8,
       "llm": {
@@ -30394,14 +30403,14 @@
       "isArchivedModIndex": false,
       "gameVersion": "0.98a",
       "author": "LngA7Gw",
-      "replies": 252,
-      "views": 215644,
+      "replies": 253,
+      "views": 215762,
       "createdDate": "May 17, 2023, 12:29:24 PM",
-      "lastPostDate": "August 25, 2026, 07:09:36 PM",
-      "lastPostBy": "thiscattail",
+      "lastPostDate": "August 26, 2026, 08:57:30 PM",
+      "lastPostBy": "LngA7Gw",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=26880.0",
       "thumbnailPath": "ext:https://i.imgur.com/lcB3PkW.png",
-      "scrapedAt": "2026-08-26T15:06:09.701574Z",
+      "scrapedAt": "2026-08-27T15:06:55.366736Z",
       "isWip": false,
       "sourceBoard": 8,
       "llm": {
@@ -31801,14 +31810,14 @@
       "isArchivedModIndex": false,
       "gameVersion": "0.98a",
       "author": "MiniDeth3",
-      "replies": 237,
-      "views": 895832,
+      "replies": 239,
+      "views": 897861,
       "createdDate": "August 24, 2023, 07:57:09 PM",
-      "lastPostDate": "August 07, 2026, 10:29:50 AM",
-      "lastPostBy": "PasDeBras",
+      "lastPostDate": "Today at 07:27:14 AM",
+      "lastPostBy": "lchronosl",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=27893.0",
       "thumbnailPath": "ext:https://raw.githubusercontent.com/MiniDeth3/PMMM/main/graphics/silly/flag.png",
-      "scrapedAt": "2026-08-08T15:06:07.746176Z",
+      "scrapedAt": "2026-08-27T15:06:49.378665Z",
       "isWip": false,
       "sourceBoard": 8,
       "llm": {
@@ -32344,13 +32353,13 @@
       "gameVersion": "0.97a",
       "author": "Planetace",
       "replies": 132,
-      "views": 236005,
+      "views": 236067,
       "createdDate": "November 02, 2023, 11:15:59 AM",
-      "lastPostDate": "Today at 03:17:54 PM",
+      "lastPostDate": "August 26, 2026, 03:17:54 PM",
       "lastPostBy": "Active Ink",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=28273.0",
       "thumbnailPath": "ext:https://i.imgur.com/Hg31maJ.png",
-      "scrapedAt": "2026-08-27T03:06:29.978903Z",
+      "scrapedAt": "2026-08-27T15:06:58.292464Z",
       "isWip": false,
       "sourceBoard": 8,
       "llm": {
@@ -41893,13 +41902,13 @@
       "gameVersion": "0.98a",
       "author": "TestingSubject",
       "replies": 62,
-      "views": 32791,
+      "views": 32893,
       "createdDate": "May 13, 2025, 12:23:11 PM",
-      "lastPostDate": "Today at 02:45:10 PM",
+      "lastPostDate": "August 26, 2026, 02:45:10 PM",
       "lastPostBy": "NaitNait",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=33045.0",
       "thumbnailPath": "ext:https://i.imgur.com/spK0uba.png",
-      "scrapedAt": "2026-08-27T03:06:31.080891Z",
+      "scrapedAt": "2026-08-27T15:06:59.373069Z",
       "isWip": false,
       "sourceBoard": 8,
       "llm": {
@@ -42469,14 +42478,14 @@
       "isArchivedModIndex": false,
       "gameVersion": "0.98a",
       "author": "Taiwendo",
-      "replies": 636,
-      "views": 143126,
+      "replies": 637,
+      "views": 146780,
       "createdDate": "June 11, 2025, 02:36:27 PM",
-      "lastPostDate": "August 07, 2026, 10:37:41 AM",
-      "lastPostBy": "Taiwendo",
+      "lastPostDate": "Today at 06:10:12 AM",
+      "lastPostBy": "ItsANewDawn",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=33348.0",
       "thumbnailPath": "ext:https://i.imgur.com/rzKwrHj.png",
-      "scrapedAt": "2026-08-08T15:06:06.783711Z",
+      "scrapedAt": "2026-08-27T15:06:50.384417Z",
       "isWip": false,
       "sourceBoard": 8,
       "llm": {
@@ -53800,13 +53809,13 @@
       "gameVersion": "0.98a-RC8",
       "author": "lepidosteus",
       "replies": 16,
-      "views": 1227,
+      "views": 1244,
       "createdDate": "July 23, 2026, 12:47:31 PM",
-      "lastPostDate": "Today at 11:13:31 AM",
+      "lastPostDate": "August 26, 2026, 11:13:31 AM",
       "lastPostBy": "superjosh250",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=35782.0",
       "thumbnailPath": "ext:https://www.lepidosteus.com/starsector/daedalus_forge/icon.png?logo",
-      "scrapedAt": "2026-08-27T03:06:38.091489Z",
+      "scrapedAt": "2026-08-27T15:07:08.387726Z",
       "isWip": false,
       "sourceBoard": 3,
       "llm": {
@@ -53927,14 +53936,14 @@
       "isArchivedModIndex": false,
       "gameVersion": "0.98a",
       "author": "Blank_",
-      "replies": 20,
-      "views": 1104,
+      "replies": 21,
+      "views": 1168,
       "createdDate": "July 28, 2026, 12:44:52 PM",
-      "lastPostDate": "Today at 01:54:43 AM",
-      "lastPostBy": "cvandem",
+      "lastPostDate": "Today at 01:22:23 AM",
+      "lastPostBy": "Blank_",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=35803.0",
       "thumbnailPath": "ext:https://imgur.com/978ZweU.png",
-      "scrapedAt": "2026-08-26T15:06:13.739669Z",
+      "scrapedAt": "2026-08-27T15:07:03.403830Z",
       "isWip": false,
       "sourceBoard": 3,
       "llm": {
@@ -53965,8 +53974,8 @@
               },
               "saveCompatibility": "not save-compatible with the original UNSC mod, and not meant to be run alongside it - both define the same faction and the same ship IDs.",
               "summary": {
-                "sentence": "Adds a fully playable UNSC faction with every ship sized to its canonical length, from 82-meter prowlers to the 5,694-meter Infinity.",
-                "paragraph": "Adds a fully playable UNSC faction with every ship sized to its canonical length, from 82-meter prowlers to the 5,694-meter Infinity. Includes a Covenant faction with a full campaign, hierarchy, and unique mechanics like the Luminary Array and tithe system. Features custom portraits, captured technology, standing orders, and a moving front line where the Covenant burn worlds unless intercepted."
+                "sentence": "Adds a fully playable UNSC faction with every ship sized to its canonical length, from a 82-meter prowler to the 5,694-meter Infinity.",
+                "paragraph": "Adds a fully playable UNSC faction with every ship sized to its canonical length, from a 82-meter prowler to the 5,694-meter Infinity. Includes a Covenant faction with a full campaign, hierarchy, and unique mechanics like the Luminary Array and tithe system. Features custom portraits, captured technology, standing orders, and a moving front line where the Covenant burn worlds unless intercepted."
               },
               "needs": [
                 "Lazylib",
@@ -53986,13 +53995,13 @@
       "gameVersion": "0.98a",
       "author": "After",
       "replies": 62,
-      "views": 6152,
+      "views": 6418,
       "createdDate": "July 30, 2026, 07:29:30 PM",
-      "lastPostDate": "Today at 06:58:42 AM",
+      "lastPostDate": "August 26, 2026, 06:58:42 AM",
       "lastPostBy": "After",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=35818.0",
       "thumbnailPath": "ext:https://imgur.com/3PkAPsV.png",
-      "scrapedAt": "2026-08-26T15:06:03.702969Z",
+      "scrapedAt": "2026-08-27T15:07:02.368156Z",
       "isWip": false,
       "sourceBoard": 8,
       "llm": {
@@ -54144,13 +54153,13 @@
       "gameVersion": "0.98a",
       "author": "Auwennja",
       "replies": 18,
-      "views": 1360,
+      "views": 1388,
       "createdDate": "August 02, 2026, 02:59:30 PM",
-      "lastPostDate": "Today at 02:31:36 PM",
+      "lastPostDate": "August 26, 2026, 02:31:36 PM",
       "lastPostBy": "BetaTyler963",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=35831.0",
       "thumbnailPath": "ext:https://raw.githubusercontent.com/Auwennja/Tri-Ceti-Pictures-GitHub/refs/heads/main/cetora.png",
-      "scrapedAt": "2026-08-27T03:06:35.984831Z",
+      "scrapedAt": "2026-08-27T15:07:06.307535Z",
       "isWip": false,
       "sourceBoard": 3,
       "llm": {
@@ -54501,12 +54510,12 @@
       "gameVersion": "0.98a",
       "author": "Razenpok",
       "replies": 12,
-      "views": 817,
+      "views": 830,
       "createdDate": "August 08, 2026, 04:08:51 PM",
-      "lastPostDate": "Today at 02:18:43 PM",
+      "lastPostDate": "August 26, 2026, 02:18:43 PM",
       "lastPostBy": "Lukas04",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=35854.0",
-      "scrapedAt": "2026-08-27T03:06:37.073276Z",
+      "scrapedAt": "2026-08-27T15:07:07.373384Z",
       "isWip": false,
       "sourceBoard": 3,
       "llm": {
@@ -54680,13 +54689,13 @@
       "gameVersion": "0.98a-RC8",
       "author": "Mamick",
       "replies": 28,
-      "views": 3841,
+      "views": 3936,
       "createdDate": "August 10, 2026, 01:39:35 AM",
-      "lastPostDate": "Today at 09:00:08 AM",
+      "lastPostDate": "August 26, 2026, 09:00:08 AM",
       "lastPostBy": "Rei Akiba",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=35859.0",
       "thumbnailPath": "ext:https://github.com/mamick2006/nomadic-fleet/raw/main/screenshots/nomad_promo_header.png",
-      "scrapedAt": "2026-08-27T03:06:31.980808Z",
+      "scrapedAt": "2026-08-27T15:07:00.275861Z",
       "isWip": false,
       "sourceBoard": 8,
       "llm": {
@@ -54783,14 +54792,14 @@
       "isArchivedModIndex": false,
       "gameVersion": "0.98a-RC8",
       "author": "Mamick",
-      "replies": 25,
-      "views": 4002,
+      "replies": 26,
+      "views": 4118,
       "createdDate": "August 10, 2026, 01:54:46 AM",
-      "lastPostDate": "Today at 07:00:32 PM",
-      "lastPostBy": "Mamick",
+      "lastPostDate": "Today at 03:15:16 AM",
+      "lastPostBy": "Regis117",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=35861.0",
       "thumbnailPath": "ext:https://github.com/mamick2006/project-arondight/raw/main/screenshots/arondight_promo_header.png",
-      "scrapedAt": "2026-08-27T03:06:26.979482Z",
+      "scrapedAt": "2026-08-27T15:06:51.265802Z",
       "isWip": false,
       "sourceBoard": 8,
       "llm": {
@@ -55193,13 +55202,13 @@
       "gameVersion": "0.98a",
       "author": "thedarkgod",
       "replies": 3,
-      "views": 99,
-      "createdDate": "Today at 11:40:29 AM",
-      "lastPostDate": "Today at 05:44:02 PM",
+      "views": 153,
+      "createdDate": "August 26, 2026, 11:40:29 AM",
+      "lastPostDate": "August 26, 2026, 05:44:02 PM",
       "lastPostBy": "Frumple",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=35930.0",
       "thumbnailPath": "ext:https://i.imgur.com/QoEe3K3.png",
-      "scrapedAt": "2026-08-27T03:06:33.973473Z",
+      "scrapedAt": "2026-08-27T15:07:04.274861Z",
       "isWip": false,
       "sourceBoard": 3,
       "llm": {
@@ -55245,12 +55254,12 @@
       "gameVersion": "0.98a",
       "author": "Anjasnare",
       "replies": 1,
-      "views": 35,
-      "createdDate": "Today at 02:14:59 PM",
-      "lastPostDate": "Today at 04:00:09 PM",
+      "views": 65,
+      "createdDate": "August 26, 2026, 02:14:59 PM",
+      "lastPostDate": "August 26, 2026, 04:00:09 PM",
       "lastPostBy": "lchronosl",
       "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=35933.0",
-      "scrapedAt": "2026-08-27T03:06:34.970345Z",
+      "scrapedAt": "2026-08-27T15:07:05.272964Z",
       "isWip": false,
       "sourceBoard": 3,
       "llm": {
@@ -70712,7 +70721,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-27T03:06:26.074143Z",
+      "scrapedAt": "2026-08-27T15:06:54.364860Z",
       "isPlaceholderDetail": false
     },
     "9221": {
@@ -84349,7 +84358,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-27T03:06:33.084801Z",
+      "scrapedAt": "2026-08-27T15:07:01.353063Z",
       "isPlaceholderDetail": false
     },
     "17362": {
@@ -88114,7 +88123,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-26T15:06:11.708955Z",
+      "scrapedAt": "2026-08-27T15:06:52.372601Z",
       "isPlaceholderDetail": false
     },
     "18828": {
@@ -94622,7 +94631,7 @@
       "gameVersion": "0.98a",
       "author": "Dazs",
       "authorTitle": "Admiral",
-      "authorPostCount": 1716,
+      "authorPostCount": 1722,
       "authorAvatarPath": "https://fractalsoftworks.com/forum/index.php?action=dlattach;attach=7004;type=avatar",
       "postDate": "November 14, 2021, 06:27:18 PM",
       "lastEditDate": "May 16, 2026, 04:37:03 AM by Dazs",
@@ -94737,7 +94746,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-17T15:06:08.903465Z",
+      "scrapedAt": "2026-08-27T15:06:53.473840Z",
       "isPlaceholderDetail": false
     },
     "22966": {
@@ -102834,7 +102843,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-27T03:06:29.007781Z",
+      "scrapedAt": "2026-08-27T15:06:57.293100Z",
       "isPlaceholderDetail": false
     },
     "26230": {
@@ -103673,7 +103682,7 @@
           "isDownloadable": true
         }
       ],
-      "scrapedAt": "2026-08-27T03:06:28.080244Z",
+      "scrapedAt": "2026-08-27T15:06:56.350717Z",
       "isPlaceholderDetail": false
     },
     "26443": {
@@ -104472,7 +104481,7 @@
       "gameVersion": "0.98a",
       "author": "LngA7Gw",
       "authorTitle": "Commander",
-      "authorPostCount": 140,
+      "authorPostCount": 141,
       "postDate": "May 17, 2023, 12:29:24 PM",
       "lastEditDate": "May 17, 2025, 02:54:30 AM by LngA7Gw",
       "contentHtml": "<div align=\"center\"><span style=\"font-size: 24pt;\" class=\"bbc_size\"><span style=\"color: red;\" class=\"bbc_color\">More Military Missions</span></span> <span style=\"font-size: 14pt;\" class=\"bbc_size\">(v0.5.0)</span></div><div align=\"center\"><span style=\"font-size: 14pt;\" class=\"bbc_size\">A mod for adding a defense oriented bar mission.</span></div><br><div align=\"center\"><a href=\"https://drive.google.com/uc?export=download&amp;id=1sQzpgePAb6FUkq6bPPP7G__-7E9WpH-i\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener noreferrer\"><span style=\"font-size: 12pt;\" class=\"bbc_size\">download here</span></a></div><div align=\"center\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25868\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener noreferrer\"><span style=\"font-size: 8pt;\" class=\"bbc_size\">requires MagicLib</span></a></div><div align=\"center\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener noreferrer\"><span style=\"font-size: 8pt;\" class=\"bbc_size\">requires LunaLib</span></a></div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>Are you tired that all military missions basically amounts to <em>go to point A</em>, then possibly destroy a fleet? Introducing the<br><strong>Orbital Defense Mission!</strong><br><ul class=\"bbc_list\"><li>have the fleets come to you instead!</li><li>fight alongside an orbital! (plus other allied fleets if they exist)</li><li>fight against multiple fleets, possible with ships from different factions!</li><li>supports any factions! including <span style=\"color: red;\" class=\"bbc_color\">Pirates</span>, <span style=\"color: limegreen;\" class=\"bbc_color\">Luddic Path</span>, and your own factions</li><li>and why can't you add your own station commander as contacts?</li><li>can be freely added to existing saves (but not removed)</li><li>tweak settings in <em>MoreMilitaryMissions\\data\\config\\modSettings.json</em></li><li>WARNING: by default it pulls enemy ships from <em>ANY</em> faction, including hidden ones, like Omega and Lion's Guard -- may break immersion if used in conjunction with faction mods that have hidden ships/factions. You can turn this off in <em>modSettings.json</em></li></ul><strong>Repair Materials Delivery Mission</strong><br><ul class=\"bbc_list\"><li>A companion mission for above: now that you've screwed up and gotten the orbital blown up, do this fetch quest to repair it faster</li></ul><strong>Mercantile Convoy Escort</strong><br><ul class=\"bbc_list\"><li>Don't you wish you can do something with the trade fleets?&nbsp; Now you can join them instead of being filthy pirates!</li><li>Allows you to get trade contacts from your own faction; also makes trade contacts more useful</li></ul><strong>VIP Mission</strong><br><ul class=\"bbc_list\"><li>Make distress call worth responding to.</li></ul><strong>Scavenger Trading</strong><br><ul class=\"bbc_list\"><li>Trade with salvage fleets (including scavengers and prospectors) for salvage intel or swap commodities.</li></ul><strong>Pick Your Ships</strong><br><ul class=\"bbc_list\"><li>New game choice that allows you to pick your starting ships.</li><li>Won't show up if you're running Nexerelin.</li></ul><strong>Force Auto Resolve</strong><br><ul class=\"bbc_list\"><li>If your fleet is much bigger than the enemy, adds an option to auto resolve battles even if enemy is not interested in fleeing.</li></ul><strong>Military Custom Bounty</strong><br><ul class=\"bbc_list\"><li>reworked difficulty logic to allow faster scaling and scale past vanilla difficulty</li></ul><br><div class=\"sp-wrap sp-wrap-default\"><div class=\"sp-head\">img</div><div class=\"sp-body folded\"><img src=\"https://i.imgur.com/lcB3PkW.png\" alt=\"\" class=\"bbc_img\"><br><img src=\"https://i.imgur.com/kVHL8Hp.png\" alt=\"\" class=\"bbc_img\"><br><img src=\"https://i.imgur.com/n6WPhiW.png\" alt=\"\" class=\"bbc_img\"><br><img src=\"https://i.imgur.com/6j0kdLz.png\" alt=\"\" class=\"bbc_img\"><br><img src=\"https://i.imgur.com/p7MMjxV.png\" alt=\"\" class=\"bbc_img\"><br><div class=\"sp-foot\">[close]</div></div></div><div class=\"sp-wrap sp-wrap-default\"><div class=\"sp-head\">changelog</div><div class=\"sp-body folded\">Version 0.5.0 (2025-05-17)<br>- Military Custom Bounty:<br>&nbsp;- reworked difficulty logic to allow faster scaling and scale past vanilla difficulty<br>&nbsp; - in general, taking the biggest bounty increases difficulty, and taking the smallest bounty decreases it<br>&nbsp; - difficulty maximum can be set in luna settings<br>- Defense Mission:<br>&nbsp;- removed an inflate call in reportBattleOccurred and prevents invasion fleets from being deflated instead<br>&nbsp;- can now change invasion probability in LunaLib<br>- Escort Mission: removed an inflate call in reportBattleOccurred and prevents trade fleets from being deflated instead<br><br><br>Version 0.4.7 (2025-04-06)<br>- Defense Mission: fixed a crash involving non-vanilla station industry class and added more exception guards<br>- updated game version to 0.98a-RC7<br><br><br>Version 0.4.6 (2025-03-29)<br>- Defense Mission: fixed a visual issue where station has 0 fleet points<br><br><br>Version 0.4.5 (2025-03-28)<br>- Defense Mission: invasion fleet faction is now more likely to match ship variants<br>- Escort Mission: re-enable missions from small trade fleets from Pirates/Path/your faction and adjusted trade profit<br>- Scavenger Trading:<br>&nbsp; - improved traded intel by showing more precise location if visible on map<br>&nbsp; - nerfed how much value you get by trading commodities by 30%<br>- recompile for Java 17 and compatibility workaround for 0.98a-RC5<br><br><br>Version 0.4.4 (2025-03-07)<br>- Defense Mission:<br>&nbsp; - remove generated fleet from system so you can't bump into them<br>&nbsp; - added configurable limit to the maximum size of the invasion fleet<br>&nbsp; - stopped generating fleets with 0 burn<br>- Escort Mission:<br>&nbsp; - reduced trade profit if destination is in the same system<br>&nbsp; - adjusted mission reward when faction is at war<br>- Procurement/Cheap Commodity missions: added a workaround to hopefully prevent NPE with Star Lords<br><br><br>Version 0.4.3 (2024-04-27)<br>- Defense Mission: makes it less likely that the officer does not match ship faction; updated invasion window logic<br>- Scavenger Trading: relaxed the criteria for eligible commodities such that lobster is now eligible<br>- added LunaLib as a required dependency to avoid confusing players<br><br><br>Version 0.4.2 (2024-02-18)<br>- Defense Mission;<br>&nbsp; - reduce effective station FP by 10%<br>&nbsp; - guard against MagicFleetBuilder exceptions<br>- Procurement/Cheap Commodity missions: fixed bug where the same mission can be taken consecutively<br>- Escort Mission: add pirate strength option in Luna Settings<br>- fixed a possible NPE<br><br><br>Version 0.4.1 (2024-02-03)<br>- updated version to 0.97a-RC6<br>- fixed a bug where the modSettings.json values are not being loaded if LunaLib is not enabled<br>- Escort/Defense Mission: increased importance of created contact<br>- trade missions (Escort/Cheap Commodity/Procurement) now affects the market by 120 days to match vanilla change<br>- Scavenger Trading: ignore salvage location if you already have an intel for it<br><br><br>Version 0.4.0 (2024-01-27)<br>- Defense Mission: added a console command to reset difficulty and clear spawned fleets<br>- Escort Mission:<br>&nbsp; - added more description for mission failure reason<br>&nbsp; - trade fleet being completely destroyed no longer reports the wrong failure reason and properly reduces reputation<br>&nbsp; - now works correctly for commodities with cargo size greater than 1<br>&nbsp; - can now grant trade contact to player faction<br>- added version checker support<br>- added Luna Settings support from LunaLib as an optional dependency<br>- made trade contacts more useful by modifying vanilla cheap commodity / procurement missions for contacts:<br>&nbsp; - can now reliable get such missions from contacts<br>&nbsp; - quantity is now determined by market surplus/shortage; doing the mission resolves the surplus/shortage<br>- integrated Scavenger Trading, Pick Your Ships, Force Auto Resolve into this mod; please do not enable 0.4.0 or later<br>&nbsp; versions of this mod with the above<br>- Scavenger Trading: can now trade credits for salvage locations<br><br><br>Version 0.3.3 (2023-11-04)<br>- Defense Mission: fixed a bug preventing invasion fleets from being changed due to PRNG seed reuse<br>- Escort Mission: now take commodity size (cargo space) into account when computing deliveries<br>- VIP Mission: prevent save scum<br><br><br>Version 0.3.2 (2023-10-08)<br>- Defense Mission:<br>&nbsp; - pirate station king created by the mod now has underworld tag instead of military<br>&nbsp; - some setting tweak<br>- Escort Mission:<br>&nbsp; - make mission name match name of trade fleet<br>&nbsp; - small trade fleets are no longer eligible for the mission<br>- all<br>&nbsp; - updated version string for MagibLib, but older version should still work<br>&nbsp; - updated SDK to 1.8<br><br><br>Version 0.3.1 (2023-07-14)<br>- Escort Mission:<br>&nbsp; - take mothballed ships into account so pirate is not much stronger than convoy plus player ships<br>&nbsp; - add options to adjust strength of pirates<br><br><br>Version 0.3.0 (2023-07-13)<br>- add new VIP mission to distress calls to make it worthwhile; can choose +1 story point as reward<br>- Escort Mission: cancel the mission if source/dest factions became hostile, but still allow outstanding deliveries to be completed<br><br><br>Version 0.2.2 (2023-06-30)<br>- Defense Mission:<br>&nbsp; - made fleet generation more robust<br><br><br>Version 0.2.1 (2023-06-24)<br>- Defense Mission:<br>&nbsp; - fixed a crash where the enemy fleets runs out of assignments before engaging in battle<br><br><br>Version 0.2.0 (2023-06-22)<br>- New mission: Escort Mission: escort a mercantile convoy, while fighting off pirate fleets and carry additional commodities for more profits<br>&nbsp; - turn EmAddAllIntel off if you don't want to see more trade fleet departure intel<br>- Defense Mission:<br>&nbsp; - add DmEnemyIgnoredByOtherFleets option so allied fleets won't chase after enemy fleets, making it more likely that they will make it to the station<br>&nbsp; - reordered things, *hopefully* fixing the issue where enemy fleets would chase each other. Cannot be sure as I cannot reproduce this issue.<br>&nbsp; - turning DmUseHiddenFactions off now skips your own faction<br><br><br>Version 0.1.1 (2023-05-31)<br>- fixed issue where enemy fleets from unaccepted missions can take over the local comm relay, etc<br><br><br>Version 0.1.0 (2023-05-29)<br>- new mission: Repair Mission to reduce the disruption days of station industry; useful when you fail your defense mission<br>- Defense Mission:<br>&nbsp; - add settings to scale enemy fleet size by faction and uses it to nerf omega fleets<br>&nbsp; - add option to skip generating enemies from hidden factions (omega, Lion's Guard, etc)<br>&nbsp; - increased reputation penalty for failing missions to match vanilla missions<br>&nbsp; - when you accept a mission in a different system (possible with Stellar Networks), how many days you have to arrive<br>&nbsp; &nbsp; is now determined by your speed and distance instead of being hard coded.<br>&nbsp; - reduces rewards when station is a big part of your fleet and marginally reduced rewards overall<br><br><br>Version 0.0.4 (2023-05-26):<br>- fixed a crash that can happen on markets without an existing station commander, like on player colonies<br>&nbsp; - more likely with mods that reorders bar events, like More Bar Missions<br><br><br>Version 0.0.3 (2023-05-25):<br>- fixed a divide by 0 bug when your fleet plus station are too small<br>- in mission offer increase fleets to show up to 10.<br><br><br>Version 0.0.2 (2023-05-21):<br>- adds a workaround for an issue with Stellar Networks; sometimes the player fleet is empty when you call a contact remotely<br>- adds more variety to enemy fleets size<br>- adds a blacklist in modSettings.json for players and other mods to blacklist factions from enemy fleets generation<br>- increased reward by 25%<br>- recompiled for 0.96a-RC10<br><br><br>Version 0.0.1 (2023-05-18):<br>- enemy difficulty should now be more consistent<br>&nbsp; - fixed a bug in fleet generation making it harder to generate fleets with the correct size<br>&nbsp; - switched to using effective strength instead of fleet point for reward and difficulty computations<br>&nbsp; &nbsp; - increases credit rewards as a side effect<br>- removed faction impact on enemy fleet's real faction (almost always the pirates)<br>- add some supplies to enemy fleets since they drop very little sometimes<br><br><br>Version 0.0.0 (2023-05-17):<br>- initial release<br>- not tested with faction mods but I don't see why it wouldn't work<br>- different factions have different fleet strength per fleet points (omega is especially bad), so the enemy can be much harder then expected<br><div class=\"sp-foot\">[close]</div></div></div><br>See my other mods <a href=\"https://fractalsoftworks.com/forum/index.php?topic=26974\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener noreferrer\"><span style=\"color: green;\" class=\"bbc_color\">More Bar Missions</span></a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=28223\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener noreferrer\"><span style=\"color: blue;\" class=\"bbc_color\">Scavenger Trading</span></a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=28303\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener noreferrer\"><span style=\"color: purple;\" class=\"bbc_color\">Pick Your Ships</span></a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=28373\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener noreferrer\"><span style=\"color: brown;\" class=\"bbc_color\">Force Auto Resolve</span></a>, and <a href=\"https://fractalsoftworks.com/forum/index.php?topic=30215\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener noreferrer\"><span style=\"color: navy;\" class=\"bbc_color\">Retrofitted Bridge</span></a>",
@@ -104553,7 +104562,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-26T15:06:09.701570Z",
+      "scrapedAt": "2026-08-27T15:06:55.366731Z",
       "isPlaceholderDetail": false
     },
     "26960": {
@@ -106728,7 +106737,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-08T15:06:07.746173Z",
+      "scrapedAt": "2026-08-27T15:06:49.378654Z",
       "isPlaceholderDetail": false
     },
     "27950": {
@@ -107552,7 +107561,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-27T03:06:29.978902Z",
+      "scrapedAt": "2026-08-27T15:06:58.292459Z",
       "isPlaceholderDetail": false
     },
     "28377": {
@@ -119867,7 +119876,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-27T03:06:31.080888Z",
+      "scrapedAt": "2026-08-27T15:06:59.373066Z",
       "isPlaceholderDetail": false
     },
     "33081": {
@@ -120384,7 +120393,7 @@
       "gameVersion": "0.98a",
       "author": "Taiwendo",
       "authorTitle": "Commander",
-      "authorPostCount": 225,
+      "authorPostCount": 226,
       "authorAvatarPath": "https://fractalsoftworks.com/forum/index.php?action=dlattach;attach=8291;type=avatar",
       "postDate": "June 11, 2025, 02:36:27 PM",
       "lastEditDate": "August 07, 2026, 10:52:01 AM by Taiwendo",
@@ -120452,7 +120461,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-08T15:06:06.783709Z",
+      "scrapedAt": "2026-08-27T15:06:50.384415Z",
       "isPlaceholderDetail": false
     },
     "33366": {
@@ -132297,7 +132306,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-27T03:06:38.091482Z",
+      "scrapedAt": "2026-08-27T15:07:08.387718Z",
       "isPlaceholderDetail": false
     },
     "35788": {
@@ -132391,7 +132400,7 @@
       "gameVersion": "0.98a",
       "author": "Blank_",
       "authorTitle": "Ensign",
-      "authorPostCount": 10,
+      "authorPostCount": 11,
       "postDate": "July 28, 2026, 12:44:52 PM",
       "lastEditDate": "August 24, 2026, 10:53:50 AM by Blank_",
       "contentHtml": "<div align=\"center\"><strong><span style=\"font-size: 14pt;\" class=\"bbc_size\">UNSC Reborn v0.5.2 - \"The Great Journey\"</span>&nbsp; <br><a href=\"https://drive.google.com/drive/folders/1T_90GfQFG-2wWWEHYPlAKMf_5rXq_Sw3\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener noreferrer\">Download</a></strong><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener noreferrer\">Lazylib</a> and <a href=\"https://fractalsoftworks.com/forum/index.php?topic=13718.0\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener noreferrer\">MagicLib</a>. Nexerelin supported.</div><br><div align=\"center\">A rebuild of <strong>AppleMarineXX's</strong> UNSC mod, picked up after three years - the faction, the lore and most of the art are theirs. I wanted the ships to be the size they are in the books, and then I could not stop.</div><div align=\"center\"><img src=\"https://imgur.com/978ZweU.png\" alt=\"\" class=\"bbc_img\"><br><em>The Infinity is 5,694 metres long. She is now 5,694 metres long.</em></div><br><strong>Lore (Subject to change):</strong> The gate did not only move the colony fleet. When it fired, it took a bite of Epsilon Eridani with it - a volume of space roughly where Reach used to be, and everything still in orbit. That included the graveyard. It also took whatever else happened to be in that volume, which in 2552 was a Covenant battlegroup in the middle of glassing the place. They came through intact. They have no idea where they are, no route home, and no interest in either question - the fleet that burned Reach is simply carrying on with it here. Somewhere behind the anchorage at Reverence, a San'Shyuum is explaining that this is all part of the plan.<br><br><br><strong>Features:</strong><br><ul class=\"bbc_list\"><li><strong>The UNSC:</strong> 34 warships, 2 civilian hulls, 7 strike craft and 3 tiers of Anchor station, every one sized from its canonical length - an 82m Winter prowler against a 1,192m Marathon, and the Infinity above everything.</li><li><strong>The Covenant:</strong> 24 warships from the DAV corvette to the CAS assault carrier, a tithe freighter, 5 strike craft, 2 tiers of anchorage, and 4 fixed installations that are there to be looked at rather than fought.</li><li><strong>Every warship armed from its canonical armament table</strong>, not from a balance guideline - the Marathon is 83% missile pods where Halopedia says 84%, the Strident 11% where canon says 11%. Carriers launch a real air group: twenty-two aircraft off an Infinity.</li><li><strong>22 UNSC weapons</strong> - the MAC line, Archer pods, Shiva nukes, Rampart point defence. <strong>12 Covenant weapons</strong> - energy projectors, plasma torpedoes, pulse lasers in three weights, needlers, fuel rods. No vanilla blueprints in either faction.</li><li><strong>Two ways to survive being shot at.</strong> The Covenant hold Energy Projection Screens - cheap to run, quick to re-form, with very little ship behind them. The UNSC holds armour, and that is the entire list.</li><li><strong>The Covenant Hierarchy</strong> - seven grades from Minor to Imperial Admiral, earned in devotion for fighting the Covenant's war and lost slowly when you do not. A Council of six named San'Shyuum and Sangheili, each with their own reading of what you are for.</li><li><strong>The Luminary Array</strong> - carry one and Forerunner relics start turning up in ordinary salvage, so every wreck and ruin already scattered across the sector becomes worth sweeping. They cannot be sold to anybody. They buy standing, and the vault is counting.</li><li><strong>The tithe</strong> - hand your holds to the Ministry for credits and devotion, which is the Covenant's answer to the trade fleet they will not let you run.</li><li><strong>ONI's three Sections</strong> - intelligence, influence and clearance, earned separately and spent on different things. Clearance answers to deniable work actually completed, not to your rank, so buying grades no longer quietly buys the secrets.</li><li><strong>Standing orders</strong> - Section Three reads how the war is actually going and tells you what to do about it, sized against a live measure of how much of the sector's economy the Covenant hold.</li><li><strong>A fleet operations board</strong> - eleven kinds of line work from derelict sweeps to counter-intelligence, opening by service grade rather than clearance, posted against UNSC space and paid in intelligence and influence.</li><li><strong>Prize crews</strong> - win a boarding action with marines aboard and keep the hull, at a price in marines that scales with what you are trying to take.</li><li><strong>Three desks that do not like each other</strong> - Sections One and Two have catalogues of their own now, and buying from one costs you standing with the other two. A desk that owes you charges less; a desk you have ignored for a year charges more, and far enough into the red it declines its best work.</li><li><strong>Captured technology</strong> - Covenant hardware comes off the wrecks you make of them, and three permanent programmes turn it into things the UNSC could never build. The hullmods have no other source: no shop, no cache, no blueprint.</li><li><strong>A front line that moves</strong> - the Covenant gather a suppression force, sail it across the sector under its own power, and burn a world if nobody stops them. Intercept it in transit, break it in orbit, or lose the planet - and killing it costs them months, not a reset.</li><li><strong>The Great Schism</strong> - serve them long enough, and carry enough relics to the vault, and a Sangheili shipmaster asks what you intend to do with what the Oracle actually said. It is the only way out of the Covenant the mod has ever had.</li><li><strong>Epsilon Eridani</strong>, with a graveyard holding the Pillar of Autumn, Iroquois, Gettysburg, In Amber Clad and Forward Unto Dawn - and the Spirit of Fire still drifting, alone, further out. Every one of them still has its flight recorder aboard.</li><li><strong>Reverence</strong> - the stranded battlegroup's anchorage, built around a forge world and covered by its own stations. It is the only Covenant port in the sector, and they are not taking visitors.</li><li><strong>ONI Section Three</strong> on every UNSC world, dealing in fleet stores, ODST detachments, archive access and work nobody writes down.</li><li><strong>Black operations</strong> - six deniable contracts against UNSC hardware in the wrong hands, plus a job board running courier work, dead drops, prisoner transfers, infiltration, extraction and sabotage on the ground with Marines instead of guns. Paid in credits and requisition chits.</li><li><strong>Requisition and standing</strong> - chits buy your way up the twelve-grade UNSC ladder from Warrant Officer to Fleet Admiral, raising your stipend and unlocking what the ONI desk will hand over.</li><li><strong>Undercover cells</strong> in the capital of every other faction in the sector. You will not find one on a menu - at Lieutenant Commander, someone starts waiting for you in the bar, and only after that drink does the door open. They deal in stolen local stores, rewritten records, and whatever nine months of deep cover has quietly put aside.</li><li><strong>Four custom industries</strong>, each taking a colony item only the UNSC makes.</li><li>Twelve ship systems, six hullmods including a fleet-wide Shipboard AI, and eleven combat missions - two of which put you on the Covenant side of the fight.</li><li><strong>Custom portraits for both factions</strong>, finally, after three versions of borrowed vanilla faces - and the picture picks the name. Choose a UNSC portrait at character creation, and you get a UNSC name; choose a Covenant one, and you very much do not. Their officers and fleet commanders are named the same way.</li></ul><br><strong>Compatibility:</strong> not save-compatible with the original UNSC mod, and not meant to be run alongside it - both define the same faction and the same ship IDs.<br><br><strong>The Ship Roster:</strong><br><div class=\"sp-wrap sp-wrap-default\"><div class=\"sp-head\">Spoiler</div><div class=\"sp-body folded\"><img src=\"https://imgur.com/zD5uKDJ.png\" alt=\"\" class=\"bbc_img\"><br><img src=\"https://imgur.com/eMM4ODq.png\" alt=\"\" class=\"bbc_img\"><br><div class=\"sp-foot\">[close]</div></div></div><br><strong>Screenshots:</strong><br><div class=\"sp-wrap sp-wrap-default\"><div class=\"sp-head\">Spoiler</div><div class=\"sp-body folded\"><img src=\"https://imgur.com/pUsRycQ.png\" alt=\"\" class=\"bbc_img\"><br><img src=\"https://imgur.com/2zAAMVF.png\" alt=\"\" class=\"bbc_img\"><div class=\"sp-foot\">[close]</div></div></div><br><strong>Changelog</strong><br><div class=\"sp-wrap sp-wrap-default\"><div class=\"sp-head\">Spoiler</div><div class=\"sp-body folded\"><strong>v0.5.2</strong><br><em>\"Devotion is not a substitute for stores. It never has been. It is simply discussed more often.\"</em><br><ul class=\"bbc_list\"><li><strong>The Covenant no longer starve themselves into rebellion.</strong> Two markets demanding eleven food between them, producing none, and hostile to every faction in the sector so nothing could be imported. It was permanent by construction, and it ended in unrest on both of their only worlds. This is the whole release.</li><li><strong>The Independents will trade with them.</strong> Blanket hostility to everyone is what made the shortage unfixable, because it left no route by which anything could arrive. The Independents are not a power, have no stake in the war, and will sell to anyone holding hard currency - which a fleet that strips worlds has.</li><li><strong>An uncommissioned captain is no longer shot on sight.</strong> World generation set the player hostile along with everybody else, so somebody carrying nobody's commission, who had never fired on them, could not dock, could not trade, and could never reach a line of the Ministry dialogue that has been in the mod since 0.5. Take a commission with their enemies, and you are still an enemy, which is the part that was always meant.</li><li><strong>Sanctum had no spaceport.</strong> None of any kind, worth roughly -110% accessibility by itself - the market was cut off from shipping entirely, including from the anchorage in its own system.</li><li><strong>Their mines finally feed something.</strong> Sanctum produced ore, the anchorage's Orbital Works demanded metals, and no refinery existed anywhere in the faction, so the shipyard had been inert since it was added. There is a refinery now, and it stands at the mines rather than at the shipyard, because ore is heavy.</li><li><strong>Reclamation Vats.</strong> A custom industry, because the Covenant do not farm and two of their holdings could not if they wished to. Stripped rock and reclaimed biomass in, protein paste and Unggoy methane out. Nutritionally complete, theologically sanctioned, and every species aboard agrees it is an insult.</li><li><strong>Sacrament Workshops.</strong> The other half nobody made: domestic goods and drugs. What a stranded fleet manufactures instead of consumer goods is liturgy - harness and plate for five species that share no anatomy, censers, prayer strips, and the ration narcotics the Ministry issues by rank and declines to call narcotics.</li><li><strong>They can make their own fuel.</strong> Fuel Production had demanded volatiles since it was added and nothing in the faction mined any. Sanctum now carries the seam, and the plant sits on top of it rather than a system away</li><li><strong>Reverence has a relay net.</strong> Epsilon Eridani has carried a comm relay, a nav buoy and a sensor array since 0.1 and the Covenant carried none of the three, which costs accessibility they could not spare</li><li><strong>The battlegroup has moved five systems further out.</strong> They sat close enough to Epsilon Eridani that a starting fleet drifting the obvious direction met a faction hostile to everything that fields nothing under a cruiser. They are not balanced as an early threat and were never meant to be.</li><li><strong>Sanctum is a size 7 forge world</strong> rather than a size 5 mining camp, which is what its smelter needed to feed the fleet, and which upgrades its garrison to a High Command.</li><li>Their markets hold a stability floor while trade routes establish. A warfleet under military discipline does not riot about rations.</li><li>An economy audit writes the whole supply and demand picture to the log on every load. It exists because five separate diagnoses of this faction were made by reading industry lists and recalling what vanilla demands, and the measured numbers overturned something every single time - including which market the refinery belonged on, and the fact that the last bottleneck was workforce rather than ore.</li></ul><br><strong>v0.5.1</strong><br><em>\"There's a file on you with a different letterhead to mine. I can't see all of it, and I've stopped asking.\"</em><br><ul class=\"bbc_list\"><li><strong>The campaign has an intel screen now.</strong> This is the whole point of the release. Ten of the twelve systems in 0.5 talked to you exclusively through messages that scroll past and are gone - your Section Zero file, your clearance, devotion, the relic count, the tech programmes, the directive you're running, and a clock counting down to a world being glassed. A world was about to burn and there was nowhere to go and look at that. Now there are four entries: an ONI personnel file, your Covenant standing, a glassing warning with a marker on the doomed world and a countdown that means something, and the Section Zero retirement detail.</li><li><strong>The liaison exists.</strong> She's been speaking every ONI screen in this mod since 0.3 and has never been anybody - the desk text literally said she doesn't introduce herself. She's Commander Odile Ellis now, she sits at Reach, and past Ensign you get a frequency and can reach her from anywhere. She reads your file before she picks up, so the greeting changes depending on whether Section Zero has something open on you, whether there's a detail out with your name on the order, whether you called in with the transponder lit, and how far behind your directive you are.</li><li><strong>She'll tell you her name if you ask,</strong> and only above Lieutenant Commander. It's one word, no rank and no first name, and that's the whole answer.</li><li><strong>The twelve Reach survivors can be answered.</strong> They were the best writing in the mod, and every one was a dead end - you walk in holding the registry for a hull somebody served in, they tell you something they haven't said in years, and the port menu comes back. Two follow-ups each, written per ship. Redoubtable's captain will tell you what the eleven minutes bought. Iroquois' won't tell you what aft of the bridge was. Coral Sea's asked you not to, and if you ask anyway you get a duty roster instead of a story.</li><li><strong>The flight recorders add up to something.</strong> Six of them and the set completing was the only thing in the mod that promised something and then did nothing. Now each has a follow-up, her answers get less guarded as the set fills, and once all six are in the desk carries a standing question about what Section Three wanted them for that Fleet didn't. There's a deeper version of that answer behind omega clearance, because on the fifth recorder she says there's a personnel file she can't pull and to ask again if you ever hold it. It's the only place in the mod where a clearance buys prose instead of a purchase.</li><li><strong>The Council are five different species instead of one register.</strong> All six have been carrying a line about where they were when the sky came apart over Reach since 0.5, and nothing has ever read it. The San'Shyuum won't say where the road goes. The Sangheili says the humans fight past the point where fighting is useful, and that he's said so in a chamber where it wasn't welcome. The Jiralhanae is patient and very good at counting. The Unggoy woke up and the world was orange and everyone was singing and he didn't know why.</li><li><strong>The Kig-Yar quartermaster uses contractions,</strong> which nobody else on that side does. She's contracted to the Covenant, not of it.</li><li><strong>A codex.</strong> Five entries under an Epsilon Eridani heading - how both fleets got here and what didn't come through with them, what the Cole Protocol actually requires and what it costs the person carrying it out, what a Luminary is, why the Covenant can't build a shipyard, and what glassing is. That last one is optimised for sterilising a surface rather than killing people, which is a distinction ONI took four years to write down because writing it down meant accepting the population was incidental.</li><li><strong>The Tours-class light cruiser,</strong> A gun cruiser - heavy spinal coilgun, four outrigger sponsons, no hangar. Sits between the Halcyon and the Marathon at 27 fleet points.</li><li><strong>Job boards say what a job needs before you take it.</strong> Marines and running dark were both enforced at the moment you tried to carry the work out, and neither was stated when you accepted it. Flying nine jumps to be told you needed forty marines is the sort of thing people write forum posts about.</li><li><strong>Promotions say what the grade buys.</strong> Twelve of them, and the screen where the most consequential number in the UNSC campaign changed had never mentioned what changed. There's a different answer if Section Zero has a file open - she's just signed for somebody another office is reading about, and she says so.</li><li><strong>Section One's assessments and the Vault's findings are readable.</strong> Four each, unlocking off numbers that already existed. The Section One track was a number that went up and bought nothing; now it buys what the intelligence Section has actually worked out about the war, in the order a real analytical shop would work it out.</li><li><strong>Fixed: the shadow tasking was repeatable and never required you to run dark.</strong> A missing comma in the rule generator ran two conditions together into one nonsense condition that always passed, so the job lost its already-done guard and its covert requirement at the same time. It's been like that since the tasking was added.</li><li><strong>Fixed: two dialogue screens were the same button twice.</strong> The comm menu offered its options through a trigger that fires every matching rule rather than the best one, so two rules that could both be true put the same four buttons on screen. Caught before it shipped, but only just.</li><li>Fixed: five screens where the liaison stopped using contractions. She does it in four of five lines and has drifted on the clearance readouts, the Section One forecast, and the last flight recorder.</li><li>Fixed: she turned the same slate at the top of four unrelated scenes.</li><li>The suppression fleet stopped walking every star system and every fleet in the sector, once a day, to re-find a ship it already had a reference to.</li><li>Four new build checkers. One resolves loose-script imports into the mod's own jar, where a rename would silently disable a whole system. One reads sprite paths out of code as well as data. One catches two rule entries run together by a missing separator. One catches an option offered twice by two rules that both fire. The last two exist because each of them let something through this month.</li><li>A fifth checker verifies that rules.csv is actually what the generator produces - the generator broke once and every other checker stayed green, because they were all reading the last good file.</li></ul><br><strong>v0.5 - \"The Great Journey\"</strong><br><em>\"You have been raised up. Do not mistake that for being trusted.\"</em><br><ul class=\"bbc_list\"><li><strong>The Covenant have a campaign now.</strong> That was the whole point of this release. Last version they had 34 hulls and a grudge; now their commission puts you in a seven-grade Hierarchy - Minor through to Imperial Admiral - earned in devotion for fighting their war and quietly eroding when you stop. Rank is asked for at the Ministry, and it decides what they'll let you touch.</li><li>A Council of six. Three San'Shyuum, three Sangheili, and a Jiralhanae nobody can quite account for. They're the face of every Covenant screen in the mod, and one of them turns out to matter a great deal later.</li><li>The Luminary Array does something now. It was already a ship system on their hulls. Carry one and Forerunner relics start turning up in ordinary salvage - every wreck and ruin already scattered around the sector, no hand-placed sites, so it works in a random sector as well as in Corvus. You can't sell them to anybody. They buy standing, and something is counting.</li><li>The tithe. Hand your holds over at the anchorage for credits and devotion. It's the only economy they offer you, because they're not about to let you run a trade fleet.</li><li><strong>ONI is three Sections instead of one shop.</strong> One deals in intelligence, Two in influence, Three in clearance, and you earn them by doing different things. Red, black, and omega clearance now answer to deniable jobs you've actually finished rather than to your rank number, so buying grades stopped quietly buying the secrets. Old saves get backfilled from whatever their rank used to imply.</li><li>Sections One and Two finally sell something. Both were earned and neither bought anything, which made them two numbers that went up. They're desks now, with catalogues, and they compete: a request granted is a budget spent, and it came out of one of the other two. Buy enough from one, and the others start charging you for it.</li><li><strong>Section Zero.</strong> The Section that audits the other three. It keeps a file on you built from what you actually did - deniable work taken, UNSC tonnage you personally destroyed, Covenant hardware you kept instead of handing in, hulls in your fleet no yard has a record of building. Five bands, and it escalates: an audit you can talk your way through, then clearance frozen, then somebody asking your contacts careful questions, and at the end a detail sent to retire you. They fly UNSC hulls, because they are UNSC, and your commission won't help.</li><li>Standing orders. Section Three asks you for things now instead of only selling to you. Sized against a live reading of how much of the sector the Covenant hold - 40 fleet points of shipping when they're contained, 160 when they're not - and it counts your engagements whether or not you remember it's running.</li><li><strong>A fleet operations board,</strong> which is where most of the \"what do I do next\" problem got solved. Fourteen kinds of line work from derelict sweeps up to theatre command, gated by service grade rather than clearance. The deniable board works abroad; this is the war at home. It's also the only thing that pays Section One, which previously had no source at all.</li><li>The top of that ladder is new. Task force command hands you three hulls on loan - and losing them goes in a file you don't control. Above that, a standing detachment maintained out of your stipend, and theatre orders, where you don't fly anything and other people's fleets move because you signed something.</li><li><strong>Captured technology.</strong> Covenant salvage comes off tonnage you actually put out of the fight, and three programmes turn it into a containment lattice, a Luminary sensor suite, and a tap into an energy projector feed that nobody signed off on. Those hullmods have no other source. No shop, no cache, no blueprint.</li><li>Prize crews. Win a fight with marines aboard, and you can put a crew on something you disabled and keep it. 40 marines for a frigate, 320 for a capital, and it arrives at ten percent readiness, which is about what a boarding action leaves you.</li><li>The quiet jobs are actually quiet now. Shadowing, dead drops, infiltration, extraction, and sabotage used to resolve exactly like a courier run - fly in with the transponder lit and a patrol on your wing, click, collect. They won't go ahead if you're being watched. Kill the transponder, lose whoever's on you, come back.</li><li><strong>The front line moves.</strong> Three worlds came through the gate already burned, and that used to be the end of it. Now the Covenant builds a suppression force, sails it across the sector, holds station over a world, and burns it. Intercept it in transit, break it in orbit, or lose the planet. My first attempt at this was a countdown, which was a bad idea - a clock you can't see or shoot at is an announcement, not a threat</li><li>They can take ground, too. colonyExpeditionChance has been zero since they were added, because a fleet with no shipyard doesn't go colonising. That stopped being true when Sanctum became a forge world. It's 0.25 now, well under the UNSC's 0.8 - humanity colonises, the Covenant occupy what they've already burned.</li><li><strong>The Great Schism.</strong> Get senior enough to be told and carry enough relics to have earned an answer, and Rtas 'Kaidonee will explain what the Luminary has actually been reading, and who the honour guard got handed to last month. Stand with the Hierarchy or walk. Walking is the first way out of the Covenant this mod has ever had.</li><li><strong>Six new missions,</strong> two of them Covenant-side, which is also a first. Glassing puts you in the CCS over a colony that can't win. Cole's Gambit can't be won either and isn't meant to be. Boarding Action, Picket Line, Prize of War, and Schism, which is twenty minutes of Sangheili against Covenant with a UNSC squadron holding station at the edge of the plot doing nothing at all.</li><li><strong>Every UNSC ship lost its shields.</strong> Not reduced. Gone. The salvaged Covenant emitters are out, and the hullmod that described them is retired, because it had ended up attached to precisely nothing. What's left is Titanium-A and the armour scheme it's bolted to.</li><li>Archer salvos went from thirty-two missiles to eight. The Infinity could erase the biggest thing the Covenant owns in two volleys. I picked the replacement number by measuring volleys-to-kill against every equal-strength opponent in the fleet rather than guessing, which I should have done the first time.</li><li>The Covenant stopped being outgunned by arithmetic. Their hulls were never the problem. The UNSC takes 80-85% of their firepower from built-in weapons that cost no ordnance points; the Covenant took ten percent, so they were paying for guns the UNSC got free. Their canon torpedo banks are built in now, and their mount counts match UNSC hulls the same size.</li><li>And they field the right ships. Their hull frequencies were upside down - 3.0 on every frigate against 0.7 on nine of their ten capitals, which meant the human navy was more likely to put a capital on the board than the aliens were. 34% of their draws were cruiser-or-bigger. It's 73% now.</li><li>The battlegroup can garrison its own system. Of their two markets, only the anchorage had any industry that puts fleets in space. Reverence has a High Command now as Reach does; Sanctum has a garrison, and both are a size larger. Old saves get brought up to the same standard on load.</li><li>Every icon in the mod is the mod's own. Nine of eleven cargo items and six of seven hullmods were wearing vanilla art, one icon was doing double duty for two different things, and every campaign system stamped its intel with the same faction crest, so a boarding action and a glassing looked identical in the log. Thirty-seven new pieces.</li><li>Weapons with no mount art can't be looted, bought, or sold anymore. Most of them are spinal guns drawn into the ship sprite, so a turret sprite would be a second gun on top of the first - fine on the hull, silly in a cargo hold.</li><li>Ship prices rebuilt from combat power on both sides.</li><li>The UNSC have a shipRoles block, which they never did. Their fleets were being assembled from raw hull frequency, so a fleet tanker was as likely as a missile destroyer to end up escorting a supercarrier.</li><li>Weapon groups rebuilt on eighty-nine variants using the game's own auto-assign. Point defence had been scattered across gun groups on sixty-eight of them, and built-in weapons sat in no group at all, so nothing gave you a key to fire a spinal projector with.</li><li><strong>Fixed: none of the Covenant weapons fired.</strong> This one was entirely my fault. Baking the engine's auto-assign into the goal variants put 128 non-PD Covenant weapons on autofire, where every hand-written variant had them on manual. They carry nothing but energy weapons with high per-shot flux, so left alone they emptied the bank into the first thing in arc, hard-locked, and stopped.</li><li>Fixed: Covenant turrets couldn't turn. Six of their weapons had no turn rate at all, which the loader reads as zero. Welded in place, pointing wherever the slot left them. The fuel rod alone was on 54 turret mounts.</li><li>Fixed: fuel rods fired and vanished. Same weapon, no flight time either. The torpedo expired on the frame it spawned.</li><li><strong>Fixed: half the ONI desk was unreachable.</strong> The game numbers dialogue options one to nine and then stops. The desk had fifteen. It's grouped now, seven at the top and nothing more than two steps away. Thirty-four screens were also rebuilding the port's own menu over their options, which had been true of the Ministry since the day it went in.</li><li>Fixed: standing orders never arrived. The mechanism was fine, the schedule wasn't. The first directive could only be issued when a twenty-four to thirty-four <em>day</em> interval elapsed, and if you weren't commissioned at the moment it landed, the whole month was spent, and the wait started again.</li><li>Fixed: a repeatable payout. You could claim a completed job as many times as you liked, because the check tested what kind of job it was and not whether that particular one was already done.</li><li>Fixed: two stations showing up in the custom fleet picker.</li><li>Fixed: 200 Covenant mount pairs carrying one weapon to port and a different one to starboard, and 35 mounts across the fleet with no opposite number at all.</li><li>Fixed: two campaign scripts rebuilding the sector's entire market list five times a tick.</li></ul><br><strong>v0.4.1</strong><br><em>If you downloaded v0.4 and it never reached the title screen, this is why, and I am sorry about it.</em><br><ul class=\"bbc_list\"><li><strong>Fixed: v0.4 would not launch at all.</strong> Two separate load-time faults, both in Covenant content added late in the release, and both entirely mine. </li><li>The Plasma Lance declared a pierce set of ASTEROIDS, MISSILES and FIGHTERS. None of those are values the engine recognises - the real ones are PROJECTILE_FF, MISSILE_NO_FF and so on - and an unrecognised one is not ignored; it throws. The game died in the weapon loader every time, before the main menu, with an error naming only the bad word.</li><li>Three Covenant ship systems then pointed their stats scripts at com.fs.starfarer.api.impl.combat. Two of the mod's systems legitimately do live there, which is what made the other three look right - but Fortress Shield, High Energy Focus and Burn Drive are loose scripts under the core data folder instead. Same crash, one loader later.</li><li>Because the game loads weapons and systems alphabetically, each fault hid the next. So rather than fix the file that crashed, I went back through all 36 weapons and all 12 ship systems against what vanilla actually uses. That is where the second and third came from. </li><li><strong>The real lesson is that the mod's own checks caught none of this.</strong> The suite has eleven of them, and every one passed on a build that could not start, because they all verify that IDs point at things that exist and none of them verified enum values, script paths outside the mod's own namespace, or that a CSV's quotes balance. All three are checked now, and each new check was tested by deliberately reintroducing the bug to confirm it fails. </li><li><strong>Groundwork: ONI has three Sections rather than one ladder.</strong> Section One deals in intelligence, Section Two in influence, Section Three in clearance, and they are earned separately. Black and Omega clearance now answer to deniable work actually done rather than to the rank number, so buying grades no longer quietly buys the secrets - red still comes with standing, because it is the way in. Existing saves keep the clearance their rank implied. Not much of this is visible yet; it is the spine the next release hangs off.</li></ul><br><strong>v0.4 - \"First Contact\"</strong><br><em>\"They are not lost. They know exactly where they are. They are here, and they intend to be here next as well.\"</em><br><ul class=\"bbc_list\"><li><strong>The Covenant are playable.</strong> 34 hulls - 24 warships from the DAV light corvette up to the CAS assault carrier, a tithe freighter, five strike craft, and four fixed installations. They open hostile to every faction in the sector, including the UNSC and the player, and there is no diplomatic way out of it. That part is on purpose</li><li><strong>Twelve Covenant weapons.</strong> Energy projectors and plasma lances on the capitals, plasma torpedoes that track, pulse lasers in three weights, needlers, fuel rod projectors, and Shade emplacements for close work. All energy, none of it shared with the UNSC, and none of it buyable from anyone else</li><li><strong>Five Covenant ship systems.</strong> Screen Surge, Barrier Focus, Lance Overcharge, Slipspace Surge and the Luminary Array. When I first got the fleet into the game, it had one system and a borrowed hullmod between all thirty-four hulls, which made a whole faction play like about four ships. </li><li><strong>Energy Projection Screens.</strong> The Covenant original of the shield the UNSC salvages. Cheaper to hold, faster to re-form, and with a lot less hull behind it - they will outlast a sustained gunline and then fold the moment it gets through. The UNSC hullmod is the same equipment cut out of a wreck and grafted onto armour that was never designed to carry it</li><li><strong>The Covenant are armed out of the books as well.</strong> Same method the UNSC got in v0.3: mount counts scaled from canonical armament instead of picked to look sensible. The SDV and CCS have full published tables, the CAS is half-documented, and the remaining twenty-two are mod originals scaled against whichever class they most resemble. Which is which is written down in the mod, so nothing I invented gets passed off as canon</li><li><strong>Reverence.</strong> The battlegroup's anchorage - forge world, asteroid belt, and two tiers of station assembled the way the game actually builds stations, a hub carrying lance, cradle and dock modules. My first attempt was one enormous single hull, and it crashed the game the moment anything approached it</li><li><strong>Custom portraits, at last.</strong> Nine UNSC faces and nine Covenant ones, replacing the vanilla portraits the mod has been borrowing since 0.1. Both sets are selectable in character creation. </li><li><strong>Your portrait chooses your name.</strong> Pick a UNSC face, and the game generates a UNSC name for you; pick a Covenant face, and it generates a Covenant one. Every officer and fleet commander either faction produces is named the same way, so a Covenant patrol is not commanded by someone called Gary anymore. </li><li>Two new missions, bringing it to five. Battlegroup sets a UNSC line squadron against a CCS and its escorts; First Contact is the engagement that started all of this</li><li><strong>Fixed: Sabre and Longsword wings would close to attack and then not shoot.</strong> Their guns were declared on the hull as built-in weapons. Not one of vanilla's thirty-two fighters does that - the guns belong to the wing's variant, and until they were moved there the fighters flew into range and sat looking at the target. Reported on the forum, and correct</li><li><strong>Fixed: the Hillsborough had no MAC at all, and the Infinity was missing four of hers along with ten Onagers.</strong> Also reported on the forum, also correct, and particularly embarrassing on a mod whose whole pitch is canonical armament</li><li><strong>Fixed: accepting a UNSC commission could hard-crash the game.</strong> The commission bonus pointed at a hullmod retired back in v0.3. Starsector only treats a CSV row as commented out when the line itself begins with a #, and every validation tool I had was quietly reading those rows as live data - so the reference looked perfectly healthy right up to the moment a player clicked accept. </li><li><strong>Fixed: the Covenant showed up in Nexerelin with no ships to choose from.</strong> The engine builds its hull-to-variant map at load and drops any hull whose list comes back empty, which is every hull whose variants ship inside the mod. Repaired at load now</li><li><strong>Fixed: opening a Covenant market, or meeting a Covenant fleet, threw a null and ended the run.</strong> One missing letter in a music ID - the faction asked for music_pirate_* where the game has music_pirates_*. A missing track only matters at the instant something tries to play it, which is why one typo surfaced as two apparently unrelated crashes in two completely different screens. </li><li><strong>Fixed: Covenant portraits appeared twice each in character creation.</strong> All nine were listed under both genders, and the creator merged the two lists</li><li>Housekeeping: 124 orphaned files removed - duplicate sprites, art for weapons retired two versions ago, sounds nothing referenced. Five reference copies of vanilla data the game never loaded are out of the mod folder, and a hullmod retired in v0.3 that had survived as a commented-out row is now gone properly</li></ul><br><strong>v0.3.1</strong><br><ul class=\"bbc_list\"><li><strong>UNSC ships fight bow-first now.</strong> The Barrier Emitters have always made a hit on the prow cost about half what one from astern does - the power runs are laid through the bow armour belt, which is why it is thick forward and thin aft. Nothing in the combat AI knew that, so UNSC ships fought broadside like everyone else and quietly threw away their best defence. They now keep the armoured prow toward whatever is shooting. </li><li><strong>The MAC has to earn its shot.</strong> A spinal gun running most of the length of the hull will not fire until it has held a target in its arc long enough to have a solution - about two seconds- and it decays faster than it builds if they slide out of the arc. Once locked, it stays locked while they stay in front of you. Swinging the bow across a target and snapping off a MAC round does not work anymore, which is rather the point. </li><li><strong>Reach and Tribute are glassed.</strong> The Covenant took both in 2552, and the gate brought the scars along with the planets. Long stretches of surface are fused to glass, and the survivors live in the gaps between them. It costs hazard and stability - these worlds are held, not recovered</li><li><strong>Fixed: a fighter wing of more than six craft crashed the combat UI.</strong> The engine indexes fighters into a fixed array, and vanilla never exceeds six, which turned out to be a limit rather than a convention. Every wing is capped there now, and the checker suite rejects anything larger - it failed inside the HUD rather than at load, so nothing in the crash pointed anywhere near the wing data</li><li><strong>Fixed: skin variants were shipping unarmed.</strong> A skin's loadout names the skin's own hullIDd, which has no hull file behind it, so the tool that fills empty mounts silently skipped every one of them. The Able went to war with nothing fitted at all</li><li>Fixed: a mirrored pair of mounts could carry two different weapons, which looks wrong and fights worse. Five pairs across the Artemis, Geneva, Point Blank and Strident, plus the Gladius, which was two ordnance points short of arming its own mirrors</li></ul><br><strong>v0.3 - \"Displacement\"</strong><br><em>\"A frigate that survives what a frigate shouldn't survive isn't good. It's a destroyer with the wrong paperwork.\"</em><br><ul class=\"bbc_list\"><li><strong>The fleet is armed out of the books now.</strong> Mount counts used to come from modding guidelines. That kept everything tidy next to vanilla and made the fleet look nothing like Halo. A canon Stalwart carries 92 missile pods and 58 point-defence guns; ours had four mounts and not a single gun on it. Every warship has been rebuilt from Halopedia's own armament tables</li><li>The upshot is that ships finally feel like themselves. The Marathon is a missile boat. The Strident is a gunship. The Punic is a wall of point defence. The Poseidon-pattern carriers barely shoot at all and aren't supposed to. </li><li>Twenty-three ships had a proper armament listed to work from. Two are only half-documented, and seven are mod originals with no canon at all, so those borrow from whatever class they most resemble - the Thanatos fights like a Marathon, the Eion like a Vindication. It's all written down, so nothing I made up gets passed off as canon</li><li>The counts are scaled rather than literal. Canon runs from fourteen weapons on a Charon to two thousand two hundred on an Infinity, and nothing sensible survives that kind of spread. The Infinity is still far and away the most heavily armed thing in the sector, at 96 mounts against its old 26. </li><li>The new missile pods are built in, which is the trick that makes any of this work. Built-ins don't cost ordnance points, so a ship can carry twenty pods without eating into the loadout you actually choose. The guns are still yours. Spinal MACs weren't touched</li><li><strong>Fighter and bomber wings are twice the size.</strong> A Baselard wing is sixteen craft now, a Broadsword twelve. An Infinity puts thirty-six aircraft up. UNSC carriers finally launch something that looks like an air group</li><li><strong>Frigates and destroyers were quietly overpowered.</strong> The canon rescale made them bigger without making them any more expensive to field, so you were getting destroyer toughness at frigate prices. Twelve hulls now cost a little more and take a little less. Cruisers and capitals were fine as they were</li><li><strong>The fleet had its flux dissipation backwards.</strong> Frigates and destroyers vented faster than vanilla while cruisers and capitals choked - exactly the wrong way round for a navy whose capitals are meant to be the frightening part. The big ships are brought up to par; the small ones were already generous. </li><li><strong>The Strident had the best shields in the fleet, by accident.</strong> Every other UNSC destroyer sits between 1.00 and 1.20 shield efficiency. The Strident was on 0.60, which is Paragon grade, on a hull that already carries heavy armour. It soaked more than twice what any of its siblings could for the same price. It now matches the Charon, Paris and Hillsborough</li><li><strong>The Halcyon (D) went to war with one gun.</strong> The scrapyard refit had a single point-defence cluster fitted across eleven mounts. It's meant to be a worn-out ship - the knackered engines and dodgy flux grid say that already. It wasn't meant to be unarmed</li><li><strong>The ONI prowlers were missing from every UNSC fleet.</strong> Razor, Winter, Point Blank and Sahara are phase ships, and the faction was set never to field phase ships. They'd been sitting in the fleet tables the whole time, never once spawning. </li><li>Those four were also carrying the shield hullmod, on ships that have no shields. It did precisely nothing. Gone</li><li><strong>New at the Section Three desk: \"What am I cleared for?\"</strong> Red, black and omega clearance gate the job board, the cells, all six deniable contracts and both fleet abilities - and the game never once mentioned they existed. Now the desk tells you which you hold, what each opens, and what you need for the next one</li><li><strong>The survivors recognise their old ships.</strong> Pull a wreck out of Epsilon Eridani, get a crew aboard, then dock where its survivor is posted. They'll notice. Twelve scenes, one per officer, no two the same. Ines Marchetti wants to know whether the Leviathan still pulls three degrees to port. Rurik Halloran has some thoughts about the word \"redoubtable\" on a ship that lasted eleven minutes</li><li><strong>Fixed: a UNSC world could end up with no governor at all, permanently.</strong> The game marked a world as sorted before it had actually put anyone in the chair, and that mark is the thing that stops it trying again. Fixed, and any world already stuck gets put right when you load. </li><li><strong>Th. e \"Spartan\" laser line is gone.</strong> Directed energy is Covenant technology. The UNSC shoots mass drivers, autocannons, and missiles. All three were fitted to nothing anyway. y</li><li>The ARES torpedo and the M96 rocket pod go with them. The missile lineup is Scythe, Archer, Archer Heavy, and Shiva, all built in, and there isn't a UNSC hull with a slot you could put a bought launcher into. UNSC AI Integration is retired too - Shipboard AI replaced it long ago</li><li><strong>Eight ships had a collision outline that crossed over itself.</strong> It looks like nothing in the file and makes collisions behave oddly. No vanilla ship does it. Eight of ours did</li><li><strong>Thirteen weapon mounts weren't actually on the ship.</strong> Some hung over space, some sat off the side of the hull entirely. Marathon, Artemis, Baselard, Thermopylae and four station modules. Moved in pairs, so nothing came out lopsided</li><li>Rewrote the Marathon, Punic and Sabre codex entries. All three were about half the length of everything else, and the Marathon especially reads like a gun cruiser when it's a fourteen-cell missile boat</li></ul><br><strong>v0.2 - \"No Such Office\"</strong><br><em>\"If he transmits before you close, this office was never here, and neither were you.\"</em><br><ul class=\"bbc_list\"><li><strong>Requisition chits.</strong> ONI pays in them, and they sit in your hold like anything else, so what you're owed is never hidden behind a counter you can't see. e</li><li><strong>The full UNSC officer ladder</strong>, Warrant Officer up to Fleet Admiral. Twelve grades, bought with chits, each one raising a monthly stipend so long as you hold a UNSC commission. The first three you earn rather than buy - they arrive at 30, 40 and 50 reputation, no chits and no commission needed</li><li>A requisition desk that opens up as you climb: ODST cadres, battleplate patterns, Smart AI cores, black archives, the capital programme. Get past RearAdmirala,l, and it stops selling blueprints and starts handing over finished hulls - a Halcyon, an Autumn, a Punic-II, out of fleet reserve with nothing on paper saying where they went</li><li>Standing and service are separate things. You can have either both or neither. The stipend needs a commission, which you pick up the ordinary way through the comm directory</li><li><strong>An ONI job board</strong> - four jobs up at a time, always kept full. Courier runs, dead drops, prisoner transfers, infiltration, extraction and sabotage, settled on the ground with marines rather than guns. Take as many as you like; they each sit on a different world</li><li>The board replaced the operatives' old contact missions, which handed out one to three jobs a month each and capped you at five contacts across the whole sector. Ordinary contacts work normally on UNSC worlds again as a result</li><li><strong>Six deniable contracts</strong> behind those three clearances: a defecting ONI commander, a prowler that mustn't be recovered, a warlord flying stolen UNSC hulls, a Tri-Tachyon charter reading our Smart AI research, a black site gone quiet, and a Vice Admiral who never disobeyed an order. Nearly every target flies UNSC hardware, so black ops means fighting your own ships</li><li><strong>Undercover cells</strong> in the capital of every faction in the sector. They're found by reading the conditions the game itself uses to mark a seat of power, so it works with modded factions and randomised sectors. You won't find one on a menu - at Lieutenant Commander somebody starts waiting in the bar, and the door only opens after that drink</li><li>Cells deal in locally \"adjusted\" fleet stores, quiet edits to your record in the host's own files, funding that turns credits into standing, and whatever nine months of deep cover has managed to put aside. A capital that gets invaded or decivilised moves its cell on its own</li><li><strong>Every UNSC world and station is run by someone who got off one of those wrecks.</strong> Twelve named officers, each tied to a specific hull in the graveyard, the senior ones on the bigger worlds</li><li><strong>The Epsilon Eridani graveyard is worth visiting for more than parts.</strong> Every named hull still has its flight recorder aboard. Hand them in and, across the six of them, Section Three tells you a piece at a time what it's willing to admit about how those ships died</li><li><strong>EMCON</strong> - shuts down every emitter the fleet doesn't need to keep moving. Your profile drops to 35% and your own sensor range with it, but you keep your speed. Going dark buys quiet with speed; EMCON buys it with your eyes</li><li><strong>The Cole Protocol</strong> - purge the navigation databases, and the fleet drops to a 15% profile for a day and a half, far below anything else going, at the cost of 10% combat readiness across every ship. It's what you do when being followed home is worse than arriving in a state</li><li>Neither is free at the start. EMCON comes with red clearance at Ensign, the Cole Protocol with black at Lieutenant Commander, so the ladder buys you capability and not just money</li><li><strong>Every hull's armament rebuilt from its canonical loadout.</strong> Halopedia's tables for thirteen classes come out at roughly half missile pods, half point defence and almost no conventional guns. The mod was nearly all gun mounts, which is the wrong navy entirely</li><li>No two classes fight alike anymore. Slot positions didn't change, so total firepower is the same - only its character moved</li><li>Archer and Scythe pods are built into the hulls rather than fitted. UNSC launchers don't draw a turret, so a mount holding one looked empty in the refit screen. They cost no ordnance now and can't be stripped off</li><li><strong>Fi. xed: ONI missions never paid out.</strong> The script was looking for the wrong kind of mission entirely, so it never found any of them and no chits were ever handed over</li><li><strong>Fixed: only the first ONI mission ever paid.</strong> Finished jobs were being marked off by the type of job rather than the job itself, so each kind paid exactly once, and everything after that came up empty</li><li><strong>Fixed: the standing screen lied when it had nothing to say</strong>, cheerfully telling a player whose standing hadn't loaded yet that they were already Fleet Admiral</li><li><strong>Fixed: UNSC fleet commanders had no skills at all.</strong> The faction was handing them officer skills where only admiral skills are accepted, so every single one was thrown away</li><li><strong>Fixed: UNSC ports only sold other people's ships.</strong> The game's dockside offer never checks whose port it is, so a UNSC world would happily try to sell you a Buffalo. Their yards now put their own decommissioned hulls up</li><li>Fixed a mangled Paris description that was rendering as black diamonds in the codex</li></ul><br><strong>v0.1 - \"Fall of Reach\"</strong><br>First release of UNSC Reborn. The numbering starts fresh rather than carrying on from the original's<br>0.4a; everything below is what changed against that mod.<br><ul class=\"bbc_list\"><li>Every hull sized from its canonical length, with the proportions between classes kept intact</li><li>Sprites brightened across the board - they'd been rendering close to black</li><li>Mounts spread along the hulls instead of bunched at the bow, and 60 added to the classes that were visibly under-armed</li><li>The Sahara heavy prowler was flying backwards. It isn't any more</li><li>The Spirit of Fire is a unique named ship rather than something you can build</li><li><strong>Salvaged Barrier Emitters</strong> - shields that wrap the whole hull, thick across the bow and thin astern</li><li>M58 Archer pods fire 32-missile salvos, with exhaust and contrails</li><li>Weapon ranges and the flux economy rebalanced against the new hull sizes; Shipboard AI built into every hull at no cost; Sabre, Baselard and Broadsword wings doubled</li><li><strong>Epsilon Eridani</strong>, with recoverable wrecks, named hulls carrying built-in refits, salvage and a debris field</li><li>ONI Section Three operatives as the faction's only contacts, four custom industries, four colony items, and Anchor stations in three tiers</li><li>The faction is fully self-contained - no vanilla blueprints, weapons or ships anywhere in it</li><li>Removed a bundled copy of Console Commands, and a debug script that handed the player a free fleet on load</li><li>Station modules had weapons bigger than their mounts and were rendering detached. Fixed</li></ul><div class=\"sp-foot\">[close]</div></div></div><br><strong>Acknowledgements:</strong><br><div class=\"sp-wrap sp-wrap-default\"><div class=\"sp-head\">Spoiler</div><div class=\"sp-body folded\"><strong>AppleMarineXX</strong> - the original UNSC mod creator. This is their faction; I only expanded it.<br><strong>The Sins of the Prophets team</strong> - the 3D models every ship sprite is rendered from.<br><div class=\"sp-foot\">[close]</div></div></div><br>Enjoy, and please leave your feedback!",
@@ -132442,7 +132451,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-26T15:06:13.739663Z",
+      "scrapedAt": "2026-08-27T15:07:03.403824Z",
       "isPlaceholderDetail": false
     },
     "35818": {
@@ -132595,7 +132604,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-26T15:06:03.702966Z",
+      "scrapedAt": "2026-08-27T15:07:02.368154Z",
       "isPlaceholderDetail": false
     },
     "35820": {
@@ -132833,7 +132842,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-27T03:06:35.984827Z",
+      "scrapedAt": "2026-08-27T15:07:06.307528Z",
       "isPlaceholderDetail": false
     },
     "35834": {
@@ -133165,7 +133174,7 @@
           "isDownloadable": true
         }
       ],
-      "scrapedAt": "2026-08-27T03:06:37.073267Z",
+      "scrapedAt": "2026-08-27T15:07:07.373375Z",
       "isPlaceholderDetail": false
     },
     "35856": {
@@ -133307,7 +133316,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-27T03:06:31.980806Z",
+      "scrapedAt": "2026-08-27T15:07:00.275859Z",
       "isPlaceholderDetail": false
     },
     "35860": {
@@ -133442,7 +133451,7 @@
           "isDownloadable": false
         }
       ],
-      "scrapedAt": "2026-08-27T03:06:26.979481Z",
+      "scrapedAt": "2026-08-27T15:06:51.265799Z",
       "isPlaceholderDetail": false
     },
     "35865": {
@@ -133988,8 +133997,8 @@
       "author": "thedarkgod",
       "authorTitle": "Ensign",
       "authorPostCount": 38,
-      "postDate": "Today at 11:40:29 AM",
-      "lastEditDate": "Today at 12:09:50 PM by thedarkgod",
+      "postDate": "August 26, 2026, 11:40:29 AM",
+      "lastEditDate": "August 26, 2026, 12:09:50 PM by thedarkgod",
       "contentHtml": "An early peak at what I'm working on.<br><br><em>Do you enjoy messing with modular ships?<br><br>Do you feel saddened by the lack of smaller modular ships?<br><br>Introducing the solution to your problems:</em><br><br><div align=\"center\"><strong><span style=\"font-size: 14pt;\" class=\"bbc_size\">Daddy Dark's Modular Daycare</span></strong><br><span style=\"font-size: 12pt;\" class=\"bbc_size\"><a href=\"https://www.mediafire.com/file/nrb27578t4k4ryo/Modular_Daycare.zip/file\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener noreferrer\">Download Here</a></span><br></div><br><br><br>This mods introduces a set of small modular ships meant to blend in seamlessly with the base game.<br><br>As of version 0.2.0 the mod adds 1 frigate with 3 distinct modules, which can be found in league space on rare occasions.<br><br><strong>The Ships with their Modules:</strong><br><div class=\"sp-wrap sp-wrap-default\"><div class=\"sp-head\">Spoiler</div><div class=\"sp-body folded\">Freightframe:<br><img src=\"https://i.imgur.com/QoEe3K3.png\" alt=\"\" class=\"bbc_img\"> <img src=\"https://i.imgur.com/C8Trdhj.png\" alt=\"\" class=\"bbc_img\"> <img src=\"https://i.imgur.com/k7pOpYT.png\" alt=\"\" class=\"bbc_img\"> <img src=\"https://i.imgur.com/YTnSPz1.png\" alt=\"\" class=\"bbc_img\"><br><div class=\"sp-foot\">[close]</div></div></div><br><strong>Installation Instructions:</strong><br>Extract the \"Modular Daycare\" folder from the root of the zip file into your Starsector/Mods folder, and enable the mod from either the launcher or from a mod manager of your choice.<br><br><strong>Q&amp;A:</strong><br><div class=\"sp-wrap sp-wrap-default\"><div class=\"sp-head\">Spoiler</div><div class=\"sp-body folded\">How balanced is this mod?<br><div class=\"quoteheader\"><div class=\"topslice_quote\">Quote</div></div><blockquote class=\"bbc_standard_quote\"><span style=\"font-size: 9pt;\" class=\"bbc_size\">The modular ships added by this mod are on average balanced to be weaker than the base game ships of the same cost, and all have some limitations. <br><br>The Freightframe ship as an example, is severely limited by only having 2 free small weapon mounts on the base hull (while 2 of the modules do have 1 built-in weapon), and not permitting mounting of shields on the base hull.<br><br>All modular ships also typically have the OP a ship of the same cost would have, split between the module(s) and the base ship.<br><br>While this may seem like a fair few limitations, this is absolutely something which is necessary to ensure that such small modular ships do not become frightfully overpowered. As modular ships permits a fair bit more min-maxing than a regular ship does, especially in conjunction with other mods.<br>There are also some minor inherent advantages of modular ships, due to how the base game treats them, essentially treating them as multiple separate ships, which means that other ships may believe themselves outnumbered, even if they in reality aren't.<br></span><br></blockquote><div class=\"quotefooter\"><div class=\"botslice_quote\"></div></div><br>This mod hasn't been updated in a while, how safe is it to install?<br><div class=\"quoteheader\"><div class=\"topslice_quote\">Quote</div></div><blockquote class=\"bbc_standard_quote\"><span style=\"font-size: 9pt;\" class=\"bbc_size\">While there may be some unintentional balancing differences, barring a large scale change (which will likely have been communicated by the development team), historically mods which simply adds ships have been backwards compatibly with very few breaking changes, something which the dev team seems to intentionally maintain.<br><br>Tldr; It will likely be fine.</span><br></blockquote><div class=\"quotefooter\"><div class=\"botslice_quote\"></div></div><br>I would like to use your work in my own mod, or distribute my own changes to it, may I do so?<br><div class=\"quoteheader\"><div class=\"topslice_quote\">Quote</div></div><blockquote class=\"bbc_standard_quote\"><span style=\"font-size: 9pt;\" class=\"bbc_size\">Absolutely, go for it, go nuts, eat nuts, such is the spirit of modding, even credit is optional, although appreciated of course.<br><br>One thing I would appreciate would be to not include the ships unchanged in some ship-pack/faction mod, while this mod is actively being updated, for the sole reason not to spam players games with multiple iterations of the same ship. This is definitely not a hard rule though, but merely a suggestion, so make your own judgement for what is best for the player of your own mod.<br></span><br></blockquote><div class=\"quotefooter\"><div class=\"botslice_quote\"></div></div><div class=\"sp-foot\">[close]</div></div></div><br><em>More to come soon.</em>",
       "images": [
         {
@@ -134021,7 +134030,7 @@
           "isDownloadable": true
         }
       ],
-      "scrapedAt": "2026-08-27T03:06:33.973469Z",
+      "scrapedAt": "2026-08-27T15:07:04.274854Z",
       "isPlaceholderDetail": false
     },
     "35933": {
@@ -134032,8 +134041,8 @@
       "author": "Anjasnare",
       "authorTitle": "Ensign",
       "authorPostCount": 4,
-      "postDate": "Today at 02:14:59 PM",
-      "lastEditDate": "Today at 02:31:14 PM by Anjasnare",
+      "postDate": "August 26, 2026, 02:14:59 PM",
+      "lastEditDate": "August 26, 2026, 02:31:14 PM by Anjasnare",
       "contentHtml": "<span style=\"font-size: 14pt;\" class=\"bbc_size\"><strong>[0.98a] ExchangeRefit v1.0.0 - Advanced Ship Layout Copier/Paster &amp; Player Sharing</strong></span><br><hr><strong>Author:</strong> Anjasnare<br><strong>Game Version:</strong> Starsector 0.98a-RC8 (Utility Mod - Safe to add/remove mid-save)<br><strong>Compatibility:</strong> Fully integrated and synchronized with Advanced Gunnery Control<br><br><strong><span style=\"font-size: 12pt;\" class=\"bbc_size\">Description</span></strong><br>Tired of manually rebuilding your ships every time you buy a new hull? Annoyed by keyboard hotkey conflicts from older scripts? <br><br>ExchangeRefit adds a fully interactive, mouse-driven shipyard terminal directly inside any orbital station or planet dialogue menu. It allows you to copy, save, and apply complete ship layouts (Weapons, Flux Vents, Capacitors, Hullmods, and S-Mods) seamlessly using your fleet cargo resources. <br><br>Since layouts are saved as standalone lightweight text files, you can easily send them to your friends to share your best builds!<br><br><strong><span style=\"font-size: 12pt;\" class=\"bbc_size\">Key Features</span></strong><br>- Full Mouse UI Integration: Accessible natively from any market dock via conversation choices. No more blind keypresses while flying in space!<br>- 5 Archive Slots per Hull: Keep up to 5 customized loadouts for every single ship hull in the game.<br>- Real Cargo and Resource Management: Automatically unmounts old weapons back into your cargo (no lost items). It safely checks your inventory and consumes the required weapons or fighters from your fleet soute upon pasting (prevents cheating).<br>- Advanced Gunnery Control Sync: Automatically backs up and restores your custom Weapon AI priorities, targeting behaviors, and automated fire group settings on the fly.<br>- Smart S-Mods Handling: Re-applies your Story Mods. If you lack Story Points in your current playthrough, it dynamically downgrades them to standard hullmods instead of locking the process.<br>- Encyclopedic Error Log: Missing a gun or a fighter wing? The terminal scans Starsector database to print an orange breakdown displaying the missing item Name, Size, Base Cost, and Manufacturer.<br>- Built-in Safeguards and Management: A yellow warning screen protects you from accidentally overwriting an active slot. You can also physically delete blueprint text files directly from the UI.<br>- Multiplayer Build Sharing: Blueprints are saved in the common saves folder. Share them via Discord or forums, allowing other players to instantly drop your loadouts into their own fleets!<br><br><hr><br><strong><span style=\"font-size: 12pt;\" class=\"bbc_size\">How to Share Loadouts Between Players</span></strong><br>To Export/Send a build:<br>1. Save your ship layout in-game on any Slot (like Slot 1).<br>2. Go to your main Starsector directory, then open the folder: saves / common<br>3. Locate the file named: ExchangeRefit_HullId_Slot1.txt<br>4. Send this file to your friend (via Discord, Email, etc.).<br><br>To Import/Receive a build:<br>1. Download your friend text file and place it inside your own saves / common directory.<br>2. (Optional) You can rename Slot1 in the filename to Slot3 if you want to place it in your 3rd slot!<br>3. Open the game, access the ExchangeRefit terminal at any station, select the matching ship hull, and click Paste!<br><br><hr><br><strong><span style=\"font-size: 12pt;\" class=\"bbc_size\">Author Note</span></strong><br>As this is my very first mod and my coding knowledge is currently quite limited, I might not have caught every single quirk. However, I am fully committed to improving and maintaining ExchangeRefit! I will be deeply attentive to all feedback, bug reports, feature suggestions, and even critiques, as long as they remain constructive. Let us make this tool better together!<br><br><hr><br><strong><span style=\"font-size: 12pt;\" class=\"bbc_size\">Installation</span></strong><br>1. Download the zip file.<br>2. Extract the ExchangeRefit folder into your Starsector / mods / directory.<br>3. Enable ExchangeRefit in the Starsector launcher.<br>4. Enjoy your smooth refitting sessions!<br><br><hr><br><strong><span style=\"font-size: 14pt;\" class=\"bbc_size\">DOWNLOAD LINK :</span></strong><br><a href=\"https://www.mediafire.com/file/n2l96g8gklvta0k/Exchangerefit+1.0.0.zip/file\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.mediafire.com/file/n2l96g8gklvta0k/Exchangerefit+1.0.0.zip/file</a><br><br><span style=\"font-size: 8pt;\" class=\"bbc_size\">ChangeLog v1.0.0: Initial Release. Built entirely on a localized dialogue tree with dynamic hull cloning to prevent stock variant locks, and integrated with AGC data tags.</span><br>",
       "images": [],
       "links": [
@@ -134044,7 +134053,7 @@
           "isDownloadable": true
         }
       ],
-      "scrapedAt": "2026-08-27T03:06:34.970338Z",
+      "scrapedAt": "2026-08-27T15:07:05.272952Z",
       "isPlaceholderDetail": false
     }
   },
