@@ -700,6 +700,11 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 
 .thread-title { opacity: 0.8; }
 
+/* "Part of <thread>", for a mod that shares its forum thread with others. It
+   sits under the name and says why the thread it links is not about it alone,
+   so it is a note about the mod rather than part of its title. */
+.part-of { color: var(--text-dim); font-size: var(--type-small); }
+
 /* What a mod will not run without, right under its name. */
 .needs-line {
   display: flex; gap: 6px; flex-wrap: wrap; align-items: baseline;

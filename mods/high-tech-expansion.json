@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T01:48:12.345888Z",
+  "generatedAt": "2026-08-27T15:14:22.178670Z",
   "listing": {
     "id": "high-tech-expansion",
     "name": "High Tech Expansion",
@@ -21,10 +21,10 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "2.0.5",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1242523800604774473/1242523800910696560/crest_tritachyon.png?ex=6a8d22b7&is=6a8bd137&hm=097e6d0be5aa7b505100ad363c156971098a0ec14e5342c94536bb661e979655&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1242523800604774473/1242523800910696560/crest_tritachyon.png?ex=6a911737&is=6a8fc5b7&hm=565b16771aa979565a31975bbcb3b9aa8b924d2ae224fbf1fc91feca58247638&",
     "summary": "We're back!",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds high-tech ships and weapons with visual and balance improvements.",
+    "aiSummary": "Adds high-tech ships and weapons with updated visuals and rebalanced stats.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -38,12 +38,21 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2024-05-21",
-    "needs": []
+    "needs": [
+      {
+        "name": "MagicLib",
+        "id": "magiclib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      }
+    ]
   },
   "description": "High Tech Expansion v2.0.5\n\nAdds a number of high-tech ships and weapons.\n\nRequires Magiclib and Lazylib. Has support for GraphicsLib shaders, but doesn't require it.\n\nSave compatible with existing saves, but not any version of itself prior to 2.0.1.\n\nCREDITS AND SOURCE\n\nSpoiler\n\nSource code is available here.\n\nSprite credits:\n\n- Me (thedragn): Equality, Scute, Gloom, all weapons and fighters minus plasma streamer.\n\n- Noof/Pogre/Mr. Bultach: Gila, Incursion, Shoebill, Spire, Peregrine, Tigershark\n\n- Demto: Bombardier\n\n- Medikohl: Persephone\n\n- Axlemc131: Moray\n\n- Helmut: Plasma Streamer\n\n- Vinya: Aphelion\n\n- Undisclosed: Iris\n\n- tuprewm: original Shoebill design\n\n[close]\n\nCHANGELOG\n\nSpoilerVersion 2.0.5\n\n- Update for 0.98\n\n- Incursion can no longer zap phased targets\n\n- Shoebill's shield is a little bit bigger\n\nVersion 2.0.4\n\nFixed a number of issues with hull/weapon tags being incorrect, leading to ships not spawning at correct rates, in correct factions, or at all. No clue how this got in without getting noticed.\n\nVersion 2.0.3\n\nRapid fix for the Tigershark's hullmod (worked as intended, description was screwy) and the Incursion being burn 7, not 8.\n\nVersion 2.0.2.\n\n- Added normal maps for all ships and weapons, and lighting data for weapons and projectiles. This will significantly improve visuals (and double the VRAM footprint) for players using graphicslib.\n\n- Peregrine: Reduced DP to 22.\n\n- Tigershark: Reduced DP to 28. Removed ballistic flux penalty from built-in.\n\n- Equality: Fixed the hullmod not actually nullifying fighter pilot losses.\n\n- Gloom: Gave it back salvage gantry. Drive Field Compressor now tells you that more than one doesn't do anything.\n\n- Fixed the version file to work with mod managers.\n\nVersion 2.0.1\n\n- Equality resprite and rebalance\n\n- Shoebill got Harmonic Energy Projector (Equality lost it)\n\n- Fixed some descriptions that were incorrect because of changing sprites/slots.\n\nVersion 2.0.0\n\n- Now safe for forum posting again.\n\n- Major rebalance and reduction in scope (and VRAM usage). Bounties, Battlegroup IV, Ashen Keepers, and Covert Ops reskins removed.\n\n- Major resprite thanks to Pogre.\n\n-\n\nFull changelog available here.\n\n[close]",
   "descriptionHtml": "<strong><a href=\"https://github.com/theDragn/HTE/releases/latest/download/HTE.zip\" rel=\"nofollow noopener\" target=\"_blank\">High Tech Expansion v2.0.5<br></a>  </strong><br><br>Adds a number of high-tech ships and weapons. <br>Requires Magiclib and Lazylib. Has support for GraphicsLib shaders, but doesn't require it.<br>Save compatible with existing saves, but not any version of itself prior to 2.0.1.<br><br>CREDITS AND SOURCE<br>Spoiler<a href=\"https://github.com/theDragn/HTE/tree/main/src\" rel=\"nofollow noopener\" target=\"_blank\">Source code is available here.</a><br><br>Sprite credits: <br>- Me (thedragn): Equality, Scute, Gloom, all weapons and fighters minus plasma streamer.<br>- Noof/Pogre/Mr. Bultach: Gila, Incursion, Shoebill, Spire, Peregrine, Tigershark<br>- Demto: Bombardier<br>- Medikohl: Persephone<br>- Axlemc131: Moray<br>- Helmut: Plasma Streamer<br>- Vinya: Aphelion<br>- Undisclosed: Iris <br>- tuprewm: original Shoebill design<br>[close]<br>CHANGELOG<br>SpoilerVersion 2.0.5<br>- Update for 0.98<br>- Incursion can no longer zap phased targets<br>- Shoebill's shield is a little bit bigger<br><br>Version 2.0.4<br>Fixed a number of issues with hull/weapon tags being incorrect, leading to ships not spawning at correct rates, in correct factions, or at all. No clue how this got in without getting noticed.<br><br>Version 2.0.3<br>Rapid fix for the Tigershark's hullmod (worked as intended, description was screwy) and the Incursion being burn 7, not 8.<br><br>Version 2.0.2.<br>- Added normal maps for all ships and weapons, and lighting data for weapons and projectiles. This will significantly improve visuals (and double the VRAM footprint) for players using graphicslib.<br>- Peregrine: Reduced DP to 22.<br>- Tigershark: Reduced DP to 28. Removed ballistic flux penalty from built-in.<br>- Equality: Fixed the hullmod not actually nullifying fighter pilot losses.<br>- Gloom: Gave it back salvage gantry. Drive Field Compressor now tells you that more than one doesn't do anything.<br>- Fixed the version file to work with mod managers.<br><br>Version 2.0.1<br>- Equality resprite and rebalance<br>- Shoebill got Harmonic Energy Projector (Equality lost it)<br>- Fixed some descriptions that were incorrect because of changing sprites/slots.<br><br>Version 2.0.0<br><strong>- Now safe for forum posting again.</strong><br>- Major rebalance and reduction in scope (and VRAM usage). Bounties, Battlegroup IV, Ashen Keepers, and Covert Ops reskins removed.<br>- Major resprite thanks to Pogre.<br>- <a href=\"https://github.com/theDragn/HTE/releases/tag/2.0.0\" rel=\"nofollow noopener\" target=\"_blank\">Full changelog available here.</a>[close]",
   "descriptionIsGenerated": false,
-  "aiDescription": "Adds a variety of high-tech ships and weapons, including new fighters and capital ships with unique abilities. Includes visual improvements such as normal maps and lighting data for enhanced graphics when used with GraphicsLib. Also features rebalancing and fixes for previous issues with ship spawning and descriptions.",
+  "aiDescription": "Adds a variety of high-tech ships and weapons to the game. Includes rebalanced and resprited ships, updated weapon effects, and improved visual fidelity with normal maps and lighting data. Some ships have new abilities or adjusted stats for better balance.",
   "saveCompatibilityText": "Save compatible with existing saves, but not any version of itself prior to 2.0.1.",
   "rawCategories": [
     "Content Expansions",
@@ -51,10 +60,10 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1242523800604774473/1242523800910696560/crest_tritachyon.png?ex=6a8d22b7&is=6a8bd137&hm=097e6d0be5aa7b505100ad363c156971098a0ec14e5342c94536bb661e979655&"
+      "url": "https://cdn.discordapp.com/attachments/1242523800604774473/1242523800910696560/crest_tritachyon.png?ex=6a911737&is=6a8fc5b7&hm=565b16771aa979565a31975bbcb3b9aa8b924d2ae224fbf1fc91feca58247638&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1242523800604774473/1246526740864569354/equality.png?ex=6a8d323e&is=6a8be0be&hm=ba8b74d12b731a3524fbf49532053afc6843243ceca8cc479a01ef0dc1d73c00&"
+      "url": "https://cdn.discordapp.com/attachments/1242523800604774473/1246526740864569354/equality.png?ex=6a9126be&is=6a8fd53e&hm=1fa97e1125f0e9037b4ac4306e8ed8f1f3a46bfe1dec7036a079246e8cb34e8d&"
     },
     {
       "url": "https://raw.githubusercontent.com/theDragn/HTE/main/hte_lineup.png"

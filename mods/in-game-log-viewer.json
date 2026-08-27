@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T01:48:12.345888Z",
+  "generatedAt": "2026-08-27T15:14:22.178670Z",
   "listing": {
     "id": "in-game-log-viewer",
     "name": "In Game Log Viewer",
@@ -16,10 +16,10 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "1.3.0",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121253741203657/Ig7PWp5.png?ex=6a8d9349&is=6a8c41c9&hm=f122821cf2fd9c027a8a345f60020affbd8b254df5738a353a14d76d30e4a87d&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121253741203657/Ig7PWp5.png?ex=6a9187c9&is=6a903649&hm=598869fb38cefcdbeb1693dfc8a8ae4098db2c5b1d81ea8a47e7b84ed092adb6&",
     "summary": "View logs from starsector.log inside the game.",
     "summaryIsGenerated": false,
-    "aiSummary": "Displays game logs in real time on screen with scrollable text and sound effects.",
+    "aiSummary": "Displays the game's log file in real time on screen with sound effects and supports viewing logs in the Console Commands mod console.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FS-Numan%2FLogViewer%2Fmaster%2Flogviewer.version%22%2C%22id%22%3A%22SN_InGameLog%22%2C%22version%22%3A%221.3.0%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FLazyWizard%2Flazylib%2Freleases%2Fdownload%2F3.0%2FLazyLib.3.0.zip%22%2C%22id%22%3A%22lw_lazylib%22%7D",
@@ -32,21 +32,26 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2026-05-02",
-    "needs": []
+    "needs": [
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      }
+    ]
   },
   "description": "Log Viewer\n\nManual download\n\nRequires\n\nLazyLib\n\nDependencies are automatically downloaded when installing with TriOS\n\nOlder versions and changelogs\n\nView logs from starsector.log inside the game.\n\nView logs on the top left of the screen via a scroller text renderer, accompanied by sound effects when they appear.\n\nView logs in the console of the Console Commands mod.\n\nConfigurable.\n\nIntended to assist mod developers. To see an error log exactly when it happens, in the game.",
   "descriptionHtml": "<strong>Log Viewer</strong><br><br><a href=\"https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip\" rel=\"nofollow noopener\" target=\"_blank\"><strong>Manual download</strong></a><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a> <br><br>Dependencies are automatically downloaded when installing with TriOS<br><a href=\"http://hhttps://github.com/S-Numan/FleetBuilder\" rel=\"nofollow noopener\" target=\"_blank\">Older versions and changelogs</a><br><hr>View logs from starsector.log inside the game.<br><br>View logs on the top left of the screen via a scroller text renderer, accompanied by sound effects when they appear.<br><br>View logs in the console of the Console Commands mod.<br><br>Configurable.<br>Intended to assist mod developers. To see an error log exactly when it happens, in the game.",
   "descriptionIsGenerated": false,
-  "aiDescription": "Displays logs from starsector.log directly in the game window, showing them in a scroller text renderer at the top left. Includes sound effects when new log entries appear and supports viewing logs through the Console Commands mod's console. Configurable settings make it useful for mod developers to catch errors exactly when they occur.",
+  "aiDescription": "Displays the game's log file in real time on the top left of the screen using a scroller text renderer, with sound effects when new entries appear. Also allows viewing logs in the console of the Console Commands mod. Configurable settings make it useful for mod developers who need to see error logs exactly when they occur during gameplay.",
   "rawCategories": [
     "Utility mods"
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121253741203657/Ig7PWp5.png?ex=6a8d9349&is=6a8c41c9&hm=f122821cf2fd9c027a8a345f60020affbd8b254df5738a353a14d76d30e4a87d&"
+      "url": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121253741203657/Ig7PWp5.png?ex=6a9187c9&is=6a903649&hm=598869fb38cefcdbeb1693dfc8a8ae4098db2c5b1d81ea8a47e7b84ed092adb6&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121308791443598/Oy2oJUf.png?ex=6a8d9356&is=6a8c41d6&hm=df38f9149844b849d81477cdff038ad17981194dbe6943f0e0c67ca49fa7997a&"
+      "url": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121308791443598/Oy2oJUf.png?ex=6a9187d6&is=6a903656&hm=bc035f07ff5cf4ef8efa71123b7cc9fe91843404e817211cd5484ba1e1c22db0&"
     },
     {
       "url": "https://i.imgur.com/37bdtXY.png"
@@ -74,7 +79,11 @@
       "needsAnotherStep": false
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "1.3.0": "View logs from starsector.log inside the game.\n\nView logs on the top left of the screen via a scroller text renderer, accompanied by sound effects when they appear.\n\nView logs in the console of the Console Commands mod.\n\nConfigurable.\nIntended to assist mod developers. To see an error log exactly when it happens, in the game.",
+    "1.2.0": "Initial release",
+    "1.1.0": "Added support for viewing logs in the Console Commands mod console"
+  },
   "changelogUrl": "http://hhttps://github.com/S-Numan/FleetBuilder",
   "sourceCodeUrl": "https://github.com/S-Numan/LogViewer",
   "supportLinks": [],

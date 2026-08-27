@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T01:48:12.345888Z",
+  "generatedAt": "2026-08-27T15:14:22.178670Z",
   "listing": {
     "id": "scan-those-gates",
     "name": "Scan Those Gates",
@@ -23,10 +23,10 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "1.5.8",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1370133954098626620/1370133954274918461/gate_active.png?ex=6a8d50ee&is=6a8bff6e&hm=dd203022b31e75235a8cc790948e0c0597bdefdba6cd99d99d96290dd797d0d6&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1370133954098626620/1370133954274918461/gate_active.png?ex=6a91456e&is=6a8ff3ee&hm=4cb8bbed8aca259bd00b16fe108ea56eae3910d2b7b399b8f66f3d3a0770bf6e&",
     "summary": "Adds abilities to remotely activate gates and reveal the locations of Domain-era Cryosleepers and Coronal Hypershunts.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds three abilities to scan and reveal hidden gates, Coronal Hypershunts, and Cryosleepers across the sector.",
+    "aiSummary": "Adds abilities to scan and reveal gates, Hypershunts, and Cryosleepers across the sector, displaying them on the intel screen and map.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/AEROassault/ScanThoseGates/releases/latest/download/ScanThoseGates.zip",
@@ -39,12 +39,17 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2022-05-26",
-    "needs": []
+    "needs": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ]
   },
   "description": "Scan Those Gates adds three abilities.\n\nRemote Gate Scan\n\n: scans all gates in systems with at least one non-hidden (not pirate/pather base) market, and adds the scanned gates to the intel screen. Settings.json options are available to change the ability to also reveal gates in marketless systems or activate them.\n\nRemote Hypershunt Survey\n\n: scans all Coronal Hypershunts in the sector, adds their location to the intel screen under the \"Megastructures\" tab, and adds markers to the intel map.\n\nRemote Cryosleeper Survey\n\n: scans all Cryosleepers in the sector, adds their location to the intel screen under the \"Megastructures\" tab, and adds markers to the intel map.\n\nIf the mod is added after a game has been started, the abilities will be automatically added. Scan Those Gates can be safely removed from an active game by running the console command \"RemoveScanThoseGates\", saving the game, and then removing the mod.\n\nThis mod has LunaSettings integration, but it is optional. However, it will not work with a LunaLib version less than v1.7.4. If you want to use this mod with LunaLib, make sure it is up to date.\n\nCredits:\n\nstormbringer951\n\n- Allowing me to use code from\n\nCaptain's Log\n\nto remove the dependency it was going to have.\n\nWispborne, Timid, SafariJohn\n\nand\n\nruddygreat\n\n- Answering my questions and helping with bugfixing",
   "descriptionHtml": "Scan Those Gates adds three abilities.<br><br><strong>Remote Gate Scan</strong>: scans all gates in systems with at least one non-hidden (not pirate/pather base) market, and adds the scanned gates to the intel screen. Settings.json options are available to change the ability to also reveal gates in marketless systems or activate them.<br><br><strong>Remote Hypershunt Survey</strong>: scans all Coronal Hypershunts in the sector, adds their location to the intel screen under the \"Megastructures\" tab, and adds markers to the intel map.<br><br><strong>Remote Cryosleeper Survey</strong>: scans all Cryosleepers in the sector, adds their location to the intel screen under the \"Megastructures\" tab, and adds markers to the intel map.<br><br>If the mod is added after a game has been started, the abilities will be automatically added. Scan Those Gates can be safely removed from an active game by running the console command \"RemoveScanThoseGates\", saving the game, and then removing the mod. <br><br><strong>This mod has LunaSettings integration, but it is optional. However, it will not work with a LunaLib version less than v1.7.4. If you want to use this mod with LunaLib, make sure it is up to date.</strong><br><br><strong>Credits:</strong><br><strong>stormbringer951</strong> - Allowing me to use code from <a href=\"https://fractalsoftworks.com/forum/index.php?topic=20161\" rel=\"nofollow noopener\" target=\"_blank\">Captain's Log</a> to remove the dependency it was going to have.<br><strong>Wispborne, Timid, SafariJohn</strong> and <strong>ruddygreat</strong> - Answering my questions and helping with bugfixing",
   "descriptionIsGenerated": false,
-  "aiDescription": "Adds three new abilities that scan and reveal hidden megastructures across the sector. The Remote Gate Scan reveals gates in systems with non-hidden markets, the Remote Hypershunt Survey locates all Coronal Hypershunts, and the Remote Cryosleeper Survey finds all Cryosleepers. These are added to the intel screen and map for easy access.",
+  "aiDescription": "Adds three abilities that scan and reveal gates, Coronal Hypershunts, and Cryosleepers across the sector. Scanned locations appear on the intel screen and map, with options to customize scanning behavior. The mod integrates with LunaSettings and can be safely added or removed during gameplay.",
   "saveCompatibilityText": "If the mod is added after a game has been started, the abilities will be automatically added. Scan Those Gates can be safely removed from an active game by running the console command \"RemoveScanThoseGates\", saving the game, and then removing the mod.",
   "rawCategories": [
     "Misc. Campaign Mods",
@@ -54,7 +59,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1370133954098626620/1370133954274918461/gate_active.png?ex=6a8d50ee&is=6a8bff6e&hm=dd203022b31e75235a8cc790948e0c0597bdefdba6cd99d99d96290dd797d0d6&"
+      "url": "https://cdn.discordapp.com/attachments/1370133954098626620/1370133954274918461/gate_active.png?ex=6a91456e&is=6a8ff3ee&hm=4cb8bbed8aca259bd00b16fe108ea56eae3910d2b7b399b8f66f3d3a0770bf6e&"
     },
     {
       "url": "https://github.com/AEROassault/ScanThoseGates/blob/master/ScanThoseGates%20Banner.png?raw=true"
@@ -71,20 +76,10 @@
       "needsAnotherStep": false
     }
   ],
-  "changelog": {
-    "1.5.8": "Scan Those Gates adds three abilities.\n\n Remote Gate Scan : scans all gates in systems with at least one non-hidden (not pirate/pather base) market, and adds the scanned gates to the intel screen. Settings.json options are available to change the ability to also reveal gates in marketless systems or activate them.\n\n Remote Hypershunt Survey : scans all Coronal Hypershunts in the sector, adds their location to the intel screen under the \"Megastructures\" tab, and adds markers to the intel map.\n\n Remote Cryosleeper Survey : scans all Cryosleepers in the sector, adds their location to the intel screen under the \"Megastructures\" tab, and adds markers to the intel map.\n\nIf the mod is added after a game has been started, the abilities will be automatically added. Scan Those Gates can be safely removed from an active game by running the console command \"RemoveScanThoseGates\", saving the game, and then removing the mod.\n\n This mod has LunaSettings integration, but it is optional. However, it will not work with a LunaLib version less than v1.7.4. If you want to use this mod with LunaLib, make sure it is up to date.",
-    "1.5.7": "Fixed a bug where the mod would not properly scan gates in systems with hidden markets.",
-    "1.5.6": "Added support for LunaSettings integration. Updated dependencies."
-  },
-  "changelogUrl": "https://github.com/AEROassault/ScanThoseGates/releases",
+  "changelog": {},
   "license": "CC BY-NC-SA 4.0",
   "sourceCodeUrl": "https://github.com/AEROassault/ScanThoseGates",
-  "supportLinks": [
-    {
-      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-      "type": "other"
-    }
-  ],
+  "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=24651.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1370133954098626620/1370133954098626620",
   "releases": [],

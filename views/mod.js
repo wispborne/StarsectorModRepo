@@ -135,12 +135,36 @@ function modHeader(mod, detail, shownName, currentVersion) {
     shownName === mod.name
       ? null
       : el('span', { class: 'sub thread-title', text: mod.name }),
+    partOfThreadLine(mod),
     (mod.authors || []).length ? authors : null,
     meta,
     howToGetIt(mod, detail),
   ]);
 
   return el('div', { class: 'mod-head' }, [modPicture(mod), words]);
+}
+
+/// "Part of <thread>", for a mod that shares a forum thread with others.
+///
+/// Some threads are several mods at once — "Hartley's Miscellaneous Mods" is
+/// four. Those mods have no thread of their own, so without this line four
+/// different mods all link the same thread and the page reads as a mistake.
+/// Only a mod read out of somebody else's thread carries the title; a mod with
+/// its own thread shows nothing here.
+function partOfThreadLine(mod) {
+  if (!mod.partOfThreadTitle) return null;
+  const line = el('div', { class: 'sub part-of' }, [
+    document.createTextNode('Part of '),
+  ]);
+  line.append(mod.forumUrl
+    ? el('a', {
+        href: mod.forumUrl, target: '_blank', rel: 'noopener nofollow',
+        text: mod.partOfThreadTitle,
+        title: 'A forum thread holding several mods, this one among them.',
+      })
+    : el('span', { text: mod.partOfThreadTitle }));
+  line.append(document.createTextNode(', a thread holding several mods.'));
+  return line;
 }
 
 /// The mod's own picture, big, at the top of its page. A mod with none, and one

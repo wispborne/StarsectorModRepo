@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T01:48:12.345888Z",
+  "generatedAt": "2026-08-27T15:14:22.178670Z",
   "listing": {
     "id": "fair-s-mods",
     "name": "Fair S Mods",
@@ -16,9 +16,9 @@
     "gameVersion": "0.95.1a",
     "modVersion": "1.1",
     "imageUrl": "https://i.imgur.com/N7CxHt9.png",
-    "summary": "Makes building cheaper hullmods viable by applying a bonus multiplier to the OP cost difference.",
+    "summary": "Adds a cost scaling system for hullmods based on their original price to make cheaper mods more viable.",
     "summaryIsGenerated": true,
-    "aiSummary": "Makes building cheaper hullmods viable by applying a bonus multiplier to the OP cost difference.",
+    "aiSummary": "Adds a cost scaling system for hullmods based on their original price to make cheaper mods more viable.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -31,12 +31,17 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2022-03-10",
-    "needs": []
+    "needs": [
+      {
+        "name": "Concord",
+        "id": "concord"
+      }
+    ]
   },
   "description": "Download link\n\nSource\n\nRequires\n\nCONCORD\n\n3.5 or above version\n\nThis mod is meant to make building in cheaper hullmods viable.\n\nFor example, if you build in an \"Advanced Turret Gyros\" on a capital which originally costs 10 OP, the difference is 20 OP, so you get 20 OP * 75% = 15 OP added to your hull.\n\nUsing Better Deserved S Mods or Progressive S Mods reduce the effectiveness to 25%; Using both nullifies the mod.\n\nThe ratios and base bonus multipliers are adjustable in settings file (data/config/settings.json)\n\nThe mod can be added mid-game and is automatically applied.\n\nThe mod is currently\n\nSAFE TO REMOVE after CONCORD 3.5.2a",
   "descriptionHtml": "<a href=\"https://github.com/Sutopia/FSM/releases/download/1.1.0/Fair.S.Mods.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download link</a><br><a href=\"https://github.com/Sutopia/FSM\" rel=\"nofollow noopener\" target=\"_blank\">Source</a><br><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=23935.0\" rel=\"nofollow noopener\" target=\"_blank\">CONCORD </a>3.5 or above version<br><br>This mod is meant to make building in cheaper hullmods viable.<br>For example, if you build in an \"Advanced Turret Gyros\" on a capital which originally costs 10 OP, the difference is 20 OP, so you get 20 OP * 75% = 15 OP added to your hull.<br><br>Using Better Deserved S Mods or Progressive S Mods reduce the effectiveness to 25%; Using both nullifies the mod.<br><strong>The ratios and base bonus multipliers are adjustable in settings file (data/config/settings.json)</strong><br><br>The mod can be added mid-game and is automatically applied. <br>The mod is currently <strong>SAFE TO REMOVE after CONCORD 3.5.2a</strong>",
   "descriptionIsGenerated": false,
-  "aiDescription": "Makes building cheaper hullmods viable by applying a bonus multiplier to the OP cost difference. The bonus is configurable via a settings file and can be adjusted based on other mods. The mod is safe to add mid-game and can be removed after CONCORD 3.5.2a.",
+  "aiDescription": "Adds a system that increases the cost of hullmods based on their original price, making cheaper hullmods more viable in builds. The effect scales with the difference between the original and current cost, and can be adjusted via a settings file. The mod is safe to add mid-game and can be removed after version 3.5.2a.",
   "saveCompatibilityText": "The mod can be added mid-game and is automatically applied.",
   "rawCategories": [
     "Utility mods"

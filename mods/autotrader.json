@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T01:48:12.345888Z",
+  "generatedAt": "2026-08-27T15:14:22.178670Z",
   "listing": {
     "id": "autotrader",
     "name": "AutoTrader v0.0.1",
@@ -16,11 +16,11 @@
       "discord"
     ],
     "gameVersion": "0.98a",
-    "modVersion": "v0.0.1",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1504747884938268702/1504747885307236383/recXtfd.png?ex=6a8d44ac&is=6a8bf32c&hm=e081d7169fd783be5108c4e790700649d1fd141fbe06f17793bea8e0e99325d5&",
+    "modVersion": "0.0.1",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1504747884938268702/1504747885307236383/recXtfd.png?ex=6a91392c&is=6a8fe7ac&hm=28b9df1c175191b50a8057afc42117fef3cb3db2d249192125b6121d89b9ca30&",
     "summary": "Sell your extra weapons and buy hullmods you don't know whenever you dock",
     "summaryIsGenerated": false,
-    "aiSummary": "Automatically sells excess weapons and buys unknown hullmods when docking at a planet.",
+    "aiSummary": "Automatically sells excess weapons and buys unknown hullmods when docking, based on user-defined thresholds.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -39,14 +39,14 @@
   "description": "[0.98a] AutoTrader v0.0.1\n\nSell your extra weapons and buy hullmods you don't know whenever you dock\n\nAutoTrader runs your standing buy/sell rules the moment you open a planet's interaction dialog. Set a sell threshold for that Light Machine Gun you keep accumulating, a buy threshold for Heavy Needlers, tell it to grab any modspec you haven't learned.\n\nAccess the configuration menu through the AutoTrader intel, which is found in the Trade tab in the intel screen.\n\nFeatures\n\nPer-item thresholds. For every weapon and fighter wing in the game, set \"sell above N\" and \"buy below N\". Leave either blank to skip that direction.Runs on first approach. Transactions happen the moment the planet dialog opens, so when you click into the market screen, your inventory already reflects what AutoTrader did. A per-stack log line is posted for every sale and purchase.Hullmod hunting. Optionally buy unknown modspecs (open market, black market, or both) and auto-learn them on the spot.Decent QoL. A custom configuration screen accessible from the intel tab: filter by text search, size/type, or only the items that you hold. Multi-select with an option to apply a template to your full selection at once, and a \"Set Reasonable Defaults\" button for quick first-time setup.\n\nNo dependencies. Should be safe to add mid-save. Not safe to remove, but can be completely disabled from the config menu.\n\nDownload:\n\nGitHub\n\nAI Usage Disclosure: Most of this mod's code was generated using Claude Opus 4.7",
   "descriptionHtml": "<strong>[0.98a] AutoTrader v0.0.1</strong><br><br><strong>Sell your extra weapons and buy hullmods you don't know whenever you dock</strong><br><br>AutoTrader runs your standing buy/sell rules the moment you open a planet's interaction dialog. Set a sell threshold for that Light Machine Gun you keep accumulating, a buy threshold for Heavy Needlers, tell it to grab any modspec you haven't learned.<br><br><strong>Access the configuration menu through the AutoTrader intel, which is found in the Trade tab in the intel screen.</strong><br><br><strong>Features</strong><br><ul><li><strong>Per-item thresholds.</strong> For every weapon and fighter wing in the game, set \"sell above N\" and \"buy below N\". Leave either blank to skip that direction.</li><li><strong>Runs on first approach.</strong> Transactions happen the moment the planet dialog opens, so when you click into the market screen, your inventory already reflects what AutoTrader did. A per-stack log line is posted for every sale and purchase.</li><li><strong>Hullmod hunting.</strong> Optionally buy unknown modspecs (open market, black market, or both) and auto-learn them on the spot.</li><li><strong>Decent QoL.</strong> A custom configuration screen accessible from the intel tab: filter by text search, size/type, or only the items that you hold. Multi-select with an option to apply a template to your full selection at once, and a \"Set Reasonable Defaults\" button for quick first-time setup.</li></ul><br>No dependencies. Should be safe to add mid-save. Not safe to remove, but can be completely disabled from the config menu.<br><br>Download: <a href=\"https://github.com/spinloki/AutoTrader/releases/download/v0.0.1/AutoTrader.zip\" rel=\"nofollow noopener\" target=\"_blank\">GitHub</a><br><br><em>AI Usage Disclosure: Most of this mod's code was generated using Claude Opus 4.7</em>",
   "descriptionIsGenerated": false,
-  "aiDescription": "Automatically sells excess weapons and buys hullmods you don't know when you dock at a planet. Runs instantly upon opening the planet interaction dialog, updating your inventory before you even see the market screen. Includes a customizable configuration menu with filtering, multi-selection, and preset templates for quick setup. Also supports hunting for unknown modspecs on the open and black markets.",
+  "aiDescription": "Automatically sells excess weapons and buys hullmods you don't yet know when you dock at a planet. Applies user-defined thresholds for each item, adjusting inventory instantly upon opening the market screen. Includes a customizable configuration interface with filtering, multi-selection, and preset templates. Can also auto-purchase and learn unknown modspecs from open or black markets.",
   "saveCompatibilityText": "Should be safe to add mid-save.",
   "rawCategories": [
     "Quality of Life"
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1504747884938268702/1504747885307236383/recXtfd.png?ex=6a8d44ac&is=6a8bf32c&hm=e081d7169fd783be5108c4e790700649d1fd141fbe06f17793bea8e0e99325d5&"
+      "url": "https://cdn.discordapp.com/attachments/1504747884938268702/1504747885307236383/recXtfd.png?ex=6a91392c&is=6a8fe7ac&hm=28b9df1c175191b50a8057afc42117fef3cb3db2d249192125b6121d89b9ca30&"
     },
     {
       "url": "https://i.imgur.com/recXtfd.png"
@@ -63,7 +63,9 @@
       "needsAnotherStep": false
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "0.0.1": "Sell your extra weapons and buy hullmods you don't know whenever you dock\n\nAutoTrader runs your standing buy/sell rules the moment you open a planet's interaction dialog. Set a sell threshold for that Light Machine Gun you keep accumulating, a buy threshold for Heavy Needlers, tell it to grab any modspec you haven't learned.\n\nAccess the configuration menu through the AutoTrader intel, which is found in the Trade tab in the intel screen.\n\nFeatures\nPer-item thresholds. For every weapon and fighter wing in the game, set \"sell above N\" and \"buy below N\". Leave either blank to skip that direction.\nRuns on first approach. Transactions happen the moment the planet dialog opens, so when you click into the market screen, your inventory already reflects what AutoTrader did. A per-stack log line is posted for every sale and purchase.\nHullmod hunting. Optionally buy unknown modspecs (open market, black market, or both) and auto-learn them on the spot.\nDecent QoL. A custom configuration screen accessible from the intel tab: filter by text search, size/type, or only the items that you hold. Multi-select with an option to apply a template to your full selection at once, and a \"Set Reasonable Defaults\" button for quick first-time setup.\n\nNo dependencies. Should be safe to add mid-save. Not safe to remove, but can be completely disabled from the config menu."
+  },
   "sourceCodeUrl": "https://github.com/spinloki/AutoTrader",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35407.0",

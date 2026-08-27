@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T01:48:12.345888Z",
+  "generatedAt": "2026-08-27T15:14:22.178670Z",
   "listing": {
     "id": "rtsassist",
     "name": "RTSAssist",
@@ -16,9 +16,9 @@
     "gameVersion": "0.98a",
     "modVersion": "0.1.9",
     "imageUrl": "https://i.imgur.com/mxk6A89.png",
-    "summary": "Adds real-time strategy controls to Starsector, allowing fleet management with drag-select, order cancellation, and manual system control during battles.",
+    "summary": "Adds real-time strategy controls, fleet arrangement before battle, and manual system overrides during combat.",
     "summaryIsGenerated": true,
-    "aiSummary": "Adds real-time strategy controls to Starsector, allowing fleet management with drag-select, order cancellation, and manual system control during battles.",
+    "aiSummary": "Adds real-time strategy controls, fleet arrangement before battle, and manual system overrides during combat.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Raatle/RTSAssist/releases/latest/download/RTSAssist.zip",
@@ -27,15 +27,20 @@
     },
     "downloadCount": 1,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=32007.0",
-    "sourceIsPublic": false,
+    "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2025-03-31",
-    "needs": []
+    "needs": [
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      }
+    ]
   },
   "description": "RTSAssist\n\nRequires LazyLib\n\nA Real Time Strategy Conversion for Starsector\n\nTake Control of Your Fleet\n\nCommand your fleet using classic real time strategy controls or switch between vanilla and RTS control schemes during battle.Override AI decision making during pinnacle moments of the battle. Manually trigger ship systems or vent ships.Arrange your fleet before battle, similar to Total War style games. Save those arrangements, saving you time in future battles.\n\n[close]\n\nCompatibility\n\nBoth TriOS and LunaLib are supported.Main menu missions \"should\" be supported. This has not been extensively tested.Save friendly. Feel free to add or remove this mod at any time (Only applies to saves created on version 0.1.6 and up). Currently, not all ships are supported. Other ship packs can be used but they may behave strangely under player control. Support for popular ships packs is in development.If using external UI scaling software, manual adjustment is possible using the config file or the Lunalib interface.Supported Ship Packs (Ships are sorted by date at which support was added. Older packs will likely have better support):\nDiable AvionicsIron ShellKnights of Ludd (All ships)Indies Expansion PackHigh Tech ExpansionAsteroid Ship PackBig Beans Ship CompilationCarters FreeTradersCaymons ShipPackHazard Mining Incorporated (Base + briton + super villains)Jaydee PiracyRAT (Random Assortment of Things)United Auroran FederationTahlan ShipWorksVolantian Reclamation InitiativeValkyriansXhan EmpireStar WarsApex Design CollectiveHalo Dynamics Ship IndustryInterstellar ImperiumEverybody Loves the Ko CombineExperimental Ship Pack/ Machina Void ServicesPhillip Andrada Gas Station ManagerScalarTech SolutionsSCYSecrets of the FrontierVolkov Industrial ConglomerateArma ArmaturaUnusual Mod interactions not currently supported:\nRAT: Both \"Zero Day Exploit\" and \"Neural Shard\" backgrounds dont play well with RTSAssist.Diable Avionics: All ship systems that switch player control to fighters, under certain conditions, will CTD.SpeedUp: Bullet time is not supported.\n\n[close]\n\nUpcoming\n\nMajor Update: Improved UI.\n\n[close]\n\nGetting Started\n\nThis is installed the same way as a normal mod. Simply extract the zip into your mods folder and tag it in the launcher.It plays just like an RTS. Drag select and give ships orders. Cancel previous orders with the X hotkey. Hold Alt to see all orders and press capslock to toggle RTS controls.For advanced controls and customisation, see the readme in the mod folder.\n\n[close]\n\nFeedback\n\nIf you find bugs.. Please let me know and I'll fix it..\n\nSome features are in a rough state and are going to be polished at a later stage . I'd like to know if you have any suggestions or improvements on how to improve those rough components. I, personally, never pilot ships myself, because I suck at it. its why I built this mod. Some feedback on the quick switching feature would very much be appreciated.\n\nAs far as mod compatibility goes, I'm basically picking ship packs out of a hat. If their is a ship pack you would like supported, let me know.\n\nFinally adding support for other ship packs is a ton of work but it is manageable. What I cannot do on my own is extensively test the support I've added. I build code, do some minor testing checking to see if the ships are working well and move on. Because of this I am relying on the community (and later on mod developers) to help me fine tune these implementations. Basically I'm saying there will bugs. Point them out and I'll fix them asap.\n\n[close]\n\nSave friendly and free of any malicious code.If their is a ship pack you would like supported, let me know.\n\nPatch Notes below:",
   "descriptionHtml": "<strong>RTSAssist</strong><br><br><a href=\"https://github.com/LazyWizard/lazylib/releases/download/3.0/LazyLib.3.0.zip\" rel=\"nofollow noopener\" target=\"_blank\"><strong>Requires LazyLib</strong></a><br><br><strong>A Real Time Strategy Conversion for Starsector</strong><br><br>Take Control of Your Fleet<ul><li>Command your fleet using classic real time strategy controls or switch between vanilla and RTS control schemes during battle.</li><li>Override AI decision making during pinnacle moments of the battle. Manually trigger ship systems or vent ships.</li><li>Arrange your fleet before battle, similar to Total War style games. Save those arrangements, saving you time in future battles.</li></ul>[close]<br> Compatibility<ul><li>Both TriOS and LunaLib are supported.</li><li>Main menu missions \"should\" be supported. This has not been extensively tested.</li><li>Save friendly. Feel free to add or remove this mod at any time (Only applies to saves created on version 0.1.6 and up). </li><li>Currently, not all ships are supported. Other ship packs can be used but they may behave strangely under player control. Support for popular ships packs is in development.</li><li>If using external UI scaling software, manual adjustment is possible using the config file or the Lunalib interface.</li><li>Supported Ship Packs (Ships are sorted by date at which support was added. Older packs will likely have better support):<br><ul><li>Diable Avionics</li><li>Iron Shell</li><li>Knights of Ludd (All ships)</li><li>Indies Expansion Pack</li><li>High Tech Expansion</li><li>Asteroid Ship Pack</li><li>Big Beans Ship Compilation</li><li>Carters FreeTraders</li><li>Caymons ShipPack</li><li>Hazard Mining Incorporated (Base + briton + super villains)</li><li>Jaydee Piracy</li><li>RAT (Random Assortment of Things)</li><li>United Auroran Federation</li><li>Tahlan ShipWorks</li><li>Volantian Reclamation Initiative</li><li>Valkyrians</li><li>Xhan Empire</li><li>Star Wars</li><li>Apex Design Collective</li><li>Halo Dynamics Ship Industry</li><li>Interstellar Imperium</li><li>Everybody Loves the Ko Combine</li><li>Experimental Ship Pack/ Machina Void Services</li><li>Phillip Andrada Gas Station Manager</li><li>ScalarTech Solutions</li><li>SCY</li><li>Secrets of the Frontier</li><li>Volkov Industrial Conglomerate</li><li>Arma Armatura</li></ul></li><li>Unusual Mod interactions not currently supported:<br><ul><li>RAT: Both \"Zero Day Exploit\" and \"Neural Shard\" backgrounds dont play well with RTSAssist.</li><li>Diable Avionics: All ship systems that switch player control to fighters, under certain conditions, will CTD.</li><li>SpeedUp: Bullet time is not supported.</li></ul></li></ul>[close]<br> Upcoming<ul><li>Major Update: Improved UI.</li></ul>[close]<br> Getting Started<ul><li>This is installed the same way as a normal mod. Simply extract the zip into your mods folder and tag it in the launcher.</li><li>It plays just like an RTS. Drag select and give ships orders. Cancel previous orders with the X hotkey. Hold Alt to see all orders and press capslock to toggle RTS controls.</li><li>For advanced controls and customisation, see the readme in the mod folder.</li></ul>[close]<br> Feedback<br>If you find bugs.. Please let me know and I'll fix it..<br>Some features are in a rough state and are going to be polished at a later stage . I'd like to know if you have any suggestions or improvements on how to improve those rough components. I, personally, never pilot ships myself, because I suck at it. its why I built this mod. Some feedback on the quick switching feature would very much be appreciated.<br><br>As far as mod compatibility goes, I'm basically picking ship packs out of a hat. If their is a ship pack you would like supported, let me know.<br><br>Finally adding support for other ship packs is a ton of work but it is manageable. What I cannot do on my own is extensively test the support I've added. I build code, do some minor testing checking to see if the ships are working well and move on. Because of this I am relying on the community (and later on mod developers) to help me fine tune these implementations. Basically I'm saying there will bugs. Point them out and I'll fix them asap.<br>[close]<br><hr>Save friendly and free of any malicious code.If their is a ship pack you would like supported, let me know.<hr><br>Patch Notes below:",
   "descriptionIsGenerated": false,
-  "aiDescription": "Adds real-time strategy controls to Starsector, enabling drag-select, order cancellation with the X key, and manual system control during battles. Allows fleet arrangement before combat and supports saving formations for future use. Works with multiple ship packs and is compatible with TriOS and LunaLib, with support for modded ships in development.",
+  "aiDescription": "Adds real-time strategy controls to Starsector, allowing players to command fleets with drag-select, order cancellation, and manual system overrides. Supports fleet arrangement before battle and switching between vanilla and RTS control schemes during combat. Works with a wide range of ship packs, with ongoing community-driven support for additional ones.",
   "saveCompatibilityText": "Save friendly. Feel free to add or remove this mod at any time (Only applies to saves created on version 0.1.6 and up).",
   "rawCategories": [
     "Feature overhauls"
@@ -57,24 +62,10 @@
     }
   ],
   "changelog": {},
+  "sourceCodeUrl": "https://github.com/Raatle/RTSAssist",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=32007.0",
   "releases": [],
   "olderVersions": [],
-  "addons": [
-    {
-      "name": "LazyLib",
-      "downloads": [
-        {
-          "url": "https://github.com/LazyWizard/lazylib/releases/download/3.0/LazyLib.3.0.zip",
-          "directUrl": "https://github.com/LazyWizard/lazylib/releases/download/3.0/LazyLib.3.0.zip",
-          "fileName": "LazyLib.3.0.zip",
-          "kind": "direct",
-          "label": "Requires LazyLib",
-          "host": "GitHub",
-          "needsAnotherStep": false
-        }
-      ]
-    }
-  ]
+  "addons": []
 }

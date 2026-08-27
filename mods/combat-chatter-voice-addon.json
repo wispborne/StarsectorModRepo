@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T01:48:12.345888Z",
+  "generatedAt": "2026-08-27T15:14:22.178670Z",
   "listing": {
     "id": "combat-chatter-voice-addon",
     "name": "Combat Chatter Voice Addon",
@@ -14,9 +14,9 @@
       "forum"
     ],
     "gameVersion": "0.98a",
-    "summary": "Adds voice audio playback for combat chatter lines with positional sound and customizable settings.",
+    "summary": "Adds voice audio playback for combat chatter lines without modifying the base mod.",
     "summaryIsGenerated": true,
-    "aiSummary": "Adds voice audio playback for combat chatter lines with positional sound and customizable settings.",
+    "aiSummary": "Adds voice audio playback for combat chatter lines without modifying the base mod.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://drive.google.com/uc?export=download&id=1qvRfbQKzBCxFOOYrqMoLDs4Q0kgR63ol",
@@ -28,12 +28,21 @@
     "sourceIsPublic": false,
     "isWorkInProgress": false,
     "addedOn": "2026-06-12",
-    "needs": []
+    "needs": [
+      {
+        "name": "Combat Chatter",
+        "id": "combat-chatter"
+      },
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ]
   },
   "description": "Combat Chatter Voice Addon\n\nA voice pack addon for\n\nCombat Chatter\n\nthat plays voice audio during combat when matching chatter lines appear.\n\nDemo Video\n\nDownload\n\nDownload from Google Drive\n\nRequirements\n\n* Starsector 0.98a\n\n*\n\nCombat Chatter\n\n*\n\nLunaLib\n\noptional, but recommended for in-game settings\n\nFeatures\n\n* Adds voice playback for Combat Chatter lines without modifying Combat Chatter itself.\n\n* Assigns voice audio to Combat Chatter characters and their individual chatter lines.\n\n* Uses ship-position audio with distance correction.\n\n* LunaLib Mod Options can be used to adjust voice volume, playback interval, and related settings.\n\nIncluded Voices\n\nThis addon includes 13 voice profiles:\n\n* Male / Female Captain: Cautious, Steady, Aggressive, Reckless, Timid\n\n* Male / Female Default(Non-officer) Captain voices\n\n* AI Core / Automated Ship voice\n\nThe addon also includes documentation for replacing voice files, creating custom voice packs, adding support for other Combat Chatter-compatible characters, and understanding voice mapping/fallback behavior.\n\nSupported Voice Maps\n\n* Core Combat Chatter characters\n\n* Ship and Weapon Pack\n\n* SS-armaa\n\n* Tahlan Shipworks\n\nAdditional mod character support can be added through the included documentation.\n\nPerformance Note\n\nThis addon contains approximately\n\n20,000 voice audio files\n\n, so Starsector may take longer to load during startup. After loading, normal gameplay performance should not be significantly affected.\n\nInstall\n\n* Extract the mod into your Starsector mods folder.\n\n* Enable Combat Chatter and this addon.\n\nCredits\n\n* Combat Chatter by Histidine\n\n* Voice generation used ElevenLabs, Chatterbox TTS, and Qwen3-TTS\n\nFeedback Welcome\n\nThis is my first Starsector mod release. Bug reports, voice issues, compatibility reports, and suggestions are very welcome.",
   "descriptionHtml": "<strong>Combat Chatter Voice Addon</strong><br><br>A voice pack addon for <a href=\"https://fractalsoftworks.com/forum/index.php?topic=10399.0\" rel=\"nofollow noopener\" target=\"_blank\">Combat Chatter</a> that plays voice audio during combat when matching chatter lines appear.<br><br><strong>Demo Video</strong><br><br><strong>Download</strong><br><br><a href=\"https://drive.google.com/file/d/1qvRfbQKzBCxFOOYrqMoLDs4Q0kgR63ol/view?usp=drive_link\" rel=\"nofollow noopener\" target=\"_blank\">Download from Google Drive</a><br><br><strong>Requirements</strong><br><br>* Starsector 0.98a<br>* <a href=\"https://fractalsoftworks.com/forum/index.php?topic=10399.0\" rel=\"nofollow noopener\" target=\"_blank\">Combat Chatter</a><br>* <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a> optional, but recommended for in-game settings<br><br><strong>Features</strong><br><br>* Adds voice playback for Combat Chatter lines without modifying Combat Chatter itself.<br>* Assigns voice audio to Combat Chatter characters and their individual chatter lines.<br>* Uses ship-position audio with distance correction.<br>* LunaLib Mod Options can be used to adjust voice volume, playback interval, and related settings.<br><br><strong>Included Voices</strong><br><br>This addon includes 13 voice profiles:<br><br>* Male / Female Captain: Cautious, Steady, Aggressive, Reckless, Timid<br>* Male / Female Default(Non-officer) Captain voices<br>* AI Core / Automated Ship voice<br><br>The addon also includes documentation for replacing voice files, creating custom voice packs, adding support for other Combat Chatter-compatible characters, and understanding voice mapping/fallback behavior.<br><br><strong>Supported Voice Maps</strong><br><br>* Core Combat Chatter characters<br>* Ship and Weapon Pack<br>* SS-armaa<br>* Tahlan Shipworks<br><br>Additional mod character support can be added through the included documentation.<br><br><strong>Performance Note</strong><br><br>This addon contains approximately <strong>20,000 voice audio files</strong>, so Starsector may take longer to load during startup. After loading, normal gameplay performance should not be significantly affected.<br><br><strong>Install</strong><br><br>* Extract the mod into your Starsector mods folder.<br>* Enable Combat Chatter and this addon.<br><br><strong>Credits</strong><br><br>* Combat Chatter by Histidine<br>* Voice generation used ElevenLabs, Chatterbox TTS, and Qwen3-TTS<br><br><strong>Feedback Welcome</strong><br><br>This is my first Starsector mod release. Bug reports, voice issues, compatibility reports, and suggestions are very welcome.",
   "descriptionIsGenerated": false,
-  "aiDescription": "Adds voice audio playback for combat chatter lines during battles without modifying the base Combat Chatter mod. Assigns individual voice profiles to characters and their specific chatter lines, using positional audio with distance correction. Allows customization through LunaLib settings and includes tools for creating custom voice packs and adding support for additional characters.",
+  "aiDescription": "Adds voice playback for Combat Chatter lines during combat, using ship-position audio with distance correction. Assigns individual voice profiles to characters and their chatter lines, with support for 13 voice types including captains, default non-officer voices, and AI core voices. Uses LunaLib for adjustable settings like volume and playback interval.",
   "rawCategories": [
     "Utility mods"
   ],

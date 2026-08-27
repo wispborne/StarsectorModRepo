@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T01:48:12.345888Z",
+  "generatedAt": "2026-08-27T15:14:22.178670Z",
   "listing": {
     "id": "treasure-hunt",
     "name": "Treasure Hunt",
@@ -20,7 +20,7 @@
     "imageUrl": "https://i.imgur.com/pPwyYIU.png",
     "summary": "Ever get annoyed at not finding that one blueprint or colony item? This mod adds a new event intel and set of mechanics for progressing it that provides a more consistent set of rewards than the dice roll of station and ruins salvaging.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a persistent event system to track progress toward rare blueprints and colony items through exploration, combat, and market actions.",
+    "aiSummary": "Adds a persistent event that tracks progress toward finding rare blueprints and colony items through exploration, combat, and market actions.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -35,12 +35,17 @@
     "isWorkInProgress": false,
     "lastReleaseDate": "2026-08-25T00:00:00.000Z",
     "addedOn": "2025-05-10",
-    "needs": []
+    "needs": [
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      }
+    ]
   },
   "description": "Treasure Hunt: Download v2.3.0\n\nGitHub Repo\n\nThe goal of this mod is to make the hunt for rare blueprints and colony items more consistent and less rage-inducing. It adds a new event intel which represents your ongoing efforts to find rare blueprints and colony items. Like with the Hyperspace Topography event, it progresses naturally with normal gameplay, but can also be engaged with actively for faster progress. Unlike regular salvaging, the rewards are far more consistent, and you get a fair degree of control over what you find.\n\nThe rewards themselves and the ways that you can gain progress are very configurable. All config items can be found in treasurehunt_settings.json in the main directory of the mod, and in settings.json, found in the data/config directory.\n\nProgress the event by\n\n:\n\nExploring derelict stations and shipsExploring planetary ruins and colonizing themFighting or paying scavengersRaiding markets\n\nA more detailed explanation for these mechanics can be found in the readme.\n\nCompatibility\n\nIt is safe to add this mod to your existing save.It is not safe to remove this mod from your save.While there should be no compatibility issues with other mods, there is no by-default integration with them yet, either. So that derelict pet center won't give you any progress when you salvage it unless you add that behavior to settings.json yourself.It usually is not safe to upgrade the mod version mid-save.\n\nCredits\n\nThanks to the users at the USC discord for providing the technical support I needed to get started. This is my first attempt at a mod, and I would have given up without them.\n\nI'm happy to hear your feedback and ideas for future development.",
   "descriptionHtml": "<a href=\"https://github.com/spinloki/TreasureHunt/releases/download/v2.3.0/TreasureHunt.zip\" rel=\"nofollow noopener\" target=\"_blank\">Treasure Hunt: Download v2.3.0</a><a href=\"https://github.com/spinloki/TreasureHunt/\" rel=\"nofollow noopener\" target=\"_blank\">GitHub Repo</a><br>The goal of this mod is to make the hunt for rare blueprints and colony items more consistent and less rage-inducing. It adds a new event intel which represents your ongoing efforts to find rare blueprints and colony items. Like with the Hyperspace Topography event, it progresses naturally with normal gameplay, but can also be engaged with actively for faster progress. Unlike regular salvaging, the rewards are far more consistent, and you get a fair degree of control over what you find.<br><br>The rewards themselves and the ways that you can gain progress are very configurable. All config items can be found in treasurehunt_settings.json in the main directory of the mod, and in settings.json, found in the data/config directory. <br><br><strong>Progress the event by</strong>:<br><ul><li>Exploring derelict stations and ships</li><li>Exploring planetary ruins and colonizing them</li><li>Fighting or paying scavengers</li><li>Raiding markets</li></ul><br>A more detailed explanation for these mechanics can be found in the readme.<br><br><strong>Compatibility</strong><br><ul><li>It <strong>is</strong> safe to add this mod to your existing save.</li><li>It <strong>is not</strong> safe to remove this mod from your save.</li><li>While there should be no compatibility issues with other mods, there is no by-default integration with them yet, either. So that derelict pet center won't give you any progress when you salvage it unless you add that behavior to settings.json yourself.</li><li>It <strong>usually is not</strong> safe to upgrade the mod version mid-save.</li></ul><br><strong>Credits</strong><br>Thanks to the users at the USC discord for providing the technical support I needed to get started. This is my first attempt at a mod, and I would have given up without them.<br><br>I'm happy to hear your feedback and ideas for future development.",
   "descriptionIsGenerated": false,
-  "aiDescription": "Adds a persistent event that tracks your progress toward finding rare blueprints and colony items. Progress is gained through exploring derelict stations and ships, colonizing planetary ruins, fighting or paying scavengers, and raiding markets. Rewards are more consistent than regular salvaging, and the system is highly configurable through JSON settings files.",
+  "aiDescription": "Adds a persistent event that tracks your progress toward finding rare blueprints and colony items. Progress is gained through exploring derelict stations and ships, colonizing planetary ruins, fighting scavengers, and raiding markets. Rewards are more consistent than regular salvaging, and the event can be advanced both passively and through active engagement.",
   "saveCompatibilityText": "It is safe to add this mod to your existing save.",
   "rawCategories": [
     "Exploration",
@@ -70,7 +75,9 @@
       "needsAnotherStep": false
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "2.3.0": "Treasure Hunt: Download v2.3.0"
+  },
   "sourceCodeUrl": "https://github.com/spinloki/TreasureHunt",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=33016.0",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T01:48:12.345888Z",
+  "generatedAt": "2026-08-27T15:14:22.178670Z",
   "listing": {
     "id": "cloning",
     "name": "Cloning",
@@ -17,10 +17,10 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "0.2.1",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1487879107445522633/1487910221962674436/image.png?ex=6a8d5120&is=6a8bffa0&hm=f94a8f51946248ee503e0bf568aa80620fcddada40c736b4727aba2937e57ae8&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1487879107445522633/1487910221962674436/image.png?ex=6a9145a0&is=6a8ff420&hm=91a0838f57fa237cd05dcf5cab1d6f689d8d37d7edca75daf0e9313a4541076e&",
     "summary": "Ever installed Astral Ascension but found you would need to wait years for a size 9 colony in the first place? Ever wanted to see those cool multipliers from having a \"Fractal Ecumonopolis\", whatever that is because you've never seen it without using console commands?",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a three-tier cloning industry that significantly boosts population growth, with scaling effects based on colony size and core type.",
+    "aiSummary": "Adds a three-tier cloning industry that boosts population growth with scaling effects and stability penalties.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/andrzejsokolowski/starsector-cloning/releases/latest",
@@ -33,31 +33,36 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2026-03-29",
-    "needs": []
+    "needs": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ]
   },
   "description": "Cloning\n\nEver installed Astral Ascension but found you would need to wait years for a size 9 colony in the first place?\nEver wanted to see those cool multipliers from having a Fractal Ecumenopolis — whatever that is, because you've never seen it without using console commands?\nEver installed Vulpoids and saw your celebrities produce 0.6% growth on a size 8?\n\nWell, look no more.\n\nAdds a three-tier cloning industry that massively boosts population growth — at a cost to stability.\n\nThis forum post is a duplicate of 35129 , since the previous one got a database error.\n\nThe code is fully open source under a license of \"do whatever you want to do with it\". You don't have to credit me, as claude code built this anyway.\n\nRequires LunaLib.\n\nIndustry Chain\n\nAdds a new industry available from the start, occupying an industry slot.Three upgrade tiers, each producing more population growth than the last:\nClone Vat Experiments — entry-level, produces some population growth.Cloning Industry — upgrade, produces more population growth.Cloning Megafactory — top tier, produces a large amount of population growth. Tons of upkeep, credits and stability. Be prepared.Growth scales with colony size when an Alpha or Omega core is installed, or when a pristine nanoforge is installed.All tiers apply a stability penalty that scales with colony size — there are consequences for cutting corners on biology.\n\nAI Core Effects\n\nGamma core — reduces upkeep. Cloning is expensive; every bit helps.Beta core — reduces upkeep and produces crew and marines alongside population growth.Alpha core — reduces upkeep, produces crew and marines, and growth now scales with colony size.Omega core (Astral Ascension) — all Alpha benefits, plus doubled colony size scaling. Expect extremely large numbers. Go wild.\n\nConfiguration\n\nUses LunaLib for in-game settings.Configurable values: base growth per tier, colony size scaling factor, and a global multiplier.Players without LunaLib will use the built-in defaults.\n\nFAQ\n\nIs this mod overpowered?\n\nDefinitely yes, until I manage to balance it somehow. And I mean\n\nreally\n\noverpowered — hitting over a thousand growth points on a size 7 colony is entirely possible right now.\n\nWhat is planned?\n\nDONE - Colony item integration.TBA - Bigger penalties to match the big bonuses.TBA - A way to acquire the Cloning blueprint from a difficult fight — maybe a Dorito.TBA - Integration with AOTD (VOK)'s research system, involving the player in unlocking stat boosts while fighting for databanks.\n\nCompatibility?\n\nShould be compatible with everything. Tested with the Build Menu Overhaul from AOTD.Tested on a 250-mod modpack with no crashes.\n\n[close]\n\nVersion log0.1.0\n\nInitial Release\n\n0.1.1\n\nFixed infinite recursion bug. Now playable.\n\n0.2.1\n\nAdded support for story point improvement as well as two colony items:\n\nBiofactory embryos and pristine nanoforge.\n\n[close]",
   "descriptionHtml": "<a href=\"https://github.com/andrzejsokolowski/starsector-cloning/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><strong>Cloning</strong></a><br><br><strong><br>Ever installed Astral Ascension but found you would need to wait years for a size 9 colony in the first place?<br>Ever wanted to see those cool multipliers from having a <em>Fractal Ecumenopolis</em> — whatever that is, because you've never seen it without using console commands?<br>Ever installed Vulpoids and saw your celebrities produce 0.6% growth on a size 8?<br><br>Well, look no more.<br><br>Adds a three-tier cloning industry that massively boosts population growth — at a cost to stability.<br><br>This forum post is a duplicate of 35129 , since the previous one got a database error.<br><br>The code is fully open source under a license of \"do whatever you want to do with it\". You don't have to credit me, as claude code built this anyway.<br><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a>.<br></strong><br><hr><strong>Industry Chain</strong><hr><ul><li>Adds a new industry available from the start, occupying an industry slot.</li><li>Three upgrade tiers, each producing more population growth than the last:<br><ul><li><strong>Clone Vat Experiments</strong> — entry-level, produces some population growth.</li><li><strong>Cloning Industry</strong> — upgrade, produces more population growth.</li><li><strong>Cloning Megafactory</strong> — top tier, produces a large amount of population growth. Tons of upkeep, credits and stability. Be prepared.</li></ul></li><li>Growth scales with colony size when an Alpha or Omega core is installed, or when a pristine nanoforge is installed.</li><li>All tiers apply a stability penalty that scales with colony size — there are consequences for cutting corners on biology.</li></ul><br><hr><strong>AI Core Effects</strong><hr><ul><li><strong>Gamma core</strong> — reduces upkeep. Cloning is expensive; every bit helps.</li><li><strong>Beta core</strong> — reduces upkeep and produces crew and marines alongside population growth.</li><li><strong>Alpha core</strong> — reduces upkeep, produces crew and marines, and growth now scales with colony size.</li><li><strong>Omega core</strong> <em>(Astral Ascension)</em> — all Alpha benefits, plus doubled colony size scaling. Expect extremely large numbers. Go wild.</li></ul><br><hr><strong>Configuration</strong><hr><ul><li>Uses <a href=\"https://fractalsoftworks.com/forum/index.php?topic=21022.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a> for in-game settings.</li><li>Configurable values: base growth per tier, colony size scaling factor, and a global multiplier.</li><li>Players without LunaLib will use the built-in defaults.</li></ul><br>FAQ<strong>Is this mod overpowered?</strong><br>Definitely yes, until I manage to balance it somehow. And I mean <em>really</em> overpowered — hitting over a thousand growth points on a size 7 colony is entirely possible right now.<br><br><strong>What is planned?</strong><br><ul><li>DONE - Colony item integration.</li><li>TBA - Bigger penalties to match the big bonuses.</li><li>TBA - A way to acquire the Cloning blueprint from a difficult fight — maybe a Dorito.</li><li>TBA - Integration with AOTD (VOK)'s research system, involving the player in unlocking stat boosts while fighting for databanks.</li></ul><br><strong>Compatibility?</strong><br><ul><li>Should be compatible with everything. Tested with the Build Menu Overhaul from AOTD.</li><li>Tested on a 250-mod modpack with no crashes.</li></ul>[close]<br>Version log0.1.0<br>Initial Release<br>0.1.1<br>Fixed infinite recursion bug. Now playable.<br>0.2.1<br>Added support for story point improvement as well as two colony items:<br>Biofactory embryos and pristine nanoforge.<br>[close]",
   "descriptionIsGenerated": false,
-  "aiDescription": "Adds a new three-tier cloning industry that increases population growth at each level, with higher tiers offering greater output but requiring more resources and stability. Growth is enhanced by certain AI cores and colony items, and scales with colony size when specific components are installed. The mod includes configurable settings via LunaLib and is designed to be highly impactful, though currently unbalanced.",
+  "aiDescription": "Adds a three-tier cloning industry that significantly increases population growth, with each tier offering more growth and higher upkeep. The growth scales with colony size when certain cores or items are installed, and each tier applies a stability penalty that increases with colony size. The mod includes configurable settings via LunaLib and supports integration with specific colony items and AI cores.",
   "rawCategories": [
     "Colonies",
     "Miscellaneous Mods"
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487910221962674436/image.png?ex=6a8d5120&is=6a8bffa0&hm=f94a8f51946248ee503e0bf568aa80620fcddada40c736b4727aba2937e57ae8&"
+      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487910221962674436/image.png?ex=6a9145a0&is=6a8ff420&hm=91a0838f57fa237cd05dcf5cab1d6f689d8d37d7edca75daf0e9313a4541076e&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965819999883294/cloning-stability-storypoint.png?ex=6a8d84e8&is=6a8c3368&hm=1579d6f220093d61e18e9219e84924178258ac680edf0f1ece510be9c6cfb48e&"
+      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965819999883294/cloning-stability-storypoint.png?ex=6a917968&is=6a9027e8&hm=4f7d1502fef867f0f489ec2d4bfc8ff53da09008d2954d8c05e4f87da804b4cf&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965820402405396/cloning-_AI_cores.png?ex=6a8d84e8&is=6a8c3368&hm=ddd6342902b6995acc256b9a750c49f587a21fa2b0d924e882b2873e1cb42873&"
+      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965820402405396/cloning-_AI_cores.png?ex=6a917968&is=6a9027e8&hm=5e385a02a4e30303363d204d05aab93387ce6f234f8fe3a0e7cd805e5dd9deab&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965820922368030/colony_growths.png?ex=6a8d84e8&is=6a8c3368&hm=d7d1322ba741cf7abed578a5538c10b8aa2f5f5709df7bd4bba1c4419d7c9129&"
+      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965820922368030/colony_growths.png?ex=6a917968&is=6a9027e8&hm=acca96b82b95e9b2560664df89428a0b36d455858a0313d86ae3d992f8268938&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965821467623434/cloning-colony-items.png?ex=6a8d84e8&is=6a8c3368&hm=b51cc34cac27ba070dcbc69c8c18a25947a82159a69dedbe92fd49eba6010288&"
+      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965821467623434/cloning-colony-items.png?ex=6a917968&is=6a9027e8&hm=d6178a56922603422f6c07e637f4c88a7a44dbdb2eed73eb5ed4314a980ebaf8&"
     }
   ],
   "downloads": [
@@ -70,7 +75,7 @@
     }
   ],
   "changelog": {
-    "0.2.1": "Added support for story point improvement as well as two colony items: Biofactory embryos and pristine nanoforge.",
+    "0.2.1": "Added support for story point improvement as well as two colony items:\nBiofactory embryos and pristine nanoforge.",
     "0.1.1": "Fixed infinite recursion bug. Now playable.",
     "0.1.0": "Initial Release"
   },
