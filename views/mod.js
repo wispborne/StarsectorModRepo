@@ -6,7 +6,7 @@
 // so a thin page reads as deliberate instead of broken.
 
 import {
-  aiSparkle, aiSummaryMode, aiSummaryNote, aiSummaryOf,
+  aiSparkle, aiSummaryNote, aiSummaryOf,
   breadcrumbs, clear,
   currentGameVersion, DATA_BASE, downloadButton, el, errorPanel, formatDay,
   formatMoment, imageUrlOf, joinNames, listToggle,
@@ -81,6 +81,7 @@ export async function render(root, parts) {
     needsLine(mod),
     sameNameMods(detail),
     description(detail),
+    aiSummary(detail),
     gallery(detail),
     downloads(detail),
     changelog(detail),
@@ -312,29 +313,15 @@ function downloadRow(download) {
   ]);
 }
 
-/// The description, marked with a sparkle and a line underneath when an AI
-/// wrote the words rather than the author.
-///
-/// A whole forum post says more than one AI paragraph, so a reader who asks
-/// for AI summaries always gets the paragraph *above* the post rather than
-/// instead of it. With them off, an AI-written description is left out and the
-/// page says there is none.
+/// The author's description. AI-written words have their own section directly
+/// after this one, so the two are never mixed together.
 function description(detail) {
   const generated = Boolean(detail.descriptionIsGenerated);
   const formatted = generated ? null : detail.descriptionHtml;
   const text = generated ? null : detail.description;
-  const ai = aiSummaryOf({
-    aiSummary: detail.aiDescription,
-    summary: detail.description,
-    summaryIsGenerated: generated,
-  });
   const own = Boolean(formatted || text);
-  // On its own where the author wrote nothing; a lead paragraph above the
-  // post where the reader asked for it always.
-  const aiLead = ai && own && aiSummaryMode() === 'always' ? ai : null;
-  const aiAlone = ai && !own ? ai : null;
 
-  if (!own && !aiAlone) {
+  if (!own) {
     return el('section', { class: 'panel' }, [
       el('h2', { text: 'About this mod' }),
       el('p', { class: 'no-description', text: NO_DESCRIPTION }),
@@ -346,19 +333,7 @@ function description(detail) {
   // is put into the page as it arrives. Anything else is shown as plain words.
   const body = formatted
     ? el('div', { class: 'prose', html: formatted })
-    : el('div', { class: 'prose plain', text: text || aiAlone });
-
-  // The sparkle goes inside the first paragraph rather than above it, so it
-  // reads as part of the words instead of as a picture of its own.
-  if (aiAlone) {
-    body.title = summaryTitle({ text: aiAlone, generated: true });
-    // Only into a block that holds words. A post that opens with a list or a
-    // picture gets the sparkle above it instead, since a sparkle inside a
-    // `<ul>` is not a list item and browsers place it anywhere they like.
-    const first = body.firstElementChild;
-    const holdsWords = first && ['P', 'DIV', 'H3', 'H4', 'H5', 'H6'].includes(first.tagName);
-    (holdsWords ? first : body).prepend(aiSparkle(aiAlone), ' ');
-  }
+    : el('div', { class: 'prose plain', text });
 
   // A long post would push the screenshots, the downloads and the changelog
   // below the fold, so the description starts cut off, with a line under it
@@ -415,25 +390,32 @@ function description(detail) {
 
   return el('section', { class: 'panel' }, [
     el('h2', { text: 'About this mod' }),
-    aiLead ? aiLeadBlock(aiLead) : null,
     clip,
     moreRow,
-    aiAlone ? aiSummaryNote() : null,
   ]);
 }
 
-/// The AI paragraph shown above the author's own post, for a reader who asked
-/// for AI summaries always. Marked the same way an AI description is: a
-/// sparkle before the words, and a line underneath saying who wrote them.
-function aiLeadBlock(words) {
-  return el('div', {
-    class: 'summary-block ai-lead',
-    title: summaryTitle({ text: words, generated: true }),
-  }, [
-    el('div', { class: 'prose plain' }, [
-      el('p', {}, [aiSparkle(words), ' ', words]),
+/// The AI paragraph, shown for either enabled summary setting. `aiSummaryOf`
+/// also handles older data and leaves this section out when the reader chose
+/// "Never".
+function aiSummary(detail) {
+  const words = aiSummaryOf({
+    aiSummary: detail.aiDescription,
+    summary: detail.description,
+    summaryIsGenerated: Boolean(detail.descriptionIsGenerated),
+  });
+  if (!words) return null;
+
+  return el('div', { class: 'panel' }, [
+    el('div', {
+      class: 'summary-block',
+      title: summaryTitle({ text: words, generated: true }),
+    }, [
+      el('div', { class: 'prose plain' }, [
+        el('p', {}, [aiSparkle(words), ' ', words]),
+      ]),
+      aiSummaryNote(),
     ]),
-    aiSummaryNote(),
   ]);
 }
 

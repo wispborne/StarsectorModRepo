@@ -8,7 +8,8 @@ import {
   aiSummaryMode, buildHash, clear, el, errorPanel, formatDay,
   formatMoment, applySpacing, go, hashParts, imageChoice, imageUrlOf, loading,
   modHref, modList, modName, myList,
-  notePageScroll, searchHelpField, setAiSummaryMode, setImageChoice,
+  preparePageScroll, restorePageScroll, searchHelpField, setAiSummaryMode,
+  setImageChoice,
   setSpacingPreference, spacingPreference,
   takeScrollPlaced, thumbnail, watchMyList,
 } from './lib.js';
@@ -82,7 +83,7 @@ function renderNav(viewId) {
 async function route() {
   // Before anything is cleared, so the view being left can still find out where
   // its reader had got to.
-  notePageScroll();
+  const savedScroll = preparePageScroll(location.hash || '#/home');
 
   const parts = hashParts();
   const viewId = parts[0] || 'home';
@@ -105,13 +106,14 @@ async function route() {
     console.error(err);
   }
 
+  restorePageScroll(savedScroll);
+
   // A new page starts at its top. Without this, going from the foot of Home to
   // Browse lands halfway down Browse.
   //
   // It happens after the page is drawn, not before, so the reader does not see
   // the old page jump while the new one loads. A view that has already put the
-  // page where it wants it — Browse, putting a reader back where they were — is
-  // left alone.
+  // page where it wants it is left alone.
   if (!takeScrollPlaced()) window.scrollTo(0, 0);
 }
 

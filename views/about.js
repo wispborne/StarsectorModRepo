@@ -80,9 +80,10 @@ export async function render(root) {
             + 'Settings. The default, "Only if missing," uses the author\'s '
             + 'description when one is available. If a mod has both kinds of '
             + 'summary, you can point at the author\'s summary to see the AI one.',
-            '"Always" shows the AI summary first whenever one is available. On a '
-            + 'mod page, it also shows the AI summary above the original post. '
-            + '"Never" hides AI summaries everywhere, including when you point at '
+            '"Always" shows the AI summary first whenever one is available. A mod '
+            + 'page shows its AI summary between About and Screenshots for either '
+            + 'enabled choice.',
+            '"Never" hides AI summaries everywhere, including when you point at '
             + 'an author\'s summary. A mod with no other description will then '
             + 'have no summary.',
             'Your choice is saved in your browser for future visits.',

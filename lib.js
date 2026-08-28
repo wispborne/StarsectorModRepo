@@ -171,6 +171,7 @@ export function go(hash) {
 /// back button.
 export function replaceHash(hash) {
   history.replaceState(null, '', hash);
+  if (activeScrollKey !== null) activeScrollKey = scrollStorageKey(hash);
 }
 
 // --- The AI summaries setting ---
@@ -370,18 +371,92 @@ export function thumbnail(url, className) {
 /// the browser says the position is zero from then on, and a view that asked
 /// after the fact would only ever get zero back.
 let scrollWhenLeft = 0;
+let scrollFromBottomWhenLeft = 0;
+let activeScrollKey = null;
+
+function scrollStorageKey(hash) {
+  return `starmodderPageScroll:${hash}`;
+}
 
 export function notePageScroll() {
   scrollWhenLeft = window.scrollY;
+  const bottom = document.documentElement.scrollHeight - window.innerHeight;
+  scrollFromBottomWhenLeft = Math.max(0, bottom - scrollWhenLeft);
 }
 
 export function pageScrollWhenLeft() {
   return scrollWhenLeft;
 }
 
-/// Set by a view that has put the page where it wants it, so the router leaves
-/// it alone instead of scrolling to the top over the top of it. Only Browse
-/// does this, and only when it is putting a reader back where they were.
+export function pageScrollFromBottomWhenLeft() {
+  return scrollFromBottomWhenLeft;
+}
+
+/// Saves the page being left and returns the position for the page being drawn.
+/// The current key follows address changes made without routing, so each
+/// filtered list is remembered under the address the reader actually left.
+export function preparePageScroll(hash) {
+  notePageScroll();
+  const position = {
+    at: pageScrollWhenLeft(),
+    fromBottom: pageScrollFromBottomWhenLeft(),
+  };
+  const nextKey = scrollStorageKey(hash);
+  const samePage = activeScrollKey === nextKey;
+  if (activeScrollKey !== null) {
+    sessionStorage.setItem(activeScrollKey, JSON.stringify(position));
+  }
+  activeScrollKey = nextKey;
+
+  // Settings redraw the current address directly. Keep the position just
+  // recorded instead of restoring an older visit to the same page.
+  if (samePage) return position;
+
+  let saved = null;
+  try {
+    saved = JSON.parse(sessionStorage.getItem(nextKey) || 'null');
+  } catch {
+    saved = null;
+  }
+  if (typeof saved === 'number') saved = { at: saved, fromBottom: null };
+  return saved;
+}
+
+/// Restores a saved position after the new page has been drawn.
+export function restorePageScroll(saved) {
+  if (saved && saved.at > 0) {
+    noteScrollPlaced();
+    placePageScroll(saved);
+  }
+}
+
+/// A page can gain height as its pictures finish laying out. Keep its saved
+/// place while that happens. Stop when the reader interacts with the page.
+function placePageScroll(saved) {
+  const wasAtBottom = saved.fromBottom !== null && saved.fromBottom <= 2;
+  const place = () => {
+    const at = wasAtBottom ? document.documentElement.scrollHeight : saved.at;
+    window.scrollTo(0, at);
+  };
+  place();
+
+  const observer = new ResizeObserver(place);
+  observer.observe(document.body);
+
+  const events = ['wheel', 'touchstart', 'pointerdown', 'keydown'];
+  const stop = () => {
+    observer.disconnect();
+    clearTimeout(timeout);
+    for (const event of events) window.removeEventListener(event, stop);
+  };
+  for (const event of events) {
+    window.addEventListener(event, stop, { once: true, passive: true });
+  }
+  const timeout = setTimeout(stop, 10000);
+}
+
+/// Set when a page has been put where the reader left it, so the router leaves
+/// it alone instead of scrolling to the top over the top of it.
 let scrollPlacedByView = false;
 
 export function noteScrollPlaced() {

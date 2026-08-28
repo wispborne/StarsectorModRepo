@@ -12,23 +12,14 @@ import {
   formatDay, gameVersionFamily, gameVersions, hashQuery, howLongAgo,
   imageUrlOf, isDiscordOnly, joinNames, modHref, modList, modName,
   MOD_VERSION_NOTE,
-  noteScrollPlaced, NO_DESCRIPTION, pageScrollWhenLeft, pager,
-  pageSizePreference, picture, replaceHash, searchHelpField, summaryTitle,
+  NO_DESCRIPTION, pager, pageSizePreference, picture, replaceHash,
+  searchHelpField, summaryTitle,
   summaryToShow, thumbnail,
   versionStanding, versionStandingNote,
 } from '../lib.js';
 import { matchesSearch, scoreOfSearch } from '../search.js';
 
 const VIEW_KEY = 'starmodderView';
-
-/// Where Browse was last scrolled to, so the back button from a mod page lands
-/// where the reader left off rather than at the top.
-const SCROLL_KEY = 'starmodderBrowseScroll';
-
-/// The address Browse last wrote for itself. The scroll position is filed
-/// against it — reading `location.hash` when the reader leaves would give the
-/// mod page they are on their way to, not the list they are leaving.
-let lastBrowseHash = '';
 
 /// The switches, each a plain yes-or-no question about one field.
 const SWITCHES = [
@@ -119,10 +110,9 @@ export async function render(root, parts) {
     drawResults(results, mods, state);
   });
   drawResults(results, mods, state);
-  restoreScroll();
 
   function saveState(shown) {
-    lastBrowseHash = buildHash(['browse'], {
+    const hash = buildHash(['browse'], {
       q: shown.search,
       game: shown.game,
       needs: shown.needs,
@@ -133,7 +123,7 @@ export async function render(root, parts) {
       older: shown.olderToo ? '1' : '',
       page: shown.page || '',
     });
-    replaceHash(lastBrowseHash);
+    replaceHash(hash);
   }
 
   function drawResults(into, all, shown) {
@@ -417,38 +407,6 @@ function nothingMatched(onClear) {
       + 'or clear the filters and start again.' }),
     el('p', { class: 'notice-action' }, [button]),
   ]);
-}
-
-/// Puts the page back where it was left. Browse is the page readers come back
-/// to over and over, and landing at the top after every mod is what makes a
-/// long list tiring.
-///
-/// The place is remembered against the address it was left at, so it is only
-/// ever put back on the same list. A different search or filter is a different
-/// list, and starts at the top.
-///
-/// The position comes from the router, which noted it before it emptied the
-/// page — an emptied page has nowhere to scroll, so asking the browser
-/// afterwards only ever gives zero.
-function restoreScroll() {
-  const remember = () => {
-    sessionStorage.setItem(SCROLL_KEY, JSON.stringify({
-      hash: lastBrowseHash, at: pageScrollWhenLeft(),
-    }));
-  };
-
-  let saved = null;
-  try {
-    saved = JSON.parse(sessionStorage.getItem(SCROLL_KEY) || 'null');
-  } catch {
-    saved = null;
-  }
-  if (saved && saved.hash === lastBrowseHash && saved.at > 0) {
-    window.scrollTo(0, saved.at);
-    noteScrollPlaced();
-  }
-
-  window.addEventListener('hashchange', remember, { once: true });
 }
 
 // --- Searching, filtering and sorting ---
