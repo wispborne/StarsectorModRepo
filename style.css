@@ -385,23 +385,46 @@ main {
 }
 .download-btn:hover { text-decoration: none; }
 
+/* A summary card or row that knows both where to download a mod and where the
+   author posted it keeps one straight action edge. The download owns three
+   quarters of the old button width. The original page owns the last quarter. */
+.download-actions {
+  display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+  flex-shrink: 0; box-sizing: border-box;
+}
+.download-actions > .download-btn {
+  min-width: 0; padding-left: 6px; padding-right: 6px;
+  border-radius: 6px 0 0 6px; font-size: var(--type-tiny);
+}
+.original-page-btn {
+  min-width: 0; padding: 6px 3px; border-left: 0;
+  border-radius: 0 6px 6px 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.original-page-btn:hover { text-decoration: none; }
+.original-page-icon, .original-page-icon svg {
+  display: block; width: 1em; height: 1em; flex-shrink: 0;
+}
+
 /* On a card it sits at the foot, under the badges, and spans the card: a
    download is the card's main action and belongs in the reader's line of sight,
    not in a small circle over a screenshot. The spacing names are whole padding
    shorthands, so the top is zeroed after rather than written out longhand. */
-.mod-card > .download-btn {
+.mod-card > .download-btn, .mod-card > .download-actions {
   margin: var(--pad-cell); margin-top: 0;
 }
 
 /* On a row it sits inline at the end, in a column of its own width so every
    button in the list starts and ends in the same place. */
-.mod-row > .download-btn, .list-links > .download-btn { width: 148px; }
-.mod-row > .download-btn { margin-right: 10px; }
+.mod-row > .download-btn, .mod-row > .download-actions,
+.list-links > .download-btn, .list-links > .download-actions { width: 148px; }
+.mod-row > .download-btn, .mod-row > .download-actions { margin-right: 10px; }
 
 /* On a release row it follows "Read changelog", so both of the row's actions
    are together at its end. The summary spaces its own children, so this needs
    no margin of its own — only a width, so the rows line up down the page. */
-.release > summary > .download-btn { width: 148px; }
+.release > summary > .download-btn,
+.release > summary > .download-actions { width: 148px; }
 
 input[type="text"], input[type="search"], select {
   background: var(--surface-2); color: var(--text);
@@ -525,7 +548,7 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
   border-radius: 8px; overflow: hidden;
 }
 .mod-card { box-shadow: var(--raised); }
-.mod-card:hover { border-color: var(--primary); }
+.mod-card:hover { border-color: var(--primary-ghost); }
 .card-inner {
   display: flex; flex-direction: column; flex: 1; color: inherit;
 }
@@ -693,7 +716,8 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .release[open] > summary .chevron { transform: rotate(90deg); }
 /* The download button is the only thing at the right end of the row, with or
    without notes. */
-.release > summary > .download-btn { margin-left: auto; }
+.release > summary > .download-btn,
+.release > summary > .download-actions { margin-left: auto; }
 
 .strip { display: grid; gap: var(--gap-cells); grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
 
@@ -745,6 +769,22 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 
 .mod-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
 .btn-big { padding: 9px 18px; font-size: var(--type-normal); }
+
+/* Support links belong near the actions, but use quiet outlined pills so the
+   download and original post remain the first things the eye lands on. */
+.support-row {
+  display: flex; gap: 8px 10px; align-items: center; flex-wrap: wrap;
+  margin-top: 2px; font-size: var(--type-small); color: var(--text-dim);
+}
+.support-label { font-weight: 600; color: var(--text-dim); }
+.support-links { display: flex; gap: 7px; flex-wrap: wrap; }
+.support-links a {
+  padding: 3px 9px; border: 1px solid var(--border); border-radius: 999px;
+  background: var(--surface-2); color: var(--text);
+}
+.support-links a:hover {
+  border-color: var(--primary); color: var(--primary); text-decoration: none;
+}
 /* A section of a mod's page. It used to be a bordered box with a ruled
    heading — two lines to say what one gap says. */
 .panel {
@@ -986,13 +1026,14 @@ body.picture-open { overflow: hidden; }
   /* A narrow screen has no room for a column of its own. In a browse row it
      also has no room beside the words: standing the button next to them left
      the mod's name one letter wide, so it drops to a line of its own. */
-  .list-links > .download-btn,
-  .release > summary > .download-btn { width: auto; }
+  .list-links > .download-btn, .list-links > .download-actions,
+  .release > summary > .download-btn,
+  .release > summary > .download-actions { width: auto; }
   .mod-row { flex-wrap: wrap; }
   /* The words take what is left of the first line rather than all of it, so
      the "+" stays up there beside them and only the button drops. */
   .mod-row > .row-inner { flex: 1 1 0; }
-  .mod-row > .download-btn {
+  .mod-row > .download-btn, .mod-row > .download-actions {
     width: auto; flex: 1 1 100%; margin: 0 10px 10px;
   }
   /* A browse row on a phone is already short of room for the mod's name, so

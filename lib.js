@@ -651,6 +651,58 @@ function downloadLabel(best) {
   return best.needsAnotherStep ? 'Download page' : 'Download';
 }
 
+// The original pages a summary card or row can point to. Forum leads when a
+// mod was found in more than one place, matching the order on the mod's own
+// page. The icons are kept here with the other small site-owned marks so the
+// page never fetches an icon from an outside host.
+const ORIGINAL_PAGES = [
+  {
+    field: 'forumUrl', name: 'the Starsector forum', label: 'On the forum',
+    icon: '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+      + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+      + 'focusable="false" aria-hidden="true"><circle cx="12" cy="12" r="9"/>'
+      + '<path d="M3 12h18M12 3c3 3.3 3 14.7 0 18M12 3c-3 3.3-3 14.7 0 18"/>'
+      + '</svg>',
+  },
+  {
+    field: 'discordUrl', name: 'Discord', label: 'On Discord',
+    icon: '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+      + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+      + 'stroke-linejoin="round" focusable="false" aria-hidden="true">'
+      + '<path d="M7 8.5A6 6 0 0 1 17 8.5l2 7.5-3 2-1.5-2h-5L8 18l-3-2 2-7.5Z"/>'
+      + '<circle cx="9.5" cy="12" r="1" fill="currentColor" stroke="none"/>'
+      + '<circle cx="14.5" cy="12" r="1" fill="currentColor" stroke="none"/>'
+      + '</svg>',
+  },
+  {
+    field: 'nexusUrl', name: 'Nexus Mods', label: 'On Nexus Mods',
+    icon: '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+      + 'stroke="currentColor" stroke-width="2" stroke-linejoin="round" '
+      + 'focusable="false" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/>'
+      + '<path d="m9 16 6-8M9 8v8M15 8v8"/></svg>',
+  },
+];
+
+function originalPageOf(mod) {
+  return ORIGINAL_PAGES.find((page) => mod[page.field]) || null;
+}
+
+function originalPageButton(mod, page) {
+  const tooltip = `Open on ${page.name} in a new tab.`;
+  const button = el('a', {
+    class: 'btn btn-primary original-page-btn',
+    href: mod[page.field],
+    rel: 'noopener nofollow',
+    target: '_blank',
+    title: tooltip,
+    'aria-label': tooltip,
+  }, [
+    el('span', { class: 'original-page-icon', html: page.icon, 'aria-hidden': 'true' }),
+  ]);
+  button.addEventListener('click', (e) => { e.stopPropagation(); });
+  return button;
+}
+
 /// The one button that gets a mod, for every list on the site.
 ///
 /// A mod can offer a dozen downloads and My List used to draw a button for each
@@ -658,25 +710,25 @@ function downloadLabel(best) {
 /// "Download". The builder has already put them in order, so this shows the
 /// first — the same thing TriOS's catalog does on a mod's card.
 ///
-/// It is only ever the button, never the button and something else. A card or a
-/// row that carried an extra link beside it came out narrower than its
-/// neighbours, so a page of them had a ragged right edge. How many downloads a
-/// mod has is said by [downloadCountBadge] instead, among the mod's other small
-/// facts, where it cannot push anything out of line.
+/// Where there is both a download and an original forum, Discord or Nexus page,
+/// summary cards and rows split the same fixed width between them. The download
+/// keeps three quarters and the original-page icon gets one quarter. The large
+/// button on the mod's own page stays single because that page already carries
+/// the original link beside it.
 ///
 /// A quarter of mods have nothing to download, so the button offers the mod's
-/// own place on the web instead — its forum thread, or its Discord post where
-/// it has no thread. That is the same order the mod's own page falls back
-/// through. A mod with neither gets no button, because a button that goes
+/// own place on the web instead — its forum thread, Discord post or Nexus Mods
+/// page. A mod with none of those gets no button, because a button that goes
 /// nowhere is worse than no button.
 export function downloadButton(mod, opts = {}) {
   const { big = false } = opts;
   const best = mod.bestDownload || null;
-  const href = best ? best.url : (mod.forumUrl || mod.discordUrl || null);
+  const originalPage = originalPageOf(mod);
+  const href = best ? best.url : (originalPage ? mod[originalPage.field] : null);
   if (!href) return null;
 
   const label = best ? downloadLabel(best)
-    : (mod.forumUrl ? 'On the forum' : 'On Discord');
+    : originalPage.label;
   const count = mod.downloadCount || 0;
   const button = el('a', {
     class: `btn btn-primary download-btn${big ? ' btn-big' : ''}`,
@@ -692,7 +744,12 @@ export function downloadButton(mod, opts = {}) {
   // On a card and on a row the button sits inside, or on top of, one big link
   // to the mod's page. Without this a press would follow that link as well.
   button.addEventListener('click', (e) => { e.stopPropagation(); });
-  return button;
+  if (big || !best || !originalPage) return button;
+
+  return el('span', { class: 'download-actions' }, [
+    button,
+    originalPageButton(mod, originalPage),
+  ]);
 }
 
 /// "3 downloads", for the row of small facts a card and a row already carry.

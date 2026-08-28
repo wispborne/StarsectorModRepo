@@ -140,6 +140,7 @@ function modHeader(mod, detail, shownName, currentVersion) {
     (mod.authors || []).length ? authors : null,
     meta,
     howToGetIt(mod, detail),
+    supportLinks(detail),
   ]);
 
   return el('div', { class: 'mod-head' }, [modPicture(mod), words]);
@@ -240,6 +241,24 @@ function howToGetIt(mod, detail) {
 
   row.append(listToggle(mod, { wide: true }));
   return row;
+}
+
+/// A small row near the main actions for places where readers can support the
+/// author. Downloads and the author's original post stay above it because they
+/// are the main reasons most readers open this page.
+function supportLinks(detail) {
+  const support = detail.supportLinks || [];
+  if (!support.length) return null;
+
+  return el('div', { class: 'support-row' }, [
+    el('span', { class: 'support-label', text: 'Support the author' }),
+    el('span', { class: 'support-links' }, support.map((one) => el('a', {
+      href: one.url,
+      target: '_blank',
+      rel: 'noopener nofollow',
+      text: SUPPORT_NAMES[one.type] || SUPPORT_NAMES.other,
+    }))),
+  ]);
 }
 
 /// What this mod will not run without, right under the header.
@@ -545,8 +564,8 @@ function addonBox(list, heading, note) {
   ]);
 }
 
-/// The links out, the license and the support links. The whole box is left out
-/// when the mod has none of them.
+/// The links out and the license. The whole box is left out when the mod has
+/// none of them. Support links sit near the main actions instead.
 function facts(detail) {
   const rows = [];
   const link = (label, url, text) => {
@@ -580,18 +599,6 @@ function facts(detail) {
   if ((listing.sources || []).length) {
     rows.push(['Found on',
       el('span', { text: joinNames(listing.sources.map(sourceName)) })]);
-  }
-
-  const support = detail.supportLinks || [];
-  if (support.length) {
-    const links = el('span', { class: 'link-list' });
-    for (const one of support) {
-      links.append(el('a', {
-        href: one.url, target: '_blank', rel: 'noopener nofollow',
-        text: SUPPORT_NAMES[one.type] || SUPPORT_NAMES.other,
-      }));
-    }
-    rows.push(['Support the author', links]);
   }
 
   if (!rows.length) return null;

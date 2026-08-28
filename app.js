@@ -224,7 +224,8 @@ function mountSettings() {
 /// Someone reading one mod's page who wants another used to have to go back to
 /// Home or Browse first. Typing here suggests the five best-matching names
 /// straight away — the whole mod list is already loaded, so it costs nothing —
-/// and Enter sends the rest to Browse.
+/// and Enter opens the first suggestion unless the reader chose another with
+/// the arrow keys. A search with no suggestions goes to Browse.
 function mountHeaderSearch() {
   const box = document.getElementById('site-search');
   const drop = document.getElementById('search-suggestions');
@@ -318,9 +319,10 @@ function mountHeaderSearch() {
       return;
     }
     if (e.key === 'Enter') {
-      if (activeIndex >= 0 && rows[activeIndex]) {
+      const chosen = rows[activeIndex >= 0 ? activeIndex : 0];
+      if (chosen) {
         e.preventDefault();
-        rows[activeIndex].click();
+        chosen.click();
       } else {
         search();
       }
