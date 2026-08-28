@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T04:25:18.204738Z",
+  "generatedAt": "2026-08-28T18:00:02.421156Z",
   "listing": {
     "id": "vexlia-s-faster-devstart",
     "name": "Vexlia's Faster DevStart 1.5b",
@@ -17,18 +17,17 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "1.5c",
-    "imageUrl": "https://github.com/Vexlia-Artemiss/Vexlia_Forum_Images/blob/main/VFDS_frontpic.png?raw=true",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1434176844625744043/1434176845007552644/VFDS_frontpic.png?ex=6a923a05&is=6a90e885&hm=d2976c8e72fb9963e005e270dec65617dcc251f291b52e1f7d51ff7b6119abe5&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1434176844625744043/1434176845007552644/VFDS_frontpic.png?ex=6a923a05&is=6a90e885&hm=d2976c8e72fb9963e005e270dec65617dcc251f291b52e1f7d51ff7b6119abe5&",
     "summary": "Small QoL utility mod to add fast start options right on the new game creation screen and get to sector generation in one click. Created mostly for modders who need to reload the game a lot.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds fast start options on the new game creation screen to skip multiple steps and reach sector generation in one click.",
+    "aiSummary": "Adds fast start options to the new game creation screen to skip to sector generation in one click.",
     "hasDirectDownload": true,
     "bestDownload": {
-      "url": "https://github.com/Vexlia-Artemiss/Vexlia-FasterDevStart/releases/latest/download/Vexlia.Faster.DevStart.zip",
-      "kind": "direct",
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FVexlia-Artemiss%2FVexlia-FasterDevStart%2Frefs%2Fheads%2Fmain%2FVexlia_FDS.version%22%2C%22id%22%3A%22Vexlia_FDS%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%7D",
+      "kind": "trios",
       "needsAnotherStep": false
     },
-    "downloadCount": 1,
+    "downloadCount": 2,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34394.0",
     "discordUrl": "https://discord.com/channels/187635036525166592/1434176844625744043/1434176844625744043",
     "sourceIsPublic": true,
@@ -45,8 +44,8 @@
   "description": "Small QoL utility mod to add fast start options right on the new game creation screen and get to sector generation in one click. Created mostly for modders who need to reload the game a lot.\n\nMod requires\n\nLunaLib\n\nto use.\n\nDue to need to run EFS for few frames after start for Auto Devmode and Safe Devmode, mod is not safe to remove until initial starting save is overwritten, if any of these features are enabled.\n\nWhat mod does precisely?\n\nAutosets the player name as \"DevMode FastStart\" (Or \"Devmode NexFastStart\" if Nexerelin is active). This also allows you to click `Continue` right away without inputting the name. \nNote: UI panel doesn't update, but name is set. Adds option on first screen to choice \"Fast start\", skipping pressing `Continue`.Choosing fast start skips skill point distribution screen, and gives skill points after, if you still need them for testing.Fast Start is equivalent to devmode start in stats.Adds similar fast start for Nexerelin (and use its devmode start values).\n\nAlso supports few additional features changeable with LunaLib:\n\nAuto Devmode on Campaign\n\nactivates devmode after game creation or load. [Independent of start chosen and save loaded.]\n\nAuto Devmode on Game App Stars\n\nactivates devmode on Game App start up. Created as alternative to editing game settings or relying on hotkeys.\n\nSafe Devmode\n\nenables devmode switching off before saving. Devmode is reenabled after save, so in most cases it should be seamless. [Should prevent crashes for mods which can't create saves with active devmode - like AotD \"Vaults of Knowledge\".]\n\nNote: By default \"Safe Devmode\" is enabled, as I don't notice any negative effects from it. \n\nNew in v1.5\n\nNew fully user customisable start! Fill special string in mod's LunaSettings, and my code execute it!\n\nCredits:\n\nVexlia Artemiss for being me and also mod author.\n\nAlex for the original \"NewGameDialogPluginImpl\" code which my mod builds off and replaces.\n\nNexerelin authors for rulesCMD code I used to facilitate Nexerelin integration.\n\nBugatti Echelon\n\nfor testing and finding bugs. And for being the main inspiration for part of the features.",
   "descriptionHtml": "Small QoL utility mod to add fast start options right on the new game creation screen and get to sector generation in one click. Created mostly for modders who need to reload the game a lot.<br><br>Mod requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a> to use.<br><br>Due to need to run EFS for few frames after start for Auto Devmode and Safe Devmode, mod is not safe to remove until initial starting save is overwritten, if any of these features are enabled.<br><br>What mod does precisely?<br><ul><li>Autosets the player name as \"DevMode FastStart\" (Or \"Devmode NexFastStart\" if Nexerelin is active). This also allows you to click `Continue` right away without inputting the name. <br><em>Note: UI panel doesn't update, but name is set. </em> </li><li>Adds option on first screen to choice \"Fast start\", skipping pressing `Continue`.</li><li>Choosing fast start skips skill point distribution screen, and gives skill points after, if you still need them for testing.</li><li>Fast Start is equivalent to devmode start in stats.</li><li>Adds similar fast start for Nexerelin (and use its devmode start values).</li></ul><br><strong>Also supports few additional features changeable with <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a>:</strong> <br><br><strong>Auto Devmode on Campaign</strong> activates devmode after game creation or load. [Independent of start chosen and save loaded.]<br><br><strong>Auto Devmode on Game App Stars</strong> activates devmode on Game App start up. Created as alternative to editing game settings or relying on hotkeys.<br><br><strong>Safe Devmode</strong> enables devmode switching off before saving. Devmode is reenabled after save, so in most cases it should be seamless. [Should prevent crashes for mods which can't create saves with active devmode - like AotD \"Vaults of Knowledge\".]<br><br><em>Note: By default \"Safe Devmode\" is enabled, as I don't notice any negative effects from it. <br><br>New in v1.5<br><br>New fully user customisable start! Fill special string in mod's LunaSettings, and my code execute it!<br><br></em><hr><strong>Credits:</strong><br>Vexlia Artemiss for being me and also mod author.<br><br>Alex for the original \"NewGameDialogPluginImpl\" code which my mod builds off and replaces.<br><br>Nexerelin authors for rulesCMD code I used to facilitate Nexerelin integration.<br><br><a href=\"https://fractalsoftworks.com/forum/index.php?action=profile;u=28233\" rel=\"nofollow noopener\" target=\"_blank\">Bugatti Echelon</a> for testing and finding bugs. And for being the main inspiration for part of the features.",
   "descriptionIsGenerated": false,
-  "aiDescription": "Adds a fast start option that skips the skill point distribution screen and sets the player name automatically, allowing immediate continuation. It also supports custom start configurations via LunaLib settings and includes features like Auto Devmode and Safe Devmode for smoother modding workflows. Safe Devmode ensures devmode is re-enabled after saving to prevent crashes with incompatible mods.",
-  "saveCompatibilityText": "Due to need to run EFS for few frames after start for Auto Devmode and Safe Devmode, mod is not safe to remove until initial starting save is overwritten, if any of these features are enabled.",
+  "aiDescription": "Adds quality-of-life features for modders, including auto-setting player names, skipping skill point distribution, and enabling devmode automatically on campaign load or game startup. Includes safe devmode switching to prevent crashes and supports Nexerelin integration.",
+  "saveCompatibilityText": "mod is not safe to remove until initial starting save is overwritten, if any of these features are enabled.",
   "rawCategories": [
     "Utility mods"
   ],
@@ -66,6 +65,13 @@
   ],
   "downloads": [
     {
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FVexlia-Artemiss%2FVexlia-FasterDevStart%2Frefs%2Fheads%2Fmain%2FVexlia_FDS.version%22%2C%22id%22%3A%22Vexlia_FDS%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%7D",
+      "kind": "trios",
+      "label": "",
+      "host": "trilink.wispborne.com",
+      "needsAnotherStep": true
+    },
+    {
       "url": "https://github.com/Vexlia-Artemiss/Vexlia-FasterDevStart/releases/latest/download/Vexlia.Faster.DevStart.zip",
       "directUrl": "https://github.com/Vexlia-Artemiss/Vexlia-FasterDevStart/releases/latest/download/Vexlia.Faster.DevStart.zip",
       "fileName": "Vexlia.Faster.DevStart.zip",
@@ -76,9 +82,10 @@
     }
   ],
   "changelog": {
-    "1.5": "New fully user customisable start! Fill special string in mod's LunaSettings, and my code execute it!"
+    "1.5c": "- Done smart thing and made mod load before Nexerelin. Should fix any problems connected to Nexerelin updates for now and the future, until rulesCMD id change.\n- Also used opportunity to refine some grammar in LunaSettings of the mod.",
+    "1.4a": "- Added alternative Nexerelin start which should be less prone to crashing.\n- Added tooltips for all start options.\n- Added non Lunalib config file, for anyone who want to use it.\n- Added ability to enable devmode on Game App start as alternative to toggling it in Starsector's config.\n\n- Changed some things in rules.csv.\n- Fixed bug with mod disabling devmode.",
+    "1.3c": "Fixed bug with missing skill points.\nAdded story points to Nexerelin start."
   },
-  "changelogUrl": "https://github.com/Vexlia-Artemiss/Vexlia-FasterDevStart",
   "sourceCodeUrl": "https://github.com/Vexlia-Artemiss/Vexlia-FasterDevStart",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34394.0",

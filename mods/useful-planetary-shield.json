@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-08-28T18:00:02.421156Z",
+  "listing": {
+    "id": "useful-planetary-shield",
+    "name": "Useful Planetary Shield 0.1.2",
+    "displayName": "Useful Planetary Shield",
+    "authors": [
+      "pogoman"
+    ],
+    "otherAuthorNames": {},
+    "categories": [],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "0.1.2",
+    "imageUrl": "https://raw.githubusercontent.com/pogoman/UsefulPlanetaryShield/main/screenshots/shield_tooltip.png",
+    "summary": "Adds a tradeoff to the Planetary Shield so it absorbs orbital bombardment at the cost of its ground-defense bonus.",
+    "summaryIsGenerated": true,
+    "aiSummary": "Adds a tradeoff to the Planetary Shield so it absorbs orbital bombardment at the cost of its ground-defense bonus.",
+    "saveCompatible": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://github.com/pogoman/UsefulPlanetaryShield/releases/download/v0.1.2/UsefulPlanetaryShield-0.1.2.zip",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35939.0",
+    "sourceIsPublic": false,
+    "isWorkInProgress": false,
+    "addedOn": "2026-08-27",
+    "needs": []
+  },
+  "description": "Useful Planetary Shield\n\nv0.1.2 — for Starsector 0.98a-RC5\n\nEver built a\n\nPlanetary Shield\n\n, watched the pretty bubble wrap around your world, and then watched a Luddic Path crisis fleet saturation-bomb it into rubble anyway?\n\nThat's not a bug. In vanilla the Planetary Shield industry does\n\nnothing\n\nagainst orbital bombardment — it's a x3 ground-defense multiplier (anti-raid/invasion), a meteor-suppressor, and a cosmetic shield texture. The one thing its name promises, it does not do.\n\nUseful Planetary Shield\n\ngives it that job — with a tradeoff so it isn't a free \"my colony is now invincible\" button.\n\nDownload\n\nUsefulPlanetaryShield-0.1.2.zip\n\nExtract into your Starsector mods/ folder and enable it in the launcher.\n\nWhat it does\n\nWhile the shield is\n\noperational\n\n(built and not disrupted), a tactical or saturation bombardment of the colony is largely absorbed:\n\nIndustry disruption is cut to 50% of its normal durationStability loss from the bombardment is cut to 50%No pollution is inflicted on habitable worldsThe colony cannot be reduced in size by a saturation strikeThe colony cannot be decivilized — by bombardment or stability collapseIn exchange, the vanilla x3 ground-defense bonus is removed — the shield stops bombs, not marines\n\nThe catch (and the balance):\n\na bombardment the shield absorbs also\n\nknocks the shield generator offline\n\n— at least 60 days for a tactical strike (configurable), and the full (halved) disruption for a saturation strike. So a shielded colony shrugs off the\n\nfirst\n\nstrike and is then exposed until the shield repairs. A sustained bombardment campaign still gets through — you just can't be one-shotted, and you get a fighting chance to intercept the follow-up or resolve the crisis.\n\nThis works against every source of bombardment: Luddic Path / Remnant / Sindrian Diktat colony crises, and any modded faction that bombards you.\n\nConfiguration\n\nEvery value above is adjustable. With\n\nLunaLib\n\nenabled (optional) you get an in-game settings menu; without it, the mod reads bundled defaults from data/config/settings.json and runs fine standalone.\n\nYou can tune the disruption/stability percentages, toggle the pollution / size / deciv protections individually, restore the vanilla ground-defense bonus, and restrict the effect to player colonies only.\n\nRequirements & compatibility\n\nStarsector 0.98a-RC5LunaLib — optional, for the in-game config menuSafe to add to an existing saveSafe to remove — but first turn off \"Block Decivilization\" (or let the shield go offline) and load+save once, so no protection flag is left behind on a colony. (Details in the README.)Conflict: any other mod that replaces the vanilla planetaryshield industry plugin. This mod swaps that plugin to drop the ground-defense bonus; only one can win.\n\nHow it works\n\n(for the curious)\n\nSpoilerVanilla has no cancellable pre-bombardment hook — the AI crisis path calls the bombardment directly and fires no listeners, and the player-side listeners are post-hoc. So the mitigation is\n\nreactive\n\n: a lightweight script snapshots each shielded colony a few times a day (industry disruption, unrest, size, pollution, the \"recently bombarded\" flag), detects a strike, and — if the shield was up when it landed — rolls the effects partway back.\n\nDecivilization is prevented\n\nproactively\n\nby giving shielded colonies the game's own story-critical flag, which every bombardment path already checks to downgrade \"destroy\" into a survivable size hit. The flag is tracked carefully so a flag set by the base game or another mod is never disturbed, and it's removed the instant the shield stops working.\n\nFully source-available; the repo README documents the exact code paths.[close]\n\nChangelog\n\nv0.1.2\n\nAbsorbing a tactical bombardment now also knocks the shield offline (min 60 days, configurable, 0 = old behavior). Vanilla tac strikes only disrupt military-tagged industries and never touch the shield, so tac bombs were being absorbed for free, forever. Saturation strikes already disrupted the shield; the new value acts as a floor there.\n\nv0.1.1\n\nShields already built before installing the mod are now migrated on game load (they kept the vanilla plugin class, so their tooltip and ground-defense removal didn't apply). AI cores, improvements, and disruption state carry over.\n\nv0.1.0\n\nInitial release.",
+  "descriptionHtml": "<strong>Useful Planetary Shield</strong><br><em>v0.1.2 — for Starsector 0.98a-RC5</em><br><hr><br>Ever built a <strong>Planetary Shield</strong>, watched the pretty bubble wrap around your world, and then watched a Luddic Path crisis fleet saturation-bomb it into rubble anyway?<br><br>That's not a bug. In vanilla the Planetary Shield industry does <em>nothing</em> against orbital bombardment — it's a x3 ground-defense multiplier (anti-raid/invasion), a meteor-suppressor, and a cosmetic shield texture. The one thing its name promises, it does not do.<br><br><strong>Useful Planetary Shield</strong> gives it that job — with a tradeoff so it isn't a free \"my colony is now invincible\" button.<br><br><hr><br><br><hr><br><strong>Download</strong><br><br><a href=\"https://github.com/pogoman/UsefulPlanetaryShield/releases/download/v0.1.2/UsefulPlanetaryShield-0.1.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">UsefulPlanetaryShield-0.1.2.zip</a><br><br>Extract into your Starsector mods/ folder and enable it in the launcher.<br><br><hr><br><strong>What it does</strong><br><br>While the shield is <strong>operational</strong> (built and not disrupted), a tactical or saturation bombardment of the colony is largely absorbed:<br><br><ul><li><strong>Industry disruption</strong> is cut to 50% of its normal duration</li><li><strong>Stability loss</strong> from the bombardment is cut to 50%</li><li><strong>No pollution</strong> is inflicted on habitable worlds</li><li>The colony <strong>cannot be reduced in size</strong> by a saturation strike</li><li>The colony <strong>cannot be decivilized</strong> — by bombardment <em>or</em> stability collapse</li><li>In exchange, the vanilla <strong>x3 ground-defense bonus is removed</strong> — the shield stops bombs, not marines</li></ul><br><strong>The catch (and the balance):</strong> a bombardment the shield absorbs also <strong>knocks the shield generator offline</strong> — at least 60 days for a tactical strike (configurable), and the full (halved) disruption for a saturation strike. So a shielded colony shrugs off the <em>first</em> strike and is then exposed until the shield repairs. A sustained bombardment campaign still gets through — you just can't be one-shotted, and you get a fighting chance to intercept the follow-up or resolve the crisis.<br><br>This works against every source of bombardment: Luddic Path / Remnant / Sindrian Diktat colony crises, and any modded faction that bombards you.<br><br><hr><br><strong>Configuration</strong><br><br>Every value above is adjustable. With <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\"><strong>LunaLib</strong></a> enabled (optional) you get an in-game settings menu; without it, the mod reads bundled defaults from data/config/settings.json and runs fine standalone.<br><br>You can tune the disruption/stability percentages, toggle the pollution / size / deciv protections individually, restore the vanilla ground-defense bonus, and restrict the effect to player colonies only.<br><br><hr><br><strong>Requirements &amp; compatibility</strong><br><br><ul><li><strong>Starsector 0.98a-RC5</strong></li><li><strong>LunaLib</strong> — optional, for the in-game config menu</li><li>Safe to <strong>add</strong> to an existing save</li><li>Safe to <strong>remove</strong> — but first turn off \"Block Decivilization\" (or let the shield go offline) and load+save once, so no protection flag is left behind on a colony. (Details in the README.)</li><li><strong>Conflict:</strong> any other mod that replaces the vanilla planetaryshield industry plugin. This mod swaps that plugin to drop the ground-defense bonus; only one can win.</li></ul><br><hr><br><strong>How it works</strong> (for the curious)<br><br>SpoilerVanilla has no cancellable pre-bombardment hook — the AI crisis path calls the bombardment directly and fires no listeners, and the player-side listeners are post-hoc. So the mitigation is <strong>reactive</strong>: a lightweight script snapshots each shielded colony a few times a day (industry disruption, unrest, size, pollution, the \"recently bombarded\" flag), detects a strike, and — if the shield was up when it landed — rolls the effects partway back.<br><br>Decivilization is prevented <strong>proactively</strong> by giving shielded colonies the game's own story-critical flag, which every bombardment path already checks to downgrade \"destroy\" into a survivable size hit. The flag is tracked carefully so a flag set by the base game or another mod is never disturbed, and it's removed the instant the shield stops working.<br><br>Fully source-available; the repo README documents the exact code paths.[close]<br><hr><br><strong>Changelog</strong><br><br><strong>v0.1.2</strong><br><ul><li>Absorbing a <em>tactical</em> bombardment now also knocks the shield offline (min 60 days, configurable, 0 = old behavior). Vanilla tac strikes only disrupt military-tagged industries and never touch the shield, so tac bombs were being absorbed for free, forever. Saturation strikes already disrupted the shield; the new value acts as a floor there.</li></ul><br><strong>v0.1.1</strong><br><ul><li>Shields already built before installing the mod are now migrated on game load (they kept the vanilla plugin class, so their tooltip and ground-defense removal didn't apply). AI cores, improvements, and disruption state carry over.</li></ul><br><strong>v0.1.0</strong><br><ul><li>Initial release.</li></ul>",
+  "descriptionIsGenerated": false,
+  "aiDescription": "Allows the Planetary Shield to mitigate the effects of orbital bombardment, reducing industry disruption and stability loss while preventing pollution, size reduction, and decivilization. In exchange for this protection, the shield loses its vanilla ground-defense bonus. A bombardment that the shield absorbs also knocks the shield generator offline for a configurable duration, leaving the colony exposed until it repairs.",
+  "saveCompatibilityText": "Safe to add to an existing save",
+  "rawCategories": [],
+  "gallery": [
+    {
+      "url": "https://raw.githubusercontent.com/pogoman/UsefulPlanetaryShield/main/screenshots/shield_tooltip.png"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/pogoman/UsefulPlanetaryShield/releases/download/v0.1.2/UsefulPlanetaryShield-0.1.2.zip",
+      "directUrl": "https://github.com/pogoman/UsefulPlanetaryShield/releases/download/v0.1.2/UsefulPlanetaryShield-0.1.2.zip",
+      "fileName": "UsefulPlanetaryShield-0.1.2.zip",
+      "kind": "direct",
+      "label": "UsefulPlanetaryShield-0.1.2.zip",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {
+    "}": "}"
+  },
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35939.0",
+  "releases": [],
+  "sameNameMods": [],
+  "addons": []
+}

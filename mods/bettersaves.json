@@ -1,0 +1,62 @@
+{
+  "generatedAt": "2026-08-28T18:00:02.421156Z",
+  "listing": {
+    "id": "bettersaves",
+    "name": "BetterSaves",
+    "authors": [
+      "Shoey"
+    ],
+    "otherAuthorNames": {},
+    "categories": [],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.97a",
+    "modVersion": "0.3.0",
+    "imageUrl": "https://fractalsoftworks.com/forum/index.php?action=dlattach;attach=12574;type=avatar",
+    "summary": "Changes save behavior to organize saves by character and rename files with character names and timestamps.",
+    "summaryIsGenerated": true,
+    "aiSummary": "Changes save behavior to organize saves by character and rename files with character names and timestamps.",
+    "hasDirectDownload": false,
+    "bestDownload": {
+      "url": "https://github.com/MildlyFootwear/starsector-BetterSaves/releases/",
+      "kind": "direct",
+      "needsAnotherStep": true
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30536.0",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2024-08-24",
+    "threadLastPostOn": "2025-09-12",
+    "needs": []
+  },
+  "description": "Warning: versions below 0.2.1 will cause legacy coded mods to duplicate some scripts.\n\nDescription\n\nChanges the behavior of making and loading saves in Starsector.\n\nThe vanilla save directory will be used to store the latest copies of the saves of all your characters.\n\nEach character will get its own subdirectory that it will save to and load from.\n\nThe Load Game button on the main menu will act more like a character select, then while that character is loaded only their saves will be shown.\n\nOutside of the game, saves will be named with the character name followed by cycle, month, day, hour. \"Sheliak Parrish c206 03 02 04\", for example.\n\nIron mode saves should not be affected by any changes.\n\nKnown Issues\n\nOnly saves made after the mod is installed will be properly organized unless you move old saves into the new directory manually. All subsequent saves will be properly organized, however, meaning old characters will still work.Due to Starsector's plugin interface prohibiting copying files, every time the game saves it'll save twice. Once to the main save folder and once to the character's sub folder.\"Save\" and \"Save Copy\" will function identically, with both always creating a new save slot, keeping the old save. Not a big issue, but worth noting.Deleting a save on the main menu won't delete the saves in a character's sub folder.\n\nImportant Usage Notes\n\nIf you are using Windows:\n\nWhen you create a new character or use a pre-existing one, you will want to drag and drop their newly created folder onto \"link.bat\" in BetterSaves' mod folder.\n\nThis will link the character's \"common\" folder (frequently used for settings, such as those changed with lunaLib) to the \"common\" folder present in the original save directory.\n\nIf this step is skipped some mods may behave wonky. Your mileage will vary.\n\nIf you don't trust random people's bat files, you can do this manually with command prompt. The command would look something like...\n\nCode\n\nmklink /J [your Starsector install directory]\\saves\\[your character's save subfolder]\\common [your Starsector install directory]\\saves\\common\n\nSomething similar will need to be done with other operating systems, but alas I can't provide assistance with that at this time.\n\nShort Demonstration\n\nDownload\n\nhttps://github.com/MildlyFootwear/starsector-BetterSaves/releases/\n\nChangelog\n\n0.3.0\n\nChanged formatting for the save sub folder name; will require manual renaming of old folder to work with new version but should now look better when viewed outside of the game.\n\n0.2.2\n\nSave name reformatting for compatibility with TriOS profiles.Tweaked culler so it won't automatically check saves that are clean (culler has been ran on the save already/the save was started after 0.2).\n\n0.2.1\n\nRewrote a large amount of the mod to correct script bloat with other mods written in a certain/legacy way.Added rudimentary luna settings.Added optional listener culler that will prompt ask the user if they want heavily excess scripts removed when a save is loaded.\n\n0.1.2\n\nPatched batch file to better handle folders with spaces\n\n0.1.1\n\nAdded batch file to link a character's common folder to the root save folder's commonAdded check in campaign to show a message if a character is not linked\n\n0.1.0\n\nRelease",
+  "descriptionHtml": "<strong>Warning: versions below 0.2.1 will cause legacy coded mods to duplicate some scripts.</strong><br><br><strong>Description</strong><br><br>Changes the behavior of making and loading saves in Starsector.<br>The vanilla save directory will be used to store the latest copies of the saves of all your characters.  <br>Each character will get its own subdirectory that it will save to and load from.<br>The Load Game button on the main menu will act more like a character select, then while that character is loaded only their saves will be shown.<br>Outside of the game, saves will be named with the character name followed by cycle, month, day, hour. \"Sheliak Parrish c206 03 02 04\", for example.<br>Iron mode saves should not be affected by any changes.<br><br><strong>Known Issues</strong><br><ul><li>Only saves made after the mod is installed will be properly organized unless you move old saves into the new directory manually. All subsequent saves will be properly organized, however, meaning old characters will still work.</li><li>Due to Starsector's plugin interface prohibiting copying files, every time the game saves it'll save twice. Once to the main save folder and once to the character's sub folder.</li><li>\"Save\" and \"Save Copy\" will function identically, with both always creating a new save slot, keeping the old save. Not a big issue, but worth noting.</li><li>Deleting a save on the main menu won't delete the saves in a character's sub folder.</li></ul> <br><br><strong>Important Usage Notes</strong><br><br>If you are using Windows:  <br><br>When you create a new character or use a pre-existing one, you will want to drag and drop their newly created folder onto \"link.bat\" in BetterSaves' mod folder.<br>This will link the character's \"common\" folder (frequently used for settings, such as those changed with lunaLib) to the \"common\" folder present in the original save directory.<br>If this step is skipped some mods may behave wonky. Your mileage will vary.<br><br>If you don't trust random people's bat files, you can do this manually with command prompt. The command would look something like...<br><br>Code<pre><code>mklink /J [your Starsector install directory]\\saves\\[your character's save subfolder]\\common [your Starsector install directory]\\saves\\common</code></pre><br>Something similar will need to be done with other operating systems, but alas I can't provide assistance with that at this time.<br><br><strong>Short Demonstration</strong><br><br><strong>Download</strong><br><a href=\"https://github.com/MildlyFootwear/starsector-BetterSaves/releases/\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/MildlyFootwear/starsector-BetterSaves/releases/</a><br><br><strong>Changelog</strong><br>0.3.0<br><ul><li>Changed formatting for the save sub folder name; will require manual renaming of old folder to work with new version but should now look better when viewed outside of the game.</li></ul>0.2.2<br><ul><li>Save name reformatting for compatibility with TriOS profiles.</li><li>Tweaked culler so it won't automatically check saves that are clean (culler has been ran on the save already/the save was started after 0.2).</li></ul>0.2.1<br><ul><li>Rewrote a large amount of the mod to correct script bloat with other mods written in a certain/legacy way.</li><li>Added rudimentary luna settings.</li><li>Added optional listener culler that will prompt ask the user if they want heavily excess scripts removed when a save is loaded.</li></ul>0.1.2<br><ul><li>Patched batch file to better handle folders with spaces</li></ul>0.1.1<br><ul><li>Added batch file to link a character's common folder to the root save folder's common</li><li>Added check in campaign to show a message if a character is not linked</li></ul>0.1.0<br><ul><li>Release</li></ul>",
+  "descriptionIsGenerated": false,
+  "aiDescription": "Organizes saves into character-specific subdirectories and renames save files to include the character name and cycle/month/day/hour. The main menu load game button acts as a character selector, showing only saves for the selected character. Includes a batch file for Windows to link character settings to the main save folder.",
+  "rawCategories": [],
+  "gallery": [],
+  "downloads": [
+    {
+      "url": "https://github.com/MildlyFootwear/starsector-BetterSaves/releases/",
+      "kind": "direct",
+      "label": "https://github.com/MildlyFootwear/starsector-BetterSaves/releases/",
+      "host": "github.com",
+      "needsAnotherStep": true
+    }
+  ],
+  "changelog": {
+    "0.3.0": "Changed formatting for the save sub folder name; will require manual renaming of old folder to work with new version but should now look better when viewed outside of the game.",
+    "0.2.2": "Save name reformatting for compatibility with TriOS profiles.\n Tweaked culler so it won't automatically check saves that are clean (culler has been ran on the save already/the save was started after 0.2).",
+    "0.2.1": "Rewrote a large amount of the mod to correct script bloat with other mods written in a certain/legacy way.\n Added rudimentary luna settings.\n Added optional listener culler that will prompt ask the user if they want heavily excess scripts removed when a save is loaded."
+  },
+  "changelogUrl": "https://github.com/MildlyFootwear/starsector-BetterSaves/releases/",
+  "sourceCodeUrl": "https://github.com/MildlyFootwear/starsector-BetterSaves",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30536.0",
+  "releases": [],
+  "threadLastPostOn": "2025-09-12",
+  "sameNameMods": [],
+  "addons": []
+}

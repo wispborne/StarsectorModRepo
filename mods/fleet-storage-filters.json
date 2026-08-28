@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T04:25:18.204738Z",
+  "generatedAt": "2026-08-28T18:00:02.421156Z",
   "listing": {
     "id": "fleet-storage-filters",
     "name": "Fleet Storage Filters",
@@ -25,7 +25,7 @@
     "modVersion": "2.1.1c",
     "summary": "Fleet Storage Filter lets you easily search through the hundreds of ships you hoarded at your colonies.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a search bar to the fleet storage UI with fuzzy matching and configurable settings.",
+    "aiSummary": "Adds a search feature to filter ships in the fleet storage screen.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -54,7 +54,7 @@
   "description": "Fleet Storage Filter\n\nDirect Download Latest\n\nSource Code (Github)\n\nDescription\n\nGot too many ships? Search through your hoard to find what you need.\n\nShowcase (v2.0.0)\n\nSafe to install/uninstall from existing saves\nRequires MagicLib, LunaLib\n\nChangelog\n\nSpoiler\n\nv2.0.1\n\nSearch is now case-insensitive and matches with hull name instead of internal id\n\n(thanks EnigmaniteZ)\n\nv2.1.0\n\nMoved the location of the search bar to not overlap with UI\n\n(thanks JamesTripleQ)\n\nSearch now uses fuzzy string matching, threshold might need tweaking\n\nThis version adds LunaLib as a dependency to enable the above\n\nVersion checker integration (tell me if its broken :P)\n\nv2.1.1\n\nLunaSettings integration for configuring fuzzy search threshold, search bar UI position\n\nFixed a storage list sorting bug\n\nv2.1.1a\n\nfixed an issue in the previous version\n\nv2.1.1b\n\nhotfix to restore previous sort behaviour\n\nv2.1.1c\n\nfixed sorting behaviour in non storage fleets[close]\n\nCredits\n\nGenir: wrote the original mod and let me take over\nLukas04: code I referenced from LunaLib and Second in Command",
   "descriptionHtml": "<strong>Fleet Storage Filter</strong><hr><br><strong><a href=\"https://github.com/starry-dragon/starsector-fleet-storage-filter/releases/latest/download/Fleet-Storage-Filter.zip\" rel=\"nofollow noopener\" target=\"_blank\">Direct Download Latest</a></strong><em>Source Code (<a href=\"https://github.com/starry-dragon/starsector-fleet-storage-filter\" rel=\"nofollow noopener\" target=\"_blank\">Github</a>)</em><br><strong>Description</strong><br>Got too many ships? Search through your hoard to find what you need.<br><strong>Showcase (v2.0.0)</strong><br><em>Safe to install/uninstall from existing saves<br>Requires MagicLib, LunaLib</em><br><strong>Changelog</strong>Spoiler<em>v2.0.1</em><br>Search is now case-insensitive and matches with hull name instead of internal id <em>(thanks EnigmaniteZ)</em><br><br><em>v2.1.0</em><br>Moved the location of the search bar to not overlap with UI <em>(thanks JamesTripleQ)</em><br>Search now uses fuzzy string matching, threshold might need tweaking<br>This version adds LunaLib as a dependency to enable the above<br>Version checker integration (tell me if its broken :P)<br><br><em>v2.1.1</em><br>LunaSettings integration for configuring fuzzy search threshold, search bar UI position<br>Fixed a storage list sorting bug<br><br><em>v2.1.1a</em><br>fixed an issue in the previous version<br><br><em>v2.1.1b</em><br>hotfix to restore previous sort behaviour<br><br><em>v2.1.1c</em><br>fixed sorting behaviour in non storage fleets[close]<br><br><hr><strong>Credits</strong><br><em>Genir: wrote the original mod and let me take over<br>Lukas04: code I referenced from LunaLib and Second in Command</em>",
   "descriptionIsGenerated": false,
-  "aiDescription": "Adds a search bar to the fleet storage UI to help locate ships quickly. Uses fuzzy string matching for more flexible searches and allows configuration of search behavior through LunaSettings. Fixes sorting issues in non-storage fleets and improves usability by repositioning the search bar.",
+  "aiDescription": "Allows players to search through their fleet storage to find specific ships. The mod includes case-insensitive search, fuzzy string matching, and configurable settings for search threshold and UI position.",
   "saveCompatibilityText": "Safe to install/uninstall from existing saves",
   "rawCategories": [
     "Colonies",
@@ -74,9 +74,9 @@
     }
   ],
   "changelog": {
-    "2.1.1c": "fixed sorting behaviour in non storage fleets",
-    "2.1.1b": "hotfix to restore previous sort behaviour",
-    "2.1.1a": "fixed an issue in the previous version"
+    "v2.1.1c": "fixed sorting behaviour in non storage fleets",
+    "v2.1.1b": "hotfix to restore previous sort behaviour",
+    "v2.1.1a": "fixed an issue in the previous version"
   },
   "sourceCodeUrl": "https://github.com/starry-dragon/starsector-fleet-storage-filter",
   "supportLinks": [],

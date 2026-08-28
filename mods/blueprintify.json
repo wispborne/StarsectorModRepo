@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T04:25:18.204738Z",
+  "generatedAt": "2026-08-28T18:00:02.421156Z",
   "listing": {
     "id": "blueprintify",
     "name": "Blueprintify",
@@ -12,9 +12,9 @@
       "forum"
     ],
     "modVersion": "1.2a",
-    "summary": "Adds automatic blueprint generation for ships that lack them, ensuring they can be built or reverse-engineered.",
+    "summary": "Automatically generates ship blueprints for hulls that lack them, ensuring salvagers and engineers can acquire and build ships from other mods.",
     "summaryIsGenerated": true,
-    "aiSummary": "Adds automatic blueprint generation for ships that lack them, ensuring they can be built or reverse-engineered.",
+    "aiSummary": "Automatically generates ship blueprints for hulls that lack them, ensuring salvagers and engineers can acquire and build ships from other mods.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/Zman714/Blueprintify/releases/latest",
@@ -32,13 +32,12 @@
         "name": "LunaLib",
         "id": "lunalib"
       }
-    ],
-    "partOfThreadTitle": "[0.98a) Blueprintify v1.2a"
+    ]
   },
   "description": "Blueprintify\n\nBecause every ship deserves a chance to be reproduced.\n\nDownload\n\nRequires\n\nLunaLib\n\nEver install a mod full of cool ships, only to find none of them ever show up as blueprints? Your salvagers scour the sector and come up empty-handed. Your engineers stare blankly at hulls they'll never get to build. Blueprintify fixes that.\n\nThis mod automatically generates ship blueprints for any hull that doesn't already have one defined in the data folder — filling the gaps left behind by mods that don't bother wiring their ships into the blueprint system.\n\nModes\n\nCleanup Mode\n\n(Default)\n\nThe sensible option. Blueprintify scans for ships from mods that haven't been properly assigned to a faction blueprint pool and quietly fills in the blanks. It's smart about what it picks up — only actual ship hulls make the cut. Stations, modules, drone hulls, and fighter frames are all filtered out and left alone.\n\nFighter wing and weapon blueprints follow the same filtering logic, so you won't end up with a cluttered, nonsensical loot table.\n\nFull Mode\n\nFor those who want everything. Any ship hull you acquire goes into the blueprint loot pool, gated appropriately so it doesn't flood your early game. Fighter wings and weapons unlock the same way, dropping into the loot pool once you've acquired them.\n\nCompatibility\n\nSpoilerWorks great with my other mod\n\nTruerecovery\n\nAs any ship acquired via this mod will also get a blueprint put in the loot pool.\n\nWhen used in conjunction with\n\nIndustrial Evolution\n\nallows any acquired ship to also be reverse engineered into a blueprint (this was actually unintentional... i just figured out that it works while testing it.)\n\n[close]There is a debug menu in the intel ui screen, if any blueprints are missing that should be there or if any are there that should not be, let me know and let me know which section they are in.\n\nMade by Zman147.\n\nStarted as a QOL mod but then i decided to also add the Full mode. To all modders, please make sure your ships actually show up where they're supposed to, but if they don't... this mod will pick up the pieces.\n\nIf there are any issues, whether it be with blueprints showing up where they shouldn't, other bugs, or clarification on anything, let me know.",
   "descriptionHtml": "<strong>Blueprintify</strong><br><em>Because every ship deserves a chance to be reproduced.</em><a href=\"https://github.com/Zman714/Blueprintify/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\">Download</a><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=26658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a><br><hr><br>Ever install a mod full of cool ships, only to find none of them ever show up as blueprints? Your salvagers scour the sector and come up empty-handed. Your engineers stare blankly at hulls they'll never get to build. Blueprintify fixes that.<br><br>This mod automatically generates ship blueprints for any hull that doesn't already have one defined in the data folder — filling the gaps left behind by mods that don't bother wiring their ships into the blueprint system.<br><br><hr><br><strong>Modes</strong><br><br><strong>Cleanup Mode</strong> <em>(Default)</em><br><br>The sensible option. Blueprintify scans for ships from mods that haven't been properly assigned to a faction blueprint pool and quietly fills in the blanks. It's smart about what it picks up — only actual ship hulls make the cut. Stations, modules, drone hulls, and fighter frames are all filtered out and left alone.<br><br>Fighter wing and weapon blueprints follow the same filtering logic, so you won't end up with a cluttered, nonsensical loot table.<br><br><strong>Full Mode</strong><br><br>For those who want everything. Any ship hull you acquire goes into the blueprint loot pool, gated appropriately so it doesn't flood your early game. Fighter wings and weapons unlock the same way, dropping into the loot pool once you've acquired them.<br><br><strong>Compatibility</strong><br>SpoilerWorks great with my other mod <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35401.msg519002#msg519002\" rel=\"nofollow noopener\" target=\"_blank\">Truerecovery</a> As any ship acquired via this mod will also get a blueprint put in the loot pool. <br>When used in conjunction with <a href=\"https://fractalsoftworks.com/forum/index.php?topic=18011.0\" rel=\"nofollow noopener\" target=\"_blank\">Industrial Evolution</a> allows any acquired ship to also be reverse engineered into a blueprint (this was actually unintentional... i just figured out that it works while testing it.)<br>[close]There is a debug menu in the intel ui screen, if any blueprints are missing that should be there or if any are there that should not be, let me know and let me know which section they are in.<br>Made by Zman147.<br>Started as a QOL mod but then i decided to also add the Full mode. To all modders, please make sure your ships actually show up where they're supposed to, but if they don't... this mod will pick up the pieces.<br>If there are any issues, whether it be with blueprints showing up where they shouldn't, other bugs, or clarification on anything, let me know.",
   "descriptionIsGenerated": false,
-  "aiDescription": "Adds automatic generation of ship blueprints for any hull that lacks one in the data folder. Ensures acquired ships, including those from other mods, are available for construction and reverse engineering. Offers two modes: Cleanup Mode for selective blueprint filling and Full Mode for comprehensive coverage.",
+  "aiDescription": "This mod fills the gaps left by mods that do not wire their ships into the blueprint system. It offers a default Cleanup Mode that filters out non-ship entities and a Full Mode that adds all acquired ships to the blueprint loot pool.",
   "rawCategories": [],
   "gallery": [],
   "downloads": [
@@ -57,6 +56,5 @@
   "releases": [],
   "threadLastPostOn": "2026-06-27",
   "sameNameMods": [],
-  "addons": [],
-  "partOfThreadTitle": "[0.98a) Blueprintify v1.2a"
+  "addons": []
 }

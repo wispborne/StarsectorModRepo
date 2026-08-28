@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T04:25:18.204738Z",
+  "generatedAt": "2026-08-28T18:00:02.421156Z",
   "listing": {
     "id": "battlesize-based-skill-dp-values",
     "name": "Battlesize based skill DP values",
@@ -14,11 +14,11 @@
       "forum"
     ],
     "gameVersion": "0.95.1a",
-    "modVersion": "0.2.0",
+    "modVersion": "v0.2.0",
     "imageUrl": "https://i.imgur.com/8NhcB4S.png",
-    "summary": "Adjusts skill DP limits and officer caps based on the battlesize setting, with configurable defaults.",
+    "summary": "Adjusts skill DP limits and maximum officer count based on the selected battlesize rather than using static values.",
     "summaryIsGenerated": true,
-    "aiSummary": "Adjusts skill DP limits and officer caps based on the battlesize setting, with configurable defaults.",
+    "aiSummary": "Adjusts skill DP limits and maximum officer count based on the selected battlesize rather than using static values.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Torashuu/ScalingSkillLimits/releases/download/v0.2.0/ScalingSkillLimits_v0.2.0.zip",
@@ -36,7 +36,7 @@
   "description": "Features:\n\nA mod that adjusts the skill DP limits based on the battlesize you set, rather than being static values. Changes get applied after game load, so if you change your battlesize limit, do a save/load cycle after to update the skills.\n\nAdditionally adjusts the maximum number of officers.\n\nExample skill:\n\nSpoilerValues are the same at default battlesize:\n\n..but scale as battlesize increases:\n\nCode snippet that appears to show reasoing 300 is the default:\n\n[close]\n\nRequirements:\n\nNone\n\nSupports\n\nNexerelin Version Checker\n\nInstallation:\n\n- Extract the archive into your Starsector\\mods folder\n\n- Open the game launcher and enable the mod in the Mods section\n\nDownload:\n\nChangelog\n\nSpoilerv0.2.0\n\n- default battlesize set to 400 from 300\n\n- default battlesize made configurable through mod settings\n\nv0.1.2\n\n-default values for industry skills fixed\n\nv0.1.1\n\n-fixed issues where repeat loads would recursively alter the values. oops.\n\nv0.1\n\n-inital release\n\n[close]\n\nComments are invited!",
   "descriptionHtml": "<strong>Features:</strong><br>A mod that adjusts the skill DP limits based on the battlesize you set, rather than being static values. Changes get applied after game load, so if you change your battlesize limit, do a save/load cycle after to update the skills.<br><br>Additionally adjusts the maximum number of officers.<br><br>Example skill:<br>SpoilerValues are the same at default battlesize:<br><br>..but scale as battlesize increases:<br><br>Code snippet that appears to show reasoing 300 is the default:<br><br>[close]<br><strong>Requirements:</strong><br>None<br><br><strong>Supports</strong><br>Nexerelin Version Checker<br><br><strong>Installation:</strong><br>- Extract the archive into your Starsector\\mods folder<br>- Open the game launcher and enable the mod in the Mods section<br><br><strong>Download:</strong><br><a href=\"https://github.com/Torashuu/ScalingSkillLimits/releases/download/v0.2.0/ScalingSkillLimits_v0.2.0.zip\" rel=\"nofollow noopener\" target=\"_blank\"><br></a><br><br><strong>Changelog</strong><br>Spoilerv0.2.0<br>- default battlesize set to 400 from 300<br>- default battlesize made configurable through mod settings <br><br>v0.1.2<br>-default values for industry skills fixed<br><br>v0.1.1<br>-fixed issues where repeat loads would recursively alter the values. oops.<br><br>v0.1<br>-inital release<br>[close]<br>Comments are invited!",
   "descriptionIsGenerated": false,
-  "aiDescription": "Adjusts skill DP limits and the maximum number of officers based on the battlesize setting in the game. The default battlesize is now 400 instead of 300 and can be changed through mod settings. Changes take effect after a save and load cycle, ensuring consistency when the battlesize is modified.",
+  "aiDescription": "Adjusts skill DP limits and maximum officer count based on the selected battlesize rather than using static values. Changes are applied after game load, so a save/load cycle is required to update skills if the battlesize limit is changed. The default battlesize is configurable through mod settings.",
   "rawCategories": [
     "Utility mods"
   ],
@@ -63,15 +63,15 @@
       "directUrl": "https://github.com/Torashuu/ScalingSkillLimits/releases/download/v0.2.0/ScalingSkillLimits_v0.2.0.zip",
       "fileName": "ScalingSkillLimits_v0.2.0.zip",
       "kind": "direct",
-      "label": "",
+      "label": "https://github.com/Torashuu/ScalingSkillLimits/releases/download/v0.2.0/ScalingSkillLimits_v0.2.0.zip",
       "host": "GitHub",
       "needsAnotherStep": false
     }
   ],
   "changelog": {
-    "0.2.0": "default battlesize set to 400 from 300\n- default battlesize made configurable through mod settings",
-    "0.1.2": "default values for industry skills fixed",
-    "0.1.1": "fixed issues where repeat loads would recursively alter the values. oops."
+    "v0.2.0": "- default battlesize set to 400 from 300\n- default battlesize made configurable through mod settings",
+    "v0.1.2": "-default values for industry skills fixed",
+    "v0.1.1": "-fixed issues where repeat loads would recursively alter the values. oops."
   },
   "sourceCodeUrl": "https://github.com/Torashuu/ScalingSkillLimits",
   "supportLinks": [],

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T04:25:18.204738Z",
+  "generatedAt": "2026-08-28T18:00:02.421156Z",
   "listing": {
     "id": "twiglib",
     "name": "TwigLib",
@@ -16,9 +16,9 @@
     "gameVersion": "0.65.2a",
     "modVersion": "0.6.11",
     "imageUrl": "http://s5.postimg.org/x26p7l08n/TWIG_TM.png",
-    "summary": "Allows the creation of extremely large ships by overcoming existing bounds limitations in the game.",
+    "summary": "Allows building enormously large ships by bypassing bounds issues.",
     "summaryIsGenerated": true,
-    "aiSummary": "Allows the creation of extremely large ships by overcoming existing bounds limitations in the game.",
+    "aiSummary": "Allows building enormously large ships by bypassing bounds issues.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://bitbucket.org/debido/starsector-multiship/downloads/TwigLib%200.6.11.7z",
@@ -36,7 +36,7 @@
   "description": "TWIG™ Library\n\nUpdate for 0.8 release\n\nTwibLib has now be superseded by built in game functionality, please use the built in game 'space station slot' functionality. The previous build is still available for those still using the patch (why? seriously? get the latest version!!!)\n\nUpdate for 0.7.2a release\n\nDownload 0.6.11\n\nModified the default behavior of isMultiShip to not return true if it is a detached node if it is dead.\n\nUpdate Log:\n\nSpoiler\n\n0.6.8-0.6.10\n\nAdded/implemented remaining methods for 0.7.2aNow suppresses spawning of parts notificationsAllied ship parts are now spawned as allied rather than player parts.\n\n0.7.1 update\n\nThe current RC5 patch solved some issues, but there is still an outstanding issue with spawning allied ship parts.\n\n0.6.7a Change Log:\n\n* Fixed up issue with RootNode not actually returning itself as the root when queried via MultiShipAPI\n\n* Fixed up issue with filterConnections not properly adding the root node to the list of parts to be removed from the list\n\n* Added isRoot and isChild from MultiShipManager to the TwigUtils\n\n0.6.6b Change Log:\n\nChanged storage method of Twig Data in the combat engine so that the combat engine may be closed after combat.\n\n0.6.5 Change Log:\n\nMajor changes:\n\nCompletely restructured package names\n\nMade more classes public for extensibility\n\nThere is now a TWIGEntity class used for loading all twig ships\n\nThere is now a CampaignTWIGEntity class useful for campaign integration, especially with it's own MemoryAPI object\n\nTwigs are now loaded without Java code at all. You now use a CSV file to point to the twig file(s) containing your twig ship(s).\n\n**Twig loading is now done with TwigNodeLibrary class with new JSON schema by Silent Stormpt** this will break old twig library users.\n\nAdded relative position type, there are now two types of positioning available. Relative and Vector. Relative uses a weapon, Vector uses a Vector2f and facing angle.\n\nAdded two AI's: Slave AI and No AI.\n\n* Slave AI is slaved to the root ship, and will target whatever the root ship is targeting if non-PD . It has the movement code removed\n\n* No AI is literally has no AI whatsoever\n\nImplemented ShipEngineControllerAPI on the root node so that someone may gather the total engine power\n\nAdded TwigUtils helper class for retrieving useful information\n\nModified frames after death to accomodate scenarios where people are running at more than 60fps[close]This mod allows people to build utterly...utterly enormous ships and get around the bounds issues that exist. Also hoping for the addition of a CollisionAPI by Alex eventually to help with a few certain scenarios better.\n\nprevious version\n\n:\n\n0.6.7 for 0.65.2a-RC2",
   "descriptionHtml": "<strong>TWIG™ Library</strong><br><strong>Update for 0.8 release</strong>TwibLib has now be superseded by built in game functionality, please use the built in game 'space station slot' functionality. The previous build is still available for those still using the patch (why? seriously? get the latest version!!!)<br><br><strong>Update for 0.7.2a release</strong><br><strong><a href=\"https://bitbucket.org/debido/starsector-multiship/downloads/TwigLib%200.6.11.7z\" rel=\"nofollow noopener\" target=\"_blank\">Download 0.6.11</a></strong><br><br>Modified the default behavior of isMultiShip to not return true if it is a detached node if it is dead.<br><br>Update Log:<br>Spoiler<br><strong>0.6.8-0.6.10<strong><br></strong></strong><ul><li>Added/implemented remaining methods for 0.7.2a</li><li>Now suppresses spawning of parts notifications</li><li>Allied ship parts are now spawned as allied rather than player parts.</li></ul><strong>0.7.1 update</strong>The current RC5 patch solved some issues, but there is still an outstanding issue with spawning allied ship parts.<br><strong>0.6.7a Change Log:</strong><br>* Fixed up issue with RootNode not actually returning itself as the root when queried via MultiShipAPI<br>* Fixed up issue with filterConnections not properly adding the root node to the list of parts to be removed from the list<br>* Added isRoot and isChild from MultiShipManager to the TwigUtils<br><strong>0.6.6b Change Log:</strong><br>Changed storage method of Twig Data in the combat engine so that the combat engine may be closed after combat.<br><strong>0.6.5 Change Log:</strong><br>Major changes:<br>Completely restructured package names<br>Made more classes public for extensibility<br>There is now a TWIGEntity class used for loading all twig ships<br>There is now a CampaignTWIGEntity class useful for campaign integration, especially with it's own MemoryAPI object<br>Twigs are now loaded without Java code at all. You now use a CSV file to point to the twig file(s) containing your twig ship(s).<br>**Twig loading is now done with TwigNodeLibrary class with new JSON schema by Silent Stormpt** this will break old twig library users.<br>Added relative position type, there are now two types of positioning available. Relative and Vector. Relative uses a weapon, Vector uses a Vector2f and facing angle.<br>Added two AI's: Slave AI and No AI. <br>* Slave AI is slaved to the root ship, and will target whatever the root ship is targeting if non-PD . It has the movement code removed<br>* No AI is literally has no AI whatsoever<br>Implemented ShipEngineControllerAPI on the root node so that someone may gather the total engine power<br>Added TwigUtils helper class for retrieving useful information<br>Modified frames after death to accomodate scenarios where people are running at more than 60fps[close]This mod allows people to build utterly...utterly enormous ships and get around the bounds issues that exist. Also hoping for the addition of a CollisionAPI by Alex eventually to help with a few certain scenarios better.<br><br><strong>previous version</strong>:<br><strong><a href=\"https://bitbucket.org/debido/starsector-multiship/downloads/TwigLib%200.6.7a.zip\" rel=\"nofollow noopener\" target=\"_blank\">0.6.7 for 0.65.2a-RC2</a></strong>",
   "descriptionIsGenerated": false,
-  "aiDescription": "Allows the creation of extremely large ships by overcoming existing bounds limitations in the game. Enables loading of multi-part ships using CSV and JSON configuration files, with support for relative and vector-based positioning. Includes tools for AI control, engine power tracking, and post-death frame handling.",
+  "aiDescription": "Allows building enormously large ships by bypassing bounds issues. Provides utilities for managing multi-ship structures, including relative positioning, AI options, and campaign integration via CSV and JSON files.",
   "rawCategories": [
     "Libraries"
   ],
@@ -59,7 +59,7 @@
       "url": "https://bitbucket.org/debido/starsector-multiship/downloads/TwigLib%200.6.7a.zip",
       "directUrl": "https://bitbucket.org/debido/starsector-multiship/downloads/TwigLib%200.6.7a.zip",
       "fileName": "TwigLib 0.6.7a.zip",
-      "kind": "direct",
+      "kind": "mirror",
       "label": "0.6.7 for 0.65.2a-RC2",
       "host": "Bitbucket",
       "needsAnotherStep": false
@@ -67,8 +67,8 @@
   ],
   "changelog": {
     "0.6.11": "Modified the default behavior of isMultiShip to not return true if it is a detached node if it is dead.",
-    "0.6.10": "Added/implemented remaining methods for 0.7.2a\nNow suppresses spawning of parts notifications\nAllied ship parts are now spawned as allied rather than player parts.",
-    "0.6.9": "Added/implemented remaining methods for 0.7.2a\nNow suppresses spawning of parts notifications\nAllied ship parts are now spawned as allied rather than player parts."
+    "0.6.8-0.6.10": "Added/implemented remaining methods for 0.7.2a\nNow suppresses spawning of parts notifications\nAllied ship parts are now spawned as allied rather than player parts.",
+    "0.7.1": "The current RC5 patch solved some issues, but there is still an outstanding issue with spawning allied ship parts."
   },
   "sourceCodeUrl": "https://bitbucket.org/debido/starsector-multiship",
   "supportLinks": [],

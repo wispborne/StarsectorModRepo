@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T04:25:18.204738Z",
+  "generatedAt": "2026-08-28T18:00:02.421156Z",
   "listing": {
     "id": "autosave",
     "name": "Autosave",
@@ -21,16 +21,16 @@
     "gameVersion": "0.96a",
     "modVersion": "1.2b",
     "imageUrl": "http://www.gravatar.com/avatar/f8cb22c8ff6fcf531a26044fcd9f051c.png",
-    "summary": "Adds configurable automatic save warnings and optional automatic saves based on time, battles, market actions, or hyperspace jumps.",
+    "summary": "Adds optional automatic saving functionality with customizable triggers and warnings.",
     "summaryIsGenerated": true,
-    "aiSummary": "Adds configurable automatic save warnings and optional automatic saves based on time, battles, market actions, or hyperspace jumps.",
+    "aiSummary": "Adds optional automatic saving functionality with customizable triggers and warnings.",
     "hasDirectDownload": true,
     "bestDownload": {
-      "url": "https://www.mediafire.com/folder/o198g5zx795g7/Autosave",
-      "kind": "trios",
+      "url": "https://github.com/LazyWizard/autosave/releases/download/1.2b/Autosave.1.2b.zip",
+      "kind": "direct",
       "needsAnotherStep": false
     },
-    "downloadCount": 3,
+    "downloadCount": 2,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=9748.0",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
@@ -46,20 +46,12 @@
   "description": "Autosave\n\n... because sometimes F5 is too hard to remember ...\n\nDownload version 1.2b (mirror)\n\n(requires\n\nLazyLib\n\n)\n\nView source code and progress\n\nArchive of old versions\n\nSupports Version Checker\n\nPlease note:\n\nautosaving is disabled by default because save times can become extremely long with many mods enabled. Instead, the mod simply warns you when you haven't saved in a while. If you want to enable autosaving, edit\n\nlw_autosave_settings.json.data\n\nin the saves/common/config folder and set\n\n\"enableAutosaves\"\n\nto\n\ntrue\n\n(this file will only exist after you have launched the game with Autosave enabled at least once).\n\nYou can set forced autosaves to happen after enough time has passed since the last save, after market transactions, after hyperspace jumps, after fighting a battle, or any combination of the four.\n\nChangelog:\n\nSpoilerQuote\n\n1.2b (May 05, 2023)\n=====================\nUpdated to be compatible with Starsector 0.96a\n\n 1.2 (July 12, 2022)\n=====================\nUpdated to be compatible with Starsector 0.95.1a\nAdded the following to saves/common/config/lw_autosave_settings.json.data:\n - \"forceSaveAfterMapChange\", forces a save after every hyperspace jump\n - \"saveAsCopy\", if enabled, every autosave creates a new save\nRemoved autosave_settings.json.default as it was confusing new players\nUpdated config loading logic to autopopulate any missing entries\nUpdated autosave to use API's cmdSave() instead of simulating keypresses\n\n 1.1c (March 26, 2021)\n=======================\nUpdated to be compatible with Starsector 0.95a\nRenamed generated settings file to saves/common/lw_autosave_settings.json.data\n(Old settings file will be removed if present)\n\n 1.1b (August 28, 2020)\n========================\nMoved version file hosting to GitHub\n\n 1.1 (November 16, 2018)\n=========================\nUpdated to be compatible with Starsector 0.9a\nThis mod now requires LazyLib 2.4b or later\nSettings are now stored in saves/common/autosave_settings.json.data\n - This file will only exist after launching the mod at least once\n\n 1.0f (April 21, 2017)\n=======================\nUpdated to be compatible with Starsector 0.8a\n\n 1.0e (March 16, 2017)\n=======================\nSwitched version file hosting to Bitbucket\n\n 1.0d (November 19, 2015)\n==========================\nFixed issue where simulated quicksave key presses weren't always registering\n\n 1.0c (November 19, 2015)\n==========================\nUpdated to be compatible with Starsector 0.7a\n\n 1.0b (December 08, 2014)\n==========================\nAdded \"minutesBetweenSubsequentWarnings\" setting to autosave_settings.json\nFixed bug where the mod started spamming sector messages after a failed autosave\n\n 1.0 (December 08, 2014)\n=========================\nInitial release:\n - By default, warns when you haven't saved in a while, and tells you how many\n   battles and market transactions have occurred since the last save\n - Player can enable autosaves in autosave_settings.json, can autosave if enough\n   time has passed since the last save, or set it to force a save after every\n   battle or market transaction\n\n[close]",
   "descriptionHtml": "<strong>Autosave</strong><br><em>... because sometimes F5 is too hard to remember ...</em><br><strong><a href=\"https://github.com/LazyWizard/autosave/releases/download/1.2b/Autosave.1.2b.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download version 1.2b</a> (<a href=\"https://www.mediafire.com/file/338sdgn2xpikyug/Autosave_1.2b.zip/file\" rel=\"nofollow noopener\" target=\"_blank\">mirror</a>)</strong> (requires <strong><a href=\"http://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a></strong>)<br><strong><a href=\"https://github.com/LazyWizard/autosave\" rel=\"nofollow noopener\" target=\"_blank\">View source code and progress</a></strong><br><strong><a href=\"https://www.mediafire.com/folder/o198g5zx795g7/Autosave\" rel=\"nofollow noopener\" target=\"_blank\">Archive of old versions</a></strong><br><strong>Supports <a href=\"http://fractalsoftworks.com/forum/index.php?topic=8181\" rel=\"nofollow noopener\" target=\"_blank\">Version Checker</a></strong><br><strong>Please note:</strong> autosaving is disabled by default because save times can become extremely long with many mods enabled. Instead, the mod simply warns you when you haven't saved in a while. If you want to enable autosaving, edit <em>lw_autosave_settings.json.data</em> in the saves/common/config folder and set <em>\"enableAutosaves\"</em> to <em>true</em> (this file will only exist after you have launched the game with Autosave enabled at least once).<br><br>You can set forced autosaves to happen after enough time has passed since the last save, after market transactions, after hyperspace jumps, after fighting a battle, or any combination of the four.<br><br>Changelog:<br>SpoilerQuote<blockquote> 1.2b (May 05, 2023)<br>=====================<br>Updated to be compatible with Starsector 0.96a<br><br> 1.2 (July 12, 2022)<br>=====================<br>Updated to be compatible with Starsector 0.95.1a<br>Added the following to saves/common/config/lw_autosave_settings.json.data:<br> - \"forceSaveAfterMapChange\", forces a save after every hyperspace jump<br> - \"saveAsCopy\", if enabled, every autosave creates a new save<br>Removed autosave_settings.json.default as it was confusing new players<br>Updated config loading logic to autopopulate any missing entries<br>Updated autosave to use API's cmdSave() instead of simulating keypresses<br><br> 1.1c (March 26, 2021)<br>=======================<br>Updated to be compatible with Starsector 0.95a<br>Renamed generated settings file to saves/common/lw_autosave_settings.json.data<br>(Old settings file will be removed if present)<br><br> 1.1b (August 28, 2020)<br>========================<br>Moved version file hosting to GitHub<br><br> 1.1 (November 16, 2018)<br>=========================<br>Updated to be compatible with Starsector 0.9a<br>This mod now requires LazyLib 2.4b or later<br>Settings are now stored in saves/common/autosave_settings.json.data<br> - This file will only exist after launching the mod at least once<br><br> 1.0f (April 21, 2017)<br>=======================<br>Updated to be compatible with Starsector 0.8a<br><br> 1.0e (March 16, 2017)<br>=======================<br>Switched version file hosting to Bitbucket<br><br> 1.0d (November 19, 2015)<br>==========================<br>Fixed issue where simulated quicksave key presses weren't always registering<br><br> 1.0c (November 19, 2015)<br>==========================<br>Updated to be compatible with Starsector 0.7a<br><br> 1.0b (December 08, 2014)<br>==========================<br>Added \"minutesBetweenSubsequentWarnings\" setting to autosave_settings.json<br>Fixed bug where the mod started spamming sector messages after a failed autosave<br><br> 1.0 (December 08, 2014)<br>=========================<br>Initial release:<br> - By default, warns when you haven't saved in a while, and tells you how many<br>   battles and market transactions have occurred since the last save<br> - Player can enable autosaves in autosave_settings.json, can autosave if enough<br>   time has passed since the last save, or set it to force a save after every<br>   battle or market transaction<br></blockquote>[close]",
   "descriptionIsGenerated": false,
-  "aiDescription": "Adds a warning system that alerts you when you haven't saved in a while. Lets you configure automatic saves based on time elapsed, market transactions, hyperspace jumps, or battles. Can be set to create a new save file for each autosave. Uses the game's built-in save API instead of simulating keypresses.",
+  "aiDescription": "Allows players to enable autosaves that trigger after specific events like battles, market transactions, or hyperspace jumps, or after a set time. By default, it only warns the player if they haven't saved in a while to avoid long save times. Settings can be configured via a JSON file.",
   "rawCategories": [
     "Utility mods"
   ],
   "gallery": [],
   "downloads": [
-    {
-      "url": "https://www.mediafire.com/folder/o198g5zx795g7/Autosave",
-      "directUrl": "https://www.mediafire.com/folder/o198g5zx795g7/Autosave",
-      "kind": "trios",
-      "label": "Archive of old versions",
-      "host": "MediaFire",
-      "needsAnotherStep": true
-    },
     {
       "url": "https://github.com/LazyWizard/autosave/releases/download/1.2b/Autosave.1.2b.zip",
       "directUrl": "https://github.com/LazyWizard/autosave/releases/download/1.2b/Autosave.1.2b.zip",
@@ -71,7 +63,7 @@
     },
     {
       "url": "https://www.mediafire.com/file/338sdgn2xpikyug/Autosave_1.2b.zip/file",
-      "directUrl": "https://download1326.mediafire.com/33qkr1jyi1lgdHzFo5FLfO-b-xvk1riv_Kd10B0RjO9Gg4QNJ1moZxoNykzGQDbOaCXQ2ov4St2uuCyahq796MoqeJWfcW9EKHzzcpacZJRJT9CWBhtMV42j7ZrqS_zKK7EKPc-Mp0cNqb5BGjsvUbIK_E7T-CaXW2KNd6ESCtBv/338sdgn2xpikyug/Autosave+1.2b.zip",
+      "directUrl": "https://download1326.mediafire.com/uyi3e5dlptfg_rRclp-BEWiBdzIIl7Nc7JEVxW4kl-S-K2kXlcVsYeVyYGCSqoRns5DYMeTt3KdCRLsXnnZE3hIR1wSgldRTlmGuwLecKmO-WPny2mrGXckGBSXXwudZVFlQ2WR8hSweRfyXi1UoKXZx1EUtT0EJsOiWu5dcmI4/338sdgn2xpikyug/Autosave+1.2b.zip",
       "fileName": "Autosave+1.2b.zip",
       "kind": "mirror",
       "label": "mirror",
@@ -81,10 +73,9 @@
   ],
   "changelog": {
     "1.2b": "Updated to be compatible with Starsector 0.96a",
-    "1.2": "Updated to be compatible with Starseector 0.95.1a\nAdded the following to saves/common/config/lw_autosave_settings.json.data:\n&nbsp;- \"forceSaveAfterMapChange\", forces a save after every hyperspace jump\n&nbsp;- \"saveAsCopy\", if enabled, every autosave creates a new save\nRemoved autosave_settings.json.default as it was confusing new players\nUpdated config loading logic to autopopulate any missing entries\nUpdated autosave to use API's cmdSave() instead of simulating keypresses",
+    "1.2": "Updated to be compatible with Starsector 0.95.1a\nAdded the following to saves/common/config/lw_autosave_settings.json.data:\n&nbsp;- \"forceSaveAfterMapChange\", forces a save after every hyperspace jump\n&nbsp;- \"saveAsCopy\", if enabled, every autosave creates a new save\nRemoved autosave_settings.json.default as it was confusing new players\nUpdated config loading logic to autopopulate any missing entries\nUpdated autosave to use API's cmdSave() instead of simulating keypresses",
     "1.1c": "Updated to be compatible with Starsector 0.95a\nRenamed generated settings file to saves/common/lw_autosave_settings.json.data\n(Old settings file will be removed if present)"
   },
-  "changelogUrl": "https://github.com/LazyWizard/autosave/releases/download/1.2b/Autosave.1.2b.zip",
   "sourceCodeUrl": "https://github.com/LazyWizard/autosave",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=9748.0",

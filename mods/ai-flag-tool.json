@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T04:25:18.204738Z",
+  "generatedAt": "2026-08-28T18:00:02.421156Z",
   "listing": {
     "id": "ai-flag-tool",
     "name": "AI Flag Tool",
@@ -15,9 +15,9 @@
     ],
     "gameVersion": "0.9.1a",
     "modVersion": "0.3.2",
-    "summary": "Displays AI flag data, target positions, and flag changes with floating text, and allows overriding flags via a console command.",
+    "summary": "Provides a utility for modders to visualize AI flags and ship targeting data for debugging ship system AIs.",
     "summaryIsGenerated": true,
-    "aiSummary": "Displays AI flag data, target positions, and flag changes with floating text, and allows overriding flags via a console command.",
+    "aiSummary": "Provides a utility for modders to visualize AI flags and ship targeting data for debugging ship system AIs.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/isturdy/ai-flag-tool/releases/download/0.3.2/ai-flag-tool-0.3.2.zip",
@@ -44,7 +44,7 @@
   "description": "AI Flag Tool 0.3.2\n\nDownload\n\nRequired mods:\n\nLazyLib\n\nMagicLib\n\nThis is a utility directed at modders who want visibility into AI flags, primarily for writing ship system AIs. It shows the following information for a focused ship (defaults to the player ship, only useful when it is on autopilot):\n\nDisplays a red diamond on the maneuver target.Displays a blue diamond on the ship target.Displays a green diamond on the mouse position.Displays all active AI flags and their custom data (if any) on the right side of the screen.When flags are set/unset, displays them as floating text above the ship (in green/red text, respectively).\n\nThe display can be toggled with alt-f; ctrl-f shifts focus to the player ship's current target, and displays its last 8 target/flag changes. These shortcuts are customizable in ai_flag_tool_settings.json (which is mergable; you can put a copy in a personal mod to protect it from updates).\n\nThis also includes a console command OverrideFlag, which allows forcing an AI flag to see how it affects ship behavior--see the help in console for details. (I will caution not to count on this behavior being the same as when the AI turns on the flag itself, since many flags seem to be partly or entirely descriptive.)",
   "descriptionHtml": "<strong>AI Flag Tool 0.3.2</strong><br><br><strong><a href=\"https://github.com/isturdy/ai-flag-tool/releases/download/0.3.2/ai-flag-tool-0.3.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download</a></strong><br><strong>Required mods:</strong><br><a href=\"http://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a><br><a href=\"http://fractalsoftworks.com/forum/index.php?topic=13718.0\" rel=\"nofollow noopener\" target=\"_blank\">MagicLib</a><br><br>This is a utility directed at modders who want visibility into AI flags, primarily for writing ship system AIs. It shows the following information for a focused ship (defaults to the player ship, only useful when it is on autopilot):<br><ul><li>Displays a red diamond on the maneuver target.</li><li>Displays a blue diamond on the ship target.</li><li>Displays a green diamond on the mouse position.</li><li>Displays all active AI flags and their custom data (if any) on the right side of the screen.</li><li>When flags are set/unset, displays them as floating text above the ship (in green/red text, respectively).</li></ul>The display can be toggled with alt-f; ctrl-f shifts focus to the player ship's current target, and displays its last 8 target/flag changes. These shortcuts are customizable in ai_flag_tool_settings.json (which is mergable; you can put a copy in a personal mod to protect it from updates).<br><br>This also includes a console command OverrideFlag, which allows forcing an AI flag to see how it affects ship behavior--see the help in console for details. (I will caution not to count on this behavior being the same as when the AI turns on the flag itself, since many flags seem to be partly or entirely descriptive.)",
   "descriptionIsGenerated": false,
-  "aiDescription": "Displays AI flag information for a focused ship, including target positions and active flags with custom data. Shows flag changes as floating text and allows overriding flags via a console command for testing behavior.",
+  "aiDescription": "Displays visual indicators for maneuver targets, ship targets, and mouse position, along with a list of active AI flags and their custom data. It also includes a console command to force AI flags and customizable keyboard shortcuts to toggle the display and shift focus.",
   "rawCategories": [
     "Utility mods"
   ],
