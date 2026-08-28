@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-08-28T15:01:03.386510Z",
   "meta": {
-    "generatedAt": "2026-08-28T18:00:01.603823Z",
+    "generatedAt": "2026-08-28T18:07:07.877867Z",
     "totalMods": 1030,
     "totalDetails": 940,
     "totalAssumedDownloadEntries": 818,
@@ -57976,13 +57976,16 @@
               "version": "0.1.2",
               "changelog": {
                 "entries": {
-                  "}": "}"
+                  "v0.1.2": "Absorbing a tactical bombardment now also knocks the shield offline (min 60 days, configurable, 0 = old behavior). Vanilla tac strikes only disrupt military-tagged industries and never touch the shield, so tac bombs were being absorbed for free, forever. Saturation strikes already disrupted the shield; the new value acts as a floor there.",
+                  "v0.1.1": "Shields already built before installing the mod are now migrated on game load (they kept the vanilla plugin class, so their tooltip and ground-defense removal didn't apply). AI cores, improvements, and disruption state carry over.",
+                  "v0.1.0": "Initial release."
                 }
               },
+              "sourceCode": "https://github.com/pogoman/UsefulPlanetaryShield",
               "saveCompatibility": "Safe to add to an existing save",
               "summary": {
-                "sentence": "Adds a tradeoff to the Planetary Shield so it absorbs orbital bombardment at the cost of its ground-defense bonus.",
-                "paragraph": "Allows the Planetary Shield to mitigate the effects of orbital bombardment, reducing industry disruption and stability loss while preventing pollution, size reduction, and decivilization. In exchange for this protection, the shield loses its vanilla ground-defense bonus. A bombardment that the shield absorbs also knocks the shield generator offline for a configurable duration, leaving the colony exposed until it repairs."
+                "sentence": "Makes planetary shields absorb orbital bombardments by reducing industry disruption and stability loss, at the cost of removing the ground defense bonus.",
+                "paragraph": "Allows planetary shields to mitigate damage from tactical and saturation bombardments, including preventing pollution, size reduction, and decivilization. In exchange, the vanilla ground defense multiplier is removed. Absorbed attacks knock the shield generator offline for a configurable duration, leaving the colony exposed until repairs are complete. Includes optional LunaLib integration for in-game configuration."
               }
             }
           }
