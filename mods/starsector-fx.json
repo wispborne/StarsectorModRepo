@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T15:14:22.178670Z",
+  "generatedAt": "2026-08-28T04:25:18.204738Z",
   "listing": {
     "id": "starsector-fx",
     "name": "Starsector FX",
@@ -15,9 +15,9 @@
     ],
     "gameVersion": "0.8.1a",
     "imageUrl": "http://www.wolfegames.com/TA_Section/SS_FX_Screen001.jpg",
-    "summary": "Adds a faster, more advanced weapon effects system with support for dynamic particle behaviors and modder extensibility.",
+    "summary": "Replaces default weapon effects with faster, more visually appealing effects that use fewer particles and leverage multiple CPU cores.",
     "summaryIsGenerated": true,
-    "aiSummary": "Adds a faster, more advanced weapon effects system with support for dynamic particle behaviors and modder extensibility.",
+    "aiSummary": "Replaces default weapon effects with faster, more visually appealing effects that use fewer particles and leverage multiple CPU cores.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://www.nexusmods.com/starsector/mods/33?tab=description",
@@ -29,6 +29,7 @@
     "sourceIsPublic": false,
     "isWorkInProgress": false,
     "addedOn": "2017-05-27",
+    "threadLastPostOn": "2020-05-06",
     "needs": [
       {
         "name": "LazyLib",
@@ -39,7 +40,7 @@
   "description": "Download Linky\n\nOne of this mod's components requires\n\nLazyLib\n\nto operate.  If you don't have LazyLib installed, do so before running this mod.\n\nInstallation\n\nThis mod comes as part of my Mod Pack.  Unzip the Mod Pack and install the mods you'd like to try out.  Currently, the Example is designed to operate with Rebal; it won't work with Vanilla.\n\nWhat This Does, In a Nutshell\n\nThis is a \"utility\" mod.  It does not interfere with the base game in any significant way, but, because of the nature of Starsector's weapon JSON support, it won't get along with mods that change core properties of Vanilla weapons (i.e., modifications of the WPN or PROJ files).\n\nWhat this does:\n\n1.  The FX system replaces the default Starsector weapons effects with cheaper, faster-rendering special effects that look better than Vanilla's somewhat-boring little glows and smoke.\n\n2.  The FX system is considerably faster than Vanilla's current effects system, because it uses few particles to get the job done and uses multiple cores to handle the math.\n\n3.  The FX system has extensive support for modders to make use of it, and the code is well-documented; adding new effects using this to your mod is pretty trivial.\n\n4.  FX system particles can have a bunch of cool properties, like color shifts, directional motion, velocity that can change over time, rotational effects, etc., etc.\n\n5.  In Alpha 3, the FX system is\n\nvery easily extensible\n\nand clearly documented; essentially, modders just need to call\n\nnewParticle()\n\nin their code to add new particles to the system.  Modders, please read through the code in the example project Plugins.\n\n6.  The FX system comes as part of the Mod Pack.  The example project requires Rebal to operate, and demonstrates a few of the capabilities of the system.\n\nScreenshots:",
   "descriptionHtml": "<a href=\"https://www.nexusmods.com/starsector/mods/33?tab=description\" rel=\"nofollow noopener\" target=\"_blank\">Download Linky</a><br>One of this mod's components requires <a href=\"http://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a> to operate.  If you don't have LazyLib installed, do so before running this mod.<br><br>Installation<br>This mod comes as part of my Mod Pack.  Unzip the Mod Pack and install the mods you'd like to try out.  Currently, the Example is designed to operate with Rebal; it won't work with Vanilla.<br><br>What This Does, In a Nutshell<br>This is a \"utility\" mod.  It does not interfere with the base game in any significant way, but, because of the nature of Starsector's weapon JSON support, it won't get along with mods that change core properties of Vanilla weapons (i.e., modifications of the WPN or PROJ files).<br><br>What this does:  <br><br>1.  The FX system replaces the default Starsector weapons effects with cheaper, faster-rendering special effects that look better than Vanilla's somewhat-boring little glows and smoke.<br>2.  The FX system is considerably faster than Vanilla's current effects system, because it uses few particles to get the job done and uses multiple cores to handle the math.<br>3.  The FX system has extensive support for modders to make use of it, and the code is well-documented; adding new effects using this to your mod is pretty trivial.<br>4.  FX system particles can have a bunch of cool properties, like color shifts, directional motion, velocity that can change over time, rotational effects, etc., etc.<br>5.  In Alpha 3, the FX system is <em>very easily extensible</em> and clearly documented; essentially, modders just need to call <strong>newParticle()</strong> in their code to add new particles to the system.  Modders, please read through the code in the example project Plugins.<br>6.  The FX system comes as part of the Mod Pack.  The example project requires Rebal to operate, and demonstrates a few of the capabilities of the system.<br><br>Screenshots:",
   "descriptionIsGenerated": false,
-  "aiDescription": "Adds a new, faster, and more visually advanced effects system for weapons in battle. Uses fewer particles and multi-core processing to improve performance while enabling advanced visual effects like color shifts, directional motion, and rotational effects. Designed to be easily extendable by modders through a well-documented API.",
+  "aiDescription": "Replaces the default weapon effects with faster, more visually appealing effects that use fewer particles and leverage multiple CPU cores. Offers extensive support for modders to add new effects through a well-documented API, with features like color shifts, directional motion, and dynamic velocity. The system is designed to be easily extensible and integrates with mod projects that use Rebal.",
   "rawCategories": [
     "Miscellaneous Mods"
   ],
@@ -64,6 +65,7 @@
   "supportLinks": [],
   "forumUrl": "http://fractalsoftworks.com/forum/index.php?topic=12503.0",
   "releases": [],
-  "olderVersions": [],
+  "threadLastPostOn": "2020-05-06",
+  "sameNameMods": [],
   "addons": []
 }

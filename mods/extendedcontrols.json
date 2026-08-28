@@ -1,0 +1,84 @@
+{
+  "generatedAt": "2026-08-28T04:25:18.204738Z",
+  "listing": {
+    "id": "extendedcontrols",
+    "name": "ExtendedControls",
+    "authors": [
+      "Shoey"
+    ],
+    "otherAuthorNames": {},
+    "categories": [],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "0.4.0",
+    "imageUrl": "https://i.imgur.com/FUgSZwT.gif",
+    "summary": "Adds keyboard navigation to campaign menus, dialog interactions, and combat weapon groups using arrow keys and enter.",
+    "summaryIsGenerated": true,
+    "aiSummary": "Adds keyboard navigation to campaign menus, dialog interactions, and combat weapon groups using arrow keys and enter.",
+    "hasDirectDownload": false,
+    "bestDownload": {
+      "url": "https://github.com/MildlyFootwear/starsector-ExtendedControls/releases/",
+      "kind": "direct",
+      "needsAnotherStep": true
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30618.0",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2024-09-07",
+    "threadLastPostOn": "2025-12-05",
+    "needs": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ],
+    "partOfThreadTitle": "[0.98a] ExtendedControls [0.4.0]"
+  },
+  "description": "Features\n\nQuickly cycle through campaign menu tabs (intel, map, etc) with left/right arrow keys.Interact dialogs can now be navigated with the up/down arrow keys and enter.Hotbar can be navigated and used with the left/right arrow keys and enter.In combat, weapon groups can be cycled through with up/down arrow keys and autofire toggled for the selected group with the right arrow key.Above keys can be customized.At the moment, default key binds for Starsector are needed for hotbar and combat interactions; weapon group 2 set to key 2, hotbar slot 5 set to key 5, etc.\n\nRequirements\n\nLunaLibSee above about default key binds.\n\nShowcase\n\nSpoiler\n\n[close]\n\nDownload\n\nhttps://github.com/MildlyFootwear/starsector-ExtendedControls/releases/\n\nChangelog\n\nSpoiler0.4.0\n\nUpdated for v0.98a.Fixed crash on startup that would occur if old versions of mod hadn't been installed.Fixed certain navigation keys not updating.Fixed issue where indicator colors may not update without saving and reloading.\n\n0.3.5\n\nMild update to handling of dialogs with more than 9 interactions, mostly to not spam log.\n\n0.3.4\n\nRemoved \"not in hyperspace\" requirement for swapping tabs in the map.Updated skip empty option to not skip weapons with regenerating ammo.Updated core UI navigation to have an indicator and a confirmation button.\n\n0.3.3\n\nAdded rudimentary navigation for core UI fleet sub tabs.Changed core UI navigation back to using key binds instead of direct commands to improve compatibility with certain other mods.\n\n0.3.2\n\nHotbar selection scrolls when held.Added check for when the interaction option panel has more than 9 options.Added options to adjust the panel scrolling through the Campaign UI tabs under the Debug tab of Luna Mod Settings; you can set the cap in Command to 6 so you can scroll to the newly added Research tab for AotD, for example.\n\n0.3.1\n\nPatched scrolling down weapon group list to not skip all the way to the end when skipping empty groups is enabled.\n\n0.3.0\n\nAdded controls to scroll through the \"sub tabs\" of Cargo, Intel, Map, and Command.Added option for combat weapon group scrolling to skip groups that have no ammo.\n\n0.2.1\n\nInteraction controls will now reset if combat is initiated, notably going back to selecting 1.Controls will now be disabled if UI is hidden.Added option to make interaction and hotbar selections wrap around when reaching either end.\n\n0.2.0\n\nCombat controls will no longer send a command to swap to weapon group 1 when combat starts.Hotbar indicators have been shrunk by 1/3rd in both dimensions.Interaction indicator will now be hidden when the mouse is moved over 20 pixels.Added pause/unpause on hotbar controls and related settings to configuration menu.Various debug printout updates and source code updates.\n\n0.1.1\n\nUpdated Hotbar indicator rendering to be sure it renders above the hotbar after a menu is opened (seemingly vanilla UI bug).Updated combat controls to not cancel when shift is being held down.\n\n0.1.0\n\nRelease\n\n[close]\n\nTo-do\n\nFeatures I'll maybe, hopefully, get to at some point in the vague future.\n\nFurther usage schemes for cargo, refit, intel, map, etc menus.Support for custom weapon group/hotbar keybinds.\n\nCredits\n\nLukas04, AtlanticAccent, and Kaysaar have all been very helpful as I'm (re)learning Java and Kotlin. Kudos to them.",
+  "descriptionHtml": "<strong>Features</strong><br><ul><li>Quickly cycle through campaign menu tabs (intel, map, etc) with left/right arrow keys.</li><li>Interact dialogs can now be navigated with the up/down arrow keys and enter.</li><li>Hotbar can be navigated and used with the left/right arrow keys and enter.</li><li>In combat, weapon groups can be cycled through with up/down arrow keys and autofire toggled for the selected group with the right arrow key.</li><li>Above keys can be customized.</li><li>At the moment, default key binds for Starsector are needed for hotbar and combat interactions; weapon group 2 set to key 2, hotbar slot 5 set to key 5, etc.</li></ul><strong>Requirements</strong><br><ul><li><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a></li><li>See above about default key binds.</li></ul><strong>Showcase</strong><br><br>Spoiler<br><br>[close]<strong>Download</strong><br><br><a href=\"https://github.com/MildlyFootwear/starsector-ExtendedControls/releases/\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/MildlyFootwear/starsector-ExtendedControls/releases/</a><br><br><strong>Changelog</strong><br><br>Spoiler0.4.0<br><ul><li>Updated for v0.98a.</li><li>Fixed crash on startup that would occur if old versions of mod hadn't been installed.</li><li>Fixed certain navigation keys not updating.</li><li>Fixed issue where indicator colors may not update without saving and reloading.</li></ul>0.3.5<br><ul><li>Mild update to handling of dialogs with more than 9 interactions, mostly to not spam log.</li></ul>0.3.4<br><ul><li>Removed \"not in hyperspace\" requirement for swapping tabs in the map.</li><li>Updated skip empty option to not skip weapons with regenerating ammo.</li><li>Updated core UI navigation to have an indicator and a confirmation button.</li></ul>0.3.3<br><ul><li>Added rudimentary navigation for core UI fleet sub tabs.</li><li>Changed core UI navigation back to using key binds instead of direct commands to improve compatibility with certain other mods.</li></ul>0.3.2<br><ul><li>Hotbar selection scrolls when held.</li><li>Added check for when the interaction option panel has more than 9 options.</li><li>Added options to adjust the panel scrolling through the Campaign UI tabs under the Debug tab of Luna Mod Settings; you can set the cap in Command to 6 so you can scroll to the newly added Research tab for AotD, for example.</li></ul>0.3.1<br><ul><li>Patched scrolling down weapon group list to not skip all the way to the end when skipping empty groups is enabled.</li></ul>0.3.0<br><ul><li>Added controls to scroll through the \"sub tabs\" of Cargo, Intel, Map, and Command.</li><li>Added option for combat weapon group scrolling to skip groups that have no ammo.</li></ul>0.2.1<br><ul><li>Interaction controls will now reset if combat is initiated, notably going back to selecting 1.</li><li>Controls will now be disabled if UI is hidden.</li><li>Added option to make interaction and hotbar selections wrap around when reaching either end.</li></ul>0.2.0<br><ul><li>Combat controls will no longer send a command to swap to weapon group 1 when combat starts.</li><li>Hotbar indicators have been shrunk by 1/3rd in both dimensions.</li><li>Interaction indicator will now be hidden when the mouse is moved over 20 pixels.</li><li>Added pause/unpause on hotbar controls and related settings to configuration menu.</li><li>Various debug printout updates and source code updates.</li></ul>0.1.1<br><ul><li>Updated Hotbar indicator rendering to be sure it renders above the hotbar after a menu is opened (seemingly vanilla UI bug).</li><li>Updated combat controls to not cancel when shift is being held down.</li></ul>0.1.0<br><ul><li>Release</li></ul>[close]<br><strong>To-do</strong><br><br>Features I'll maybe, hopefully, get to at some point in the vague future.<br><ul><li>Further usage schemes for cargo, refit, intel, map, etc menus.</li><li>Support for custom weapon group/hotbar keybinds.</li></ul><br><strong>Credits</strong><br><br>Lukas04, AtlanticAccent, and Kaysaar have all been very helpful as I'm (re)learning Java and Kotlin. Kudos to them.",
+  "descriptionIsGenerated": false,
+  "aiDescription": "Adds keyboard navigation to campaign menu tabs, dialog interactions, and the hotbar using arrow keys and enter. Enables cycling through weapon groups in combat with up/down keys and toggling autofire with the right arrow key. Allows customization of key bindings and includes options to skip empty weapon groups or wrap around when reaching the end of a list.",
+  "rawCategories": [],
+  "gallery": [
+    {
+      "url": "https://i.imgur.com/FUgSZwT.gif"
+    },
+    {
+      "url": "https://i.imgur.com/aqqUMZE.gif"
+    },
+    {
+      "url": "https://i.imgur.com/XEzook2.jpeg"
+    },
+    {
+      "url": "https://i.imgur.com/uIxW5k7.jpeg"
+    },
+    {
+      "url": "https://i.imgur.com/y5TfZUx.jpeg"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/MildlyFootwear/starsector-ExtendedControls/releases/",
+      "kind": "direct",
+      "label": "https://github.com/MildlyFootwear/starsector-ExtendedControls/releases/",
+      "host": "github.com",
+      "needsAnotherStep": true
+    }
+  ],
+  "changelog": {
+    "0.4.0": "Updated for v0.98a.\nFixed crash on startup that would occur if old versions of mod hadn't been installed.\nFixed certain navigation keys not updating.\nFixed issue where indicator colors may not update without saving and reloading.",
+    "0.3.5": "Mild update to handling of dialogs with more than 9 interactions, mostly to not spam log.",
+    "0.3.4": "Removed \"not in hyperspace\" requirement for swapping tabs in the map.\nUpdated skip empty option to not skip weapons with regenerating ammo.\nUpdated core UI navigation to have an indicator and a confirmation button."
+  },
+  "sourceCodeUrl": "https://github.com/MildlyFootwear/starsector-ExtendedControls",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30618.0",
+  "releases": [],
+  "threadLastPostOn": "2025-12-05",
+  "sameNameMods": [],
+  "addons": [],
+  "partOfThreadTitle": "[0.98a] ExtendedControls [0.4.0]"
+}

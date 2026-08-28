@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T15:14:22.178670Z",
+  "generatedAt": "2026-08-28T04:25:18.204738Z",
   "listing": {
     "id": "combat-chatter",
     "name": "Combat Chatter",
@@ -23,10 +23,11 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "1.15.2",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1208662889284509726/1208662889427378186/icon_chatter.png?ex=6a912c08&is=6a8fda88&hm=46b2c88547b2ff15cf21a866a1fa976772b55214a29236ba4f26f4735bc4ff11&",
+    "imageUrl": "http://i.imgur.com/r9nJR1S.png",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1208662889284509726/1208662889427378186/icon_chatter.png?ex=6a91d4c8&is=6a908348&hm=f77f8a0ca4f31cd86b880e6a37369094394868e325f2f105a2868813fa97212a&",
     "summary": "The talking ships mod.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds dynamic in-battle dialogue from ships with customizable characters, settings, and faction-specific lines.",
+    "aiSummary": "Adds dynamic in-battle chatter from ships with customizable characters and settings.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Histidine91/SS-CombatChatter/releases/download/v1.15.2/CombatChatter_1.15.2.zip",
@@ -39,6 +40,7 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2015-12-18",
+    "threadLastPostOn": "2026-04-24",
     "needs": [
       {
         "name": "LazyLib",
@@ -53,7 +55,7 @@
   "description": "Combat Chatter v1.15.2\n\nDownload\n\nOn Nexus\n\nGit repository\n\nRequires\n\nLazyLib, MagicLib\n\nThis simple mod lets ships in battle say some useful (and not-so-useful) things. Like so:\n\nChangelog\n\nSpoiler\n\n## v1.15.2 (2026-04-25) ##\n* Character picker in refit additional options has some sorting; shows character IDs; can be used on non-officered ships\n    * The generic officers are replaced when ship is stored or a 'real' officer is assigned and unassigned, so chatter character will also need to be repicked in that case\n* Add characters: menace_pirate, menace_rewa, menace_exconde\n* Add settings.json toggle for floating text\n* Threat and Dweller marked as no-chatter factions\n* Other scripts/mods can access the ignored ships map in combat plugin\n\n## v1.15.1 (2025-11-22) ##\n* Chatter characters can be assigned from LunaLib's refit additional options\n* Add enemy-related line substitutions (commander, flagship and faction)\n* Refactor ignored ship handling; allow ignoring by variant tag\n* Floating text lifetime based on text length; font size configurable in LunaLib mod settings\n* Disable enemy chatter for Threat and Dweller (for now?)\n* Fix a few typos\n* Clean up some error logging\n\n## v1.15.0 (2025-04-05) ##\n* Update for Starsector 0.98\n* Add a system for intro splashes when fighting a faction for the first time\n* Fix overload and out-of-missile messages being filtered out\n\n[close]\n\nConsole commands\n\nPrintChatterChars: List all remembered officers and their current chatter character. Optional all arg: instead lists all characters that exist in the game.\n\nSetChatterChar [officer name] [character ID]: Assigns the specified chatter character to the officer in the player fleet with the best match for the provided name. Note: Full name is searched first, then surname, then given name.\n\nConfiguration\n\nchatterConfig.json lets you turn off low-value and/or ally chatter.\n\nTo add/modify lines and personalities, look in data/config/chatter. (\n\nHelp with faction-specific chatter\n\n)\n\nFor configuring fleet intros for your mod, see\n\nFleet intros\n\nKo-fi",
   "descriptionHtml": "Combat Chatter v1.15.2<br><a href=\"https://github.com/Histidine91/SS-CombatChatter/releases/download/v1.15.2/CombatChatter_1.15.2.zip\" rel=\"nofollow noopener\" target=\"_blank\"><strong>Download</strong></a><br><strong><a href=\"https://www.nexusmods.com/starsector/mods/29\" rel=\"nofollow noopener\" target=\"_blank\">On Nexus</a></strong><br><strong><a href=\"https://github.com/Histidine91/SS-CombatChatter\" rel=\"nofollow noopener\" target=\"_blank\">Git repository</a></strong><br><br>Requires <strong><a href=\"http://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25868.0\" rel=\"nofollow noopener\" target=\"_blank\">MagicLib</a></strong><br><br>This simple mod lets ships in battle say some useful (and not-so-useful) things. Like so:<br><br><strong><a href=\"https://github.com/Histidine91/SS-CombatChatter/wiki/Changelog\" rel=\"nofollow noopener\" target=\"_blank\">Changelog</a></strong><br>Spoiler<pre>## v1.15.2 (2026-04-25) ##<br>* Character picker in refit additional options has some sorting; shows character IDs; can be used on non-officered ships<br>    * The generic officers are replaced when ship is stored or a 'real' officer is assigned and unassigned, so chatter character will also need to be repicked in that case<br>* Add characters: menace_pirate, menace_rewa, menace_exconde<br>* Add settings.json toggle for floating text<br>* Threat and Dweller marked as no-chatter factions<br>* Other scripts/mods can access the ignored ships map in combat plugin<br><br>## v1.15.1 (2025-11-22) ##<br>* Chatter characters can be assigned from LunaLib's refit additional options<br>* Add enemy-related line substitutions (commander, flagship and faction)<br>* Refactor ignored ship handling; allow ignoring by variant tag<br>* Floating text lifetime based on text length; font size configurable in LunaLib mod settings<br>* Disable enemy chatter for Threat and Dweller (for now?)<br>* Fix a few typos<br>* Clean up some error logging<br><br>## v1.15.0 (2025-04-05) ##<br>* Update for Starsector 0.98<br>* Add a system for intro splashes when fighting a faction for the first time<br>* Fix overload and out-of-missile messages being filtered out<br></pre>[close]<br><strong><a href=\"http://fractalsoftworks.com/forum/index.php?topic=4106.0\" rel=\"nofollow noopener\" target=\"_blank\">Console commands</a></strong><br>PrintChatterChars: List all remembered officers and their current chatter character. Optional all arg: instead lists all characters that exist in the game.<br>SetChatterChar [officer name] [character ID]: Assigns the specified chatter character to the officer in the player fleet with the best match for the provided name. Note: Full name is searched first, then surname, then given name.<br><br><strong>Configuration</strong><br>chatterConfig.json lets you turn off low-value and/or ally chatter.<br>To add/modify lines and personalities, look in data/config/chatter. (<a href=\"https://github.com/Histidine91/SS-CombatChatter/wiki/Faction%20specific%20chatter\" rel=\"nofollow noopener\" target=\"_blank\">Help with faction-specific chatter</a>)<br>For configuring fleet intros for your mod, see <a href=\"https://github.com/Histidine91/SS-CombatChatter/wiki/Fleet-intros\" rel=\"nofollow noopener\" target=\"_blank\">Fleet intros</a><br><br><strong><a href=\"https://ko-fi.com/R6R5Q52DU\" rel=\"nofollow noopener\" target=\"_blank\">Ko-fi<br></a></strong>",
   "descriptionIsGenerated": false,
-  "aiDescription": "Adds dynamic in-battle dialogue from ships, with customizable characters and settings. Supports faction-specific lines, floating text, and integration with refit options. Allows modders to access and extend chatter behavior through APIs.",
+  "aiDescription": "Adds dynamic in-battle chatter from ships, including faction-specific lines and character-specific dialogue. Lets players assign custom chatter characters to officers and includes options for floating text and chatter filtering. Supports integration with other mods through its API.",
   "rawCategories": [
     "Officers",
     "Quality of Life",
@@ -98,6 +100,7 @@
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=10399.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1208662889284509726/1208662889284509726",
   "releases": [],
-  "olderVersions": [],
+  "threadLastPostOn": "2026-04-24",
+  "sameNameMods": [],
   "addons": []
 }

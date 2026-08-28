@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T15:14:22.178670Z",
+  "generatedAt": "2026-08-28T04:25:18.204738Z",
   "listing": {
     "id": "free-orbit",
     "name": "Free Orbit",
@@ -13,9 +13,9 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "1.2",
-    "summary": "Adds passive supply reduction for fleets orbiting planets, stations, or other orbital bodies.",
+    "summary": "Adds zero supply consumption for ships while orbiting any celestial body.",
     "summaryIsGenerated": true,
-    "aiSummary": "Adds passive supply reduction for fleets orbiting planets, stations, or other orbital bodies.",
+    "aiSummary": "Adds zero supply consumption for ships while orbiting any celestial body.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Vladitron96/FreeOrbit/releases/download/v1.2/FreeOrbit_v1.2.zip",
@@ -27,17 +27,17 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2026-03-19",
+    "threadLastPostOn": "2026-05-08",
     "needs": [
       {
-        "name": "LunaLib",
-        "id": "lunalib"
+        "name": "Starsector 0.98a-RC8"
       }
     ]
   },
   "description": "Free Orbit\n\nVersion 1.2 | For Starsector 0.98a-RC8\n\nWhat does this mod do?\n\nWhile your fleet is\n\norbiting\n\na planet, station, or any other body, your ships consume\n\nzero supplies\n\nfor maintenance. The moment you leave orbit, normal supply consumption resumes automatically.\n\nNo buttons to press, no commands to run - it just works passively in the background.\n\nWhy I made this\n\nI found it annoying that supplies kept draining even when I was just sitting in orbit waiting, trading, or managing my fleet. If you are docked at a station you do not pay for upkeep - why should orbiting cost anything? This mod fixes that.\n\nFeatures\n\nAutomatic - activates whenever your fleet status is \"Orbiting\" Works around planets, stations, and any other orbital body Optional LunaLib integration - configure the supply reduction percentage in Mod Settings (0 to 100%, default 100%)\n Version Checker support - get notified when updates are available\n\nRequirements\n\nStarsector 0.98a-RC8 LunaLib (optional, for configurable reduction amount)\n\nInstallation\n\n1. Download the zip below\n\n2. Extract the\n\nFreeOrbit\n\nfolder into your Starsector/mods/ directory\n\n3. Enable the mod in the launcher\n\nDownload\n\nFreeOrbit_v1.2.zip\n\n(GitHub Releases)\n\nSource code on GitHub\n\nChangelog\n\nv1.2\n\n- Fixed LunaLib detection to use isModEnabled() - more reliable than the previous approach (thanks WolframSegler!)\n\n- Added Version Checker support\n\n- Renamed setting to \"Supply Reduction Percent\" for clarity\n\nv1.1\n\n- Added optional LunaLib support for configurable supply reduction percentage\n\nv1.0\n\n- Initial release",
   "descriptionHtml": "<strong>Free Orbit</strong><br><em>Version 1.2 | For Starsector 0.98a-RC8</em><br><br><strong>What does this mod do?</strong><br><br>While your fleet is <strong>orbiting</strong> a planet, station, or any other body, your ships consume <strong>zero supplies</strong> for maintenance. The moment you leave orbit, normal supply consumption resumes automatically.<br><br>No buttons to press, no commands to run - it just works passively in the background.<br><br><strong>Why I made this</strong><br><br>I found it annoying that supplies kept draining even when I was just sitting in orbit waiting, trading, or managing my fleet. If you are docked at a station you do not pay for upkeep - why should orbiting cost anything? This mod fixes that.<br><br><strong>Features</strong><br><br><ul><li> Automatic - activates whenever your fleet status is \"Orbiting\"</li><li> Works around planets, stations, and any other orbital body</li><li> Optional <strong>LunaLib</strong> integration - configure the supply reduction percentage in Mod Settings (0 to 100%, default 100%)<br></li><li> <strong>Version Checker</strong> support - get notified when updates are available<br></li></ul><strong>Requirements</strong><br><br><ul><li> Starsector 0.98a-RC8</li><li> LunaLib (optional, for configurable reduction amount)</li></ul><br><strong>Installation</strong><br><br>1. Download the zip below<br>2. Extract the <strong>FreeOrbit</strong> folder into your Starsector/mods/ directory<br>3. Enable the mod in the launcher<br><br><strong>Download</strong><br><br><a href=\"https://github.com/Vladitron96/FreeOrbit/releases/download/v1.2/FreeOrbit_v1.2.zip\" rel=\"nofollow noopener\" target=\"_blank\"><strong>FreeOrbit_v1.2.zip</strong></a> (GitHub Releases)<br><br><a href=\"https://github.com/Vladitron96/FreeOrbit\" rel=\"nofollow noopener\" target=\"_blank\">Source code on GitHub</a><br><br><strong>Changelog</strong><br><br><strong>v1.2</strong><br>- Fixed LunaLib detection to use isModEnabled() - more reliable than the previous approach (thanks WolframSegler!)<br>- Added Version Checker support<br>- Renamed setting to \"Supply Reduction Percent\" for clarity<br><br><strong>v1.1</strong><br>- Added optional LunaLib support for configurable supply reduction percentage<br><br><strong>v1.0</strong><br>- Initial release",
   "descriptionIsGenerated": false,
-  "aiDescription": "Adds passive supply reduction for fleets orbiting planets, stations, or other orbital bodies. Supplies are not consumed while in orbit, resuming normally when leaving orbit. Includes optional configuration via LunaLib for adjusting the reduction percentage.",
+  "aiDescription": "Adds zero supply consumption for ships while orbiting planets, stations, or other orbital bodies. The effect activates automatically when the fleet is in orbit and resumes normal consumption as soon as the fleet leaves orbit. Includes optional configuration via LunaLib for adjusting the supply reduction percentage.",
   "rawCategories": [],
   "gallery": [],
   "downloads": [
@@ -60,6 +60,7 @@
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35071.0",
   "releases": [],
-  "olderVersions": [],
+  "threadLastPostOn": "2026-05-08",
+  "sameNameMods": [],
   "addons": []
 }

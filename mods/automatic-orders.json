@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T15:14:22.178670Z",
+  "generatedAt": "2026-08-28T04:25:18.204738Z",
   "listing": {
     "id": "automatic-orders",
     "name": "Automatic Orders",
@@ -15,9 +15,9 @@
     ],
     "gameVersion": "0.9a",
     "modVersion": "0.3.2",
-    "summary": "Adds configurable AI behavior for ships, including automatic retreats, escort orders, and search-and-destroy missions based on conditions like hull damage, missile count, and officer personality.",
+    "summary": "Adds configurable AI behavior for ships, including automatic retreats, escort orders, and search-and-destroy missions based on ship conditions and settings.",
     "summaryIsGenerated": true,
-    "aiSummary": "Adds configurable AI behavior for ships, including automatic retreats, escort orders, and search-and-destroy missions based on conditions like hull damage, missile count, and officer personality.",
+    "aiSummary": "Adds configurable AI behavior for ships, including automatic retreats, escort orders, and search-and-destroy missions based on ship conditions and settings.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/isturdy/automatic-orders/releases/download/0.3.2/automatic-orders-0.3.2.zip",
@@ -29,6 +29,7 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2019-02-22",
+    "threadLastPostOn": "2024-05-06",
     "needs": [
       {
         "name": "LazyLib",
@@ -39,7 +40,7 @@
   "description": "Automatic Orders\n\nDownload\n\nGithub repository\n\nRequired mods:\n\nLazyLib\n\nThis is a spiritual successor to the (now outdated) Autonomous Ships mod, providing AI personality overrides and configurable automatic retreats. All settings affect AI-controlled ships (including the player ship, if on autopilot) in the player fleet; ally and enemy ships are unaffected. Each order will only be given once to each ship for each reason: for example, if a ship starts to retreat due to low PPT and you cancel the order AO will respect that, but may still issue a retreat order because of low hull or expended missiles, if those are enabled.\n\nThere are two primary sources of configuration:\n\nautomatic_orders_settings.json (in the mod folder) allows setting default retreat thresholds for CR/PPT and hull damage, and whether personality hullmods override officer personalities.A range of hullmods (all under the \"Automatic Orders\" category, for easy filtering), including:\nPersonality overrides: override faction doctrine, but not officer personality unless the relevant setting is changed in the settings file.\nRetreat threshold overrides: these override the defaults (I advise setting a high default and overriding it to a lower threshold for disposable or SO ships).Retreat when all missiles are expended: compatible with other CR/PPT/damage retreat options.Search and Destroy: gives the ship a S&D order when it enters the battle (or, if the flagship, when first turned over to the autopilot).Escort (small/medium/heavy): give the ship an escort target order on battle start (applies to the flagship even under player control). The AI will automatically fulfill these orders; you can use S&D orders to prevent ships from being assigned to escort.\n\nMod integration\n\nMost mods should work without configuration, Automatic Orders does have two extendible CSVs for additional configuration:\n\ndata/config/automatic_orders/ship_blacklist.csv: Add hull ids for independent ships that should not be given orders. Fighters, ships without AI, and modules are already excluded; this should be used for independent frigate+ sized ships, such as deployable platforms.data/config/automatic_orders/missile_regen_systems.csv: Add systems that regenerate missiles, such as Vanilla's Autoforge. This is used to avoid ordering missile ships to retreat when they are out of ammo but have system charges left.",
   "descriptionHtml": "<strong>Automatic Orders</strong><br><br><strong><a href=\"https://github.com/isturdy/automatic-orders/releases/download/0.3.2/automatic-orders-0.3.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download</a></strong><br><a href=\"https://github.com/isturdy/automatic-orders\" rel=\"nofollow noopener\" target=\"_blank\">Github repository</a><br><strong>Required mods:</strong><br><a href=\"http://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a><br><br>This is a spiritual successor to the (now outdated) Autonomous Ships mod, providing AI personality overrides and configurable automatic retreats. All settings affect AI-controlled ships (including the player ship, if on autopilot) in the player fleet; ally and enemy ships are unaffected. Each order will only be given once to each ship for each reason: for example, if a ship starts to retreat due to low PPT and you cancel the order AO will respect that, but may still issue a retreat order because of low hull or expended missiles, if those are enabled.<br><br>There are two primary sources of configuration:<br><ul><li>automatic_orders_settings.json (in the mod folder) allows setting default retreat thresholds for CR/PPT and hull damage, and whether personality hullmods override officer personalities.</li><li>A range of hullmods (all under the \"Automatic Orders\" category, for easy filtering), including:<br><ul><li>Personality overrides: override faction doctrine, but not officer personality unless the relevant setting is changed in the settings file.<br></li><li>Retreat threshold overrides: these override the defaults (I advise setting a high default and overriding it to a lower threshold for disposable or SO ships).</li><li>Retreat when all missiles are expended: compatible with other CR/PPT/damage retreat options.</li><li>Search and Destroy: gives the ship a S&amp;D order when it enters the battle (or, if the flagship, when first turned over to the autopilot).</li><li>Escort (small/medium/heavy): give the ship an escort target order on battle start (applies to the flagship even under player control). The AI will automatically fulfill these orders; you can use S&amp;D orders to prevent ships from being assigned to escort.</li></ul></li></ul><br><strong>Mod integration</strong><br>Most mods should work without configuration, Automatic Orders does have two extendible CSVs for additional configuration:<br><ul><li>data/config/automatic_orders/ship_blacklist.csv: Add hull ids for independent ships that should not be given orders. Fighters, ships without AI, and modules are already excluded; this should be used for independent frigate+ sized ships, such as deployable platforms.</li><li>data/config/automatic_orders/missile_regen_systems.csv: Add systems that regenerate missiles, such as Vanilla's Autoforge. This is used to avoid ordering missile ships to retreat when they are out of ammo but have system charges left.</li></ul>",
   "descriptionIsGenerated": false,
-  "aiDescription": "Adds AI behavior overrides for player-controlled ships on autopilot, allowing automatic retreats when hull damage, PPT, or missile count falls below thresholds. Ships can be given escort, search-and-destroy, or personality override orders based on hullmods. Configurable settings and CSV files allow customization for specific ships and systems, with support for missile regeneration and independent ship exclusion.",
+  "aiDescription": "Adds configurable AI behavior for ships, including automatic retreats based on hull damage, PPT, or missile depletion, and the ability to assign escort and search-and-destroy orders at battle start. It supports personality overrides and integrates with other mods through extendible configuration files for blacklisting ships and defining missile-recharging systems.",
   "rawCategories": [
     "Miscellaneous Mods"
   ],
@@ -60,6 +61,7 @@
   "supportLinks": [],
   "forumUrl": "http://fractalsoftworks.com/forum/index.php?topic=15128.0",
   "releases": [],
-  "olderVersions": [],
+  "threadLastPostOn": "2024-05-06",
+  "sameNameMods": [],
   "addons": []
 }

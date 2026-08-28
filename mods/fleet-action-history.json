@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T15:14:22.178670Z",
+  "generatedAt": "2026-08-28T04:25:18.204738Z",
   "listing": {
     "id": "fleet-action-history",
     "name": "Fleet Action History",
@@ -16,9 +16,9 @@
     "gameVersion": "0.96a",
     "modVersion": "1.0.10",
     "imageUrl": "https://i.imgur.com/f6UFrio.png",
-    "summary": "Tracks individual ship and officer battle statistics, including kills, level-ups, and detailed battle logs.",
+    "summary": "Tracks individual battle histories, ship kills, officer level ups, and provides detailed logs for every battle fought.",
     "summaryIsGenerated": true,
-    "aiSummary": "Tracks individual ship and officer battle statistics, including kills, level-ups, and detailed battle logs.",
+    "aiSummary": "Tracks individual battle histories, ship kills, officer level ups, and provides detailed logs for every battle fought.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -31,12 +31,13 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2021-06-06",
+    "threadLastPostOn": "2024-05-23",
     "needs": []
   },
   "description": "Do you like statistics?\n\nWould you like to know exactly how many enemy fleets you've personally blown up in your entire playthrough?\n\nOr how many of your ships fell in glorious battle against the accursed <DORITOS>?\n\nIf so, this mod may be for you! Please enjoy it:\n\nDownload\n\nFleet Action History v1.0.10 - 2023-05-10\n\nSafe to add to existing savegames, and easily removable too\n\nIndividual battle histories for each of your ships and officers\n\nOfficer level ups and new skills are tracked too\n\n[close]\n\nDetailed logs for every battle you fight\n\n[close]\n\nTested with unreasonably huge battle sizes and every faction mod I could find - no crashes or slowdownI pray for the souls of all the poor crewmen who were incinerated for my testing\n\n[close]\n\nIn-game configuration, no fiddling with settings.json ever! Also includes built-in \"clear data\" function for safe removal from savefiles\n\n[close]\n\nFor fellow moddersIntegration ideas are welcome. If you'd like to experiment, add fleethistory.jar as a library in your IDE and try out these methods:\n\nCode\n\nU.getOfficerLogFor(PersonAPI.getId())\n\nCode\n\nU.getShipLogFor(FleetMemberAPI.getId())\n\n[close]\n\nKnown issues and limitations- Only battles you fight personally are tracked - autoresolve not handled\n\n- Kills of fighters, dorito crumbs, and any other ships dynamically spawned on the field can't be recorded\n\n- If you transfer command during battle, only the stats of the last ship commanded are credited to you\n\n- Battlestation kills sometimes behave oddly (more than one ship gets the kill; fleet point value assigned is greater than actual value)\n\n[close]\n\nFuture plans- Battle recap / timeline\n\n- Log of post-battle loot?\n\n- Suggestions welcome\n\n[close]\n\nThanks to...- The adepts of #advanced_scripting_sanctum on Discord, every one of you is a gentleman and a scholar\n\n- Nick XR, whose\n\nDetailed Combat Results\n\nwas an inspiration for this mod\n\n- Alex for this beautiful game - playing since 2012\n\n- And you for trying this out! Let me know how it goes\n\n[close]\n\nChange logv1.0.10 (2023-05-10)\n\n- fixed: crash when switching kill count display mode to \"table\"\n\nv1.0.9 (2023-05-06)\n\n- Compatibility update for Starsector 0.96 release\n\nv1.0.8 (2022-04-29)\n\n- Minor fix to prevent a crash of unknown cause (\n\nhttps://fractalsoftworks.com/forum/index.php?topic=5061.msg361695#msg361695\n\n)\n\nv1.0.7 (2021-11-14)\n\n- Minor fix to prevent occasional crash when playing with Vayra's Sector unofficial update (\n\nhttps://fractalsoftworks.com/forum/index.php?topic=5061.8115\n\n)\n\nv1.0.6 (2021-06-29)\n\n- Fixed savefile-corrupting bug (instructions for repairing affected saves can be found here:\n\nhttps://fractalsoftworks.com/forum/index.php?topic=21929.msg334039#msg334039\n\n)\n\nv1.0.5 (2021-06-28)\n\n- Fixed some minor text bugs (thanks to saya39)\n\nv1.0.4 (2021-06-27)\n\n- Will no longer add story points when mousing over lost player ships in battle report. ????\n\n- Added translation support for fossic friends\n\nv1.0.0 - v1.0.3 (2021-06-08)\n\n- Various post-release crash fixes\n\n[close]",
   "descriptionHtml": "Do you like statistics? <br>Would you like to know exactly how many enemy fleets you've personally blown up in your entire playthrough?<br>Or how many of your ships fell in glorious battle against the accursed &lt;DORITOS&gt;? <br>If so, this mod may be for you! Please enjoy it:<br><a href=\"https://github.com/briansd9/starsector-fleethistory/releases/latest/download/fleethistory.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download</a><br>Fleet Action History v1.0.10 - 2023-05-10<br>Safe to add to existing savegames, and easily removable too<br><br><hr><br>Individual battle histories for each of your ships and officers<br><br>Officer level ups and new skills are tracked too<br><br>[close]<br>Detailed logs for every battle you fight<br><br>[close]<br>Tested with unreasonably huge battle sizes and every faction mod I could find - no crashes or slowdownI pray for the souls of all the poor crewmen who were incinerated for my testing<br><br>[close]<br>In-game configuration, no fiddling with settings.json ever! Also includes built-in \"clear data\" function for safe removal from savefiles<br>[close]<br><hr><br>For fellow moddersIntegration ideas are welcome. If you'd like to experiment, add fleethistory.jar as a library in your IDE and try out these methods:<br>Code<pre><code>U.getOfficerLogFor(PersonAPI.getId())</code></pre>Code<pre><code>U.getShipLogFor(FleetMemberAPI.getId())</code></pre>[close]<br>Known issues and limitations- Only battles you fight personally are tracked - autoresolve not handled<br>- Kills of fighters, dorito crumbs, and any other ships dynamically spawned on the field can't be recorded<br>- If you transfer command during battle, only the stats of the last ship commanded are credited to you<br>- Battlestation kills sometimes behave oddly (more than one ship gets the kill; fleet point value assigned is greater than actual value)<br>[close]<br>Future plans- Battle recap / timeline<br>- Log of post-battle loot?<br>- Suggestions welcome<br>[close]<br>Thanks to...- The adepts of #advanced_scripting_sanctum on Discord, every one of you is a gentleman and a scholar <br>- Nick XR, whose <a href=\"https://fractalsoftworks.com/forum/index.php?topic=11551.0\" rel=\"nofollow noopener\" target=\"_blank\">Detailed Combat Results</a> was an inspiration for this mod<br>- Alex for this beautiful game - playing since 2012<br>- And you for trying this out! Let me know how it goes<br>[close]<br><hr><br>Change logv1.0.10 (2023-05-10)<br>- fixed: crash when switching kill count display mode to \"table\"<br><br>v1.0.9 (2023-05-06)<br>- Compatibility update for Starsector 0.96 release<br><br>v1.0.8 (2022-04-29)<br>- Minor fix to prevent a crash of unknown cause (<a href=\"https://fractalsoftworks.com/forum/index.php?topic=5061.msg361695#msg361695\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=5061.msg361695#msg361695</a>)<br><br>v1.0.7 (2021-11-14)<br>- Minor fix to prevent occasional crash when playing with Vayra's Sector unofficial update (<a href=\"https://fractalsoftworks.com/forum/index.php?topic=5061.8115\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=5061.8115</a>)<br><br>v1.0.6 (2021-06-29)<br>- Fixed savefile-corrupting bug (instructions for repairing affected saves can be found here: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=21929.msg334039#msg334039\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=21929.msg334039#msg334039</a> )<br><br>v1.0.5 (2021-06-28)<br>- Fixed some minor text bugs (thanks to saya39)<br><br>v1.0.4 (2021-06-27)<br>- Will no longer add story points when mousing over lost player ships in battle report. ????<br>- Added translation support for fossic friends<br><br>v1.0.0 - v1.0.3 (2021-06-08)<br>- Various post-release crash fixes<br>[close]",
   "descriptionIsGenerated": false,
-  "aiDescription": "Tracks every battle you personally fight, recording kill counts, ship losses, and officer level-ups. Provides in-game configuration and a built-in data-clearing function for safe removal. Includes detailed logs and supports modder integration through public APIs.",
+  "aiDescription": "Tracks individual battle histories for each of your ships and officers, including level ups and new skills. Provides detailed logs for every battle fought and allows in-game configuration without editing settings.json. Includes a built-in function to clear data safely.",
   "saveCompatibilityText": "Safe to add to existing savegames, and easily removable too",
   "rawCategories": [
     "Utility mods"
@@ -90,13 +91,13 @@
   "changelog": {
     "1.0.10": "fixed: crash when switching kill count display mode to \"table\"",
     "1.0.9": "Compatibility update for Starsector 0.96 release",
-    "1.0.8": "Minor fix to prevent a crash of unknown cause ( https://fractalsoftworks.com/forum/index.php?topic=5061.msg361695#msg361695 )"
+    "1.0.8": "Minor fix to prevent a crash of unknown cause (https://fractalsoftworks.com/forum/index.php?topic=5061.msg361695#msg361695 [link: https://fractalsoftworks.com/forum/index.php?topic=5061.msg361695#msg361695])"
   },
-  "changelogUrl": "https://fractalsoftworks.com/forum/index.php?topic=11551.0",
   "sourceCodeUrl": "https://github.com/briansd9/starsector-fleethistory",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=21929.0",
   "releases": [],
-  "olderVersions": [],
+  "threadLastPostOn": "2024-05-23",
+  "sameNameMods": [],
   "addons": []
 }
