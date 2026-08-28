@@ -232,6 +232,37 @@ export function applySpacing() {
   document.documentElement.dataset.spacing = spacingPreference();
 }
 
+// --- Which of a mod's two pictures to show ---
+
+/// "post" (the default) shows the picture from the author's forum post;
+/// "announcement" shows the one from the Discord or Nexus post the mod was
+/// announced in. Most mods only have one picture, and those look the same
+/// either way.
+export const IMAGE_CHOICES = ['post', 'announcement'];
+const IMAGE_KEY = 'starmodderPicture';
+
+export function imageChoice() {
+  const saved = localStorage.getItem(IMAGE_KEY);
+  return IMAGE_CHOICES.includes(saved) ? saved : 'post';
+}
+
+export function setImageChoice(choice) {
+  localStorage.setItem(IMAGE_KEY, choice);
+}
+
+/// The picture to show for a mod, or null when it has none.
+///
+/// `announcementImageUrl` is only published where it differs from `imageUrl`,
+/// so a reader who asked for the announcement picture reads that one first and
+/// falls back to the only picture the mod has.
+export function imageUrlOf(mod) {
+  if (!mod) return null;
+  if (imageChoice() === 'announcement') {
+    return mod.announcementImageUrl || mod.imageUrl || null;
+  }
+  return mod.imageUrl || null;
+}
+
 /// The summary to show for a mod, or null when there is nothing to show.
 ///
 /// Two blocks of words may be on offer: the author's own, and the sentence an
@@ -263,7 +294,11 @@ export function summaryToShow(mod) {
 /// Null when there is nothing worth saying.
 export function summaryTitle(summary) {
   if (!summary) return null;
-  if (summary.generated) return AI_SUMMARY_TITLE;
+  if (summary.generated) {
+    return summary.text
+      ? `${summary.text}\n\n${AI_SUMMARY_TITLE}`
+      : AI_SUMMARY_TITLE;
+  }
   return summary.aiAside ? `AI summary: ${summary.aiAside}` : null;
 }
 
@@ -297,12 +332,13 @@ export const AI_SUMMARY_TITLE = "Written by an AI from the mod's post. "
 /// It takes the colour of those words, says where they came from on hover, and
 /// is hidden from a screen reader — the line under the description says the
 /// same thing in words.
-export function aiSparkle() {
+export function aiSparkle(summary = null) {
   return el('span', {
     class: 'ai-spark',
     html: SPARKLE_SVG,
     'aria-hidden': 'true',
-    title: AI_SUMMARY_TITLE,
+    title: summaryTitle(summary ? { text: summary, generated: true } : null)
+      || AI_SUMMARY_TITLE,
   });
 }
 
@@ -447,6 +483,75 @@ export function showPicture(images, at = 0) {
   draw();
   document.body.classList.add('picture-open');
   document.body.append(box);
+  close.focus();
+}
+
+/// A note above a list, saying in a sentence or two where the list came from,
+/// with a button that opens the long answer in a box over the page.
+///
+/// The short version has to be on the page — a reader who never presses
+/// anything should still know the list can be wrong. The long version is
+/// behind a press because it is five paragraphs, and five paragraphs above
+/// every visit to the front page is somebody else's page.
+export function noteWithMore(shortText, { title, paragraphs, moreLabel }) {
+  const more = el('button', {
+    type: 'button', class: 'note-more', text: moreLabel || 'More about this',
+  });
+  more.addEventListener('click', () => openInfoDialog(title, paragraphs));
+
+  return el('div', { class: 'list-note' }, [
+    el('p', {}, [el('span', { text: `${shortText} ` }), more]),
+  ]);
+}
+
+/// The box that note opens: a heading, some paragraphs, and a way out.
+///
+/// It is a real `<dialog>`, so Escape closes it and the keyboard stays inside
+/// it, and it is thrown away on closing rather than left in the page — nothing
+/// here is worth keeping between presses.
+export function openInfoDialog(title, paragraphs) {
+  // Where the keyboard was before this opened, so closing it puts the reader
+  // back on the button they pressed.
+  const cameFrom = document.activeElement;
+
+  const close = el('button', {
+    type: 'button', class: 'info-close', text: '×', 'aria-label': 'Close',
+  });
+  const dialog = el('dialog', { class: 'info-dialog' }, [
+    el('div', { class: 'info-inner' }, [
+      el('div', { class: 'info-head' }, [el('h2', { text: title }), close]),
+      ...paragraphs.map((text) => el('p', { class: 'about-line', text })),
+    ]),
+  ]);
+
+  // Closing means taking it out of the page, not only shutting it. Every way
+  // out goes through here, and it is safe to call twice.
+  const shut = () => {
+    window.removeEventListener('hashchange', shut);
+    if (dialog.open) dialog.close();
+    dialog.remove();
+    if (cameFrom && cameFrom.focus) cameFrom.focus();
+  };
+
+  close.addEventListener('click', shut);
+  // A click on the dimmed page behind the box closes it, the same way the
+  // settings box works. The box itself is the dialog's one child, so a click
+  // on the dialog element and nowhere inside that child is the backdrop.
+  dialog.addEventListener('click', (e) => {
+    if (e.target === dialog) shut();
+  });
+  // Escape is the browser's own way out. It is caught here rather than through
+  // the dialog's `close` event, which not every browser sends.
+  dialog.addEventListener('cancel', shut);
+  dialog.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') shut();
+  });
+  // The back button is a way out of this too, or the box would sit over
+  // whatever page the reader landed on next.
+  window.addEventListener('hashchange', shut);
+
+  document.body.append(dialog);
+  dialog.showModal();
   close.focus();
 }
 
@@ -709,6 +814,84 @@ export function isDiscordOnly(mod) {
 
 export function sourceName(source) {
   return SOURCE_NAMES[source] || source;
+}
+
+// --- The search box, and the panel saying what it understands ---
+
+/// What the search can do, for the panel that explains it. A name, the thing
+/// to type, and an example.
+///
+/// Only ways the search really has belong here. Offering one it does not — a
+/// way of asking for all of several terms at once, say, or naming a field —
+/// leaves a reader typing something that quietly matches nothing.
+/// Every line is a name, then how it works with something to type. A string is
+/// words; a `code` is the letters themselves.
+const WAYS_TO_SEARCH = [
+  {
+    name: 'OR',
+    says: ['comma-separated: ', { code: 'faction, portrait' }, ' matches either term'],
+  },
+  {
+    name: 'AND',
+    says: ['plus-separated: ', { code: 'hartley + abuse' }, ' must match all terms'],
+  },
+  {
+    name: 'Exclude',
+    says: ['prefix with ', { code: '-' }, ' to hide results, e.g. ',
+      { code: 'faction, -portrait' }],
+  },
+  {
+    name: 'Acronyms',
+    says: ['e.g. ', { code: 'swp' }, ' matches Ship/Weapon Pack'],
+  },
+  {
+    name: 'Versions',
+    says: ['e.g. ', { code: '0.98' }, ' matches mods for that release'],
+  },
+  {
+    name: 'Field search',
+    says: [{ code: 'key:value' }, ' syntax, e.g. ', { code: 'source:forum' },
+      ', ', { code: 'author:Wisp' }, ', ', { code: 'category:weapons' }, ', ',
+      { code: 'version:0.97' }],
+  },
+];
+
+/// A search box with a panel that says what the search understands.
+///
+/// The panel is shown only while the pointer is over the search field. Focusing
+/// the box to type does not open it, so it cannot cover the results just because
+/// somebody is using the search.
+///
+/// `hideWhileTyping` is for the box at the top of every page, where the
+/// suggested mods want the same room. Empty box: the panel. Typing: the
+/// suggestions.
+export function searchHelpField(input, { hideWhileTyping = false } = {}) {
+  const panel = el('div', { class: 'search-help' }, [
+    el('p', {
+      class: 'search-help-lead',
+      text: 'Searches mod names, authors, categories, and descriptions.',
+    }),
+    ...WAYS_TO_SEARCH.map((way) => el('p', {}, [
+      el('strong', { text: way.name }),
+      ' — ',
+      ...way.says.map((bit) => (typeof bit === 'string' ? bit : el('code', { text: bit.code }))),
+    ])),
+  ]);
+
+  const help = el('span', {
+    class: 'search-help-mark',
+    text: '?',
+    'aria-hidden': 'true',
+  });
+
+  const field = el('div', { class: 'search-field' }, [input, help, panel]);
+
+  if (hideWhileTyping) {
+    const sync = () => field.classList.toggle('help-off', input.value.trim() !== '');
+    input.addEventListener('input', sync);
+    sync();
+  }
+  return field;
 }
 
 // --- Names and versions ---

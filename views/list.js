@@ -8,7 +8,8 @@
 // or somebody else's that they followed a link to.
 
 import {
-  breadcrumbs, clear, downloadButton, el, hashQuery, joinNames, listHref,
+  breadcrumbs, clear, downloadButton, el, hashQuery, imageUrlOf, joinNames,
+  listHref,
   modHref, modList, modName, myList, neededModsLine, setMyList, thumbnail,
   toggleInMyList,
 } from '../lib.js';
@@ -126,7 +127,7 @@ function listRow(mod, mine, redraw) {
   ]);
 
   const row = el('div', { class: 'list-row' }, [
-    thumbnail(mod.imageUrl, 'row-thumb'),
+    thumbnail(imageUrlOf(mod), 'row-thumb'),
     el('div', { class: 'row-main' }, [
       el('a', { class: 'row-title', href: modHref(mod.id), text: modName(mod) }),
       el('div', {

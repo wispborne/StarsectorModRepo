@@ -5,12 +5,14 @@
 // files, fetched off this site's own origin.
 
 import {
-  aiSummaryMode, buildHash, clear, el, errorPanel, everyOtherName, formatDay,
-  formatMoment, applySpacing, go, hashParts, loading, modHref, modList,
-  modName, myList,
-  notePageScroll, setAiSummaryMode, setSpacingPreference, spacingPreference,
+  aiSummaryMode, buildHash, clear, el, errorPanel, formatDay,
+  formatMoment, applySpacing, go, hashParts, imageChoice, imageUrlOf, loading,
+  modHref, modList, modName, myList,
+  notePageScroll, searchHelpField, setAiSummaryMode, setImageChoice,
+  setSpacingPreference, spacingPreference,
   takeScrollPlaced, thumbnail, watchMyList,
 } from './lib.js';
+import { scoreOfTerm } from './search.js';
 import * as home from './views/home.js';
 import * as browse from './views/browse.js';
 import * as mod from './views/mod.js';
@@ -164,10 +166,11 @@ async function showBuild() {
 
 /// The settings dialog, opened from the bar at the top. It holds the choices
 /// that are about the reader rather than about any one page: how much room
-/// there is between things, and whether AI-written summaries are shown at all.
-/// Each choice takes effect the moment it is ticked — there is no Save button
-/// to find. Changing the summaries choice redraws the page underneath, so
-/// every summary on it changes at once rather than on the next click.
+/// there is between things, which of a mod's two pictures to show, and whether
+/// AI-written summaries are shown at all. Each choice takes effect the moment
+/// it is ticked — there is no Save button to find. Changing the pictures or
+/// the summaries choice redraws the page underneath, so everything on it
+/// changes at once rather than on the next click.
 function mountSettings() {
   const open = document.getElementById('open-settings');
   const dialog = document.getElementById('settings');
@@ -175,6 +178,8 @@ function mountSettings() {
   const close = dialog.querySelector('.settings-close');
   const radios = [...dialog.querySelectorAll('input[name="spacing"]')];
   const aiRadios = [...dialog.querySelectorAll('input[name="ai-summaries"]')];
+  const pictureRadios =
+    [...dialog.querySelectorAll('input[name="mod-pictures"]')];
 
   applySpacing();
   open.addEventListener('click', () => {
@@ -182,6 +187,8 @@ function mountSettings() {
     for (const radio of radios) radio.checked = radio.value === current;
     const ai = aiSummaryMode();
     for (const radio of aiRadios) radio.checked = radio.value === ai;
+    const picture = imageChoice();
+    for (const radio of pictureRadios) radio.checked = radio.value === picture;
     dialog.showModal();
   });
   close.addEventListener('click', () => dialog.close());
@@ -203,6 +210,13 @@ function mountSettings() {
       route();
     });
   }
+  for (const radio of pictureRadios) {
+    radio.addEventListener('change', () => {
+      if (!radio.checked) return;
+      setImageChoice(radio.value);
+      route();
+    });
+  }
 }
 
 /// The search box in the bar at the top, on every page.
@@ -216,10 +230,50 @@ function mountHeaderSearch() {
   const drop = document.getElementById('search-suggestions');
   if (!box || !drop) return;
 
+  // The panel saying what the search understands, in the room the suggested
+  // mods use once there is something to suggest. The holder is noted first
+  // because building the field takes the box out of it.
+  const holder = box.parentNode;
+  holder.insertBefore(searchHelpField(box, { hideWhileTyping: true }), drop);
+
   let mods = [];
   modList().then((list) => { mods = list.mods || []; }).catch(() => {});
 
-  const hide = () => { clear(drop); drop.hidden = true; };
+  let activeIndex = -1;
+  const suggestionRows = () => [...drop.querySelectorAll('.suggestion')];
+  const setActive = (index) => {
+    const rows = suggestionRows();
+    if (!rows.length) {
+      activeIndex = -1;
+      box.removeAttribute('aria-activedescendant');
+      return;
+    }
+
+    activeIndex = (index + rows.length) % rows.length;
+    rows.forEach((row, i) => {
+      row.setAttribute('aria-selected', i === activeIndex ? 'true' : 'false');
+    });
+    const active = rows[activeIndex];
+    box.setAttribute('aria-activedescendant', active.id);
+    active.scrollIntoView({ block: 'nearest' });
+  };
+  const prepareSuggestions = () => {
+    suggestionRows().forEach((row, i) => {
+      row.id = `search-suggestion-${i}`;
+      row.setAttribute('role', 'option');
+      row.setAttribute('aria-selected', 'false');
+      row.addEventListener('mouseenter', () => setActive(i));
+    });
+    activeIndex = -1;
+    box.removeAttribute('aria-activedescendant');
+  };
+  const hide = () => {
+    clear(drop);
+    drop.hidden = true;
+    box.setAttribute('aria-expanded', 'false');
+    activeIndex = -1;
+    box.removeAttribute('aria-activedescendant');
+  };
   const search = () => {
     hide();
     box.blur();
@@ -247,11 +301,30 @@ function mountHeaderSearch() {
       drop.append(el('div', { class: 'suggestion-group', text: 'People' }));
       for (const person of people) drop.append(personSuggestion(person, hide));
     }
+    prepareSuggestions();
     drop.hidden = false;
+    box.setAttribute('aria-expanded', 'true');
   });
 
   box.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') search();
+    const rows = suggestionRows();
+    if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && rows.length) {
+      e.preventDefault();
+      const firstMove = e.key === 'ArrowDown' ? 0 : rows.length - 1;
+      const next = activeIndex < 0
+        ? firstMove
+        : activeIndex + (e.key === 'ArrowDown' ? 1 : -1);
+      setActive(next);
+      return;
+    }
+    if (e.key === 'Enter') {
+      if (activeIndex >= 0 && rows[activeIndex]) {
+        e.preventDefault();
+        rows[activeIndex].click();
+      } else {
+        search();
+      }
+    }
     if (e.key === 'Escape') { hide(); box.blur(); }
   });
   box.addEventListener('blur', () => {
@@ -274,7 +347,7 @@ function mountHeaderSearch() {
 /// One suggested mod under the search box.
 function suggestion(hit, hide) {
   const row = el('a', { class: 'suggestion', href: modHref(hit.id) }, [
-    thumbnail(hit.imageUrl, 'suggestion-thumb'),
+    thumbnail(imageUrlOf(hit), 'suggestion-thumb'),
     el('div', { class: 'suggestion-main' }, [
       el('div', { class: 'suggestion-name', text: modName(hit) }),
       (hit.authors || []).length
@@ -323,15 +396,11 @@ function personSuggestion(person, hide) {
   return row;
 }
 
-/// How well a mod matches what has been typed. A name that starts with it beats
-/// a name that merely holds it, which beats a match on the author's name.
+/// How well a mod answers what has been typed, for putting the suggestions in
+/// order. The same scoring the browse page's "Best match" uses, so the two
+/// never disagree about which mod answers best.
 function matchStrength(mod, wanted) {
-  const name = modName(mod).toLowerCase();
-  if (name.startsWith(wanted)) return 3;
-  if (name.includes(wanted)) return 2;
-  const people = [...(mod.authors || []), ...everyOtherName(mod)];
-  if (people.some((p) => p.toLowerCase().includes(wanted))) return 1;
-  return 0;
+  return scoreOfTerm(mod, wanted);
 }
 
 /// The skip link at the very top, for anyone moving through the page by

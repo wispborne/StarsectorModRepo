@@ -9,13 +9,15 @@ import {
   aiSparkle, aiSummaryNote, breadcrumbs, buildHash, categoryChips, clear,
   countedAcross,
   currentGameVersion, downloadButton, downloadCountBadge, el, listToggle,
-  everyOtherName, formatDay, gameVersionFamily, gameVersions, hashQuery, howLongAgo,
-  isDiscordOnly, joinNames, modHref, modList, modName, MOD_VERSION_NOTE,
+  formatDay, gameVersionFamily, gameVersions, hashQuery, howLongAgo,
+  imageUrlOf, isDiscordOnly, joinNames, modHref, modList, modName,
+  MOD_VERSION_NOTE,
   noteScrollPlaced, NO_DESCRIPTION, pageScrollWhenLeft, pager,
-  pageSizePreference, picture, replaceHash, summaryTitle, summaryToShow,
-  thumbnail,
+  pageSizePreference, picture, replaceHash, searchHelpField, summaryTitle,
+  summaryToShow, thumbnail,
   versionStanding, versionStandingNote,
 } from '../lib.js';
+import { matchesSearch, scoreOfSearch } from '../search.js';
 
 const VIEW_KEY = 'starmodderView';
 
@@ -57,6 +59,9 @@ const SWITCHES = [
 ];
 
 const SORTS = [
+  // Only offered while there is something typed, and picked for the reader
+  // when there is: a list of what answers best is the point of searching.
+  { key: 'relevance', label: 'Best match', onlyWhenSearching: true },
   { key: 'current', label: 'Current version first' },
   { key: 'name', label: 'Name' },
   { key: 'newest', label: 'Newest' },
@@ -77,7 +82,8 @@ export async function render(root, parts) {
     needs: query.get('needs') || '',
     category: query.get('category') || '',
     author: query.get('author') || '',
-    sort: SORTS.some((s) => s.key === query.get('sort')) ? query.get('sort') : 'current',
+    sort: SORTS.some((s) => s.key === query.get('sort')) ? query.get('sort')
+      : ((query.get('q') || '') ? 'relevance' : 'current'),
     switches: new Set((query.get('only') || '').split(',').filter(Boolean)),
     // Older mods are left out to begin with. Nineteen pages of A-to-Z over
     // every game release anyone ever built for is not a list anybody reads.
@@ -135,7 +141,7 @@ export async function render(root, parts) {
     clear(into);
 
     const matches = sortMods(all.filter((mod) => matchesFilters(mod, shown)),
-      shown.sort, shown.currentVersion);
+      sortInUse(shown), shown.currentVersion, shown.search);
 
     fillResultLine(countLine, all, matches, shown,
       () => { shown.olderToo = true; drawResults(into, all, shown); });
@@ -158,6 +164,16 @@ export async function render(root, parts) {
       (to) => { shown.page = to; drawResults(into, all, shown); window.scrollTo(0, 0); },
       (newSize) => { shown.pageSize = newSize; shown.page = 0; drawResults(into, all, shown); }));
   }
+}
+
+/// Which sort is really being used.
+///
+/// "Best match" only means anything while something is typed, so with an empty
+/// box it stands aside for the usual order rather than leaving the list in
+/// whatever order a scoreless sort would give.
+export function sortInUse(state) {
+  if (state.sort === 'relevance' && !state.search.trim()) return 'current';
+  return state.sort;
 }
 
 /// The line above the results: how many matched, and — when older mods are
@@ -216,6 +232,12 @@ function drawControls(into, mods, state, onChange) {
     onChange();
   };
 
+  /// The sort in use before a search began, put back when the box is emptied.
+  let sortBeforeSearch = null;
+  /// Whether the reader picked a sort themselves during this search. Their
+  /// choice outranks the automatic switch to Best match.
+  let chosenByHand = state.sort !== 'current' && state.sort !== 'relevance';
+
   const search = el('input', {
     type: 'search',
     class: 'search-box',
@@ -223,7 +245,21 @@ function drawControls(into, mods, state, onChange) {
     value: state.search,
   });
   search.addEventListener('input', () => {
+    const wasSearching = state.search.trim() !== '';
     state.search = search.value;
+    const searchingNow = state.search.trim() !== '';
+
+    // Starting a search sorts by what answers best, because that is the whole
+    // point of having typed something. Clearing it puts back the sort that was
+    // in use before, so the list a reader had set up is not quietly changed.
+    if (searchingNow && !wasSearching && !chosenByHand) {
+      sortBeforeSearch = state.sort;
+      state.sort = 'relevance';
+    } else if (!searchingNow && wasSearching) {
+      if (state.sort === 'relevance') state.sort = sortBeforeSearch || 'current';
+      chosenByHand = false;
+    }
+    drawSort();
     changed();
   });
 
@@ -247,11 +283,11 @@ function drawControls(into, mods, state, onChange) {
   litView();
   viewToggle.append(gridBtn, rowsBtn);
 
-  into.append(el('div', { class: 'search-row' }, [search, viewToggle]));
+  into.append(el('div', { class: 'search-row' }, [searchHelpField(search), viewToggle]));
   into.append(el('p', {
     class: 'search-hint',
-    text: 'Several things at once: separate them with commas. Put a minus in '
-      + 'front of one to leave those out, like "faction, -portrait".',
+    text: 'Commas mean any of these: "faction, portrait" shows both kinds. Put '
+      + 'a minus in front of one to leave those out, like "faction, -portrait".',
   }));
 
   // The chips come before the dropdowns: picking a kind of mod is what most
@@ -277,10 +313,27 @@ function drawControls(into, mods, state, onChange) {
           (v) => { state.needs = v; changed(); },
           { anyLabel: 'Needs anything' })]
       : []),
-    dropdown('Sort by', SORTS.map((s) => s.key), state.sort,
-      (v) => { state.sort = v || 'current'; changed(); },
-      { anyLabel: null, labels: Object.fromEntries(SORTS.map((s) => [s.key, s.label])) }),
   );
+
+  // "Best match" is only in the list while something is typed, so the dropdown
+  // is rebuilt whenever that changes rather than drawn once like the others.
+  const sortHolder = el('div', {});
+  const drawSort = () => {
+    clear(sortHolder);
+    const offered = SORTS.filter(
+      (s) => !s.onlyWhenSearching || state.search.trim());
+    sortHolder.append(dropdown('Sort by', offered.map((s) => s.key), state.sort,
+      (v) => {
+        state.sort = v || 'current';
+        // Choosing a sort by hand while searching means it is wanted for this
+        // search, so typing on does not snatch the list back to Best match.
+        chosenByHand = true;
+        changed();
+      },
+      { anyLabel: null, labels: Object.fromEntries(offered.map((s) => [s.key, s.label])) }));
+  };
+  filters.append(sortHolder);
+  drawSort();
 
   const switches = el('div', { class: 'switches' });
   const addSwitch = (label, title, isOn, onToggle) => {
@@ -362,7 +415,7 @@ function nothingMatched(onClear) {
     el('h3', { text: 'No mods match' }),
     el('p', { text: 'Nothing here matches what you asked for. Try fewer words, '
       + 'or clear the filters and start again.' }),
-    el('p', {}, [button]),
+    el('p', { class: 'notice-action' }, [button]),
   ]);
 }
 
@@ -400,48 +453,6 @@ function restoreScroll() {
 
 // --- Searching, filtering and sorting ---
 
-/// Splits what the reader typed into terms to look for and terms to leave out.
-/// Commas separate them; a leading minus means "not this one".
-export function readSearch(text) {
-  const wanted = [];
-  const unwanted = [];
-  for (const raw of String(text || '').split(',')) {
-    const term = raw.trim().toLowerCase();
-    if (!term) continue;
-    if (term.startsWith('-')) {
-      const without = term.slice(1).trim();
-      if (without) unwanted.push(without);
-    } else {
-      wanted.push(term);
-    }
-  }
-  return { wanted, unwanted };
-}
-
-/// Everything about a mod that a search looks at: its name as shown and as the
-/// thread wrote it, the people credited and the other names they go by, its
-/// categories and its description.
-export function searchableText(mod) {
-  return [
-    mod.name,
-    mod.displayName,
-    ...(mod.authors || []),
-    ...everyOtherName(mod),
-    ...(mod.categories || []),
-    mod.summary,
-  ].filter(Boolean).join(' ').toLowerCase();
-}
-
-/// True when a mod should be listed. Every term the reader typed has to match,
-/// and any term with a minus in front of it must not.
-export function matchesSearch(mod, text) {
-  const { wanted, unwanted } = readSearch(text);
-  if (!wanted.length && !unwanted.length) return true;
-  const haystack = searchableText(mod);
-  return wanted.every((term) => haystack.includes(term))
-    && !unwanted.some((term) => haystack.includes(term));
-}
-
 /// True when a mod is built for the game release the site treats as current.
 /// A mod that does not say which release it is for is kept — an unknown version
 /// is not the same as an old one.
@@ -476,7 +487,7 @@ export function matchesFilters(mod, state) {
   return true;
 }
 
-export function sortMods(mods, sort, currentVersion) {
+export function sortMods(mods, sort, currentVersion, search = '') {
   const byName = (a, b) =>
     modName(a).localeCompare(modName(b), undefined, { sensitivity: 'base' });
   const newestFirst = (get) => (a, b) => {
@@ -490,7 +501,12 @@ export function sortMods(mods, sort, currentVersion) {
   };
 
   const sorted = [...mods];
-  if (sort === 'newest') sorted.sort(newestFirst((m) => m.addedOn));
+  if (sort === 'relevance') {
+    // Worked out once per mod rather than inside the comparison, which would
+    // score the same mod again for every other mod it is put beside.
+    const scores = new Map(mods.map((mod) => [mod, scoreOfSearch(mod, search)]));
+    sorted.sort((a, b) => scores.get(b) - scores.get(a) || byName(a, b));
+  } else if (sort === 'newest') sorted.sort(newestFirst((m) => m.addedOn));
   else if (sort === 'updated') sorted.sort(newestFirst((m) => m.lastReleaseDate));
   else if (sort === 'name') sorted.sort(byName);
   else {
@@ -561,7 +577,7 @@ export function modRows(mods, currentVersion) {
     const names = joinNames(mod.authors);
     rows.append(el('div', { class: 'mod-row' }, [
       el('a', { class: 'row-inner', href: modHref(mod.id) }, [
-        thumbnail(mod.imageUrl, 'row-thumb'),
+        thumbnail(imageUrlOf(mod), 'row-thumb'),
         el('div', { class: 'row-main' }, [
           el('div', { class: 'row-title', text: modName(mod) }),
           el('div', {
@@ -569,7 +585,7 @@ export function modRows(mods, currentVersion) {
             title: summaryTitle(summary),
           }, [
             names ? `${names} · ` : null,
-            generated ? aiSparkle() : null,
+            generated ? aiSparkle(summary.text) : null,
             generated ? ' ' : null,
             summary?.text || NO_DESCRIPTION,
           ]),
@@ -593,8 +609,9 @@ function cardImage(mod) {
     text: (modName(mod).trim()[0] || '?').toUpperCase(),
     'aria-hidden': 'true',
   });
-  if (!mod.imageUrl) return initial();
-  return picture(mod.imageUrl, {
+  const url = imageUrlOf(mod);
+  if (!url) return initial();
+  return picture(url, {
     className: 'card-image',
     whenBroken: (img) => img.replaceWith(initial()),
   });
@@ -652,7 +669,7 @@ function summaryLine(summary) {
     // reader who wants a second opinion on a summary that says nothing.
     title: summaryTitle(summary),
   }, [
-    generated ? aiSparkle() : null,
+    generated ? aiSparkle(summary.text) : null,
     generated ? ' ' : null,
     summary?.text || NO_DESCRIPTION,
   ]);

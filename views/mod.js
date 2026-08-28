@@ -6,12 +6,12 @@
 // so a thin page reads as deliberate instead of broken.
 
 import {
-  AI_SUMMARY_TITLE, aiSparkle, aiSummaryMode, aiSummaryNote, aiSummaryOf,
+  aiSparkle, aiSummaryMode, aiSummaryNote, aiSummaryOf,
   breadcrumbs, clear,
-  currentGameVersion, downloadButton, el, errorPanel, formatDay, formatMoment,
-  joinNames, listToggle,
+  currentGameVersion, DATA_BASE, downloadButton, el, errorPanel, formatDay,
+  formatMoment, imageUrlOf, joinNames, listToggle,
   modDetail, modList, modName, MOD_VERSION_NOTE, neededModsLine,
-  NO_DESCRIPTION, picture, showPicture, sourceName,
+  NO_DESCRIPTION, picture, showPicture, sourceName, summaryTitle,
   versionStanding, versionStandingNote,
 } from '../lib.js';
 import { modCard } from './browse.js';
@@ -79,6 +79,7 @@ export async function render(root, parts) {
   root.append(el('div', { class: 'stack' }, [
     modHeader(mod, detail, shownName, currentVersion),
     needsLine(mod),
+    sameNameMods(detail),
     description(detail),
     gallery(detail),
     downloads(detail),
@@ -86,9 +87,9 @@ export async function render(root, parts) {
     releases(detail),
     addons(detail),
     facts(detail),
-    olderVersions(detail),
     moreByTheAuthor(mod, everyMod, currentVersion),
     similarMods(mod, everyMod, currentVersion),
+    rawInfo(detail, id),
   ]));
 }
 
@@ -171,9 +172,10 @@ function partOfThreadLine(mod) {
 /// whose picture will not load, both leave the words to fill the width rather
 /// than an empty box.
 function modPicture(mod) {
-  if (!mod.imageUrl) return null;
+  const url = imageUrlOf(mod);
+  if (!url) return null;
   const box = el('div', { class: 'mod-head-picture' });
-  box.append(picture(mod.imageUrl, {
+  box.append(picture(url, {
     alt: '',
     whenBroken: () => box.remove(),
   }));
@@ -330,13 +332,13 @@ function description(detail) {
   // The sparkle goes inside the first paragraph rather than above it, so it
   // reads as part of the words instead of as a picture of its own.
   if (aiAlone) {
-    body.title = AI_SUMMARY_TITLE;
+    body.title = summaryTitle({ text: aiAlone, generated: true });
     // Only into a block that holds words. A post that opens with a list or a
     // picture gets the sparkle above it instead, since a sparkle inside a
     // `<ul>` is not a list item and browsers place it anywhere they like.
     const first = body.firstElementChild;
     const holdsWords = first && ['P', 'DIV', 'H3', 'H4', 'H5', 'H6'].includes(first.tagName);
-    (holdsWords ? first : body).prepend(aiSparkle(), ' ');
+    (holdsWords ? first : body).prepend(aiSparkle(aiAlone), ' ');
   }
 
   // A long post would push the screenshots, the downloads and the changelog
@@ -405,9 +407,12 @@ function description(detail) {
 /// for AI summaries always. Marked the same way an AI description is: a
 /// sparkle before the words, and a line underneath saying who wrote them.
 function aiLeadBlock(words) {
-  return el('div', { class: 'summary-block ai-lead', title: AI_SUMMARY_TITLE }, [
+  return el('div', {
+    class: 'summary-block ai-lead',
+    title: summaryTitle({ text: words, generated: true }),
+  }, [
     el('div', { class: 'prose plain' }, [
-      el('p', {}, [aiSparkle(), ' ', words]),
+      el('p', {}, [aiSparkle(words), ' ', words]),
     ]),
     aiSummaryNote(),
   ]);
@@ -496,8 +501,31 @@ function releases(detail) {
   ]);
 }
 
+/// The other downloads on the same thread, in two boxes rather than one.
+///
+/// They used to share a box headed "Add-ons on the same thread", which told a
+/// reader that "Postmodern Carriers Lite" was something to install as well as
+/// Postmodern Carriers. It is the same mod cut down, and you install it
+/// instead. Anything the extractor called a variant is another build; anything
+/// else needs the mod and goes beside it.
 function addons(detail) {
   const list = detail.addons || [];
+  if (!list.length) return null;
+
+  const versions = list.filter((a) => a.role === 'variant');
+  const extras = list.filter((a) => a.role !== 'variant');
+
+  return el('div', { class: 'stack' }, [
+    addonBox(extras, 'Add-ons on the same thread', null),
+    addonBox(
+      versions,
+      'Other versions of this mod',
+      'Install one of these instead of the mod above, not as well as it.',
+    ),
+  ]);
+}
+
+function addonBox(list, heading, note) {
   if (!list.length) return null;
 
   const box = el('div', { class: 'stack' });
@@ -511,7 +539,9 @@ function addons(detail) {
     ]));
   }
   return el('section', { class: 'panel' }, [
-    el('h2', { text: 'Add-ons on the same thread' }), box,
+    el('h2', { text: heading }),
+    note ? el('p', { class: 'card-authors', text: note }) : null,
+    box,
   ]);
 }
 
@@ -575,29 +605,59 @@ function facts(detail) {
   ]);
 }
 
-/// Older threads for the same mod. There are none yet — matching an old thread
-/// to the mod it became is a separate job — so this box stays out of the way
-/// until there are.
-function olderVersions(detail) {
-  const list = detail.olderVersions || [];
-  if (!list.length) return null;
+/// The other mods on the site that carry this one's name.
+///
+/// Dozens of names here belong to more than one mod. Some are a mod's own older
+/// thread, which often holds the last build that ran on an older game version.
+/// Some are a fork that kept the name of the mod it forked, which is often the
+/// only build that runs on the current one. Some are two people who happened to
+/// pick the same name. All three are worth keeping, so the site keeps them all
+/// and says which is which instead of choosing for the reader.
+///
+/// The day each thread was last posted on leads the facts, because it is the
+/// one that separates a live thread from an archive. Everything else about a
+/// pair like this is either the same on both or missing.
+function sameNameMods(detail) {
+  const others = detail.sameNameMods || [];
+  if (!others.length) return null;
 
   const rows = el('div', { class: 'mod-rows' });
-  for (const older of list) {
-    rows.append(el('a', {
-      class: 'mod-row', href: older.url, target: '_blank', rel: 'noopener nofollow',
-    }, [
-      el('div', { class: 'row-main' }, [
-        el('div', { class: 'row-title', text: older.title }),
-        el('div', {
-          class: 'row-sub',
-          text: [older.modVersion, older.gameVersion].filter(Boolean).join(' · '),
-        }),
-      ]),
+  for (const other of others) {
+    const saidAbout = [
+      (other.authors || []).length ? `by ${joinNames(other.authors)}` : null,
+      other.threadLastPostOn
+        ? `thread last posted ${formatDay(other.threadLastPostOn)}`
+        : null,
+      other.gameVersion ? `for Starsector ${other.gameVersion}` : null,
+      other.modVersion ? `version ${other.modVersion}` : null,
+    ].filter(Boolean);
+
+    // A page here where we have one, and the forum thread where we do not.
+    const inner = other.id
+      ? el('a', { class: 'row-inner', href: `#/mods/${other.id}` })
+      : el('a', {
+          class: 'row-inner', href: other.url,
+          target: '_blank', rel: 'noopener nofollow',
+        });
+    inner.append(el('div', { class: 'row-main' }, [
+      el('div', { class: 'row-title', text: other.title }),
+      saidAbout.length
+        ? el('div', { class: 'row-sub', text: saidAbout.join(' · ') })
+        : null,
     ]));
+    rows.append(el('div', { class: 'mod-row' }, [inner]));
   }
-  return el('section', { class: 'panel' }, [
-    el('h2', { text: 'Older versions' }), rows,
+
+  const many = others.length > 1;
+  return el('section', { class: 'panel name-share' }, [
+    el('h2', { text: `${many ? 'Other mods' : 'Another mod'} called this` }),
+    el('p', {
+      class: 'sub',
+      text: `${many ? 'These carry' : 'It carries'} the same name. `
+        + `${many ? 'Each' : 'It'} may be an older thread for this mod, a fork `
+        + 'of it, or a different mod altogether.',
+    }),
+    rows,
   ]);
 }
 
@@ -660,6 +720,90 @@ function strip(mods, currentVersion, { alreadyOrdered = false } = {}) {
   return row;
 }
 
+/// The "See raw info" fold at the very foot of the page: everything the site
+/// holds about this mod, straight from its published file, laid out field by
+/// field. It is for working out why a page looks wrong — a reader never needs
+/// it, so it sits closed and quiet under everything else, and its insides are
+/// only built the first time somebody opens it.
+function rawInfo(detail, id) {
+  const fold = el('details', { class: 'raw-info' }, [
+    el('summary', { text: 'See raw info' }),
+  ]);
+  let built = false;
+  fold.addEventListener('toggle', () => {
+    if (built || !fold.open) return;
+    built = true;
+    fold.append(rawInfoBody(detail, id));
+  });
+  return fold;
+}
+
+function rawInfoBody(detail, id) {
+  const file = `mods/${encodeURIComponent(id)}.json`;
+  const copy = el('button', { class: 'btn', text: 'Copy as JSON' });
+  copy.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(JSON.stringify(detail, null, 2));
+      copy.textContent = 'Copied';
+    } catch {
+      copy.textContent = 'Could not copy';
+    }
+    setTimeout(() => { copy.textContent = 'Copy as JSON'; }, 2000);
+  });
+
+  return el('div', { class: 'panel raw-info-body' }, [
+    el('div', { class: 'raw-info-tools' }, [
+      copy,
+      el('a', {
+        class: 'btn', href: DATA_BASE + file, target: '_blank', rel: 'noopener',
+        text: 'Open the file',
+        title: `The published file this is read from: ${file}`,
+      }),
+    ]),
+    el('div', { class: 'raw-tree' }, [rawValue(detail)]),
+  ]);
+}
+
+/// One value from the mod's file, whatever its shape, drawn so it can be read:
+/// an object as field names down the left, a list as numbered entries, a long
+/// or HTML string as a scrolling block of plain text (never put into the page
+/// as markup), an address as a link, and everything else as itself.
+function rawValue(value) {
+  if (value === null || value === undefined) {
+    return el('span', { class: 'raw-none', text: 'nothing' });
+  }
+  if (Array.isArray(value)) {
+    if (!value.length) return el('span', { class: 'raw-none', text: 'empty list' });
+    const rows = el('div', { class: 'raw-branch' });
+    value.forEach((entry, i) => {
+      rows.append(el('span', { class: 'raw-name', text: `${i + 1}.` }),
+        el('div', { class: 'raw-cell' }, [rawValue(entry)]));
+    });
+    return rows;
+  }
+  if (typeof value === 'object') {
+    const keys = Object.keys(value);
+    if (!keys.length) return el('span', { class: 'raw-none', text: 'empty' });
+    const rows = el('div', { class: 'raw-branch' });
+    for (const key of keys) {
+      rows.append(el('span', { class: 'raw-name', text: key }),
+        el('div', { class: 'raw-cell' }, [rawValue(value[key])]));
+    }
+    return rows;
+  }
+  if (typeof value === 'string') {
+    if (value.length > 160 || value.includes('\n') || value.includes('<')) {
+      return el('pre', { class: 'raw-text', text: value });
+    }
+    if (/^https?:\/\//.test(value)) {
+      return el('a', {
+        href: value, target: '_blank', rel: 'noopener nofollow', text: value,
+      });
+    }
+  }
+  return el('span', { text: String(value) });
+}
+
 /// Most recently released first, then by name. A mod with no release yet sorts
 /// last, whichever way round the dates are.
 function newestFirst(mods) {
@@ -672,4 +816,3 @@ function newestFirst(mods) {
     return right.localeCompare(left);
   });
 }
-

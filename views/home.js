@@ -8,7 +8,8 @@
 import {
   buildHash, categoryChips, clear, currentGameVersion, downloadButton, el,
   formatDay, go,
-  howLongAgo, modHref, modList, modName, releaseFeed, thumbnail,
+  howLongAgo, imageUrlOf, modHref, modList, modName, noteWithMore,
+  releaseFeed, searchHelpField, thumbnail,
 } from '../lib.js';
 import { modCard } from './browse.js';
 
@@ -64,7 +65,7 @@ function front() {
   button.addEventListener('click', search);
 
   return el('section', { class: 'front' }, [
-    el('div', { class: 'search-row' }, [box, button]),
+    el('div', { class: 'search-row' }, [searchHelpField(box), button]),
     el('p', {
       class: 'front-hint',
       text: 'Or press / from anywhere on the site.',
@@ -113,6 +114,10 @@ function releasesPanel(releases, byId) {
     return panel;
   }
 
+  // Only where there is a list to explain. The empty notice above says what is
+  // going on well enough on its own.
+  panel.append(releasesNote());
+
   for (const [day, ofThatDay] of groupByDay(releases)) {
     const list = el('div', { class: 'release-list' });
     for (const release of ofThatDay) list.append(releaseRow(release, byId));
@@ -127,6 +132,48 @@ function releasesPanel(releases, byId) {
   const openAll = expandAllChangelogs(panel);
   if (openAll) head.append(openAll);
   return panel;
+}
+
+/// The note above the releases, saying where this list comes from and that it
+/// can be wrong.
+///
+/// A dated list reads as a list of what came out that day, and this is not
+/// that: it is what a program noticed, having read a version number out of a
+/// forum post, which it sometimes reads wrong. An author checking whether
+/// their own mod is listed right needs to know that before writing in to say
+/// the site is broken.
+///
+/// The short version is on the page, because a reader who never presses
+/// anything should still know the list can be wrong. The long version is
+/// behind a press, because five paragraphs above every visit to the front
+/// page is somebody else's page.
+function releasesNote() {
+  return noteWithMore(
+    'Note: this list may be wrong. Forum posts are checked twice a day, and '
+      + 'AI is used to read mod version numbers.',
+    {
+      title: 'How recent updates work',
+      moreLabel: 'More about this',
+      paragraphs: [
+        'The Starsector forum is checked twice a day. A mod appears here only '
+          + 'when the version number in its forum post increases. Replies and '
+          + 'other activity in the thread do not count.',
+        'Only forum data is used for this. Version Checker is not.',
+        'AI reads the version number from the author\'s post. It sometimes '
+          + 'gets the number wrong. The same new version must appear in two '
+          + 'checks in a row before it is listed. Versions older than the last '
+          + 'confirmed version are also ignored.',
+        'If the thread title includes a version, the version '
+          + 'in the post must match it.',
+        'The date shown is when this site confirmed the update. It may not be '
+          + 'the date when the author released it.',
+        'An older confirmed version is needed before an update can be reported. '
+          + 'This means the first version found for a mod is not listed. A '
+          + 'mod without a version number in its post won\'t appear here.',
+        'Changelog notes are copied from the author\'s post.',
+      ],
+    },
+  );
 }
 
 /// One button beside the heading that opens every changelog on the page, and
@@ -185,7 +232,7 @@ function releaseRow(release, byId) {
     title: notes ? 'Read changelog' : null,
   }, [
     notes ? el('span', { class: 'chevron', text: '›', 'aria-hidden': 'true' }) : null,
-    thumbnail(mod && mod.imageUrl, 'release-thumb'),
+    thumbnail(mod && imageUrlOf(mod), 'release-thumb'),
     mod
       ? el('a', { class: 'release-name', href: modHref(release.modId), text: shownName })
       : el('span', { class: 'release-name', text: shownName }),

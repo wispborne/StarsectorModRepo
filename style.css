@@ -223,21 +223,41 @@ h3 { font-size: var(--type-big); line-height: 1.25; margin: 0 0 6px; }
 
 /* --- The settings dialog --- */
 
-.settings-dialog {
+.settings-dialog, .info-dialog {
   background: var(--surface-container); color: var(--text);
   border: 1px solid var(--border); border-radius: 10px;
   padding: 0; width: min(440px, calc(100vw - 32px));
   box-shadow: var(--lifted);
 }
-.settings-dialog::backdrop { background: var(--picture-backdrop); opacity: 0.7; }
+.settings-dialog::backdrop, .info-dialog::backdrop { background: var(--picture-backdrop); opacity: 0.7; }
 .settings-inner { padding: var(--pad-block); display: flex; flex-direction: column; gap: var(--gap-wide); }
-.settings-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-.settings-head h2 { margin: 0; }
-.settings-close {
+.settings-head, .info-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.settings-head h2, .info-head h2 { margin: 0; }
+.settings-close, .info-close {
   background: none; border: none; cursor: pointer; padding: 2px 8px;
   color: var(--text-dim); font-family: inherit; font-size: var(--type-heading); line-height: 1;
 }
-.settings-close:hover { color: var(--primary); }
+.settings-close:hover, .info-close:hover { color: var(--primary); }
+
+/* The box behind a "More about this" press. Wider than the settings box,
+   because this one is paragraphs to read rather than choices to tick. */
+.info-dialog { width: min(560px, calc(100vw - 32px)); overflow: auto; }
+.info-inner { padding: var(--pad-block); display: flex; flex-direction: column; gap: var(--gap); }
+.info-inner .about-line { color: var(--text-dim); font-size: var(--type-small); margin: 0; }
+
+/* The note above a list, saying where the list came from. The amber edge is
+   the same one the site uses for anything a reader should weigh before
+   believing it. A single-sided border, so no rounded corners. */
+.list-note {
+  background: var(--surface-2); padding: var(--pad-block);
+  border-left: 3px solid var(--edge-warning); box-shadow: var(--raised);
+}
+.list-note p { margin: 0; color: var(--text-dim); font-size: var(--type-small); }
+.note-more {
+  background: none; border: none; padding: 0; cursor: pointer;
+  font: inherit; color: var(--primary); text-decoration: underline;
+}
+.note-more:hover { color: var(--secondary); }
 .settings-section { display: flex; flex-direction: column; gap: var(--gap); }
 .settings-section > h3 {
   margin: 0; font-size: var(--type-tiny); letter-spacing: 0.06em;
@@ -269,7 +289,10 @@ h3 { font-size: var(--type-big); line-height: 1.25; margin: 0 0 6px; }
   color: inherit; border-bottom: 1px solid var(--border);
 }
 .suggestion:last-child { border-bottom: none; }
-.suggestion:hover { background: var(--primary-soft); text-decoration: none; }
+.suggestion:hover,
+.suggestion[aria-selected="true"] {
+  background: var(--primary-soft); text-decoration: none;
+}
 .suggestion-thumb {
   width: 46px; height: 30px; object-fit: cover; flex-shrink: 0;
   background: var(--surface-2);
@@ -328,6 +351,7 @@ main {
 .notice.error { border-color: var(--error); }
 .notice h3 { margin-top: 0; }
 .notice p { margin: 0; color: var(--text-dim); }
+.notice-action { padding-top: var(--gap); }
 
 .breadcrumbs { font-size: var(--type-small); color: var(--text-dim); margin-bottom: 12px; }
 .crumb-sep { margin: 0 6px; opacity: 0.6; }
@@ -402,6 +426,65 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .search-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
 .search-box { flex: 1 1 280px; min-width: 0; }
 .search-hint { color: var(--text-dim); font-size: var(--type-small); margin: 6px 0 0; }
+
+/* The search box, the button that explains it, and the panel that button
+   opens. The panel hangs off the field the way the suggestions under the
+   box at the top do, and is built the same way. */
+.search-field {
+  position: relative; display: flex; align-items: center; gap: 8px;
+  flex: 1 1 280px; min-width: 0;
+}
+/* The box shares the row with the "?", so it takes what is left rather than
+   the whole width some other rule may have given it. */
+.search-field .search-box { flex: 1 1 auto; width: auto; min-width: 0; }
+
+.search-help-mark {
+  display: flex; align-items: center; justify-content: center;
+  box-sizing: border-box;
+  flex: none; width: 26px; height: 26px; padding: 0;
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 999px; color: var(--primary);
+  font-family: inherit; font-size: var(--type-small); line-height: 1;
+}
+.search-field:hover .search-help-mark {
+  background: var(--primary-soft); border-color: var(--primary);
+}
+
+.search-help {
+  position: absolute; top: calc(100% + 6px); left: 0; z-index: 30;
+  width: min(400px, calc(100vw - 24px)); padding: var(--pad-block);
+  background: var(--surface-container); border: 1px solid var(--primary);
+  border-radius: 8px; box-shadow: var(--lifted);
+  opacity: 0; visibility: hidden; transition: opacity 0.12s;
+}
+/* The panel is controlled only by the pointer. Focusing the search box to type
+   does not open it. */
+.search-field:hover .search-help { opacity: 1; visibility: visible; }
+/* The panel sits a little below the box, and that gap is neither of them, so
+   crossing it with the pointer would flick the panel away before it could be
+   read. This fills the gap without showing anything. */
+.search-help::before {
+  content: ''; position: absolute; left: 0; right: 0; top: -7px; height: 7px;
+}
+/* Last, so it wins: in the bar at the top the suggested mods want this room. */
+.search-field.help-off .search-help { opacity: 0; visibility: hidden; }
+
+.search-help p { margin: 0; font-size: var(--type-small); color: var(--text-dim); }
+.search-help p + p { margin-top: 7px; }
+.search-help-lead { padding-bottom: 7px; border-bottom: 1px solid var(--border); }
+.search-help strong { color: var(--text); font-weight: 600; }
+/* The example is something to type, not something to press, so it is not
+   cyan. The line round it is what says "these are the exact letters". */
+.search-help code {
+  font-family: inherit; font-size: var(--type-tiny); color: var(--text);
+  padding: 1px 6px; border: 1px solid var(--border); border-radius: 4px;
+  background: var(--surface-2); white-space: nowrap;
+}
+
+/* The bar at the top sits at the right, so the panel hangs from that edge
+   rather than running off the side of the page. */
+.header-search .search-field { flex: 1 1 auto; }
+.header-search .search-help { left: auto; right: 0; }
 
 /* No box around the filters any more. They are a row of controls, and each
    one already looks like a control. */
@@ -705,6 +788,16 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
    so it is a note about the mod rather than part of its title. */
 .part-of { color: var(--text-dim); font-size: var(--type-small); }
 
+/* The other mods on the site carrying this one's name. It sits above the
+   downloads, so a reader who came from outside meets it, and its facts wrap
+   rather than being cut off — the whole point of the block is to be read. */
+.name-share > .sub {
+  color: var(--text-dim); font-size: var(--type-small);
+  margin: 0 0 var(--gap);
+}
+.name-share .row-sub { white-space: normal; overflow: visible; }
+.name-share .mod-row:last-child { border-bottom: none; }
+
 /* What a mod will not run without, right under its name. */
 .needs-line {
   display: flex; gap: 6px; flex-wrap: wrap; align-items: baseline;
@@ -814,6 +907,40 @@ body.picture-open { overflow: hidden; }
 .fact-list dd { margin: 0; }
 .fact-list .dim { color: var(--text-dim); }
 
+/* --- See raw info --- */
+
+/* The debugging fold at the foot of a mod's page. Quiet on purpose: it is for
+   working out why a page looks wrong, not part of the page. */
+.raw-info > summary {
+  cursor: pointer; width: max-content;
+  color: var(--text-dim); font-size: var(--type-small);
+}
+.raw-info > summary:hover { color: var(--primary); }
+.raw-info-body {
+  margin-top: var(--gap);
+  display: flex; flex-direction: column; gap: var(--gap);
+  align-items: flex-start;
+}
+.raw-info-tools { display: flex; gap: var(--gap); flex-wrap: wrap; }
+/* Field names down the left, values on the right, each list or object inside
+   one indenting behind a hairline of its own. Everything wraps: half these
+   values are addresses. */
+.raw-tree { align-self: stretch; font-size: var(--type-small); }
+.raw-branch { display: grid; grid-template-columns: max-content 1fr; gap: 2px 14px; }
+.raw-branch .raw-branch { padding: 2px 0 2px 10px; border-left: 1px solid var(--border); }
+.raw-name { color: var(--text-dim); }
+.raw-none { color: var(--text-dim); font-style: italic; }
+.raw-cell { min-width: 0; overflow-wrap: anywhere; }
+/* A long or HTML value, shown as the plain text it is, in a box that scrolls
+   rather than a page-long wall. */
+.raw-text {
+  margin: 0; padding: 6px 8px;
+  white-space: pre-wrap; overflow-wrap: anywhere;
+  max-height: 16em; overflow-y: auto;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+  font-size: var(--type-tiny);
+}
+
 /* --- My mod list --- */
 
 .list-row {
@@ -847,6 +974,10 @@ body.picture-open { overflow: hidden; }
   .mod-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
   .fact-list { grid-template-columns: 1fr; }
   .fact-list dt { margin-top: 6px; }
+  /* Names above values rather than beside them — a nested branch on a phone
+     has no width to spare for a column of names. */
+  .raw-branch { grid-template-columns: 1fr; }
+  .raw-branch > .raw-name { margin-top: 4px; }
   .row-thumb { display: none; }
   /* On a phone the picture goes above the words rather than beside them. */
   .mod-head { flex-direction: column; gap: 14px; }
