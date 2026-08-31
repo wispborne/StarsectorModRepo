@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T18:07:08.642435Z",
+  "generatedAt": "2026-08-31T15:08:46.131379Z",
   "listing": {
     "id": "java-24-mikohime-27-win-linux",
     "name": "Java 24 [Mikohime 27] [Win/Linux]",
@@ -22,7 +22,7 @@
     "gameVersion": "0.97a",
     "modVersion": "R27a",
     "imageUrl": "https://i.imgur.com/Ec76HMq.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975008177717318/banner_ico.png?ex=6a91a5f7&is=6a905477&hm=0a09e69e295eb6e213621b335881642bc1c300ce511b092080c4fb2541fe0f93&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975008177717318/banner_ico.png?ex=6a964337&is=6a94f1b7&hm=0e91662df527bbc814550ff2fe030b76deb090c40a69d29a04830ad94594dff8&",
     "summary": "a Conversion Kit to run Starsector on Latest Java 23, Provides up to 90% FPS & Stability Improvement over Stock Vanilla in Campaign with SUPER STABLE COMBAT FPS Originally supposed to launch as Mod Launcher Feature only to avoid user-error, but since someone posted another Java 21 kit.. might as well do this",
     "summaryIsGenerated": false,
     "aiSummary": "Provides a conversion kit to run Starsector on Java 24 with pre-configured Shenandoah GC for improved FPS and stability.",
@@ -39,7 +39,7 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2024-02-19",
-    "threadLastPostOn": "2026-08-25",
+    "threadLastPostOn": "2026-08-30",
     "needs": []
   },
   "description": "Descriptions:\n\nSpoiler[close]a Conversion Kit to run Starsector on Latest Java 24, Provides up to 90% FPS & Stability Improvement over Stock Vanilla in Campaign with SUPER STABLE COMBAT FPS, the kit came with pre-configured Modern Java GC Shenandoah to ensure smooth and long run gameplay stability.\n\nImportant Information\n\nGame Version need to Be Matching, Please Check Your Game Version First!\n\nError 0xc0000000005\n\nCheck if the game accidentally use your iGPU, if you only have iGPU reduce the size you pick (you ran out of ram)\n\nIf you already changed the game into using your Dedicated GPU and its still crashing like this, check if your PC Memory is Stable\n\nFor Windows User :\n\nRequired Java :\n\nFor Version 0.97a-RC11\n\nFor Version 0.96a-RC10\n\nFor Linux Distro User :\n\nRequired Java :\n\nFor Version 0.97a-RC11\n\nNotes: make sure you set the Kitsunebi.sh file as executable. Right click and properties and toggle \"is executable\"\n\nOlder Java 23 Version :\n\nFor Windows User :\n\nRequired Java :\n\nFor Version 0.97a-RC11\n\nFor Version 0.96a-RC10\n\nFor Linux Distro User :\n\nRequired Java :\n\nFor Version 0.97a-RC11\n\n[close]\n\nBenchmark (Campaign Nexerelin Speed Up 24x)Methodology:\n\nCapFrameX on 120 sec capture on Campaign with Nexerelin and Speed Up (24x)\n\nrunning as fast as possible on latest Ryzen 7000\n\n[close]\n\nBenchmark (Glib Combat Mission)Methodology:\n\nCapFrameX on 60 sec capture on GraphicLib Benchmark Mission\n\n[close]\n\nFrequently Asked Questions & Troubleshooting\n\nWhere is the Instruction?\n\ndid you opened the other zip yet?, its inside there.. if you havent download the other one then please do so\n\nWhat is Shenandoah?\n\na very fast concurrent garbage collector that the game needed to run well or in nerd words :\n\n\"Shenandoah is the low pause time garbage collector that reduces GC pause times by performing more garbage collection work concurrently with the running Java program. Shenandoah does the bulk of GC work concurrently, including the concurrent compaction, which means its pause times are no longer directly proportional to the size of the heap. Garbage collecting a 200 GB heap or a 2 GB heap should have the similar low pause behavior.\"\n\nWill This Affect My Save Games?\n\nNo, changing java does not affect your ongoing saves at all\n\nis this better than the other Java?\n\nYes however Experience May Varies, This Java & Presets is Pre-Configured & Tested personally for over 2 Years\n\nWhat other benefit this offer?\n\ndetailed nullpointer crash reason, you can help modder to Hotfix crash faster by giving the exact reason why it crash\n\nWhy am i not getting performance uplift?\n\ntry changing the starsector-core\\data\\config\\settings.json (data\\config\\settings.json in linux)\n\nEdit the settings values as specified below (do not just copy the whole block into settings.json)\n\n\"vsync\":false,\n\n\"fps\":1000,\n\n\"forceNoVBO\":false,\n\n\"useGLFlush\":false,\n\n\"useGLFinish\":false,\n\n(note: you can also set said fps to 120 or sth, 1000 is just my personal one)\n\nSound Fail to initialize / OooooOOo Sound error\n\nmake sure the game version is correct, you can try rerunning the game installer to be sure\n\nError 0xc0000000005\n\nCheck if the game accidentally use your iGPU, if you only have iGPU reduce the size you pick (you ran out of ram)\n\nIf you already changed the game into using your Dedicated GPU and its still crashing like this, check if your PC Memory is Stable\n\ni am seeing non-default stack size specified warning on my left screen\n\nthere is companion \"mods\" included to disable that or you can edit your settings.json for this two lines\n\n\"doRAMandVRAMChecksWhenRunningWithMods\":false,\n\n\"memoryCheckVerbose\":false,\n\nLauncher is stuck game not launching / JVM cannot use large page memory\n\nif you're seeing this message :\n\nOpenJDK 64-Bit Server VM warning: JVM cannot use large page memory because it does not have enough privilege to lock pages in memory.\n\nuse the preset inside \"Alternatives VMParams\" (you can also remove two LargePage line inside Miko_R3.txt)\n\nif what you're experiencing is slow launcher startup / not showing up at all.. restarting should fix this (just Windows Large Page behaviour, it'll try to defrag it)\n\nCould not load file: ..\\mikohime/.rouge_owo\n\nplace mikohime folder into your starsector installation! xD\n\nwhat magic trick you do to get 90% performance uplift?\n\na lot of profilling and testing for over 2 year\n\nMy Games Is Stuttering After Installing/Applying This\n\nTry\n\nIncreasing\n\nyour\n\nVMParams Size\n\nabove what you have right now, the next step you can do is using preset inside\n\nAdaptive\n\nzip.\n\nWhy Mikohime Previously Isnt Posted on Forums?\n\nLimited Testing Scopes, now i have some confidence it doesnt explode.. enjoy it xD\n\nWhich Size Should I Use?\n\nFirst Thing First you want to open your\n\nTask Manager\n\nand look at\n\nPerformance Tabs -> Memory\n\n, its\n\nRecommended\n\nto use Size thats\n\nbelow\n\nyour\n\nFree Memory\n\n. Here is my Personal Recommendation:\n\nBelow 3GB = 1GB\n\n4GB - 6GB PC = 2GB\n\n8GB PC = 3 or 4GB\n\n16GB PC = 6GB\n\n32GB PC = 8GB\n\nHow to add this to Steam Launcher?\n\nsome user called \"lieght\" shared some guide how to do this, you can follow this step :\n\nNo steam overlay:\n\nBecause we are using a .bat file, we can't just add it to steam as a non-steam game. steam only \"allows\" .exe files to be added as a non-steam game. We can circumvent this quite easily by just adding any random .exe file instead and then changing the target of it to be the Miko_Rouge.bat file. However, doing it like this doesn't allow us to use the steam overlay and everything else that steam has to offer, like its fps counter.\n\nWith steam overlay:\n\nIn the steam ui:\n\ngames -> Add non-steam game -> browse -> \"C:\\Windows\\System32\\cmd.exe\"\n\nAfter adding cmd.exe as a game, right click on it and click on properties.\n\nIn the properties give it a nice name and give it a picture that you like. You can find the picture that miko uses in: \\Starsector\\mikohime\\ui\n\nChange target to be:\n\n\"C:\\Windows\\System32\\cmd.exe\" /k DRIVE:\\where\\starsector\\is\\installed\\Miko_Rouge.bat\n\nfor me that would be:\n\n\"C:\\Windows\\System32\\cmd.exe\" /k C:\\games\\Starsector\\Miko_Rouge.bat\n\nChange start in to be:\n\nDRIVE:\\where\\starsector\\is\\installed\n\nfor me that would be:\n\nC:\\games\\Starsector\n\nfor the people that don't like having the cmd/bat file open in the background (the black box):\n\nInstall the\n\nMiko_Silent.bat\n\nand put it in your starsector folder.\n\nchange target to be:\n\n\"C:\\Windows\\System32\\cmd.exe\" /C DRIVE:\\where\\starsector\\is\\installed\\Miko_Silent.bat\n\nFor me that would be:\n\n\"C:\\Windows\\System32\\cmd.exe\" /C C:\\games\\Starsector\\Miko_Silent.bat\n\nThat is all you have to do.\n\nMy Audio Crackling\n\nUse this experimental addons that you can get from\n\nhere\n\n[close]\n\nChangelogs:\n\nR27a : Move to Java 24, reduce Heap Usage by up to 25% at cost of 5% performance\n\nR26.4f : automatically close cmd windows when there is no error log\n\nR26.4c - eg: attempted fix for certain mods\n\nR26.4b : reupload to include Miko_silent & guide to add into steam library\n\nR26.4a : reupload to add _win & _linux suffix into zip filenames.\n\nR26.4 : Fixed Illegal Instruction on Older CPU & Mute Debug Logging\n\nSpoiler[close]\n\nCredits:\n\nFriends\n\n: that trust my stupid jargon over 2 years and tested it for me\n\nHelpful Modders Community:\n\nBeing Poison Tester\n\nUnnofficial Starsector Discord Server People:\n\nTester & Feedbacks",
@@ -56,37 +56,37 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975008177717318/banner_ico.png?ex=6a91a5f7&is=6a905477&hm=0a09e69e295eb6e213621b335881642bc1c300ce511b092080c4fb2541fe0f93&"
+      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975008177717318/banner_ico.png?ex=6a964337&is=6a94f1b7&hm=0e91662df527bbc814550ff2fe030b76deb090c40a69d29a04830ad94594dff8&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975049718243368/meme.png?ex=6a91a601&is=6a905481&hm=935d750bf88466e0184d348d55e86d0d58746e51f0e82683014927f39b222bdc&"
+      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975049718243368/meme.png?ex=6a964341&is=6a94f1c1&hm=84ab32149dd42b3437c7393f11818ba403401b19f1b6dce6f471fff6bda2b854&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975186255151154/campaign_speed_up.png?ex=6a91a622&is=6a9054a2&hm=15b750a8779336b0406e38d3b874bb6e981895f7ddab82fd434f6af722248cec&"
+      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975186255151154/campaign_speed_up.png?ex=6a964362&is=6a94f1e2&hm=24ca43f60ed2dabf9b3964ec786b0c7870f8c1a6b60c122ae3cbce7e91a28b61&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975219109400627/campaign_speed_up_2.png?ex=6a91a629&is=6a9054a9&hm=46a395dc430b5181dc4d82f9c33983edae0ddc012c0f4c19e384e9b7fc0f8057&"
+      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975219109400627/campaign_speed_up_2.png?ex=6a964369&is=6a94f1e9&hm=1b769d841d82fb7ce44f8fce77d721938560a55bf602fd2213508a3ea7b29228&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975237056569404/campaign_speed_up_3.png?ex=6a91a62e&is=6a9054ae&hm=6621282412e67465767d50aa52340a2ce7d41db52e58ae48bb8f51141b49e6d2&"
+      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1208975237056569404/campaign_speed_up_3.png?ex=6a96436e&is=6a94f1ee&hm=beeb9350ec5efb7c0e5b045202f22b8d2c6f11ec4e5266f2ca4fa9e9f47fbd5d&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1209311649790431265/image.png?ex=6a9236bd&is=6a90e53d&hm=63d4b6dc593fd811bef5b668be9b365b4eb9c5fa11fca0fc443b7e4f638779ec&"
+      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1209311649790431265/image.png?ex=6a96d3fd&is=6a95827d&hm=18c4f5319c0915925479d496be3562acc80827f455fe5ea0ec0ca8646212337b&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1210491471573295124/image.png?ex=6a91e448&is=6a9092c8&hm=7cbcb5fb790ae0d14311c6b074705f898057fbf7f7e3b7a17cd691ed9bcecc9a&"
+      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1210491471573295124/image.png?ex=6a968188&is=6a953008&hm=4209fc1ded3f3520df4230b581059b3809ca2f3e827aad461d72db3b1991d568&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1210491500497215549/image.png?ex=6a91e44f&is=6a9092cf&hm=4d6064b34b02bae074992a8ed9e11c0afce321ec9e96e0fe452a4ff895ffbbe4&"
+      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1210491500497215549/image.png?ex=6a96818f&is=6a95300f&hm=10e203ab3f8d903e67c5c7f0c6c83f5224330b5911e6a07bdf6e14b3e03e4b02&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1211876735742902333/image.png?ex=6a91a869&is=6a9056e9&hm=30efb87c824926e867b0bc0e4e2732d37ee7ef9c9c7221856fdd4238393de838&"
+      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1211876735742902333/image.png?ex=6a9645a9&is=6a94f429&hm=3592f948dca7c39a15a906d9452b041d23d995f89a155b16dcdd21ab8fe00854&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1263297821067706499/image.png?ex=6a922dc7&is=6a90dc47&hm=422acf00b6451d6893e1231fb0863be58dc91950131dc028a0f240ed12225a66&"
+      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1263297821067706499/image.png?ex=6a96cb07&is=6a957987&hm=95540ff473c59e7e3c157bf7bf22e9ab2cc210c9f24da6ad560b885aa6a3cf1e&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1313080406203170836/07d98d51e6e8bac1cdd54fddd6820614.jpeg?ex=6a92032c&is=6a90b1ac&hm=3a8d27760f8a788b540c5a5f4360d18d113a15cd4f95a8941f655b34f9a6ad90&"
+      "url": "https://cdn.discordapp.com/attachments/1208975007993176094/1313080406203170836/07d98d51e6e8bac1cdd54fddd6820614.jpeg?ex=6a96a06c&is=6a954eec&hm=a2aac138632a778b2526bf69b2066fe098c37fb3e0b5caf2e5cb603b92f05b96&"
     },
     {
       "url": "https://i.imgur.com/Ec76HMq.png"
@@ -152,7 +152,7 @@
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29320.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1208975007993176094/1208975007993176094",
   "releases": [],
-  "threadLastPostOn": "2026-08-25",
+  "threadLastPostOn": "2026-08-30",
   "sameNameMods": [],
   "addons": []
 }

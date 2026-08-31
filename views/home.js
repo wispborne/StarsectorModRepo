@@ -149,8 +149,8 @@ function releasesPanel(releases, byId) {
 /// page is somebody else's page.
 function releasesNote() {
   return noteWithMore(
-    'Note: this list may be wrong. Forum posts are checked twice a day, and '
-      + 'AI is used to read mod version numbers.',
+    'Note: this list will contain mistakes. AI is used to read mod version numbers '
+      + 'from forum post text; if the version is missing or unclear, it may mistake something else as the version.',
     {
       title: 'How recent updates work',
       moreLabel: 'More about this',

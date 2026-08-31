@@ -1,0 +1,88 @@
+{
+  "generatedAt": "2026-08-31T15:08:46.131379Z",
+  "listing": {
+    "id": "stop-stacking-me",
+    "name": "- Stop Stacking Me v1.0.0",
+    "displayName": "Stop Stacking Me",
+    "authors": [
+      "oddisz"
+    ],
+    "otherAuthorNames": {},
+    "categories": [
+      "Quality of life"
+    ],
+    "sources": [
+      "forum",
+      "discord"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "1.0.0",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616672152162304/image.png?ex=6a96d60d&is=6a95848d&hm=ff640e5fe89ca554363234f32916c875a213d4c67c000925b128134eb53c8969&",
+    "summary": "Just a simple mod that stops sprite stacking for weapons. I personally prefer it when sprites for weapons are only one-at-a-time, to more easily distinguish the thousands of weapons in the modsector.",
+    "summaryIsGenerated": false,
+    "aiSummary": "Draws one sprite per cargo stack instead of multiple overlapping copies.",
+    "hasDirectDownload": false,
+    "bestDownload": {
+      "url": "https://github.com/andrzejsokolowski/starsector-stopstackingme/releases/latest",
+      "kind": "direct",
+      "needsAnotherStep": true
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35952.0",
+    "discordUrl": "https://discord.com/channels/187635036525166592/1543616671997108244/1543616671997108244",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2026-08-30",
+    "threadLastPostOn": "2026-08-30",
+    "needs": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      }
+    ]
+  },
+  "description": "StopStackingMe\n\nWHAT DOES THIS MOD DO?\n- Draws one sprite per cargo stack, instead of a pile of grey ghost copies behind it.\n\nDo you have three Heavy Maulers in your hold? Then the game draws three Heavy Maulers, piled up in one little tile, the two at the back tinted grey.\n\nIt's there to tell you how many you have. There is already a number in the corner doing exactly that.\n\nOne sprite. Every screen. The number stays. Helps with the visual clutter for me\n\nThe code is fully open source. You don't have to credit me. Claude Code built this anyway.\nRequires LunaLib and LazyLib.\n\nSettings\n\nIn LunaLib's settings menu (Shift+F2 in the campaign), under Icons.Weapons - one sprite only: on by default.Crew and marines - one sprite only: off by default. Those tiles pile up the same way, one extra portrait per 50 aboard.Both apply on the next frame drawn, so you can flip one and watch the screen you are already looking at change.\n\nFAQ\n\nCan I add or remove it mid save?\n\nYes, both. Nothing of this mod is ever written into your save. It only changes how a screen is drawn while you are looking at it.\n\nDoes it change how much I actually have?\n\nNo. It only stops the extra sprites being drawn. The number in the corner is untouched, and so is everything the game does with the stack.\n\nThe sprite sits slightly lower when I have more than one.\n\nThat one is the game's own doing. When a tile holds more than one it shifts the front sprite down a few pixels to leave room for the pile behind it. The pile is gone, the shift stays.\n\nWhat about fighter LPCs, blueprints and AI cores?\n\nThose already draw a single sprite in vanilla. Nothing to fix.\n\nDoes it work in the simulator or in missions?\n\nNo, campaign only. Those run in a different part of the game.\n\n[close]Version log1.0.1\n\nLinked the mod to this forum thread.\n\n1.0.0\n\nFirst release. One sprite per cargo stack, everywhere the game stacks them, with a LunaLib toggle for crew and marines.\n\n[close]",
+  "descriptionHtml": "<a href=\"https://github.com/andrzejsokolowski/starsector-stopstackingme/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><strong>StopStackingMe</strong></a><br>  <br><strong><br>WHAT DOES THIS MOD DO?<br>- Draws one sprite per cargo stack, instead of a pile of grey ghost copies behind it.<br><br>Do you have three Heavy Maulers in your hold? Then the game draws three Heavy Maulers, piled up in one little tile, the two at the back tinted grey.<br><br>It's there to tell you how many you have. There is already a number in the corner doing exactly that.<br><br>One sprite. Every screen. The number stays. Helps with the visual clutter for me<br><br>The code is fully open source. You don't have to credit me. Claude Code built this anyway.<br>Requires <strong>LunaLib</strong> and <strong>LazyLib</strong>.<br></strong><hr><strong>Settings</strong><hr><ul><li>In LunaLib's settings menu (<strong>Shift+F2</strong> in the campaign), under <strong>Icons</strong>.</li><li><strong>Weapons - one sprite only</strong>: on by default.</li><li><strong>Crew and marines - one sprite only</strong>: off by default. Those tiles pile up the same way, one extra portrait per 50 aboard.</li><li>Both apply on the next frame drawn, so you can flip one and watch the screen you are already looking at change.</li></ul>FAQ<strong>Can I add or remove it mid save?</strong><br>Yes, both. Nothing of this mod is ever written into your save. It only changes how a screen is drawn while you are looking at it.<br><strong>Does it change how much I actually have?</strong><br>No. It only stops the extra sprites being drawn. The number in the corner is untouched, and so is everything the game does with the stack.<br><strong>The sprite sits slightly lower when I have more than one.</strong><br>That one is the game's own doing. When a tile holds more than one it shifts the front sprite down a few pixels to leave room for the pile behind it. The pile is gone, the shift stays.<br><strong>What about fighter LPCs, blueprints and AI cores?</strong><br>Those already draw a single sprite in vanilla. Nothing to fix.<br><strong>Does it work in the simulator or in missions?</strong><br>No, campaign only. Those run in a different part of the game.<br>[close]Version log1.0.1<br>Linked the mod to this forum thread.<br><br>1.0.0<br>First release. One sprite per cargo stack, everywhere the game stacks them, with a LunaLib toggle for crew and marines.<br>[close]",
+  "descriptionIsGenerated": false,
+  "aiDescription": "Replaces the visual pile of grey ghost sprites behind stacked items in the hold with a single sprite. The item count remains visible in the corner. Includes toggles in LunaLib settings for weapons and for crew/marines.",
+  "saveCompatibilityText": "Yes, both. Nothing of this mod is ever written into your save. It only changes how a screen is drawn while you are looking at it.",
+  "rawCategories": [
+    "Quality of Life"
+  ],
+  "gallery": [
+    {
+      "url": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616672152162304/image.png?ex=6a96d60d&is=6a95848d&hm=ff640e5fe89ca554363234f32916c875a213d4c67c000925b128134eb53c8969&"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616723675119636/image.png?ex=6a96d619&is=6a958499&hm=d45affe0904b1643a8f6b0d9867c0acb62bc537b1f645972016963539d85de17&"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616739986772038/image.png?ex=6a96d61d&is=6a95849d&hm=eb367ee6598a48bad54f08dc2e0dbed6886cba786335443875493bdab66dcc82&"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/andrzejsokolowski/starsector-stopstackingme/releases/latest",
+      "kind": "direct",
+      "label": "StopStackingMe",
+      "host": "github.com",
+      "needsAnotherStep": true
+    }
+  ],
+  "changelog": {
+    "1.0.1": "Linked the mod to this forum thread.",
+    "1.0.0": "First release. One sprite per cargo stack, everywhere the game stacks them, with a LunaLib toggle for crew and marines."
+  },
+  "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-stopstackingme",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35952.0",
+  "discordUrl": "https://discord.com/channels/187635036525166592/1543616671997108244/1543616671997108244",
+  "releases": [],
+  "threadLastPostOn": "2026-08-30",
+  "sameNameMods": [],
+  "addons": []
+}
