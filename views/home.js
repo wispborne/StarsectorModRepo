@@ -1,5 +1,4 @@
-// Home: a search box, the mods added recently, the kinds of mod, then what
-// came out recently.
+// Home: the mods added recently, the kinds of mod, then what came out recently.
 //
 // The release feed is the heart of the page. It is not "threads somebody
 // replied to" — it is mods whose version actually moved forward, worked out by
@@ -7,9 +6,9 @@
 
 import {
   buildHash, categoryChips, clear, currentGameVersion, downloadButton, el,
-  formatDay, go,
+  formatDay,
   howLongAgo, imageUrlOf, modHref, modList, modName, noteWithMore,
-  releaseFeed, searchHelpField, thumbnail,
+  releaseFeed, thumbnail,
 } from '../lib.js';
 import { modCard } from './browse.js';
 
@@ -34,43 +33,14 @@ export async function render(root) {
   const byId = new Map(mods.map((mod) => [mod.id, mod]));
   const currentVersion = currentGameVersion(mods);
 
-  // The search box first, then the mods added recently, then the kinds of mod
-  // and the releases.
+  // The mods added recently first, then the kinds of mod and the releases.
   clear(root);
   root.append(el('div', { class: 'stack' }, [
-    front(),
     recentlyAdded(mods, currentVersion),
     browseByKind(mods),
     releasesPanel(releases, byId),
     feedLine(),
   ]));
-}
-
-/// The front of the site: a search box.
-///
-/// A reader arriving here has one of two things in mind — a mod they can name,
-/// or no idea yet. The search box answers the first and the rest of the page
-/// answers the second, so between them they cover everybody who arrives.
-function front() {
-  const box = el('input', {
-    type: 'search',
-    class: 'search-box',
-    placeholder: 'Search for a mod, a person or a kind of mod…',
-    'aria-label': 'Search mods',
-  });
-  const button = el('button', { class: 'btn btn-primary', text: 'Search' });
-  const search = () => go(buildHash(['browse'], { q: box.value }));
-
-  box.addEventListener('keydown', (e) => { if (e.key === 'Enter') search(); });
-  button.addEventListener('click', search);
-
-  return el('section', { class: 'front' }, [
-    el('div', { class: 'search-row' }, [searchHelpField(box), button]),
-    el('p', {
-      class: 'front-hint',
-      text: 'Or press / from anywhere on the site.',
-    }),
-  ]);
 }
 
 /// The line offering the release feed. Feed readers are where a lot of modders
@@ -85,7 +55,7 @@ function feedLine() {
   ]);
 }
 
-/// The categories, as a row of chips, right under the search box. It is the
+/// The categories, as a row of chips under the recently added mods. It is the
 /// front door for a reader who does not know what they are looking for yet.
 function browseByKind(mods) {
   const chips = categoryChips(mods);

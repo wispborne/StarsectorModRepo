@@ -99,7 +99,6 @@
   --pad-page: 16px 16px 40px;   /* round the whole page */
   --pad-block: 12px 14px;  /* inside a panel or a notice */
   --pad-cell: 6px 10px;    /* inside a card's words, a row, a release */
-  --pad-front: 8px 0 12px; /* above and below the front page's search box */
   --pad-bar: 6px 16px;     /* the bar at the top */
 
   --page-width: 1200px;
@@ -152,7 +151,6 @@
   --pad-page: 28px 20px 64px;
   --pad-block: 20px 22px;
   --pad-cell: 10px 12px;
-  --pad-front: 18px 0 22px;
   --pad-bar: 10px 16px;
 }
 
@@ -660,17 +658,6 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 
 /* --- Home page --- */
 
-/* The front of the site: the search box. Everything else on Home comes after
-   it. */
-.front {
-  display: flex; flex-direction: column; align-items: center; gap: var(--gap);
-  text-align: center;
-  padding: var(--pad-front);
-}
-.front .search-row { width: 100%; max-width: 620px; }
-.front .search-box { font-size: var(--type-big); padding: 12px 16px; }
-.front-hint { color: var(--text-dim); font-size: var(--type-small); margin: 0; }
-
 .release-day { margin-bottom: var(--gap-wide); }
 .release-day > h3 { font-size: var(--type-normal); color: var(--text-dim); font-weight: 600; }
 .release-list {
@@ -907,19 +894,53 @@ body.picture-open { overflow: hidden; }
   display: flex; flex-direction: column;
   padding: 40px 56px 20px;
 }
+/* The middle owns every gesture (touch-action: none keeps the browser's own
+   pinch and pan off it) and clips the zoomed picture so it never slides over
+   the caption or the buttons. */
 .big-picture-middle {
   flex: 1 1 auto; min-height: 0;
   display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; touch-action: none;
 }
 .big-picture-shot {
   max-width: 100%; max-height: 100%; object-fit: contain;
   border: 1px solid var(--border);
+  cursor: zoom-in; user-select: none; -webkit-user-drag: none;
+}
+/* Eases a picture to its place after a press; dragging takes it straight off. */
+.big-picture-shot.settle { transition: transform 0.18s ease; }
+.big-picture.zoomed .big-picture-shot { cursor: grab; }
+.big-picture.zoomed .big-picture-shot:active { cursor: grabbing; }
+/* A ring while a picture is on its way — after a beat, so one that is already
+   here shows no flash. */
+.big-picture-middle.is-loading::after {
+  content: ''; position: absolute; left: 50%; top: 50%;
+  width: 28px; height: 28px; margin: -14px 0 0 -14px;
+  border: 2px solid var(--border); border-top-color: var(--primary);
+  border-radius: 50%; opacity: 0;
+  animation: big-picture-appear 0.2s ease 0.3s forwards,
+    big-picture-spin 0.8s linear infinite;
+}
+@keyframes big-picture-spin { to { transform: rotate(1turn); } }
+@keyframes big-picture-appear { to { opacity: 1; } }
+.big-picture-note {
+  color: var(--text-dim); font-size: var(--type-small);
+  padding: 20px; text-align: center;
 }
 .big-picture-foot {
   flex: 0 0 auto; padding-top: 12px; text-align: center;
   color: var(--text); font-size: var(--type-small);
 }
-.big-picture-counter { color: var(--text-dim); font-size: var(--type-small); margin-top: 4px; }
+.big-picture-tools {
+  display: flex; justify-content: center; align-items: baseline;
+  gap: 14px; margin-top: 4px;
+}
+.big-picture-counter { color: var(--text-dim); font-size: var(--type-small); }
+.big-picture-name {
+  color: var(--text-dim); font-size: var(--type-small);
+  overflow-wrap: anywhere;
+}
+.big-picture-original { font-size: var(--type-small); }
 .big-picture-close, .big-picture-step {
   position: absolute; background: none; border: none; cursor: pointer;
   color: var(--text-dim); font-family: inherit; line-height: 1;
@@ -929,6 +950,22 @@ body.picture-open { overflow: hidden; }
 .big-picture-step { top: 50%; transform: translateY(-50%); font-size: 3rem; padding: 8px 14px; }
 .big-picture-step.back { left: 4px; }
 .big-picture-step.forward { right: 4px; }
+.big-picture-zoom { position: absolute; top: 10px; left: 16px; display: flex; gap: 6px; }
+.big-picture-zoom-button {
+  width: 34px; height: 34px; padding: 0;
+  background: none; border: 1px solid var(--border); cursor: pointer;
+  color: var(--text-dim); font-family: inherit; font-size: 1.2rem; line-height: 1;
+}
+.big-picture-zoom-button:hover:not(:disabled) {
+  color: var(--primary); border-color: var(--primary);
+}
+.big-picture-zoom-button:disabled { opacity: 0.4; cursor: default; }
+@media (prefers-reduced-motion: reduce) {
+  .big-picture-shot.settle { transition: none; }
+  .big-picture-middle.is-loading::after {
+    animation: big-picture-appear 0.2s ease 0.3s forwards;
+  }
+}
 
 .changelog-entry { border-bottom: 1px solid var(--border); }
 .changelog-entry:last-child { border-bottom: none; }

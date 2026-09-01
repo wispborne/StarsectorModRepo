@@ -24,12 +24,6 @@ const VIEW_KEY = 'starmodderView';
 /// The switches, each a plain yes-or-no question about one field.
 const SWITCHES = [
   {
-    key: 'save',
-    label: 'Save compatible',
-    title: 'Only mods the author says can be added to a game already in progress.',
-    keep: (mod) => mod.saveCompatible === true,
-  },
-  {
     key: 'download',
     label: 'Has a download',
     title: 'Only mods with a link that goes straight to a file.',
@@ -75,7 +69,8 @@ export async function render(root, parts) {
     author: query.get('author') || '',
     sort: SORTS.some((s) => s.key === query.get('sort')) ? query.get('sort')
       : ((query.get('q') || '') ? 'relevance' : 'current'),
-    switches: new Set((query.get('only') || '').split(',').filter(Boolean)),
+    switches: new Set((query.get('only') || '').split(',')
+      .filter((key) => SWITCHES.some((option) => option.key === key))),
     // Older mods are left out to begin with. Nineteen pages of A-to-Z over
     // every game release anyone ever built for is not a list anybody reads.
     olderToo: query.get('older') === '1',
@@ -592,17 +587,6 @@ function badges(mod, currentVersion) {
     }));
   }
   if (mod.isWorkInProgress) out.push(el('span', { class: 'badge wip', text: 'WIP' }));
-  if (mod.saveCompatible === true) {
-    out.push(el('span', {
-      class: 'badge save-ok', text: 'Save Compat',
-      title: 'The author says this can be added to a game already in progress.',
-    }));
-  } else if (mod.saveCompatible === false) {
-    out.push(el('span', {
-      class: 'badge save-no', text: 'New game',
-      title: 'The author says this needs a new game.',
-    }));
-  }
   const downloads = downloadCountBadge(mod);
   if (downloads) out.push(downloads);
   if (isDiscordOnly(mod)) {

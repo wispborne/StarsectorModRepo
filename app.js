@@ -11,7 +11,7 @@ import {
   preparePageScroll, restorePageScroll, searchHelpField, setAiSummaryMode,
   setImageChoice,
   setSpacingPreference, spacingPreference,
-  takeScrollPlaced, thumbnail, watchMyList,
+  thumbnail, watchMyList,
 } from './lib.js';
 import { scoreOfTerm } from './search.js';
 import * as home from './views/home.js';
@@ -106,15 +106,13 @@ async function route() {
     console.error(err);
   }
 
-  restorePageScroll(savedScroll);
-
-  // A new page starts at its top. Without this, going from the foot of Home to
-  // Browse lands halfway down Browse.
+  // A new page starts at its top, unless it was just put back where the reader
+  // left it. Without this, going from the foot of Home to Browse lands halfway
+  // down Browse.
   //
   // It happens after the page is drawn, not before, so the reader does not see
-  // the old page jump while the new one loads. A view that has already put the
-  // page where it wants it is left alone.
-  if (!takeScrollPlaced()) window.scrollTo(0, 0);
+  // the old page jump while the new one loads.
+  if (!restorePageScroll(savedScroll)) window.scrollTo(0, 0);
 }
 
 /// Says when the data on show was last collected. It is on every page, at the
