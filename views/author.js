@@ -41,7 +41,7 @@ export async function render(root, parts) {
       el('h1', { text: bestSpelling(mods, wanted) }),
       el('span', {
         class: 'sub',
-        text: `${mods.length} mod${mods.length === 1 ? '' : 's'}.`,
+        text: `has ${mods.length} mod${mods.length === 1 ? '' : 's'}`,
       }),
       otherNames.length
         ? el('span', {
@@ -76,9 +76,9 @@ async function renderIndex(root) {
   const people = [...counts.values()]
     .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 
-  document.title = 'People | Starmodder';
+  document.title = 'Mod authors | Starmodder';
   clear(root);
-  root.append(breadcrumbs([{ label: 'People' }]));
+  root.append(breadcrumbs([{ label: 'Mod authors' }]));
 
   const cloud = el('div', { class: 'people' });
   for (const person of people) {
@@ -93,12 +93,7 @@ async function renderIndex(root) {
 
   root.append(el('div', { class: 'stack' }, [
     el('div', { class: 'page-head' }, [
-      el('h1', { text: 'People' }),
-      el('span', {
-        class: 'sub',
-        text: `${people.length} people have a mod here. The ones with the most `
-          + 'come first.',
-      }),
+      el('h1', { text: `${people.length} mod authors` }),
     ]),
     cloud,
   ]));

@@ -5,6 +5,8 @@
 // files fetched off the same origin the pages came from, and nothing here can
 // change anything.
 
+import { address } from './address.js';
+
 // --- Where the data comes from ---
 
 /// The folder the published data files sit in, relative to this page.
@@ -136,13 +138,9 @@ export function breadcrumbs(trail = []) {
 
 // --- The address bar ---
 
-/// Reads the path part of `#/foo/bar?x=1` into ['foo','bar'].
-export function hashParts() {
-  const h = location.hash.replace(/^#\/?/, '').split('?')[0];
-  return h.length ? h.split('/').map(decodeURIComponent) : [];
-}
-
-/// The query part of the current hash, as URLSearchParams.
+/// The query part of the current hash, as URLSearchParams. Only the pages that
+/// live on the front document carry one, so this reads the hash and nothing
+/// else; a mod's page has no hash and no query of its own.
 export function hashQuery() {
   const i = location.hash.indexOf('?');
   return new URLSearchParams(i >= 0 ? location.hash.slice(i + 1) : '');
@@ -161,8 +159,10 @@ export function buildHash(parts, params = {}) {
   return `#/${path}${qs ? '?' + qs : ''}`;
 }
 
+/// Goes to a page and draws it, adding one history entry. It never reloads the
+/// site, whichever of the two address shapes each page has.
 export function go(hash) {
-  location.hash = hash;
+  address().go(hash);
 }
 
 /// Changes the address without adding a history entry or redrawing the page. A
@@ -170,7 +170,7 @@ export function go(hash) {
 /// bookmark brings the same list back without every keystroke piling up in the
 /// back button.
 export function replaceHash(hash) {
-  history.replaceState(null, '', hash);
+  address().replace(hash);
   if (activeScrollKey !== null) activeScrollKey = scrollStorageKey(hash);
 }
 
@@ -1382,9 +1382,11 @@ export function everyOtherName(mod) {
   return Object.values(map).flat();
 }
 
-/// The address of a mod's own page.
+/// The address of a mod's own page: the real file the builder writes at
+/// `mods/<id>/`. That is what makes a copied address show the mod's own name
+/// and picture when it is pasted somewhere that fetches it.
 export function modHref(id) {
-  return `#/mods/${encodeURIComponent(id)}`;
+  return address().modHref(id);
 }
 
 /// The number part of a game version: "0.98a", "0.98" and "0.98a-RC8" all come

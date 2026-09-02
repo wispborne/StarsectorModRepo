@@ -8,8 +8,8 @@
 // or somebody else's that they followed a link to.
 
 import {
-  breadcrumbs, clear, downloadButton, el, hashQuery, imageUrlOf, joinNames,
-  listHref,
+  breadcrumbs, clear, downloadButton, el, go, hashQuery, imageUrlOf,
+  joinNames, listHref,
   modHref, modList, modName, myList, neededModsLine, setMyList, thumbnail,
   toggleInMyList,
 } from '../lib.js';
@@ -106,7 +106,7 @@ function actions(root, mine, found, missing) {
     const take = el('button', { class: 'btn', text: 'Make this my list' });
     take.addEventListener('click', () => {
       setMyList(ids);
-      location.hash = '#/list';
+      go('#/list');
     });
     row.append(take);
   }

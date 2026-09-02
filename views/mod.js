@@ -10,7 +10,7 @@ import {
   breadcrumbs, clear,
   currentGameVersion, DATA_BASE, downloadButton, el, errorPanel, formatDay,
   formatMoment, imageUrlOf, joinNames, listToggle,
-  modDetail, modList, modName, MOD_VERSION_NOTE, neededModsLine,
+  modDetail, modHref, modList, modName, MOD_VERSION_NOTE, neededModsLine,
   NO_DESCRIPTION, picture, showPicture, sourceName, summaryTitle,
   versionStanding, versionStandingNote,
 } from '../lib.js';
@@ -623,7 +623,7 @@ function sameNameMods(detail) {
 
     // A page here where we have one, and the forum thread where we do not.
     const inner = other.id
-      ? el('a', { class: 'row-inner', href: `#/mods/${other.id}` })
+      ? el('a', { class: 'row-inner', href: modHref(other.id) })
       : el('a', {
           class: 'row-inner', href: other.url,
           target: '_blank', rel: 'noopener nofollow',

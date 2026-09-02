@@ -3,12 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--page-head-->
+  <!-- Everything between the two marks around this is what changes from page
+       to page. A mod's own page is this same document, written to
+       `mods/<id>/index.html` with this region swapped for that mod's base,
+       title and preview tags. So nothing relative may be written above the
+       first mark — that is where the `<base>` lands, and a `<base>` has to
+       come before the first relative address on the page.
+
+       The base is where the site's files are, which is not the same as where
+       the address bar is: opening a mod moves the address to `mods/<id>/`
+       without loading a new document, and every stylesheet, script and data
+       file still lives up here. address.js pins this to an absolute address as
+       the site starts, so it stays right after the address has moved. -->
+  <base href="./">
+  <title>Starmodder 4: Starsector mods</title>
+  <meta name="description" content="Starsector mods, with recent releases, downloads, changelogs and screenshots.">
+  <!--/page-head-->
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
        picture is being shown on, so no request from this site carries one. -->
   <meta name="referrer" content="no-referrer">
-  <title>Starmodder 4: Starsector mods</title>
-  <meta name="description" content="Starsector mods, with recent releases, downloads, changelogs and screenshots.">
   <link rel="stylesheet" href="style.css">
   <!-- The reader's spacing choice, applied before anything is drawn so the
        page does not change shape a moment after it appears. The same key

@@ -1,22 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer">
-<title>Remnant Command Transfer | Starmodder</title>
-<meta name="description" content="Allows transferring command to remnant ships.">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Starmodder">
-<meta property="og:title" content="Remnant Command Transfer">
-<meta property="og:description" content="Allows transferring command to remnant ships.">
-<meta property="og:image" content="https://fractalsoftworks.com/forum/index.php?action=dlattach;attach=7025;type=avatar">
-<meta name="twitter:card" content="summary_large_image">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="../../">
+  <title>Remnant Command Transfer | Starmodder</title>
+  <meta name="description" content="Allows transferring command to remnant ships.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Starmodder">
+  <meta property="og:title" content="Remnant Command Transfer">
+  <meta property="og:description" content="Allows transferring command to remnant ships.">
+  <meta property="og:image" content="https://fractalsoftworks.com/forum/index.php?action=dlattach;attach=7025;type=avatar">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Pictures come from wherever the mod's author put them. Several of those
+       hosts — Imgur most of all — answer 403 when they can see which page the
+       picture is being shown on, so no request from this site carries one. -->
+  <meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="style.css">
+  <!-- The reader's spacing choice, applied before anything is drawn so the
+       page does not change shape a moment after it appears. The same key
+       lib.js keeps it under. -->
+  <script>
+    try {
+      var spacing = localStorage.getItem('starmodderSpacing');
+      document.documentElement.dataset.spacing =
+        spacing === 'comfortable' ? 'comfortable' : 'dense';
+    } catch (e) { document.documentElement.dataset.spacing = 'dense'; }
+  </script>
+  <!-- The release feed, so a feed reader offers to subscribe on any page. -->
+  <link rel="alternate" type="application/atom+xml"
+        title="Starmodder: new Starsector mod releases" href="updates.xml">
 </head>
 <body>
-<h1>Remnant Command Transfer</h1>
-<p>Allows transferring command to remnant ships.</p>
-<p><a href="../../#/mods/remnant-command-transfer">Open Remnant Command Transfer on Starmodder</a></p>
-<script>location.replace('../../#/mods/remnant-command-transfer');</script>
+  <a class="skip-link" href="#app">Skip to the page</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#/home">Starmodder</a>
+      <nav id="nav" class="site-nav" aria-label="Main"></nav>
+      <div class="header-search">
+        <input type="search" id="site-search" class="search-box"
+               placeholder="Search mods…  (press /)"
+               aria-label="Search mods" autocomplete="off" role="combobox"
+               aria-autocomplete="list" aria-controls="search-suggestions"
+               aria-expanded="false">
+        <div id="search-suggestions" class="suggestions" role="listbox"
+             aria-label="Search suggestions" hidden></div>
+      </div>
+      <button type="button" id="open-settings" class="settings-button"
+              title="Settings">Settings</button>
+    </div>
+  </header>
+
+  <dialog id="settings" class="settings-dialog" aria-labelledby="settings-title">
+    <div class="settings-inner">
+      <div class="settings-head">
+        <h2 id="settings-title">Settings</h2>
+        <button type="button" class="settings-close" aria-label="Close settings">×</button>
+      </div>
+      <section class="settings-section" aria-labelledby="appearance-title">
+        <h3 id="appearance-title">Appearance</h3>
+        <p>How much room there is between things. The words and pictures stay the same size either way.</p>
+        <div class="choice-list" role="radiogroup" aria-label="Spacing">
+          <label class="choice">
+            <input type="radio" name="spacing" value="dense">
+            <span>
+              <span class="choice-name">Dense</span><br>
+              <span class="choice-note">Less room between things, so more fits on the screen.</span>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="spacing" value="comfortable">
+            <span>
+              <span class="choice-name">Comfortable</span><br>
+              <span class="choice-note">More room between things.</span>
+            </span>
+          </label>
+        </div>
+      </section>
+      <section class="settings-section" aria-labelledby="pictures-title">
+        <h3 id="pictures-title">Mod pictures</h3>
+        <p>Some mods have two pictures: one in their forum post and one in the Discord or Nexus post announcing them. This picks which of the two to show. Mods with only one picture look the same either way.</p>
+        <div class="choice-list" role="radiogroup" aria-label="Which picture to show">
+          <label class="choice">
+            <input type="radio" name="mod-pictures" value="post">
+            <span>
+              <span class="choice-name">From the forum post</span><br>
+              <span class="choice-note">The picture the author put in their own thread.</span>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="mod-pictures" value="announcement">
+            <span>
+              <span class="choice-name">From Discord or Nexus</span><br>
+              <span class="choice-note">The picture posted where the mod was announced. This is what TriOS shows.</span>
+            </span>
+          </label>
+        </div>
+      </section>
+      <section class="settings-section" aria-labelledby="summaries-title">
+        <h3 id="summaries-title">Show AI mod summaries</h3>
+        <p>Where a mod's post has no short description in it, an AI wrote one from the post. Those are marked with a sparkle.</p>
+        <div class="choice-list" role="radiogroup" aria-label="AI-written summaries">
+          <label class="choice">
+            <input type="radio" name="ai-summaries" value="always">
+            <span>
+              <span class="choice-name">Always</span><br>
+              <span class="choice-note">The AI summary is shown even where the author wrote one.</span>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="ai-summaries" value="whenMissing">
+            <span>
+              <span class="choice-name">Only if missing</span><br>
+              <span class="choice-note">Cards use the author's own words first. Detail pages also show the AI summary.</span>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="ai-summaries" value="never">
+            <span>
+              <span class="choice-name">Never</span><br>
+              <span class="choice-note">A mod with only an AI summary reads as having no description.</span>
+            </span>
+          </label>
+        </div>
+      </section>
+    </div>
+  </dialog>
+
+  <main id="app" tabindex="-1"><div class="loading">Loading…</div></main>
+
+  <footer class="site-footer">
+    <span id="freshness" class="freshness"></span>
+    <span id="build" class="build"></span>
+    <a href="#/about">About this site</a>
+    <a href="updates.xml">Release feed</a>
+    <span class="footer-note">A read-only view of mods posted on the Starsector forum and Discord.</span>
+  </footer>
+
+  <script type="module" src="app.js"></script>
 </body>
 </html>
