@@ -748,8 +748,10 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
   border: 1px solid var(--border); background: var(--surface-container);
   border-radius: 8px; overflow: hidden;
 }
+/* The whole picture, same as the cards: a tall or square mod picture had its
+   sides cut off here. Bars either side are the price. */
 .mod-head-picture img {
-  width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;
+  width: 100%; aspect-ratio: 16 / 9; object-fit: contain; display: block;
 }
 .mod-head-words {
   flex: 1 1 320px; min-width: 0;
