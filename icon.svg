@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img"
+     aria-label="Starmodder">
+  <!-- Starmodder's mark: a sibling of the TriOS logo, not a copy of it.
+
+       What it keeps is the family likeness — a thin ring, and inside it a
+       triangle broken into three arms with the gaps on the corners. What it
+       changes is what the arms hold. TriOS holds a cluster of dots there;
+       Starmodder holds a download arrow, because that is what this site is
+       for: TriOS runs your mods, Starmodder is where you go to get them. The
+       colour is the site's own cyan rather than TriOS's blue.
+
+       The shapes are not eyeballed. Everything follows from four rules, and
+       the rules are worth keeping if it is ever redrawn:
+
+       - The triangle has a circumradius of 132 about the centre (128, 128),
+         so each side sits 66 out from the middle. One arm is drawn and turned
+         120 and 240 degrees, so the three can never drift apart.
+       - Each arm is cut at both ends along the line running from that corner
+         to the centre. That is what makes the three gaps constant-width slots
+         aimed at the corners, rather than three wedges of whatever width the
+         numbers happened to give. It is the single thing that most makes the
+         mark look drawn rather than assembled.
+       - An arm is 23 thick at one end and 14 at the other, and its inner edge
+         bows out very slightly. The lean is TriOS's; the bow keeps the middle
+         of an arm from looking starved.
+       - The arrow sits so that its own centre of area is on the centre of the
+         mark, not its bounding box — an arrow centred the lazy way rides low.
+         Its shoulders are cut on the same 30-degree line the slots use, and
+         its point is cut flat, so its outline is made of angles the rest of
+         the mark already uses. It is then sized to clear the arms evenly.
+
+       The bottom arm doubles as the arrow's tray. At a tab's size the two run
+       together, and what is left reads as an arrow over a line, which is the
+       download sign everywhere.
+
+       Nothing is stroked but the ring, so there is no hairline to vanish when
+       this is drawn small. -->
+
+  <!-- The site's two cyans, the same pair `style.css` keeps at the top of its
+       colour block. A light page needs the darker one: the bright cyan on
+       near-white cannot be read. An SVG shown with `<img>` still answers this
+       question for itself, so the one file works on either page. -->
+  <style>
+    .ring { stroke: #49fcff; }
+    .mark { fill: #49fcff; }
+    @media (prefers-color-scheme: light) {
+      .ring { stroke: #006877; }
+      .mark { fill: #006877; }
+    }
+  </style>
+  <circle class="ring" cx="128" cy="128" r="116" fill="none" stroke-width="11"/>
+  <g class="mark" transform="translate(128 128) scale(0.85) translate(-128 -128)">
+    <path d="M33.7 194 L222.3 194 L198.1 180 Q135.8 169.5 73.5 171 Z"/>
+    <path d="M33.7 194 L222.3 194 L198.1 180 Q135.8 169.5 73.5 171 Z"
+          transform="rotate(120 128 128)"/>
+    <path d="M33.7 194 L222.3 194 L198.1 180 Q135.8 169.5 73.5 171 Z"
+          transform="rotate(240 128 128)"/>
+    <path d="M106.8 89.9 L149.2 89.9 L141.1 136.3 L172.4 136.3 L158.4 144.3
+             L136.7 164.5 L119.3 164.5 L97.6 144.3 L83.6 136.3 L114.9 136.3 Z"/>
+  </g>
+</svg>

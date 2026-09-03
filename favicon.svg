@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- The tab icon: the same triangle and arrow as `icon.svg` — same rules,
+       same paths — drawn big enough to fill a dark disc on its own, with no
+       ring around it.
+
+       Two things it has to do at once.
+
+       It must not read as the TriOS logo. TriOS is a thin bright ring with a
+       small figure inside, and at a tab's size the ring is the whole picture,
+       so a cyan ring beside a blue one is the same picture twice. Dropping the
+       ring settles it: what is left is a filled shape, and an outline and a
+       solid never read alike at any size. The ring stays in `icon.svg`, where
+       the mark is shown big enough for the difference to be plain.
+
+       And it must stay quiet. Cyan is the site's accent — the colour of a
+       thing you can act on — never a ground, so a solid cyan coin was both too
+       loud and against the site's own rule. Dark ground, cyan mark, the way
+       every page is. The disc carries the page's own background into the tab
+       strip, which is what makes the mark readable against a light browser's
+       near-white strip as well as a dark one.
+
+       Keep the paths in step with `icon.svg`. Only the ring, the disc and the
+       scale are meant to differ. -->
+  <circle cx="128" cy="128" r="128" fill="#0e162b"/>
+  <g fill="#49fcff">
+    <path d="M33.7 194 L222.3 194 L198.1 180 Q135.8 169.5 73.5 171 Z"/>
+    <path d="M33.7 194 L222.3 194 L198.1 180 Q135.8 169.5 73.5 171 Z"
+          transform="rotate(120 128 128)"/>
+    <path d="M33.7 194 L222.3 194 L198.1 180 Q135.8 169.5 73.5 171 Z"
+          transform="rotate(240 128 128)"/>
+    <path d="M106.8 89.9 L149.2 89.9 L141.1 136.3 L172.4 136.3 L158.4 144.3
+             L136.7 164.5 L119.3 164.5 L97.6 144.3 L83.6 136.3 L114.9 136.3 Z"/>
+  </g>
+</svg>

@@ -163,10 +163,10 @@ function partOfThreadLine(mod) {
     ? el('a', {
         href: mod.forumUrl, target: '_blank', rel: 'noopener nofollow',
         text: mod.partOfThreadTitle,
-        title: 'A forum thread holding several mods, this one among them.',
+        title: 'A forum thread with several mods, including this one.',
       })
     : el('span', { text: mod.partOfThreadTitle }));
-  line.append(document.createTextNode(', a thread holding several mods.'));
+  line.append(document.createTextNode(', a thread with several mods.'));
   return line;
 }
 
@@ -284,7 +284,7 @@ function downloads(detail) {
       ? el('p', {
           class: 'checked-on',
           text: `Last checked ${formatMoment(detail.generatedAt)}.`,
-          title: "When these links were last read off the mod's post.",
+          title: "When these links were last read from the mod's post.",
         })
       : null,
   ]);
@@ -306,7 +306,7 @@ function downloadRow(download) {
     download.host ? el('span', { class: 'badge', text: download.host }) : null,
     download.needsAnotherStep
       ? el('span', {
-          class: 'badge', text: 'Needs another click',
+          class: 'badge', text: 'Has download page',
           title: "The host's own page opens first; the file comes after that.",
         })
       : null,
@@ -432,7 +432,7 @@ function gallery(detail) {
   images.forEach((image) => {
     const button = el('button', {
       class: 'shot',
-      title: image.caption || 'Open this screenshot',
+      title: image.caption || 'Open screenshot',
     });
     button.append(picture(image.url, {
       alt: image.caption || '',
@@ -521,7 +521,7 @@ function addons(detail) {
     addonBox(
       versions,
       'Other versions of this mod',
-      'Install one of these instead of the mod above, not as well as it.',
+      null,
     ),
   ]);
 }
@@ -573,9 +573,9 @@ function facts(detail) {
   // does. Left out when it says nothing the line above did not.
   const raw = detail.rawCategories || [];
   if (raw.length && joinNames(raw) !== joinNames(listing.categories || [])) {
-    rows.push(['Filed under', el('span', {
+    rows.push(['Original categories', el('span', {
       class: 'dim', text: joinNames(raw),
-      title: 'The shelves the forum and Discord file this mod under.',
+      title: 'The original categories on the forum and/or Discord.',
     })]);
   }
   if ((listing.sources || []).length) {
@@ -639,11 +639,10 @@ function sameNameMods(detail) {
 
   const many = others.length > 1;
   return el('section', { class: 'panel name-share' }, [
-    el('h2', { text: `${many ? 'Other mods' : 'Another mod'} called this` }),
+    el('h3', { text: `Note: ${many ? 'other mods have' : 'another mod has'} the same name` }),
     el('p', {
       class: 'sub',
-      text: `${many ? 'These carry' : 'It carries'} the same name. `
-        + `${many ? 'Each' : 'It'} may be an older thread for this mod, a fork `
+      text: `${many ? 'Each' : 'It'} may be an older thread for this mod, a fork `
         + 'of it, or a different mod altogether.',
     }),
     rows,
@@ -693,7 +692,7 @@ function similarMods(mod, everyMod, currentVersion) {
   const ranked = newestFirst(alike).sort((a, b) => shared(b) - shared(a));
 
   return el('section', { class: 'stack' }, [
-    el('h2', { text: 'Mods like this one' }),
+    el('h2', { text: 'Similar mods' }),
     strip(ranked, currentVersion, { alreadyOrdered: true }),
   ]);
 }
