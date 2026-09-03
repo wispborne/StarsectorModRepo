@@ -566,8 +566,12 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
   background: var(--primary-soft);
   border-color: var(--primary); color: var(--primary);
 }
+/* The whole picture, never a cut-down of it: mod pictures come in every shape
+   from a wide banner to a tall poster, and cropping to the card's 16:9 cut the
+   name off a title screen. Bars either side are the price, in the panel colour
+   the card already uses. */
 .card-image {
-  width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
+  width: 100%; aspect-ratio: 16 / 9; object-fit: contain;
   background: var(--surface-container); display: block;
 }
 .card-image.placeholder {

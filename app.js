@@ -228,9 +228,10 @@ function mountSettings() {
 ///
 /// Someone reading one mod's page who wants another used to have to go back to
 /// Home or Browse first. Typing here suggests the five best-matching names
-/// straight away — the whole mod list is already loaded, so it costs nothing —
-/// and Enter opens the first suggestion unless the reader chose another with
-/// the arrow keys. A search with no suggestions goes to Browse.
+/// straight away — the whole mod list is already loaded, so it costs nothing.
+/// Enter opens the row the reader picked with the arrow keys, or the only
+/// suggestion where there is just one; with several, or none, it goes to
+/// Browse with the search in the address.
 function mountHeaderSearch() {
   const box = document.getElementById('site-search');
   const drop = document.getElementById('search-suggestions');
@@ -326,7 +327,12 @@ function mountHeaderSearch() {
       return;
     }
     if (e.key === 'Enter') {
-      const chosen = rows[activeIndex >= 0 ? activeIndex : 0];
+      // A row the reader picked with the arrow keys always wins. Otherwise
+      // Enter only opens a suggestion when it is the one and only answer —
+      // with several to choose from, opening the first is a guess, so the
+      // search page shows them all instead.
+      const chosen = activeIndex >= 0 ? rows[activeIndex]
+        : (rows.length === 1 ? rows[0] : null);
       if (chosen) {
         e.preventDefault();
         chosen.click();
