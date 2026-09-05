@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2026-09-05T03:04:06.387949Z",
+  "listing": {
+    "id": "intel-renewed",
+    "name": "- Intel - Renewed v1.1.0",
+    "displayName": "Intel - Renewed",
+    "authors": [
+      "oddisz"
+    ],
+    "otherAuthorNames": {},
+    "categories": [],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "1.1.0",
+    "imageUrl": "https://github.com/andrzejsokolowski/starsector-intel-renewed/blob/main/intel-renewed-icon.png?raw=true",
+    "summary": "Lets you customize the intel screen by hiding entries, categories, and empty buttons, and adding search functionality.",
+    "summaryIsGenerated": true,
+    "aiSummary": "Lets you customize the intel screen by hiding entries, categories, and empty buttons, and adding search functionality.",
+    "saveCompatible": true,
+    "hasDirectDownload": false,
+    "downloadCount": 0,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35978.0",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2026-09-05",
+    "needs": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      }
+    ]
+  },
+  "description": "Intel Renewed\n\nWHAT DOES THIS MOD DO?\n- Lets you decide what the intel screen shows. Hide whole kinds of entries, hide categories, hide single entries, drop the empty category buttons, and search the list.\n\nEver opened the intel screen with 200 mods and found your actual missions buried under Trait Suggestions, Simulator Updates and a lore tab with (0) in it that never goes away?\nCool, select one and press \"Hide all like this\". Every entry of that kind is gone, in this save and every other one.\nEver wished the category bar at the bottom had the eight buttons you use instead of forty?\nCool, open Customize and switch the rest off.\n\nNothing is deleted. Entries are only kept off the screen, and everything can be turned back on.\nThe code is fully open source. You don't have to credit me. Claude Code built this anyway.\nRequires LunaLib and LazyLib.\n\nOn the intel screen\n\nA small strip sits in the top right corner of the map, next to the game's own STARSCAPE button.\n\nSearch: live, matches the entry title and its category names as you type.Hide this entry: hides only the selected entry. Stored in that save.Hide all like this: hides every entry of the same kind as the selected one (every Trait Suggestion, every Simulator Update). Stored per installation, so it holds in every save.Show hidden: reveals the hidden entries while it is on, so you can select one and unhide it.Customize: opens the window below.\n\nThe Customize window\n\nCategories: every category button with three choices. Show, No button (the button goes, the entries stay under their other categories) and Hide all (the button and everything filed under it are gone). New, Important, Accepted and Story are markers, not categories, so they can lose their button but never hide entries.Kinds of entries: every kind of entry in your game, with the mod it comes from and how many there are, each with a Hidden toggle. A filter box narrows the list.Hide empty categories (on by default): buttons with (0) in them disappear. New, Important and Major events always stay, as in the base game.Restore everything puts it all back.\n\nPopups\n\nA hidden entry no longer shows its message popup in the bottom left corner, and does not play the sound either. Can be turned off in the LunaLib settings.\n\nFAQ\n\nDoes it work with modded intel?\n\nYes. Kinds and categories are read from whatever is in your game, so it scales with your modlist.\n\nDoes hiding an entry delete it?\n\nNever. The mod never touches the intel itself, so missions, bounties and mod events keep running. Hidden entries are only kept off the screen, the map and the popups, and Show hidden brings them back into view.\n\nWhere are my choices stored?\n\nHidden kinds and categories are stored once per installation, in saves/common/intel_renewed/. Single entries you hide are stored in that save.\n\nPerformance?\n\nNegligible. It filters the list the game already builds. No extra scripts running in the background beyond a check for popups.\n\nCan I add or remove it mid save?\n\nYes. It is UI only and safe to add or remove at any time.\n\n[close]Version log0.1.2\n\nMod icon, forum thread and version checker.\n\n0.1.1\n\nFixed the Customize window opening empty with no way to close it. Un-hiding now brings entries straight back. Hiding the selected entry no longer confuses the list. Buttons renamed to \"Hide this entry\" / \"Hide all like this\", with tooltips.\n\n0.1.0\n\nFirst test release. Hide kinds, categories and single entries, hide empty category buttons, search box, popups of hidden entries silenced.\n\n[close]",
+  "descriptionHtml": "<a href=\"https://github.com/andrzejsokolowski/starsector-intel-renewed/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><strong>Intel Renewed</strong></a><br>  <br><strong><br>WHAT DOES THIS MOD DO?<br>- Lets you decide what the intel screen shows. Hide whole kinds of entries, hide categories, hide single entries, drop the empty category buttons, and search the list.<br><br>Ever opened the intel screen with 200 mods and found your actual missions buried under Trait Suggestions, Simulator Updates and a lore tab with (0) in it that never goes away?<br>Cool, select one and press \"Hide all like this\". Every entry of that kind is gone, in this save and every other one.<br>Ever wished the category bar at the bottom had the eight buttons you use instead of forty?<br>Cool, open Customize and switch the rest off.<br><br>Nothing is deleted. Entries are only kept off the screen, and everything can be turned back on.<br>The code is fully open source. You don't have to credit me. Claude Code built this anyway.<br>Requires <strong>LunaLib</strong> and <strong>LazyLib</strong>.<br></strong><hr><strong>On the intel screen</strong><hr>A small strip sits in the top right corner of the map, next to the game's own STARSCAPE button.<br><ul><li><strong>Search</strong>: live, matches the entry title and its category names as you type.</li><li><strong>Hide this entry</strong>: hides only the selected entry. Stored in that save.</li><li><strong>Hide all like this</strong>: hides every entry of the same kind as the selected one (every Trait Suggestion, every Simulator Update). Stored per installation, so it holds in every save.</li><li><strong>Show hidden</strong>: reveals the hidden entries while it is on, so you can select one and unhide it.</li><li><strong>Customize</strong>: opens the window below.</li></ul><hr><strong>The Customize window</strong><hr><ul><li><strong>Categories</strong>: every category button with three choices. <em>Show</em>, <em>No button</em> (the button goes, the entries stay under their other categories) and <em>Hide all</em> (the button and everything filed under it are gone). New, Important, Accepted and Story are markers, not categories, so they can lose their button but never hide entries.</li><li><strong>Kinds of entries</strong>: every kind of entry in your game, with the mod it comes from and how many there are, each with a Hidden toggle. A filter box narrows the list.</li><li><strong>Hide empty categories</strong> (on by default): buttons with (0) in them disappear. New, Important and Major events always stay, as in the base game.</li><li><strong>Restore everything</strong> puts it all back.</li></ul><hr><strong>Popups</strong><hr><ul><li>A hidden entry no longer shows its message popup in the bottom left corner, and does not play the sound either. Can be turned off in the LunaLib settings.</li></ul>FAQ<strong>Does it work with modded intel?</strong><br>Yes. Kinds and categories are read from whatever is in your game, so it scales with your modlist.<br><strong>Does hiding an entry delete it?</strong><br>Never. The mod never touches the intel itself, so missions, bounties and mod events keep running. Hidden entries are only kept off the screen, the map and the popups, and Show hidden brings them back into view.<br><strong>Where are my choices stored?</strong><br>Hidden kinds and categories are stored once per installation, in saves/common/intel_renewed/. Single entries you hide are stored in that save.<br><strong>Performance?</strong><br>Negligible. It filters the list the game already builds. No extra scripts running in the background beyond a check for popups.<br><strong>Can I add or remove it mid save?</strong><br>Yes. It is UI only and safe to add or remove at any time.<br>[close]Version log0.1.2<br>Mod icon, forum thread and version checker.<br>0.1.1<br>Fixed the Customize window opening empty with no way to close it. Un-hiding now brings entries straight back. Hiding the selected entry no longer confuses the list. Buttons renamed to \"Hide this entry\" / \"Hide all like this\", with tooltips.<br>0.1.0<br>First test release. Hide kinds, categories and single entries, hide empty category buttons, search box, popups of hidden entries silenced.<br>[close]",
+  "descriptionIsGenerated": false,
+  "aiDescription": "Provides tools to filter the intel screen, allowing users to hide specific entry types, categories, or individual items. Includes a live search feature and options to suppress popups for hidden entries. Changes are stored per installation or save, ensuring compatibility with modded content without deleting underlying game data.",
+  "saveCompatibilityText": "Can I add or remove it mid save?\nYes. It is UI only and safe to add or remove at any time.",
+  "rawCategories": [],
+  "gallery": [],
+  "downloads": [],
+  "changelog": {},
+  "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-intel-renewed",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35978.0",
+  "releases": [],
+  "sameNameMods": [],
+  "addons": []
+}
