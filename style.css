@@ -404,6 +404,13 @@ main {
   display: block; width: 1em; height: 1em; flex-shrink: 0;
 }
 
+/* A button that carries its site icon before its label — the mod page's
+   "On Discord" / "On the forum" fallback. */
+.btn-with-icon {
+  display: inline-flex; align-items: center; gap: 7px;
+}
+.btn-with-icon:hover { text-decoration: none; }
+
 /* On a card it sits at the foot, under the badges, and spans the card: a
    download is the card's main action and belongs in the reader's line of sight,
    not in a small circle over a screenshot. The spacing names are whole padding

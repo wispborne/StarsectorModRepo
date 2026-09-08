@@ -11,7 +11,7 @@ import {
   currentGameVersion, DATA_BASE, downloadButton, el, errorPanel, formatDay,
   formatMoment, imageUrlOf, joinNames, listToggle,
   modDetail, modHref, modList, modName, MOD_VERSION_NOTE, neededModsLine,
-  NO_DESCRIPTION, picture, showPicture, sourceName, summaryTitle,
+  NO_DESCRIPTION, pageIcon, picture, showPicture, sourceName, summaryTitle,
   versionStanding, versionStandingNote,
 } from '../lib.js';
 import { modCard } from './browse.js';
@@ -204,7 +204,7 @@ function bestOf(download) {
 /// to call it when there is a download as well.
 const PLACES = [
   { field: 'forumUrl', alone: 'Get it from the forum thread', also: 'Official Forum' },
-  { field: 'discordUrl', alone: 'Get it from Discord', also: 'The Discord post' },
+  { field: 'discordUrl', alone: 'Get it from Discord', also: 'On Discord' },
 ];
 
 /// The buttons that get the mod.
@@ -231,13 +231,18 @@ function howToGetIt(mod, detail) {
 
   const place = PLACES.find((p) => detail[p.field]);
   if (place) {
+    const icon = pageIcon(place.field);
     row.append(el('a', {
-      class: first ? 'btn btn-big' : 'btn btn-primary btn-big',
+      class: `btn btn-big btn-with-icon${first ? '' : ' btn-primary'}`,
       href: detail[place.field],
       rel: 'noopener nofollow',
       target: '_blank',
-      text: first ? place.also : place.alone,
-    }));
+    }, [
+      icon
+        ? el('span', { class: 'original-page-icon', html: icon, 'aria-hidden': 'true' })
+        : null,
+      el('span', { text: first ? place.also : place.alone }),
+    ]));
   }
 
   row.append(listToggle(mod, { wide: true }));
