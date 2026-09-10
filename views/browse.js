@@ -8,7 +8,7 @@
 import {
   aiSparkle, aiSummaryNote, breadcrumbs, buildHash, categoryChips, clear,
   countedAcross,
-  currentGameVersion, downloadButton, downloadCountBadge, el, listToggle,
+  currentGameVersion, downloadButton, downloadCountBadge, el, favoriteToggle,
   formatDay, gameVersionFamily, gameVersions, hashQuery, howLongAgo,
   imageUrlOf, isDiscordOnly, joinNames, modHref, modList, modName,
   MOD_VERSION_NOTE,
@@ -486,7 +486,7 @@ export function modGrid(mods, currentVersion) {
 /// One mod's card.
 ///
 /// The card is a box holding a link that fills it, rather than being a link
-/// itself, so the "add to my list" button can sit on top without being a button
+/// itself, so the favorite button can sit on top without being a button
 /// inside a link — which is not allowed and which browsers handle differently.
 /// One mod as a card. [when] replaces the card's usual "Updated …" line — the
 /// Recently added strip is about when a mod turned up, not when it last moved.
@@ -515,7 +515,7 @@ export function modCard(mod, currentVersion, { when = null } = {}) {
         el('div', { class: 'card-foot' }, badges(mod, currentVersion)),
       ]),
     ]),
-    listToggle(mod),
+    favoriteToggle(mod),
     // Under the card's link rather than on top of it: a download is the card's
     // main action, and a 28px circle over a screenshot is no place for it.
     downloadButton(mod),
@@ -545,7 +545,7 @@ export function modRows(mods, currentVersion) {
         ]),
         el('div', { class: 'row-side' }, badges(mod, currentVersion)),
       ]),
-      listToggle(mod),
+      favoriteToggle(mod),
       downloadButton(mod),
     ]));
   }

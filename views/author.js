@@ -12,7 +12,14 @@ import { modGrid, sortMods } from './browse.js';
 
 export async function render(root, parts) {
   const wanted = parts[0];
-  if (!wanted) return renderIndex(root);
+  // There is no index of authors. A list of everyone, ordered by how many mods
+  // they have, is a scoreboard, and a scoreboard rewards publishing more mods
+  // rather than better ones. A person's page is reached from a mod that
+  // credits them, or from the search box.
+  if (!wanted) {
+    location.hash = '#/browse';
+    return;
+  }
 
   const list = await modList();
   const mods = (list.mods || []).filter((mod) => creditedTo(mod, wanted));
@@ -51,51 +58,6 @@ export async function render(root, parts) {
         : null,
     ]),
     modGrid(sortMods(mods, 'name'), currentGameVersion(list.mods || [])),
-  ]));
-}
-
-/// Everyone who has a mod here, with how many each has.
-///
-/// This replaces a dropdown of 589 names on the browse page, which nobody could
-/// use. A name is listed once, under the spelling its mods credit; the other
-/// spellings a person goes by are folded into that one, so Histidine is one
-/// entry and not three.
-async function renderIndex(root) {
-  const list = await modList();
-  const mods = list.mods || [];
-
-  const counts = new Map();
-  for (const mod of mods) {
-    for (const name of mod.authors || []) {
-      const key = name.toLowerCase();
-      if (!counts.has(key)) counts.set(key, { name, count: 0 });
-      counts.get(key).count += 1;
-    }
-  }
-
-  const people = [...counts.values()]
-    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
-
-  document.title = 'Mod authors | Starmodder';
-  clear(root);
-  root.append(breadcrumbs([{ label: 'Mod authors' }]));
-
-  const cloud = el('div', { class: 'people' });
-  for (const person of people) {
-    cloud.append(el('a', {
-      class: 'person',
-      href: `#/authors/${encodeURIComponent(person.name)}`,
-    }, [
-      el('span', { class: 'person-name', text: person.name }),
-      el('span', { class: 'person-count', text: String(person.count) }),
-    ]));
-  }
-
-  root.append(el('div', { class: 'stack' }, [
-    el('div', { class: 'page-head' }, [
-      el('h1', { text: `${people.length} mod authors` }),
-    ]),
-    cloud,
   ]));
 }
 

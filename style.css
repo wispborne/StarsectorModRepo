@@ -422,7 +422,7 @@ main {
 /* On a row it sits inline at the end, in a column of its own width so every
    button in the list starts and ends in the same place. */
 .mod-row > .download-btn, .mod-row > .download-actions,
-.list-links > .download-btn, .list-links > .download-actions { width: 148px; }
+.fav-links > .download-btn, .fav-links > .download-actions { width: 148px; }
 .mod-row > .download-btn, .mod-row > .download-actions { margin-right: 10px; }
 
 /* On a release row it follows "Read changelog", so both of the row's actions
@@ -559,8 +559,8 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 }
 .card-inner:hover { text-decoration: none; }
 
-/* The "add to my list" button, sitting on top of the card's own link. */
-.list-toggle {
+/* The favorite button, sitting on top of the card's own link. */
+.fav-toggle {
   position: absolute; top: 6px; right: 6px; z-index: 2;
   width: 28px; height: 28px; padding: 0;
   display: flex; align-items: center; justify-content: center;
@@ -568,8 +568,8 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
   background: var(--over-picture); color: var(--text-dim);
   font-size: var(--type-normal); font-family: inherit; line-height: 1; cursor: pointer;
 }
-.list-toggle:hover { border-color: var(--primary); color: var(--primary); }
-.list-toggle.on {
+.fav-toggle:hover { border-color: var(--primary); color: var(--primary); }
+.fav-toggle.on {
   background: var(--primary-soft);
   border-color: var(--primary); color: var(--primary);
 }
@@ -631,7 +631,7 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
   padding: var(--pad-cell); color: inherit;
 }
 .row-inner:hover { text-decoration: none; }
-.mod-row .list-toggle { position: static; margin-right: 10px; flex-shrink: 0; }
+.mod-row .fav-toggle { position: static; margin-right: 10px; flex-shrink: 0; }
 .row-thumb { width: 72px; height: 44px; object-fit: cover; flex-shrink: 0; background: var(--surface-container); }
 .row-main { flex: 1 1 auto; min-width: 0; }
 .row-title { font-weight: 600; color: var(--text); }
@@ -856,25 +856,12 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .about-line { margin: 0 0 10px; }
 .about-line:last-child { margin-bottom: 0; }
 
-/* --- People --- */
-
-.people { display: flex; gap: 8px; flex-wrap: wrap; }
-.person {
-  display: flex; gap: 7px; align-items: center;
-  padding: 5px 11px; border: 1px solid var(--border);
-  background: var(--surface-2); border-radius: 999px; color: inherit;
-}
-.person:hover { border-color: var(--primary); text-decoration: none; }
-.person-name { color: var(--text); font-size: var(--type-small); }
-
 /* A mod's name is plain text until you point at it. Said once here rather than
    four times, once per place a name turns up. */
 .mod-card:hover .card-title,
 .mod-row:hover .row-title,
 a.row-title:hover,
-.suggestion:hover .suggestion-name,
-.person:hover .person-name { color: var(--primary); }
-.person-count { color: var(--text-dim); font-size: var(--type-tiny); }
+.suggestion:hover .suggestion-name { color: var(--primary); }
 /* The line under an AI-written description. Dim rather than coloured — it is
    a note about the words, not part of them. */
 .ai-note {
@@ -1028,15 +1015,15 @@ body.picture-open { overflow: hidden; }
   font-size: var(--type-tiny);
 }
 
-/* --- My mod list --- */
+/* --- Favorites --- */
 
-.list-row {
+.fav-row {
   display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
   padding: var(--pad-cell); border: 1px solid var(--border);
   background: var(--surface-2); border-radius: 8px; box-shadow: var(--raised);
 }
-.list-links { display: flex; gap: 8px; flex-wrap: wrap; }
-.list-row .row-main { flex: 1 1 200px; }
+.fav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.fav-row .row-main { flex: 1 1 200px; }
 
 /* --- The line at the foot --- */
 
@@ -1073,7 +1060,7 @@ body.picture-open { overflow: hidden; }
   /* A narrow screen has no room for a column of its own. In a browse row it
      also has no room beside the words: standing the button next to them left
      the mod's name one letter wide, so it drops to a line of its own. */
-  .list-links > .download-btn, .list-links > .download-actions,
+  .fav-links > .download-btn, .fav-links > .download-actions,
   .release > summary > .download-btn,
   .release > summary > .download-actions { width: auto; }
   .mod-row { flex-wrap: wrap; }

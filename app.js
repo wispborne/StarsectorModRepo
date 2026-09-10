@@ -7,11 +7,11 @@
 import {
   aiSummaryMode, buildHash, clear, el, errorPanel, formatDay,
   formatMoment, applySpacing, go, imageChoice, imageUrlOf, loading,
-  modHref, modList, modName, myList,
+  favorites, modHref, modList, modName,
   preparePageScroll, restorePageScroll, searchHelpField, setAiSummaryMode,
   setImageChoice,
   setSpacingPreference, spacingPreference,
-  thumbnail, watchMyList,
+  thumbnail, watchFavorites,
 } from './lib.js';
 import { address } from './address.js';
 import { scoreOfTerm } from './search.js';
@@ -20,7 +20,7 @@ import * as browse from './views/browse.js';
 import * as mod from './views/mod.js';
 import * as author from './views/author.js';
 import * as about from './views/about.js';
-import * as list from './views/list.js';
+import * as favoritesView from './views/favorites.js';
 
 /// Where this site's code lives. The commit in the footer links into it, so
 /// a bug report can name the exact build.
@@ -33,8 +33,7 @@ const site = address();
 const NAV = [
   { route: 'home', label: 'Home' },
   { route: 'browse', label: 'Browse mods' },
-  { route: 'authors', label: 'Mod authors' },
-  { route: 'list', label: 'My list' },
+  { route: 'favorites', label: 'Favorites' },
   { route: 'about', label: 'About' },
 ];
 
@@ -44,7 +43,10 @@ const ROUTES = {
   mods: (root, parts) => mod.render(root, parts),
   authors: (root, parts) => author.render(root, parts),
   about: (root, parts) => about.render(root, parts),
-  list: (root, parts) => list.render(root, parts),
+  favorites: (root, parts) => favoritesView.render(root, parts),
+  // The old address for the favorites page. Shared links carry it, so it has to
+  // keep working.
+  list: (root, parts) => favoritesView.render(root, parts),
 };
 
 /// How many mods the search box suggests as you type.
@@ -69,16 +71,16 @@ function renderNav(viewId) {
       class: item.route === viewId ? 'active' : '',
       text: item.label,
     });
-    // How many mods are in the reader's list, so they can see one is building
-    // up without going to look.
-    if (item.route === 'list') {
+    // How many mods are favorited, so the reader sees the count building up
+    // without going to look.
+    if (item.route === 'favorites') {
       const count = el('span', { class: 'nav-count' });
       const draw = (ids) => {
         count.textContent = ids.length ? String(ids.length) : '';
         count.hidden = !ids.length;
       };
-      draw(myList());
-      stopWatchingList = watchMyList(draw);
+      draw(favorites());
+      stopWatchingList = watchFavorites(draw);
       link.append(count);
     }
     nav.append(link);
@@ -374,21 +376,24 @@ function suggestion(hit, hide) {
   return row;
 }
 
-/// The people whose name holds what has been typed, with how many mods each
-/// has. Search already covers authors, so this is only to save the reader
-/// working out that a name is a person rather than a mod.
+/// The people whose name holds what has been typed. Search already covers
+/// authors, so this is only to save the reader working out that a name is a
+/// person rather than a mod.
+///
+/// They are listed by name, not by how many mods each has. Ordering people by
+/// mod count is a scoreboard, and a scoreboard is a reason to publish more
+/// mods rather than better ones.
 function peopleMatching(mods, wanted) {
-  const counts = new Map();
+  const found = new Map();
   for (const mod of mods) {
     for (const name of mod.authors || []) {
       if (!name.toLowerCase().includes(wanted)) continue;
       const key = name.toLowerCase();
-      if (!counts.has(key)) counts.set(key, { name, count: 0 });
-      counts.get(key).count += 1;
+      if (!found.has(key)) found.set(key, { name });
     }
   }
-  return [...counts.values()]
-    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+  return [...found.values()]
+    .sort((a, b) => a.name.localeCompare(b.name))
     .slice(0, PEOPLE_SUGGESTION_COUNT);
 }
 
@@ -401,10 +406,7 @@ function personSuggestion(person, hide) {
     el('div', { class: 'suggestion-thumb person-thumb', 'aria-hidden': 'true' }),
     el('div', { class: 'suggestion-main' }, [
       el('div', { class: 'suggestion-name', text: person.name }),
-      el('div', {
-        class: 'suggestion-by',
-        text: `${person.count} mod${person.count === 1 ? '' : 's'}`,
-      }),
+      el('div', { class: 'suggestion-by', text: 'Mod author' }),
     ]),
   ]);
   row.addEventListener('click', hide);

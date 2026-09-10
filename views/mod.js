@@ -9,7 +9,7 @@ import {
   aiSparkle, aiSummaryNote, aiSummaryOf,
   breadcrumbs, clear,
   currentGameVersion, DATA_BASE, downloadButton, el, errorPanel, formatDay,
-  formatMoment, imageUrlOf, joinNames, listToggle,
+  favoriteToggle, formatMoment, imageUrlOf, joinNames,
   modDetail, modHref, modList, modName, MOD_VERSION_NOTE, neededModsLine,
   NO_DESCRIPTION, pageIcon, picture, showPicture, sourceName, summaryTitle,
   versionStanding, versionStandingNote,
@@ -245,7 +245,7 @@ function howToGetIt(mod, detail) {
     ]));
   }
 
-  row.append(listToggle(mod, { wide: true }));
+  row.append(favoriteToggle(mod, { wide: true }));
   return row;
 }
 

@@ -981,59 +981,62 @@ export function neededModsLine(label, needs) {
   ]);
 }
 
-// --- The reader's own mod list ---
+// --- The reader's favorites ---
 
-/// Where the reader's list is kept. In their own browser, and nowhere else —
-/// there is no server here to keep it on.
-const MY_LIST_KEY = 'starmodderMyList';
+/// Where the favorites are kept. In the reader's own browser, and nowhere else
+/// — there is no server here to keep them on.
+///
+/// The name in storage is the old one, from when this was called My List.
+/// Changing it would empty everybody's favorites, and the reader never sees it.
+const FAVORITES_KEY = 'starmodderMyList';
 
-/// Anyone who wants to know when the list changes. The header count and
-/// whatever page is open both watch it.
-const listWatchers = new Set();
+/// Anyone who wants to know when the favorites change. The header count and
+/// whatever page is open both watch them.
+const favoriteWatchers = new Set();
 
-/// The mod ids in the reader's list, in the order they were added.
-export function myList() {
+/// The favorited mod ids, in the order they were added.
+export function favorites() {
   try {
-    const saved = JSON.parse(localStorage.getItem(MY_LIST_KEY) || '[]');
+    const saved = JSON.parse(localStorage.getItem(FAVORITES_KEY) || '[]');
     return Array.isArray(saved) ? saved.filter((id) => typeof id === 'string') : [];
   } catch {
     return [];
   }
 }
 
-export function inMyList(id) {
-  return myList().includes(id);
+export function isFavorite(id) {
+  return favorites().includes(id);
 }
 
-/// Puts a whole list in place, dropping anything repeated. Used by "add" and
-/// "remove", and by taking somebody else's shared list as your own.
-export function setMyList(ids) {
+/// Puts a whole set of favorites in place, dropping anything repeated. Used by
+/// adding, removing, and taking somebody else's shared list as your own.
+export function setFavorites(ids) {
   const kept = [...new Set((ids || []).filter(Boolean))];
-  localStorage.setItem(MY_LIST_KEY, JSON.stringify(kept));
-  for (const watcher of listWatchers) watcher(kept);
+  localStorage.setItem(FAVORITES_KEY, JSON.stringify(kept));
+  for (const watcher of favoriteWatchers) watcher(kept);
   return kept;
 }
 
 /// Adds a mod, or takes it out again if it is already there. Returns whether it
-/// is in the list afterwards.
-export function toggleInMyList(id) {
-  const now = myList();
+/// is a favorite afterwards.
+export function toggleFavorite(id) {
+  const now = favorites();
   const at = now.indexOf(id);
   if (at >= 0) now.splice(at, 1);
   else now.push(id);
-  setMyList(now);
+  setFavorites(now);
   return at < 0;
 }
 
-export function watchMyList(fn) {
-  listWatchers.add(fn);
-  return () => listWatchers.delete(fn);
+export function watchFavorites(fn) {
+  favoriteWatchers.add(fn);
+  return () => favoriteWatchers.delete(fn);
 }
 
-/// The address that shares a list: the ids packed into the hash, so the whole
-/// list travels in the link and needs nothing at the other end.
-export function listHref(ids) {
-  return buildHash(['list'], { ids: (ids || []).join(',') });
+/// The address that shares favorites: the ids packed into the hash, so the
+/// whole list travels in the link and needs nothing at the other end.
+export function favoritesHref(ids) {
+  return buildHash(['favorites'], { ids: (ids || []).join(',') });
 }
 
 /// What a download button should say, given the download it would follow.
@@ -1131,7 +1134,8 @@ function originalPageButton(mod, page) {
 
 /// The one button that gets a mod, for every list on the site.
 ///
-/// A mod can offer a dozen downloads and My List used to draw a button for each
+/// A mod can offer a dozen downloads and the favorites page used to draw a
+/// button for each
 /// one, which asked the reader to choose between four buttons all saying
 /// "Download". The builder has already put them in order, so this shows the
 /// first — the same thing TriOS's catalog does on a mod's card.
@@ -1193,25 +1197,25 @@ export function downloadCountBadge(mod) {
   });
 }
 
-/// The button that puts a mod in the reader's list, or takes it out.
+/// The button that favorites a mod, or takes it out of the favorites.
 ///
 /// Small and round on a card, where it sits over the picture; wide and worded
 /// on the mod's own page, where it stands beside the download. One button
-/// either way, so the two can never disagree about what is in the list.
-export function listToggle(mod, opts = {}) {
+/// either way, so the two can never disagree about what is favorited.
+export function favoriteToggle(mod, opts = {}) {
   const { wide = false } = opts;
-  const button = el('button', { class: wide ? 'btn btn-big' : 'list-toggle' });
+  const button = el('button', { class: wide ? 'btn btn-big' : 'fav-toggle' });
 
   const draw = () => {
-    const inIt = inMyList(mod.id);
+    const inIt = isFavorite(mod.id);
     button.classList.toggle('on', inIt);
     button.textContent = wide
-      ? (inIt ? '✓ In my list' : '+ Add to my list')
-      : (inIt ? '✓' : '+');
-    button.title = inIt ? 'Take out of my list' : 'Add to my list';
+      ? (inIt ? '★ Favorited' : '☆ Favorite')
+      : (inIt ? '★' : '☆');
+    button.title = inIt ? 'Remove from favorites' : 'Add to favorites';
     button.setAttribute('aria-pressed', String(inIt));
     button.setAttribute('aria-label',
-      `${inIt ? 'Take' : 'Add'} ${modName(mod)} ${inIt ? 'out of' : 'to'} my list`);
+      `${inIt ? 'Remove' : 'Add'} ${modName(mod)} ${inIt ? 'from' : 'to'} favorites`);
   };
 
   button.addEventListener('click', (e) => {
@@ -1219,7 +1223,7 @@ export function listToggle(mod, opts = {}) {
     // would follow the link as well as tick the box.
     e.preventDefault();
     e.stopPropagation();
-    toggleInMyList(mod.id);
+    toggleFavorite(mod.id);
     draw();
   });
 
