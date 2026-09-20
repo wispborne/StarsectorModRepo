@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T06:09:06.470059Z",
+  "generatedAt": "2026-09-20T18:09:03.652709Z",
   "listing": {
     "id": "qol-weaponamounts-sell-your-excess-stuff-automatically",
     "name": "QoL weaponAmounts - Sell your excess stuff. Automatically.",
@@ -13,13 +13,14 @@
       "forum"
     ],
     "gameVersion": "0.98a",
+    "modVersion": "0.2.1",
     "imageUrl": "https://i.imgur.com/eJU4XBA.png",
-    "summary": "Automatically sells excess weapons and LPCs from cargo and colony stockpiles when entering a market.",
+    "summary": "Automatically sells excess weapons and LPCs from your cargo and colony stockpiles when visiting a market.",
     "summaryIsGenerated": true,
-    "aiSummary": "Automatically sells excess weapons and LPCs from cargo and colony stockpiles when entering a market.",
+    "aiSummary": "Automatically sells excess weapons and LPCs from your cargo and colony stockpiles when visiting a market.",
     "hasDirectDownload": true,
     "bestDownload": {
-      "url": "https://github.com/oprotnes/weaponAmounts/releases/download/alpha/weaponAmounts.7z",
+      "url": "https://github.com/oprotnes/weaponAmounts/releases/download/0.2.1/weaponAmounts.7z",
       "kind": "direct",
       "needsAnotherStep": false
     },
@@ -28,14 +29,17 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2026-09-15",
-    "threadLastPostOn": "2026-09-15",
-    "needs": []
+    "needs": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ]
   },
-  "description": "[start promotional pitch]\n\nEver end up with absurd stockpiles of weapons and LPCs on your colonies? Never quite know if those 820 weapons you're lugging around after a few battles are worth bringing home, and too lazy to check the owned tooltip on each one?\n\nWell here's the solution.\n\nweaponAmounts\n\nMaybe. Unless I screwed up :P\n\nNever wrote a mod for anything before but this thing has been bugging me forever. Couldn't find a mod that did it so I thought wth, I can give it a shot. So far it seems to work decently for me in my own game, but I'd love feedback and someone to test it out to see if it works like it is supposed to elsewhere, and if I screwed up something.\n\nIn short, it's a simple mod that just counts the weapons and LPCs you own (cargo+colony stockpiles) and whenever you enter a station or planet with a market matching the one you want to sell at, i.e open or black, it automatically sells any cargo you have that exceeds a set threshold value (default 25).\n\nDoes not count mounted weapons/LPCs, but I could do that too I think. If you like keeping well-outfitted ships around I don't see the real gain though, as it's mostly for hoarders like me in the late game.\n\nIncludes an optional config file for those who don't run LunaLib (weaponAmountsSettings.json in data/config), so it doesn't really depend on LunaLib. However if you have it, which is absolutely recommended, it ignores that file and uses the in-game mod menu (F3 I think) to allow you to enable/disable, choose market and set the threshold while in game.\n\nDownload weaponAmounts.7z\n\nShouldn't interfere with anything else, doesn't really require LunaLib, and should be safe to remove. To get started, configure the mod, load up all your colony junk at your colony (hopefully one with a market) and just leave/reenter and drop your new and slimmed down stash back. From then as long as the mod is enabled, will auto-sell anything you loot at any market you visit depending on your mod settings and colony/cargo stash.\n\nHave fun.\n\nSCREENSHOTSA run on one of my saves with a huge stash, with threshold set to 40:\n\nBefore:\n\nSelling:\n\nAfter:\n\n[close]",
-  "descriptionHtml": "<strong><em>[start promotional pitch]</em></strong> Ever end up with absurd stockpiles of weapons and LPCs on your colonies? Never quite know if those 820 weapons you're lugging around after a few battles are worth bringing home, and too lazy to check the owned tooltip on each one? <br>                                                    <strong>Well here's the solution. </strong><br><br><strong><a href=\"https://github.com/oprotnes/weaponAmounts/releases/download/alpha/weaponAmounts.7z\" rel=\"nofollow noopener\" target=\"_blank\">weaponAmounts</a></strong>Maybe. Unless I screwed up :P<br><br>Never wrote a mod for anything before but this thing has been bugging me forever. Couldn't find a mod that did it so I thought wth, I can give it a shot. So far it seems to work decently for me in my own game, but I'd love feedback and someone to test it out to see if it works like it is supposed to elsewhere, and if I screwed up something.<br><br>In short, it's a simple mod that just counts the weapons and LPCs you own (cargo+colony stockpiles) and whenever you enter a station or planet with a market matching the one you want to sell at, i.e open or black, it automatically sells any cargo you have that exceeds a set threshold value (default 25).<br>Does not count mounted weapons/LPCs, but I could do that too I think. If you like keeping well-outfitted ships around I don't see the real gain though, as it's mostly for hoarders like me in the late game.<br><br>Includes an optional config file for those who don't run LunaLib (weaponAmountsSettings.json in data/config), so it doesn't really depend on LunaLib. However if you have it, which is absolutely recommended, it ignores that file and uses the in-game mod menu (F3 I think) to allow you to enable/disable, choose market and set the threshold while in game.<br><br><a href=\"https://github.com/oprotnes/weaponAmounts/releases/download/alpha/weaponAmounts.7z\" rel=\"nofollow noopener\" target=\"_blank\"><strong>Download weaponAmounts.7z</strong></a><br><br>Shouldn't interfere with anything else, doesn't really require LunaLib, and should be safe to remove. To get started, configure the mod, load up all your colony junk at your colony (hopefully one with a market) and just leave/reenter and drop your new and slimmed down stash back. From then as long as the mod is enabled, will auto-sell anything you loot at any market you visit depending on your mod settings and colony/cargo stash.<br><br>Have fun.<br><br>SCREENSHOTSA run on one of my saves with a huge stash, with threshold set to 40:<br><br>Before:<br><br>Selling: <br><br>After: <br><br>[close]",
+  "description": "[start promotional pitch]\n\nEver end up with absurd stockpiles of weapons and LPCs on your colonies? Never quite know if those 820 weapons you're lugging around after a few battles are worth bringing home, and too lazy to check the owned tooltip on each one?\n\nWell here's the solution.\n\nweaponAmounts\n\nMaybe. Unless I screwed up :P\n\nNever wrote a mod for anything before but this thing has been bugging me forever. Couldn't find a mod that did it so I thought wth, I can give it a shot. So far it seems to work decently for me in my own game, but I'd love feedback and someone to test it out to see if it works like it is supposed to elsewhere, and if I screwed up something.\n\nIn short, it's a simple mod that just counts the weapons and LPCs you own (cargo+colony stockpiles) and whenever you enter a station or planet with a market matching the one you want to sell at, i.e open or black, it automatically sells any cargo you have that exceeds a set threshold value (default 25).\n\nDoes not count mounted weapons/LPCs, but I could do that too I think. If you like keeping well-outfitted ships around I don't see the real gain though, as it's mostly for hoarders like me in the late game.\n\nChanges:\n\nSpoiler\n\n0.2.1\n- LunaLib is now a dependency, use the mod menu, makes it all easier.\n- Added toggle to consider mounted weapons, or not.\n\n0.2.0\n- Added versioning for LunaLib etc\n- Added a toggle for using separate thresholds for known/unknown blueprints.\n\n0.1.0\n- First version.\n\n[close]\n\nDownload weaponAmounts.7z\n\nShouldn't interfere with anything else, doesn't really require LunaLib, and should be safe to remove. To get started, configure the mod, load up all your colony junk at your colony (hopefully one with a market) and just leave/reenter and drop your new and slimmed down stash back. From then as long as the mod is enabled, will auto-sell anything you loot at any market you visit depending on your mod settings and colony/cargo stash.\n\nHave fun.\n\nSCREENSHOTSA run on one of my saves with a huge stash, with threshold set to 40:\n\nBefore:\n\nSelling:\n\nAfter:\n\n[close]",
+  "descriptionHtml": "<strong><em>[start promotional pitch]</em></strong> Ever end up with absurd stockpiles of weapons and LPCs on your colonies? Never quite know if those 820 weapons you're lugging around after a few battles are worth bringing home, and too lazy to check the owned tooltip on each one? <br>                                                    <strong>Well here's the solution. </strong><br><br><strong><a href=\"https://github.com/oprotnes/weaponAmounts/releases/download/0.2.1/weaponAmounts.7z\" rel=\"nofollow noopener\" target=\"_blank\">weaponAmounts</a></strong>Maybe. Unless I screwed up :P<br><br>Never wrote a mod for anything before but this thing has been bugging me forever. Couldn't find a mod that did it so I thought wth, I can give it a shot. So far it seems to work decently for me in my own game, but I'd love feedback and someone to test it out to see if it works like it is supposed to elsewhere, and if I screwed up something.<br><br>In short, it's a simple mod that just counts the weapons and LPCs you own (cargo+colony stockpiles) and whenever you enter a station or planet with a market matching the one you want to sell at, i.e open or black, it automatically sells any cargo you have that exceeds a set threshold value (default 25).<br>Does not count mounted weapons/LPCs, but I could do that too I think. If you like keeping well-outfitted ships around I don't see the real gain though, as it's mostly for hoarders like me in the late game.<br><br><strong>Changes:</strong><br>Spoiler<em>0.2.1<br>- LunaLib is now a dependency, use the mod menu, makes it all easier.<br>- Added toggle to consider mounted weapons, or not.<br><br>0.2.0<br>- Added versioning for LunaLib etc<br>- Added a toggle for using separate thresholds for known/unknown blueprints.<br><br>0.1.0<br>- First version.</em>[close]<br><a href=\"https://github.com/oprotnes/weaponAmounts/releases/download/0.2.1/weaponAmounts.7z\" rel=\"nofollow noopener\" target=\"_blank\"><strong>Download weaponAmounts.7z</strong></a><br><br>Shouldn't interfere with anything else, doesn't really require LunaLib, and should be safe to remove. To get started, configure the mod, load up all your colony junk at your colony (hopefully one with a market) and just leave/reenter and drop your new and slimmed down stash back. From then as long as the mod is enabled, will auto-sell anything you loot at any market you visit depending on your mod settings and colony/cargo stash.<br><br>Have fun.<br><br>SCREENSHOTSA run on one of my saves with a huge stash, with threshold set to 40:<br><br>Before:<br><br>Selling: <br><br>After: <br><br>[close]",
   "descriptionIsGenerated": false,
-  "aiDescription": "Counts owned weapons and LPCs across cargo and colonies, excluding mounted items. When entering a station or planet with a matching market, it automatically sells any cargo exceeding a configurable threshold. Includes optional configuration via LunaLib or a JSON file.",
-  "saveCompatibilityText": "Shouldn't interfere with anything else, doesn't really require LunaLib, and should be safe to remove.",
+  "aiDescription": "Counts the weapons and LPCs you own across cargo and colonies. When you enter a station or planet with a matching market, it automatically sells any items that exceed a set threshold. This helps manage large stockpiles without manually checking each item.",
   "rawCategories": [],
   "gallery": [
     {
@@ -50,8 +54,8 @@
   ],
   "downloads": [
     {
-      "url": "https://github.com/oprotnes/weaponAmounts/releases/download/alpha/weaponAmounts.7z",
-      "directUrl": "https://github.com/oprotnes/weaponAmounts/releases/download/alpha/weaponAmounts.7z",
+      "url": "https://github.com/oprotnes/weaponAmounts/releases/download/0.2.1/weaponAmounts.7z",
+      "directUrl": "https://github.com/oprotnes/weaponAmounts/releases/download/0.2.1/weaponAmounts.7z",
       "fileName": "weaponAmounts.7z",
       "kind": "direct",
       "label": "weaponAmounts",
@@ -59,12 +63,15 @@
       "needsAnotherStep": false
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "0.2.1": "- LunaLib is now a dependency, use the mod menu, makes it all easier.\n- Added toggle to consider mounted weapons, or not.",
+    "0.2.0": "- Added versioning for LunaLib etc\n- Added a toggle for using separate thresholds for known/unknown blueprints.",
+    "0.1.0": "- First version."
+  },
   "sourceCodeUrl": "https://github.com/oprotnes/weaponAmounts",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36023.0",
   "releases": [],
-  "threadLastPostOn": "2026-09-15",
   "sameNameMods": [],
   "addons": []
 }
