@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2026-10-05T18:08:44.599913Z",
+  "listing": {
+    "id": "rising-contact-importance",
+    "name": "Rising Contact Importance",
+    "authors": [
+      "Eld"
+    ],
+    "otherAuthorNames": {},
+    "categories": [],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "1.1.0",
+    "imageUrl": "https://i.8upload.com/image/19ea6e43040dbf26/screenshot018-1.png",
+    "summary": "Allows a contact importance to rise as you complete their missions.",
+    "summaryIsGenerated": true,
+    "aiSummary": "Allows a contact importance to rise as you complete their missions.",
+    "saveCompatible": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FEld3142%2FRisingContactImportance%2Fmain%2Feld_RCI.version%22%2C%22id%22%3A%22eld_rci%22%2C%22version%22%3A%221.1.0%22%7D",
+      "kind": "trios",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 2,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36117.0",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2026-10-04",
+    "threadLastPostOn": "2026-10-04",
+    "needs": []
+  },
+  "description": "Rising Contact Importance\n\nAllows a contact importance to rise as you complete their missions.\n\nSource code\n\n|\n\nChangelog and older versions\n\nRequired mods:\n\nNone, but\n\nLunaLib\n\nheavily\n\nrecommended\n\nAdding to an ongoing game:\n\nYes, it's safe\n\nRemoving from an ongoing game:\n\nFollow the instruction in FAQ, need LunaLib for this\n\nWhat is this?\n\nA mod that allow you to gradually increase your contact's importance, up until Very High.\n\nTotal missions completed threshold before the importance can rise.Various options like Market Size requirement, importance increase Cooldown, Minimum Credits reward from missions for them to count.Favor system for Very High importance contact, where you can ask them to arrange you certain mission (except custom production).Everything configurable via LunaLib (you have it right?).\n\nIntel Stuff\n\n[close]Favor System\n\n[close]\n\nFAQ\n\nFAQ\n\nWhat missions count to increase importance?\n\nNot all missions, only those that can be seen as \"completed\". Spoiler[close]\n\nWhat does importance actually affects?\n\nLong VersionIt basically affects the difficulty and reward of the missions they give. Each importance is given some \"value\", like Very Low being 0, Low being 0.25, and so on until Very High at 1.\n\nA mission quality ranges from 0 to 1. This is affected by contact's relationship with player and capped by importance's value above (there is also maxRelBonus for relationship effect to quality that can rise a bit above importance cap. This has default value of 0.20, tho this value that can be configured in settings.json, in \"missionMaxPossibleQualityAboveImportance\").\n\nThen there's the effect on difficulty for certain mission, for example:\n\n-Extraction, jailbreak, or disruption mission. Very Low importance would ask you to do the mission against a market with size 3-4, but Very High will ask you to do it on market with size 6-8.\n\n-Cheap commodity or procurement mission, only Medium importance or above can offer you remote variation (where the commodity isn't on the market you get the mission).\n\n-Certain vanilla Custom Bounty is only possible from a Very High importance contact.[close]TLDR: Higher importance -> higher difficulty -> higher reward.\n\nI like the importance increase, but I don't like the Favor System, can I disable it?\n\nYou can, just use LunaSettings to disable it.\n\nHow to safely remove this mod from my save?\n\nGo to this Mod Setting of this mod -> in Blacklist & Removal, set \"Remove This Mod Safely\" to True -> Load your save -> Save game then quit -> Remove this mod -> Now you can play that save without this mod.\n\nPlease note that setting this to True would disable basically all of this mod's feature, so don't forget to set it to False if you want to enable this mod again.\n\nAlso note that if you have the earlier version (1.0.x) you can't safely remove this mod mid-save even if you update it to latest version. I can't clean up my past mess, sorry.\n\nWhy can't I ask for Custom Production with Favor?\n\nI plainly can't do it.\n\nThe missions in Favor stuff can be rerolled, is it intended?\n\nIt's a feature, definitely not a bug.[close]\n\nDisclaimer\n\nAI Use DisclaimerI used Muse Spark 1.3 Free, Plan/Read-only mode to help me in locating and fixing many bugs in my code, especially in Favor System debugging. Everything else is still written and tested in-game by myself.\n\n[close]\n\nChangelog\n\nChangelog\n\n1.1.0:\n\nInitial forum release.Added blacklist and safe removal option.\n\n1.0.4:\n\nFixed some typos.Added Favor system for Very High importance contact.\n\n1.0.3:\n\nFixed various bugs.Added minimum credits for a mission to count toward the threshold.Added intel dialog on contact tab for better in-game tracking.\n\n1.0.2:\n\nAdded market size requirement for High and Very High importance.Added cooldown after a contact's importance went up before a mission from that contact can count again.\n\n1.0.1:\n\nAdded intel pop-up when a contact's importance rises.\n\n1.0.0:\n\nInitial release.Make it possible for your contacts to rise in importance (Very Low -> Low -> Medium -> High -> Very High) as you complete their missions.\n\n[close]\n\nPlease send any feedback or bug reports here, for example if your Very High importance contact still has \"low grade\" missions. Or if there are issues with modded contact (I put in blacklist to bandaid that stuff). Or if the Favor system is borked (it's janky).\n\nCredits\n\nSpoiler\n\nLukas04 for LunaLib and its easily understandable integration guide.\n\nLazyWizard for Console Commands that allowed me to easily test a lot of stuff.\n\nUnofficial Starsector Chat folks (Mr. Bear, Raven, etc) for the valuable feedback, suggestion, and support.\n\nAlex and Fractal Softworks Team for making this game in the first place.\n\n[close]",
+  "descriptionHtml": "<strong>Rising Contact Importance</strong><br>Allows a contact importance to rise as you complete their missions.<br><br><a href=\"https://github.com/Eld3142/RisingContactImportance\" rel=\"nofollow noopener\" target=\"_blank\">Source code</a> | <a href=\"https://github.com/Eld3142/RisingContactImportance/releases\" rel=\"nofollow noopener\" target=\"_blank\">Changelog and older versions</a><br><br><strong>Required mods:</strong> None, but <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a> <strong>heavily</strong> recommended<br><strong>Adding to an ongoing game:</strong> Yes, it's safe<br><strong>Removing from an ongoing game:</strong> Follow the instruction in FAQ, need LunaLib for this<hr><strong>What is this?</strong><br><br>A mod that allow you to gradually increase your contact's importance, up until Very High.<br><ul><li>Total missions completed threshold before the importance can rise.</li><li>Various options like Market Size requirement, importance increase Cooldown, Minimum Credits reward from missions for them to count.</li><li>Favor system for Very High importance contact, where you can ask them to arrange you certain mission (except custom production).</li><li>Everything configurable via LunaLib (you have it right?).</li></ul><br><hr>Intel Stuff<br><br>[close]Favor System<br><br>[close]<br><hr><strong>FAQ</strong><br><br>FAQ <strong>What missions count to increase importance?</strong>Not all missions, only those that can be seen as \"completed\". Spoiler[close]  <hr> <strong>What does importance actually affects?</strong>Long VersionIt basically affects the difficulty and reward of the missions they give. Each importance is given some \"value\", like Very Low being 0, Low being 0.25, and so on until Very High at 1.<br><br>A mission quality ranges from 0 to 1. This is affected by contact's relationship with player and capped by importance's value above (there is also maxRelBonus for relationship effect to quality that can rise a bit above importance cap. This has default value of 0.20, tho this value that can be configured in settings.json, in \"missionMaxPossibleQualityAboveImportance\").<br><br>Then there's the effect on difficulty for certain mission, for example: <br>-Extraction, jailbreak, or disruption mission. Very Low importance would ask you to do the mission against a market with size 3-4, but Very High will ask you to do it on market with size 6-8.<br>-Cheap commodity or procurement mission, only Medium importance or above can offer you remote variation (where the commodity isn't on the market you get the mission).<br>-Certain vanilla Custom Bounty is only possible from a Very High importance contact.[close]TLDR: Higher importance -&gt; higher difficulty -&gt; higher reward. <hr> <strong>I like the importance increase, but I don't like the Favor System, can I disable it?</strong>You can, just use LunaSettings to disable it. <hr> <strong>How to safely remove this mod from my save?</strong>Go to this Mod Setting of this mod -&gt; in Blacklist &amp; Removal, set \"Remove This Mod Safely\" to True -&gt; Load your save -&gt; Save game then quit -&gt; Remove this mod -&gt; Now you can play that save without this mod.<br>Please note that setting this to True would disable basically all of this mod's feature, so don't forget to set it to False if you want to enable this mod again.<br>Also note that if you have the earlier version (1.0.x) you can't safely remove this mod mid-save even if you update it to latest version. I can't clean up my past mess, sorry. <hr> <strong>Why can't I ask for Custom Production with Favor?</strong>I plainly can't do it. <hr> <strong>The missions in Favor stuff can be rerolled, is it intended?</strong>It's a feature, definitely not a bug.[close]<br><hr><strong>Disclaimer</strong><br><br>AI Use DisclaimerI used Muse Spark 1.3 Free, Plan/Read-only mode to help me in locating and fixing many bugs in my code, especially in Favor System debugging. Everything else is still written and tested in-game by myself. <br>[close]<br><hr><strong>Changelog</strong><br><br>Changelog<strong>1.1.0:</strong> <ul><li>Initial forum release.</li><li>Added blacklist and safe removal option.</li></ul><strong>1.0.4:</strong> <ul><li>Fixed some typos.</li><li>Added Favor system for Very High importance contact.</li></ul><strong>1.0.3:</strong> <ul><li>Fixed various bugs.</li><li>Added minimum credits for a mission to count toward the threshold.</li><li>Added intel dialog on contact tab for better in-game tracking.</li></ul><strong>1.0.2:</strong> <ul><li>Added market size requirement for High and Very High importance.</li><li>Added cooldown after a contact's importance went up before a mission from that contact can count again.</li></ul><strong>1.0.1:</strong> <ul><li>Added intel pop-up when a contact's importance rises.</li></ul><strong>1.0.0:</strong> <ul><li>Initial release.</li><li>Make it possible for your contacts to rise in importance (Very Low -&gt; Low -&gt; Medium -&gt; High -&gt; Very High) as you complete their missions.</li></ul>[close]<hr>Please send any feedback or bug reports here, for example if your Very High importance contact still has \"low grade\" missions. Or if there are issues with modded contact (I put in blacklist to bandaid that stuff). Or if the Favor system is borked (it's janky).<br><br><strong>Credits</strong><br>Spoiler<ul><li><strong>Lukas04</strong> for LunaLib and its easily understandable integration guide.</li></ul><ul><li><strong>LazyWizard</strong> for Console Commands that allowed me to easily test a lot of stuff.</li></ul><ul><li><strong>Unofficial Starsector Chat</strong> folks (Mr. Bear, Raven, etc) for the valuable feedback, suggestion, and support.</li></ul><ul><li><strong>Alex and Fractal Softworks Team</strong> for making this game in the first place.</li></ul>[close]",
+  "descriptionIsGenerated": false,
+  "aiDescription": "Allows a contact importance to rise as you complete their missions. It increases importance up to Very High based on completed missions, with configurable thresholds for market size, cooldowns, and credit rewards. It includes a Favor system for Very High importance contacts to request specific missions, and all settings are configurable via LunaLib.",
+  "saveCompatibilityText": "Adding to an ongoing game: Yes, it's safe",
+  "rawCategories": [],
+  "gallery": [
+    {
+      "url": "https://i.8upload.com/image/19ea6e43040dbf26/screenshot018-1.png"
+    },
+    {
+      "url": "https://i.8upload.com/image/797282aae292c2a4/screenshot024.png"
+    },
+    {
+      "url": "https://i.8upload.com/image/92e41e5b94781ea3/screenshot025.png"
+    },
+    {
+      "url": "https://i.8upload.com/image/e3565d1504c80115/screenshot022.png"
+    },
+    {
+      "url": "https://i.8upload.com/image/b7c80d0f9152361f/screenshot023.png"
+    },
+    {
+      "url": "https://i.8upload.com/image/773dc570058dbe3b/screenshot019-1.png"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FEld3142%2FRisingContactImportance%2Fmain%2Feld_RCI.version%22%2C%22id%22%3A%22eld_rci%22%2C%22version%22%3A%221.1.0%22%7D",
+      "kind": "trios",
+      "label": "",
+      "host": "trilink.wispborne.com",
+      "needsAnotherStep": true
+    },
+    {
+      "url": "https://github.com/Eld3142/RisingContactImportance/releases/download/1.1.0/RisingContactImportance.rar",
+      "directUrl": "https://github.com/Eld3142/RisingContactImportance/releases/download/1.1.0/RisingContactImportance.rar",
+      "fileName": "RisingContactImportance.rar",
+      "kind": "direct",
+      "label": "",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {
+    "1.1.0": "Initial forum release.\nAdded blacklist and safe removal option.",
+    "1.0.4": "Fixed some typos.\nAdded Favor system for Very High importance contact.",
+    "1.0.3": "Fixed various bugs.\nAdded minimum credits for a mission to count toward the threshold.\nAdded intel dialog on contact tab for better in-game tracking."
+  },
+  "changelogUrl": "https://github.com/Eld3142/RisingContactImportance/releases",
+  "sourceCodeUrl": "https://github.com/Eld3142/RisingContactImportance",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36117.0",
+  "releases": [],
+  "threadLastPostOn": "2026-10-04",
+  "sameNameMods": [],
+  "addons": []
+}
