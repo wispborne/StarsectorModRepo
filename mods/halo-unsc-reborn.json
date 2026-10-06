@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-05T18:08:44.599913Z",
+  "generatedAt": "2026-10-06T06:06:34.618314Z",
   "listing": {
     "id": "halo-unsc-reborn",
-    "name": "Halo - UNSC Reborn v0.6.4",
+    "name": "Halo - UNSC Reborn v0.6.5",
     "displayName": "Halo - UNSC Reborn",
     "authors": [
       "Blank_"
@@ -29,7 +29,7 @@
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35803.0",
     "sourceIsPublic": false,
     "isWorkInProgress": false,
-    "lastReleaseDate": "2026-09-12T00:00:00.000Z",
+    "lastReleaseDate": "2026-10-06T00:00:00.000Z",
     "addedOn": "2026-07-28",
     "threadLastPostOn": "2026-10-04",
     "needs": [
@@ -108,6 +108,15 @@
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35803.0",
   "releases": [
+    {
+      "modId": "halo-unsc-reborn",
+      "modName": "Halo - UNSC Reborn",
+      "seenOn": "2026-10-06",
+      "oldVersion": "0.6.3",
+      "newVersion": "v0.6.4",
+      "gameVersion": "0.98a",
+      "changelogNotes": "Fixed: prize crews tried to board Remnant and THREAT hulls, which the base game never lets anybody board - they are automated, so there is no crew to overpower. The marines sent at them died for nothing. Automated, unboardable, unrecoverable and station hulls are now never attempted\nAdded: a Prize crews setting, because the mechanic spent marines after every won battle with no way to decline it. On by default; a LunaLib checkbox under Campaign Rules, or one line in data/config/settings.json\nIncreased: a Covenant suppression force from 70/110/160 fleet points to 200/320/450, with a floor of 5/6/8 hulls, because Covenant hulls cost 30 to 60 points each - a glassing fleet really was one carrier and an escort\nAdded: the world's own navy now answers a glassing. A military response is raised over the target and renewed monthly for as long as the force is there, because nothing in the mod had ever told the defenders that anything was happening\nAdded: an orbital siege phase, because a station in orbit counted for nothing. The force engages the platform first, the surface clock does not start until it stops firing, and a platform still firing after twelve days is reduced and out of the sky for ninety\nChanged: the force now sails with its transponder lit and can be detected from a very long way out while the projectors charge, with a danger ping at the target every three days, because it used to cross the sector dark and nothing ever lit up\nFixed: the Suppression Force and Section Zero Retirement Detail entries pointed the map at a fleet outside your sensor range, which draws nothing at all. Both now point at the system the fleet is in and name it, and the suppression entry says how many hulls and which phase it is in\nChanged: the excavation under Sanctum from three in-game years to two, and relics to halve it from 31 to 24, because it was too slow to release the Flood\nAdded: the pacing numbers are now readable from data/config/settings.json, so a player without LunaLib can also set the dig length, the relic discount and the Flood's growth rate\nAdded: codex entries for how a glassing actually runs and what every setting does, and loading tips naming both, because none of it was written down anywhere"
+    },
     {
       "modId": "halo-unsc-reborn",
       "modName": "Halo - UNSC Reborn",
