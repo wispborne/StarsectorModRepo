@@ -1,0 +1,176 @@
+{
+  "generatedAt": "2026-10-06T18:09:37.787722Z",
+  "listing": {
+    "id": "political-map-sector-map-layers-kmu",
+    "name": "Political Map - Sector Map Layers - KMU",
+    "authors": [
+      "Klark Morrigan"
+    ],
+    "otherAuthorNames": {},
+    "categories": [
+      "Utilities",
+      "Quality of life"
+    ],
+    "sources": [
+      "forum",
+      "discord"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "0.2.1",
+    "imageUrl": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/always-has-been.png",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710767568195705/always-has-been-square.png?ex=6ac60e1f&is=6ac4bc9f&hm=08bc0748f0f8a4d7a05386a2d630c3f97d9b18054a1aed92ed575b927a60708b&",
+    "summary": "Currently in pre-release. Requires LazyLib and LunaLib. Safe to enable mid-save, uninstalled via settings.",
+    "summaryIsGenerated": false,
+    "aiSummary": "Adds political map layers to the sector map and intel screens, visualizing faction presence, claims, and alliances.",
+    "hasDirectDownload": false,
+    "bestDownload": {
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FKlark-Morrigan%2FStarsector-Mod-KMU%2Freleases%2Flatest%2Fdownload%2Fkmu-en.version%22%2C%22id%22%3A%22kmu%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FKlark-Morrigan%2FStarsector-Mod-KMLib%2Freleases%2Flatest%2Fdownload%2Fkmlib-en.version%22%2C%22id%22%3A%22kmlib%22%7D",
+      "kind": "trios",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 2,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36029.0",
+    "discordUrl": "https://discord.com/channels/187635036525166592/1549710766226014298/1549710766226014298",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2026-09-16",
+    "needs": [
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      },
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "KMLib"
+      }
+    ]
+  },
+  "description": "Political Map\n\nas the headline feature of\n\nSector Map Layers\n\nThis is the pre-release stage intended for public testing and feedback collection.\nYou can try this mod early and share your experiences, so I can improve it.\n\nAre you struggling to\n\nkeep track of faction presence and growth\n\n?\n\nDo you want to know\n\nwhich systems are claimed and by who\n\nbefore you even take the trip there?\n\nDo you want to\n\npaint the map\n\nwith your conquests?\n\nDo you just want to\n\nsee all that border gore\n\nfactions in your mod list produce?\n\nDo you want to\n\nplay Bad Apple\n\n?\n\nThis mod requires\n\nLazyLib\n\n,\n\nLunaLib\n\n.\n\nIt's\n\nsafe to install mid-run\n\n,\n\nand there's a short\n\nuninstall procedure\n\nyou will need to follow if you decide to keep your save after uninstalling the mod.\n\nThis mod is made compatible with\n\nNexerelin\n\n,\n\nFast Rendering\n\n,\n\nRandom Assortment of Things\n\n.\n\nSector Map Layers\n\nis an overlay for the map screen\n\n(Tab, Q)\n\n, the intel screen\n\n(E, 1)\n\n, the minimap in the bottom right corner of the screen (replaces the vanilla radar) if you have\n\nRandom Assortment of Things\n\ninstalled.\n\nExamples\n\nMap screen.\n\nIntel screen.\n\nRandom Assortment of Things\n\nminimap.\n\n[close]\n\nEverything is calculated and drawn off of game data, and it gets updated as the state of the sector changes. Map layers don't alter any of the data being used to draw it, making map layers\n\nread-only\n\nby design.\n\nSector examples\n\nVanilla.\n\nLightly modded.\n\nHeavily modded.\n\n[close]How to access map layers\n\nKMU\n\ncomes with\n\nSector Map Layers\n\nfeature turned on by default. After loading a save or starting a new game, when you open the\n\nmap screen\n\nor the\n\nintel screen\n\n, you'll see a new\n\nMap layers\n\nbutton among map filter buttons. Clicking that button or pressing\n\n(M)\n\nenables the map layer overlay and its sidebar.\n\nMap screen.\n\nIntel screen.\n\n[close]\n\nThe main control interface of map layers is the collapsible\n\nsidebar\n\nthat lists all available layers and related knobs and toggles.\n\nAvailable map layersPolitical Map (P)\n\nFocuses on populated colonies (markets) and their affiliation.\nOnly they paint the map.Decivilised markets are treated as populated (can be disabled in settings) and aligned with Neutral faction (politically disorganised as contrasted by the Independent faction). Systems only with decivilised markets are painted in their own style (adjustable in settings).Markets with Abandoned Station condition are treated as unpopulated and produce no map paint.All non-market entities produce no map paint.\nExamples\nUnclaimed unpopulated systems are drawn very faintly just to show where systems touch.\nThose outlines of unpopulated systems can be toggled on and off independently from populated systems,\nwhich are always drawn even when there's no organised faction in the system (e.g. all colonies in a system are decivilised).\nYou can also adjust their visual style independently from faction and decivilised systems.\n[close]Any given system can be painted by only a single faction, so each system draws a presence ribbon hugging its border that represents each populated colony with the color of the faction holding them. Ribbons are shortened to represent solidified control when only a single faction or alliance is present in a system, while that presence is in no violation of unconditional claims.\n\nExamples\nPresence ribbons: Samarra draws one showing 3 Hegemony markets and 1 Independent market.\n[close]Expandable system tooltips provide detailed information on how each market affects the balance of power.\n\nExamples\nTooltips list Neutral (unowned) markets.\n\nTooltips list markets producing no domination score.\n[close]Factions holding any population centers are listed in a sortable filter. Selecting any of them spotlights their presence across the sector. Neutral is listed there alongside organised factions, so selecting it spotlights every system holding decivilised colonies.\nIn domination views (Factions and Alliances) solid fill represents domination, hatched fill represents presence in a system dominated by somebody else, no fill represents claims on unpopulated systems.On the Claims view all systems are painted with solid fill.\nExamples\nFaction filter, expanded to 2 columns, sorted by faction attitude toward the player.\n\nAlliances view filtered by the Luddic Church alliance.\n\nFactions view filtered by Pirates.\n\nUnpopulated systems get no paint in domination views.\nTia star system is shown as Hegemony-owned because Hegemony holds an unconditional claim for it.\n[close]\n\nThe\n\nPolitical Map\n\ncomes with 3 views:\n\nFactions - paints faction territory based on a custom domination algorithm (highly customisable in settings) that weighs markets sizes, stability, whether a market is hidden, presence of an orbital station (or if a station is militarised), and the number of patrol fleets generated (by their sizes).\n\nExamples\nLuddic Church unconditionally claims Penelope's Star but isn't present there,\nand per domination rules actually present faction (Independent) reads as the holder.\nThe claim is still listed in the tooltip.\n[close]Alliances (only visible with Nexerelin installed) - same as Factions but allied factions stand as a single political entity with their holdings combined.\n\nExamples\nTooltips in the Alliances view combine domination score of present alliance members.\n[close]Claims - paints faction territory based on the vanilla system claim mechanic - dynamic or unconditional. Unconditional claims are set via sector memory and are the highest authority. Unless a claim is unconditional, system claim is resolved dynamically - the single biggest market (that participates in the economy) wins, boosted by the presence of same-faction markets (of any kind) and any military industry constructed. The player faction and non-territorial factions cannot lay claims dynamically. If you filter by a non-territorial faction, unclaimed systems with their presence will be spotlit.\n\nExamples\nLuddic Church isn't present in Penelope's Star system, holds an unconditional claim on it,\nand there's a non-territorial faction (Independent) present.\n[close]\n\n[close][close]Spoiler protectionTo avoid spoilers, map layers operate on a vanilla-derived\n\nvisibility\n\nsystem\n\n(each component is available in settings)\n\n:\n\nHidden systems (with no hyperspace anchor generated off of a star, nebula, or a black hole) are not revealed unless there's a visible population center present or it holds an active gate.Entities marked as discoverable (hidden on the system map until in range of player fleet sensors) are not revealed. They are also listed on Claims tooltips because vanilla uses them in claim calculations, but are redacted.Markets marked as hidden are not revealed if there are no visible colonies held by other non-allied factions, or until the player visits their system. They are also listed on Claims tooltips because vanilla uses them in claim calculations, but are redacted.Decivilised markets are not revealed unless they start so, or until the player performs a full survey on them (adjustable in settings). These markets are also revealed if there are visible colonies held by other non-allied factions.Unowned markets with the Abandoned Station condition follow visibility rules of hidden markets.\n\n[close]\n\nThis mod comes with a suite of\n\nLunaLib\n\nsettings that allow you to tweak, visuals, sound volume, keybinds, underlying mechanics.\n\nConsole commandsIf you've got\n\nConsole Commands\n\ninstalled you can make use of the following commands.\n\nProvided by\n\nKMU\n\n:\n\nkmu_profiling [tree|flat|walks] [namespace=<prefix>] [top=<count>] [perframe] [reset] - Writes full or scoped performance measurements to game logs on demand. Calls exceeding the budget are logged automatically without this command. Requires profiling to be enabled in settings.\n\nProvided by\n\nKMLib\n\n:\n\nkmlib_act\n\n…",
+  "descriptionHtml": "<strong>Political Map</strong><br>as the headline feature of <strong>Sector Map Layers</strong><br><br><em>This is the <strong>pre-release</strong> stage intended for public testing and feedback collection.<br>You can try this mod early and share your experiences, so I can improve it.</em><br><hr>Are you struggling to <strong>keep track of faction presence and growth</strong>?<br>Do you want to know <strong>which systems are claimed and by who</strong> before you even take the trip there?<br>Do you want to <strong>paint the map</strong> with your conquests?<br>Do you just want to <strong>see all that border gore</strong> factions in your mod list produce?<br>Do you want to <strong><a href=\"https://www.reddit.com/r/starsector/comments/1wl36nq/finally_bad_apple_thanks_kmu/\" rel=\"nofollow noopener\" target=\"_blank\">play Bad Apple</a></strong>?<br><hr><br><br>This mod requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\"><strong>LazyLib</strong></a>, <strong><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a></strong>.<br><hr>It's <strong>safe to install mid-run</strong>,<br>and there's a short <strong>uninstall procedure</strong> you will need to follow if you decide to keep your save after uninstalling the mod.<br><hr>This mod is made compatible with <strong><a href=\"https://fractalsoftworks.com/forum/index.php?topic=9175.0\" rel=\"nofollow noopener\" target=\"_blank\">Nexerelin</a></strong>, <strong><a href=\"https://fractalsoftworks.com/forum/index.php?topic=33870.0\" rel=\"nofollow noopener\" target=\"_blank\">Fast Rendering</a></strong>, <strong><a href=\"https://fractalsoftworks.com/forum/index.php?topic=26260.0\" rel=\"nofollow noopener\" target=\"_blank\">Random Assortment of Things</a></strong>.<br><hr><strong>Sector Map Layers</strong> is an overlay for the map screen <strong>(Tab, Q)</strong>, the intel screen <strong>(E, 1)</strong>, the minimap in the bottom right corner of the screen (replaces the vanilla radar) if you have <strong>Random Assortment of Things</strong> installed.<br><br>Examples<br>Map screen.<br><br>Intel screen.<br><br><strong>Random Assortment of Things</strong> minimap.<br>[close]<br>Everything is calculated and drawn off of game data, and it gets updated as the state of the sector changes. Map layers don't alter any of the data being used to draw it, making map layers <strong>read-only</strong> by design.<br><br>Sector examples<br>Vanilla.<br><br>Lightly modded.<br><br>Heavily modded.<br>[close]How to access map layers<strong>KMU</strong> comes with <strong>Sector Map Layers</strong> feature turned on by default. After loading a save or starting a new game, when you open the <strong>map screen</strong> or the <strong>intel screen</strong>, you'll see a new <strong>Map layers</strong> button among map filter buttons. Clicking that button or pressing <strong>(M)</strong> enables the map layer overlay and its sidebar.<br><br>Map screen.<br><br>Intel screen.<br>[close]<br>The main control interface of map layers is the collapsible <strong>sidebar</strong> that lists all available layers and related knobs and toggles.<br><br>Available map layersPolitical Map (P)<ul><li>Focuses on <strong>populated colonies</strong> (markets) and their affiliation.<br><ul><li>Only they paint the map.</li><li><strong>Decivilised markets</strong> are treated as populated <em>(can be disabled in settings)</em> and aligned with <strong>Neutral</strong> faction (politically disorganised as contrasted by the <strong>Independent</strong> faction). Systems only with decivilised markets are painted in their own style <em>(adjustable in settings)</em>.</li><li>Markets with <strong>Abandoned Station</strong> condition are treated as unpopulated and produce no map paint.</li><li>All non-market entities produce no map paint.</li></ul><br>Examples<br>Unclaimed <strong>unpopulated systems</strong> are drawn very faintly just to show where systems touch.<br>Those outlines of unpopulated systems can be toggled on and off independently from <strong>populated systems</strong>,<br>which are always drawn even when there's no organised faction in the system (e.g. all colonies in a system are <strong>decivilised</strong>).<br><em>You can also adjust their visual style independently from faction and decivilised systems.</em><br>[close]</li><li>Any given system can be painted by only a single faction, so each system draws a <strong>presence ribbon</strong> hugging its border that represents each populated colony with the color of the faction holding them. Ribbons are shortened to represent <strong>solidified control</strong> when only a single faction or alliance is present in a system, while that presence is in no violation of <strong>unconditional claims</strong>.<br><br>Examples<br>Presence ribbons: <strong>Samarra</strong> draws one showing 3 <strong>Hegemony</strong> markets and 1 <strong>Independent</strong> market.<br>[close]</li><li>Expandable <strong>system tooltips</strong> provide detailed information on how each market affects the balance of power.<br><br>Examples<br>Tooltips list <strong>Neutral</strong> (unowned) markets.<br><br>Tooltips list markets producing no domination score.<br>[close]</li><li>Factions holding any population centers are listed in a <strong>sortable filter</strong>. Selecting any of them spotlights their presence across the sector. <strong>Neutral</strong> is listed there alongside organised factions, so selecting it spotlights every system holding <strong>decivilised</strong> colonies.<br><ul><li>In domination views (<strong>Factions</strong> and <strong>Alliances</strong>) <strong>solid fill</strong> represents domination, <strong>hatched fill</strong> represents presence in a system dominated by somebody else, <strong>no fill</strong> represents claims on unpopulated systems.</li><li>On the <strong>Claims</strong> view all systems are painted with solid fill.</li></ul><br>Examples<br>Faction filter, expanded to 2 columns, sorted by faction <strong>attitude</strong> toward the player.<br><br><strong>Alliances</strong> view filtered by the <strong>Luddic Church</strong> alliance.<br><br><strong>Factions</strong> view filtered by <strong>Pirates</strong>.<br><br><strong>Unpopulated systems</strong> get no paint in domination views.<br><strong>Tia</strong> star system is shown as <strong>Hegemony</strong>-owned because <strong>Hegemony</strong> holds an unconditional claim for it.<br>[close]</li></ul><br>The <strong>Political Map</strong> comes with 3 views:<br><ul><li><strong>Factions</strong> - paints faction territory based on a custom <strong>domination algorithm</strong> (highly customisable in settings) that weighs markets sizes, stability, whether a market is hidden, presence of an orbital station (or if a station is militarised), and the number of patrol fleets generated (by their sizes).<br><br>Examples<br><strong>Luddic Church</strong> unconditionally claims <strong>Penelope's Star</strong> but isn't present there,<br>and per domination rules actually present faction (<strong>Independent</strong>) reads as the holder.<br>The claim is still listed in the tooltip.<br>[close]</li><li><strong>Alliances</strong> (only visible with <strong>Nexerelin</strong> installed) - same as <strong>Factions</strong> but allied factions stand as a single political entity with their holdings combined.<br><br>Examples<br>Tooltips in the <strong>Alliances</strong> view combine domination score of present alliance members.<br>[close]</li><li><strong>Claims</strong> - paints faction territory based on the vanilla <strong>system claim</strong> mechanic - dynamic or unconditional. <strong>Unconditional claims</strong> are set via sector memory and are the highest authority. <strong>Unless a claim is unconditional, system claim is resolved dynamically</strong> - the single biggest market (that participates in the economy) wins, boosted by the presence of same-faction markets (of any kind) and any military industry constructed. The player faction and <strong>non-territorial</strong> factions cannot lay claims dynamically. If you filter by a <strong>non-territorial</strong> faction, unclaimed systems with their presence will be spotlit.<br><br>Examples<br><strong>Luddic Church</strong> isn't present in <strong>Penelope's Star</strong> system, holds an unconditional claim on it,<br>and there's a non-territorial faction (<strong>Independent</strong>) present.<br>[close]</li></ul>[close][close]Spoiler protectionTo avoid spoilers, map layers operate on a vanilla-derived <strong>visibility</strong> system <em>(each component is available in settings)</em>:<br><ul><li><strong>Hidden systems</strong> (with no hyperspace anchor generated off of a star, nebula, or a black hole) are not revealed unless there's a visible population center present or it holds an active gate.</li><li>Entities marked as <strong>discoverable</strong> (hidden on the system map until in range of player fleet sensors) are not revealed. They are also listed on <strong>Claims</strong> tooltips because vanilla uses them in claim calculations, but are redacted.</li><li>Markets marked as <strong>hidden</strong> are not revealed if there are no visible colonies held by other non-allied factions, or until the player visits their system. They are also listed on <strong>Claims</strong> tooltips because vanilla uses them in claim calculations, but are redacted.</li><li><strong>Decivilised markets</strong> are not revealed unless they start so, or until the player performs a full survey on them <em>(adjustable in settings)</em>. These markets are also revealed if there are visible colonies held by other non-allied factions.</li><li>Unowned markets with the <strong>Abandoned Station</strong> condition follow visibility rules of <strong>hidden markets</strong>.</li></ul>[close]<br>This mod comes with a suite of <strong>LunaLib</strong> settings that allow you to tweak, visuals, sound volume, keybinds, underlying mechanics.<br><br>Console commandsIf you've got <strong><a href=\"https://fractalsoftworks.com/forum/index.php?topic=4106.0\" rel=\"nofollow noopener\" target=\"_blank\">Console Commands</a></strong> installed you can make use of the following commands.<br><br>Provided by <strong>KMU</strong>:<br><ul><li><strong>kmu_profiling [tree|flat|walks] [namespace=&lt;prefix&gt;] [top=&lt;count&gt;] [perframe] [reset]</strong> - Writes full or scoped performance measurements to game logs on demand. Calls exceeding the budget are logged automatically without this command. Requires profiling to be enabled in settings.</li></ul><br>Provided by <strong>KMLib</strong>:<br><ul><li><strong>kmlib_act</strong></li></ul><p>…</p>",
+  "descriptionIsGenerated": false,
+  "aiDescription": "Overlays the map and intel screens with layers showing faction territories, presence ribbons, and claims based on market data. Includes views for Factions, Alliances, and Claims, with customizable settings for visuals and spoiler protection. Compatible with Nexerelin and Random Assortment of Things, offering console commands for debugging and manipulation.",
+  "saveCompatibilityText": "It's safe to install mid-run ,\nand there's a short uninstall procedure you will need to follow if you decide to keep your save after uninstalling the mod.",
+  "rawCategories": [
+    "Quality of Life",
+    "Utility mods"
+  ],
+  "gallery": [
+    {
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710767568195705/always-has-been-square.png?ex=6ac60e1f&is=6ac4bc9f&hm=08bc0748f0f8a4d7a05386a2d630c3f97d9b18054a1aed92ed575b927a60708b&"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710768574963802/sector-1-vanilla.png?ex=6ac60e1f&is=6ac4bc9f&hm=e5bd3769db7078ce6dc3eecc9986a21b31f3a50c55261bbaf3cb9745b79d9127&"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710769304768562/sector-3-modded-heavy.png?ex=6ac60e1f&is=6ac4bc9f&hm=974d4d4d55273e28c2d7005400d176fd49508f86ffef39af4f8e5ffada469ddf&"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710769866678332/random-assortment-of-things-minimap.png?ex=6ac60e1f&is=6ac4bc9f&hm=22dededc8b42bb34dca70a245a809cbfa75f4dc8d81ce03c7bcde06d12b8d217&"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710770495946752/intel-screen.png?ex=6ac60e1f&is=6ac4bc9f&hm=f3c43bc9ee145c684f5a83ec26781e3b9e1573bac98909a06f0336cfb7a22bf2&"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710771410313296/map-screen.png?ex=6ac60e20&is=6ac4bca0&hm=b0e2b250e18aa3748ff2291f6465e3e62978174d04dc087084e2b840df8c7f58&"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710772244975728/domination-factions-filter.png?ex=6ac60e20&is=6ac4bca0&hm=dc73648ee418c0269bfa9feec5fb88a4d0def5b0e0f8ee051d69abb5e569f14c&"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710773020917810/domination-alliances-tooltip.png?ex=6ac60e20&is=6ac4bca0&hm=ad6a98b56a3238a6eec7e1193ff7e66d840166285fbde27d727164a0bf2ef499&"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710773591474266/domination-factions-luddic-church.png?ex=6ac60e20&is=6ac4bca0&hm=183eb04280087fff7a89527c7d8b5730d209c9878648f552e21b9a557e063fb9&"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710774266765423/domination-factions-pirates.png?ex=6ac60e20&is=6ac4bca0&hm=931ee85cd2d6cd320d476aaf48064360dc460462ce434613a46f1094a16e679d&"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/always-has-been.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/map-screen.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/intel-screen.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/random-assortment-of-things-minimap.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/sector-1-vanilla.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/sector-2-modded-light.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/sector-3-modded-heavy.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/ui-toggle-map.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/ui-toggle-intel.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/domination-factions-unpopulated.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/domination-factions-presence-ribbon.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/domination-factions-tooltip-lists-neutral-markets.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/domination-factions-tooltip-lists-not-contributing-markets.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/domination-factions-filter.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/domination-factions-luddic-church.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/domination-factions-pirates.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/domination-factions-unpopulated-claimed.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/domination-factions-penelope_star.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/domination-alliances-tooltip.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/claims-cored-but-somebody-else-is-present.png"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FKlark-Morrigan%2FStarsector-Mod-KMU%2Freleases%2Flatest%2Fdownload%2Fkmu-en.version%22%2C%22id%22%3A%22kmu%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FKlark-Morrigan%2FStarsector-Mod-KMLib%2Freleases%2Flatest%2Fdownload%2Fkmlib-en.version%22%2C%22id%22%3A%22kmlib%22%7D",
+      "kind": "trios",
+      "label": "",
+      "host": "trilink.wispborne.com",
+      "needsAnotherStep": true
+    },
+    {
+      "url": "https://github.com/Klark-Morrigan/Starsector-Mod-KMU/releases/latest",
+      "kind": "direct",
+      "label": "",
+      "host": "github.com",
+      "needsAnotherStep": true
+    }
+  ],
+  "changelog": {},
+  "sourceCodeUrl": "https://github.com/Klark-Morrigan/Starsector-Mod-KMU",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36029.0",
+  "discordUrl": "https://discord.com/channels/187635036525166592/1549710766226014298/1549710766226014298",
+  "releases": [],
+  "sameNameMods": [],
+  "addons": []
+}
