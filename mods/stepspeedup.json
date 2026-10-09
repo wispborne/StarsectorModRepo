@@ -1,0 +1,73 @@
+{
+  "generatedAt": "2026-10-09T06:05:56.523327Z",
+  "listing": {
+    "id": "stepspeedup",
+    "name": "StepSpeedup 1.0.0",
+    "displayName": "StepSpeedup",
+    "authors": [
+      "dynafire"
+    ],
+    "otherAuthorNames": {},
+    "categories": [],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "1.0.0",
+    "imageUrl": "https://raw.githubusercontent.com/gilbertgong/stepspeedup/main/graphics/banner.png",
+    "summary": "Lets you step the game speed up and down with the + and - keys through a configurable list of speed multipliers.",
+    "summaryIsGenerated": true,
+    "aiSummary": "Lets you step the game speed up and down with the + and - keys through a configurable list of speed multipliers.",
+    "saveCompatible": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2Fgilbertgong%2Fstepspeedup%2Fmain%2FStepSpeedup.version%22%2C%22id%22%3A%22stepspeedup%22%2C%22version%22%3A%221.0.0%22%7D",
+      "kind": "trios",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 2,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36140.0",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2026-10-09",
+    "needs": []
+  },
+  "description": "StepSpeedup\n\nis a utility mod that lets you step the game speed up and down with the\n\n+\n\nand\n\n-\n\nkeys, through a list of (configurable) speed multipliers: x1, x2, x4, x6, x8, x16 by default.\n\nThis works in both combat and the campaign. It is recommended to enable the\n\nCampaign \"speed up time\" is a toggle\n\ngame setting, and keep \"speed up\" enabled. You can step down to x1 for normal speed. It also works with the standard non-toggle setting.\n\nVersion Checker supported. Utility mod: safe to add to or remove from an existing save.\n\nWhy another speed mod?\n\nSpeedUp\n\nby DarkRevenant is the established speed mod, and it works well. It is built around separate hotkeys that each hold or toggle a fixed multiplier, and multipliers from several active hotkeys stack together.\n\nStepSpeedup takes a simpler approach: one list of speeds, and two keys to move through it. Rather than enabling and disabling speedup, you can step down to x1, making it always simple to speed up or slow down.\n\nHow it works\n\nCombat:\n\n+\n\nand\n\n-\n\nchange the combat engine's time multiplier directly. Every battle starts at x1 (with an option to keep the multiplier between battles). A message is shown for each change. Speeds below x1 work in combat.\n\nCampaign:\n\nCampaign \"speed up time\" is a toggle\n\nsetting is recommended. Enable \"speed up time\", then use\n\n+\n\nand\n\n-\n\nto step through speeds, including down to x1 for normal speed.\n\nSpeeds below x1:\n\nthe game only supports slow motion in combat. You can add values like 0.5 to the speed list, but they only have an effect in combat.\n\nInstallation\n\nCopy the stepspeedup folder into your Starsector mods folder.Enable StepSpeedup in the launcher.\n\nConfiguration\n\nSettings are in data/config/StepSpeedup.json:\n\nSetting\n\nDefault\n\nDescription\n\nspeeds[1, 2, 4, 6, 8, 16]The speed list. x1 and x2 are always included, and the list is sorted automatically.speedUpKeys[13, 78]Keys that step up: =/+ and numpad +. Uses\n\nLWJGL key codes\n\n.slowDownKeys[12, 74]Keys that step down: - and numpad -.allowKeyRepeatfalseIf true, holding a key keeps stepping.resetEachBattletrueReset combat speed to x1 at the start of each battle.enableCampaigntrueControl the campaign speed-up multiplier.showMessagestrueShow a message when the speed changes.\n\nKey presses with Ctrl or Alt held are ignored, so they're left for the game and other mods.\n\nVery high speeds make combat less accurate, because the game simulates bigger time steps per frame.\n\nAI disclaimer\n\nThe majority of this mod was written by Claude (including some of the graphics). I made additions, edits and changes, and have reviewed every line of code.\n\nChangelog\n\n1.0.0\n\nInitial release",
+  "descriptionHtml": "<strong>StepSpeedup</strong> is a utility mod that lets you step the game speed up and down with the <strong>+</strong> and <strong>-</strong> keys, through a list of (configurable) speed multipliers: x1, x2, x4, x6, x8, x16 by default.<br><br>This works in both combat and the campaign. It is recommended to enable the <em>Campaign \"speed up time\" is a toggle</em> game setting, and keep \"speed up\" enabled. You can step down to x1 for normal speed. It also works with the standard non-toggle setting.<br><br>Version Checker supported. Utility mod: safe to add to or remove from an existing save.<br><br><hr><br><strong>Why another speed mod?</strong><br><br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=13394.0\" rel=\"nofollow noopener\" target=\"_blank\">SpeedUp</a> by DarkRevenant is the established speed mod, and it works well. It is built around separate hotkeys that each hold or toggle a fixed multiplier, and multipliers from several active hotkeys stack together.<br><br>StepSpeedup takes a simpler approach: one list of speeds, and two keys to move through it. Rather than enabling and disabling speedup, you can step down to x1, making it always simple to speed up or slow down.<br><br><strong>How it works</strong><br><br><strong>Combat:</strong> <strong>+</strong> and <strong>-</strong> change the combat engine's time multiplier directly. Every battle starts at x1 (with an option to keep the multiplier between battles). A message is shown for each change. Speeds below x1 work in combat.<br><br><strong>Campaign:</strong> <em>Campaign \"speed up time\" is a toggle</em> setting is recommended. Enable \"speed up time\", then use <strong>+</strong> and <strong>-</strong> to step through speeds, including down to x1 for normal speed.<br><br><strong>Speeds below x1:</strong> the game only supports slow motion in combat. You can add values like 0.5 to the speed list, but they only have an effect in combat.<br><br><strong>Installation</strong><br><br><ul><li>Copy the stepspeedup folder into your Starsector mods folder.</li><li>Enable <strong>StepSpeedup</strong> in the launcher.</li></ul><br><strong>Configuration</strong><br><br>Settings are in data/config/StepSpeedup.json:<br><br><strong>Setting</strong><strong>Default</strong><strong>Description</strong>speeds[1, 2, 4, 6, 8, 16]The speed list. x1 and x2 are always included, and the list is sorted automatically.speedUpKeys[13, 78]Keys that step up: =/+ and numpad +. Uses <a href=\"https://gist.github.com/Mumfrey/5cfc3b7e14fef91b6fa56470dc05218a\" rel=\"nofollow noopener\" target=\"_blank\">LWJGL key codes</a>.slowDownKeys[12, 74]Keys that step down: - and numpad -.allowKeyRepeatfalseIf true, holding a key keeps stepping.resetEachBattletrueReset combat speed to x1 at the start of each battle.enableCampaigntrueControl the campaign speed-up multiplier.showMessagestrueShow a message when the speed changes.<br>Key presses with Ctrl or Alt held are ignored, so they're left for the game and other mods.<br>Very high speeds make combat less accurate, because the game simulates bigger time steps per frame.<br><br><strong>AI disclaimer</strong><br><br>The majority of this mod was written by Claude (including some of the graphics). I made additions, edits and changes, and have reviewed every line of code.<br><br><strong>Changelog</strong><br><br><strong>1.0.0</strong><br><ul><li>Initial release</li></ul>",
+  "descriptionIsGenerated": false,
+  "aiDescription": "Lets you step the game speed up and down with the + and - keys through a configurable list of speed multipliers. It works in both combat and the campaign, allowing you to step down to x1 for normal speed. Speeds below x1 only have an effect in combat.",
+  "saveCompatibilityText": "safe to add to or remove from an existing save",
+  "rawCategories": [],
+  "gallery": [
+    {
+      "url": "https://raw.githubusercontent.com/gilbertgong/stepspeedup/main/graphics/banner.png"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2Fgilbertgong%2Fstepspeedup%2Fmain%2FStepSpeedup.version%22%2C%22id%22%3A%22stepspeedup%22%2C%22version%22%3A%221.0.0%22%7D",
+      "kind": "trios",
+      "label": "",
+      "host": "trilink.wispborne.com",
+      "needsAnotherStep": true
+    },
+    {
+      "url": "https://github.com/gilbertgong/stepspeedup/archive/refs/tags/v1.0.0.zip",
+      "directUrl": "https://github.com/gilbertgong/stepspeedup/archive/refs/tags/v1.0.0.zip",
+      "fileName": "v1.0.0.zip",
+      "kind": "direct",
+      "label": "",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {
+    "1.0.0": "Initial release"
+  },
+  "sourceCodeUrl": "https://github.com/gilbertgong/stepspeedup",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36140.0",
+  "releases": [],
+  "sameNameMods": [],
+  "addons": []
+}
