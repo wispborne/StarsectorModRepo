@@ -57,6 +57,9 @@
 
   /* A wash over a picture, for the round button that sits on a card. */
   --over-picture: rgba(14, 22, 43, 0.82);
+  /* How light an author's own text colour may be, so it reads on this background. */
+  --author-l-min: 0.72;
+  --author-l-max: 0.95;
   --lifted: 0 8px 24px rgba(0, 0, 0, 0.45);
   --badge-back: rgba(255, 255, 255, 0.02);
   /* Shading behind badges on card pictures. */
@@ -113,7 +116,8 @@
 }
 
 /* The same colours for a reader whose computer asks for light pages. Only the
-   names change; nothing else in this file knows the difference.
+   names change; nothing else in this file knows the difference. The "Light"
+   theme further down repeats these values, so change both together.
 
    The cyan is darker here than the dark version's. Light cyan on white is
    unreadable, and an action nobody can read is not an action. */
@@ -145,6 +149,9 @@
     --warning-wash: rgba(158, 96, 0, 0.07);
 
     --over-picture: rgba(255, 255, 255, 0.88);
+    /* How light an author's own text colour may be, so it reads on this background. */
+    --author-l-min: 0.3;
+    --author-l-max: 0.55;
     --lifted: 0 8px 24px rgba(22, 30, 45, 0.16);
     --badge-back: rgba(22, 30, 45, 0.03);
     --over-picture-fade: linear-gradient(to top, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
@@ -162,7 +169,7 @@
    page is in. These blocks come after the light block on purpose: they are no
    more specific than it, so being later is what lets them win.
 
-   Every theme is a dark one. This first block puts back the dark version of
+   Every theme but Light is a dark one. This first block puts back the dark version of
    everything that is not the theme's own colours, for a reader whose computer
    asks for light pages, and works out the see-through strengths of the
    theme's colours from the colours themselves. */
@@ -193,6 +200,52 @@
   --on: var(--secondary);
   --on-soft: color-mix(in srgb, var(--secondary) 16%, transparent);
   --over-picture: color-mix(in srgb, var(--surface) 82%, transparent);
+  /* How light an author's own text colour may be, so it reads on this background. */
+  --author-l-min: 0.72;
+  --author-l-max: 0.95;
+}
+/* Light, for a reader who wants light pages whatever their computer is set
+   to. The same colours as the light block above, written out a second time:
+   a media query cannot share a block with a plain selector. Keep the two in
+   step. It comes after the shared `[data-theme]` block so it wins over that
+   block's dark text, and it puts "switched on" back to the main colour, as the
+   default does. */
+[data-theme="light"] {
+  --primary: rgb(0, 104, 119);
+  --secondary: rgb(0, 108, 127);
+  --surface: rgb(240, 244, 250);
+  --surface-container: rgb(232, 238, 245);
+  --surface-2: rgb(255, 255, 255);
+  --text: rgb(22, 30, 45);
+  --text-dim: rgb(92, 104, 124);
+  --warning: rgb(158, 96, 0);
+  --error: rgb(184, 38, 38);
+  --success: rgb(19, 116, 58);
+  --llm: rgb(107, 60, 176);
+  --border: rgba(0, 104, 119, 0.22);
+
+  --primary-soft: rgba(0, 104, 119, 0.1);
+  --primary-faint: rgba(0, 104, 119, 0.05);
+  --primary-bar: rgba(0, 104, 119, 0.3);
+  --primary-ghost: rgba(0, 104, 119, 0.4);
+  --primary-bar-lit: rgba(0, 104, 119, 0.55);
+  --on: var(--primary);
+  --on-soft: var(--primary-soft);
+
+  --edge-warning: rgba(158, 96, 0, 0.35);
+  --edge-success: rgba(19, 116, 58, 0.35);
+  --edge-llm: rgba(107, 60, 176, 0.35);
+  --edge-secondary: rgba(0, 108, 127, 0.35);
+  --warning-wash: rgba(158, 96, 0, 0.07);
+
+  --over-picture: rgba(255, 255, 255, 0.88);
+  /* How light an author's own text colour may be, so it reads on this background. */
+  --author-l-min: 0.3;
+  --author-l-max: 0.55;
+  --lifted: 0 8px 24px rgba(22, 30, 45, 0.16);
+  --badge-back: rgba(22, 30, 45, 0.03);
+  --over-picture-fade: linear-gradient(to top, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
+  --raised: 0 0 0 1px rgba(22, 30, 45, 0.06), 0 1px 3px rgba(22, 30, 45, 0.05);
 }
 /* The default's dark colours, for its preview button only. On the page the
    default sets no `data-theme`, so this never applies there. */
@@ -1054,11 +1107,96 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .prose pre { white-space: pre-wrap; overflow-x: auto; }
 .prose a { overflow-wrap: anywhere; }
 
+/* The pictures from the author's post, where they put them. Never wider than
+   the column, and the shape kept even where the post gave a width and height.
+   A picture that is not a link opens over the page. */
+.prose img { max-width: 100%; height: auto; vertical-align: middle; }
+.prose img.inline-picture { cursor: zoom-in; }
+/* With pictures in descriptions turned off, each is a small link instead. */
+.inline-picture-link {
+  font-size: var(--type-small); padding: 0 6px; margin: 0 2px;
+  border: 1px solid var(--border); border-radius: 4px; text-decoration: none;
+}
+.inline-picture-link::before { content: '🖼 '; }
+
+/* The forum's own formatting, written by the builder as these classes. */
+
+/* A spoiler: a fold, shut until opened, labelled with its title. */
+.prose details.spoiler {
+  margin: 0 0 10px; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--primary-faint);
+}
+.prose details.spoiler > summary {
+  cursor: pointer; padding: 4px 10px; color: var(--primary);
+  font-weight: 600; user-select: none;
+}
+.prose details.spoiler[open] > summary { border-bottom: 1px solid var(--border); }
+.prose details.spoiler > :not(summary) { margin-left: 10px; margin-right: 10px; }
+.prose details.spoiler[open] { padding-bottom: 8px; }
+.prose details.spoiler[open] > summary + * { margin-top: 8px; }
+
+/* Centred and right-aligned blocks, as the author laid them out. */
+.prose .align-center { text-align: center; }
+.prose .align-right { text-align: right; }
+
+/* The author's sizes, as four steps on the site's own scale. */
+.prose .size-small { font-size: var(--type-small); }
+.prose .size-big { font-size: var(--type-big); }
+.prose .size-bigger { font-size: var(--type-heading); line-height: 1.25; }
+.prose .size-biggest { font-size: var(--type-title); line-height: 1.15; }
+
+/* The author's own colour, kept to a lightness that reads on this theme. The
+   first line is for browsers that cannot work out a colour from another; it
+   pulls the colour toward the ordinary text colour, which always reads. */
+.prose .author-colour {
+  color: color-mix(in srgb, var(--c) 60%, var(--text));
+  color: oklch(from var(--c) clamp(var(--author-l-min), l, var(--author-l-max)) min(c, 0.25) h);
+}
+
+/* A quote that names who it quotes. */
+.prose blockquote > cite {
+  display: block; font-style: normal; font-size: var(--type-small);
+  margin-bottom: 4px;
+}
+
+/* A table scrolls sideways in its own box rather than widening the page. */
+.prose .table-scroll { overflow-x: auto; margin: 0 0 10px; }
+.prose .table-scroll table { border-collapse: collapse; }
+.prose .table-scroll td, .prose .table-scroll th {
+  padding: 4px 8px; vertical-align: top; border: 1px solid var(--border);
+}
+
+/* A YouTube video: its thumbnail with a play mark, and the player that takes
+   its place when clicked. Both are the same 16:9 box, so nothing moves. */
+.prose a.video-link:not(.as-words), .prose .video-player {
+  display: block; position: relative; width: 100%; max-width: 640px;
+  aspect-ratio: 16 / 9; margin: 0 0 10px; border: 0;
+  border-radius: 6px; overflow: hidden; background: var(--surface-2);
+}
+.prose a.video-link:not(.as-words) img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.prose a.video-link:not(.as-words)::after {
+  content: '▶'; position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%); width: 64px; height: 64px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; background: var(--over-picture); color: var(--primary);
+  font-size: var(--type-heading);
+}
+.prose a.video-link:not(.as-words):hover::after { background: var(--primary); color: var(--surface); }
+/* "Hide pictures" beside the "About this mod" heading. The heading row keeps
+   the gap a heading alone would have under it. */
+.panel > .section-head { margin-bottom: 12px; }
+.pictures-switch { font-size: var(--type-small); text-decoration: none; }
+
 /* The description starts cut off, fading out at the foot, with a "Show more"
    line under it. The cut is only kept when the words really overrun it. */
 .prose-clip.clipped {
-  max-height: 14em; overflow: hidden; position: relative;
+  max-height: 14em; overflow: hidden; position: relative; cursor: pointer;
 }
+/* While cut off, a click anywhere opens the post out, so nothing inside it
+   looks clickable. */
+.prose-clip.clipped * { cursor: pointer; }
 .prose-clip.clipped::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 4em;
   background: linear-gradient(to bottom, transparent, var(--surface-2));
@@ -1151,6 +1289,10 @@ a.row-title:hover,
   cursor: zoom-in; line-height: 0; border-radius: 6px; overflow: hidden;
 }
 .shot:hover { border-color: var(--primary); }
+.shot[hidden] { display: none; }
+/* The button that shows the gallery's buttons, badges and small icons. */
+.small-pictures-row { margin: var(--gap) 0 0; }
+.small-pictures-toggle { text-decoration: none; }
 
 /* A screenshot over the page, rather than a raw image in a new tab. */
 /* Nothing behind it scrolls while it is open. */

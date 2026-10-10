@@ -1,42 +1,105 @@
 // What the site's search matches on.
 //
 // Both the browse page and the box in the bar at the top use this, so a search
-// that finds a mod in one finds it in the other.
+// that finds a mod in one finds it in the other, in the same order.
 //
-// Every mod gets a list of terms — its name, the words in its name, the first
-// letters of those words, the people credited, its categories, its summary and
-// its versions. A typed word matches when it sits inside one of those terms.
-// Checking each fact on its own is the point: running them all into one long
-// string lets the end of a category run into the start of an author's name and
-// match something nobody typed.
+// Everything typed and every fact about a mod goes through one clean-up first
+// (`normalize`), so capitals, accents, apostrophes and punctuation never stop a
+// match: "seeker unidentified contact" finds "Seeker - Unidentified Contact".
+// What was typed is then read as groups (split on commas) of words (split on
+// spaces). Every word in a group has to match one fact about the mod, in any
+// order; each fact is checked on its own, so the end of a category can never
+// run into the start of an author's name and match something nobody typed.
+//
+// The tests are in test/site/search_test.mjs, run against real mod records.
 
-import { everyOtherName, modName } from './lib.js';
+import { everyOtherName, modName } from './mod_names.js';
+import { NICKNAMES } from './nicknames.js';
 
-/// The terms already worked out for a mod. Keyed on the mod itself, because two
-/// mods can share a name and the list is fetched once and used everywhere.
-const termsByMod = new WeakMap();
+// --- The clean-up ---
 
-/// A name reduced to lowercase words with a dash between them: "Ship/Weapon
-/// Pack" becomes "ship-weapon-pack". Splitting that on the dashes is how the
-/// separate words, and the first letters of them, are found.
-function slugify(text) {
-  return String(text || '')
+/// Apostrophes, taken out without leaving a gap, so "Amazigh's" is "amazighs".
+/// Done before anything else: Unicode would turn "´" into a space and a mark.
+const APOSTROPHES = /['’‘´`]/g;
+const NOT_A_LETTER_DIGIT_OR_DOT = /[^\p{L}\p{N}.]+/gu;
+const ACCENT_MARKS = /\p{M}/gu;
+/// A dot with no digit on one side of it. Only "0.98"-style dots are kept.
+const LONE_DOT = /(?<!\p{N})\.|\.(?!\p{N})/gu;
+const SPACES = /\s+/g;
+
+/// Text reduced to lowercase words with single spaces between them: accents
+/// off, apostrophes gone, every other mark a space, and a dot kept only
+/// between two digits so a version like "0.98a" survives. Letters of every
+/// alphabet are kept.
+export function normalize(text) {
+  if (text == null) return '';
+  return String(text)
+    .replace(APOSTROPHES, '')
+    // Symbols go before the decomposition, which would turn "™" into "TM".
+    .replace(NOT_A_LETTER_DIGIT_OR_DOT, ' ')
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
+    .normalize('NFKD')
+    .replace(ACCENT_MARKS, '')
+    .replace(NOT_A_LETTER_DIGIT_OR_DOT, ' ')
+    .replace(LONE_DOT, ' ')
+    .replace(SPACES, ' ')
+    .trim();
 }
 
-/// Words too small to count when a name is shortened to its initials.
+/// The same text with the spaces taken out, so "shipweapon" can match
+/// "Ship/Weapon Pack".
+const squash = (cleaned) => cleaned.replace(/ /g, '');
+
+/// A name split where a small letter is followed by a capital, so "GraphicsLib"
+/// is also read as "Graphics Lib" and its initials are "gl".
+const splitAtCapitals = (text) =>
+  String(text || '').replace(/(\p{Ll})(\p{Lu})/gu, '$1 $2');
+
+// --- Spelling distance ---
+
+/// How many single-letter changes turn one word into the other: a letter
+/// added, taken away or swapped for another, or two letters next to each
+/// other trading places. Stops early and answers `limit + 1` once the answer is
+/// sure to be over `limit`.
+export function editDistance(a, b, limit = Infinity) {
+  a = String(a);
+  b = String(b);
+  if (Math.abs(a.length - b.length) > limit) return limit + 1;
+  let before = null;
+  let previous = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const row = [i];
+    let smallest = i;
+    for (let j = 1; j <= b.length; j++) {
+      const change = a[i - 1] === b[j - 1] ? 0 : 1;
+      let cost = Math.min(previous[j] + 1, row[j - 1] + 1, previous[j - 1] + change);
+      if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) {
+        cost = Math.min(cost, before[j - 2] + 1);
+      }
+      row.push(cost);
+      if (cost < smallest) smallest = cost;
+    }
+    if (smallest > limit) return limit + 1;
+    before = previous;
+    previous = row;
+  }
+  return previous[b.length];
+}
+
+// --- What a mod can be found by ---
+
+/// Words too small to count when a name is shortened to its initials, or to
+/// stop a run of word starts ("aotd" and "ad" are both Ashes of the Domain).
 const STOP_WORDS = new Set(
   ['of', 'the', 'and', 'for', 'a', 'an', 'in', 'on', 'to', 'by', 'or', 'at']);
 
 /// How much worse a match on this fact is than a match on the mod's name.
 ///
 /// A mod called "Nexerelin" should come above one whose category happens to
-/// hold the letters somebody typed. These are the numbers taken off the score
-/// so that happens: the name and the people credited cost nothing, the pieces
-/// of a name cost a little, a category or a version costs more, and the
-/// summary — a paragraph, where a stray match means least — costs most.
+/// hold the letters somebody typed. The name, its nicknames and the people
+/// credited cost nothing, the separate words of a name cost a little, a
+/// category or a version costs more, and the summary — a paragraph, where a
+/// stray match means least — costs most.
 const COST = {
   name: 0,
   namePiece: 10,
@@ -44,72 +107,199 @@ const COST = {
   person: 0,
   category: 20,
   version: 20,
-  summary: 30,
+  summary: 40,
 };
 
-/// Everything about a mod a search can match: each fact its own term,
-/// lowercased, with what a match on it costs.
-///
-/// The pieces and the initials come from the name as shown, not the thread
-/// title — a title carries "[0.98a]" and a date, whose first letters are noise.
-/// The title itself is still a term, so someone searching an old spelling of a
-/// name still finds the mod.
-export function searchTerms(mod) {
-  const already = termsByMod.get(mod);
-  if (already) return already;
+/// The kinds of fact that say who or what the mod is. A typed word that hits
+/// none of these is the one a close spelling is tried for.
+const IDENTITY = new Set(['name', 'namePiece', 'initials', 'person']);
 
-  const terms = [];
-  const add = (value, cost) => {
-    const term = String(value || '').trim().toLowerCase();
-    if (term) terms.push({ term, cost });
+/// Everything worked out for a mod, kept so it is done once per mod. Keyed on
+/// the mod itself, because two mods can share a name.
+const factsByMod = new WeakMap();
+
+/// Everything about a mod the search looks at, worked out once.
+///
+/// - `terms`: each fact on its own, cleaned up, with what a match on it costs
+///   and what kind of fact it is.
+/// - `names`: the mod's whole names (shown name, thread title, nicknames),
+///   cleaned up, for the bonus a search that is the whole name earns.
+/// - `nameWords`: the shown name as words, also split at capitals, for runs of
+///   word starts such as "indevo".
+/// - `closeWords`: the words of every name and person, for close spellings.
+function factsOf(mod) {
+  const known = factsByMod.get(mod);
+  if (known) return known;
+
+  const terms = new Map();
+  const add = (value, cost, kind) => {
+    const term = normalize(value);
+    if (!term) return;
+    const had = terms.get(term);
+    if (!had || cost < had.cost) terms.set(term, { term, cost, kind });
   };
 
   const shown = modName(mod);
-  add(shown, COST.name);
-  add(mod.name, COST.name);
+  const nicknames = [...(mod.nicknames || []), ...(NICKNAMES[mod.id] || [])];
+  const names = [shown, mod.name, ...nicknames].map(normalize).filter(Boolean);
+  for (const name of names) {
+    add(name, COST.name, 'name');
+    add(squash(name), COST.name, 'name');
+  }
 
-  const words = slugify(shown).split('-').filter(Boolean);
-  for (const word of words) add(word, COST.namePiece);
-  if (words.length) {
-    add(slugify(shown), COST.namePiece);
-    add(words.map((word) => word[0]).join(''), COST.initials);
-    // The initials again with the little words left out. "Ashes of the
+  const nameWords = [];
+  for (const form of new Set([normalize(shown), normalize(splitAtCapitals(shown))])) {
+    const words = form.split(' ').filter(Boolean);
+    if (!words.length) continue;
+    nameWords.push(words);
+    for (const word of words) add(word, COST.namePiece, 'namePiece');
+    if (words.length < 2) continue;
+    // The initials, and again with the little words left out: "Ashes of the
     // Domain" is "aotd" taking every word and "ad" taking only the ones that
     // mean anything, and people write it both ways.
+    add(words.map((word) => word[0]).join(''), COST.initials, 'initials');
     const solid = words.filter((word) => !STOP_WORDS.has(word));
-    if (solid.length && solid.length !== words.length) {
-      add(solid.map((word) => word[0]).join(''), COST.initials);
+    if (solid.length >= 2) add(solid.map((word) => word[0]).join(''), COST.initials, 'initials');
+  }
+  for (const word of normalize(mod.name).split(' ')) add(word, COST.namePiece, 'namePiece');
+
+  const people = [...(mod.authors || []), ...everyOtherName(mod)].map(normalize).filter(Boolean);
+  for (const person of people) {
+    add(person, COST.person, 'person');
+    add(squash(person), COST.person, 'person');
+  }
+
+  for (const category of mod.categories || []) add(category, COST.category, 'category');
+  add(mod.gameVersion, COST.version, 'version');
+  add(mod.modVersion, COST.version, 'version');
+  add(mod.summary, COST.summary, 'summary');
+
+  const closeWords = new Set();
+  for (const text of [...names, ...people]) {
+    for (const word of text.split(' ')) if (word) closeWords.add(word);
+  }
+
+  const facts = { terms: [...terms.values()], names, nameWords, closeWords: [...closeWords] };
+  factsByMod.set(mod, facts);
+  return facts;
+}
+
+/// Everything about a mod a search can match: each fact its own term, cleaned
+/// up, with what a match on it costs.
+export function searchTerms(mod) {
+  return factsOf(mod).terms;
+}
+
+// --- How well one typed word answers ---
+
+/// How well one fact answers a typed word: the fact being exactly the word,
+/// starting with it, having a word inside it that starts with it, or holding
+/// it somewhere. Below zero when it does not answer at all.
+function scoreTerm(tag, wanted) {
+  let score;
+  if (tag.term === wanted) score = 100;
+  else if (tag.term.startsWith(wanted)) score = 80;
+  else if (tag.term.includes(` ${wanted}`)) score = 70;
+  else if (tag.term.includes(wanted)) score = 50;
+  else return -1;
+  // Typing a mod's initials exactly is naming it, near enough: as good as a
+  // name that starts with what was typed.
+  if (score === 100 && tag.kind === 'initials') score += 40;
+  return score - tag.cost;
+}
+
+/// A run of word starts scores below any match on the name's own words, so a
+/// mod whose name really holds the letters always comes first.
+const WORD_STARTS_SCORE = 45;
+
+/// A close spelling of a name scores below every exact match on a name or a
+/// person, and above a word found mid-way through a summary.
+const CLOSE_SCORES = [null, 38, 34];
+
+const HAS_DIGIT = /\p{N}/u;
+const ONLY_LETTERS = /^\p{L}+$/u;
+
+/// The best score a plain word or a quoted phrase gets against a mod. Exact
+/// matching first; then, for a plain word, the two looser ways in.
+function scoreWord(facts, wanted, { loose }) {
+  let best = -1;
+  let hitsIdentity = false;
+  for (const tag of facts.terms) {
+    const score = scoreTerm(tag, wanted);
+    if (score < 0) continue;
+    if (score > best) best = score;
+    if (IDENTITY.has(tag.kind)) hitsIdentity = true;
+  }
+  if (!loose) return best;
+
+  if (best < WORD_STARTS_SCORE && builtFromWordStarts(wanted, facts.nameWords)) {
+    best = WORD_STARTS_SCORE;
+  }
+  if (!hitsIdentity) {
+    const close = closeSpelling(wanted, facts.closeWords);
+    if (close > best) best = close;
+  }
+  return best;
+}
+
+/// True when the typed word can be built from the starts of words standing
+/// next to each other in a name, in order, little words skipped where needed:
+/// "indevo" is Ind-ustrial Evo-lution, "kol" is K-nights O-f L-udd.
+///
+/// Two limits keep ordinary words out, both measured on the real mod list:
+/// three letters or more, and either every piece is one letter or every piece
+/// but the last is two letters or more. Without the second, "faction" found
+/// Fleet Action History ("f" + "action").
+function builtFromWordStarts(wanted, nameWords) {
+  if (wanted.length < 3 || !ONLY_LETTERS.test(wanted)) return false;
+  for (const words of nameWords) {
+    if (words.length < 2) continue;
+    const fits = (at, from, pieces) => {
+      if (at === wanted.length) {
+        if (pieces.length < 2) return false;
+        return pieces.every((size) => size === 1)
+          || pieces.slice(0, -1).every((size) => size >= 2);
+      }
+      for (let i = from; i < words.length; i++) {
+        const word = words[i];
+        for (let size = Math.min(word.length, wanted.length - at); size >= 1; size--) {
+          if (word.startsWith(wanted.slice(at, at + size))
+            && fits(at + size, i + 1, [...pieces, size])) return true;
+        }
+        if (!STOP_WORDS.has(word)) break;
+      }
+      return false;
+    };
+    for (let first = 0; first < words.length; first++) {
+      if (fits(0, first, [])) return true;
     }
   }
+  return false;
+}
 
-  for (const author of mod.authors || []) add(author, COST.person);
-  for (const other of everyOtherName(mod)) add(other, COST.person);
-  for (const category of mod.categories || []) add(category, COST.category);
-  add(mod.summary, COST.summary);
-  add(mod.gameVersion, COST.version);
-  add(mod.modVersion, COST.version);
-
-  const seen = new Set();
-  const unique = [];
-  for (const tag of terms) {
-    const key = `${tag.term}:${tag.cost}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    unique.push(tag);
+/// The score for a word spelled almost like one in a name or a person's name,
+/// or -1. Only for words of five letters or more with no digits, and only
+/// where the first letter is right, which almost every typo keeps — without
+/// that, "faction" is one letter from "action". One mistake is allowed in a
+/// word of five to seven letters, two from eight letters up. A word is also
+/// compared with the start of each longer word, so a half-typed word with a
+/// mistake in it is still found.
+function closeSpelling(wanted, words) {
+  if (wanted.length < 5 || HAS_DIGIT.test(wanted)) return -1;
+  const allowed = wanted.length >= 8 ? 2 : 1;
+  let fewest = allowed + 1;
+  for (const word of words) {
+    if (word[0] !== wanted[0]) continue;
+    fewest = Math.min(fewest, editDistance(wanted, word, allowed));
+    if (word.length > wanted.length) {
+      fewest = Math.min(fewest, editDistance(wanted, word.slice(0, wanted.length), allowed));
+    }
+    if (fewest === 1) break;
   }
-  termsByMod.set(mod, unique);
-  return unique;
+  return fewest >= 1 && fewest <= allowed ? CLOSE_SCORES[fewest] : -1;
 }
 
-/// How well one of a mod's terms answers what was typed. An exact match beats
-/// a term that starts with it, which beats a term that merely holds it. Below
-/// zero means it does not answer at all.
-function scoreTerm(tag, wanted) {
-  if (tag.term === wanted) return 100 - tag.cost;
-  if (tag.term.startsWith(wanted)) return 75 - tag.cost;
-  if (tag.term.includes(wanted)) return 50 - tag.cost;
-  return -1;
-}
+// --- Asking about one field ---
 
 /// The fields a reader can ask about by name, as in `author:Wisp`. Each gives
 /// back the values to look in.
@@ -140,95 +330,218 @@ FIELDS.sources = FIELDS.source;
 /// `author:Wisp` puts Wisp's mods at the top.
 const FIELD_SCORE = 100;
 
-/// How well a mod answers one typed term, or below zero when it does not.
-///
-/// `key:value` asks about one field; anything else is looked for across
-/// everything the mod is known by, and the best-answering fact decides.
-export function scoreOfTerm(mod, term) {
-  const colon = term.indexOf(':');
-  if (colon > 0) {
-    const field = FIELDS[term.slice(0, colon).trim().toLowerCase()];
-    const wanted = term.slice(colon + 1).trim();
-    if (field && wanted) {
-      const hit = field(mod).some(
-        (value) => String(value || '').toLowerCase().includes(wanted));
-      return hit ? FIELD_SCORE : -1;
+// --- Reading what was typed ---
+
+/// Splits text at a character, except inside double quotes.
+function splitOutsideQuotes(text, isBreak) {
+  const parts = [];
+  let current = '';
+  let quoted = false;
+  for (const ch of text) {
+    if (ch === '"') quoted = !quoted;
+    if (!quoted && isBreak(ch)) {
+      parts.push(current);
+      current = '';
+    } else {
+      current += ch;
     }
   }
-  let best = -1;
-  for (const tag of searchTerms(mod)) {
-    const score = scoreTerm(tag, term);
-    if (score > best) best = score;
+  parts.push(current);
+  return parts;
+}
+
+/// A quote with no closing mark runs to the end of its comma group, so the
+/// missing mark is put there.
+function closeOpenQuote(text) {
+  if ((text.match(/"/g) || []).length % 2 === 0) return text;
+  const open = text.lastIndexOf('"');
+  const comma = text.indexOf(',', open);
+  return comma < 0 ? `${text}"` : `${text.slice(0, comma)}"${text.slice(comma)}`;
+}
+
+const FIELD_TERM = /^([a-z]+):(.*)$/is;
+
+/// One piece of a group, read as what it asks for. Gives back a list, because
+/// a plain word that clean-up turns into several ("seeker-unidentified") is
+/// several words.
+function readPiece(piece) {
+  const leaveOut = piece.startsWith('-');
+  const body = leaveOut ? piece.slice(1) : piece;
+  if (!body) return [];
+
+  if (body.startsWith('"')) {
+    const phrase = normalize(body.slice(1).replace(/"$/, ''));
+    return phrase ? [{ kind: 'phrase', value: phrase, leaveOut }] : [];
   }
-  return best;
+
+  const asField = FIELD_TERM.exec(body);
+  if (asField) {
+    const field = FIELDS[asField[1].toLowerCase()];
+    const value = normalize(asField[2].replace(/^"|"$/g, ''));
+    if (field && value) return [{ kind: 'field', field, value, leaveOut }];
+  }
+
+  const cleaned = normalize(body);
+  if (!cleaned) return [];
+  // A word to leave out that cleans to several stays one thing to leave out.
+  if (leaveOut) return [{ kind: 'phrase', value: cleaned, leaveOut }];
+  return cleaned.split(' ').map((word) => ({ kind: 'word', value: word, leaveOut }));
 }
 
-/// True when a mod answers one typed term.
-export function matchesTerm(mod, term) {
-  return scoreOfTerm(mod, term) >= 0;
-}
-
-/// Splits what the reader typed into the groups to look for and the groups to
-/// leave out.
-///
-/// Commas separate the groups, and a leading minus means "not this one". A
-/// plus inside a group joins terms that must all match. A minus or a plus with
-/// nothing either side of it is ignored rather than emptying the list.
+/// Splits what the reader typed into comma groups, each a list of things to
+/// look for and things to leave out. Commas inside quotes are part of the
+/// phrase. A plus means the same as a space. A minus, a plus or a quote with
+/// nothing to go with it is ignored rather than emptying the list.
 export function readSearch(text) {
-  const wanted = [];
-  const unwanted = [];
-  for (const raw of String(text || '').split(',')) {
-    const group = raw.trim().toLowerCase();
-    if (!group) continue;
-    const leaveOut = group.startsWith('-');
-    const terms = (leaveOut ? group.slice(1) : group)
-      .split('+').map((term) => term.trim()).filter(Boolean);
-    // A minus or a plus on its own is somebody halfway through typing, not a
-    // search for a hyphen. The list holds still until there is something to
-    // look for.
-    if (!terms.length) continue;
-    (leaveOut ? unwanted : wanted).push(terms);
+  const groups = [];
+  for (const raw of splitOutsideQuotes(closeOpenQuote(String(text || '')), (ch) => ch === ',')) {
+    const wanted = [];
+    const unwanted = [];
+    for (const piece of splitOutsideQuotes(raw, (ch) => /\s|\+/.test(ch))) {
+      for (const part of readPiece(piece.trim())) {
+        (part.leaveOut ? unwanted : wanted).push(part);
+      }
+    }
+    if (wanted.length || unwanted.length) groups.push({ wanted, unwanted });
   }
-  return { wanted, unwanted };
+  return groups;
 }
 
-/// How well a mod answers the whole search, or below zero when it should not
-/// be listed at all.
-///
-/// Commas mean any of these, not all of them: "faction, portrait" shows both
-/// kinds. A plus is the other way about — every term joined by one has to
-/// match, so "hartley + abuse" finds only what answers both, and their scores
-/// are added, because a mod answering both terms answers better than one
-/// scraping past each. A group with a minus in front takes mods back out
-/// again, and beats a group that put them in. Typing only minus groups starts
-/// from every mod. Where several groups let a mod in, the best-answering one
-/// speaks for it.
-export function scoreOfSearch(mod, text) {
-  const { wanted, unwanted } = readSearch(text);
-  if (!wanted.length && !unwanted.length) return 0;
+// --- Scoring a whole search ---
 
-  const scoreGroup = (group) => {
-    let total = 0;
-    for (const term of group) {
-      const score = scoreOfTerm(mod, term);
-      if (score < 0) return -1;
-      total += score;
+/// How well a mod answers one thing a group asks for, or below zero.
+function scorePart(mod, facts, part) {
+  if (part.kind === 'field') {
+    return part.field(mod).some((value) => normalize(value).includes(part.value))
+      ? FIELD_SCORE : -1;
+  }
+  // Nothing loose is tried for a word to leave out: a guess must never take a
+  // mod off the list.
+  return scoreWord(facts, part.value, { loose: part.kind === 'word' && !part.leaveOut });
+}
+
+/// The bonus a group earns for naming the mod: most when its words are the
+/// mod's whole name (or a nickname), less when a name starts with them, less
+/// again when they sit in order somewhere inside it.
+function nameBonus(facts, group) {
+  const typed = group.wanted.filter((part) => part.kind === 'word').map((part) => part.value);
+  if (!typed.length) return 0;
+  const joined = typed.join(' ');
+  const squashed = squash(joined);
+  let bonus = 0;
+  for (const name of facts.names) {
+    if (name === joined || squash(name) === squashed) return 60;
+    if (name.startsWith(joined)) bonus = Math.max(bonus, 40);
+    else if (name.includes(joined)) bonus = Math.max(bonus, 30);
+  }
+  return bonus;
+}
+
+/// A typed search, read once and then put to each mod.
+///
+/// - `isEmpty`: true when there is nothing to look for, and every mod answers.
+/// - `hasWanted`: true when at least one group looks for something, rather than
+///   only leaving mods out.
+/// - `score(mod)`: how well the mod answers, or below zero when it should not
+///   be listed.
+///
+/// Commas mean any of these: where several groups let a mod in, the best one
+/// speaks for it. Within a group every word has to match and their scores are
+/// added. A word with a minus in front narrows its own group; a group made only
+/// of minus words takes mods out of the whole list. Typing only minus words
+/// starts from every mod.
+export function compileSearch(text) {
+  const groups = readSearch(text);
+  const looking = groups.filter((group) => group.wanted.length);
+  const leaving = groups.filter((group) => !group.wanted.length);
+  const isEmpty = groups.length === 0;
+
+  const score = (mod) => {
+    if (isEmpty) return 0;
+    const facts = factsOf(mod);
+    for (const group of leaving) {
+      if (group.unwanted.some((part) => scorePart(mod, facts, part) >= 0)) return -1;
     }
-    return total;
+    if (!looking.length) return 0;
+
+    let best = -1;
+    for (const group of looking) {
+      if (group.unwanted.some((part) => scorePart(mod, facts, part) >= 0)) continue;
+      let total = 0;
+      for (const part of group.wanted) {
+        const partScore = scorePart(mod, facts, part);
+        if (partScore < 0) {
+          total = -1;
+          break;
+        }
+        total += partScore;
+      }
+      if (total < 0) continue;
+      total += nameBonus(facts, group);
+      if (total > best) best = total;
+    }
+    return best;
   };
 
-  if (unwanted.some((group) => scoreGroup(group) >= 0)) return -1;
-  if (!wanted.length) return 0;
-
-  let best = -1;
-  for (const group of wanted) {
-    const score = scoreGroup(group);
-    if (score > best) best = score;
-  }
-  return best;
+  return { isEmpty, hasWanted: looking.length > 0, groups, score };
 }
 
-/// True when a mod should be listed.
-export function matchesSearch(mod, text) {
-  return scoreOfSearch(mod, text) >= 0;
+/// The mods that answer a search, best first. Ties go by name, then id, so
+/// the order never changes between two runs of the same search. With nothing
+/// to look for, the mods come back in the order given, for the caller to sort.
+/// The list passed in is never changed.
+export function searchMods(mods, text) {
+  const search = compileSearch(text);
+  if (search.isEmpty) return [...mods];
+  return mods
+    .map((mod) => ({ mod, score: search.score(mod) }))
+    .filter((entry) => entry.score >= 0)
+    .sort((a, b) => b.score - a.score
+      || modName(a.mod).localeCompare(modName(b.mod))
+      || String(a.mod.id).localeCompare(String(b.mod.id)))
+    .map((entry) => entry.mod);
+}
+
+/// The mods to suggest under the box at the top: the first few of exactly what
+/// Browse would list for the same search. Nothing until there is something to
+/// look for and at least two letters or digits of it.
+export function suggestMods(mods, text, count) {
+  if (!compileSearch(text).hasWanted || tooLittleTyped(text)) return [];
+  return searchMods(mods, text).slice(0, count);
+}
+
+/// True when fewer than two letters or digits have been typed, which is too
+/// little to suggest anything worth reading — mods or people.
+const tooLittleTyped = (text) =>
+  normalize(text).replace(/[^\p{L}\p{N}]/gu, '').length < 2;
+
+/// The people whose name holds every word typed. Search already covers
+/// authors, so this is only to save the reader working out that a name is a
+/// person rather than a mod.
+///
+/// They are listed by name, not by how many mods each has. Ordering people by
+/// mod count is a scoreboard, and a scoreboard is a reason to publish more
+/// mods rather than better ones.
+export function peopleMatching(mods, text, count) {
+  if (tooLittleTyped(text)) return [];
+  const asks = compileSearch(text).groups
+    .map((group) => group.wanted
+      .filter((part) => part.kind !== 'field')
+      .map((part) => part.value))
+    .filter((values) => values.length);
+  if (!asks.length) return [];
+
+  const found = new Map();
+  for (const mod of mods) {
+    for (const name of mod.authors || []) {
+      const cleaned = normalize(name);
+      if (!cleaned || found.has(cleaned)) continue;
+      const squashed = squash(cleaned);
+      const holds = (value) => cleaned.includes(value) || squashed.includes(squash(value));
+      if (asks.some((values) => values.every(holds))) found.set(cleaned, { name });
+    }
+  }
+  return [...found.values()]
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .slice(0, count);
 }

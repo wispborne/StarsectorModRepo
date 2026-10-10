@@ -7,6 +7,11 @@
 
 import { address } from './address.js';
 
+import { everyOtherName, modName, otherNamesOf } from './mod_names.js';
+
+// Exported again so the rest of the site keeps importing them from here.
+export { everyOtherName, modName, otherNamesOf };
+
 // --- Where the data comes from ---
 
 /// The folder the published data files sit in, relative to this page.
@@ -95,8 +100,12 @@ export function el(tag, attrs = {}, children = []) {
 /// removed, or swapped for whatever [whenBroken] puts in its place.
 export function picture(url, opts = {}) {
   const { className = null, alt = '', title = null, whenBroken = null } = opts;
+  // The picture's address goes on last, so the browser already knows to wait
+  // until it is near the screen, and to send no referrer, when it starts the
+  // request. Some old image hosts refuse pictures asked for by another site.
   const img = el('img', {
-    class: className, src: url, alt, title, loading: 'lazy',
+    class: className, alt, title, loading: 'lazy', referrerpolicy: 'no-referrer',
+    src: url,
   });
   img.addEventListener('error', () => {
     if (whenBroken) whenBroken(img);
@@ -277,9 +286,11 @@ export function applySpacing() {
 /// The themes a reader can pick, copied from TriOS. Each id names a
 /// `[data-theme]` block in style.css, which holds its colours; this list only
 /// says which exist and what to call them. "default" sets no `data-theme` at
-/// all, so it keeps following the computer's light or dark setting.
+/// all, so it keeps following the computer's light or dark setting. "light"
+/// is the site's own light colours, not one of TriOS's themes.
 export const THEMES = [
   { id: 'default', name: 'Default' },
+  { id: 'light', name: 'Light' },
   { id: 'sigma', name: 'Sigma' },
   { id: 'redacted', name: '[REDACTED]' },
   { id: 'player', name: 'Player' },
@@ -325,6 +336,30 @@ export function imageChoice() {
 
 export function setImageChoice(choice) {
   localStorage.setItem(IMAGE_KEY, choice);
+}
+
+/// Whether a mod's description shows the pictures from the author's post,
+/// where the post put them: "on" (the default) or "off". Off means none of them
+/// is even fetched — each becomes a small link instead, for a reader on a slow
+/// connection or one who would rather read.
+export const INLINE_PICTURE_CHOICES = ['on', 'off'];
+const INLINE_PICTURES_KEY = 'starmodderInlinePictures';
+
+export function inlinePictures() {
+  try {
+    const saved = localStorage.getItem(INLINE_PICTURES_KEY);
+    return INLINE_PICTURE_CHOICES.includes(saved) ? saved : 'on';
+  } catch {
+    return 'on';
+  }
+}
+
+export function setInlinePictures(choice) {
+  try {
+    localStorage.setItem(INLINE_PICTURES_KEY, choice);
+  } catch {
+    // Storage is blocked; the choice lasts until the page is reloaded.
+  }
 }
 
 /// The picture to show for a mod, or null when it has none.
@@ -1428,32 +1463,42 @@ export function sourceName(source) {
 /// What the search can do, for the panel that explains it. A name, the thing
 /// to type, and an example.
 ///
-/// Only ways the search really has belong here. Offering one it does not — a
-/// way of asking for all of several terms at once, say, or naming a field —
-/// leaves a reader typing something that quietly matches nothing.
+/// Only ways the search really has belong here. Offering one it does not
+/// leaves a reader typing something that quietly matches nothing. The plus
+/// still works as a space, for old links, but a space does the same job, so
+/// it is not offered.
 /// Every line is a name, then how it works with something to type. A string is
 /// words; a `code` is the letters themselves.
 const WAYS_TO_SEARCH = [
+  {
+    name: 'Words',
+    says: ['every word must match, in any order: ', { code: 'battlestar portrait' }],
+  },
+  {
+    name: 'Exact phrase',
+    says: ['in quotes: ', { code: '"unknown contact"' }],
+  },
   {
     name: 'OR',
     says: ['comma-separated: ', { code: 'faction, portrait' }, ' matches either term'],
   },
   {
-    name: 'AND',
-    says: ['plus-separated: ', { code: 'hartley + abuse' }, ' must match all terms'],
-  },
-  {
     name: 'Exclude',
     says: ['prefix with ', { code: '-' }, ' to hide results, e.g. ',
-      { code: 'faction, -portrait' }],
+      { code: 'pirate -junk' }, ' or ', { code: 'faction, -portrait' }],
   },
   {
-    name: 'Acronyms',
-    says: ['e.g. ', { code: 'swp' }, ' matches Ship/Weapon Pack'],
+    name: 'Shorthand',
+    says: ['e.g. ', { code: 'swp' }, ', ', { code: 'kol' }, ' or ', { code: 'indevo' },
+      ' finds the mod they stand for'],
   },
   {
     name: 'Versions',
     says: ['e.g. ', { code: '0.98' }, ' matches mods for that release'],
+  },
+  {
+    name: 'Close spellings',
+    says: ['small typos in a name are forgiven: ', { code: 'nexerlin' }],
   },
   {
     name: 'Field search',
@@ -1476,7 +1521,7 @@ export function searchHelpField(input, { hideWhileTyping = false } = {}) {
   const panel = el('div', { class: 'search-help' }, [
     el('p', {
       class: 'search-help-lead',
-      text: 'Searches mod names, authors, categories, and descriptions.',
+      text: 'Searches mod names and nicknames, authors, categories, versions and summaries.',
     }),
     ...WAYS_TO_SEARCH.map((way) => el('p', {}, [
       el('strong', { text: way.name }),
@@ -1503,35 +1548,8 @@ export function searchHelpField(input, { hideWhileTyping = false } = {}) {
 
 // --- Names and versions ---
 
-/// The name to show for a mod.
-///
-/// A thread title carries the game version in brackets, the mod version, dates
-/// and sometimes a leading dash. The builder publishes a tidied `displayName`
-/// where it differs from the title; where it does not, the title was already
-/// the name.
-export function modName(mod) {
-  return (mod && (mod.displayName || mod.name)) || '';
-}
-
-/// The other names one credited person goes by on this mod.
-///
-/// `otherAuthorNames` is keyed by the name in `authors`, because a mod can
-/// credit two people and their other names must not be mixed up together.
-export function otherNamesOf(mod, author) {
-  const map = (mod && mod.otherAuthorNames) || {};
-  const wanted = String(author).toLowerCase();
-  for (const [name, others] of Object.entries(map)) {
-    if (name.toLowerCase() === wanted) return others || [];
-  }
-  return [];
-}
-
-/// Every other name anyone credited on this mod goes by, in one list. For
-/// searching, where it does not matter whose name is whose.
-export function everyOtherName(mod) {
-  const map = (mod && mod.otherAuthorNames) || {};
-  return Object.values(map).flat();
-}
+// `modName`, `otherNamesOf` and `everyOtherName` live in `mod_names.js` and
+// are exported again at the top of this file.
 
 /// The address of a mod's own page: the real file the builder writes at
 /// `mods/<id>/`. That is what makes a copied address show the mod's own name

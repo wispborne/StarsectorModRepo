@@ -69,7 +69,7 @@
       </div>
       <section class="settings-section" aria-labelledby="appearance-title">
         <h3 id="appearance-title">Appearance</h3>
-        <p>The site's colours. The same themes TriOS has. The default follows your computer's light or dark setting; the rest are always dark.</p>
+        <p>The site's colours. Default follows your computer's light or dark setting. Light is always light. The rest are TriOS's themes, and they are always dark.</p>
         <div id="theme-list" class="theme-list" role="radiogroup" aria-label="Theme"></div>
         <p>How much room there is between things. The words and pictures stay the same size either way.</p>
         <div class="choice-list" role="radiogroup" aria-label="Spacing">
@@ -105,6 +105,23 @@
             <span>
               <span class="choice-name">From Discord or Nexus</span><br>
               <span class="choice-note">The picture posted where the mod was announced. This is what TriOS shows.</span>
+            </span>
+          </label>
+        </div>
+        <p>Pictures in descriptions: the pictures from the author's post, in the places they put them.</p>
+        <div class="choice-list" role="radiogroup" aria-label="Pictures in descriptions">
+          <label class="choice">
+            <input type="radio" name="inline-pictures" value="on">
+            <span>
+              <span class="choice-name">Show them</span><br>
+              <span class="choice-note">The description looks the way the post does.</span>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="inline-pictures" value="off">
+            <span>
+              <span class="choice-name">Don't show them</span><br>
+              <span class="choice-note">Each picture is a small link instead, and nothing is loaded until you click one.</span>
             </span>
           </label>
         </div>

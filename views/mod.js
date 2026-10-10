@@ -9,7 +9,8 @@ import {
   aiSparkle, aiSummaryNote, aiSummaryOf,
   breadcrumbs, clear,
   currentGameVersion, DATA_BASE, downloadButton, el, errorPanel, formatDay,
-  favoriteToggle, formatMoment, imageUrlOf, joinNames,
+  favoriteToggle, formatMoment, imageUrlOf, inlinePictures, joinNames,
+  setInlinePictures,
   modDetail, modHref, modList, modName, MOD_VERSION_NOTE, neededModsLine,
   NO_DESCRIPTION, pageIcon, picture, showPicture, sourceName, summaryTitle,
   versionStanding, versionStandingNote,
@@ -363,10 +364,11 @@ function description(detail) {
   }
 
   // The formatted description is built by the scraper from a short list of safe
-  // tags — no scripts, no styles, nothing that loads from another host — so it
-  // is put into the page as it arrives. Anything else is shown as plain words.
+  // tags — no scripts, no styles, and pictures written out fresh with nothing
+  // but their address and size — so it is put into the page as it arrives,
+  // once its pictures have been seen to. Anything else is shown as plain words.
   const body = formatted
-    ? el('div', { class: 'prose', html: formatted })
+    ? postBody(formatted)
     : el('div', { class: 'prose plain', text });
 
   // A long post would push the screenshots, the downloads and the changelog
@@ -379,6 +381,7 @@ function description(detail) {
     type: 'button',
     'aria-expanded': 'false',
   });
+  const moreRow = el('p', { class: 'prose-more-row' }, [more]);
   const showAll = () => {
     clip.classList.remove('clipped');
     more.textContent = 'Show less ▴';
@@ -389,44 +392,208 @@ function description(detail) {
     more.textContent = 'Show more ▾';
     more.setAttribute('aria-expanded', 'false');
   };
+
+  // Whether the words overrun the cut-off can only be measured once they are
+  // on the page, which is after this function has returned — and it changes
+  // as the post's pictures load, since a short post can turn long once its
+  // screenshots arrive. So it is measured every time the post changes size,
+  // until the reader presses the button and decides for themselves. Starting
+  // with the link showing is the safe way round: if the measurement never
+  // comes, a reader still has a way to open the post out.
+  let readerChose = false;
+  const settle = () => {
+    if (readerChose || !clip.isConnected) return;
+    clip.classList.add('clipped');
+    const limit = clip.clientHeight;
+    if (limit === 0) return;
+    const overruns = body.offsetHeight > limit + 1;
+    if (overruns) showSome();
+    else clip.classList.remove('clipped');
+    moreRow.hidden = !overruns;
+  };
+  showSome();
+
+  let watcher = null;
   more.addEventListener('click', () => {
+    readerChose = true;
+    if (watcher) watcher.disconnect();
     if (clip.classList.contains('clipped')) showAll();
     else showSome();
   });
-  const moreRow = el('p', { class: 'prose-more-row' }, [more]);
-
-  // Whether the words overrun the cut-off can only be measured once they are
-  // on the page, which is after this function has returned. So the section is
-  // built cut off with the link showing, and the first time the browser lays
-  // it out the measurement decides: words that fit lose the cut and the link.
-  // Starting with the link showing is the safe way round — if the measurement
-  // never comes, a reader still has a way to open the post out.
-  showSome();
-  const settle = () => {
-    if (!clip.isConnected || !clip.classList.contains('clipped')) return false;
-    if (clip.clientHeight === 0) return false;
-    if (clip.scrollHeight <= clip.clientHeight + 1) {
-      clip.classList.remove('clipped');
-      moreRow.hidden = true;
-    }
-    return true;
-  };
-  // Two ways to get the measurement: the first time the browser sizes the
-  // section, and a timer a moment after this function returns, for a tab the
-  // browser is not drawing (layout is still worked out on demand).
+  // While the post is cut off, a click anywhere on it opens it out instead of
+  // reaching what was clicked. The reader is looking at a fragment, so a click
+  // there means "show me this", not "follow this link" or "play this video".
+  // Caught on the way down, so nothing inside the post sees it first.
+  clip.addEventListener('click', (e) => {
+    if (!clip.classList.contains('clipped')) return;
+    e.preventDefault();
+    e.stopPropagation();
+    readerChose = true;
+    if (watcher) watcher.disconnect();
+    showAll();
+  }, true);
+  // Two ways to get the measurement: whenever the browser sizes the post, and
+  // a timer a moment after this function returns, for a tab the browser is not
+  // drawing (layout is still worked out on demand).
   if (typeof ResizeObserver !== 'undefined') {
-    const watcher = new ResizeObserver(() => {
-      if (settle()) watcher.disconnect();
-    });
-    watcher.observe(clip);
+    watcher = new ResizeObserver(settle);
+    watcher.observe(body);
   }
   setTimeout(settle, 0);
 
-  return el('section', { class: 'panel' }, [
-    el('h2', { text: 'About this mod' }),
+  const section = el('section', { class: 'panel' }, [
+    el('div', { class: 'section-head' }, [
+      el('h2', { text: 'About this mod' }),
+      formatted && /<img\s/i.test(formatted)
+        ? picturesSwitch(() => section.replaceWith(description(detail)))
+        : null,
+    ]),
     clip,
     moreRow,
   ]);
+  return section;
+}
+
+/// The same choice as "Pictures in descriptions" in Settings, put beside the
+/// description itself, because that is where a reader thinks of it. Only drawn
+/// when the post has pictures. Pressing it changes the setting for every mod
+/// and redraws the description in place, so the reader stays where they are.
+function picturesSwitch(redraw) {
+  const on = inlinePictures() !== 'off';
+  const button = el('button', {
+    class: 'link-button pictures-switch',
+    type: 'button',
+    text: on ? 'Hide pictures' : 'Show pictures',
+    title: 'Changes this for every mod. It is also in Settings.',
+  });
+  button.addEventListener('click', () => {
+    setInlinePictures(on ? 'off' : 'on');
+    redraw();
+  });
+  return button;
+}
+
+/// The author's post, with its pictures seen to before any of them loads.
+///
+/// The post is read into a `<template>` first, because putting it straight into
+/// an element — even one not yet on the page — starts every picture in it
+/// downloading, and a reader who turned pictures off must not pay for them.
+///
+/// With pictures on, a picture that will not load is taken out, and a picture
+/// that is not a link opens over the page. With them off, each becomes a small
+/// "picture" link instead. Either way, a link whose only content was a
+/// picture is left with its address in the picture's place, so a badge used as
+/// a download button still works.
+function postBody(html) {
+  const template = document.createElement('template');
+  template.innerHTML = html;
+  const content = template.content;
+  const showPictures = inlinePictures() !== 'off';
+
+  // The pictures the viewer steps through, in the order the post has them.
+  const viewable = [];
+  const open = (image) => showPicture(viewable, viewable.indexOf(image));
+
+  for (const video of [...content.querySelectorAll('a.video-link')]) {
+    youTubePreview(video, showPictures);
+  }
+
+  for (const img of [...content.querySelectorAll('img')]) {
+    // A video's thumbnail was seen to above.
+    if (img.closest('a.video-link')) continue;
+    const image = {
+      url: img.getAttribute('src'),
+      caption: img.getAttribute('alt') || null,
+    };
+    const link = img.closest('a');
+    const onlyContentOfLink = Boolean(link)
+      && link.textContent.trim() === ''
+      && link.querySelectorAll('img').length === 1;
+
+    // What is left of a picture inside a link once the picture is gone.
+    const linkWords = () => document.createTextNode(link.getAttribute('href'));
+
+    if (!showPictures) {
+      if (link) {
+        if (onlyContentOfLink) img.replaceWith(linkWords());
+        else img.remove();
+        continue;
+      }
+      viewable.push(image);
+      const stand = el('button', {
+        class: 'link-button inline-picture-link',
+        type: 'button',
+        text: 'picture',
+        title: image.caption || 'Open this picture',
+      });
+      stand.addEventListener('click', () => open(image));
+      img.replaceWith(stand);
+      continue;
+    }
+
+    img.addEventListener('error', () => {
+      const gone = viewable.indexOf(image);
+      if (gone >= 0) viewable.splice(gone, 1);
+      if (onlyContentOfLink) img.replaceWith(linkWords());
+      else img.remove();
+    });
+    if (!link) {
+      viewable.push(image);
+      img.classList.add('inline-picture');
+      img.addEventListener('click', () => open(image));
+    }
+  }
+
+  const body = el('div', { class: 'prose' });
+  body.append(content);
+  return body;
+}
+
+/// A YouTube video in a description: the builder writes a plain link to the
+/// video holding its thumbnail. A plain click plays it right there instead,
+/// with YouTube's privacy-enhanced player, so nothing of YouTube's player is
+/// loaded until the reader asks. A click with a key held, or a middle click,
+/// still opens the video on YouTube.
+///
+/// With pictures turned off, or when the thumbnail will not load, the link
+/// reads "Video on YouTube" instead, and no thumbnail is fetched.
+function youTubePreview(link, showPictures) {
+  const thumb = link.querySelector('img');
+  const asWords = () => {
+    link.classList.add('as-words');
+    link.replaceChildren('▶ Video on YouTube');
+  };
+  if (!showPictures || !thumb) {
+    asWords();
+    return;
+  }
+  thumb.addEventListener('error', asWords);
+
+  let id = null;
+  try {
+    id = new URL(link.getAttribute('href')).searchParams.get('v');
+  } catch {
+    // Not an address; it stays a plain link.
+  }
+  if (!id || !/^[A-Za-z0-9_-]{11}$/.test(id)) return;
+
+  link.addEventListener('click', (e) => {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    if (link.classList.contains('as-words')) return;
+    e.preventDefault();
+    // The player sits in the same 16:9 box the thumbnail did, so the page
+    // does not move. YouTube refuses to play in a frame that sends no
+    // referrer at all, so this one sends the site's address and nothing more.
+    const player = el('iframe', {
+      class: 'video-player',
+      src: `https://www.youtube-nocookie.com/embed/${id}?autoplay=1`,
+      title: 'YouTube video',
+      allow: 'autoplay; encrypted-media; picture-in-picture; fullscreen',
+      allowfullscreen: '',
+      referrerpolicy: 'strict-origin-when-cross-origin',
+    });
+    link.replaceWith(player);
+  });
 }
 
 /// The AI paragraph, shown for either enabled summary setting. `aiSummaryOf`
@@ -457,32 +624,66 @@ function gallery(detail) {
   const images = detail.gallery || [];
   if (!images.length) return null;
 
+  // Buttons, badges and small icons are published too, but kept out of the
+  // way behind a button, so the section reads as screenshots first.
+  const smallCount = images.filter((image) => image.small).length;
+  let showSmall = false;
+
   // A picture that will not load takes its button with it, so the grid holds
   // no empty boxes to click on. A picture that does load opens over the page
   // rather than in a new tab, so a reader can look through the lot and still be
-  // where they were.
-  const working = [];
+  // where they were. The viewer only steps through the pictures showing.
+  const broken = new Set();
+  const showing = () => images.filter((image) =>
+    !broken.has(image) && (showSmall || !image.small));
   const grid = el('div', { class: 'gallery' });
+  const buttons = new Map();
   images.forEach((image) => {
     const button = el('button', {
       class: 'shot',
       title: image.caption || 'Open screenshot',
     });
+    button.hidden = Boolean(image.small);
     button.append(picture(image.url, {
       alt: image.caption || '',
       whenBroken: () => {
         button.remove();
-        const gone = working.indexOf(image);
-        if (gone >= 0) working.splice(gone, 1);
+        broken.add(image);
       },
     }));
-    button.addEventListener('click',
-      () => showPicture(working, working.indexOf(image)));
-    working.push(image);
+    button.addEventListener('click', () => {
+      const list = showing();
+      showPicture(list, list.indexOf(image));
+    });
+    buttons.set(image, button);
     grid.append(button);
   });
+
+  let toggle = null;
+  if (smallCount) {
+    toggle = el('button', {
+      class: 'link-button small-pictures-toggle', type: 'button',
+    });
+    const label = () => {
+      toggle.textContent = showSmall
+        ? 'Hide small pictures'
+        : `Show ${smallCount} small ${smallCount === 1 ? 'picture' : 'pictures'}`;
+      toggle.setAttribute('aria-expanded', String(showSmall));
+    };
+    label();
+    toggle.addEventListener('click', () => {
+      showSmall = !showSmall;
+      for (const [image, button] of buttons) {
+        if (image.small) button.hidden = !showSmall;
+      }
+      label();
+    });
+  }
+
   return el('section', { class: 'panel' }, [
-    el('h2', { text: 'Screenshots' }), grid,
+    el('h2', { text: 'Screenshots' }),
+    grid,
+    toggle ? el('p', { class: 'small-pictures-row' }, [toggle]) : null,
   ]);
 }
 

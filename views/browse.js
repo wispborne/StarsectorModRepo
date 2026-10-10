@@ -17,7 +17,7 @@ import {
   summaryToShow, thumbnail,
   versionStanding, versionStandingNote, viewToggle,
 } from '../lib.js';
-import { matchesSearch, scoreOfSearch } from '../search.js';
+import { compileSearch } from '../search.js';
 
 const VIEW_KEY = 'starmodderView';
 const NO_REQUIREMENTS = '__none__';
@@ -273,10 +273,12 @@ function drawControls(into, mods, state, onChange) {
 
   into.append(el('div', { class: 'search-row' }, [searchHelpField(search), views]));
   into.append(el('p', { class: 'search-hint' }, [
-    'Use commas to match either term: ',
+    'Every word must match, in any order: ',
+    el('code', { text: 'battlestar portrait' }),
+    '. Commas match either: ',
     el('code', { text: 'faction, portrait' }),
-    '. Add a minus to exclude a term: ',
-    el('code', { text: 'faction, -portrait' }),
+    '. A minus leaves mods out: ',
+    el('code', { text: 'pirate -junk' }),
     '.',
   ]));
 
@@ -421,6 +423,22 @@ function nothingMatched(onClear) {
 
 // --- Searching, filtering and sorting ---
 
+/// The search being typed, read once. One redraw filters, counts and sorts the
+/// same list several times over, so the text is read once when it changes and
+/// each mod's score is kept until it changes again.
+let lastSearch = { text: null, search: null, scores: new WeakMap() };
+
+/// How well a mod answers what is typed in the box, or below zero when it
+/// should not be listed. Every mod answers an empty box.
+function searchScore(mod, text) {
+  if (lastSearch.text !== text) {
+    lastSearch = { text, search: compileSearch(text), scores: new WeakMap() };
+  }
+  const { search, scores } = lastSearch;
+  if (!scores.has(mod)) scores.set(mod, search.score(mod));
+  return scores.get(mod);
+}
+
 /// True when a mod is built for the game release the site treats as current.
 /// A mod that does not say which release it is for is kept — an unknown version
 /// is not the same as an old one.
@@ -432,7 +450,7 @@ export function isForCurrentGame(mod, currentVersion) {
 /// Everything the filters ask except the current-game-version one. It is what
 /// counts how many mods that one switch is hiding.
 function matchesEverythingElse(mod, state) {
-  if (!matchesSearch(mod, state.search)) return false;
+  if (searchScore(mod, state.search) < 0) return false;
   if (state.game && gameVersionFamily(mod.gameVersion) !== state.game) return false;
   if (state.category && !(mod.categories || []).includes(state.category)) return false;
   if (state.needs === NO_REQUIREMENTS) {
@@ -472,10 +490,9 @@ export function sortMods(mods, sort, currentVersion, search = '', seed = 1) {
 
   const sorted = [...mods];
   if (sort === 'relevance') {
-    // Worked out once per mod rather than inside the comparison, which would
-    // score the same mod again for every other mod it is put beside.
-    const scores = new Map(mods.map((mod) => [mod, scoreOfSearch(mod, search)]));
-    sorted.sort((a, b) => scores.get(b) - scores.get(a) || byName(a, b));
+    // The same scores the filter worked out, so nothing is scored twice.
+    sorted.sort((a, b) => searchScore(b, search) - searchScore(a, search)
+      || byName(a, b));
   } else if (sort === 'newest') sorted.sort(newestFirst((m) => m.addedOn));
   else if (sort === 'updated') sorted.sort(newestFirst((m) => m.lastReleaseDate));
   else if (sort === 'name') sorted.sort(byName);

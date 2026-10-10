@@ -6,16 +6,17 @@
 
 import {
   aiSummaryMode, buildHash, clear, el, errorPanel, formatDay,
-  formatMoment, applySpacing, go, imageChoice, imageUrlOf, loading,
+  formatMoment, applySpacing, go, imageChoice, imageUrlOf, inlinePictures,
+  loading,
   favorites, modHref, modList, modName,
   preparePageScroll, restorePageScroll, searchHelpField, setAiSummaryMode,
-  setImageChoice,
+  setImageChoice, setInlinePictures,
   setSpacingPreference, spacingPreference,
   THEMES, applyTheme, setThemePreference, themePreference,
   thumbnail, watchFavorites,
 } from './lib.js';
 import { address } from './address.js';
-import { scoreOfTerm } from './search.js';
+import { peopleMatching, suggestMods } from './search.js';
 import * as home from './views/home.js';
 import * as browse from './views/browse.js';
 import * as mod from './views/mod.js';
@@ -174,8 +175,9 @@ async function showBuild() {
 
 /// The settings dialog, opened from the bar at the top. It holds the choices
 /// that are about the reader rather than about any one page: the colours, how
-/// much room there is between things, which of a mod's two pictures to show, and whether
-/// AI-written summaries are shown at all. Each choice takes effect the moment
+/// much room there is between things, which of a mod's two pictures to show,
+/// whether a description shows its post's pictures, and whether AI-written
+/// summaries are shown at all. Each choice takes effect the moment
 /// it is ticked — there is no Save button to find. Changing the pictures or
 /// the summaries choice redraws the page underneath, so everything on it
 /// changes at once rather than on the next click.
@@ -188,6 +190,8 @@ function mountSettings() {
   const aiRadios = [...dialog.querySelectorAll('input[name="ai-summaries"]')];
   const pictureRadios =
     [...dialog.querySelectorAll('input[name="mod-pictures"]')];
+  const inlineRadios =
+    [...dialog.querySelectorAll('input[name="inline-pictures"]')];
   const themeRadios = mountThemeList(dialog.querySelector('#theme-list'));
 
   applySpacing();
@@ -199,6 +203,8 @@ function mountSettings() {
     for (const radio of aiRadios) radio.checked = radio.value === ai;
     const picture = imageChoice();
     for (const radio of pictureRadios) radio.checked = radio.value === picture;
+    const inline = inlinePictures();
+    for (const radio of inlineRadios) radio.checked = radio.value === inline;
     const theme = themePreference();
     for (const radio of themeRadios) radio.checked = radio.value === theme;
     dialog.showModal();
@@ -231,6 +237,13 @@ function mountSettings() {
     radio.addEventListener('change', () => {
       if (!radio.checked) return;
       setImageChoice(radio.value);
+      route();
+    });
+  }
+  for (const radio of inlineRadios) {
+    radio.addEventListener('change', () => {
+      if (!radio.checked) return;
+      setInlinePictures(radio.value);
       route();
     });
   }
@@ -321,16 +334,13 @@ function mountHeaderSearch() {
   };
 
   box.addEventListener('input', () => {
-    const wanted = box.value.trim().toLowerCase();
+    const wanted = box.value;
     clear(drop);
-    if (wanted.length < 2) { hide(); return; }
 
-    const hits = mods
-      .filter((m) => matchStrength(m, wanted) > 0)
-      .sort((a, b) => matchStrength(b, wanted) - matchStrength(a, wanted)
-        || modName(a).localeCompare(modName(b)))
-      .slice(0, SUGGESTION_COUNT);
-    const people = peopleMatching(mods, wanted);
+    // The same search Browse runs, so the two never disagree about which mod
+    // answers best. Both give nothing until there is something to look for.
+    const hits = suggestMods(mods, wanted, SUGGESTION_COUNT);
+    const people = peopleMatching(mods, wanted, PEOPLE_SUGGESTION_COUNT);
 
     if (!hits.length && !people.length) { hide(); return; }
     if (hits.length) {
@@ -407,27 +417,6 @@ function suggestion(hit, hide) {
   return row;
 }
 
-/// The people whose name holds what has been typed. Search already covers
-/// authors, so this is only to save the reader working out that a name is a
-/// person rather than a mod.
-///
-/// They are listed by name, not by how many mods each has. Ordering people by
-/// mod count is a scoreboard, and a scoreboard is a reason to publish more
-/// mods rather than better ones.
-function peopleMatching(mods, wanted) {
-  const found = new Map();
-  for (const mod of mods) {
-    for (const name of mod.authors || []) {
-      if (!name.toLowerCase().includes(wanted)) continue;
-      const key = name.toLowerCase();
-      if (!found.has(key)) found.set(key, { name });
-    }
-  }
-  return [...found.values()]
-    .sort((a, b) => a.name.localeCompare(b.name))
-    .slice(0, PEOPLE_SUGGESTION_COUNT);
-}
-
 /// One suggested person under the search box.
 function personSuggestion(person, hide) {
   const row = el('a', {
@@ -442,13 +431,6 @@ function personSuggestion(person, hide) {
   ]);
   row.addEventListener('click', hide);
   return row;
-}
-
-/// How well a mod answers what has been typed, for putting the suggestions in
-/// order. The same scoring the browse page's "Best match" uses, so the two
-/// never disagree about which mod answers best.
-function matchStrength(mod, wanted) {
-  return scoreOfTerm(mod, wanted);
 }
 
 /// The skip link at the very top, for anyone moving through the page by
