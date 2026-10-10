@@ -11,6 +11,7 @@ import {
   preparePageScroll, restorePageScroll, searchHelpField, setAiSummaryMode,
   setImageChoice,
   setSpacingPreference, spacingPreference,
+  THEMES, applyTheme, setThemePreference, themePreference,
   thumbnail, watchFavorites,
 } from './lib.js';
 import { address } from './address.js';
@@ -172,8 +173,8 @@ async function showBuild() {
 }
 
 /// The settings dialog, opened from the bar at the top. It holds the choices
-/// that are about the reader rather than about any one page: how much room
-/// there is between things, which of a mod's two pictures to show, and whether
+/// that are about the reader rather than about any one page: the colours, how
+/// much room there is between things, which of a mod's two pictures to show, and whether
 /// AI-written summaries are shown at all. Each choice takes effect the moment
 /// it is ticked — there is no Save button to find. Changing the pictures or
 /// the summaries choice redraws the page underneath, so everything on it
@@ -187,8 +188,10 @@ function mountSettings() {
   const aiRadios = [...dialog.querySelectorAll('input[name="ai-summaries"]')];
   const pictureRadios =
     [...dialog.querySelectorAll('input[name="mod-pictures"]')];
+  const themeRadios = mountThemeList(dialog.querySelector('#theme-list'));
 
   applySpacing();
+  applyTheme();
   open.addEventListener('click', () => {
     const current = spacingPreference();
     for (const radio of radios) radio.checked = radio.value === current;
@@ -196,6 +199,8 @@ function mountSettings() {
     for (const radio of aiRadios) radio.checked = radio.value === ai;
     const picture = imageChoice();
     for (const radio of pictureRadios) radio.checked = radio.value === picture;
+    const theme = themePreference();
+    for (const radio of themeRadios) radio.checked = radio.value === theme;
     dialog.showModal();
   });
   close.addEventListener('click', () => dialog.close());
@@ -208,6 +213,11 @@ function mountSettings() {
   for (const radio of radios) {
     radio.addEventListener('change', () => {
       if (radio.checked) setSpacingPreference(radio.value);
+    });
+  }
+  for (const radio of themeRadios) {
+    radio.addEventListener('change', () => {
+      if (radio.checked) setThemePreference(radio.value);
     });
   }
   for (const radio of aiRadios) {
@@ -224,6 +234,27 @@ function mountSettings() {
       route();
     });
   }
+}
+
+/// One button per theme in Settings, each with a strip of that theme's
+/// colours. The strip carries the theme's own `data-theme`, so style.css draws
+/// it in that theme whatever the page is in. Returns the radio buttons.
+function mountThemeList(holder) {
+  if (!holder) return [];
+  return THEMES.map((theme) => {
+    const radio = el('input', { type: 'radio', name: 'theme', value: theme.id });
+    holder.append(el('label', { class: 'theme-choice' }, [
+      radio,
+      el('span', { class: 'theme-strip', 'data-theme': theme.id, 'aria-hidden': 'true' }, [
+        el('span', { class: 'strip-surface' }),
+        el('span', { class: 'strip-container' }),
+        el('span', { class: 'strip-primary' }),
+        el('span', { class: 'strip-secondary' }),
+      ]),
+      el('span', { text: theme.name }),
+    ]));
+    return radio;
+  });
 }
 
 /// The search box in the bar at the top, on every page.

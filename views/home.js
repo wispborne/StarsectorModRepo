@@ -1,4 +1,4 @@
-// Home: the mods added recently, the kinds of mod, then what came out recently.
+// Home: the mods added recently, the categories, then what came out recently.
 //
 // The release feed is the heart of the page. It is not "threads somebody
 // replied to" — it is mods whose version actually moved forward, worked out by
@@ -33,43 +33,40 @@ export async function render(root) {
   const byId = new Map(mods.map((mod) => [mod.id, mod]));
   const currentVersion = currentGameVersion(mods);
 
-  // The mods added recently first, then the kinds of mod and the releases.
+  // The mods added recently first, then the categories and the releases.
   clear(root);
   root.append(el('div', { class: 'stack' }, [
     recentlyAdded(mods, currentVersion),
-    browseByKind(mods),
+    browseByCategory(mods),
     releasesPanel(releases, byId),
     feedLine(),
   ]));
 }
 
-/// The line offering the release feed. Feed readers are where a lot of modders
-/// and server admins actually live, so this is the one way somebody hears about
-/// a release without coming back to look. It is on the page whether or not
-/// anything has been released yet — that is exactly when subscribing helps.
+/// Offers a feed subscription even before any releases have been recorded.
 function feedLine() {
   return el('p', { class: 'feed-note' }, [
-    el('span', { text: 'Would rather be told? ' }),
     el('a', { href: 'updates.xml', text: 'Subscribe to the release feed' }),
-    el('span', { text: ' in any feed reader.' }),
+    el('span', { text: ' in your feed reader.' }),
   ]);
 }
 
-/// The categories, as a row of chips under the recently added mods. It is the
+/// The categories, as a small table under the recently added mods. It is the
 /// front door for a reader who does not know what they are looking for yet.
-function browseByKind(mods) {
+function browseByCategory(mods) {
   const chips = categoryChips(mods);
   if (!chips) return null;
 
   return el('section', { class: 'stack' }, [
-    el('h2', { class: 'quiet-heading', text: 'Browse by kind' }),
+    el('h2', { class: 'section-title', text: 'Browse by category' }),
     chips,
+    el('a', { href: buildHash(['browse']), text: 'See all →' }),
   ]);
 }
 
 function releasesPanel(releases, byId) {
   const head = el('div', { class: 'section-head' }, [
-    el('h2', { class: 'quiet-heading', text: 'Recent updates' }),
+    el('h2', { class: 'section-title', text: 'Recent updates' }),
   ]);
   const panel = el('div', { class: 'stack' }, [head]);
 
@@ -137,7 +134,7 @@ function releasesNote() {
           + 'in the post must match it.',
         'The date shown is when this site confirmed the update. It may not be '
           + 'the date when the author released it.',
-        'An older confirmed version is needed before an update can be reported. '
+        'An older confirmed version is required before an update can be reported. '
           + 'This means the first version found for a mod is not listed. A '
           + 'mod without a version number in its post won\'t appear here.',
         'Changelog notes are copied from the author\'s post.',
@@ -213,6 +210,7 @@ function releaseRow(release, byId) {
     release.gameVersion
       ? el('span', { class: 'badge game', text: release.gameVersion })
       : null,
+    updateBadge(release),
     // The whole summary is the fold's own press area, so a download inside it
     // would open the changelog on a stray press. The button stops its own click
     // from reaching the fold, the same way the "+" on a card does.
@@ -222,6 +220,24 @@ function releaseRow(release, byId) {
   const row = el('details', { class: notes ? 'release' : 'release no-notes' }, [summary]);
   if (notes) row.append(el('pre', { class: 'release-notes', text: notes }));
   return row;
+}
+
+/// What the author says about updating to this release, as a small badge with
+/// their own words on hover. Only drawn where the post has a note for this
+/// version and a plain answer was read off it.
+function updateBadge(release) {
+  const words = release.updateCompatibilityText;
+  const kind = {
+    yes: ['save-ok', 'Keeps existing saves'],
+    no: ['save-no', 'Breaks existing saves'],
+    depends: ['', 'Existing saves: it depends'],
+  }[release.canUpdate];
+  if (!words || !kind) return null;
+  return el('span', {
+    class: `badge ${kind[0]}`.trim(),
+    text: kind[1],
+    title: `The author says: ${words}`,
+  });
 }
 
 /// The releases split into days, newest day first. The feed is already in that
@@ -249,7 +265,7 @@ function recentlyAdded(mods, currentVersion) {
   const strip = el('div', { class: 'strip' });
   for (const mod of newest) {
     strip.append(modCard(mod, currentVersion, {
-      when: { text: `Added ${howLongAgo(mod.addedOn)}`, on: mod.addedOn },
+      when: { kind: 'added', on: mod.addedOn },
     }));
   }
 
@@ -294,7 +310,7 @@ function recentlyAdded(mods, currentVersion) {
 
   return el('section', { class: 'stack' }, [
     el('div', { class: 'section-head' }, [
-      el('h2', { class: 'quiet-heading', text: 'Recently added' }),
+      el('h2', { class: 'section-title', text: 'Recently added' }),
       picker,
     ]),
     strip,

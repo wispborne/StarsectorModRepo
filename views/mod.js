@@ -79,6 +79,7 @@ export async function render(root, parts) {
   root.append(el('div', { class: 'stack' }, [
     modHeader(mod, detail, shownName, currentVersion),
     needsLine(mod),
+    saves(detail),
     sameNameMods(detail),
     description(detail),
     aiSummary(detail),
@@ -104,6 +105,18 @@ function modHeader(mod, detail, shownName, currentVersion) {
     meta.append(el('span', {
       class: 'badge version', text: mod.modVersion, title: MOD_VERSION_NOTE,
     }));
+    // Beside the version, because an update note is about one release.
+    const updating = {
+      yes: ['save-ok', 'Keeps saves from earlier versions'],
+      no: ['save-no', 'Breaks saves from earlier versions'],
+      depends: ['', 'Earlier saves: it depends'],
+    }[detail.canUpdate];
+    if (updating && detail.updateCompatibilityText) {
+      meta.append(el('span', {
+        class: `badge ${updating[0]}`, text: updating[1],
+        title: `The author says: ${detail.updateCompatibilityText}`,
+      }));
+    }
   }
   if (mod.gameVersion) {
     meta.append(el('span', {
@@ -113,6 +126,12 @@ function modHeader(mod, detail, shownName, currentVersion) {
     }));
   }
   if (mod.isWorkInProgress) meta.append(el('span', { class: 'badge wip', text: 'Work in progress' }));
+  if (mod.isTool) {
+    meta.append(el('span', {
+      class: 'badge tool', text: 'Tool — runs beside the game',
+      title: 'A program you run beside the game, not a mod you load into it.',
+    }));
+  }
   if (mod.saveCompatible === true) {
     meta.append(el('span', {
       class: 'badge save-ok', text: 'Can be added to an existing save',
@@ -120,8 +139,15 @@ function modHeader(mod, detail, shownName, currentVersion) {
     }));
   } else if (mod.saveCompatible === false) {
     meta.append(el('span', {
-      class: 'badge save-no', text: 'Needs a new game',
-      title: 'The author says this needs a new game.',
+      class: 'badge save-no', text: 'New game required',
+      title: 'The author says this requires a new game.',
+    }));
+  }
+  // Only a "no" on removing earns a badge: it is the one that costs a save.
+  if (detail.canRemove === 'no' && detail.removalCompatibilityText) {
+    meta.append(el('span', {
+      class: 'badge save-no', text: "Can't be removed later",
+      title: `The author says: ${detail.removalCompatibilityText}`,
     }));
   }
 
@@ -136,7 +162,10 @@ function modHeader(mod, detail, shownName, currentVersion) {
     // The thread's own title, where it says more than the name does.
     shownName === mod.name
       ? null
-      : el('span', { class: 'sub thread-title', text: mod.name }),
+      : el('span', { class: 'sub thread-title' }, [
+        'Original title: ',
+        el('i', { text: mod.name }),
+      ]),
     partOfThreadLine(mod),
     (mod.authors || []).length ? authors : null,
     meta,
@@ -273,7 +302,7 @@ function supportLinks(detail) {
 /// Nexerelin, and finding that out after the download — from a crash on
 /// startup — is the oldest annoyance in Starsector modding.
 function needsLine(mod) {
-  return neededModsLine('Needs', mod.needs);
+  return neededModsLine('Requires', mod.needs);
 }
 
 function downloads(detail) {
@@ -539,7 +568,7 @@ function addonBox(list, heading, note) {
     box.append(el('div', {}, [
       el('h3', { text: addon.name }),
       addon.requires
-        ? el('div', { class: 'card-authors', text: `Needs ${addon.requires}` })
+        ? el('div', { class: 'card-authors', text: `Requires ${addon.requires}` })
         : null,
       el('div', { class: 'download-list' }, (addon.downloads || []).map(downloadRow)),
     ]));
@@ -549,6 +578,65 @@ function addonBox(list, heading, note) {
     note ? el('p', { class: 'card-authors', text: note }) : null,
     box,
   ]);
+}
+
+/// The chip for each short answer on saves. "Depends" and "Unknown" get no
+/// colour.
+const SAVE_ANSWERS = {
+  yes: ['save-ok', 'Yes'],
+  no: ['save-no', 'No'],
+  depends: ['', 'Depends'],
+  unknown: ['save-unknown', 'Unknown'],
+};
+
+/// Whether the mod can go into a game in progress, and come out of one: a
+/// question, a short answer and the author's words, one row each. Both rows
+/// are shown once the author has said anything, so a question they never
+/// answered reads as "Unknown" rather than vanishing. Updating is left to the
+/// badge beside the version, because an update note belongs to one release.
+function saves(detail) {
+  const questions = [
+    ['Add mid-game?', detail.saveCompatibilityText, detail.canAdd],
+    ['Remove from game?', detail.removalCompatibilityText, detail.canRemove],
+  ];
+  if (!questions.some(([, words]) => words)) return null;
+
+  const authors = joinNames((detail.listing || {}).authors || []);
+  const quoted = new Set();
+  const rows = el('div', { class: 'save-lines' });
+  for (const [question, words, answer] of questions) {
+    const shown = words ? answer : 'unknown';
+    const chip = SAVE_ANSWERS[shown];
+    // Where the model copied the same words into both fields, they are quoted
+    // on the first row only.
+    const quote = words && !quoted.has(words)
+      ? el('q', {
+          class: 'save-words',
+          text: chip ? withoutLeadingAnswer(words, shown) : words,
+          title: authors ? `${authors}, in the mod's forum thread` : null,
+        })
+      : el('span');
+    if (words) quoted.add(words);
+    rows.append(
+      el('span', { class: 'save-question', text: question }),
+      chip ? el('span', { class: `badge ${chip[0]}`.trim(), text: chip[1] }) : el('span'),
+      quote,
+    );
+  }
+
+  return el('div', { class: 'save-box' }, [
+    el('span', { class: 'needs-label', text: 'Save compatibility' }),
+    rows,
+  ]);
+}
+
+/// The author's words with a leading "Yes." or "No." taken off when the chip
+/// beside them already says it, so the answer is not read twice.
+function withoutLeadingAnswer(words, answer) {
+  if (answer !== 'yes' && answer !== 'no') return words;
+  const rest = words.replace(new RegExp(`^${answer}\\b[\\s.,!:;\u2014-]*`, 'i'), '');
+  if (!rest || rest === words) return words;
+  return rest[0].toUpperCase() + rest.slice(1);
 }
 
 /// The links out and the license. The whole box is left out when the mod has
@@ -566,10 +654,6 @@ function facts(detail) {
   link('Discord', detail.discordUrl, 'On Discord');
   link('Source code', detail.sourceCodeUrl);
   if (detail.license) rows.push(['License', el('span', { text: detail.license })]);
-  if (detail.saveCompatibilityText) {
-    rows.push(['Save compatibility',
-      el('span', { text: detail.saveCompatibilityText })]);
-  }
   const listing = detail.listing || {};
   if ((listing.categories || []).length) {
     rows.push(['Category', el('span', { text: joinNames(listing.categories) })]);

@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="../../">
-  <title>Galactic Constellate | Starmodder</title>
+  <title>Galactic Constellate [Eng Translation] | Starmodder</title>
   <meta name="description" content="Starsector Mod by &quot;Riptide (A.k.a When Can I Finish Pleiades）&quot;">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Starmodder">
-  <meta property="og:title" content="Galactic Constellate">
+  <meta property="og:title" content="Galactic Constellate [Eng Translation]">
   <meta property="og:description" content="Starsector Mod by &quot;Riptide (A.k.a When Can I Finish Pleiades）&quot;">
   <meta property="og:image" content="https://cdn.discordapp.com/attachments/1359352557348065311/1359352558065287229/223015l7c33z40o475ro3t.png?ex=6acb9b79&amp;is=6aca49f9&amp;hm=df9c81e8f364d9a876ab7bea58051067e2441ba45088b5723afdb79672a250b2&amp;">
   <meta name="twitter:card" content="summary_large_image">
@@ -30,6 +30,13 @@
       document.documentElement.dataset.spacing =
         spacing === 'comfortable' ? 'comfortable' : 'dense';
     } catch (e) { document.documentElement.dataset.spacing = 'dense'; }
+    // The reader's theme, for the same reason. The default sets nothing.
+    try {
+      var theme = localStorage.getItem('starmodderTheme');
+      if (theme && theme !== 'default' && /^[a-z-]+$/.test(theme)) {
+        document.documentElement.dataset.theme = theme;
+      }
+    } catch (e) {}
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -63,6 +70,8 @@
       </div>
       <section class="settings-section" aria-labelledby="appearance-title">
         <h3 id="appearance-title">Appearance</h3>
+        <p>The site's colours. The same themes TriOS has. The default follows your computer's light or dark setting; the rest are always dark.</p>
+        <div id="theme-list" class="theme-list" role="radiogroup" aria-label="Theme"></div>
         <p>How much room there is between things. The words and pictures stay the same size either way.</p>
         <div class="choice-list" role="radiogroup" aria-label="Spacing">
           <label class="choice">

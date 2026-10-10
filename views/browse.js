@@ -8,18 +8,19 @@
 import {
   aiSparkle, aiSummaryNote, breadcrumbs, buildHash, categoryChips, clear,
   countedAcross,
-  currentGameVersion, downloadButton, downloadCountBadge, el, favoriteToggle,
+  currentGameVersion, downloadButton, el, favoriteToggle,
   formatDay, gameVersionFamily, gameVersions, hashQuery, howLongAgo,
   imageUrlOf, isDiscordOnly, joinNames, modHref, modList, modName,
   MOD_VERSION_NOTE,
-  NO_DESCRIPTION, pager, pageSizePreference, picture, replaceHash,
-  searchHelpField, summaryTitle,
+  NO_DESCRIPTION, pager, quickTip, pageSizePreference, picture, replaceHash,
+  fullAiSummaryOnHover, searchHelpField, summaryTitle,
   summaryToShow, thumbnail,
-  versionStanding, versionStandingNote,
+  versionStanding, versionStandingNote, viewToggle,
 } from '../lib.js';
 import { matchesSearch, scoreOfSearch } from '../search.js';
 
 const VIEW_KEY = 'starmodderView';
+const NO_REQUIREMENTS = '__none__';
 
 /// The switches, each a plain yes-or-no question about one field.
 const SWITCHES = [
@@ -34,6 +35,12 @@ const SWITCHES = [
     label: 'Source is public',
     title: 'Only mods whose code is somewhere you can read it.',
     keep: (mod) => mod.sourceIsPublic === true,
+  },
+  {
+    key: 'addable',
+    label: 'Safe to add mid-game',
+    title: 'Only mods whose author says they can be added to a game already in progress.',
+    keep: (mod) => mod.saveCompatible === true,
   },
   {
     key: 'nowip',
@@ -51,7 +58,15 @@ const SORTS = [
   { key: 'name', label: 'Name' },
   { key: 'newest', label: 'Newest' },
   { key: 'updated', label: 'Recently updated' },
+  { key: 'random', label: 'Random' },
 ];
+
+/// A new number to shuffle by. The shuffle is worked out from it rather than
+/// drawn fresh each time, so turning a page or changing a filter keeps the same
+/// order, and it rides in the address so a link brings back the same shuffle.
+function newSeed() {
+  return Math.floor(Math.random() * 0x7fffffff) + 1;
+}
 
 export async function render(root, parts) {
   const list = await modList();
@@ -69,6 +84,7 @@ export async function render(root, parts) {
     author: query.get('author') || '',
     sort: SORTS.some((s) => s.key === query.get('sort')) ? query.get('sort')
       : ((query.get('q') || '') ? 'relevance' : 'current'),
+    seed: Number(query.get('seed')) || newSeed(),
     switches: new Set((query.get('only') || '').split(',')
       .filter((key) => SWITCHES.some((option) => option.key === key))),
     // Older mods are left out to begin with. Nineteen pages of A-to-Z over
@@ -114,6 +130,7 @@ export async function render(root, parts) {
       category: shown.category,
       author: shown.author,
       sort: shown.sort === 'current' ? '' : shown.sort,
+      seed: shown.sort === 'random' ? shown.seed : '',
       only: [...shown.switches].join(','),
       older: shown.olderToo ? '1' : '',
       page: shown.page || '',
@@ -126,7 +143,7 @@ export async function render(root, parts) {
     clear(into);
 
     const matches = sortMods(all.filter((mod) => matchesFilters(mod, shown)),
-      sortInUse(shown), shown.currentVersion, shown.search);
+      sortInUse(shown), shown.currentVersion, shown.search, shown.seed);
 
     fillResultLine(countLine, all, matches, shown,
       () => { shown.olderToo = true; drawResults(into, all, shown); });
@@ -171,7 +188,7 @@ function fillResultLine(line, all, matches, state, onShowOlder) {
   line.append(el('span', {
     text: matches.length === all.length
       ? `Showing all ${all.length} mods.`
-      : `${matches.length} of ${all.length} mods match.`,
+      : `${matches.length} of ${all.length} mods shown.`,
   }));
 
   // Nothing is being left out when older mods are already in, when there is no
@@ -194,9 +211,9 @@ function fillResultLine(line, all, matches, state, onShowOlder) {
 // --- The controls ---
 
 function drawControls(into, mods, state, onChange) {
-  // The chips are redrawn whenever anything else changes, because their counts
-  // are of what picking that chip would really show. Counting the whole list
-  // would have a chip read 182 and then hand back 104, since older game
+  // The category table is redrawn whenever anything else changes, because its counts
+  // are of what picking that category would really show. Counting the whole list
+  // would have a category read 182 and then hand back 104, since older game
   // versions are left out to begin with.
   const chips = el('div', {});
   const drawChips = () => {
@@ -207,7 +224,7 @@ function drawControls(into, mods, state, onChange) {
       onPick: (picked) => { state.category = picked; changed(); },
     });
     clear(chips);
-    // Nothing matching means no chips to draw. `append` turns a null into the
+    // Nothing matching means no table to draw. `append` turns a null into the
     // word "null" on the page, so the row has to be checked rather than handed
     // straight over.
     if (row) chips.append(row);
@@ -248,34 +265,22 @@ function drawControls(into, mods, state, onChange) {
     changed();
   });
 
-  const viewToggle = el('div', { class: 'view-toggle', role: 'group' });
-  const gridBtn = el('button', { class: 'btn', text: 'Cards' });
-  const rowsBtn = el('button', { class: 'btn', text: 'Rows' });
-  const litView = () => {
-    gridBtn.classList.toggle('on', state.view === 'grid');
-    rowsBtn.classList.toggle('on', state.view === 'rows');
-    gridBtn.setAttribute('aria-pressed', String(state.view === 'grid'));
-    rowsBtn.setAttribute('aria-pressed', String(state.view === 'rows'));
-  };
-  const pickView = (which) => {
+  const views = viewToggle(() => state.view, (which) => {
     state.view = which;
     localStorage.setItem(VIEW_KEY, which);
-    litView();
     changed();
-  };
-  gridBtn.addEventListener('click', () => pickView('grid'));
-  rowsBtn.addEventListener('click', () => pickView('rows'));
-  litView();
-  viewToggle.append(gridBtn, rowsBtn);
+  });
 
-  into.append(el('div', { class: 'search-row' }, [searchHelpField(search), viewToggle]));
-  into.append(el('p', {
-    class: 'search-hint',
-    text: 'Commas mean any of these: "faction, portrait" shows both kinds. Put '
-      + 'a minus in front of one to leave those out, like "faction, -portrait".',
-  }));
+  into.append(el('div', { class: 'search-row' }, [searchHelpField(search), views]));
+  into.append(el('p', { class: 'search-hint' }, [
+    'Use commas to match either term: ',
+    el('code', { text: 'faction, portrait' }),
+    '. Add a minus to exclude a term: ',
+    el('code', { text: 'faction, -portrait' }),
+    '.',
+  ]));
 
-  // The chips come before the dropdowns: picking a kind of mod is what most
+  // The categories come before the dropdowns: picking a category is what most
   // readers want first, and a row you can see beats a list you have to open.
   drawChips();
   into.append(chips);
@@ -291,18 +296,26 @@ function drawControls(into, mods, state, onChange) {
           versions.map((v) => [v.family, `${v.label} (${v.count})`])),
       }),
 
-    // Left out entirely until some mod says what it needs, so the page never
-    // offers a filter that would find nothing.
-    ...(needed.length
-      ? [dropdown('Needs', needed, state.needs,
-          (v) => { state.needs = v; changed(); },
-          { anyLabel: 'Needs anything' })]
-      : []),
+    dropdown('Requires', [NO_REQUIREMENTS, ...needed], state.needs,
+      (v) => { state.needs = v; changed(); },
+      {
+        anyLabel: 'Unspecified',
+        labels: { [NO_REQUIREMENTS]: 'Standalone (no requirements)' },
+      }),
   );
 
   // "Best match" is only in the list while something is typed, so the dropdown
   // is rebuilt whenever that changes rather than drawn once like the others.
-  const sortHolder = el('div', {});
+  const sortHolder = el('div', { class: 'sort-holder' });
+  // Picking Random again from the dropdown does nothing, so a fresh shuffle
+  // needs a button of its own. It is made once and only shown or hidden, so
+  // choosing a sort never rebuilds the dropdown out from under the reader.
+  const shuffleAgain = el('button', { class: 'btn', text: 'Shuffle' });
+  shuffleAgain.addEventListener('click', () => {
+    state.seed = newSeed();
+    changed();
+  });
+  const showShuffleAgain = () => { shuffleAgain.hidden = state.sort !== 'random'; };
   const drawSort = () => {
     clear(sortHolder);
     const offered = SORTS.filter(
@@ -310,12 +323,15 @@ function drawControls(into, mods, state, onChange) {
     sortHolder.append(dropdown('Sort by', offered.map((s) => s.key), state.sort,
       (v) => {
         state.sort = v || 'current';
+        showShuffleAgain();
         // Choosing a sort by hand while searching means it is wanted for this
         // search, so typing on does not snatch the list back to Best match.
         chosenByHand = true;
         changed();
       },
       { anyLabel: null, labels: Object.fromEntries(offered.map((s) => [s.key, s.label])) }));
+    sortHolder.append(shuffleAgain);
+    showShuffleAgain();
   };
   filters.append(sortHolder);
   drawSort();
@@ -374,8 +390,7 @@ function dropdown(label, values, chosen, onPick, opts = {}) {
   ]);
 }
 
-/// Every mod that some other mod needs, most-needed first. It is a short list —
-/// a handful of libraries and Nexerelin cover nearly all of it.
+/// Required mods, ordered by how many mods require them.
 function neededMods(mods) {
   return countedAcross(mods, (mod) => (mod.needs || []).map((n) => n.name))
     .map(([name]) => name);
@@ -420,7 +435,9 @@ function matchesEverythingElse(mod, state) {
   if (!matchesSearch(mod, state.search)) return false;
   if (state.game && gameVersionFamily(mod.gameVersion) !== state.game) return false;
   if (state.category && !(mod.categories || []).includes(state.category)) return false;
-  if (state.needs
+  if (state.needs === NO_REQUIREMENTS) {
+    if ((mod.needs || []).length) return false;
+  } else if (state.needs
       && !(mod.needs || []).some((n) => n.name === state.needs)) return false;
   if (state.author && !(mod.authors || []).includes(state.author)) return false;
   for (const option of SWITCHES) {
@@ -440,7 +457,7 @@ export function matchesFilters(mod, state) {
   return true;
 }
 
-export function sortMods(mods, sort, currentVersion, search = '') {
+export function sortMods(mods, sort, currentVersion, search = '', seed = 1) {
   const byName = (a, b) =>
     modName(a).localeCompare(modName(b), undefined, { sensitivity: 'base' });
   const newestFirst = (get) => (a, b) => {
@@ -462,6 +479,12 @@ export function sortMods(mods, sort, currentVersion, search = '') {
   } else if (sort === 'newest') sorted.sort(newestFirst((m) => m.addedOn));
   else if (sort === 'updated') sorted.sort(newestFirst((m) => m.lastReleaseDate));
   else if (sort === 'name') sorted.sort(byName);
+  else if (sort === 'random') {
+    // Each mod's place comes from its id and the seed alone, so a mod keeps its
+    // place relative to the others whichever filters are on.
+    const places = new Map(mods.map((mod) => [mod, shufflePlace(mod.id, seed)]));
+    sorted.sort((a, b) => places.get(a) - places.get(b) || byName(a, b));
+  }
   else {
     // The default: what a reader can use first, then what moved most recently,
     // then by name.
@@ -475,6 +498,19 @@ export function sortMods(mods, sort, currentVersion, search = '') {
   return sorted;
 }
 
+/// A number from 0 up to 2^32 for one mod under one seed: the same answer every
+/// time for the same two, and no pattern between neighbouring ids. FNV-1a over
+/// the id, started from the seed, then mixed so similar ids land far apart.
+function shufflePlace(id, seed) {
+  let hash = (2166136261 ^ seed) >>> 0;
+  for (const char of String(id)) {
+    hash = Math.imul(hash ^ char.codePointAt(0), 16777619);
+  }
+  hash = Math.imul(hash ^ (hash >>> 16), 0x85ebca6b);
+  hash = Math.imul(hash ^ (hash >>> 13), 0xc2b2ae35);
+  return (hash ^ (hash >>> 16)) >>> 0;
+}
+
 // --- Drawing the mods ---
 
 export function modGrid(mods, currentVersion) {
@@ -483,36 +519,36 @@ export function modGrid(mods, currentVersion) {
   return grid;
 }
 
-/// One mod's card.
-///
-/// The card is a box holding a link that fills it, rather than being a link
-/// itself, so the favorite button can sit on top without being a button
-/// inside a link — which is not allowed and which browsers handle differently.
-/// One mod as a card. [when] replaces the card's usual "Updated …" line — the
-/// Recently added strip is about when a mod turned up, not when it last moved.
+/// Keeps the favorite and download controls outside the card's link to avoid
+/// nesting interactive elements. `when` overrides the update date for the
+/// Recently added strip.
 export function modCard(mod, currentVersion, { when = null } = {}) {
   const summary = summaryToShow(mod);
   const updated = mod.lastReleaseDate
-    ? { text: `Updated ${howLongAgo(mod.lastReleaseDate)}`, on: mod.lastReleaseDate }
+    ? { kind: 'updated', on: mod.lastReleaseDate }
     : null;
-  const whenLine = when || updated;
   return el('div', { class: 'mod-card' }, [
     el('a', { class: 'card-inner', href: modHref(mod.id) }, [
-      cardImage(mod),
+      // Overlay badges to leave more room for the card text.
+      el('div', { class: 'card-picture' }, [
+        cardImage(mod),
+        el('div', { class: 'card-foot' }, [
+          ...badges(mod, currentVersion),
+          // How long ago the mod changed, at the right of the badges.
+          when || updated ? whenLine(when || updated) : null,
+        ]),
+      ]),
       el('div', { class: 'card-body' }, [
-        el('div', { class: 'card-title', text: modName(mod) }),
-        (mod.authors || []).length
-          ? el('div', { class: 'card-authors', text: joinNames(mod.authors) })
-          : null,
+        // The name and who made it are one thing, held closer together than
+        // the card's other lines.
+        el('div', { class: 'card-heading' }, [
+          el('div', { class: 'card-title', text: modName(mod) }),
+          (mod.authors || []).length
+            ? el('div', { class: 'card-authors', text: joinNames(mod.authors) })
+            : null,
+        ]),
         summaryLine(summary),
-        whenLine
-          ? el('div', {
-              class: 'card-when',
-              text: whenLine.text,
-              title: whenLine.on ? formatDay(whenLine.on) : null,
-            })
-          : null,
-        el('div', { class: 'card-foot' }, badges(mod, currentVersion)),
+        categoryLine(mod.categories),
       ]),
     ]),
     favoriteToggle(mod),
@@ -533,7 +569,7 @@ export function modRows(mods, currentVersion) {
         thumbnail(imageUrlOf(mod), 'row-thumb'),
         el('div', { class: 'row-main' }, [
           el('div', { class: 'row-title', text: modName(mod) }),
-          el('div', {
+          fullAiSummaryOnHover(el('div', {
             class: 'row-sub',
             title: summaryTitle(summary),
           }, [
@@ -541,7 +577,7 @@ export function modRows(mods, currentVersion) {
             generated ? aiSparkle(summary.text) : null,
             generated ? ' ' : null,
             summary?.text || NO_DESCRIPTION,
-          ]),
+          ]), summary),
         ]),
         el('div', { class: 'row-side' }, badges(mod, currentVersion)),
       ]),
@@ -587,8 +623,12 @@ function badges(mod, currentVersion) {
     }));
   }
   if (mod.isWorkInProgress) out.push(el('span', { class: 'badge wip', text: 'WIP' }));
-  const downloads = downloadCountBadge(mod);
-  if (downloads) out.push(downloads);
+  if (mod.isTool) {
+    out.push(el('span', {
+      class: 'badge tool', text: 'Tool',
+      title: 'A program you run beside the game, not a mod you load into it.',
+    }));
+  }
   if (isDiscordOnly(mod)) {
     out.push(el('span', {
       class: 'badge discord', text: 'Discord only',
@@ -596,6 +636,63 @@ function badges(mod, currentVersion) {
     }));
   }
   return out;
+}
+
+// The icon on the date: a clock with an arrow running back round it,
+// anticlockwise (Tabler's history shape, mirrored). The same icon whether the
+// date is when the mod was updated or when it was added; the hover text says
+// which.
+const WHEN_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+  + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+  + 'stroke-linejoin="round" focusable="false" aria-hidden="true">'
+  + '<path d="M12 8v4l2 2"/><path d="M20.95 11a9 9 0 1 0-.5 4m.5 5v-5h-5"/></svg>';
+const WHEN_WORDS = { updated: 'Updated', added: 'Added' };
+
+/// "3 days ago", with an icon saying what happened then. The word "Updated" or
+/// "Added" is left to the icon and the hover text.
+function whenLine({ kind, on }) {
+  const ago = howLongAgo(on);
+  if (!ago) return null;
+  return el('span', {
+    class: 'card-when',
+    title: `${WHEN_WORDS[kind]} ${formatDay(on)}`,
+  }, [
+    el('span', { class: 'when-icon', html: WHEN_ICON }),
+    ago[0].toUpperCase() + ago.slice(1),
+  ]);
+}
+
+/// The mod's categories as one line of badges at the foot of a card. Those
+/// that do not fit are folded into a "+2" badge, which names them on hover.
+///
+/// How much fits is only known once the card is on the page and laid out, and
+/// changes with the page's width, so the line measures itself whenever its own
+/// width changes.
+function categoryLine(categories) {
+  const names = categories || [];
+  if (!names.length) return null;
+  const chips = names.map((name) => el('span', { class: 'badge', text: name }));
+  const more = el('span', { class: 'badge category-more', hidden: true });
+  const line = el('div', { class: 'card-categories' }, [...chips, more]);
+  quickTip(more, () => names.filter((_, i) => chips[i].hidden).join(', '));
+
+  const fit = () => {
+    for (const chip of chips) chip.hidden = false;
+    more.hidden = true;
+    const overflowing = () => line.scrollWidth > line.clientWidth;
+    if (!overflowing()) return;
+    more.hidden = false;
+    // Always keep the first one: a lone "+3" says nothing at a glance.
+    let shown = chips.length;
+    do {
+      chips[--shown].hidden = true;
+      const hidden = names.slice(shown);
+      more.textContent = `+${hidden.length}`;
+      more.setAttribute('aria-label', `Also: ${hidden.join(', ')}`);
+    } while (shown > 1 && overflowing());
+  };
+  new ResizeObserver(fit).observe(line);
+  return line;
 }
 
 /// The summary on a card. An AI-written one is marked with a sparkle just
@@ -607,8 +704,7 @@ function summaryLine(summary) {
     class: summary ? 'card-summary' : 'card-summary none',
     // The same words the sparkle carries, on the whole sentence: a reader is
     // far more likely to point at the words than at the star in front of them.
-    // On an author's own summary it is the AI's sentence instead, for the
-    // reader who wants a second opinion on a summary that says nothing.
+    // An author's own summary has no hover text.
     title: summaryTitle(summary),
   }, [
     generated ? aiSparkle(summary.text) : null,
@@ -616,5 +712,6 @@ function summaryLine(summary) {
     summary?.text || NO_DESCRIPTION,
   ]);
   if (!generated) return words;
+  fullAiSummaryOnHover(words, summary);
   return el('div', { class: 'summary-block' }, [words, aiSummaryNote()]);
 }

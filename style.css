@@ -39,6 +39,12 @@
      badge that carries the mod's own version. */
   --primary-ghost: rgba(73, 252, 255, 0.35);
   --primary-bar-lit: rgba(73, 252, 255, 0.55);
+  /* Something switched on: the page you are on, a ticked choice, a filter in
+     use. The default is the same cyan as everything else; a theme makes it
+     its second colour, the way TriOS marks a picked chip. Hovering stays
+     cyan, so "on" and "under the pointer" can be told apart. */
+  --on: var(--primary);
+  --on-soft: var(--primary-soft);
 
   /* The line round each kind of badge, and the wash behind the line saying
      what a mod needs. Each is its own colour at a strength that shows without
@@ -53,6 +59,8 @@
   --over-picture: rgba(14, 22, 43, 0.82);
   --lifted: 0 8px 24px rgba(0, 0, 0, 0.45);
   --badge-back: rgba(255, 255, 255, 0.02);
+  /* Shading behind badges on card pictures. */
+  --over-picture-fade: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 
   /* What separates a raised surface — a card, a panel, the releases list —
      from the page behind it. In the dark version the two colours do that on
@@ -139,8 +147,108 @@
     --over-picture: rgba(255, 255, 255, 0.88);
     --lifted: 0 8px 24px rgba(22, 30, 45, 0.16);
     --badge-back: rgba(22, 30, 45, 0.03);
+    --over-picture-fade: linear-gradient(to top, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
     --raised: 0 0 0 1px rgba(22, 30, 45, 0.06), 0 1px 3px rgba(22, 30, 45, 0.05);
   }
+}
+
+/* The themes a reader can pick in Settings, copied from TriOS's
+   `assets/themes.json`. Picking one sets `data-theme` on the page; the default
+   sets nothing, so it still follows the computer's light or dark setting.
+
+   Each theme block is written against `[data-theme]` rather than `:root`, so
+   the little colour preview on each theme's button in Settings can carry the
+   same attribute and draw itself in that theme's colours, whatever theme the
+   page is in. These blocks come after the light block on purpose: they are no
+   more specific than it, so being later is what lets them win.
+
+   Every theme is a dark one. This first block puts back the dark version of
+   everything that is not the theme's own colours, for a reader whose computer
+   asks for light pages, and works out the see-through strengths of the
+   theme's colours from the colours themselves. */
+[data-theme] {
+  --text: rgb(220, 225, 240);
+  --text-dim: rgb(140, 150, 170);
+  --warning: rgb(255, 183, 77);
+  --error: rgb(255, 100, 100);
+  --success: rgb(100, 255, 150);
+  --llm: rgb(196, 148, 255);
+  --edge-warning: rgba(255, 183, 77, 0.4);
+  --edge-success: rgba(100, 255, 150, 0.35);
+  --edge-llm: rgba(196, 148, 255, 0.4);
+  --warning-wash: rgba(255, 183, 77, 0.06);
+  --lifted: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --badge-back: rgba(255, 255, 255, 0.02);
+  --over-picture-fade: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  --raised: none;
+
+  --surface-2: color-mix(in srgb, var(--surface) 50%, var(--surface-container));
+  --border: color-mix(in srgb, var(--primary) 15%, transparent);
+  --primary-soft: color-mix(in srgb, var(--primary) 14%, transparent);
+  --primary-faint: color-mix(in srgb, var(--primary) 5%, transparent);
+  --primary-bar: color-mix(in srgb, var(--primary) 30%, transparent);
+  --primary-ghost: color-mix(in srgb, var(--primary) 35%, transparent);
+  --primary-bar-lit: color-mix(in srgb, var(--primary) 55%, transparent);
+  --edge-secondary: color-mix(in srgb, var(--secondary) 35%, transparent);
+  --on: var(--secondary);
+  --on-soft: color-mix(in srgb, var(--secondary) 16%, transparent);
+  --over-picture: color-mix(in srgb, var(--surface) 82%, transparent);
+}
+/* The default's dark colours, for its preview button only. On the page the
+   default sets no `data-theme`, so this never applies there. */
+[data-theme="default"] {
+  --primary: rgb(73, 252, 255);
+  --secondary: rgb(59, 203, 232);
+  --surface: rgb(14, 22, 43);
+  --surface-container: rgb(32, 41, 65);
+}
+[data-theme="sigma"] {
+  --primary: #40D7A3;
+  --secondary: #18FFFF;
+  --surface: #21242B;
+  --surface-container: #282C34;
+}
+[data-theme="redacted"] {
+  --primary: #46FFEB;
+  --secondary: #8FA9A6;
+  --surface: #071412;
+  --surface-container: #0D1F1C;
+}
+[data-theme="player"] {
+  --primary: #8BC3E8;
+  --secondary: #31779C;
+  --surface: #04141C;
+  --surface-container: #0A2029;
+}
+[data-theme="one-dark"] {
+  --primary: #4D78CC;
+  --secondary: #98C379;
+  --surface: #21242B;
+  --surface-container: #282C34;
+}
+[data-theme="independents"] {
+  --primary: #B8BCC4;
+  --secondary: #FFD737;
+  --surface: #101216;
+  --surface-container: #1A1D23;
+}
+[data-theme="lavender"] {
+  --primary: #C0A2E8;
+  --secondary: #E3B7D8;
+  --surface: #1A1524;
+  --surface-container: #241D31;
+}
+[data-theme="knights-of-ludd"] {
+  --primary: #B4D93C;
+  --secondary: #E03B30;
+  --surface: #14170A;
+  --surface-container: #1D2110;
+}
+[data-theme="sindrian-diktat"] {
+  --primary: #E762CE;
+  --secondary: #C8007D;
+  --surface: #170A12;
+  --surface-container: #22101B;
 }
 
 /* The roomier spacing, for a reader who picked "Comfortable" in Settings. */
@@ -167,6 +275,17 @@ body {
 
 a { color: var(--primary); text-decoration: none; }
 a:hover { text-decoration: underline; }
+/* A link inside a sentence is underlined, faintly, as well as coloured. Some
+   themes' main colour is close to the text colour (Independents' grey,
+   Lavender's pale purple), and colour alone left those links invisible.
+   Written with `:where` so it is no stronger than `a` above: any rule naming a
+   class, such as a button or the "Read more" link, still wins. */
+:where(p, .prose) a:where(:not(.btn)) {
+  text-decoration: underline;
+  text-decoration-color: var(--primary-ghost);
+  text-underline-offset: 2px;
+}
+:where(p, .prose) a:where(:not(.btn)):hover { text-decoration-color: currentColor; }
 img { max-width: 100%; }
 
 h1 { font-size: var(--type-title); line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.01em; }
@@ -205,12 +324,15 @@ h3 { font-size: var(--type-big); line-height: 1.25; margin: 0 0 6px; }
   border-bottom: 2px solid transparent;
 }
 .site-nav a:hover { color: var(--text); text-decoration: none; }
-.site-nav a.active { color: var(--primary); border-bottom-color: var(--primary); }
+.site-nav a.active { color: var(--on); border-bottom-color: var(--on); }
 .nav-count {
   display: inline-block; margin-left: 6px; padding: 0 6px;
-  border-radius: 999px; background: var(--primary-soft);
-  color: var(--primary); font-size: var(--type-tiny);
+  border-radius: 999px; background: var(--on-soft);
+  color: var(--on); font-size: var(--type-tiny);
 }
+/* With no favorites the count is hidden, and its margin and padding with it.
+   `display` above would otherwise beat `hidden` and leave an empty pill. */
+.nav-count[hidden] { display: none; }
 
 .settings-button {
   background: none; border: none; padding: 0; font: inherit;
@@ -269,10 +391,30 @@ h3 { font-size: var(--type-big); line-height: 1.25; margin: 0 0 6px; }
   background: var(--surface-2);
 }
 .choice:hover { border-color: var(--primary); }
-.choice:has(input:checked) { border-color: var(--primary); background: var(--primary-soft); }
-.choice input { accent-color: var(--primary); margin-top: 3px; cursor: pointer; }
+.choice:has(input:checked) { border-color: var(--on); background: var(--on-soft); }
+.choice input { accent-color: var(--on); margin-top: 3px; cursor: pointer; }
 .choice-name { color: var(--text); font-size: var(--type-small); font-weight: 600; }
 .choice-note { color: var(--text-dim); font-size: var(--type-tiny); }
+
+/* The theme buttons: a strip of each theme's colours and its name, in a row
+   that wraps. The radio button is hidden but still there, so the arrow keys
+   and a screen reader treat the row as one choice. */
+.theme-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.theme-choice {
+  position: relative; display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  padding: 5px 10px 5px 6px; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--surface-2); color: var(--text-dim); font-size: var(--type-small);
+}
+.theme-choice:hover { border-color: var(--primary); color: var(--text); }
+.theme-choice:has(input:checked) { border-color: var(--on); background: var(--on-soft); color: var(--text); }
+.theme-choice:has(input:focus-visible) { outline: 2px solid var(--primary); outline-offset: 2px; }
+.theme-choice input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
+.theme-strip { display: inline-flex; border-radius: 3px; overflow: hidden; box-shadow: 0 0 0 1px var(--border); }
+.theme-strip > span { width: 8px; height: 18px; }
+.strip-surface { background: var(--surface); }
+.strip-container { background: var(--surface-container); }
+.strip-primary { background: var(--primary); }
+.strip-secondary { background: var(--secondary); }
 
 .header-search { position: relative; flex: 0 1 260px; min-width: 0; }
 .header-search .search-box { width: 100%; }
@@ -369,7 +511,7 @@ main {
 .btn:hover:not([disabled]) { border-color: var(--primary); color: var(--primary); }
 .btn[disabled] { opacity: 0.4; cursor: default; }
 .btn-primary { border-color: var(--primary); color: var(--primary); }
-.btn.on { background: var(--primary-soft); border-color: var(--primary); color: var(--primary); }
+.btn.on { background: var(--on-soft); border-color: var(--on); color: var(--on); }
 
 /* The one download button every list carries. A mod can offer a dozen
    downloads; the builder has already put them in order, so the button shows the
@@ -410,6 +552,7 @@ main {
   display: inline-flex; align-items: center; gap: 7px;
 }
 .btn-with-icon:hover { text-decoration: none; }
+.github-icon { display: inline-flex; }
 
 /* On a card it sits at the foot, under the badges, and spans the card: a
    download is the card's main action and belongs in the reader's line of sight,
@@ -418,11 +561,20 @@ main {
 .mod-card > .download-btn, .mod-card > .download-actions {
   margin: var(--pad-cell); margin-top: 0;
 }
+/* How long ago the mod changed, at the bottom right of the picture beside the
+   badges. No outline, so it reads as a note about the mod rather than a fact
+   badge, but the same dark backing so it stays readable on any picture. */
+.card-when {
+  margin-left: auto; padding: 1px 6px; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 3px;
+  font-size: var(--type-note); color: var(--text-dim); white-space: nowrap;
+  background: var(--over-picture); pointer-events: auto;
+}
+.when-icon { display: inline-flex; }
 
 /* On a row it sits inline at the end, in a column of its own width so every
    button in the list starts and ends in the same place. */
-.mod-row > .download-btn, .mod-row > .download-actions,
-.fav-links > .download-btn, .fav-links > .download-actions { width: 148px; }
+.mod-row > .download-btn, .mod-row > .download-actions { width: 148px; }
 .mod-row > .download-btn, .mod-row > .download-actions { margin-right: 10px; }
 
 /* On a release row it follows "Read changelog", so both of the row's actions
@@ -503,7 +655,7 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .search-help strong { color: var(--text); font-weight: 600; }
 /* The example is something to type, not something to press, so it is not
    cyan. The line round it is what says "these are the exact letters". */
-.search-help code {
+.search-help code, .search-hint code {
   font-family: inherit; font-size: var(--type-tiny); color: var(--text);
   padding: 1px 6px; border: 1px solid var(--border); border-radius: 4px;
   background: var(--surface-2); white-space: nowrap;
@@ -518,29 +670,65 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
    one already looks like a control. */
 .filters { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .filter-label { display: flex; align-items: center; gap: 6px; font-size: var(--type-small); color: var(--text-dim); }
+/* Shorter than the site's other boxes, so the filters take less room. */
+/* A set height, so the browser centres the words itself. This font's letters
+   sit a little low in their line, so the box is moved down 1 pixel and the
+   padding at its foot lifts the words back to where they were. Without that
+   the box looks high around its words and its label. */
+.filters select {
+  height: 28px; padding: 0 8px 2px; line-height: normal;
+  position: relative; top: 1px;
+}
+.sort-holder { display: flex; align-items: center; gap: 8px; }
 .switches { display: flex; gap: 8px; flex-wrap: wrap; }
 
-/* The categories, as a row you can see all of at once. */
-.chips { display: flex; gap: 8px; flex-wrap: wrap; }
-.chip {
-  display: flex; gap: 7px; align-items: center;
-  padding: 5px 12px; border: 1px solid var(--border);
-  background: var(--surface-2); border-radius: 999px;
-  color: var(--text); font-size: var(--type-small); font-family: inherit;
+/* The categories, as a small table you can see all of at once: a name and a
+   count on each line, in as many columns as fit. Each line is its own small
+   box, so it reads as something to press, and the counts line up on the
+   right. */
+.category-table {
+  display: grid; gap: 6px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.category-cell {
+  display: flex; gap: 10px; align-items: baseline; justify-content: space-between;
+  width: 100%; padding: 5px 10px; margin: 0;
+  border: 1px solid var(--border); border-radius: 6px;
+  background: var(--surface-2); text-align: left;
+  color: var(--primary); font-size: var(--type-small); font-family: inherit;
   cursor: pointer;
 }
-.chip:hover { border-color: var(--primary); color: var(--primary); text-decoration: none; }
-.chip.on {
-  background: var(--primary-soft);
-  border-color: var(--primary); color: var(--primary);
+/* Cyan names say "you can press this", the same as every other link here. */
+.category-cell:hover {
+  background: var(--primary-soft); border-color: var(--primary-ghost);
+  text-decoration: none;
 }
-.chip-count { color: var(--text-dim); font-size: var(--type-tiny); }
-.chip.on .chip-count { color: var(--primary); }
+.category-cell.on {
+  background: var(--on-soft); border-color: var(--on);
+  font-weight: 600;
+}
+.category-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.category-count {
+  flex: none; color: var(--text-dim); font-size: var(--type-tiny);
+  font-variant-numeric: tabular-nums;
+}
+.category-cell:hover .category-count { color: var(--primary); }
+.category-cell.on .category-count { color: var(--on); }
 .result-line { color: var(--text-dim); font-size: var(--type-small); }
 
 /* --- The mod list --- */
 
-.view-toggle { display: flex; gap: 4px; }
+/* Cards and Rows are joined into one control, so it reads as a choice of one.
+   Each button's border overlaps its neighbour's, and the one in use is drawn
+   on top so its cyan border shows on every side. */
+.view-toggle { display: flex; }
+.view-toggle > .btn { position: relative; border-radius: 0; gap: 6px; }
+.view-toggle > .btn + .btn { margin-left: -1px; }
+.view-toggle > .btn:first-child { border-radius: 6px 0 0 6px; }
+.view-toggle > .btn:last-child { border-radius: 0 6px 6px 0; }
+.view-toggle > .btn.on,
+.view-toggle > .btn:hover { z-index: 1; }
+.view-icon, .view-icon svg { display: block; width: 1em; height: 1em; flex-shrink: 0; }
 
 .mod-grid {
   display: grid; gap: var(--gap-cells);
@@ -570,8 +758,19 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 }
 .fav-toggle:hover { border-color: var(--primary); color: var(--primary); }
 .fav-toggle.on {
-  background: var(--primary-soft);
-  border-color: var(--primary); color: var(--primary);
+  background: var(--on-soft);
+  border-color: var(--on); color: var(--on);
+}
+/* An empty star on every mod is clutter, so it only shows while the pointer is
+   on the mod, or while the button has keyboard focus. A favorited mod always
+   shows its star. Faded rather than removed, so a row keeps its shape and the
+   button can still be reached by Tab. A screen with no pointer to hover with
+   (a phone) always shows it, or there would be no way to favorite at all. */
+@media (hover: hover) {
+  .fav-toggle:not(.on) { opacity: 0; transition: opacity 0.12s; }
+  .mod-card:hover .fav-toggle,
+  .mod-row:hover .fav-toggle,
+  .fav-toggle:focus-visible { opacity: 1; }
 }
 /* The whole picture, never a cut-down of it: mod pictures come in every shape
    from a wide banner to a tall poster, and cropping to the card's 16:9 cut the
@@ -592,6 +791,31 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
   overflow-wrap: anywhere;
 }
 .card-authors { font-size: var(--type-small); color: var(--text-dim); overflow-wrap: anywhere; }
+/* The name and the authors under it read as one heading, so they sit closer
+   together than the card's other lines. */
+.card-heading { display: flex; flex-direction: column; gap: 1px; }
+.card-heading .card-title { line-height: 1.2; }
+/* One line of category badges. What does not fit is hidden by the script and
+   counted in the "+N" badge. It sits at the foot of the card so the lines match
+   across a row of cards. */
+.card-categories {
+  display: flex; gap: 4px; align-items: center; overflow: hidden; min-width: 0;
+  margin-top: auto;
+}
+.card-categories .badge {
+  flex-shrink: 0; max-width: 100%; overflow: hidden; text-overflow: ellipsis;
+}
+.card-categories .badge[hidden] { display: none; }
+.badge.category-more { cursor: help; }
+
+/* The note that shows at once on hover (`quickTip`). */
+.quick-tip {
+  position: fixed; z-index: 50; max-width: 280px; pointer-events: none;
+  padding: 4px 8px; border-radius: 6px;
+  font-size: var(--type-tiny); color: var(--text);
+  background: var(--surface-container); border: 1px solid var(--border);
+  box-shadow: var(--lifted);
+}
 .card-summary {
   font-size: var(--type-small); color: var(--text);
   /* Three lines at most, so one long summary cannot stretch a whole grid row.
@@ -599,7 +823,6 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.card-when { font-size: var(--type-tiny); color: var(--text-dim); }
 /* A summary and the note under it are one thing, held closer together than the
    card's other lines are. */
 .summary-block { display: flex; flex-direction: column; }
@@ -612,11 +835,26 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .no-description { margin: 0; color: var(--text-dim); font-style: italic; }
 
 /* The sparkle that marks words an AI wrote. It sits on the line with them and
-   takes their colour. */
+   takes their colour, a little smaller than the words so it marks them
+   without leading them. The icon is 1em, so the font size is its size. */
 .ai-spark {
-  display: inline-block; vertical-align: -0.1em; flex-shrink: 0;
+  display: inline-block; vertical-align: -0.05em; flex-shrink: 0;
+  font-size: 0.85em;
 }
-.card-foot { margin-top: auto; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+/* Match the favorite button's backing and shade the image behind the badges
+   to keep them readable in both themes. */
+.card-picture { position: relative; }
+.card-foot {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 18px 5px 5px; display: flex;
+  background: var(--over-picture-fade); gap: 4px; flex-wrap: wrap; align-items: center;
+  pointer-events: none;
+}
+.card-foot .badge {
+  padding: 1px 6px; font-size: var(--type-note);
+  background: var(--over-picture);
+  pointer-events: auto;
+}
 
 .mod-rows { display: flex; flex-direction: column; }
 .mod-row {
@@ -652,7 +890,9 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .badge.wip { color: var(--warning); border-color: var(--edge-warning); }
 .badge.save-ok { color: var(--success); border-color: var(--edge-success); }
 .badge.save-no { color: var(--warning); border-color: var(--edge-warning); }
+.badge.save-unknown { opacity: 0.75; }
 .badge.discord { color: var(--secondary); border-color: var(--edge-secondary); }
+.badge.tool { color: var(--text); }
 
 .pager {
   display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
@@ -661,10 +901,17 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .pager-info { color: var(--text-dim); font-size: var(--type-small); }
 .pager-size-label { display: flex; align-items: center; gap: 6px; font-size: var(--type-small); color: var(--text-dim); margin-left: auto; }
 
-/* A heading that names a section without shouting over the page's own title. */
-.quiet-heading {
-  font-size: var(--type-big); color: var(--text-dim);
-  font-weight: 600; letter-spacing: 0.02em;
+/* The heading that starts each section of the front page. Full-strength and
+   ruled off underneath, so it is plain where one section stops and the next
+   begins. The line sits under the whole row where the heading shares it with
+   a control, such as the rows picker. */
+.section-title {
+  font-size: var(--type-heading); color: var(--text);
+  font-weight: 700; letter-spacing: 0.01em;
+}
+.stack > .section-title,
+.section-head:has(> .section-title) {
+  padding-bottom: 6px; border-bottom: 1px solid var(--primary-bar);
 }
 
 /* --- Home page --- */
@@ -734,7 +981,7 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
   color: var(--text-dim); cursor: pointer; border-radius: 4px;
 }
 .rows-pick button:hover { color: var(--primary); background: var(--primary-faint); }
-.rows-pick button.on { color: var(--primary); background: var(--primary-soft); }
+.rows-pick button.on { color: var(--on); background: var(--on-soft); }
 .rows-word { margin-left: 4px; }
 
 /* "Show all changelogs" — as quiet as the rows picker beside the other
@@ -821,7 +1068,7 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .prose-more { text-decoration: none; }
 .prose-more:hover, .prose-more:focus-visible { text-decoration: underline; }
 
-.thread-title { opacity: 0.8; }
+.thread-title { opacity: 0.8; font-size: var(--type-tiny); }
 
 /* "Part of <thread>", for a mod that shares its forum thread with others. It
    sits under the name and says why the thread it links is not about it alone,
@@ -850,6 +1097,26 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
   letter-spacing: 0.05em; text-transform: uppercase;
 }
 .needs-list { min-width: 0; overflow-wrap: anywhere; }
+/* Whether a mod can be added to or removed from a game in progress, under
+   the Requires line: a question, a short answer and the author's words per
+   row, lined up in columns. */
+.save-box {
+  display: grid; gap: 6px; font-size: var(--type-small);
+  padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px;
+}
+.save-box > .needs-label { color: var(--text-dim); }
+.save-lines {
+  display: grid; grid-template-columns: max-content max-content minmax(0, 1fr);
+  gap: 4px 8px; align-items: baseline;
+}
+.save-question { font-weight: 600; }
+.save-words { min-width: 0; overflow-wrap: anywhere; font-style: italic; }
+.save-words::before { content: '\201C'; }
+.save-words::after { content: '\201D'; }
+@media (max-width: 640px) {
+  .save-lines { grid-template-columns: max-content minmax(0, 1fr); }
+  .save-words { grid-column: 1 / -1; }
+}
 .needed.unknown { color: var(--text-dim); }
 .checked-on { color: var(--text-dim); font-size: var(--type-tiny); margin: 4px 0 0; }
 .feed-note { color: var(--text-dim); font-size: var(--type-small); margin: 0; }
@@ -1017,13 +1284,17 @@ body.picture-open { overflow: hidden; }
 
 /* --- Favorites --- */
 
-.fav-row {
-  display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
-  padding: var(--pad-cell); border: 1px solid var(--border);
-  background: var(--surface-2); border-radius: 8px; box-shadow: var(--raised);
+/* The heading and its count on the left, the buttons on the right, lined up
+   on the heading's foot. On a narrow screen the buttons wrap underneath. */
+.fav-head {
+  display: flex; gap: var(--gap); flex-wrap: wrap;
+  align-items: flex-end; justify-content: space-between;
 }
-.fav-links { display: flex; gap: 8px; flex-wrap: wrap; }
-.fav-row .row-main { flex: 1 1 200px; }
+.fav-head > .page-head { margin-bottom: 0; }
+.fav-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+/* The view switch sits apart from the list's own buttons. */
+.fav-actions > .view-toggle { margin-left: 8px; }
+.fav-undo { font-size: var(--type-small); color: var(--text-dim); }
 
 /* --- The line at the foot --- */
 
@@ -1060,7 +1331,6 @@ body.picture-open { overflow: hidden; }
   /* A narrow screen has no room for a column of its own. In a browse row it
      also has no room beside the words: standing the button next to them left
      the mod's name one letter wide, so it drops to a line of its own. */
-  .fav-links > .download-btn, .fav-links > .download-actions,
   .release > summary > .download-btn,
   .release > summary > .download-actions { width: auto; }
   .mod-row { flex-wrap: wrap; }
@@ -1070,9 +1340,6 @@ body.picture-open { overflow: hidden; }
   .mod-row > .download-btn, .mod-row > .download-actions {
     width: auto; flex: 1 1 100%; margin: 0 10px 10px;
   }
-  /* A browse row on a phone is already short of room for the mod's name, so
-     the least important badge stays off it. The card view still shows it. */
-  .mod-row .badge.downloads { display: none; }
   .big-picture { padding: 40px 12px 16px; }
   .big-picture-step { font-size: 2.2rem; padding: 6px 8px; }
   .pager-size-label { margin-left: 0; }

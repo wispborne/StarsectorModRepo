@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="../../">
-  <title>Sea of Stars 0.5.1 - Go Beyond the Persean Sector | Starmodder</title>
+  <title>Sea of Stars | Starmodder</title>
   <meta name="description" content="Adds a new officer, Koyama Sinni, and her Questline to reach the Fourteenth Battlegroup's Lost Inheritance -- the Defense Macrocomplex known as FOB Ithaca. Travel with her with a limited exploration fleet to discover the Orion Knot Sector-- In it, Six New, Handcrafted Systems as you travel with her to unravel the mystery of what happened when the Fourteenth Battlegroup was stranded at FOB Ithaca.">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Starmodder">
-  <meta property="og:title" content="Sea of Stars 0.5.1 - Go Beyond the Persean Sector">
+  <meta property="og:title" content="Sea of Stars">
   <meta property="og:description" content="Adds a new officer, Koyama Sinni, and her Questline to reach the Fourteenth Battlegroup's Lost Inheritance -- the Defense Macrocomplex known as FOB Ithaca. Travel with her with a limited exploration fleet to discover the Orion Knot Sector-- In it, Six New, Handcrafted Systems as you travel with her to unravel the mystery of what happened when the Fourteenth Battlegroup was stranded at FOB Ithaca.">
   <meta property="og:image" content="https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/forum-media-2026-10-07/Sea-of-Stars-banner-v2.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -30,6 +30,13 @@
       document.documentElement.dataset.spacing =
         spacing === 'comfortable' ? 'comfortable' : 'dense';
     } catch (e) { document.documentElement.dataset.spacing = 'dense'; }
+    // The reader's theme, for the same reason. The default sets nothing.
+    try {
+      var theme = localStorage.getItem('starmodderTheme');
+      if (theme && theme !== 'default' && /^[a-z-]+$/.test(theme)) {
+        document.documentElement.dataset.theme = theme;
+      }
+    } catch (e) {}
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -63,6 +70,8 @@
       </div>
       <section class="settings-section" aria-labelledby="appearance-title">
         <h3 id="appearance-title">Appearance</h3>
+        <p>The site's colours. The same themes TriOS has. The default follows your computer's light or dark setting; the rest are always dark.</p>
+        <div id="theme-list" class="theme-list" role="radiogroup" aria-label="Theme"></div>
         <p>How much room there is between things. The words and pictures stay the same size either way.</p>
         <div class="choice-list" role="radiogroup" aria-label="Spacing">
           <label class="choice">

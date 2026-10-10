@@ -136,6 +136,45 @@ export function breadcrumbs(trail = []) {
   return nav;
 }
 
+/// A hover note that shows at once, for where the browser's own `title` is too
+/// slow: it waits about a second, and a reader pointing at "+3" to see what is
+/// hidden gives up before then. It floats on the page itself, so a card that
+/// clips its own contents cannot cut it off.
+///
+/// [text] is read each time the pointer arrives, so it can change after the
+/// note is set up. Only one note is ever on the page, and it goes when the
+/// pointer leaves, the page scrolls or the route changes.
+export function quickTip(node, text) {
+  node.addEventListener('pointerenter', () => {
+    const words = typeof text === 'function' ? text() : text;
+    if (!words) return;
+    hideQuickTip();
+    const tip = el('div', { class: 'quick-tip', role: 'tooltip', text: words });
+    document.body.append(tip);
+    const at = node.getBoundingClientRect();
+    const size = tip.getBoundingClientRect();
+    const left = Math.min(
+      Math.max(4, at.left + at.width / 2 - size.width / 2),
+      window.innerWidth - size.width - 4,
+    );
+    const above = at.top - size.height - 6;
+    tip.style.left = `${left}px`;
+    tip.style.top = `${above >= 4 ? above : at.bottom + 6}px`;
+    shownTip = tip;
+  });
+  node.addEventListener('pointerleave', hideQuickTip);
+  return node;
+}
+
+let shownTip = null;
+function hideQuickTip() {
+  shownTip?.remove();
+  shownTip = null;
+}
+for (const event of ['scroll', 'hashchange', 'popstate']) {
+  window.addEventListener(event, hideQuickTip, { passive: true });
+}
+
 // --- The address bar ---
 
 /// The query part of the current hash, as URLSearchParams. Only the pages that
@@ -233,6 +272,43 @@ export function applySpacing() {
   document.documentElement.dataset.spacing = spacingPreference();
 }
 
+// --- The theme setting ---
+
+/// The themes a reader can pick, copied from TriOS. Each id names a
+/// `[data-theme]` block in style.css, which holds its colours; this list only
+/// says which exist and what to call them. "default" sets no `data-theme` at
+/// all, so it keeps following the computer's light or dark setting.
+export const THEMES = [
+  { id: 'default', name: 'Default' },
+  { id: 'sigma', name: 'Sigma' },
+  { id: 'redacted', name: '[REDACTED]' },
+  { id: 'player', name: 'Player' },
+  { id: 'one-dark', name: 'One Dark' },
+  { id: 'independents', name: 'Independents' },
+  { id: 'lavender', name: 'Lavender' },
+  { id: 'knights-of-ludd', name: 'Knights of Ludd' },
+  { id: 'sindrian-diktat', name: 'Sindrian Diktat' },
+];
+const THEME_KEY = 'starmodderTheme';
+
+export function themePreference() {
+  const saved = localStorage.getItem(THEME_KEY);
+  return THEMES.some((t) => t.id === saved) ? saved : 'default';
+}
+
+/// Remembers the choice and applies it straight away; the style sheet does the
+/// rest. (index.html applies the saved choice before the first paint too.)
+export function setThemePreference(theme) {
+  localStorage.setItem(THEME_KEY, theme);
+  applyTheme();
+}
+
+export function applyTheme() {
+  const theme = themePreference();
+  if (theme === 'default') delete document.documentElement.dataset.theme;
+  else document.documentElement.dataset.theme = theme;
+}
+
 // --- Which of a mod's two pictures to show ---
 
 /// "post" (the default) shows the picture from the author's forum post;
@@ -269,7 +345,8 @@ export function imageUrlOf(mod) {
 /// Two blocks of words may be on offer: the author's own, and the sentence an
 /// AI wrote from the post. Which one wins is the reader's choice — the AI
 /// sentence first, the author's first, or the AI summary not at all. The
-/// answer says which was picked, so a card can mark AI words as AI.
+/// answer says which was picked, so a card can mark AI words as AI, and which
+/// mod it is, so the hover text can fetch the AI's longer paragraph.
 export function summaryToShow(mod) {
   if (!mod) return null;
   const own = mod.summaryIsGenerated ? null : mod.summary;
@@ -278,29 +355,44 @@ export function summaryToShow(mod) {
     ? [[ai, true], [own, false]]
     : [[own, false], [ai, true]];
   for (const [text, generated] of inOrder) {
-    if (!text) continue;
-    // The one that lost, where it was the AI's and the reader asked for AI
-    // words only when the author wrote none. Some of those author summaries
-    // are a pasted line that says nothing about the mod, so the AI sentence is
-    // put on hover rather than thrown away. A reader who asked for no AI words
-    // at all never gets one: `aiSummaryOf` has already returned nothing.
-    const aiAside = !generated && ai && ai !== text ? ai : null;
-    return { text, generated, aiAside };
+    if (text) return { text, generated, modId: mod.id };
   }
   return null;
 }
 
-/// What the words of a summary say on hover: who wrote them where an AI did,
-/// and the AI's own sentence where the author's words are being shown instead.
-/// Null when there is nothing worth saying.
+/// What the words of a summary say on hover: the words themselves and who
+/// wrote them, where an AI did. Null for the author's own words — a reader
+/// shown no AI summary is shown none on hover either.
 export function summaryTitle(summary) {
-  if (!summary) return null;
-  if (summary.generated) {
-    return summary.text
-      ? `${summary.text}\n\n${AI_SUMMARY_TITLE}`
-      : AI_SUMMARY_TITLE;
-  }
-  return summary.aiAside ? `AI summary: ${summary.aiAside}` : null;
+  if (!summary?.generated) return null;
+  return summary.text
+    ? `${summary.text}\n\n${AI_SUMMARY_TITLE}`
+    : AI_SUMMARY_TITLE;
+}
+
+/// Swaps the hover text on an AI summary for the AI's longer paragraph, the
+/// first time the pointer rests on it. The list file only carries the one
+/// sentence — the paragraph for every mod would take it past its size limit —
+/// so the paragraph is read from the mod's own file, which is kept for the
+/// rest of the visit. Until it arrives, and for a mod with no paragraph, the
+/// hover text stays the sentence. [node] and anything in it with a title of
+/// its own (the sparkle) are both changed.
+export function fullAiSummaryOnHover(node, summary) {
+  if (!summary?.generated || !summary.modId) return node;
+  node.addEventListener('pointerenter', async () => {
+    let paragraph;
+    try {
+      paragraph = (await modDetail(summary.modId))?.aiDescription;
+    } catch (_) {
+      return; // The sentence is still there, so nothing is lost.
+    }
+    if (!paragraph) return;
+    const title = summaryTitle({ text: paragraph, generated: true });
+    for (const target of [node, ...node.querySelectorAll('[title]')]) {
+      target.title = title;
+    }
+  }, { once: true });
+  return node;
 }
 
 /// The AI summary for a mod, or null when there is none or the reader has
@@ -1053,6 +1145,48 @@ function downloadLabel(best) {
   return best.needsAnotherStep ? 'Download page' : 'Download';
 }
 
+// The icons beside "Cards" and "Rows": four boxes, and three lines each with a
+// dot at the front. Outline, like the site's other icons (Tabler shapes).
+const VIEW_ICONS = {
+  grid: '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+    + 'stroke="currentColor" stroke-width="2" stroke-linejoin="round" '
+    + 'focusable="false" aria-hidden="true">'
+    + '<rect x="4" y="4" width="6" height="6" rx="1"/>'
+    + '<rect x="14" y="4" width="6" height="6" rx="1"/>'
+    + '<rect x="4" y="14" width="6" height="6" rx="1"/>'
+    + '<rect x="14" y="14" width="6" height="6" rx="1"/></svg>',
+  rows: '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+    + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+    + 'focusable="false" aria-hidden="true">'
+    + '<path d="M9 6h11M9 12h11M9 18h11M5 6v.01M5 12v.01M5 18v.01"/></svg>',
+};
+
+/// The Cards and Rows pair of buttons, each with its icon beside the word.
+/// `current()` says which is in use and `pick(which)` is told when the reader
+/// changes it; each page keeps its own choice, this only draws the buttons.
+export function viewToggle(current, pick) {
+  const group = el('div', { class: 'view-toggle', role: 'group' });
+  const button = (which, label) => {
+    const b = el('button', { class: 'btn btn-with-icon' }, [
+      el('span', { class: 'view-icon', html: VIEW_ICONS[which] }),
+      el('span', { text: label }),
+    ]);
+    b.addEventListener('click', () => { pick(which); light(); });
+    return b;
+  };
+  const gridBtn = button('grid', 'Cards');
+  const rowsBtn = button('rows', 'Rows');
+  const light = () => {
+    for (const [b, which] of [[gridBtn, 'grid'], [rowsBtn, 'rows']]) {
+      b.classList.toggle('on', current() === which);
+      b.setAttribute('aria-pressed', String(current() === which));
+    }
+  };
+  light();
+  group.append(gridBtn, rowsBtn);
+  return group;
+}
+
 // The original pages a summary card or row can point to. Forum leads when a
 // mod was found in more than one place, matching the order on the mod's own
 // page. The icons are kept here with the other small site-owned marks so the
@@ -1182,21 +1316,6 @@ export function downloadButton(mod, opts = {}) {
   ]);
 }
 
-/// "3 downloads", for the row of small facts a card and a row already carry.
-///
-/// It is not a link: the card, the row and the mod's name are all already links
-/// to the mod's own page, which is where the downloads are listed. Null for a
-/// mod with one download or none, which is most of them.
-export function downloadCountBadge(mod) {
-  const count = mod.downloadCount || 0;
-  if (count < 2) return null;
-  return el('span', {
-    class: 'badge downloads',
-    text: `${count} downloads`,
-    title: "Mirrors and older versions. The mod's own page lists them all.",
-  });
-}
-
 /// The button that favorites a mod, or takes it out of the favorites.
 ///
 /// Small and round on a card, where it sits over the picture; wide and worded
@@ -1247,10 +1366,11 @@ export function countedAcross(mods, pick) {
     .sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])));
 }
 
-/// A row of category chips, each with how many mods are on it, each a link to
-/// that category on the browse page.
+/// The categories as a small table: a name and how many mods are in it on
+/// each line, in as many columns as the page has room for. Each line is a link
+/// to that category on the browse page, or, on Browse, a button that picks it.
 ///
-/// This is the only way to browse by kind that a reader can actually use. The
+/// This is the only way to browse by category that a reader can actually use. The
 /// dropdown it replaces held 26 overlapping names; the site publishes thirteen
 /// and shows them all at once.
 export function categoryChips(mods, opts = {}) {
@@ -1259,17 +1379,17 @@ export function categoryChips(mods, opts = {}) {
   const inOrder = countedAcross(mods, (mod) => mod.categories);
   if (!inOrder.length) return null;
 
-  const row = el('div', { class: 'chips' });
+  const row = el('div', { class: 'category-table' });
   for (const [category, count] of inOrder) {
     const on = category === chosen;
     const chip = el(onPick ? 'button' : 'a', {
-      class: on ? 'chip on' : 'chip',
+      class: on ? 'category-cell on' : 'category-cell',
       href: onPick ? null : buildHash(['browse'], { category }),
       'aria-pressed': onPick ? String(on) : null,
       'aria-label': `${category}, ${count} mod${count === 1 ? '' : 's'}`,
     }, [
-      el('span', { text: category }),
-      el('span', { class: 'chip-count', text: String(count) }),
+      el('span', { class: 'category-name', text: category }),
+      el('span', { class: 'category-count', text: String(count) }),
     ]);
     // A chip that is already on turns itself off, so a reader is never stuck
     // inside one category with no way out but the browser's back button.
@@ -1287,7 +1407,7 @@ const SOURCE_NAMES = {
 
 /// True when Discord is the only place this mod was found. Those used to be
 /// published under a category called "Discord Only", which said where a mod
-/// came from rather than what kind of mod it is.
+/// came from rather than what category it belongs in.
 ///
 /// A mod with a forum thread never counts, even where Discord is the only
 /// place we read it from. A lot of Discord posts link the mod's own forum
