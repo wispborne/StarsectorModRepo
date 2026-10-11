@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T21:22:10.461534Z",
+  "generatedAt": "2026-10-11T06:06:39.188605Z",
   "listing": {
     "id": "mikohime-unofficial-java-28-fr-resource-cache-openal-add-on",
     "name": "Mikohime Unofficial Java 28+ & FR Resource Cache & OpenAL Add-on",
@@ -12,30 +12,23 @@
       "forum"
     ],
     "gameVersion": "0.98a-RC8",
-    "modVersion": "v0.8.0",
     "imageUrl": "https://avatars.githubusercontent.com/u/128272540?v=4",
-    "summary": "Provides a guided setup for running Starsector with modern Java 27 or 28.",
-    "summaryIsGenerated": true,
-    "aiSummary": "Provides a guided setup for running Starsector with modern Java 27 or 28.",
+    "summaryIsGenerated": false,
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/GaiusCassiusL/Starsector_Mikohime-Unofficial-Java28-Configurator/releases/download/v0.8.0/Mikohime.Unofficial.Configurator.-.Java.28+-v0.8.0-Windows.zip",
       "kind": "direct",
       "needsAnotherStep": false
     },
-    "downloadCount": 2,
+    "downloadCount": 8,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35977.0",
-    "sourceIsPublic": true,
+    "sourceIsPublic": false,
     "isWorkInProgress": false,
-    "lastReleaseDate": "2026-09-14T00:00:00.000Z",
     "addedOn": "2026-09-04",
     "threadLastPostOn": "2026-10-03",
     "needs": []
   },
-  "description": "Mikohime Unofficial Java 28+ Configurator\nA guided setup for running Starsector with modern Java 27/28\n\nLatest release: v0.8.0\n\nWindows x64\n\n\nRecommended Java for Windows - choose Java 27 or Java 28\n\n\n\n\n\nExperimental Linux x64\n\n\nRecommended Java for Linux - choose Java 27 or Java 28\n\n\n\n\n\nBoth configurators can download and install a supported Java version automatically.\n\nWhat is this?\n\nThis is an unofficial, self-contained Mikohime package with a guided configurator. It sets up Starsector to use Java 17, Java 27, or Java 28 and generates the launcher and configuration files for you.\n\nThe required Mikohime files are included with permission from the original author, Yue (Himemiko). You do not need to install the original Mikohime package separately.\n\nMain features\n\nGuided configuration through Configure_Me.cmd or Configure_Me.shDetects installed Java versions and can install a compatible JDK locallySupports Java 27 27+22-ea and Java 28 28+13-eaMemory and CPU recommendations based on your systemFull, Reduced, and Minimal logging modesOptional Large Pages or Linux huge-page configurationSupport for Fast RenderingOptional installation and configuration of FR Resource CacheOptional installation and configuration of OpenAL Add-onSupport for StarsectorPrepatcher 0.18.4 or newerCreates a ready-to-use platform-specific launcher\n\nWINDOWS INSTALLATION\n\nWindows installation\n1. Download the Windows ZIP.\n\n2. Extract everything into your Starsector installation folder.\n\nThe files should be located like this:\n\nStarsector\\starsector.exeStarsector\\Configure_Me.cmdStarsector\\mikohime\\\n3. Keep Starsector's original jre folder. Do not delete or replace it. Add a Java 27 or Java 28 JDK manually, or install either supported version from within the configurator during step 5.\n\n4. Run Configure_Me.cmd. If Starsector is installed under Program Files or Program Files (x86), right-click the configurator and select Run as administrator.\n\n5. Follow the prompts to select or install Java and configure memory, CPU, logging, Large Pages, Fast Rendering, FR Resource Cache, and StarsectorPrepatcher.\n\n6. Launch the game using Miko_Rouge.bat.\n\nIf Starsector is installed under Program Files or Program Files (x86) and you enabled FR Resource Cache, run Miko_Rouge.bat as administrator for the first launch. Allow Starsector to reach the main menu so the cache directory and initial cache files can be created.\n\nEXPERIMENTAL 64-BIT LINUX SUPPORT\n\nLinux support is still under development. Expect bugs and compatibility issues.\n\nExperimental Linux installation\nImportant: The Linux package passes build and native-library initialization checks, but it has not completed full Starsector gameplay, mod, GPU, and distribution testing. Do not treat it as a fully supported release.\n\n1. Download the experimental Linux .tar.gz package.\n\n2. Extract it into your Starsector installation directory beside starsector.sh.\n\nThe files should be located like this:\n\nStarsector/starsector.shStarsector/Configure_Me.shStarsector/mikohime/\n3. Open a terminal in the Starsector installation directory.\n\n4. If necessary, make the configurator executable:\n\nchmod +x Configure_Me.sh\n5. Run the configurator:\n\n./Configure_Me.sh\n6. Follow the guided setup to select Java and configure memory, CPU, logging, huge pages, Fast Rendering, FR Resource Cache, and StarsectorPrepatcher.\n\n7. Launch Starsector using:\n\n./Miko_Rouge.sh\nThe configurator can install the supported Java builds automatically:\n\n./Configure_Me.sh --install-java 27\n./Configure_Me.sh --install-java 28\nLinux requires the usual Starsector desktop runtime libraries, including X11, XRandR, XCursor, XF86VidMode, OpenAL, and ALSA.\n\nMods that use OpenCL, such as BoxUtil, require a working Mesa or GPU-vendor OpenCL ICD. Mikohime intentionally does not bundle libOpenCL.so because it must match your installed GPU driver.\n\nNote: For Fast Rendering to work on Linux you need the Linux fork. https://github.com/jontyab/starsector-render\n\nMANUAL JAVA INSTALLATION\nThere is an option in the configurator to download the two tested Java versions, only do this if you feel like doing the download and install manually or using a different, untested, version of Java.\n\nJava installation information\nThe configurator can install Java 27 or Java 28 locally beside the Starsector launcher. It does not modify your system-wide Java installation.\n\nFor most users trying the newest Java setup, use Java 28 28+13-ea.\n\nExample Windows locations:\n\nStarsector\\jdk-27+22\\Starsector\\jdk-28+13\\\nExample Linux locations:\n\nStarsector/jdk-27+22/Starsector/jdk-28+13/\nKeep Starsector's bundled Java runtime.\n\nLatest Mikohime changes\nv0.8.0\n\nAdded simpler Recommended, Basic, and Advanced Windows setup workflowsAdded clearer system summaries and update checks for optional componentsAdded an option to securely download, install, and enable FR Resource Cache when Fast Rendering is detectedAdded an optional Windows OpenAL Soft 1.25.1 download with backup, repair, recovery, uninstall, and audio configuration supportAdded the Toadsector launcher background for Windows and LinuxRedesigned Windows menus, navigation, recommendations, and component managementImproved the safety and consistency of configuration generationFixed Java 28 logging and compiler-directive settings across Windows workflowsFixed component download links incorrectly reporting failuresFixed menu alignment and inconsistent navigation controls\nv0.7.6\n\nAdded stable 64-bit Linux support and the Miko_Rouge.sh launcherAdded Linux LWJGL, OpenAL, and JInput native librariesAdded support for the Linux Fast Rendering forkAdded separate Windows ZIP and Linux tar.gz release packagesUpdated Linux to use Starsector's native flat directory layout without starsector-coreRemoved StarsectorPrepatcher options from Linux because it is not Linux-compatible; Windows support is unchangedFixed an LWJGL native-path error that could cause a Range [0, -1) crashImproved Windows administrator, write-access, and manual Java-download handlingv0.7.5\n\nAdded an experimental 64-bit Linux configurator and generated Miko_Rouge.sh launcherAdded Linux LWJGL, OpenAL, and JInput native librariesAdded separate Windows and Linux release packagesAdded Linux Java, memory, CPU, logging, rendering, cache, and Prepatcher configurationAdded automatic Java installation on Linux with checksum validationFixed Linux support for Starsector's native flat installation layoutFixed Linux relative Java paths and launcher working-directory handlingImproved Windows manual Java-download handling\n\nFR Resource Cache\nAn optional persistent resource cache for Fast Rendering\n\nLatest release: v0.4\n\nWhat does it do?\n\nFR Resource Cache improves startup performance by allowing Fast Rendering to reuse a persistent cache instead of repeatedly reading thousands of small files from installed mod folders.\n\nIt preserves Fast Rendering's resource resolution and mod precedence. Unsupported, invalid, changed, or unavailable cache entries safely fall back to the original files.\n\nRequirements\n\nFast Rendering\n\nMikohime J27/28+ is not required. The Mikohime configurator is only an optional, convenient way to download, install, and configure FR Resource Cache.\n\nManual FR Resource Cache installation\n1. Download the latest FR Resource Cache release.\n\n2. Extract fr-resource-cache-agent.jar into the appropriate location.\n\nWindows:\n\nStarsector\\starsector-core\\fr-resource-cache-agent.jar\nLinux:\n\nStarsector/fr-resource-cache-agent.jar\n3. Add the FR Resource Cache Java agent before the Fast Rendering agent.\n\nAdd the following arguments to fr.vmparams. \n\nWindows example:\n\n-javaagent:fr-resource-cache-agent.jar=gameRoot=.,installRoot=..,cacheDir=..\\fr-resource-cache,flushDelaySeconds=30,memoryCacheMiB=128,maxFileSize=1048576\n-javaagent:fr.agent.jar\nLinux:\n\n-javaagent:fr-resource-cache-agent.jar=gam\n\n…",
-  "descriptionHtml": "<div class=\"align-center\"><span class=\"size-bigger\"><strong>Mikohime Unofficial Java 28+ Configurator</strong></span><br>A guided setup for running Starsector with modern Java 27/28<br><br><em>Latest release: v0.8.0</em><br><br><strong>Windows x64</strong><br><a href=\"https://github.com/GaiusCassiusL/Starsector_Mikohime-Unofficial-Java28-Configurator/releases/download/v0.8.0/Mikohime.Unofficial.Configurator.-.Java.28+-v0.8.0-Windows.zip\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/static/v1?label=DOWNLOAD&amp;message=WINDOWS%20v0.8.0&amp;labelColor=555555&amp;color=35c900&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><em>Recommended Java for Windows - choose Java 27 or Java 28</em><br><br><a href=\"https://github.com/adoptium/temurin27-binaries/releases/download/jdk-27%2B22-ea-beta/OpenJDK-jdk_x64_windows_hotspot_27_22-ea.zip\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/static/v1?label=DOWNLOAD%20JAVA&amp;message=27%2B22-EA%20WINDOWS&amp;labelColor=555555&amp;color=0788d1&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><a href=\"https://github.com/adoptium/temurin28-binaries/releases/download/jdk-28%2B13-ea-beta/OpenJDK-jdk_x64_windows_hotspot_28_13-ea.zip\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/static/v1?label=DOWNLOAD%20JAVA&amp;message=28%2B13-EA%20WINDOWS&amp;labelColor=555555&amp;color=0788d1&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><strong><span class=\"author-colour\" style=\"--c:#ffa500\">Experimental Linux x64</span></strong><br><a href=\"https://github.com/GaiusCassiusL/Starsector_Mikohime-Unofficial-Java28-Configurator/releases/download/v0.8.0/Mikohime.Unofficial.Configurator.-.Java.28+-v0.8.0-Linux.tar.gz\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/static/v1?label=DOWNLOAD&amp;message=EXPERIMENTAL%20LINUX%20v0.8.0&amp;labelColor=555555&amp;color=e69500&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><em>Recommended Java for Linux - choose Java 27 or Java 28</em><br><br><a href=\"https://github.com/adoptium/temurin27-binaries/releases/download/jdk-27%2B22-ea-beta/OpenJDK-jdk_x64_linux_hotspot_27_22-ea.tar.gz\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/static/v1?label=DOWNLOAD%20JAVA&amp;message=27%2B22-EA%20LINUX&amp;labelColor=555555&amp;color=0788d1&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><a href=\"https://github.com/adoptium/temurin28-binaries/releases/download/jdk-28%2B13-ea-beta/OpenJDK-jdk_x64_linux_hotspot_28_13-ea.tar.gz\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/static/v1?label=DOWNLOAD%20JAVA&amp;message=28%2B13-EA%20LINUX&amp;labelColor=555555&amp;color=0788d1&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><span class=\"size-small\">Both configurators can download and install a supported Java version automatically.</span></div><br><strong>What is this?</strong><br><br>This is an unofficial, self-contained Mikohime package with a guided configurator. It sets up Starsector to use Java 17, Java 27, or Java 28 and generates the launcher and configuration files for you.<br>The required Mikohime files are included with permission from the original author, Yue (Himemiko). You do not need to install the original Mikohime package separately.<br><br><strong>Main features</strong><br><br><ul><li>Guided configuration through <code>Configure_Me.cmd</code> or <code>Configure_Me.sh</code></li><li>Detects installed Java versions and can install a compatible JDK locally</li><li>Supports Java 27 <code>27+22-ea</code> and Java 28 <code>28+13-ea</code></li><li>Memory and CPU recommendations based on your system</li><li>Full, Reduced, and Minimal logging modes</li><li>Optional Large Pages or Linux huge-page configuration</li><li>Support for Fast Rendering</li><li>Optional installation and configuration of FR Resource Cache</li><li>Optional installation and configuration of OpenAL Add-on</li><li>Support for StarsectorPrepatcher 0.18.4 or newer</li><li>Creates a ready-to-use platform-specific launcher</li></ul><br><div class=\"align-center\"><strong>WINDOWS INSTALLATION</strong></div><br><details class=\"spoiler\"><summary>Windows installation</summary>1. Download the Windows ZIP.<br><br>2. Extract everything into your Starsector installation folder.<br><br><strong>The files should be located like this:</strong><br><br><ul><li><code>Starsector\\starsector.exe</code></li><li><code>Starsector\\Configure_Me.cmd</code></li><li><code>Starsector\\mikohime\\</code></li></ul><br>3. Keep Starsector's original <code>jre</code> folder. Do not delete or replace it. Add a Java 27 or Java 28 JDK manually, or install either supported version from within the configurator during step 5.<br><br>4. Run <code>Configure_Me.cmd</code>. If Starsector is installed under <code>Program Files</code> or <code>Program Files (x86)</code>, right-click the configurator and select <strong>Run as administrator</strong>.<br><br>5. Follow the prompts to select or install Java and configure memory, CPU, logging, Large Pages, Fast Rendering, FR Resource Cache, and StarsectorPrepatcher.<br><br>6. Launch the game using <code>Miko_Rouge.bat</code>.<br><br>If Starsector is installed under <code>Program Files</code> or <code>Program Files (x86)</code> and you enabled FR Resource Cache, run <code>Miko_Rouge.bat</code> as administrator for the first launch. Allow Starsector to reach the main menu so the cache directory and initial cache files can be created.</details><br><div class=\"align-center\"><strong><span class=\"author-colour\" style=\"--c:#ffa500\">EXPERIMENTAL 64-BIT LINUX SUPPORT</span></strong><br><br>Linux support is still under development. Expect bugs and compatibility issues.</div><br><details class=\"spoiler\"><summary>Experimental Linux installation</summary><span class=\"author-colour\" style=\"--c:#ff0000\"><strong>Important:</strong></span> The Linux package passes build and native-library initialization checks, but it has not completed full Starsector gameplay, mod, GPU, and distribution testing. Do not treat it as a fully supported release.<br><br>1. Download the experimental Linux <code>.tar.gz</code> package.<br><br>2. Extract it into your Starsector installation directory beside <code>starsector.sh</code>.<br><br><strong>The files should be located like this:</strong><br><br><ul><li><code>Starsector/starsector.sh</code></li><li><code>Starsector/Configure_Me.sh</code></li><li><code>Starsector/mikohime/</code></li></ul><br>3. Open a terminal in the Starsector installation directory.<br><br>4. If necessary, make the configurator executable:<br><br><blockquote>chmod +x Configure_Me.sh</blockquote><br>5. Run the configurator:<br><br><blockquote>./Configure_Me.sh</blockquote><br>6. Follow the guided setup to select Java and configure memory, CPU, logging, huge pages, Fast Rendering, FR Resource Cache, and StarsectorPrepatcher.<br><br>7. Launch Starsector using:<br><br><blockquote>./Miko_Rouge.sh</blockquote><br>The configurator can install the supported Java builds automatically:<br><br><blockquote>./Configure_Me.sh --install-java 27<br>./Configure_Me.sh --install-java 28</blockquote><br>Linux requires the usual Starsector desktop runtime libraries, including X11, XRandR, XCursor, XF86VidMode, OpenAL, and ALSA.<br><br>Mods that use OpenCL, such as BoxUtil, require a working Mesa or GPU-vendor OpenCL ICD. Mikohime intentionally does not bundle <code>libOpenCL.so</code> because it must match your installed GPU driver.<br><br>Note: For Fast Rendering to work on Linux you need the Linux fork. <a href=\"https://github.com/jontyab/starsector-render\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/jontyab/starsector-render</a></details><br><div class=\"align-center\"><strong>MANUAL JAVA INSTALLATION</strong><br>There is an option in the configurator to download the two tested Java versions, only do this if you feel like doing the download and install manually or using a different, untested, version of Java.</div><br><details class=\"spoiler\"><summary>Java installation information</summary>The configurator can install Java 27 or Java 28 locally beside the Starsector launcher. It does not modify your system-wide Java installation.<br><br>For most users trying the newest Java setup, use Java 28 <code>28+13-ea</code>.<br><br><strong>Example Windows locations:</strong><br><br><ul><li><code>Starsector\\jdk-27+22\\</code></li><li><code>Starsector\\jdk-28+13\\</code></li></ul><br><strong>Example Linux locations:</strong><br><br><ul><li><code>Starsector/jdk-27+22/</code></li><li><code>Starsector/jdk-28+13/</code></li></ul><br>Keep Starsector's bundled Java runtime.</details><br><details class=\"spoiler\"><summary>Latest Mikohime changes</summary><strong>v0.8.0</strong><br><br><ul><li>Added simpler Recommended, Basic, and Advanced Windows setup workflows</li><li>Added clearer system summaries and update checks for optional components</li><li>Added an option to securely download, install, and enable FR Resource Cache when Fast Rendering is detected</li><li>Added an optional Windows OpenAL Soft 1.25.1 download with backup, repair, recovery, uninstall, and audio configuration support</li><li>Added the Toadsector launcher background for Windows and Linux</li><li>Redesigned Windows menus, navigation, recommendations, and component management</li><li>Improved the safety and consistency of configuration generation</li><li>Fixed Java 28 logging and compiler-directive settings across Windows workflows</li><li>Fixed component download links incorrectly reporting failures</li><li>Fixed menu alignment and inconsistent navigation controls</li></ul><br><strong>v0.7.6</strong><br><br><ul><li>Added stable 64-bit Linux support and the <code>Miko_Rouge.sh</code> launcher</li><li>Added Linux LWJGL, OpenAL, and JInput native libraries</li><li>Added support for the Linux Fast Rendering fork</li><li>Added separate Windows ZIP and Linux <code>tar.gz</code> release packages</li><li>Updated Linux to use Starsector's native flat directory layout without <code>starsector-core</code></li><li>Removed StarsectorPrepatcher options from Linux because it is not Linux-compatible; Windows support is unchanged</li><li>Fixed an LWJGL native-path error that could cause a <code>Range [0, -1)</code> crash</li><li>Improved Windows administrator, write-access, and manual Java-download handling</li></ul><strong>v0.7.5</strong><br><br><ul><li>Added an experimental 64-bit Linux configurator and generated <code>Miko_Rouge.sh</code> launcher</li><li>Added Linux LWJGL, OpenAL, and JInput native libraries</li><li>Added separate Windows and Linux release packages</li><li>Added Linux Java, memory, CPU, logging, rendering, cache, and Prepatcher configuration</li><li>Added automatic Java installation on Linux with checksum validation</li><li>Fixed Linux support for Starsector's native flat installation layout</li><li>Fixed Linux relative Java paths and launcher working-directory handling</li><li>Improved Windows manual Java-download handling</li></ul></details><br><br><div class=\"align-center\"><span class=\"size-bigger\"><strong>FR Resource Cache</strong></span><br>An optional persistent resource cache for Fast Rendering<br><br><em>Latest release: v0.4</em><br><br><a href=\"https://github.com/GaiusCassiusL/Starsector_FR-Resource-Cache/releases/download/v0.4/FR.Resource.Cache.-v0.4.zip\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/static/v1?label=DOWNLOAD&amp;message=FR%20RESOURCE%20CACHE%20v0.4&amp;labelColor=555555&amp;color=35c900&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></div><br><strong>What does it do?</strong><br><br>FR Resource Cache improves startup performance by allowing Fast Rendering to reuse a persistent cache instead of repeatedly reading thousands of small files from installed mod folders.<br>It preserves Fast Rendering's resource resolution and mod precedence. Unsupported, invalid, changed, or unavailable cache entries safely fall back to the original files.<br><br><strong>Requirements</strong><br><ul><li>Fast Rendering</li></ul>Mikohime J27/28+ is not required. The Mikohime configurator is only an optional, convenient way to download, install, and configure FR Resource Cache.<br><br><details class=\"spoiler\"><summary>Manual FR Resource Cache installation</summary>1. Download the latest FR Resource Cache release.<br><br>2. Extract <code>fr-resource-cache-agent.jar</code> into the appropriate location.<br><br><strong>Windows:</strong><br><br><ul><li><code>Starsector\\starsector-core\\fr-resource-cache-agent.jar</code></li></ul><br><strong>Linux:</strong><br><br><ul><li><code>Starsector/fr-resource-cache-agent.jar</code></li></ul><br>3. Add the FR Resource Cache Java agent before the Fast Rendering agent.<br><br>Add the following arguments to <code>fr.vmparams</code>. <br><br><strong>Windows example:</strong><br><br><blockquote>-javaagent:fr-resource-cache-agent.jar=gameRoot=.,installRoot=..,cacheDir=..\\fr-resource-cache,flushDelaySeconds=30,memoryCacheMiB=128,maxFileSize=1048576<br>-javaagent:fr.agent.jar</blockquote><br><strong>Linux:</strong><br><br><blockquote>-javaagent:fr-resource-cache-agent.jar=gam</blockquote></details><p>…</p>",
   "descriptionIsGenerated": false,
-  "aiDescription": "Sets up Starsector to use Java 17, Java 27, or Java 28 and generates the launcher and configuration files. It includes required Mikohime files and supports optional components like Fast Rendering, FR Resource Cache, and OpenAL Add-on.",
   "rawCategories": [],
   "gallery": [
     {
@@ -80,7 +73,25 @@
       "directUrl": "https://github.com/GaiusCassiusL/Starsector_Mikohime-Unofficial-Java28-Configurator/releases/download/v0.8.0/Mikohime.Unofficial.Configurator.-.Java.28+-v0.8.0-Windows.zip",
       "fileName": "Mikohime.Unofficial.Configurator.-.Java.28+-v0.8.0-Windows.zip",
       "kind": "direct",
-      "label": "Windows x64",
+      "label": "",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/adoptium/temurin27-binaries/releases/download/jdk-27%2B22-ea-beta/OpenJDK-jdk_x64_windows_hotspot_27_22-ea.zip",
+      "directUrl": "https://github.com/adoptium/temurin27-binaries/releases/download/jdk-27%2B22-ea-beta/OpenJDK-jdk_x64_windows_hotspot_27_22-ea.zip",
+      "fileName": "OpenJDK-jdk_x64_windows_hotspot_27_22-ea.zip",
+      "kind": "direct",
+      "label": "",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/adoptium/temurin28-binaries/releases/download/jdk-28%2B13-ea-beta/OpenJDK-jdk_x64_windows_hotspot_28_13-ea.zip",
+      "directUrl": "https://github.com/adoptium/temurin28-binaries/releases/download/jdk-28%2B13-ea-beta/OpenJDK-jdk_x64_windows_hotspot_28_13-ea.zip",
+      "fileName": "OpenJDK-jdk_x64_windows_hotspot_28_13-ea.zip",
+      "kind": "direct",
+      "label": "",
       "host": "GitHub",
       "needsAnotherStep": false
     },
@@ -89,73 +100,52 @@
       "directUrl": "https://github.com/GaiusCassiusL/Starsector_Mikohime-Unofficial-Java28-Configurator/releases/download/v0.8.0/Mikohime.Unofficial.Configurator.-.Java.28+-v0.8.0-Linux.tar.gz",
       "fileName": "Mikohime.Unofficial.Configurator.-.Java.28+-v0.8.0-Linux.tar.gz",
       "kind": "direct",
-      "label": "Experimental Linux x64",
+      "label": "",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/adoptium/temurin27-binaries/releases/download/jdk-27%2B22-ea-beta/OpenJDK-jdk_x64_linux_hotspot_27_22-ea.tar.gz",
+      "directUrl": "https://github.com/adoptium/temurin27-binaries/releases/download/jdk-27%2B22-ea-beta/OpenJDK-jdk_x64_linux_hotspot_27_22-ea.tar.gz",
+      "fileName": "OpenJDK-jdk_x64_linux_hotspot_27_22-ea.tar.gz",
+      "kind": "direct",
+      "label": "",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/adoptium/temurin28-binaries/releases/download/jdk-28%2B13-ea-beta/OpenJDK-jdk_x64_linux_hotspot_28_13-ea.tar.gz",
+      "directUrl": "https://github.com/adoptium/temurin28-binaries/releases/download/jdk-28%2B13-ea-beta/OpenJDK-jdk_x64_linux_hotspot_28_13-ea.tar.gz",
+      "fileName": "OpenJDK-jdk_x64_linux_hotspot_28_13-ea.tar.gz",
+      "kind": "direct",
+      "label": "",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/GaiusCassiusL/Starsector_FR-Resource-Cache/releases/download/v0.4/FR.Resource.Cache.-v0.4.zip",
+      "directUrl": "https://github.com/GaiusCassiusL/Starsector_FR-Resource-Cache/releases/download/v0.4/FR.Resource.Cache.-v0.4.zip",
+      "fileName": "FR.Resource.Cache.-v0.4.zip",
+      "kind": "direct",
+      "label": "",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/GaiusCassiusL/Starsector_Mikohime-OpenAL-Addon/releases/download/v1.25.1/Mikohime.OpenAL.Addon.-v1.25.1-Windows.zip",
+      "directUrl": "https://github.com/GaiusCassiusL/Starsector_Mikohime-OpenAL-Addon/releases/download/v1.25.1/Mikohime.OpenAL.Addon.-v1.25.1-Windows.zip",
+      "fileName": "Mikohime.OpenAL.Addon.-v1.25.1-Windows.zip",
+      "kind": "direct",
+      "label": "",
       "host": "GitHub",
       "needsAnotherStep": false
     }
   ],
-  "changelog": {
-    "v0.8.0": "Added simpler Recommended, Basic, and Advanced Windows setup workflows\nAdded clearer system summaries and update checks for optional components\nAdded an option to securely download, install, and enable FR Resource Cache when Fast Rendering is detected\nAdded an optional Windows OpenAL Soft 1.25.1 download with backup, repair, recovery, uninstall, and audio configuration support\nAdded the Toadsector launcher background for Windows and Linux\nRedesigned Windows menus, navigation, recommendations, and component management\nImproved the safety and consistency of configuration generation\nFixed Java 28 logging and compiler-directive settings across Windows workflows\nFixed component download links incorrectly reporting failures\nFixed menu alignment and inconsistent navigation controls",
-    "v0.7.6": "Added stable 64-bit Linux support and the Miko_Rouge.sh launcher\nAdded Linux LWJGL, OpenAL, and JInput native libraries\nAdded support for the Linux Fast Rendering fork\nAdded separate Windows ZIP and Linux tar.gz release packages\nUpdated Linux to use Starsector's native flat directory layout without starsector-core\nRemoved StarsectorPrepatcher options from Linux because it is not Linux-compatible; Windows support is unchanged\nFixed an LWJGL native-path error that could cause a Range [0, -1) crash\nImproved Windows administrator, write-access, and manual Java-download handling",
-    "v0.7.5": "Added an experimental 64-bit Linux configurator and generated Miko_Rouge.sh launcher\nAdded Linux LWJGL, OpenAL, and JInput native libraries\nAdded separate Windows and Linux release packages\nAdded Linux Java, memory, CPU, logging, rendering, cache, and Prepatcher configuration\nAdded automatic Java installation on Linux with checksum validation\nFixed Linux support for Starsector's native flat installation layout\nFixed Linux relative Java paths and launcher working-directory handling\nImproved Windows manual Java-download handling"
-  },
-  "changelogUrl": "https://github.com/GaiusCassiusL/Starsector_Mikohime-Unofficial-Java28-Configurator/releases",
-  "sourceCodeUrl": "https://github.com/GaiusCassiusL/Starsector_Mikohime-Unofficial-Java28-Configurator",
+  "changelog": {},
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35977.0",
-  "releases": [
-    {
-      "modId": "mikohime-unofficial-java-28-fr-resource-cache-openal-add-on",
-      "modName": "Mikohime Unofficial Java 28+ & FR Resource Cache & OpenAL Add-on",
-      "seenOn": "2026-09-14",
-      "oldVersion": "v0.7.6",
-      "newVersion": "v0.8.0",
-      "gameVersion": "0.98a-RC8",
-      "changelogNotes": "Added simpler Recommended, Basic, and Advanced Windows setup workflows\nAdded clearer system summaries and update checks for optional components\nAdded an option to securely download, install, and enable FR Resource Cache when Fast Rendering is detected\nAdded an optional Windows OpenAL Soft 1.25.1 download with backup, repair, recovery, uninstall, and audio configuration support\nAdded the Toadsector launcher background for Windows and Linux\nRedesigned Windows menus, navigation, recommendations, and component management\nImproved the safety and consistency of configuration generation\nFixed Java 28 logging and compiler-directive settings across Windows workflows\nFixed component download links incorrectly reporting failures\nFixed menu alignment and inconsistent navigation controls"
-    },
-    {
-      "modId": "mikohime-unofficial-java-28-fr-resource-cache-openal-add-on",
-      "modName": "Mikohime Unofficial Java 28+ & FR Resource Cache & OpenAL Add-on",
-      "seenOn": "2026-09-07",
-      "oldVersion": "v0.7.5",
-      "newVersion": "v0.7.6",
-      "gameVersion": "0.98a-RC8"
-    }
-  ],
+  "releases": [],
   "threadLastPostOn": "2026-10-03",
   "sameNameMods": [],
-  "addons": [
-    {
-      "name": "FR Resource Cache",
-      "role": "addon",
-      "requires": "Fast Rendering",
-      "downloads": [
-        {
-          "url": "https://github.com/GaiusCassiusL/Starsector_FR-Resource-Cache/releases/download/v0.4/FR.Resource.Cache.-v0.4.zip",
-          "directUrl": "https://github.com/GaiusCassiusL/Starsector_FR-Resource-Cache/releases/download/v0.4/FR.Resource.Cache.-v0.4.zip",
-          "fileName": "FR.Resource.Cache.-v0.4.zip",
-          "kind": "direct",
-          "label": "Latest release: v0.4",
-          "host": "GitHub",
-          "needsAnotherStep": false
-        }
-      ]
-    },
-    {
-      "name": "Mikohime OpenAL Add-on",
-      "role": "addon",
-      "requires": "Mikohime Unofficial Java 28+ Configurator",
-      "downloads": [
-        {
-          "url": "https://github.com/GaiusCassiusL/Starsector_Mikohime-OpenAL-Addon/releases/download/v1.25.1/Mikohime.OpenAL.Addon.-v1.25.1-Windows.zip",
-          "directUrl": "https://github.com/GaiusCassiusL/Starsector_Mikohime-OpenAL-Addon/releases/download/v1.25.1/Mikohime.OpenAL.Addon.-v1.25.1-Windows.zip",
-          "fileName": "Mikohime.OpenAL.Addon.-v1.25.1-Windows.zip",
-          "kind": "direct",
-          "label": "Windows x64",
-          "host": "GitHub",
-          "needsAnotherStep": false
-        }
-      ]
-    }
-  ]
+  "addons": []
 }
