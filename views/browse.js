@@ -20,8 +20,8 @@ import {
 import { compileSearch } from '../search.js';
 
 const VIEW_KEY = 'starmodderView';
-/// Where the filters sit: across the top (the default) or in a column at the
-/// left side.
+/// Where the filters sit: in a column at the left (the default) or across
+/// the top.
 const LAYOUT_KEY = 'starmodderBrowseLayout';
 const FILTERS_KEY = 'starmodderBrowseFilters';
 const NO_REQUIREMENTS = '__none__';
@@ -277,12 +277,12 @@ function fillResultLine(line, all, matches, state, onShowEveryRelease) {
 
 // --- The controls ---
 
-/// The layout the reader last picked, or the filters along the top.
+/// The layout the reader last picked, or the filters at the side.
 function savedLayout() {
   try {
-    return localStorage.getItem(LAYOUT_KEY) === 'side' ? 'side' : 'top';
+    return localStorage.getItem(LAYOUT_KEY) === 'top' ? 'top' : 'side';
   } catch {
-    return 'top';
+    return 'side';
   }
 }
 
