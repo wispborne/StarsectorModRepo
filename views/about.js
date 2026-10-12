@@ -2,7 +2,7 @@
 // problem.
 
 import {
-    breadcrumbs, clear, el, formatDay, modList, PROBLEM_REPORT_BASE,
+    clear, el, formatDay, modList, PROBLEM_REPORT_BASE,
 } from '../lib.js';
 
 const MOD_REPO_URL = 'https://github.com/wispborne/StarsectorModRepo';
@@ -36,7 +36,6 @@ export async function render(root) {
 
     document.title = 'About | Starmodder';
     clear(root);
-    root.append(breadcrumbs([{label: 'About'}]));
     root.append(el('div', {class: 'stack'}, [
         el('div', {class: 'page-head'}, [
             el('h1', {text: 'About Starmodder'}),

@@ -10,6 +10,11 @@ import { address } from './address.js';
 import { everyOtherName, modName, otherNamesOf } from './mod_names.js';
 
 export { everyOtherName, modName, otherNamesOf };
+import {
+  compareGameVersions, compareVersions, gameVersionFamily, repairGameVersion,
+} from './version.js';
+
+export { compareGameVersions, compareVersions, gameVersionFamily, repairGameVersion };
 
 // --- Where the data comes from ---
 
@@ -1572,25 +1577,6 @@ export function searchHelpField(input, { hideWhileTyping = false } = {}) {
 /// and picture when it is pasted somewhere that fetches it.
 export function modHref(id) {
   return address().modHref(id);
-}
-
-/// The number part of a game version: "0.98a", "0.98" and "0.98a-RC8" all come
-/// back as "0.98". It is what the filter groups on, so one game release is one
-/// choice rather than three.
-export function gameVersionFamily(version) {
-  const match = /^\s*v?(\d+(?:\.\d+)*)/.exec(String(version || ''));
-  return match ? match[1] : String(version || '').trim();
-}
-
-/// Compares two game versions as numbers, so "0.9" comes before "0.98".
-export function compareGameVersions(a, b) {
-  const left = gameVersionFamily(a).split('.').map(Number);
-  const right = gameVersionFamily(b).split('.').map(Number);
-  for (let i = 0; i < Math.max(left.length, right.length); i++) {
-    const diff = (left[i] || 0) - (right[i] || 0);
-    if (diff) return diff;
-  }
-  return 0;
 }
 
 /// How few mods a game version can have and still be taken for the current one.

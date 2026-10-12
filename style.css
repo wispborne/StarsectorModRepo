@@ -532,7 +532,6 @@ main {
    push the heading away from its own words. */
 .stack > h2, .stack > h3 { margin-bottom: 0; }
 .stack > .release-day { margin-bottom: 0; }
-.stack > .search-hint { margin-top: 0; }
 
 
 .loading { color: var(--text-dim); padding: 24px 0; }
@@ -658,7 +657,6 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 
 .search-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
 .search-box { flex: 1 1 280px; min-width: 0; }
-.search-hint { color: var(--text-dim); font-size: var(--type-small); margin: 6px 0 0; }
 
 /* The search box, the button that explains it, and the panel that button
    opens. The panel hangs off the field the way the suggestions under the
@@ -708,7 +706,7 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .search-help strong { color: var(--text); font-weight: 600; }
 /* The example is something to type, not something to press, so it is not
    cyan. The line round it is what says "these are the exact letters". */
-.search-help code, .search-hint code {
+.search-help code {
   font-family: inherit; font-size: var(--type-tiny); color: var(--text);
   padding: 1px 6px; border: 1px solid var(--border); border-radius: 4px;
   background: var(--surface-2); white-space: nowrap;
@@ -768,6 +766,44 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .category-cell:hover .category-count { color: var(--primary); }
 .category-cell.on .category-count { color: var(--on); }
 .result-line { color: var(--text-dim); font-size: var(--type-small); }
+
+/* Browse with the filters in a column at the left, the way Modrinth lays out
+   its search. The column stays in view under the top bar and scrolls on its
+   own when it is taller than the window. On a narrow screen it goes above the
+   results. */
+.browse-split {
+  display: grid; gap: var(--gap-wide); align-items: start;
+  grid-template-columns: 260px minmax(0, 1fr);
+}
+.browse-main { min-width: 0; }
+.browse-filters {
+  display: flex; flex-direction: column; gap: var(--gap);
+  position: sticky; top: 64px;
+  max-height: calc(100vh - 80px); overflow-y: auto;
+  scrollbar-width: thin; scrollbar-color: var(--primary-bar) transparent;
+}
+.filter-panel { display: flex; flex-direction: column; }
+.filter-panel-head {
+  cursor: pointer; list-style: none; font-weight: 600;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.filter-panel-head::-webkit-details-marker { display: none; }
+.filter-panel-head::after { content: '\25B4'; color: var(--text-dim); }
+.filter-panel:not([open]) > .filter-panel-head::after { content: '\25BE'; }
+.filter-panel[open] > .filter-panel-head { margin-bottom: 8px; }
+/* The lists at the side are one column of plain lines, not boxes. */
+.browse-filters .category-table { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+.browse-filters .category-cell { border-color: transparent; padding: 4px 8px; }
+.browse-filters .filter-label { display: block; }
+.browse-filters select { width: 100%; }
+.check-list { display: flex; flex-direction: column; gap: 6px; font-size: var(--type-small); }
+.check-row { display: flex; gap: 8px; align-items: flex-start; cursor: pointer; }
+.check-row input { margin: 2px 0 0; accent-color: var(--on); }
+.filters-gap { flex: 1 1 auto; }
+@media (max-width: 900px) {
+  .browse-split { grid-template-columns: minmax(0, 1fr); }
+  .browse-filters { position: static; max-height: none; overflow: visible; }
+}
 
 /* --- The mod list --- */
 
@@ -940,6 +976,11 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .badge.game.current { color: var(--success); border-color: var(--edge-success); }
 .badge.game.one-behind { color: var(--warning); border-color: var(--edge-warning); }
 .badge.game.old { color: var(--text-dim); opacity: 0.75; }
+/* On a mod's own page an old game version is a warning, not a faded note:
+   the reader is deciding whether to install it. */
+.side-value .badge.game.old {
+  color: var(--warning); border-color: var(--edge-warning); opacity: 1;
+}
 .badge.wip { color: var(--warning); border-color: var(--edge-warning); }
 .badge.save-ok { color: var(--success); border-color: var(--edge-success); }
 .badge.save-no { color: var(--warning); border-color: var(--edge-warning); }

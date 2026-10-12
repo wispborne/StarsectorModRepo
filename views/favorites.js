@@ -10,7 +10,7 @@
 // here as everywhere else, and its ☆ is how it comes off the list.
 
 import {
-  breadcrumbs, clear, currentGameVersion, el, favorites, favoritesHref, go,
+  clear, currentGameVersion, el, favorites, favoritesHref, go,
   hashQuery, modList, setFavorites, viewToggle, watchFavorites,
 } from '../lib.js';
 import { modGrid, modRows } from './browse.js';
@@ -81,7 +81,6 @@ export async function render(root) {
 
   document.title = mine ? 'Favorites | Starmodder' : 'Shared favorites | Starmodder';
   clear(root);
-  root.append(breadcrumbs([{ label: mine ? 'Favorites' : 'Shared favorites' }]));
 
   const undo = mine ? undoClearLine() : null;
   clearedIds = null;

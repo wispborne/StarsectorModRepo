@@ -6,7 +6,7 @@
 // a filtered list brings back the same list.
 
 import {
-  aiSparkle, aiSummaryNote, breadcrumbs, buildHash, categoryChips, clear,
+  aiSparkle, aiSummaryNote, buildHash, categoryChips, clear,
   countedAcross,
   currentGameVersion, downloadButton, el, favoriteToggle,
   formatDay, gameVersionFamily, gameVersions, hashQuery, howLongAgo,
@@ -20,8 +20,15 @@ import {
 import { compileSearch } from '../search.js';
 
 const VIEW_KEY = 'starmodderView';
+/// Where the filters sit: across the top (the default) or in a column at the
+/// left side.
+const LAYOUT_KEY = 'starmodderBrowseLayout';
 const FILTERS_KEY = 'starmodderBrowseFilters';
 const NO_REQUIREMENTS = '__none__';
+/// The game version filter's two choices that are not a release: every mod,
+/// and the mods that do not say which release they are for.
+const ANY_GAME = 'any';
+const NO_GAME = 'none';
 
 /// The switches, each a plain yes-or-no question about one field.
 const SWITCHES = [
@@ -100,20 +107,18 @@ export async function render(root, parts) {
   const query = browseQuery(hashQuery());
   const state = {
     search: query.get('q') || '',
-    // The filter works on the number a game release shares, so a link saved
-    // back when it held a full spelling ("0.98a") still finds the same mods.
-    game: query.get('game') ? gameVersionFamily(query.get('game')) : '',
+    game: gameFromAddress(query, currentVersion),
     needs: query.get('needs') || '',
-    category: query.get('category') || '',
+    // "Miscellaneous" was called "Everything else" once, and links to it
+    // were shared under that name.
+    category: query.get('category') === 'Everything else'
+      ? 'Miscellaneous' : (query.get('category') || ''),
     author: query.get('author') || '',
     sort: SORTS.some((s) => s.key === query.get('sort')) ? query.get('sort')
       : ((query.get('q') || '') ? 'relevance' : 'current'),
     seed: Number(query.get('seed')) || newSeed(),
     switches: new Set((query.get('only') || '').split(',')
       .filter((key) => SWITCHES.some((option) => option.key === key))),
-    // Older mods are left out to begin with. Nineteen pages of A-to-Z over
-    // every game release anyone ever built for is not a list anybody reads.
-    olderToo: query.get('older') === '1',
     page: Math.max(0, Number(query.get('page')) || 0),
     pageSize: pageSizePreference(),
     view: localStorage.getItem(VIEW_KEY) === 'rows' ? 'rows' : 'grid',
@@ -121,12 +126,13 @@ export async function render(root, parts) {
   };
 
   clear(root);
-  root.append(breadcrumbs([{ label: 'Browse mods' }]));
 
   const head = el('div', { class: 'page-head' }, [
     el('h1', { text: `Browse ${mods.length} mods` }),
   ]);
+  const layout = savedLayout();
   const controls = el('div', { class: 'stack' });
+  const side = el('aside', { class: 'browse-filters', 'aria-label': 'Filters' });
   const results = el('div', { class: 'stack' });
 
   // The count is read out as it changes, so it has to be the same node from
@@ -134,29 +140,45 @@ export async function render(root, parts) {
   // announced by nothing. It is made here, before anything draws, because a
   // `const` cannot be reached from a function that runs above it.
   const countLine = el('div', { class: 'result-line', role: 'status' });
-  root.append(el('div', { class: 'stack' }, [head, controls, results]));
+  root.append(layout === 'side'
+    ? el('div', { class: 'stack' }, [
+      head,
+      el('div', { class: 'browse-split' }, [
+        side,
+        el('div', { class: 'stack browse-main' }, [controls, results]),
+      ]),
+    ])
+    : el('div', { class: 'stack' }, [head, controls, results]));
 
   // The controls are drawn once and left alone; only the results are redrawn as
   // the reader types, so the search box never loses what is in it or where the
-  // cursor sits.
-  drawControls(controls, mods, state, () => {
+  // cursor sits. Swapping the layout draws the whole page again, from the
+  // address, which already holds everything the reader had picked.
+  drawControls({ top: controls, side, layout }, mods, state, () => {
     state.page = 0;
     saveState(state);
     drawResults(results, mods, state);
+  }, (which) => {
+    try {
+      localStorage.setItem(LAYOUT_KEY, which);
+    } catch {
+      // Kept for this visit only.
+    }
+    render(root, parts);
   });
   drawResults(results, mods, state);
 
   function saveState(shown) {
     const hash = buildHash(['browse'], {
       q: shown.search,
-      game: shown.game,
+      // The current release is what the page opens on, so it needs no mention.
+      game: shown.game === shown.currentVersion ? '' : shown.game,
       needs: shown.needs,
       category: shown.category,
       author: shown.author,
       sort: shown.sort === 'current' ? '' : shown.sort,
       seed: shown.sort === 'random' ? shown.seed : '',
       only: [...shown.switches].join(','),
-      older: shown.olderToo ? '1' : '',
       page: shown.page || '',
     });
     rememberFilters(hash);
@@ -170,8 +192,14 @@ export async function render(root, parts) {
     const matches = sortMods(all.filter((mod) => matchesFilters(mod, shown)),
       sortInUse(shown), shown.currentVersion, shown.search, shown.seed);
 
+    // Widening the game version draws the whole page again, so the game
+    // version filter shows the new choice too.
     fillResultLine(countLine, all, matches, shown,
-      () => { shown.olderToo = true; drawResults(into, all, shown); });
+      () => {
+        shown.game = ANY_GAME;
+        saveState(shown);
+        render(root, parts);
+      });
     into.append(countLine);
 
     if (!matches.length) {
@@ -204,12 +232,28 @@ export function sortInUse(state) {
   return state.sort;
 }
 
-/// The line above the results: how many matched, and — when older mods are
-/// being left out — how many those are and one click to bring them back.
+/// The game version the address asks for. With none named, the page opens on
+/// the current release: nineteen pages of A-to-Z over every game release anyone
+/// ever built for is not a list anybody reads.
+function gameFromAddress(query, currentVersion) {
+  const asked = query.get('game');
+  if (asked === ANY_GAME || asked === NO_GAME) return asked;
+  // The filter works on the number a game release shares, so a link saved back
+  // when it held a full spelling ("0.98a") still finds the same mods.
+  if (asked) return gameVersionFamily(asked);
+  // Links from before the current release was picked by default asked for
+  // every release with `older=1`.
+  if (query.get('older') === '1' || !currentVersion) return ANY_GAME;
+  return currentVersion;
+}
+
+/// The line above the results: how many matched, and — while the list is on
+/// the current release — how many other releases would add, with one click to
+/// bring them in.
 ///
 /// It fills a line that is already on the page rather than making a new one,
 /// because that is what gets it read out.
-function fillResultLine(line, all, matches, state, onShowOlder) {
+function fillResultLine(line, all, matches, state, onShowEveryRelease) {
   clear(line);
   line.append(el('span', {
     text: matches.length === all.length
@@ -217,26 +261,100 @@ function fillResultLine(line, all, matches, state, onShowOlder) {
       : `${matches.length} of ${all.length} mods shown.`,
   }));
 
-  // Nothing is being left out when older mods are already in, when there is no
-  // current release to compare against, or when the reader picked a game
-  // version themselves — their choice overrules the switch.
-  if (state.olderToo || !state.currentVersion || state.game) return;
+  if (!state.currentVersion || state.game !== state.currentVersion) return;
 
-  const hidden = all.filter((mod) => !isForCurrentGame(mod, state.currentVersion)
-    && matchesEverythingElse(mod, state)).length;
-  if (!hidden) return;
+  const added = all.filter((mod) => matchesFilters(mod, { ...state, game: ANY_GAME })).length
+    - matches.length;
+  if (added <= 0) return;
 
   const button = el('button', {
     class: 'link-button',
-    text: `Include ${hidden} for older game versions`,
+    text: `Include ${added} for other game versions`,
   });
-  button.addEventListener('click', onShowOlder);
+  button.addEventListener('click', onShowEveryRelease);
   line.append(el('span', { text: ' ' }), button);
 }
 
 // --- The controls ---
 
-function drawControls(into, mods, state, onChange) {
+/// The layout the reader last picked, or the filters along the top.
+function savedLayout() {
+  try {
+    return localStorage.getItem(LAYOUT_KEY) === 'side' ? 'side' : 'top';
+  } catch {
+    return 'top';
+  }
+}
+
+/// Two buttons: filters along the top, or filters in a column at the side.
+function layoutToggle(current, pick) {
+  const group = el('div', {
+    class: 'view-toggle', role: 'group', 'aria-label': 'Where the filters sit',
+  });
+  for (const [which, label, title] of [
+    ['top', 'Top', 'Filters along the top'],
+    ['side', 'Side', 'Filters in a column at the side'],
+  ]) {
+    const on = current === which;
+    const button = el('button', {
+      class: `btn btn-with-icon${on ? ' on' : ''}`, title, 'aria-pressed': String(on),
+    }, [
+      el('span', { class: 'view-icon', html: LAYOUT_ICONS[which] }),
+      el('span', { text: label }),
+    ]);
+    if (!on) button.addEventListener('click', () => pick(which));
+    group.append(button);
+  }
+  return group;
+}
+
+// Tabler layout-navbar and layout-sidebar icons.
+const LAYOUT_ICONS = {
+  top: '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" '
+    + 'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+    + '<path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/>'
+    + '<path d="M4 9l16 0"/></svg>',
+  side: '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" '
+    + 'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+    + '<path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/>'
+    + '<path d="M9 4l0 16"/></svg>',
+};
+
+/// One group of filters in the side column, under a heading that folds it.
+function filterPanel(title, body, open) {
+  return el('details', { class: 'panel filter-panel', open: open ? '' : null }, [
+    el('summary', { class: 'filter-panel-head', text: title }),
+    body,
+  ]);
+}
+
+/// A list of choices, one of which can be on, each with how many mods it
+/// holds. Picking the one that is on turns it off. Drawn like the category
+/// table, so the side column's lists all look alike.
+function choiceList(entries, chosen, onPick) {
+  const list = el('div', { class: 'category-table' });
+  for (const { value, label, count } of entries) {
+    const on = value === chosen;
+    const button = el('button', {
+      class: on ? 'category-cell on' : 'category-cell', 'aria-pressed': String(on),
+    }, [
+      el('span', { class: 'category-name', text: label }),
+      el('span', { class: 'category-count', text: String(count) }),
+    ]);
+    button.addEventListener('click', () => onPick(on ? '' : value));
+    list.append(button);
+  }
+  return list;
+}
+
+/// The search box, the categories, the dropdowns and the switches. Along the
+/// top they sit in rows above the results. At the side the switches, the
+/// categories and the game versions are lists in folding panels, and only the
+/// search box, the sort and the view buttons stay above the results.
+function drawControls(places, mods, state, onChange, onLayout) {
+  const { top, side, layout } = places;
+  const atSide = layout === 'side';
+
   // The category table is redrawn whenever anything else changes, because its counts
   // are of what picking that category would really show. Counting the whole list
   // would have a category read 182 and then hand back 104, since older game
@@ -255,8 +373,24 @@ function drawControls(into, mods, state, onChange) {
     // straight over.
     if (row) chips.append(row);
   };
+  // At the side the game versions are a list too, counted the same way as the
+  // categories: what picking that version would really show.
+  const versionsHolder = el('div', {});
+  const drawVersions = () => {
+    const wouldMatch = mods.filter(
+        (mod) => matchesFilters(mod, { ...state, game: ANY_GAME }));
+    const entries = gameVersions(wouldMatch)
+      .map((v) => ({ value: v.family, label: v.label, count: v.count }));
+    const unknown = wouldMatch.filter((mod) => !mod.gameVersion).length;
+    if (unknown) entries.push({ value: NO_GAME, label: 'No game version', count: unknown });
+    clear(versionsHolder);
+    // Turning off the one that is picked shows every release.
+    versionsHolder.append(choiceList(entries, state.game,
+      (v) => { state.game = v || ANY_GAME; changed(); }));
+  };
   const changed = () => {
     drawChips();
+    if (atSide) drawVersions();
     onChange();
   };
 
@@ -297,40 +431,16 @@ function drawControls(into, mods, state, onChange) {
     changed();
   });
 
-  into.append(el('div', { class: 'search-row' }, [searchHelpField(search), views]));
-  into.append(el('p', { class: 'search-hint' }, [
-    'Every word must match, in any order: ',
-    el('code', { text: 'battlestar portrait' }),
-    '. Commas match either: ',
-    el('code', { text: 'faction, portrait' }),
-    '. A minus leaves mods out: ',
-    el('code', { text: 'pirate -junk' }),
-    '.',
-  ]));
-
-  // The categories come before the dropdowns: picking a category is what most
-  // readers want first, and a row you can see beats a list you have to open.
-  drawChips();
-  into.append(chips);
-
-  const filters = el('div', { class: 'filters' });
   const versions = gameVersions(mods);
   const needed = neededMods(mods);
-  filters.append(
-    dropdown('Game version', versions.map((v) => v.family), state.game,
-      (v) => { state.game = v; changed(); },
-      {
-        labels: Object.fromEntries(
-          versions.map((v) => [v.family, `${v.label} (${v.count})`])),
-      }),
-
-    dropdown('Requires', [NO_REQUIREMENTS, ...needed], state.needs,
-      (v) => { state.needs = v; changed(); },
-      {
-        anyLabel: 'Unspecified',
-        labels: { [NO_REQUIREMENTS]: 'Standalone (no requirements)' },
-      }),
-  );
+  // At the side the panel's heading names the dropdown, so it carries no label.
+  const requiresDropdown = dropdown(atSide ? '' : 'Requires',
+    [NO_REQUIREMENTS, ...needed], state.needs,
+    (v) => { state.needs = v; changed(); },
+    {
+      anyLabel: '—',
+      labels: { [NO_REQUIREMENTS]: 'Standalone (no requirements)' },
+    });
 
   // "Best match" is only in the list while something is typed, so the dropdown
   // is rebuilt whenever that changes rather than drawn once like the others.
@@ -361,11 +471,21 @@ function drawControls(into, mods, state, onChange) {
     sortHolder.append(shuffleAgain);
     showShuffleAgain();
   };
-  filters.append(sortHolder);
   drawSort();
 
-  const switches = el('div', { class: 'switches' });
+  // Along the top each switch is a button that lights up; at the side it is a
+  // tick box with its label, the way a list of filters usually reads.
+  const switches = el('div', { class: atSide ? 'check-list' : 'switches' });
   const addSwitch = (label, title, isOn, onToggle) => {
+    if (atSide) {
+      const box = el('input', { type: 'checkbox' });
+      box.checked = isOn();
+      box.addEventListener('change', () => { onToggle(); changed(); });
+      switches.append(el('label', { class: 'check-row', title }, [
+        box, el('span', { text: label }),
+      ]));
+      return;
+    }
     const button = el('button', {
       class: isOn() ? 'btn on' : 'btn',
       text: label,
@@ -381,17 +501,6 @@ function drawControls(into, mods, state, onChange) {
     switches.append(button);
   };
 
-  if (state.currentVersion) {
-    const spelling =
-      (versions.find((v) => v.family === state.currentVersion) || {}).label
-      || state.currentVersion;
-    addSwitch(
-      `Current game version only (${spelling})`,
-      'Leave out mods built for an older game release.',
-      () => !state.olderToo,
-      () => { state.olderToo = !state.olderToo; },
-    );
-  }
   for (const option of SWITCHES) {
     addSwitch(option.label, option.title,
       () => state.switches.has(option.key),
@@ -400,12 +509,52 @@ function drawControls(into, mods, state, onChange) {
         else state.switches.add(option.key);
       });
   }
-  filters.append(switches);
-  into.append(filters);
+
+  const layoutSwitch = layoutToggle(layout, onLayout);
+  drawChips();
+
+  if (atSide) {
+    drawVersions();
+    top.append(
+      el('div', { class: 'search-row' }, [searchHelpField(search)]),
+      el('div', { class: 'filters' }, [
+        sortHolder, el('span', { class: 'filters-gap' }), views, layoutSwitch,
+      ]),
+    );
+    // On a phone the column sits above the results, so only the switches start
+    // open; the long lists would push the mods a screen or more down.
+    const phone = window.matchMedia('(max-width: 900px)').matches;
+    side.append(
+      filterPanel('Show', switches, true),
+      filterPanel('Category', chips, !phone),
+      filterPanel('Game version', versionsHolder, !phone),
+      filterPanel('Requires', requiresDropdown, !phone),
+    );
+    return;
+  }
+
+  top.append(el('div', { class: 'search-row' }, [searchHelpField(search), views, layoutSwitch]));
+  // The categories come before the dropdowns: picking a category is what most
+  // readers want first, and a row you can see beats a list you have to open.
+  top.append(chips);
+  top.append(el('div', { class: 'filters' }, [
+    dropdown('Game version', [...versions.map((v) => v.family), NO_GAME],
+      state.game === ANY_GAME ? '' : state.game,
+      (v) => { state.game = v || ANY_GAME; changed(); },
+      {
+        labels: {
+          ...Object.fromEntries(versions.map((v) => [v.family, `${v.label} (${v.count})`])),
+          [NO_GAME]: `No game version (${mods.filter((mod) => !mod.gameVersion).length})`,
+        },
+      }),
+    requiresDropdown,
+    sortHolder,
+    switches,
+  ]));
 }
 
 function dropdown(label, values, chosen, onPick, opts = {}) {
-  const { anyLabel = `Any ${label.toLowerCase()}`, labels = {} } = opts;
+  const { anyLabel = `Any ${(label || 'value').toLowerCase()}`, labels = {} } = opts;
   const select = el('select');
   if (anyLabel != null) select.append(el('option', { value: '', text: anyLabel }));
   for (const value of values) {
@@ -414,7 +563,7 @@ function dropdown(label, values, chosen, onPick, opts = {}) {
   select.value = values.includes(chosen) ? chosen : (anyLabel != null ? '' : values[0]);
   select.addEventListener('change', () => onPick(select.value));
   return el('label', { class: 'filter-label' }, [
-    el('span', { text: label }), select,
+    label ? el('span', { text: label }) : null, select,
   ]);
 }
 
@@ -426,12 +575,11 @@ function neededMods(mods) {
 
 function clearFilters(state) {
   state.search = '';
-  state.game = '';
+  state.game = state.currentVersion || ANY_GAME;
   state.needs = '';
   state.category = '';
   state.author = '';
   state.switches.clear();
-  state.olderToo = false;
   state.page = 0;
 }
 
@@ -471,11 +619,16 @@ export function isForCurrentGame(mod, currentVersion) {
   return gameVersionFamily(mod.gameVersion) === currentVersion;
 }
 
-/// Everything the filters ask except the current-game-version one. It is what
-/// counts how many mods that one switch is hiding.
-function matchesEverythingElse(mod, state) {
+/// Whether a mod is on the game version the filter is set to.
+function onGameVersion(mod, game) {
+  if (!game || game === ANY_GAME) return true;
+  if (game === NO_GAME) return !mod.gameVersion;
+  return Boolean(mod.gameVersion) && gameVersionFamily(mod.gameVersion) === game;
+}
+
+export function matchesFilters(mod, state) {
   if (searchScore(mod, state.search) < 0) return false;
-  if (state.game && gameVersionFamily(mod.gameVersion) !== state.game) return false;
+  if (!onGameVersion(mod, state.game)) return false;
   if (state.category && !(mod.categories || []).includes(state.category)) return false;
   if (state.needs === NO_REQUIREMENTS) {
     if ((mod.needs || []).length) return false;
@@ -484,17 +637,6 @@ function matchesEverythingElse(mod, state) {
   if (state.author && !(mod.authors || []).includes(state.author)) return false;
   for (const option of SWITCHES) {
     if (state.switches.has(option.key) && !option.keep(mod)) return false;
-  }
-  return true;
-}
-
-export function matchesFilters(mod, state) {
-  if (!matchesEverythingElse(mod, state)) return false;
-  // The reader's own choice of game version is the stronger one: picking an
-  // older release from the dropdown must not then be overruled by the switch.
-  if (!state.olderToo && !state.game
-      && !isForCurrentGame(mod, state.currentVersion)) {
-    return false;
   }
   return true;
 }
