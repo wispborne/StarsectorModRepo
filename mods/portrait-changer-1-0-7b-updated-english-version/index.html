@@ -70,46 +70,46 @@
       </div>
       <section class="settings-section" aria-labelledby="appearance-title">
         <h3 id="appearance-title">Appearance</h3>
-        <p>The site's colours. Default follows your computer's light or dark setting. Light is always light. The rest are TriOS's themes, and they are always dark.</p>
+        <p>Default follows your computer's light or dark setting. Light stays light; the TriOS themes stay dark.</p>
         <div id="theme-list" class="theme-list" role="radiogroup" aria-label="Theme"></div>
-        <p>How much room there is between things. The words and pictures stay the same size either way.</p>
+        <p>Choose the spacing between items. Text and picture sizes stay the same.</p>
         <div class="choice-list" role="radiogroup" aria-label="Spacing">
           <label class="choice">
             <input type="radio" name="spacing" value="dense">
             <span>
               <span class="choice-name">Dense</span><br>
-              <span class="choice-note">Less room between things, so more fits on the screen.</span>
+              <span class="choice-note">Fits more on the screen.</span>
             </span>
           </label>
           <label class="choice">
             <input type="radio" name="spacing" value="comfortable">
             <span>
               <span class="choice-name">Comfortable</span><br>
-              <span class="choice-note">More room between things.</span>
+              <span class="choice-note">More space between items.</span>
             </span>
           </label>
         </div>
       </section>
       <section class="settings-section" aria-labelledby="pictures-title">
         <h3 id="pictures-title">Mod pictures</h3>
-        <p>Some mods have two pictures: one in their forum post and one in the Discord or Nexus post announcing them. This picks which of the two to show. Mods with only one picture look the same either way.</p>
+        <p>Choose the forum picture or the Discord/Nexus announcement picture. Mods with one picture use it for both choices.</p>
         <div class="choice-list" role="radiogroup" aria-label="Which picture to show">
           <label class="choice">
             <input type="radio" name="mod-pictures" value="post">
             <span>
               <span class="choice-name">From the forum post</span><br>
-              <span class="choice-note">The picture the author put in their own thread.</span>
+              <span class="choice-note">From the author’s forum thread.</span>
             </span>
           </label>
           <label class="choice">
             <input type="radio" name="mod-pictures" value="announcement">
             <span>
               <span class="choice-name">From Discord or Nexus</span><br>
-              <span class="choice-note">The picture posted where the mod was announced. This is what TriOS shows.</span>
+              <span class="choice-note">From the announcement, as shown in TriOS.</span>
             </span>
           </label>
         </div>
-        <p>Pictures in descriptions: the pictures from the author's post, in the places they put them.</p>
+        <p>Show pictures where the author placed them in the description.</p>
         <div class="choice-list" role="radiogroup" aria-label="Pictures in descriptions">
           <label class="choice">
             <input type="radio" name="inline-pictures" value="on">
@@ -122,34 +122,34 @@
             <input type="radio" name="inline-pictures" value="off">
             <span>
               <span class="choice-name">Don't show them</span><br>
-              <span class="choice-note">Each picture is a small link instead, and nothing is loaded until you click one.</span>
+              <span class="choice-note">Replace pictures with links. Pictures load only when opened.</span>
             </span>
           </label>
         </div>
       </section>
       <section class="settings-section" aria-labelledby="summaries-title">
         <h3 id="summaries-title">Show AI mod summaries</h3>
-        <p>Where a mod's post has no short description in it, an AI wrote one from the post. Those are marked with a sparkle.</p>
+        <p>AI summaries are based on forum posts and marked with a sparkle.</p>
         <div class="choice-list" role="radiogroup" aria-label="AI-written summaries">
           <label class="choice">
             <input type="radio" name="ai-summaries" value="always">
             <span>
               <span class="choice-name">Always</span><br>
-              <span class="choice-note">The AI summary is shown even where the author wrote one.</span>
+              <span class="choice-note">Prefer the AI summary when available.</span>
             </span>
           </label>
           <label class="choice">
             <input type="radio" name="ai-summaries" value="whenMissing">
             <span>
               <span class="choice-name">Only if missing</span><br>
-              <span class="choice-note">Cards use the author's own words first. Detail pages also show the AI summary.</span>
+              <span class="choice-note">Prefer the author’s words on cards. Mod pages can also show the AI summary.</span>
             </span>
           </label>
           <label class="choice">
             <input type="radio" name="ai-summaries" value="never">
             <span>
               <span class="choice-name">Never</span><br>
-              <span class="choice-note">A mod with only an AI summary reads as having no description.</span>
+              <span class="choice-note">Hide AI summaries, including hover text.</span>
             </span>
           </label>
         </div>
@@ -164,7 +164,7 @@
     <span id="build" class="build"></span>
     <a href="#/about">About this site</a>
     <a href="updates.xml">Release feed</a>
-    <span class="footer-note">A read-only view of mods posted on the Starsector forum and Discord.</span>
+    <span class="footer-note">Not affiliated with Fractal Softworks</span>
   </footer>
 
   <script type="module" src="app.js"></script>

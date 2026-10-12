@@ -1048,38 +1048,164 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 
 /* --- Mod page --- */
 
-/* The picture on one side, everything a reader decides on over on the other. */
-.mod-head { display: flex; gap: 20px; align-items: flex-start; }
-.mod-head-picture {
-  flex: 0 0 320px; max-width: 320px;
-  border: 1px solid var(--border); background: var(--surface-container);
-  border-radius: 8px; overflow: hidden;
+/* A small picture beside the name, the way a project page shows its icon;
+   then the name, the one-line summary, and one line holding who made it and
+   the chips saying which game version it is for and what kind of mod it is. */
+.mod-head { display: flex; gap: 18px; align-items: center; }
+.mod-head-words {
+  flex: 1 1 auto; min-width: 0;
+  display: flex; flex-direction: column; gap: 6px;
 }
-/* The whole picture, same as the cards: a tall or square mod picture had its
-   sides cut off here. Bars either side are the price. */
+.mod-head h1 { margin: 0; }
+.mod-summary-slot { display: contents; }
+.mod-summary { margin: 0; color: var(--text-dim); max-width: 70ch; }
+.mod-byline {
+  display: flex; gap: 8px 12px; flex-wrap: wrap; align-items: center;
+  font-size: var(--type-small);
+}
+.mod-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+/* The header above the mod on the left, and one side column at the right that
+   starts level with the header. The second row is `1fr` so the tall side
+   column does not stretch the header's row: a grid leaves an item that spans
+   a flexible row out when it sizes the other rows. On a narrow screen the
+   download card comes before the mod and the other cards after it. */
+.mod-layout {
+  display: grid; gap: var(--gap-wide);
+  grid-template-columns: minmax(0, 1fr) 340px;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "head aside" "main aside";
+  align-items: start;
+}
+.mod-layout > .mod-head { grid-area: head; }
+.mod-main { grid-area: main; min-width: 0; }
+/* The side stays in view while the post is read. Below the bar at the top,
+   which is sticky too, and scrolling on its own when it is taller than the
+   window, or its foot could never be reached until the post ran out. */
+.mod-aside {
+  grid-area: aside;
+  display: flex; flex-direction: column; gap: var(--gap);
+  position: sticky; top: 64px;
+  max-height: calc(100vh - 80px); overflow-y: auto;
+  scrollbar-width: thin; scrollbar-color: var(--primary-bar) transparent;
+}
+.mod-side { gap: var(--gap); }
+@media (max-width: 900px) {
+  .mod-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas: "head" "get" "main" "side";
+  }
+  .mod-aside { display: contents; }
+  .mod-get { grid-area: get; }
+  .mod-side { grid-area: side; }
+}
+
+/* The whole picture, same as the cards: bars either side are the price of
+   not cutting off a tall or square picture. */
+.mod-head-picture {
+  flex: 0 0 200px; padding: 0; cursor: zoom-in; line-height: 0;
+  border: 1px solid var(--border); background: var(--surface-container);
+  border-radius: 10px; overflow: hidden;
+}
 .mod-head-picture img {
   width: 100%; aspect-ratio: 16 / 9; object-fit: contain; display: block;
 }
-.mod-head-words {
-  flex: 1 1 320px; min-width: 0;
-  display: flex; flex-direction: column; gap: 8px;
+@media (max-width: 640px) {
+  .mod-head { flex-direction: column; align-items: stretch; gap: 12px; }
+  .mod-head-picture { flex-basis: auto; }
 }
-.mod-head-words h1 { margin: 0; }
-.mod-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 
-.mod-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+/* The mod's sections as tabs along the top of the main column. The open one
+   is filled; the others are plain words until the pointer is on them. */
+.mod-tabs {
+  display: flex; gap: 4px; flex-wrap: wrap;
+  padding: 6px; border-radius: 10px; background: var(--surface-2);
+  box-shadow: var(--raised);
+}
+.mod-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border: 0; border-radius: 999px;
+  background: none; color: var(--text); font: inherit;
+  font-size: var(--type-small); font-weight: 600; cursor: pointer;
+}
+.mod-tab:hover { background: var(--primary-faint); color: var(--primary); text-decoration: none; }
+.mod-tab.on { background: var(--on-soft); color: var(--on); }
+.mod-tab-count {
+  font-size: var(--type-tiny); font-weight: 400; color: var(--text-dim);
+}
+.mod-tab.on .mod-tab-count { color: inherit; }
+
 .btn-big { padding: 9px 18px; font-size: var(--type-normal); }
-
-/* Support links belong near the actions, but use quiet outlined pills so the
-   download and original post remain the first things the eye lands on. */
-.support-row {
-  display: flex; gap: 8px 10px; align-items: center; flex-wrap: wrap;
-  margin-top: 2px; font-size: var(--type-small); color: var(--text-dim);
+/* The one filled button on the page: the main way to get the mod. */
+.btn.btn-solid {
+  background: var(--primary); border-color: var(--primary);
+  color: var(--surface); font-weight: 600;
 }
-.support-label { font-weight: 600; color: var(--text-dim); }
-.support-links { display: flex; gap: 7px; flex-wrap: wrap; }
+.btn.btn-solid:hover:not([disabled]) { color: var(--surface); filter: brightness(1.1); }
+
+/* A card at the side. Its heading is a small label rather than a title, so
+   the side reads as reference and the mod's own words lead. */
+.side-card { display: flex; flex-direction: column; gap: 8px; }
+.panel > h2.side-heading, .side-heading {
+  margin: 0; color: var(--text-dim); font-size: var(--type-tiny);
+  font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+}
+
+/* The buttons that get the mod: the main one the card's full width, and a
+   row of smaller ones under it — the plain file, the thread, the favorite. */
+.get-it > .btn { display: flex; justify-content: center; text-align: center; }
+.get-it { gap: 8px; }
+.get-it-row { display: flex; gap: 6px; }
+/* Each takes the room its label needs, and the spare room is shared out. */
+.get-it-row > .btn {
+  flex: 1 1 auto;
+  display: flex; align-items: center; justify-content: center; gap: 5px;
+  padding: 6px 8px; white-space: nowrap;
+}
+
+/* The facts card: a label over its value, or beside it where the value is
+   short. Spacing alone separates them. */
+.side-facts {
+  display: flex; flex-direction: column; gap: var(--gap); font-size: var(--type-small);
+}
+.side-fact { display: flex; flex-direction: column; gap: 3px; }
+.side-fact.beside {
+  flex-direction: row; justify-content: space-between; align-items: center; gap: var(--gap);
+}
+.side-fact.beside > .side-value { text-align: right; }
+.side-label { color: var(--text-dim); }
+/* A label with an explanation on hover. */
+.side-label.has-tip {
+  cursor: help; text-decoration: underline dotted; text-underline-offset: 3px;
+}
+.badge.dim { color: var(--text-dim); }
+.side-value { min-width: 0; overflow-wrap: anywhere; }
+.side-value .dim { color: var(--text-dim); }
+.side-link-list { display: flex; flex-direction: column; gap: 8px; font-size: var(--type-small); }
+.side-link-list > a { display: inline-flex; align-items: center; gap: 8px; }
+.needs-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip.needed {
+  padding: 3px 10px; border-radius: 6px; background: var(--primary-soft);
+  color: var(--primary); font-size: var(--type-small);
+}
+a.chip.needed:hover { background: var(--primary-bar); text-decoration: none; }
+.chip.needed.unknown { background: var(--surface-container); color: var(--text-dim); }
+
+/* Where the code is kept: a green badge that links to it, or a grey one. */
+.badge.source-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  color: var(--success); border-color: var(--edge-success);
+}
+.badge.source-link:hover { border-color: var(--success); text-decoration: none; }
+.badge.source-missing { color: var(--text-dim); cursor: help; }
+/* The page's own small way back, in place of the breadcrumb trail. */
+.back-link {
+  align-self: flex-start; font-size: var(--type-small); margin-bottom: 6px;
+  display: inline-block;
+}
+.support-links { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
 .support-links a {
-  padding: 3px 9px; border: 1px solid var(--border); border-radius: 999px;
+  padding: 3px 12px; border: 1px solid var(--border); border-radius: 999px;
   background: var(--surface-2); color: var(--text);
 }
 .support-links a:hover {
@@ -1188,23 +1314,20 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
    the gap a heading alone would have under it. */
 .panel > .section-head { margin-bottom: 12px; }
 .pictures-switch { font-size: var(--type-small); text-decoration: none; }
-
-/* The description starts cut off, fading out at the foot, with a "Show more"
-   line under it. The cut is only kept when the words really overrun it. */
-.prose-clip.clipped {
-  max-height: 14em; overflow: hidden; position: relative; cursor: pointer;
-}
-/* While cut off, a click anywhere opens the post out, so nothing inside it
-   looks clickable. */
-.prose-clip.clipped * { cursor: pointer; }
+.description-switches { display: flex; gap: 14px; }
+/* A description the reader folded: a short preview fading out at the foot.
+   The height is PREVIEW_LINES in views/mod.js. */
+.prose-clip.clipped { max-height: 14em; overflow: hidden; position: relative; }
 .prose-clip.clipped::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 4em;
   background: linear-gradient(to bottom, transparent, var(--surface-2));
   pointer-events: none;
 }
-.prose-more-row { margin: 0; }
-.prose-more { text-decoration: none; }
-.prose-more:hover, .prose-more:focus-visible { text-decoration: underline; }
+/* The switch that hides AI words on mod pages, at the foot of the AI summary
+   opposite the note saying who wrote it; and the one line left once hidden. */
+.ai-foot { display: flex; justify-content: space-between; align-items: baseline; gap: var(--gap); flex-wrap: wrap; }
+.ai-switch { font-size: var(--type-tiny); text-decoration: none; }
+.ai-hidden-row { margin: 0; color: var(--text-dim); font-size: var(--type-tiny); }
 
 .thread-title { opacity: 0.8; font-size: var(--type-tiny); }
 
@@ -1223,39 +1346,18 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .name-share .row-sub { white-space: normal; overflow: visible; }
 .name-share .mod-row:last-child { border-bottom: none; }
 
-/* What a mod will not run without, right under its name. */
-.needs-line {
-  display: flex; gap: 6px; flex-wrap: wrap; align-items: baseline;
-  font-size: var(--type-small);
-  padding: 8px 12px; border: 1px solid var(--border);
-  background: var(--warning-wash); border-radius: 6px;
-}
-.needs-label {
-  color: var(--warning); font-weight: 600; font-size: var(--type-tiny);
-  letter-spacing: 0.05em; text-transform: uppercase;
-}
-.needs-list { min-width: 0; overflow-wrap: anywhere; }
-/* Whether a mod can be added to or removed from a game in progress, under
-   the Requires line: a question, a short answer and the author's words per
-   row, lined up in columns. */
-.save-box {
-  display: grid; gap: 6px; font-size: var(--type-small);
-  padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px;
-}
-.save-box > .needs-label { color: var(--text-dim); }
-.save-lines {
-  display: grid; grid-template-columns: max-content max-content minmax(0, 1fr);
-  gap: 4px 8px; align-items: baseline;
-}
+/* Whether a mod can be added to, updated in or removed from a game in
+   progress: the question with its short answer at the right, and the
+   author's words under it. */
+.save-lines { display: flex; flex-direction: column; gap: 8px; font-size: var(--type-small); }
+.save-line { display: flex; flex-direction: column; gap: 2px; }
+.save-ask { display: flex; justify-content: space-between; align-items: center; gap: var(--gap); }
 .save-question { font-weight: 600; }
-.save-words { min-width: 0; overflow-wrap: anywhere; font-style: italic; }
+.save-words {
+  min-width: 0; overflow-wrap: anywhere; font-style: italic; color: var(--text-dim);
+}
 .save-words::before { content: '\201C'; }
 .save-words::after { content: '\201D'; }
-@media (max-width: 640px) {
-  .save-lines { grid-template-columns: max-content minmax(0, 1fr); }
-  .save-words { grid-column: 1 / -1; }
-}
-.needed.unknown { color: var(--text-dim); }
 .checked-on { color: var(--text-dim); font-size: var(--type-tiny); margin: 4px 0 0; }
 .feed-note { color: var(--text-dim); font-size: var(--type-small); margin: 0; }
 .about-line { margin: 0 0 10px; }
@@ -1275,12 +1377,14 @@ a.row-title:hover,
 }
 
 .download-list { display: flex; flex-direction: column; gap: var(--gap); }
+/* One download per line: what it is on the left, its host on the right. */
+.side-downloads { display: flex; flex-direction: column; gap: 8px; }
 .download {
-  display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
-  padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px;
-  background: var(--primary-faint);
+  display: flex; gap: 10px; align-items: center; justify-content: space-between;
+  font-size: var(--type-small);
 }
-.download .file { color: var(--text-dim); font-size: var(--type-small); word-break: break-all; }
+.download-name { min-width: 0; overflow-wrap: anywhere; }
+.side-more { font-size: var(--type-small); }
 
 .gallery { display: grid; gap: var(--gap); grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
 .gallery img { width: 100%; display: block; }
@@ -1290,8 +1394,9 @@ a.row-title:hover,
 }
 .shot:hover { border-color: var(--primary); }
 .shot[hidden] { display: none; }
-/* The button that shows the gallery's buttons, badges and small icons. */
+/* The button that shows the gallery's small pictures. */
 .small-pictures-row { margin: var(--gap) 0 0; }
+.small-pictures-row:has(> [hidden]) { display: none; }
 .small-pictures-toggle { text-decoration: none; }
 
 /* A screenshot over the page, rather than a raw image in a new tab. */
@@ -1443,7 +1548,7 @@ body.picture-open { overflow: hidden; }
 .site-footer {
   max-width: var(--page-width); margin: 0 auto;
   padding: 14px 16px 30px; border-top: 1px solid var(--border);
-  display: flex; gap: 14px; flex-wrap: wrap;
+  display: flex; gap: 14px; flex-wrap: wrap; align-items: center;
   color: var(--text-dim); font-size: var(--type-small);
 }
 .footer-note { margin-left: auto; }
@@ -1466,10 +1571,6 @@ body.picture-open { overflow: hidden; }
   .raw-branch { grid-template-columns: 1fr; }
   .raw-branch > .raw-name { margin-top: 4px; }
   .row-thumb { display: none; }
-  /* On a phone the picture goes above the words rather than beside them. */
-  .mod-head { flex-direction: column; gap: 14px; }
-  .mod-head-picture { flex: 1 1 auto; max-width: 100%; width: 100%; }
-  .mod-actions .btn-big { flex: 1 1 100%; text-align: center; }
   /* A narrow screen has no room for a column of its own. In a browse row it
      also has no room beside the words: standing the button next to them left
      the mod's name one letter wide, so it drops to a line of its own. */

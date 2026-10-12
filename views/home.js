@@ -6,7 +6,7 @@
 
 import {
   buildHash, categoryChips, clear, currentGameVersion, downloadButton, el,
-  formatDay,
+  expandAllButton, formatDay,
   howLongAgo, imageUrlOf, modHref, modList, modName, noteWithMore,
   releaseFeed, thumbnail,
 } from '../lib.js';
@@ -96,7 +96,8 @@ function releasesPanel(releases, byId) {
     ]));
   }
 
-  const openAll = expandAllChangelogs(panel);
+  const openAll = expandAllButton(panel, 'details.release:not(.no-notes)',
+    { open: 'Show all changelogs', shut: 'Hide all changelogs' });
   if (openAll) head.append(openAll);
   return panel;
 }
@@ -143,50 +144,6 @@ function releasesNote() {
   );
 }
 
-/// One button beside the heading that opens every changelog on the page, and
-/// closes them all again once they are open.
-///
-/// Reading down a day of releases means clicking every row in turn, and there
-/// is no way back short of clicking each one again. The label says what a press
-/// would do, so nobody has to guess which way it goes.
-///
-/// Returns null when no release on the page has notes — a button that would do
-/// nothing is worse than no button.
-function expandAllChangelogs(panel) {
-  const foldsIn = () => [...panel.querySelectorAll('details.release:not(.no-notes)')];
-  if (!foldsIn().length) return null;
-
-  const button = el('button', {
-    type: 'button',
-    class: 'expand-all',
-  });
-
-  // Read off the page every time rather than kept in a variable: rows are also
-  // opened one at a time, and a button that thinks it knows better tells the
-  // reader the wrong thing.
-  const relabel = () => {
-    const folds = foldsIn();
-    const allOpen = folds.length > 0 && folds.every((fold) => fold.open);
-    button.textContent = allOpen ? 'Hide all changelogs' : 'Show all changelogs';
-    button.setAttribute('aria-expanded', allOpen ? 'true' : 'false');
-  };
-
-  button.addEventListener('click', () => {
-    const folds = foldsIn();
-    const open = !folds.every((fold) => fold.open);
-    for (const fold of folds) fold.open = open;
-    relabel();
-  });
-
-  // A fold's own `toggle` event does not travel up the page, so it is caught on
-  // the way down instead. Without this, opening the last shut row by hand would
-  // leave the button still offering to show them all.
-  panel.addEventListener('toggle', relabel, true);
-
-  relabel();
-  return button;
-}
-
 /// One release. Where the post gave changelog notes for that version, the row
 /// opens to show them as the author wrote them. The arrow at the left is what
 /// says a row opens, so a row without notes does not get one.
@@ -228,7 +185,7 @@ function releaseRow(release, byId) {
 function updateBadge(release) {
   const words = release.updateCompatibilityText;
   const kind = {
-    yes: ['save-ok', 'Keeps existing saves'],
+    yes: ['save-ok', 'Save compatible update'],
     no: ['save-no', 'Breaks existing saves'],
     depends: ['', 'Existing saves: it depends'],
   }[release.canUpdate];

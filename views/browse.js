@@ -20,6 +20,7 @@ import {
 import { compileSearch } from '../search.js';
 
 const VIEW_KEY = 'starmodderView';
+const FILTERS_KEY = 'starmodderBrowseFilters';
 const NO_REQUIREMENTS = '__none__';
 
 /// The switches, each a plain yes-or-no question about one field.
@@ -32,20 +33,20 @@ const SWITCHES = [
   },
   {
     key: 'source',
-    label: 'Source is public',
-    title: 'Only mods whose code is somewhere you can read it.',
+    label: 'Source code linked',
+    title: 'Only mods with publicly available source code.',
     keep: (mod) => mod.sourceIsPublic === true,
   },
   {
     key: 'addable',
     label: 'Safe to add mid-game',
-    title: 'Only mods whose author says they can be added to a game already in progress.',
+    title: 'Only mods the author says are safe to add mid-game.',
     keep: (mod) => mod.saveCompatible === true,
   },
   {
     key: 'nowip',
     label: 'Hide works in progress',
-    title: 'Leave out mods whose thread marks them as unfinished.',
+    title: 'Hide mods marked as unfinished in their thread.',
     keep: (mod) => mod.isWorkInProgress !== true,
   },
 ];
@@ -68,12 +69,35 @@ function newSeed() {
   return Math.floor(Math.random() * 0x7fffffff) + 1;
 }
 
+// A shared address supplies the whole selection. An ordinary Browse visit
+// picks up the last selection, starting on the first page.
+function browseQuery(query) {
+  if (query.size) return query;
+  try {
+    const saved = new URLSearchParams(localStorage.getItem(FILTERS_KEY) || '');
+    saved.delete('page');
+    return saved;
+  } catch {
+    return query;
+  }
+}
+
+function rememberFilters(hash) {
+  const query = new URLSearchParams(hash.split('?')[1] || '');
+  query.delete('page');
+  try {
+    localStorage.setItem(FILTERS_KEY, query.toString());
+  } catch {
+    // The address still keeps the selection when storage is unavailable.
+  }
+}
+
 export async function render(root, parts) {
   const list = await modList();
   const mods = list.mods || [];
   const currentVersion = currentGameVersion(mods);
 
-  const query = hashQuery();
+  const query = browseQuery(hashQuery());
   const state = {
     search: query.get('q') || '',
     // The filter works on the number a game release shares, so a link saved
@@ -135,6 +159,7 @@ export async function render(root, parts) {
       older: shown.olderToo ? '1' : '',
       page: shown.page || '',
     });
+    rememberFilters(hash);
     replaceHash(hash);
   }
 
@@ -152,6 +177,7 @@ export async function render(root, parts) {
     if (!matches.length) {
       into.append(nothingMatched(() => {
         clearFilters(shown);
+        saveState(shown);
         render(root, parts);
       }));
       return;
@@ -399,7 +425,6 @@ function neededMods(mods) {
 }
 
 function clearFilters(state) {
-  replaceHash(buildHash(['browse']));
   state.search = '';
   state.game = '';
   state.needs = '';
@@ -411,12 +436,11 @@ function clearFilters(state) {
 }
 
 function nothingMatched(onClear) {
-  const button = el('button', { class: 'btn btn-primary', text: 'Clear the filters' });
+  const button = el('button', { class: 'btn btn-primary', text: 'Clear filters' });
   button.addEventListener('click', onClear);
   return el('div', { class: 'notice' }, [
     el('h3', { text: 'No mods match' }),
-    el('p', { text: 'Nothing here matches what you asked for. Try fewer words, '
-      + 'or clear the filters and start again.' }),
+    el('p', { text: 'Try fewer search words or clear the filters.' }),
     el('p', { class: 'notice-action' }, [button]),
   ]);
 }
@@ -643,7 +667,7 @@ function badges(mod, currentVersion) {
   if (mod.isTool) {
     out.push(el('span', {
       class: 'badge tool', text: 'Tool',
-      title: 'A program you run beside the game, not a mod you load into it.',
+      title: 'A separate program, such as a launcher or mod editor.',
     }));
   }
   if (isDiscordOnly(mod)) {

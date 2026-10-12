@@ -1,17 +1,5 @@
-// What the site's search matches on.
-//
-// Both the browse page and the box in the bar at the top use this, so a search
-// that finds a mod in one finds it in the other, in the same order.
-//
-// Everything typed and every fact about a mod goes through one clean-up first
-// (`normalize`), so capitals, accents, apostrophes and punctuation never stop a
-// match: "seeker unidentified contact" finds "Seeker - Unidentified Contact".
-// What was typed is then read as groups (split on commas) of words (split on
-// spaces). Every word in a group has to match one fact about the mod, in any
-// order; each fact is checked on its own, so the end of a category can never
-// run into the start of an author's name and match something nobody typed.
-//
-// The tests are in test/site/search_test.mjs, run against real mod records.
+// Shared browse and top-bar search. Comma-separated groups are alternatives;
+// every word within a group must match an individual mod fact.
 
 import { everyOtherName, modName } from './mod_names.js';
 import { NICKNAMES } from './nicknames.js';
@@ -93,13 +81,7 @@ export function editDistance(a, b, limit = Infinity) {
 const STOP_WORDS = new Set(
   ['of', 'the', 'and', 'for', 'a', 'an', 'in', 'on', 'to', 'by', 'or', 'at']);
 
-/// How much worse a match on this fact is than a match on the mod's name.
-///
-/// A mod called "Nexerelin" should come above one whose category happens to
-/// hold the letters somebody typed. The name, its nicknames and the people
-/// credited cost nothing, the separate words of a name cost a little, a
-/// category or a version costs more, and the summary — a paragraph, where a
-/// stray match means least — costs most.
+// Match penalties by field; lower costs rank ahead of incidental matches.
 const COST = {
   name: 0,
   namePiece: 10,
@@ -118,15 +100,7 @@ const IDENTITY = new Set(['name', 'namePiece', 'initials', 'person']);
 /// the mod itself, because two mods can share a name.
 const factsByMod = new WeakMap();
 
-/// Everything about a mod the search looks at, worked out once.
-///
-/// - `terms`: each fact on its own, cleaned up, with what a match on it costs
-///   and what kind of fact it is.
-/// - `names`: the mod's whole names (shown name, thread title, nicknames),
-///   cleaned up, for the bonus a search that is the whole name earns.
-/// - `nameWords`: the shown name as words, also split at capitals, for runs of
-///   word starts such as "indevo".
-/// - `closeWords`: the words of every name and person, for close spellings.
+// Cached terms, full names, name segments and words used for typo matching.
 function factsOf(mod) {
   const known = factsByMod.get(mod);
   if (known) return known;
@@ -515,13 +489,7 @@ export function suggestMods(mods, text, count) {
 const tooLittleTyped = (text) =>
   normalize(text).replace(/[^\p{L}\p{N}]/gu, '').length < 2;
 
-/// The people whose name holds every word typed. Search already covers
-/// authors, so this is only to save the reader working out that a name is a
-/// person rather than a mod.
-///
-/// They are listed by name, not by how many mods each has. Ordering people by
-/// mod count is a scoreboard, and a scoreboard is a reason to publish more
-/// mods rather than better ones.
+// Suggest matching authors in alphabetical order.
 export function peopleMatching(mods, text, count) {
   if (tooLittleTyped(text)) return [];
   const asks = compileSearch(text).groups

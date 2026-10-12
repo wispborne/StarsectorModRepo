@@ -173,14 +173,7 @@ async function showBuild() {
   }
 }
 
-/// The settings dialog, opened from the bar at the top. It holds the choices
-/// that are about the reader rather than about any one page: the colours, how
-/// much room there is between things, which of a mod's two pictures to show,
-/// whether a description shows its post's pictures, and whether AI-written
-/// summaries are shown at all. Each choice takes effect the moment
-/// it is ticked — there is no Save button to find. Changing the pictures or
-/// the summaries choice redraws the page underneath, so everything on it
-/// changes at once rather than on the next click.
+// Apply settings immediately; picture and summary changes redraw the page.
 function mountSettings() {
   const open = document.getElementById('open-settings');
   const dialog = document.getElementById('settings');

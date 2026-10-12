@@ -1,8 +1,4 @@
-// The names a mod and its people are known by.
-//
-// Kept apart from `lib.js` because it needs nothing from a browser, which is
-// what lets the search be loaded and tested in Node. `lib.js` exports these
-// again, so the rest of the site imports them from there as it always has.
+// Browser-independent mod names, re-exported by lib.js.
 
 /// The name to show for a mod.
 ///

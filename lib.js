@@ -9,7 +9,6 @@ import { address } from './address.js';
 
 import { everyOtherName, modName, otherNamesOf } from './mod_names.js';
 
-// Exported again so the rest of the site keeps importing them from here.
 export { everyOtherName, modName, otherNamesOf };
 
 // --- Where the data comes from ---
@@ -100,9 +99,7 @@ export function el(tag, attrs = {}, children = []) {
 /// removed, or swapped for whatever [whenBroken] puts in its place.
 export function picture(url, opts = {}) {
   const { className = null, alt = '', title = null, whenBroken = null } = opts;
-  // The picture's address goes on last, so the browser already knows to wait
-  // until it is near the screen, and to send no referrer, when it starts the
-  // request. Some old image hosts refuse pictures asked for by another site.
+  // Set loading and referrer policy before src starts the request.
   const img = el('img', {
     class: className, alt, title, loading: 'lazy', referrerpolicy: 'no-referrer',
     src: url,
@@ -145,14 +142,7 @@ export function breadcrumbs(trail = []) {
   return nav;
 }
 
-/// A hover note that shows at once, for where the browser's own `title` is too
-/// slow: it waits about a second, and a reader pointing at "+3" to see what is
-/// hidden gives up before then. It floats on the page itself, so a card that
-/// clips its own contents cannot cut it off.
-///
-/// [text] is read each time the pointer arrives, so it can change after the
-/// note is set up. Only one note is ever on the page, and it goes when the
-/// pointer leaves, the page scrolls or the route changes.
+// Append to the body to avoid clipping by cards. Read dynamic text on hover.
 export function quickTip(node, text) {
   node.addEventListener('pointerenter', () => {
     const words = typeof text === 'function' ? text() : text;
@@ -268,10 +258,7 @@ export function spacingPreference() {
   return SPACINGS.includes(saved) ? saved : 'dense';
 }
 
-/// Remembers the choice and applies it to the page straight away. The style
-/// sheet reads it off `data-spacing` on the root element, so no page has to be
-/// redrawn. (index.html applies the saved choice before the first paint too,
-/// so a reader who picked Comfortable never sees the dense page flash first.)
+// index.html also applies the saved theme before first paint.
 export function setSpacingPreference(spacing) {
   localStorage.setItem(SPACING_KEY, spacing);
   applySpacing();
@@ -283,11 +270,7 @@ export function applySpacing() {
 
 // --- The theme setting ---
 
-/// The themes a reader can pick, copied from TriOS. Each id names a
-/// `[data-theme]` block in style.css, which holds its colours; this list only
-/// says which exist and what to call them. "default" sets no `data-theme` at
-/// all, so it keeps following the computer's light or dark setting. "light"
-/// is the site's own light colours, not one of TriOS's themes.
+// Theme ids match style.css. Default follows the system; Light is site-specific.
 export const THEMES = [
   { id: 'default', name: 'Default' },
   { id: 'light', name: 'Light' },
@@ -307,8 +290,7 @@ export function themePreference() {
   return THEMES.some((t) => t.id === saved) ? saved : 'default';
 }
 
-/// Remembers the choice and applies it straight away; the style sheet does the
-/// rest. (index.html applies the saved choice before the first paint too.)
+// index.html also applies the saved theme before first paint.
 export function setThemePreference(theme) {
   localStorage.setItem(THEME_KEY, theme);
   applyTheme();
@@ -338,10 +320,7 @@ export function setImageChoice(choice) {
   localStorage.setItem(IMAGE_KEY, choice);
 }
 
-/// Whether a mod's description shows the pictures from the author's post,
-/// where the post put them: "on" (the default) or "off". Off means none of them
-/// is even fetched — each becomes a small link instead, for a reader on a slow
-/// connection or one who would rather read.
+// Off replaces inline pictures with links without fetching the images.
 export const INLINE_PICTURE_CHOICES = ['on', 'off'];
 const INLINE_PICTURES_KEY = 'starmodderInlinePictures';
 
@@ -358,7 +337,28 @@ export function setInlinePictures(choice) {
   try {
     localStorage.setItem(INLINE_PICTURES_KEY, choice);
   } catch {
-    // Storage is blocked; the choice lasts until the page is reloaded.
+    // Ignore unavailable storage.
+  }
+}
+
+// Mod-page AI visibility is independent of the list summary preference.
+export const AI_ON_MOD_PAGES_CHOICES = ['show', 'hide'];
+const AI_ON_MOD_PAGES_KEY = 'starmodderAiOnModPages';
+
+export function aiOnModPages() {
+  try {
+    const saved = localStorage.getItem(AI_ON_MOD_PAGES_KEY);
+    return AI_ON_MOD_PAGES_CHOICES.includes(saved) ? saved : 'show';
+  } catch {
+    return 'show';
+  }
+}
+
+export function setAiOnModPages(choice) {
+  try {
+    localStorage.setItem(AI_ON_MOD_PAGES_KEY, choice);
+  } catch {
+    // Ignore unavailable storage.
   }
 }
 
@@ -794,7 +794,7 @@ export function showPicture(images, at = 0) {
   shot.addEventListener('error', () => {
     middle.classList.remove('is-loading');
     shot.hidden = true;
-    note.textContent = 'This picture could not be loaded.';
+    note.textContent = 'Could not load this picture.';
     note.hidden = false;
   });
 
@@ -1081,31 +1081,47 @@ export function openInfoDialog(title, paragraphs) {
   close.focus();
 }
 
-/// The line that names the mods something needs, with each one linked where
-/// this site has a page for it.
+/// One button that opens every fold in [container] matching [selector], and
+/// closes them all again once they are open. Home's release list and a mod's
+/// Changelog tab both carry one.
 ///
-/// Both a mod's own page and the reader's list say this, in the same words and
-/// the same shape, so they are the same piece of the page.
-export function neededModsLine(label, needs) {
-  if (!needs || !needs.length) return null;
+/// Reading down a list of changelogs means clicking every row in turn, and
+/// there is no way back short of clicking each one again. The label says what
+/// a press would do, so nobody has to guess which way it goes.
+///
+/// Returns null when there are no folds — a button that would do nothing is
+/// worse than no button.
+export function expandAllButton(container, selector,
+  { open: openLabel = 'Expand all', shut: shutLabel = 'Collapse all' } = {}) {
+  const foldsIn = () => [...container.querySelectorAll(selector)];
+  if (!foldsIn().length) return null;
 
-  // The names sit in one span of their own, so the commas stay against the
-  // name in front of them rather than being spaced out as flex children.
-  const names = el('span', { class: 'needs-list' });
-  needs.forEach((needed, i) => {
-    if (i) names.append(document.createTextNode(', '));
-    names.append(needed.id
-      ? el('a', { class: 'needed', href: modHref(needed.id), text: needed.name })
-      : el('span', {
-          class: 'needed unknown', text: needed.name,
-          title: 'This site has no page for that one.',
-        }));
+  const button = el('button', { type: 'button', class: 'expand-all' });
+
+  // Read off the page every time rather than kept in a variable: folds are
+  // also opened one at a time, and a button that thinks it knows better tells
+  // the reader the wrong thing.
+  const relabel = () => {
+    const folds = foldsIn();
+    const allOpen = folds.length > 0 && folds.every((fold) => fold.open);
+    button.textContent = allOpen ? shutLabel : openLabel;
+    button.setAttribute('aria-expanded', allOpen ? 'true' : 'false');
+  };
+
+  button.addEventListener('click', () => {
+    const folds = foldsIn();
+    const open = !folds.every((fold) => fold.open);
+    for (const fold of folds) fold.open = open;
+    relabel();
   });
 
-  return el('div', { class: 'needs-line' }, [
-    el('span', { class: 'needs-label', text: label }),
-    names,
-  ]);
+  // A fold's own `toggle` event does not travel up the page, so it is caught on
+  // the way down instead. Without this, opening the last shut fold by hand
+  // would leave the button still offering to open them all.
+  container.addEventListener('toggle', relabel, true);
+
+  relabel();
+  return button;
 }
 
 // --- The reader's favorites ---
@@ -1490,7 +1506,7 @@ const WAYS_TO_SEARCH = [
   {
     name: 'Shorthand',
     says: ['e.g. ', { code: 'swp' }, ', ', { code: 'kol' }, ' or ', { code: 'indevo' },
-      ' finds the mod they stand for'],
+      ' matches the full mod name'],
   },
   {
     name: 'Versions',
@@ -1498,7 +1514,7 @@ const WAYS_TO_SEARCH = [
   },
   {
     name: 'Close spellings',
-    says: ['small typos in a name are forgiven: ', { code: 'nexerlin' }],
+    says: ['matches minor typos in names: ', { code: 'nexerlin' }],
   },
   {
     name: 'Field search',
@@ -1646,7 +1662,7 @@ export function versionStanding(mod, current) {
 /// there is nothing worth saying.
 export function versionStandingNote(standing) {
   if (standing === 'current') return 'Built for the current game release.';
-  if (standing === 'one-behind') return 'Built for the game release before this one.';
+  if (standing === 'one-behind') return 'Built for the previous game release.';
   if (standing === 'old') return 'Built for an older game release.';
   return null;
 }
@@ -1654,7 +1670,7 @@ export function versionStandingNote(standing) {
 /// What the version badge beside a mod's name means. The game version badge
 /// next to it explains itself, so this one should too.
 export const MOD_VERSION_NOTE =
-  "The mod's own version, as the author last gave it.";
+  "The mod version reported by the author.";
 
 // --- Dates ---
 
