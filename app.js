@@ -183,8 +183,7 @@ function mountSettings() {
   const aiRadios = [...dialog.querySelectorAll('input[name="ai-summaries"]')];
   const pictureRadios =
     [...dialog.querySelectorAll('input[name="mod-pictures"]')];
-  const inlineRadios =
-    [...dialog.querySelectorAll('input[name="inline-pictures"]')];
+  const inlineToggle = dialog.querySelector('input[name="inline-pictures"]');
   const themeRadios = mountThemeList(dialog.querySelector('#theme-list'));
 
   applySpacing();
@@ -196,8 +195,7 @@ function mountSettings() {
     for (const radio of aiRadios) radio.checked = radio.value === ai;
     const picture = imageChoice();
     for (const radio of pictureRadios) radio.checked = radio.value === picture;
-    const inline = inlinePictures();
-    for (const radio of inlineRadios) radio.checked = radio.value === inline;
+    inlineToggle.checked = inlinePictures() === 'on';
     const theme = themePreference();
     for (const radio of themeRadios) radio.checked = radio.value === theme;
     dialog.showModal();
@@ -233,13 +231,10 @@ function mountSettings() {
       route();
     });
   }
-  for (const radio of inlineRadios) {
-    radio.addEventListener('change', () => {
-      if (!radio.checked) return;
-      setInlinePictures(radio.value);
-      route();
-    });
-  }
+  inlineToggle.addEventListener('change', () => {
+    setInlinePictures(inlineToggle.checked ? 'on' : 'off');
+    route();
+  });
 }
 
 /// One button per theme in Settings, each with a strip of that theme's

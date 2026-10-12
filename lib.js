@@ -275,14 +275,16 @@ export function applySpacing() {
 
 // --- The theme setting ---
 
-// Theme ids match style.css. Default follows the system; Light is site-specific.
+// Theme ids match style.css. Browser Default follows the browser's colour scheme.
 export const THEMES = [
-  { id: 'default', name: 'Default' },
+  { id: 'browser-default', name: 'Browser Default' },
+  { id: 'dark', name: 'Dark' },
   { id: 'light', name: 'Light' },
   { id: 'sigma', name: 'Sigma' },
   { id: 'redacted', name: '[REDACTED]' },
   { id: 'player', name: 'Player' },
   { id: 'one-dark', name: 'One Dark' },
+  { id: 'one-dark-blue', name: 'One Dark Blue' },
   { id: 'independents', name: 'Independents' },
   { id: 'lavender', name: 'Lavender' },
   { id: 'knights-of-ludd', name: 'Knights of Ludd' },
@@ -292,7 +294,7 @@ const THEME_KEY = 'starmodderTheme';
 
 export function themePreference() {
   const saved = localStorage.getItem(THEME_KEY);
-  return THEMES.some((t) => t.id === saved) ? saved : 'default';
+  return THEMES.some((t) => t.id === saved) ? saved : 'browser-default';
 }
 
 // index.html also applies the saved theme before first paint.
@@ -303,7 +305,7 @@ export function setThemePreference(theme) {
 
 export function applyTheme() {
   const theme = themePreference();
-  if (theme === 'default') delete document.documentElement.dataset.theme;
+  if (theme === 'browser-default') delete document.documentElement.dataset.theme;
   else document.documentElement.dataset.theme = theme;
 }
 

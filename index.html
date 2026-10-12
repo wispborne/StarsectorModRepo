@@ -38,10 +38,10 @@
       document.documentElement.dataset.spacing =
         spacing === 'comfortable' ? 'comfortable' : 'dense';
     } catch (e) { document.documentElement.dataset.spacing = 'dense'; }
-    // The reader's theme, for the same reason. The default sets nothing.
+    // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
-      if (theme && theme !== 'default' && /^[a-z-]+$/.test(theme)) {
+      if (theme && theme !== 'default' && theme !== 'browser-default' && /^[a-z-]+$/.test(theme)) {
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
@@ -78,30 +78,24 @@
       </div>
       <section class="settings-section" aria-labelledby="appearance-title">
         <h3 id="appearance-title">Appearance</h3>
-        <p>Default follows your computer's light or dark setting. Light stays light; the TriOS themes stay dark.</p>
+        <p>Browser Default follows your browser's light or dark setting. Dark and Light stay as chosen; the TriOS themes stay dark.</p>
         <div id="theme-list" class="theme-list" role="radiogroup" aria-label="Theme"></div>
-        <p>Choose the spacing between items. Text and picture sizes stay the same.</p>
+        <p>Choose the spacing between items.</p>
         <div class="choice-list" role="radiogroup" aria-label="Spacing">
           <label class="choice">
             <input type="radio" name="spacing" value="dense">
-            <span>
-              <span class="choice-name">Dense</span><br>
-              <span class="choice-note">Fits more on the screen.</span>
-            </span>
+            <span class="choice-name">Dense</span>
           </label>
           <label class="choice">
             <input type="radio" name="spacing" value="comfortable">
-            <span>
-              <span class="choice-name">Comfortable</span><br>
-              <span class="choice-note">More space between items.</span>
-            </span>
+            <span class="choice-name">Comfortable</span>
           </label>
         </div>
       </section>
       <section class="settings-section" aria-labelledby="pictures-title">
-        <h3 id="pictures-title">Mod pictures</h3>
-        <p>Choose the forum picture or the Discord/Nexus announcement picture. Mods with one picture use it for both choices.</p>
-        <div class="choice-list" role="radiogroup" aria-label="Which picture to show">
+        <h3 id="pictures-title">Mod images</h3>
+        <p>Choose the forum image or the Discord/Nexus announcement image. Mods with one image use it for both choices.</p>
+        <div class="choice-list" role="radiogroup" aria-label="Which image to show">
           <label class="choice">
             <input type="radio" name="mod-pictures" value="post">
             <span>
@@ -117,23 +111,10 @@
             </span>
           </label>
         </div>
-        <p>Show pictures where the author placed them in the description.</p>
-        <div class="choice-list" role="radiogroup" aria-label="Pictures in descriptions">
-          <label class="choice">
-            <input type="radio" name="inline-pictures" value="on">
-            <span>
-              <span class="choice-name">Show them</span><br>
-              <span class="choice-note">The description looks the way the post does.</span>
-            </span>
-          </label>
-          <label class="choice">
-            <input type="radio" name="inline-pictures" value="off">
-            <span>
-              <span class="choice-name">Don't show them</span><br>
-              <span class="choice-note">Replace pictures with links. Pictures load only when opened.</span>
-            </span>
-          </label>
-        </div>
+        <label class="check-row">
+          <input type="checkbox" name="inline-pictures">
+          <span>Show images in mod descriptions</span>
+        </label>
       </section>
       <section class="settings-section" aria-labelledby="summaries-title">
         <h3 id="summaries-title">Show AI mod summaries</h3>

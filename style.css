@@ -16,7 +16,7 @@
    Everything is laid out to fit a phone: nothing here scrolls sideways except
    the odd wide table, which scrolls inside its own box. */
 
-:root {
+:root, [data-theme="dark"], [data-theme="browser-default"] {
   --primary: rgb(73, 252, 255);
   --secondary: rgb(59, 203, 232);
   --surface: rgb(14, 22, 43);
@@ -45,6 +45,10 @@
      cyan, so "on" and "under the pointer" can be told apart. */
   --on: var(--primary);
   --on-soft: var(--primary-soft);
+  /* A quieter selection for the Cards/Rows and Top/Side controls. */
+  --view-on: color-mix(in srgb, var(--on) 85%, transparent);
+  --view-on-border: color-mix(in srgb, var(--on) 65%, transparent);
+  --view-on-soft: color-mix(in srgb, var(--on) 12%, transparent);
 
   /* The line round each kind of badge, and the wash behind the line saying
      what a mod needs. Each is its own colour at a strength that shows without
@@ -122,7 +126,7 @@
    The cyan is darker here than the dark version's. Light cyan on white is
    unreadable, and an action nobody can read is not an action. */
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme]), [data-theme="browser-default"] {
     --primary: rgb(0, 104, 119);
     --secondary: rgb(0, 108, 127);
     --surface: rgb(240, 244, 250);
@@ -160,8 +164,8 @@
 }
 
 /* The themes a reader can pick in Settings, copied from TriOS's
-   `assets/themes.json`. Picking one sets `data-theme` on the page; the default
-   sets nothing, so it still follows the computer's light or dark setting.
+   `assets/themes.json`. Picking one sets `data-theme` on the page; Browser Default
+   sets nothing, so it follows the browser's light or dark setting.
 
    Each theme block is written against `[data-theme]` rather than `:root`, so
    the little colour preview on each theme's button in Settings can carry the
@@ -173,7 +177,7 @@
    everything that is not the theme's own colours, for a reader whose computer
    asks for light pages, and works out the see-through strengths of the
    theme's colours from the colours themselves. */
-[data-theme] {
+[data-theme]:where(:not([data-theme="dark"]):not([data-theme="browser-default"])) {
   --text: rgb(220, 225, 240);
   --text-dim: rgb(140, 150, 170);
   --warning: rgb(255, 183, 77);
@@ -247,14 +251,6 @@
   --over-picture-fade: linear-gradient(to top, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
   --raised: 0 0 0 1px rgba(22, 30, 45, 0.06), 0 1px 3px rgba(22, 30, 45, 0.05);
 }
-/* The default's dark colours, for its preview button only. On the page the
-   default sets no `data-theme`, so this never applies there. */
-[data-theme="default"] {
-  --primary: rgb(73, 252, 255);
-  --secondary: rgb(59, 203, 232);
-  --surface: rgb(14, 22, 43);
-  --surface-container: rgb(32, 41, 65);
-}
 [data-theme="sigma"] {
   --primary: #40D7A3;
   --secondary: #18FFFF;
@@ -273,11 +269,14 @@
   --surface: #04141C;
   --surface-container: #0A2029;
 }
-[data-theme="one-dark"] {
+[data-theme="one-dark"], [data-theme="one-dark-blue"] {
   --primary: #4D78CC;
   --secondary: #98C379;
   --surface: #21242B;
   --surface-container: #282C34;
+}
+[data-theme="one-dark-blue"] {
+  --secondary: var(--primary);
 }
 [data-theme="independents"] {
   --primary: #B8BCC4;
@@ -809,12 +808,17 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 
 /* Cards and Rows are joined into one control, so it reads as a choice of one.
    Each button's border overlaps its neighbour's, and the one in use is drawn
-   on top so its cyan border shows on every side. */
+   on top so its selected border shows on every side. */
 .view-toggle { display: flex; }
 .view-toggle > .btn { position: relative; border-radius: 0; gap: 6px; }
 .view-toggle > .btn + .btn { margin-left: -1px; }
 .view-toggle > .btn:first-child { border-radius: 6px 0 0 6px; }
 .view-toggle > .btn:last-child { border-radius: 0 6px 6px 0; }
+.view-toggle > .btn.on {
+  background: var(--view-on-soft);
+  border-color: var(--view-on-border);
+  color: var(--view-on);
+}
 .view-toggle > .btn.on,
 .view-toggle > .btn:hover { z-index: 1; }
 .view-icon, .view-icon svg { display: block; width: 1em; height: 1em; flex-shrink: 0; }
