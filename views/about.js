@@ -8,6 +8,7 @@ import {
 const MOD_REPO_URL = 'https://github.com/wispborne/StarsectorModRepo';
 const SCRAPER_URL = 'https://github.com/wispborne/Mod_Repo_Scraper';
 const WISP_URL = 'https://github.com/wispborne';
+const TRIOS_URL = 'https://fractalsoftworks.com/forum/index.php?topic=29674';
 const QBMBAMM_URL = 'https://github.com/theRoastSuckling/QBMBAMM';
 
 // Inline GitHub mark; inherits the button colour.
@@ -41,71 +42,69 @@ export async function render(root) {
             el('h1', {text: 'About Starmodder'}),
         ]),
 
-    section('What this is', [
-      'Starmodder brings together Starsector mods posted on the Starsector '
+    section('What is this?', [
+      'Starmodder is an easier way to view, filter, and sort mods posted on the official Starsector '
         + 'forum and the Unofficial Starsector Discord.',
-      'The site is read-only. It has no accounts, comments, or ratings. Your '
-        + 'browser builds each page from files on this site, and nothing you '
-        + 'do here is sent anywhere.',
+      [
+        'This is ',
+        el('em', {text: 'not'}),
+        ' a site like NexusMods; you cannot upload or manage mods here (see "Why not let people upload mods?" below). It is only '
+        + 'displaying mods from other sites in an easier format.',
+      ],
     ]),
 
     section('Who made this?', [
       [
-        'Starmodder is made and maintained by ',
+        'Starmodder is made by ',
         githubLink(WISP_URL, 'Wisp'),
-        '. Its scraper combines code written by Wisp with a Dart port and fork of ',
+        ' (developer of ',
+        githubLink(TRIOS_URL, 'TriOS'),
+        '). Its scraper combines code written by Wisp with a Dart port and fork of ',
         githubLink(QBMBAMM_URL, 'QBMBAMM'),
         ', originally made by theRoastSuckling aka kyuubi_.',
       ],
+        'AI wrote the code for the website itself.'
     ]),
 
-    section('Where the data comes from', [
+    section('How does it work?', [
             [
-                githubLink(SCRAPER_URL, 'A program'),
+                githubLink(SCRAPER_URL, 'A scraper'),
                 ' collects mod information from forum threads and Discord mod '
-                + 'channels, then combines it into ',
-                githubLink(MOD_REPO_URL, 'one list'),
-                '. Mod names, descriptions, pictures, downloads, and changelogs come '
-                + 'from the authors\' posts. Links still point to the places where '
-                + 'the authors shared them.',
+                + 'channels, then merges it ',
+                githubLink(MOD_REPO_URL, 'all together'),
+                ', then builds this site from that merge. TriOS uses the same data.'
             ],
             collectedOn
-                ? `The site updates twice a day. This data was collected ${
+                ? `The site updates twice a day. It last ran: ${
                     formatDay(collectedOn)}.`
                 : 'The site updates twice a day.',
             [
-                'The published data is available in the ',
+                'It is available in the ',
                 githubLink(MOD_REPO_URL, 'Starsector Mod Repo'),
-                '. The code that collects and builds it is in the ',
+                ' repo. The scraper\'s code is in the ',
                 githubLink(SCRAPER_URL, 'Mod Repo Scraper'),
-                '. Both projects are on GitHub.',
+                ' repo.',
             ],
         ]),
 
-        section('What "AI" means here', [
-            'AI writes summaries from forum posts. A sparkle marks AI-written text.',
-            'Choose "Show AI mod summaries" in Settings: "Only if missing" '
-            + 'prefers the author\'s words, "Always" prefers AI summaries, and '
-            + '"Never" hides them everywhere, including hover text. Your choice '
-            + 'is saved in your browser.',
-            'With summaries enabled, mod pages can also show an AI summary in '
-            + 'the Description tab. You can hide it there for all mod pages.',
-            'AI also extracts details such as versions, changelogs, licenses '
-            + 'and source code links from the author\'s post.',
+        section('Why not let people upload mods?', [
+            'Moderation.',
+            'The current setup relies on the moderation teams of the Forum and USC to decide what mods'
+            + ' to allow. From the Starmodder side, everything is entirely automated.',
+            'Dealing with issues such as: how NSFW is too NSFW, whether a mod stole someone else\'s work,'
+            + ' corporate copyright, what is considered hate speech, takedown requests, political mods, targeted mods etc.'
+            + ' These are not how I\'d like to spend my free time.'
         ]),
 
-        section('How updates are detected', [
-            'A new release means that a mod\'s version has increased. A reply to its '
-            + 'forum thread does not count as a release.',
-            'Version numbers can be hard to read reliably from a post, so the site '
-            + 'checks them before adding a release to the feed. The same new '
-            + 'version must appear in two consecutive checks. A confirmed version '
-            + 'cannot move backward. The site ignores a number that matches the Starsector '
-            + 'version, since that is probably the game version rather than the '
-            + 'mod version. If the thread title includes a version, the detected '
-            + 'version must agree with it.',
-            'The first confirmed version of a mod is its starting point, so it is '
-            + 'not announced as a new release.',
+        section('How is AI used?', [
+            'The LLM runs on my own hardware in my own home; scraped forum mods are not sent to cloud providers.',
+            'AI writes summaries from forum posts and is marked with the sparkle icon.',
+            'You can choose when to see AI-generated mod summaries in Settings: "Only if missing" (no human desc available), '
+            + '"Always", or "Never".',
+            'With summaries enabled, mod pages can also show an AI summary in '
+            + 'the Description tab. You can hide it there for all mod pages.',
+            'AI also extracts details such as versions, changelogs, save compatibility, licenses'
+            + ', source code links, and more from the author\'s post.',
         ]),
 
         el('p', {}, [
