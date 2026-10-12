@@ -4,7 +4,7 @@
   <subtitle>Mods whose version really moved forward, newest first.</subtitle>
   <id>tag:starmodder,2026:releases</id>
   <author><name>Starmodder</name></author>
-  <updated>2026-10-12T04:38:19Z</updated>
+  <updated>2026-10-12T08:32:50Z</updated>
   <link rel="self" href="updates.xml"/>
   <link rel="alternate" type="text/html" href="index.html"/>
   <entry>
@@ -264,8 +264,6 @@ Saves: Initial release - no older versions to update from.</content>
     <link rel="alternate" type="text/html" href="index.html#/mods/halo-unsc-reborn"/>
     <content type="text">Halo - UNSC Reborn went from v0.6.4 to 0.6.5.
 
-Saves: not save-compatible with the original UNSC mod, and not meant to be run alongside it - both define the same faction and the same ship IDs.
-
 Fixed: five jobs - Shadow a battlegroup, and the dead drop, infiltration, extraction and sabotage - demanded that nobody had you placed, and a station is a fleet in this engine. The battlestation over the port you dock at held you at composition detail forever, so your own navy refused its own tasking at its own pier and then told you to open the range. Stations no longer count, and neither does anybody who is not hostile to you
 Changed: shadowing is no longer a yes/no at the counter. It is five days actually spent trailing a Covenant formation with your transponder off, close enough to count them, and the days need not be consecutive. Being made puts the count back to nothing, and the bank survives the trip home
 Added: the board line now reads "3 of 5 days trailed", the intel briefing says what the job wants before you take it, and the refusal at the desk explains how it is flown instead of repeating that you are visible
@@ -432,6 +430,8 @@ Added 2 lines in the income screen under player hq that shows the upkeep for mar
     <link rel="alternate" type="text/html" href="index.html#/mods/exiled-sector"/>
     <content type="text">Exiled Sector went from 0.4.0 to 0.5.0.
 
+Saves: If a future update removes nodes from the tree, your ships get back the OP and free allocations they spent on them. If a ship's starting root is removed, its tree is reset so you can pick a new one, and it keeps its level, XP and banked allocations. Hopefully this makes skill tree iterations not break your saves.
+
 Features
 You can now save a ship's skill tree as a named template and load it onto any other ship with the same starting node. A loaded template shows its path as green connectors, and the Auto-allocate button fills it in for you, skipping any nodes that are blocked or cost items.
 Ships now earn more XP from harder fights, using the same difficulty rating vanilla shows before combat. It only ever adds XP, the post-battle report tells you how much, and you can adjust its strength and cap in LunaLib.
@@ -588,7 +588,7 @@ Added version checker support.(Actually this time, will fix change log when I ha
     <link rel="alternate" type="text/html" href="index.html#/mods/nexerelin"/>
     <content type="text">Nexerelin went from 0.12.2c to 0.12.2d.
 
-Saves: updates will almost always be save-compatible for several versions</content>
+Saves: Updates will almost always be save-compatible for several versions.</content>
   </entry>
   <entry>
     <title>THREAT TECH 1.9a</title>
@@ -605,9 +605,7 @@ Added the "SYSTEM" tag to all the fighter/ship built-in weapons so they won't ap
     <id>tag:starmodder,2026:release/strike-craft-expansion/2.0.5e</id>
     <updated>2026-09-26T00:00:00Z</updated>
     <link rel="alternate" type="text/html" href="index.html#/mods/strike-craft-expansion"/>
-    <content type="text">Strike Craft Expansion went from 2.0.5b to 2.0.5e.
-
-Saves: For best results befor updates fully remove the old mod version and back it up, until basic functionality of the new version is confirmed!</content>
+    <content type="text">Strike Craft Expansion went from 2.0.5b to 2.0.5e.</content>
   </entry>
   <entry>
     <title>Play HQ 1.7.2 [Mod] 1.4</title>
@@ -671,7 +669,7 @@ Saves: Improved functionality for adding faction mid-save
     <link rel="alternate" type="text/html" href="index.html#/mods/play-hq-1-7-2-mod"/>
     <content type="text">Play HQ 1.7.2 [Mod] went from 1.1 to 1.2.
 
-Saves: Removed the Combat Drone Replicator station upgrade(Make sure to uninstall it before updating)
+Saves: Removed the Combat Drone Replicator station upgrade(Make sure to uninstall it before updating) and now the colony gets a 0.50x bonus to defense and +1 Stability if you build the Military Hub.
 
 Cleaned up info text, fixed typos and removed personal notes.
 
@@ -1546,7 +1544,7 @@ small fix: the title above the custom-group squares was stuck on whichever group
     <link rel="alternate" type="text/html" href="index.html#/mods/junk-yard-dogs"/>
     <content type="text">Junk Yard Dogs went from 3.6.9 to 3.7.0.
 
-Saves: Save Compatible
+Saves: v3.7.0 - Save Compatible
 
 Save Compatible
 &amp;nbsp;&amp;nbsp;&amp;nbsp;-Stalwart Variant: Fixed a spelling mistake on my part - TY RustyDios for catching it!
