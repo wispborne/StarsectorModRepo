@@ -14,7 +14,7 @@ import {
   MOD_VERSION_NOTE,
   NO_DESCRIPTION, pager, quickTip, pageSizePreference, picture, replaceHash,
   fullAiSummaryOnHover, searchHelpField, summaryTitle,
-  summaryToShow, thumbnail,
+  summaryToShow,
   versionStanding, versionStandingNote, viewToggle,
 } from '../lib.js';
 import { compileSearch } from '../search.js';
@@ -741,28 +741,30 @@ export function modCard(mod, currentVersion, { when = null } = {}) {
   ]);
 }
 
+/// The same facts a card carries, laid out across the page: picture, name and
+/// authors, summary, categories, then the badges and how long ago the mod
+/// changed at the right.
 export function modRows(mods, currentVersion) {
   const rows = el('div', { class: 'mod-rows' });
   for (const mod of mods) {
-    const summary = summaryToShow(mod);
-    const generated = Boolean(summary?.generated);
     const names = joinNames(mod.authors);
     rows.append(el('div', { class: 'mod-row' }, [
       el('a', { class: 'row-inner', href: modHref(mod.id) }, [
-        thumbnail(imageUrlOf(mod), 'row-thumb'),
+        cardImage(mod, 'row-thumb'),
         el('div', { class: 'row-main' }, [
-          el('div', { class: 'row-title', text: modName(mod) }),
-          fullAiSummaryOnHover(el('div', {
-            class: 'row-sub',
-            title: summaryTitle(summary),
-          }, [
-            names ? `${names} · ` : null,
-            generated ? aiSparkle(summary.text) : null,
-            generated ? ' ' : null,
-            summary?.text || NO_DESCRIPTION,
-          ]), summary),
+          el('div', { class: 'row-heading' }, [
+            el('span', { class: 'row-title', text: modName(mod) }),
+            names ? el('span', { class: 'row-authors', text: names }) : null,
+          ]),
+          summaryLine(summaryToShow(mod)),
+          categoryLine(mod.categories),
         ]),
-        el('div', { class: 'row-side' }, badges(mod, currentVersion)),
+        el('div', { class: 'row-side' }, [
+          el('div', { class: 'row-badges' }, badges(mod, currentVersion)),
+          mod.lastReleaseDate
+            ? whenLine({ kind: 'updated', on: mod.lastReleaseDate })
+            : null,
+        ]),
       ]),
       favoriteToggle(mod),
       downloadButton(mod),
@@ -771,20 +773,20 @@ export function modRows(mods, currentVersion) {
   return rows;
 }
 
-/// The picture on a card. A mod with none, and a mod whose picture will not
-/// load, both get a plain box with the first letter of the name in it — which
-/// tells the reader more than the words "no picture" did, and keeps the grid
-/// even.
-function cardImage(mod) {
+/// The picture on a card or row. A mod with none, and a mod whose picture will
+/// not load, both get a plain box with the first letter of the name in it —
+/// which tells the reader more than the words "no picture" did, and keeps the
+/// grid even.
+function cardImage(mod, className = 'card-image') {
   const initial = () => el('div', {
-    class: 'card-image placeholder',
+    class: `${className} placeholder`,
     text: (modName(mod).trim()[0] || '?').toUpperCase(),
     'aria-hidden': 'true',
   });
   const url = imageUrlOf(mod);
   if (!url) return initial();
   return picture(url, {
-    className: 'card-image',
+    className,
     whenBroken: (img) => img.replaceWith(initial()),
   });
 }

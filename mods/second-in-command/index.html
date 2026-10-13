@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="../../">
   <title>Second-in-Command | Starmodder</title>
-  <meta name="description" content="A skill system rework that almost entirely replaces the original system with a new one. More information on it can be found on its forum page.">
+  <meta name="description" content="Second-in-Command is a">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Second-in-Command">
-  <meta property="og:description" content="A skill system rework that almost entirely replaces the original system with a new one. More information on it can be found on its forum page.">
+  <meta property="og:description" content="Second-in-Command is a">
   <meta property="og:image" content="https://imgur.com/CbmANKW.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
@@ -21,15 +21,10 @@
        written, and its address resolves against that page's own `<base>`. -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
-  <!-- The reader's spacing choice, applied before anything is drawn so the
-       page does not change shape a moment after it appears. The same key
-       lib.js keeps it under. -->
+  <!-- The reader's theme, applied before anything is drawn so the page does
+       not change colour a moment after it appears. The same key lib.js keeps
+       it under. -->
   <script>
-    try {
-      var spacing = localStorage.getItem('starmodderSpacing');
-      document.documentElement.dataset.spacing =
-        spacing === 'comfortable' ? 'comfortable' : 'dense';
-    } catch (e) { document.documentElement.dataset.spacing = 'dense'; }
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -70,47 +65,42 @@
       </div>
       <section class="settings-section" aria-labelledby="appearance-title">
         <h3 id="appearance-title">Appearance</h3>
-        <p>Browser Default follows your browser's light or dark setting. Dark and Light stay as chosen; the TriOS themes stay dark.</p>
         <div id="theme-list" class="theme-list" role="radiogroup" aria-label="Theme"></div>
-        <p>Choose the spacing between items.</p>
-        <div class="choice-list" role="radiogroup" aria-label="Spacing">
-          <label class="choice">
-            <input type="radio" name="spacing" value="dense">
-            <span class="choice-name">Dense</span>
-          </label>
-          <label class="choice">
-            <input type="radio" name="spacing" value="comfortable">
-            <span class="choice-name">Comfortable</span>
-          </label>
-        </div>
       </section>
       <section class="settings-section" aria-labelledby="pictures-title">
         <h3 id="pictures-title">Mod images</h3>
-        <p>Choose the forum image or the Discord/Nexus announcement image. Mods with one image use it for both choices.</p>
+        <p>For the primary mod image, prefer</p>
         <div class="choice-list" role="radiogroup" aria-label="Which image to show">
           <label class="choice">
             <input type="radio" name="mod-pictures" value="post">
             <span>
-              <span class="choice-name">From the forum post</span><br>
-              <span class="choice-note">From the author’s forum thread.</span>
+              <span class="choice-name">...the forum post</span><br>
             </span>
           </label>
           <label class="choice">
             <input type="radio" name="mod-pictures" value="announcement">
             <span>
-              <span class="choice-name">From Discord or Nexus</span><br>
-              <span class="choice-note">From the announcement, as shown in TriOS.</span>
+              <span class="choice-name">...the Discord or Nexus post</span><br>
             </span>
           </label>
         </div>
-        <label class="check-row">
-          <input type="checkbox" name="inline-pictures">
-          <span>Show images in mod descriptions</span>
-        </label>
+        <div class="setting-row">
+          <span id="inline-pictures-label">Show images in mod descriptions</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="inline-pictures-label">
+            <label title="Display images just like on their Forum page.">
+              <input type="radio" name="inline-pictures" value="on">
+              <span>Show</span>
+            </label>
+            <label title="Replace images with a small link.">
+              <input type="radio" name="inline-pictures" value="off">
+              <span>Hide</span>
+            </label>
+          </div>
+        </div>
       </section>
       <section class="settings-section" aria-labelledby="summaries-title">
         <h3 id="summaries-title">Show AI mod summaries</h3>
-        <p>AI summaries are based on forum posts and marked with a sparkle.</p>
+        <p>More info on AI use on the About page.</p>
         <div class="choice-list" role="radiogroup" aria-label="AI-written summaries">
           <label class="choice">
             <input type="radio" name="ai-summaries" value="always">
@@ -133,6 +123,19 @@
               <span class="choice-note">Hide AI summaries, including hover text.</span>
             </span>
           </label>
+        </div>
+        <div class="setting-row">
+          <span id="ai-note-label">Show “Summary generated by AI” text</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="ai-note-label">
+            <label title="Write “Summary generated by AI” under each AI summary.">
+              <input type="radio" name="ai-note" value="show">
+              <span>Show</span>
+            </label>
+            <label title="Leave the text out. The sparkle before the summary still marks it as AI.">
+              <input type="radio" name="ai-note" value="hide">
+              <span>Hide</span>
+            </label>
+          </div>
         </div>
       </section>
     </div>

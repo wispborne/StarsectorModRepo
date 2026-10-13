@@ -100,21 +100,25 @@
      lines, so most of the boxes that used to carry a border now carry one of
      these instead.
 
-     These are the "Dense" numbers, which is the default. The reader can pick
-     "Comfortable" in Settings, which sets `data-spacing="comfortable"` on the
-     page and swaps in the roomier block further down. Only the room between
-     and around things changes — never the size of the words, the pictures or
-     the controls. Nothing outside these two blocks should write a gap or a
-     padding out longhand where one of these fits. */
-  --gap: 10px;             /* between things in one group */
-  --gap-wide: 22px;        /* between the sections of a page. It has to be
+     One set of numbers, taken from the old Dense and Comfortable
+     settings where each worked best. Lists and grids are tight, so more mods
+     fit on a screen: the gap between cards, the room inside a card or a row,
+     and the bar at the top. Reading is roomy: the gap between a page's
+     sections, the room inside a panel, and the margin round the page. A
+     phone gets the tight numbers throughout (the block near the end), since
+     room there costs more than it gives. Only the room between and around
+     things is set here — never the size of the words, the pictures or the
+     controls. Nothing else should write a gap or a padding out longhand
+     where one of these fits. */
+  --gap: 12px;             /* between things in one group */
+  --gap-wide: 32px;        /* between the sections of a page. It has to be
                               clearly more than --gap, or a heading sits as
                               close to the section above as to its own words */
-  --gap-cells: 10px;       /* between cards in a grid */
-  --pad-page: 16px 16px 40px;   /* round the whole page */
-  --pad-block: 12px 14px;  /* inside a panel or a notice */
-  --pad-cell: 6px 10px;    /* inside a card's words, a row, a release */
-  --pad-bar: 6px 16px;     /* the bar at the top */
+  --gap-cells: 12px;       /* between cards in a grid */
+  --pad-page: 24px 20px 56px;   /* round the whole page */
+  --pad-block: 18px 20px;  /* inside a panel or a notice */
+  --pad-cell: 7px 10px;    /* inside a card's words, a row, a release */
+  --pad-bar: 8px 16px;     /* the bar at the top */
 
   --page-width: 1200px;
 }
@@ -303,15 +307,15 @@
   --surface-container: #22101B;
 }
 
-/* The roomier spacing, for a reader who picked "Comfortable" in Settings. */
-:root[data-spacing="comfortable"] {
-  --gap: 16px;
-  --gap-wide: 36px;
-  --gap-cells: 18px;
-  --pad-page: 28px 20px 64px;
-  --pad-block: 20px 22px;
-  --pad-cell: 10px 12px;
-  --pad-bar: 10px 16px;
+/* A phone keeps the tight numbers: on a narrow screen, room around a
+   section pushes the next one off the bottom. */
+@media (max-width: 640px) {
+  :root {
+    --gap: 10px;
+    --gap-wide: 22px;
+    --pad-page: 16px 16px 40px;
+    --pad-block: 12px 14px;
+  }
 }
 
 * { box-sizing: border-box; }
@@ -447,6 +451,27 @@ h3 { font-size: var(--type-big); line-height: 1.25; margin: 0 0 6px; }
 .choice input { accent-color: var(--on); margin-top: 3px; cursor: pointer; }
 .choice-name { color: var(--text); font-size: var(--type-small); font-weight: 600; }
 .choice-note { color: var(--text-dim); font-size: var(--type-tiny); }
+/* A setting with two short answers, on one line: its name at the left and the
+   answers as joined buttons at the right. The radio buttons stay in the page
+   for the keyboard and screen readers, but are drawn as the buttons. */
+.setting-row {
+  display: flex; justify-content: space-between; align-items: center; gap: var(--gap);
+  font-size: var(--type-small);
+}
+.segmented { display: inline-flex; }
+.segmented > label {
+  position: relative; cursor: pointer; padding: 4px 12px;
+  border: 1px solid var(--border); background: var(--surface-2); color: var(--text-dim);
+}
+.segmented > label + label { margin-left: -1px; }
+.segmented > label:first-child { border-radius: 6px 0 0 6px; }
+.segmented > label:last-child { border-radius: 0 6px 6px 0; }
+.segmented > label:hover { border-color: var(--primary); z-index: 1; }
+.segmented > label:has(input:checked) {
+  border-color: var(--on); background: var(--on-soft); color: var(--text); z-index: 1;
+}
+.segmented > label:has(input:focus-visible) { outline: 2px solid var(--on); outline-offset: 1px; }
+.segmented input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
 
 /* The theme buttons: a strip of each theme's colours and its name, in a row
    that wraps. The radio button is hidden but still there, so the arrow keys
@@ -963,11 +988,38 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 }
 .row-inner:hover { text-decoration: none; }
 .mod-row .fav-toggle { position: static; margin-right: 10px; flex-shrink: 0; }
-.row-thumb { width: 72px; height: 44px; object-fit: cover; flex-shrink: 0; background: var(--surface-container); }
-.row-main { flex: 1 1 auto; min-width: 0; }
+/* The whole picture, as on a card, so a title screen keeps its name. */
+.row-thumb {
+  width: 128px; aspect-ratio: 16 / 9; object-fit: contain; flex-shrink: 0;
+  display: block; background: var(--surface-container);
+}
+.row-thumb.placeholder {
+  display: flex; align-items: center; justify-content: center;
+  color: var(--primary-ghost); font-size: 1.6rem; font-weight: 700;
+  user-select: none;
+}
+/* Name, summary and categories, one under the other, like a card's body. */
+.row-main {
+  flex: 1 1 auto; min-width: 0;
+  display: flex; flex-direction: column; gap: 4px;
+}
 .row-title { font-weight: 600; color: var(--text); }
+/* The authors follow the name on the same line, dimmer, as one heading. */
+.row-heading { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 8px; }
+.row-authors { font-size: var(--type-small); color: var(--text-dim); overflow-wrap: anywhere; }
+/* A row is wider than a card, so two lines of summary hold as much. */
+.row-main .card-summary { -webkit-line-clamp: 2; }
+.row-main .card-categories { margin-top: 0; }
 .row-sub { font-size: var(--type-small); color: var(--text-dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.row-side { flex-shrink: 0; display: flex; gap: 6px; align-items: center; }
+/* The badges a card lays over its picture, and how long ago the mod changed,
+   stacked at the right of the row. */
+.row-side {
+  flex-shrink: 0; max-width: 240px;
+  display: flex; flex-direction: column; gap: 6px; align-items: flex-end;
+}
+.row-badges { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+/* Not over a picture here, so it needs no backing. */
+.row-side .card-when { margin-left: 0; padding: 0; background: none; }
 
 .badge {
   display: inline-block; padding: 2px 8px; border-radius: 999px;
@@ -1615,7 +1667,14 @@ body.picture-open { overflow: hidden; }
      has no width to spare for a column of names. */
   .raw-branch { grid-template-columns: 1fr; }
   .raw-branch > .raw-name { margin-top: 4px; }
-  .row-thumb { display: none; }
+  .row-thumb { width: 72px; }
+  .row-thumb.placeholder { font-size: 1.1rem; }
+  /* No room for a column at the right: the badges go under the words. */
+  .row-inner { flex-wrap: wrap; }
+  .row-main { flex: 1 1 0; }
+  .row-side { max-width: none; flex: 1 1 100%; flex-direction: row; align-items: center; flex-wrap: wrap; }
+  .row-badges { justify-content: flex-start; }
+  .row-side .card-when { margin-left: auto; }
   /* A narrow screen has no room for a column of its own. In a browse row it
      also has no room beside the words: standing the button next to them left
      the mod's name one letter wide, so it drops to a line of its own. */
@@ -1632,4 +1691,45 @@ body.picture-open { overflow: hidden; }
   .big-picture-step { font-size: 2.2rem; padding: 6px 8px; }
   .pager-size-label { margin-left: 0; }
   .footer-note { margin-left: 0; }
+}
+
+/* --- Cut corners, like Starsector's own buttons ---
+   The game has no rounded corners anywhere. Its buttons are cut straight
+   across at two opposite corners, top-left and bottom-right, the way the refit
+   screen's buttons and the tabs along the bottom of the screen are. So every
+   corner the rules above round is cut instead, and its border follows the
+   cut; the top-right and bottom-left corners are left square. A pair of
+   buttons joined into one control (Cards / Rows, a download and its "open the
+   page" button) only had its outer corners rounded, so it comes out as one
+   shape with the same two cuts.
+
+   The game cuts a button by about a third of its height; the sizes below
+   follow that where "round" meant a pill or a circle, since a pill cut that
+   deep comes to a point.
+
+   A browser that cannot cut corners keeps the rounded ones it always had. */
+@supports (corner-shape: bevel) {
+  *, *::before, *::after {
+    corner-shape: bevel;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+
+  .btn { border-radius: 10px; }
+  .btn-big { border-radius: 14px; }
+  .badge, .card-when { border-radius: 7px; }
+  .nav-count, .search-help-mark { border-radius: 6px; }
+  .fav-toggle { border-radius: 9px; }
+  .mod-tab { border-radius: 10px; }
+  .support-links a { border-radius: 9px; }
+  .mod-card { border-radius: 12px; }
+  .download-actions > .download-btn { border-radius: 10px 0 0 10px; }
+  .original-page-btn { border-radius: 0 10px 10px 0; }
+  .view-toggle > .btn { border-radius: 0; }
+  .view-toggle > .btn:first-child { border-radius: 10px 0 0 10px; }
+  .view-toggle > .btn:last-child { border-radius: 0 10px 10px 0; }
+
+  /* Real circles stay round: the play mark on a video and the loading spinner. */
+  .prose a.video-link:not(.as-words)::after,
+  .big-picture-middle.is-loading::after { corner-shape: round; border-radius: 50% !important; }
 }

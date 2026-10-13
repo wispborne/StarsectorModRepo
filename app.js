@@ -5,13 +5,12 @@
 // files, fetched off this site's own origin.
 
 import {
-  aiSummaryMode, buildHash, clear, el, errorPanel, formatDay,
-  formatMoment, applySpacing, go, imageChoice, imageUrlOf, inlinePictures,
+  aiNoteChoice, aiSummaryMode, buildHash, clear, el, errorPanel, formatDay,
+  formatMoment, go, imageChoice, imageUrlOf, inlinePictures,
   loading,
   favorites, modHref, modList, modName,
   preparePageScroll, restorePageScroll, searchHelpField, setAiSummaryMode,
-  setImageChoice, setInlinePictures,
-  setSpacingPreference, spacingPreference,
+  setAiNoteChoice, setImageChoice, setInlinePictures,
   THEMES, applyTheme, setThemePreference, themePreference,
   thumbnail, watchFavorites,
 } from './lib.js';
@@ -179,23 +178,24 @@ function mountSettings() {
   const dialog = document.getElementById('settings');
   if (!open || !dialog) return;
   const close = dialog.querySelector('.settings-close');
-  const radios = [...dialog.querySelectorAll('input[name="spacing"]')];
   const aiRadios = [...dialog.querySelectorAll('input[name="ai-summaries"]')];
   const pictureRadios =
     [...dialog.querySelectorAll('input[name="mod-pictures"]')];
-  const inlineToggle = dialog.querySelector('input[name="inline-pictures"]');
+  const inlineRadios =
+    [...dialog.querySelectorAll('input[name="inline-pictures"]')];
+  const aiNoteRadios = [...dialog.querySelectorAll('input[name="ai-note"]')];
   const themeRadios = mountThemeList(dialog.querySelector('#theme-list'));
 
-  applySpacing();
   applyTheme();
   open.addEventListener('click', () => {
-    const current = spacingPreference();
-    for (const radio of radios) radio.checked = radio.value === current;
     const ai = aiSummaryMode();
     for (const radio of aiRadios) radio.checked = radio.value === ai;
     const picture = imageChoice();
     for (const radio of pictureRadios) radio.checked = radio.value === picture;
-    inlineToggle.checked = inlinePictures() === 'on';
+    const inline = inlinePictures();
+    for (const radio of inlineRadios) radio.checked = radio.value === inline;
+    const aiNote = aiNoteChoice();
+    for (const radio of aiNoteRadios) radio.checked = radio.value === aiNote;
     const theme = themePreference();
     for (const radio of themeRadios) radio.checked = radio.value === theme;
     dialog.showModal();
@@ -207,11 +207,6 @@ function mountSettings() {
   dialog.addEventListener('click', (e) => {
     if (e.target === dialog) dialog.close();
   });
-  for (const radio of radios) {
-    radio.addEventListener('change', () => {
-      if (radio.checked) setSpacingPreference(radio.value);
-    });
-  }
   for (const radio of themeRadios) {
     radio.addEventListener('change', () => {
       if (radio.checked) setThemePreference(radio.value);
@@ -231,10 +226,20 @@ function mountSettings() {
       route();
     });
   }
-  inlineToggle.addEventListener('change', () => {
-    setInlinePictures(inlineToggle.checked ? 'on' : 'off');
-    route();
-  });
+  for (const radio of inlineRadios) {
+    radio.addEventListener('change', () => {
+      if (!radio.checked) return;
+      setInlinePictures(radio.value);
+      route();
+    });
+  }
+  for (const radio of aiNoteRadios) {
+    radio.addEventListener('change', () => {
+      if (!radio.checked) return;
+      setAiNoteChoice(radio.value);
+      route();
+    });
+  }
 }
 
 /// One button per theme in Settings, each with a strip of that theme's
