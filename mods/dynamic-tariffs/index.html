@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Dynamic Tariffs</h1><p>A Starsector mod by Tuv0x. For Starsector 0.96a. Version 2.0.</p><p>Whenever you open a market, it modifies the tariff based on your reputation with the owning faction. When you close a market, the modifications are removed, hence why this is a utility mod.</p><p><a href="https://github.com/jsbursik/DynamicTariffs/releases/latest" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=19531" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/jsbursik/DynamicTariffs" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Dynamic Tariffs<br>Created by: Tuv0x<br>Download<br>Source</p><p>During a vanilla play-through, I decided that a 30% tariff while dealing with a faction I have good reputation with, just didn't make sense.<br>I figured I might as well break into the modding scene with a mod that handles this problem, not to mention it let me practice my seriously rusty Java.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Dynamic Tariffs</h1><p>A Starsector mod by Tuv0x. For Starsector 0.96a. Version 2.0.</p><p>Whenever you open a market, it modifies the tariff based on your reputation with the owning faction. When you close a market, the modifications are removed, hence why this is a utility mod.</p><p><a href="https://github.com/jsbursik/DynamicTariffs/releases/latest" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=19531" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/jsbursik/DynamicTariffs" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Dynamic Tariffs<br>Created by: Tuv0x<br>Download<br>Source</p><p>During a vanilla play-through, I decided that a 30% tariff while dealing with a faction I have good reputation with, just didn't make sense.<br>I figured I might as well break into the modding scene with a mod that handles this problem, not to mention it let me practice my seriously rusty Java.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

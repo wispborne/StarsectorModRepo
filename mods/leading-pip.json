@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T02:25:52.959609Z",
+  "generatedAt": "2026-10-14T02:49:00.299335Z",
   "listing": {
     "id": "leading-pip",
     "name": "Leading Pip",
@@ -22,7 +22,7 @@
     "gameVersion": "0.98a",
     "modVersion": "1.10.2",
     "imageUrl": "http://www.sc2mafia.com/Starsector/Leading.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1356184967134314506/1356184967285047316/leading.png?ex=6acf3eac&is=6acded2c&hm=badfde327c5b597bbcaeb6f02fbe34256b39265393ca5cbace245ba42ec42101&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1356184967134314506/1356184967285047316/leading.png?ex=6acfe76c&is=6ace95ec&hm=97e8084793ec5cccb16b5ac05296b850624a102d3316f5b31f7f1433516e6660&",
     "summary": "The image kind of speaks for itself, but to clarify, this mod adds a target leading pip in front of whatever ship you have targeted. If you shoot at that pip, you will generally hit the target.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds a target leading pip in front of targeted ships to help aim weapons.",
@@ -33,7 +33,7 @@
       "needsAnotherStep": false
     },
     "downloadCount": 1,
-    "forumUrl": "http://fractalsoftworks.com/forum/index.php?topic=7921.0",
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=7921.0",
     "discordUrl": "https://discord.com/channels/187635036525166592/1356184967134314506/1356184967134314506",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
@@ -50,6 +50,7 @@
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-big\"><a href=\"https://bitbucket.org/DarkRevenant/leading-pip/downloads/Leading_Pip_1.10.2.7z\" rel=\"nofollow noopener\" target=\"_blank\"><strong>Download Leading Pip 1.10.2</strong></a></span></div><div class=\"align-center\">(Requires <a href=\"http://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib 3.0.0</a>)</div><br><div class=\"align-center\"><em>- Supports <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a> -</em></div><br><div class=\"align-center\"><img src=\"http://www.sc2mafia.com/Starsector/Leading.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><br>The image kind of speaks for itself, but to clarify, this mod adds a target leading pip in front of whatever ship you have targeted.  If you shoot at that pip, you will generally hit the target.  The algorithm takes into account your position and velocity, your target's position and velocity, your weapon group, the positions of the weapons in the weapon group, the projectile speed of the weapons in the weapon group, and the acceleration and max speed of rocket-type missiles.<br><br>Highly customizable, including various display modes (combined vs. individual pips, for instance).<br><br><u><strong>Change Log</strong></u><br><strong>Version 1.10.2</strong> (May 27, 2025):<br>- Leading pips on station/ship modules now take the mothership's rotation and velocity into account<br><br><strong>Version 1.10.1</strong> (May 14, 2025):<br>- Fixed a couple of very minor display issues that most people wouldn't notice<br><br><strong>Version 1.10.0</strong> (May 2, 2025):<br>- Improved accuracy of pip when using weapons with mixed projectile speeds and weapon slot locations<br>- Removed inaccurate \"backup\" intercept method; it won't render anything if the primary (accurate) intercept method doesn't find a valid solution<br>- Now properly calculates intercept points for accelerating rocket-type missiles<br>- If an alternating weapon group is selected, only the currently active weapon is considered for the purposes of calculating the intercept point<br>- Will no longer render a leading pip if no weapons within the weapon group have a valid target leading projection<br>- Target leading now takes into account the time-scaled velocity of target ships<br>- In combined pips mode, \"bad\" intercepts (ones which are mathematically valid, but would exceed the weapon's range) are culled unless there are no \"good\" intercepts to display<br>  * This behavior is suppressed if out-of-range pips are configured to neither fade nor hide<br>- Added different pip display configurations:<br>  * \"Individual\" mode: an individual indicator will be displayed for each weapon in a linked control group<br>  * \"Combined\" mode: the legacy behavior; a single indicator will be displayed in a position that represents a \"smart\" average aiming point<br>  * \"Auto-Scaling\" mode: the new default behavior; a modified variant of \"Combined\" mode, which causes the combined indicator to dynamically re-scale to represent the standard deviation between individual aiming points<br>- Added different pip out-of-range behaviors:<br>  * \"Show\" mode: pips are displayed normally<br>  * \"Fade\" mode: pips that are too far out of range are dimmed<br>  * \"Hide\" mode: pips that are too far out of range are hidden<br>- Added LunaLib support<br><br><strong>Version 1.9.5</strong> (March 31, 2025):<br>- Updated for Starsector 0.98a<br><br><strong>Version 1.9.4</strong> (February 3, 2024):<br>- Updated for Starsector 0.97a<br><br><strong>Version 1.9.3</strong> (May 10, 2023):<br>- Updated for Starsector 0.96a<br><br><strong>Version 1.9.2</strong> (December 12, 2021):<br>- Updated for Starsector 0.95.1a<br>- Smoother lines<br><br><strong>Version 1.9.1</strong> (March 29, 2021):<br>- Updated for Starsector 0.95a<br>- Migrated version file to custom host (sigh)<br><br><strong>Version 1.9.0</strong> (July 11, 2020):<br>- Updated for Starsector 0.9.1a<br>- Migrated version file to BitBucket<br><br><strong>Version 1.8.3</strong> (November 16, 2018):<br>- Works in Starsector 0.9a<br><br><strong>Version 1.8.2</strong> (April 24, 2018):<br>- Toggle key now actually works<br><br><strong>Version 1.8.1</strong> (June 4, 2017):<br>- Various bugs fixed<br>- Works in Starsector 0.8.1a<br><br><strong>Version 1.8.0</strong> (April 22, 2017):<br>- Started change tracking<br>- Various bugs fixed<br>- Works in Starsector 0.8a",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
+  "discordPostHtml": "<p>This mod adds a target leading pip in front of whatever ship you have targeted.  If you shoot at that pip, you will generally hit the target.  The algorithm takes into account your position and velocity, your target's position and velocity, your weapon group, the positions of the weapons in the weapon group, the projectile speed of the weapons in the weapon group, and the acceleration and max speed of rocket-type missiles.</p><p>Highly customizable, including various display modes (combined vs. individual pips, for instance).</p><pre><code>Version 1.10.2 (May 27, 2025)\n- Leading pips on station/ship modules now take the mothership's rotation and velocity into account</code></pre><p>Download: <a href=\"https://bitbucket.org/DarkRevenant/leading-pip/downloads/Leading_Pip_1.10.2.7z\" rel=\"nofollow noopener\" target=\"_blank\">https://bitbucket.org/DarkRevenant/leading-pip/downloads/Leading_Pip_1.10.2.7z</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=7921.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=7921.0</a></p>",
   "aiDescription": "Adds a target leading pip in front of whatever ship you have targeted. Shooting at the pip generally hits the target. The algorithm accounts for your position and velocity, the target's position and velocity, weapon group details, projectile speeds, and rocket missile acceleration.",
   "rawCategories": [
     "Quality of Life",
@@ -57,7 +58,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1356184967134314506/1356184967285047316/leading.png?ex=6acf3eac&is=6acded2c&hm=badfde327c5b597bbcaeb6f02fbe34256b39265393ca5cbace245ba42ec42101&"
+      "url": "https://cdn.discordapp.com/attachments/1356184967134314506/1356184967285047316/leading.png?ex=6acfe76c&is=6ace95ec&hm=97e8084793ec5cccb16b5ac05296b850624a102d3316f5b31f7f1433516e6660&"
     },
     {
       "url": "http://www.sc2mafia.com/Starsector/Leading.png"
@@ -81,7 +82,7 @@
   },
   "sourceCodeUrl": "https://bitbucket.org/DarkRevenant/leading-pip",
   "supportLinks": [],
-  "forumUrl": "http://fractalsoftworks.com/forum/index.php?topic=7921.0",
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=7921.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1356184967134314506/1356184967134314506",
   "releases": [],
   "threadLastPostOn": "2025-09-10",

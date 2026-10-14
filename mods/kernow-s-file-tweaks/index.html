@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Kernow's File Tweaks</h1><p>A Starsector mod by Kernow. For Starsector 0.98a-RC8.</p><p><a href="https://fractalsoftworks.com/forum/index.php?topic=36104.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>INFORMATION AND RAMBLINGS<br>As somebody who can't stop modding, I've been fiddling about with the inner workings of the game.</p><p>It's fun to break open files, edit values or swap/insert lines of code and see what happens, because sometimes genuinely interesting or cool things can be the result. This is a compilation of working alterations I've discovered, tested and created. Thought I would share them with you all.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Kernow's File Tweaks</h1><p>A Starsector mod by Kernow. For Starsector 0.98a-RC8.</p><p><a href="https://fractalsoftworks.com/forum/index.php?topic=36104.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>INFORMATION AND RAMBLINGS<br>As somebody who can't stop modding, I've been fiddling about with the inner workings of the game.</p><p>It's fun to break open files, edit values or swap/insert lines of code and see what happens, because sometimes genuinely interesting or cool things can be the result. This is a compilation of working alterations I've discovered, tested and created. Thought I would share them with you all.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>AI-Retrofits</h1><p>A Starsector mod by alaricdragon. For Starsector 0.98a. Version 0.10.1.</p><p>Robotic markets, captains, and administrators</p><p><a href="https://github.com/Alaricdragon/AIRetrofits/archive/refs/heads/master.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=22261.msg335242#msg335242" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1361105891486732459/1361105891486732459" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/Alaricdragon/AIRetrofits" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/crew-replacer/">Crew Replacer</a></li><li><a href="mods/market-retrofits/">Market Retrofits</a></li></ul><h2>Forum post</h2><p>AI-Retrofits</p><p>Robotic markets, captains, and administrators<br>A hullmod to automate any ship<br>New drones and another hullmod to create them</p><p>Download</p><p>My very first mod: feel free to suggest things or report bugs.</p><p>Requirements<br>crew replacer<br>market retrofits</p><p>Compatibility<br>No known incompatible mods.<br>Mods that overwrite the automated ships skill will remove the indicator of the abilities from this mod, but you will still get them after you visit a market.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>AI-Retrofits</h1><p>A Starsector mod by alaricdragon. For Starsector 0.98a. Version 0.10.1.</p><p>Robotic markets, captains, and administrators</p><p><a href="https://github.com/Alaricdragon/AIRetrofits/archive/refs/heads/master.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=22261.msg335242#msg335242" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1361105891486732459/1361105891486732459" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/Alaricdragon/AIRetrofits" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/crew-replacer/">Crew Replacer</a></li><li><a href="mods/market-retrofits/">Market Retrofits</a></li></ul><h2>Forum post</h2><p>AI-Retrofits</p><p>Robotic markets, captains, and administrators<br>A hullmod to automate any ship<br>New drones and another hullmod to create them</p><p>Download</p><p>My very first mod: feel free to suggest things or report bugs.</p><p>Requirements<br>crew replacer<br>market retrofits</p><p>Compatibility<br>No known incompatible mods.<br>Mods that overwrite the automated ships skill will remove the indicator of the abilities from this mod, but you will still get them after you visit a market.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

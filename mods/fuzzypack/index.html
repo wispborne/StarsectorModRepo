@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>FuzzyPack</h1><p>A Starsector mod by SirFuzzWuzz. For Starsector 0.98a. Version 1.6.6.</p><p>FuzzyPack is a content pack with ships, weapons and hullmods.</p><p><a href="https://github.com/SirFuzzWuzz/Starsector_mods/raw/main/FuzzyPack.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=24596.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1376251946125627553/1376251946125627553" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/SirFuzzWuzz/Starsector_mods" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/graphicslib/">GraphicsLib</a></li><li><a href="mods/magiclib/">MagicLib</a></li></ul><h2>Forum post</h2><p>The mod is for v0.98</p><p>I made some ships and weapons. Go play with them.</p><p>v1.6.6<br>-Update for current game version, some balans<br>-No more giant triangles from shieldgens<br>-More dakkadispenser blacklisting<br>-Multiple flux batteries have separate HUD entries</p><p>Requires LazyLib, GraphicsLib, MagicLib.</p><p>FuzzyPack is a content pack with ships, weapons and hullmods.</p><p>DL: https://github.com/SirFuzzWuzz/Starsector_mods/raw/main/FuzzyPack.zip</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>FuzzyPack</h1><p>A Starsector mod by SirFuzzWuzz. For Starsector 0.98a. Version 1.6.6.</p><p>FuzzyPack is a content pack with ships, weapons and hullmods.</p><p><a href="https://github.com/SirFuzzWuzz/Starsector_mods/raw/main/FuzzyPack.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=24596.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1376251946125627553/1376251946125627553" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/SirFuzzWuzz/Starsector_mods" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/graphicslib/">GraphicsLib</a></li><li><a href="mods/magiclib/">MagicLib</a></li></ul><h2>Forum post</h2><p>The mod is for v0.98</p><p>I made some ships and weapons. Go play with them.</p><p>v1.6.6<br>-Update for current game version, some balans<br>-No more giant triangles from shieldgens<br>-More dakkadispenser blacklisting<br>-Multiple flux batteries have separate HUD entries</p><p>Requires LazyLib, GraphicsLib, MagicLib.</p><p>FuzzyPack is a content pack with ships, weapons and hullmods.</p><p>DL: https://github.com/SirFuzzWuzz/Starsector_mods/raw/main/FuzzyPack.zip</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

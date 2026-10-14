@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>UAF Portraits</h1><p>A Starsector mod by caedhin. For Starsector 0.98a. Version 1.0.0.</p><p>I also have an expanding collection of edited portraits from some of the mods I use since I wanted a bit of consistency with the portraits.</p><p><a href="https://www.dropbox.com/scl/fi/xfpwtoq7apxutzs5s4v1b/Edited-UAF-Portraits-1.0.0.zip?rlkey=l73e5bhao6c721oqa2x2lhzuu&amp;st=3c1o4pky&amp;dl=1" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=35226.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>I also have an expanding collection of edited portraits from some of the mods I use since I wanted a bit of consistency with the portraits.</p><p>So far I've contacted Ryxsen1421 for his United Aurora Federation Mod and gotten permission to post the edited portraits for that.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>UAF Portraits</h1><p>A Starsector mod by caedhin. For Starsector 0.98a. Version 1.0.0.</p><p>I also have an expanding collection of edited portraits from some of the mods I use since I wanted a bit of consistency with the portraits.</p><p><a href="https://www.dropbox.com/scl/fi/xfpwtoq7apxutzs5s4v1b/Edited-UAF-Portraits-1.0.0.zip?rlkey=l73e5bhao6c721oqa2x2lhzuu&amp;st=3c1o4pky&amp;dl=1" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=35226.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>I also have an expanding collection of edited portraits from some of the mods I use since I wanted a bit of consistency with the portraits.</p><p>So far I've contacted Ryxsen1421 for his United Aurora Federation Mod and gotten permission to post the edited portraits for that.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

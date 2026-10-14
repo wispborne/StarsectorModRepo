@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Blue Apogee ship skin</h1><p>A Starsector mod by Aramoro. For Starsector 0.95a-RC15.</p><p>i added a blue apogee for TryTac its up on nexus</p><p><a href="https://www.nexusmods.com/starsector/mods/57" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=21443.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Im getting a lot of useful feedback from u guys, and good ideas.</p><p>edit: thx for moving it, and yes its a skin, i forgot...</p><p>Blue Apogee ship skin</p><p>i added a blue apogee for TryTac<br>its up on nexus<br>https://www.nexusmods.com/starsector/mods/57</p><p>tell me what u think about it</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Blue Apogee ship skin</h1><p>A Starsector mod by Aramoro. For Starsector 0.95a-RC15.</p><p>i added a blue apogee for TryTac its up on nexus</p><p><a href="https://www.nexusmods.com/starsector/mods/57" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=21443.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Im getting a lot of useful feedback from u guys, and good ideas.</p><p>edit: thx for moving it, and yes its a skin, i forgot...</p><p>Blue Apogee ship skin</p><p>i added a blue apogee for TryTac<br>its up on nexus<br>https://www.nexusmods.com/starsector/mods/57</p><p>tell me what u think about it</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

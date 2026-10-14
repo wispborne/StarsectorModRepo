@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="0.98.5a Preview Mod">
   <meta property="og:description" content="adds highlighted changes from 0.98.5a preview to 0.98a https://fractalsoftworks.com/forum/index.php?topic=35147.0">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1491137693109846038/1491137693768225041/changelog1.png?ex=6acf1c72&amp;is=6acdcaf2&amp;hm=2e158673a3ce6090dbfc719417b1e4c18c2f88946dfb50cfc7773a5bc63ad604&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1491137693109846038/1491137693768225041/changelog1.png?ex=6acfc532&amp;is=6ace73b2&amp;hm=bd3277559a8a9288a3e50f6b54010d1123e2f085e43d954e7874ad6766aeffa9&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>0.98.5a Preview Mod</h1><p>A Starsector mod by timid_.. For Starsector 0.98a.</p><p>adds highlighted changes from 0.98.5a preview to 0.98a https://fractalsoftworks.com/forum/index.php?topic=35147.0</p><p><a href="https://fractalsoftworks.com/forum/index.php?topic=35147.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1491137693109846038/1491137693109846038" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>adds highlighted changes from 0.98.5a preview to 0.98a https://fractalsoftworks.com/forum/index.php?topic=35147.0</p><p>Changes made are somewhat save-game compatible (Paragon will have overfitted weapons until they start autofitting it out)</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>0.98.5a Preview Mod</h1><p>A Starsector mod by timid_.. For Starsector 0.98a.</p><p>adds highlighted changes from 0.98.5a preview to 0.98a https://fractalsoftworks.com/forum/index.php?topic=35147.0</p><p><a href="https://fractalsoftworks.com/forum/index.php?topic=35147.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1491137693109846038/1491137693109846038" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

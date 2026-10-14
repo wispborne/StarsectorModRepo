@@ -24,6 +24,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -143,7 +146,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Starsector Co-op</h1><p>A Starsector mod by AyoKeito. For Starsector 0.98a. Version 0.1.5.</p><p>Two people, two copies of Starsector 0.98a-RC8, one shared sector. Both of you fly around it at the same time, on one calendar. The host's game runs the NPC fleets, markets, economy and colonies. The guest's game mirrors them.</p><p><a href="https://github.com/AyoKeito/starsector-coop/releases/latest" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=36148.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/AyoKeito/starsector-coop" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Starsector Co-op: two players, one campaign<br>https://github.com/AyoKeito/starsector-coop/releases/latest</p><p>AI use disclaimer<br>Most code in this mod was created using AI tools:<br>Fable 5.1, Opus 5.5, Astra, Sol 6.1</p><p>All smoke tests were done manually and verified via logs.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Starsector Co-op</h1><p>A Starsector mod by AyoKeito. For Starsector 0.98a. Version 0.1.5.</p><p>Two people, two copies of Starsector 0.98a-RC8, one shared sector. Both of you fly around it at the same time, on one calendar. The host's game runs the NPC fleets, markets, economy and colonies. The guest's game mirrors them.</p><p><a href="https://github.com/AyoKeito/starsector-coop/releases/latest" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=36148.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/AyoKeito/starsector-coop" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Starsector Co-op: two players, one campaign<br>https://github.com/AyoKeito/starsector-coop/releases/latest</p><p>AI use disclaimer<br>Most code in this mod was created using AI tools:<br>Fable 5.1, Opus 5.5, Astra, Sol 6.1</p><p>All smoke tests were done manually and verified via logs.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

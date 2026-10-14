@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Dialog Minimap</h1><p>A Starsector mod by andylizi. For Starsector 0.95a.</p><p>This mod shows a minimap besides the dialog when it asks you to accept a mission. It's the same map as the one on Intel screen, with fuel range, accepted mission icons, etc. That's all it does. It's a utility mod and can be added or removed at any time.</p><p><a href="https://drive.google.com/drive/folders/1eV-lnIwCSDIWPLJ0-2dGed6yoLugwfmF?usp=sharing" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=23199.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/andylizi/starsector-dialog-minimap" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Dialog Minimap</p><p>This mod shows a minimap besides the dialog when it asks you to accept a mission. It's the same map as the one on Intel screen, with fuel range, accepted mission icons, etc.<br>That's all it does. It's a utility mod and can be added or removed at any time.</p><p>NOTE: This mod is unnecessary in 0.95.1a and above. See below.</p><p>Download: https://drive.google.com/drive/folders/1eV-lnIwCSDIWPLJ0-2dGed6yoLugwfmF?usp=sharing</p><p>Source code: https://github.com/andylizi/starsector-dialog-minimap</p><p>FAQ</p><p>Why?</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Dialog Minimap</h1><p>A Starsector mod by andylizi. For Starsector 0.95a.</p><p>This mod shows a minimap besides the dialog when it asks you to accept a mission. It's the same map as the one on Intel screen, with fuel range, accepted mission icons, etc. That's all it does. It's a utility mod and can be added or removed at any time.</p><p><a href="https://drive.google.com/drive/folders/1eV-lnIwCSDIWPLJ0-2dGed6yoLugwfmF?usp=sharing" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=23199.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/andylizi/starsector-dialog-minimap" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Dialog Minimap</p><p>This mod shows a minimap besides the dialog when it asks you to accept a mission. It's the same map as the one on Intel screen, with fuel range, accepted mission icons, etc.<br>That's all it does. It's a utility mod and can be added or removed at any time.</p><p>NOTE: This mod is unnecessary in 0.95.1a and above. See below.</p><p>Download: https://drive.google.com/drive/folders/1eV-lnIwCSDIWPLJ0-2dGed6yoLugwfmF?usp=sharing</p><p>Source code: https://github.com/andylizi/starsector-dialog-minimap</p><p>FAQ</p><p>Why?</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

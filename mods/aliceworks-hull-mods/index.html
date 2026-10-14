@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Aliceworks Hull Mods</h1><p>A Starsector mod by Vryka. For Starsector 0.98.</p><p>Here are the null hull mods and what they do</p><p><a href="https://mega.nz/file/HFlEVKZb#bqKFVPwufqZqy8VcL9SMu3yqgjP_kXbbSDSagy-7Up8" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=34249.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Hello.  I am new to modding on starsector and made some new hull mods to test.  I am new to Java as well so please be patient and do not add if you have a save game already.</p><p>Here are the null hull mods and what they do</p><p>Right now, these hull mods only work with base stats, and do not work if you add hull mods to increase them.  The reason is I can't code it properly to work how I wanted it to and also these hull mods are meant to be used on weird ships not all ships.</p><p>Bolstered Bulkheads</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Aliceworks Hull Mods</h1><p>A Starsector mod by Vryka. For Starsector 0.98.</p><p>Here are the null hull mods and what they do</p><p><a href="https://mega.nz/file/HFlEVKZb#bqKFVPwufqZqy8VcL9SMu3yqgjP_kXbbSDSagy-7Up8" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=34249.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Hello.  I am new to modding on starsector and made some new hull mods to test.  I am new to Java as well so please be patient and do not add if you have a save game already.</p><p>Here are the null hull mods and what they do</p><p>Right now, these hull mods only work with base stats, and do not work if you add hull mods to increase them.  The reason is I can't code it properly to work how I wanted it to and also these hull mods are meant to be used on weird ships not all ships.</p><p>Bolstered Bulkheads</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

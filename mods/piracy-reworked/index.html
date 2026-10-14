@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Piracy Reworked</h1><p>A Starsector mod by pogoman. For Starsector 0.98a. Version 0.2.0.</p><p>Basically i didnt like how pirate bases were random and infinite, in that no matter how many you destroy another pops up. I also dont like how the core early game loop of starsector is to buy and sell exclusively on the black market with near zero consequences.</p><p><a href="https://github.com/pogoman/PiracyReworked/releases/download/v0.2.0/PiracyReworked-0.2.0.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=35956.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/pogoman/PiracyReworked" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Piracy Reworked<br>v0.2.0 - the underworld runs on your money - for Starsector 0.98a-RC8</p><p>Download</p><p>PiracyReworked-0.2.0.zip</p><p>Extract into your Starsector mods/ folder and enable it in the launcher. Safe to add to an existing save.</p><p>Description</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Piracy Reworked</h1><p>A Starsector mod by pogoman. For Starsector 0.98a. Version 0.2.0.</p><p>Basically i didnt like how pirate bases were random and infinite, in that no matter how many you destroy another pops up. I also dont like how the core early game loop of starsector is to buy and sell exclusively on the black market with near zero consequences.</p><p><a href="https://github.com/pogoman/PiracyReworked/releases/download/v0.2.0/PiracyReworked-0.2.0.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=35956.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/pogoman/PiracyReworked" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Piracy Reworked<br>v0.2.0 - the underworld runs on your money - for Starsector 0.98a-RC8</p><p>Download</p><p>PiracyReworked-0.2.0.zip</p><p>Extract into your Starsector mods/ folder and enable it in the launcher. Safe to add to an existing save.</p><p>Description</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

@@ -24,6 +24,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -143,7 +146,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Auto-Continue-Inator</h1><p>A Starsector mod by AtlanticAccent. For Starsector 0.97a. Version 0.0.4.</p><p>With this mod, I can automatically continue any game in the Tri-State area!</p><p><a href="https://github.com/atlanticaccent/auto-continue-inator/releases/latest" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=29103.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1206363259817426944/1206363259817426944" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/atlanticaccent/auto-continue-inator" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Behold! The Auto-Continue-Inator!<br>With this mod, I can automatically continue any game in the Tri-State area!</p><p>Immediately loads your last save, bypassing the main menu, as soon as you start the game (and it finishes starting up).</p><p>Note: Includes a terrible, terrible hack involving setting the CombatEngine manually avoid a NPE I occasionally experienced. If this concerns you, don't use the mod lol</p><p>DOWNLOAD HERE</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Auto-Continue-Inator</h1><p>A Starsector mod by AtlanticAccent. For Starsector 0.97a. Version 0.0.4.</p><p>With this mod, I can automatically continue any game in the Tri-State area!</p><p><a href="https://github.com/atlanticaccent/auto-continue-inator/releases/latest" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=29103.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1206363259817426944/1206363259817426944" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/atlanticaccent/auto-continue-inator" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Behold! The Auto-Continue-Inator!<br>With this mod, I can automatically continue any game in the Tri-State area!</p><p>Immediately loads your last save, bypassing the main menu, as soon as you start the game (and it finishes starting up).</p><p>Note: Includes a terrible, terrible hack involving setting the CombatEngine manually avoid a NPE I occasionally experienced. If this concerns you, don't use the mod lol</p><p>DOWNLOAD HERE</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

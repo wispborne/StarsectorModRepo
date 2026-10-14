@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Mimikko Assistant">
   <meta property="og:description" content="Original Mod for Starsector by: SAVEmedley and 死萌 (Simeng)">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1214093776004317224/1214093776880935033/Cover_small.png?ex=6acf1df1&amp;is=6acdcc71&amp;hm=edc2463920730021639437d0d0f01bf755fc04e487486aeec818d94328ca9960&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1214093776004317224/1214093776880935033/Cover_small.png?ex=6acfc6b1&amp;is=6ace7531&amp;hm=ef55fde11ad2319408295f66982534d30befa35381f9c3e6ad2e4e3b025932d0&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Mimikko Assistant</h1><p>A Starsector mod by mycophobia. For Starsector 0.97a.</p><p>Original Mod for Starsector by: SAVEmedley and 死萌 (Simeng)</p><p><a href="https://github.com/MycophobiaSC/mimikko_tl/releases/download/v.07/mimikko096.tl.0.7.rar" rel="nofollow noopener">Download</a> · <a href="https://discord.com/channels/187635036525166592/1214093776004317224/1214093776004317224" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>Original Mod for Starsector by:<br>SAVEmedley and 死萌 (Simeng)</p><p>0.96 Version<br>https://github.com/MycophobiaSC/mimikko_tl/releases/download/v.07/mimikko096.tl.0.7.rar</p><p>0.97 Mod Info Edit, not extensively tested but should work no problem (I might have gotten the wrong mod.info, will correct tonight once I’m home)<br>https://github.com/MycophobiaSC/mimikko_tl/releases/download/v.07-97/mimikko096.tl.0.7.-.0.97.rar<br>(TL Update Mar 5-2024 v0.5)<br>Dependencies: <br>Lazy Lib/Magic Lib/Graphic Lib</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Mimikko Assistant</h1><p>A Starsector mod by mycophobia. For Starsector 0.97a.</p><p>Original Mod for Starsector by: SAVEmedley and 死萌 (Simeng)</p><p><a href="https://github.com/MycophobiaSC/mimikko_tl/releases/download/v.07/mimikko096.tl.0.7.rar" rel="nofollow noopener">Download</a> · <a href="https://discord.com/channels/187635036525166592/1214093776004317224/1214093776004317224" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

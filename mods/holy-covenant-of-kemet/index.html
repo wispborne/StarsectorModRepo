@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Holy Covenant of Kemet</h1><p>A Starsector mod by kingalfonzo. For Starsector 0.97a.</p><p>An isolationist, strictly hierarchical polity with a strong emphasis on high tech weaponry and incredibly garish ship designs, this Egyptian-themed faction is slowly emerging onto the wider Persean scene with strong suspicions by the hegemony of rampant AI utilisation.</p><p><a href="https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/holy_covenant_of_kemet_0_0_4f.zip" rel="nofollow noopener">Download</a> · <a href="https://discord.com/channels/187635036525166592/1206069792625266758/1206069792625266758" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>An isolationist, strictly hierarchical polity with a strong emphasis on high tech weaponry and incredibly garish ship designs, this Egyptian-themed faction is slowly emerging onto the wider Persean scene with strong suspicions by the hegemony of rampant AI utilisation.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Holy Covenant of Kemet</h1><p>A Starsector mod by kingalfonzo. For Starsector 0.97a.</p><p>An isolationist, strictly hierarchical polity with a strong emphasis on high tech weaponry and incredibly garish ship designs, this Egyptian-themed faction is slowly emerging onto the wider Persean scene with strong suspicions by the hegemony of rampant AI utilisation.</p><p><a href="https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/holy_covenant_of_kemet_0_0_4f.zip" rel="nofollow noopener">Download</a> · <a href="https://discord.com/channels/187635036525166592/1206069792625266758/1206069792625266758" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Bricky Construction</h1><p>A Starsector mod by Lortus. For Starsector 0.95.1a. Version 1.3.0.</p><p>Are your ships simply not tanky enough? Do you wish for firepower to blot out the sun? Do you like getting engine flameouts?? The Bricky Construction has got you covered for all your bricky needs! Purchase only the highest quality space rocks at Bricky Construction Inc!!</p><p><a href="https://github.com/Lortus/Bricky-Construction/releases/download/1.3.0/BrickyConstruction.zip" rel="nofollow noopener">Download</a> · <a href="http://fractalsoftworks.com/forum/index.php?topic=23806.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/Lortus/Bricky-Construction" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Bricky Construction<br>(banner coming soon)</p><p>Are your ships simply not tanky enough? Do you wish for firepower to blot out the sun? Do you like getting engine flameouts?? The Bricky Construction has got you covered for all your bricky needs! Purchase only the highest quality space rocks at Bricky Construction Inc!!</p><p>Download<br>if you downloaded before you saw this msg pls redownload I fixed the ACA description<br>Github Direct Download Link<br>Version 1.3.0<br>Compatible with all previous versions<br>Save compatible</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Bricky Construction</h1><p>A Starsector mod by Lortus. For Starsector 0.95.1a. Version 1.3.0.</p><p>Are your ships simply not tanky enough? Do you wish for firepower to blot out the sun? Do you like getting engine flameouts?? The Bricky Construction has got you covered for all your bricky needs! Purchase only the highest quality space rocks at Bricky Construction Inc!!</p><p><a href="https://github.com/Lortus/Bricky-Construction/releases/download/1.3.0/BrickyConstruction.zip" rel="nofollow noopener">Download</a> · <a href="http://fractalsoftworks.com/forum/index.php?topic=23806.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/Lortus/Bricky-Construction" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Bricky Construction<br>(banner coming soon)</p><p>Are your ships simply not tanky enough? Do you wish for firepower to blot out the sun? Do you like getting engine flameouts?? The Bricky Construction has got you covered for all your bricky needs! Purchase only the highest quality space rocks at Bricky Construction Inc!!</p><p>Download<br>if you downloaded before you saw this msg pls redownload I fixed the ACA description<br>Github Direct Download Link<br>Version 1.3.0<br>Compatible with all previous versions<br>Save compatible</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

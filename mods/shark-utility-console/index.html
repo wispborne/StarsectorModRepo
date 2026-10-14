@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Shark Utility Console">
   <meta property="og:description" content="Have you ever wondered how to find the exact ship that will suit your needs? Or a weapon with very specific requirements/parameters?">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1229925569924304896/1229925854851764384/image.png?ex=6acf5d76&amp;is=6ace0bf6&amp;hm=634a548a18db4d711c7e6f90c0f6e2ff32abd35f844a2d073e5bd48aa6bd32e5&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1229925569924304896/1229925854851764384/image.png?ex=6ad00636&amp;is=6aceb4b6&amp;hm=05a608cce40c81e0b3543213c58c9b1d1933aed0833c2c628c9d7543cc453213&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Shark Utility Console</h1><p>A Starsector mod by rksharkz. For Starsector 0.97a.</p><p>Have you ever wondered how to find the exact ship that will suit your needs? Or a weapon with very specific requirements/parameters?</p><p><a href="https://github.com/RkShaRkz/Starsector-IntelliJ-Template/releases/tag/release-utilityconsole-v1.0.0" rel="nofollow noopener">Download page</a> · <a href="https://discord.com/channels/187635036525166592/1229925569924304896/1229925569924304896" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>Have you ever wondered how to find the exact ship that will suit your needs? Or a weapon with very specific requirements/parameters?</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Shark Utility Console</h1><p>A Starsector mod by rksharkz. For Starsector 0.97a.</p><p>Have you ever wondered how to find the exact ship that will suit your needs? Or a weapon with very specific requirements/parameters?</p><p><a href="https://github.com/RkShaRkz/Starsector-IntelliJ-Template/releases/tag/release-utilityconsole-v1.0.0" rel="nofollow noopener">Download page</a> · <a href="https://discord.com/channels/187635036525166592/1229925569924304896/1229925569924304896" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

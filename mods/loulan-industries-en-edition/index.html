@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Loulan Industries - EN Edition</h1><p>A Starsector mod by MrMagolor. For Starsector 0.98a. Version 2.2.0.</p><p>127 years after the collapse, Mirage SouthWind, CEO of SouthWind Metals Corporation, which controls Adenium Obesum, found that staying in the Persean League would only allow corrupt warlords and dictators to drain them of value till there was nothing left, and only leaving the Persean League could allow them a chance to survive in the chaotic post-Collapse Sector.</p><p><a href="https://drive.google.com/uc?export=download&amp;id=1lOmu5Uuzebv9TSBu9YHkBTsVVvPWv7BX" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=26367.0" rel="nofollow noopener">Forum thread</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/magiclib/">MagicLib</a></li><li>BoxUtil</li></ul><h2>Forum post</h2><p>Loulan Industries</p><p>Original mod by Komeiji Satori/IMustRegroupMyForces (Original Fossic post)</p><p>Download links for translated versions:Google Drive<br>Incompatible with earlier versions!</p><p>"Loulan Industries: pummeling enemies into space dust with high-precision weaponry since cycle 127."</p><p>Requires the appropriate versions of LazyLib, MagicLib, BoxUtil</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Loulan Industries - EN Edition</h1><p>A Starsector mod by MrMagolor. For Starsector 0.98a. Version 2.2.0.</p><p>127 years after the collapse, Mirage SouthWind, CEO of SouthWind Metals Corporation, which controls Adenium Obesum, found that staying in the Persean League would only allow corrupt warlords and dictators to drain them of value till there was nothing left, and only leaving the Persean League could allow them a chance to survive in the chaotic post-Collapse Sector.</p><p><a href="https://drive.google.com/uc?export=download&amp;id=1lOmu5Uuzebv9TSBu9YHkBTsVVvPWv7BX" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=26367.0" rel="nofollow noopener">Forum thread</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/magiclib/">MagicLib</a></li><li>BoxUtil</li></ul><h2>Forum post</h2><p>Loulan Industries</p><p>Original mod by Komeiji Satori/IMustRegroupMyForces (Original Fossic post)</p><p>Download links for translated versions:Google Drive<br>Incompatible with earlier versions!</p><p>"Loulan Industries: pummeling enemies into space dust with high-precision weaponry since cycle 127."</p><p>Requires the appropriate versions of LazyLib, MagicLib, BoxUtil</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

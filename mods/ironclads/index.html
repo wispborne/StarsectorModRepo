@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Ironclads</h1><p>A Starsector mod by Okim. For Starsector 0.65.2a. Version 11.</p><p>The mod tells a story of humanity`s future. It is 206 years after the first FTL jump made by humans. As soon as the unmanned probe returned from the first FTL travel to a nearby star - it became clear that space contains a lot of riches that await to be harvested.</p><p><a href="https://yadi.sk/d/9284bCG1qzpuv" rel="nofollow noopener">Download page</a> · <a href="http://fractalsoftworks.com/forum/index.php?topic=431.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>HISTORY</p><p>The mod tells a story of humanity`s future. It is 206 years after the first FTL jump made by humans. As soon as the unmanned probe returned from the first FTL travel to a nearby star - it became clear that space contains a lot of riches that await to be harvested.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Ironclads</h1><p>A Starsector mod by Okim. For Starsector 0.65.2a. Version 11.</p><p>The mod tells a story of humanity`s future. It is 206 years after the first FTL jump made by humans. As soon as the unmanned probe returned from the first FTL travel to a nearby star - it became clear that space contains a lot of riches that await to be harvested.</p><p><a href="https://yadi.sk/d/9284bCG1qzpuv" rel="nofollow noopener">Download page</a> · <a href="http://fractalsoftworks.com/forum/index.php?topic=431.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>HISTORY</p><p>The mod tells a story of humanity`s future. It is 206 years after the first FTL jump made by humans. As soon as the unmanned probe returned from the first FTL travel to a nearby star - it became clear that space contains a lot of riches that await to be harvested.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

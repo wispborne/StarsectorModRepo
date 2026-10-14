@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>ModdedStarsector</h1><p>A Starsector mod by Erick Doe. For Starsector 0.6.1a. Version 3.</p><p>This mod compilation features the latest inter-compatible versions of a whole bunch of faction mods</p><p><a href="http://download1349.mediafire.com/p9j1aztmvc7gniqQmHxDV2r-QfIG1cmGuRAU1Nh6katv_tF3VptyhwHm4M8_3vWvlRMNj18Kyku97KKRaR6Lf8r0pPc99sg4mUfpUKKGBLbhcCsnjqwp6bvqEBWOIvFIg4judUjiYyMtYnGyAACiwhK0l5SHWQKMcdzUPNbj_hU/zh51vcqqunlhpv1/ModdedStarsectorV3.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=7327.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Current version: ModdedStarsectorV3<br>Size: 88.3 MB</p><p>This mod compilation features the latest inter-compatible versions of a whole bunch of faction mods</p><p>All put together into one easy to download and easy to install package</p><p>This will save you the time to check on what mods are compatible with one another</p><p>These mods are overall fairly 'vanilla' balanced!</p><p>(these are also all Exerelin compatible, just download Exerelin and load up the mods in this pack alongside it)</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>ModdedStarsector</h1><p>A Starsector mod by Erick Doe. For Starsector 0.6.1a. Version 3.</p><p>This mod compilation features the latest inter-compatible versions of a whole bunch of faction mods</p><p><a href="http://download1349.mediafire.com/p9j1aztmvc7gniqQmHxDV2r-QfIG1cmGuRAU1Nh6katv_tF3VptyhwHm4M8_3vWvlRMNj18Kyku97KKRaR6Lf8r0pPc99sg4mUfpUKKGBLbhcCsnjqwp6bvqEBWOIvFIg4judUjiYyMtYnGyAACiwhK0l5SHWQKMcdzUPNbj_hU/zh51vcqqunlhpv1/ModdedStarsectorV3.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=7327.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Current version: ModdedStarsectorV3<br>Size: 88.3 MB</p><p>This mod compilation features the latest inter-compatible versions of a whole bunch of faction mods</p><p>All put together into one easy to download and easy to install package</p><p>This will save you the time to check on what mods are compatible with one another</p><p>These mods are overall fairly 'vanilla' balanced!</p><p>(these are also all Exerelin compatible, just download Exerelin and load up the mods in this pack alongside it)</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

@@ -24,6 +24,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -143,7 +146,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Portrait Replacer</h1><p>A Starsector mod by combustiblemon. For Starsector 0.98a.</p><p>Small utility mod that replaces some modded portraits with vanilla ones. The mod was created by me because certain portrait styles took me out of the game. Fully extendable in data/config/modSettings.json. ATM the mod replaces the portraits with random ones from vanilla on every game launch, a lot of functionality can be customized in the settings. Can be added/removed any time without issues. For any issues please ping me. Should not crash your game, but I may have left some debug crashes in by accident</p><p><a href="https://discord.com/channels/187635036525166592/1364322219089727518/1364322219089727518" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>Small utility mod that replaces some modded portraits with vanilla ones. The mod was created by me because certain portrait styles took me out of the game. Fully extendable in `data/config/modSettings.json`. ATM the mod replaces the portraits with random ones from vanilla on every game launch, a lot of functionality can be customized in the settings. Can be added/removed any time without issues. For any issues please ping me. *Should not crash your game, but I may have left some debug crashes in…</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Portrait Replacer</h1><p>A Starsector mod by combustiblemon. For Starsector 0.98a.</p><p>Small utility mod that replaces some modded portraits with vanilla ones. The mod was created by me because certain portrait styles took me out of the game. Fully extendable in data/config/modSettings.json. ATM the mod replaces the portraits with random ones from vanilla on every game launch, a lot of functionality can be customized in the settings. Can be added/removed any time without issues. For any issues please ping me. Should not crash your game, but I may have left some debug crashes in by accident</p><p><a href="https://discord.com/channels/187635036525166592/1364322219089727518/1364322219089727518" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

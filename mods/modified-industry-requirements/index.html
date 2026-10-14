@@ -24,6 +24,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -143,7 +146,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Modified Industry Requirements</h1><p>A Starsector mod by Fokka. For Starsector 0.95a. Version 0.3.</p><p>This small mod is aimed to expand the use area of new Special items, added in 0.95, by changing planet status requirements.</p><p><a href="https://drive.google.com/uc?export=download&amp;id=1UoCdlvkYs-MW3Jg-R6a2PdJlDpbVn1uJ" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=20822.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>This small mod is aimed to expand the use area of new Special items, added in 0.95, by changing planet status requirements.</p><p>DOWNLOAD v0.3</p><p>DOWNLOAD v0.3 - no pollution version</p><p>Use data/config/settings.json to change requirements. readme.txt has all vanilla reqs listed. More can be found in impl.campaign.ids.Conditions.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Modified Industry Requirements</h1><p>A Starsector mod by Fokka. For Starsector 0.95a. Version 0.3.</p><p>This small mod is aimed to expand the use area of new Special items, added in 0.95, by changing planet status requirements.</p><p><a href="https://drive.google.com/uc?export=download&amp;id=1UoCdlvkYs-MW3Jg-R6a2PdJlDpbVn1uJ" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=20822.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>This small mod is aimed to expand the use area of new Special items, added in 0.95, by changing planet status requirements.</p><p>DOWNLOAD v0.3</p><p>DOWNLOAD v0.3 - no pollution version</p><p>Use data/config/settings.json to change requirements. readme.txt has all vanilla reqs listed. More can be found in impl.campaign.ids.Conditions.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

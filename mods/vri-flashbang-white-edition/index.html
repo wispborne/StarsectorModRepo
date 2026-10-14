@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="VRI Flashbang White Edition">
   <meta property="og:description" content="This is the what Gunmetal was originally meant to be.">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1237851617030701128/1237851617315786894/VRI_Crest.png?ex=6acf31e7&amp;is=6acde067&amp;hm=386807a8d5cc6bf9012a9c0b50611cc5a907671e93b4e3893d582785745ae6d6&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1237851617030701128/1237851617315786894/VRI_Crest.png?ex=6acfdaa7&amp;is=6ace8927&amp;hm=d96b0991897a2581f83867e4899f7442fea7635ec23aed85d0bbd70451cf76de&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>VRI Flashbang White Edition</h1><p>A Starsector mod by positivevibesvr. For Starsector 0.97a.</p><p>This is the what Gunmetal was originally meant to be.</p><p><a href="https://discord.com/channels/187635036525166592/1237851617030701128/1237851617030701128" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>This is the what Gunmetal was originally meant to be.</p><p>Permission given by Vanilla</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>VRI Flashbang White Edition</h1><p>A Starsector mod by positivevibesvr. For Starsector 0.97a.</p><p>This is the what Gunmetal was originally meant to be.</p><p><a href="https://discord.com/channels/187635036525166592/1237851617030701128/1237851617030701128" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

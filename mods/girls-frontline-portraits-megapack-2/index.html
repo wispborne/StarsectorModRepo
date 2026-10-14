@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Girls' Frontline Portraits Megapack</h1><p>A Starsector mod by HarryVanguard. For Starsector 0.98a. Version 1.1.2.</p><p>Contains over 1400 portraits from characters of Girls' Frontline, added to your player faction and other vanilla factions (with certain portrait groups being exempt). Also includes 10 flags from major and minor factions you encounter throughout the story.</p><p><a href="https://drive.google.com/drive/folders/1yYhrmE23a8xBhkAcYKbyhNnCe-EAUy9E" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=34701.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Girls' Frontline Portraits Megapack</p><p>DOWNLOAD LINK [v1.1.2]</p><p>Contains over 1400 portraits from characters of Girls' Frontline, added to your player faction and other vanilla factions (with certain portrait groups being exempt).<br>Also includes 10 flags from major and minor factions you encounter throughout the story.<br>Should be safe to download and drop right into your modpack. May induce lag should the entire pack be included.</p><p>Portraits Preview</p><p>"Wait, there are dudes here as well?"</p><p>Flags Preview</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Girls' Frontline Portraits Megapack</h1><p>A Starsector mod by HarryVanguard. For Starsector 0.98a. Version 1.1.2.</p><p>Contains over 1400 portraits from characters of Girls' Frontline, added to your player faction and other vanilla factions (with certain portrait groups being exempt). Also includes 10 flags from major and minor factions you encounter throughout the story.</p><p><a href="https://drive.google.com/drive/folders/1yYhrmE23a8xBhkAcYKbyhNnCe-EAUy9E" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=34701.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Girls' Frontline Portraits Megapack</p><p>DOWNLOAD LINK [v1.1.2]</p><p>Contains over 1400 portraits from characters of Girls' Frontline, added to your player faction and other vanilla factions (with certain portrait groups being exempt).<br>Also includes 10 flags from major and minor factions you encounter throughout the story.<br>Should be safe to download and drop right into your modpack. May induce lag should the entire pack be included.</p><p>Portraits Preview</p><p>"Wait, there are dudes here as well?"</p><p>Flags Preview</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

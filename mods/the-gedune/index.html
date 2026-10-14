@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>The Gedune</h1><p>A Starsector mod by Hyph_K31. For Starsector 0.6.2a. Version 1.7.2.</p><p>A race borne from the ashes of a fallen empire. The Gedune were once one of the most powerful races of man to ever roam the stars. Now they are little more than scavengers and pirates, but even in their death throes the Gedune are a force not to be taken lightly.</p><p><a href="http://bit.ly/1rpYF3P" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=3865.0" rel="nofollow noopener">Forum thread</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/shaderlib/">ShaderLib</a></li></ul><h2>Forum post</h2><p>THE GEDUNE<br>A race borne from the ashes of a fallen empire. The Gedune were once one of the most powerful races of man to ever roam the stars.<br>Now they are little more than scavengers and pirates, but even in their death throes the Gedune are a force not to be taken lightly.</p><p>SHIPS<br>Cruisers<br>Spoiler</p><p>Tenzen Class Cruiser / Dahkan Class Cruiser<br>Destroyers<br>Spoiler</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>The Gedune</h1><p>A Starsector mod by Hyph_K31. For Starsector 0.6.2a. Version 1.7.2.</p><p>A race borne from the ashes of a fallen empire. The Gedune were once one of the most powerful races of man to ever roam the stars. Now they are little more than scavengers and pirates, but even in their death throes the Gedune are a force not to be taken lightly.</p><p><a href="http://bit.ly/1rpYF3P" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=3865.0" rel="nofollow noopener">Forum thread</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/shaderlib/">ShaderLib</a></li></ul><h2>Forum post</h2><p>THE GEDUNE<br>A race borne from the ashes of a fallen empire. The Gedune were once one of the most powerful races of man to ever roam the stars.<br>Now they are little more than scavengers and pirates, but even in their death throes the Gedune are a force not to be taken lightly.</p><p>SHIPS<br>Cruisers<br>Spoiler</p><p>Tenzen Class Cruiser / Dahkan Class Cruiser<br>Destroyers<br>Spoiler</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

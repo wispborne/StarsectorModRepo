@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Arbworks Ships">
   <meta property="og:description" content="A cute little pack of really neatly-sprited ships, most of them asymmetrical. That's about it.">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1376243674228461610/1376308534781808741/arb.png?ex=6acf48f5&amp;is=6acdf775&amp;hm=8c50643920f82c1d91e13dc25532427816966d4365371fc1f61064f2db335cb3&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1376243674228461610/1376308534781808741/arb.png?ex=6acff1b5&amp;is=6acea035&amp;hm=63ef017f426e5426b411b0c50e09274a8edc6fe974bc593d57cb05eaaaa73f4a&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Arbworks Ships</h1><p>A Starsector mod by lahaelyn. For Starsector 0.98a.</p><p>A cute little pack of really neatly-sprited ships, most of them asymmetrical. That's about it.</p><p><a href="https://github.com/CyberCelestial/Repository-Of-Laharl-s-Empire/raw/refs/heads/master/Arbworks%20ships.zip" rel="nofollow noopener">Download</a> · <a href="https://discord.com/channels/187635036525166592/1376243674228461610/1376243674228461610" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>A cute little pack of really neatly-sprited ships, most of them asymmetrical. That's about it.</p><p>With permission from ArbuzBudesh, this is now updated to 0.98, all ships spawn and have variants, and have sim/title/indevo entries</p><p>Doesn't have any requirements I think. Changelog in the folder. If I forgot the version just force compat.</p><p>I encourage yelling at me about balance issues- but if you want to burn me at the stake about it, I insist on pine wood.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Arbworks Ships</h1><p>A Starsector mod by lahaelyn. For Starsector 0.98a.</p><p>A cute little pack of really neatly-sprited ships, most of them asymmetrical. That's about it.</p><p><a href="https://github.com/CyberCelestial/Repository-Of-Laharl-s-Empire/raw/refs/heads/master/Arbworks%20ships.zip" rel="nofollow noopener">Download</a> · <a href="https://discord.com/channels/187635036525166592/1376243674228461610/1376243674228461610" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

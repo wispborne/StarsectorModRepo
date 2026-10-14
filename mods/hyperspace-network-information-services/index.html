@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Hyperspace Network - Information Services</h1><p>A Starsector mod by Jaghaimo. For Starsector 0.9.1a. Version 1.6.2.</p><p>Hyperspace Network, or HyperNET in short, is a sector-wide hyperspace network to query content of known markets.</p><p><a href="https://github.com/jaghaimo/hypernet/releases/latest" rel="nofollow noopener">Download page</a> · <a href="http://fractalsoftworks.com/forum/index.php?topic=19252.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/jaghaimo/hypernet" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Hyperspace Network<br>Information services for Starsector</p><p>Hyperspace Network, or HyperNET in short, is a sector-wide hyperspace network to query content of known markets.<br>Using the network one can search for administrators or officers with a given personality, query markets for weapons, fighter wings, modspecs, or blueprints, or locate specific ships for sale.</p><p>Known bugs</p><p>Spoiler<br>Having too many queries leads to rows bleeding into UI.<br>Unfixable until next Starsector release.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Hyperspace Network - Information Services</h1><p>A Starsector mod by Jaghaimo. For Starsector 0.9.1a. Version 1.6.2.</p><p>Hyperspace Network, or HyperNET in short, is a sector-wide hyperspace network to query content of known markets.</p><p><a href="https://github.com/jaghaimo/hypernet/releases/latest" rel="nofollow noopener">Download page</a> · <a href="http://fractalsoftworks.com/forum/index.php?topic=19252.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/jaghaimo/hypernet" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Hyperspace Network<br>Information services for Starsector</p><p>Hyperspace Network, or HyperNET in short, is a sector-wide hyperspace network to query content of known markets.<br>Using the network one can search for administrators or officers with a given personality, query markets for weapons, fighter wings, modspecs, or blueprints, or locate specific ships for sale.</p><p>Known bugs</p><p>Spoiler<br>Having too many queries leads to rows bleeding into UI.<br>Unfixable until next Starsector release.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

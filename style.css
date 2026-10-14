@@ -561,6 +561,11 @@ main {
 
 
 .loading { color: var(--text-dim); padding: 24px 0; }
+/* The mod's words written into its page file, for search engines that do not
+   run scripts. Where scripts run, "Loading…" shows instead until the script
+   draws the page. */
+.js .page-text { display: none; }
+:root:not(.js) .page-text ~ .loading { display: none; }
 
 .notice {
   background: var(--surface-2); padding: var(--pad-block); border-radius: 10px;

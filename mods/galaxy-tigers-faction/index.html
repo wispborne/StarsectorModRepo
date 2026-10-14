@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Galaxy Tigers faction</h1><p>A Starsector mod by KnightOfTigers. For Starsector 0.9.1a. Version 1.4.4.</p><p>Adds the Galaxy Tigers faction</p><p><a href="https://bitbucket.org/KnightOfTigers/the-galaxy-tigers/downloads/Galaxy_Tigers_Faction.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=17362.0" rel="nofollow noopener">Forum thread</a> · <a href="https://bitbucket.org/KnightOfTigers/the-galaxy-tigers" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/magiclib/">MagicLib</a></li></ul><h2>Forum post</h2><p>Download here (or click on the flag)<br>The Galaxy Tigers</p><p>Update 1.4.4 : Technically save compatible</p><p>Requires LazyLib and MagicLib to work<br>Compatible with Nexerelin and Commissioned Crews<br>Supports Version Checker</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Galaxy Tigers faction</h1><p>A Starsector mod by KnightOfTigers. For Starsector 0.9.1a. Version 1.4.4.</p><p>Adds the Galaxy Tigers faction</p><p><a href="https://bitbucket.org/KnightOfTigers/the-galaxy-tigers/downloads/Galaxy_Tigers_Faction.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=17362.0" rel="nofollow noopener">Forum thread</a> · <a href="https://bitbucket.org/KnightOfTigers/the-galaxy-tigers" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/magiclib/">MagicLib</a></li></ul><h2>Forum post</h2><p>Download here (or click on the flag)<br>The Galaxy Tigers</p><p>Update 1.4.4 : Technically save compatible</p><p>Requires LazyLib and MagicLib to work<br>Compatible with Nexerelin and Commissioned Crews<br>Supports Version Checker</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Sprog's Quickships</h1><p>A Starsector mod by Sproginator.</p><p>This little mod adds some various custom made ships to the game, they are:</p><p><a href="https://www.dropbox.com/s/mp8awibbgfrvplj/Sprog%27s%20Quickships.rar?dl=1" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=3452.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>This little mod adds some various custom made ships to the game, they are:</p><p>The Ark Royal</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Sprog's Quickships</h1><p>A Starsector mod by Sproginator.</p><p>This little mod adds some various custom made ships to the game, they are:</p><p><a href="https://www.dropbox.com/s/mp8awibbgfrvplj/Sprog%27s%20Quickships.rar?dl=1" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=3452.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>This little mod adds some various custom made ships to the game, they are:</p><p>The Ark Royal</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

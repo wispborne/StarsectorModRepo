@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Unbattlecruiser Mod">
   <meta property="og:description" content="Can't have shit in starsector unbattlecruisers your battlecruiser">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1358596257030995978/1358596257244774530/Unbattlecruiser.png?ex=6acf729d&amp;is=6ace211d&amp;hm=e7523efc9912a4c5bdddb198f1f5b541deede7eaad75b9deb35ed5e6f4bb1a48&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1358596257030995978/1358596257244774530/Unbattlecruiser.png?ex=6ad01b5d&amp;is=6acec9dd&amp;hm=227389926739cf8397df7ebdd1ea7c1ea20a278e01017d35f7e369c4e2b29fce&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Unbattlecruiser Mod</h1><p>A Starsector mod by gord_f. For Starsector 0.98a.</p><p>Can't have shit in starsector unbattlecruisers your battlecruiser</p><p><a href="https://discord.com/channels/187635036525166592/1358596257030995978/1358596257030995978" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>Can't have shit in starsector *unbattlecruisers your battlecruiser*</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Unbattlecruiser Mod</h1><p>A Starsector mod by gord_f. For Starsector 0.98a.</p><p>Can't have shit in starsector unbattlecruisers your battlecruiser</p><p><a href="https://discord.com/channels/187635036525166592/1358596257030995978/1358596257030995978" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

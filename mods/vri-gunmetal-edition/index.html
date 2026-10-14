@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="VRI Gunmetal Edition">
   <meta property="og:description" content="This skinpack was an accident that occurred while I was making a shitpost of VRI (Cumstain Flashbang White Edition).">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1237848043957653554/1237848045341900921/image.png?ex=6acf2e94&amp;is=6acddd14&amp;hm=66dc15232c043a7368aeddccf23b78c7e0215269da93197ef9fd8f99276ca8b4&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1237848043957653554/1237848045341900921/image.png?ex=6acfd754&amp;is=6ace85d4&amp;hm=916ded8626c5c020518144a3204b5c6538c49f4c4182a9a425796b824fdf684f&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>VRI Gunmetal Edition</h1><p>A Starsector mod by positivevibesvr. For Starsector 0.97a.</p><p>This skinpack was an accident that occurred while I was making a shitpost of VRI (Cumstain Flashbang White Edition).</p><p><a href="https://discord.com/channels/187635036525166592/1237848043957653554/1237848043957653554" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>This skinpack was an accident that occurred while I was making a shitpost of VRI (~~Cumstain~~ Flashbang White Edition).</p><p>Permission given by Vanilla</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>VRI Gunmetal Edition</h1><p>A Starsector mod by positivevibesvr. For Starsector 0.97a.</p><p>This skinpack was an accident that occurred while I was making a shitpost of VRI (Cumstain Flashbang White Edition).</p><p><a href="https://discord.com/channels/187635036525166592/1237848043957653554/1237848043957653554" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

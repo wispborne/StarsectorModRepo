@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Payout Multiplier">
   <meta property="og:description" content="A long awaited (by like, maybe 2 people) sequel to Payout Tweaker. CHANGE mission REWARDS! change BOUNTY REWARDS! Lunalib integration for changeable settings WITHOUT restart! THREE TIMES the settings!">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1209201653467713627/1209201654000521277/2024-02-19_12-53-11.png?ex=6acf1e0c&amp;is=6acdcc8c&amp;hm=1455cb7b0587abfe1222f2ef4ee2eef21da704ff1d33d3caba4de95fe125b074&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1209201653467713627/1209201654000521277/2024-02-19_12-53-11.png?ex=6acfc6cc&amp;is=6ace754c&amp;hm=0e542f6796fb67b65c255f4f65d8639fb160cd04b10d28fe6a7623aff0e026ad&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Payout Multiplier</h1><p>A Starsector mod by 123nick. For Starsector 0.97a.</p><p>A long awaited (by like, maybe 2 people) sequel to Payout Tweaker. CHANGE mission REWARDS! change BOUNTY REWARDS! Lunalib integration for changeable settings WITHOUT restart! THREE TIMES the settings!</p><p><a href="https://discord.com/channels/187635036525166592/1209201653467713627/1209201653467713627" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>A long awaited (by like, maybe 2 people) sequel to Payout Tweaker. CHANGE mission REWARDS! change BOUNTY REWARDS! Lunalib integration for changeable settings WITHOUT restart! THREE TIMES the settings!</p><p>Changelog:<br>```1.0.0:<br>mod released, does stuff, hopefully works<br>```</p><p>Download is attached. The payout in the image is with all values set to minimum - 0.01, if you want to spend more in supplies than you get doing bounties for whatever reason</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Payout Multiplier</h1><p>A Starsector mod by 123nick. For Starsector 0.97a.</p><p>A long awaited (by like, maybe 2 people) sequel to Payout Tweaker. CHANGE mission REWARDS! change BOUNTY REWARDS! Lunalib integration for changeable settings WITHOUT restart! THREE TIMES the settings!</p><p><a href="https://discord.com/channels/187635036525166592/1209201653467713627/1209201653467713627" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

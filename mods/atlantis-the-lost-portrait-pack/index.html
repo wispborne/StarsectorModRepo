@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Atlantis: The Lost Portrait Pack">
   <meta property="og:description" content="A portrait pack with characters from the movie Atlantis: The Lost Empire.">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1546663579275628544/1546663579770421289/atlpp_icon.png?ex=6acf6775&amp;is=6ace15f5&amp;hm=75cb56c95f820e62c62cee458c05ebc6d481609fe2b9648053faa807a3317d8e&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1546663579275628544/1546663579770421289/atlpp_icon.png?ex=6ad01035&amp;is=6acebeb5&amp;hm=a5f84a1cc71d1fddd26a6b6543529b0c09efcde2161a4947ad5a2e447a7cf6a9&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Atlantis: The Lost Portrait Pack</h1><p>A Starsector mod by wmgreywind. For Starsector 0.98a.</p><p>A portrait pack with characters from the movie Atlantis: The Lost Empire.</p><p><a href="https://drive.google.com/file/d/1Bj8ZkAwCywWUdMdbqxD-G33lMHuVeXdF/" rel="nofollow noopener">Download page</a> · <a href="https://discord.com/channels/187635036525166592/1546663579275628544/1546663579275628544" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>A portrait pack with characters from the movie Atlantis: The Lost Empire.</p><p>Art drawn by Haonfest:<br>https://vgen.co/haonfest</p><p>Download Link:<br>https://drive.google.com/file/d/1Bj8ZkAwCywWUdMdbqxD-G33lMHuVeXdF/</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Atlantis: The Lost Portrait Pack</h1><p>A Starsector mod by wmgreywind. For Starsector 0.98a.</p><p>A portrait pack with characters from the movie Atlantis: The Lost Empire.</p><p><a href="https://drive.google.com/file/d/1Bj8ZkAwCywWUdMdbqxD-G33lMHuVeXdF/" rel="nofollow noopener">Download page</a> · <a href="https://discord.com/channels/187635036525166592/1546663579275628544/1546663579275628544" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

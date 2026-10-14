@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Loulan Industries</h1><p>A Starsector mod by mrmagolor. For Starsector 0.98a.</p><p>Almost certainly incompatible with 2.2.0 saves</p><p><a href="https://drive.google.com/uc?export=download&amp;id=1lOmu5Uuzebv9TSBu9YHkBTsVVvPWv7BX" rel="nofollow noopener">Download</a> · <a href="https://discord.com/channels/187635036525166592/1405020859269251122/1405020859269251122" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>**Almost certainly incompatible with 2.2.0 saves**</p><p>Original mod by: Komeiji Satori</p><p>A PL breakaway faction with a varied lineup of ships, weapons, and fighters.</p><p>While Loulan ships cover a wide variety of design philosophies, they all benefit from the same set of "Tac-Mods" which provide unique benefits relating to the consumption and/or restoration of the ship's hull level. They also have access to a range of... eccentric weapons.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Loulan Industries</h1><p>A Starsector mod by mrmagolor. For Starsector 0.98a.</p><p>Almost certainly incompatible with 2.2.0 saves</p><p><a href="https://drive.google.com/uc?export=download&amp;id=1lOmu5Uuzebv9TSBu9YHkBTsVVvPWv7BX" rel="nofollow noopener">Download</a> · <a href="https://discord.com/channels/187635036525166592/1405020859269251122/1405020859269251122" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

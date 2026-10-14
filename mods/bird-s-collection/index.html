@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Bird's Collection</h1><p>A Starsector mod by BirdWanderer. For Starsector 0.97a. Version 1.5.3.</p><p>A simple mod adding a bunch of ships, weapons (not so many) and a new faction which you can toggle on or off. Should be save compatible, although a lot of stuff won't spawn.</p><p><a href="https://drive.google.com/uc?export=download&amp;id=1axFI7KSnbStuyFRD7_3UP8YLaaHVvs-i" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=27164.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1203137239777808414/1203137239777808414" rel="nofollow noopener">Discord post</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/magiclib/">MagicLib</a></li><li><a href="mods/lunalib/">LunaLib</a></li></ul><h2>Forum post</h2><p>Bird's Collection<br>v1.5.3</p><p>A simple mod adding a bunch of ships, weapons (not so many) and a new faction which you can toggle on or off. Should be save compatible, although a lot of stuff won't spawn.<br>I would appreciate any feedback, especially regarding balance. Contact me on discord @ birdwanderer.<br>Although this is my first mod, I hope you'll enjoy it!</p><p>REQUIRES LAZYLIB, MAGICLIB AND LUNALIB<br>Download</p><p>Ships!</p><p>Yes, that is a phase Paragon. Yes, I am sorry.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Bird's Collection</h1><p>A Starsector mod by BirdWanderer. For Starsector 0.97a. Version 1.5.3.</p><p>A simple mod adding a bunch of ships, weapons (not so many) and a new faction which you can toggle on or off. Should be save compatible, although a lot of stuff won't spawn.</p><p><a href="https://drive.google.com/uc?export=download&amp;id=1axFI7KSnbStuyFRD7_3UP8YLaaHVvs-i" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=27164.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1203137239777808414/1203137239777808414" rel="nofollow noopener">Discord post</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/magiclib/">MagicLib</a></li><li><a href="mods/lunalib/">LunaLib</a></li></ul><h2>Forum post</h2><p>Bird's Collection<br>v1.5.3</p><p>A simple mod adding a bunch of ships, weapons (not so many) and a new faction which you can toggle on or off. Should be save compatible, although a lot of stuff won't spawn.<br>I would appreciate any feedback, especially regarding balance. Contact me on discord @ birdwanderer.<br>Although this is my first mod, I hope you'll enjoy it!</p><p>REQUIRES LAZYLIB, MAGICLIB AND LUNALIB<br>Download</p><p>Ships!</p><p>Yes, that is a phase Paragon. Yes, I am sorry.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Chairsector">
   <meta property="og:description" content="Ever wanted to smuggle furniture? Now you can.">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1213936284909969408/1213936285979385927/furniture.png?ex=6acf3404&amp;is=6acde284&amp;hm=bcf01e4caf9c4907fc6fd867536aa929d4c960b61301ffe1e565713835b5f52d&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1213936284909969408/1213936285979385927/furniture.png?ex=6acfdcc4&amp;is=6ace8b44&amp;hm=60e799138f3580ae4e55f756e2682f9176ac5db8bf896c19b898ca3a4749d33f&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Chairsector</h1><p>A Starsector mod by birdwanderer. For Starsector 0.97a.</p><p>Ever wanted to smuggle furniture? Now you can.</p><p><a href="https://discord.com/channels/187635036525166592/1213936284909969408/1213936284909969408" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>Ever wanted to smuggle furniture? Now you can.</p><p>Adds a luxury commodity only produced on Tartessus for you to ~~smuggle into Askonia~~ trade.</p><p>Currently breaks with Nex Random Sector (still haven't fixed this), a fix will be out eventually.</p><p>Changes:<br>-updated to 0.97</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Chairsector</h1><p>A Starsector mod by birdwanderer. For Starsector 0.97a.</p><p>Ever wanted to smuggle furniture? Now you can.</p><p><a href="https://discord.com/channels/187635036525166592/1213936284909969408/1213936284909969408" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

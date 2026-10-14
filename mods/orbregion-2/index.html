@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Orbregion</h1><p>A Starsector mod by lolghurt. For Starsector 0.98a. Version 1.4.1.</p><p>The worlds most helpful quality of life mod, enhancing "all" game text for improved readability</p><p><a href="https://github.com/lolghurt/orbregion/archive/refs/tags/1.4.1.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=32814.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/lolghurt/orbregion" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>The worlds most helpful quality of life mod, enhancing "all" game text for improved readability<br>Mod Download<br>Some text was not reachable for various reasons. Please let me know if there are some $tokens i somehow broke.</p><p>1.4.1<br>more $token corrections</p><p>1.3.1<br>Added more "useful" tips<br>fixed a typo that would crash the game on sector gen</p><p>1.2.0<br>"Fixed" a "bug" where normal tips would sometimes still appear.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Orbregion</h1><p>A Starsector mod by lolghurt. For Starsector 0.98a. Version 1.4.1.</p><p>The worlds most helpful quality of life mod, enhancing "all" game text for improved readability</p><p><a href="https://github.com/lolghurt/orbregion/archive/refs/tags/1.4.1.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=32814.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/lolghurt/orbregion" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>The worlds most helpful quality of life mod, enhancing "all" game text for improved readability<br>Mod Download<br>Some text was not reachable for various reasons. Please let me know if there are some $tokens i somehow broke.</p><p>1.4.1<br>more $token corrections</p><p>1.3.1<br>Added more "useful" tips<br>fixed a typo that would crash the game on sector gen</p><p>1.2.0<br>"Fixed" a "bug" where normal tips would sometimes still appear.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

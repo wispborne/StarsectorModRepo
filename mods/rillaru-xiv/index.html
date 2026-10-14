@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Rillaru XIV">
   <meta property="og:description" content="No description... yet.">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1488831212339597313/1488831212557434992/crest_hegemony.png?ex=6acf4a1e&amp;is=6acdf89e&amp;hm=1dd8a4c29db8ee54a76e7ec95c9c571ea85c3dacad2bf5c17ef0a169b6210d55&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1488831212339597313/1488831212557434992/crest_hegemony.png?ex=6acff2de&amp;is=6acea15e&amp;hm=dc88500981ef469848ce5f4a92d21503ea1e4c3bb34683952709e06d23d8e905&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Rillaru XIV</h1><p>A Starsector mod by kirb0o0. For Starsector 0.98a.</p><p>No description... yet.</p><p><a href="https://discord.com/channels/187635036525166592/1488831212339597313/1488831212339597313" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>## Description:<br>No description... yet.</p><p>## Latest Changes:<br>```<br>orange rillaru whoever wants to implement it for something more substantial like a questline im more than happy for you to use it peace<br>```</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Rillaru XIV</h1><p>A Starsector mod by kirb0o0. For Starsector 0.98a.</p><p>No description... yet.</p><p><a href="https://discord.com/channels/187635036525166592/1488831212339597313/1488831212339597313" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

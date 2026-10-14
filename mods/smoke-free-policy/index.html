@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Smoke Free Policy">
   <meta property="og:description" content="Mod that establishes a smoke-free policy on the bridge.">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1356402788271263836/1356402788870918324/NO_SMOKING_AT_ANY_TIME_ON_THE_BRIDGE.png?ex=6acf60c9&amp;is=6ace0f49&amp;hm=d3a3ab045d1ec79199b67d8f82180bbcd8ddc85d9953ee7a8855bc8e2c29b76b&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1356402788271263836/1356402788870918324/NO_SMOKING_AT_ANY_TIME_ON_THE_BRIDGE.png?ex=6ad00989&amp;is=6aceb809&amp;hm=72c8556a7a1739a6875704545e8af73a653a22626429dfff5976bca01ff7e191&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Smoke Free Policy</h1><p>A Starsector mod by nescom. For Starsector 0.98a.</p><p>Mod that establishes a smoke-free policy on the bridge.</p><p><a href="https://discord.com/channels/187635036525166592/1356402788271263836/1356402788271263836" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>Mod that establishes a smoke-free policy on the bridge.</p><p>- replaces a single vanilla portrait<br>- best mod</p><p>*Can be added or removed at any time.*</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Smoke Free Policy</h1><p>A Starsector mod by nescom. For Starsector 0.98a.</p><p>Mod that establishes a smoke-free policy on the bridge.</p><p><a href="https://discord.com/channels/187635036525166592/1356402788271263836/1356402788271263836" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

@@ -24,6 +24,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -143,7 +146,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Stargate Unknown Galaxies</h1><p>A Starsector mod by Captain.Friendlyfire100. Version 0.9.3.</p><p>I allways was a huge stargate fan, imagine my disappointment nobody made a decent starsector mod for it, thats why i thought why not make it yourself, i need to admit i am a complete novice on modding new content but nevertheless i hope you enjoy this small mod.</p><p><a href="https://github.com/CaptainFriendlyfire100/Stargate-Unknown-Galaxies/raw/main/Stargate%20Unknown%20Galaxies%200.9.3%20for%200.95.1a-RC6%20.rar" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=24869.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/CaptainFriendlyfire100/Stargate-Unknown-Galaxies" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Stargate Unknown Galaxies a Starsector Mod</p><p>Download</p><p>I allways was a huge stargate fan, imagine my disappointment nobody made a decent starsector mod for it, thats why i thought why not make it yourself, i need to admit i am a complete novice on modding new content but nevertheless i hope you enjoy this small mod.</p><p>This is a early release for balance and feedback purposes, it also is my first real modding project.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Stargate Unknown Galaxies</h1><p>A Starsector mod by Captain.Friendlyfire100. Version 0.9.3.</p><p>I allways was a huge stargate fan, imagine my disappointment nobody made a decent starsector mod for it, thats why i thought why not make it yourself, i need to admit i am a complete novice on modding new content but nevertheless i hope you enjoy this small mod.</p><p><a href="https://github.com/CaptainFriendlyfire100/Stargate-Unknown-Galaxies/raw/main/Stargate%20Unknown%20Galaxies%200.9.3%20for%200.95.1a-RC6%20.rar" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=24869.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/CaptainFriendlyfire100/Stargate-Unknown-Galaxies" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Stargate Unknown Galaxies a Starsector Mod</p><p>Download</p><p>I allways was a huge stargate fan, imagine my disappointment nobody made a decent starsector mod for it, thats why i thought why not make it yourself, i need to admit i am a complete novice on modding new content but nevertheless i hope you enjoy this small mod.</p><p>This is a early release for balance and feedback purposes, it also is my first real modding project.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

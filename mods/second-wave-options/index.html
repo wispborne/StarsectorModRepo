@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Second Wave Options</h1><p>A Starsector mod by RustyCabbage. For Starsector 0.95a. Version 0.6.5.</p><p>Second Wave Options is a highly adjustable challenge mod that seeks to increase the game's campaign difficulty. Every change is adjustable or toggleable so you can craft your own experience.</p><p><a href="https://github.com/RustyCabbage/Second-Wave-Options-legacy/releases/download/0.6.5/Second.Wave.Options.0.6.5.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=17086.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/RustyCabbage/Second-Wave-Options-legacy" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>(there's a new version, it's just on the discord server and i'm a bit lazy to update the OP with all the things it changes)</p><p>SeConD WaVE OpTiONs<br>by RustyCabbage<br>Download Second Wave Options v0.6.5</p><p>Second Wave Options is a highly adjustable challenge mod that seeks to increase the game's campaign difficulty. Every change is adjustable or toggleable so you can craft your own experience.</p><p>Examples of SlowCR, Odyssey Mode (from the sector edge), and sensor strength boosts from Dark Sector.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Second Wave Options</h1><p>A Starsector mod by RustyCabbage. For Starsector 0.95a. Version 0.6.5.</p><p>Second Wave Options is a highly adjustable challenge mod that seeks to increase the game's campaign difficulty. Every change is adjustable or toggleable so you can craft your own experience.</p><p><a href="https://github.com/RustyCabbage/Second-Wave-Options-legacy/releases/download/0.6.5/Second.Wave.Options.0.6.5.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=17086.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/RustyCabbage/Second-Wave-Options-legacy" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>(there's a new version, it's just on the discord server and i'm a bit lazy to update the OP with all the things it changes)</p><p>SeConD WaVE OpTiONs<br>by RustyCabbage<br>Download Second Wave Options v0.6.5</p><p>Second Wave Options is a highly adjustable challenge mod that seeks to increase the game's campaign difficulty. Every change is adjustable or toggleable so you can craft your own experience.</p><p>Examples of SlowCR, Odyssey Mode (from the sector edge), and sensor strength boosts from Dark Sector.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

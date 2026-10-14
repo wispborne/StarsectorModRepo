@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>The Rising Sun</h1><p>A Starsector mod by Cordacc.</p><p>The rising sun came from another galaxy, most likely displaced by the second galaxy war. They have no fighters because their "fighters" are so large that by all standards the would be considered frigates. Their ships are fast and strong.</p><p><a href="http://www.mediafire.com/download.php?d276x501giwszp0" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=2165.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>The rising Sun</p><p>The rising sun came from another galaxy, most likely displaced by the second galaxy war.<br>They have no fighters because their "fighters" are so large that by all standards the would be considered frigates.<br>Their ships are fast and strong.<br>They only attack if aggression is absolutely required, but if it is required, then they will not stop until they are sure that they can live in peace once again, usually by utterly obliterating their opponents.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>The Rising Sun</h1><p>A Starsector mod by Cordacc.</p><p>The rising sun came from another galaxy, most likely displaced by the second galaxy war. They have no fighters because their "fighters" are so large that by all standards the would be considered frigates. Their ships are fast and strong.</p><p><a href="http://www.mediafire.com/download.php?d276x501giwszp0" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=2165.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>The rising Sun</p><p>The rising sun came from another galaxy, most likely displaced by the second galaxy war.<br>They have no fighters because their "fighters" are so large that by all standards the would be considered frigates.<br>Their ships are fast and strong.<br>They only attack if aggression is absolutely required, but if it is required, then they will not stop until they are sure that they can live in peace once again, usually by utterly obliterating their opponents.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

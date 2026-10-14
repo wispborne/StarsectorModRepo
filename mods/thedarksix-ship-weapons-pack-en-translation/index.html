@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>TheDarkSix - Ship &amp; Weapons Pack (EN Translation)</h1><p>A Starsector mod by sto.hugh359. For Starsector 0.98a.</p><p>My poor second translation attempt of a great CN super ship mod.</p><p><a href="https://www.fossic.org/thread-8273-1-1.html" rel="nofollow noopener">Download page</a> · <a href="https://discord.com/channels/187635036525166592/1390350393309003838/1390350393309003838" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>My poor second translation attempt of a great CN super ship mod.</p><p>- Contains super dreadnoughts for all the core factions + XIV &amp; LG<br>- Contains some new fighters, weapons and hullmods<br>- Has some normal ships for all factions too, plus 999th variant of Atlas for the Pirates<br>- TDS Reskin of existing ship systems</p><p>Original Thread: https://www.fossic.org/thread-8273-1-1.html</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>TheDarkSix - Ship &amp; Weapons Pack (EN Translation)</h1><p>A Starsector mod by sto.hugh359. For Starsector 0.98a.</p><p>My poor second translation attempt of a great CN super ship mod.</p><p><a href="https://www.fossic.org/thread-8273-1-1.html" rel="nofollow noopener">Download page</a> · <a href="https://discord.com/channels/187635036525166592/1390350393309003838/1390350393309003838" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

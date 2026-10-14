@@ -24,6 +24,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -143,7 +146,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Triad Shields</h1><p>A Starsector mod by zoeythegirlgal. For Starsector 0.98a.</p><p>Adds Triad Shields, an unused system supposadly made for omega. Currently, the Tesseract and Facet have it, but you can get it as a hullmod if you beat a hypershunt.</p><p><a href="https://github.com/nikothedude/Triad-Shields/releases" rel="nofollow noopener">Download page</a> · <a href="https://discord.com/channels/187635036525166592/1446206031976726608/1446206031976726608" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>Adds Triad Shields, an unused system supposadly made for omega. Currently, the Tesseract and Facet have it, but you can get it as a hullmod if you beat a hypershunt.</p><p>Triad Shields are a cell-based skinshield.</p><p>Yes, this buffs omega.</p><p>No, its not balanced.</p><p>No, its not entirely polished. Yes, it works.</p><p>This is primarily a fucko mod I made just as a proof of concept, but I thought, hey, wouldnt it be cool if you could use it?</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Triad Shields</h1><p>A Starsector mod by zoeythegirlgal. For Starsector 0.98a.</p><p>Adds Triad Shields, an unused system supposadly made for omega. Currently, the Tesseract and Facet have it, but you can get it as a hullmod if you beat a hypershunt.</p><p><a href="https://github.com/nikothedude/Triad-Shields/releases" rel="nofollow noopener">Download page</a> · <a href="https://discord.com/channels/187635036525166592/1446206031976726608/1446206031976726608" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

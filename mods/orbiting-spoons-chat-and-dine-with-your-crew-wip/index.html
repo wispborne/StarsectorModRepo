@@ -24,6 +24,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -143,7 +146,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Orbiting Spoons - chat and dine with your crew</h1><p>A Starsector mod by the volkflower. For Starsector 0.98a.</p><p>The Orbiting Spoon is a lightweight, text-based roleplay and campaign layer mod that adds interactive space diners to markets and spaceports across the Persean Sector.</p><p><a href="https://fractalsoftworks.com/forum/index.php?topic=35988.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/starsector-mods/orbiting-spoons" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>[0.98a] The Orbiting Spoon - A Space Diner &amp; Officer Social Mod<br>"Because hyperspace nutrient paste gets old after a few cycles or two."</p><p>You slide into a cracked vinyl booth beneath a flickering neon sign. The vents hum with recycled air, cutting through the faint smell of engine grease and sizzling biomass.<br>Across the table, your second-in-command rubs their temples, staring down at a lukewarm bowl of spacer's stew.</p><p>"What'll it be, Captain?"</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Orbiting Spoons - chat and dine with your crew</h1><p>A Starsector mod by the volkflower. For Starsector 0.98a.</p><p>The Orbiting Spoon is a lightweight, text-based roleplay and campaign layer mod that adds interactive space diners to markets and spaceports across the Persean Sector.</p><p><a href="https://fractalsoftworks.com/forum/index.php?topic=35988.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/starsector-mods/orbiting-spoons" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>[0.98a] The Orbiting Spoon - A Space Diner &amp; Officer Social Mod<br>"Because hyperspace nutrient paste gets old after a few cycles or two."</p><p>You slide into a cracked vinyl booth beneath a flickering neon sign. The vents hum with recycled air, cutting through the faint smell of engine grease and sizzling biomass.<br>Across the table, your second-in-command rubs their temples, staring down at a lukewarm bowl of spacer's stew.</p><p>"What'll it be, Captain?"</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

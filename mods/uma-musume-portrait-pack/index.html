@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Uma Musume Portrait Pack</h1><p>A Starsector mod by coldhatch. For Starsector 0.98a. Version 1.0.</p><p>Adds 172 Portraits from the hit series "Uma Musume: Pretty Derby", featuring a whopping 4 male trainers.</p><p><a href="https://github.com/ColdHatch/Starsector-Uma-Musume-Portrait-Pack/archive/refs/tags/v1.0.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=33717.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1397616897599733905/1397616897599733905" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/ColdHatch/Starsector-Uma-Musume-Portrait-Pack" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>"A 'horse'? Oh, you mean those girls with tails and cute animal ears who can run really fast."</p><p>Download</p><p>Adds 172 Portraits from the hit series "Uma Musume: Pretty Derby", featuring a whopping 4 male trainers.</p><p>Spoiler</p><p>I've removed ST-2 from every faction except player.faction and remnants.faction (in hindsight the latter file is probably useless?)</p><p>Spoiler</p><p>the poor.faction file does not include any umas who are nobility or have a rich background. Umas excluded in this file are:</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Uma Musume Portrait Pack</h1><p>A Starsector mod by coldhatch. For Starsector 0.98a. Version 1.0.</p><p>Adds 172 Portraits from the hit series "Uma Musume: Pretty Derby", featuring a whopping 4 male trainers.</p><p><a href="https://github.com/ColdHatch/Starsector-Uma-Musume-Portrait-Pack/archive/refs/tags/v1.0.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=33717.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1397616897599733905/1397616897599733905" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/ColdHatch/Starsector-Uma-Musume-Portrait-Pack" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>"A 'horse'? Oh, you mean those girls with tails and cute animal ears who can run really fast."</p><p>Download</p><p>Adds 172 Portraits from the hit series "Uma Musume: Pretty Derby", featuring a whopping 4 male trainers.</p><p>Spoiler</p><p>I've removed ST-2 from every faction except player.faction and remnants.faction (in hindsight the latter file is probably useless?)</p><p>Spoiler</p><p>the poor.faction file does not include any umas who are nobility or have a rich background. Umas excluded in this file are:</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

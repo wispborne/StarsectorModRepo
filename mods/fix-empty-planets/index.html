@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Fix Empty Planets</h1><p>A Starsector mod by Carabus. For Starsector 0.9a. Version 1.0.</p><p>This is a small utility mod that fixes "empty planets" bug in systems from The Core Worlds. On first load it finds all empty planets and generates Planetary Conditions for them using exactly the same logic Starsector normally uses for condition generation.</p><p><a href="https://bitbucket.org/Carabus/fixemptyplanets/downloads/Fix%20All%20Empty%20Planets%20v1.0.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=14879.0" rel="nofollow noopener">Forum thread</a> · <a href="https://bitbucket.org/Carabus/fixemptyplanets" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Hello</p><p>This is a small utility mod that fixes "empty planets" bug in systems from The Core Worlds.<br>On first load it finds all empty planets and generates Planetary Conditions for them using exactly the same logic Starsector normally uses for condition generation.<br>It fixes empty Planetary Conditions (also changing Hazard Rating from default 100%), and makes these planets provide Survey Data normally.</p><p>When done it prints a summary on the screen:</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Fix Empty Planets</h1><p>A Starsector mod by Carabus. For Starsector 0.9a. Version 1.0.</p><p>This is a small utility mod that fixes "empty planets" bug in systems from The Core Worlds. On first load it finds all empty planets and generates Planetary Conditions for them using exactly the same logic Starsector normally uses for condition generation.</p><p><a href="https://bitbucket.org/Carabus/fixemptyplanets/downloads/Fix%20All%20Empty%20Planets%20v1.0.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=14879.0" rel="nofollow noopener">Forum thread</a> · <a href="https://bitbucket.org/Carabus/fixemptyplanets" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Hello</p><p>This is a small utility mod that fixes "empty planets" bug in systems from The Core Worlds.<br>On first load it finds all empty planets and generates Planetary Conditions for them using exactly the same logic Starsector normally uses for condition generation.<br>It fixes empty Planetary Conditions (also changing Hazard Rating from default 100%), and makes these planets provide Survey Data normally.</p><p>When done it prints a summary on the screen:</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

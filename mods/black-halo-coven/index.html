@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Black Halo Coven</h1><p>A Starsector mod by osart04. For Starsector 0.98a. Version 1.0.5.</p><p>The Black Halo Coven is a new Midline faction for Starsector, built around the pursuit of one's own goals, power and perfection, and the belief that humanity was never meant to accept its limitations.</p><p><a href="https://github.com/Osart-Projects/Black-Halo-Coven/releases/latest" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=36030.msg530171#msg530171" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1550217113665405050/1550217113665405050" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/Osart-Projects/Black-Halo-Coven" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>BLACK HALO COVEN</p><p>Join us. Transcend your limits. Achieve Perfection.</p><p>The Black Halo Coven is a new Midline faction for Starsector, built around the pursuit of one's own goals, power and perfection, and the belief that humanity was never meant to accept its limitations.</p><p>ASCENSION     •     POWER     •     PERFECTION</p><p>At any cost.</p><p>IDEOLOGY<br>The Church and Path misunderstood Ludd.</p><p>The Church chose stagnation.<br>The Path chose destruction.<br>We chose Ascension.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Black Halo Coven</h1><p>A Starsector mod by osart04. For Starsector 0.98a. Version 1.0.5.</p><p>The Black Halo Coven is a new Midline faction for Starsector, built around the pursuit of one's own goals, power and perfection, and the belief that humanity was never meant to accept its limitations.</p><p><a href="https://github.com/Osart-Projects/Black-Halo-Coven/releases/latest" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=36030.msg530171#msg530171" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1550217113665405050/1550217113665405050" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/Osart-Projects/Black-Halo-Coven" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>BLACK HALO COVEN</p><p>Join us. Transcend your limits. Achieve Perfection.</p><p>The Black Halo Coven is a new Midline faction for Starsector, built around the pursuit of one's own goals, power and perfection, and the belief that humanity was never meant to accept its limitations.</p><p>ASCENSION     •     POWER     •     PERFECTION</p><p>At any cost.</p><p>IDEOLOGY<br>The Church and Path misunderstood Ludd.</p><p>The Church chose stagnation.<br>The Path chose destruction.<br>We chose Ascension.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

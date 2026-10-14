@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="The Hagan Protestants (Beta/in need of playtesting)">
   <meta property="og:description" content="A big old faction mod I've been hammering away at on and off for about a year now that's finally ready for some proper playtesting.">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1267608001255047229/1267608001842511892/Pro_Icon.png?ex=6acf57b2&amp;is=6ace0632&amp;hm=385e25e5c8d6070ca10313b6f1804023a83dbd338fde607ab978e6a3a62bad04&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1267608001255047229/1267608001842511892/Pro_Icon.png?ex=6ad00072&amp;is=6aceaef2&amp;hm=ad122fd0cd069a40de2fe017fd7806946280b5082dd3344bb769c0d38a2c48e2&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>The Hagan Protestants (Beta/in need of playtesting)</h1><p>A Starsector mod by steve_the. For Starsector 0.97a.</p><p>A big old faction mod I've been hammering away at on and off for about a year now that's finally ready for some proper playtesting.</p><p><a href="https://discord.com/channels/187635036525166592/1267608001255047229/1267608001255047229" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>A big old faction mod I've been hammering away at on and off for about a year now that's finally ready for some proper playtesting.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>The Hagan Protestants (Beta/in need of playtesting)</h1><p>A Starsector mod by steve_the. For Starsector 0.97a.</p><p>A big old faction mod I've been hammering away at on and off for about a year now that's finally ready for some proper playtesting.</p><p><a href="https://discord.com/channels/187635036525166592/1267608001255047229/1267608001255047229" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

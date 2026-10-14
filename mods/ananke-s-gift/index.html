@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Ananke's Gift</h1><p>A Starsector mod by lord_dalton. For Starsector 0.98a.</p><p>Well when I say standalone I mean *mostly* standalone as it does come with the other 2 bits from NAS and one or two hullmods, plus of course its component mission.</p><p><a href="https://mega.nz/file/FHoUVbxT#3ZW3-7fmAbFuGfXLLBFM2IzNXSOr3VbcMolQ_9RmbKI" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=34870.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1465566412289605654/1465566412289605654" rel="nofollow noopener">Discord post</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/magiclib/">MagicLib</a></li><li>Nexelerin</li></ul><h2>Forum post</h2><p>Hello, I have returned from my modding hiatus (briefly) to bring you all a pretty small mod:</p><p>Ananke's Gift as a standalone mod this time.</p><p>Well when I say standalone I mean *mostly* standalone as it does come with the other 2 bits from NAS and one or two hullmods, plus of course its component mission.</p><p>In any case, if you'd like to have a shot at flying a jacked up superdestroyer then this is the mod for you!</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Ananke's Gift</h1><p>A Starsector mod by lord_dalton. For Starsector 0.98a.</p><p>Well when I say standalone I mean *mostly* standalone as it does come with the other 2 bits from NAS and one or two hullmods, plus of course its component mission.</p><p><a href="https://mega.nz/file/FHoUVbxT#3ZW3-7fmAbFuGfXLLBFM2IzNXSOr3VbcMolQ_9RmbKI" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=34870.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1465566412289605654/1465566412289605654" rel="nofollow noopener">Discord post</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/magiclib/">MagicLib</a></li><li>Nexelerin</li></ul><h2>Forum post</h2><p>Hello, I have returned from my modding hiatus (briefly) to bring you all a pretty small mod:</p><p>Ananke's Gift as a standalone mod this time.</p><p>Well when I say standalone I mean *mostly* standalone as it does come with the other 2 bits from NAS and one or two hullmods, plus of course its component mission.</p><p>In any case, if you'd like to have a shot at flying a jacked up superdestroyer then this is the mod for you!</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

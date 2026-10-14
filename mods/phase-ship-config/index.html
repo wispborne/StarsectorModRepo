@@ -24,6 +24,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -143,7 +146,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Phase Ship Config</h1><p>A Starsector mod by android9k. For Starsector 0.98a.</p><p>Adds a lunaconfig menu that allows you to: Nerf the armor, hull, and speed of phase ships (ships with phase-like systems and phase fighters optionally).</p><p><a href="https://www.dropbox.com/scl/fi/htd00nxkadgugwhya8wmu/PhaseShipConfig.zip?rlkey=zmsjdrabocyx90cffofh3wse7&amp;e=1&amp;st=40bbwmcn&amp;dl=0" rel="nofollow noopener">Download</a> · <a href="https://discord.com/channels/187635036525166592/1497728089265012856/1497728089265012856" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>Adds a lunaconfig menu that allows you to:<br>- Nerf the armor, hull, and speed of phase ships (ships with phase-like systems and phase fighters optionally). *<br>- Modify the maximum-slowdown hard-flux threshold for all phase ships. The threshold can be set so far above 100% hard flux that it virtually removes all flux-based slowdown.</p><p>Save to add/remove mid save; requires lunalib.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Phase Ship Config</h1><p>A Starsector mod by android9k. For Starsector 0.98a.</p><p>Adds a lunaconfig menu that allows you to: Nerf the armor, hull, and speed of phase ships (ships with phase-like systems and phase fighters optionally).</p><p><a href="https://www.dropbox.com/scl/fi/htd00nxkadgugwhya8wmu/PhaseShipConfig.zip?rlkey=zmsjdrabocyx90cffofh3wse7&amp;e=1&amp;st=40bbwmcn&amp;dl=0" rel="nofollow noopener">Download</a> · <a href="https://discord.com/channels/187635036525166592/1497728089265012856/1497728089265012856" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

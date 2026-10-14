@@ -24,6 +24,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -143,7 +146,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Legacy of Leonis</h1><p>A Starsector mod by happycrow. For Starsector 0.98. Version 1.0.</p><p>10 New Kit-bashed Ships for Starsector for Pirates, Independents, and the Luddic Church. As with all of my nonsense, focused on the early and mid-game. (Some of these kit bashes are mine, others are from the Spiral Arms II thread, all credit to their proper owners)</p><p><a href="https://drive.google.com/drive/folders/1aCl6sCinXleV8IG2jlKe4xjRkW4jtm8g?usp=sharing" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=34276.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Legacy of Leonis</p><p>Leonis' crossing of the Abyss would have been considered heroic, had it not been performed for the purpose of spreading terror and dismay.</p><p>Version 1.0 stable.<br>10 New Kit-bashed Ships for Starsector for Pirates, Independents, and the Luddic Church. As with all of my nonsense, focused on the early and mid-game. (Some of these kit bashes are mine, others are from the Spiral Arms II thread, all credit to their proper owners)</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Legacy of Leonis</h1><p>A Starsector mod by happycrow. For Starsector 0.98. Version 1.0.</p><p>10 New Kit-bashed Ships for Starsector for Pirates, Independents, and the Luddic Church. As with all of my nonsense, focused on the early and mid-game. (Some of these kit bashes are mine, others are from the Spiral Arms II thread, all credit to their proper owners)</p><p><a href="https://drive.google.com/drive/folders/1aCl6sCinXleV8IG2jlKe4xjRkW4jtm8g?usp=sharing" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=34276.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Legacy of Leonis</p><p>Leonis' crossing of the Abyss would have been considered heroic, had it not been performed for the purpose of spreading terror and dismay.</p><p>Version 1.0 stable.<br>10 New Kit-bashed Ships for Starsector for Pirates, Independents, and the Luddic Church. As with all of my nonsense, focused on the early and mid-game. (Some of these kit bashes are mine, others are from the Spiral Arms II thread, all credit to their proper owners)</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

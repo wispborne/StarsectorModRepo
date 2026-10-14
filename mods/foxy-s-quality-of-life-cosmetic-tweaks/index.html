@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Foxy's Quality of Life - Cosmetic Tweaks</h1><p>A Starsector mod by Foxy. For Starsector 0.96a.</p><p>Well, I am glad you asked. First of all it adds new music, sound effects and graphic illustrations that refine the look and feel of the game. Not to say that the original material is not good, but as it stands right now it's pretty much in broad strokes.</p><p><a href="https://tzr.ro/mods/starsector/fqol/fqol.rar" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=24579.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Intro: I have made this mod initially for personal use, but the more I edited the files the more I realize I can share this beauty (cosmetic mod) with you guys. So here we go again!</p><p>Download Me</p><p>Addons</p><p>(just drop them on top of the main mod)</p><p>Custom Cursors</p><p>What does this do?</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Foxy's Quality of Life - Cosmetic Tweaks</h1><p>A Starsector mod by Foxy. For Starsector 0.96a.</p><p>Well, I am glad you asked. First of all it adds new music, sound effects and graphic illustrations that refine the look and feel of the game. Not to say that the original material is not good, but as it stands right now it's pretty much in broad strokes.</p><p><a href="https://tzr.ro/mods/starsector/fqol/fqol.rar" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=24579.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Intro: I have made this mod initially for personal use, but the more I edited the files the more I realize I can share this beauty (cosmetic mod) with you guys. So here we go again!</p><p>Download Me</p><p>Addons</p><p>(just drop them on top of the main mod)</p><p>Custom Cursors</p><p>What does this do?</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

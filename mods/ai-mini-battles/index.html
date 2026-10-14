@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="AI Mini-Battles">
   <meta property="og:description" content="This is the tournament mod used for the 0.97a Brawl King tournament, updated to 0.98a with a few new features to enable tournament hosting for this version, at least until the actual AI Battles mod gets updated.">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1363232182839148666/1363232183187406969/icon_recon.png?ex=6acf2ca8&amp;is=6acddb28&amp;hm=2fd203161af197b6a0f992feddaf17a445625ac91ba27946f59b5c40ed14eccf&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1363232182839148666/1363232183187406969/icon_recon.png?ex=6acfd568&amp;is=6ace83e8&amp;hm=a9451166631f3d38d2986288cff73dc3f65cdd5d7f188438626a65b5dde3f2df&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>AI Mini-Battles</h1><p>A Starsector mod by tranquil_light. For Starsector 0.98a.</p><p>This is the tournament mod used for the 0.97a Brawl King tournament, updated to 0.98a with a few new features to enable tournament hosting for this version, at least until the actual AI Battles mod gets updated.</p><p><a href="https://discord.com/channels/187635036525166592/1363232182839148666/1363232182839148666" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>This is the tournament mod used for the 0.97a Brawl King tournament, updated to 0.98a with a few new features to enable tournament hosting for this version, at least until the actual AI Battles mod gets updated.</p><p>Has support for officers, fleet skills, Automated Ship CR limits, etc.</p><p>(No long-term support or forum post at this time because I do not feel like maintaining yet another mod lol.)</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>AI Mini-Battles</h1><p>A Starsector mod by tranquil_light. For Starsector 0.98a.</p><p>This is the tournament mod used for the 0.97a Brawl King tournament, updated to 0.98a with a few new features to enable tournament hosting for this version, at least until the actual AI Battles mod gets updated.</p><p><a href="https://discord.com/channels/187635036525166592/1363232182839148666/1363232182839148666" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

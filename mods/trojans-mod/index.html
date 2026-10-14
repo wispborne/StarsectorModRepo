@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Trojans Mod</h1><p>A Starsector mod by mattfrank7. Version 0.1.</p><p>Well, this mod is all about adding a group of ships and a few missions to the game for you guys to play, currently it adds two ships and one mission for you to play them on, the ships aren't perfected yet so you may feel that they need improvement/center]</p><p><a href="http://www.mediafire.com/?aj3lse6ouxb9mp7" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=571.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Matthew's Trojans mod thread!</p><p>This is going to be the thread for my mod, named the Trojans Mod! :D</p><p>Before you begin reading this, I want you to know that this mod is still in heavy development, and will not be finished for a while :)</p><p>Info on the mod!</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Trojans Mod</h1><p>A Starsector mod by mattfrank7. Version 0.1.</p><p>Well, this mod is all about adding a group of ships and a few missions to the game for you guys to play, currently it adds two ships and one mission for you to play them on, the ships aren't perfected yet so you may feel that they need improvement/center]</p><p><a href="http://www.mediafire.com/?aj3lse6ouxb9mp7" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=571.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Matthew's Trojans mod thread!</p><p>This is going to be the thread for my mod, named the Trojans Mod! :D</p><p>Before you begin reading this, I want you to know that this mod is still in heavy development, and will not be finished for a while :)</p><p>Info on the mod!</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

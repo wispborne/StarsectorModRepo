@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Domain Explorarium Expansion</h1><p>A Starsector mod by SparraNova. For Starsector 0.98a. Version 0.0.24.</p><p>This is a relatively basic (for the moment) ship-pack focused on the Derelict drones (the green ones with no shields that show up around Motherships).</p><p><a href="https://drive.google.com/uc?export=download&amp;id=18t8pe-R5SSfp__Eer5PicEnk-lMzNVNu" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=26432.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1355292446980046859/1355292446980046859" rel="nofollow noopener">Discord post</a></p><h2>Forum post</h2><p>Domain Explorarium Expansion</p><p>This is a relatively basic (for the moment) ship-pack focused on the Derelict drones (the green ones with no shields that show up around Motherships).</p><p>This is still in development, but is intended to target a 'vanilla-like' experience that makes a mostly smooth curve from early-game pushovers to late-game powerhouses, matching the player and providing appropriate challange as you progress.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Domain Explorarium Expansion</h1><p>A Starsector mod by SparraNova. For Starsector 0.98a. Version 0.0.24.</p><p>This is a relatively basic (for the moment) ship-pack focused on the Derelict drones (the green ones with no shields that show up around Motherships).</p><p><a href="https://drive.google.com/uc?export=download&amp;id=18t8pe-R5SSfp__Eer5PicEnk-lMzNVNu" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=26432.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1355292446980046859/1355292446980046859" rel="nofollow noopener">Discord post</a></p><h2>Forum post</h2><p>Domain Explorarium Expansion</p><p>This is a relatively basic (for the moment) ship-pack focused on the Derelict drones (the green ones with no shields that show up around Motherships).</p><p>This is still in development, but is intended to target a 'vanilla-like' experience that makes a mostly smooth curve from early-game pushovers to late-game powerhouses, matching the player and providing appropriate challange as you progress.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

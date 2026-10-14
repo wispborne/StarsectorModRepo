@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Extra Weeb AI Portraits - "You Like Men!" Update</h1><p>A Starsector mod by demonx3. For Starsector 0.97a.</p><p>A pack of 45 new weeb AI portraits added directly into player faction for easy use. Comes with 15 Nia's AI portraits for player as a bonus (so 60 in total).</p><p><a href="https://discord.com/channels/187635036525166592/1220042629832638526/1220042629832638526" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>A pack of 45 new weeb AI portraits added directly into player faction for easy use.<br>Comes with 15 Nia's AI portraits for player as a bonus (so 60 in total).</p><p>`Note: This does not replace any portraits anywhere, it only adds new ones to the player faction.`</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Extra Weeb AI Portraits - "You Like Men!" Update</h1><p>A Starsector mod by demonx3. For Starsector 0.97a.</p><p>A pack of 45 new weeb AI portraits added directly into player faction for easy use. Comes with 15 Nia's AI portraits for player as a bonus (so 60 in total).</p><p><a href="https://discord.com/channels/187635036525166592/1220042629832638526/1220042629832638526" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

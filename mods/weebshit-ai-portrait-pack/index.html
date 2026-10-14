@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Weebshit AI portrait pack">
   <meta property="og:description" content="What it says on the tin">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1363091535968604181/1363091536954396692/scathach.png?ex=6acf526b&amp;is=6ace00eb&amp;hm=87d6a26c176961f6f29c8a7d86ee4291ddb67f569e83aeaf74b68819ca139ebf&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1363091535968604181/1363091536954396692/scathach.png?ex=6acffb2b&amp;is=6acea9ab&amp;hm=e2e8be0d018e9266040bd5ac74b965026f55dbd8750984e5374ebcb210ff9b37&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Weebshit AI portrait pack</h1><p>A Starsector mod by niatahl. For Starsector 0.98a.</p><p>What it says on the tin</p><p><a href="https://discord.com/channels/187635036525166592/1363091535968604181/1363091535968604181" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>What it says on the tin</p><p>On second thought, I should probably clarify that these are portraits for AI cores not AI-generated portraits. Using Arknights characters cause cause why not.</p><p>Added Scathach</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Weebshit AI portrait pack</h1><p>A Starsector mod by niatahl. For Starsector 0.98a.</p><p>What it says on the tin</p><p><a href="https://discord.com/channels/187635036525166592/1363091535968604181/1363091535968604181" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

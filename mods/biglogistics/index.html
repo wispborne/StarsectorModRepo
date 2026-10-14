@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="BIGLOGISTICS">
   <meta property="og:description" content="TEN ATLASES WELDED TOGETHER">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1372123280617508864/1372123280819097691/aBadIdea2_long_atlas.png?ex=6acf3862&amp;is=6acde6e2&amp;hm=4bedc03692cad5d7ff39c1948bb27ae1a6b1a173d12eeb599cad3e4b6dc0e869&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1372123280617508864/1372123280819097691/aBadIdea2_long_atlas.png?ex=6acfe122&amp;is=6ace8fa2&amp;hm=1d4ef86c7d31102e02c7dfd8e268b24820a28cef8ff776315ac3ce1543c99463&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>BIGLOGISTICS</h1><p>A Starsector mod by mechamagpiecat. For Starsector 0.98a.</p><p>TEN ATLASES WELDED TOGETHER</p><p><a href="https://discord.com/channels/187635036525166592/1372123280617508864/1372123280617508864" rel="nofollow noopener">Discord post</a></p><h2>About this mod</h2><p>TEN ATLASES WELDED TOGETHER</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>BIGLOGISTICS</h1><p>A Starsector mod by mechamagpiecat. For Starsector 0.98a.</p><p>TEN ATLASES WELDED TOGETHER</p><p><a href="https://discord.com/channels/187635036525166592/1372123280617508864/1372123280617508864" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

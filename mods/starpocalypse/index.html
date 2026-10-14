@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Starpocalypse</h1><p>A Starsector mod by Jaghaimo. For Starsector 0.95.1a. Version 2.3.2.</p><p>Reduce weapon and combat ship availability, and make NPC colonies stronger.</p><p><a href="https://github.com/jaghaimo/starpocalypse/releases/latest" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=21812.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/jaghaimo/starpocalypse" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Starpocalypse is no longer being maintained. Last working build is available for 0.95.1a. Repository is archived (accessible but read-only). The successor to this mod can be found here: https://fractalsoftworks.com/forum/index.php?topic=26969.0</p><p>Spoiler<br>Starpocalypse<br>Reduce weapon and combat ship availability, and make NPC colonies stronger.</p><p>This minimod makes the following changes to the campaign layer of Starsector:</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Starpocalypse</h1><p>A Starsector mod by Jaghaimo. For Starsector 0.95.1a. Version 2.3.2.</p><p>Reduce weapon and combat ship availability, and make NPC colonies stronger.</p><p><a href="https://github.com/jaghaimo/starpocalypse/releases/latest" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=21812.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/jaghaimo/starpocalypse" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Starpocalypse is no longer being maintained. Last working build is available for 0.95.1a. Repository is archived (accessible but read-only). The successor to this mod can be found here: https://fractalsoftworks.com/forum/index.php?topic=26969.0</p><p>Spoiler<br>Starpocalypse<br>Reduce weapon and combat ship availability, and make NPC colonies stronger.</p><p>This minimod makes the following changes to the campaign layer of Starsector:</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

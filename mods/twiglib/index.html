@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>TwigLib</h1><p>A Starsector mod by Debido. For Starsector 0.65.2a. Version 0.6.11.</p><p>Modified frames after death to accomodate scenarios where people are running at more than 60fpsThis mod allows people to build utterly...utterly enormous ships and get around the bounds issues that exist.</p><p><a href="https://bitbucket.org/debido/starsector-multiship/downloads/TwigLib%200.6.11.7z" rel="nofollow noopener">Download</a> · <a href="http://fractalsoftworks.com/forum/index.php?topic=8266.0" rel="nofollow noopener">Forum thread</a> · <a href="https://bitbucket.org/debido/starsector-multiship" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>TWIG™ Library</p><p>Update for 0.8 releaseTwibLib has now be superseded by built in game functionality, please use the built in game 'space station slot' functionality. The previous build is still available for those still using the patch (why? seriously? get the latest version!!!)</p><p>Update for 0.7.2a release<br>Download 0.6.11</p><p>Modified the default behavior of isMultiShip to not return true if it is a detached node if it is dead.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>TwigLib</h1><p>A Starsector mod by Debido. For Starsector 0.65.2a. Version 0.6.11.</p><p>Modified frames after death to accomodate scenarios where people are running at more than 60fpsThis mod allows people to build utterly...utterly enormous ships and get around the bounds issues that exist.</p><p><a href="https://bitbucket.org/debido/starsector-multiship/downloads/TwigLib%200.6.11.7z" rel="nofollow noopener">Download</a> · <a href="http://fractalsoftworks.com/forum/index.php?topic=8266.0" rel="nofollow noopener">Forum thread</a> · <a href="https://bitbucket.org/debido/starsector-multiship" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>TWIG™ Library</p><p>Update for 0.8 releaseTwibLib has now be superseded by built in game functionality, please use the built in game 'space station slot' functionality. The previous build is still available for those still using the patch (why? seriously? get the latest version!!!)</p><p>Update for 0.7.2a release<br>Download 0.6.11</p><p>Modified the default behavior of isMultiShip to not return true if it is a detached node if it is dead.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

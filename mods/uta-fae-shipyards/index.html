@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Uta-Fae Shipyards</h1><p>A Starsector mod by Utafae. For Starsector 0.98a. Version 0.3.</p><p>Do you like being constantly uncertain of the distinction between a large frigate and a small destroyer? Do you enjoy shootouts over whether a ship is a small cruiser or large destroyer? Do you want to drive in close and empty out your magazines right now?</p><p><a href="https://fractalsoftworks.com/forum/index.php?topic=31842.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/Kyubold/Uta-Fae-Shipyards" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Uta-Fae Shipyards<br>A midline-ish but not-completely-so content pack.</p><p>https://github.com/Kyubold/Uta-Fae-Shipyards.git</p><p>overview</p><p>new in 0.3</p><p>new in 0.2</p><p>Introduction</p><p>Do you like being constantly uncertain of the distinction between a large frigate and a small destroyer? Do you enjoy shootouts over whether a ship is a small cruiser or large destroyer? Do you want to drive in close and empty out your magazines right now?</p><p>Then come on over to Uta-Fae Shipyards, where the customer almost always leaves.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Uta-Fae Shipyards</h1><p>A Starsector mod by Utafae. For Starsector 0.98a. Version 0.3.</p><p>Do you like being constantly uncertain of the distinction between a large frigate and a small destroyer? Do you enjoy shootouts over whether a ship is a small cruiser or large destroyer? Do you want to drive in close and empty out your magazines right now?</p><p><a href="https://fractalsoftworks.com/forum/index.php?topic=31842.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/Kyubold/Uta-Fae-Shipyards" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Uta-Fae Shipyards<br>A midline-ish but not-completely-so content pack.</p><p>https://github.com/Kyubold/Uta-Fae-Shipyards.git</p><p>overview</p><p>new in 0.3</p><p>new in 0.2</p><p>Introduction</p><p>Do you like being constantly uncertain of the distinction between a large frigate and a small destroyer? Do you enjoy shootouts over whether a ship is a small cruiser or large destroyer? Do you want to drive in close and empty out your magazines right now?</p><p>Then come on over to Uta-Fae Shipyards, where the customer almost always leaves.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

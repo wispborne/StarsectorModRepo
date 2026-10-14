@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>ExtendedControls</h1><p>A Starsector mod by Shoey. For Starsector 0.98a. Version 0.4.0.</p><p>Quickly cycle through campaign menu tabs (intel, map, etc) with left/right arrow keys. Interact dialogs can now be navigated with the up/down arrow keys and enter. Hotbar can be navigated and used with the left/right arrow keys and enter.</p><p><a href="https://github.com/MildlyFootwear/starsector-ExtendedControls/releases/" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=30618.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/MildlyFootwear/starsector-ExtendedControls" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/lunalib/">LunaLib</a></li></ul><h2>Forum post</h2><p>Features</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>ExtendedControls</h1><p>A Starsector mod by Shoey. For Starsector 0.98a. Version 0.4.0.</p><p>Quickly cycle through campaign menu tabs (intel, map, etc) with left/right arrow keys. Interact dialogs can now be navigated with the up/down arrow keys and enter. Hotbar can be navigated and used with the left/right arrow keys and enter.</p><p><a href="https://github.com/MildlyFootwear/starsector-ExtendedControls/releases/" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=30618.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/MildlyFootwear/starsector-ExtendedControls" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/lunalib/">LunaLib</a></li></ul><h2>Forum post</h2><p>Features</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

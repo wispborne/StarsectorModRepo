@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Officer Extension - The OP Fork</h1><p>A Starsector mod by 5thYL. For Starsector 0.96a. Version R.03.</p><p>Adds the ability to increase level and elite skills cap of individual officer by spending storypoints.</p><p><a href="https://github.com/5thYL/Starsector-Officer-Extension/releases" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=27754.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/5thYL/Starsector-Officer-Extension" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Officer Extension - The OP Fork</p><p>Adds the ability to increase level and elite skills cap of individual officer by spending storypoints.<br>Fork of the original OE here: https://fractalsoftworks.com/forum/index.php?topic=23928<br>Cannot be used alongside the original OE since this is a fork, not a true addon.<br>And as you can see this is an complete ripoff of OE, even the forum formatting is a ripoff...</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Officer Extension - The OP Fork</h1><p>A Starsector mod by 5thYL. For Starsector 0.96a. Version R.03.</p><p>Adds the ability to increase level and elite skills cap of individual officer by spending storypoints.</p><p><a href="https://github.com/5thYL/Starsector-Officer-Extension/releases" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=27754.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/5thYL/Starsector-Officer-Extension" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Officer Extension - The OP Fork</p><p>Adds the ability to increase level and elite skills cap of individual officer by spending storypoints.<br>Fork of the original OE here: https://fractalsoftworks.com/forum/index.php?topic=23928<br>Cannot be used alongside the original OE since this is a fork, not a true addon.<br>And as you can see this is an complete ripoff of OE, even the forum formatting is a ripoff...</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

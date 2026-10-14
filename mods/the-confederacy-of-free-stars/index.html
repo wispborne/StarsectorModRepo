@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>The Confederacy of Free Stars</h1><p>A Starsector mod by InfinitySquared.</p><p>The Perseus Arm Coalition is a multinational organization much like the NATO of old Terra. It consists of the:</p><p><a href="https://www.box.com/s/yb1lqwasht7u7bh03opb" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=643.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Disclaimer: Though the designs are my sole property, the sprite packs belong to their respective owners.</p><p>So, this is my first mod. I'm using the Battleships Forever ship maker and several sprite packs to create the hulls, and I'm possibly thinking of converting a few of the custom weapons as well.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>The Confederacy of Free Stars</h1><p>A Starsector mod by InfinitySquared.</p><p>The Perseus Arm Coalition is a multinational organization much like the NATO of old Terra. It consists of the:</p><p><a href="https://www.box.com/s/yb1lqwasht7u7bh03opb" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=643.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Disclaimer: Though the designs are my sole property, the sprite packs belong to their respective owners.</p><p>So, this is my first mod. I'm using the Battleships Forever ship maker and several sprite packs to create the hulls, and I'm possibly thinking of converting a few of the custom weapons as well.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

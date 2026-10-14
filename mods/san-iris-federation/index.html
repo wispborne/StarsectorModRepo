@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>San-Iris Federation</h1><p>A Starsector mod by Sikair. For Starsector 0.98a. Version 1.1.0.</p><p>Add a small faction with 2 water world south of the core world. San-Iris ships are made to defend their home world and as such are very defense oriented.</p><p><a href="https://github.com/Sikair/SanIris/archive/refs/tags/v1.1.0.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=25775.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1292034152790757418/1292034152790757418" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/Sikair/SanIris" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/magiclib/">MagicLib</a></li><li><a href="mods/lazylib/">LazyLib</a></li></ul><h2>Forum post</h2><p>San-Iris Federation</p><p>Add a small faction with 2 water world south of the core world.<br>San-Iris ships are made to defend their home world and as such are very defense oriented. The ship emulate biological life in their design, with high armor and low hp, they have a bonus in flux dissipation but get weaker as hull go down.</p><p>Feature :<br>- Wavy tentacle thruster<br>- Ballistic weapon with 2 stage mechanics<br>- Defense oriented system<br>- Really nice music made by Haplogynae</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>San-Iris Federation</h1><p>A Starsector mod by Sikair. For Starsector 0.98a. Version 1.1.0.</p><p>Add a small faction with 2 water world south of the core world. San-Iris ships are made to defend their home world and as such are very defense oriented.</p><p><a href="https://github.com/Sikair/SanIris/archive/refs/tags/v1.1.0.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=25775.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1292034152790757418/1292034152790757418" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/Sikair/SanIris" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/magiclib/">MagicLib</a></li><li><a href="mods/lazylib/">LazyLib</a></li></ul><h2>Forum post</h2><p>San-Iris Federation</p><p>Add a small faction with 2 water world south of the core world.<br>San-Iris ships are made to defend their home world and as such are very defense oriented. The ship emulate biological life in their design, with high armor and low hp, they have a bonus in flux dissipation but get weaker as hull go down.</p><p>Feature :<br>- Wavy tentacle thruster<br>- Ballistic weapon with 2 stage mechanics<br>- Defense oriented system<br>- Really nice music made by Haplogynae</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

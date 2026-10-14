@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Background Mod - Okim's Project Ironclads Bundle</h1><p>A Starsector mod by Vandala.</p><p>Adds 3 new backgrounds. These backgrounds have been taken from the Project Ironclads mod found here.</p><p><a href="http://www.sendspace.com/file/xsdket" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=2926.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Adds 3 new backgrounds. These backgrounds have been taken from the Project Ironclads mod found here.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Background Mod - Okim's Project Ironclads Bundle</h1><p>A Starsector mod by Vandala.</p><p>Adds 3 new backgrounds. These backgrounds have been taken from the Project Ironclads mod found here.</p><p><a href="http://www.sendspace.com/file/xsdket" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=2926.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Adds 3 new backgrounds. These backgrounds have been taken from the Project Ironclads mod found here.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

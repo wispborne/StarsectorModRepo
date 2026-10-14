@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Custom Battle Music</h1><p>A Starsector mod by Laroustine. For Starsector 0.98a. Version 2.0.0.</p><p>This mod is made in order to add custom battle music to the game. You can now add songs that fit factions for the base game or even from mods. You can also add music to fleets and ships. It is very easy to modify and implement. Now contains music for every major faction in the game.</p><p><a href="https://github.com/Laroustine/mod-starsector-battle-music/releases/download/v.2.0.0/Battle_Music_Custom.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=24663.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/Laroustine/mod-starsector-battle-music" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>CUSTOM BATTLE MUSIC</p><p>This mod is made in order to add custom battle music to the game.<br>You can now add songs that fit factions for the base game or even from mods.<br>You can also add music to fleets and ships.<br>It is very easy to modify and implement.<br>Now contains music for every major faction in the game.</p><p>For Developers:</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Custom Battle Music</h1><p>A Starsector mod by Laroustine. For Starsector 0.98a. Version 2.0.0.</p><p>This mod is made in order to add custom battle music to the game. You can now add songs that fit factions for the base game or even from mods. You can also add music to fleets and ships. It is very easy to modify and implement. Now contains music for every major faction in the game.</p><p><a href="https://github.com/Laroustine/mod-starsector-battle-music/releases/download/v.2.0.0/Battle_Music_Custom.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=24663.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/Laroustine/mod-starsector-battle-music" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>CUSTOM BATTLE MUSIC</p><p>This mod is made in order to add custom battle music to the game.<br>You can now add songs that fit factions for the base game or even from mods.<br>You can also add music to fleets and ships.<br>It is very easy to modify and implement.<br>Now contains music for every major faction in the game.</p><p>For Developers:</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

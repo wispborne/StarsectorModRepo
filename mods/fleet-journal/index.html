@@ -25,6 +25,9 @@
        not change colour a moment after it appears. The same key lib.js keeps
        it under. -->
   <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
     // Browser Default (and the old default preference) sets nothing.
     try {
       var theme = localStorage.getItem('starmodderTheme');
@@ -144,7 +147,7 @@
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Fleet Journal</h1><p>A Starsector mod by Ontheheavens. For Starsector 0.97a. Version 1.1.3.</p><p>Some years ago when I was playing the game, lack of note-taking feature was something that bothered me quite a bit. Oh, but then I found Captain's Log, which adds custom notes!.. as a console command. That was a bummer.</p><p><a href="https://github.com/Ontheheavens/Fleet-Journal/releases/download/v1.1.3/Fleet.Journal.1.1.3.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=26122.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/Ontheheavens/Fleet-Journal/" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li></ul><h2>Forum post</h2><p>Requires LazyLib for Kotlin runtime library.<br>Can be safely added to existing save games.<br>Cannot be removed from games in which it was already used.</p><p>Important: consider leaving a star for the repo if you appreciate this project.</p><p>Description:</p><p>Some years ago when I was playing the game, lack of note-taking feature was something that bothered me quite a bit. Oh, but then I found Captain's Log, which adds custom notes!.. as a console command. That was a bummer.</p></article><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Fleet Journal</h1><p>A Starsector mod by Ontheheavens. For Starsector 0.97a. Version 1.1.3.</p><p>Some years ago when I was playing the game, lack of note-taking feature was something that bothered me quite a bit. Oh, but then I found Captain's Log, which adds custom notes!.. as a console command. That was a bummer.</p><p><a href="https://github.com/Ontheheavens/Fleet-Journal/releases/download/v1.1.3/Fleet.Journal.1.1.3.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=26122.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/Ontheheavens/Fleet-Journal/" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li></ul><h2>Forum post</h2><p>Requires LazyLib for Kotlin runtime library.<br>Can be safely added to existing save games.<br>Cannot be removed from games in which it was already used.</p><p>Important: consider leaving a star for the repo if you appreciate this project.</p><p>Description:</p><p>Some years ago when I was playing the game, lack of note-taking feature was something that bothered me quite a bit. Oh, but then I found Captain's Log, which adds custom notes!.. as a console command. That was a bummer.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>
