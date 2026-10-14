@@ -30,33 +30,72 @@ const NO_REQUIREMENTS = '__none__';
 const ANY_GAME = 'any';
 const NO_GAME = 'none';
 
-/// The switches, each a plain yes-or-no question about one field.
+/// The switches, each a plain yes-or-no question about one field. Each has
+/// three states: off, on (keep the mods that answer yes) and "not" (keep the
+/// mods that answer no). A press moves to the next state. `notLabel` and
+/// `notTitle` are what the switch says in the "not" state, and `keepWhenNot`,
+/// where there is one, decides "not" in place of "everything `keep` turns away".
 const SWITCHES = [
   {
     key: 'download',
     label: 'Has a download',
     title: 'Only mods with a link that goes straight to a file.',
+    notLabel: 'No direct download',
+    notTitle: 'Only mods with no link that goes straight to a file.',
     keep: (mod) => mod.hasDirectDownload === true,
   },
   {
     key: 'source',
     label: 'Source code linked',
     title: 'Only mods with publicly available source code.',
+    notLabel: 'No source code linked',
+    notTitle: 'Only mods with no link to their source code.',
     keep: (mod) => mod.sourceIsPublic === true,
   },
   {
     key: 'addable',
     label: 'Safe to add mid-game',
     title: 'Only mods the author says are safe to add mid-game.',
+    notLabel: 'Not safe to add mid-game',
+    notTitle: 'Only mods the author says are not safe to add mid-game.',
     keep: (mod) => mod.saveCompatible === true,
+    // Most mods never say. "Not" means the author said no, not that nobody
+    // said anything.
+    keepWhenNot: (mod) => mod.saveCompatible === false,
   },
   {
     key: 'nowip',
     label: 'Hide works in progress',
     title: 'Hide mods marked as unfinished in their thread.',
+    notLabel: 'Only works in progress',
+    notTitle: 'Only mods marked as unfinished in their thread.',
     keep: (mod) => mod.isWorkInProgress !== true,
   },
 ];
+const ONLY = 'only';
+const NOT = 'not';
+
+// The tick and the cross for a switch's box at the side (Tabler shapes). Both
+// are always there; style.css shows the one that fits the switch's state.
+const TRI_BOX_MARKS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+  + 'stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" '
+  + 'focusable="false"><path class="mark-on" d="M5 12.5l4.5 4.5L19 7.5"/>'
+  + '<path class="mark-not" d="M7 7l10 10M17 7 7 17"/></svg>';
+
+/// The switches as the address names them: `only=a,b` and `not=c`. A key in
+/// both counts as "only".
+function switchesFromAddress(query) {
+  const picked = new Map();
+  for (const state of [NOT, ONLY]) {
+    for (const key of (query.get(state) || '').split(',')) {
+      if (SWITCHES.some((option) => option.key === key)) picked.set(key, state);
+    }
+  }
+  return picked;
+}
+
+const switchKeysIn = (switches, wanted) =>
+  [...switches].filter(([, state]) => state === wanted).map(([key]) => key).join(',');
 
 const SORTS = [
   // Only offered while there is something typed, and picked for the reader
@@ -117,8 +156,7 @@ export async function render(root, parts) {
     sort: SORTS.some((s) => s.key === query.get('sort')) ? query.get('sort')
       : ((query.get('q') || '') ? 'relevance' : 'current'),
     seed: Number(query.get('seed')) || newSeed(),
-    switches: new Set((query.get('only') || '').split(',')
-      .filter((key) => SWITCHES.some((option) => option.key === key))),
+    switches: switchesFromAddress(query),
     page: Math.max(0, Number(query.get('page')) || 0),
     pageSize: pageSizePreference(),
     view: localStorage.getItem(VIEW_KEY) === 'rows' ? 'rows' : 'grid',
@@ -178,7 +216,8 @@ export async function render(root, parts) {
       author: shown.author,
       sort: shown.sort === 'current' ? '' : shown.sort,
       seed: shown.sort === 'random' ? shown.seed : '',
-      only: [...shown.switches].join(','),
+      only: switchKeysIn(shown.switches, ONLY),
+      not: switchKeysIn(shown.switches, NOT),
       page: shown.page || '',
     });
     rememberFilters(hash);
@@ -474,41 +513,42 @@ function drawControls(places, mods, state, onChange, onLayout) {
   drawSort();
 
   // Along the top each switch is a button that lights up; at the side it is a
-  // tick box with its label, the way a list of filters usually reads.
+  // box with its label, the way a list of filters usually reads. Either way a
+  // press goes off, then on, then "not", then off again. "Not" shows its own
+  // words and a cross, so it never reads as plain on.
   const switches = el('div', { class: atSide ? 'check-list' : 'switches' });
-  const addSwitch = (label, title, isOn, onToggle) => {
-    if (atSide) {
-      const box = el('input', { type: 'checkbox' });
-      box.checked = isOn();
-      box.addEventListener('change', () => { onToggle(); changed(); });
-      switches.append(el('label', { class: 'check-row', title }, [
-        box, el('span', { text: label }),
-      ]));
-      return;
-    }
+  const addSwitch = (option) => {
+    const words = el('span');
+    const tick = atSide
+      ? el('span', { class: 'tri-box', 'aria-hidden': 'true', html: TRI_BOX_MARKS })
+      : null;
     const button = el('button', {
-      class: isOn() ? 'btn on' : 'btn',
-      text: label,
-      title,
-      'aria-pressed': String(isOn()),
-    });
+      type: 'button',
+      class: atSide ? 'check-row' : 'btn',
+    }, [tick, words]);
+    const draw = () => {
+      const picked = state.switches.get(option.key);
+      words.textContent = picked === NOT ? option.notLabel : option.label;
+      button.title = `${picked === NOT ? option.notTitle : option.title} `
+        + (picked === ONLY ? 'Press again for the opposite.'
+          : picked === NOT ? 'Press again to turn this off.' : '');
+      button.classList.toggle('on', picked === ONLY);
+      button.classList.toggle('not', picked === NOT);
+      button.setAttribute('aria-pressed', picked ? 'true' : 'false');
+    };
     button.addEventListener('click', () => {
-      onToggle();
-      button.classList.toggle('on', isOn());
-      button.setAttribute('aria-pressed', String(isOn()));
+      const picked = state.switches.get(option.key);
+      if (!picked) state.switches.set(option.key, ONLY);
+      else if (picked === ONLY) state.switches.set(option.key, NOT);
+      else state.switches.delete(option.key);
+      draw();
       changed();
     });
+    draw();
     switches.append(button);
   };
 
-  for (const option of SWITCHES) {
-    addSwitch(option.label, option.title,
-      () => state.switches.has(option.key),
-      () => {
-        if (state.switches.has(option.key)) state.switches.delete(option.key);
-        else state.switches.add(option.key);
-      });
-  }
+  for (const option of SWITCHES) addSwitch(option);
 
   const layoutSwitch = layoutToggle(layout, onLayout);
   drawChips();
@@ -636,7 +676,10 @@ export function matchesFilters(mod, state) {
       && !(mod.needs || []).some((n) => n.name === state.needs)) return false;
   if (state.author && !(mod.authors || []).includes(state.author)) return false;
   for (const option of SWITCHES) {
-    if (state.switches.has(option.key) && !option.keep(mod)) return false;
+    const picked = state.switches.get(option.key);
+    if (picked === ONLY && !option.keep(mod)) return false;
+    if (picked === NOT
+      && (option.keepWhenNot ? !option.keepWhenNot(mod) : option.keep(mod))) return false;
   }
   return true;
 }

@@ -721,7 +721,10 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
   border-radius: 999px; color: var(--primary);
   font-family: inherit; font-size: var(--type-small); line-height: 1;
 }
-.search-field:hover .search-help-mark {
+/* The "?" is lit exactly while its panel shows, and at no other time. These
+   two rules are the same conditions as the panel's own rules below. */
+.search-field:not(.help-off):hover .search-help-mark,
+.search-field.help-off.help-asked .search-help-mark {
   background: var(--primary-soft); border-color: var(--primary);
 }
 
@@ -847,6 +850,31 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .check-list { display: flex; flex-direction: column; gap: 6px; font-size: var(--type-small); }
 .check-row { display: flex; gap: 8px; align-items: flex-start; cursor: pointer; }
 .check-row input { margin: 2px 0 0; accent-color: var(--on); }
+/* The switches at the side are buttons drawn as a box and its words, because
+   a tick box has no third state for "not". */
+button.check-row {
+  background: none; border: none; padding: 0; margin: 0; text-align: left;
+  font: inherit; color: inherit;
+}
+button.check-row { align-items: center; }
+.tri-box {
+  flex: none; box-sizing: border-box; width: 16px; height: 16px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--surface-2); border: 1px solid var(--border); border-radius: 4px;
+  transition: background 0.1s, border-color 0.1s;
+}
+.tri-box svg { width: 12px; height: 12px; }
+.tri-box .mark-on, .tri-box .mark-not { display: none; }
+.check-row:hover .tri-box { border-color: var(--on); }
+.check-row.on .tri-box { background: var(--on); border-color: var(--on); color: var(--surface); }
+.check-row.on .mark-on { display: inline; }
+.check-row.not .tri-box {
+  background: color-mix(in srgb, var(--error) 15%, transparent);
+  border-color: var(--error); color: var(--error);
+}
+.check-row.not .mark-not { display: inline; }
+/* Along the top, "not" is lit in the warning colour rather than the "on" one. */
+.switches .btn.not { border-color: var(--error); color: var(--error); }
 .filters-gap { flex: 1 1 auto; }
 @media (max-width: 900px) {
   .browse-split { grid-template-columns: minmax(0, 1fr); }
@@ -1396,6 +1424,7 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .btn-with-icon .view-icon,
 .btn-with-icon .github-icon,
 .badge.source-link .original-page-icon,
+.check-row .tri-box,
 .post-switch-icon { transform: translateY(0.06em); }
 /* The Discord post under the forum post: a little more room than between
    the parts of one group, so the two read as two posts. */

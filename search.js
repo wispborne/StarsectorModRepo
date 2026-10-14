@@ -290,7 +290,9 @@ const FIELDS = {
   version: (mod) => [mod.gameVersion],
   gameversion: (mod) => [mod.gameVersion],
   modversion: (mod) => [mod.modVersion],
-  source: (mod) => mod.sources || [],
+  // Where the mod was found: forum, discord or nexus. `source:` was its first
+  // name and still works, but reads too much like source code.
+  from: (mod) => mod.sources || [],
   url: (mod) => [mod.forumUrl, mod.discordUrl,
     mod.bestDownload && mod.bestDownload.url],
   summary: (mod) => [mod.summary],
@@ -298,7 +300,24 @@ const FIELDS = {
 // The plural reads as naturally as the singular, so both are accepted.
 FIELDS.authors = FIELDS.author;
 FIELDS.categories = FIELDS.category;
-FIELDS.sources = FIELDS.source;
+FIELDS.source = FIELDS.from;
+FIELDS.sources = FIELDS.from;
+
+/// The yes-or-no questions a reader can ask with `has:` or `is:`, as in
+/// `has:source` or `-is:wip`. The same questions as Browse's switches, plus
+/// `tool`. Both words work with every question, so nobody has to remember
+/// which one goes with which.
+const FLAGS = {
+  source: (mod) => mod.sourceIsPublic === true,
+  download: (mod) => mod.hasDirectDownload === true,
+  addable: (mod) => mod.saveCompatible === true,
+  wip: (mod) => mod.isWorkInProgress === true,
+  tool: (mod) => mod.isTool === true,
+};
+FLAGS.code = FLAGS.source;
+FLAGS.sourcecode = FLAGS.source;
+FLAGS.safe = FLAGS.addable;
+const FLAG_WORDS = new Set(['has', 'is']);
 
 /// A field asked about by name answers as well as a mod's own name does, so
 /// `author:Wisp` puts Wisp's mods at the top.
@@ -349,6 +368,10 @@ function readPiece(piece) {
   }
 
   const asField = FIELD_TERM.exec(body);
+  if (asField && FLAG_WORDS.has(asField[1].toLowerCase())) {
+    const test = FLAGS[normalize(asField[2]).replace(/ /g, '')];
+    if (test) return [{ kind: 'flag', test, leaveOut }];
+  }
   if (asField) {
     const field = FIELDS[asField[1].toLowerCase()];
     const value = normalize(asField[2].replace(/^"|"$/g, ''));
@@ -385,6 +408,9 @@ export function readSearch(text) {
 
 /// How well a mod answers one thing a group asks for, or below zero.
 function scorePart(mod, facts, part) {
+  // A yes-or-no question lets a mod in or keeps it out, and says nothing
+  // about how well it answers the words.
+  if (part.kind === 'flag') return part.test(mod) ? 0 : -1;
   if (part.kind === 'field') {
     return part.field(mod).some((value) => normalize(value).includes(part.value))
       ? FIELD_SCORE : -1;

@@ -1530,9 +1530,15 @@ const WAYS_TO_SEARCH = [
   },
   {
     name: 'Field search',
-    says: [{ code: 'key:value' }, ' syntax, e.g. ', { code: 'source:forum' },
-      ', ', { code: 'author:Wisp' }, ', ', { code: 'category:weapons' }, ', ',
-      { code: 'version:0.97' }],
+    says: [{ code: 'key:value' }, ' syntax, e.g. ', { code: 'author:Wisp' },
+      ', ', { code: 'category:weapons' }, ', ', { code: 'version:0.97' }, ', ',
+      { code: 'from:discord' }],
+  },
+  {
+    name: 'Has / is',
+    says: [{ code: 'has:source' }, ', ', { code: 'has:download' }, ', ',
+      { code: 'is:addable' }, ', ', { code: 'is:wip' }, ', ', { code: 'is:tool' },
+      '; add ', { code: '-' }, ' to leave those out: ', { code: '-is:wip' }],
   },
 ];
 
