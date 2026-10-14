@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="../../">
   <title>Ship Direction Marker | Starmodder</title>
-  <meta name="description" content="Add marker to indicate current movement direction of player ship and target ship.">
+  <meta name="description" content="Add marker to indicate current movement direction of player ship and target ship. Useful for ship with flicker.">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Ship Direction Marker">
-  <meta property="og:description" content="Add marker to indicate current movement direction of player ship and target ship.">
+  <meta property="og:description" content="Add marker to indicate current movement direction of player ship and target ship. Useful for ship with flicker.">
   <meta property="og:image" content="https://i.imgur.com/1po8Nb6.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
@@ -141,7 +141,10 @@
     </div>
   </dialog>
 
-  <main id="app" tabindex="-1"><div class="loading">Loading…</div></main>
+  <!-- A mod's own page writes the mod's words between these two marks, so a
+       search engine that does not run the script still reads them. The
+       script empties this as it starts. -->
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Ship Direction Marker</h1><p>A Starsector mod by PureTilt. For Starsector 0.95a. Version 1.3.1.</p><p>Add marker to indicate current movement direction of player ship and target ship. Useful for ship with flicker.</p><p><a href="https://github.com/PureTilt/ShipDirectionMarker/releases/download/1.3.1/ShipDirectionMarker.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=18994.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/PureTilt/ShipDirectionMarker" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li></ul><h2>Forum post</h2><p>Ship Direction Marker got assimilated into QoLPack<br>https://fractalsoftworks.com/forum/index.php?topic=23652.0</p><p>Requires LazyLib</p><p>Add marker to indicate current movement direction of player ship and target ship. Useful for ship with flicker.</p><p>you can toggle markers visibility, buttons can be changed in ini file,<br>default buttons:<br>for your ship marker "["<br>for target ship marker "]"<br>for all ships option " ' "<br>for fighters in all ships option"\"</p><p>Changelog:</p></article><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

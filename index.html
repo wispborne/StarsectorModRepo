@@ -149,7 +149,10 @@
     </div>
   </dialog>
 
-  <main id="app" tabindex="-1"><div class="loading">Loading…</div></main>
+  <!-- A mod's own page writes the mod's words between these two marks, so a
+       search engine that does not run the script still reads them. The
+       script empties this as it starts. -->
+  <main id="app" tabindex="-1"><!--page-body--><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

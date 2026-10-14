@@ -9,16 +9,17 @@ import {
   aiOnModPages, aiSparkle, aiSummaryNote, aiSummaryOf,
   clear,
   currentGameVersion, DATA_BASE, downloadButton, el, errorPanel, expandAllButton, formatDay,
-  favoriteToggle, formatMoment, imageUrlOf, inlinePictures, joinNames,
+  favoriteToggle, formatMoment, imageUrlOf, inlinePictures, joinNames, quickTip,
   setAiOnModPages, setInlinePictures, summaryToShow,
   modDetail, modHref, modList, modName, MOD_VERSION_NOTE,
-  NO_DESCRIPTION, pageIcon, picture, showPicture, sourceName, summaryTitle,
+  NO_DESCRIPTION, pageIcon, picture, showPicture, summaryTitle,
   versionStanding, versionStandingNote,
 } from '../lib.js';
 import { address } from '../address.js';
-import { modCard } from './browse.js';
+import { SUPPORT_ICONS } from '../support_icons.js';
 
-const RELATED_COUNT = 6;
+// How many rows each of the side column's two short lists shows.
+const RELATED_SIDE_COUNT = 5;
 
 const SUPPORT_NAMES = {
   patreon: 'Patreon',
@@ -70,8 +71,8 @@ export async function render(root, parts) {
   const shownName = modName(mod);
   document.title = `${shownName} | Starmodder`;
 
-  // The list is also what the two "more like this" strips at the foot are
-  // built from. A page that will not load it still draws everything else.
+  // The list is also what the side column's "More by" and "Similar mods"
+  // lists are built from. A page that will not load it still draws everything else.
   let everyMod = [];
   try {
     everyMod = (await modList()).mods || [];
@@ -94,38 +95,55 @@ export async function render(root, parts) {
     galleryCount.hidden = !count;
   });
 
+  // Each post sits in a holder that is never swapped out, so a post that
+  // redraws itself (pictures on or off) is still the one its tab and its jump
+  // link point at.
+  const forumPost = holderFor(description(detail), 'post');
+  const discordPostPart = holderFor(discordPost(detail), 'discord-post');
+
+  const sections = tabs(id, [
+    { label: 'Description', parts: [aiSummary(detail, mod), forumPost, discordPostPart] },
+    { label: 'Gallery', countNode: galleryCount, parts: [galleryPanel] },
+    // The author's changelog and the releases this site noticed are one
+    // question — what changed, and when — so they share a tab.
+    { label: 'Recent Updates', parts: [changelog(detail), releases(detail)] },
+    { label: 'Add-ons', count: (detail.addons || []).length, parts: [addons(detail)] },
+  ]);
+
+  const forumHeading = Boolean(detail.descriptionIsForumPost);
+  const header = modHeader(mod, detail, shownName);
+  const jumps = jumpLinks(sections, [
+    { node: header, text: 'Header' },
+    forumPost && { node: forumPost, text: forumHeading ? 'Forum post' : 'About this mod' },
+    discordPostPart && { node: discordPostPart, text: 'Discord post' },
+  ]);
+
   // The header above the mod on the left; the side column at the right starts
   // level with the header, so the download card sits beside the mod's name.
   root.append(el('div', { class: 'stack' }, [
     el('div', { class: 'mod-layout' }, [
-      modHeader(mod, detail, shownName),
+      header,
       el('div', { class: 'mod-main stack' }, [
         sameNameMods(detail),
-        tabs(id, [
-          { label: 'Description', parts: [aiSummary(detail, mod), description(detail)] },
-          { label: 'Gallery', countNode: galleryCount, parts: [galleryPanel] },
-          // The author's changelog and the releases this site noticed are one
-          // question — what changed, and when — so they share a tab.
-          { label: 'Recent Updates', parts: [changelog(detail), releases(detail)] },
-          { label: 'Add-ons', count: (detail.addons || []).length, parts: [addons(detail)] },
-        ]),
+        sections,
       ]),
-      // One column that stays in view while the post is read. On a narrow
-      // screen it stands aside (`display: contents`) so the download card can
-      // come before the mod and the other cards after it.
+      // One column that stays in view while the post is read: the buttons
+      // that get the mod, then everything else about the mod as one panel,
+      // then "On this page", which is about the page and not the mod. On a
+      // narrow screen the column stands aside (`display: contents`) so the
+      // download card can come before the mod and the other cards after it.
       el('div', { class: 'mod-aside' }, [
         el('aside', { class: 'mod-get' }, [howToGetIt(mod, detail)]),
-        el('aside', { class: 'mod-side stack' }, [
+        el('aside', { class: 'mod-side side-merged stack' }, [
           codeAndSupport(detail),
           compatibility(detail, currentVersion),
-          linksOut(detail),
           facts(detail),
           downloads(detail),
         ]),
+        jumps && el('aside', { class: 'mod-jumps' }, [jumps]),
+        relatedLists(mod, everyMod, currentVersion),
       ]),
     ]),
-    moreByTheAuthor(mod, everyMod, currentVersion),
-    similarMods(mod, everyMod, currentVersion),
     rawInfo(detail, id),
   ]));
 }
@@ -148,7 +166,11 @@ function tabs(modId, list) {
     .map((tab) => ({ ...tab, parts: tab.parts.filter(Boolean), key: tabKey(tab.label) }))
     .filter((tab) => tab.parts.length);
   if (!shown.length) return null;
-  if (shown.length === 1) return el('div', { class: 'stack' }, shown[0].parts);
+  if (shown.length === 1) {
+    const only = el('div', { class: 'stack' }, shown[0].parts);
+    only.openHolding = () => {};
+    return only;
+  }
 
   const addressOf = (tab) => (tab === shown[0]
     ? modHref(modId)
@@ -185,7 +207,98 @@ function tabs(modId, list) {
   // the first one.
   const asked = location.hash.replace(/^#/, '');
   open(shown.find((tab) => tab.key === asked) || shown[0]);
-  return el('div', { class: 'stack' }, [bar, holder]);
+  const box = el('div', { class: 'stack' }, [bar, holder]);
+  // Opens the tab [part] is on, for a jump link to something on a tab that is
+  // not showing.
+  box.openHolding = (part) => {
+    const tab = shown.find((one) => one.parts.includes(part));
+    if (!tab) return;
+    open(tab);
+    address().replace(addressOf(tab));
+  };
+  return box;
+}
+
+/// [part] inside a holder that stays put, with an id a jump link can find.
+/// Null when there is no part.
+function holderFor(part, id) {
+  if (!part) return null;
+  return el('div', { class: 'jump-target', id: `section-${id}` }, [part]);
+}
+
+/// "On this page": a link back up to the header and to each post, so a
+/// reader can reach the Discord post under a long forum post in one press.
+///
+/// It is drawn the way other sites draw a table of contents, so it does not
+/// read as a second list of links out: quiet words with no icons, down a thin
+/// line, and the part of the page being read is lit on that line.
+///
+/// These are buttons, not `#` links: on this site the hash picks the page, so
+/// a hash link to a section would be read as a page of that name.
+function jumpLinks(sections, entries) {
+  const kept = entries.filter((entry) => entry && entry.text);
+  if (!kept.length) return null;
+  const buttons = kept.map(({ node, text }) => {
+    const button = el('button', { class: 'link-button jump-link', type: 'button', text });
+    button.addEventListener('click', () => {
+      if (!node.isConnected && sections) sections.openHolding(node);
+      const smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+      node.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+    });
+    return button;
+  });
+  const list = el('div', { class: 'jump-list' }, buttons);
+  litWhileRead(list, kept.map((entry) => entry.node), buttons);
+  return el('section', { class: 'panel side-card' }, [
+    el('h2', { class: 'side-heading', text: 'On this page' }),
+    list,
+  ]);
+}
+
+/// Lights the button for the part of the page being read: the last part
+/// whose top has gone above a line a little below the top bar. Nothing is lit
+/// before the first part reaches that line, and the last part is lit once the
+/// page has been scrolled as far as it goes, since a short last part may never
+/// reach it.
+/// A part in a tab that is not showing is skipped. The watch stops itself
+/// once the list has left the page.
+function litWhileRead(list, nodes, buttons) {
+  const line = 140;
+  let waiting = false;
+  let shown = false;
+  const update = () => {
+    waiting = false;
+    if (!list.isConnected) {
+      // The list is built before it is put on the page, so only a list that
+      // has been on the page and left it is finished with.
+      if (shown) {
+        window.removeEventListener('scroll', onScroll);
+        window.removeEventListener('resize', onScroll);
+      }
+      return;
+    }
+    shown = true;
+    let lit = -1;
+    nodes.forEach((node, i) => {
+      if (node.isConnected && node.getBoundingClientRect().top <= line) lit = i;
+    });
+    const atFoot = window.scrollY > 0 && window.innerHeight + window.scrollY
+      >= document.documentElement.scrollHeight - 2;
+    if (atFoot) {
+      for (let i = nodes.length - 1; i >= 0; i--) {
+        if (nodes[i].isConnected) { lit = i; break; }
+      }
+    }
+    buttons.forEach((button, i) => button.classList.toggle('lit', i === lit));
+  };
+  const onScroll = () => {
+    if (waiting) return;
+    waiting = true;
+    requestAnimationFrame(update);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  requestAnimationFrame(update);
 }
 
 /// A tab's name as it is written in the address: "Recent Updates" is
@@ -296,15 +409,15 @@ function bestOf(download) {
 }
 
 const PLACES = [
-  { field: 'forumUrl', alone: 'Get it from the forum thread', also: 'Forum' },
-  { field: 'discordUrl', alone: 'Get it from Discord', also: 'Discord' },
+  { field: 'forumUrl', alone: 'Forum thread', also: 'Forum' },
+  { field: 'discordUrl', alone: 'Discord', also: 'Discord' },
 ];
 
 // Downloads are already sorted by the builder. Offer a plain download
 // below a TriOS link for readers who do not use TriOS.
 function howToGetIt(mod, detail) {
   const list = detail.downloads || [];
-  const first = list[0];
+  const { first, plain } = topDownloads(list);
   const card = el('section', { class: 'panel side-card get-it' });
   // When the links were last read from the post, on hover over the download
   // buttons rather than a line of its own.
@@ -325,7 +438,6 @@ function howToGetIt(mod, detail) {
   // Everything but the main button shares one row of smaller buttons, so the
   // card stays short.
   const row = el('div', { class: 'get-it-row' });
-  const plain = first?.kind === 'trios' ? list.find((d) => d.kind !== 'trios') : null;
   if (plain) row.append(plainDownloadButton(plain, checked));
   const place = PLACES.find((p) => detail[p.field]);
   if (place) {
@@ -363,14 +475,21 @@ function codeAndSupport(detail) {
   return el('section', { class: 'panel side-card' }, [
     el('h2', { class: 'side-heading', text: 'Links' }),
     el('div', { class: 'side-facts' }, [
-      sideFact('Source code', sourceCodeStatus(detail), { beside: true }),
-      // The short name, with the author's own wording on hover.
-      detail.license
-        ? sideFact('License', el('span', {
-            text: shortLicenseName(detail.license), title: detail.license,
-          }), { beside: true })
-        : null,
+      // The code and the license it is shared under are one question — can I
+      // look at it and reuse it — so they share a row. The license is its
+      // short name, with the author's own wording on hover.
+      sideFact('Source code', el('span', { class: 'code-and-license' }, [
+        detail.license
+          ? el('span', {
+              class: 'license-name',
+              text: shortLicenseName(detail.license),
+              title: `License: ${detail.license}`,
+            })
+          : null,
+        sourceCodeStatus(detail),
+      ]), { beside: true }),
       support ? sideFact('Support the author', support, { beside: true }) : null,
+      linksOut(detail),
     ].filter(Boolean)),
   ]);
 }
@@ -397,21 +516,43 @@ function sourceCodeStatus(detail) {
   } catch {
     return el('span', {
       class: 'badge source-missing',
-      title: "The author's forum post has no link to the mod's code. "
-        + 'The code may be inside the download, or the mod may have none. '
-        + 'Authors: add a GitHub, GitLab or Bitbucket link to your post and it will show here.',
+      title: "The author's *forum post* has no link to the mod's code. "
+        + 'The code may be inside the download, or the mod may be closed source.',
       text: 'Not linked',
     });
   }
+  // GitHub gets its own mark; every other host the plain code icon.
+  const github = host === 'github.com';
   return el('a', {
     class: 'badge source-link',
     href: url, target: '_blank', rel: 'noopener nofollow',
     title: url,
   }, [
-    el('span', { class: 'original-page-icon', html: CODE_ICON, 'aria-hidden': 'true' }),
+    el('span', {
+      class: 'original-page-icon',
+      html: github ? GITHUB_MARK : CODE_ICON,
+      'aria-hidden': 'true',
+    }),
     CODE_HOSTS[host] || host,
   ]);
 }
+
+// GitHub's own mark, copied unchanged from its Octicons set (mark-github-16,
+// MIT licence). GitHub's brand rules allow it as a link to a project but not
+// redrawn or recoloured: it is drawn solid, in the badge's colour, which is the
+// page's text colour and so the white or black the rules ask for
+// (`.badge.source-link` in style.css).
+const GITHUB_MARK = '<svg viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" '
+  + 'focusable="false" aria-hidden="true">'
+  + '<path d="M6.766 11.328c-2.063-.25-3.516-1.734-3.516-3.656 0-.781.281-1.625.75-2.188'
+  + '-.203-.515-.172-1.609.063-2.062.625-.078 1.468.25 1.968.703.594-.187 1.219-.281 '
+  + '1.985-.281.765 0 1.39.094 1.953.265.484-.437 1.344-.765 1.969-.687.218.422.25 '
+  + '1.515.046 2.047.5.593.766 1.39.766 2.203 0 1.922-1.453 3.375-3.547 3.64.531.344.89 '
+  + '1.094.89 1.954v1.625c0 .468.391.734.86.547C13.781 14.359 16 11.53 16 8.03 16 3.61 '
+  + '12.406 0 7.984 0 3.563 0 0 3.61 0 8.031a7.88 7.88 0 0 0 5.172 7.422c.422.156.828-.125'
+  + '.828-.547v-1.25c-.219.094-.5.156-.75.156-1.031 0-1.64-.562-2.078-1.609-.172-.422-.36'
+  + '-.672-.719-.719-.187-.015-.25-.093-.25-.187 0-.188.313-.328.625-.328.453 0 .844.281 '
+  + '1.25.86.313.452.64.655 1.031.655s.641-.14 1-.5c.266-.265.47-.5.657-.656"/></svg>';
 
 /// A license's usual short name, read from however the author wrote it: the
 /// full name, a short code, or a link to the license's own page. A license in
@@ -488,31 +629,44 @@ function supportLinks(detail) {
   const support = detail.supportLinks || [];
   if (!support.length) return null;
 
+  // A known platform shows its own logo before its name; any other link is
+  // just its name.
   return el('span', { class: 'support-links' }, support.map((one) => el('a', {
       href: one.url,
       target: '_blank',
       rel: 'noopener nofollow',
-      text: supportName(one),
       title: one.url,
-    })));
+    }, [
+      SUPPORT_ICONS[one.type]
+        ? el('span', { class: 'support-icon', html: SUPPORT_ICONS[one.type], 'aria-hidden': 'true' })
+        : null,
+      supportName(one),
+    ])));
 }
 
+/// The downloads the buttons at the top of the side already offer: the first
+/// one, and the first plain download where the first is a TriOS link. Read by
+/// both [howToGetIt] and [downloads], so the two can never disagree.
+function topDownloads(list) {
+  const first = list[0];
+  const plain = first?.kind === 'trios' ? list.find((d) => d.kind !== 'trios') : null;
+  return { first, plain };
+}
+
+/// Every download the buttons at the top do not already offer — a mirror,
+/// another build, a second file. Not drawn when the buttons cover them all,
+/// which is most mods.
 function downloads(detail) {
   const list = detail.downloads || [];
-  if (!list.length) return null;
+  const { first, plain } = topDownloads(list);
+  const rest = list.filter((d) => d !== first && d !== plain);
+  if (!rest.length) return null;
 
   const box = el('div', { class: 'side-downloads' });
-  for (const download of list) box.append(downloadRow(download));
+  for (const download of rest) box.append(downloadRow(download));
   return el('section', { class: 'panel side-card' }, [
-    el('h2', { class: 'side-heading', text: list.length === 1 ? 'Download' : 'All downloads' }),
+    el('h2', { class: 'side-heading', text: rest.length === 1 ? 'Other download' : 'Other downloads' }),
     box,
-    detail.changelogUrl
-      ? el('a', {
-          class: 'side-more',
-          href: detail.changelogUrl, target: '_blank', rel: 'noopener nofollow',
-          text: 'Full changelog →',
-        })
-      : null,
   ]);
 }
 
@@ -542,6 +696,9 @@ function description(detail, { collapsed = false } = {}) {
   const own = Boolean(formatted || text);
 
   if (!own) {
+    // The Discord post below is the author's own words, so "no description"
+    // would not be true.
+    if (detail.discordPostHtml) return null;
     return el('section', { class: 'panel' }, [
       el('h2', { text: 'About this mod' }),
       el('p', { class: 'no-description', text: NO_DESCRIPTION }),
@@ -554,45 +711,120 @@ function description(detail, { collapsed = false } = {}) {
     : el('div', { class: 'prose plain', text });
   continuedOnTheForum(body, detail.forumUrl);
 
-  const clip = el('div', { class: `prose-clip${collapsed ? ' clipped' : ''}` }, [body]);
-  const fold = el('button', {
-    class: 'link-button pictures-switch',
-    type: 'button',
-    text: collapsed ? 'Show full description' : 'Collapse',
-    'aria-expanded': String(!collapsed),
+  const forum = Boolean(detail.descriptionIsForumPost);
+  const state = { collapsed };
+  const section = foldingPost({
+    heading: forum ? 'Forum post' : 'About this mod',
+    icon: forum ? pageIcon('forumUrl') : null,
+    body,
+    state,
+    switches: [
+      formatted && /<img\s/i.test(formatted)
+        ? picturesSwitch(() => section.replaceWith(description(detail, state)))
+        : null,
+    ],
   });
+  return section;
+}
+
+/// The mod's Discord post. Its markdown was turned into tags when the site was
+/// built, and the same sanitizer as a forum post has been over it.
+function discordPost(detail) {
+  if (!detail.discordPostHtml) return null;
+  return foldingPost({
+    heading: 'Discord post',
+    icon: pageIcon('discordUrl'),
+    body: postBody(detail.discordPostHtml),
+    state: { collapsed: false },
+    switches: [],
+  });
+}
+
+/// A post under its heading, with a "Collapse" link that folds a long one to a
+/// short preview. [state] carries whether it is folded, so a post that redraws
+/// itself keeps the reader's choice.
+function foldingPost({ heading, icon, body, state, switches }) {
+  const clip = el('div', { class: `prose-clip${state.collapsed ? ' clipped' : ''}` }, [body]);
+  const fold = el('button', { class: 'post-switch', type: 'button' });
+  const label = () => {
+    setSwitch(fold, state.collapsed ? EXPAND_ICON : COLLAPSE_ICON,
+      state.collapsed ? 'Expand' : 'Collapse');
+    fold.setAttribute('aria-expanded', String(!state.collapsed));
+  };
+  label();
   fold.addEventListener('click', () => {
-    collapsed = !collapsed;
-    clip.classList.toggle('clipped', collapsed);
-    fold.textContent = collapsed ? 'Show full description' : 'Collapse';
-    fold.setAttribute('aria-expanded', String(!collapsed));
+    state.collapsed = !state.collapsed;
+    clip.classList.toggle('clipped', state.collapsed);
+    label();
   });
   // Images can change the post height after it is attached.
+  const head = el('div', { class: 'section-head' }, [
+    el('h2', { class: 'post-heading' }, [
+      icon ? el('span', { class: 'original-page-icon', html: icon, 'aria-hidden': 'true' }) : null,
+      heading,
+    ]),
+    el('span', { class: 'post-switches' }, [...switches.filter(Boolean), fold]),
+  ]);
+  // A press anywhere on the heading strip folds the post too, the same as
+  // "Collapse". Not a press on one of its buttons, which do their own thing,
+  // and not the end of selecting the heading's words. The button stays the
+  // way in for a keyboard.
+  //
+  // Whether the press came from a button is read from the path it travelled,
+  // fixed when it started. Asking the pressed element for its button does not
+  // work: "Collapse" swaps its own words as it is pressed, so by the time the
+  // press reaches the strip the pressed word has left the page, has no button
+  // round it, and the strip would fold the post straight back.
+  head.addEventListener('click', (e) => {
+    const fromAButton = e.composedPath().some((node) => node.tagName === 'BUTTON' || node.tagName === 'A');
+    if (fold.hidden || fromAButton) return;
+    if (String(getSelection?.() || '').trim()) return;
+    fold.click();
+  });
+
   const settle = () => {
     if (!clip.isConnected) return;
     const preview = parseFloat(getComputedStyle(body).fontSize) * PREVIEW_LINES;
     fold.hidden = body.offsetHeight <= preview + 1;
+    // Only a post that can fold says so with the pointer.
+    head.classList.toggle('foldable', !fold.hidden);
   };
   if (typeof ResizeObserver !== 'undefined') new ResizeObserver(settle).observe(body);
   setTimeout(settle, 0);
 
-  const section = el('section', { class: 'panel' }, [
-    el('div', { class: 'section-head' }, [
-      el('h2', { text: 'About this mod' }),
-      el('span', { class: 'description-switches' }, [
-        formatted && /<img\s/i.test(formatted)
-          ? picturesSwitch(() => section.replaceWith(description(detail, { collapsed })))
-          : null,
-        fold,
-      ]),
-    ]),
-    clip,
+  // The heading sits in a strip of its own with a line under it, and the post
+  // in the panel's usual padding below.
+  return el('section', { class: 'panel post-panel' }, [
+    head,
+    el('div', { class: 'post-body' }, [clip]),
   ]);
-  return section;
 }
 
 // Keep in step with `.prose-clip.clipped` in style.css.
 const PREVIEW_LINES = 14;
+
+/// A post's switch as an icon and a few words.
+function setSwitch(button, icon, words) {
+  button.replaceChildren(
+    el('span', { class: 'post-switch-icon', html: icon, 'aria-hidden': 'true' }),
+    el('span', { text: words }),
+  );
+}
+
+// Tabler chevrons-up, chevrons-down, photo and photo-off icons.
+const SWITCH_SVG = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+  + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+  + 'stroke-linejoin="round" focusable="false" aria-hidden="true">';
+const COLLAPSE_ICON = `${SWITCH_SVG}<path d="M7 11l5 -5l5 5"/><path d="M7 17l5 -5l5 5"/></svg>`;
+const EXPAND_ICON = `${SWITCH_SVG}<path d="M7 7l5 5l5 -5"/><path d="M7 13l5 5l5 -5"/></svg>`;
+const PICTURES_ICON = `${SWITCH_SVG}<path d="M15 8h.01"/>`
+  + '<path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z"/>'
+  + '<path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5"/>'
+  + '<path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3"/></svg>';
+const PICTURES_OFF_ICON = `${SWITCH_SVG}<path d="M15 8h.01"/>`
+  + '<path d="M7 3h11a3 3 0 0 1 3 3v11m-.856 3.099a2.991 2.991 0 0 1 -2.144 .901h-12a3 3 0 0 1 -3 -3v-12c0 -.845 .349 -1.608 .91 -2.153"/>'
+  + '<path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5"/>'
+  + '<path d="M16.33 12.338c.574 -.054 1.155 .166 1.67 .662l3 3"/><path d="M3 3l18 18"/></svg>';
 
 /// A post too long to publish whole ends with a "…" paragraph (the builder's
 /// cap, `maxDescriptionLength`). That is turned into a link to the thread, so
@@ -609,11 +841,12 @@ function continuedOnTheForum(body, forumUrl) {
 function picturesSwitch(redraw) {
   const on = inlinePictures() !== 'off';
   const button = el('button', {
-    class: 'link-button pictures-switch',
+    class: 'post-switch',
     type: 'button',
-    text: on ? 'Hide pictures' : 'Show pictures',
     title: 'Applies to all mod descriptions. Also available in Settings.',
   });
+  setSwitch(button, on ? PICTURES_OFF_ICON : PICTURES_ICON,
+    on ? 'Hide pictures' : 'Show pictures');
   button.addEventListener('click', () => {
     setInlinePictures(on ? 'off' : 'on');
     redraw();
@@ -881,7 +1114,7 @@ function foldingPanel(heading, body, foldSelector) {
 
 function changelog(detail) {
   const entries = Object.entries(detail.changelog || {});
-  const changelogUrl = (detail.downloads || []).length ? null : detail.changelogUrl;
+  const changelogUrl = detail.changelogUrl;
   if (!entries.length && !changelogUrl) return null;
 
   const box = el('div', {});
@@ -1029,6 +1262,39 @@ function sideFact(label, value, { beside = false, labelTitle = null } = {}) {
   ]);
 }
 
+/// The site's categories for the mod. Where the sources named them
+/// differently, an "Original categories" button on the label's line shows those
+/// names under the site's own. Few readers want them, so they are not shown
+/// until asked for.
+function categories(names, raw) {
+  const pills = categoryPills(names);
+  if (!raw) return sideFact('Category', pills);
+
+  const original = el('div', { class: 'original-categories', hidden: '' }, [
+    categoryPills(raw, 'original-category'),
+  ]);
+  const button = el('button', {
+    class: 'post-switch side-fact-switch',
+    type: 'button',
+    'aria-expanded': 'false',
+    title: "The categories exactly as the forum's mod index and Discord list "
+      + 'them. Starmodder groups those names into its own shorter list.',
+    text: 'Original categories',
+  });
+  button.addEventListener('click', () => {
+    original.hidden = !original.hidden;
+    button.setAttribute('aria-expanded', String(!original.hidden));
+    button.classList.toggle('on', !original.hidden);
+  });
+  return el('div', { class: 'side-fact' }, [
+    el('div', { class: 'side-fact-head' }, [
+      el('span', { class: 'side-label', text: 'Category' }),
+      button,
+    ]),
+    el('div', { class: 'side-value' }, [pills, original]),
+  ]);
+}
+
 /// Categories as the same small pills the header uses.
 function categoryPills(names, extra = '') {
   return el('div', { class: 'needs-chips' }, names.map((name) =>
@@ -1069,25 +1335,39 @@ function compatibility(detail, currentVersion) {
   ]);
 }
 
+/// The mod's pages elsewhere: its forum thread, its Discord post, its Nexus
+/// page. They also say where the mod was found, so there is no separate line
+/// for that.
 function linksOut(detail) {
   const links = [
-    ['Forum thread', detail.forumUrl, 'forumUrl'],
-    ['Discord', detail.discordUrl, 'discordUrl'],
+    ['Forum thread', detail.forumUrl, pageIcon('forumUrl')],
+    ['Discord', detail.discordUrl, pageIcon('discordUrl')],
+    ['Nexus Mods', detail.nexusUrl, EXTERNAL_ICON],
+    ['Full changelog', detail.changelogUrl, CHANGELOG_ICON],
   ].filter(([, url]) => url);
   if (!links.length) return null;
-  return el('section', { class: 'panel side-card' }, [
-    el('h2', { class: 'side-heading', text: 'Community' }),
-    el('div', { class: 'side-link-list' }, links.map(([text, url, field]) => {
-      const icon = field ? pageIcon(field) : CODE_ICON;
-      return el('a', {
-        href: url, target: '_blank', rel: 'noopener nofollow', title: url,
-      }, [
-        icon ? el('span', { class: 'original-page-icon', html: icon, 'aria-hidden': 'true' }) : null,
-        el('span', { text }),
-      ]);
-    })),
-  ]);
+  return el('div', { class: 'side-link-list' }, links.map(([text, url, icon]) => el('a', {
+    href: url, target: '_blank', rel: 'noopener nofollow', title: url,
+  }, [
+    icon ? el('span', { class: 'original-page-icon', html: icon, 'aria-hidden': 'true' }) : null,
+    el('span', { text }),
+  ])));
 }
+
+// Tabler list-details icon, for the author's own changelog page.
+const CHANGELOG_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+  + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+  + 'stroke-linejoin="round" focusable="false" aria-hidden="true">'
+  + '<path d="M13 5h8"/><path d="M13 9h5"/><path d="M13 15h8"/><path d="M13 19h5"/>'
+  + '<path d="M3 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/>'
+  + '<path d="M3 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/></svg>';
+
+// Tabler external-link icon, for a page that has no mark of its own here.
+const EXTERNAL_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+  + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+  + 'stroke-linejoin="round" focusable="false" aria-hidden="true">'
+  + '<path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"/>'
+  + '<path d="M11 13l9 -9"/><path d="M15 4h5v5"/></svg>';
 
 // Tabler code icon.
 const CODE_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
@@ -1110,24 +1390,13 @@ function facts(detail) {
         { beside: true })
       : null,
     (listing.categories || []).length
-      ? sideFact('Category', categoryPills(listing.categories))
-      : null,
-    rawDiffers
-      ? sideFact('Original categories', categoryPills(raw, 'dim'), {
-          labelTitle: "The categories exactly as the forum's mod index and Discord "
-            + 'list them. The site groups those names into its own shorter list, '
-            + 'shown above.',
-        })
+      ? categories(listing.categories, rawDiffers ? raw : null)
       : null,
     day('Added', listing.addedOn,
       'When the forum thread was posted, or the mod was first seen on Discord.'),
     day('Last release', listing.lastReleaseDate,
       'When this site last noticed a new version.'),
     day('Thread last posted', listing.threadLastPostOn || detail.threadLastPostOn, null),
-    (listing.sources || []).length
-      ? sideFact('Found on', el('span', { text: joinNames(listing.sources.map(sourceName)) }),
-        { beside: true })
-      : null,
   ]);
 }
 
@@ -1175,50 +1444,97 @@ function sameNameMods(detail) {
   ]);
 }
 
-function moreByTheAuthor(mod, everyMod, currentVersion) {
+/// The author's other mods, newest release first. Empty when the mod credits
+/// nobody.
+function theAuthorsOtherMods(mod, everyMod) {
   const people = new Set((mod.authors || []).map((a) => a.toLowerCase()));
-  if (!people.size) return null;
-
-  const theirs = everyMod.filter((other) => other.id !== mod.id
-    && (other.authors || []).some((a) => people.has(a.toLowerCase())));
-  if (!theirs.length) return null;
-
-  const who = (mod.authors || []).length === 1 ? mod.authors[0] : 'these authors';
-  return el('section', { class: 'stack' }, [
-    el('h2', { text: `More by ${who}` }),
-    strip(theirs, currentVersion),
-  ]);
+  if (!people.size) return [];
+  return newestFirst(everyMod.filter((other) => other.id !== mod.id
+    && (other.authors || []).some((a) => people.has(a.toLowerCase()))));
 }
 
-function similarMods(mod, everyMod, currentVersion) {
+/// Mods by other people that share a category with this one: most shared
+/// categories first, then newest release.
+function modsLikeThis(mod, everyMod) {
   const shelves = new Set(mod.categories || []);
-  if (!shelves.size) return null;
+  if (!shelves.size) return [];
 
   const people = new Set((mod.authors || []).map((a) => a.toLowerCase()));
   const shared = (other) =>
     (other.categories || []).filter((c) => shelves.has(c)).length;
   const alike = everyMod.filter((other) => other.id !== mod.id
-    // Not this person's own mods — those have their own strip above.
+    // Not this person's own mods — those are under "More by".
     && !(other.authors || []).some((a) => people.has(a.toLowerCase()))
     && shared(other) > 0);
-  if (!alike.length) return null;
-
   // Stable sorting preserves release order within each category count.
-  const ranked = newestFirst(alike).sort((a, b) => shared(b) - shared(a));
-
-  return el('section', { class: 'stack' }, [
-    el('h2', { text: 'Similar mods' }),
-    strip(ranked, currentVersion, { alreadyOrdered: true }),
-  ]);
+  return newestFirst(alike).sort((a, b) => shared(b) - shared(a));
 }
 
-function strip(mods, currentVersion, { alreadyOrdered = false } = {}) {
-  const row = el('div', { class: 'strip' });
-  const inOrder = alreadyOrdered ? mods : newestFirst(mods);
-  for (const mod of inOrder.slice(0, RELATED_COUNT)) {
-    row.append(modCard(mod, currentVersion));
-  }
-  return row;
+function moreByHeading(mod) {
+  return `More by ${(mod.authors || []).length === 1 ? mod.authors[0] : 'these authors'}`;
+}
+
+/// "More by" and "Similar mods", as short rows in the side column.
+/// Each row is a small picture, the name with its game version at the right,
+/// and the mod's summary under the name. "Similar mods" also names the author
+/// after the name; under "More by" that would be the same name on every row.
+function relatedLists(mod, everyMod, currentVersion) {
+  const rows = (mods, { withAuthor = false } = {}) => el('div', { class: 'related-list' }, mods
+    .slice(0, RELATED_SIDE_COUNT)
+    .map((other) => quickTip(el('a', { class: 'related-row', href: modHref(other.id) }, [
+      relatedThumb(other),
+      el('span', { class: 'related-words' }, [
+        el('span', { class: 'related-top' }, [
+          el('span', { class: 'related-name', text: modName(other) }),
+          withAuthor && (other.authors || []).length
+            ? el('span', { class: 'related-by', text: `by ${joinNames(other.authors)}` })
+            : null,
+          other.gameVersion
+            ? el('span', {
+                class: `badge game ${versionStanding(other, currentVersion) || ''}`.trim(),
+                text: other.gameVersion,
+                title: versionStandingNote(versionStanding(other, currentVersion)),
+              })
+            : null,
+        ]),
+        summaryLine(other)
+          ? el('span', { class: 'related-sub', text: summaryLine(other) })
+          : null,
+      ]),
+    ]), () => fullText(other))));
+  const summaryLine = (other) => summaryToShow(other)?.text || '';
+  // The row cuts the name, the author and the summary short, so all three
+  // are written out in full on hover.
+  const fullText = (other) => [
+    modName(other),
+    (other.authors || []).length ? `by ${joinNames(other.authors)}` : '',
+    summaryLine(other) ? `\n${summaryLine(other)}` : '',
+  ].filter(Boolean).join('\n');
+
+  const theirs = theAuthorsOtherMods(mod, everyMod);
+  const alike = modsLikeThis(mod, everyMod);
+  const parts = [
+    theirs.length ? sideCard(moreByHeading(mod), [rows(theirs)]) : null,
+    alike.length ? sideCard('Similar mods', [rows(alike, { withAuthor: true })]) : null,
+  ].filter(Boolean);
+  if (!parts.length) return null;
+  return el('aside', { class: 'mod-related side-merged stack' }, parts);
+}
+
+/// The mod's picture, small, or its first letter where it has none — the same
+/// stand-in the cards use.
+function relatedThumb(mod) {
+  const initial = () => el('span', {
+    class: 'related-thumb placeholder',
+    text: (modName(mod).trim()[0] || '?').toUpperCase(),
+    'aria-hidden': 'true',
+  });
+  const url = imageUrlOf(mod);
+  if (!url) return initial();
+  return picture(url, {
+    className: 'related-thumb',
+    whenBroken: (img) => img.replaceWith(initial()),
+  });
 }
 
 // Build the diagnostic view only when first opened.

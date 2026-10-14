@@ -119,6 +119,7 @@
   --pad-block: 18px 20px;  /* inside a panel or a notice */
   --pad-cell: 7px 10px;    /* inside a card's words, a row, a release */
   --pad-bar: 8px 16px;     /* the bar at the top */
+  --pad-head: 7px 20px;    /* a panel's heading strip, over a line */
 
   --page-width: 1200px;
 }
@@ -315,6 +316,7 @@
     --gap-wide: 22px;
     --pad-page: 16px 16px 40px;
     --pad-block: 12px 14px;
+    --pad-head: 6px 14px;
   }
 }
 
@@ -929,13 +931,15 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 /* The note that shows at once on hover (`quickTip`). */
 .quick-tip {
   position: fixed; z-index: 50; max-width: 280px; pointer-events: none;
+  white-space: pre-line;
   padding: 4px 8px; border-radius: 6px;
   font-size: var(--type-tiny); color: var(--text);
   background: var(--surface-container); border: 1px solid var(--border);
   box-shadow: var(--lifted);
 }
 .card-summary {
-  font-size: var(--type-small); color: var(--text);
+  /* A little quieter than the name above it, so the name leads. */
+  font-size: var(--type-small); color: color-mix(in srgb, var(--text) 65%, var(--text-dim));
   /* Three lines at most, so one long summary cannot stretch a whole grid row.
      Anything past that is on the mod's own page. */
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
@@ -1153,12 +1157,14 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
   flex: 1 1 auto; min-width: 0;
   display: flex; flex-direction: column; gap: 6px;
 }
-.mod-head h1 { margin: 0; }
+.mod-head h1 { margin: 0; line-height: 1.05; }
 .mod-summary-slot { display: contents; }
 .mod-summary { margin: 0; color: var(--text-dim); max-width: 70ch; }
+/* The name and the summary are one thought; the byline is facts about it,
+   so it sits a little further off. */
 .mod-byline {
   display: flex; gap: 8px 12px; flex-wrap: wrap; align-items: center;
-  font-size: var(--type-small);
+  font-size: var(--type-small); margin-top: calc(var(--gap) / 3);
 }
 .mod-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 /* The header above the mod on the left, and one side column at the right that
@@ -1166,8 +1172,10 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
    column does not stretch the header's row: a grid leaves an item that spans
    a flexible row out when it sizes the other rows. On a narrow screen the
    download card comes before the mod and the other cards after it. */
+/* The tabs belong to the mod's words below them, so the header sits closer
+   to them than a whole section's gap; the columns keep the wide gap. */
 .mod-layout {
-  display: grid; gap: var(--gap-wide);
+  display: grid; gap: calc(var(--gap) * 2) var(--gap-wide);
   grid-template-columns: minmax(0, 1fr) 340px;
   grid-template-rows: auto 1fr;
   grid-template-areas: "head aside" "main aside";
@@ -1186,21 +1194,39 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
   scrollbar-width: thin; scrollbar-color: var(--primary-bar) transparent;
 }
 .mod-side { gap: var(--gap); }
+/* Beside the mod, the cards about it are one panel: each keeps its heading,
+   with a thin line running from the end of the heading to the panel's edge,
+   which marks where a section starts without boxing it in. */
+@media (min-width: 901px) {
+  .mod-aside > .side-merged {
+    background: var(--surface-2); border-radius: 10px; box-shadow: var(--raised);
+    padding: var(--pad-block); gap: calc(var(--gap) * 2);
+  }
+  .side-merged > .side-card {
+    background: none; box-shadow: none; border-radius: 0; padding: 0;
+  }
+  .side-merged .side-heading { display: flex; align-items: center; gap: 10px; }
+  .side-merged .side-heading::after {
+    content: ""; flex: 1; height: 1px; background: var(--border);
+  }
+}
 @media (max-width: 900px) {
   .mod-layout {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: none;
-    grid-template-areas: "head" "get" "main" "side";
+    grid-template-areas: "head" "get" "main" "side" "jumps" "related";
   }
   .mod-aside { display: contents; }
   .mod-get { grid-area: get; }
   .mod-side { grid-area: side; }
+  .mod-jumps { grid-area: jumps; }
+  .mod-related { grid-area: related; }
 }
 
 /* The whole picture, same as the cards: bars either side are the price of
    not cutting off a tall or square picture. */
 .mod-head-picture {
-  flex: 0 0 200px; padding: 0; cursor: zoom-in; line-height: 0;
+  flex: 0 0 160px; padding: 0; cursor: zoom-in; line-height: 0;
   border: 1px solid var(--border); background: var(--surface-container);
   border-radius: 10px; overflow: hidden;
 }
@@ -1214,8 +1240,10 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 
 /* The mod's sections as tabs along the top of the main column. The open one
    is filled; the others are plain words until the pointer is on them. */
+/* A little more room under the bar than between the parts of the tab, so
+   the first part does not sit pressed against it. */
 .mod-tabs {
-  display: flex; gap: 4px; flex-wrap: wrap;
+  display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: calc(var(--gap) / 2);
   padding: 6px; border-radius: 10px; background: var(--surface-2);
   box-shadow: var(--raised);
 }
@@ -1278,9 +1306,120 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 .badge.dim { color: var(--text-dim); }
 .side-value { min-width: 0; overflow-wrap: anywhere; }
 .side-value .dim { color: var(--text-dim); }
+/* "More by" and "Similar mods" in the side column: one row per mod, a small
+   picture, the name with its game version at the right, and a dim line under
+   the name. The name is white like every mod name, and turns cyan under the
+   pointer. */
+.related-list { display: flex; flex-direction: column; gap: 2px; font-size: var(--type-small); }
+.related-row {
+  display: flex; align-items: center; gap: 10px; min-width: 0;
+  padding: 4px 6px; margin: 0 -6px; border-radius: 6px; text-decoration: none;
+}
+.related-row:hover { background: var(--primary-faint); }
+.related-thumb {
+  flex: 0 0 64px; width: 64px; aspect-ratio: 16 / 9; object-fit: contain;
+  border-radius: 4px; border: 1px solid var(--border);
+  background: var(--surface-container);
+}
+.related-thumb.placeholder {
+  display: flex; align-items: center; justify-content: center;
+  color: var(--primary-ghost); font-weight: 700; user-select: none;
+}
+.related-words { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.related-top { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.related-top .badge { flex-shrink: 0; margin-left: auto; padding: 0 6px; }
+.related-name {
+  color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.related-row:hover .related-name { color: var(--primary); }
+/* The author only gets the room the name leaves free: it starts from no
+   width and grows into what is left, so the name is cut only once the author
+   is gone. */
+.related-name { flex: 0 1 auto; }
+.related-by {
+  flex: 1 1 0; min-width: 0; color: var(--text-dim); font-size: var(--type-tiny);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.related-sub {
+  color: var(--text-dim); font-size: var(--type-tiny);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
 .side-link-list { display: flex; flex-direction: column; gap: 8px; font-size: var(--type-small); }
 .side-link-list > a { display: inline-flex; align-items: center; gap: 8px; }
+/* "On this page", drawn the way other sites draw a table of contents so it
+   does not read as more links out: quiet words down a thin line, the part
+   being read lit in the "switched on" colour, on the line and in the words. */
+.jump-list {
+  display: flex; flex-direction: column; font-size: var(--type-small);
+  border-left: 2px solid var(--border);
+}
+.jump-list > .jump-link {
+  display: block; text-align: left; text-decoration: none; font-size: inherit;
+  color: var(--text-dim); padding: 4px 0 4px 12px; margin-left: -2px;
+  border-left: 2px solid transparent;
+}
+.jump-list > .jump-link:hover { color: var(--text); }
+.jump-list > .jump-link.lit { color: var(--on); border-left-color: var(--on); }
+/* An icon beside words. Centred on its line box, it sits about 1px above the
+   middle of the capital letters, because a line box leaves more room above
+   the capitals than below the baseline. An icon is taller than the capitals,
+   so it looks centred when it sticks out equally above their tops and below
+   the baseline: its middle on the capitals' middle. This moves it there. Not
+   further: lining it up with the small letters instead makes it hang below
+   the baseline, which looks low. An icon alone in its button
+   (`.original-page-btn`) is not beside words and stays centred. */
+.side-link-list .original-page-icon,
+.post-heading .original-page-icon,
+.btn-with-icon .original-page-icon,
+.btn-with-icon .view-icon,
+.btn-with-icon .github-icon,
+.badge.source-link .original-page-icon,
+.post-switch-icon { transform: translateY(0.06em); }
+/* The Discord post under the forum post: a little more room than between
+   the parts of one group, so the two read as two posts. */
+#section-discord-post { margin-top: calc((var(--gap-wide) - var(--gap)) / 2); }
+/* A section a jump lands on stops below the sticky bar, not under it. */
+.jump-target, .mod-head { scroll-margin-top: 72px; }
+/* "Forum post" and "Discord post": a small heading with its site's mark,
+   so the author's own words below lead rather than our label. */
+.panel > .section-head > h2.post-heading {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: var(--type-small); font-weight: 600; color: var(--text);
+}
+/* "Forum post" and "Discord post" panels: the heading in a short strip with a
+   line under it that runs to both edges of the panel, then the post in the
+   panel's usual padding. The padding sits on the post's own box rather than
+   the clip, so a folded post still shows its whole preview. */
+.panel.post-panel { padding: 0; }
+.post-panel > .section-head {
+  margin: 0; padding: var(--pad-head); border-bottom: 1px solid var(--border);
+}
+.post-body { padding: var(--pad-block); }
+/* A post that can fold: the whole strip folds it, so the whole strip lights
+   up under the pointer. Not while the pointer is on "Hide pictures", which
+   does something else. The top corners follow the panel's. */
+.post-panel > .section-head { border-radius: 10px 10px 0 0; }
+.post-panel > .section-head.foldable { cursor: pointer; }
+.post-panel > .section-head.foldable:hover:not(:has(.post-switch:not(:last-child):hover)) {
+  background: var(--primary-faint);
+}
 .needs-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+/* The license badge and the source code badge, side by side on one row. */
+/* The license as plain words beside the source code badge: it is something
+   to read, not something to press. */
+.code-and-license {
+  display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: flex-end;
+}
+.license-name { color: var(--text-dim); cursor: help; }
+/* A label with a small switch at the far end of its line: Category's
+   "Original names". */
+.side-fact-head { display: flex; justify-content: space-between; align-items: center; gap: var(--gap); }
+.side-fact-switch { margin-right: -8px; }
+.side-fact-switch.on { color: var(--on); }
+.original-categories { margin-top: 6px; }
+/* The sources' own category names, in amber so they never read as
+   Starmodder's categories above them. */
+.badge.original-category { color: var(--warning); border-color: var(--edge-warning); }
 .chip.needed {
   padding: 3px 10px; border-radius: 6px; background: var(--primary-soft);
   color: var(--primary); font-size: var(--type-small);
@@ -1288,23 +1427,31 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 a.chip.needed:hover { background: var(--primary-bar); text-decoration: none; }
 .chip.needed.unknown { background: var(--surface-container); color: var(--text-dim); }
 
-/* Where the code is kept: a green badge that links to it, or a grey one. */
+/* Where the code is kept: a badge in the text colour that links to it, or a
+   grey one. The text colour is white on dark themes and dark on Light, which
+   is also what GitHub's brand rules allow for its mark. */
 .badge.source-link {
   display: inline-flex; align-items: center; gap: 5px;
-  color: var(--success); border-color: var(--edge-success);
+  color: var(--text); border-color: color-mix(in srgb, var(--text) 40%, transparent);
 }
-.badge.source-link:hover { border-color: var(--success); text-decoration: none; }
+.badge.source-link:hover { border-color: var(--text); text-decoration: none; }
 .badge.source-missing { color: var(--text-dim); cursor: help; }
 /* The page's own small way back, in place of the breadcrumb trail. */
 .back-link {
-  align-self: flex-start; font-size: var(--type-small); margin-bottom: 6px;
+  align-self: flex-start; font-size: var(--type-small); margin-bottom: var(--gap);
   display: inline-block;
 }
 .support-links { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
 .support-links a {
+  display: inline-flex; align-items: center; gap: 5px;
   padding: 3px 12px; border: 1px solid var(--border); border-radius: 999px;
   background: var(--surface-2); color: var(--text);
 }
+.support-icon, .support-icon svg { display: block; width: 1em; height: 1em; flex-shrink: 0; }
+/* Centring the logo on the line puts it a little above the middle of the
+   capital letters beside it, which a short, flat-topped mark like Ko-fi's
+   shows. This moves it onto the letters' middle. */
+.support-icon { transform: translateY(0.06em); }
 .support-links a:hover {
   border-color: var(--primary); color: var(--primary); text-decoration: none;
 }
@@ -1410,8 +1557,17 @@ a.chip.needed:hover { background: var(--primary-bar); text-decoration: none; }
 /* "Hide pictures" beside the "About this mod" heading. The heading row keeps
    the gap a heading alone would have under it. */
 .panel > .section-head { margin-bottom: 12px; }
-.pictures-switch { font-size: var(--type-small); text-decoration: none; }
-.description-switches { display: flex; gap: 14px; }
+.panel > .section-head:has(> .post-heading) { align-items: center; }
+/* "Hide pictures" and "Collapse": quiet until pointed at. */
+.post-switches { display: flex; gap: 4px; }
+.post-switch {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 8px; border: none; border-radius: 6px;
+  background: none; color: var(--text-dim); font: inherit; font-size: var(--type-tiny);
+  cursor: pointer;
+}
+.post-switch:hover { background: var(--primary-soft); color: var(--primary); }
+.post-switch-icon { display: inline-flex; font-size: 1.1em; }
 /* A description the reader folded: a short preview fading out at the foot.
    The height is PREVIEW_LINES in views/mod.js. */
 .prose-clip.clipped { max-height: 14em; overflow: hidden; position: relative; }
@@ -1481,7 +1637,6 @@ a.row-title:hover,
   font-size: var(--type-small);
 }
 .download-name { min-width: 0; overflow-wrap: anywhere; }
-.side-more { font-size: var(--type-small); }
 
 .gallery { display: grid; gap: var(--gap); grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
 .gallery img { width: 100%; display: block; }
@@ -1733,3 +1888,4 @@ body.picture-open { overflow: hidden; }
   .prose a.video-link:not(.as-words)::after,
   .big-picture-middle.is-loading::after { corner-shape: round; border-radius: 50% !important; }
 }
+

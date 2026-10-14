@@ -175,8 +175,11 @@ function hideQuickTip() {
   shownTip?.remove();
   shownTip = null;
 }
+// Scrolling is caught on the way down, so a tip in a column that scrolls on
+// its own (a mod page's side column) goes away too: a scroll event does not
+// travel up the page.
 for (const event of ['scroll', 'hashchange', 'popstate']) {
-  window.addEventListener(event, hideQuickTip, { passive: true });
+  window.addEventListener(event, hideQuickTip, { passive: true, capture: event === 'scroll' });
 }
 
 // --- The address bar ---
