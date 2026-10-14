@@ -1536,6 +1536,11 @@ const WAYS_TO_SEARCH = [
   },
 ];
 
+// A plain cross for the search box's clear button (Tabler's "x").
+const CLEAR_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+  + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+  + 'focusable="false" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+
 /// A search box with a panel that says what the search understands.
 ///
 /// The panel is shown only while the pointer is over the search field. Focusing
@@ -1544,8 +1549,10 @@ const WAYS_TO_SEARCH = [
 ///
 /// `hideWhileTyping` is for the box at the top of every page, where the
 /// suggested mods want the same room. Empty box: the panel. Typing: the
-/// suggestions.
-export function searchHelpField(input, { hideWhileTyping = false } = {}) {
+/// suggestions, unless the pointer is on the "?" itself, which always opens
+/// the panel. `onHelpAsked(true)` is called when that happens, so the caller
+/// can hide its suggestions, and `onHelpAsked(false)` when the pointer leaves.
+export function searchHelpField(input, { hideWhileTyping = false, onHelpAsked } = {}) {
   const panel = el('div', { class: 'search-help' }, [
     el('p', {
       class: 'search-help-lead',
@@ -1564,12 +1571,52 @@ export function searchHelpField(input, { hideWhileTyping = false } = {}) {
     'aria-hidden': 'true',
   });
 
-  const field = el('div', { class: 'search-field' }, [input, help, panel]);
+  // Our own clear button, in place of the browser's: Chrome draws a small grey
+  // cross of its own that matches nothing else on the site. It shows only
+  // while there is something to clear, and clearing tells the page the same
+  // way typing does, so the list or the suggestions follow.
+  const clearButton = el('button', {
+    type: 'button',
+    class: 'search-clear',
+    title: 'Clear the search',
+    'aria-label': 'Clear the search',
+    html: CLEAR_ICON,
+  });
+  // Pressing the button would otherwise take the cursor out of the box first.
+  clearButton.addEventListener('mousedown', (e) => e.preventDefault());
+  clearButton.addEventListener('click', () => {
+    input.value = '';
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    input.focus();
+  });
+  const showClear = () => { clearButton.hidden = input.value === ''; };
+  input.addEventListener('input', showClear);
+  showClear();
+
+  const box = el('span', { class: 'search-input' }, [input, clearButton]);
+  const field = el('div', { class: 'search-field' }, [box, help, panel]);
 
   if (hideWhileTyping) {
     const sync = () => field.classList.toggle('help-off', input.value.trim() !== '');
     input.addEventListener('input', sync);
     sync();
+
+    // The pointer counts as on the "?" while it is on the mark or on the panel
+    // it opened, so the reader can move down into the panel to read it.
+    let asked = false;
+    const onHelp = (node) => !!node && (help.contains(node) || panel.contains(node));
+    const setAsked = (now) => {
+      if (now === asked) return;
+      asked = now;
+      field.classList.toggle('help-asked', now);
+      onHelpAsked?.(now);
+    };
+    help.addEventListener('mouseenter', () => setAsked(true));
+    for (const part of [help, panel]) {
+      part.addEventListener('mouseleave', (e) => {
+        if (!onHelp(e.relatedTarget)) setAsked(false);
+      });
+    }
   }
   return field;
 }

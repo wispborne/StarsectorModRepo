@@ -698,7 +698,20 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 }
 /* The box shares the row with the "?", so it takes what is left rather than
    the whole width some other rule may have given it. */
-.search-field .search-box { flex: 1 1 auto; width: auto; min-width: 0; }
+.search-field .search-input { position: relative; display: flex; flex: 1 1 auto; min-width: 0; }
+.search-field .search-box { flex: 1 1 auto; width: auto; min-width: 0; padding-right: 30px; }
+
+/* The browser's own clear cross is hidden; the site draws its own. */
+.search-box::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-clear {
+  position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+  display: flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; padding: 0;
+  background: none; border: none; border-radius: 4px;
+  color: var(--text-dim); font-size: var(--type-small); cursor: pointer;
+}
+.search-clear:hover { color: var(--text); background: var(--surface-container); }
+.search-clear[hidden] { display: none; }
 
 .search-help-mark {
   display: flex; align-items: center; justify-content: center;
@@ -730,6 +743,10 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 }
 /* Last, so it wins: in the bar at the top the suggested mods want this room. */
 .search-field.help-off .search-help { opacity: 0; visibility: hidden; }
+/* Except when the pointer is on the "?" itself: that always opens the panel,
+   and the suggested mods step aside for it. */
+.search-field.help-off.help-asked .search-help { opacity: 1; visibility: visible; }
+.suggestions.behind-help { display: none; }
 
 .search-help p { margin: 0; font-size: var(--type-small); color: var(--text-dim); }
 .search-help p + p { margin-top: 7px; }

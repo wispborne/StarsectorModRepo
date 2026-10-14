@@ -280,7 +280,10 @@ function mountHeaderSearch() {
   // mods use once there is something to suggest. The holder is noted first
   // because building the field takes the box out of it.
   const holder = box.parentNode;
-  holder.insertBefore(searchHelpField(box, { hideWhileTyping: true }), drop);
+  holder.insertBefore(searchHelpField(box, {
+    hideWhileTyping: true,
+    onHelpAsked: (asked) => drop.classList.toggle('behind-help', asked),
+  }), drop);
 
   let mods = [];
   modList().then((list) => { mods = list.mods || []; }).catch(() => {});
@@ -326,7 +329,7 @@ function mountHeaderSearch() {
     go(buildHash(['browse'], { q: box.value.trim() }));
   };
 
-  box.addEventListener('input', () => {
+  const showSuggestions = () => {
     const wanted = box.value;
     clear(drop);
 
@@ -349,6 +352,14 @@ function mountHeaderSearch() {
     prepareSuggestions();
     drop.hidden = false;
     box.setAttribute('aria-expanded', 'true');
+  };
+  box.addEventListener('input', showSuggestions);
+  // Clicking back into the box brings back the suggestions for what is
+  // already in it.
+  let hideLater = null;
+  box.addEventListener('focus', () => {
+    clearTimeout(hideLater);
+    showSuggestions();
   });
 
   box.addEventListener('keydown', (e) => {
@@ -380,7 +391,7 @@ function mountHeaderSearch() {
   });
   box.addEventListener('blur', () => {
     // Late enough for a click on a suggestion to land first.
-    setTimeout(hide, 150);
+    hideLater = setTimeout(hide, 150);
   });
 
   // "/" puts the cursor in the search box, wherever the reader is on the page,
