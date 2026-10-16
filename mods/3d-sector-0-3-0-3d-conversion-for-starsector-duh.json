@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T06:05:41.761908Z",
+  "generatedAt": "2026-10-16T18:07:47.130543Z",
   "listing": {
     "id": "3d-sector-0-3-0-3d-conversion-for-starsector-duh",
     "name": "3D Sector 0.3.0 - 3D conversion for Starsector(Duh)",
@@ -29,7 +29,9 @@
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36154.0",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "lastReleaseDate": "2026-10-16T00:00:00.000Z",
     "addedOn": "2026-10-14",
+    "threadLastPostOn": "2026-10-15",
     "needs": []
   },
   "description": "3D Sector\n\nRequired mods: None\nCan be added Mid-Game?: Yes\nRemoving from an ongoing game: Safe\n\nWhat is this?\nA Utility/Conversion Mod for starsector, it is still a work in progress, especially on the graphical end since there are no premade assets, but otherwise it should be playable from start to finish.\n\nAll the weapons and systems are implemented according to vanilla values and behaviour\nShields become 3D cones. Omni shields turn toward threats on their own.\nAll vanilla ship systems should work with 3D VFX.\nOfficer skills do carry over similar to vanilla.\nCommand view (T) 3D tactical map, replace the vanilla \"TAB\" button map, uses cp just like the original with more features to suit 3D look.\nSettings - Everything is in data/config/s3d_tuning.json: key bindings, flight feel, ranges, AI and other things for fine tuning.\n\nScreenshots\n\nControls\n\nMouse: steer\nLeft click: fire the selected group\nRight click: shield / phase\n1-7: select weapon group, Ctrl/Cmd + 1-7: toggle autofire\nW / S: throttle, X: all stop\nA / D: strafe, Space / Shift: up / down\nQ / E: roll, L: auto-level\nF: ship system, V: vent, R: lock target, Z: fighters engage / regroup\nHold Alt or middle mouse: look around, Mouse wheel: zoom\nT: command view, J: spectate ([ and ] to switch ships)\nTap Cmd (Mac) or Ctrl: pause\nTab: vanilla command map (deploy reserves, full retreat)\nF11: hide HUD, F9 twice: finish the battle in vanilla 2D\n\nCompatibility and known issues\nOther mods: Modded hulls, weapons and hullmods are read from the game's own data, so most of them work without changes. If 3D doesn't know a modded ship system or weapon script, the weapon still fires and deals its normal damage, but the special effect is missing. Each time the game starts, it writes saves/common/s3d_compatibility.txt.data, a list of anything from your enabled mods that doesn't fully work in 3D.\nFor modders: You can add support with three small CSV files. No Java is needed, and your mod won't depend on this one. See MODDING.md in the download.\n\nOfficer personalities don't change how AI ships fight yet.\nThis is a beta. If a battle goes wrong, press F9 twice to finish it in 2D.\n\nFAQ\nDoes this change the campaign?\nNo. Only the battles change. Nothing is stored in your save.\n\nCan I play some battles in 2D?\nPress F9 twice during a battle to finish it in vanilla 2D, or set battle.enabled to false in s3d_tuning.json to turn 3D off completely.\n\nWhy do the ships look like that?\nEach ship's 3D shape is built from its 2D sprite when the battle loads, so every vanilla and modded ship works without needing a separate model. If you prefer a lower-fidelity look, try the retro filter.\n\nThe game runs slowly in big battles.\nPress I to show the performance readout, and include it in your bug report along with the files listed below.\n\nAttribution / Acknowledgement\nHalke     The ship AI borrows ideas from AI Tweaks, rebuilt for 3D. No code was copied.\nAlex and Fractal Softworks     Starsector. All ship art, sounds and fonts come from the game at runtime and are not redistributed.\n\nAI use disclaimer\nAI was used to create the Mesh Rendering and Simulation engine for the Mod, and to create Fleet AI used for 3D.\nCode: Claude (Anthropic), through Claude Code\n\nThere are no AI-generated images: ship shapes are built from the vanilla sprites while the game runs.\n\nPermissions\nCode: Feel free to use/share it however you want.\nFeedback and bug reports\nFeedback and suggestions are very welcome.\nFor bugs, post here or report an issue. Please include your game and mod versions, your enabled mods and what happened. Attach these files from saves/common/: s3d_last_battle.txt.data, plus s3d_last_error.txt.data if it exists. Together they contain the battle log, your mod list and your system info.\nThanks for playing!",
@@ -86,7 +88,17 @@
   "sourceCodeUrl": "https://github.com/winters791/starsector-3d",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36154.0",
-  "releases": [],
+  "releases": [
+    {
+      "modId": "3d-sector-0-3-0-3d-conversion-for-starsector-duh",
+      "modName": "3D Sector",
+      "seenOn": "2026-10-16",
+      "oldVersion": "0.2.5",
+      "newVersion": "0.3.0",
+      "gameVersion": "0.98"
+    }
+  ],
+  "threadLastPostOn": "2026-10-15",
   "sameNameMods": [
     {
       "title": "3D Sector",
