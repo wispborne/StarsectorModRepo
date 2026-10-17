@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T06:06:15.696427Z",
+  "generatedAt": "2026-10-17T18:06:33.535262Z",
   "listing": {
     "id": "fast-rendering",
     "name": "Fast Rendering",
@@ -34,8 +34,9 @@
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=33870.0",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
-    "lastReleaseDate": "2026-10-12T00:00:00.000Z",
+    "lastReleaseDate": "2026-10-17T00:00:00.000Z",
     "addedOn": "2025-08-19",
+    "threadLastPostOn": "2026-10-16",
     "needs": []
   },
   "description": "Fast Rendering\n\nStarsector perfomance overhaul\n\nDownload v0.9.5\n\nAlso available on GITHUB REPO\n\nFeatures\n\nImproved framerate and animation smoothness, especially on lower-end GPUs.\nImproved game loading speed.\n\nBugfixes and improvements to vanilla game engine\n\nFixed multiple race conditions that could cause random crashes at game startup.\nFixed all instances of background flickering when saving and loading the game.\nFixed an issue where engine contrails were rendered below planets.\nFixed an XStream issue that could cause freezes during game saving.\nFixed an issue where enemy ships were deployed progressively from smallest to largest.\n\nRequirements\n\nStarsector 0.98a-RC8 Windows.\nQuad-core CPU recommended. On single-core or dual-core CPUs, performance may decrease.\n\nMod integration\n\nWhen used with VRAM Optimizer, Fast Rendering uploads textures only when needed, further reducing VRAM usage compared to using VRAM Optimizer alone.\n\nIncompatible mods\n\nBoxUtil versions 1.6.0 and later are compatible only on a GPU that supports OpenGL 4.5.\nParticle Engine may rarely crash in very large battles. The issue is difficult to trigger and can be safely ignored for typical gameplay.\n\nInstallation/Uninstallation\n\nCopy the included files into the /starsector-core directory.\n(Optional) Change the allocated memory by editing fr.vmparams file.\nStart the game by running fr.bat instead of starsector.exe.\n(Optional) Create a shortcut to fr.bat, and set its icon to FR_SS.ico.\nCan be added and removed mid-save.\nCorrect installation example\n\nBytecode modifification disclosure\n\nFast Rendering modifies the bytecode of Starsector, the LWJGL and XStream libraries, and any script that calls OpenGL methods.\nThese modifications are performed using a Java agent, the ObjectWeb ASM library, and custom bytecode transformation code.\n\nSpoiler\nUsing the Fast Rendering Profiler to Diagnose Lag or Stuttering\nWhen you experience lag or stuttering during gameplay, press Ctrl + Shift + F8 to start the profiler.\nThe game will slow down for several seconds while the profiler activates. After that, gameplay should return to normal performance.\nContinue playing for a few minutes with the profiler running.\nPress Ctrl + Shift + F8 again to stop profiling.\nA file named something like profile-1762450936.jfr will appear in the starsector-core directory.\nShare this file on Discord or the forums so I can analyze the cause of the lag.",
@@ -74,6 +75,14 @@
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=33870.0",
   "releases": [
+    {
+      "modId": "fast-rendering",
+      "modName": "Fast Rendering",
+      "seenOn": "2026-10-17",
+      "oldVersion": "0.9.3",
+      "newVersion": "0.9.5",
+      "gameVersion": "0.98a-RC8"
+    },
     {
       "modId": "fast-rendering",
       "modName": "Fast Rendering",
@@ -155,6 +164,7 @@
       "gameVersion": "0.98a-RC8"
     }
   ],
+  "threadLastPostOn": "2026-10-16",
   "sameNameMods": [],
   "addons": []
 }
