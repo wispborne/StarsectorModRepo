@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T18:10:45.926254Z",
+  "generatedAt": "2026-10-19T06:06:12.673024Z",
   "listing": {
     "id": "detailed-combat-results",
     "name": "Detailed Combat Results",
@@ -22,7 +22,7 @@
     "gameVersion": "0.98a",
     "modVersion": "5.4.5",
     "imageUrl": "https://i.imgur.com/5GyrqKjl.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1356121233439330474/1356121233594515466/logo.jpg?ex=6ad64391&is=6ad4f211&hm=0dfd304f595a3d185c9627d378aafb391f9c4933aee24addd35e5f60d8b425bc&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1356121233439330474/1356121233594515466/logo.jpg?ex=6ad6ec51&is=6ad59ad1&hm=416be6ddbdaea6c4407808d43bbc2f22fe4e3d3a92519b7ea52a521d8ec6d398&",
     "summary": "Ever wonder how many ships you've killed? Or how a new ship load-out you've created is performing in combat? Or how useless a cautious officer is in an Onslaught? No more guessing, now you can know for sure!",
     "summaryIsGenerated": false,
     "aiSummary": "Adds detailed post-combat reports and performance tracking for ships and weapons.",
@@ -43,7 +43,6 @@
     ],
     "lastReleaseDate": "2026-10-09T00:00:00.000Z",
     "addedOn": "2017-01-10",
-    "threadLastPostOn": "2026-10-17",
     "needs": []
   },
   "description": "Detailed Combat Results\n\nEver wonder how many ships you've killed?  Or how a new ship load-out you've created is performing in combat?  Or how useless a cautious officer is in an Onslaught?\nNo more guessing, now you can know for sure!\n\nFeatures:\n\nDetailed post combat report on the Intel screen\nReports summarizing ship performance over time or per battle\nIndividual weapon performance\nKill count of various hull sizes\nEasy to use, just add the mod and you're good to go.\nWorks with just about any mod (Tested with nexerlin, SS+, lots of ships & factions)\nDisabling the mod is possible, see instructions below\n\nIn Game Images:\n\nHow to use:\n\n1. If you haven't already, ensure you've increased your max memory (if you haven't, your game will be slooooow with mods): https://fractalsoftworks.com/forum/index.php?topic=8726.0\n2. Download & install this mod\n3. Make sure this mod is enabled\n4. Fight at least one battle\n5. View the generated intel event using the 'e' key OR\n6. Press the 'L' key (configurable in mod's settings.json) when in the campaign UI\n\nMod compatibility:\n\nConfigured via Lunalib\nTested with nexerlin, SS+, lots of ships & factions\nCompatible with all prior versions of this mod\n\nKnown Issues/Limitations:\n\nDoesn't work for missions from the main menu\n\nTo remove this mod\n\nSpoiler\nSet Misc->Uninstall to true via the LunaLib config UI\nEnsure a non DCR intel event is being viewed\nSave Game\nExit Starsector\nDeselect DCR Mod\nStart Starsector\n\nUsing this mod in other mods:\nThis mod is covered by the MIT license, you can do what ever you want with this, no need to ask.  Just be nice and mention that this mod exists and where you got it from :)\n\nChange Log:\n\nSpoiler\nv5.4.5\nFixed error (NoSuchMethodError) in missile interception tracking that could occur after a Starsector update\n\nv5.4.4\nMany, many performance improvements (code is about 2x as fast)\nHits counting is more accurate\nOther minor bug fixes\n\nv5.4.3\nHits are now counted properly\nMany other minor code bug fixes\n\nv5.4.2\nUpdate to SS .98a\n\nv5.4.1\nFixed bug with beam damage calculation relating to pauses & slowdowns\nDon't calculate damage while paused (thanks bug reporter!)\nGrid rows now highlight on mouseover\nWeapons grid rows now have mouse over tooltips with extra info\nWeapon data rows are highlighted based on weapon performance (% OP vs % Dmg) So you can see more easily which weapons are doing well\nPerformance\n- New save file format for performance (New data save format, old combats won't load but this won't brick your save or anything)\n- New in-memory damage tracking\n\nv5.4.0\nUpdated to SS .97a\n\nv5.3.3\nFix for rare null pointer when tracking emp arc damage\n\nv5.3.2\nAll settings now done through Luna (still a soft dependency)\nResults UI now tracks damage repaired (requires mods to report damage repaired)\nNew uninstall LunaLib setting\n\nv5.3.1\nUpgrade to Starsector .96a\nChanges to support DEM missiles (Thanks DR)\nImprovements to ignoring exploding ship damage logic\n\nv5.3.0\nConfiguration values can now be configured via Luna (Thanks Lukas04)\nAdditional support for mods specifying damage or clarifying unknown damages\nModification of vanilla on-hit effects to specify and clarify their damages\nMod Authors, please look at the file: https://bitbucket.org/NickWWest/starsectorcombatanalytics/src/master/CombatAnalyticsMod/src/data/scripts/DCRIntegration.java\n\nv5.2.3\nSupports having damage values supplied by mods (specifically Realistic Combat)\n\nv5.2.2\nBugfix Release:\nShip count limit now configurable via JSON (for intel display)\nUpdated wording for enemy fleet damage dealt\nLightning gun from SWP now has its damage recorded correctly\nDon't process missile damages 2x (was caused by processing explosion damage and then missile damge)\nDon't count launched missiles as a part of a fleet\n\nv5.2.1\nBugfixes\n\nForum: http://fractalsoftworks.com/forum/index.php?topic=11551.0\nSource: https://bitbucket.org/NickWWest/starsectorcombatanalytics\nLicense: MIT License (Do what ever you want, creators not liable)",
@@ -61,7 +60,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1356121233439330474/1356121233594515466/logo.jpg?ex=6ad64391&is=6ad4f211&hm=0dfd304f595a3d185c9627d378aafb391f9c4933aee24addd35e5f60d8b425bc&",
+      "url": "https://cdn.discordapp.com/attachments/1356121233439330474/1356121233594515466/logo.jpg?ex=6ad6ec51&is=6ad59ad1&hm=416be6ddbdaea6c4407808d43bbc2f22fe4e3d3a92519b7ea52a521d8ec6d398&",
       "small": true
     },
     {
@@ -115,7 +114,6 @@
       "gameVersion": "0.98a"
     }
   ],
-  "threadLastPostOn": "2026-10-17",
   "sameNameMods": [],
   "addons": []
 }
