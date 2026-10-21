@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T06:08:23.856303Z",
+  "generatedAt": "2026-10-21T14:03:48.421739Z",
   "listing": {
     "id": "emergent-threats",
     "name": "Emergent Threats",
@@ -35,8 +35,9 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1355071745366822950/1355071745366822950",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
-    "lastReleaseDate": "2026-07-17T00:00:00.000Z",
+    "lastReleaseDate": "2026-10-21T00:00:00.000Z",
     "addedOn": "2023-06-14",
+    "threadLastPostOn": "2026-10-20",
     "needs": []
   },
   "description": "This Remnant focused mod seeks to make the faction a true challenge for the late game, while offering the player a chance to try out unique technologies on captured and modified drone ships. The mod also adds new content for the Sindrian Diktat, Tri-Tachyon, Persean League, Independents, and new missions with unique rewards to challenge the player.",
@@ -370,6 +371,17 @@
     {
       "modId": "emergent-threats",
       "modName": "Emergent Threats",
+      "seenOn": "2026-10-21",
+      "oldVersion": "1.3.3",
+      "newVersion": "1.4.0",
+      "gameVersion": "0.98a",
+      "changelogNotes": "v1.4.0 should be compatible with v1.1+\n\n Emergent Threats\n Misc\n-Added new bounty mission Thousand Cuts, needs to be character level 12+ and have finished one of the following: Project Mayfly, Diamond in the Dark, or A Theory of Mind, enemy can be recruited, bargained with, fought at full strength, or fought at reduced strength\n-Fixed a graphic bug where s-mod Integrated Point Defense AI would cause Shield Shunt system to not display venting correctly on activation\n-Lure Infected Fleet enemy spawn size for Threat Infected fleets adjusted from a range of -35% to +65% of player strength, to -25% to +25% of player strength\n-(SIC) Alternate portrait for Supreme Leadership updated, thanks MWGreywind\n-(SIC) Synthesis skill Temporal Accelerator slightly tweaked the stacking bonus with Adaptive Temporal Shell to more accurately reflect 15% time flow boost, and will work with the new Mokosh bounty ship\n-(SIC) Addressed a rare edge case where the AI Commander biochip could be used on a Synthesis XO created Command Subroutine\n-(Diktat Enhancement) The Sindrian Diktat should no longer know the Banteng (TT)\n-The flagship in the Faith and Fury bounty should now spawn with s-mods as intended\n-Diamond Nexus bounty mission fleets now have Remnant cyan color circles on the system layer instead of white\n-Renamed several elements in the Diamond in the Dark bounty\n-Minor typo fixes\n\n Ships\n-Bellicose (EX) shield and collision radius slightly increased\n-Effulgent elite variant updated\n-Mokosh Temporal Carrier added, special bounty ship\n-Nephos Drone Carrier added, special bounty ship\n\n Fighters\n-Change from vanilla, Spark drone fighter squadrons now gain a group based EMP system, which can be reverted with undo_and_restore_mod_changes folder, also addressed a vanilla bug that made the Spark's gun mount lopsided\n\n Systems\n-Ship systems added by the mod now have appropriate offensive, defensive, and movement tags for the codex\n-Reactor Overcharge (EX) for the Tigershark (EX) damage boost increased from 50% to 75%, cooldown lowered from 12 to 11 seconds\n-Harmonic EMP fighter system added to the Spark, can be removed for people who prefer vanilla Spark squadrons, see fighter notes\n-Micro-Missile Swarm for Glycon, Nephos, and Starquake fighter drone system range increased from 1200 to 1600\n-Temporal Disjunction unique system added for the Mokosh\n\n Weapons\n-Volatile Fragment Launcher renamed to Volatile Flechette Launcher, damage per shot lowered from 180 to 160, EMP per shot lowered from 240 to 200, flux per shot lowered from 45 to 40, rate of fire increased, improving overall damage from 1200 to 1600 per second, flux ration of 0.25 unchanged\n-Warp Drone Assembler/Constructor missile extra damage on hit purple text removed, since the damage is already being included in the standard damage display\n\n IX Revival\n Misc\n-Fixed an issue with Cryoarithmetic Engine, Synchrotron Core not showing up in the codex\n-Fixed a graphics bug where s-mod Integrated Point Defense AI would cause Shield Shunt system to not display venting correctly on activation\n-The Broken Core and dummy Panopticon Core with the same broken core graphics should no longer show up in the codex\n-(NEX) The Trinity Worlds will make use of new vassal mechanics and join the IX Battlegroup as vassals in their Core Consensus alliance\n-(LunaLib) Added option to enable IX Honor Guard weapons to be sold at the Bodach Station arms bazaar in Danu, enabled by default\n-Vertex Station Honor Guard Armory should sell Honor Guard weapons more consistently\n-Added four IX aligned player commission faction flags\n-Minor typo fixes\n\n Ships\n-Astral (TW) Ordnance Points increased from 245 to 250, two forward small energy mounts changed to composite\n-Aurora (IX) front small hardpoint type changed from Synergy to Universal, medium Synergy hardpoint/turret changed to Missile\n-Bellicose (TW) added, available only as Nex super start for the Trinity Worlds for now, but will be possible to acquire through bar event in the future\n-Brawler (TW) small synergy slots changed to small missile slots\n-Equalizer (TW) added Secondary Reactor hullmod, large missile slots changed to large composite slots, loses modernized rangefinder built-in hullmod\n-Iconoclast (IX) increased fitting from 70 to 75 OP, ship system changed from Plasma Burn to Combat Flux Shunt, description updated\n-Intrepid (TW) added Secondary Reactor hullmod, medium and large missile slots changed to composite slots\n-Iris (IX) main built-in weapon changed from ER Brightburn CIWS to Dedicated EWAR Suite, hullmods updated\n-Stonefish (TW) built-in hullmod changed from Seeker Lens to Converging Seeker Lens\n-Various ship fittings updated due to Spatial Charges no longer fitting into medium missile slots, and to include new Plasma Lancet weapons\n\n Fighters\n-Disruptor Drone (TW) on the Astral (TW) given unique ER Heavy Lacerator with built-in 900 range and much greater turn speed, while losing Advanced Optics, the drone AI behavior has also been updated to be less aggressive\n\n Systems\n-Ship systems added by the mod now have appropriate offensive, defensive, and movement tags for the codex\n-Astral (TW) in AI hands should use its Flechette Swarm system more conservatively, increasing odds of hitting the target\n-Reactor Overcharge for the Conflux (TW), Firebird (A/TW), Tigershark (TW) damage boost increased from 35% to 50%, cooldown lowered from 12 to 11 seconds\n-Bellicose (TW) gets a unique Phase Teleporter system to match its engine colors\n\n Weapons\n-Arrester Salvo Cannon flux cost reduced from 360 to 300 per second, improving flux ratio from 1.2 to 1.0\n-Iconoclast Interdictor Array burst damage rounded off from 143 to 150 per second\n-Muon Siege Lance glow effect updated\n-Plasma Lancet/Plasma Lancet Repeater small and medium archaic composite anti-armor weapons added to the Trinity Worlds\n-Spatial Charge Launcher rebalance, type change from missile to archaic composite, range reduced from 1500 to 800, added 0.75 flux cost, description updated\n-Stormwall Salvo Launcher range increased from 800 to 1000 to match Stormwall Suppressor, volley count increased from 4 to 5, damage per second increased from 120 to 150 with 0.6 flux efficiency remaining unchanged\n\n Hullmods\n-Carrier Gunships hullmod now unlocked by default\n-Modernized Rangefinder added to IX Battlegroup known hullmods for sale on their markets",
+      "updateCompatibilityText": "v1.4.0 should be compatible with v1.1+",
+      "canUpdate": "yes"
+    },
+    {
+      "modId": "emergent-threats",
+      "modName": "Emergent Threats",
       "seenOn": "2026-07-17",
       "oldVersion": "1.3.2",
       "newVersion": "1.3.3",
@@ -377,6 +389,7 @@
       "changelogNotes": "should be compatible with v1.1+"
     }
   ],
+  "threadLastPostOn": "2026-10-20",
   "sameNameMods": [],
   "addons": []
 }
