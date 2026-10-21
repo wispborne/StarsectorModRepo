@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T18:10:07.267988Z",
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
   "listing": {
     "id": "triad-shields-2",
     "name": "Triad Shields 1.2.3",
@@ -16,24 +16,29 @@
       "discord"
     ],
     "gameVersion": "0.98a",
+    "modVersion": "1.2.3",
     "summary": "Adds Triad Shields, an unused system supposadly made for omega. Currently, the Tesseract and Facet have it, but you can get it as a hullmod if you beat a hypershunt.",
     "summaryIsGenerated": false,
-    "hasDirectDownload": false,
+    "aiSummary": "Adds a cell-based skinshield system to ships and as a hullmod.",
+    "hasDirectDownload": true,
     "bestDownload": {
-      "url": "https://github.com/nikothedude/Triad-Shields/releases",
+      "url": "https://github.com/nikothedude/Triad-Shields/releases/download/1.2.3/Triad.Shields.7z",
       "kind": "direct",
-      "needsAnotherStep": true
+      "needsAnotherStep": false
     },
     "downloadCount": 1,
     "discordUrl": "https://discord.com/channels/187635036525166592/1446206031976726608/1446206031976726608",
-    "sourceIsPublic": false,
+    "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2025-12-04",
     "needs": []
   },
-  "descriptionIsGenerated": false,
+  "description": "Adds Triad Shields, an unused shield system originally intended for the Omega. The Tesseract and Facet ships have this system by default, while other ships can acquire it as a hullmod by defeating a hypershunt. The shields function as a cell-based skinshield that blocks attacks and regenerates.",
+  "descriptionHtml": "<p>Adds Triad Shields, an unused shield system originally intended for the Omega. The Tesseract and Facet ships have this system by default, while other ships can acquire it as a hullmod by defeating a hypershunt. The shields function as a cell-based skinshield that blocks attacks and regenerates.</p>",
+  "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>Adds Triad Shields, an unused system supposadly made for omega. Currently, the Tesseract and Facet have it, but you can get it as a hullmod if you beat a hypershunt.</p><p>Triad Shields are a cell-based skinshield.</p><p>Yes, this buffs omega.</p><p>No, its not balanced.</p><p>No, its not entirely polished. Yes, it works.</p><p>This is primarily a fucko mod I made just as a proof of concept, but I thought, hey, wouldnt it be cool if you could use it?</p><p><a href=\"https://cdn.discordapp.com/attachments/187635036525166592/1445919179000778895/image.png?ex=6932c16c&amp;is=69316fec&amp;hm=1b23daa50ed253e08c5d9b7b844ed1e3493ff2e5fea6504f4a96d82187c6e0d5&amp;\" rel=\"nofollow noopener\" target=\"_blank\">https://cdn.discordapp.com/attachments/187635036525166592/1445919179000778895/image.png?ex=6932c16c&amp;is=69316fec&amp;hm=1b23daa50ed253e08c5d9b7b844ed1e3493ff2e5fea6504f4a96d82187c6e0d5&amp;</a></p><p>Download: <a href=\"https://github.com/nikothedude/Triad-Shields/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/nikothedude/Triad-Shields/releases</a></p>",
+  "aiDescription": "Adds Triad Shields, an unused shield system originally intended for the Omega. The Tesseract and Facet ships have this system by default, while other ships can acquire it as a hullmod by defeating a hypershunt. The shields function as a cell-based skinshield that blocks attacks and regenerates.",
   "rawCategories": [
     "Misc. Campaign Mods",
     "Modular Hullmods"
@@ -42,13 +47,20 @@
   "downloads": [
     {
       "url": "https://github.com/nikothedude/Triad-Shields/releases",
+      "directUrl": "https://github.com/nikothedude/Triad-Shields/releases/download/1.2.3/Triad.Shields.7z",
+      "fileName": "Triad.Shields.7z",
       "kind": "direct",
-      "label": "",
+      "label": "Download:",
       "host": "GitHub",
-      "needsAnotherStep": true
+      "needsAnotherStep": false
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "1.2.2": "SAVE COMPATBILE\n\nTriad shields OP increased\nTriad shields are now suppressed by incoming fire if they are down",
+    "1.2.1": "SAVE COMPATIBLE\n\nFixes large ships not having total shield coverage\nFixes AI ships holding fire with triad shields",
+    "1.2.0": "SAVE COMPATIBLE\n\nEMP Arcs are now blocked\nMovingrays now have correct collision for real\nPhase now pauses regen\n\nAdded limited punchthrough\n If an attack breakas a shield node, the remainder of its damage is spread across adjacent cells\n\nMassively reduced raycast overhead\nReduced collision overhead\n\nRefactored triad shields a bit\nShields now prevent triad shield collision"
+  },
+  "sourceCodeUrl": "https://github.com/nikothedude/Triad-Shields",
   "supportLinks": [],
   "discordUrl": "https://discord.com/channels/187635036525166592/1446206031976726608/1446206031976726608",
   "releases": [],

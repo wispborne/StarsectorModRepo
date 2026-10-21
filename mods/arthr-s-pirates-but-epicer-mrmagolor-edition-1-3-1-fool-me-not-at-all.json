@@ -1,8 +1,9 @@
 {
-  "generatedAt": "2026-10-20T18:10:07.267988Z",
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
   "listing": {
     "id": "arthr-s-pirates-but-epicer-mrmagolor-edition-1-3-1-fool-me-not-at-all",
     "name": "Arthr's Pirates but EPICer - MrMagolor Edition 1.3.1 \"Fool Me Not At All\"",
+    "displayName": "Arthr's Pirates but EPICer - MrMagolor Edition",
     "authors": [
       "mrmagolor"
     ],
@@ -14,9 +15,12 @@
       "discord"
     ],
     "gameVersion": "0.98a",
+    "modVersion": "1.3.1",
     "imageUrl": "https://cdn.discordapp.com/attachments/1356793347112697968/1356793347494117430/SPOILER_java_DUoTdXit0w.png?ex=6ad8b586&is=6ad76406&hm=5b8dacb121291826cbd14d727c9c2863034d971b523cab2c45cd47b16f20b45a&",
     "summary": "Gives the pirates practically every ship/weapon/fighter/hullmod in your modlist.",
     "summaryIsGenerated": false,
+    "aiSummary": "Gives pirates access to nearly every ship, weapon, fighter, and hullmod in the player's modlist.",
+    "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://drive.google.com/uc?export=download&id=1oZ0qwVFB18zQmID66F2Llc4qZ9K4Rl3m",
@@ -28,11 +32,25 @@
     "sourceIsPublic": false,
     "isWorkInProgress": false,
     "addedOn": "2025-04-02",
-    "needs": []
+    "needs": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ]
   },
-  "descriptionIsGenerated": false,
+  "description": "Gives pirates access to nearly every ship, weapon, fighter, and hullmod in the player's modlist. This drastically alters game progression and may significantly increase campaign load times if default role assignment is enabled.",
+  "descriptionHtml": "<p>Gives pirates access to nearly every ship, weapon, fighter, and hullmod in the player's modlist. This drastically alters game progression and may significantly increase campaign load times if default role assignment is enabled.</p>",
+  "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>Gives the pirates practically every ship/weapon/fighter/hullmod in your modlist.</p><p><strong>Warning: Will completely, semi-irrevocably, undeniably destroy your intended game progression.</strong></p><p><strong>Warning 2: If the \"assign default roles to ships that do not have them\" setting is enabled, it will take anywhere from a little to a lot longer to start/load a campaign, depending on your modlist size.</strong></p><p>Requires LunaLib</p><p><em>safe to add, and probably also remove, from existing saves</em><br>download link: <a href=\"https://drive.google.com/uc?export=download&amp;id=1oZ0qwVFB18zQmID66F2Llc4qZ9K4Rl3m\" rel=\"nofollow noopener\" target=\"_blank\">https://drive.google.com/uc?export=download&amp;id=1oZ0qwVFB18zQmID66F2Llc4qZ9K4Rl3m</a></p><p>(attached image is spoilers for, but proves compatibility with, 0.98: IYKYK)</p>",
+  "aiDescription": "Gives pirates access to nearly every ship, weapon, fighter, and hullmod in the player's modlist. This drastically alters game progression and may significantly increase campaign load times if default role assignment is enabled.",
+  "saveCompatibilityText": "safe to add, and probably also remove, from existing saves",
+  "updateCompatibilityText": "Disclaimer: Update may significantly increase load times (but not save times)",
+  "removalCompatibilityText": "probably also remove, from existing saves",
+  "canAdd": "yes",
+  "canUpdate": "depends",
+  "canRemove": "depends",
   "rawCategories": [
     "Misc. Campaign Mods"
   ],
@@ -45,13 +63,18 @@
     {
       "url": "https://drive.google.com/uc?export=download&id=1oZ0qwVFB18zQmID66F2Llc4qZ9K4Rl3m",
       "directUrl": "https://drive.google.com/uc?export=download&id=1oZ0qwVFB18zQmID66F2Llc4qZ9K4Rl3m",
+      "fileName": "Arthrs Pirates But Epicer.zip",
       "kind": "direct",
-      "label": "",
+      "label": "https://drive.google.com/uc?export=download&id=1oZ0qwVFB18zQmID66F2Llc4qZ9K4Rl3m",
       "host": "Google Drive",
       "needsAnotherStep": false
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "1.3": "1.3 adds Lunalib integration, allowing for much greater configurability of how crazy you want the game to be.\n *results may vary",
+    "1.2": "Version 1.2:\n Now has Version Checker support\n Hopefully modules no longer appear in fleets/markets\n Minor logging\n May or may not actually work\n As a bonus have another silly fleet screenshot",
+    "0.97": "Changes from the 0.96 version:\n Hopefully prevented a lot of crashes (if a crashing variant is still loaded, the fault is on the mod the variant is from for giving it a default role to begin with)\nFine-tuned the anti-module code some more (it isn't perfect but at this rate the things that get through might as well be normal ships)\n\nChanged the version number from 0.96 to 0.97, wow!!!"
+  },
   "supportLinks": [],
   "discordUrl": "https://discord.com/channels/187635036525166592/1356793347112697968/1356793347112697968",
   "releases": [],

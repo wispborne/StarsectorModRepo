@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T18:10:07.267988Z",
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
   "listing": {
     "id": "portrait-changer",
     "name": "Portrait Changer",
@@ -23,7 +23,8 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1322443173712105572/1322443173917757542/115-1720838306-841180897.webp?ex=6ad8fcee&is=6ad7ab6e&hm=f4ed08c6c2d97578bfe629acb03291df1c30d4758ea3cf63258ce5089a2f66bc&",
     "summary": "Change your own or other's look on the go with this wonderful quality of life mod. This allows you to alter Player, Officer and Administrator appearances but probably not any unique stuff that other mods have created.",
     "summaryIsGenerated": false,
-    "aiSummary": "Lets you change the appearance of the player, officers, and administrators.",
+    "aiSummary": "Allows players to change their own, officer, and administrator portraits during gameplay.",
+    "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://drive.google.com/uc?export=download&id=1NZDVAR3EmMVjQmy8jBIcud3zNw7SJYEO",
@@ -49,8 +50,10 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<ul><li>AN OK PORTRAIT PACK -</li><li>300 total portraits</li><li>30  new portraits per faction (15 male / 15 female)</li><li>50  for pirates and for player/independent factions</li><li>100% of experts agree it's curated quality controlled and vanilla friendly. </li><li>Can add mid game, compatible with all mods</li></ul><p>I know this is \"AI\" and therefore I'm a talentless bastard, but I worked really hard on this doing quality control, I really wanted a portrait pack that wasn't too far from vanilla, but that added that much needed variety of faces in the sector.</p><p>!Best used with <a href=\"https://fractalsoftworks.com/forum/index.php?topic=27381.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=27381.0</a> so that you can enjoy it all on demand.</p><p>Only download source currently is Nexusmods (sorry) <a href=\"https://www.nexusmods.com/starsector/mods/115\" rel=\"nofollow noopener\" target=\"_blank\">https://www.nexusmods.com/starsector/mods/115</a></p>",
-  "aiDescription": "Lets you change the appearance of the player, officers, and administrators. It allows for altering looks on the go and includes a special tab for Universal Asset Framework portraits if installed.",
-  "updateCompatibilityText": "Save Compatible, it fixes an issue where the players portrait will reset to its initial one when you reload a save/game.",
+  "aiDescription": "Lets you alter the appearance of your character, officers, and administrators via an Intel tab. It supports custom portraits and integrates with other mods like UAF if installed.",
+  "saveCompatibilityText": "Can add mid game",
+  "updateCompatibilityText": "- Save Compatible, it fixes an issue where the players portrait will reset to its initial one when you reload a save/game.",
+  "canAdd": "yes",
   "canUpdate": "yes",
   "rawCategories": [
     "Officers",
@@ -85,7 +88,7 @@
     }
   ],
   "changelog": {
-    "1.0.1": "Save Compatible, it fixes an issue where the players portrait will reset to its initial one when you reload a save/game. It may require the player to do this with Console Command mod;\n1.Update the mod\n2. Run this runcode with console commands. It will remove the Portrait changer intel.\n\n Quote\n\n runcode\nimport com.fs.starfarer.api.Global;\nimport com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;\nimport java.util.ArrayList;\nimport portrait_changer.PortraitChangerIntel;\n\n&nbsp;for (IntelInfoPlugin intel : new ArrayList<IntelInfoPlugin>(Global.getSector().getIntelManager().getIntel()))\n&nbsp; &nbsp; &nbsp; &nbsp; {\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (intel instanceof PortraitChangerIntel)\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Global.getSector().getIntelManager().removeIntel(intel);\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }\n&nbsp; &nbsp; &nbsp; &nbsp; }\n\n 3. Save after having the intel removed.\n4. Reload save, which should re-add the updated version of the Portrait Changer Intel tab."
+    "1.0.1": "- Save Compatible, it fixes an issue where the players portrait will reset to its initial one when you reload a save/game. It may require the player to do this with Console Command mod;\n1.Update the mod\n2. Run this runcode with console commands. It will remove the Portrait changer intel.\n\n Quote\n\n runcode\nimport com.fs.starfarer.api.Global;\nimport com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;\nimport java.util.ArrayList;\nimport portrait_changer.PortraitChangerIntel;\n\n&nbsp;for (IntelInfoPlugin intel : new ArrayList<IntelInfoPlugin>(Global.getSector().getIntelManager().getIntel()))\n&nbsp; &nbsp; &nbsp; &nbsp; {\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (intel instanceof PortraitChangerIntel)\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Global.getSector().getIntelManager().removeIntel(intel);\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }\n&nbsp; &nbsp; &nbsp; &nbsp; }\n\n 3. Save after having the intel removed.\n4. Reload save, which should re-add the updated version of the Portrait Changer Intel tab."
   },
   "supportLinks": [
     {

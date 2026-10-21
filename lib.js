@@ -222,16 +222,28 @@ export function replaceHash(hash) {
 
 // --- The AI summaries setting ---
 
-const AI_COOKIE = 'starmodderAiSummaries';
+/// Kept in `localStorage` like every other setting. It used to be a cookie
+/// under the same name; `savedAiSummaryMode` moves an old one across.
+const AI_KEY = 'starmodderAiSummaries';
 
 /// The three choices, the same three TriOS offers and in the same order:
 /// prefer the AI summary, use it only where the author wrote nothing, or
-/// never show it.
-export const AI_SUMMARY_MODES = ['always', 'whenMissing', 'never'];
+/// never show it. The banner and the Settings dialog both draw from this, so
+/// they always say the same thing.
+export const AI_SUMMARY_CHOICES = [
+  { mode: 'always', name: 'Always', note: 'Prefer the consistent, succinct AI summaries.' },
+  {
+    mode: 'whenMissing', name: 'Only as a fallback',
+    note: 'Only show the AI summary if there\'s no human description.',
+  },
+  { mode: 'never', name: 'Never', note: 'Never ever show AI summaries - humans only!' },
+];
+
+export const AI_SUMMARY_MODES = AI_SUMMARY_CHOICES.map((choice) => choice.mode);
 
 /// What the reader picked, defaulting to "whenMissing".
 export function aiSummaryMode() {
-  const saved = readCookie(AI_COOKIE);
+  const saved = savedAiSummaryMode();
   if (AI_SUMMARY_MODES.includes(saved)) return saved;
   // The setting used to be a plain on/off, so a reader who turned it off
   // before keeps that choice. "on" was the same as "whenMissing" is now.
@@ -239,11 +251,116 @@ export function aiSummaryMode() {
   return 'whenMissing';
 }
 
-/// Remembers the reader's choice for a year, so it holds between visits.
+/// Remembers the reader's choice, so it holds between visits.
 export function setAiSummaryMode(mode) {
-  const year = 365 * 24 * 60 * 60;
-  document.cookie =
-    `${AI_COOKIE}=${mode}; path=/; max-age=${year}; SameSite=Lax`;
+  try {
+    localStorage.setItem(AI_KEY, mode);
+  } catch {
+    // Kept for this visit only.
+  }
+}
+
+/// The saved choice as written, or null. A choice still in the old cookie is
+/// copied into `localStorage` and the cookie deleted, so nobody loses it.
+function savedAiSummaryMode() {
+  let saved = null;
+  try {
+    saved = localStorage.getItem(AI_KEY);
+  } catch {
+    // No storage: fall through to the cookie, which may still hold a choice.
+  }
+  if (saved !== null) return saved;
+
+  const fromCookie = readCookie(AI_KEY);
+  if (fromCookie === null) return null;
+  try {
+    localStorage.setItem(AI_KEY, fromCookie);
+    // Only once it is safely moved, or a reader with no storage loses it.
+    document.cookie = `${AI_KEY}=; path=/; max-age=0; SameSite=Lax`;
+  } catch {
+    // No storage: keep reading the cookie.
+  }
+  return fromCookie;
+}
+
+/// The banner at the top of Home and Browse that asks the reader how much AI
+/// writing they want, with the same three choices as Settings. The choice in
+/// use is marked, and picking another redraws the page through [onPicked] with
+/// the banner still there, so the reader sees what each choice does. Only its
+/// Hide button takes it away, and that is remembered.
+///
+/// Returns null once the reader has hidden it.
+export function aiSummaryBanner(onPicked) {
+  if (aiBannerHidden()) return null;
+
+  const current = aiSummaryMode();
+  const choice = ({ mode, name, note }) => {
+    const button = el('button', {
+      type: 'button', class: 'ai-banner-choice', title: note,
+      'aria-pressed': String(mode === current),
+    }, [
+      el('span', { class: 'choice-name', text: name }),
+      el('span', { class: 'choice-note', text: note }),
+    ]);
+    button.addEventListener('click', () => {
+      setAiSummaryMode(mode);
+      onPicked();
+    });
+    return button;
+  };
+  const hide = el('button', {
+    type: 'button', class: 'ai-banner-hide',
+    title: 'Hide this. You can still change it in Settings.',
+  }, [
+    el('span', { class: 'ai-banner-hide-icon', html: HIDE_ICON, 'aria-hidden': 'true' }),
+    el('span', { text: 'Hide' }),
+  ]);
+
+  const banner = el('section', { class: 'ai-banner', 'aria-labelledby': 'ai-banner-title' }, [
+    el('div', { class: 'ai-banner-head' }, [
+      el('h2', { id: 'ai-banner-title', text: 'AI-written mod summaries' }),
+      hide,
+    ]),
+    el('p', {
+      text: 'Not all mods include a description and some of them are not very useful.'
+    }),
+    el('p', {
+      text: 'You may choose to never see AI-gen summaries, see one only if there\'s no real (human) one, or always see them.',
+    }),
+    el('div', { class: 'ai-banner-choices' }, AI_SUMMARY_CHOICES.map(choice)),
+    el('p', {
+      text: 'You can change this again later in Settings. Summaries were generated on personally-owned hardware and not used for training.',
+    }),
+  ]);
+  hide.addEventListener('click', () => {
+    try {
+      localStorage.setItem(AI_BANNER_KEY, 'hidden');
+    } catch {
+      // Hidden for this page only.
+    }
+    banner.remove();
+  });
+  return banner;
+}
+
+const AI_BANNER_KEY = 'starmodderAiBanner';
+
+// Tabler eye-off icon (MIT).
+const HIDE_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+  + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+  + 'stroke-linejoin="round" focusable="false" aria-hidden="true">'
+  + '<path d="M10.585 10.587a2 2 0 0 0 2.829 2.828"/>'
+  + '<path d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6'
+  + 'c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18'
+  + 'c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87"/>'
+  + '<path d="M3 3l18 18"/></svg>';
+
+function aiBannerHidden() {
+  try {
+    return localStorage.getItem(AI_BANNER_KEY) === 'hidden';
+  } catch {
+    return false;
+  }
 }
 
 function readCookie(name) {
@@ -1716,7 +1833,7 @@ export function versionStandingNote(standing) {
 /// What the version badge beside a mod's name means. The game version badge
 /// next to it explains itself, so this one should too.
 export const MOD_VERSION_NOTE =
-  "The mod version reported by the author.";
+  "Mod version";
 
 // --- Dates ---
 

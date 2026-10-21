@@ -176,6 +176,14 @@ export function siteAddress({
       drawn = url.href;
     },
 
+    /// Swaps the address for [href] without adding a history entry, and draws
+    /// it. For an old address that now leads to another page, so Back skips
+    /// the old one.
+    redirect(href) {
+      historyRef.replaceState(null, '', new URL(href, here()).href);
+      moved();
+    },
+
     /// Starts drawing pages: on Back and Forward, and on a click on one of our
     /// own links.
     ///

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T18:10:07.267988Z",
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
   "listing": {
     "id": "seeker-unidentified-contact",
     "name": "Seeker - Unidentified Contact",
@@ -15,8 +15,10 @@
       "discord"
     ],
     "gameVersion": "0.98a",
+    "modVersion": "0.65",
     "summary": "Update for a mod by Tartiflette",
     "summaryIsGenerated": false,
+    "aiSummary": "Adds exploration content, bosses, and bounties.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip",
@@ -25,14 +27,19 @@
     },
     "downloadCount": 1,
     "discordUrl": "https://discord.com/channels/187635036525166592/1370652306214883368/1370652306214883368",
-    "sourceIsPublic": false,
+    "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2025-05-10",
     "needs": []
   },
-  "descriptionIsGenerated": false,
+  "description": "Adds exploration content including bosses that generate mid-save. Adjusts ship availability across factions to increase variety. Fixes various bugs related to bounties, custom starts, and ship configurations.",
+  "descriptionHtml": "<p>Adds exploration content including bosses that generate mid-save. Adjusts ship availability across factions to increase variety. Fixes various bugs related to bounties, custom starts, and ship configurations.</p>",
+  "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>Update for a mod by Tartiflette</p><p><strong>Download:</strong><br><a href=\"https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip</a></p>",
+  "aiDescription": "Adds exploration content including bosses that generate mid-save. Adjusts ship availability across factions to increase variety. Fixes various bugs related to bounties, custom starts, and ship configurations.",
+  "updateCompatibilityText": "(Requires a new game to take effect)",
+  "canUpdate": "no",
   "rawCategories": [
     "Weapon/Fighter Pack",
     "Ship Pack",
@@ -45,25 +52,31 @@
       "directUrl": "https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip",
       "fileName": "SEEKER.zip",
       "kind": "direct",
-      "label": "",
+      "label": "https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip",
       "host": "GitHub",
       "needsAnotherStep": false
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "0.65": "- The ClearCommands mod no longer removes fleets spawned at the start of the game. (Requires a new game to take effect)",
+    "0.64": "- Version checker now links to the new git repo. Thus, auto-update support is now present.\n - Edited bounties to avoid job_show_distance being \"vague\"\n - Fix staged bounties showing up when they shouldn't\n - Changed rarity of plague weapons and wings so random autofitted plague fleets actually use plague weapons.\n - Roughly aligned the siegfried's flux torpedoes With the new git repository and version checker linking to it, there will no longer be a need to check this channel for updates.\n Once MagicLib updates to version 1.5.7, fixing pre-existing bounties, I'll make a forum post for this mod.",
+    "0.63": "- Edited the terrible (tactical laser + integrated point defense) combo on several ships. Either by removing the IPDA, or replacing the tach lasers with LRPD.\n - Added no_dealer to relevant hulls: All Exotics, Titanic, Blitzkrieg, and Demeter.\n - Placed old guardian ship files into \"old\" directory under hulls, to avoid the error that it's missing in ship_data.csv in the logs."
+  },
+  "sourceCodeUrl": "https://github.com/S-Numan/Seeker",
   "supportLinks": [],
   "discordUrl": "https://discord.com/channels/187635036525166592/1370652306214883368/1370652306214883368",
   "releases": [],
   "sameNameMods": [
     {
       "title": "SEEKER - Unidentified Contact",
-      "url": "https://fractalsoftworks.com/forum/index.php?topic=35971.0",
-      "id": "seeker-unidentified-contact-2",
+      "url": "https://fractalsoftworks.com/forum/index.php?topic=29289.0",
+      "id": "seeker-unidentified-contact-3",
       "authors": [
-        "the volkflower"
+        "presidentmattdamon"
       ],
-      "gameVersion": "0.98a",
-      "threadLastPostOn": "2026-09-29"
+      "gameVersion": "0.97a",
+      "modVersion": "0.6.2",
+      "threadLastPostOn": "2024-03-08"
     }
   ],
   "addons": []

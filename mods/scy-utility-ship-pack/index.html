@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="../../">
+  <title>SCY Utility Ship Pack | Starmodder</title>
+  <meta name="description" content="This is a sub ship pack mod for the Scy Nation's: created by Tartiflette, Music by Fastland, With the help of Debido, Mesotronik, Dark Revenant, Histidine, Silentstormpt, SniZupGun, Deathfly, 19_30 and many others; updated for the 0.97a-RC11 by starficz.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Starmodder">
+  <meta property="og:title" content="SCY Utility Ship Pack">
+  <meta property="og:description" content="This is a sub ship pack mod for the Scy Nation's: created by Tartiflette, Music by Fastland, With the help of Debido, Mesotronik, Dark Revenant, Histidine, Silentstormpt, SniZupGun, Deathfly, 19_30 and many others; updated for the 0.97a-RC11 by starficz.">
+  <meta property="og:image" content="https://i.postimg.cc/76jRY3Cm/SCY-Utility-0-6.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Pictures come from wherever the mod's author put them. Several of those
+       hosts — Imgur most of all — answer 403 when they can see which page the
+       picture is being shown on, so no request from this site carries one. -->
+  <meta name="referrer" content="no-referrer">
+  <!-- The tab icon. It sits below the page-head marks on purpose: a mod's own
+       page swaps only the region above, so every mod page gets this line as
+       written, and its address resolves against that page's own `<base>`. -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <!-- The reader's theme, applied before anything is drawn so the page does
+       not change colour a moment after it appears. The same key lib.js keeps
+       it under. -->
+  <script>
+    // Scripts run here, so the mod's words written into a mod's page for
+    // search engines are hidden: the script draws the real page instead.
+    document.documentElement.classList.add('js');
+    // Browser Default (and the old default preference) sets nothing.
+    try {
+      var theme = localStorage.getItem('starmodderTheme');
+      if (theme && theme !== 'default' && theme !== 'browser-default' && /^[a-z-]+$/.test(theme)) {
+        document.documentElement.dataset.theme = theme;
+      }
+    } catch (e) {}
+  </script>
+  <!-- The release feed, so a feed reader offers to subscribe on any page. -->
+  <link rel="alternate" type="application/atom+xml"
+        title="Starmodder: new Starsector mod releases" href="updates.xml">
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to the page</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#/home">Starmodder</a>
+      <nav id="nav" class="site-nav" aria-label="Main"></nav>
+      <div class="header-search">
+        <input type="search" id="site-search" class="search-box"
+               placeholder="Search mods…  (press /)"
+               aria-label="Search mods" autocomplete="off" role="combobox"
+               aria-autocomplete="list" aria-controls="search-suggestions"
+               aria-expanded="false">
+        <div id="search-suggestions" class="suggestions" role="listbox"
+             aria-label="Search suggestions" hidden></div>
+      </div>
+      <button type="button" id="open-settings" class="settings-button"
+              title="Settings"><span class="settings-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" fill-rule="evenodd" focusable="false"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94L14.4 2.81c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41L9.25 5.35c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></span>Settings</button>
+    </div>
+  </header>
+
+  <dialog id="settings" class="settings-dialog" aria-labelledby="settings-title">
+    <div class="settings-inner">
+      <div class="settings-head">
+        <h2 id="settings-title">Settings</h2>
+        <button type="button" class="settings-close" aria-label="Close settings">×</button>
+      </div>
+      <section class="settings-section" aria-labelledby="appearance-title">
+        <h3 id="appearance-title">Appearance</h3>
+        <div id="theme-list" class="theme-list" role="radiogroup" aria-label="Theme"></div>
+      </section>
+      <section class="settings-section" aria-labelledby="pictures-title">
+        <h3 id="pictures-title">Mod images</h3>
+        <p>For the primary mod image, prefer</p>
+        <div class="choice-list" role="radiogroup" aria-label="Which image to show">
+          <label class="choice">
+            <input type="radio" name="mod-pictures" value="post">
+            <span>
+              <span class="choice-name">...the forum post</span><br>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="mod-pictures" value="announcement">
+            <span>
+              <span class="choice-name">...the Discord or Nexus post</span><br>
+            </span>
+          </label>
+        </div>
+        <div class="setting-row">
+          <span id="inline-pictures-label">Show images in mod descriptions</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="inline-pictures-label">
+            <label title="Display images just like on their Forum page.">
+              <input type="radio" name="inline-pictures" value="on">
+              <span>Show</span>
+            </label>
+            <label title="Replace images with a small link.">
+              <input type="radio" name="inline-pictures" value="off">
+              <span>Hide</span>
+            </label>
+          </div>
+        </div>
+      </section>
+      <section class="settings-section" aria-labelledby="summaries-title">
+        <h3 id="summaries-title">Show AI mod summaries</h3>
+        <p>More info on AI use on the About page.</p>
+        <!-- Filled by app.js from AI_SUMMARY_CHOICES in lib.js, the same list the banner uses. -->
+        <div class="choice-list" id="ai-summary-list" role="radiogroup" aria-label="AI-written summaries"></div>
+        <div class="setting-row">
+          <span id="ai-note-label">Show “Summary generated by AI” text</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="ai-note-label">
+            <label title="Write “Summary generated by AI” under each AI summary.">
+              <input type="radio" name="ai-note" value="show">
+              <span>Show</span>
+            </label>
+            <label title="Leave the text out. The sparkle before the summary still marks it as AI.">
+              <input type="radio" name="ai-note" value="hide">
+              <span>Hide</span>
+            </label>
+          </div>
+        </div>
+      </section>
+    </div>
+  </dialog>
+
+  <!-- A mod's own page writes the mod's words between these two marks, so a
+       search engine that does not run the script still reads them. The
+       script empties this as it starts. -->
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>SCY Utility Ship Pack</h1><p>A Starsector mod by Hatanis. For Starsector 0.98a-RC8. Version 0.61a.</p><p>This is a sub ship pack mod for the Scy Nation's: created by Tartiflette, Music by Fastland, With the help of Debido, Mesotronik, Dark Revenant, Histidine, Silentstormpt, SniZupGun, Deathfly, 19_30 and many others; updated for the 0.97a-RC11 by starficz.</p><p><a href="https://download942.mediafire.com/xiurvf6buangRMgzcCxxwRxhsx53FlrA5YQqbWsW3Gjdv06PtGINmZfn8c_wgNB5T6JzVVKXjn1Kp-mDLKpbAcjX0P8drlQH1C7ON_ZglheNs-hWDHa8yQmJxs6I1d5egm-AdmFa8kXNNokZPQXFpJ0NdA8ArFMWI3WFygPTuCas/z8jj3ab6muq0mxc/00+SCY+Utility+0.61+Alpha+test.7z" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=25985.0" rel="nofollow noopener">Forum thread</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/magiclib/">MagicLib</a></li></ul><h2>Forum post</h2><p>Hello !</p><p>This is a sub ship pack mod for the Scy Nation's: created by Tartiflette, Music by Fastland, With the help of Debido, Mesotronik, Dark Revenant, Histidine, Silentstormpt, SniZupGun, Deathfly, 19_30 and many others; updated for the 0.97a-RC11 by starficz.</p><p>If you use a old version: always DELETE it before extracting the new one and you must start a new game.</p><p>For the moment it's aearly state, not well balance:</p><p>Download</p><p>Requires:<br>Scy Nation's<br>LazyLib<br>MagicLib</p><p>Ships</p><p>Compatible with Nexerelin</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+
+  <footer class="site-footer">
+    <span id="freshness" class="freshness"></span>
+    <span id="build" class="build"></span>
+    <a href="#/about">About this site</a>
+    <a href="updates.xml">Release feed</a>
+    <span class="footer-note">Not affiliated with Fractal Softworks</span>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

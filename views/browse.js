@@ -6,7 +6,7 @@
 // a filtered list brings back the same list.
 
 import {
-  aiSparkle, aiSummaryNote, buildHash, categoryChips, clear,
+  aiSparkle, aiSummaryBanner, aiSummaryNote, buildHash, categoryChips, clear,
   countedAcross,
   currentGameVersion, downloadButton, el, favoriteToggle,
   formatDay, gameVersionFamily, gameVersions, hashQuery, howLongAgo,
@@ -138,6 +138,20 @@ function rememberFilters(hash) {
   }
 }
 
+/// Drops the saved search text, keeping every other filter. The "Browse mods"
+/// entry at the top calls this, so pressing it opens Browse with an empty
+/// search box, as a fresh visit would.
+export function forgetSearch() {
+  try {
+    const saved = new URLSearchParams(localStorage.getItem(FILTERS_KEY) || '');
+    saved.delete('q');
+    if (saved.get('sort') === 'relevance') saved.delete('sort');
+    localStorage.setItem(FILTERS_KEY, saved.toString());
+  } catch {
+    // Without storage nothing was saved, so there is nothing to forget.
+  }
+}
+
 export async function render(root, parts) {
   const list = await modList();
   const mods = list.mods || [];
@@ -178,15 +192,17 @@ export async function render(root, parts) {
   // announced by nothing. It is made here, before anything draws, because a
   // `const` cannot be reached from a function that runs above it.
   const countLine = el('div', { class: 'result-line', role: 'status' });
+  const aiBanner = aiSummaryBanner(() => render(root, parts));
   root.append(layout === 'side'
     ? el('div', { class: 'stack' }, [
+      aiBanner,
       head,
       el('div', { class: 'browse-split' }, [
         side,
         el('div', { class: 'stack browse-main' }, [controls, results]),
       ]),
     ])
-    : el('div', { class: 'stack' }, [head, controls, results]));
+    : el('div', { class: 'stack' }, [aiBanner, head, controls, results]));
 
   // The controls are drawn once and left alone; only the results are redrawn as
   // the reader types, so the search box never loses what is in it or where the

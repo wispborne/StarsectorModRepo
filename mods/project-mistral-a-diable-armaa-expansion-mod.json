@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T18:10:07.267988Z",
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
   "listing": {
     "id": "project-mistral-a-diable-armaa-expansion-mod",
     "name": "Project MISTRAL - a Diable/ArmaA Expansion Mod",
@@ -15,11 +15,12 @@
       "discord"
     ],
     "gameVersion": "0.98a",
+    "modVersion": "0.5i",
     "imageUrl": "https://i.imgur.com/WwiEj1z.png",
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1529687309132496976/1529687309501599915/angelos_icon.png?ex=6ad8d612&is=6ad78492&hm=8e43aba06e132baf0c36824db0b424eb363912d170b465b24423eb111941dae1&",
     "summary": "This mod adds:",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a new faction of former Diable Avionics rebels and a set of Diable-styled ships with Arma Armatura strikecraft.",
+    "aiSummary": "Adds a new faction of former rebels and several strikecraft-focused ships based on existing hulls.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -62,7 +63,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>This mod adds a new faction: The Angelos Contingent, A faction of former Diable Avionics rebels with a luddic tilt, operating out of the Angelos trinary system near diable space. Using Diable Avionics-based hull designs with some Arma-Armatura-styled Strikecraft. Ships from this mod forego micro-missiles for a more up-close playstyle.</p><p>Pre-release updates/discussion will be here: </p><p>Forum thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35781.msg525989#msg525989\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35781.msg525989#msg525989</a></p><p>Direct Download: <a href=\"https://github.com/Bass294/Project_MISTRAL/releases/latest/download/Project_MISTRAL.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Bass294/Project_MISTRAL/releases/latest/download/Project_MISTRAL.zip</a><br><strong>This mod currently REQUIRES the pre-release version of Arma Armatura 3.2.6+ (sorry, signing you up to be beta-testers for Shoi) and the Caymon Joestar version of Diable (due to skin compatabiliy reqs).</strong> Please read the forum post for full details.<br><strong>NOT save compat with 0.1 version from the pre-release thread</strong></p>",
-  "aiDescription": "Introduces the Angelos Contingent, a faction of former Diable Avionics rebels with a luddic tilt operating near Diable space. Adds several new ships, including frigates, strikecraft wanzers, and carriers, which forego micro-missiles for a close-quarters playstyle. Includes red skins for Diable purists and basic Nexerelin compatibility.",
+  "aiDescription": "Introduces the Angelos Contingent, a faction operating near Diable space with unique officers and contact rewards. Adds new ships derived from Diable Avionics and Arma Armatura designs that emphasize close-range combat over micro-missiles. Includes red skins for Diable-style aesthetics and basic Nexerelin compatibility.",
   "saveCompatibilityText": "generates mid-save",
   "updateCompatibilityText": "NOT SAVE COMPATIBLE IF YOU WERE USING THE OLD 0.1 VERSION FROM DISCORD.",
   "canAdd": "yes",
@@ -111,7 +112,11 @@
       "needsAnotherStep": false
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "0.5i": "New Ship - Breeze - a light carrier DD with recall device\nRemoved Calm (AC) from angelos known weps\nFixed some hullmod tag errors that was causing some to drop incorrectly\nAdded more variants and fixed some variants of sunrain, typhoon, tailwind, stormsurge\nAngelos system should now correctly gen with Angelos \"claim\" on the system - new saves only",
+    "0.5h": "Added Commissioned Crews bonus - minor damage reduction for frigates/DDs/fighters\nAdded lunalib setting to display/hide wanzer amp relay indicators.\nangelos wing formations\n-removed 0-flux boost\nSunrain/Sunshower DA:\nadjusted small mount angles",
+    "0.5g": "More balance changes, I wanted to bring down the power of the sunrain/tailwind a bit. The raven kai was originally a fun way to get un-nerfed ravens back in the game, but they homogonized gameplay a bit too much. I also figured out a better wanzer amp targetting method, so now you are still highly incentivized to slot in single-wing wanzers, but can still go nuts with any cross-mod single-wing fighters, and experiment with different wanzer combinations. The \"advanced avionics\" style 0-flux boost was also active far too often, so now it'll turn itself off far more frequently, while still being useful to let your carriers keep up with your strikecraft. I may need to adjust this further if it's still too powerful.\nTailwind/Sunrain:\n-Removed built in Raven Kai wings, total bay amounts unchanged, OP unchanged.\nSunrain/Sunshower DA:\n-Hull from 15000 to 18000\n-Armor from 1200 to 1500\n-Max Flux from 20000 to 22000\nSunrain:\n-Flux dissipation 1300 -> 1150\n-Shield efficiency 0.6 -> 0.7\n-Adjusted glow ring vfx on system usage\nTyphoon:\nOP from 130 to 140\nTailwind/Sunrain/Typhoon:\nRemoved B-decks.\nWanzer Amp Relay:\n-Changed targetting. Now targets frigates by DP > single fighter of the using ship's wings by OP\n-Now activates automatically on player flagship with identical activation conditions as AI use.\n-VFX adjusted, no longer has a \"scan pulse\" effect, now displays a range indicator while the system is on cooldown if the player is piloting the ship, or a buffable frigate.\nAngelos Wing Formations:\n-0-flux boost 7% -> 1% of max flux generated per second\nAdded faction music\nAdded a player flag - thanks to Vexlia for the concept.\nAdded following weapons to angelos known weapons:\nreaper\nsabot\nsabot_single\nsabotpod\nsquall\nlocust\nfoura plasma lance - a new tachyon lance sidegrade\nfasan pulse laser - a new large energy kinetic beam weapon\nAdded remaining wanzers to angelos known wings."
+  },
   "sourceCodeUrl": "https://github.com/Bass294/Project_MISTRAL",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35781.msg525989#msg525989",

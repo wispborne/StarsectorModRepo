@@ -1,45 +1,99 @@
 {
-  "generatedAt": "2026-10-20T18:10:07.267988Z",
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
   "listing": {
     "id": "aegis-combat-system",
-    "name": "Aegis Combat System v0.5.0",
-    "displayName": "Aegis Combat System",
+    "name": "Aegis Combat System",
     "authors": [
-      ".beyondthehorizon"
+      "BeyondTheHorizon"
     ],
     "otherAuthorNames": {},
     "categories": [
       "Ships and weapons"
     ],
     "sources": [
+      "forum",
       "discord"
     ],
     "gameVersion": "0.98a",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1358068572404056277/1358068572701720817/AEGIS-COMBAT-SYSTEM.png?ex=6ad8bbeb&is=6ad76a6b&hm=091943f32bb3c3d078b2fb33f5a3972e98dd66510e90fc37735ba66811c2db5d&",
-    "summary": "A weapon mod that introduces area defense missiles that behave like the RIMs with the coordination under the Aegis Combat System of the US Navy. Requires LazyLib and MagicLib.",
+    "modVersion": "0.5.0",
+    "imageUrl": "https://i.imgur.com/Ia4UCoT.png",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1358068572404056277/1358068572701720817/AEGIS-COMBAT-SYSTEM.png?ex=6ad8bbeb&is=6ad76a6b&hm=091943f32bb3c3d078b2fb33f5a3972e98dd66510e90fc37735ba66811c2db5d&",
+    "summary": "Still using flak against missiles? MAGIC MUST DEFEAT MAGIC.gif! Here comes a weapon mod introducing area defense missiles that behave like the RIMs with the coordination under the Aegis Combat System of the US Navy instead of mindlessly wasting missiles around.",
     "summaryIsGenerated": false,
-    "hasDirectDownload": false,
-    "downloadCount": 0,
+    "aiSummary": "Introduces area defense missiles and fighter wings that coordinate intercepts using an Aegis-style combat system.",
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://www.patreon.com/posts/125985655",
+      "kind": "direct",
+      "needsAnotherStep": true
+    },
+    "downloadCount": 1,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=25807",
     "discordUrl": "https://discord.com/channels/187635036525166592/1358068572404056277/1358068572404056277",
     "sourceIsPublic": false,
     "isWorkInProgress": false,
-    "addedOn": "2025-04-05",
-    "needs": []
+    "addedOn": "2022-12-26",
+    "needs": [
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      },
+      {
+        "name": "MagicLib",
+        "id": "magiclib"
+      }
+    ]
   },
+  "description": "Aegis Combat System\n\n>DOWNLOAD<\n\nRequire LazyLib and MagicLib\n\nStill using flak against missiles? MAGIC MUST DEFEAT MAGIC.gif! Here comes a weapon mod introducing area defense missiles that behave like the RIMs with the coordination under the Aegis Combat System of the US Navy instead of mindlessly wasting missiles around.\n\nThe original plan is to make a modern naval mod but I don't have the skill to make ship sprites so I release it as a weapon mod. The point is to share the idea of area defense missiles for Starsector so if you're a modder feel free to build your own stuff with my ai script.\n\nFeatures:\n\nAEGIS Baseline 10 hullmod and Radar Intercept Missiles.\nCustom weapon and missile AI script to recreate the Aegis Combat System.\nKilling one track with one bird. No more salvoing missiles even when there's only one incoming missile.\nLayered area defense with SM3, SM6 and ESSM.\nIntercept artillery shell with C-Dome.\nFighter wings.\nStealthy AGM-158C LARSM, datalink guided BGM-109 Block Va and more.\n\nChangelog:\n\nSpoiler\nVersion update v0.5.0:\nUpdate mod to Starsector 0.98a\nEmbedded Aegis Combat System script in to the weapons, Aegis Combat System hullmod is no longer needed for the RIM missile to work!\nOld Aegis Combat System hullmod is changed to AEGIS Baseline 10 hullmod with actual buffs\nSM-6 is able to lock on to ship if air target is no longer available\nFix AAM of fighters not firing\n\nVersion update v0.4.0\nAdd F/A-18E/F and EA-18G Fighter Wings (see Fighter Wings section) (Sprite credit to Ilija)\nAdd CHAMP Missile, BGM-109B TASM, RGM-184A NSM and RGM-84 Harpoon\nSprite revamp for weapons, e.g. Phalanx CIWS, MK29 Launcher (Sprite credit to Ilija)\nChange some of the RIM missiles to HE damage and add Blast Fragmentation Warhead effect with AOE fragmentation damage\nIncrease the rate of fire of RIM missiles\nSlightly increase the range of short range RIM missiles to speed up the respond time\nIncrease the rate of fire of C-Dome\n\nHotfix update v0.3.0a\nFix CTD when using Electromagnetic Catapult Hullmod with fighters with no travel drive\n\nVersion update v0.3.0\nReworked Aegis Combat System code, now will acquire new target instead of self-destruct if current target is history, friendly ships won't target the same missile\nVertical Launch System (sprites credit to Mo Yan Yang Shang, basic script credit to Iryx)\nAdd new missiles, check the weapon section\nFix AI ship won't fire RIM\nFix RIM-116 SeaRam AI, it now acts similar to AAM of other mods\n\nVersion update v0.2.0\nUpdate for Starsector 0.97a\nAdd C-Dome for intercepting artillery shells (projectile with >150 damage fired towards your ship)\nAdd BGM-109 Block Va datalink guided (your mouse cursor) cruise missile\nAdd contrail effect to missiles\nNew weapons sprites (Credit to Bloodbath)\nStats rework, especially on reload\n\nPatch update v0.1.4\nFix intercept missiles of the same type may target the same incoming missile\n\nMissiles will only be targeted by one missile from the same ship regardless of intercept missile type but still can be targeted by intercept missiles from different ships.\n\nIncrease missile manoeuvrability (expect SM-3 as I plan to make it into two phases, the first phase has lower acceleration, second has higher).\n\nAdjust the minimum fire distance of intercept missiles if no other type of intercept missile with a shorter range on the ship, the minimum fire distance will reduce. For example, the minimum fire distance of SM-3 is 1300 if the ship is equipped with SM-6 and ESSM, 600 if there is ESSM only, 200 when there is no SM-6 and ESSM.\n\nPatch v0.1.3\nUpdate to Starsector 0.96 compatible.\n\nPatch v0.1.2\nRemove the unused mod dependence for hullmod which is causing the crash.\n\nPatch v0.1.1\nFix Logger not found CTD for some players.\nMinor stats/balance change\n\nRelease v0.1.0\n\nWeapons:\n\nSpoiler\nRIM-161 SM3 (MEDIUM): 2000-1300 long-range kinetic warhead anti-missile/fighter missile\nRIM-174 ERAM (MEDIUM): 1300-600 medium-long range HE/Frag anti-missile/fighter/ship missile\nRIM-162 ESSM (MEDIUM): 600-100 medium-close range HE/Frag anti-missile/fighter missile\nRIM-7 Sea Sparrow (SMALL): 550-0 close range HE/Frag anti-missile/fighter missile\nRIM-116 SeaRam (SMALL): Point defense fragmentation anti-missile/fighter missile\nPhalanx CIW (SMALL)\nAGM-158C LARSM and RGM-184A NSM: Subsonic stealth anti-ship missile\nPrecision Strike Missile (PrSM): a cluster warhead anti shield missile\nConventional Prompt Strike (CPS) Missile: two-stage hypersonic missile\nHypersonic Attack Cruise Missile (HACM): just like its name\nRUM-139 VLROC: two-stage anti phase rocket, torpedo warhead will phase when target phases and deal flux damage to phased target\nCHAMP Missile: EMP missile dealing no conventional damage but flux damage and high AOE EMP damage\nBGM-109B and BGM-109 Block V: Subsonic cruise missile with active radar (normal) and data-link (mouse pointer) guidance respectively\nRGM-84 Harpoon: Subsonic swarm anti-ship missile\nHow to get them: Find the blueprint package or spawn with console command\n\nFighter Wings:\n\nSpoiler\nF/A-18E (CAP) AIM-120 Loadout (Support)\nF/A-18E (Intercept) AIM-174B Loadout (Interceptor)\nF/A-18F (ASuW, AGM-158A) AGM-158A JASSM Loadout (Fighter)\nE/A-18G (SEAD) AGM-88G Loadout with Offensive ECM system (Fighter)\n\nImage:\n\nSpoiler\n\nCredit:\n\nLazyWizard for making LazyLib.\n\nTartiflette for making MagicLib.\n\nMo Yan Yang Shang for VLS sprites and Iryx for VLS base script for me to modify.\n\nBloodbath for weapon sprites.\n\nIlija for fighter, weapon and missile sprites\n\nMissile movement and proximity fuse scripts are based on codes from Tartiflette's Diable Avionics mod.",
+  "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\"><span class=\"author-colour\" style=\"--c:#000080\"><strong>Aegis Combat System</strong></span></span></div><div class=\"align-center\"><a href=\"https://www.patreon.com/posts/125985655\" rel=\"nofollow noopener\" target=\"_blank\"><span class=\"size-bigger\"><span class=\"author-colour\" style=\"--c:#0000ff\">&gt;DOWNLOAD&lt;</span></span></a></div><div class=\"align-center\"><span class=\"size-bigger\"><span class=\"author-colour\" style=\"--c:#ff0000\"><strong>Require LazyLib and MagicLib</strong></span></span></div><br><div class=\"align-center\"><img src=\"https://i.imgur.com/Ia4UCoT.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><br>Still using flak against missiles? MAGIC MUST DEFEAT MAGIC.gif! Here comes a weapon mod introducing area defense missiles that behave like the RIMs with the coordination under the Aegis Combat System of the US Navy instead of mindlessly wasting missiles around.<br><br>The original plan is to make a modern naval mod but I don't have the skill to make ship sprites so I release it as a weapon mod. The point is to share the idea of area defense missiles for Starsector so if you're a modder feel free to build your own stuff with my ai script.<br><br><strong><span class=\"size-big\">Features:</span></strong><br><br><ul><li>AEGIS Baseline 10 hullmod and Radar Intercept Missiles.</li><li>Custom weapon and missile AI script to recreate the Aegis Combat System.</li><li>Killing one track with one bird. No more salvoing missiles even when there's only one incoming missile.</li><li>Layered area defense with SM3, SM6 and ESSM.</li><li>Intercept artillery shell with C-Dome.</li><li>Fighter wings.</li><li>Stealthy AGM-158C LARSM, datalink guided BGM-109 Block Va and more.</li></ul><br><strong>Changelog:</strong><br><details class=\"spoiler\"><summary>Spoiler</summary>Version update v0.5.0:<br>Update mod to Starsector 0.98a<br>Embedded Aegis Combat System script in to the weapons, Aegis Combat System hullmod is no longer needed for the RIM missile to work!<br>Old Aegis Combat System hullmod is changed to AEGIS Baseline 10 hullmod with actual buffs<br>SM-6 is able to lock on to ship if air target is no longer available<br>Fix AAM of fighters not firing<br><br>Version update v0.4.0<br>Add F/A-18E/F and EA-18G Fighter Wings (see Fighter Wings section) (Sprite credit to Ilija)<br>Add CHAMP Missile, BGM-109B TASM, RGM-184A NSM and RGM-84 Harpoon<br>Sprite revamp for weapons, e.g. Phalanx CIWS, MK29 Launcher (Sprite credit to Ilija)<br>Change some of the RIM missiles to HE damage and add Blast Fragmentation Warhead effect with AOE fragmentation damage<br>Increase the rate of fire of RIM missiles<br>Slightly increase the range of short range RIM missiles to speed up the respond time<br>Increase the rate of fire of C-Dome<br><br>Hotfix update v0.3.0a<br>Fix CTD when using Electromagnetic Catapult Hullmod with fighters with no travel drive<br><br>Version update v0.3.0<br>Reworked Aegis Combat System code, now will acquire new target instead of self-destruct if current target is history, friendly ships won't target the same missile<br>Vertical Launch System (sprites credit to Mo Yan Yang Shang, basic script credit to Iryx)<br>Add new missiles, check the weapon section<br>Fix AI ship won't fire RIM<br>Fix RIM-116 SeaRam AI, it now acts similar to AAM of other mods<br><br>Version update v0.2.0<br>Update for Starsector 0.97a<br>Add C-Dome for intercepting artillery shells (projectile with &gt;150 damage fired towards your ship)<br>Add BGM-109 Block Va datalink guided (your mouse cursor) cruise missile<br>Add contrail effect to missiles<br>New weapons sprites (Credit to Bloodbath)<br>Stats rework, especially on reload<br><br>Patch update v0.1.4<br>Fix intercept missiles of the same type may target the same incoming missile<br><br>Missiles will only be targeted by one missile from the same ship regardless of intercept missile type but still can be targeted by intercept missiles from different ships.<br><br>Increase missile manoeuvrability (expect SM-3 as I plan to make it into two phases, the first phase has lower acceleration, second has higher).<br><br>Adjust the minimum fire distance of intercept missiles if no other type of intercept missile with a shorter range on the ship, the minimum fire distance will reduce. For example, the minimum fire distance of SM-3 is 1300 if the ship is equipped with SM-6 and ESSM, 600 if there is ESSM only, 200 when there is no SM-6 and ESSM.<br><br>Patch v0.1.3<br>Update to Starsector 0.96 compatible.<br><br>Patch v0.1.2<br>Remove the unused mod dependence for hullmod which is causing the crash.<br><br>Patch v0.1.1<br>Fix Logger not found CTD for some players.<br>Minor stats/balance change<br><br>Release v0.1.0</details><br><strong>Weapons:</strong><br><details class=\"spoiler\"><summary>Spoiler</summary><ul><li>RIM-161 SM3 (MEDIUM): 2000-1300 long-range kinetic warhead anti-missile/fighter missile</li><li>RIM-174 ERAM (MEDIUM): 1300-600 medium-long range HE/Frag anti-missile/fighter/ship missile</li><li>RIM-162 ESSM (MEDIUM): 600-100 medium-close range HE/Frag anti-missile/fighter missile</li><li>RIM-7 Sea Sparrow (SMALL): 550-0 close range HE/Frag anti-missile/fighter missile</li><li>RIM-116 SeaRam (SMALL): Point defense fragmentation anti-missile/fighter missile</li><li>Phalanx CIW (SMALL)</li><li>AGM-158C LARSM and RGM-184A NSM: Subsonic stealth anti-ship missile</li><li>Precision Strike Missile (PrSM): a cluster warhead anti shield missile</li><li>Conventional Prompt Strike (CPS) Missile: two-stage hypersonic missile</li><li>Hypersonic Attack Cruise Missile (HACM): just like its name</li><li>RUM-139 VLROC: two-stage anti phase rocket, torpedo warhead will phase when target phases and deal flux damage to phased target</li><li>CHAMP Missile: EMP missile dealing no conventional damage but flux damage and high AOE EMP damage</li><li>BGM-109B and BGM-109 Block V: Subsonic cruise missile with active radar (normal) and data-link (mouse pointer) guidance respectively</li><li>RGM-84 Harpoon: Subsonic swarm anti-ship missile</li><li>How to get them: Find the blueprint package or spawn with console command</li></ul></details><br><strong>Fighter Wings:</strong><br><details class=\"spoiler\"><summary>Spoiler</summary><ul><li>F/A-18E (CAP) AIM-120 Loadout (Support)</li><li>F/A-18E (Intercept) AIM-174B Loadout (Interceptor)</li><li>F/A-18F (ASuW, AGM-158A) AGM-158A JASSM Loadout (Fighter)</li><li>E/A-18G (SEAD) AGM-88G Loadout with Offensive ECM system (Fighter)</li></ul></details><br><strong>Image:</strong><br><details class=\"spoiler\"><summary>Spoiler</summary><div class=\"align-center\"><img src=\"https://i.imgur.com/WnKryg1.gif\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.imgur.com/ZLNSTfh.gif\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.imgur.com/Pn8o0SK.gif\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.imgur.com/Pn8o0SK.gif\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.imgur.com/R1WeoS8.gif\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.imgur.com/236Or7T.gif\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.imgur.com/ufy9mG9.gif\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div></details><br><strong><span class=\"size-big\">Credit:</span></strong><br><br>LazyWizard for making LazyLib.<br><br>Tartiflette for making MagicLib.<br><br>Mo Yan Yang Shang for VLS sprites and Iryx for VLS base script for me to modify.<br><br>Bloodbath for weapon sprites.<br><br>Ilija for fighter, weapon and missile sprites<br><br>Missile movement and proximity fuse scripts are based on codes from Tartiflette's Diable Avionics mod.",
   "descriptionIsGenerated": false,
-  "descriptionIsForumPost": false,
+  "descriptionIsForumPost": true,
   "discordPostHtml": "<p>A weapon mod that introduces area defense missiles that behave like the RIMs with the coordination under the Aegis Combat System of the US Navy.<br>Requires LazyLib and MagicLib.</p><p>Features:<br>AEGIS Baseline 10 hullmod and Radar Intercept Missiles.<br>Custom weapon and missile AI script to recreate the Aegis Combat System.<br>Killing one track with one bird. No more salvoing missiles even when there's only one incoming missile.<br>Layered area defense with SM3, SM6 and ESSM.<br>Intercept artillery shell with C-Dome.<br>Bonus: Stealthy AGM-158C LARSM, datalink guided BGM-109 Block Va and more.</p><p>Changelog:<br>`Version update v0.5.0<br>Update mod to Starsector 0.98a</p><p>Embedded Aegis Combat System script in to the weapons, Aegis Combat System hullmod is no longer needed for the RIM missiles to work!</p><p>Old Aegis Combat System hullmod is changed to AEGIS Baseline 10 hullmod with actual buffs</p><p>SM-6 is able to lock on to ship if air target is no longer available</p><p>Fix AAM of fighters not firing<br>`</p><p>Forum and download:<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25807\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=25807</a></p>",
+  "aiDescription": "Adds a suite of anti-missile, anti-fighter, and anti-ship weapons including RIM variants, cruise missiles, and hypersonic options. Implements custom AI scripts to manage layered defense, ensuring efficient interception of incoming threats without wasting ammunition. Includes fighter wings with specialized loadouts for combat air patrol, interception, and suppression.",
   "rawCategories": [
     "Weapon/Fighter Pack"
   ],
   "gallery": [
     {
       "url": "https://cdn.discordapp.com/attachments/1358068572404056277/1358068572701720817/AEGIS-COMBAT-SYSTEM.png?ex=6ad8bbeb&is=6ad76a6b&hm=091943f32bb3c3d078b2fb33f5a3972e98dd66510e90fc37735ba66811c2db5d&"
+    },
+    {
+      "url": "https://i.imgur.com/Ia4UCoT.png"
+    },
+    {
+      "url": "https://i.imgur.com/WnKryg1.gif"
+    },
+    {
+      "url": "https://i.imgur.com/ZLNSTfh.gif"
+    },
+    {
+      "url": "https://i.imgur.com/Pn8o0SK.gif"
+    },
+    {
+      "url": "https://i.imgur.com/R1WeoS8.gif"
+    },
+    {
+      "url": "https://i.imgur.com/236Or7T.gif"
+    },
+    {
+      "url": "https://i.imgur.com/ufy9mG9.gif"
     }
   ],
-  "downloads": [],
-  "changelog": {},
+  "downloads": [
+    {
+      "url": "https://www.patreon.com/posts/125985655",
+      "directUrl": "https://www.patreon.com/posts/125985655",
+      "kind": "direct",
+      "label": ">DOWNLOAD<",
+      "host": "Patreon",
+      "needsAnotherStep": true
+    }
+  ],
+  "changelog": {
+    "0.5.0": "Update mod to Starsector 0.98a\nEmbedded Aegis Combat System script in to the weapons, Aegis Combat System hullmod is no longer needed for the RIM missile to work!\nOld Aegis Combat System hullmod is changed to AEGIS Baseline 10 hullmod with actual buffs\nSM-6 is able to lock on to ship if air target is no longer available\nFix AAM of fighters not firing",
+    "0.4.0": "Add F/A-18E/F and EA-18G Fighter Wings (see Fighter Wings section) (Sprite credit to Ilija)\nAdd CHAMP Missile, BGM-109B TASM, RGM-184A NSM and RGM-84 Harpoon\nSprite revamp for weapons, e.g. Phalanx CIWS, MK29 Launcher (Sprite credit to Ilija)\nChange some of the RIM missiles to HE damage and add Blast Fragmentation Warhead effect with AOE fragmentation damage\nIncrease the rate of fire of RIM missiles\nSlightly increase the range of short range RIM missiles to speed up the respond time\nIncrease the rate of fire of C-Dome",
+    "0.3.0a": "Fix CTD when using Electromagnetic Catapult Hullmod with fighters with no travel drive"
+  },
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=25807",
   "discordUrl": "https://discord.com/channels/187635036525166592/1358068572404056277/1358068572404056277",

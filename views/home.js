@@ -5,7 +5,7 @@
 // comparing saved copies of the data over time.
 
 import {
-  buildHash, categoryChips, clear, currentGameVersion, downloadButton, el,
+  aiSummaryBanner, buildHash, categoryChips, clear, currentGameVersion, downloadButton, el,
   expandAllButton, formatDay,
   howLongAgo, imageUrlOf, modHref, modList, modName, noteWithMore,
   releaseFeed, thumbnail,
@@ -36,6 +36,7 @@ export async function render(root) {
   // The mods added recently first, then the categories and the releases.
   clear(root);
   root.append(el('div', { class: 'stack' }, [
+    aiSummaryBanner(() => render(root)),
     recentlyAdded(mods, currentVersion),
     browseByCategory(mods),
     releasesPanel(releases, byId),

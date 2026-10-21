@@ -5,7 +5,7 @@
 // files, fetched off this site's own origin.
 
 import {
-  aiNoteChoice, aiSummaryMode, buildHash, clear, el, errorPanel, formatDay,
+  AI_SUMMARY_CHOICES, aiNoteChoice, aiSummaryMode, buildHash, clear, el, errorPanel, formatDay,
   formatMoment, go, imageChoice, imageUrlOf, inlinePictures,
   loading,
   favorites, modHref, modList, modName,
@@ -83,6 +83,11 @@ function renderNav(viewId) {
       draw(favorites());
       stopWatchingList = watchFavorites(draw);
       link.append(count);
+    }
+    // Opens Browse with the search box empty. The other filters are kept.
+    // Runs before the site's own link handling, which listens on the page.
+    if (item.route === 'browse') {
+      link.addEventListener('click', () => browse.forgetSearch());
     }
     nav.append(link);
   }
@@ -178,7 +183,7 @@ function mountSettings() {
   const dialog = document.getElementById('settings');
   if (!open || !dialog) return;
   const close = dialog.querySelector('.settings-close');
-  const aiRadios = [...dialog.querySelectorAll('input[name="ai-summaries"]')];
+  const aiRadios = mountAiSummaryList(dialog.querySelector('#ai-summary-list'));
   const pictureRadios =
     [...dialog.querySelectorAll('input[name="mod-pictures"]')];
   const inlineRadios =
@@ -240,6 +245,24 @@ function mountSettings() {
       route();
     });
   }
+}
+
+/// The AI summary choices in Settings, worded the same as the banner on Home
+/// and Browse because both come from one list. Returns the radio buttons.
+function mountAiSummaryList(holder) {
+  if (!holder) return [];
+  return AI_SUMMARY_CHOICES.map(({ mode, name, note }) => {
+    const radio = el('input', { type: 'radio', name: 'ai-summaries', value: mode });
+    holder.append(el('label', { class: 'choice' }, [
+      radio,
+      el('span', {}, [
+        el('span', { class: 'choice-name', text: name }),
+        el('br'),
+        el('span', { class: 'choice-note', text: note }),
+      ]),
+    ]));
+    return radio;
+  });
 }
 
 /// One button per theme in Settings, each with a strip of that theme's

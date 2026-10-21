@@ -395,9 +395,11 @@ h3 { font-size: var(--type-big); line-height: 1.25; margin: 0 0 6px; }
 .settings-button {
   background: none; border: none; padding: 0; font: inherit;
   font-size: var(--type-small); color: var(--text-dim); cursor: pointer;
-  white-space: nowrap;
+  white-space: nowrap; display: inline-flex; align-items: center; gap: 5px;
 }
 .settings-button:hover { color: var(--primary); }
+/* The gear, from Material Icons (Apache 2.0). */
+.settings-icon, .settings-icon svg { display: block; width: 1.1em; height: 1.1em; flex-shrink: 0; }
 
 /* --- The settings dialog --- */
 
@@ -436,6 +438,36 @@ h3 { font-size: var(--type-big); line-height: 1.25; margin: 0 0 6px; }
   font: inherit; color: var(--primary); text-decoration: underline;
 }
 .note-more:hover { color: var(--secondary); }
+/* The question about AI summaries at the top of Home and Browse, shown until
+   the reader picks an answer. */
+.ai-banner {
+  display: flex; flex-direction: column; gap: var(--gap);
+  background: var(--surface-2); padding: var(--pad-block);
+  border-left: 3px solid var(--primary); box-shadow: var(--raised);
+}
+.ai-banner-head { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--gap); }
+.ai-banner h2 { margin: 0; font-size: var(--type-normal); }
+.ai-banner p { margin: 0; color: var(--text-dim); font-size: var(--type-small); }
+.ai-banner-hide {
+  flex: none; cursor: pointer; font: inherit; font-size: var(--type-small);
+  padding: 2px 10px; border: 1px solid var(--primary); border-radius: 6px;
+  background: none; color: var(--text);
+  display: inline-flex; align-items: center; gap: 5px;
+}
+.ai-banner-hide:hover { background: var(--primary-faint); }
+.ai-banner-hide-icon, .ai-banner-hide-icon svg { display: block; width: 1.1em; height: 1.1em; flex-shrink: 0; }
+.ai-banner-choices {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 6px;
+}
+.ai-banner-choice {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+  text-align: left; cursor: pointer; font: inherit;
+  padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--surface);
+}
+.ai-banner-choice:hover, .ai-banner-choice:focus-visible { border-color: var(--primary); }
+.ai-banner-choice:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+.ai-banner-choice[aria-pressed="true"] { border-color: var(--on); background: var(--on-soft); }
 .settings-section { display: flex; flex-direction: column; gap: var(--gap); }
 .settings-section > h3 {
   margin: 0; font-size: var(--type-tiny); letter-spacing: 0.06em;
@@ -1425,6 +1457,8 @@ button.check-row { align-items: center; }
 .btn-with-icon .github-icon,
 .badge.source-link .original-page-icon,
 .check-row .tri-box,
+.settings-icon,
+.ai-banner-hide-icon,
 .post-switch-icon { transform: translateY(0.06em); }
 /* The Discord post under the forum post: a little more room than between
    the parts of one group, so the two read as two posts. */

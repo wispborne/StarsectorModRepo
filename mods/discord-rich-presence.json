@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T18:10:07.267988Z",
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
   "listing": {
     "id": "discord-rich-presence",
     "name": "Discord Rich Presence",
@@ -21,7 +21,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1503905343565205585/1503905343929974795/image.png?ex=6ad8a53f&is=6ad753bf&hm=ebbce5f0acb0ceea6819d98cb1bfa773d615321e8474cf433d08fc371919d687&",
     "summary": "Ever wanted to show your friends you're playing a single player game right now so they don't spam invites to *** multiplayer games?",
     "summaryIsGenerated": false,
-    "aiSummary": "Displays dynamic game information on Discord, including commander details, ship info, location, and fleet stats.",
+    "aiSummary": "Displays dynamic in-game status on Discord, including commander details, ship info, location, and fleet economy.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/andrzejsokolowski/starsector-discord-rich-presence/releases/latest",
@@ -42,7 +42,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Ever wanted to show your friends you're playing a single player game right now so they don't spam invites to shitty multiplayer games?<br>Yeah, introducing discord rich presence, shows up on discord for everyone with a nice icon and all.<br>The information provided is taken from the game dynamically.<br>Info available:</p><p>cmdr {yourplayername} level {yourlevel} | {flagship name} ({flagship class})<br>{currentLocalization}  - {ships In fleet amount } - {current credits}</p><p><a href=\"https://github.com/andrzejsokolowski/starsector-discord-rich-presence/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\">Download v1.0.0</a> from github</p><p>Or</p><p>Forum link: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35392.msg518784#msg518784\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35392.msg518784#msg518784</a></p>",
-  "aiDescription": "Shows your current game status on Discord with a nice icon. It dynamically pulls information such as your commander name and level, flagship details, current location, and fleet economy stats to display to your friends.",
+  "aiDescription": "Shows a rich presence status on Discord for players of single-player games. It dynamically pulls information such as player name, level, flagship details, current location, fleet size, and credits to display alongside a game icon.",
   "rawCategories": [
     "Quality of Life",
     "Utility mods"
@@ -72,7 +72,9 @@
       "needsAnotherStep": true
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "1.0.0": "Updated to 1.0.0 main release.\nTested working in all areas of campaign & combat.\nAdded version check, forum link, icon etc."
+  },
   "license": "do whatever you want to do with it",
   "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-discord-rich-presence",
   "supportLinks": [],

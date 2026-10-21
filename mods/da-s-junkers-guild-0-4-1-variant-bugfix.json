@@ -1,8 +1,9 @@
 {
-  "generatedAt": "2026-10-20T18:10:07.267988Z",
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
   "listing": {
     "id": "da-s-junkers-guild-0-4-1-variant-bugfix",
     "name": "DA's Junkers Guild 0.4.1 Variant Bugfix",
+    "displayName": "DA's Junkers Guild",
     "authors": [
       "zone51"
     ],
@@ -15,25 +16,41 @@
       "discord"
     ],
     "gameVersion": "0.97a",
+    "modVersion": "0.4.1",
     "imageUrl": "https://cdn.discordapp.com/attachments/1212728628752941076/1212731721737445416/image.png?ex=6ad8a9ed&is=6ad7586d&hm=63e3186778cb1486f6f1ef17bea6d79ed021fffacb11228b387c619518b73fde&",
     "summary": "a Simple Ship and Weapon Pack for Diable Avionics ,also can be used in 0.96 too. you require Diable avionics Still since its a given, and also requires its dependencies too.",
     "summaryIsGenerated": false,
+    "aiSummary": "Adds ships and weapons to the Diable Avionics faction.",
+    "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Zone51alex/DAWeaponsPack/releases/download/0.4.1/DA.Junker.s.Guild.Mod.0.4.1.zip",
       "kind": "direct",
       "needsAnotherStep": false
     },
-    "downloadCount": 1,
+    "downloadCount": 2,
     "discordUrl": "https://discord.com/channels/187635036525166592/1212728628752941076/1212728628752941076",
-    "sourceIsPublic": false,
+    "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "nicknames": [
+      "DA Weapons Pack"
+    ],
     "addedOn": "2024-02-29",
-    "needs": []
+    "needs": [
+      {
+        "name": "Diable Avionics",
+        "id": "diable-avionics"
+      }
+    ]
   },
-  "descriptionIsGenerated": false,
+  "description": "Provides a simple ship and weapon pack for the Diable Avionics faction. It includes new hulls like Fractus, Gust, and Rime, as well as new energy weapons such as the Dirune Burn EMP array. The pack also features balance adjustments to existing weapons like the Artassault Buckshot Blunderbuss.",
+  "descriptionHtml": "<p>Provides a simple ship and weapon pack for the Diable Avionics faction. It includes new hulls like Fractus, Gust, and Rime, as well as new energy weapons such as the Dirune Burn EMP array. The pack also features balance adjustments to existing weapons like the Artassault Buckshot Blunderbuss.</p>",
+  "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>a Simple Ship and Weapon Pack for Diable Avionics ,also can be used in 0.96 too.<br>you require Diable avionics Still since its a given, and also requires its dependencies too.<br>the normal version is Compatible with joestar's Fork of DA.</p><p>changelogs moved blow.</p><p>mid-save compatible.</p><p>Github : <a href=\"https://github.com/Zone51alex/DAWeaponsPack\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Zone51alex/DAWeaponsPack</a><br>Download : <a href=\"https://github.com/Zone51alex/DAWeaponsPack/releases/download/0.4.1/DA.Junker.s.Guild.Mod.0.4.1.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Zone51alex/DAWeaponsPack/releases/download/0.4.1/DA.Junker.s.Guild.Mod.0.4.1.zip</a><br>Download- Sealed Edition : <a href=\"https://github.com/Zone51alex/DAWeaponsPack/releases/download/0.4.1/DA.Junker.s.Guild.Mod.0.4.1S.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Zone51alex/DAWeaponsPack/releases/download/0.4.1/DA.Junker.s.Guild.Mod.0.4.1S.zip</a></p>",
+  "aiDescription": "Provides a simple ship and weapon pack for the Diable Avionics faction. It includes new hulls like Fractus, Gust, and Rime, as well as new energy weapons such as the Dirune Burn EMP array. The pack also features balance adjustments to existing weapons like the Artassault Buckshot Blunderbuss.",
+  "saveCompatibilityText": "mid-save compatible.",
+  "canAdd": "yes",
   "rawCategories": [
     "Weapon/Fighter Pack",
     "Faction Mods"
@@ -49,12 +66,26 @@
       "directUrl": "https://github.com/Zone51alex/DAWeaponsPack/releases/download/0.4.1/DA.Junker.s.Guild.Mod.0.4.1.zip",
       "fileName": "DA.Junker.s.Guild.Mod.0.4.1.zip",
       "kind": "direct",
-      "label": "",
+      "label": "Download",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/Zone51alex/DAWeaponsPack/releases/download/0.4.1/DA.Junker.s.Guild.Mod.0.4.1S.zip",
+      "directUrl": "https://github.com/Zone51alex/DAWeaponsPack/releases/download/0.4.1/DA.Junker.s.Guild.Mod.0.4.1S.zip",
+      "fileName": "DA.Junker.s.Guild.Mod.0.4.1S.zip",
+      "kind": "direct",
+      "label": "Download- Sealed Edition",
       "host": "GitHub",
       "needsAnotherStep": false
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "0.3.0": "adds 6 hulls Fractus, gust, Pocket Gust, Rime (M), Vapor and Versant, added the Dirune \"Burn\" EMP array New energy weapon akin to the Ion Beam,\nalso revamps the Artassault \"Buckshot\" Blunderbuss to a more fixed pattern intead of random spread and Stats tweaks.",
+    "0.2.3": "the Artassault \"Buckshot\" Blunderbuss got a Balance Pass,\nammo/sec got changed from 1.33 to 5.3333..., Reload size from 4 to 16, ammo from 20 to 32, damage per shot is 50x8.\nNew Descriptions, New Weapon Sprite for the Buckshot.",
+    "0.2.2": "The \"Buckshot\" got some Big Stats changes, ammo/sec from 1.33 to 5.3, Reload size from 4 to 16, flux from 50 to to 80, ammo from 20 to 16."
+  },
+  "sourceCodeUrl": "https://github.com/Zone51alex/DAWeaponsPack",
   "supportLinks": [],
   "discordUrl": "https://discord.com/channels/187635036525166592/1212728628752941076/1212728628752941076",
   "releases": [],

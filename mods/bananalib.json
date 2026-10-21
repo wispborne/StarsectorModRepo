@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T18:10:07.267988Z",
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
   "listing": {
     "id": "bananalib",
     "name": "bananaLib",
@@ -15,10 +15,10 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "20260110.1",
-    "imageUrl": "https://i.imgur.com/2cXeXuN.jpeg",
+    "imageUrl": "https://fractalsoftworks.com/forum/index.php?action=dlattach;attach=4057;type=avatar",
     "summary": "this is the shared assets repository for my other mods, to minimize copypasting it is not limited to strictly code, but also includes some hullmods, abilities, graphic assets and utility frameworks i made use of. will be sporadically updated as needed.",
     "summaryIsGenerated": false,
-    "aiSummary": "Provides shared assets, code libraries, and utility frameworks for other mods.",
+    "aiSummary": "Provides a shared library of code, hullmods, abilities, and utility frameworks for other mods.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://download1326.mediafire.com/avk8644w6qrgVF0rF0VbnkPoorUuRkRvd2MUHTSRuvX31dA-AFtIXK8CDhT4P2elabQx0vGaRfuCQG2XdbTen4euPnhVdWHVaec1T8quALiM__FlUv6Vfd1P1FfcK0pDuIry3wEyKf8vbhXJAA9r5M72C_aqyd7nL2hxlkRDug/crexcs1ks0pvfoq/bananaLib-20260110.1.zip",
@@ -42,7 +42,7 @@
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\">bananaLib</span><br><img src=\"https://i.imgur.com/2cXeXuN.jpeg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br>download link: <a href=\"https://www.mediafire.com/file/crexcs1ks0pvfoq/bananaLib-20260110.1.zip/file\" rel=\"nofollow noopener\" target=\"_blank\">https://www.mediafire.com/file/crexcs1ks0pvfoq/bananaLib-20260110.1.zip/file</a><br><br>requires LazyLib: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=5444.0</a></div><br><span class=\"size-bigger\">disclaimer</span><br><details class=\"spoiler\"><summary>Spoiler</summary>this is a mod in progress. it is not as clean or stable as i would wish it to be.<br>there may be bugs, it may delete your save, it may call KGB to invade your home and steal your cookies. proceed with caution.<br><br>there may be sweeping API changes, as necessary. i will attempt to mitigate those to a minimum, to the best of my abilities.<br>there is not, and will never be a github/gitlab repository. best i can offer is a pastebin page for some specific scripts by request.<br>all source code is included in the mod archive. additionally, as it is written in plain java 7, it can be easily decompiled. <em>ALWAYS VERIFY</em><br><br>in the event of any questions/misunderstandings please do not hesitate to contact me here via DM, or on discord.</details><br><br><span class=\"size-bigger\">what and why</span><br><details class=\"spoiler\"><summary>Spoiler</summary>this is the shared assets repository for my other mods, to minimize copypasting<br>it is not limited to strictly code, but also includes some hullmods, abilities, graphic assets and utility frameworks i made use of.<br>will be sporadically updated as needed.<br>contains most of bananaFactory code, use it as dependency for compatibility.</details><br><br><span class=\"size-bigger\">key features</span><br><details class=\"spoiler\"><summary>Spoiler</summary>bananaFactory recipe plugins for some common scenarios<br>sector memory handler to control what recipes are known, can be used for other stuff<br>campaign target selection reticle - used for station construction recipe, may have more uses<br>combatInjector - for making things happen in combat based on specified conditions, beforehand combat actually starts, i.e. \"after next 3 player battles, randomly spawn 900 reaper kites on all sides.\"<br>a bunch of helpful ui functions for displaying various info in tooltips.</details><br><br><span class=\"size-bigger\">changelog</span><br><details class=\"spoiler\"><summary>Spoiler</summary><span class=\"size-small\"><br>20260110.1<br>- fix modularSkill crash<br>20260110<br>- internal rework of data structure to support custom product selectors and tech trees<br>- fixed numToProduce not being factored for price calculation<br>- various fixes and improvements that i forgot to document<br>20250420<br>- added some functions required by other mods<br>20250415<br>- preliminary update for 0.98<br>- some internal rework<br>20250302<br>- fixed price calculation to account for things that are not commodities. wtf was that?<br>- fixed canAfford function AGAIN<br>- various fixes to address random null crashes<br>- added data\\bananaLib_stations\\station_data.json. allows to easily add custom addons to customEntity stations in campaign layer.<br>- reworked recipe loading process, now recipe json is loaded entirely as-is and stored in the recipe plugin. as a result all values can be accessed, not just ones that were specifically parsed on load.<br>20250217<br>- adjusted product getter in the default recipes, now can specify whether it will search for spec id or tag, keys starting with $ will be treated as tags<br>20250215<br>- fixed bug that caused crash when checking amount of items in null cargo/fleet, potentially making save unloadable<br>20250213<br>- added bananaLib.special.shipInBox<br>- added boolean bananaLib.recipes.defaultRecipe.canProgress()<br>- adjustments to build time and price calculation, now possible to change build time while item is being produced<br>202502012<br>- added bananaLib.weapons.baseVectorThrusterWeapon. <br>- internal changes required for other mods<br>20250208<br>- initial release<br></span></details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Serves as a shared assets repository to minimize code duplication across related mods. Includes hullmods, abilities, graphic assets, and utility frameworks such as recipe plugins, a sector memory handler, and combat injection tools. It contains most of the code for bananaFactory and is intended to be used as a dependency for compatibility.",
+  "aiDescription": "Acts as a central repository for shared assets to minimize code duplication across related mods. Includes recipe plugins, a sector memory handler, combat injection tools, and UI helper functions. Designed to be used as a dependency for compatibility with bananaFactory.",
   "rawCategories": [
     "Libraries"
   ],
@@ -57,7 +57,7 @@
       "directUrl": "https://download1326.mediafire.com/avk8644w6qrgVF0rF0VbnkPoorUuRkRvd2MUHTSRuvX31dA-AFtIXK8CDhT4P2elabQx0vGaRfuCQG2XdbTen4euPnhVdWHVaec1T8quALiM__FlUv6Vfd1P1FfcK0pDuIry3wEyKf8vbhXJAA9r5M72C_aqyd7nL2hxlkRDug/crexcs1ks0pvfoq/bananaLib-20260110.1.zip",
       "fileName": "bananaLib-20260110.1.zip",
       "kind": "direct",
-      "label": "download link",
+      "label": "https://www.mediafire.com/file/crexcs1ks0pvfoq/bananaLib-20260110.1.zip/file",
       "host": "MediaFire",
       "needsAnotherStep": false
     }

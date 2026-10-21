@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T18:10:07.267988Z",
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
   "listing": {
     "id": "starsector-audio-fixer",
     "name": "Starsector Audio Fixer",
@@ -17,6 +17,7 @@
     "gameVersion": "0.98a",
     "summary": "A small patch that addresses an issue that has existed in the game for ages.",
     "summaryIsGenerated": false,
+    "aiSummary": "Fixes audio loss when the system's default audio device changes during gameplay.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/reaperyeah420-cpu/starsector-audio-fix",
@@ -25,14 +26,17 @@
     },
     "downloadCount": 1,
     "discordUrl": "https://discord.com/channels/187635036525166592/1518090250218373210/1518090250218373210",
-    "sourceIsPublic": false,
+    "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2026-06-21",
     "needs": []
   },
-  "descriptionIsGenerated": false,
+  "description": "Addresses a long-standing issue where Starsector loses all sound if the active audio output switches, such as when Bluetooth headphones disconnect. It upgrades the game's OpenAL implementation and uses a proxy to handle Windows audio device changes dynamically, allowing seamless switching without restarting the game.",
+  "descriptionHtml": "<p>Addresses a long-standing issue where Starsector loses all sound if the active audio output switches, such as when Bluetooth headphones disconnect. It upgrades the game's OpenAL implementation and uses a proxy to handle Windows audio device changes dynamically, allowing seamless switching without restarting the game.</p>",
+  "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>A small patch that addresses an issue that has existed in the game for ages.</p><p>Usually when you're playing Starsector and for whatever reason your audio device changes (Blutooth headphones disconnect, wired earbuds unplug, you swap from integrated speakers to your brand new JBL, etc.) the game will lose all audio until you restart, this happens because the game does not handle audio device swapping, when you start the game it scans for the default audio device and sticks with it, if that ever changes the game keeps transmitting audio to a stale device that no longer exists.</p><p>This patch fixes that issue by upgrading the OpenAL in the game and using a proxy to properly communicate with Windows and handle any sound device changes so your Bluetooth headphones can lose battery and you wont have to wait 45 minutes for your toaster to load your 500 mods again.</p><p>Works with a regular starsector installation and Java 27 upgrades (Mikohime)</p><p>Download link: <a href=\"https://github.com/reaperyeah420-cpu/starsector-audio-fix\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/reaperyeah420-cpu/starsector-audio-fix</a><br>(The above includes a source code if anyone is skeptical of installing .dlls from strangers online)</p>",
+  "aiDescription": "Addresses a long-standing issue where Starsector loses all sound if the active audio output switches, such as when Bluetooth headphones disconnect. It upgrades the game's OpenAL implementation and uses a proxy to handle Windows audio device changes dynamically, allowing seamless switching without restarting the game.",
   "rawCategories": [
     "Audio/Visual",
     "Other/Misc."
@@ -42,12 +46,13 @@
     {
       "url": "https://github.com/reaperyeah420-cpu/starsector-audio-fix",
       "kind": "direct",
-      "label": "",
-      "host": "GitHub",
+      "label": "Download link",
+      "host": "github.com",
       "needsAnotherStep": true
     }
   ],
   "changelog": {},
+  "sourceCodeUrl": "https://github.com/reaperyeah420-cpu/starsector-audio-fix",
   "supportLinks": [],
   "discordUrl": "https://discord.com/channels/187635036525166592/1518090250218373210/1518090250218373210",
   "releases": [],

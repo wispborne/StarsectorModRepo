@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T18:10:07.267988Z",
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
   "listing": {
     "id": "vram-optimizer",
     "name": "Vram Optimizer",
@@ -46,7 +46,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>A memory optimization mod that converts vanilla and modded textures into the DirectDraw Surface (DDS) format with BC7 compression.</p><p>These native GPU-supported textures reduces VRAM usage by <strong>over 75%</strong> with <strong>zero</strong> quality loss.<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35788.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35788.0</a></p>",
-  "aiDescription": "Converts vanilla and modded textures into the DirectDraw Surface (DDS) format with BC7 compression. These native GPU-supported textures reduce VRAM usage by over 75% with practically zero quality loss. Users must generate the DDS textures themselves, which can increase startup time unless Fast Rendering is used.",
+  "aiDescription": "Converts vanilla and modded textures into the DirectDraw Surface (DDS) format using BC7 compression. This reduces VRAM usage by over 75% with practically zero quality loss. Users must generate the DDS textures themselves, which can increase startup time unless Fast Rendering is used.",
   "rawCategories": [
     "Other/Misc.",
     "Utility mods"
@@ -94,7 +94,11 @@
       "needsAnotherStep": true
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "1.0.44": "do some changes to generation and loading + add disable mipmap\nthis update also should fix AMD crashes, if using FR 0.8.9 or above\nwill probly need texture regeneration idk",
+    "1.0.42": "fixed the skewed textures and some crashes on some gpus (probably)\nwill need texture regeneration",
+    "1.0.38": "fixed crunchy textures and added even better integration with FR (thanks genir ❤️)\n you will need to update your fr to its latest version\n you will need to recreate your textures if updating for the fix to take effect, otherwise your textures might break\nyou can easily do this by using the Purge texture cache option in the app, and then regenerating your textures"
+  },
   "sourceCodeUrl": "https://github.com/DeCEll-1/VramOptimizer",
   "supportLinks": [
     {
@@ -105,7 +109,7 @@
     {
       "url": "https://github.com/sponsors/DeCEll-1",
       "type": "githubsponsors",
-      "label": "GitHub Sponsors"
+      "label": "Github Sponsors"
     }
   ],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35788.0",

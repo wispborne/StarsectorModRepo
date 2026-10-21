@@ -67,6 +67,19 @@ export async function render(root, parts) {
     return;
   }
 
+  // An old address whose mod was joined into another: on to that mod's page.
+  if (detail.movedTo) {
+    address().redirect(modHref(detail.movedTo));
+    return;
+  }
+
+  // An address that turned out to be a post holding several mods: it keeps
+  // its page, which now lists the mods instead of standing for one of them.
+  if (detail.collection) {
+    await collectionPage(root, detail.collection);
+    return;
+  }
+
   const mod = detail.listing || {};
   const shownName = modName(mod);
   document.title = `${shownName} | Starmodder`;
@@ -671,8 +684,14 @@ function downloads(detail) {
 }
 
 function downloadRow(download) {
+  // The file's name where we know it, then the link's own words from the post
+  // (or the name the AI gave it). The words after that are ours, and
+  // "Download" is only used where the link gets you the file.
   const label = download.kind === 'trios' ? 'Install with TriOS'
-    : download.fileName || (download.kind === 'mirror' ? 'Mirror' : 'Download');
+    : download.fileName || download.label
+      || (download.needsAnotherStep ? 'Download page'
+        : download.kind === 'mirror' ? 'Mirror' : 'Download');
+  const where = download.url ? `${download.url}` : "...something";
   return el('div', { class: 'download' }, [
     el('a', {
       class: 'download-name',
@@ -681,7 +700,7 @@ function downloadRow(download) {
       target: '_blank',
       text: label,
       title: download.needsAnotherStep
-        ? "Opens the download page rather than the file."
+        ? `Opens ${where}`
         : (download.kind === 'mirror' ? 'A mirror of the main download.' : null),
     }),
     download.host ? el('span', { class: 'badge', text: download.host }) : null,
@@ -1624,4 +1643,43 @@ function newestFirst(mods) {
     if (!right) return -1;
     return right.localeCompare(left);
   });
+}
+
+/// The page at a Collection's old address: the post's name, where it is, and a
+/// card for each mod it holds. Links people shared to this address still lead
+/// somewhere useful, and no mod has to pretend to be the whole post.
+async function collectionPage(root, collection) {
+  const name = collection.name || 'A collection of mods';
+  document.title = `${name} | Starmodder`;
+  const mods = collection.mods || [];
+  let currentVersion = null;
+  try {
+    currentVersion = currentGameVersion((await modList()).mods || []);
+  } catch {
+    currentVersion = null;
+  }
+  const { modGrid } = await import('./browse.js');
+
+  clear(root);
+  root.append(el('a', { class: 'back-link', href: '#/browse', text: '‹ Browse mods' }));
+  const page = el('div', { class: 'stack' });
+  // The heading and the two lines under it are one group; the cards are the
+  // next section.
+  const intro = el('div', { class: 'stack' });
+  intro.append(el('h1', { text: name }));
+  intro.append(el('p', {
+    text: mods.length === 1
+      ? 'This post holds one mod, which has a page of its own.'
+      : `This post holds ${mods.length} mods. Each has a page of its own.`,
+  }));
+  const where = collection.forumUrl || collection.discordUrl;
+  if (where) {
+    intro.append(el('p', {}, [el('a', {
+      href: where, target: '_blank', rel: 'noopener',
+      text: collection.forumUrl ? 'The forum thread →' : 'The Discord post →',
+    })]));
+  }
+  page.append(intro);
+  if (mods.length) page.append(modGrid(mods, currentVersion));
+  root.append(page);
 }

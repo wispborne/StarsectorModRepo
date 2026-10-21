@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
+  "listing": {
+    "id": "resource-production-mod-example-hydroponic-ship-and-mining",
+    "name": "Resource Production Mod example (Hydroponic Ship and Mining)",
+    "displayName": "Resource Production Mod example",
+    "authors": [
+      "Verrius"
+    ],
+    "otherAuthorNames": {},
+    "categories": [],
+    "sources": [
+      "forum"
+    ],
+    "imageUrl": "https://fractalsoftworks.com/forum/index.php?action=dlattach;attach=2266;type=avatar",
+    "summary": "For the Farmstead to produce supplies (I don't think I switched it to \"food\", it's still supplies) it must be combat ready. It will produce 3 each day, however this amount is modified by your crew level.",
+    "summaryIsGenerated": false,
+    "aiSummary": "Adds ships that produce supplies and mine resources from asteroids.",
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "http://www.mediafire.com/download.php?rq21cpn1538qhgw",
+      "kind": "direct",
+      "needsAnotherStep": true
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=3888.0",
+    "sourceIsPublic": false,
+    "isWorkInProgress": false,
+    "addedOn": "2012-08-14",
+    "threadLastPostOn": "2012-08-14",
+    "needs": [
+      {
+        "name": "Alex's Mining Pods"
+      }
+    ]
+  },
+  "description": "Download Link (Current Version)\n\nHey there guys, as I recently mentioned in my Fleet Control Mod Threat, I've been secretly working on ships that can make resources and the ability to mine. This mod probably won't be actively updated for content, I just want it to be out there so people can see and use the tech. I've TRIED to document it as best I could, but when it comes to documentation, that's what kept me from acing Computer Science, so you'll have to forgive me. Feel free to ask any questions though.\n\nI will most likely integrate a system like this to the Fleet Control Mod, but your more than welcome to use this code. Heck, that's why it's here!\n\nHow it works:\nFor the Farmstead to produce supplies (I don't think I switched it to \"food\", it's still supplies) it must be combat ready. It will produce 3 each day, however this amount is modified by your crew level. Green crew produces 25% less, Regular produces the normal amount, Veteran is 25% more, and Elite is 50% more.\n\nI've used Alex's Mining Pods to do the mining. Pick up a wing or two of em from the Hegemony, the fly to an asteroid. Each day a check is made to see if you (actually if every fleet in the system) are sitting near an asteroid. If you are, it calculates your mining power based on your ships. How much mining power you have depends on your combat ready mining pods. The more you have, the more resources you can drain from the asteroid. At the moment, the asteroids never actually die or anything, don't know if I can do that yet.\n\nThere are three types of resources you can drain from asteroids. Ore, Metal, and Precious Ore. Precious Ore is rare, but worth a lot to sell. It's worth noting that, as you'd expect, Ore is a fair bit heavier than regular supplies and such, so pack yourself some good cargo space.\n\nIf you actually look at the code, it's not too hard to add your own mining ships. There is a hashmap at the bottom of the SupplyEvent and the MiningEvent scripts. Simply add a value to whichever map you like with your ships ID, and the production amount/mining power, and bam it'll get to work.\n\nVersion 0.1: (Not publicly released) Added the Farmstead, a modified tanker that actually looks sorta pretty that produces supplies.\nVersion 0.2: Gave Mining Pods the ability to mine.",
+  "descriptionHtml": "<span class=\"size-big\"><a href=\"http://www.mediafire.com/download.php?rq21cpn1538qhgw\" rel=\"nofollow noopener\" target=\"_blank\">Download Link (Current Version)</a></span><br><br>Hey there guys, as I recently mentioned in my Fleet Control Mod Threat, I've been secretly working on ships that can make resources and the ability to mine. This mod probably won't be actively updated for content, I just want it to be out there so people can see and use the tech. I've TRIED to document it as best I could, but when it comes to documentation, that's what kept me from acing Computer Science, so you'll have to forgive me. Feel free to ask any questions though.<br><br>I will most likely integrate a system like this to the Fleet Control Mod, but your more than welcome to use this code. Heck, that's why it's here!<br><br><strong>How it works: </strong><br>For the Farmstead to produce supplies (I don't think I switched it to \"food\", it's still supplies) it must be combat ready. It will produce 3 each day, however this amount is modified by your crew level. Green crew produces 25% less, Regular produces the normal amount, Veteran is 25% more, and Elite is 50% more.<br><br>I've used Alex's Mining Pods to do the mining. Pick up a wing or two of em from the Hegemony, the fly to an asteroid. Each day a check is made to see if you (actually if every fleet in the system) are sitting near an asteroid. If you are, it calculates your mining power based on your ships. How much mining power you have depends on your combat ready mining pods. The more you have, the more resources you can drain from the asteroid. At the moment, the asteroids never actually die or anything, don't know if I can do that yet.<br><br>There are three types of resources you can drain from asteroids. Ore, Metal, and Precious Ore. Precious Ore is rare, but worth a lot to sell. It's worth noting that, as you'd expect, Ore is a fair bit heavier than regular supplies and such, so pack yourself some good cargo space.<br><br>If you actually look at the code, it's not too hard to add your own mining ships. There is a hashmap at the bottom of the SupplyEvent and the MiningEvent scripts. Simply add a value to whichever map you like with your ships ID, and the production amount/mining power, and bam it'll get to work.<br><br>Version 0.1: (Not publicly released) Added the Farmstead, a modified tanker that actually looks sorta pretty that produces supplies.<br>Version 0.2: Gave Mining Pods the ability to mine.",
+  "descriptionIsGenerated": false,
+  "descriptionIsForumPost": true,
+  "aiDescription": "Introduces a modified tanker called the Farmstead that generates supplies daily based on crew quality. It also enables mining pods to extract ore, metal, and precious ore from asteroids when parked nearby. The system uses Alex's Mining Pods for the mining functionality.",
+  "rawCategories": [],
+  "gallery": [],
+  "downloads": [
+    {
+      "url": "http://www.mediafire.com/download.php?rq21cpn1538qhgw",
+      "directUrl": "http://www.mediafire.com/download.php?rq21cpn1538qhgw",
+      "kind": "direct",
+      "label": "Download Link (Current Version)",
+      "host": "MediaFire",
+      "needsAnotherStep": true
+    }
+  ],
+  "changelog": {
+    "0.2": "Gave Mining Pods the ability to mine.",
+    "0.1": "(Not publicly released) Added the Farmstead, a modified tanker that actually looks sorta pretty that produces supplies."
+  },
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=3888.0",
+  "releases": [],
+  "threadLastPostOn": "2012-08-14",
+  "sameNameMods": [],
+  "addons": []
+}

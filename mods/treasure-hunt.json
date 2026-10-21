@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T18:10:07.267988Z",
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
   "listing": {
     "id": "treasure-hunt",
     "name": "Treasure Hunt",
@@ -20,7 +20,7 @@
     "imageUrl": "https://i.imgur.com/pPwyYIU.png",
     "summary": "The goal of this mod is to make the hunt for rare blueprints and colony items more consistent and less rage-inducing. It adds a new event intel which represents your ongoing efforts to find rare blueprints and colony items.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a new event intel to make the hunt for rare blueprints and colony items more consistent and less frustrating.",
+    "aiSummary": "Adds an event intel system for finding rare blueprints and colony items.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -43,7 +43,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Ever get annoyed at not finding that one blueprint or colony item? This mod adds a new event intel and set of mechanics for progressing it that provides a more consistent set of rewards than the dice roll of station and ruins salvaging.</p><p>Github: <a href=\"https://github.com/spinloki/TreasureHunt\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/spinloki/TreasureHunt</a><br>Forum: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=33016.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=33016.0</a><br>Direct Download: <a href=\"https://github.com/spinloki/TreasureHunt/releases/download/v2.3.0/TreasureHunt.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/spinloki/TreasureHunt/releases/download/v2.3.0/TreasureHunt.zip</a></p>",
-  "aiDescription": "Adds a new event intel that represents ongoing efforts to find rare blueprints and colony items. It progresses naturally with normal gameplay but can also be engaged with actively for faster progress. Rewards are more consistent than regular salvaging, and players get a fair degree of control over what they find. Progress can be gained by exploring derelict stations and ships, exploring planetary ruins and colonizing them, fighting or paying scavengers, and raiding markets.",
+  "aiDescription": "Introduces a new event intel that tracks efforts to locate rare blueprints and colony items. Progress occurs naturally through gameplay or can be accelerated by exploring derelicts, colonizing ruins, fighting scavengers, or raiding markets. Rewards are more consistent than standard salvaging, with configurable settings for progress methods and loot.",
   "saveCompatibilityText": "It is safe to add this mod to your existing save.",
   "updateCompatibilityText": "It usually is not safe to upgrade the mod version mid-save.",
   "removalCompatibilityText": "It is not safe to remove this mod from your save.",
@@ -82,7 +82,10 @@
       "needsAnotherStep": false
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "0.2.4": "Fixed:\n Incorrect price displayed when buying treasure hunt info from scavengers\n Blueprint reward packages showing up as loot (hopefully, let me know if you still see this happening)\n Weird possible edge case where progress isn't awarded properly if the player is fighting a mix of scavengers and non-scavengers in a single battle\n Progress is now awarded for most salvageable entities, like supply/equipment/weapon caches.\n Changed:\n Added progress reward for debris field and raiding any market, including pirate/pather stations.\n Moved a lot of customization for reward values from treasurehunt_settings.json to settings.json for the mod. You can now add entries for any salvageable thing in the game, as long as you know the custom description ID. If you don't want to be rewarded for certain actions, you can also safely remove their entry from settings.json.",
+    "0.2.3": "Removed mod enable setting in treasurehunt_settings.json, which didn't do anything\n Fixed a bug that awarded all Treasure Hunt actions the amount for salvaging a derelict station"
+  },
   "sourceCodeUrl": "https://github.com/spinloki/TreasureHunt/",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=33016.0",

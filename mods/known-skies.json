@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T18:10:07.267988Z",
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
   "listing": {
     "id": "known-skies",
     "name": "Known Skies 1.1.0",
@@ -15,9 +15,11 @@
       "discord"
     ],
     "gameVersion": "0.97a",
+    "modVersion": "1.1.0",
     "imageUrl": "https://cdn.discordapp.com/attachments/1224317110944268368/1224317111158050967/itsasurprise.png?ex=6ad89faa&is=6ad74e2a&hm=c4779eecf7968b51fb4f830d313c99ca07f1f81c4e75a1da34369ca13f296774&",
     "summary": "A mod that adds a \"special\" new unique star in the sector which gives buffs to all planets in its system. It will randomly replace a procgen star like the unique planets from Unknown Skies. Also adds a command for ConsoleCommands which allows you to convert any star into that special star.",
     "summaryIsGenerated": false,
+    "aiSummary": "Adds a special unique star that buffs all planets in its system and allows converting existing stars via console commands.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/JamesTripleQ/Known-Skies/releases/latest",
@@ -26,14 +28,21 @@
     },
     "downloadCount": 1,
     "discordUrl": "https://discord.com/channels/187635036525166592/1224317110944268368/1224317110944268368",
-    "sourceIsPublic": false,
+    "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2024-04-01",
     "needs": []
   },
-  "descriptionIsGenerated": false,
+  "description": "Adds a special unique star that randomly replaces a procedural generation star, buffing all planets in its system. Includes a ConsoleCommands command to convert any star into this special type, with an option to force the swap regardless of star type. Music playback is intentionally paused for long periods in the special star system but resumes when the game is paused.",
+  "descriptionHtml": "<p>Adds a special unique star that randomly replaces a procedural generation star, buffing all planets in its system. Includes a ConsoleCommands command to convert any star into this special type, with an option to force the swap regardless of star type. Music playback is intentionally paused for long periods in the special star system but resumes when the game is paused.</p>",
+  "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>A mod that adds a \"special\" new unique star in the sector which gives buffs to all planets in its system. It will randomly replace a procgen star like the unique planets from Unknown Skies. Also adds a command for ConsoleCommands which allows you to convert any star into that special star.</p><p>In the special star system music may not play for <strong>LONG</strong> periods of time, <strong>THIS IS INTENTIONAL</strong>. When the game is paused music will resume however (this is also intentional).</p><p>Save compatible but the star will require a new save to spawn (you can just use the console),<br><a href=\"https://github.com/JamesTripleQ/Known-Skies/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/JamesTripleQ/Known-Skies/releases/latest</a></p><p><s>This was hell</s></p>",
+  "aiDescription": "Adds a special unique star that randomly replaces a procedural generation star, buffing all planets in its system. Includes a ConsoleCommands command to convert any star into this special type, with an option to force the swap regardless of star type. Music playback is intentionally paused for long periods in the special star system but resumes when the game is paused.",
+  "saveCompatibilityText": "Save compatible but the star will require a new save to spawn (you can just use the console),",
+  "updateCompatibilityText": "Should be save compatible but PLEASE BACK UP YOUR SAVES just in case.",
+  "canAdd": "depends",
+  "canUpdate": "depends",
   "rawCategories": [
     "Exploration"
   ],
@@ -47,11 +56,14 @@
       "url": "https://github.com/JamesTripleQ/Known-Skies/releases/latest",
       "kind": "direct",
       "label": "",
-      "host": "GitHub",
+      "host": "github.com",
       "needsAnotherStep": true
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "1.1.0": "- Added 3 new songs.\n- Slightly increased time between each song (unfortunate consequence of the above change).\n- Added the ability to force swap a star anyway regardless of type by typing \"force\" after the convert command. Should be save compatible but PLEASE BACK UP YOUR SAVES just in case."
+  },
+  "sourceCodeUrl": "https://github.com/JamesTripleQ/Known-Skies",
   "supportLinks": [],
   "discordUrl": "https://discord.com/channels/187635036525166592/1224317110944268368/1224317110944268368",
   "releases": [],

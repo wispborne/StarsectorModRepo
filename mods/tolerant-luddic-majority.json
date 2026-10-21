@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T18:10:07.267988Z",
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
   "listing": {
     "id": "tolerant-luddic-majority",
     "name": "Tolerant Luddic Majority",
@@ -15,9 +15,11 @@
       "discord"
     ],
     "gameVersion": "0.98a",
+    "modVersion": "3.1.0",
     "imageUrl": "https://cdn.discordapp.com/attachments/1426411592559628328/1426411593008283759/hesperus_mine.png?ex=6ad8da91&is=6ad78911&hm=c7bb99b4f8caf93736ad83782f3ba8ac1974de5543209462f12895b8f1d8261e&",
     "summary": "Ever feel like your Luddic faithful are just too picky? Worlds that are harsh, polluted, or missing a few farms shouldn’t ruin a colony’s harmony?",
     "summaryIsGenerated": false,
+    "aiSummary": "Lets Luddic populations tolerate harsh worlds, pollution, and industrial hubs they would normally reject.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/exon-farer/Tolerant.LuddicMajority/releases/latest/download/Tolerant.LuddicMajority.zip",
@@ -26,14 +28,22 @@
     },
     "downloadCount": 1,
     "discordUrl": "https://discord.com/channels/187635036525166592/1426411592559628328/1426411592559628328",
-    "sourceIsPublic": false,
+    "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2025-10-11",
-    "needs": []
+    "needs": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ]
   },
-  "descriptionIsGenerated": false,
+  "description": "Adjusts the conditions required for a colony to have a Luddic majority. Allows players to configure which negative factors are ignored, such as heavy industry or uninhabitable terrain. Integrates with LunaLib to provide configuration options for these tolerances.",
+  "descriptionHtml": "<p>Adjusts the conditions required for a colony to have a Luddic majority. Allows players to configure which negative factors are ignored, such as heavy industry or uninhabitable terrain. Integrates with LunaLib to provide configuration options for these tolerances.</p>",
+  "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>Ever feel like your Luddic faithful are just too picky? Worlds that are harsh, polluted, or missing a few farms shouldn’t ruin a colony’s harmony?</p><p>This mod lets your Luddic populations tolerate things they normally wouldn’t:</p><p>Harsh or uninhabitable worlds? They’ll make do.</p><p>Dardan Kato’s policies trying to suppress them? Not a problem anymore.</p><p>Pick what the faithful will tolerate. Keep it subtle, or disable the Heavy Industry factor entirely if you want them to ignore all industrial hubs.</p><p>Thanks to LunaLib integration, you can tweak which negating factors are enforced - or turn them all off if you want the faithful to just… get along with everything.</p><p>Your colonies, your rules, your Luddic faithful thriving despite all the things that normally wouldn’t fly.</p><p>DOWNLOAD: <a href=\"https://github.com/exon-farer/Tolerant.LuddicMajority/releases/latest/download/Tolerant.LuddicMajority.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/exon-farer/Tolerant.LuddicMajority/releases/latest/download/Tolerant.LuddicMajority.zip</a></p>",
+  "aiDescription": "Adjusts the conditions required for a colony to have a Luddic majority. Allows players to configure which negative factors are ignored, such as heavy industry or uninhabitable terrain. Integrates with LunaLib to provide configuration options for these tolerances.",
   "rawCategories": [
     "Colonies",
     "Utility mods"
@@ -58,12 +68,16 @@
       "directUrl": "https://github.com/exon-farer/Tolerant.LuddicMajority/releases/latest/download/Tolerant.LuddicMajority.zip",
       "fileName": "Tolerant.LuddicMajority.zip",
       "kind": "direct",
-      "label": "",
+      "label": "DOWNLOAD",
       "host": "GitHub",
       "needsAnotherStep": false
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "3.0.0": "Look at that - actually using LunaLib. It’s like I’m a real modder now or something.\nAlso, this update is probably save-breaking. Not exactly sure.",
+    "2.1.0": "I have outright removed the old colony size listener for the Luddic Majority Condition in vanilla. I've tested it a little bit, and it seems to work. Although I have no idea about subsequent consequences.\n No idea if it's save-friendly."
+  },
+  "sourceCodeUrl": "https://github.com/exon-farer/Tolerant.LuddicMajority",
   "supportLinks": [],
   "discordUrl": "https://discord.com/channels/187635036525166592/1426411592559628328/1426411592559628328",
   "releases": [],

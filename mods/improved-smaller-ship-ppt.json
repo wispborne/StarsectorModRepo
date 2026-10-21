@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
+  "listing": {
+    "id": "improved-smaller-ship-ppt",
+    "name": "Improved Smaller Ship PPT",
+    "authors": [
+      "tom"
+    ],
+    "otherAuthorNames": {},
+    "categories": [],
+    "sources": [
+      "forum"
+    ],
+    "imageUrl": "https://fractalsoftworks.com/forum/index.php?action=dlattach;attach=14723;type=avatar",
+    "summary": "I personally don't understand why smaller ships shouldn't last as long in battle as bigger ships, and I dislike having wolfpack strategies fail against endgame enemies because my ships ran out of PPT even with Hardened Subsystems, Combat Endurance, not using Safety Overrides, etc.",
+    "summaryIsGenerated": false,
+    "aiSummary": "Increases Peak Performance Time for frigates, destroyers, and cruisers to help them last longer in battle.",
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://mega.nz/file/Y20lGK5a#h7JaaNwYToh289rfwx3w2BE1xALls6saE0UBlzWZa0w",
+      "kind": "direct",
+      "needsAnotherStep": true
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34317.0",
+    "sourceIsPublic": false,
+    "isWorkInProgress": false,
+    "addedOn": "2025-10-21",
+    "threadLastPostOn": "2025-10-23",
+    "needs": []
+  },
+  "description": "I personally don't understand why smaller ships shouldn't last as long in battle as bigger ships, and I dislike having wolfpack strategies fail against endgame enemies because my ships ran out of PPT even with Hardened Subsystems, Combat Endurance, not using Safety Overrides, etc. I made this small script that increases PPT for all ships programmatically:\nFrigates: +20% (rounded to nearest multiple of 10) but capped at 400 (because of Monitor).\nDestroyers: +10% (rounded to nearest multiple of 10).\nCruisers: +5% (rounded to nearest multiple of 10).\nCapitals: No change.\n\nHere are the script contents before being compiled (I detest java):\n\nSpoiler\npackage data.scripts.plugins;\n\nimport com.fs.starfarer.api.BaseModPlugin;\nimport com.fs.starfarer.api.Global;\nimport com.fs.starfarer.api.combat.ShipHullSpecAPI;\nimport com.fs.starfarer.api.combat.ShipAPI.HullSize;\n\npublic class ISSPPT_ModPlugin extends BaseModPlugin {\n\n@Override\npublic void onApplicationLoad() throws Exception {\n// Iterate through all the ship hull specifications loaded by the game.\nfor (ShipHullSpecAPI hullSpec : Global.getSettings().getAllShipHullSpecs()) {\n\n// Get the ship's original Peak Performance Time.\nfloat originalPPT = hullSpec.getNoCRLossSeconds();\nfloat newPPT = originalPPT;\n\n// Check the hull size and apply changes accordingly.\nif (hullSpec.getHullSize() == HullSize.FRIGATE) {\n// REFINED LOGIC: Only modify frigates if their original PPT is less than the 400s cap.\nif (originalPPT < 400f) {\n// Frigates: +20%, rounded to nearest 10, capped at 400.\nnewPPT = originalPPT * 1.2f;\nnewPPT = Math.round(newPPT / 10f) * 10;\nnewPPT = Math.min(newPPT, 400f); // Cap the result.\n}\n\n} else if (hullSpec.getHullSize() == HullSize.DESTROYER) {\n// Destroyers: +10%, rounded to nearest 10.\nnewPPT = originalPPT * 1.1f;\nnewPPT = Math.round(newPPT / 10f) * 10;\n\n} else if (hullSpec.getHullSize() == HullSize.CRUISER) {\n// Cruisers: +5%, rounded to nearest 10.\nnewPPT = originalPPT * 1.05f;\nnewPPT = Math.round(newPPT / 10f) * 10;\n}\n\n// If the PPT has changed, apply the new value.\nif (newPPT != originalPPT) {\nhullSpec.setNoCRLossSeconds(newPPT);\n}\n}\n}\n}\n\nI have a compiled version that I can potentially upload, but I'm feeling too lazy to create another repository account, and I am not going to put this in the account I use for work stuff. Is it acceptable to provide something like \"mega\" or \"rapidshare\" link to the archive file?\n\nEDIT: Link to mod archive (7zip): https://mega.nz/file/Y20lGK5a#h7JaaNwYToh289rfwx3w2BE1xALls6saE0UBlzWZa0w",
+  "descriptionHtml": "I personally don't understand why smaller ships shouldn't last as long in battle as bigger ships, and I dislike having wolfpack strategies fail against endgame enemies because my ships ran out of PPT even with Hardened Subsystems, Combat Endurance, not using Safety Overrides, etc. I made this small script that increases PPT for all ships programmatically:<br>Frigates: +20% (rounded to nearest multiple of 10) but capped at 400 (because of Monitor).<br>Destroyers: +10% (rounded to nearest multiple of 10).<br>Cruisers: +5% (rounded to nearest multiple of 10).<br>Capitals: No change.<br><br>Here are the script contents before being compiled (I detest java):<br><details class=\"spoiler\"><summary>Spoiler</summary><pre><code>package data.scripts.plugins;<br><br>import com.fs.starfarer.api.BaseModPlugin;<br>import com.fs.starfarer.api.Global;<br>import com.fs.starfarer.api.combat.ShipHullSpecAPI;<br>import com.fs.starfarer.api.combat.ShipAPI.HullSize;<br><br>public class ISSPPT_ModPlugin extends BaseModPlugin {<br><br>    @Override<br>    public void onApplicationLoad() throws Exception {<br>        // Iterate through all the ship hull specifications loaded by the game.<br>        for (ShipHullSpecAPI hullSpec : Global.getSettings().getAllShipHullSpecs()) {<br>            <br>            // Get the ship's original Peak Performance Time.<br>            float originalPPT = hullSpec.getNoCRLossSeconds();<br>            float newPPT = originalPPT;<br><br>            // Check the hull size and apply changes accordingly.<br>            if (hullSpec.getHullSize() == HullSize.FRIGATE) {<br>                // REFINED LOGIC: Only modify frigates if their original PPT is less than the 400s cap.<br>                if (originalPPT &lt; 400f) {<br>                    // Frigates: +20%, rounded to nearest 10, capped at 400.<br>                    newPPT = originalPPT * 1.2f;<br>                    newPPT = Math.round(newPPT / 10f) * 10;<br>                    newPPT = Math.min(newPPT, 400f); // Cap the result.<br>                }<br><br>            } else if (hullSpec.getHullSize() == HullSize.DESTROYER) {<br>                // Destroyers: +10%, rounded to nearest 10.<br>                newPPT = originalPPT * 1.1f;<br>                newPPT = Math.round(newPPT / 10f) * 10;<br><br>            } else if (hullSpec.getHullSize() == HullSize.CRUISER) {<br>                // Cruisers: +5%, rounded to nearest 10.<br>                newPPT = originalPPT * 1.05f;<br>                newPPT = Math.round(newPPT / 10f) * 10;<br>            }<br><br>            // If the PPT has changed, apply the new value.<br>            if (newPPT != originalPPT) {<br>                hullSpec.setNoCRLossSeconds(newPPT);<br>            }<br>        }<br>    }<br>}</code></pre></details><br>I have a compiled version that I can potentially upload, but I'm feeling too lazy to create another repository account, and I am not going to put this in the account I use for work stuff. Is it acceptable to provide something like \"mega\" or \"rapidshare\" link to the archive file?<br><br>EDIT: Link to mod archive (7zip): <a href=\"https://mega.nz/file/Y20lGK5a#h7JaaNwYToh289rfwx3w2BE1xALls6saE0UBlzWZa0w\" rel=\"nofollow noopener\" target=\"_blank\">https://mega.nz/file/Y20lGK5a#h7JaaNwYToh289rfwx3w2BE1xALls6saE0UBlzWZa0w</a>",
+  "descriptionIsGenerated": false,
+  "descriptionIsForumPost": true,
+  "aiDescription": "Programmatically increases the Peak Performance Time (PPT) of ships based on their hull size. Frigates receive a 20% increase capped at 400 seconds, destroyers get 10%, and cruisers get 5%. Capitals remain unchanged.",
+  "rawCategories": [],
+  "gallery": [],
+  "downloads": [
+    {
+      "url": "https://mega.nz/file/Y20lGK5a#h7JaaNwYToh289rfwx3w2BE1xALls6saE0UBlzWZa0w",
+      "directUrl": "https://mega.nz/file/Y20lGK5a#h7JaaNwYToh289rfwx3w2BE1xALls6saE0UBlzWZa0w",
+      "kind": "direct",
+      "label": "Link to mod archive (7zip)",
+      "host": "mega.nz",
+      "needsAnotherStep": true
+    }
+  ],
+  "changelog": {},
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34317.0",
+  "releases": [],
+  "threadLastPostOn": "2025-10-23",
+  "sameNameMods": [],
+  "addons": []
+}

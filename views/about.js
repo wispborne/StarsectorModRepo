@@ -99,7 +99,7 @@ export async function render(root) {
         section('How is AI used?', [
             'The LLM runs on my own hardware in my own home; scraped forum mods are not sent to cloud providers.',
             'AI writes summaries from forum posts and is marked with the sparkle icon.',
-            'You can choose when to see AI-generated mod summaries in Settings: "Only if missing" (no human desc available), '
+            'You can choose when to see AI-generated mod summaries in Settings: "Only as a fallback" (no human desc available), '
             + '"Always", or "Never".',
             'With summaries enabled, mod pages can also show an AI summary in '
             + 'the Description tab. You can hide it there for all mod pages.',

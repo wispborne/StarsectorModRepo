@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T18:10:07.267988Z",
+  "generatedAt": "2026-10-21T03:35:38.630497Z",
   "listing": {
     "id": "better-combat",
     "name": "Better Combat",
@@ -19,7 +19,7 @@
     "modVersion": "0.5.1",
     "summary": "Better combat aims to make starsector combat more fun by modifying values, and adding a few small features.",
     "summaryIsGenerated": false,
-    "aiSummary": "Modifies combat values and adds features to make battles more dynamic and fun.",
+    "aiSummary": "Modifies combat values and adds features like larger asteroids, ship fragments, and configurable speed limits to make battles more dynamic.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -32,7 +32,7 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1355574299087339669/1355574299087339669",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
-    "lastReleaseDate": "2026-10-13T00:00:00.000Z",
+    "lastReleaseDate": "2026-10-17T00:00:00.000Z",
     "addedOn": "2024-05-04",
     "threadLastPostOn": "2026-10-12",
     "needs": [
@@ -46,7 +46,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Current version:<br><a href=\"https://gitlab.com/starsector/better_combat/-/archive/main/better_combat-main.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://gitlab.com/starsector/better_combat/-/archive/main/better_combat-main.zip</a><br>Releases:<br><a href=\"https://gitlab.com/starsector/better_combat/-/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://gitlab.com/starsector/better_combat/-/releases</a></p><p>Better combat is a mod that aims to make starsector combat more fun by modifying values, and adds a few small features.</p><p>All configureable.<br>Safe to add and remove.</p><p>Compatible with secrets of the frontier<br>Integrated with luna lib</p><p>With default settings, ships have a much faster top speed, but take much longer to accelerate to top speed. Allong with this, the map size and weapon range is changed for longer range gameplay.</p><p>Added Features:<br>bigger asteroids<br>asteroids split on destruction<br>ship fragments move more when a ship is destroyed<br>PPT and CR reduced by ship damage(disabled by default)<br>Dynamic Zero Flux speed boost based on ship speed(disabled by default)</p><p>Values better combat allows you to modify:<br>map size<br>ship deployment location and spacing<br>max zoom out of the combat camera<br>how far ships reveal fog of war<br>weapon range &amp; damage<br>projectile speed<br>missile speed &amp; manuverability<br>missile submunition properties<br>fighter range &amp; speed<br>ship speed, acceleration, hull, armor, shield, phase, flux, ordanance points, explosion size, PPT, bounds radius.<br>Phase global values</p><p>You can also modify values of particular weapons and ships using a query system.</p><p>Thanks to Liral for the map code<br>Thanks to Crablobab for the asteroid code<br>Thanks to Maelstrom for suggesting and testing features.</p><p>showcase video. Several fixes and updates have been made since then: <a href=\"https://youtu.be/mikU8sxLbuU\" rel=\"nofollow noopener\" target=\"_blank\">https://youtu.be/mikU8sxLbuU</a></p>",
-  "aiDescription": "Adjusts ship speeds, acceleration, weapon ranges, and map sizes to create longer-range gameplay. Adds features like splitting asteroids, ship fragments, and dynamic speed boosts. Allows extensive customization of combat parameters including hull, armor, flux, and missile properties through a configurable settings system.",
+  "aiDescription": "Adjusts ship acceleration, top speeds, map size, and weapon ranges for longer-range gameplay. Adds features such as asteroid splitting, random retreat deployment, uncapped fighter speeds, and dynamic zero-flux boosts. Allows extensive customization of combat parameters including hull, armor, flux, malfunction chances, and specific weapon or ship stats via a query system.",
   "saveCompatibilityText": "Safe to add and remove.",
   "removalCompatibilityText": "Safe to add and remove.",
   "canAdd": "yes",
@@ -68,9 +68,9 @@
     }
   ],
   "changelog": {
-    "0.5.1": "added missileLaunchSpeedMult\nchanged missileRangeMultiplier to missileTimeToLive to reflect what it is, and fixed it being applied multiple times for some missiles.",
-    "0.5.0": "added breakSpeedLimitFeature allowing the hard limit of 600 speed to be exeeded\nadded multiplier and adder values to fighters and ships\nadded fix to invincible ships with zero hull\nadded getShaSpeedAddSystemMult and getNovaDriveFix, to hullmodskillability. These modify ship systems. Nova drive is seperate because it reacts very differently than the rest when the speed limit is turned off.\nadded defense id to custom settings feature for selecting phase ships\nadded instantRetreatFeature which modifies when the instant retreat kicks in, fixes ships dissappearing as they retreat while still visible\nmodified custom settings reducing asteroid size and HP, making ships more controlable, and makes fighters faster.",
-    "0.4.8": "enhanced weaponRangeThresholdMult with many more ship systems and abilities added."
+    "0.5.1": "&nbsp;&nbsp;&nbsp;added missileLaunchSpeedMult\n&nbsp;&nbsp;&nbsp;changed missileRangeMultiplier to missileTimeToLive to reflect what it is, and fixed it being applied multiple times for some missiles.",
+    "0.5.0": "&nbsp;&nbsp;&nbsp;added breakSpeedLimitFeature allowing the hard limit of 600 speed to be exeeded\n&nbsp;&nbsp;&nbsp;added multiplier and adder values to fighters and ships\n&nbsp;&nbsp;&nbsp;added fix to invincible ships with zero hull\n&nbsp;&nbsp;&nbsp;added getShaSpeedAddSystemMult and getNovaDriveFix, to hullmodskillability. These modify ship systems. Nova drive is seperate because it reacts very differently than the rest when the speed limit is turned off.\n&nbsp;&nbsp;&nbsp;added defense id to custom settings feature for selecting phase ships\n&nbsp;&nbsp;&nbsp;added instantRetreatFeature which modifies when the instant retreat kicks in, fixes ships dissappearing as they retreat while still visible\n&nbsp;&nbsp;&nbsp;modified custom settings reducing asteroid size and HP, making ships more controlable, and makes fighters faster.",
+    "0.4.8": "&nbsp;&nbsp;&nbsp;enhanced weaponRangeThresholdMult with many more ship systems and abilities added."
   },
   "changelogUrl": "https://gitlab.com/starsector/better_combat/-/releases",
   "sourceCodeUrl": "https://gitlab.com/starsector/better_combat",
@@ -81,7 +81,7 @@
     {
       "modId": "better-combat",
       "modName": "Better Combat",
-      "seenOn": "2026-10-13",
+      "seenOn": "2026-10-17",
       "oldVersion": "0.4.6",
       "newVersion": "0.5.1",
       "gameVersion": "0.98a",
