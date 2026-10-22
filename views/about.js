@@ -111,7 +111,7 @@ export async function render(root) {
             'Each mod page has an "AI use" line under Details. It shows what the '
             + 'author says about using AI tools to make the mod, such as for '
             + 'portraits, music or code. Point at it to read the author\'s own words.',
-            '"None" means the author says no AI was used. "Not stated" means the '
+            '"None" means the author says no AI was used. "Unknown" means the '
             + 'mod\'s posts were read and say nothing about it. "Not checked yet" '
             + 'means they have not been read for this yet. The site does not '
             + 'guess from the pictures or the writing.',

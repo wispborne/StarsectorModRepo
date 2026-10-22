@@ -6,7 +6,7 @@
 // so a thin page reads as deliberate instead of broken.
 
 import {
-  aiOnModPages, aiSparkle, aiSummaryNote, aiSummaryOf, imageCaption,
+  aiOnModPages, aiSparkle, aiSummaryNote, aiSummaryOf, imageCaption, imageHoverText,
   clear,
   currentGameVersion, DATA_BASE, downloadButton, el, errorPanel, expandAllButton, formatDay,
   favoriteToggle, formatMoment, imageUrlOf, inlinePictures, joinNames, quickTip,
@@ -1069,7 +1069,7 @@ function gallery(detail, onCount) {
   images.forEach((image) => {
     const button = el('button', {
       class: 'shot',
-      title: imageCaption(image) || 'Open picture',
+      title: imageHoverText(image) || 'Open picture',
     });
     const img = picture(image.url, {
       alt: imageCaption(image),
@@ -1096,7 +1096,7 @@ function gallery(detail, onCount) {
   const refreshCaptions = () => {
     for (const [image, button] of buttons) {
       const caption = imageCaption(image);
-      button.title = caption || 'Open picture';
+      button.title = imageHoverText(image) || 'Open picture';
       const img = button.querySelector('img');
       if (img) img.alt = caption;
     }
@@ -1438,13 +1438,13 @@ function facts(detail) {
 /// with no colour or warning mark: the site reports it and takes no side. The
 /// author's own words are on hover. Neither of the two dim answers is "None":
 /// "Not checked yet" means the mod's posts have not been read for this (no
-/// `aiUse` at all), and "Not stated" means they were read and say nothing (an
+/// `aiUse` at all), and "Unknown" means they were read and say nothing (an
 /// `aiUse` with no `usesAi`).
 function aiUseFact(aiUse, authors = []) {
   if (!aiUse || aiUse.usesAi == null) {
     return sideFact('AI use', el('span', aiUse
-      ? { class: 'dim', text: 'Not stated',
-          title: "The mod's posts were read, and they say nothing about AI use." }
+      ? { class: 'dim', text: 'Unknown',
+          title: 'No AI use declaration found.' }
       : { class: 'dim', text: 'Not checked yet',
           title: "The mod's posts have not been read for AI use yet." }),
     { beside: true });

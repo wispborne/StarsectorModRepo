@@ -504,6 +504,35 @@ export function imageCaption(image) {
   return author;
 }
 
+const PICTURE_FITS = {
+  good: 'good for a mod card',
+  okay: 'okay for a mod card',
+  poor: 'poor for a mod card',
+};
+
+const PICTURE_KINDS = {
+  missing: 'Missing picture notice',
+};
+
+/// What the AI saw in a picture besides its description: what kind of
+/// picture it is and how well it would do on a mod's card, or that it could
+/// not read it. Empty when the reader has turned AI words off.
+export function imageAiFacts(image) {
+  if (aiSummaryMode() === 'never' || aiOnModPages() === 'hide') return '';
+  if (image.aiUnreadable) return 'AI: could not read this picture';
+  const parts = [];
+  if (image.aiKind) {
+    parts.push(PICTURE_KINDS[image.aiKind] || image.aiKind[0].toUpperCase() + image.aiKind.slice(1));
+  }
+  if (PICTURE_FITS[image.aiFit]) parts.push(PICTURE_FITS[image.aiFit]);
+  return parts.length ? `AI: ${parts.join(', ')}` : '';
+}
+
+/// A picture's hover text: its caption, then what the AI saw in it.
+export function imageHoverText(image) {
+  return [imageCaption(image), imageAiFacts(image)].filter(Boolean).join('\n');
+}
+
 /// The picture to show for a mod, or null when it has none.
 ///
 /// `announcementImageUrl` is only published where it differs from `imageUrl`,
@@ -769,6 +798,7 @@ export function showPicture(images, at = 0) {
   });
   const note = el('div', { class: 'big-picture-note' });
   const caption = el('div', { class: 'big-picture-caption' });
+  const aiFacts = el('div', { class: 'big-picture-ai' });
   const counter = el('div', { class: 'big-picture-counter', 'aria-live': 'polite' });
   const fileName = el('div', { class: 'big-picture-name' });
   const original = el('a', {
@@ -805,6 +835,7 @@ export function showPicture(images, at = 0) {
     middle,
     el('div', { class: 'big-picture-foot' }, [
       caption,
+      aiFacts,
       el('div', { class: 'big-picture-tools' }, [counter, fileName, original]),
     ]),
     el('div', { class: 'big-picture-zoom' }, [zoomOut, zoomIn]),
@@ -925,6 +956,8 @@ export function showPicture(images, at = 0) {
     if (shot.complete && shot.naturalWidth) middle.classList.remove('is-loading');
     shot.alt = imageCaption(image);
     caption.textContent = imageCaption(image);
+    aiFacts.textContent = imageAiFacts(image);
+    aiFacts.hidden = !aiFacts.textContent;
     counter.textContent =
       images.length > 1 ? `${showing + 1} of ${images.length}` : '';
     fileName.textContent = fileNameOf(image.url);
