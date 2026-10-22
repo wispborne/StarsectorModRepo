@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-10-22T04:26:54.047511Z",
+  "updatedAt": "2026-10-22T06:05:30.841775Z",
   "meta": {
-    "generatedAt": "2026-10-22T04:31:54.796198Z",
-    "totalMods": 1064,
-    "totalDetails": 1052,
-    "totalAssumedDownloadEntries": 882,
+    "generatedAt": "2026-10-22T06:09:36.366496Z",
+    "totalMods": 1065,
+    "totalDetails": 1053,
+    "totalAssumedDownloadEntries": 883,
     "placeholderDetailCount": 0,
-    "scrapeDurationSeconds": 12,
-    "modsScraped": 7,
+    "scrapeDurationSeconds": 10,
+    "modsScraped": 1,
     "imagesDownloaded": 0,
     "errors": 0
   },
@@ -18943,11 +18943,13 @@
               "canRemove": "yes",
               "summary": {
                 "sentence": "Adds high risk, high reward difficulty options by scaling XP rewards based on battle difficulty and penalizing save-scumming.",
-                "paragraph": "Adjusts combat rewards so difficult battles grant increased XP while easy ones do not. Penalizes reloading saves by reducing future XP and reputation gains. Increases hostility from factions and spawns dangerous fleets in hyperspace to make the game more challenging."
+                "paragraph": "Adjusts combat rewards so difficult battles grant increased XP while easy ones do not, and reduces progress if a fleet is destroyed. Penalizes reloading saves by lowering future XP and reputation gains. Increases hostility from factions and spawns dangerous fleets in hyperspace to make the sector more challenging."
               },
               "needs": [
+                "Version Checker",
                 "LunaLib"
-              ]
+              ],
+              "aiUse": {}
             },
             "descriptionAnchors": {
               "startsWith": "The goal of this mod is to provide difficulty options meant to incentivize challenging gameplay.",
@@ -22706,15 +22708,16 @@
               },
               "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
               "summary": {
-                "sentence": "Adds a new faction with 10 ships, 15 fighter wings, 5 weapons, and a revamped star system.",
-                "paragraph": "Introduces the Fourteenth Battlegroup as a playable Hegemony-aligned faction focused on commerce. Provides new ships, fighters with modified stats, and several mini-quests. Includes extensive lore detailing the history of the Naraka System and the battlegroup's integration into the Hegemony."
+                "sentence": "Adds a new faction with ships, fighters, weapons, and lore centered on the Fourteenth Battlegroup.",
+                "paragraph": "Introduces a complete faction featuring 10 flyable ships, 15 fighter wings, 5 weapons, and a revamped star system. Includes gameplay features like taxes, mini-quests, and specialized fighter stats for Hegemony-themed runs."
               },
               "needs": [
                 "GraphicsLib",
                 "LazyLib",
                 "MagicLib",
                 "Nexerelin"
-              ]
+              ],
+              "aiUse": {}
             },
             "descriptionAnchors": {
               "startsWith": "Iron Shell is a faction mod based around increasing the arsenal and developing the lore behind the Fourteenth Battlegroup and Hegemony.",
@@ -40499,28 +40502,34 @@
                 }
               ],
               "summary": {
-                "sentence": "Adds new content for the Remnant faction and other factions, including new ships, weapons, hullmods, and bounty missions.",
-                "paragraph": "Makes the Remnant faction a late-game challenge by adding unique drone ships and technologies. Introduces new content for the Sindrian Diktat, Tri-Tachyon, Persean League, and Independents, along with new bounty missions featuring unique rewards. Includes two new factions, the IX Battlegroup and Trinity Worlds, with their own ships and weapons."
+                "sentence": "Adds new Remnant challenges, unique drone ships, and content for multiple factions.",
+                "paragraph": "Makes the Remnant faction a late-game threat with modified drone ships. Adds new ships, weapons, and missions for the Sindrian Diktat, Tri-Tachyon, Persean League, and Independents. Includes a standalone IX Battlegroup faction that can be used independently or interactively."
+              },
+              "aiUse": {
+                "quote": "AI was used to generate a small number of hullmod icons, one location image, and one NPC portrait set. All coding, writing, and other art and sprite work is made by hand.",
+                "usesAi": true,
+                "uses": [
+                  {
+                    "area": "icons",
+                    "how": "generated",
+                    "extent": "some"
+                  },
+                  {
+                    "area": "illustrations",
+                    "how": "generated",
+                    "extent": "some"
+                  },
+                  {
+                    "area": "portraits",
+                    "how": "generated",
+                    "extent": "some"
+                  }
+                ]
               }
             },
             "descriptionAnchors": {
               "startsWith": "This Remnant focused mod seeks to make",
               "endsWith": "new missions with unique rewards to challenge the player."
-            }
-          },
-          {
-            "name": "9th Domain Battlegroup",
-            "role": "main",
-            "downloads": [],
-            "extras": {
-              "summary": {
-                "sentence": "Adds an antagonist faction revived from a previous mod.",
-                "paragraph": "Provides a standalone version of the 9th Domain Battlegroup faction. It was originally created in the abandoned Arsenal Expansion mod and has been revived with permission. This faction can be used independently or alongside Emergent Threats for extra content."
-              }
-            },
-            "descriptionAnchors": {
-              "startsWith": "This antagonist faction was first created in the now abandoned",
-              "endsWith": "disable the original's battlegroup in its mod settings to avoid two versions of the faction spawning at the same time."
             }
           }
         ]
@@ -74462,6 +74471,93 @@
       "scrapedAt": "2026-10-22T04:26:45.021567Z",
       "isWip": false,
       "sourceBoard": 3
+    },
+    {
+      "topicId": 36183,
+      "title": "[0.98a] Orbital Raceways v1.0.1",
+      "category": "uncategorized",
+      "inModIndex": false,
+      "isArchivedModIndex": false,
+      "gameVersion": "0.98a",
+      "author": "coolestofguys",
+      "replies": 0,
+      "views": 31,
+      "createdDate": "Today at 09:49:38 PM",
+      "lastPostDate": "Today at 09:49:38 PM",
+      "lastPostBy": "coolestofguys",
+      "topicUrl": "https://fractalsoftworks.com/forum/index.php?topic=36183.0",
+      "thumbnailPath": "ext:https://i.imgur.com/Q9o4bde.jpeg",
+      "scrapedAt": "2026-10-22T06:05:30.841775Z",
+      "isWip": false,
+      "sourceBoard": 3,
+      "llm": {
+        "mods": [
+          {
+            "name": "Orbital Raceways",
+            "role": "main",
+            "downloads": [
+              {
+                "url": "https://github.com/coolestofguys/OrbitalRaceways/releases/latest",
+                "label": "",
+                "kind": "direct",
+                "sourceHost": "github.com",
+                "confidence": "low",
+                "requiresManualStep": true
+              },
+              {
+                "url": "https://github.com/coolestofguys/OrbitalRaceways/releases/download/v.1.0.1/OrbitalRaceways.rar",
+                "label": "Manual download",
+                "kind": "direct",
+                "resolvedDirectUrl": "https://github.com/coolestofguys/OrbitalRaceways/releases/download/v.1.0.1/OrbitalRaceways.rar",
+                "sourceHost": "GitHub",
+                "fileName": "OrbitalRaceways.rar",
+                "confidence": "high",
+                "requiresManualStep": false
+              }
+            ],
+            "image": "ext:https://i.imgur.com/Q9o4bde.jpeg",
+            "extras": {
+              "version": "1.0.1",
+              "sourceCode": "https://github.com/coolestofguys/OrbitalRaceways",
+              "saveCompatibility": "Adding to an existing save: Moderate testing, 100% success rate.",
+              "updateNotes": [
+                {
+                  "quote": "Updating: this is the first release."
+                }
+              ],
+              "removalCompatibility": "Removing from a save: not safe. Removing the mod from a save in progress can cause errors, so please don't. If you want it out of your way, open the mod's Intel screen and turn Notifications to OFF. That hides its alerts, so you can ignore the races for the rest of your game.",
+              "canAdd": "yes",
+              "canRemove": "no",
+              "summary": {
+                "sentence": "Adds a monthly orbital frigate race with betting and VIP rewards.",
+                "paragraph": "A race circuit opens above Asharu where players bet credits on frigates every month. It includes standings, membership rewards, special events, and a VIP lounge. The odds are transparent, and the feature is optional and does not interfere with normal gameplay."
+              },
+              "aiUse": {
+                "quote": "Some of the code and assets in this mod were created using AI tools:\n Code: Claude (Anthropic). I directed the design, tested everything in game and made the balance decisions.\n Graphics: Market Icon was generated with Gemini 3.5.",
+                "usesAi": true,
+                "uses": [
+                  {
+                    "area": "code",
+                    "how": "assisted"
+                  },
+                  {
+                    "area": "icons",
+                    "how": "generated"
+                  }
+                ],
+                "tools": [
+                  "Claude (Anthropic)",
+                  "Gemini 3.5"
+                ]
+              }
+            },
+            "descriptionAnchors": {
+              "startsWith": "A race circuit opens above Asharu",
+              "endsWith": "its effects are small and optional."
+            }
+          }
+        ]
+      }
     }
   ],
   "details": {
@@ -165205,6 +165301,70 @@
       "extraPosts": [],
       "scrapedAt": "2026-10-22T04:26:53.019041Z",
       "isPlaceholderDetail": false
+    },
+    "36183": {
+      "topicId": 36183,
+      "title": "[0.98a] Orbital Raceways v1.0.1",
+      "category": "uncategorized",
+      "gameVersion": "0.98a",
+      "author": "coolestofguys",
+      "authorTitle": "Ensign",
+      "authorPostCount": 1,
+      "authorAvatarPath": "https://fractalsoftworks.com/forum/avatars/default.png",
+      "postDate": "Today at 09:49:38 PM",
+      "lastEditDate": "Today at 10:44:48 PM by coolestofguys",
+      "contentHtml": "\n\t\t\t\t\t\t\t\t\t<div class=\"centertext\"><span style=\"font-size: 20pt;\" class=\"bbc_size\"><b>Orbital Raceways</b></span><br><i>A monthly orbital frigate race with betting, High-stakes gambles, and a VIP-Lounge.</i><br><br><a href=\"https://github.com/coolestofguys/OrbitalRaceways/releases/latest\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener\"><img src=\"https://img.shields.io/badge/Download-GitHub-blue?style=for-the-badge\" alt=\"\" class=\"bbc_img\" loading=\"lazy\"></a>&nbsp; <a href=\"https://github.com/coolestofguys/OrbitalRaceways\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener\"><img src=\"https://img.shields.io/badge/Source-GitHub-gray?style=for-the-badge\" alt=\"\" class=\"bbc_img\" loading=\"lazy\"></a><br><br><b><a href=\"https://github.com/coolestofguys/OrbitalRaceways/releases/download/v.1.0.1/OrbitalRaceways.rar\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener\">Manual download</a></b><br></div><br><hr><br><b>Requirements</b><br><ul class=\"bbc_list\"><li>Starsector 0.98a-RC8</li><li>No other mods needed. No libraries or dependencies.</li></ul><br><b>Save compatibility</b><br><ul class=\"bbc_list\"><li><b>Adding to an existing save:</b> Moderate testing, 100% success rate.</li><li><b>Removing from a save:</b>not safe. Removing the mod from a save in progress can cause errors, so please don't. If you want it out of your way, open the mod's Intel screen and turn Notifications to OFF. That hides its alerts, so you can ignore the races for the rest of your game.</li><li><b>Updating:</b> this is the first release.</li></ul><br><hr><br><b>What it does</b><br>A race circuit opens above Asharu (you can change the host world in the config). Every month a new field of frigates takes the grid. Bet credits on the racers from the Intel screen during the first 7 days of the month. It adds a long-term credit sink and a bit of gambling flavor to the campaign.<br><br><b>What it Doesn't</b><br><ul class=\"bbc_list\"><li><b>Take over your game.</b> The race is a monthly event that sits in the background of your normal Starsector play instead of monopolizing your time.</li><li><b>Make you participate.</b> Use it as much or as little as you like. There is no penalty for falling behind and no bonus for getting a head start.</li><li><b>Reach into the rest of your game.</b> Apart from the credits you win or lose, its effects are small and optional.</li><li><b>Promise success.</b> The odds reflect those of real-world gambling. Good luck.</li></ul><br><img src=\"https://i.imgur.com/Q9o4bde.jpeg\" alt=\"\" width=\"&quot;600&quot;\" class=\"bbc_img resized\" loading=\"lazy\"><br><img src=\"http://paste_screenshot_link_2\" alt=\"\" width=\"&quot;600&quot;\" class=\"bbc_img resized\" loading=\"lazy\"><br><br><ul class=\"bbc_list\"><li><b>Race and Wagers:</b> bet on a racer to win. The odds and payout are shown before you commit.</li><li><b>Standings:</b> every pilot has an Elo rating and a recent record.</li><li><b>Membership and Rewards:</b> earn Membership Rewards Points on your wagers and spend them as Fuel Points or Exclusive VIP Privileges.</li><li><b>December Grand Prix:</b> a bigger field with win and podium wagers and better payouts.</li><li><b>VIP Sky Lounge:</b> MEMBERS ONLY.</li><li><b>Special events:</b> For VIP Members<br><ul class=\"bbc_list\"><li>Hostile fleets and raiders may interfere with the racers.<br></li></ul><br><b>Odds</b><br>The odds shown are the real odds, no deception or rigged bets.<br><br><b>Install</b><br>Unzip so the <span style=\"font-family: Courier;\" class=\"bbc_font\">OrbitalRaceways</span> folder sits inside your Starsector <span style=\"font-family: Courier;\" class=\"bbc_font\">mods</span> folder, then enable it in the launcher.<br><br><b>Configuration</b><br><span style=\"font-family: Courier;\" class=\"bbc_font\">data/config/orbital_raceways.json</span> holds the racer names and ships, win chances, bet sizes, house cut, special event costs and payouts, and the host world. Every setting has a comment. No recompiling needed.<br><br><b>FAQ</b><br><hr><table class=\"bbc_table\"><tbody><tr><td> <b>Do I need other mods?</b> </td></tr><tr><td> No. It is standalone and does not replace any vanilla files. It adds one market condition (orbital_raceways) and a campaign script. </td></tr></tbody></table><hr><table class=\"bbc_table\"><tbody><tr><td> <b>Can I move the circuit to another planet?</b> </td></tr><tr><td> Yes. Set hostMarketId in the config file to the market id you want. </td></tr></tbody></table><hr><table class=\"bbc_table\"><tbody><tr><td> <b>Can I change the racers?</b> </td></tr><tr><td> Yes. Names, fleet names and ship variants are all in the config file. </td></tr></tbody></table><hr><table class=\"bbc_table\"><tbody><tr><td> <b>Are there compatibility issues with other mods?</b> </td></tr><tr><td> No, there should not be any mod compatibility issues and none came up in my extensive testing. </td></tr></tbody></table><hr><table class=\"bbc_table\"><tbody><tr><td> <b>How do I get help with my gambling addiction?</b> </td></tr><tr><td> You can reach the confidential <a href=\"https://www.ncpgambling.org/help-treatment/\" class=\"bbc_link\" target=\"_blank\" rel=\"noopener\">National Problem Gambling Helpline</a> 24/7 by calling 1-800-GAMBLER (1-800-522-4700) or texting 800GAM. </td></tr></tbody></table><table class=\"bbc_table\"><tbody><tr><td> <b>Can I move the circuit to another planet?</b> </td></tr><tr><td> Yes. Set hostMarketId in the config file to the market id you want. If you have mods or settings enabled that alter the core worlds or the vanilla markets Asharu or Nomios, you will need to set the condition to a market that is present in your sector </td></tr></tbody></table><hr><br>AI use disclaimer<br>Some of the code and assets in this mod were created using AI tools:<br><ul class=\"bbc_list\"><li>Code: Claude (Anthropic). I directed the design, tested everything in game and made the balance decisions.</li><li>Graphics: Market Icon was generated with Gemini 3.5.</li></ul><br><hr><br><b>Credits and permissions</b><br>Made by coolestofguys. Feedback, bug reports and balance ideas are welcome. If you report a problem, please include your starsector.log.</li></ul>\n\t\t\t\t\t\t\t\t",
+      "images": [
+        {
+          "originalUrl": "https://img.shields.io/badge/Download-GitHub-blue?style=for-the-badge",
+          "localPath": "",
+          "alt": ""
+        },
+        {
+          "originalUrl": "https://img.shields.io/badge/Source-GitHub-gray?style=for-the-badge",
+          "localPath": "",
+          "alt": ""
+        },
+        {
+          "originalUrl": "https://i.imgur.com/Q9o4bde.jpeg",
+          "localPath": "",
+          "alt": ""
+        },
+        {
+          "originalUrl": "http://paste_screenshot_link_2",
+          "localPath": "",
+          "alt": ""
+        }
+      ],
+      "links": [
+        {
+          "url": "https://github.com/coolestofguys/OrbitalRaceways/releases/latest",
+          "text": "",
+          "isExternal": true,
+          "isDownloadable": false
+        },
+        {
+          "url": "https://github.com/coolestofguys/OrbitalRaceways",
+          "text": "",
+          "isExternal": true,
+          "isDownloadable": false
+        },
+        {
+          "url": "https://github.com/coolestofguys/OrbitalRaceways/releases/download/v.1.0.1/OrbitalRaceways.rar",
+          "text": "Manual download",
+          "isExternal": true,
+          "isDownloadable": true
+        },
+        {
+          "url": "https://www.ncpgambling.org/help-treatment/",
+          "text": "National Problem Gambling Helpline",
+          "isExternal": true,
+          "isDownloadable": false
+        }
+      ],
+      "extraPosts": [],
+      "scrapedAt": "2026-10-22T06:05:30.841748Z",
+      "isPlaceholderDetail": false
     }
   },
   "assumedDownloads": {
@@ -177638,6 +177798,17 @@
         "confidence": "high",
         "requiresManualStep": false,
         "linkText": "Download v0.5.2 (beta)"
+      }
+    ],
+    "36183": [
+      {
+        "originalUrl": "https://github.com/coolestofguys/OrbitalRaceways/releases/download/v.1.0.1/OrbitalRaceways.rar",
+        "resolvedDirectUrl": "https://github.com/coolestofguys/OrbitalRaceways/releases/download/v.1.0.1/OrbitalRaceways.rar",
+        "sourceHost": "GitHub",
+        "fileName": "OrbitalRaceways.rar",
+        "confidence": "high",
+        "requiresManualStep": false,
+        "linkText": "Manual download"
       }
     ]
   },
