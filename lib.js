@@ -377,10 +377,12 @@ function readCookie(name) {
 
 // --- The theme setting ---
 
-// Theme ids match style.css. Browser Default follows the browser's colour scheme.
+// Theme ids match style.css. Browser Default follows the browser's colour
+// scheme: Independents on dark pages, the light colours on light pages.
 export const THEMES = [
   { id: 'browser-default', name: 'Browser Default' },
-  { id: 'dark', name: 'Dark' },
+  // Kept as 'dark' so readers who already picked it keep it.
+  { id: 'dark', name: 'TriOS' },
   { id: 'light', name: 'Light' },
   { id: 'sigma', name: 'Sigma' },
   { id: 'redacted', name: '[REDACTED]' },
@@ -784,7 +786,8 @@ function placePageScroll(saved) {
 /// for the reader who wants the full file after all.
 ///
 /// [images] is the list of `{url, caption}` still on the page, and [at] is
-/// which one to open first.
+/// which one to open first. A picture can also carry `source` (`forum`,
+/// `discord` or `nexus`) and `sourceUrl`, the post it came from.
 export function showPicture(images, at = 0) {
   if (!images || !images.length) return;
 
@@ -801,6 +804,9 @@ export function showPicture(images, at = 0) {
   const aiFacts = el('div', { class: 'big-picture-ai' });
   const counter = el('div', { class: 'big-picture-counter', 'aria-live': 'polite' });
   const fileName = el('div', { class: 'big-picture-name' });
+  const from = el('a', {
+    class: 'big-picture-source', target: '_blank', rel: 'noopener nofollow',
+  });
   const original = el('a', {
     class: 'big-picture-original', text: 'Open original',
     target: '_blank', rel: 'noopener noreferrer',
@@ -836,7 +842,7 @@ export function showPicture(images, at = 0) {
     el('div', { class: 'big-picture-foot' }, [
       caption,
       aiFacts,
-      el('div', { class: 'big-picture-tools' }, [counter, fileName, original]),
+      el('div', { class: 'big-picture-tools' }, [counter, from, fileName, original]),
     ]),
     el('div', { class: 'big-picture-zoom' }, [zoomOut, zoomIn]),
     close,
@@ -962,6 +968,18 @@ export function showPicture(images, at = 0) {
       images.length > 1 ? `${showing + 1} of ${images.length}` : '';
     fileName.textContent = fileNameOf(image.url);
     fileName.hidden = !fileName.textContent;
+    const source = PICTURE_SOURCES[image.source];
+    from.hidden = !source;
+    if (source) {
+      from.replaceChildren(
+        el('span', {
+          class: 'original-page-icon', html: pageIcon(source.field), 'aria-hidden': 'true',
+        }),
+        `Image from ${source.words}`,
+      );
+      if (image.sourceUrl) from.href = image.sourceUrl;
+      else from.removeAttribute('href');
+    }
     original.href = image.url;
     preload(showing + 1);
     preload(showing - 1);
@@ -1473,6 +1491,20 @@ function originalPageOf(mod) {
 /// field, as an SVG string. The mod page's fallback button uses it too, so
 /// there is one copy of each icon and the page never fetches one from an
 /// outside host. Empty for a field with no icon.
+/// Where a picture was posted, as the picture viewer names it, and which of a
+/// mod's addresses leads to that post.
+const PICTURE_SOURCES = {
+  forum: { field: 'forumUrl', words: 'forum' },
+  discord: { field: 'discordUrl', words: 'Discord' },
+  nexus: { field: 'nexusUrl', words: 'Nexus Mods' },
+};
+
+/// A picture as the viewer takes it, with the post it came from.
+export function withSource(image, source, detail) {
+  const page = PICTURE_SOURCES[source];
+  return { ...image, source, sourceUrl: page ? detail[page.field] || null : null };
+}
+
 export function pageIcon(field) {
   const page = ORIGINAL_PAGES.find((p) => p.field === field);
   return page ? page.icon : '';

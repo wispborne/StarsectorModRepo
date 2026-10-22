@@ -1,7 +1,8 @@
 /* Starmodder — the public site.
-   Cyan on navy, the same colours as the local results viewer, so the two read
-   as one project. A reader whose computer asks for light pages gets a light
-   version of the same colours further down.
+   By default, dark pages use the Independents theme: grey with yellow for
+   anything switched on. The block below is the TriOS theme (id `dark`), cyan on navy, the
+   same colours as the local results viewer. A reader whose computer asks for
+   light pages gets a light version of the cyan further down.
 
    Two rules worth keeping:
 
@@ -16,7 +17,7 @@
    Everything is laid out to fit a phone: nothing here scrolls sideways except
    the odd wide table, which scrolls inside its own box. */
 
-:root, [data-theme="dark"], [data-theme="browser-default"] {
+:root, [data-theme="dark"] {
   --primary: rgb(73, 252, 255);
   --secondary: rgb(59, 203, 232);
   --surface: rgb(14, 22, 43);
@@ -124,65 +125,22 @@
   --page-width: 1200px;
 }
 
-/* The same colours for a reader whose computer asks for light pages. Only the
-   names change; nothing else in this file knows the difference. The "Light"
-   theme further down repeats these values, so change both together.
-
-   The cyan is darker here than the dark version's. Light cyan on white is
-   unreadable, and an action nobody can read is not an action. */
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme]), [data-theme="browser-default"] {
-    --primary: rgb(0, 104, 119);
-    --secondary: rgb(0, 108, 127);
-    --surface: rgb(240, 244, 250);
-    --surface-container: rgb(232, 238, 245);
-    --surface-2: rgb(255, 255, 255);
-    --text: rgb(22, 30, 45);
-    --text-dim: rgb(92, 104, 124);
-    --warning: rgb(158, 96, 0);
-    --error: rgb(184, 38, 38);
-    --success: rgb(19, 116, 58);
-    --llm: rgb(107, 60, 176);
-    --border: rgba(0, 104, 119, 0.22);
-
-    --primary-soft: rgba(0, 104, 119, 0.1);
-    --primary-faint: rgba(0, 104, 119, 0.05);
-    --primary-bar: rgba(0, 104, 119, 0.3);
-    --primary-ghost: rgba(0, 104, 119, 0.4);
-    --primary-bar-lit: rgba(0, 104, 119, 0.55);
-
-    --edge-warning: rgba(158, 96, 0, 0.35);
-    --edge-success: rgba(19, 116, 58, 0.35);
-    --edge-llm: rgba(107, 60, 176, 0.35);
-    --edge-secondary: rgba(0, 108, 127, 0.35);
-    --warning-wash: rgba(158, 96, 0, 0.07);
-
-    --over-picture: rgba(255, 255, 255, 0.88);
-    /* How light an author's own text colour may be, so it reads on this background. */
-    --author-l-min: 0.3;
-    --author-l-max: 0.55;
-    --lifted: 0 8px 24px rgba(22, 30, 45, 0.16);
-    --badge-back: rgba(22, 30, 45, 0.03);
-    --over-picture-fade: linear-gradient(to top, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
-    --raised: 0 0 0 1px rgba(22, 30, 45, 0.06), 0 1px 3px rgba(22, 30, 45, 0.05);
-  }
-}
-
 /* The themes a reader can pick in Settings, copied from TriOS's
    `assets/themes.json`. Picking one sets `data-theme` on the page; Browser Default
-   sets nothing, so it follows the browser's light or dark setting.
+   sets nothing. It uses Independents on dark pages and the light block at the
+   end of this list on light pages.
 
    Each theme block is written against `[data-theme]` rather than `:root`, so
    the little colour preview on each theme's button in Settings can carry the
    same attribute and draw itself in that theme's colours, whatever theme the
-   page is in. These blocks come after the light block on purpose: they are no
-   more specific than it, so being later is what lets them win.
+   page is in.
 
    Every theme but Light is a dark one. This first block puts back the dark version of
    everything that is not the theme's own colours, for a reader whose computer
    asks for light pages, and works out the see-through strengths of the
-   theme's colours from the colours themselves. */
-[data-theme]:where(:not([data-theme="dark"]):not([data-theme="browser-default"])) {
+   theme's colours from the colours themselves. It also covers Browser Default,
+   which uses Independents on dark pages. */
+[data-theme]:where(:not([data-theme="dark"])), :root:where(:not([data-theme])) {
   --text: rgb(220, 225, 240);
   --text-dim: rgb(140, 150, 170);
   --warning: rgb(255, 183, 77);
@@ -214,7 +172,7 @@
   --author-l-max: 0.95;
 }
 /* Light, for a reader who wants light pages whatever their computer is set
-   to. The same colours as the light block above, written out a second time:
+   to. The same colours as the light block at the end, written out a second time:
    a media query cannot share a block with a plain selector. Keep the two in
    step. It comes after the shared `[data-theme]` block so it wins over that
    block's dark text, and it puts "switched on" back to the main colour, as the
@@ -283,7 +241,8 @@
 [data-theme="one-dark-blue"] {
   --secondary: var(--primary);
 }
-[data-theme="independents"] {
+/* Also Browser Default's colours on dark pages. */
+[data-theme="independents"], [data-theme="browser-default"], :root:where(:not([data-theme])) {
   --primary: #B8BCC4;
   --secondary: #FFD737;
   --surface: #101216;
@@ -306,6 +265,54 @@
   --secondary: #C8007D;
   --surface: #170A12;
   --surface-container: #22101B;
+}
+
+/* Browser Default for a reader whose computer asks for light pages. Only the
+   names change; nothing else in this file knows the difference. The "Light"
+   theme above repeats these values, so change both together. This block comes
+   after the theme blocks on purpose: it is no more specific than the
+   Independents block, so being later is what lets it win.
+
+   The cyan is darker here than the TriOS theme's. Light cyan on white is
+   unreadable, and an action nobody can read is not an action. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]), [data-theme="browser-default"] {
+    --primary: rgb(0, 104, 119);
+    --secondary: rgb(0, 108, 127);
+    --surface: rgb(240, 244, 250);
+    --surface-container: rgb(232, 238, 245);
+    --surface-2: rgb(255, 255, 255);
+    --text: rgb(22, 30, 45);
+    --text-dim: rgb(92, 104, 124);
+    --warning: rgb(158, 96, 0);
+    --error: rgb(184, 38, 38);
+    --success: rgb(19, 116, 58);
+    --llm: rgb(107, 60, 176);
+    --border: rgba(0, 104, 119, 0.22);
+
+    --primary-soft: rgba(0, 104, 119, 0.1);
+    --primary-faint: rgba(0, 104, 119, 0.05);
+    --primary-bar: rgba(0, 104, 119, 0.3);
+    --primary-ghost: rgba(0, 104, 119, 0.4);
+    --primary-bar-lit: rgba(0, 104, 119, 0.55);
+    --on: var(--primary);
+    --on-soft: var(--primary-soft);
+
+    --edge-warning: rgba(158, 96, 0, 0.35);
+    --edge-success: rgba(19, 116, 58, 0.35);
+    --edge-llm: rgba(107, 60, 176, 0.35);
+    --edge-secondary: rgba(0, 108, 127, 0.35);
+    --warning-wash: rgba(158, 96, 0, 0.07);
+
+    --over-picture: rgba(255, 255, 255, 0.88);
+    /* How light an author's own text colour may be, so it reads on this background. */
+    --author-l-min: 0.3;
+    --author-l-max: 0.55;
+    --lifted: 0 8px 24px rgba(22, 30, 45, 0.16);
+    --badge-back: rgba(22, 30, 45, 0.03);
+    --over-picture-fade: linear-gradient(to top, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
+    --raised: 0 0 0 1px rgba(22, 30, 45, 0.06), 0 1px 3px rgba(22, 30, 45, 0.05);
+  }
 }
 
 /* A phone keeps the tight numbers: on a narrow screen, room around a
@@ -1519,6 +1526,7 @@ button.check-row { align-items: center; }
 .btn-with-icon .view-icon,
 .btn-with-icon .github-icon,
 .badge.source-link .original-page-icon,
+.big-picture-source .original-page-icon,
 .check-row .tri-box,
 .settings-icon,
 .ai-banner-hide-icon,
@@ -1856,6 +1864,12 @@ body.picture-open { overflow: hidden; }
   overflow-wrap: anywhere;
 }
 .big-picture-original { font-size: var(--type-small); }
+.big-picture-source {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: var(--type-small); white-space: nowrap;
+}
+.big-picture-source[hidden] { display: none; }
+.big-picture-source:not([href]) { color: var(--text-dim); }
 .big-picture-close, .big-picture-step {
   position: absolute; background: none; border: none; cursor: pointer;
   color: var(--text-dim); font-family: inherit; line-height: 1;

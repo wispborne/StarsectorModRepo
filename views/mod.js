@@ -13,7 +13,7 @@ import {
   setAiOnModPages, setInlinePictures, summaryToShow,
   modDetail, modHref, modList, modName, MOD_VERSION_NOTE,
   NO_DESCRIPTION, pageIcon, picture, showPicture, summaryTitle,
-  versionStanding, versionStandingNote,
+  versionStanding, versionStandingNote, withSource,
 } from '../lib.js';
 import { address } from '../address.js';
 import { SUPPORT_ICONS } from '../support_icons.js';
@@ -725,12 +725,12 @@ function description(detail, { collapsed = false } = {}) {
   }
 
   // descriptionHtml is sanitized by the builder; plain descriptions use textContent.
+  const forum = Boolean(detail.descriptionIsForumPost);
   const body = formatted
-    ? postBody(formatted)
+    ? postBody(formatted, forum ? (image) => withSource(image, 'forum', detail) : undefined)
     : el('div', { class: 'prose plain', text });
   continuedOnTheForum(body, detail.forumUrl);
 
-  const forum = Boolean(detail.descriptionIsForumPost);
   const state = { collapsed };
   const section = foldingPost({
     heading: forum ? 'Forum post' : 'About this mod',
@@ -753,7 +753,7 @@ function discordPost(detail) {
   return foldingPost({
     heading: 'Discord post',
     icon: pageIcon('discordUrl'),
-    body: postBody(detail.discordPostHtml),
+    body: postBody(detail.discordPostHtml, (image) => withSource(image, 'discord', detail)),
     state: { collapsed: false },
     switches: [],
   });
@@ -875,7 +875,8 @@ function picturesSwitch(redraw) {
 
 // Parse in a template so hidden pictures do not start downloading.
 // Preserve image-only links as text when removing their pictures.
-function postBody(html) {
+// [describe] adds what the viewer shows about each picture, such as its post.
+function postBody(html, describe = (image) => image) {
   const template = document.createElement('template');
   template.innerHTML = html;
   const content = template.content;
@@ -892,20 +893,24 @@ function postBody(html) {
   for (const img of [...content.querySelectorAll('img')]) {
     // A video's thumbnail was seen to above.
     if (img.closest('a.video-link')) continue;
-    const image = {
+    const image = describe({
       url: img.getAttribute('src'),
       caption: img.getAttribute('alt') || null,
-    };
+    });
     const link = img.closest('a');
     const onlyContentOfLink = Boolean(link)
       && link.textContent.trim() === ''
       && link.querySelectorAll('img').length === 1;
+    // A picture linked to a bigger copy of itself, or to a picture host's
+    // page for it, opens in the viewer like a picture with no link.
+    const linksToPicture = onlyContentOfLink
+      && isPictureAddress(link.getAttribute('href'));
 
     // What is left of a picture inside a link once the picture is gone.
     const linkWords = () => document.createTextNode(link.getAttribute('href'));
 
     if (!showPictures) {
-      if (link) {
+      if (link && !linksToPicture) {
         if (onlyContentOfLink) img.replaceWith(linkWords());
         else img.remove();
         continue;
@@ -918,7 +923,7 @@ function postBody(html) {
         title: image.caption || 'Open this picture',
       });
       stand.addEventListener('click', () => open(image));
-      img.replaceWith(stand);
+      (linksToPicture ? link : img).replaceWith(stand);
       continue;
     }
 
@@ -928,16 +933,45 @@ function postBody(html) {
       if (onlyContentOfLink) img.replaceWith(linkWords());
       else img.remove();
     });
-    if (!link) {
+    if (!link || linksToPicture) {
       viewable.push(image);
       img.classList.add('inline-picture');
-      img.addEventListener('click', () => open(image));
+      img.addEventListener('click', (e) => {
+        // A click with Ctrl, Shift or the like still follows the link.
+        if (link && (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey)) return;
+        e.preventDefault();
+        open(image);
+      });
     }
   }
 
   const body = el('div', { class: 'prose' });
   body.append(content);
   return body;
+}
+
+/// Sites whose page for a picture shows that picture and little else.
+const PICTURE_HOSTS = [
+  'imgur.com', 'ibb.co', 'imgbb.com', 'postimages.org', 'postimage.org',
+  'postimg.cc', 'postimg.org', 'flic.kr', 'flickr.com', 'gyazo.com',
+  'imgbox.com', 'photobucket.com', 'prnt.sc', 'prntscr.com',
+];
+
+/// Whether a link goes to a picture: a picture file, or a picture host's page.
+/// An album or gallery holds more than the one picture, so it stays a link.
+function isPictureAddress(href) {
+  let url;
+  try {
+    url = new URL(href);
+  } catch {
+    return false;
+  }
+  if (/\.(png|jpe?g|gif|webp|bmp)$/i.test(url.pathname)) return true;
+  const host = url.hostname.replace(/^www\./, '');
+  if (!PICTURE_HOSTS.some((name) => host === name || host.endsWith(`.${name}`))) {
+    return false;
+  }
+  return !/\/(a|gallery|albums?|sets)(\/|$)/i.test(url.pathname);
 }
 
 // Load the YouTube player only on an unmodified click.
@@ -1033,7 +1067,8 @@ function aiSummary(detail, mod) {
 /// pictures are one button away. [onCount] hears how many screenshots are
 /// showing each time that changes.
 function gallery(detail, onCount) {
-  const images = detail.gallery || [];
+  const images = (detail.gallery || [])
+    .map((image) => withSource(image, image.source, detail));
   if (!images.length) {
     onCount(0);
     return null;
@@ -1430,7 +1465,7 @@ function facts(detail) {
     day('Last release', listing.lastReleaseDate,
       'When this site last noticed a new version.'),
     day('Thread last posted', listing.threadLastPostOn || detail.threadLastPostOn, null),
-    aiUseFact(detail.aiUse, listing.authors),
+    aiUseFact(detail.aiUse),
   ]);
 }
 
@@ -1440,7 +1475,7 @@ function facts(detail) {
 /// "Not checked yet" means the mod's posts have not been read for this (no
 /// `aiUse` at all), and "Unknown" means they were read and say nothing (an
 /// `aiUse` with no `usesAi`).
-function aiUseFact(aiUse, authors = []) {
+function aiUseFact(aiUse) {
   if (!aiUse || aiUse.usesAi == null) {
     return sideFact('AI use', el('span', aiUse
       ? { class: 'dim', text: 'Unknown',
@@ -1453,12 +1488,12 @@ function aiUseFact(aiUse, authors = []) {
     ? (aiUse.uses || []).map(aiUseLabel).join(' · ')
     : 'None';
   const value = quickTip(el('span', { class: 'ai-use has-tip', text }),
-    () => aiUseTip(aiUse, authors));
+    () => aiUseTip(aiUse));
   return sideFact('AI use', value, { beside: !aiUse.usesAi });
 }
 
 // Keep all reported details in the tooltip, alongside the author's quote.
-function aiUseTip(aiUse, authors = []) {
+function aiUseTip(aiUse) {
   const tools = aiUse.tools || [];
   const uses = aiUse.usesAi ? aiUse.uses || [] : [];
   return el('div', { class: 'tip-parts' }, [
@@ -1470,7 +1505,7 @@ function aiUseTip(aiUse, authors = []) {
     tools.length
       ? el('div', { class: 'tip-badges' }, tools.map((tool) => el('span', { class: 'badge', text: tool })))
       : null,
-    el('div', { class: 'tip-label', text: `${authors.length ? joinNames(authors) : 'The author'} says:` }),
+    el('div', { class: 'tip-label', text: 'AI Disclosure' }),
     el('blockquote', { class: 'tip-quote', text: withoutOuterQuotes(aiUse.quote) }),
   ]);
 }
