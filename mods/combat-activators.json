@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "combat-activators",
     "name": "Combat Activators",
@@ -16,7 +16,7 @@
     "imageUrl": "https://i.imgur.com/MyY6m7H.png",
     "summary": "Activators are coded to mimic the functions of ship systems.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a library for creating custom combat activators that mimic ship system functionality, including drone spawning and HUD displays.",
+    "aiSummary": "Adds a library for creating custom combat activators that mimic ship system functionality.",
     "hasDirectDownload": false,
     "downloadCount": 0,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=26410.0",
@@ -31,7 +31,7 @@
       },
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
       },
       {
         "name": "LazyLib",
@@ -43,7 +43,8 @@
   "descriptionHtml": "<div class=\"align-center\"><strong>Combat Activators v1.3.0</strong></div><div class=\"align-center\"><span class=\"author-colour\" style=\"--c:#808080\"><strong>Requires <u><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a></u>, <u><a href=\"https://fractalsoftworks.com/forum/index.php?topic=13718\" rel=\"nofollow noopener\" target=\"_blank\">MagicLib</a></u> and <u><a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a></u></strong><br>Donations are appreciated. <br><strong><a href=\"https://ko-fi.com/presidentmattdamon\" rel=\"nofollow noopener\" target=\"_blank\">https://ko-fi.com/presidentmattdamon</a></strong><br></span></div><br><img src=\"https://i.imgur.com/MyY6m7H.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><em>download link removed -Alex</em><br><br><span class=\"size-big\"><strong>Activators</strong></span><br>Activators are coded to mimic the functions of ship systems. It's not exactly a one-to-one copy but they have a HUD display like the one shown above, with the name displayed, the key used for activation, the number of charges (if any), a bar that fills showing progress in the current state, and some info about the system.<br><br>Activators can be toggled, have charges, and have open methods for overrides on almost all functionality: the HUD display, the bar fill, a static key can be used or it can be not assigned to a key at all, what to do when the activator enters the IN state (onActivate) and the COOLDOWN state (onFinished), along with general advance methods that run only when combat is unpaused (advance) or always (advanceAlways), where the former is for gameplay effects while the latter is for cosmetic effects.<br><br><strong>Drone Activators</strong><br>Drone activators can spawn a compliment of drones with a given formation. There's some basic formations included in the mod, but none that actively mimic what a real fighter does because I didn't have time to figure it out while working on all the other mods I have.<br><br>Drone activators will consume an activation of the activator by default. They also support having a separate count of charges entirely so that the activator can have charges or no charges for activation of its own effects.<br>The formation of the drone essentially acts as an AI that offers fine control over the wing and its PID Controller, which controls its movement and rotation.<br><br><strong>Ship System Activators</strong><br>The ShipSystemActivator class takes a ship system ID and attempts to mimic the entirety of a ship system's functionality, except in the context of an activator instead. This means it will appear with the activators in the HUD and will also be assigned a key by the ActivatorManager, but otherwise will call all the methods that the ship system stats script base offers, including letting it define the state durations, cooldown, charges, activator name, and status data that appears on the left in combat. It will automatically call apply and unapply with the current state when those are required.<br><br>ask me for help if you want to integrate this into your mod, although the in-code documentation is pretty good imo, and it comes with example implementations as well.<br><br><details class=\"spoiler\"><summary>Changelog</summary>1.3.0:<br>- bunch of fixes for stuff that wasn't quite right: drone movement and rotation, hotkeys assigning, and also added some new overridable methods and a new base class to help mods integrate this library.<br><br>1.2.0:<br>- visual version number change so that mods can require this specific version of the library as it includes API changes<br><br>1.1.3:<br>- streamlined state handling<br>- barfill now handles drone activators with no charges better<br>- added a method that directly activates the activator<br><br>1.1.2:<br>drone activators now spawn all drones at start of combat without consuming charges. this means they'll start with full charges, which (iirc) is the same as drone systems in vanilla.<br><br>1.1.1:<br>advanceInternal is now called with the ship's timeflow as a multiplier<br><br>1.1.0:<br>added drone activators<br><br>1.0.5:<br>fixed charged drive being added to every single ship<br><br>1.0.4:<br>fixed not able to deactivate toggled activators, and hasCharges now returns true if getMaxCharges returns above 0<br><br>1.0.3:<br>updated for 0.96a, improved key text in HUD, fixed example not unapplying stat.<br><br>1.0.2:<br>added examples, render methods with viewports, fixed bar rising not counting active time. fix ui scaling with text rendering in HUD<br><br>1.0.0:<br>release</details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Provides a framework for coding custom combat activators that function similarly to ship systems. These activators feature HUD displays with names, activation keys, charge counts, and progress bars. The library supports toggling, charging, and various override methods for gameplay and cosmetic effects, including specific classes for drone formations and full ship system emulation.",
+  "aiDescription": "Provides a framework for coding activators that appear in the HUD with keys, charges, and progress bars. Includes drone activators for spawning formations and ship system activators that replicate vanilla system behavior. Offers extensive override methods for HUD display, activation logic, and state handling to help other mods integrate custom systems.",
+  "aiUse": {},
   "rawCategories": [],
   "gallery": [
     {

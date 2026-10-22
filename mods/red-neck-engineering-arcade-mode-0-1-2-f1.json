@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "red-neck-engineering-arcade-mode-0-1-2-f1",
     "name": "Red Neck Engineering - Arcade Mode 0.1.2-F1",
@@ -22,7 +22,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1548069249409622130/1548069249824854107/icon.jpg?ex=6ada7356&is=6ad921d6&hm=7ebe3cb5969e3811d000ee7d4b8f16e3222754531f017a1053aa8164855e6894&",
     "summary": "Adds a hullmod that modifies in a ship:",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a hullmod that adjusts ship maintenance and capacity stats via hot-swappable settings.",
+    "aiSummary": "Adds a hullmod that modifies ship maintenance and capacity stats via hot-changeable settings.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/OfficialZygorg/RedNeckEngineering_ArcadeMode/releases/download/latest/RedNeckEngineering_ArcadeMode-0.1.1.zip",
@@ -34,6 +34,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1548069249409622130/1548069249409622130",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "assisted"
+      }
+    ],
     "lastReleaseDate": "2026-09-15T00:00:00.000Z",
     "addedOn": "2026-02-10",
     "threadLastPostOn": "2026-09-18",
@@ -53,11 +60,24 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>RedNeckEngineering_ArcadeMode</p><p>Adds a hullmod that modifies in a ship:<br>PPT, CR Degradation rate, Supplies Per Month, Supplies To Recover after a fight, Cargo capacity, Fuel capacity and Crew capacity</p><p>All of these values can be modified on the LunaLib settings in the main menu, without the need to reload the game (Hot changable).</p><pre><code>Changelog:\nVersion 0.1.1\n\nAdded:\n\n    Versioning file\n    Changelog file\n    Update checker\n    Placeholder mod image for TriOS\n    Python script that makes a zip of the mod (Used ChatGPT because idk python)\n\nModified:\n\n    Revamped LunaLib settings\n    Revamped how the mod uses the settings\n    Made the mod a utility mod\n    Modified the README.md\n    Modified the hullmod descriptions\n\nFixed:\n\n    Lots of errors while Revamping\n\n!Unknown compatibility with 0.1.0 and bellow!\n!Unknown if you can disable the mod once you use it in a save!</code></pre><p>Fractalsoftworks page: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=34908\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=34908</a><br>Requires LazyLib:<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=5444.0</a><br><a href=\"https://github.com/LazyWizard/lazylib\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/lazylib</a><br>Requires LunaLib:<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=25658.0</a><br><a href=\"https://github.com/Lukas22041/LunaLib\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Lukas22041/LunaLib</a></p>",
-  "aiDescription": "Adds a hullmod that modifies PPT, CR degradation rate, supplies per month, supplies to recover after a fight, cargo capacity, fuel capacity, and crew capacity. These values can be modified in the LunaLib settings in the main menu without reloading the game.",
+  "aiDescription": "Adds a hullmod that modifies PPT, CR Degradation rate, Supplies Per Month, Supplies To Recover after a fight, Cargo capacity, Fuel capacity and Crew capacity. All of these values can be modified on the LunaLib settings in the main menu, without the need to reload the game (Hot changable).",
   "saveCompatibilityText": "!Unknown compatibility with 0.1.0 and bellow!",
   "removalCompatibilityText": "!Unknown if you can disable the mod once you use it in a save!",
   "canAdd": "depends",
   "canRemove": "depends",
+  "aiUse": {
+    "quote": "Python script that makes a zip of the mod (Used ChatGPT because idk python)",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "assisted"
+      }
+    ],
+    "tools": [
+      "ChatGPT"
+    ]
+  },
   "rawCategories": [
     "Quality of Life",
     "Utility mods"

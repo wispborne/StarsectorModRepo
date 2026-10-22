@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "show-encounter-stats",
     "name": "[0.98] Show Encounter Stats v1.1.2",
@@ -35,6 +35,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1457151130739020042/1457151130739020042",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "assisted"
+      }
+    ],
     "addedOn": "2026-01-03",
     "threadLastPostOn": "2026-01-16",
     "needs": [
@@ -53,11 +60,24 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Download link: <a href=\"https://github.com/Seekers6967/starsector-show_encounter_stats/releases/latest/download/ShowEncounterStats.rar\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Seekers6967/starsector-show_encounter_stats/releases/latest/download/ShowEncounterStats.rar</a></p><p>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=34734\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=34734</a></p><p>Small mod that adds various info when you encounter a fleet but before deciding to engage it.</p><p>Displays information such as number of ships on each side, DP total, autoresolve strenght (Fleet Power or FP) and the estimated +%EXP bonus due to battle difficulty (using vanilla calcs). Excludes civilian ships from the number of ships and DP count, as they are not really relevant but it does count the FP they contribute.</p>",
-  "aiDescription": "Shows detailed encounter information including fleet power, estimated experience bonuses, and officer counts. It handles multi-fleet engagements by combining enemy stats and supports viewing ongoing battles between allied factions.",
-  "saveCompatibilityText": "it can be added or removed mid save",
-  "removalCompatibilityText": "it can be added or removed mid save",
+  "aiDescription": "Shows detailed encounter information including estimated experience bonuses and officer counts. It supports viewing stats for allied fleets and ongoing multi-faction battles. Civilian ships are excluded from combat counts but their contribution to fleet power is tracked separately.",
+  "saveCompatibilityText": "it can be added or removed mid save.",
+  "removalCompatibilityText": "it can be added or removed mid save.",
   "canAdd": "yes",
   "canRemove": "yes",
+  "aiUse": {
+    "quote": "Refactored code (read, made a mess of the code myself, then had chatgpt clean it up ending up with more of a mess, im sorry).",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "assisted"
+      }
+    ],
+    "tools": [
+      "chatgpt"
+    ]
+  },
   "rawCategories": [
     "Other/Misc.",
     "Utility mods"

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "price-of-command",
     "name": "Price of Command 0.0.10",
@@ -17,8 +17,7 @@
     ],
     "gameVersion": "0.97a",
     "modVersion": "0.0.10",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1203147246233722890/1203148068661502054/memorial.png?ex=6ad81374&is=6ad6c1f4&hm=1a788ef99a74e660a09d6a1b08ab38fe33284cb78f41e29ee11ddb221c03ebbf&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1203147246233722890/1203148068661502054/memorial.png?ex=6adab674&is=6ad964f4&hm=410189b1075e977712645dc593d786326fa7710c7e76ead082332b5664696ac0&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1203147246233722890/1203148068661502054/memorial.png?ex=6adab674&is=6ad964f4&hm=410189b1075e977712645dc593d786326fa7710c7e76ead082332b5664696ac0&",
     "summary": "Allows your officers to get tired, get injured, and, in the worst case, die.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds officer fatigue, injury, and death mechanics while making officers cheaper and more numerous.",
@@ -40,7 +39,7 @@
       },
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
       },
       {
         "name": "LunaLib",
@@ -48,14 +47,15 @@
       }
     ]
   },
-  "description": "Officers can now become tired, injured, or die during battles. To balance these risks, hiring costs are reduced and roster limits are increased. The system includes After Action Reports where story points can be spent to alter outcomes, and provides APIs for other mods to add custom conditions.",
-  "descriptionHtml": "<p>Officers can now become tired, injured, or die during battles. To balance these risks, hiring costs are reduced and roster limits are increased. The system includes After Action Reports where story points can be spent to alter outcomes, and provides APIs for other mods to add custom conditions.</p>",
+  "description": "Officers can now become tired, injured, or die during battles. To balance this, hiring costs are reduced and roster limits are increased. The mod provides hooks for other authors to implement custom conditions.",
+  "descriptionHtml": "<p>Officers can now become tired, injured, or die during battles. To balance this, hiring costs are reduced and roster limits are increased. The mod provides hooks for other authors to implement custom conditions.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>Allows your officers to get tired, get injured, and, in the worst case, <strong>die</strong>. <code> </code></p><p>To compensate for the increased demands this puts on your officers, officers are now cheaper to hire, pay, and are more numerous. Additionally, you can now have a greater number on your roster.<br>Mod authors may be interested in implementing their own \"conditions\" like fatigue and injuries. A number of methods are available for other mod authors to hook into.</p><pre><code>Requires:\nLazyLib, MagicLib, LunaLib\nOptional:\nConsole Commands - Lets you inflict and heal the conditions currently in the mod, as well as just kill an officer (but why?)</code></pre><p><strong><em>Not balanced AT ALL</em></strong><br><strong><em>Not save compatible AT ALL with versions prior to 0.0.5</em></strong></p><p><strong>Changelog:</strong></p><pre><code>0.0.10 BETA \n- Mod now functions again after being completely broken by reflection shenanigans\n0.0.9 BETA\n- Now compatible (hopefully) with all RCs of 0.97\n0.0.8 BETA\n- Injuries avoided by a successful roll on the crew survival stat would be lost and not resolve correctly, resulting in a permanent bugged Injury skill and a permanently missing actual skill\n  - I recommend installing Console Commands and giving your officers a free skill if you believe you've been impacted\n- The table detailing officer conditions in the After Action Report will no longer extend out of frame when officers have longer names\n0.0.7 BETA\n- Base roster size configurable through LunaLib\n- Conditions resolving no longer causes a crash (oops)\n0.0.6 BETA\n- 0.97 compatibility\n0.0.5 BETA\nFeatures:\n- Scars now do something\n  - Officers may now be more cowardly or reckless when facing certain adversaries...\n- More configs\n- Crew loss reduction multipliers (ie: Blast Doors) should now reduce the chance of officers being injured. Or, this being a beta and my brain being fried on a Sunday night, it will crash your game.\n- Maybe other stuff? I don't remember\n- lots and lots of bug fixes\n- oh probably a very annoying option that will break your muscle memory in fleet encounter dialogs\nNOT SAVE COMPATIBLE WITH VERSION PRIOR TO 0.0.5</code></pre><p>Download: <a href=\"https://github.com/atlanticaccent/price-of-command/releases/download/0.0.10/price-of-command.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/atlanticaccent/price-of-command/releases/download/0.0.10/price-of-command.zip</a></p>",
-  "aiDescription": "Officers can now become tired, injured, or die during battles. To balance these risks, hiring costs are reduced and roster limits are increased. The system includes After Action Reports where story points can be spent to alter outcomes, and provides APIs for other mods to add custom conditions.",
+  "aiDescription": "Officers can now become tired, injured, or die during battles. To balance this, hiring costs are reduced and roster limits are increased. The mod provides hooks for other authors to implement custom conditions.",
   "updateCompatibilityText": "Not save compatible AT ALL with versions prior to 0.0.5",
-  "canUpdate": "depends",
+  "canUpdate": "no",
+  "aiUse": {},
   "rawCategories": [
     "Libraries",
     "Officers"
@@ -86,5 +86,12 @@
   "discordUrl": "https://discord.com/channels/187635036525166592/1203147246233722890/1203147246233722890",
   "releases": [],
   "sameNameMods": [],
-  "addons": []
+  "addons": [
+    {
+      "name": "Console Commands",
+      "role": "addon",
+      "requires": "Price of Command",
+      "downloads": []
+    }
+  ]
 }

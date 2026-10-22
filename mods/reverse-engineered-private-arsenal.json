@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "reverse-engineered-private-arsenal",
     "name": "Reverse Engineered Private Arsenal",
@@ -21,7 +21,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1519108627770900611/1519108627930288248/icon-128.png?ex=6ada8fa8&is=6ad93e28&hm=19f04fa9e9061c5b213d44fbdc90ad735b123f7ec27b354c8ff493f5316b6571&",
     "summary": "Reverse Engineered Private Arsenal adds a colony industry chain that takes apart the weapons, fighters and ships you deposit, learns to reproduce them, and sells you copies from an integrated Private Arsenal submarket. Vanilla and modded gear alike.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a colony structure that reverse engineers deposited weapons, fighters, and ships to sell copies in a private submarket.",
+    "aiSummary": "Adds a colony industry chain that reverse engineers deposited weapons, fighters, and ships to sell copies in a private submarket.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
@@ -34,6 +34,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1519108627770900611/1519108627770900611",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
     "lastReleaseDate": "2026-10-07T00:00:00.000Z",
     "addedOn": "2026-06-23",
     "threadLastPostOn": "2026-10-05",
@@ -49,11 +56,25 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Ever wanted to copy that rare weapon or ship you found instead of hoping for a blueprint drop? Build a Reverse Engineering Hub on your colony. Deposit weapons, fighters, or ships into storage. Each day the hub researches one item. Once done, you get fifty copies to buy from an integrated Private Arsenal submarket at a configurable price.<br>The hub comes in three tiers. Tier 1 handles weapons, Tier 2 adds fighters, Tier 3 adds ships (but you only get their blueprints when improved). Assign an AI core for bonuses: it speeds up research AND cuts the Arsenal prices.<br>Requires LunaLib. Works with modded gear. Full source on GitHub. No credits needed.<br>Download: <a href=\"https://github.com/andrzejsokolowski/starsector-private-arsenal/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/andrzejsokolowski/starsector-private-arsenal/releases/latest</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35627.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35627.0</a></p><p>This mod is a complete rewrite of DarkQOL's private arsenal/reverse engineering industries. I opted to coalesce them into one thing.<br>DarkQOL's abandoned and buggy, so I fixed it up, changed the logic and balance, and gave it a small general feel update.<br>Most of the mod is configurable via lunaSettings.</p>",
-  "aiDescription": "Builds a three-tier Reverse Engineering Hub on your colonies to analyze deposited gear. The hub uses AI cores to determine research speed and pricing for the resulting Private Arsenal submarket. It supports vanilla and modded items, with optional blueprint production via story points.",
+  "aiDescription": "Builds a three-tier Reverse Engineering Hub on your colonies to analyze deposited gear. The hub stocks fifty copies of each unlocked item in a Private Arsenal submarket, with research speed and pricing determined by the assigned AI core. Supports vanilla and modded equipment, with optional blueprint generation via story points.",
   "saveCompatibilityText": "Adding to an existing save is fine.",
   "removalCompatibilityText": "Removing it mid save is not recommended, as with any mod that adds industries and submarkets.",
   "canAdd": "yes",
   "canRemove": "no",
+  "aiUse": {
+    "quote": "Claude Code built this anyway.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "generated",
+        "extent": "all"
+      }
+    ],
+    "tools": [
+      "Claude Code"
+    ]
+  },
   "rawCategories": [
     "Colonies",
     "Miscellaneous Mods"

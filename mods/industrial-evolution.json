@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "industrial-evolution",
     "name": "Industrial.Evolution",
@@ -21,7 +21,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1356019260194951240/1356019260656320522/mod_post_icon_indevo.png?ex=6ada81d9&is=6ad93059&hm=0d0228ba45d25109e455f9c4bf464f607b882b800d7fb990edb54d80e0f96c37&",
     "summary": "Industrial.Evolution has long since departed from being a simple industry mod and should be treated as a general vanilla-themed campaign extension.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds extensive campaign content including new colony buildings, exploration events, fleet detachments, consumable items, and governance options.",
+    "aiSummary": "Adds extensive campaign content including new colony buildings, exploration events, fleet detachments, and consumable items.",
     "saveCompatible": false,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -37,12 +37,19 @@
     "nicknames": [
       "IndEvo"
     ],
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "illustrations",
+        "how": "generated"
+      }
+    ],
     "addedOn": "2020-02-17",
     "threadLastPostOn": "2026-10-17",
     "needs": [
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
       },
       {
         "name": "LazyLib",
@@ -63,13 +70,27 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><code>A massive campaign content expansion for colonies and exploration.</code></p><p>Industrial Evolution aims to deepen the colonisation and exploration aspect of the game, bringing new gameplay features not available anywhere else, to support whatever playstyle you choose.<br>Can not be installed on an ongoing save.</p><pre><code>Changelog: \n4.1.b - Meteor and Museum fixes, Museum settings, S-Mod effect for Museum\n4.1.a - Meteor Swarms, Museum, so, so much polish and improvements and a bunch of bug fixes. Check the full changelog below.\n</code></pre><pre><code>+ Save compatible with 4.1\n- NOT Save compatible with 4.0\n- Can NOT be installed on an ongoing save\nThis means: The mod can't be added if it was not present on game start, and can only be safely updated if your prior version was 4.1</code></pre><h3><a href=\"https://github.com/SirHartley/Industrial.Evolution/releases/download/4.1.b/Industrial.Evolution4.1.b.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download</a></h3><h3><a href=\"https://fractalsoftworks.com/forum/index.php?topic=18011.0\" rel=\"nofollow noopener\" target=\"_blank\">Forum Thread</a></h3><h3><a href=\"https://patreon.com/SirHartley\" rel=\"nofollow noopener\" target=\"_blank\">Support my Efforts</a></h3><p>or buy me a <a href=\"https://Ko-fi.com/sirhartley\" rel=\"nofollow noopener\" target=\"_blank\">Ko-Fi</a></p><p><code>_________________________________</code></p><p><em>The feature creep will continue until morale improves</em></p>",
-  "aiDescription": "Expands vanilla gameplay with over 20 new colony buildings featuring unique effects like D-Mod removal, reverse engineering, and cargo transport. Introduces new exploration content such as derelict industries, themed stations, and campaign layer hazards like artillery and meteor storms. Allows players to create fleet detachments on the fly, manage pets for ships, and alter colony governance through various political structures.",
+  "aiDescription": "Expands vanilla gameplay with over 20 new colony buildings featuring unique effects like governance changes and specialized industries. Introduces new exploration content such as derelict stations, themed encounters, and campaign-layer hazards like artillery and meteor storms. Adds fleet management features allowing players to create detachments that can transport cargo or fight independently. Includes consumable items, missiles, pets for ships, and research projects to enhance colony and fleet capabilities.",
   "saveCompatibilityText": "This can NOT be added to ongoing games",
   "updateCompatibilityText": "Update 4.1.b is save compatible with 4.1.a",
   "removalCompatibilityText": "it will break saves if removed",
   "canAdd": "no",
   "canUpdate": "yes",
   "canRemove": "no",
+  "aiUse": {
+    "quote": "The following assets in this mod have been created via the Stable Diffusion model \"Midjourney\", varying versions. Midjourney is a commercial Stable Diffusion model trained on a closed-source dataset:\n- Pet Images (some, not all)\n- Illustration for Automated Shipyards (scheduled for replacement)",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "illustrations",
+        "how": "generated",
+        "extent": "some"
+      }
+    ],
+    "tools": [
+      "Midjourney"
+    ]
+  },
   "rawCategories": [
     "Colonies",
     "Exploration",

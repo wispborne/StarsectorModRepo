@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "starsector-co-op",
     "name": "Starsector Co-op",
@@ -15,7 +15,7 @@
     "modVersion": "0.1.5",
     "summary": "Two people, two copies of Starsector 0.98a-RC8, one shared sector. Both of you fly around it at the same time, on one calendar. The host's game runs the NPC fleets, markets, economy and colonies. The guest's game mirrors them.",
     "summaryIsGenerated": false,
-    "aiSummary": "Lets two players share a single campaign sector with synchronized time, world state, and economy.",
+    "aiSummary": "Lets two players share a single campaign sector with synchronized time, economy, and colonies.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/AyoKeito/starsector-coop/releases/latest",
@@ -26,6 +26,13 @@
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36148.0",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
     "addedOn": "2026-10-12",
     "threadLastPostOn": "2026-10-12",
     "needs": []
@@ -34,7 +41,24 @@
   "descriptionHtml": "<strong>Starsector Co-op: two players, one campaign</strong><br><a href=\"https://github.com/AyoKeito/starsector-coop/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/AyoKeito/starsector-coop/releases/latest</a><br><br><details class=\"spoiler\"><summary>AI use disclaimer</summary>Most code in this mod was created using AI tools:<br>Fable 5.1, Opus 5.5, Astra, Sol 6.1<br><br>All smoke tests were done manually and verified via logs.</details><br>Two people, two copies of Starsector 0.98a-RC8, one shared sector. Both of you fly around it at the same time, on one calendar. The host's game runs the NPC fleets, markets, economy and colonies. The guest's game mirrors them.<br>Make sure to use a dedicated install for co-op mod, because it modifies files outside of mod folder. They are not hard to reverse, but easy to forget.<br><br>Decently short and concise TL;DR on how to run it is in the github repo readme.<br>I'll be very happy with proper issues on github, but I'll take bug reports and opinions here too.<br>Hit F11 in game to mark something in logs. If something looks broken, it would be optimal if you leave a mark with short description ASAP.<br><br><strong>What's shared</strong><br>- Time. A dialog, menu or battle on either side pauses the other. Fast forward speeds up both.<br>- The world. You see your partner's real fleet on your map. Patrols, pirates, traders, wrecks, markets, bar offers and faction reputation are the same for both of you.<br>- Storage and colonies. One storage locker per market for both of you, and one player faction with two governors. Colony income is split 50/50.<br>- Combat. Whoever gets engaged fights it on their own PC while the other waits. Switch on **Fight Alongside** and your fleet joins your partner's fights as an AI ally. Ships you lose there are really lost.<br><br><strong>Not in this version</strong><br>- No shared piloting. Only one of you flies each battle, so watch over screen share.<br>- Hyperspace weather and slipstreams differ between the two games.<br>- Abyss is host-only, no sensor ghosts for guest.<br>- Generated pirate bases can have different position for host and guest (in the same system)<br>- Story missions, contacts and bounties belong to one player.<br>- Solo play isn't supported while the mod is enabled.<br><br><strong>Hacky stuff</strong><br>- Who spots whom between NPC fleets and the guest is approximated, so sensor range can feel off.<br>- NPCs chase the guest's copy on the host's game, and the catch is handed to the guest's PC. Close to vanilla but lightly tested, so NPCs can derp.<br>- Vanilla only spawns fleets near the one player it knows. The mod spawns them near the guest too when you're in different systems, but it can misbehave.<br>- Journal stuff and monthly messages can and probably will be off for guest (ranging from wrong to non-existent).<br>- Minimizing or removing focus from the game can cause desyncs and disconnects (recoverable, but someone alt-tabbing to watch youtube will pause the game)<br>- 2x speed forced into a toggle.<br>- Colony stuff is wonky, but generally works.<br><br><strong>Setup</strong><br>Both players need the same game version, the same mod list, and this mod installed from the same download. Only the host has to be reachable: a port forward, UPnP, IPv6 or a VPN like Radmin or ZeroTier all work. The included **Coop Launcher** checks your install and fixes it. The host copies an invite, and the guest pastes it.<br><br>This was lightly tested with my friend who is absolutely clueless about Starsector - it worked fine, although we didn't do anything crazy. Mid and late game content are entirely untested. Sessions longer than 1,5 hours are not tested.<br>I'd like to get some input from more experienced players: things you find broken and want fixed first, features to add, etc.<br>This was tested on vanilla with absolutely no other mods. No balance adjustments were made for co-op.<br>Best way to report a bug: <a href=\"https://github.com/AyoKeito/starsector-coop/blob/main/docs/player/REPORTING.md\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/AyoKeito/starsector-coop/blob/main/docs/player/REPORTING.md</a><br>All feedback welcome!<br><br>This mod also includes an MCP server that will help you simplify testing using LLMs, if you're into that. You can ask for creds, ships, teleportation, etc.<br>Main difference from <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36147.0\" rel=\"nofollow noopener\" target=\"_blank\">this</a> mod is that my mod focuses entierly on co-op aspect with 0 PvP by design. This is not expected to change.<br><br>Guest POV: <br><a class=\"video-link\" href=\"https://www.youtube.com/watch?v=cD8c8xW-b7w\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.ytimg.com/vi/cD8c8xW-b7w/hqdefault.jpg\" alt=\"Video on YouTube\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br>Earlier version both clients POV (video quality is bad because of video dimensions): <br><a class=\"video-link\" href=\"https://www.youtube.com/watch?v=V4Qt1MzwibA\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.ytimg.com/vi/V4Qt1MzwibA/hqdefault.jpg\" alt=\"Video on YouTube\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Synchronizes time, markets, colonies, and NPC fleets between two game instances. Allows one player to fight battles while the other waits, or optionally joins as an AI ally. Includes a launcher to verify installations and handle network connections.",
+  "aiDescription": "Synchronizes time, world state, storage, and colony income between two players running separate game instances. Handles combat by letting one player fight while the other waits or joins as an AI ally. Includes a launcher to check installations and manage connections.",
+  "aiUse": {
+    "quote": "Most code in this mod was created using AI tools:\nFable 5.1, Opus 5.5, Astra, Sol 6.1\n\nAll smoke tests were done manually and verified via logs.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "generated",
+        "extent": "most"
+      }
+    ],
+    "tools": [
+      "Fable 5.1",
+      "Opus 5.5",
+      "Astra",
+      "Sol 6.1"
+    ]
+  },
   "rawCategories": [],
   "gallery": [],
   "downloads": [

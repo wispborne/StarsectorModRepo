@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "magiclib",
     "name": "MagicLib",
@@ -26,7 +26,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355301122121924730/1355301122532835572/magicLibSquare.png?ex=6ada8807&is=6ad93687&hm=97adb330d053e1cdd1b37f1d9d42ac85f78225ee3aa369de5f318c9a3b683ce9&",
     "summary": "The goal of MagicLib is to create a community-built library of useful (and well documented) scripts and plugins that can be leveraged and contributed to by every modder.",
     "summaryIsGenerated": false,
-    "aiSummary": "Provides a community-built library of scripts and plugins for modders.",
+    "aiSummary": "Provides a library of scripts and plugins for modders to use in their own mods.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/MagicLibStarsector/MagicLib/releases/latest/download/MagicLib.zip",
@@ -38,6 +38,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1355301122121924730/1355301122121924730",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "icons",
+        "how": "generated"
+      }
+    ],
     "addedOn": "2023-01-08",
     "threadLastPostOn": "2026-09-26",
     "needs": [
@@ -52,7 +59,21 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>A community-driven Starsector library of useful code that can be leveraged and contributed to by every modder.</p><h5>Download</h5><p><a href=\"https://github.com/MagicLibStarsector/MagicLib/releases/latest/download/MagicLib.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/MagicLibStarsector/MagicLib/releases/latest/download/MagicLib.zip</a></p><p>Changelogs: <a href=\"https://github.com/MagicLibStarsector/MagicLib/blob/master/CHANGELOGS.md\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/MagicLibStarsector/MagicLib/blob/master/CHANGELOGS.md</a><br>Forum: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25868.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=25868.0</a><br>Source: <a href=\"https://github.com/MagicLibStarsector/MagicLib\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/MagicLibStarsector/MagicLib</a></p>",
-  "aiDescription": "Offers a shared configuration system, frameworks for achievements, paintjobs, and bounties, and various utility functions for campaigns, UI, rendering, and combat mechanics. It serves as a foundation for cross-mod integration and compatibility.",
+  "aiDescription": "Offers a collection of functions and frameworks for common modding tasks, such as handling settings, bounties, achievements, paintjobs, and visual effects. It includes tools for cross-mod integration via a shared configuration file and provides various helper scripts for weapons, missiles, and UI elements.",
+  "aiUse": {
+    "quote": "Generative \"AI\" was used in creating the achievement icons. Lora: sxz-2dicon, model: Deliberate v2.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "icons",
+        "how": "generated"
+      }
+    ],
+    "tools": [
+      "Lora: sxz-2dicon",
+      "Deliberate v2"
+    ]
+  },
   "rawCategories": [
     "Libraries"
   ],

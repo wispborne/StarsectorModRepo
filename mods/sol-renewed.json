@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "sol-renewed",
     "name": "Sol - Renewed",
@@ -21,7 +21,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1545912358092931173/1545912358277484669/sol-renewed-icon.png?ex=6ada8393&is=6ad93213&hm=1f58fd770a9d5a64b66cb63c4daf624b1a0606ba09c72f390faefab318014158&",
     "summary": "Adds Sol: the eight planets, Pluto, and the moons that matter, sized and spaced out so it fits vanilla's scale.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a quest to locate and colonize the Sol system, triggering a crisis as colonies grow.",
+    "aiSummary": "Adds the Sol system with its planets and moons, featuring a quest to bring it into the sector and colony crisis mechanics.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
@@ -34,6 +34,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1545912358092931173/1545912358092931173",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
     "lastReleaseDate": "2026-10-20T00:00:00.000Z",
     "addedOn": "2026-09-05",
     "threadLastPostOn": "2026-10-18",
@@ -53,9 +60,23 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35983.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35983.0</a></p><p>This is my edited version of Bugatti's Sol mod - But with many tweaks, a new questline to discover sol, less loot in your face, nerfed slightly, distances changed, planets are larger and move slower so they're not as annoying to dock to and more.</p><p>Also has a colony crisis mechanic (that you can disable) that adds tons of enemies for you to fight depending on your progression in the sol system</p>",
-  "aiDescription": "Adds the Sol system with its planets and moons, accessible via a quest or settings. Colonizing Sol triggers escalating raids from pirates, Luddic Path, and Remnants based on colony size and industry. The system includes unique stations, cryo-prisons, and configurable enemy presence.",
+  "aiDescription": "Introduces the Sol system, including eight planets, Pluto, and major moons, scaled to fit vanilla game dimensions. Players must complete a quest involving a rogue AI to locate and transfer Sol into the Persean Sector. Colonizing Sol triggers a crisis where pirates, Luddic Pathers, and Remnants raid the colonies based on population and industry growth. The system includes unique locations like Gungnir Dockyard, a cryo-detention platform, and configurable Remnant presence levels.",
   "saveCompatibilityText": "Yes. The quest hooks itself up on load and the system is generated when you finish it.",
   "canAdd": "yes",
+  "aiUse": {
+    "quote": "Claude Code built this anyway.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "generated",
+        "extent": "all"
+      }
+    ],
+    "tools": [
+      "Claude Code"
+    ]
+  },
   "rawCategories": [
     "Colonies"
   ],

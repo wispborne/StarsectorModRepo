@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "hiver-swarm",
     "name": "Hiver Swarm",
@@ -24,7 +24,7 @@
     "imageUrl": "https://i.imgur.com/uiXpsfj.png",
     "summary": "Hiver Swarm is a non player enemy AI faction designed to be aggressive invaders and can colonize systems. An insectoid race that uses high tech bio-cybernetics to grow their living ships. Their home world is found in deep space and their relations range from inhospitable to hostile for all factions.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds an aggressive insectoid AI faction with living ships that regenerate hulls in combat.",
+    "aiSummary": "Adds an aggressive insectoid faction with living ships that colonize systems and attack the player.",
     "saveCompatible": false,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -37,6 +37,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1203417843732058202/1203417843732058202",
     "sourceIsPublic": false,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "portraits",
+        "optional": true
+      }
+    ],
     "addedOn": "2021-11-14",
     "threadLastPostOn": "2026-09-25",
     "needs": [
@@ -50,7 +57,7 @@
       },
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
       }
     ]
   },
@@ -59,11 +66,21 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Hiver Swarm is a non player enemy AI faction designed to be aggressive invaders and can colonize systems. An insectoid race that uses high tech bio-cybernetics to grow their living ships. Their home world is found in deep space and their relations range from inhospitable to hostile for all factions. Their exclusive living hull designs (seen below) allow them to regenerate their hulls in combat and to be tougher made than the average factions' making them a challenge to fight. They use custom made drones, energy pulse weapons and missiles but have been known to use captured Corvus ships.</p><p>They are vengeful toward the player and will become hostile on sight, you have been warned.</p><p>The mod comes with multiple optional files in the ZIP with instructions on what they do and how to enable them on the forum page as well as in a file named README in the ZIP.</p><p><a href=\"https://i.imgur.com/yVPzkVK.png\" rel=\"nofollow noopener\" target=\"_blank\">https://i.imgur.com/yVPzkVK.png</a><br>The second image is the alternate ship pack for players with entomophobia.<br><a href=\"https://i.imgur.com/EfDsdNT.png\" rel=\"nofollow noopener\" target=\"_blank\">https://i.imgur.com/EfDsdNT.png</a><br>Link to Support my Coffee Addiction: <a href=\"https://ko-fi.com/dazs825110\" rel=\"nofollow noopener\" target=\"_blank\">https://ko-fi.com/dazs825110</a><br>Forum <a href=\"https://fractalsoftworks.com/forum/index.php?topic=22965.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=22965.0</a><br>Download: <a href=\"https://drive.google.com/uc?export=download&amp;id=1qU06YXnPXJTxbPrVG5A1EHWiiqyxk7mP\" rel=\"nofollow noopener\" target=\"_blank\">https://drive.google.com/uc?export=download&amp;id=1qU06YXnPXJTxbPrVG5A1EHWiiqyxk7mP</a></p>",
-  "aiDescription": "Introduces a hostile non-player faction that invades and colonizes systems. Their bio-cybernetic ships feature regenerating hulls, custom drones, and energy pulse weapons. The mod offers multiple difficulty variations ranging from vanilla plus to extreme mode.",
+  "aiDescription": "Introduces a hostile alien race featuring bio-cybernetic ships with regenerating hulls. These enemies use custom drones, energy weapons, and missiles to invade sectors and establish colonies. The mod offers multiple difficulty modes ranging from vanilla-friendly to extreme challenges.",
   "saveCompatibilityText": "New game required to have them appear in the sector",
   "updateCompatibilityText": "Save compatible Note: Changes wil only take effect during the sector generation of a new game",
   "canAdd": "no",
   "canUpdate": "depends",
+  "aiUse": {
+    "quote": "Optional AI enhanced Hiver portraits (Install instructions in the README file)",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "portraits",
+        "optional": true
+      }
+    ]
+  },
   "rawCategories": [
     "Faction Mods"
   ],

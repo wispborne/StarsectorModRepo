@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "universal-missile-regeneration",
     "name": "Universal Missile Regeneration v1.0.0",
@@ -22,7 +22,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1556831577172873306/1556831577470935060/Neon_Rusted_Rocket_Emblem_150x150.png?backend=b2&ex=6adaafe4&is=6ad95e64&hm=0dc7e9ff41f6e6ed4d816103647db22c477e4918884472416523c34809cef642&",
     "summary": "Universal Missile Regeneration (UMR) gives eligible finite-ammo missile launchers combat-time ammunition regeneration while preserving their normal firing behavior.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds combat-time ammunition regeneration for eligible finite-ammo missile launchers.",
+    "aiSummary": "Adds combat-time ammunition regeneration to finite-ammo missile launchers.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -38,6 +38,17 @@
     "nicknames": [
       "UMR"
     ],
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "assisted"
+      },
+      {
+        "area": "writing",
+        "how": "assisted"
+      }
+    ],
     "addedOn": "2026-10-05",
     "threadLastPostOn": "2026-10-06",
     "needs": []
@@ -47,11 +58,27 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>A mod that allows all limited ammo missile weapons to regenerate ammo at a pace designed to feel similar to Missiles and Sundry.</p><p>Uses a custom ruleset to dynamically apply missile regeneration. By default, UMR works for eligible vanilla and modded missile launchers, and it applies the same core regeneration rules to player and NPC ships. The goal is to make missiles remain useful throughout longer/larger fights without redesigning the weapons themselves.</p><pre><code>Changelog:\n1.0.0\nInitial Release</code></pre><pre><code>Save Compatibility Notice\nShould be safe to add or remove at any time.\nDoes not keep persisistent data in your save.</code></pre><p>Download: <a href=\"https://github.com/ktastic7/Universal-Missile-Regeneration/releases/download/v1.0.0/Universal-Missile-Regeneration.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/ktastic7/Universal-Missile-Regeneration/releases/download/v1.0.0/Universal-Missile-Regeneration.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36118.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36118.0</a></p>",
-  "aiDescription": "Regenerates ammunition for vanilla and modded missile launchers during combat. Refills in burst-sized packets based on mount size and magazine capacity, with safety floors to prevent infinite firing. Includes configuration options for blacklists, overrides, and logging levels.",
+  "aiDescription": "Regenerates ammo for eligible vanilla and modded missile launchers during combat. Refills occur in burst-sized packets based on mount size and magazine capacity, with safety floors to prevent infinite firing. Compatible with Expanded Missile Racks and prevents double-dipping with the vanilla Missile Autoloader.",
   "saveCompatibilityText": "Does not require a new campaign.",
   "removalCompatibilityText": "Should be safe to remove at any time.",
   "canAdd": "yes",
   "canRemove": "yes",
+  "aiUse": {
+    "quote": "Custom made AI tools were used to assist in the development, documentation, creating testing scripts and other limited aspects of this mod. An extensive amount of man hours were put in by myself to among other things, ensure stability of code, accuracy of any AI contribution, and all actual testing.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "assisted",
+        "extent": "some"
+      },
+      {
+        "area": "writing",
+        "how": "assisted",
+        "extent": "some"
+      }
+    ]
+  },
   "rawCategories": [
     "Utility mods"
   ],

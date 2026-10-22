@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "stat-derived-ship-costs-the-kelly-blue-book-of-space",
     "name": "Stat-Derived Ship Costs \"The Kelly Blue Book of Space\"",
@@ -20,7 +20,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1520697507787575407/1520697508349743205/SDSC.png?ex=6ada68ab&is=6ad9172b&hm=90614d1c389512716ad81e13b42b0717e3f943359a28382fecc6cf1dda08b2bc&",
     "summary": "An in-space Kelly Blue Book for Starsector ships.",
     "summaryIsGenerated": false,
-    "aiSummary": "Replaces static ship prices with values derived from hull stats, condition, and market context.",
+    "aiSummary": "Replaces static ship prices with values derived from hull stats, visible condition, market channel, and local economy context.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -48,13 +48,14 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>\"The Kelly Blue Book of Spaceships\"</p><p>The most important immersion mod for any modded Starsector run. Ships are no longer priced by vibes, they are appraised by their actual hull stats, condition, rarity, logistics burden, and market channel.</p><p>Stat-Derived Ship Costs acts like a Kelly Blue Book for spaceships. It evaluates loaded ship hulls and replaces arbitrary market prices with stat-derived values that better reflect what a ship is actually worth in the Sector.</p><p>Powerful ships are not nerfed. The economy simply recognizes them. If a ship is trash, the market will reflect that.</p><p>That sleek destroyer might still look amazing, but the ugly frigate you used to ignore may suddenly reveal itself as the better buy! Especially when you realize you can deploy three of them for the same DP cost.</p><p>Features:</p><ul><li>Stat-derived ship hull pricing</li><li>Highly Tunable</li><li>Positive Faction Relations give dynamic discounts</li><li>D-mod condition pricing</li><li>Open, military, and black market unique price behavior</li><li>Rarity, logistics, and market-context adjustments</li><li>Hull value report generation</li><li>Designed for heavily modded games with inconsistent ship pricing</li><li>Will flip your logic when composing fleets</li></ul><p>Save Compatibility Notice</p><p>Safe to add to an existing save.<br>Safe to remove, but ship prices will return to normal after the mod is disabled and the game is restarted.</p><p>A full restart is recommended after updating.</p><p>Download: <a href=\"https://github.com/Compterra/Stat-Derived-Ship-Costs/archive/refs/heads/main.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Compterra/Stat-Derived-Ship-Costs/archive/refs/heads/main.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35645.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35645.0</a></p>",
-  "aiDescription": "Replaces static ship prices with dynamic values based on hull statistics, visible damage, and local economy conditions. Damaged ships sell for less while clean ships retain prestige, allowing players to acquire larger hulls through cheaper, damaged options. Pricing behavior varies by market channel and is highly configurable via LunaLib.",
+  "aiDescription": "Derives base ship value from hull stats instead of relying only on vanilla price entries. D-mods strongly reduce ship value, while S-mods have little face-value effect. Open Market, Military Market, and Black Market each have their own pricing behavior, and selling prices are adjusted separately to reflect buyer motives.",
   "saveCompatibilityText": "Safe to add to an existing save.",
   "updateCompatibilityText": "A full restart is recommended after updating.",
   "removalCompatibilityText": "Safe to remove, but ship prices will return to normal after the mod is disabled and the game is restarted.",
   "canAdd": "yes",
   "canUpdate": "depends",
   "canRemove": "yes",
+  "aiUse": {},
   "rawCategories": [
     "Misc. Campaign Mods"
   ],

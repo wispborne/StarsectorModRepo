@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "clearcommands",
     "name": "ClearCommands",
@@ -21,7 +21,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355893179949387967/1355893180343517224/clearCommands_icon.png?ex=6adab52d&is=6ad963ad&hm=4a79e304d873a208d2d0df937097539347c3690e889ea6f11f0af4879d9d4002&",
     "summary": "A small amount of additional console commands to clear the fleet bloat that seems to be affecting many saves. Safe to add and remove to an ongoing save file.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds console commands to identify and clear excessive fleets causing performance issues.",
+    "aiSummary": "Adds console commands to identify and remove excessive fleets causing performance issues.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -48,13 +48,14 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><code>A small set of additional console commands for save file cleanup.</code></p><p>Might be able to fix your game if:</p><ul><li>Your game is stuttering</li><li>You have extremely low fps</li><li>You are unable to save</li><li>You are crashing when hovering over certain fleets</li></ul><p>ALWAYS save a copy before using any of the commands provided by this mod.</p><p>Try <code>[csmartClear]</code> before using the more direct deletion commands!<br>If you are getting the \"crashing when mousing over a fleet\" problem, use <code>[cclearModularShips]</code>!</p><pre><code>Changelog: \n&gt; Version patch, excluded some quest factions from csmartclear\n&gt; Made cSmartClear slightly more robust and less prone to murdering quest fleets\n&gt; Fixed it clearing the seeker bosses</code></pre><pre><code>+ SAVE COMPATIBLE with any prior version\n+ CAN be installed on an ongoing save\n+ CAN be safely removed from an ongoing save\nThis means: The mod can be added if it was not present on game start, the update is safe to install over the old one if you had a prior version, and you can remove the mod at any time.</code></pre><h3><a href=\"https://github.com/SirHartley/ClearCommands/releases/download/1.0.g/ClearCommands1.0.g.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download</a></h3><h3><a href=\"https://fractalsoftworks.com/forum/index.php?topic=19210.0\" rel=\"nofollow noopener\" target=\"_blank\">Forum Thread</a></h3><h3><a href=\"https://patreon.com/SirHartley\" rel=\"nofollow noopener\" target=\"_blank\">Support my Efforts</a></h3><p><code>_________________________________</code></p><p><em>Now with 100% less softlocking quests.</em></p>",
-  "aiDescription": "Provides diagnostic tools to report on fleet counts and specific factions. Includes commands to safely clear abnormal fleets, all fleets, or specific faction fleets while excluding important entities like stations and quest fleets. Designed to resolve stuttering, low FPS, and crashes caused by save file bloat.",
+  "aiDescription": "Provides diagnostic tools to report on fleet counts and specific faction activities. Includes commands to selectively clear abnormal or problematic fleets while preserving important quest and station entities. Designed to resolve stuttering, low FPS, and crashes associated with save file bloat.",
   "saveCompatibilityText": "Safe to add and remove to an ongoing save file.",
   "updateCompatibilityText": "SAVE COMPATIBLE with any prior version",
   "removalCompatibilityText": "Safe to add and remove to an ongoing save file.",
   "canAdd": "yes",
   "canUpdate": "yes",
   "canRemove": "yes",
+  "aiUse": {},
   "rawCategories": [
     "Other/Misc.",
     "Utility mods"
@@ -91,9 +92,9 @@
     }
   ],
   "changelog": {
-    "1.0.g": "Changelog post 1.0.g to be found here.",
     "1.0.f": "Adjusted - Added defending fleets to the exception list for cSmartClear\n Adjusted - Added fleets that are tagged to be ignored by other fleets to the exception list for cSmartClear\n Adjusted - Accounted for fleets with unique ships and ships with a forced loadout (likely mod-added bounties) to not be cleared by any command\n Fixed - No longer clears Seeker bosses",
-    "1.0.e": "Fixed - No longer clears Ziggurat Fleet"
+    "1.0.e": "Fixed - No longer clears Ziggurat Fleet",
+    "1.0.d": "Adjusted - updated for 0.95a"
   },
   "changelogUrl": "https://github.com/SirHartley/ClearCommands/releases",
   "sourceCodeUrl": "https://github.com/SirHartley/ClearCommands",

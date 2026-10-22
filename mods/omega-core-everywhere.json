@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "omega-core-everywhere",
     "name": "Omega Core Everywhere",
@@ -15,11 +15,10 @@
       "discord"
     ],
     "gameVersion": "0.98a",
-    "modVersion": "1.0.0",
     "imageUrl": "https://fractalsoftworks.com/forum/index.php?action=dlattach;attach=15979;type=avatar",
     "summary": "Omega cores drop from destroyed Omega ships",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds Omega core drops from destroyed Omega ships and unique effects for Omega cores installed in colony buildings.",
+    "aiSummary": "Adds Omega core drops from destroyed ships and unique effects for Omega cores installed in colony buildings.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
@@ -32,6 +31,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1561454784517636186/1561454784517636186",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
     "addedOn": "2026-10-18",
     "threadLastPostOn": "2026-10-18",
     "needs": [
@@ -46,11 +52,25 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>This mod will allow you to put in omega cores in every industry giving unique buffs. Has unique interactions with indevo, AOTD, tasc.</p><p>forum post:</p><p><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36168.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36168.0</a></p>",
-  "aiDescription": "Allows destroyed Omega ships to drop their command cores, with drop rates scaling by ship size. Installing an Omega core in a colony building grants powerful bonuses, such as doubled production or enhanced defenses, across the base game and several supported mods.",
-  "saveCompatibilityText": "Can I add it to an existing save? Yes.",
-  "removalCompatibilityText": "Can I remove it from a save? Yes. The building effects come off before every save, so the save does not depend on this mod. Everything already handed out stays: delivered goods, officer levels, Hypercognition, restored ships and reputation.",
+  "aiDescription": "Allows destroyed Omega ships to drop their command cores, with drop rates scaling by ship size. Installing an Omega core in a colony building grants powerful bonuses, such as doubled production or enhanced defenses. These effects apply to buildings in the base game and several supported mods like Industrial Evolution and Vaults of Knowledge.",
+  "saveCompatibilityText": "Can I add it to an existing save?\nYes.",
+  "removalCompatibilityText": "Can I remove it from a save?\nYes. The building effects come off before every save, so the save does not depend on this mod. Everything already handed out stays: delivered goods, officer levels, Hypercognition, restored ships and reputation.",
   "canAdd": "yes",
   "canRemove": "yes",
+  "aiUse": {
+    "quote": "Claude Code built this anyway.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "generated",
+        "extent": "all"
+      }
+    ],
+    "tools": [
+      "Claude Code"
+    ]
+  },
   "rawCategories": [
     "Colonies"
   ],

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "cloning-baseline-feature-complete",
     "name": "Cloning",
@@ -16,8 +16,7 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "0.2.1",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1487879107445522633/1487910221962674436/image.png?ex=6ad876a0&is=6ad72520&hm=dd5d545cf354593cb17233a132aca0d2fcd1e2c19dd7900f6452b64217d4c496&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1487879107445522633/1487910221962674436/image.png?ex=6ada70e0&is=6ad91f60&hm=99637d68c6f1fac9c0dd3191a97b0a8209d1d76e79ca7ecb864b5e5d3456887b&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1487879107445522633/1487910221962674436/image.png?ex=6ada70e0&is=6ad91f60&hm=99637d68c6f1fac9c0dd3191a97b0a8209d1d76e79ca7ecb864b5e5d3456887b&",
     "summary": "Adds a three-tier cloning industry that massively boosts population growth — at a cost to stability.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds a three-tier cloning industry that massively boosts population growth at a cost to stability.",
@@ -32,6 +31,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1487879107445522633/1487879107445522633",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
     "addedOn": "2026-03-29",
     "threadLastPostOn": "2026-04-01",
     "needs": [
@@ -46,7 +52,21 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Ever installed **Astral Ascension **but found you would need to wait years for a size 9 colony in the first place?<br>Ever wanted to see those cool multipliers from having a \"<em>Fractal Ecumonopolis</em>\", whatever that is because you've never seen it without using console commands?</p><p>Ever installed **Vulpoids **and saw your celebrities produce 0.6% growth on a size 8?</p><p>Well look no more:<br><strong>Cloning</strong></p><p>This mod adds an (available from the start) industry called \"Cloning\". It has one upgrade path, with 3 levels:</p><ol><li>Cloning Vat Experiments  - Produces some pop growth</li><li>Cloning industry - Produces more pop growth</li><li>Cloning Megafactory - Produces tons of pop growth</li></ol><p>Cloning takes up an industry slot.</p><p>Additionally, you can add AI cores to this industry for:<br>gamma: Reduced upkeep (this industry eats a lot of money)<br>beta: Now produces marines &amp; crew in addition to pop growth<br>alpha: Now produces marines &amp; crew and scales with market size.<br>(planned omega) - Alpha + 2x the colony size scaling rate. Will allow you to hit some bonkers numbers on popgrowth. Go wild, i guess.</p><p>Cloning incurs a stability penalty of ${COLONY_SIZE} just for any semblance of a demerit.</p><p>Uses Lunalib for user settings for values provided by this mod, and thus is a (soft) dependency. People without lunalib will face default values, but I set it as a hard-dep anyway in the modinfo.</p><p>FAQ:</p><ul><li>Is this mod overpowered?</li></ul><p>Definitely yes, until I can \"<strong>Balans</strong>\" is somehow<br>And I mean REALLY overpowered right now. I'm hitting over a thousand popgrowth on a 7-size colony.</p><ul><li>What is planned in the future?</li></ul><p>Colony item integration, big penalties for big bonuses, balance, a way to aquire the blueprint for cloning from a hard fight (maybe a dorito one?)<br>Also I plan to use AOTD(VOK)'s research system to involve the player in the stat boost a little bit more while fighting for databanks with the alternatives.</p><ul><li>Compatibility?</li></ul><p>Should be compatible with everything. Tested with build menu overhaul from AOTD as well.<br>Tested on a 250 mod modpack, no crashes.</p><p><a href=\"https://github.com/andrzejsokolowski/starsector-cloning/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><strong>DOWNLOAD</strong></a><br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35130.0\" rel=\"nofollow noopener\" target=\"_blank\"><strong>Forum Thread</strong></a></p>",
-  "aiDescription": "Adds a new industry chain with three upgrade tiers, each producing more population growth than the last. Growth scales with colony size when specific cores or items are installed, and all tiers apply a stability penalty. AI cores provide additional benefits such as reduced upkeep and crew production.",
+  "aiDescription": "Adds a new industry chain with three upgrade tiers, from Clone Vat Experiments to Cloning Megafactory. Each tier increases population growth but applies a scaling stability penalty and high upkeep costs. Growth scales with colony size when specific AI cores or items are installed, and settings can be configured via LunaLib.",
+  "aiUse": {
+    "quote": "You don't have to credit me, as claude code built this anyway.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "generated",
+        "extent": "all"
+      }
+    ],
+    "tools": [
+      "claude code"
+    ]
+  },
   "rawCategories": [
     "Colonies"
   ],

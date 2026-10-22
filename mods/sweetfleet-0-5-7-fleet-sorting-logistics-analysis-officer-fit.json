@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "sweetfleet-0-5-7-fleet-sorting-logistics-analysis-officer-fit",
     "name": "SweetFleet 0.5.7 - fleet sorting, logistics analysis, officer fit",
@@ -21,7 +21,7 @@
     "imageUrl": "https://raw.githubusercontent.com/daerogami/sweet-fleet/dev/assets/icon.png",
     "summary": "SweetFleet is a utility mod that makes fleet management less of a chore: multi-criteria sorting with editable presets, a logistics/affordability screen, officer-to-ship fit suggestions, and Fleet-tab buttons so you can reach it without leaving the screen.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds multi-criteria sorting, logistics analysis, and officer fit suggestions to fleet management.",
+    "aiSummary": "Adds multi-criteria fleet sorting, logistics analysis, and officer fit suggestions to the Fleet tab.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -34,6 +34,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1534674229969158235/1534674229969158235",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
     "addedOn": "2026-08-05",
     "threadLastPostOn": "2026-10-08",
     "needs": [
@@ -48,13 +55,27 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>SweetFleet is a utility QoL mod: multi-criteria fleet sorting with editable global presets, a logistics/affordability screen (overreach flags + Efficiency Overhaul hints), officer-fit suggestions (including your commander), and SF Sort / SF Settings on the Fleet tab. Hotkeys F8 (sort) / F7 (analyze). Requires LazyLib; Console Commands optional.<br>Developed with heavy use of Cursor Auto mode (AI coding agents) — I directed design and tested in-game; report bugs with starsector.log.</p><pre><code>Changelog:\n0.5.7\nAdded - civilian hull sorting parameter\nChanged - the default sort preset is now a more thorough chain\n0.5.6\nAdded - First public release (sort presets, analysis, officer fit, Fleet-tab buttons)\nFixed - Officer-fit / cost-analysis crashes, Fleet-tab drag crash, button hover flicker</code></pre><pre><code>Save Compatibility Notice\nSafe to add or remove mid-campaign. Sort presets live in saves/common and survive mod updates.</code></pre><p>Download: <a href=\"https://github.com/daerogami/sweet-fleet/releases/download/0.5.7/SweetFleet-0.5.7.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/daerogami/sweet-fleet/releases/download/0.5.7/SweetFleet-0.5.7.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35839\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35839</a></p><p><a href=\"https://github.com/daerogami/sweet-fleet/raw/dev/assets/icon.png\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/daerogami/sweet-fleet/raw/dev/assets/icon.png</a></p>",
-  "aiDescription": "Provides multi-criteria sorting with editable presets and a logistics screen for analyzing supply, fuel, and income. Suggests optimal officer assignments based on ship hulls and skills. Adds buttons directly to the Fleet tab for easy access.",
+  "aiDescription": "Provides multi-criteria sorting with editable presets accessible via Fleet-tab buttons. Includes a logistics screen for analyzing supply, fuel, and income per ship. Suggests optimal officer assignments based on skill and hull matching.",
   "saveCompatibilityText": "Save-safe: Yes - add or remove mid-campaign",
   "updateCompatibilityText": "Sort presets live in saves/common and survive mod updates.",
   "removalCompatibilityText": "Save-safe: Yes - add or remove mid-campaign",
   "canAdd": "yes",
   "canUpdate": "yes",
   "canRemove": "yes",
+  "aiUse": {
+    "quote": "Disclaimer: This mod was developed with heavy use of Cursor Auto mode (AI coding agents). I directed the design and tested in-game; the implementation was largely produced by those models. Treat it accordingly - please report bugs with a starsector.log if something breaks.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "generated",
+        "extent": "most"
+      }
+    ],
+    "tools": [
+      "Cursor"
+    ]
+  },
   "rawCategories": [
     "Quality of Life",
     "Utility mods"

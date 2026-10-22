@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "hostile-intercept-and-autopause",
     "name": "Hostile Intercept (and Autopause!)",
@@ -19,7 +19,7 @@
     "imageUrl": "https://i.imgur.com/efhfR4u.png",
     "summary": "This utility mod adds radiating rings around hostile and intercepting fleets so you can easily spot them. It also adds autopause!",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds visual indicators for hostile and intercepting fleets, plus an autopause feature.",
+    "aiSummary": "Adds visual indicators for hostile and intercepting fleets and introduces an autopause feature.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/SafariJohn/Misc-Starsector-Mods/raw/refs/heads/main/Hostile%20Intercept%201.6.0.zip",
@@ -38,7 +38,8 @@
   "descriptionHtml": "<div class=\"align-center\"><img src=\"https://i.imgur.com/PPUpNz2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><span class=\"size-bigger\">Hostile Intercept</span><br><span class=\"size-big\">and Autopause!</span><br><span class=\"size-big\"><a href=\"https://github.com/SafariJohn/Misc-Starsector-Mods/raw/refs/heads/main/Hostile%20Intercept%201.6.0.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download v1.6.0</a></span><br><br>This utility mod adds radiating rings around hostile and intercepting fleets so you can easily spot them. It also adds autopause!<br><br>Features:<br>- Hostile fleets/stations radiate red rings<br>- Fleets chasing you or looking for you radiate grey rings<br>- Autopause!<br>- Jump point autopause<br><br>Autopause only works while a course is set, and vice versa for jump point autopause. You can enable/disable them in settings.json, or modify them temporarily mid-game using <a href=\"https://fractalsoftworks.com/forum/index.php?topic=4106.0\" rel=\"nofollow noopener\" target=\"_blank\">Console Commands</a>.</div><br><details class=\"spoiler\"><summary>Two fleets chasing the player and one chasing the pirate fleet</summary><img src=\"https://i.imgur.com/efhfR4u.png\" alt=\"&quot;Two fleets chasing the player and one chasing the pirate fleet&quot;\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details><br><details class=\"spoiler\"><summary>Changelog:</summary>Version 1.6.0<br>- Reworked settings<br>  - Added cheat options<br>  - Added support for LunaLib<br>  - Removed CC commands (for now)<br>  - Changes to settings.json require restart (for now)<br><br>Version 1.5.0<br>- Updated to 0.98a<br>- Fixed broken strings<br><br>Version 1.4.0<br>- Updated to 0.97a<br>- Fixed undiscovered pirate stations showing their hostility<br>- Externalized strings<br>- Converted code to Kotlin<br><br>Version 1.3.3<br>- Updated to 0.96a<br><br>Version 1.3.2<br>- Updated to 0.95a<br><br>Version 1.3.1<br>- Added option to make autopause only activate when a fleet is targeting yours<br>- Migrated Version Checker file to github.com<br><br>Version 1.3.0<br>- Added console commands to enable/disable certain features:<br>  - HI_Autopause<br>  - HI_JumpPause<br>  - HI_InterceptAlarm<br>- Settings.json changes only take affect on restart<br>- Settings.json overrides console commands on restart<br><br>Version 1.2.0<br>- Added alarm when an intercept is detected<br>- Added alarm when autopause activates (or would have)<br>- Added snooze timer after an autopause happens<br>- Added pause after jumping when a course is NOT set<br>  - Unless you set a course to that jump point<br>  - Can be limited to when a threat is detected<br>- Fixed some loopholes in autopause logic<br>- <del>Can now activate and deactivate autopause, etc. at any point by editing the mod's data/config/settings.json</del><br>- Autopause actually does work for courses set to arbitrary points<br><br>Version 1.1.0<br>- Added autopause feature when a course is laid in and being followed<br>  - <del>Does not work for courses set to an arbitrary point in space, for now</del> Was wrong<br>- Fixed missing marker on fleets that have been individually turned hostile<br><br>Version 1.0<br>- Initial release</details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Displays red rings around hostile fleets and stations, and grey rings around fleets that are chasing or searching for the player. Includes an autopause function that activates when a course is set and threats are detected, with options to configure behavior via settings files.",
+  "aiDescription": "Displays red rings around hostile fleets and stations, and grey rings around fleets that are chasing or searching for the player. Includes an autopause function that triggers when a course is set and threats are detected, as well as jump point autopause.",
+  "aiUse": {},
   "rawCategories": [
     "Utility mods"
   ],

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "tactical-combat-overhaul",
     "name": "Tactical Combat Overhaul",
@@ -21,7 +21,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1561624243626840174/1561624243849134101/pad_blueprint_hightech.png?ex=6ada5329&is=6ad901a9&hm=87186bc16e1d2993fc26b9ba1654add0db890294b9a791fc8c79a51fa8be384a&",
     "summary": "Command your fleet like an RTS, and fight with grounded, tactical rules.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds RTS-style fleet command, realistic armor mechanics, logistics systems, radar, and boarding combat to battles.",
+    "aiSummary": "Overhauls combat to allow RTS-style fleet command and introduces grounded tactical mechanics like armor penetration, ammo logistics, radar, and boarding.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -34,6 +34,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1561624243626840174/1561624243626840174",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "assisted"
+      }
+    ],
     "addedOn": "2026-10-19",
     "threadLastPostOn": "2026-10-19",
     "needs": [
@@ -48,11 +55,22 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<h3>Tactical Combat Overhaul v0.30.0 (pre-release)</h3><p>A combat overhaul that turns battles into tactical fleet engagements. Command your fleet like an RTS, or jump into any ship and fly it yourself.</p><p><strong>Command</strong></p><ul><li>RTS controls: box select, orders, formations, control groups, attack-move</li><li>Stances: Aggressive, Defensive, Hold ground, Evasive and Rescue</li><li>Fog of war, larger battlefields, and two new objectives: the Supply FOB and the Repair Dock</li></ul><p><strong>Combat</strong></p><ul><li>Armor penetration, ricochets, sloped plates, cook-offs and fires</li><li>Ballistic guns have limited ammo, refilled mid-battle by supply ships</li><li>Reactor power alongside flux, and meltdowns from deep hits </li><li>Ships burn and break up while their crew escape in pods</li></ul><p><strong>Missiles and sensors</strong></p><ul><li>Radar missiles need a track to launch; IR missiles chase heat and can be fooled by flares</li><li>Datalinks, ECM and noise jamming, plus a radar scope when you fly a ship</li></ul><p><strong>Boarding</strong></p><ul><li>Send marines to take ships in deck by deck combat</li><li>Orders (Assault, Methodical, Sabotage, Withdraw), marine experience, desperate measures taken by defenders.</li></ul><p><strong>Logistics</strong></p><ul><li>Repair tenders, tugs that tow stranded ships, security droids and new hullmods</li><li>NPC fleets bring their own support ships and use TCO's hullmods too</li></ul><p>Built to work with other mods: their ships, weapons and missiles fit TCO's rules automatically.</p><p><strong>Requires:</strong> Starsector 0.98a-RC8. <strong>Recommended:</strong> LunaLib (in-game settings, where every major system can be tuned or turned off).</p><p><strong>Download:</strong> <a href=\"https://github.com/reaperyeah420-cpu/Tactical-Combat-Overhaul\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/reaperyeah420-cpu/Tactical-Combat-Overhaul</a><br><strong>Forum post:</strong> <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36171.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36171.0</a></p><p>Mod thread: <a href=\"https://discord.com/channels/187635036525166592/1561820584726503425\" rel=\"nofollow noopener\" target=\"_blank\">https://discord.com/channels/187635036525166592/1561820584726503425</a> (feedback goes here)</p><p>Please report issues here and attach <code>starsector.log</code> (in <code>starsector-core</code>) for crashes. Removing TCO from an ongoing save isn't supported.</p><p>DISCLAIMER: While most of the code is made entirely by me, some workarounds and solutions were made using an AI Agent.</p>",
-  "aiDescription": "Lets you command fleets with RTS controls like box selection, formations, and stances. Introduces detailed armor mechanics where shells penetrate or ricochet based on angle, along with magazine cook-offs and fires. Adds logistical elements such as limited ammo, reactor power management, repair tenders, and supply ships. Includes radar detection, missile guidance types, and deck-by-deck boarding actions for capturing enemy ships.",
+  "aiDescription": "Lets you command your fleet with RTS controls including box selection, formations, and stances. Adds realistic armor mechanics where shells penetrate or ricochet, along with limited ammo, reactor power management, and support ships for repairs and towing. Includes radar detection, missile spoofing, and deck-by-deck boarding actions to capture enemy vessels.",
   "saveCompatibilityText": "can be added to an existing save.",
   "removalCompatibilityText": "Removing it from a save it has been used in is not supported.",
   "canAdd": "yes",
   "canRemove": "no",
+  "aiUse": {
+    "quote": "While most of the code was written by me, an AI agent helped with workarounds, tidying code and implement certain mechanics.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "assisted",
+        "extent": "some"
+      }
+    ]
+  },
   "rawCategories": [
     "Misc. Campaign Mods"
   ],

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "stop-stacking-me",
     "name": "Stop Stacking Me",
@@ -17,11 +17,10 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "1.0.0",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616672152162304/image.png?ex=6ad8184d&is=6ad6c6cd&hm=7cc30537a88e9526c40a060829808fabb9306ec649316795e3050bc13c80afb3&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616672152162304/image.png?ex=6adabb4d&is=6ad969cd&hm=7a50cbfe7d3ea7c53c41251b1d079ad1d053b2bbd764e2adf72a3bf10fb4056b&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616672152162304/image.png?ex=6adabb4d&is=6ad969cd&hm=7a50cbfe7d3ea7c53c41251b1d079ad1d053b2bbd764e2adf72a3bf10fb4056b&",
     "summary": "Draws one sprite per cargo stack, instead of a pile of grey ghost copies behind it.",
     "summaryIsGenerated": false,
-    "aiSummary": "Draws one sprite per cargo stack instead of multiple overlapping sprites.",
+    "aiSummary": "Draws one sprite per cargo stack instead of a pile of grey ghost copies.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
@@ -34,6 +33,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1543616671997108244/1543616671997108244",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
     "addedOn": "2026-08-30",
     "threadLastPostOn": "2026-08-30",
     "needs": [
@@ -52,11 +58,25 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Just a simple mod that stops sprite stacking for weapons.<br>I personally prefer it when sprites for weapons are only one-at-a-time, to more easily distinguish the thousands of weapons in the modsector.</p><p>Forum post: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35952.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35952.0</a></p>",
-  "aiDescription": "Replaces the stacked sprite display in cargo holds with a single sprite, reducing visual clutter. The item count remains visible and unchanged. Includes toggles for weapons and crew/marines via LunaLib settings.",
-  "saveCompatibilityText": "Yes, both. Nothing of this mod is ever written into your save. It only changes how a screen is drawn while you are looking at it.",
-  "removalCompatibilityText": "Yes, both. Nothing of this mod is ever written into your save. It only changes how a screen is drawn while you are looking at it.",
+  "aiDescription": "Replaces the stacked sprites in cargo holds with a single icon for each item type. The quantity number remains visible, reducing visual clutter without changing gameplay mechanics or save data.",
+  "saveCompatibilityText": "Can I add or remove it mid save? Yes, both.",
+  "removalCompatibilityText": "Can I add or remove it mid save? Yes, both.",
   "canAdd": "yes",
   "canRemove": "yes",
+  "aiUse": {
+    "quote": "Claude Code built this anyway.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "generated",
+        "extent": "all"
+      }
+    ],
+    "tools": [
+      "Claude Code"
+    ]
+  },
   "rawCategories": [
     "Quality of Life"
   ],

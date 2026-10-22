@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "small-helper-starsector-log-filter-windows",
     "name": "Small helper: starsector log filter (Windows)",
@@ -16,7 +16,7 @@
     "imageUrl": "https://fractalsoftworks.com/forum/index.php?action=dlattach;attach=10581;type=avatar",
     "summary": "For those of you that use the log files extensivly:",
     "summaryIsGenerated": false,
-    "aiSummary": "Filters Starsector log output to display only errors, warnings, and specific mod activity.",
+    "aiSummary": "Filters Starsector log files to display only errors, warnings, and specific mod activity.",
     "hasDirectDownload": false,
     "downloadCount": 0,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34153.0",
@@ -30,7 +30,8 @@
   "descriptionHtml": "For those of you that use the log files extensivly:<br><br>save this script for the powershell somewhere:<br><pre><code>param(<br>    [string]$LogPath = \"&lt;your starsector folder&gt;\\starsector-core\\starsector.log\",<br>    [switch]$ClearScreen = $false<br>)<br><br># Check if log file exists<br>if (-not (Test-Path $LogPath)) {<br>    Write-Host \"ERROR: Log file not found at: $LogPath\" -ForegroundColor Red<br>    Write-Host \"Make sure Starsector is installed at &lt;your starsector folder&gt; or specify the path.\" -ForegroundColor Yellow<br>    <br>    # Try to find the log file automatically<br>    Write-Host \"Searching for starsector.log...\" -ForegroundColor Cyan<br>    $possiblePaths = @(<br>        \"&lt;your starsector folder&gt;\\starsector-core\\starsector.log\",<br>        \"C:\\Program Files\\Starsector\\starsector-core\\starsector.log\",<br>        \"C:\\Games\\Starsector\\starsector-core\\starsector.log\",<br>        \"$env:USERPROFILE\\Games\\Starsector\\starsector-core\\starsector.log\"<br>    )<br>    <br>    $found = $false<br>    foreach ($path in $possiblePaths) {<br>        if (Test-Path $path) {<br>            Write-Host \"Found log file at: $path\" -ForegroundColor Green<br>            $LogPath = $path<br>            $found = $true<br>            break<br>        }<br>    }<br>    <br>    if (-not $found) {<br>        Write-Host \"Could not find starsector.log automatically.\" -ForegroundColor Red<br>        Write-Host \"Please specify the path manually: .\\starsector_log_filter.ps1 -LogPath 'YOUR_PATH'\" -ForegroundColor Yellow<br>        exit<br>    }<br>}<br><br>if ($ClearScreen) {<br>    Clear-Host<br>}<br><br>Write-Host \"=== Starsector Log Filter ===\" -ForegroundColor Green<br>Write-Host \"Watching: $LogPath\" -ForegroundColor Cyan<br>Write-Host \"Showing: strifespark activity, errors, and warnings\" -ForegroundColor Cyan<br>Write-Host \"Press Ctrl+C to stop\" -ForegroundColor Yellow<br>Write-Host \"\"<br><br># Tail the log file with filtering<br>Get-Content -Path $LogPath -Wait | ForEach-Object {<br>    $line = $_<br>    <br>    # Check for Mod Lines or Error/Warning Lines based on strict rules<br>    if ($line -match 'strifespark' -or $line -match ' ERROR ' -or $line -match ' WARN ') {<br>        <br>        # Color code the output<br>        if ($line -match ' ERROR ') {<br>            Write-Host $line -ForegroundColor Red<br>        } elseif ($line -match ' WARN ') {<br>            Write-Host $line -ForegroundColor Yellow<br>        } elseif ($line -match 'strifespark') {<br>            # Lines containing mod keywords (assuming they are usually INFO/DEBUG lines we want to see)<br>            Write-Host $line -ForegroundColor Green<br>        } else {<br>            # Fallback for lines that matched one of the three conditions but weren't colored by the specific ERROR/WARN/Mod checks above <br>            Write-Host $line<br>        }<br>    }<br>    # All other lines are implicitly ignored.<br>}<br></code></pre><strong><br>NOTE: My mod is called 'Strifespark' you will need to replace this with your own prefix in the code above!</strong><br><br>Now you can use a simple batch script:<br><pre><code>@echo off<br>powershell -ExecutionPolicy Bypass -File \"%~dp0starsector_log_filter.ps1\" =&gt; if the ps1 file is placed on the desktop, else adapt path.<br>pause</code></pre><br>1. Click the bat file<br>2. Start starsector<br>3. All log entries will now be filtered to only show warnings, errors or your mod-specific messages (which are prefixed by starsector by default)",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Provides a PowerShell script and batch file to monitor the game's log file in real time. It highlights error lines in red, warning lines in yellow, and lines containing a specified mod prefix in green. All other log entries are ignored.",
+  "aiDescription": "Provides a PowerShell script and batch file to monitor the game's log in real-time. It highlights error lines in red, warning lines in yellow, and custom mod messages in green while ignoring all other entries.",
+  "aiUse": {},
   "rawCategories": [],
   "gallery": [],
   "downloads": [],

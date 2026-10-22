@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "starter-pack",
     "name": "Starter Pack",
@@ -22,7 +22,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1536113281381703740/1536113281675034705/starterIconBig.png?ex=6ada75f9&is=6ad92479&hm=888228786062bb536d5a4a2dcdbb0efecdcaa1541e0dd79c1c5d660d40af86cb&",
     "summary": "Build a starting loadout once from the main menu, and stamp it onto every new game you ever start.",
     "summaryIsGenerated": false,
-    "aiSummary": "Lets you build a starting loadout once and apply it to every new campaign automatically.",
+    "aiSummary": "Lets you build a starting loadout once and apply it to every new campaign.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
@@ -35,6 +35,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1536113281381703740/1536113281381703740",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
     "addedOn": "2026-08-09",
     "threadLastPostOn": "2026-08-18",
     "needs": [
@@ -49,11 +56,25 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>StarterPack 1.0.0 📦 Out now. Build your test fleet once from the main menu — ships, weapons, fighters, hullmods, S-mods, D-mods, cargo, credits, story points, and your whole hotbar — then have every new campaign start with it already done. Requires LazyLib; Console Commands optional.<br>forum post: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35856.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35856.0</a></p>",
-  "aiDescription": "Provides an editor accessible from the main menu to define templates for ships, cargo, character stats, and hotbars. These templates are stored globally and can be applied automatically or via console command at the start of any new game. It supports modded content and handles missing mods gracefully by skipping unresolved items.",
+  "aiDescription": "Provides an editor accessible from the main menu to define ship fits, cargo, character stats, and hotbar configurations. These templates are stored globally and can be applied automatically or via console command at the start of any new game. It supports modded content and handles missing mods gracefully by skipping unresolved items.",
   "saveCompatibilityText": "Can I add or remove the mod mid save? Yes.",
   "removalCompatibilityText": "Removing the mod leaves everything it gave you exactly where it is.",
   "canAdd": "yes",
   "canRemove": "yes",
+  "aiUse": {
+    "quote": "Claude Code built this anyway.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "generated",
+        "extent": "all"
+      }
+    ],
+    "tools": [
+      "Claude Code"
+    ]
+  },
   "rawCategories": [
     "Quality of Life",
     "Utility mods"

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "yuki-s-tactical-display",
     "name": "Yuki's Tactical Display",
@@ -37,7 +37,7 @@
     "needs": [
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
       },
       {
         "name": "LunaLib",
@@ -49,7 +49,8 @@
   "descriptionHtml": "<div class=\"align-center\"><img src=\"https://i.imgur.com/ODhsOr5.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><em>Originally called Nightcross Tactical Display</em><br><br><a href=\"https://github.com/YukiMonsai/yukistacticaldisplay/releases/latest/download/yukistacticaldisplay.zip\" rel=\"nofollow noopener\" target=\"_blank\"><br><img src=\"https://img.shields.io/github/downloads/YukiMonsai/yukistacticaldisplay/total?label=Download&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a>  <a href=\"https://github.com/YukiMonsai/yukistacticaldisplay/releases\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/v/release/YukiMonsai/yukistacticaldisplay?label=Changelog&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></div><br>Adds a tactical display widget to the combat UI anchored to the left side of the screen, with configurable position. Shows your fleet along with their assignments and status, as well as flux bars and CR/PPT in visual form. The sprite turns red as the ship takes hull damage while the armor plates represent the armor integrity on different sides of the ship.<br>You can also use it to issue orders to toggle retreat, seek escorts, or search &amp; destroy without entering the command UI. It still takes command points to do so.<br><br>Has an option to show enemy fleet as well, could theoretically be used for tournaments<br><br>Requires magiclib and lunalib. Still in pre-release.<br><br><strong>How to use</strong><br><br>Using LunaLib config, adjust the height and spacing to your desired position. It will show up in the simulator so you can test it without reloading a save. Ideally it should leave some space for the scrolling text log on the top left of the screen as they will intersect and look bad.<br>Also note, there is an option to flip the position, which is how I actually use it most of the time- it goes really well with <a href=\"https://fractalsoftworks.com/forum/index.php?topic=7526.0\" rel=\"nofollow noopener\" target=\"_blank\">Combat Radar</a> when the vertical and horizontal positions are flipped. Just position it with some offset so it doesn't clip with the radar.<br><br>You can use it to issue commands by clicking the text for \"retreat\" \"escort\" or \"S&amp;D\" and then clicking a ship icon. You can also disable this feature if you do not wish to risk misclicking.<br><br>For larger battles you will definitely need to lower the ship icon size. I'm looking for feedback on how it looks at different resolutions, would be nice to leave a screenshot of how it looks on your screen! I may also need to add an ultra-compact mode or size slider at some point.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Adds a tactical display widget to the combat UI anchored to the left side of the screen, with configurable position. Shows your fleet along with their assignments and status, as well as flux bars and CR/PPT in visual form. The sprite turns red as the ship takes hull damage while the armor plates represent the armor integrity on different sides of the ship. You can also use it to issue orders to toggle retreat, seek escorts, or search & destroy without entering the command UI.",
+  "aiDescription": "Adds a configurable tactical display widget to the left side of the combat screen. It visualizes fleet assignments, flux bars, CR/PPT, and hull/armor integrity with color-coded sprites. Users can issue retreat, escort, or search & destroy orders directly from the widget without opening the command UI.",
+  "aiUse": {},
   "rawCategories": [
     "Utility mods"
   ],

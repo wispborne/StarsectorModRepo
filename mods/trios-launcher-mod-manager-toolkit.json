@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "trios-launcher-mod-manager-toolkit",
     "name": "TriOS: Launcher/Mod Manager/Toolkit",
@@ -24,7 +24,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355300468968001586/1355300469232238662/image.png?ex=6ada876c&is=6ad935ec&hm=04a2911540bd2995438900d677f0cc7a9a49a7cc8f465128e61a3bd3ce970868&",
     "summary": "All-in-one Starsector launcher, mod manager, and toolkit. For Windows, Linux, and MacOS",
     "summaryIsGenerated": false,
-    "aiSummary": "Provides an all-in-one launcher, mod manager, and toolkit for managing game files and mods.",
+    "aiSummary": "Provides an all-in-one launcher, mod manager, and toolkit for managing Starsector mods.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/wispborne/TriOS/releases/latest/download/TriOS-Windows.zip",
@@ -32,11 +32,18 @@
       "needsAnotherStep": false
     },
     "downloadCount": 5,
-    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29674.0",
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29674",
     "discordUrl": "https://discord.com/channels/187635036525166592/1355300468968001586/1355300468968001586",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "isTool": true,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "assisted"
+      }
+    ],
     "addedOn": "2024-03-31",
     "threadLastPostOn": "2026-10-13",
     "needs": []
@@ -46,7 +53,21 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>All-in-one Starsector mod manager, toolkit, and launcher.</p><p>Roadmap: <a href=\"https://github.com/users/wispborne/projects/5/views/1\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/users/wispborne/projects/5/views/1</a></p><h4>Download (Windows)</h4><p><a href=\"https://github.com/wispborne/TriOS/releases/latest/download/TriOS-Windows.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/wispborne/TriOS/releases/latest/download/TriOS-Windows.zip</a></p><h4>Download (Linux)</h4><p><a href=\"https://github.com/wispborne/TriOS/releases/latest/download/TriOS-Linux.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/wispborne/TriOS/releases/latest/download/TriOS-Linux.zip</a></p><h4>Download (MacOS)</h4><p><a href=\"https://github.com/wispborne/TriOS/releases/latest/download/TriOS-MacOS.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/wispborne/TriOS/releases/latest/download/TriOS-MacOS.zip</a></p><p>Forum: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=29674\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=29674</a><br>Changelog: <a href=\"https://github.com/wispborne/TriOS/blob/main/changelog.md\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/wispborne/TriOS/blob/main/changelog.md</a> (may include unreleased changes)<br>Donate: <a href=\"https://ko-fi.com/wispborne\" rel=\"nofollow noopener\" target=\"_blank\">https://ko-fi.com/wispborne</a> or <a href=\"https://patreon.com/wispborne\" rel=\"nofollow noopener\" target=\"_blank\">https://patreon.com/wispborne</a><br>Source Code: <a href=\"https://github.com/wispborne/TriOS\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/wispborne/TriOS</a><br>Feedback &amp; News: <a href=\"https://discord.com/channels/187635036525166592/1378384304773795850\" rel=\"nofollow noopener\" target=\"_blank\">https://discord.com/channels/187635036525166592/1378384304773795850</a></p>",
-  "aiDescription": "Offers a dashboard for launching the game and checking mod updates. Includes tools for swapping mod versions, adjusting RAM allocation, browsing mod catalogs, and viewing in-game codex data externally. Features include profile management, portrait replacement, log viewing, and VRAM estimation.",
+  "aiDescription": "Offers a dashboard for launching the game, checking mod updates, and swapping mod versions. Includes tools for viewing ship and weapon data, managing mod profiles, replacing portraits, and estimating VRAM usage.",
+  "aiUse": {
+    "quote": "TriOS's code is written with the use of LLMs; Claude and Codex's various models.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "assisted"
+      }
+    ],
+    "tools": [
+      "Claude",
+      "Codex"
+    ]
+  },
   "rawCategories": [
     "Mod Manager",
     "Standalone Utilities",
@@ -204,7 +225,7 @@
       "label": "Ko-Fi"
     }
   ],
-  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29674.0",
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29674",
   "discordUrl": "https://discord.com/channels/187635036525166592/1355300468968001586/1355300468968001586",
   "releases": [],
   "threadLastPostOn": "2026-10-13",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "ai-support-doctrine",
     "name": "AI Support Doctrine",
@@ -16,7 +16,7 @@
     "imageUrl": "https://raw.githubusercontent.com/daemonbarber/AI-Support-Doctrine/main/screenshots/skill-tooltip.png",
     "summary": "Reworks the Leadership skill Support Doctrine into AI Support Doctrine:",
     "summaryIsGenerated": false,
-    "aiSummary": "Reworks the Support Doctrine skill to allow unofficered ships to be supported by Gamma Cores.",
+    "aiSummary": "Reworks the Support Doctrine skill to allow Gamma Cores to act as officers for unofficered ships.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -28,6 +28,17 @@
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36161.0",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "generated"
+      },
+      {
+        "area": "writing",
+        "how": "generated"
+      }
+    ],
     "addedOn": "2026-10-16",
     "threadLastPostOn": "2026-10-19",
     "needs": []
@@ -36,11 +47,30 @@
   "descriptionHtml": "<span class=\"size-big\"><strong>AI Support Doctrine</strong></span><br><em>\"Not every cadet has talent or skill - but why should that slow down your fleet? Introducing Gamma Assist: the AI assistant that never sleeps.\"</em><br>- Tri-Tachyon commercial, intercepted on the Hyperwave<br><br><strong>Download:</strong> <a href=\"https://github.com/daemonbarber/AI-Support-Doctrine/releases/latest/download/AI-Support-Doctrine.zip\" rel=\"nofollow noopener\" target=\"_blank\">AI-Support-Doctrine.zip</a> (v1.0.0, for 0.98a-RC8)<br><strong>Source:</strong> <a href=\"https://github.com/daemonbarber/AI-Support-Doctrine\" rel=\"nofollow noopener\" target=\"_blank\">GitHub</a><br><strong>Requires:</strong> nothing. LunaLib is optional, for the in-game settings menu.<br><br><strong>AI disclosure:</strong> the code, text and documentation for this mod were written by an AI (Claude/Opus 5.5). I came up with the design, directed the changes and tested everything in game.<br><br><img src=\"https://raw.githubusercontent.com/daemonbarber/AI-Support-Doctrine/main/screenshots/skill-tooltip.png\" alt=\"\" width=\"650\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><hr><br><strong>What it does</strong><br>Reworks the Leadership skill <strong>Support Doctrine</strong> into <strong>AI Support Doctrine</strong>:<br><ul><li><strong>Removed:</strong> \"Gain non-elite Helmsmanship, Damage Control, Combat Endurance, and Ordnance Expertise\"</li><li><strong>Added:</strong> Ships without officers can be supported by Gamma Cores. Gamma Cores in your cargo show up next to your officers in the normal captain list of crewed ships (Fleet and Refit screens).</li><li><strong>Kept:</strong> -20% deployment cost (max 10) for unofficered ships, which also applies to ships supported by a Gamma Core, and +100% command point recovery.</li></ul><br><img src=\"https://raw.githubusercontent.com/daemonbarber/AI-Support-Doctrine/main/screenshots/captain-picker.png\" alt=\"\" width=\"600\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><strong>Gamma Assists</strong><br>A Gamma Core supporting a crewed ship becomes a <strong>\"Gamma Assist - by Tri-Tachyon\"</strong>:<br><ul><li>Only gets the regular (non-elite) versions of its skills, and can't take the capstone skills (Systems Expertise, Missile Specialization)</li><li>Can't be integrated</li><li>Follows your fleet doctrine's aggression setting instead of being \"Fearless\"</li><li>Doesn't count as an officer for Carrier Group, Fighter Uplink, Coordinated Maneuvers, Wolfpack Tactics, or battle difficulty (XP)</li><li>Swaps with officers and with you just like an officer would; selling, storing or scuttling the ship returns the core</li></ul>Automated ships and their AI cores are completely unaffected.<br><br><img src=\"https://raw.githubusercontent.com/daemonbarber/AI-Support-Doctrine/main/screenshots/assist-tooltip.png\" alt=\"\" width=\"300\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"> <img src=\"https://raw.githubusercontent.com/daemonbarber/AI-Support-Doctrine/main/screenshots/change-skills.png\" alt=\"\" width=\"450\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><strong>Settings</strong><br>With LunaLib, these are in its mod settings menu. Without it, edit <code>data/config/settings.json</code> in the mod folder.<br><ul><li><strong>Allowed AI cores:</strong> Gamma only (default), Gamma + Beta, or Gamma + Beta + Alpha</li><li><strong>Non-elite skills only</strong> (default on)</li><li><strong>Block capstone skills</strong> (default on)</li><li><strong>Gamma Assists count as officers</strong> (default off)</li></ul><br><strong>Compatibility</strong><br><ul><li>Safe to add to an existing save. To remove it, take any Gamma Assists off crewed ships first.</li><li>Replaces the skill files for Support Doctrine, Carrier Group, Fighter Uplink, Coordinated Maneuvers and Wolfpack Tactics, so it will conflict with other mods that change those skills.</li><li>Supports Version Checker.</li></ul><br><strong>Known issues</strong><br><ul><li>In \"Change skills\", a newly picked skill flashes as elite for one frame before dropping to regular.</li><li>Ships supported by an AI core don't add to your side's share of deployment points (the game ignores AI-core captains there unless your fleet is commanded by one). This is barely noticeable with small ships, but more so with many capitals.</li></ul><br><strong>Changelog</strong><br>1.0.0 - Initial release.<br><br>Licensed under MIT.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Reworks the Leadership skill Support Doctrine into AI Support Doctrine. Ships without officers can be supported by Gamma Cores, which appear in the captain list and follow fleet doctrine settings. These assists do not count as officers for certain skills or battle difficulty calculations.",
+  "aiDescription": "Reworks the Leadership skill Support Doctrine into AI Support Doctrine, allowing ships without officers to be supported by Gamma Cores. These cores appear in the captain list and provide non-elite skills while following fleet doctrine settings. They do not count as officers for certain perks or battle difficulty calculations.",
   "saveCompatibilityText": "Safe to add to an existing save.",
   "removalCompatibilityText": "To remove it, take any Gamma Assists off crewed ships first.",
   "canAdd": "yes",
   "canRemove": "depends",
+  "aiUse": {
+    "quote": "AI disclosure: the code, text and documentation for this mod were written by an AI (Claude/Opus 5.5). I came up with the design, directed the changes and tested everything in game.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "generated",
+        "extent": "all"
+      },
+      {
+        "area": "writing",
+        "how": "generated",
+        "extent": "all"
+      }
+    ],
+    "tools": [
+      "Claude/Opus 5.5"
+    ]
+  },
   "rawCategories": [],
   "gallery": [
     {

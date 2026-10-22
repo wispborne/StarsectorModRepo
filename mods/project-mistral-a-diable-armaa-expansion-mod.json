@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "project-mistral-a-diable-armaa-expansion-mod",
     "name": "Project MISTRAL - a Diable/ArmaA Expansion Mod",
@@ -15,12 +15,12 @@
       "discord"
     ],
     "gameVersion": "0.98a",
-    "modVersion": "0.5i",
+    "modVersion": "0.5",
     "imageUrl": "https://i.imgur.com/WwiEj1z.png",
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1529687309132496976/1529687309501599915/angelos_icon.png?ex=6adad052&is=6ad97ed2&hm=8df291b5f1ba33a88576fc1233caba2180807681f6503cea74a2b360172b3e91&",
     "summary": "This mod adds:",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a new faction of former rebels and several strikecraft-focused ships based on existing hulls.",
+    "aiSummary": "Adds a new faction of former Diable Avionics rebels and several new ships based on Diable hulls and Arma Armatura strikecraft.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -33,6 +33,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1529687309132496976/1529687309132496976",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "assisted"
+      }
+    ],
     "addedOn": "2026-07-22",
     "threadLastPostOn": "2026-09-09",
     "needs": [
@@ -41,12 +48,12 @@
         "id": "arma-armatura"
       },
       {
-        "name": "Diable Avionics",
-        "id": "diable-avionics-3"
+        "name": "Diable Avionics: Original Flavor",
+        "id": "diable-avionics-original-flavor"
       },
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
       },
       {
         "name": "LazyLib",
@@ -63,11 +70,24 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>This mod adds a new faction: The Angelos Contingent, A faction of former Diable Avionics rebels with a luddic tilt, operating out of the Angelos trinary system near diable space. Using Diable Avionics-based hull designs with some Arma-Armatura-styled Strikecraft. Ships from this mod forego micro-missiles for a more up-close playstyle.</p><p>Pre-release updates/discussion will be here: </p><p>Forum thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35781.msg525989#msg525989\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35781.msg525989#msg525989</a></p><p>Direct Download: <a href=\"https://github.com/Bass294/Project_MISTRAL/releases/latest/download/Project_MISTRAL.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Bass294/Project_MISTRAL/releases/latest/download/Project_MISTRAL.zip</a><br><strong>This mod currently REQUIRES the pre-release version of Arma Armatura 3.2.6+ (sorry, signing you up to be beta-testers for Shoi) and the Caymon Joestar version of Diable (due to skin compatabiliy reqs).</strong> Please read the forum post for full details.<br><strong>NOT save compat with 0.1 version from the pre-release thread</strong></p>",
-  "aiDescription": "Introduces the Angelos Contingent, a faction operating near Diable space with unique officers and contact rewards. Adds new ships derived from Diable Avionics and Arma Armatura designs that emphasize close-range combat over micro-missiles. Includes red skins for Diable-style aesthetics and basic Nexerelin compatibility.",
+  "aiDescription": "Introduces the Angelos Contingent, a faction operating near Diable space with a unique officer and contact rewards. Adds new ships like the Ame frigate, Sparrow and Hummingbird wanzers, and various carrier variants that replace micro-missiles with close-range combat styles. Includes red skins for Diable purists and compatibility with Nexerelin.",
   "saveCompatibilityText": "generates mid-save",
   "updateCompatibilityText": "NOT SAVE COMPATIBLE IF YOU WERE USING THE OLD 0.1 VERSION FROM DISCORD.",
   "canAdd": "yes",
   "canUpdate": "no",
+  "aiUse": {
+    "quote": "Claude Code AI was used for code assistance and file formatting. No AI was used in art, writing, or descriptions.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "assisted"
+      }
+    ],
+    "tools": [
+      "Claude Code AI"
+    ]
+  },
   "rawCategories": [
     "Faction Mods"
   ],

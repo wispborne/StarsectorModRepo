@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "elvensector-0-1-7-gacha-edition",
     "name": "ElvenSector 0.1.7 -  Gacha Edition",
@@ -21,7 +21,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1212952880101855252/1212952880554971146/es_mechanicus_1_small.png?ex=6adac966&is=6ad977e6&hm=bae6b6edd974eea5fbc7aa048f94be02d8b861fda092ae00d6c0f9dd596d88e7&",
     "summary": "Introducing the Dökkálfar Mechanicus, the first of several elven factions to be added.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds elven factions with steampunk magic-powered ships and goblin-like cave elves.",
+    "aiSummary": "Adds elven factions with steampunk ships and goblin-like cave elves to the sector.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://mega.nz/file/020GDbhI#zn-vxMPIeAvLE36wvUhP6QGHcRxqtVboINWYjjxcvjw",
@@ -33,6 +33,17 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1212952880101855252/1212952880101855252",
     "sourceIsPublic": false,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "portraits",
+        "how": "generated"
+      },
+      {
+        "area": "sprites",
+        "how": "generated"
+      }
+    ],
     "addedOn": "2023-07-02",
     "threadLastPostOn": "2026-09-21",
     "needs": [
@@ -46,9 +57,28 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>ElvenSector adds elves to Starsector. 👍</p><p>Quick balance and bugfix update/patch to ElvenSector, balance suggestions are always welcome, please dm me with said balance suggestions or bug reports.</p><p>Changelog:<br>-Assorted balancing changes and buffs.<br>-Fixed a problem (oopsie on my behalf) of the Boiler Gun having a mistagged slot size.<br>0.1.2 is a small update/patch, more content soon.</p><p>Probably save-compatible</p><p>Download: <a href=\"https://mega.nz/file/8rdXnT7R#zs_hxhKXU9FfORl8N9jcwO-pX_8HsHchd-lezJQYI_s\" rel=\"nofollow noopener\" target=\"_blank\">https://mega.nz/file/8rdXnT7R#zs_hxhKXU9FfORl8N9jcwO-pX_8HsHchd-lezJQYI_s</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=27460.msg405441#msg405441\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=27460.msg405441#msg405441</a></p>",
-  "aiDescription": "Introduces the Dökkálfar Mechanicus faction, featuring steampunk ships with a special hullmod that boosts maneuverability and speed based on flux levels. Also adds the Hellisálfur, or goblins, who operate warship conversions in a black hole fortress system. New NPCs and dialogue options are included for recruiting contacts.",
+  "aiDescription": "Introduces the Dökkálfar Mechanicus faction, featuring steampunk ships powered by magic with a special hullmod for maneuverability. Also adds the Hellisálfur, or goblins, who operate in a black hole fortress system. The update includes new systems, NPCs, and dialogue options for recruiting characters.",
   "updateCompatibilityText": "NOT save compatible",
   "canUpdate": "no",
+  "aiUse": {
+    "quote": "Stablediffusion used for generating: all ship sprites, all weapon sprites, all character portraits",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "sprites",
+        "how": "generated",
+        "extent": "all"
+      },
+      {
+        "area": "portraits",
+        "how": "generated",
+        "extent": "all"
+      }
+    ],
+    "tools": [
+      "Stablediffusion"
+    ]
+  },
   "rawCategories": [
     "Faction Mods"
   ],

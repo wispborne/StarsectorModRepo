@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:09:49.461402Z",
+  "generatedAt": "2026-10-22T10:05:41.877961Z",
   "listing": {
     "id": "corrupt-officials-lower-colony-income-more-rewarding-growth",
     "name": "Corrupt.Officials - Lower colony income, more rewarding growth",
@@ -20,7 +20,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1487503296607424652/1487503296846364842/mod_post_icon_corrupt_officials.png?ex=6adaf026&is=6ad99ea6&hm=1afa488e51b55e7d347c1d9b8b64b83c14c35b4f560c19049bc45233fb198c5a&",
     "summary": "This is a challenge mode intended to balance out the extreme passive income colonies can provide. The mechanic imposes a diminishing-returns penalty on colonies whose net income exceeds a configurable cutoff.",
     "summaryIsGenerated": false,
-    "aiSummary": "Imposes a diminishing-returns penalty on colony income exceeding a configurable cutoff.",
+    "aiSummary": "Imposes a diminishing-returns penalty on colony income above a configurable threshold to reduce passive earnings.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -47,9 +47,10 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><code>Lower colony income, more rewarding growth</code></p><p>This mod adds an optional diminishing returns penalty to colony income above a configurable cutoff (default 40k credits).<br>Every credit earned beyond the threshold is reduced by an increasing percentage, 80k earns you 68k, 1M earns you ~180k.</p><p>The curve, cutoff, and scaling are fully configurable. Can be toggled on/off mid-save.<br>Read the Forum Post!</p><pre><code>Changelog:\n1.0.b - Fixed crash when there's a colony without pop&amp;infra (how?)\n1.0.a - Spun off from IndEvo as standalone mod. Fixed the calculation errors that would cause the mod to increase the penalty beyond what it should have been.</code></pre><pre><code>+ Save compatible + </code></pre><h3><a href=\"https://github.com/SirHartley/Corrupt.Officials/releases/download/1.0.b/Corrupt.Officials1.0.b.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download</a></h3><h3><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35125.0\" rel=\"nofollow noopener\" target=\"_blank\">Forum Thread</a></h3><h3><a href=\"https://patreon.com/SirHartley\" rel=\"nofollow noopener\" target=\"_blank\">Support my Efforts</a></h3><p><code>_________________________________</code></p><p><em>Makes the government steal your money, just like in real life.</em></p>",
-  "aiDescription": "Imposes a diminishing-returns penalty on colony income exceeding a configurable cutoff. The first portion of income is unaffected, while excess income is reduced by a percentage that scales with the amount earned. This mechanic aims to balance extreme passive income from colonies.",
+  "aiDescription": "Applies a corruption penalty to colonies that generate high net income. The first portion of income is exempt, while amounts exceeding the cutoff are reduced by a percentage that scales with total earnings. This mechanic encourages active management over passive accumulation.",
   "saveCompatibilityText": "Save Compatible",
   "canAdd": "yes",
+  "aiUse": {},
   "rawCategories": [
     "Colonies",
     "Misc. Campaign Mods"
