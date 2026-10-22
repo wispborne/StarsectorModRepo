@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T04:19:51.208836Z",
+  "generatedAt": "2026-10-22T04:32:08.279090Z",
   "listing": {
     "id": "worldsmith-console-commands",
     "name": "Worldsmith Console Commands 1.2.0",
@@ -24,7 +24,7 @@
     "imageUrl": "https://fractalsoftworks.com/forum/index.php?action=dlattach;attach=16199;type=avatar",
     "summary": "Ever wanted to drag a gas giant out to the edge of a neutron star system, hide a moon in its shadow where the pulsar beam can't reach it, found a brand-new faction with its own flag and lore, and then plunge the whole sector into total war?",
     "summaryIsGenerated": false,
-    "aiSummary": "Lets you reshape the star sector using plain-word console commands to build worlds, bend orbits, found factions, and trigger wars or apocalypses.",
+    "aiSummary": "Adds console commands to reshape the sector by building worlds, bending orbits, founding factions, and steering wars.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
@@ -37,6 +37,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1562120395753005066/1562120395753005066",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
     "lastReleaseDate": "2026-10-21T00:00:00.000Z",
     "addedOn": "2026-10-20",
     "needs": [
@@ -59,11 +66,25 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>(Starsector 0.98a-RC8): reshape the sector from the console. Build planets, stars and whole star systems, bend orbits, found new factions, steer Nexerelin's colony expeditions, start total war or end the sector. Needs Console Commands, LazyLib and Nexerelin; can be added mid-save, not removed. Download and all commands: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36177.msg532771#msg532771\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36177.msg532771#msg532771</a>  Most of the code is AI.</p>",
-  "aiDescription": "Provides console commands to create planets, moons, rings, and new star systems. Allows modifying planet properties like size, color, and orbit, as well as renaming entities. Enables founding new factions with custom flags, lore, ships, and personalities, and controlling faction strength, expeditions, and war states.",
+  "aiDescription": "Lets you build planets, moons, rings, and new star systems directly from the game console. You can modify orbits, terraform planets, rename entities, and create custom factions with specific ships and doctrines. It also allows for large-scale geopolitical changes like total war, peace treaties, armadas, and apocalyptic scenarios.",
   "saveCompatibilityText": "Can be added to a running save, but not removed from one.",
   "removalCompatibilityText": "not removed from one",
   "canAdd": "yes",
   "canRemove": "no",
+  "aiUse": {
+    "quote": "Most of the code was written by AI (Claude Opus 5.5).",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "generated",
+        "extent": "most"
+      }
+    ],
+    "tools": [
+      "Claude Opus 5.5"
+    ]
+  },
   "rawCategories": [
     "Faction Mods",
     "Other/Misc.",

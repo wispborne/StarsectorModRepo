@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T04:19:51.208836Z",
+  "generatedAt": "2026-10-22T04:32:08.279090Z",
   "listing": {
     "id": "arma-armatura",
     "name": "Arma Armatura",
@@ -25,10 +25,10 @@
     "gameVersion": "0.98a",
     "modVersion": "3.3.7",
     "imageUrl": "https://i.imgur.com/zYciRZg.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1397364283821523085/1397364284819898528/armaa_logo00_crest.png?ex=6ad9f7a7&is=6ad8a627&hm=49ab625bb70096b55398bc41f6a77e12131df2ad083242c9ed2d97a96fba51a9&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1397364283821523085/1397364284819898528/armaa_logo00_crest.png?ex=6adaa067&is=6ad94ee7&hm=2ca31c4dff51132bf09f6574e707f61541ac862878939ae94a6b21bbfe53bbb3&",
     "summary": "A story and content mod primarily focused around pilotable strikecraft: fighter-scale ships with own unique mechanics, over 30 pilotable units across 18 chassis families, 7 warships and carriers built to support them, and 9 fighter wings, a fully fleshed out companion officer, a minor faction with campaign layer elements, and a story centering around a system level conflict centuries in the making.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds pilotable strikecraft, a companion officer, a minor faction, and a campaign story.",
+    "aiSummary": "Adds pilotable strikecraft, a companion officer, and a story-driven faction conflict.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2Fgomarz%2Fss-armaa%2Fmaster%2Farmaa.version%22%2C%22id%22%3A%22armaa%22%2C%22version%22%3A%223.3.4b%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FMagicLibStarsector%2FMagicLib%2Fmaster%2Fmagiclib.version%22%2C%22id%22%3A%22MagicLib%22%7D",
@@ -43,6 +43,30 @@
     "nicknames": [
       "ArmaA"
     ],
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "assisted"
+      },
+      {
+        "area": "illustrations",
+        "how": "edited"
+      },
+      {
+        "area": "portraits",
+        "how": "edited",
+        "optional": true
+      },
+      {
+        "area": "voice",
+        "how": "edited"
+      },
+      {
+        "area": "writing",
+        "how": "assisted"
+      }
+    ],
     "lastReleaseDate": "2026-10-06T00:00:00.000Z",
     "addedOn": "2020-06-25",
     "needs": [
@@ -52,7 +76,7 @@
       },
       {
         "name": "MagicLib",
-        "id": "magiclib"
+        "id": "magiclib-2"
       }
     ]
   },
@@ -61,11 +85,45 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>A story and content mod primarily focused around pilotable strikecraft: fighter-scale ships with own unique mechanics, over 30 pilotable units across 18 chassis families, 7 warships and carriers built to support them, and 9 fighter wings, a fully fleshed out companion officer, a minor faction with campaign layer elements, and a story centering around a system level conflict.</p><p>Can be added mid-save, but best installed on a new save for the full experience. Not all updates are save-compatible; check the changelog.</p><p>Forum: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=18751.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=18751.0</a><br>Changelog: <a href=\"https://github.com/gomarz/SS-armaa/blob/master/changelog.md\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/gomarz/SS-armaa/blob/master/changelog.md</a><br>DL: <a href=\"https://github.com/gomarz/SS-armaa/releases/download/v3.3.4/armaa-3.3.4b.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/gomarz/SS-armaa/releases/download/v3.3.4/armaa-3.3.4b.zip</a></p>",
-  "aiDescription": "Introduces over 30 pilotable fighter-scale ships with unique mechanics, supported by warships and carriers. Includes a recruitable officer with reactive dialogue, a pirate mini-faction, and scripted quests set in the Gamlin system. Features persistent named pilots for carrier wings who gain experience and skills throughout the campaign.",
+  "aiDescription": "Introduces over 30 pilotable fighter-scale ships with unique mechanics like repair pools and flight-over capabilities. Includes a recruitable officer, a minor faction with campaign elements, and quests featuring scripted battles. Adds WINGCOM hullmod for persistent named pilots with progression and radio chatter.",
   "saveCompatibilityText": "Can be added mid-save, but best installed on a new save for the full experience.",
   "updateCompatibilityText": "NOT save compatible with versions of ArmaA prior to v3.2.6",
   "canAdd": "depends",
   "canUpdate": "no",
+  "aiUse": {
+    "quote": "The optional anime-style portraits in this mod were generated with DALL·E 3 and edited by hand. Some voice lines use modified output from ElevenLabs. The illustrations for Jenius and New Meshan were generated with ElevenLabs and edited by hand. LLMs were used for grammar and syntax passes on written text, and code assistance.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "portraits",
+        "how": "edited",
+        "extent": "some",
+        "optional": true
+      },
+      {
+        "area": "voice",
+        "how": "edited",
+        "extent": "some"
+      },
+      {
+        "area": "illustrations",
+        "how": "edited",
+        "extent": "some"
+      },
+      {
+        "area": "writing",
+        "how": "assisted"
+      },
+      {
+        "area": "code",
+        "how": "assisted"
+      }
+    ],
+    "tools": [
+      "DALL·E 3",
+      "ElevenLabs"
+    ]
+  },
   "rawCategories": [
     "Content Expansions",
     "Officers",
@@ -76,7 +134,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1397364283821523085/1397364284819898528/armaa_logo00_crest.png?ex=6ad9f7a7&is=6ad8a627&hm=49ab625bb70096b55398bc41f6a77e12131df2ad083242c9ed2d97a96fba51a9&",
+      "url": "https://cdn.discordapp.com/attachments/1397364283821523085/1397364284819898528/armaa_logo00_crest.png?ex=6adaa067&is=6ad94ee7&hm=2ca31c4dff51132bf09f6574e707f61541ac862878939ae94a6b21bbfe53bbb3&",
       "small": true
     },
     {

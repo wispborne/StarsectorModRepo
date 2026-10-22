@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T04:19:51.208836Z",
+  "generatedAt": "2026-10-22T04:32:08.279090Z",
   "listing": {
     "id": "3d-sector-2",
     "name": "3D Sector V0.3.5",
@@ -22,10 +22,10 @@
     "gameVersion": "0.98a",
     "modVersion": "0.3.8",
     "imageUrl": "https://raw.githubusercontent.com/winters791/starsector-3d/refs/heads/main/screenshots/aurora_doom.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1559645440188874795/1559645440969019453/screenshot010.png?ex=6ad9b7c1&is=6ad86641&hm=7317887491ea8811ba5abe0fd75858b64a7be4a0a1880e32684822d4cabe430b&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1559645440188874795/1559645440969019453/screenshot010.png?ex=6ada6081&is=6ad90f01&hm=0a63f153a00cac72d7956e32a1b81be314c8794effd3fac20f4116e1b00eb5f0&",
     "summary": "A Utility/Conversion Mod for starsector, it is still a work in progress, especially on the graphical end since there are no premade assets, but otherwise it should be playable from start to finish.",
     "summaryIsGenerated": false,
-    "aiSummary": "Converts battles into 3D tactical engagements with custom controls and settings.",
+    "aiSummary": "Converts Starsector battles into a 3D flight simulation with custom controls and tactical views.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
@@ -38,6 +38,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1559645440188874795/1559645440188874795",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
     "lastReleaseDate": "2026-10-21T00:00:00.000Z",
     "addedOn": "2026-10-13",
     "needs": []
@@ -47,47 +54,61 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36154.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36154.0</a></p><p>Should work afaik, i'm on a mac but I tested it on my friends PC (Windows) and except some graphical flickering issues (mainly on the back burners and weapon slots in the UI) the game seemed to run fine. Commands using Tab can be a bit awkward at times but map objectives are captured fine.</p><p>It might or might not work on Modded ships, Modded Ships that use vanilla weapons and subsystems should work fine.</p><p>Controls:<br>Shift - strafe down vertically<br>Space - strafe up vertically<br>T - Tactical view, i like to use it to see the whole battlefield at once.<br>l-alt - use for free-cam rotation<br>j - Spectating<br>[ and ] - rotate spectating.<br>G - Hide UI<br>P-Pause</p><p>Or could be unplayable though, do let me know.</p>",
-  "aiDescription": "Replaces standard 2D combat with a 3D view featuring mouse steering, weapon groups, and shield cones. Ships are generated from vanilla sprites, allowing modded hulls to work without extra models. The campaign remains unchanged, but battles can be finished in 2D if needed.",
+  "aiDescription": "Replaces standard 2D combat with a 3D environment where ships, shields, and weapons are rendered in three dimensions. It includes a new command view for tactical management and allows players to tune settings like flight feel and key bindings via a configuration file. The mod builds ship models from existing sprites, ensuring compatibility with vanilla and modded content without requiring separate assets.",
   "saveCompatibilityText": "Can be added Mid-Game?: Yes",
   "removalCompatibilityText": "Removing from an ongoing game: Safe",
   "canAdd": "yes",
   "canRemove": "yes",
+  "aiUse": {
+    "quote": "AI was used to create the Mesh Rendering and Simulation engine for the Mod, and to create Fleet AI used for 3D. Code: Claude (Anthropic), through Claude Code There are no AI-generated images: ship shapes are built from the vanilla sprites while the game runs.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
+    "tools": [
+      "Claude (Anthropic)",
+      "Claude Code"
+    ]
+  },
   "rawCategories": [
     "Total Conversion"
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1559645440969019453/screenshot010.png?ex=6ad9b7c1&is=6ad86641&hm=7317887491ea8811ba5abe0fd75858b64a7be4a0a1880e32684822d4cabe430b&"
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1559645440969019453/screenshot010.png?ex=6ada6081&is=6ad90f01&hm=0a63f153a00cac72d7956e32a1b81be314c8794effd3fac20f4116e1b00eb5f0&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1559899973544448000/screenshot032.png?ex=6ad9fc0f&is=6ad8aa8f&hm=5e7788b0d3d4b1ae92c9325fd6e1991b298b7a0257b91c43934972d7bda140a3&"
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1559899973544448000/screenshot032.png?ex=6adaa4cf&is=6ad9534f&hm=9c3cdfd7b34286adb3c90959a6b0af5054e3ee69fcb23a82726fde5c9c14b456&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679907648573601/odyssey.png?ex=6ad9de40&is=6ad88cc0&hm=61ba3fdd37afc9c92ed94d7b8425d7a5ef4292e0970d4cb7c1a68c1faf61c298&"
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679907648573601/odyssey.png?ex=6ada8700&is=6ad93580&hm=98c7f1dfb9c120c7baf6ac3849b6af8f70bd5027b1a7648fd9eb28aa609e7770&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679908671987793/conquest.png?ex=6ad9de40&is=6ad88cc0&hm=2ec27afc6720f6ec64848874782a0ab2298869fafafdc334604d6202456c7b20&"
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679908671987793/conquest.png?ex=6ada8700&is=6ad93580&hm=ca5f8695b14ad2c06d710f7412823c56636270fb1e66987141acaee6e5b404e6&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679909208719421/retribution.png?ex=6ad9de40&is=6ad88cc0&hm=5a8a5868ba9fe6ae7c2a2a385be55dd0d08322837439c30ae1d54c59bb6a2fec&"
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679909208719421/retribution.png?ex=6ada8700&is=6ad93580&hm=f7817446d621013da4f9b25036fe4e64bceeaf05ce203bc0020fbd646fbeb5d8&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679909984796772/grendel.png?ex=6ad9de41&is=6ad88cc1&hm=4b796a60740c5e9d8ae68a25e9c5932e5d92089ee72bca32e47ddc9c9da4c814&"
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679909984796772/grendel.png?ex=6ada8701&is=6ad93581&hm=2d6ab6a0c9d838661aa214136acdde0625a088465fa8063c28622b25532a0a19&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679910668603513/mora.png?ex=6ad9de41&is=6ad88cc1&hm=86d2f106944a1167d7fa01d19ed3370340b5059b1c21e42c841c6faafe1fa046&"
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679910668603513/mora.png?ex=6ada8701&is=6ad93581&hm=f406de3556ca24a8aaed869da9136f72dd2b4749474342b927d204d33b4de834&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679911482302494/gryphon.png?ex=6ad9de41&is=6ad88cc1&hm=74aebd5e4068d2f3f1896c0167c75ae7aa84b9cf85faa29699382a48ad5e1364&"
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679911482302494/gryphon.png?ex=6ada8701&is=6ad93581&hm=05eb013fc3a30de109122601328f3c7353e6c44663c1567c496f0f1e46b14a2e&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679912140800060/falcon.png?ex=6ad9de41&is=6ad88cc1&hm=b8e7d970ed09d4d66dfef2bb323e01d7e15069a4a2b81961681acc316e508b2d&"
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679912140800060/falcon.png?ex=6ada8701&is=6ad93581&hm=b34047009a5846db2f1007eb4cb0d5cce006af4ce5e5f2e28df58a7698edd1d5&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679913034055720/venture.png?ex=6ad9de41&is=6ad88cc1&hm=caeb900a4c30304c8f7948a42ebf51ba9f7d6fbdbef429b02e6bf2165a12cb65&"
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679913034055720/venture.png?ex=6ada8701&is=6ad93581&hm=208809c851ebc5aee711f6229873a3e83d532627c0eb3c85031d27385a7b1b11&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679913516408953/starliner.png?ex=6ad9de41&is=6ad88cc1&hm=df945fc7f4555021ef5cf6a874e49d39a65ec83ce67d3b25467408ad83e30252&"
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679913516408953/starliner.png?ex=6ada8701&is=6ad93581&hm=3f0006063ad08232fb42e38b0264762942969ed6475389d8f194ebf6c2555545&"
     },
     {
       "url": "https://img.shields.io/github/v/release/winters791/starsector-3d?style=for-the-badge&amp;logo=github&amp;label=Download",
