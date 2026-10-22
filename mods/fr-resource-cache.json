@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "fr-resource-cache",
     "name": "FR Resource Cache",
@@ -41,7 +41,7 @@
   "descriptionHtml": "FR Resource Cache improves startup performance by allowing Fast Rendering to reuse a persistent cache instead of repeatedly reading thousands of small files from installed mod folders.<br>It preserves Fast Rendering's resource resolution and mod precedence. Unsupported, invalid, changed, or unavailable cache entries safely fall back to the original files.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Allows Fast Rendering to reuse a persistent cache instead of reading many small files. It preserves resource resolution and mod precedence. Invalid or changed cache entries fall back to original files.",
+  "aiDescription": "Allows Fast Rendering to reuse a persistent cache instead of reading many small files. It preserves resource resolution and mod precedence. The cache includes validation modes and safe fallbacks for invalid entries.",
   "aiUse": {},
   "rawCategories": [],
   "gallery": [
@@ -78,7 +78,10 @@
       "small": true
     },
     {
-      "url": "https://i0.wp.com/gonefroggin.com/wp-content/uploads/2019/06/southern_toad.jpg"
+      "url": "https://i0.wp.com/gonefroggin.com/wp-content/uploads/2019/06/southern_toad.jpg",
+      "aiCaption": "A close-up photograph of a toad.",
+      "aiKind": "other",
+      "aiFit": "poor"
     }
   ],
   "downloads": [
@@ -92,7 +95,9 @@
       "needsAnotherStep": false
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "0.4": "Persistent and in-memory resource caching\nMetadata, sampled, and strong fingerprint validation modes\nAutomatic crash-safe cache compaction\nConfigurable memory cache with LRU eviction\nDetailed hit, miss, bypass, byte, and latency statistics\nOptional per-resource trace logging\nSafe fallback when cached data cannot be used"
+  },
   "changelogUrl": "https://github.com/GaiusCassiusL/Starsector_FR-Resource-Cache/releases",
   "sourceCodeUrl": "https://github.com/GaiusCassiusL/Starsector_FR-Resource-Cache",
   "supportLinks": [],

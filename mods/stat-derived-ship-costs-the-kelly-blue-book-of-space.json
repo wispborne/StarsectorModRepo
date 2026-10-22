@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "stat-derived-ship-costs-the-kelly-blue-book-of-space",
     "name": "Stat-Derived Ship Costs \"The Kelly Blue Book of Space\"",
@@ -17,10 +17,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.1.4",
     "imageUrl": "https://raw.githubusercontent.com/Compterra/Stat-Derived-Ship-Costs/main/graphics/icon/SDSC.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1520697507787575407/1520697508349743205/SDSC.png?ex=6ada68ab&is=6ad9172b&hm=90614d1c389512716ad81e13b42b0717e3f943359a28382fecc6cf1dda08b2bc&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1520697507787575407/1520697508349743205/SDSC.png?ex=6adb116b&is=6ad9bfeb&hm=9e218004a094572f5da50ab8b1b5c8d25c8f0a87cfedf3e7261e285b7c532150&",
     "summary": "An in-space Kelly Blue Book for Starsector ships.",
     "summaryIsGenerated": false,
-    "aiSummary": "Replaces static ship prices with values derived from hull stats, visible condition, market channel, and local economy context.",
+    "aiSummary": "Replaces static ship prices with values derived from hull stats, condition, and market context.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -48,7 +48,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>\"The Kelly Blue Book of Spaceships\"</p><p>The most important immersion mod for any modded Starsector run. Ships are no longer priced by vibes, they are appraised by their actual hull stats, condition, rarity, logistics burden, and market channel.</p><p>Stat-Derived Ship Costs acts like a Kelly Blue Book for spaceships. It evaluates loaded ship hulls and replaces arbitrary market prices with stat-derived values that better reflect what a ship is actually worth in the Sector.</p><p>Powerful ships are not nerfed. The economy simply recognizes them. If a ship is trash, the market will reflect that.</p><p>That sleek destroyer might still look amazing, but the ugly frigate you used to ignore may suddenly reveal itself as the better buy! Especially when you realize you can deploy three of them for the same DP cost.</p><p>Features:</p><ul><li>Stat-derived ship hull pricing</li><li>Highly Tunable</li><li>Positive Faction Relations give dynamic discounts</li><li>D-mod condition pricing</li><li>Open, military, and black market unique price behavior</li><li>Rarity, logistics, and market-context adjustments</li><li>Hull value report generation</li><li>Designed for heavily modded games with inconsistent ship pricing</li><li>Will flip your logic when composing fleets</li></ul><p>Save Compatibility Notice</p><p>Safe to add to an existing save.<br>Safe to remove, but ship prices will return to normal after the mod is disabled and the game is restarted.</p><p>A full restart is recommended after updating.</p><p>Download: <a href=\"https://github.com/Compterra/Stat-Derived-Ship-Costs/archive/refs/heads/main.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Compterra/Stat-Derived-Ship-Costs/archive/refs/heads/main.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35645.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35645.0</a></p>",
-  "aiDescription": "Derives base ship value from hull stats instead of relying only on vanilla price entries. D-mods strongly reduce ship value, while S-mods have little face-value effect. Open Market, Military Market, and Black Market each have their own pricing behavior, and selling prices are adjusted separately to reflect buyer motives.",
+  "aiDescription": "Derives ship value from hull statistics rather than fixed vanilla prices. Damaged ships sell for less, while clean ships retain their prestige. Pricing behavior varies by market channel and local economy conditions.",
   "saveCompatibilityText": "Safe to add to an existing save.",
   "updateCompatibilityText": "A full restart is recommended after updating.",
   "removalCompatibilityText": "Safe to remove, but ship prices will return to normal after the mod is disabled and the game is restarted.",
@@ -61,10 +61,16 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1520697507787575407/1520697508349743205/SDSC.png?ex=6ada68ab&is=6ad9172b&hm=90614d1c389512716ad81e13b42b0717e3f943359a28382fecc6cf1dda08b2bc&"
+      "url": "https://cdn.discordapp.com/attachments/1520697507787575407/1520697508349743205/SDSC.png?ex=6adb116b&is=6ad9bfeb&hm=9e218004a094572f5da50ab8b1b5c8d25c8f0a87cfedf3e7261e285b7c532150&",
+      "aiCaption": "A blue shield logo featuring an open book with a white rocket ship launching from its pages against a starry background.",
+      "aiKind": "logo",
+      "aiFit": "good"
     },
     {
       "url": "https://raw.githubusercontent.com/Compterra/Stat-Derived-Ship-Costs/main/graphics/icon/SDSC.png",
+      "aiCaption": "A blue shield logo featuring an open book with a white rocket ship in the center.",
+      "aiKind": "logo",
+      "aiFit": "good",
       "small": true
     }
   ],

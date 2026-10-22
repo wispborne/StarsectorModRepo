@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "per-class-limits",
     "name": "Per class limits",
@@ -42,7 +42,7 @@
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-big\"><strong>[0.98a] Per Class Limits</strong></span><br>Version: <strong>v1.0.1</strong></div><br>A lightweight campaign mod that applies <strong>soft caps</strong> to the player’s <strong>warship</strong> lineup by hull size.<br>You can exceed the caps, but doing so applies escalating penalties.<br>This mod makes the game strictly harder.<br>I had the idea of making this mod for few last playthroughs, and also found pretty much the same idea <a href=\"https://fractalsoftworks.com/forum/index.php?topic=19032.0\" rel=\"nofollow noopener\" target=\"_blank\">here (make fleets great again!)</a><br><br><hr><br><strong>Features</strong><br><ul><li><strong>Soft limits per hull size</strong> (default: 1 capital, 3 cruisers, 6 destroyers, unlimited frigates).</li><li><strong>Max CR penalties</strong> scale based on how far you exceed a class cap.</li><li><strong>Fleetwide operating pressure</strong>: increased supplies/month and fuel use when over caps.</li><li><strong>Clear UI indicator</strong>: affected ships receive a warning hullmod (“Over Command Limit”) showing the active penalty details.</li><li><strong>Configurable via lunalib</strong> (caps and scaling).</li></ul><br><strong>Screenshots</strong><br><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/598Lvbd.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details><br><div class=\"align-center\"><span class=\"size-biggest\"><strong><a href=\"https://github.com/Fiard/SS-Per-Class-Limits/releases/download/v1.0.1/PerClassLimits.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download!</a></strong></span></div><strong>Downloads List</strong><br><ul><li><strong>PerClassLimits.zip</strong> (GitHub Release): <a href=\"https://github.com/Fiard/SS-Per-Class-Limits/releases/download/v1.0.1/PerClassLimits.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Fiard/SS-Per-Class-Limits/releases/download/v1.0.1/PerClassLimits.zip</a></li><li><strong>All releases list</strong> (GitHub): <a href=\"https://github.com/Fiard/SS-Per-Class-Limits/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Fiard/SS-Per-Class-Limits/releases</a></li></ul><br><strong>Installation</strong><br><ul><li>Unzip into: <strong>Starsector/mods/</strong></li><li>Folder structure should be: <strong>Starsector/mods/PerClassLimits/mod_info.json</strong></li><li>Enable <strong>Per Class Limits</strong> in the launcher.</li></ul><br><strong>Compatibility</strong><br><ul><li>Designed for Starsector <strong>0.98a</strong>.</li><li>Generally safe to add to an existing save.</li><li>Removing mid-save is not recommended.</li></ul><br><strong>Configuration</strong><br>Settings file (if you don't use lunalib):<br><ul><li><strong>PerClassLimits/data/config/pcl_settings.json</strong></li></ul><br>Notes:<br><ul><li>What Counts as a \"Warship\"? Any ships that are not pure logistic ships (liner/transport/tanker), and specifically combat freighters. Civilian freighters do not count.</li></ul><br><strong>Known Issues</strong><br><ul><li>None currently known. If you encounter a problem, please attach <strong>starsector.log</strong> and your mod list.</li></ul><br><strong>TODO list</strong><br><ul><li><del>Add lunalib settings</del></li><li>Add version checker support</li><li>Add new fleet ability to temporarily (few weeks) increase limits with long cooldown, so that you can prepare and fight star fortresses or some tough events</li></ul>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Enforces soft limits on capital ships, cruisers, and destroyers while allowing unlimited frigates. Exceeding these caps increases CR penalties, supplies consumption, and fuel usage. Affected ships display a warning hullmod indicating the active penalty details.",
+  "aiDescription": "Enforces soft limits on capital ships, cruisers, and destroyers while allowing unlimited frigates. Exceeding these caps increases max CR penalties, supplies usage, and fuel consumption. Affected ships display a warning hullmod indicating the active penalty details.",
   "saveCompatibilityText": "Generally safe to add to an existing save.",
   "removalCompatibilityText": "Removing mid-save is not recommended.",
   "canAdd": "yes",
@@ -51,7 +51,10 @@
   "rawCategories": [],
   "gallery": [
     {
-      "url": "https://i.imgur.com/598Lvbd.png"
+      "url": "https://i.imgur.com/598Lvbd.png",
+      "aiCaption": "A game interface showing an 'Over Command Limit' warning with penalty details for fleet composition.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     }
   ],
   "downloads": [

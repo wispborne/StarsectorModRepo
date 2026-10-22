@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "oddish-s-crash-logger",
     "name": "Oddish's Crash Logger",
@@ -15,9 +15,10 @@
     ],
     "gameVersion": "0.98a",
     "imageUrl": "https://cdn.discordapp.com/attachments/1543971295207624804/1543971578734317699/image.png?ex=6adab455&is=6ad962d5&hm=77c349fa58b0d778f5a9cd2b027f7c0765ef5e43fc9c2efef8540a6b4c657b88&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1543971295207624804/1543971578734317699/image.png?ex=6adb5d15&is=6ada0b95&hm=e32630921944ffad95e24698b58013396c48557bc02f0433a8c1c8c91a63a4a3&",
     "summary": "This is just an extra crash information logger that I vibecoded for debugging another mod's development. I have since deleted the code as it was quite useless, but then later on claude told me that it actually WAS useful. I'm putting it up here as a mod if anyone wants to use it. It saves way more information about the game, mostly for LLM's to understand what went wrong. It's just an enormous dump of whatever I can dump, pretty much.",
     "summaryIsGenerated": false,
-    "aiSummary": "Logs extensive crash information to a text file for debugging purposes.",
+    "aiSummary": "Logs extensive game state information to a text file for debugging crashes.",
     "hasDirectDownload": false,
     "downloadCount": 0,
     "discordUrl": "https://discord.com/channels/187635036525166592/1543971295207624804/1543971295207624804",
@@ -33,12 +34,12 @@
     "addedOn": "2026-08-31",
     "needs": []
   },
-  "description": "Dumps as much game state and error data as possible into a .txt file. Designed primarily to help large language models analyze crashes and identify potential fixes.",
-  "descriptionHtml": "<p>Dumps as much game state and error data as possible into a .txt file. Designed primarily to help large language models analyze crashes and identify potential fixes.</p>",
+  "description": "Dumps accessible game data, including mod content, scripts, listeners, and thread states, into a text file. This output is designed to be analyzed by large-context LLMs to identify the cause of crashes.",
+  "descriptionHtml": "<p>Dumps accessible game data, including mod content, scripts, listeners, and thread states, into a text file. This output is designed to be analyzed by large-context LLMs to identify the cause of crashes.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>This is just an extra crash information logger that I vibecoded for debugging another mod's development. I have since deleted the code as it was quite useless, but then later on claude told me that it actually WAS useful. I'm putting it up here as a mod if anyone wants to use it.<br>It saves way more information about the game, mostly for LLM's to understand what went wrong. It's just an enormous dump of whatever I can dump, pretty much.</p>",
-  "aiDescription": "Dumps as much game state and error data as possible into a .txt file. Designed primarily to help large language models analyze crashes and identify potential fixes.",
+  "aiDescription": "Dumps accessible game data, including mod content, scripts, listeners, and thread states, into a text file. This output is designed to be analyzed by large-context LLMs to identify the cause of crashes.",
   "aiUse": {
     "quote": "I have since deleted the code as it was quite useless, but then later on claude told me that it actually WAS useful.",
     "usesAi": true,
@@ -57,25 +58,46 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1543971295207624804/1543971578734317699/image.png?ex=6adab455&is=6ad962d5&hm=77c349fa58b0d778f5a9cd2b027f7c0765ef5e43fc9c2efef8540a6b4c657b88&"
+      "url": "https://cdn.discordapp.com/attachments/1543971295207624804/1543971578734317699/image.png?ex=6adb5d15&is=6ada0b95&hm=e32630921944ffad95e24698b58013396c48557bc02f0433a8c1c8c91a63a4a3&",
+      "aiCaption": "A text list titled 'Mods with content in this battle (hulls / weapons)' showing various mod names and counts.",
+      "aiKind": "other",
+      "aiFit": "okay"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1543971295207624804/1543971590323183768/image.png?ex=6adab458&is=6ad962d8&hm=a1780e31dad6896280b9df903fb8666763c8cee800bfb475ee1dd844a7a01765&"
+      "url": "https://cdn.discordapp.com/attachments/1543971295207624804/1543971590323183768/image.png?ex=6adb5d18&is=6ada0b98&hm=3399883fa334df9070f38a1e3cbf27ffee874cb2aba3a5134fa6cad5e7d9be92&",
+      "aiCaption": "A dense log output listing ship variants, hullmods, and weapon details for a battle crash report.",
+      "aiKind": "other",
+      "aiFit": "okay"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1543971295207624804/1543971843331858483/image.png?ex=6adab495&is=6ad96315&hm=a267b29ab9e1c70284adae3bee307e0ae6e50085973655ce2d76e1933db46cdd&"
+      "url": "https://cdn.discordapp.com/attachments/1543971295207624804/1543971843331858483/image.png?ex=6adb5d55&is=6ada0bd5&hm=2bb0f584c95b169946c067ea099d40a3e1e6e1d9fe9d159c4aa054b648cbe2f6&",
+      "aiCaption": "A text list titled 'Every-frame scripts running (mod code ticking each campaign frame)' showing various script names.",
+      "aiKind": "other",
+      "aiFit": "okay"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1543971295207624804/1543971888316031036/image.png?ex=6adab49f&is=6ad9631f&hm=7c7a0409281e681a7d9bb2dcaddb6acffc09a1ea6c380a0bf565dc5937d1c9f7&"
+      "url": "https://cdn.discordapp.com/attachments/1543971295207624804/1543971888316031036/image.png?ex=6adb5d5f&is=6ada0bdf&hm=adb946633a86d88c1b3a1af7f763b09b7f7f8164c7a57b2e485a3f5ae5f9bc0b&",
+      "aiCaption": "A text list titled 'Registered campaign listeners (mod hooks into game events)' showing mod hook names.",
+      "aiKind": "other",
+      "aiFit": "okay"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1543971295207624804/1543972060106194994/image.png?ex=6adab4c8&is=6ad96348&hm=0a7b8a7809591c6da15a653af7562709168f07e51fe1631f3baf6ed113e7e113&"
+      "url": "https://cdn.discordapp.com/attachments/1543971295207624804/1543972060106194994/image.png?ex=6adb5d88&is=6ada0c08&hm=10ac990ebffaf37ad6c0db9470f58b2a59e6d87083c23bf5b06331e4752ebe37&",
+      "aiCaption": "A technical log section labeled 'THREAD DUMP' showing Java thread states and stack traces.",
+      "aiKind": "other",
+      "aiFit": "okay"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1543971295207624804/1543974282122502204/image.png?ex=6adab6da&is=6ad9655a&hm=c6fed6d1f2b2364a594df3ffc478a2ffb3748d193c959b08391a9b2aaa24c1e5&"
+      "url": "https://cdn.discordapp.com/attachments/1543971295207624804/1543974282122502204/image.png?ex=6adb5f9a&is=6ada0e1a&hm=a73d978dfba37a3460597c260340ded8e93527779a50cfe6935441178e576bef&",
+      "aiCaption": "A screenshot of a chat interface showing a user asking for help with a crash log and an AI assistant listing commands it ran to analyze the file.",
+      "aiKind": "other",
+      "aiFit": "poor"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1543971295207624804/1543974338481365163/image.png?ex=6adab6e7&is=6ad96567&hm=7fbb3dac1b3c3121b553b2a96af791697b0193082ebb64b816a08752ef92e5d2&"
+      "url": "https://cdn.discordapp.com/attachments/1543971295207624804/1543974338481365163/image.png?ex=6adb5fa7&is=6ada0e27&hm=e01f06f14c183db604498f437b9d6961120db8709da590e9ead65c099fbdb4fa&",
+      "aiCaption": "A screenshot of a chat interface displaying a detailed explanation under headings 'What crashed' and 'Why it happens' regarding a weapon mismatch error.",
+      "aiKind": "other",
+      "aiFit": "poor"
     }
   ],
   "downloads": [],

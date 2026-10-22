@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "corrupt-officials-lower-colony-income-more-rewarding-growth",
     "name": "Corrupt.Officials - Lower colony income, more rewarding growth",
@@ -17,18 +17,18 @@
     "gameVersion": "0.98a",
     "modVersion": "1.0.b",
     "imageUrl": "https://i.imgur.com/oC7BzAM.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1487503296607424652/1487503296846364842/mod_post_icon_corrupt_officials.png?ex=6adaf026&is=6ad99ea6&hm=1afa488e51b55e7d347c1d9b8b64b83c14c35b4f560c19049bc45233fb198c5a&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1487503296607424652/1487503296846364842/mod_post_icon_corrupt_officials.png?ex=6adb98e6&is=6ada4766&hm=8b8ac3d22b11c153fe652fd9894c177e3aea2e8bca3cc0bcb2d37857fc98b845&",
     "summary": "This is a challenge mode intended to balance out the extreme passive income colonies can provide. The mechanic imposes a diminishing-returns penalty on colonies whose net income exceeds a configurable cutoff.",
     "summaryIsGenerated": false,
-    "aiSummary": "Imposes a diminishing-returns penalty on colony income above a configurable threshold to reduce passive earnings.",
+    "aiSummary": "Imposes a diminishing-returns penalty on colony net income exceeding a configurable cutoff.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
-      "url": "https://github.com/SirHartley/Corrupt.Officials/releases/download/1.0.b/Corrupt.Officials1.0.b.zip",
-      "kind": "direct",
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FSirHartley%2FCorrupt.Officials%2Fblob%2Fmaster%2Fcorruptofficials.version%22%2C%22id%22%3A%22corruptofficials%22%7D",
+      "kind": "trios",
       "needsAnotherStep": false
     },
-    "downloadCount": 1,
+    "downloadCount": 2,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35125.0",
     "discordUrl": "https://discord.com/channels/187635036525166592/1487503296607424652/1487503296607424652",
     "sourceIsPublic": true,
@@ -47,7 +47,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><code>Lower colony income, more rewarding growth</code></p><p>This mod adds an optional diminishing returns penalty to colony income above a configurable cutoff (default 40k credits).<br>Every credit earned beyond the threshold is reduced by an increasing percentage, 80k earns you 68k, 1M earns you ~180k.</p><p>The curve, cutoff, and scaling are fully configurable. Can be toggled on/off mid-save.<br>Read the Forum Post!</p><pre><code>Changelog:\n1.0.b - Fixed crash when there's a colony without pop&amp;infra (how?)\n1.0.a - Spun off from IndEvo as standalone mod. Fixed the calculation errors that would cause the mod to increase the penalty beyond what it should have been.</code></pre><pre><code>+ Save compatible + </code></pre><h3><a href=\"https://github.com/SirHartley/Corrupt.Officials/releases/download/1.0.b/Corrupt.Officials1.0.b.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download</a></h3><h3><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35125.0\" rel=\"nofollow noopener\" target=\"_blank\">Forum Thread</a></h3><h3><a href=\"https://patreon.com/SirHartley\" rel=\"nofollow noopener\" target=\"_blank\">Support my Efforts</a></h3><p><code>_________________________________</code></p><p><em>Makes the government steal your money, just like in real life.</em></p>",
-  "aiDescription": "Applies a corruption penalty to colonies that generate high net income. The first portion of income is exempt, while amounts exceeding the cutoff are reduced by a percentage that scales with total earnings. This mechanic encourages active management over passive accumulation.",
+  "aiDescription": "Imposes a diminishing-returns penalty on colonies whose net income exceeds a configurable cutoff. The first portion of income is free, while amounts above the threshold are reduced by a percentage that increases with total earnings. This mechanic aims to balance extreme passive income and make colony growth more rewarding.",
   "saveCompatibilityText": "Save Compatible",
   "canAdd": "yes",
   "aiUse": {},
@@ -57,28 +57,50 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1487503296607424652/1487503296846364842/mod_post_icon_corrupt_officials.png?ex=6adaf026&is=6ad99ea6&hm=1afa488e51b55e7d347c1d9b8b64b83c14c35b4f560c19049bc45233fb198c5a&",
+      "url": "https://cdn.discordapp.com/attachments/1487503296607424652/1487503296846364842/mod_post_icon_corrupt_officials.png?ex=6adb98e6&is=6ada4766&hm=8b8ac3d22b11c153fe652fd9894c177e3aea2e8bca3cc0bcb2d37857fc98b845&",
+      "aiCaption": "A logo featuring a gear with a crescent moon and squares inside an octagonal frame.",
+      "aiKind": "logo",
+      "aiFit": "good",
       "small": true
     },
     {
-      "url": "https://i.imgur.com/oC7BzAM.png"
+      "url": "https://i.imgur.com/oC7BzAM.png",
+      "aiCaption": "A banner with the text 'CORRUPT OFFICIALS' and a gear logo overlaid on a historical illustration of officials.",
+      "aiKind": "banner",
+      "aiFit": "good"
     },
     {
       "url": "https://trilink.wispborne.com/badges/install-badge-forthebadge.svg",
       "small": true
     },
     {
-      "url": "https://i.imgur.com/xQodpET.png"
+      "url": "https://i.imgur.com/xQodpET.png",
+      "aiCaption": "An orange button labeled 'Become a patron'.",
+      "aiKind": "button",
+      "aiFit": "poor"
     },
     {
-      "url": "https://i.imgur.com/2tqRHS9.jpeg"
+      "url": "https://i.imgur.com/2tqRHS9.jpeg",
+      "aiCaption": "A graph titled 'Income Reduction' showing a curve where credits earned by the colony decrease from 0% to ~62% as values increase from 40.000 to 200.0.",
+      "aiKind": "other",
+      "aiFit": "okay"
     },
     {
       "url": "https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png",
+      "aiCaption": "A Creative Commons license badge with the text 'CC BY-NC ND'.",
+      "aiKind": "badge",
+      "aiFit": "poor",
       "small": true
     }
   ],
   "downloads": [
+    {
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FSirHartley%2FCorrupt.Officials%2Fblob%2Fmaster%2Fcorruptofficials.version%22%2C%22id%22%3A%22corruptofficials%22%7D",
+      "kind": "trios",
+      "label": "",
+      "host": "trilink.wispborne.com",
+      "needsAnotherStep": true
+    },
     {
       "url": "https://github.com/SirHartley/Corrupt.Officials/releases/download/1.0.b/Corrupt.Officials1.0.b.zip",
       "directUrl": "https://github.com/SirHartley/Corrupt.Officials/releases/download/1.0.b/Corrupt.Officials1.0.b.zip",

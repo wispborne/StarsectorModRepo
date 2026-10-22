@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "nomadic-survival",
     "name": "Nomadic Survival",
@@ -19,10 +19,10 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "1.5.0",
-    "imageUrl": "https://i.imgur.com/VBuqj2p.png",
+    "imageUrl": "https://i.imgur.com/BRSbpKC.png",
     "summary": "Nomadic Survival makes exploration more interesting by adding sites to planets that allow you to perform various operations. It's a mod about crafting the resources you need instead of returning home to restock.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds planetary operation sites for crafting resources and an optional drive field anomaly mechanic that limits fuel tankers.",
+    "aiSummary": "Adds planetary operation sites for crafting resources and introduces an optional drive field anomaly mechanic that limits fuel tankers.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -44,7 +44,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Makes exploration more interesting by adding sites to planets that allow you to perform various operations.<br>It's a mod about crafting the resources you need instead of returning home to restock.</p><p>It also adds a (completely optional) challenge that dramatically limits the usefulness of fuel tankers.<br>This makes it necessary to scavenge, steal, and craft fuel as you go.</p><p>Full description: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=26255.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=26255.0</a></p><p>Latest changes:</p><pre><code>1.5.0:\n- Updated for Starsector version 0.98a and Java 17\n- Fixed a rare error that could occur intermittently while loading saves for some users\n- Added support for specifying the minimum abundance capacity and abundance per month of operation types\n- Added support for forcing operations to spawn at colonized planets\n- Added support for defining specific planetary conditions as op requirements, even if they're part of a condition group\n- Changed: By default, planet ops may no longer require skills to perform (to improve out-of-the-box compatibility with Second in Command)\n- Changed: New operations are now created any time newly added operation types are detected. Previously this only occurred if an update to this mod was also detected.\n- Improved addition of newly added operations to more closely resemble initial spawn distribution</code></pre><p>Full change log: <a href=\"https://github.com/NateNBJ/NomadicSurvival/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/NateNBJ/NomadicSurvival/releases</a><br>Download: <a href=\"https://github.com/NateNBJ/NomadicSurvival/releases/latest/download/Nomadic.Survival.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/NateNBJ/NomadicSurvival/releases/latest/download/Nomadic.Survival.zip</a></p>",
-  "aiDescription": "Adds over 50 types of planetary operations revealed by surveying planets, allowing you to convert commodities like metals and organics into supplies and fuel. Includes a completely optional challenge called the Drive Field Anomaly that drains fuel during hyperspace travel in exchange for valuable anomaly data. Provides intel logging for discovered sites and fleet abilities like siphoning fuel from nebulae.",
+  "aiDescription": "Adds over 50 types of planetary operations to convert commodities like metals and organics into supplies and fuel. Includes a completely optional challenge called the Drive Field Anomaly which drains fuel during hyperspace travel, encouraging scavenging and crafting instead of relying on tankers. Provides intel logging for discovered sites and allows configuration via LunaLib or ini files.",
   "saveCompatibilityText": "Can be added to existing games.",
   "updateCompatibilityText": "All updates are save-compatible unless stated otherwise.",
   "removalCompatibilityText": "Can NOT be removed from games in which it was already used.",
@@ -65,22 +65,40 @@
       "small": true
     },
     {
-      "url": "https://i.imgur.com/VBuqj2p.png"
+      "url": "https://i.imgur.com/VBuqj2p.png",
+      "aiCaption": "A text screen listing extracible sources of volatiles, a disused autofac, and a ship graveyard.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/vLurl44.png"
+      "url": "https://i.imgur.com/vLurl44.png",
+      "aiCaption": "A 'Fabricate supplies' menu showing resource costs and options to begin or cancel the operation.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/sk10Eoy.png"
+      "url": "https://i.imgur.com/sk10Eoy.png",
+      "aiCaption": "An Intel tab interface displaying a star map with search parameters for fueling waypoints and scavengers.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/BRSbpKC.png"
+      "url": "https://i.imgur.com/BRSbpKC.png",
+      "aiCaption": "A game screenshot showing the 'Siphon Fuel' ability tooltip active in a nebula.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://i.imgur.com/DpZR517.png"
+      "url": "https://i.imgur.com/DpZR517.png",
+      "aiCaption": "A small icon of a metallic component on a blue circular background.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://i.imgur.com/k12CfZ3.png"
+      "url": "https://i.imgur.com/k12CfZ3.png",
+      "aiCaption": "A 'Drive Field Anomaly' status screen showing fuel consumption penalties and reserve statistics.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     }
   ],
   "downloads": [

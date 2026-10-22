@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "interastral-peace-casino",
     "name": "Interastral Peace Casino",
@@ -18,10 +18,10 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "1.6.3",
-    "imageUrl": "https://github.com/zman406986/CasinoMod/blob/master/gacha.gif?raw=true",
-    "summary": "Gamble away your ships at the",
+    "imageUrl": "https://github.com/zman406986/CasinoMod/blob/master/poker.png?raw=true",
+    "summary": "Visit any Tri-Tachyon or Player owned market > size 3.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a casino with poker, blackjack, gacha, and betting arenas to Tri-Tachyon and player markets.",
+    "aiSummary": "Adds a casino with poker, blackjack, gacha, and arena betting minigames.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -49,7 +49,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<h3>Gamble away your ships at the IPC!</h3><p>**Adds a casino where you can lose money via 4 minigames: **</p><ul><li>Poker (Player vs AI, Texas Holdem, inc. 2-player and 5-player variants)</li><li>Blackjack (6-decks, allows counting)</li><li>Ship Gacha (Genshin style, Tachy-Impact™)</li><li>Arena betting (Spaceship battle royale, has adaptive odds like horse betting)</li></ul><p><strong>New - a 5th one will be availible if my other mod, Cosmicon Dice, is also loaded</strong></p><p>Along with a debt system (but you <strong><em>don't</em></strong> want to owe the casino money)</p><ul><li>Plus a battle pass experience complete with daily ads (can be turned off)</li><li>Plus custom music and a lot of Genshin/Honkai Starrail Memes.</li></ul><p><strong>Cosmicon Collab:</strong> <a href=\"https://discord.com/channels/187635036525166592/1503113590150795497\" rel=\"nofollow noopener\" target=\"_blank\">https://discord.com/channels/187635036525166592/1503113590150795497</a><br>If the <strong><em>Cosmicon Dice</em></strong> mod is also loaded, you can spend stargems at the casino to play dice against a strong opponent and unlock the dice tournament for big rewards!<br>Note: You can remove either mod and keep playing the remaining mod's feature, but may lose saved progress of collab features.</p><p>Visit any Tri-Tachyon or player owned colony to play.<br>Should be compatible with everything and safe to add/remove mid game.<br><a href=\"https://s13.gifyu.com/images/bq6mu.gif\" rel=\"nofollow noopener\" target=\"_blank\">https://s13.gifyu.com/images/bq6mu.gif</a><br><a href=\"https://github.com/zman406986/CasinoMod/blob/master/poker.png?raw=true\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/zman406986/CasinoMod/blob/master/poker.png?raw=true</a><br><a href=\"https://s13.gifyu.com/images/bmu0W.gif\" rel=\"nofollow noopener\" target=\"_blank\">https://s13.gifyu.com/images/bmu0W.gif</a></p><h4>Almost all values are configurable (just edit <code>data/config/casino_settings.json</code>)</h4><p>Download: <a href=\"https://github.com/zman406986/CasinoMod/releases/download/v1.6.3/Casino.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/zman406986/CasinoMod/releases/download/v1.6.3/Casino.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=34918.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=34918.0</a></p><p>Fossic Forum Thread (for CN ver): <a href=\"https://www.fossic.org/thread-19096-1-1.html\" rel=\"nofollow noopener\" target=\"_blank\">https://www.fossic.org/thread-19096-1-1.html</a></p><p>Github: <a href=\"https://github.com/zman406986/CasinoMod\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/zman406986/CasinoMod</a><br>All code in this mod that isn't sloppy AI crap was produced by , thank them</p>",
-  "aiDescription": "Adds four minigames: Texas Hold'em Poker, Blackjack, a rotating banner gacha system called Tachy-Impact, and a battle royale arena called Spiral Abyss Arena. Includes a stargem currency system for purchasing gems or pawning ships, along with VIP passes that offer daily rewards and exclusive financial benefits. All game settings, including odds, rates, and UI text, are configurable via a JSON file.",
+  "aiDescription": "Adds four minigames: Texas Hold'em Poker, Blackjack, Tachy-Impact gacha, and Spiral Abyss Arena. Includes stargem finances for purchasing gems or pawning ships, plus a VIP pass system with daily rewards and exclusive benefits. All settings are configurable via JSON files.",
   "saveCompatibilityText": "Safe to add or remove mid-campaign!",
   "removalCompatibilityText": "Safe to add or remove mid-campaign!",
   "canAdd": "yes",
@@ -59,8 +59,7 @@
     "usesAi": true,
     "uses": [
       {
-        "area": "code",
-        "extent": "some"
+        "area": "code"
       }
     ]
   },
@@ -75,13 +74,22 @@
       "small": true
     },
     {
-      "url": "https://github.com/zman406986/CasinoMod/blob/master/gacha.gif?raw=true"
+      "url": "https://github.com/zman406986/CasinoMod/blob/master/gacha.gif?raw=true",
+      "aiCaption": "A slot machine interface displaying a grid of ship hull icons with 'Shopping' text at the bottom.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://github.com/zman406986/CasinoMod/blob/master/poker.png?raw=true"
+      "url": "https://github.com/zman406986/CasinoMod/blob/master/poker.png?raw=true",
+      "aiCaption": "A poker table game screen showing cards, player stacks, and betting options like 'Raise' and 'Fold'.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://github.com/zman406986/CasinoMod/blob/master/arena.gif?raw=true"
+      "url": "https://github.com/zman406986/CasinoMod/blob/master/arena.gif?raw=true",
+      "aiCaption": "A battle log interface listing combat rounds with text such as 'Round: 2', 'Total Bet: 2500', and character names like 'Brittle Euclid'.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     }
   ],
   "downloads": [
@@ -96,9 +104,9 @@
     }
   ],
   "changelog": {
-    "1.6.3": "10/05/2026 - V1.6.3\n- Add option to refresh current gacha pool for 5000 Stargems.\n- Add collab with Cosmicon Dice mod - if both installed, you can play dice in casino.\n- Fix softlock when resuming on grown player colony.",
-    "1.6.2": "26/04/2026 - V1.6.2\n- Fixed crash and incorrect stack visualization bar when resuming suspended 5-player poker game.",
-    "1.6.1": "22/04/2026 - V1.6.1\n- Fixed crash when resuming suspended arena game."
+    "1.6.3": "- Add option to refresh current gacha pool for 5000 Stargems.\n- Add collab with Cosmicon Dice mod - if both installed, you can play dice in casino.\n- Fix softlock when resuming on grown player colony.",
+    "1.6.2": "- Fixed crash and incorrect stack visualization bar when resuming suspended 5-player poker game.",
+    "1.6.1": "- Fixed crash when resuming suspended arena game."
   },
   "sourceCodeUrl": "https://github.com/zman406986/CasinoMod",
   "supportLinks": [],

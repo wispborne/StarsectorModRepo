@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "omm-freitag-corporation",
     "name": "OMM - Freitag Corporation",
@@ -17,11 +17,11 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "0.9.0c",
-    "imageUrl": "https://i.imgur.com/0PqjhKe.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1402958315352490034/1402958315595497512/image.png?ex=6ada8b00&is=6ad93980&hm=d289a283dacd3e61891432031b52423f6bf3e499f19416a2092cbaf760f7041b&",
+    "imageUrl": "https://i.imgur.com/4W47MGP.png",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1402958315352490034/1402958315595497512/image.png?ex=6adb33c0&is=6ad9e240&hm=e792eac699696c9c3bacd071b5c96ca449a03c91a190b63c24f5beaf06a383fd&",
     "summary": "0.9.1 indev Notes: improved flag & crest some sprite updates added a ton of weapons (at least 12) changed Octocorallia bounds so it's easier to switch between it and the Orchestria in refit screen fix: Ecrevisse ship system did not apply force to targets properly, also increased cooldown updated Freitag Control Suite hullmod text to better convey drone mechanics to the player fixed the Sesarma hullmod logistics hullmod mismatch fixed multiple cases in which autofire control would not function correctly PD Drones will no longer get stuck in an infinite loop of starting and landing on the mothership 0.9.0c Release Notes: fixed a Null Pointer Exception in main mod plugin 0.9.0b Release Notes: fixed a crash due to mousing over the Monofilament Tow Cable Hullmod 0.9.0a Release Notes: slightly increased repair power of repair drone OMM no longer replaces any vanilla sound files",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds civilian ships with drone-based weapons, orbital platforms, and logistics abilities like algae farms.",
+    "aiSummary": "Adds civilian ships with drone-based weaponry, orbital platform deployment, and logistics-focused campaign abilities like algae farms.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Tecrys/OrbitalManipulation-Maintenance/releases/download/0.9.0c/OrbitalManipulationMaintenance.zip",
@@ -53,7 +53,7 @@
       },
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
       }
     ]
   },
@@ -62,7 +62,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Download: <a href=\"https://github.com/Tecrys/OrbitalManipulation-Maintenance/releases/tag/0.9.0c\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tecrys/OrbitalManipulation-Maintenance/releases/tag/0.9.0c</a><br>Forum page: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=22142.msg333767#msg333767\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=22142.msg333767#msg333767</a></p><pre><code>0.9.1 indev Notes:\n- improved flag &amp; crest\n- some sprite updates\n- added a ton of weapons (at least 12)\n- changed Octocorallia bounds so it's easier to switch between it and the Orchestria in refit screen\n- fix: Ecrevisse ship system did not apply force to targets properly, also increased cooldown\n- updated Freitag Control Suite hullmod text to better convey drone mechanics to the player\n- fixed the Sesarma hullmod logistics hullmod mismatch\n- fixed multiple cases in which autofire control would not function correctly\n- PD Drones will no longer get stuck in an infinite loop of starting and landing on the mothership\n0.9.0c Release Notes:\n- fixed a Null Pointer Exception in main mod plugin\n0.9.0b Release Notes:\n- fixed a crash due to mousing over the Monofilament Tow Cable Hullmod\n0.9.0a Release Notes:\n- slightly increased repair power of repair drone\n- OMM no longer replaces any vanilla sound files</code></pre>",
-  "aiDescription": "Introduces a faction of civilian vessels that rely on surrounding drones for combat rather than fixed weapon mounts. These ships can deploy orbital platforms during battle and provide support effects to allies. Campaign features include mobile algae farms that generate supplies and fuel while in your fleet.",
+  "aiDescription": "Introduces a faction of civilian vessels that rely on surrounding drones for combat rather than fixed weapon mounts. These drones can swap weapons, aim at the cursor, and intercept enemy ordnance. Ships deploy orbital platforms automatically during battle and provide support buffs to allies. Campaign features include mobile algae farms that generate supplies and fuel while part of the fleet.",
   "aiUse": {},
   "rawCategories": [
     "Faction Mods",
@@ -70,37 +70,67 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1402958315352490034/1402958315595497512/image.png?ex=6ada8b00&is=6ad93980&hm=d289a283dacd3e61891432031b52423f6bf3e499f19416a2092cbaf760f7041b&"
+      "url": "https://cdn.discordapp.com/attachments/1402958315352490034/1402958315595497512/image.png?ex=6adb33c0&is=6ad9e240&hm=e792eac699696c9c3bacd071b5c96ca449a03c91a190b63c24f5beaf06a383fd&"
     },
     {
-      "url": "https://i.imgur.com/0PqjhKe.png"
+      "url": "https://i.imgur.com/0PqjhKe.png",
+      "aiCaption": "A thin banner strip with the text FREITAG CORPORATION overlaid on ship art.",
+      "aiKind": "banner",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/4W47MGP.png"
+      "url": "https://i.imgur.com/4W47MGP.png",
+      "aiCaption": "A wide title picture featuring various ship sprites and the large text FREITAG CORPORATION.",
+      "aiKind": "banner",
+      "aiFit": "good"
     },
     {
-      "url": "https://i.imgur.com/q7Fk4d9.png"
+      "url": "https://i.imgur.com/q7Fk4d9.png",
+      "aiCaption": "A top-down view of a white and grey spaceship sprite with red accents.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://i.imgur.com/FNW4fx5.png"
+      "url": "https://i.imgur.com/FNW4fx5.png",
+      "aiCaption": "A top-down view of a complex white and grey spaceship sprite featuring a central gold emblem.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://i.imgur.com/gwMVueC.png"
+      "url": "https://i.imgur.com/gwMVueC.png",
+      "aiCaption": "A top-down view of a teal and white spaceship sprite with striped patterns.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://i.imgur.com/tl6gsXh.png"
+      "url": "https://i.imgur.com/tl6gsXh.png",
+      "aiCaption": "A top-down view of a white spaceship sprite with blue accents and long dark protrusions.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://i.imgur.com/Z1kl5Id.png"
+      "url": "https://i.imgur.com/Z1kl5Id.png",
+      "aiCaption": "A top-down view of an orange and blue spaceship sprite with wing-like structures.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://i.imgur.com/0vpxy9K.png"
+      "url": "https://i.imgur.com/0vpxy9K.png",
+      "aiCaption": "A top-down view of a spaceship sprite featuring a large cluster of green spheres at the rear.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://i.imgur.com/ixG2ORR.png"
+      "url": "https://i.imgur.com/ixG2ORR.png",
+      "aiCaption": "A top-down view of a yellow and grey spaceship sprite with multiple engine pods.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://i.imgur.com/5ns7MEe.png"
+      "url": "https://i.imgur.com/5ns7MEe.png",
+      "aiCaption": "A top-down view of a white spaceship sprite with long blue curved appendages extending upwards.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
       "url": "https://i.imgur.com/S3TXoJ6.png"
@@ -127,7 +157,7 @@
       "directUrl": "https://github.com/Tecrys/OrbitalManipulation-Maintenance/releases/download/0.9.0c/OrbitalManipulationMaintenance.zip",
       "fileName": "OrbitalManipulationMaintenance.zip",
       "kind": "direct",
-      "label": "click the banner to download",
+      "label": "",
       "host": "GitHub",
       "needsAnotherStep": false
     }

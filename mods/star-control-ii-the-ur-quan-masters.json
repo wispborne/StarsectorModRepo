@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "star-control-ii-the-ur-quan-masters",
     "name": "Star Control II: The Ur-Quan Masters",
@@ -15,7 +15,7 @@
     "imageUrl": "http://i.imgur.com/FIGHOVF.png",
     "summary": "I started with the sprites in Star Control II, tweaked the lines and then frankened bits and bobs from Starfarer ships. My hope is that the ships look like their original counterparts enough to be recognizable, but seen through the lens of the Starfarer style, scale and gameplay.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds ships and missions inspired by Star Control II.",
+    "aiSummary": "Adds ships from Star Control II adapted to the Starfarer style.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "http://dl.dropbox.com/u/14340846/sc2_0.7.zip?dl=1",
@@ -34,40 +34,70 @@
   "descriptionHtml": "<a href=\"http://dl.dropbox.com/u/14340846/sc2_0.7.zip\" rel=\"nofollow noopener\" target=\"_blank\"><span class=\"size-bigger\"><strong><img src=\"http://i.imgur.com/FIGHOVF.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"> Download version 0.7</strong></span></a> — Star Control II: The Ur-Quan Masters <a href=\"http://creativecommons.org/licenses/by-nc-sa/3.0/\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><strong>TO DO (Global):</strong><br><ul><li>Provide module for any ship to transform to other sprite + bounds; armor damage will be stored per ship+transform instance; so each mode of a ship would get its own armor; actual transformation implementation via <em>ShipAPI setSprite, getArmorGrid, CombatEntityAPI getExactBounds</em>; add sprites to settings.json/graphics; add armor grid hashtable internal to the module;</li><li>Set to Total Conversion; remove vanilla content; create custom title screen</li><li>Victory Music &amp; Special Sound FX: now possible via <em>SoundPlayerAPI</em></li><li>Zero-flux speed boost removed globally</li><li>Custom AI support where necessary for strange weapons, especially some \"missiles/drones\" (Orz marine, Chenjesu DOGI, Vux Limpet)</li></ul><br><strong>Ships to-do:</strong><br><ul><li>Slylandro Probe: EMP ship system for main weapon; \"Speed\" script (can't slow down)</li><li>Chmmr Avatar: 3x ZapSats drones; Tractor Beam via scripted weapon, pulls target (weaker on heavier ships!)</li><li>Arilou Laylee'lay Skiff: Inertialess Drive via stats, Teleport ship system</li><li>Chenjesu Broodhome: DOGI drone (one-at-time limit)</li><li>Ilwrath Avenger: Phasing system for cloak; Flamethrower as scripted weapon with custom sprite rendering</li><li>Mmrnmhrm X-Form: use new transform module; use \"convergeOnPoint\" beam weapon spec (X-Wing); Missiles to 30 ammo, instant recharge for AI (Y-Wing).</li><li>Orz Nemesis: Space Marines as drones or missiles, damage-over-time via scripts</li><li>Ur-Quan Kzer-Za Dreadnought: Autonomous Fighters via drones, launched two-at-a-time with custom sound fx</li><li>Mycon Podship: Hull/Armor Restoration via scripted ship system, fade-out of weapon via scripted rendering weapon plugin</li><li>Androsynth Guardian: use new transform module; Acid Bubble weapon via scripted weapon</li><li>Umgah Drone: Field Effect weapon as custom beam graphic, + script to destroy asteroids/projectiles in field; movement ability via ship system movement script</li><li>Earthling Cruiser: Allow PD lasers to target asteroids (lowest priority but extra damage); sprite tweaks (nacelle placement)</li><li>Druuge Mauler: sprite tweaks (conical surface rendering)</li></ul><br><strong>Planned</strong><br>Utwig Jugger<br>Pkunk Fury<br>Androsynth Guardian<br>Umgah Drone<br>Supox Blade<br>Thraddash Torch<br>Ur-Quan Kohr-Ah Marauder<br>Syreen Penetrator<br>Slylandro Probe<br>Chenjesu Broodhome<br><br><strong>Have Sprites</strong><br>Druuge Mauler<br>Chmmr Avatar<br>Mycon Podship<br>Shofixti Scout<br>Arilou Laylee'lay Skiff<br>Ilwrath Avenger<br>Zoq-Fot-Pik Stinger<br><br><strong>Implemented to Some Degree</strong><br>Vux Intruder<br>Spathi Discriminator<br>Mmrnmhrm X-Form<br>Yehat Terminator<br>Melnorme Trader<br>Orz Nemesis<br>Earthling Cruiser<br>Ur-Quan Kzer-Za Dreadnought<br><br><img src=\"http://i.imgur.com/EcmXI4n.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"http://i.imgur.com/3JgjbtN.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"http://i.imgur.com/H28s0Dh.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"http://i.imgur.com/TUo4aFr.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"http://i.imgur.com/u6mzHgM.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"http://i.imgur.com/lRoiF1B.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"http://i.imgur.com/JDkEm3T.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"http://i.imgur.com/6KazAl1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"http://i.imgur.com/TR0gv5D.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"http://i.imgur.com/R1R4dem.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"http://i.imgur.com/WH4Mmsu.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"http://i.imgur.com/kJ1nwaB.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"http://i.imgur.com/vU64tr1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"http://i.imgur.com/YWFGHzL.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"http://i.imgur.com/UqMbqRm.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br>I started with the sprites in Star Control II, tweaked the lines and then frankened bits and bobs from Starfarer ships. My hope is that the ships look like their original counterparts enough to be recognizable, but seen through the lens of the Starfarer style, scale and gameplay.<br><br>The mod adds 4 missions: Totality, Random Melee, Hierarchy vs. Alliance, and Alliance vs. Hierarchy.<br><br><a href=\"http://sc2.sourceforge.net/\" rel=\"nofollow noopener\" target=\"_blank\"><strong>The Ur-Quan Masters Project</strong></a> <span class=\"author-colour\" style=\"--c:#808080\"><em>credit to this project for all their hard work</em></span>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Adds ship sprites adapted from Star Control II using a Starfarer style. Includes four missions: Totality, Random Melee, Hierarchy vs. Alliance, and Alliance vs. Hierarchy. Features various ship systems and weapons such as transformation modules, drones, and scripted beams.",
+  "aiDescription": "Adds ships from Star Control II adapted to the Starfarer style. Includes four missions: Totality, Random Melee, Hierarchy vs. Alliance, and Alliance vs. Hierarchy.",
   "aiUse": {},
   "rawCategories": [],
   "gallery": [
     {
-      "url": "http://i.imgur.com/FIGHOVF.png"
+      "url": "http://i.imgur.com/FIGHOVF.png",
+      "aiCaption": "The logo for Star Control II.",
+      "aiKind": "logo",
+      "aiFit": "good"
     },
     {
       "url": "http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png",
+      "aiCaption": "A Creative Commons BY-NC-SA license badge.",
+      "aiKind": "badge",
+      "aiFit": "poor",
       "small": true
     },
     {
-      "url": "http://i.imgur.com/EcmXI4n.png"
+      "url": "http://i.imgur.com/EcmXI4n.png",
+      "aiCaption": "Ship art labeled Druuge Mauler.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "http://i.imgur.com/3JgjbtN.png"
+      "url": "http://i.imgur.com/3JgjbtN.png",
+      "aiCaption": "Ship art labeled Chmmr Avatar.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "http://i.imgur.com/H28s0Dh.png"
+      "url": "http://i.imgur.com/H28s0Dh.png",
+      "aiCaption": "Ship art labeled Mycon Podship.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "http://i.imgur.com/TUo4aFr.png"
+      "url": "http://i.imgur.com/TUo4aFr.png",
+      "aiCaption": "Ship art labeled Shofixti Scout.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "http://i.imgur.com/u6mzHgM.png"
+      "url": "http://i.imgur.com/u6mzHgM.png",
+      "aiCaption": "Ship art labeled Arilou Lale'e'lay Skiff.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "http://i.imgur.com/lRoiF1B.png"
+      "url": "http://i.imgur.com/lRoiF1B.png",
+      "aiCaption": "Ship art labeled Ilwrath Avenger.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "http://i.imgur.com/JDkEm3T.png"
+      "url": "http://i.imgur.com/JDkEm3T.png",
+      "aiCaption": "Ship art labeled Zoq-Fot-Pik Stinger.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "http://i.imgur.com/6KazAl1.png"
+      "url": "http://i.imgur.com/6KazAl1.png",
+      "aiCaption": "Ship art labeled Vux Intruder.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
       "url": "http://i.imgur.com/TR0gv5D.png"
@@ -103,7 +133,7 @@
     }
   ],
   "changelog": {},
-  "license": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+  "license": "Creative Commons BY-NC-SA 3.0",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=171.0",
   "releases": [],

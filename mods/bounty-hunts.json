@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "bounty-hunts",
     "name": "Bounty Hunts",
@@ -35,39 +35,69 @@
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-bigger\">Bounty Hunts</span><br><a href=\"https://www.mediafire.com/?08s219bvhrcr681\" rel=\"nofollow noopener\" target=\"_blank\"><span class=\"size-big\">Download 1.11 for Starsector 0.6.2a</span></a></div><br>Looking for a safer way to make money early game? A reason to use the shiny new hyperspace system?<br><br>Visit the Bounty Hunter station in the new Opportunity system to pick up bounties on hardened criminals, find traders to escort or trawl the bars for rumours to investigate- all randomly-generated in different locations and systems. Make money, make XP, explore the sector!<br><br>Three difficulties of bounty are available:<br><ul><li><strong>Easy:</strong> A frigate, with a -2 burn speed penalty (to make them easier to catch).</li><li><strong>Regular:</strong> 15 FP worth of destroyers &amp; smaller, with a -1 burn speed penalty.</li><li><strong>Dangerous:</strong> 25 FP worth of cruisers &amp; smaller.</li></ul>A few days after selecting a bounty, competition will kick off- fellow hunters will head after your target. Just individuals at first, but if they fail bigger posses will come, clearing out any bounties you might not be able to take yourself.<br><br>In addition, there's Most Wanted bounties: Preset unique fleets with skilled captains, and guaranteed captures. These can't be defeated by anyone but you. Most Wanted bounties are very easy to add, using a .wanted files structured as:<br><details class=\"spoiler\"><summary>Spoiler</summary><pre><code>{<br>\t#A NOTE: ALWAYS END EACH LINE IN A COMMA. Apart from comment lines, like this one, that start with #.<br>\t#These first few entries are NOT OPTIONAL<br>\t\"wantedId\" : \"bounty_buffalo\",<br>\t\"title\" : \"Buffalo Hunt\",<br>\t\"reward\" : \"15000\",<br>\t#Fleet name is optional; if not provided, the mod will use the captain's name.<br>\t\"fleetName\" : \"Buffalo Herd\",<br>\t#Difficulty is optional.<br>\t\"difficulty\" : \"Regular\",<br>\t#Captain is optional<br>\t\"captain\" : {<br>\t\t#All entries here are optional; the mod will generate its own details if left blank.<br>\t\t\"first\" : \"John\",<br>\t\t\"last\" : \"Hicks\",<br>\t\t\"rank\" : \"Cowboy\",<br>\t\t\"gender\" : \"M\",<br>\t\t\"portrait\" : \"graphics/portraits/portrait17.png\",<br>\t\t#Aptitudes are optional. Aptitude Ids can be found in data/characters/skills. <br>\t\t\"aptitudes\" : {<br>\t\t\t\"combat\" : \"5\",<br>\t\t},<br>\t\t#Skills are optional. Skill Ids can be found in data/characters/skills.<br>\t\t\"skills\" : {<br>\t\t\t\"missile_specialization\" : \"10\",<br>\t\t\t\"construction\" : \"10\",<br>\t\t},<br>\t},<br>\t#You can specify a token (station/planet) within a system<br>\t#Or just use 'system' &amp; 'location' and it'll pick a random token in that system<br>\t#Or not include 'location', and it'll pick a random token in a random system<br>\t\"location\" : {<br>\t\t\"system\" : \"Opportunity\",<br>\t\t\"token\" : \"Opportunity Minor\",<br>\t},<br>\t#The description is shown when the player views the wanted poster. To include line breaks in it, use \\n.<br>\t\"description\" : \"Hicks is one of the meanest, dirtiest, lowest-budget pirates in the sector and he's wrangling up a herd of Buffalo at Opportunity Minor. There's a 15000 credit reward for the first captain to bring him to justice.\",<br>\t#The congratulation is shown when the player kills the bounty. To include line breaks in it, use \\n. Optional.<br>\t\"congratulation\" : \"Hicks won't be troubling the fine people of the sector any longer- the 15000 reward is yours.\", <br>\t#This is the list of ships in the target's fleet. THERE MUST BE AT LEAST ONE.<br>\t\"fleetShips\" : [<br>\t\t#Each new ship should be enclosed in { DETAILS },<br>\t\t{\t<br>\t\t\t#MUST contain either variantId (for ship) OR wingId (for fighter wing)<br>\t\t\t\"variantId\" : \"buffalo2_FS\",<br>\t\t\t#This is the name the ship will be given. Optional.<br>\t\t\t\"name\" : \"Bill\",<br>\t\t\t#Crew rating is also optional, can be \"ELITE\"/\"VETERAN\"/\"GREEN\"/\"REGULAR\".<br>\t\t\t#If not given, the ship will have \"REGULAR\" crew.<br>\t\t\t\"crewRating\" : \"ELITE\",<br>\t\t\t#Whether or not the ship will be automatically salvaged after the battle. Optional. Defaults to \"FALSE\".<br>\t\t\t\"salvage\" : \"TRUE\",<br>\t\t},<br>\t\t{\t\"variantId\" : \"buffalo2_FS\",<br>\t\t\t\"name\" : \"Kid\",<br>\t\t\t\"crewRating\" : \"GREEN\",<br>\t\t},<br>\t\t{\t\"variantId\" : \"buffalo2_FS\"\t},<br>\t\t{\t\"variantId\" : \"buffalo2_FS\"\t},<br>\t\t{\t\"variantId\" : \"buffalo2_FS\"\t},<br>\t],<br>}</code></pre></details>And a CSV file to register them through. It means you can easily add custom fleet setups that you might like to challenge, or give players access to new ships you've made by having them be bounties with guaranteed captures- Helmut's currently working on adding his ship variants in this way. The default mod comes with 5 Most Wanted bounties, ranging from fairly easy to an Elite Onslaught with all stats &amp; skills maxed out.<br><br>Three difficulties of escort are available:<br><ul><li><strong>Easy:</strong> Escort a large fleet of durable ships between two locations in the same system.</li><li><strong>Regular:</strong> Escort a small fleet of flimsy ships between two systems.</li><li><strong>Dangerous:</strong> Escort a single Atlas between two systems.</li></ul>Your clients won't set out until you arrive- but if you leave them waiting too long, they'll give up.<br><br>Currently, the only rumours available are of rogue asteroids/comets on collision courses with planets and stations. These aren't just straight-up battles, and you'll need to:<br><ul><li>Drive off any mining fleets with diplomacy or gunpower.</li><li>Use skills to melt, divert or destroy spacerocks. </li><li>Deploy vessels to pummel the asteroid to bits with weapons fire (a much more expensive prospect).</li></ul>If you're too slow to find the asteroid after you start investigating it, it <em>will</em> hit something- and if that's a station, supplies, fuel and hapless crewmen will perish.<br><br><em>Images:</em><br><strong>New locations: Shattered Haven &amp; Haven's Gate Station</strong><br><a href=\"http://i.imgur.com/hjlCQvg.png\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"http://i.imgur.com/hjlCQvgs.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><a href=\"http://i.imgur.com/2H1ezHi.png\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"http://i.imgur.com/2H1ezHis.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><strong>Selecting missions</strong> <br><a href=\"http://i.imgur.com/tNKt0SY.png\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"http://i.imgur.com/tNKt0SYs.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><a href=\"http://i.imgur.com/KlWQEhw.png\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"http://i.imgur.com/KlWQEhws.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><a href=\"http://i.imgur.com/ghqUuKF.png\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"http://i.imgur.com/ghqUuKFs.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><strong>Bounties, collection, most wanted posters &amp; fleets</strong><br><a href=\"http://i.imgur.com/F1Y7ZqA.png\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"http://i.imgur.com/F1Y7ZqAs.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><a href=\"http://i.imgur.com/GzpLxiy.png\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"http://i.imgur.com/GzpLxiys.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><a href=\"http://i.imgur.com/z2nc1zs.png\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"http://i.imgur.com/z2nc1zss.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><a href=\"http://i.imgur.com/02zZcG8.png\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"http://i.imgur.com/02zZcG8s.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br>If another fleet kills a regular bounty, they collect the reward- which you can potentially pick up off of them. Most wanted bounties, however, always win fights against NPCs.<br><br><strong>Rogue asteroids &amp; irate miners</strong><br><a href=\"http://i.imgur.com/d0dujjW.png\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"http://i.imgur.com/d0dujjWs.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><a href=\"http://i.imgur.com/xhFh7wE.png\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"http://i.imgur.com/xhFh7wEs.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><a href=\"http://i.imgur.com/dM5ehnU.png\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"http://i.imgur.com/dM5ehnUs.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br>AFAIK this should be compatible with everything.<br><br><em>Changelog:</em><br><em>1.00</em> - Release<br><em>1.01</em> - Fixed a crash bug when running in report mode, tweaked some dialog<br><em>1.10</em> - Added escorts, rumours &amp; most wanted<br><em>1.11</em> - Fixed salvage bug, fixed bug on killing Hunter fleets<br><br><em>Plans:</em><br>More rumours- of derelict ships, hidden caches and lost systems to investigate?<br>A market that generates orders for weapons/hulls for you to fill?<br><br><em>Credits:</em><br>Thanks to Alex &amp; Zaphide for their invaluable scripting help!<br>Thanks to Psiyon for his asteroid sprites (I tinted them for use as comets).",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Visitors to a new station can pick up bounties on criminals, escort traders, or investigate rumors about rogue asteroids. Bounties come in three difficulties with varying fleet compositions and burn speed penalties, while Most Wanted bounties offer unique preset fleets that only the player can defeat. Escort missions require protecting ships between locations, and rumor investigations involve dealing with mining fleets or destroying space rocks before they collide with stations.",
+  "aiDescription": "Visitors to a new station can pick up bounties on criminals, escort traders, or investigate rumors about rogue asteroids. Bounties come in three difficulty levels with varying fleet compositions and burn speed penalties. Competition from other hunters emerges after a few days, while unique Most Wanted bounties offer preset fleets that only the player can defeat.",
   "aiUse": {},
   "rawCategories": [],
   "gallery": [
     {
-      "url": "http://i.imgur.com/hjlCQvgs.png"
+      "url": "http://i.imgur.com/hjlCQvgs.png",
+      "aiCaption": "A screenshot of a mission briefing screen with text and a planet in the background.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "http://i.imgur.com/2H1ezHis.png"
+      "url": "http://i.imgur.com/2H1ezHis.png",
+      "aiCaption": "A screenshot showing a mission objective or briefing window over a space background.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "http://i.imgur.com/tNKt0SYs.png"
+      "url": "http://i.imgur.com/tNKt0SYs.png",
+      "aiCaption": "A dark screenshot with text on the left and a faint ship diagram on the right.",
+      "aiKind": "screenshot",
+      "aiFit": "poor"
     },
     {
-      "url": "http://i.imgur.com/KlWQEhws.png"
+      "url": "http://i.imgur.com/KlWQEhws.png",
+      "aiCaption": "A dark screenshot showing a mission briefing or log entry with a ship schematic.",
+      "aiKind": "screenshot",
+      "aiFit": "poor"
     },
     {
-      "url": "http://i.imgur.com/ghqUuKFs.png"
+      "url": "http://i.imgur.com/ghqUuKFs.png",
+      "aiCaption": "A dark screenshot displaying text and a ship diagram against a black background.",
+      "aiKind": "screenshot",
+      "aiFit": "poor"
     },
     {
-      "url": "http://i.imgur.com/F1Y7ZqAs.png"
+      "url": "http://i.imgur.com/F1Y7ZqAs.png",
+      "aiCaption": "A screenshot of a space scene with two glowing purple rings or anomalies.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "http://i.imgur.com/GzpLxiys.png"
+      "url": "http://i.imgur.com/GzpLxiys.png",
+      "aiCaption": "A dark screenshot showing text and a faint planet in the background.",
+      "aiKind": "screenshot",
+      "aiFit": "poor"
     },
     {
-      "url": "http://i.imgur.com/z2nc1zss.png"
+      "url": "http://i.imgur.com/z2nc1zss.png",
+      "aiCaption": "A dark screenshot with text on the left and a ship schematic on the right.",
+      "aiKind": "screenshot",
+      "aiFit": "poor"
     },
     {
-      "url": "http://i.imgur.com/02zZcG8s.png"
+      "url": "http://i.imgur.com/02zZcG8s.png",
+      "aiCaption": "A screenshot of a mission briefing screen with text options visible.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "http://i.imgur.com/d0dujjWs.png"
+      "url": "http://i.imgur.com/d0dujjWs.png",
+      "aiCaption": "A dark screenshot showing a small menu or interface element in space.",
+      "aiKind": "screenshot",
+      "aiFit": "poor"
     },
     {
       "url": "http://i.imgur.com/xhFh7wEs.png"

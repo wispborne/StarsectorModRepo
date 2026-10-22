@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "show-encounter-stats",
     "name": "[0.98] Show Encounter Stats v1.1.2",
@@ -19,10 +19,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.1.2",
     "imageUrl": "https://i.imgur.com/Jk6rWFR.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1457151130739020042/1457151130969833554/screenshot616.png?ex=6ada99be&is=6ad9483e&hm=f907e9a12de45d309e635e44b86cfdfb47c4382f983dce74249a089c846cd977&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1457151130739020042/1457151130969833554/screenshot616.png?ex=6adb427e&is=6ad9f0fe&hm=640700307a1528afeb2a46b65bdd67315f51f136d31975cfeb0e35b6d2305160&",
     "summary": "Small mod that adds various info when you encounter a fleet but before deciding to engage it.",
     "summaryIsGenerated": false,
-    "aiSummary": "Displays fleet statistics such as ship counts, DP totals, and autoresolve strength before engaging an enemy.",
+    "aiSummary": "Displays fleet statistics like ship counts, deployment points, and autoresolve strength before engaging an enemy.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -60,9 +60,9 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Download link: <a href=\"https://github.com/Seekers6967/starsector-show_encounter_stats/releases/latest/download/ShowEncounterStats.rar\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Seekers6967/starsector-show_encounter_stats/releases/latest/download/ShowEncounterStats.rar</a></p><p>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=34734\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=34734</a></p><p>Small mod that adds various info when you encounter a fleet but before deciding to engage it.</p><p>Displays information such as number of ships on each side, DP total, autoresolve strenght (Fleet Power or FP) and the estimated +%EXP bonus due to battle difficulty (using vanilla calcs). Excludes civilian ships from the number of ships and DP count, as they are not really relevant but it does count the FP they contribute.</p>",
-  "aiDescription": "Shows detailed encounter information including estimated experience bonuses and officer counts. It supports viewing stats for allied fleets and ongoing multi-faction battles. Civilian ships are excluded from combat counts but their contribution to fleet power is tracked separately.",
-  "saveCompatibilityText": "it can be added or removed mid save.",
-  "removalCompatibilityText": "it can be added or removed mid save.",
+  "aiDescription": "Shows detailed encounter information including total DP, Fleet Power, and estimated experience bonuses. It handles multi-fleet encounters by combining enemy stats and supports viewing ongoing battles between allied and enemy forces. Civilian ships are excluded from ship counts but their contribution to fleet strength is tracked separately.",
+  "saveCompatibilityText": "it can be added or removed mid save",
+  "removalCompatibilityText": "it can be added or removed mid save",
   "canAdd": "yes",
   "canRemove": "yes",
   "aiUse": {
@@ -84,25 +84,46 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1457151130969833554/screenshot616.png?ex=6ada99be&is=6ad9483e&hm=f907e9a12de45d309e635e44b86cfdfb47c4382f983dce74249a089c846cd977&"
+      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1457151130969833554/screenshot616.png?ex=6adb427e&is=6ad9f0fe&hm=640700307a1528afeb2a46b65bdd67315f51f136d31975cfeb0e35b6d2305160&",
+      "aiCaption": "A pre-battle screen showing fleet strength statistics for the Hegemony Detachment.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1457151463427018834/screenshot504.png?ex=6ada9a0d&is=6ad9488d&hm=97daa701df3e9fecfb2e928d09040ce746d173e58ca67288fc924a4e35a4be7e&"
+      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1457151463427018834/screenshot504.png?ex=6adb42cd&is=6ad9f14d&hm=007998728e202709e8d4f43d9ec22b451d1cb1e3da7a8ab8dcf13d760ed18d72&",
+      "aiCaption": "A detailed encounter screen listing TriTach Phase Corps forces and their deployment points.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1461040405062615276/image.png?ex=6adae829&is=6ad996a9&hm=2b4833e5eaf484f173f7519b978a47b856cc545bc3ffbe07fb981a5bff0bb67b&"
+      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1461040405062615276/image.png?ex=6adb90e9&is=6ada3f69&hm=981508d66e53fc8c35f1ff7455a678b8b48a85acf3d61dbbc20c910983aeda54&",
+      "aiCaption": "An encounter screen displaying officer skills and fleet statistics for the Luddic Church Holy Armada.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1461253744199991316/image.png?ex=6ada5d59&is=6ad90bd9&hm=9cb91de0173e3e076a9c94bd356d2c490aac9c589cb7a4af9d7428023cb2259b&"
+      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1461253744199991316/image.png?ex=6adbaed9&is=6ada5d59&hm=42f607a847bcb936426d02152083338dfaca6c5f8a9d577289abf07ec74fa802&",
+      "aiCaption": "A battle interface showing Remnant Ordo forces with detailed combat-related skills listed.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1461973627032436808/image.png?ex=6ada58ca&is=6ad9074a&hm=889f2c263a4c2634eaef48a5d374810ac64e95e71570dd09b728e758ecbc9ad3&"
+      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1461973627032436808/image.png?ex=6adbaa4a&is=6ada58ca&hm=5cf221b109c17b6a9048af2e34d7476133d829a5ceedf732d144c2f5bf1ab6e5&",
+      "aiCaption": "An encounter screen displaying fleet statistics and officer skills for the Remnant Ordo.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/Jk6rWFR.png"
+      "url": "https://i.imgur.com/Jk6rWFR.png",
+      "aiCaption": "A pre-battle encounter screen showing fleet strength statistics for 'Your forces' and the 'Hegemony Detachment', including deployment points and expected bonus EXP.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://i.imgur.com/qHWhBCR.png"
+      "url": "https://i.imgur.com/qHWhBCR.png",
+      "aiCaption": "A detailed encounter screen displaying fleet statistics for the 'TriTach Phase Corps Grand Invasion Fleet' alongside a grid of ship icons and commander details.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     }
   ],
   "downloads": [

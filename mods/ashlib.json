@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "ashlib",
     "name": "AshLib",
@@ -13,10 +13,10 @@
     ],
     "gameVersion": "0.98",
     "modVersion": "2.2.3",
-    "imageUrl": "https://i.imgur.com/B5TIl34.png",
+    "imageUrl": "https://i.imgur.com/TUaHoSz.png",
     "summary": "So basically this is library sort of mod(I would say more like utilitary mod even) that I have decied to post, since few people asked for it and because a lot of functions i have created is used by more than 1 mod , so for my own life to be easier decided to release this as lib mod, hey maybe someone else will also use those features",
     "summaryIsGenerated": false,
-    "aiSummary": "Provides utility functions for creating tooltips, rendering modular ships and weapons, customizing AI core skills, and generating pop-up dialogs.",
+    "aiSummary": "Provides utility functions for tooltips, ship rendering, and AI core customization.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -36,41 +36,71 @@
   "descriptionHtml": "<div class=\"align-center\"><strong><span class=\"size-big\"><span class=\"author-colour\" style=\"--c:#ffa500\">Ashlib</span></span></strong></div><div class=\"align-center\"><strong>NOTE ! IF you have Ashlib folder without \"_\" delete it and place this one posted in download link!</strong></div><div class=\"align-center\">So basically this is library sort of mod(I would say more like utilitary mod even) that I have decied to post, since few people asked for it and because a lot of functions i have created is used by more than 1 mod , so for my own life to be easier decided to release this as lib mod, hey maybe someone else will also use those features</div><strong>Horizontal Scrollbar</strong><br><details class=\"spoiler\"><summary>Spoiler</summary>To use it look at HorizontalTooltipPlugin<br><strong>NOTE!</strong><br>1.First create instance then call method init <br>2.True width and true height are sizes of tooltips themself whether width and height are sizes of scrolable area<br>3.Set width and heigt AT MAX to twice the size of max width and max height, if its more then tooltip will  have some weird behaviours<br>4.True width and true height can be basically like 10k but place tooltip and panel as such, that their border is equal to border of game itself<br><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/B5TIl34.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/pZzf4Zv.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details></details><strong>Access  to nearly 1:1 replica of weapon/fighter/ship tooltips</strong><br><details class=\"spoiler\"><summary>Spoiler</summary><strong>Methods for those are accessable from AshInfoTooltipGenerator</strong><br><details class=\"spoiler\"><summary>Spoiler</summary><pre><code>   //Note ! Spec can be either Hullspec, WeaponSpec, or FighterWingSpec!<br>    public static void generateTooltip(TooltipMakerAPI tooltip,Object spec){<br>        float width = 400f;<br>        if(spec instanceof ShipHullSpecAPI){<br>            width= 990f;<br>            final CustomPanelAPI panelAPIs = ShipInfoGenerator.getShipImage((ShipHullSpecAPI) spec, 250, null).one;<br>            ShipInfoGenerator.generate(tooltip, AshMisc.getFleetMemberFromSpec((ShipHullSpecAPI) spec),null,panelAPIs,width);<br>            return;<br><br>        }<br>        if(spec instanceof WeaponSpecAPI){<br>            WeaponInfoGenerator.generate(tooltip, (WeaponSpecAPI) spec,width);<br>            return;<br><br>        }<br>        if(spec instanceof FighterWingSpecAPI){<br>            FighterInfoGenerator.generate(tooltip, (FighterWingSpecAPI) spec,width);<br>            return;<br><br>        }<br><br>    }</code></pre></details>Ship<br><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/cSMgt8K.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details>Weapon<br><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/7ztd8Dz.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details>Fighter<br><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/tkmed5h.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details></details><strong>Allowing to correctly render modular ships, fighters and weapons (even with missles!)</strong><br><details class=\"spoiler\"><summary>Spoiler</summary><strong>Methods for those are accessable from Ship/Weapon/FighterInfoGenerator</strong><br><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/TUaHoSz.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/6ttLvoX.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/toD5PXv.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/r4dIn5E.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details></details><strong>Custom AI core skill poll</strong><br><details class=\"spoiler\"><summary>Spoiler</summary>So with this lib you will be able to fully customize what skills should appear in skill selection menu , you can insert there up to 16 different skills.<br>To implement this ,<strong> copy file  ai_core_skill_poll.csv from data/campaign</strong> to same directory but in your mod.<br>Field id is id of core,  where skillPoll is list of id's of all skills that should appear<br><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/CarE1Pd.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/k9sE2bf.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details></details><strong>Pop up UI and replica of vanilla Dialog</strong><br><details class=\"spoiler\"><summary>Spoiler</summary>More about that later, but basically PopUpUI and BasePopUpDialog are classes you are looking for</details><div class=\"align-center\"><a href=\"https://github.com/Kaysaar/AshLib/releases/latest/download/Ashlib_.zip\" rel=\"nofollow noopener\" target=\"_blank\"><strong><span class=\"size-big\"><span class=\"author-colour\" style=\"--c:#ffa500\">Click here to download</span></span></strong></a></div><div class=\"align-center\"><strong>Current ver : 2.2.3( Safe to add mid save)</strong></div><br><div class=\"align-center\"><a href=\"https://github.com/Kaysaar/AshLib/releases/download/legacy/Ashlib_.zip\" rel=\"nofollow noopener\" target=\"_blank\"><strong><span class=\"size-big\"><span class=\"author-colour\" style=\"--c:#0000ff\">Click here to download legacy version</span></span></strong></a></div><div class=\"align-center\"><strong>LEGACY VERSION 2.1.2 DOWNLOAD</strong></div><br><div class=\"align-center\"><strong>Special thanks</strong><br>Lukas04 for some of scripts that are used there<br>CY/Milkydrommeda as it was his idea in first place for Custom AI Core skill poll</div>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Offers a library of tools for mod developers. Includes features for horizontal scrollbars in tooltips, replicating vanilla ship, weapon, and fighter info panels, correctly rendering modular entities, customizing AI core skill polls via CSV, and creating custom pop-up UIs.",
+  "aiDescription": "Offers a horizontal scrollbar plugin and methods to generate 1:1 replicas of vanilla weapon, fighter, and ship tooltips. Includes functionality to correctly render modular ships, fighters, and weapons with missiles. Allows full customization of the skills appearing in the AI core skill selection menu via a CSV file.",
   "saveCompatibilityText": "Safe to add mid save",
   "canAdd": "yes",
   "aiUse": {},
   "rawCategories": [],
   "gallery": [
     {
-      "url": "https://i.imgur.com/B5TIl34.png"
+      "url": "https://i.imgur.com/B5TIl34.png",
+      "aiCaption": "A technology tree interface showing research options like 'Exo-Skeletons' and 'Industrial Base Template'.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/pZzf4Zv.png"
+      "url": "https://i.imgur.com/pZzf4Zv.png",
+      "aiCaption": "A continuation of the technology tree showing advanced research nodes such as 'Deep Mining' and 'Mega-Assembly Systems'.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/cSMgt8K.png"
+      "url": "https://i.imgur.com/cSMgt8K.png",
+      "aiCaption": "A ship blueprint screen displaying stats for the 'Lunaria-class Battleship' with a description of its design.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/7ztd8Dz.png"
+      "url": "https://i.imgur.com/7ztd8Dz.png",
+      "aiCaption": "A weapon blueprint screen showing details for the 'Rift Torpedo Launcher' including damage and range statistics.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/tkmed5h.png"
+      "url": "https://i.imgur.com/tkmed5h.png",
+      "aiCaption": "A fighter wing blueprint screen displaying technical data for the 'Fragmenta Wing'.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/TUaHoSz.png"
+      "url": "https://i.imgur.com/TUaHoSz.png",
+      "aiCaption": "Ship art of a large, ornate green and white capital ship viewed from above.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://i.imgur.com/6ttLvoX.png"
+      "url": "https://i.imgur.com/6ttLvoX.png",
+      "aiCaption": "Ship art of a sleek, angular grey and red warship with blue accents.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://i.imgur.com/toD5PXv.png"
+      "url": "https://i.imgur.com/toD5PXv.png",
+      "aiCaption": "A small icon or sprite of a dark ship component with a glowing red center.",
+      "aiKind": "art",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/r4dIn5E.png"
+      "url": "https://i.imgur.com/r4dIn5E.png",
+      "aiCaption": "A list of fighter wing blueprints including 'Fragmenta Wing', 'Miasma Wing', and 'Spooky Wing'.",
+      "aiKind": "screenshot",
+      "aiFit": "poor"
     },
     {
-      "url": "https://i.imgur.com/CarE1Pd.png"
+      "url": "https://i.imgur.com/CarE1Pd.png",
+      "aiCaption": "An interface for selecting skills for an AI core, showing a grid of skill icons.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
       "url": "https://i.imgur.com/k9sE2bf.png"

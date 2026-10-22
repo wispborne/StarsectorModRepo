@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "console-commands",
     "name": "Console Commands",
@@ -26,7 +26,7 @@
     "gameVersion": "0.98a",
     "modVersion": "2024.10.04",
     "imageUrl": "https://imgur.com/zoCketX.gif",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6ada51a1&is=6ad90021&hm=56e5f149e408d45fc496ea67b0672b31533111610d559f3f1f03fcd14e5344a9&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6adba321&is=6ada51a1&hm=21160b1662aae5de5bf3794044afd93d2a4595e74ffe42c8e23ebcf8e9b2494f&",
     "summary": "An unofficial developer's console",
     "summaryIsGenerated": false,
     "aiSummary": "Adds an in-game developer console for executing commands and running code.",
@@ -51,7 +51,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>An official update to console commands that overhauls the interface to feel more modern and provide additional quality of life.</p><p><strong>Download</strong>: <a href=\"https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip</a><br><strong>Forum Page</strong>: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=4106.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=4106.0</a><br><strong>Changelog &amp; Previous versions</strong>: <a href=\"https://github.com/LazyWizard/console-commands/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/console-commands/releases</a></p><pre><code>Version 4.0.0\n\n- Complete visual overhaul of the legacy UI.\n- Added command and argument autocompletion &amp; suggestion.\n- Added syntax hints for command parameters.\n- Now remembers the last 30 commands, even across game restarts.\n- The runcode command now displays live compile error warnings.\n- Reverted the mods version system back to the original format.\n- Added version checker changelog &amp; download support.\n- Added \"History\" command.\n\nKeybinds\n\n- CTRL + Backspace: open console\n- Enter: confirm command\n- Left/Right: move cursor\n- Up/Down: Scroll through command history/select autocompletion\n- Tab: confirm autocompletion\n\nLegacy UI\n\n- The legacy UI can still be re-enabled in \"ConsoleCommands/data/console/console_settings.json\".\n- New features added with this version are not available in the legacy UI.\n\nFor Modders\n\n- Added \"BaseCommandWithSuggestion\". Implement it to create a command with autocomplete suggestions.\n- Use the \"getSuggestions\" method to return a list of the provided suggestions for your command.\n- \"parameter\" tells you which parameter the suggestions are for (0 is the first arg).\n- \"previous\" are the other arguments the user entered before the current one.</code></pre>",
-  "aiDescription": "Provides a custom overlay to input commands using keybinds like Ctrl+Backspace. Includes numerous universal, campaign, and combat commands for cheating or debugging. Allows users to write, compile, and run Java code directly in the game using the Janino library.",
+  "aiDescription": "Provides a custom overlay to input commands using keybinds. Includes numerous universal, campaign, and combat commands for cheating or debugging. Allows users to write, compile, and run Java code directly in the game using the Janino library.",
   "saveCompatibilityText": "Doesn't require a new game, and can be safely untagged from a running game without issues",
   "removalCompatibilityText": "can be safely untagged from a running game without issues",
   "canAdd": "yes",
@@ -65,20 +65,26 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6ada51a1&is=6ad90021&hm=56e5f149e408d45fc496ea67b0672b31533111610d559f3f1f03fcd14e5344a9&"
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6adba321&is=6ada51a1&hm=21160b1662aae5de5bf3794044afd93d2a4595e74ffe42c8e23ebcf8e9b2494f&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1422651666393600030/image.png?ex=6ada561c&is=6ad9049c&hm=f9b6ededc9eb058ff60bb768789f942b4c0ffcf8acc1ae68d9b7d7ae3dd7535b&"
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1422651666393600030/image.png?ex=6adba79c&is=6ada561c&hm=166a0139e908c65f33fb7f238f81e7aced1da8c528d0c440df49ab3479865dea&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1423713681312583851/image.png?ex=6adae770&is=6ad995f0&hm=9664abccd43034429f9af91ae7ae933ce6bc6d14b14bbbc62cd91eaf5f2727b1&"
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1423713681312583851/image.png?ex=6adb9030&is=6ada3eb0&hm=1555a0b41ee24913867ea640437e23fa1b104e1e6443d330a5260757aa68419a&",
+      "aiCaption": "A screenshot of a console window showing code with the command 'runcode' and a loop using Console.showMessage.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
       "url": "https://img.shields.io/github/v/release/LazyWizard/console-commands?label=Download Latest&amp;style=for-the-badge",
       "small": true
     },
     {
-      "url": "https://imgur.com/zoCketX.gif"
+      "url": "https://imgur.com/zoCketX.gif",
+      "aiCaption": "A dark game screen showing a console prompt with the text 'Console loaded, summon with CONTROL+BACKSPACE.' and '> Enter a command, or 'help' for a list of valid commands.'",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     }
   ],
   "downloads": [

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "lpc-editor",
     "name": "lpc editor",
@@ -15,9 +15,10 @@
     ],
     "gameVersion": "0.98a",
     "imageUrl": "https://cdn.discordapp.com/attachments/1512225609491808286/1512437233804775616/image.png?ex=6adaae30&is=6ad95cb0&hm=ee6bed023d48ac082c676bba47dd614eaf624c4800fdf1c0bb975bddde0a28be&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1512225609491808286/1512437233804775616/image.png?ex=6adb56f0&is=6ada0570&hm=219b8d13f4d3262773ebe8394f17d64ecb4f9c3d50cfa1a636dd31b4fbf616ef&",
     "summary": "adds an lpc editor that allows you to edit your wings to put custom weapons on it to edit a wing you need to have a few conditions respected:",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds an in-game editor for modifying carrier wing loadouts with custom weapons.",
+    "aiSummary": "Adds an in-game editor for modifying ship wing loadouts with custom weapons.",
     "hasDirectDownload": false,
     "downloadCount": 0,
     "discordUrl": "https://discord.com/channels/187635036525166592/1512225609491808286/1512225609491808286",
@@ -26,12 +27,12 @@
     "addedOn": "2026-06-04",
     "needs": []
   },
-  "description": "Allows players to edit existing wings or fabricate new variants using LPC retool chips. Editing requires the wing to be whitelisted and weapons to be present in cargo. The tool provides a UI to select slots and save changes across campaigns.",
-  "descriptionHtml": "<p>Allows players to edit existing wings or fabricate new variants using LPC retool chips. Editing requires the wing to be whitelisted and weapons to be present in cargo. The tool provides a UI to select slots and save changes across campaigns.</p>",
+  "description": "Allows players to edit whitelisted ship wings by selecting slots and assigning weapons from cargo. Requires an LPC retool chip found at size 4+ markets. Changes persist across saves, but removal is unsafe.",
+  "descriptionHtml": "<p>Allows players to edit whitelisted ship wings by selecting slots and assigning weapons from cargo. Requires an LPC retool chip found at size 4+ markets. Changes persist across saves, but removal is unsafe.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>adds an lpc editor that allows you to edit your wings to put custom weapons on it<br>to edit a wing you need to have a few conditions respected:<br>the wing must be whitelisted<br>the button is only added to carriers<br>you need to have weapons in your cargo<br>you must have an lpc retool chip can be found at any size 4+ market<br>to edit wings open the editor by pressing the lpc editor button this will bring you a ui where you can select the wing you want to edit wings are ordered in bay order<br>select weapon tab and choose a slot to edit only weapons in your cargo are considered<br>once youre done with your changes pressing save will save it allowing you to use it across your campaign and your other saves<br>select the fabricate button to create a brand new wing variant this consumes one chip<br>safe to add midsave probably<br><strong>NOT SAFE TO REMOVE</strong><br>modded wings are not taken into account by default they must be whitelisted for authors there is a template in config lpc_editor_config that will explain you how to do it<br>if you dont wanna wait for authors to update it i set the whitelist mode in the json in this file path to false<br>there are going to be crashes with some lpcs if they use decos or other shit so always make a save before editing anything<br>diable wings are hardcoded to not be editable sorry they always crash<br>dont expect save comp updates<br>report bugs here<br><a href=\"https://discord.com/channels/187635036525166592/1512225679679422484\" rel=\"nofollow noopener\" target=\"_blank\">https://discord.com/channels/187635036525166592/1512225679679422484</a><br>~~there is currently a crash with jaydeepiracy for now ~~</p>",
-  "aiDescription": "Allows players to edit existing wings or fabricate new variants using LPC retool chips. Editing requires the wing to be whitelisted and weapons to be present in cargo. The tool provides a UI to select slots and save changes across campaigns.",
+  "aiDescription": "Allows players to edit whitelisted ship wings by selecting slots and assigning weapons from cargo. Requires an LPC retool chip found at size 4+ markets. Changes persist across saves, but removal is unsafe.",
   "saveCompatibilityText": "safe to add midsave probably",
   "updateCompatibilityText": "dont expect save comp updates",
   "removalCompatibilityText": "NOT SAFE TO REMOVE",
@@ -44,10 +45,16 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1512225609491808286/1512437233804775616/image.png?ex=6adaae30&is=6ad95cb0&hm=ee6bed023d48ac082c676bba47dd614eaf624c4800fdf1c0bb975bddde0a28be&"
+      "url": "https://cdn.discordapp.com/attachments/1512225609491808286/1512437233804775616/image.png?ex=6adb56f0&is=6ada0570&hm=219b8d13f4d3262773ebe8394f17d64ecb4f9c3d50cfa1a636dd31b4fbf616ef&",
+      "aiCaption": "A Starsector battle screen showing a fleet with Splinterguns and Exosara ships targeting a Broadsword-class ship.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1512225609491808286/1512437234102702120/image.png?ex=6adaae30&is=6ad95cb0&hm=0cb23bf22bb86191d949da1837b4336c4245553473825c3e05ca176e0073281d&"
+      "url": "https://cdn.discordapp.com/attachments/1512225609491808286/1512437234102702120/image.png?ex=6adb56f0&is=6ada0570&hm=25f3f4fc87619cce3182372a3ade53e1a7d9700a0db526cb509e5bb52934f3b3&",
+      "aiCaption": "A Starsector combat scene featuring a large enemy ship firing weapons with damage numbers visible.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     }
   ],
   "downloads": [],

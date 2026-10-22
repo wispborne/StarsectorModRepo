@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "industrial-evolution",
     "name": "Industrial.Evolution",
@@ -18,8 +18,8 @@
     "gameVersion": "0.98a",
     "modVersion": "4.1.b",
     "imageUrl": "https://i.imgur.com/7k1QAas.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1356019260194951240/1356019260656320522/mod_post_icon_indevo.png?ex=6ada81d9&is=6ad93059&hm=0d0228ba45d25109e455f9c4bf464f607b882b800d7fb990edb54d80e0f96c37&",
-    "summary": "Industrial.Evolution has long since departed from being a simple industry mod and should be treated as a general vanilla-themed campaign extension.",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1356019260194951240/1356019260656320522/mod_post_icon_indevo.png?ex=6adb2a99&is=6ad9d919&hm=2dcef13be7ac083f100c36abe0a21696e580aa3986d5de06ef866347d9936a96&",
+    "summary": "This mod is a massive content expansion that fits almost seamlessly into vanilla to add a multitude of new gameplay options, expanding primarily on exploration and colony gameplay.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds extensive campaign content including new colony buildings, exploration events, fleet detachments, and consumable items.",
     "saveCompatible": false,
@@ -49,7 +49,7 @@
     "needs": [
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
       },
       {
         "name": "LazyLib",
@@ -70,7 +70,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><code>A massive campaign content expansion for colonies and exploration.</code></p><p>Industrial Evolution aims to deepen the colonisation and exploration aspect of the game, bringing new gameplay features not available anywhere else, to support whatever playstyle you choose.<br>Can not be installed on an ongoing save.</p><pre><code>Changelog: \n4.1.b - Meteor and Museum fixes, Museum settings, S-Mod effect for Museum\n4.1.a - Meteor Swarms, Museum, so, so much polish and improvements and a bunch of bug fixes. Check the full changelog below.\n</code></pre><pre><code>+ Save compatible with 4.1\n- NOT Save compatible with 4.0\n- Can NOT be installed on an ongoing save\nThis means: The mod can't be added if it was not present on game start, and can only be safely updated if your prior version was 4.1</code></pre><h3><a href=\"https://github.com/SirHartley/Industrial.Evolution/releases/download/4.1.b/Industrial.Evolution4.1.b.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download</a></h3><h3><a href=\"https://fractalsoftworks.com/forum/index.php?topic=18011.0\" rel=\"nofollow noopener\" target=\"_blank\">Forum Thread</a></h3><h3><a href=\"https://patreon.com/SirHartley\" rel=\"nofollow noopener\" target=\"_blank\">Support my Efforts</a></h3><p>or buy me a <a href=\"https://Ko-fi.com/sirhartley\" rel=\"nofollow noopener\" target=\"_blank\">Ko-Fi</a></p><p><code>_________________________________</code></p><p><em>The feature creep will continue until morale improves</em></p>",
-  "aiDescription": "Expands vanilla gameplay with over 20 new colony buildings featuring unique effects like governance changes and specialized industries. Introduces new exploration content such as derelict stations, themed encounters, and campaign-layer hazards like artillery and meteor storms. Adds fleet management features allowing players to create detachments that can transport cargo or fight independently. Includes consumable items, missiles, pets for ships, and research projects to enhance colony and fleet capabilities.",
+  "aiDescription": "Expands vanilla gameplay with over 20 new colony buildings featuring unique effects like governance changes and specialized industries. Introduces new exploration content such as derelict stations, survey stories, and campaign-layer hazards like artillery and meteor storms. Adds fleet management features allowing players to create detachments with diverse behavior modes, along with consumable items and missiles for tactical use.",
   "saveCompatibilityText": "This can NOT be added to ongoing games",
   "updateCompatibilityText": "Update 4.1.b is save compatible with 4.1.a",
   "removalCompatibilityText": "it will break saves if removed",
@@ -99,42 +99,75 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1356019260194951240/1356019260656320522/mod_post_icon_indevo.png?ex=6ada81d9&is=6ad93059&hm=0d0228ba45d25109e455f9c4bf464f607b882b800d7fb990edb54d80e0f96c37&",
+      "url": "https://cdn.discordapp.com/attachments/1356019260194951240/1356019260656320522/mod_post_icon_indevo.png?ex=6adb2a99&is=6ad9d919&hm=2dcef13be7ac083f100c36abe0a21696e580aa3986d5de06ef866347d9936a96&",
+      "aiCaption": "A black gear icon with a central circle on a white octagonal background.",
+      "aiKind": "logo",
+      "aiFit": "good",
       "small": true
     },
     {
-      "url": "https://i.imgur.com/7k1QAas.png"
+      "url": "https://i.imgur.com/7k1QAas.png",
+      "aiCaption": "A banner with a gear logo and the text 'INDUSTRIAL . EVOLUTION'.",
+      "aiKind": "banner",
+      "aiFit": "good"
     },
     {
       "url": "https://trilink.wispborne.com/badges/install-badge-forthebadge.svg",
       "small": true
     },
     {
-      "url": "https://i.imgur.com/xQodpET.png"
+      "url": "https://i.imgur.com/xQodpET.png",
+      "aiCaption": "An orange button labeled 'Become a patron'.",
+      "aiKind": "button",
+      "aiFit": "poor"
     },
     {
-      "url": "https://i.imgur.com/lOzPAzb.png"
+      "url": "https://i.imgur.com/lOzPAzb.png",
+      "aiCaption": "A game menu showing fleet detachment options and behavior modes.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/aRg256b.png"
+      "url": "https://i.imgur.com/aRg256b.png",
+      "aiCaption": "A research project interface listing projects like 'Project Eureka' and 'Project Snowblind'.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/QjBSkxh.gif"
+      "url": "https://i.imgur.com/QjBSkxh.gif",
+      "aiCaption": "A dark star map view with a planet and nebula background.",
+      "aiKind": "screenshot",
+      "aiFit": "poor"
     },
     {
-      "url": "https://i.imgur.com/eJHWE0F.gif"
+      "url": "https://i.imgur.com/eJHWE0F.gif",
+      "aiCaption": "A close-up of a red nebula on the star map with a cursor visible.",
+      "aiKind": "screenshot",
+      "aiFit": "poor"
     },
     {
-      "url": "https://i.imgur.com/DKnglUq.gif"
+      "url": "https://i.imgur.com/DKnglUq.gif",
+      "aiCaption": "A paused game screen showing a planet and nebula in space.",
+      "aiKind": "screenshot",
+      "aiFit": "poor"
     },
     {
-      "url": "https://i.imgur.com/u3EIgY8.png"
+      "url": "https://i.imgur.com/u3EIgY8.png",
+      "aiCaption": "A pet management menu listing pets like 'Feesh' and 'Rattus the 2nd' with options to rename or euthanize.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/QnmBYHx.png"
+      "url": "https://i.imgur.com/QnmBYHx.png",
+      "aiCaption": "A market interface showing ship sales and a tooltip for 'Repair Docks'.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/Uese49V.png"
+      "url": "https://i.imgur.com/Uese49V.png",
+      "aiCaption": "An Academy menu with options for officer training and an image of a city on a planet.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
       "url": "https://i.imgur.com/IP6kW8l.png"
@@ -303,6 +336,9 @@
     },
     {
       "url": "https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png",
+      "aiCaption": "A Creative Commons license badge with the text 'CC BY-NC ND'.",
+      "aiKind": "badge",
+      "aiFit": "poor",
       "small": true
     }
   ],

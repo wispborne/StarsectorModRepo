@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "second-in-command-auxiliaries",
     "name": "Second-in-Command: Auxiliaries",
@@ -18,11 +18,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.4.0",
     "imageUrl": "https://gitlab.com/starsector-public/sic-auxiliaries/-/raw/main/graphics/icon/logo-sic-auxiliaries.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717094768148670/logo-sic-auxiliaries.png?ex=6ada5aef&is=6ad9096f&hm=54d37481b0db5717482dc1b14649222576b0a44970ebf6a6c0a5d3a694dce485&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717094768148670/logo-sic-auxiliaries.png?ex=6adbac6f&is=6ada5aef&hm=fc8c9670dac16dd2963ce14d16e26fcc289da3006e1d98a5298c292dfb250909&",
     "summary": "Adds multiple new executive officers, exploration focused milestones as well as some QoL utilities for for the player.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds new executive officers, exploration milestones, and quality-of-life utilities.",
-    "saveCompatible": true,
+    "aiSummary": "Adds new executive officer aptitudes, exploration milestones, and quality-of-life utilities.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://gitlab.com/starsector-public/sic-auxiliaries/-/archive/1.4.0/sic-auxiliaries-1.4.0.zip",
@@ -39,10 +38,6 @@
     "threadLastPostOn": "2026-10-03",
     "needs": [
       {
-        "name": "Second-in-Command",
-        "id": "second-in-command"
-      },
-      {
         "name": "LunaLib",
         "id": "lunalib"
       }
@@ -53,9 +48,9 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Adds multiple new executive officers, exploration focused milestones as well as some QoL utilities for the player.</p><pre><code>Can be added to an ongoing save, though it can take up to a month before the new executive officers spawn.</code></pre><p><strong>Forum thread:</strong> <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35525.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35525.0</a><br><strong>Download:</strong> <a href=\"https://gitlab.com/starsector-public/sic-auxiliaries/-/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://gitlab.com/starsector-public/sic-auxiliaries/-/releases</a></p>",
-  "aiDescription": "Adds seven new executive officers with unique abilities like fleet creation without officers or warp-in reinforcements. Introduces eleven non-executive exploration milestones that provide progression rewards for activities like colony building and defeating endgame encounters. Includes optional quality-of-life features such as additional fleet composition counters and clearer fighter role labels.",
+  "aiDescription": "Introduces several new executive officers with unique abilities, such as summoning ships or enhancing fighter wings. Adds non-executive skills that reward players for exploration and colony building. Includes optional UI improvements like fleet composition counters and clearer fighter role labels.",
   "saveCompatibilityText": "Can be added to an ongoing save, though it can take up to a month before the new executive officers spawn.",
-  "canAdd": "yes",
+  "canAdd": "depends",
   "aiUse": {},
   "rawCategories": [
     "Misc. Campaign Mods",
@@ -64,54 +59,102 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717094768148670/logo-sic-auxiliaries.png?ex=6ada5aef&is=6ad9096f&hm=54d37481b0db5717482dc1b14649222576b0a44970ebf6a6c0a5d3a694dce485&",
+      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717094768148670/logo-sic-auxiliaries.png?ex=6adbac6f&is=6ada5aef&hm=fc8c9670dac16dd2963ce14d16e26fcc289da3006e1d98a5298c292dfb250909&",
+      "aiCaption": "A stylized portrait of a female officer with a winged emblem above her head.",
+      "aiKind": "logo",
+      "aiFit": "good",
       "small": true
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717095107760138/aptitude-valkyrie.png?ex=6ada5aef&is=6ad9096f&hm=f60f8cc1fe09f61765df106dbcb7ba1b56f9ee57d80543f3bcb3ddb3bae91ae4&"
+      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717095107760138/aptitude-valkyrie.png?ex=6adbac6f&is=6ada5aef&hm=8ff54738171dca841f5799fa2c095fc5a36ada0fb215a298ffe5d9db20f42511&",
+      "aiCaption": "A skill tree diagram showing various fighter wing abilities like Fighter Wings, Bomber Wings, and Interceptor Wings.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717095510282531/milestone-explorer.png?ex=6ada5aef&is=6ad9096f&hm=d6f4937a2092860c7b80e90ff7b2ab77698d6c49a3aa28a1234ff025ceee6986&"
+      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717095510282531/milestone-explorer.png?ex=6adbac6f&is=6ada5aef&hm=bf8285ce5dea07b6dcdc5d21c88f72be9254f8abe35061b4ae1f621d72fcaa62&",
+      "aiCaption": "The game's codex interface displaying 'Executive Officers' and 'Non-Executive Skills' tabs with a quote from Lieutenant Pitr.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1527982614114471986/image.png?ex=6ada8b73&is=6ad939f3&hm=208950ce32b24a1bab2fb4c2d83b5409d68da5a3f48ee9396fdcd664797544b7&"
+      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1527982614114471986/image.png?ex=6adb3433&is=6ad9e2b3&hm=2cb2fd47447ab1ce44654f17aca7237bba14168a27eb93dc76bb93a1116d9118&",
+      "aiCaption": "A skill tree diagram detailing abilities for ships with fighter bays, such as Tungsten Plates and Expanded Hangars.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1538595434950434948/image.png?ex=6adaebe9&is=6ad99a69&hm=9aefabade0d0511a8ce3b0f0644cc5b9478b28ae11e7626a32a28b6c16833640&"
+      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1538595434950434948/image.png?ex=6adb94a9&is=6ada4329&hm=93cf1fa0876a2fc500b649672223d57a9043a2d0aaf3b40f6628fcbe64b27927&",
+      "aiCaption": "Two capital ships in space combat displaying status bars for Flux, Hull, Friendly CR, and Fighters.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1538595435420192840/image.png?ex=6adaebe9&is=6ad99a69&hm=b15ed054e33520aeb26fcffe74f4a492682bfc3b7861bea3a693043511518f08&"
+      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1538595435420192840/image.png?ex=6adb94a9&is=6ada4329&hm=908bd46d36c139454630355b36648572e3aa0a5101eee4ded06b633ea2023b04&",
+      "aiCaption": "A skill tree diagram showing abilities related to the Raptor drone ship, including Storm and Drone Synergy.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
       "url": "https://gitlab.com/starsector-public/sic-auxiliaries/-/raw/main/graphics/icon/logo-sic-auxiliaries.png",
+      "aiCaption": "A square icon featuring a stylized officer character with a winged emblem above.",
+      "aiKind": "logo",
+      "aiFit": "good",
       "small": true
     },
     {
-      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/aptitude-cadet.png"
+      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/aptitude-cadet.png",
+      "aiCaption": "A skill tree diagram for the officer 'Cadet - Gora Anderlon' showing various abilities like Target Analysis and Field Modulation.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/aptitude-storm.png"
+      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/aptitude-storm.png",
+      "aiCaption": "A skill tree diagram for the officer 'Storm - Odessa Petersen' detailing skills related to Raptors and flagship abilities.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/aptitude-valkyrie.png"
+      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/aptitude-valkyrie.png",
+      "aiCaption": "A skill tree diagram for the officer 'Valkyrie - Kelly Bechard' showing fighter wing enhancements like Fighter Wings and Bomber Wings.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/aptitude-apostle.png"
+      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/aptitude-apostle.png",
+      "aiCaption": "A skill tree diagram for the officer 'Apostle - Tora Sezen' displaying fleet-wide buffs such as Burn bright! and We survive!.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/aptitude-nomad.png"
+      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/aptitude-nomad.png",
+      "aiCaption": "A skill tree diagram for the officer 'Nomad - Brux Jolbois' focusing on fleet logistics and recovery skills like Recovery and Surveying.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/aptitude-guerilla.png"
+      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/aptitude-guerilla.png",
+      "aiCaption": "A skill tree diagram for the officer 'Guerilla - Dante Zhang' showing combat enhancements like Ammo Capacity and Flux Capacity.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/aptitude-helios.png"
+      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/aptitude-helios.png",
+      "aiCaption": "A skill tree diagram for the officer 'Helios - Autumn Cevdet' detailing fighter bay improvements like Expanded Hangars and Precision Weapons.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/milestone-explorer.png"
+      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/milestone-explorer.png",
+      "aiCaption": "A menu screen showing 'Executive Officers' and 'Non-Executive Skills' tabs with a dialogue box from Lieutenant Pitr.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/utilities-composition.png"
+      "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/utilities-composition.png",
+      "aiCaption": "A small UI panel displaying fleet composition data including counts for combat, phase, and automated ships.",
+      "aiKind": "screenshot",
+      "aiFit": "poor"
     },
     {
       "url": "https://gitlab.com/starsector-public/forums/-/raw/main/sic-auxiliaries/utilities-fighter-role.png"

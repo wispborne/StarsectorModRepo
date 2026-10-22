@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "adversary",
     "name": "Adversary",
@@ -21,7 +21,7 @@
     "gameVersion": "0.98a",
     "modVersion": "7.1.2",
     "imageUrl": "https://i.imgur.com/7Q0sLu1.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355783112998654033/1355783113136935054/adversary_crest.png?ex=6adaf76b&is=6ad9a5eb&hm=7257273aa980e45617fdb9dc397036578a1f643af1df54262ef144870d34f0c9&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355783112998654033/1355783113136935054/adversary_crest.png?ex=6adba02b&is=6ada4eab&hm=cb16a914037358a9f4ad76c03d4c2767a6847716c885c99d5e665f60e8c886b4&",
     "summary": "This mod adds the \"Adversary\", a player-like faction equipped with nearly all vanilla ships, weapons, fighters, and hullmods. By default, they occupy an ideal star system located near the Core Worlds, with the best planetary conditions and industries for maximum commodity production and defenses.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds a player-like faction equipped with vanilla ships and weapons that serves as an end-game challenge.",
@@ -41,8 +41,24 @@
     "threadLastPostOn": "2026-06-15",
     "needs": [
       {
+        "name": "Nexerelin",
+        "id": "nexerelin"
+      },
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "Commissioned Crews",
+        "id": "commissioned-crews"
+      },
+      {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
+      },
+      {
+        "name": "Customizable Star Systems",
+        "id": "customizable-star-systems"
       }
     ]
   },
@@ -51,7 +67,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Adds a player-like faction in an ideal star system, using most vanilla ships and weapons.</p><p>Also includes several endgame MagicBounties with MagicLib installed.</p><p><strong>Download</strong>:<br><a href=\"https://github.com/Tranquiliti/Adversary/releases/download/v7.1.2/Adversary-v7.1.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/Adversary/releases/download/v7.1.2/Adversary-v7.1.2.zip</a></p><p><strong>Releases and Changelogs</strong>:<br><a href=\"https://github.com/Tranquiliti/Adversary/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/Adversary/releases</a></p><p><strong>Forum Thread</strong>: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25821.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=25821.0</a></p>",
-  "aiDescription": "Introduces a superpower faction called Adversary that occupies an ideal star system near the Core Worlds. They utilize a dynamically-changing doctrine to swarm enemies with various ship types and serve as a source for colony items. The mod includes support for Nexerelin, LunaLib, Commissioned Crews, MagicLib bounties, and Customizable Star Systems presets.",
+  "aiDescription": "Introduces a superpower faction called the Adversary that occupies an ideal star system near the Core Worlds. They utilize a dynamically-changing doctrine to swarm enemies with various ship types and serve as a source for colony items. The mod includes support for Nexerelin, LunaLib, Commissioned Crews, MagicLib bounties, and Customizable Star Systems presets.",
   "saveCompatibilityText": "Safe to add to existing saves",
   "removalCompatibilityText": "not safe to remove from existing saves",
   "canAdd": "yes",
@@ -62,10 +78,16 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1355783112998654033/1355783113136935054/adversary_crest.png?ex=6adaf76b&is=6ad9a5eb&hm=7257273aa980e45617fdb9dc397036578a1f643af1df54262ef144870d34f0c9&"
+      "url": "https://cdn.discordapp.com/attachments/1355783112998654033/1355783113136935054/adversary_crest.png?ex=6adba02b&is=6ada4eab&hm=cb16a914037358a9f4ad76c03d4c2767a6847716c885c99d5e665f60e8c886b4&",
+      "aiCaption": "A stylized blue letter A logo with horizontal stripes.",
+      "aiKind": "logo",
+      "aiFit": "good"
     },
     {
-      "url": "https://i.imgur.com/7Q0sLu1.png"
+      "url": "https://i.imgur.com/7Q0sLu1.png",
+      "aiCaption": "A stylized blue letter 'A' logo with horizontal bars.",
+      "aiKind": "logo",
+      "aiFit": "good"
     },
     {
       "url": "https://img.shields.io/github/downloads/Tranquiliti/Adversary/total?color=navy&amp;label=Download%20v7.1.2&amp;logo=github&amp;style=for-the-badge",
@@ -80,16 +102,28 @@
       "small": true
     },
     {
-      "url": "https://i.imgur.com/8KV1SbX.png"
+      "url": "https://i.imgur.com/8KV1SbX.png",
+      "aiCaption": "The in-game Intel screen showing the faction description for 'The Adversary' and its relations with other factions.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/29ZgsPk.png"
+      "url": "https://i.imgur.com/29ZgsPk.png",
+      "aiCaption": "A fleet view showing an 'Adversary Detachment' composed of various ships against a starfield background.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://i.imgur.com/LNVyg4Q.png"
+      "url": "https://i.imgur.com/LNVyg4Q.png",
+      "aiCaption": "The colony management screen for 'Cymek, Toxic World', displaying industries and resources for the Adversary faction.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://i.imgur.com/f2pS3xU.png"
+      "url": "https://i.imgur.com/f2pS3xU.png",
+      "aiCaption": "A text description of the 'Adversarial Determination' design type.",
+      "aiKind": "other",
+      "aiFit": "poor"
     },
     {
       "url": "https://img.shields.io/github/license/Tranquiliti/Adversary?style=for-the-badge",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "it-came-from-beyond",
     "name": "It Came From Beyond 0.1.3",
@@ -19,8 +19,8 @@
     ],
     "gameVersion": "0.97a",
     "modVersion": "0.1.3a-alpha",
-    "imageUrl": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/screenshots/WOE.png?raw=true",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1302131454234333215/1302131455081844746/Shifters_Crest.png?ex=6adae66b&is=6ad994eb&hm=4bb326f85b8702475527232a510d6ca886b6768c6a85df3ad8ec7c9cd9ab9c2b&",
+    "imageUrl": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/factions/Boundless.png?raw=true",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1302131454234333215/1302131455081844746/Shifters_Crest.png?ex=6adb8f2b&is=6ada3dab&hm=f0347f1bb6709e4f9f5bf9ee6a236081a7771bcf030d1f18606c1e1899d8385f&",
     "summary": "Adds a new faction called the Boundless, ships to go along with them, and campaign-level features such as a new storyline and ability.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds a new faction called the Boundless, their ships, and campaign features like a new storyline.",
@@ -43,7 +43,7 @@
       },
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
       }
     ]
   },
@@ -52,7 +52,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Adds a new faction called <em>the Boundless</em>, ships to go along with them, and campaign-level features such as a new storyline and ability.</p><p>The faction inhabits two new star systems to the Southeast of the core worlds. Enjoy exploring the new worlds! This mod is still early in development, so it's a little thin on features as-of-yet, but I plan to add much and more. More new ships, weapons, and expansions to the storyline. If you need a hint as to how to start the story: head to the system called Kato. <strong><em>Requires MagicLib and LazyLib.</em></strong></p><p>Download: <a href=\"https://github.com/JohnShmo/Project_ItCameFromBeyond/releases/latest/download/ItCameFromBeyond.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/JohnShmo/Project_ItCameFromBeyond/releases/latest/download/ItCameFromBeyond.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=30923.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=30923.0</a></p>",
-  "aiDescription": "Introduces the Boundless faction inhabiting two new star systems to the southeast. Includes a fleet of forward-focused ships with converging firepower and mobility. Adds campaign-level features such as a Shift Jump ability for instantaneous travel and missions from a mysterious benefactor.",
+  "aiDescription": "Introduces the Boundless faction inhabiting two new star systems. Includes seven new ship classes focused on forward firepower and mobility. Adds campaign elements such as a Shift Jump ability and a mysterious benefactor named Xent Alabaster.",
   "updateCompatibilityText": "Added - Failsafe for adding mod to an ongoing save.",
   "canUpdate": "yes",
   "aiUse": {},
@@ -63,53 +63,92 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1302131454234333215/1302131455081844746/Shifters_Crest.png?ex=6adae66b&is=6ad994eb&hm=4bb326f85b8702475527232a510d6ca886b6768c6a85df3ad8ec7c9cd9ab9c2b&"
+      "url": "https://cdn.discordapp.com/attachments/1302131454234333215/1302131455081844746/Shifters_Crest.png?ex=6adb8f2b&is=6ada3dab&hm=f0347f1bb6709e4f9f5bf9ee6a236081a7771bcf030d1f18606c1e1899d8385f&",
+      "aiCaption": "A stylized eye with radiating beams of light in pink, orange, and purple.",
+      "aiKind": "logo",
+      "aiFit": "good"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1302131454234333215/1304562326288072725/Vik.gif?ex=6ada83d8&is=6ad93258&hm=4d9f72580f9e47693784995f2f57e7954e1ab358ac7ad3229f2668a5081027bd&"
+      "url": "https://cdn.discordapp.com/attachments/1302131454234333215/1304562326288072725/Vik.gif?ex=6adb2c98&is=6ad9db18&hm=d967aee0be15e1378a23dea10928a0e191ed235476902dc1b1ddb7972e317f1e&",
+      "aiCaption": "A top-down view of a large, detailed spaceship sprite firing engines against a starry background.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1302131454234333215/1305008083336167476/Vindur.gif?ex=6adad17c&is=6ad97ffc&hm=3d9507c5ea681085c6d5f55293d8180f46c05cc3338f83398c02824fc2d15b18&"
+      "url": "https://cdn.discordapp.com/attachments/1302131454234333215/1305008083336167476/Vindur.gif?ex=6adb7a3c&is=6ada28bc&hm=06c753777a87a710c1f30ba6bc087098ad8ea529981172ae2a95d129c0328a83&",
+      "aiCaption": "A top-down view of a different spaceship sprite with multiple engine thrusters firing.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1302131454234333215/1310800460587860008/Shifter_01_Static.png?ex=6adacc0f&is=6ad97a8f&hm=3df567b92c139e385009dc8477dcb98aa9d0e02ba1bc37986996c2837e11dd15&"
+      "url": "https://cdn.discordapp.com/attachments/1302131454234333215/1310800460587860008/Shifter_01_Static.png?ex=6adb74cf&is=6ada234f&hm=cb3eb14d540bcdf7731b0f886ff777e45a2bc8d23da41a3da121a32b522343f6&"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1302131454234333215/1310909320422101022/Shift_Jump_Effect.gif?ex=6ada88b1&is=6ad93731&hm=a8a2c2647647880693179958ebf28bd577a741446255913a0dec8cfa853eddd6&"
+      "url": "https://cdn.discordapp.com/attachments/1302131454234333215/1310909320422101022/Shift_Jump_Effect.gif?ex=6adb3171&is=6ad9dff1&hm=e078f96351566817c0f1f9633b36d824ed77aa02580e1880fc0c686561fd7098&"
     },
     {
       "url": "https://img.shields.io/github/downloads/JohnShmo/Project_ItCameFromBeyond/total?style=for-the-badge&amp;logo=github&amp;logoSize=auto&amp;label=Download%20Latest%20Version",
       "small": true
     },
     {
-      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/factions/Boundless.png?raw=true"
+      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/factions/Boundless.png?raw=true",
+      "aiCaption": "A stylized graphic of a pink sun rising over a purple horizon with yellow rays.",
+      "aiKind": "banner",
+      "aiFit": "good"
     },
     {
-      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/screenshots/WOE.png?raw=true"
+      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/screenshots/WOE.png?raw=true",
+      "aiCaption": "A space scene featuring a glowing orange star surrounded by debris and several ships moving through the void.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/hulls/Corvette_1.png?raw=true"
+      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/hulls/Corvette_1.png?raw=true",
+      "aiCaption": "A top-down view of a purple and gold spaceship sprite with circular engine details.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/hulls/Frigate_1.png?raw=true"
+      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/hulls/Frigate_1.png?raw=true",
+      "aiCaption": "A top-down view of a complex purple and gold spaceship sprite featuring multiple wings and engines.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/hulls/Frigate_3.png?raw=true"
+      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/hulls/Frigate_3.png?raw=true",
+      "aiCaption": "A top-down view of a wide, multi-winged purple and gold spaceship sprite with circular engine clusters.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/hulls/Destroyer_1.png?raw=true"
+      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/hulls/Destroyer_1.png?raw=true",
+      "aiCaption": "A top-down view of a large, symmetrical purple and gold spaceship sprite with intricate mechanical details.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/hulls/Destroyer_2.png?raw=true"
+      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/hulls/Destroyer_2.png?raw=true",
+      "aiCaption": "A top-down view of a vertical purple and gold spaceship sprite with circular engine pods on the sides.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/hulls/Cruiser_1.png?raw=true"
+      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/hulls/Cruiser_1.png?raw=true",
+      "aiCaption": "A top-down view of a long, slender purple and gold spaceship sprite with detailed paneling.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/hulls/Battlecruiser_1.png?raw=true"
+      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/graphics/ItCameFromBeyond/hulls/Battlecruiser_1.png?raw=true",
+      "aiCaption": "A top-down view of a massive, blocky purple and gold spaceship sprite with heavy armor plating.",
+      "aiKind": "art",
+      "aiFit": "good"
     },
     {
-      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/gifs/shift_jump.gif?raw=true"
+      "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/raw/main/gifs/shift_jump.gif?raw=true",
+      "aiCaption": "A dark space scene showing concentric purple rings surrounding a tiny central object.",
+      "aiKind": "screenshot",
+      "aiFit": "poor"
     },
     {
       "url": "https://github.com/JohnShmo/Project_ItCameFromBeyond/blob/main/graphics/ItCameFromBeyond/portraits/Shifter_01_Static.png?raw=true"

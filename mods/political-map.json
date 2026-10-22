@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T14:43:56.593911Z",
+  "generatedAt": "2026-10-22T19:11:14.366483Z",
   "listing": {
     "id": "political-map",
     "name": "Political Map - Sector Map Layers - KMU",
@@ -18,10 +18,9 @@
     "gameVersion": "0.98a",
     "modVersion": "0.2.1",
     "imageUrl": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/always-has-been.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710767568195705/always-has-been-square.png?ex=6ada7d5f&is=6ad92bdf&hm=acc11c79ac85b79a1c838599016d4c518ab55ac77325635b84a3193c214104c8&",
     "summary": "Sector Map Layers is an overlay for the map screen (Tab, Q), the intel screen (E, 1), the minimap in the bottom right corner of the screen (replaces the vanilla radar) if you have Random Assortment of Things installed.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds political map layers to the sector map and intel screens.",
+    "aiSummary": "Adds a political map overlay to the sector and intel screens showing faction territories and claims.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
@@ -66,9 +65,9 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Currently in pre-release. Requires <strong>LazyLib</strong> and <strong>LunaLib</strong>. Safe to enable mid-save, uninstalled via settings.</p><p>Install it via <a href=\"https://trilink.wispborne.com/open.html?mod=%7B&quot;url&quot;%3A&quot;https%3A%2F%2Fgithub.com%2FKlark-Morrigan%2FStarsector-Mod-KMU%2Freleases%2Flatest%2Fdownload%2Fkmu-en.version&quot;%2C&quot;id&quot;%3A&quot;kmu&quot;%7D&amp;dep=%7B&quot;url&quot;%3A&quot;https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version&quot;%2C&quot;id&quot;%3A&quot;lw_lazylib&quot;%7D&amp;dep=%7B&quot;url&quot;%3A&quot;https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version&quot;%2C&quot;id&quot;%3A&quot;lunalib&quot;%7D&amp;dep=%7B&quot;url&quot;%3A&quot;https%3A%2F%2Fgithub.com%2FKlark-Morrigan%2FStarsector-Mod-KMLib%2Freleases%2Flatest%2Fdownload%2Fkmlib-en.version&quot;%2C&quot;id&quot;%3A&quot;kmlib&quot;%7D\" rel=\"nofollow noopener\" target=\"_blank\"><strong>TriOS</strong></a> or by downloading <a href=\"https://github.com/Klark-Morrigan/Starsector-Mod-KMLib/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><strong>KMLib</strong></a> (its dependency) and <a href=\"https://github.com/Klark-Morrigan/Starsector-Mod-KMU/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><strong>KMU</strong></a> (the mod itself).</p><p>The <strong>Political Map</strong> is the first among <strong>Sector Map Layers</strong> and focuses on populated colonies and their allegiances, with <strong>Faction</strong>, <strong>Alliance</strong>, and <strong>Claim</strong> views. It shows up primarily on the map screen and the intel screen, with a collapsible sidebar as its control interface.</p><p>Made compatible with <strong>Fast Rendering</strong>, <strong>Nexerelin</strong> (alliances), <strong>Random Assortment of Things</strong> (minimap replacement). Can <a href=\"https://www.youtube.com/watch?v=mA9gAeQeEhA\" rel=\"nofollow noopener\" target=\"_blank\">play <strong>Bad Apple</strong></a>.</p><p><strong>Bishop1664</strong> made a short <a href=\"https://www.youtube.com/watch?v=3BoDbbFrMPo\" rel=\"nofollow noopener\" target=\"_blank\">video showcase</a>.</p><p>Discuss in <a href=\"https://discord.com/channels/187635036525166592/1549091275167240272\" rel=\"nofollow noopener\" target=\"_blank\">https://discord.com/channels/187635036525166592/1549091275167240272</a><br>Forum thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36029.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36029.0</a></p>",
-  "aiDescription": "Overlays faction presence, claims, and domination data onto the map screen, intel screen, and minimap. Visualizes territory using customizable views for factions, alliances, and claims. Includes spoiler protection based on vanilla visibility rules and extensive settings for customization.",
-  "saveCompatibilityText": "It's safe to install mid-run",
-  "removalCompatibilityText": "there's a short uninstall procedure you will need to follow if you decide to keep your save after uninstalling the mod.",
+  "aiDescription": "Overlays faction presence and territory on the map, intel screen, and minimap. Displays domination scores, alliances, and claims based on market data and vanilla mechanics. Includes customizable views for factions, alliances, and claims with spoiler protection settings.",
+  "saveCompatibilityText": "It's safe to install mid-run ,\nand there's a short uninstall procedure you will need to follow if you decide to keep your save after uninstalling the mod.",
+  "removalCompatibilityText": "there's a short uninstall procedure you will need to follow if you decide to keep your save after uninstalling the mod",
   "canAdd": "yes",
   "canRemove": "depends",
   "aiUse": {
@@ -91,37 +90,70 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710767568195705/always-has-been-square.png?ex=6ada7d5f&is=6ad92bdf&hm=acc11c79ac85b79a1c838599016d4c518ab55ac77325635b84a3193c214104c8&"
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710767568195705/always-has-been-square.png?ex=6adb261f&is=6ad9d49f&hm=8632ebc1b7e622ebe500a061a1653f727f8731eec2a9be82c04a3dd363aadc72&",
+      "aiCaption": "A meme featuring astronauts pointing a gun with the text 'WAIT, STARSECTOR IS A MAP GAME? ALWAYS HAS BEEN'.",
+      "aiKind": "other",
+      "aiFit": "poor"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710768574963802/sector-1-vanilla.png?ex=6ada7d5f&is=6ad92bdf&hm=112ab04a3968e87230ad47fc74bbc8c689a792db98d755480ff28f36f725d070&"
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710768574963802/sector-1-vanilla.png?ex=6adb261f&is=6ad9d49f&hm=cb9c99e8c895ba2ce3302d946037185dfbd28270977f036273c174dfd597ad30&",
+      "aiCaption": "A sector map showing political territories for factions like Hegemony, Persean League, and Tri-Tachyon.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710769304768562/sector-3-modded-heavy.png?ex=6ada7d5f&is=6ad92bdf&hm=4e8c20e6b32a5fa946d133599c259f181dc5b81ee613e681f46b539295591579&"
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710769304768562/sector-3-modded-heavy.png?ex=6adb261f&is=6ad9d49f&hm=ded79247d0afe924669d6b46175ddbb2ec3428c987504534e558f10d9b885d3e&",
+      "aiCaption": "A dense, full-sector political map displaying numerous faction territories and alliances.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710769866678332/random-assortment-of-things-minimap.png?ex=6ada7d5f&is=6ad92bdf&hm=cf2f45b60e9fb1cf0cf5de05e573d3d91c6bc1ae09a22bf29aa7755b3266fa6c&"
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710769866678332/random-assortment-of-things-minimap.png?ex=6adb261f&is=6ad9d49f&hm=250c207401a6df8eb39772463929029a9880838b94394f392ce8805ccf4612b9&",
+      "aiCaption": "A tactical battle screen showing ships near a black hole with a system information panel for Zagan Star System.",
+      "aiKind": "screenshot",
+      "aiFit": "poor"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710770495946752/intel-screen.png?ex=6ada7d5f&is=6ad92bdf&hm=839d875b07e7eb645f6663e7a04dc1c882b434f5c133e64138cc429ac1700c89&"
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710770495946752/intel-screen.png?ex=6adb261f&is=6ad9d49f&hm=154417dcdec8b8b7ff76f47e85b29f6a19563317a9cdb20fe497bc1851526261&",
+      "aiCaption": "The game's intel menu displaying a political map layer surrounded by lists of storage contents and events.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710771410313296/map-screen.png?ex=6ada7d60&is=6ad92be0&hm=483536b7bf28506b9b504537059a82776d00cfacf11f4013638cbf948e384200&"
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710771410313296/map-screen.png?ex=6adb2620&is=6ad9d4a0&hm=d348a037f9ac453d9e24b2685f7e9bf3d6a276606404503f9a84e82180852699&",
+      "aiCaption": "A sector map view showing faction territories like Hegemony and Blackrock with a sidebar listing faction relations.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710772244975728/domination-factions-filter.png?ex=6ada7d60&is=6ad92be0&hm=f183ffbf92fb6e4849a1d331ce1f0f0204b23af800838c3dab3abcf29d7ff7d8&"
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710772244975728/domination-factions-filter.png?ex=6adb2620&is=6ad9d4a0&hm=ea748531f659aa18953feb05c5b7e50b9b44e1b91fb5a9552e698e932aa61fcb&",
+      "aiCaption": "A detailed political map with a long sidebar listing numerous factions and their scores.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710773020917810/domination-alliances-tooltip.png?ex=6ada7d60&is=6ad92be0&hm=2fad337411b95fb8035bb00c7434b0d7d2bf92981a726c21e542391b42773725&"
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710773020917810/domination-alliances-tooltip.png?ex=6adb2620&is=6ad9d4a0&hm=122e8b5a7ed99914571ce052d845c3fab554eb4c05f042b53c4418566712aee2&",
+      "aiCaption": "A close-up of the sector map highlighting 'Greater Hegemony' territory with a system details panel for Naraka Star System.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710773591474266/domination-factions-luddic-church.png?ex=6ada7d60&is=6ad92be0&hm=c1c778deaa1f92af044d5a5f734d5185173c86d7d7fd9b2dfc75bbf9205ef6a1&"
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710773591474266/domination-factions-luddic-church.png?ex=6adb2620&is=6ad9d4a0&hm=d53be12b3b151fa1f6625824d8afd23bdf694f2c819f03cd31f3eadee5628302&",
+      "aiCaption": "A political map view showing territories like 'Church of Galactic Redemption' with a system details panel for EOS Exodus.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710774266765423/domination-factions-pirates.png?ex=6ada7d60&is=6ad92be0&hm=a5307e0cd885bba79468673caf4f0adf7f954fd564389ab4810bda607842c4e2&"
+      "url": "https://cdn.discordapp.com/attachments/1549710766226014298/1549710774266765423/domination-factions-pirates.png?ex=6adb2620&is=6ad9d4a0&hm=801c32fbb3822ba637cd0359852520c48d88ef3fdfbcf0792d7b251bea2ac75f&",
+      "aiCaption": "A sector map highlighting pirate-controlled systems in red with a system details panel for Pythagoras Star System.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/always-has-been.png"
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/always-has-been.png",
+      "aiCaption": "A meme-style banner featuring astronauts and a map with the text 'WAIT, STARSECTOR IS A MAP GAME? ALWAYS HAS BEEN'.",
+      "aiKind": "banner",
+      "aiFit": "good"
     },
     {
       "url": "https://img.shields.io/badge/Install_with-TriOS-blue?style=for-the-badge&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cGF0aCBmaWxsPSIjNjBhMmU5IiBkPSJNMjcuNjg2IDE0Mi4zODJDMjAuNDI3IDg2LjgwMyA1OS43NyAzNC44MDQgMTEzLjg2MyAyNy45NTJjNTguNjQtNy40MjggMTA5LjM2NiAzMSAxMTYuMzg4IDg4LjE3IDUuNjU3IDQ2LjA1LTE3Ljk5MyA4OC43OTEtNTkuMzQ4IDEwNy4yNTgtNDAuODE3IDE4LjIyNi04OS4zNDYgNy43Ni0xMTguNjkxLTI1LjcyMi0xMy43ODItMTUuNzI0LTIxLjk1NC0zNC4wMzEtMjQuNTI2LTU1LjI3Nm0xODguNjMzIDMzLjM0M2M5LjI3Ny0xOC4yODIgMTMuMTk0LTM3LjQ4MiAxMC44MjUtNTguMDItNi4xOTItNTMuNjcyLTU1LjYzNS05My4wOTQtMTA5LjI1LTg2Ljg2Mi01MS40ODYgNS45ODQtOTAuMjggNTEuNTc4LTg3Ljc0IDEwMy4xMiAyLjU2OCA1Mi4xMjggNDUuMzcgOTQuNjMgOTcuMTMgOTQuNzU2IDM5LjM2Mi4wOTUgNjkuMTQ4LTE3LjkxNCA4OS4wMzUtNTIuOTk0Ii8%2BPHBhdGggZmlsbD0iIzY2YWVmYSIgZD0iTTE0Mi44NjQgNDQuMDc3YzcuNjc1IDEzLjA1MiAxNS40MTcgMjYuMDY3IDIzLjAxMyAzOS4xNjcgMTMuNTMgMjMuMzM3IDI2Ljk3NyA0Ni43MjMgNDAuNDQ1IDcwLjA5Ny45MTMgMS41ODUgMi4wOTYgMy4xNjMgMi40MzIgNC44ODYuMjczIDEuNDAzLS4xMDIgMy4zOTYtLjk5OSA0LjQxNS0uNzA0LjgtMy4wMTcgMS4xNTctMy45ODEuNjA0LTEwLjIzOS01Ljg2OC0yMC40NC0xMS44MTQtMzAuNDQ3LTE4LjA2OC0zLjMzNi0yLjA4NC00LjAzLTUuNjk1LTMuNzI0LTkuNzE3IDEuNDMtMTguNzU1LTcuNDc1LTMzLjgyMy0yNC41LTQxLjg4NS01Ljk2Ni0yLjgyNS05LjE4My03LjExNi04Ljk2LTE0LjEuMzItOS45ODgtLjAwMy0xOS45OTYuMTYtMjkuOTkzLjAzLTEuODI1IDEuMDctMy42MzMgMi4zOS01LjQ5NiAxLjg4NiAwIDMuMDI4LjA0NCA0LjE3LjA5em0tNzAuNTU4IDc0LjIzMWMxMy40ODgtMjMuMzczIDI2LjcyNS00Ni40NyA0MC4xODQtNjkuNDM2IDEuMTU3LTEuOTc0IDMuNzg3LTMuMDg1IDUuNzM0LTQuNTk3IDEuMTg0IDIuMzQyIDMuMjkgNC42NDYgMy4zOSA3LjAzMy4zOTQgOS40NzQtLjA0IDE4Ljk4LjIzIDI4LjQ2NC4xOTEgNi43LTIuNzEgMTAuOTM2LTguNjIgMTMuNzI1LTEzLjA1NCA2LjE2Mi0yMS4yODYgMTYuMjc1LTIzLjg5MSAzMC41NzYtLjY0OSAzLjU2LS44MjIgNy4zMzEtLjQ0NSAxMC45MjQuNjA4IDUuNzk1LTEuOTQ1IDkuNjg2LTYuNTMgMTIuNDQtOC43IDUuMjI1LTE3LjQ2NiAxMC4zNS0yNi4zNjQgMTUuMjI2LTEuNTg2Ljg3LTMuOTQzLjMzMi01Ljk0NC40NDQuMDQ0LTIuMTQ0LS42NjktNC43MDcuMjUtNi4zNjYgNy4wOTQtMTIuODA2IDE0LjUwMy0yNS40MzcgMjIuMDA2LTM4LjQzMyIvPjxwYXRoIGZpbGw9IiM2N2FlZmIiIGQ9Ik0xOTAuMTEzIDE3My44NjVjMi43ODcgMi4zMSA3Ljg1NiAyLjc5NSA2LjY1NiA3LjM2LTEuMjg2IDQuODg4LTYuMDQ3IDMuMTM5LTkuNDMxIDMuMTQ4LTM5LjE0NC4xLTc4LjI4OC4xMjUtMTE3LjQzLS4wNi0yLjk2Ny0uMDEzLTcuNzI1LS45OTUtOC41MjctMi44NjctMS45MDEtNC40MzQgMy4yODktNS4zMzkgNS45OC03LjAwNiA3LjM1NC00LjU1NiAxNS4wMDEtOC42MzUgMjIuNDI1LTEzLjA4MiA0LjczNy0yLjgzOCA5LjIwNS0yLjc2MiAxMy40MDguNzMgMTQuMzIxIDExLjg5NCAzNS4yNCAxMy4xNjIgNTEuNTguMzE1IDQuNjYyLTMuNjY1IDkuMjk0LTMuNzcgMTQuMzAyLS43NyA2Ljg1MyA0LjEwNyAxMy44MDIgOC4wNTMgMjEuMDM3IDEyLjIzMiIvPjxwYXRoIGZpbGw9IiM2NmFjZjgiIGQ9Ik0xMzQuMTMgMTEyLjk1Yy0yLjQ5IDMuMjE4LTUuNjA4IDQuMzEtOC4zMTggMS44MDUtMS41NjYtMS40NDctMi42MDQtNC42ODUtMi4xODUtNi43NzkuNjQ3LTMuMjM4IDMuNzIxLTQuNzgyIDcuMDA0LTMuNjM3IDMuODQgMS4zNCA1LjM1IDQuMjIxIDMuNDk5IDguNjEyem0tMTUuODYzLTIuNDQxYzEuMzc5IDIuNTM5IDMuMjU1IDQuOTQgMy4xNDMgNy4yNDMtLjA3MSAxLjQ3Mi0yLjk4NCAzLjczMy00LjgwNyAzLjkyOS0xLjguMTkzLTQuNDk3LTEuMzIzLTUuNTU4LTIuOTE3LS45MTktMS4zOC0uOS00Ljc0NC4xNC01Ljc1NiAxLjYtMS41NTYgNC40My0xLjg0OSA3LjA4Mi0yLjV6bTE5LjUyOCAxLjI4NmMzLjA0My0yLjM2OSA2LjE2LTIuNjI1IDguMjE5LjA4OCAxLjIzNiAxLjYyOCAxLjc5NyA0Ljc0IDEuMTIgNi42MzUtMS4yMDggMy4zOS00LjMyMyA0LjM5Mi03Ljc1NSAyLjc2NS0zLjUyLTEuNjctNC4wNzctNC43Mi0xLjU4NC05LjQ4OG0tMjkuNzQ2IDIyLjMzN2MtMy4yMDktMi40OTMtNC4zMjItNS42MDUtMS44MDMtOC4zMTkgMS40NTQtMS41NjUgNC42OTMtMi42MDUgNi43ODYtMi4xODMgMy4yMjguNjUgNC43OCAzLjcxMyAzLjYzMyA3LjAwNi0xLjM0NCAzLjg2LTQuMjM5IDUuMzItOC42MTYgMy40OTZtMTkuNDEyLjY1NGMtNC42NzktMy4wOTEtNS43MS02LjM4NC0zLjEwMS05LjQzOCAyLjQwMy0yLjgxNCA1LjU4OC0zLjQzMyA4LjIzNy0uODUyIDEuMzg2IDEuMzUgMi4zMTUgNC4xNjEgMS45ODggNi4wNi0uNTY4IDMuMjg5LTMuMjkgNC43NDMtNy4xMjQgNC4yM20yNS4zMjMtNy4zMTdjLjQ2IDQuMzE1LTEuMzU4IDcuMzEtNS4xNjUgNy4yMjEtMi4xNjMtLjA1LTUuNTI1LTIuMzQyLTYuMDQtNC4yNDgtLjUxLTEuODc4IDEuMjk3LTUuNDc3IDMuMTQ5LTYuNjYgMy4zNjYtMi4xNSA2LjI0LS4xMzIgOC4wNTYgMy42ODdtLTM2LjU1OCA3LjYwN2M0LjMyNi4xMTIgNy4wMjIgMi4yMzQgNi41MTggNi4wNTgtLjI3MyAyLjA3LTIuNzU0IDUuMTc2LTQuNTIgNS4zNzktMi4xMDMuMjQxLTUuNTUyLTEuNTc2LTYuNTU3LTMuNDgzLTEuOTc4LTMuNzUxLjMxNC02LjU0NyA0LjU1OS03Ljk1NG0yNi4zMDkgMTEuNzExYy00LjU2Ny40MTYtNy41NzItMS41Ni03LjI1MS01LjY0OC4xNjYtMi4xMiAyLjc5Mi01LjMyNiA0LjcyOC01LjY2OSAxLjk0MS0uMzQ0IDUuMzQyIDEuNzQgNi40MjkgMy42OTMgMS43ODkgMy4yMTQtLjI4NiA1Ljk1LTMuOTA2IDcuNjI0bS0xNC4zMDktNS43MTFjNC4zMjcuMTEyIDcuMDI0IDIuMjM4IDYuNTI2IDYuMDU3LS4yNyAyLjA3LTIuNzU4IDUuMTc0LTQuNTI4IDUuMzgtMi4xMDEuMjQzLTUuNTUtMS41NzYtNi41NTctMy40ODMtMS45ODMtMy43NTUuMzE3LTYuNTQ1IDQuNTU5LTcuOTU0Ii8%2BPHBhdGggZmlsbD0iIzUxODViYyIgZD0iTTE0Mi43ODMgNDMuNzgyYy0xLjA2Mi4yNS0yLjIwNC4yMDQtMy43NTkuMDM3Ljk1LS4xOTIgMi4zMTQtLjI2MiAzLjc1OS0uMDM3Ii8%2BPC9zdmc%2B",
@@ -144,31 +176,58 @@
       "small": true
     },
     {
-      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/map-screen.png"
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/map-screen.png",
+      "aiCaption": "A screenshot of the game's sector map showing colored regions for factions like Hegemony and Persean League with a sidebar list.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/intel-screen.png"
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/intel-screen.png",
+      "aiCaption": "A screenshot of the political map interface displaying faction territories and system details in side panels.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/random-assortment-of-things-minimap.png"
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/random-assortment-of-things-minimap.png",
+      "aiCaption": "A gameplay screenshot showing a star system with ships and an overlay panel titled 'Zagan Star System' listing dominance statistics.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/sector-1-vanilla.png"
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/sector-1-vanilla.png",
+      "aiCaption": "A close-up view of the political map showing faction territories such as Hegemony, Luddic Church, and Persean League.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/sector-2-modded-light.png"
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/sector-2-modded-light.png",
+      "aiCaption": "A screenshot of the sector map displaying large colored blobs representing factions like Hegemony, Blackrock, and Spinadle.",
+      "aiKind": "screenshot",
+      "aiFit": "good"
     },
     {
-      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/sector-3-modded-heavy.png"
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/sector-3-modded-heavy.png",
+      "aiCaption": "A wide view of the political map showing numerous faction territories across the sector.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
-      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/ui-toggle-map.png"
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/ui-toggle-map.png",
+      "aiCaption": "A cropped strip of the game interface showing menu buttons like 'Map layers' and 'Character'.",
+      "aiKind": "screenshot",
+      "aiFit": "poor"
     },
     {
-      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/ui-toggle-intel.png"
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/ui-toggle-intel.png",
+      "aiCaption": "A cropped strip of the game interface showing tabs for 'Intel', 'Planets', and 'Factions'.",
+      "aiKind": "screenshot",
+      "aiFit": "poor"
     },
     {
-      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/domination-factions-unpopulated.png"
+      "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/domination-factions-unpopulated.png",
+      "aiCaption": "A screenshot of the political map with a sidebar listing faction scores and territories like VRI and Blackrock.",
+      "aiKind": "screenshot",
+      "aiFit": "okay"
     },
     {
       "url": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/domination-factions-presence-ribbon.png"
