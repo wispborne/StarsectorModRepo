@@ -305,14 +305,18 @@ FIELDS.sources = FIELDS.from;
 
 /// The yes-or-no questions a reader can ask with `has:` or `is:`, as in
 /// `has:source` or `-is:wip`. The same questions as Browse's switches, plus
-/// `tool`. Both words work with every question, so nobody has to remember
-/// which one goes with which.
+/// `tool`, plus what the author says about AI use: `has:ai` when they say AI
+/// was used and `is:noai` when they say none was. A mod whose author says
+/// nothing answers no to both, so `-has:ai` keeps it. Both words work with
+/// every question, so nobody has to remember which one goes with which.
 const FLAGS = {
   source: (mod) => mod.sourceIsPublic === true,
   download: (mod) => mod.hasDirectDownload === true,
   addable: (mod) => mod.saveCompatible === true,
   wip: (mod) => mod.isWorkInProgress === true,
   tool: (mod) => mod.isTool === true,
+  ai: (mod) => mod.usesAi === true,
+  noai: (mod) => mod.usesAi === false,
 };
 FLAGS.code = FLAGS.source;
 FLAGS.sourcecode = FLAGS.source;

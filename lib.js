@@ -148,12 +148,15 @@ export function breadcrumbs(trail = []) {
 }
 
 // Append to the body to avoid clipping by cards. Read dynamic text on hover.
+// `text` may also be a built element, for a tip with parts of its own.
 export function quickTip(node, text) {
   node.addEventListener('pointerenter', () => {
     const words = typeof text === 'function' ? text() : text;
     if (!words) return;
     hideQuickTip();
-    const tip = el('div', { class: 'quick-tip', role: 'tooltip', text: words });
+    const tip = words instanceof Node
+      ? el('div', { class: 'quick-tip rich', role: 'tooltip' }, [words])
+      : el('div', { class: 'quick-tip', role: 'tooltip', text: words });
     document.body.append(tip);
     const at = node.getBoundingClientRect();
     const size = tip.getBoundingClientRect();
@@ -258,6 +261,7 @@ export function setAiSummaryMode(mode) {
   } catch {
     // Kept for this visit only.
   }
+  window.dispatchEvent(new Event('ai-caption-preference-changed'));
 }
 
 /// The saved choice as written, or null. A choice still in the old cookie is
@@ -487,6 +491,17 @@ export function setAiOnModPages(choice) {
   } catch {
     // Ignore unavailable storage.
   }
+  window.dispatchEvent(new Event('ai-caption-preference-changed'));
+}
+
+// Keep author text available when generated descriptions are hidden.
+export function imageCaption(image) {
+  const author = image.caption?.trim() || '';
+  const ai = image.aiCaption?.trim() || '';
+  const mode = aiSummaryMode();
+  if (mode === 'never' || aiOnModPages() === 'hide') return author;
+  if (ai && (mode === 'always' || !author)) return `AI description: ${ai}`;
+  return author;
 }
 
 /// The picture to show for a mod, or null when it has none.
@@ -908,8 +923,8 @@ export function showPicture(images, at = 0) {
     shot.src = image.url;
     // A picture already fetched fires no load event worth waiting for.
     if (shot.complete && shot.naturalWidth) middle.classList.remove('is-loading');
-    shot.alt = image.caption || '';
-    caption.textContent = image.caption || '';
+    shot.alt = imageCaption(image);
+    caption.textContent = imageCaption(image);
     counter.textContent =
       images.length > 1 ? `${showing + 1} of ${images.length}` : '';
     fileName.textContent = fileNameOf(image.url);
@@ -1654,7 +1669,8 @@ const WAYS_TO_SEARCH = [
   {
     name: 'Has / is',
     says: [{ code: 'has:source' }, ', ', { code: 'has:download' }, ', ',
-      { code: 'is:addable' }, ', ', { code: 'is:wip' }, ', ', { code: 'is:tool' },
+      { code: 'is:addable' }, ', ', { code: 'is:wip' }, ', ', { code: 'is:tool' }, ', ',
+      { code: 'has:ai' }, ', ', { code: 'is:noai' },
       '; add ', { code: '-' }, ' to leave those out: ', { code: '-is:wip' }],
   },
 ];

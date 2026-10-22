@@ -896,7 +896,7 @@ button.check-row { align-items: center; }
   transition: background 0.1s, border-color 0.1s;
 }
 .tri-box svg { width: 12px; height: 12px; }
-.tri-box .mark-on, .tri-box .mark-not { display: none; }
+.tri-box .mark-on, .tri-box .mark-not, .tri-box .mark-some { display: none; }
 .check-row:hover .tri-box { border-color: var(--on); }
 .check-row.on .tri-box { background: var(--on); border-color: var(--on); color: var(--surface); }
 .check-row.on .mark-on { display: inline; }
@@ -905,8 +905,55 @@ button.check-row { align-items: center; }
   border-color: var(--error); color: var(--error);
 }
 .check-row.not .mark-not { display: inline; }
+/* Some boxes in the group are checked. */
+.check-row.some .tri-box { border-color: var(--on); color: var(--on); }
+.check-row.some .mark-some { display: inline; }
+/* Radio button: a circle with a dot. */
+.check-row.radio .tri-box { border-radius: 50%; }
+.check-row.radio.on .tri-box { background: var(--surface-2); color: var(--on); }
 /* Along the top, "not" is lit in the warning colour rather than the "on" one. */
 .switches .btn.not { border-color: var(--error); color: var(--error); }
+/* AI use filter: modes, parts and options. */
+.ai-filter { display: flex; flex-direction: column; gap: 10px; }
+.ai-filter button.check-row { width: 100%; }
+/* Stack and join the mode buttons to fit the side column. */
+.ai-modes { flex-direction: column; }
+.ai-modes > .btn { justify-content: center; white-space: nowrap; padding-inline: 8px; }
+.view-toggle.ai-modes > .btn + .btn { margin-left: 0; margin-top: -1px; }
+.view-toggle.ai-modes > .btn:first-child { border-radius: 6px 6px 0 0; }
+.view-toggle.ai-modes > .btn:last-child { border-radius: 0 0 6px 6px; }
+.ai-filter-section { display: flex; flex-direction: column; gap: 6px; }
+.ai-filter-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  color: var(--text-dim); font-size: var(--type-tiny); font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.ai-all-none {
+  display: flex; gap: 8px; margin-left: auto; margin-right: 8px;
+  font-size: var(--type-tiny); font-weight: 400;
+}
+/* Show All and None only when the parts they change are visible. */
+.filter-panel:not([open]) .ai-all-none { display: none; }
+.ai-filter-box-head {
+  display: flex; align-items: baseline; margin-bottom: 8px; font-weight: 600;
+}
+.ai-filter-box-head .ai-all-none { margin-right: 0; }
+.ai-parts .ai-part { padding-left: 24px; }
+.check-count {
+  margin-left: auto; color: var(--text-dim); font-size: var(--type-tiny);
+  font-variant-numeric: tabular-nums;
+}
+/* The top button opens the same controls over the results. */
+.ai-filter-menu { position: relative; }
+.ai-filter-menu > summary { list-style: none; }
+.ai-filter-menu > summary::-webkit-details-marker { display: none; }
+.ai-filter-box {
+  position: absolute; z-index: 10; top: calc(100% + 6px); left: 0;
+  width: 300px; max-width: calc(100vw - 32px); padding: var(--pad-cell);
+  max-height: min(70vh, 640px); overflow-y: auto;
+  background: var(--surface-container); border: 1px solid var(--border);
+  border-radius: 8px; box-shadow: var(--lifted);
+}
 .filters-gap { flex: 1 1 auto; }
 @media (max-width: 900px) {
   .browse-split { grid-template-columns: minmax(0, 1fr); }
@@ -1019,6 +1066,22 @@ button.check-row { align-items: center; }
   background: var(--surface-container); border: 1px solid var(--border);
   box-shadow: var(--lifted);
 }
+/* A tip with parts of its own, such as the author's words on AI use. Each part
+   has a small label like a side card's heading, so the quote leads and the
+   labels stay out of its way. */
+.quick-tip.rich { max-width: 340px; padding: 8px 10px; white-space: normal; }
+.tip-parts { display: flex; flex-direction: column; gap: 4px; }
+.tip-label {
+  color: var(--text-dim); font-size: var(--type-note);
+  font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.tip-label:not(:first-child) { margin-top: 6px; }
+.tip-quote {
+  margin: 0; padding-left: 8px; border-left: 2px solid var(--border);
+  white-space: pre-line; line-height: 1.45;
+}
+.tip-badges { display: flex; flex-wrap: wrap; gap: 4px; }
+.tip-uses { margin: 0; padding-left: 16px; line-height: 1.45; }
 .card-summary {
   /* A little quieter than the name above it, so the name leads. */
   font-size: var(--type-small); color: color-mix(in srgb, var(--text) 65%, var(--text-dim));
@@ -1382,7 +1445,7 @@ button.check-row { align-items: center; }
 .side-fact.beside > .side-value { text-align: right; }
 .side-label { color: var(--text-dim); }
 /* A label with an explanation on hover. */
-.side-label.has-tip {
+.side-label.has-tip, .ai-use.has-tip {
   cursor: help; text-decoration: underline dotted; text-underline-offset: 3px;
 }
 .badge.dim { color: var(--text-dim); }
@@ -1969,8 +2032,9 @@ body.picture-open { overflow: hidden; }
   .view-toggle > .btn:first-child { border-radius: 10px 0 0 10px; }
   .view-toggle > .btn:last-child { border-radius: 0 10px 10px 0; }
 
-  /* Real circles stay round: the play mark on a video and the loading spinner. */
+  /* Keep the video play button, loading spinner and radio buttons round. */
   .prose a.video-link:not(.as-words)::after,
-  .big-picture-middle.is-loading::after { corner-shape: round; border-radius: 50% !important; }
+  .big-picture-middle.is-loading::after,
+  .check-row.radio .tri-box { corner-shape: round; border-radius: 50% !important; }
 }
 

@@ -6,7 +6,7 @@
 // so a thin page reads as deliberate instead of broken.
 
 import {
-  aiOnModPages, aiSparkle, aiSummaryNote, aiSummaryOf,
+  aiOnModPages, aiSparkle, aiSummaryNote, aiSummaryOf, imageCaption,
   clear,
   currentGameVersion, DATA_BASE, downloadButton, el, errorPanel, expandAllButton, formatDay,
   favoriteToggle, formatMoment, imageUrlOf, inlinePictures, joinNames, quickTip,
@@ -406,7 +406,7 @@ function partOfThreadLine(mod) {
         title: 'A forum thread with several mods, including this one.',
       })
     : el('span', { text: mod.partOfThreadTitle }));
-  line.append(document.createTextNode(', a thread with several mods.'));
+  line.append(document.createTextNode(', a thread with multiple mods.'));
   return line;
 }
 
@@ -1069,10 +1069,10 @@ function gallery(detail, onCount) {
   images.forEach((image) => {
     const button = el('button', {
       class: 'shot',
-      title: image.caption || 'Open picture',
+      title: imageCaption(image) || 'Open picture',
     });
     const img = picture(image.url, {
-      alt: image.caption || '',
+      alt: imageCaption(image),
       whenBroken: () => {
         button.remove();
         broken.add(image);
@@ -1092,6 +1092,20 @@ function gallery(detail, onCount) {
     buttons.set(image, button);
     grid.append(button);
   });
+
+  const refreshCaptions = () => {
+    for (const [image, button] of buttons) {
+      const caption = imageCaption(image);
+      button.title = caption || 'Open picture';
+      const img = button.querySelector('img');
+      if (img) img.alt = caption;
+    }
+  };
+  const captionEvents = new AbortController();
+  window.addEventListener('ai-caption-preference-changed', refreshCaptions,
+    { signal: captionEvents.signal });
+  window.addEventListener('hashchange', () => captionEvents.abort(),
+    { once: true, signal: captionEvents.signal });
 
   toggle.addEventListener('click', () => {
     showHidden = !showHidden;
@@ -1416,7 +1430,87 @@ function facts(detail) {
     day('Last release', listing.lastReleaseDate,
       'When this site last noticed a new version.'),
     day('Thread last posted', listing.threadLastPostOn || detail.threadLastPostOn, null),
+    aiUseFact(detail.aiUse, listing.authors),
   ]);
+}
+
+/// What the author says about using AI tools to make the mod, in plain words
+/// with no colour or warning mark: the site reports it and takes no side. The
+/// author's own words are on hover. Neither of the two dim answers is "None":
+/// "Not checked yet" means the mod's posts have not been read for this (no
+/// `aiUse` at all), and "Not stated" means they were read and say nothing (an
+/// `aiUse` with no `usesAi`).
+function aiUseFact(aiUse, authors = []) {
+  if (!aiUse || aiUse.usesAi == null) {
+    return sideFact('AI use', el('span', aiUse
+      ? { class: 'dim', text: 'Not stated',
+          title: "The mod's posts were read, and they say nothing about AI use." }
+      : { class: 'dim', text: 'Not checked yet',
+          title: "The mod's posts have not been read for AI use yet." }),
+    { beside: true });
+  }
+  const text = aiUse.usesAi
+    ? (aiUse.uses || []).map(aiUseLabel).join(' · ')
+    : 'None';
+  const value = quickTip(el('span', { class: 'ai-use has-tip', text }),
+    () => aiUseTip(aiUse, authors));
+  return sideFact('AI use', value, { beside: !aiUse.usesAi });
+}
+
+// Keep all reported details in the tooltip, alongside the author's quote.
+function aiUseTip(aiUse, authors = []) {
+  const tools = aiUse.tools || [];
+  const uses = aiUse.usesAi ? aiUse.uses || [] : [];
+  return el('div', { class: 'tip-parts' }, [
+    uses.length ? el('div', { class: 'tip-label', text: 'AI use' }) : null,
+    uses.length
+      ? el('ul', { class: 'tip-uses' }, uses.map((use) => el('li', { text: aiUseSentence(use) })))
+      : null,
+    tools.length ? el('div', { class: 'tip-label', text: 'Tools used' }) : null,
+    tools.length
+      ? el('div', { class: 'tip-badges' }, tools.map((tool) => el('span', { class: 'badge', text: tool })))
+      : null,
+    el('div', { class: 'tip-label', text: `${authors.length ? joinNames(authors) : 'The author'} says:` }),
+    el('blockquote', { class: 'tip-quote', text: withoutOuterQuotes(aiUse.quote) }),
+  ]);
+}
+
+/// A quote with the quotation marks around the whole of it taken off. The
+/// quote is already set off as a quote, so marks around it are one pair too
+/// many.
+function withoutOuterQuotes(quote) {
+  const match = /^["“”](.*)["“”]$/s.exec(quote.trim());
+  return match ? match[1] : quote.trim();
+}
+
+// Use the same wording as the tooltip so "edited" clearly means a person changed AI work.
+function aiUseLabel(use) {
+  const area = use.area[0].toUpperCase() + use.area.slice(1);
+  const amount = aiUseAmount(use).join(' ');
+  const notes = [amount, use.optional ? 'optional' : null].filter(Boolean);
+  return notes.length ? `${area} (${notes.join(', ')})` : area;
+}
+
+const AI_USE_HOW = {
+  generated: 'AI',
+  edited: 'AI with human edits',
+  assisted: 'AI-assisted',
+};
+const AI_USE_EXTENT = { all: 'entirely', most: 'mostly', some: 'partly' };
+
+/// How much and how, such as ["entirely", "AI"]. An amount with no "how" still
+/// says "AI", so a row never reads "Code (entirely)".
+function aiUseAmount(use) {
+  const how = AI_USE_HOW[use.how] ?? (use.extent ? 'AI' : null);
+  return [AI_USE_EXTENT[use.extent], how].filter(Boolean);
+}
+
+// Leave out any details the author did not give.
+function aiUseSentence(use) {
+  const area = use.area[0].toUpperCase() + use.area.slice(1);
+  const parts = aiUseAmount(use);
+  const text = parts.length ? `${area}: ${parts.join(' ')}.` : `${area}.`;
+  return use.optional ? `${text} Optional.` : text;
 }
 
 // Same-name entries may be older threads, forks, or unrelated mods.

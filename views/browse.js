@@ -17,6 +17,10 @@ import {
   summaryToShow,
   versionStanding, versionStandingNote, viewToggle,
 } from '../lib.js';
+import {
+  AI_AREAS, AI_GROUPS, AI_HIDE, AI_LEVELS, AI_ONLY, aiFilterFromAddress,
+  aiFilterIsOn, aiFilterOff, aiFilterToAddress, countedAreas, keepsForAi,
+} from '../ai_filter.js';
 import { compileSearch } from '../search.js';
 
 const VIEW_KEY = 'starmodderView';
@@ -24,6 +28,7 @@ const VIEW_KEY = 'starmodderView';
 /// the top.
 const LAYOUT_KEY = 'starmodderBrowseLayout';
 const FILTERS_KEY = 'starmodderBrowseFilters';
+const PANELS_KEY = 'starmodderFilterPanels';
 const NO_REQUIREMENTS = '__none__';
 /// The game version filter's two choices that are not a release: every mod,
 /// and the mods that do not say which release they are for.
@@ -75,12 +80,16 @@ const SWITCHES = [
 const ONLY = 'only';
 const NOT = 'not';
 
-// The tick and the cross for a switch's box at the side (Tabler shapes). Both
-// are always there; style.css shows the one that fits the switch's state.
+// Checkbox marks from Tabler. All three are present; style.css shows the
+// current state. A dash means some boxes in the group are checked.
 const TRI_BOX_MARKS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
   + 'stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" '
   + 'focusable="false"><path class="mark-on" d="M5 12.5l4.5 4.5L19 7.5"/>'
-  + '<path class="mark-not" d="M7 7l10 10M17 7 7 17"/></svg>';
+  + '<path class="mark-not" d="M7 7l10 10M17 7 7 17"/>'
+  + '<path class="mark-some" d="M6 12h12"/></svg>';
+// Dot for the selected radio button.
+const RADIO_MARK = '<svg viewBox="0 0 24 24" focusable="false">'
+  + '<circle class="mark-on" cx="12" cy="12" r="5" fill="currentColor"/></svg>';
 
 /// The switches as the address names them: `only=a,b` and `not=c`. A key in
 /// both counts as "only".
@@ -171,6 +180,7 @@ export async function render(root, parts) {
       : ((query.get('q') || '') ? 'relevance' : 'current'),
     seed: Number(query.get('seed')) || newSeed(),
     switches: switchesFromAddress(query),
+    ai: aiFilterFromAddress(query),
     page: Math.max(0, Number(query.get('page')) || 0),
     pageSize: pageSizePreference(),
     view: localStorage.getItem(VIEW_KEY) === 'rows' ? 'rows' : 'grid',
@@ -234,6 +244,7 @@ export async function render(root, parts) {
       seed: shown.sort === 'random' ? shown.seed : '',
       only: switchKeysIn(shown.switches, ONLY),
       not: switchKeysIn(shown.switches, NOT),
+      ...aiFilterToAddress(shown.ai),
       page: shown.page || '',
     });
     rememberFilters(hash);
@@ -252,6 +263,11 @@ export async function render(root, parts) {
     fillResultLine(countLine, all, matches, shown,
       () => {
         shown.game = ANY_GAME;
+        saveState(shown);
+        render(root, parts);
+      },
+      () => {
+        shown.ai = aiFilterOff();
         saveState(shown);
         render(root, parts);
       });
@@ -308,13 +324,26 @@ function gameFromAddress(query, currentVersion) {
 ///
 /// It fills a line that is already on the page rather than making a new one,
 /// because that is what gets it read out.
-function fillResultLine(line, all, matches, state, onShowEveryRelease) {
+function fillResultLine(line, all, matches, state, onShowEveryRelease, onAiFilterOff) {
   clear(line);
   line.append(el('span', {
     text: matches.length === all.length
       ? `Showing all ${all.length} mods.`
       : `${matches.length} of ${all.length} mods shown.`,
   }));
+
+  // Show the hidden count even when the filter panel is closed.
+  if (aiFilterIsOn(state.ai)) {
+    const left = all.filter((mod) => matchesFilters(mod, { ...state, ai: aiFilterOff() })).length
+      - matches.length;
+    if (left > 0) {
+      const off = el('button', { class: 'link-button', text: 'Clear AI filter' });
+      off.addEventListener('click', onAiFilterOff);
+      line.append(el('span', {
+        text: ` ${left} hidden by the AI use filter. `,
+      }), off);
+    }
+  }
 
   if (!state.currentVersion || state.game !== state.currentVersion) return;
 
@@ -375,12 +404,44 @@ const LAYOUT_ICONS = {
     + '<path d="M9 4l0 16"/></svg>',
 };
 
-/// One group of filters in the side column, under a heading that folds it.
-function filterPanel(title, body, open) {
-  return el('details', { class: 'panel filter-panel', open: open ? '' : null }, [
-    el('summary', { class: 'filter-panel-head', text: title }),
+/// Reads which side panels the reader opened or shut, by heading.
+/// For example: `{"Game version": false}`. Untouched panels are left out.
+/// They use their default.
+function savedPanels() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(PANELS_KEY) || '{}');
+    return saved && typeof saved === 'object' ? saved : {};
+  } catch {
+    return {};
+  }
+}
+
+/// A side panel that remembers whether the reader left it open or shut.
+/// `open` sets the starting state.
+/// `beside` adds controls next to the heading.
+function filterPanel(title, body, open, beside = null) {
+  const saved = savedPanels()[title];
+  const panel = el('details', {
+    class: 'panel filter-panel', open: (typeof saved === 'boolean' ? saved : open) ? '' : null,
+  }, [
+    el('summary', { class: 'filter-panel-head' }, [el('span', { text: title }), beside]),
     body,
   ]);
+  // Drawing a panel open also fires `toggle`. Only heading presses count.
+  // Otherwise, each default would be saved as the reader's choice.
+  let pressed = false;
+  panel.querySelector('summary').addEventListener('click', () => { pressed = true; });
+  panel.addEventListener('toggle', () => {
+    if (!pressed) return;
+    pressed = false;
+    try {
+      localStorage.setItem(PANELS_KEY,
+        JSON.stringify({ ...savedPanels(), [title]: panel.open }));
+    } catch {
+      // Kept for this visit only.
+    }
+  });
+  return panel;
 }
 
 /// A list of choices, one of which can be on, each with how many mods it
@@ -443,8 +504,62 @@ function drawControls(places, mods, state, onChange, onLayout) {
     versionsHolder.append(choiceList(entries, state.game,
       (v) => { state.game = v || ANY_GAME; changed(); }));
   };
+  // Counts use the mods shown by the other filters. Redraw them with the
+  // other controls so they stay up to date.
+  const aiHolder = el('div', {});
+  const aiMenuLabel = el('span');
+  // All and None share the side panel's heading.
+  // In the top layout, they share the box's small "AI use" heading.
+  const aiAllOrNone = el('span', { class: 'ai-all-none' });
+  for (const [label, pick] of [['All', true], ['None', false]]) {
+    const button = el('button', {
+      type: 'button', class: 'link-button', text: label,
+      title: pick ? 'Select all.' : 'Deselect all.',
+    });
+    button.addEventListener('click', (event) => {
+      // Keep the side panel open when All or None is pressed.
+      event.preventDefault();
+      state.ai.parts = pick ? new Set(AI_AREAS) : new Set();
+      changed();
+    });
+    aiAllOrNone.append(button);
+  }
+  const aiMenu = el('details', { class: 'ai-filter-menu' }, [
+    el('summary', { class: 'btn', title: 'Choose which kinds of AI use to filter by.' },
+      [aiMenuLabel]),
+    el('div', { class: 'ai-filter-box' }, [
+      atSide ? null : el('div', { class: 'ai-filter-box-head' }, [
+        el('span', { text: 'AI use' }), aiAllOrNone,
+      ]),
+      aiHolder,
+    ]),
+  ]);
+  // Align the menu with its button, then shift it to fit on screen.
+  aiMenu.addEventListener('toggle', () => {
+    if (!aiMenu.open) return;
+    const box = aiMenu.querySelector('.ai-filter-box');
+    box.style.left = '0px';
+    const edge = 16;
+    const { left, right } = box.getBoundingClientRect();
+    const shift = Math.max(edge - left, Math.min(0, window.innerWidth - edge - right));
+    box.style.left = `${shift}px`;
+  });
+  const drawAiFilter = () => {
+    const wouldMatch = mods.filter(
+        (mod) => matchesFilters(mod, { ...state, ai: aiFilterOff() }));
+    // Restore keyboard focus after redrawing the controls.
+    const focused = aiHolder.contains(document.activeElement)
+      ? document.activeElement.dataset.focus : null;
+    clear(aiHolder);
+    aiHolder.append(aiFilterBody(wouldMatch, state.ai, () => changed()));
+    if (focused) aiHolder.querySelector(`[data-focus="${focused}"]`)?.focus();
+    // Show the current filter in the top button.
+    aiMenuLabel.textContent = aiMenuWords(state.ai);
+    aiMenu.querySelector('summary').classList.toggle('on', aiFilterIsOn(state.ai));
+  };
   const changed = () => {
     drawChips();
+    drawAiFilter();
     if (atSide) drawVersions();
     onChange();
   };
@@ -568,6 +683,7 @@ function drawControls(places, mods, state, onChange, onLayout) {
 
   const layoutSwitch = layoutToggle(layout, onLayout);
   drawChips();
+  drawAiFilter();
 
   if (atSide) {
     drawVersions();
@@ -577,14 +693,17 @@ function drawControls(places, mods, state, onChange, onLayout) {
         sortHolder, el('span', { class: 'filters-gap' }), views, layoutSwitch,
       ]),
     );
-    // On a phone the column sits above the results, so only the switches start
-    // open; the long lists would push the mods a screen or more down.
+    // On a phone, the column sits above the results. Only the switches start open.
+    // Long lists would push the mods down by a screen or more.
+    // On any screen, panels keep the state the reader chose.
     const phone = window.matchMedia('(max-width: 900px)').matches;
     side.append(
       filterPanel('Show', switches, true),
       filterPanel('Category', chips, !phone),
-      filterPanel('Game version', versionsHolder, !phone),
+      // The list starts on the current release. Few readers change it.
+      filterPanel('Game version', versionsHolder, false),
       filterPanel('Requires', requiresDropdown, !phone),
+      filterPanel('AI use', aiHolder, !phone, aiAllOrNone),
     );
     return;
   }
@@ -606,8 +725,142 @@ function drawControls(places, mods, state, onChange, onLayout) {
     requiresDropdown,
     sortHolder,
     switches,
+    aiMenu,
   ]));
 }
+
+/// The two mode buttons sit above the parts, one above the other.
+const AI_MODES = [
+  [AI_HIDE, "Don't show AI-gen…", 'Hide mods where AI was used for any of the following.'],
+  [AI_ONLY, 'Only show AI-gen…', 'Only show mods where AI was used for any of the following.'],
+];
+
+const AI_LEVEL_LABELS = {
+  made: ['all of the work', null],
+  edited: ['some, but edited by a human',
+    null],
+  any: ['anything at all', null],
+};
+
+/// Show the current filter in the top button even when the menu is closed.
+function aiMenuWords(filter) {
+  if (!aiFilterIsOn(filter)) return 'AI use';
+  return filter.mode === AI_HIDE ? 'AI use: hiding' : 'AI use: only';
+}
+
+/// Controls for mode, parts, AI use level and optional parts.
+/// Counts use `mods`, the mods left after the other filters.
+function aiFilterBody(mods, filter, onChange) {
+  const body = el('div', { class: 'ai-filter' });
+  const set = (change) => { change(); onChange(); };
+
+  const modes = el('div', {
+    class: 'view-toggle ai-modes', role: 'group', 'aria-label': 'AI use filter',
+  });
+  for (const [mode, label, title] of AI_MODES) {
+    const on = filter.mode === mode;
+    const button = el('button', {
+      type: 'button', class: `btn${on ? ' on' : ''}`, title,
+      'aria-pressed': String(on), 'data-focus': `mode-${mode}`, text: label,
+    });
+    button.addEventListener('click', () => set(() => {
+      filter.mode = mode;
+      // Check all parts when switching to "Only show AI-gen…" with none checked.
+      // Otherwise, no mods would be shown.
+      if (mode === AI_ONLY && !filter.parts.size) filter.parts = new Set(AI_AREAS);
+    }));
+    modes.append(button);
+  }
+  body.append(modes);
+
+  // Count matches for each part using the current level and optional setting.
+  const areasOf = new Map(mods.map((mod) => [mod, countedAreas(mod, filter)]));
+  const caught = (areas) =>
+    mods.filter((mod) => areas.some((area) => areasOf.get(mod).has(area))).length;
+
+  const parts = el('div', { class: 'check-list ai-parts' });
+  for (const group of AI_GROUPS) {
+    const areas = group.areas.map(([area]) => area);
+    const ticked = areas.filter((area) => filter.parts.has(area)).length;
+    const state = ticked === areas.length ? 'on' : ticked ? 'some' : '';
+    parts.append(aiCheckRow(group.label, caught(areas), state, `group-${group.key}`,
+      null,
+      () => set(() => {
+        for (const area of areas) {
+          if (state === 'on') filter.parts.delete(area);
+          else filter.parts.add(area);
+        }
+      })));
+    if (areas.length < 2) continue;
+    for (const [area, label] of group.areas) {
+      const on = filter.parts.has(area);
+      parts.append(aiCheckRow(label, caught([area]), on ? 'on' : '', `area-${area}`, null,
+        () => set(() => { if (on) filter.parts.delete(area); else filter.parts.add(area); }),
+        'ai-part'));
+    }
+  }
+  body.append(parts);
+
+  const levels = el('div', {
+    class: 'check-list', role: 'radiogroup', 'aria-label': 'If AI did…',
+  });
+  for (const level of AI_LEVELS) {
+    const [label, title] = AI_LEVEL_LABELS[level.key];
+    const on = filter.level === level.key;
+    const button = el('button', {
+      type: 'button', class: `check-row radio${on ? ' on' : ''}`, role: 'radio',
+      'aria-checked': String(on), title, 'data-focus': `level-${level.key}`,
+    }, [
+      el('span', { class: 'tri-box', 'aria-hidden': 'true', html: RADIO_MARK }),
+      el('span', { text: label }),
+    ]);
+    button.addEventListener('click', () => set(() => { filter.level = level.key; }));
+    levels.append(button);
+  }
+  body.append(aiFilterSection('If AI did…', levels));
+
+  const more = el('div', { class: 'check-list' });
+  more.append(aiCheckRow('Ignore if AI content is optional', null,
+    filter.skipOptional ? 'on' : '', 'optional',
+    'Ignore AI content that isn\'t required, such as an optional portrait pack.',
+    () => set(() => { filter.skipOptional = !filter.skipOptional; })));
+  body.append(aiFilterSection('Options', more));
+  return body;
+}
+
+/// Filter section with a heading.
+function aiFilterSection(title, content, beside = null) {
+  return el('div', { class: 'ai-filter-section' }, [
+    el('div', { class: 'ai-filter-head' }, [title ? el('span', { text: title }) : null, beside]),
+    content,
+  ]);
+}
+
+/// Checkbox, label and match count. `state` is `on`, `some`
+/// (some boxes in a group are checked) or empty.
+function aiCheckRow(label, count, state, focusKey, title, onPress, extraClass = '') {
+  const button = el('button', {
+    type: 'button',
+    class: ['check-row', state, extraClass].filter(Boolean).join(' '),
+    'aria-pressed': state === 'some' ? 'mixed' : String(state === 'on'),
+    'data-focus': focusKey,
+    title,
+  }, [
+    el('span', { class: 'tri-box', 'aria-hidden': 'true', html: TRI_BOX_MARKS }),
+    el('span', { text: label }),
+    count == null ? null : el('span', { class: 'check-count', text: String(count) }),
+  ]);
+  button.addEventListener('click', onPress);
+  return button;
+}
+
+// Along the top, the AI use filter floats over the results, so a press
+// anywhere else shuts it.
+document.addEventListener('pointerdown', (event) => {
+  for (const menu of document.querySelectorAll('.ai-filter-menu[open]')) {
+    if (!menu.contains(event.target)) menu.open = false;
+  }
+});
 
 function dropdown(label, values, chosen, onPick, opts = {}) {
   const { anyLabel = `Any ${(label || 'value').toLowerCase()}`, labels = {} } = opts;
@@ -636,6 +889,7 @@ function clearFilters(state) {
   state.category = '';
   state.author = '';
   state.switches.clear();
+  state.ai = aiFilterOff();
   state.page = 0;
 }
 
@@ -697,7 +951,7 @@ export function matchesFilters(mod, state) {
     if (picked === NOT
       && (option.keepWhenNot ? !option.keepWhenNot(mod) : option.keep(mod))) return false;
   }
-  return true;
+  return !state.ai || keepsForAi(mod, state.ai);
 }
 
 export function sortMods(mods, sort, currentVersion, search = '', seed = 1) {

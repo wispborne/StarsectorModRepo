@@ -107,6 +107,27 @@ export async function render(root) {
             + ', source code links, and more from the author\'s post.',
         ]),
 
+        section('Does a mod say it was made with AI?', [
+            'Each mod page has an "AI use" line under Details. It shows what the '
+            + 'author says about using AI tools to make the mod, such as for '
+            + 'portraits, music or code. Point at it to read the author\'s own words.',
+            '"None" means the author says no AI was used. "Not stated" means the '
+            + 'mod\'s posts were read and say nothing about it. "Not checked yet" '
+            + 'means they have not been read for this yet. The site does not '
+            + 'guess from the pictures or the writing.',
+            [
+                'On Browse, "Hide AI use" hides mods by what AI was used for. '
+                + 'Mods that do not say, or have not been checked, stay visible. '
+                + 'In the search box, ',
+                el('code', {text: 'has:ai'}),
+                ' finds mods whose author says AI was used, and ',
+                el('code', {text: 'is:noai'}),
+                ' finds mods whose author says it was not. Put ',
+                el('code', {text: '-'}),
+                ' in front of either to leave those mods out.',
+            ],
+        ]),
+
         el('p', {}, [
             el('a', {
                 class: 'btn',
