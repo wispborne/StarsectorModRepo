@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T20:51:37.661004Z",
+  "generatedAt": "2026-10-23T08:30:57.407176Z",
   "listing": {
     "id": "halo-united-nations-space-command-continued-unsc-legacy",
     "name": "Halo - United Nations Space Command: Core Continued (UNSC)",
@@ -18,7 +18,7 @@
     "gameVersion": "0.98a",
     "modVersion": "2.0.0",
     "imageUrl": "https://i.imgur.com/kFqpt93.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1558387123881512990/1558387124091355146/Core_Continued_copy.png?ex=6adb129b&is=6ad9c11b&hm=10da935a4a599512c9d45acc2b8bfdca369fd621d207bc90889c7f78ff566376&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1558387123881512990/1558387124091355146/Core_Continued_copy.png?ex=6adbbb5b&is=6ada69db&hm=e26088c741d755054af4868406ec567264e716fda4947b4cb53c5fa530bf8953&",
     "summary": "This mod is a continuation/fork of AppleMarineXX's original UNSC mod.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds a Halo-themed faction with ships and systems compatible with other Halo mods.",
@@ -37,7 +37,13 @@
       "UNSC CC",
       "UNSC"
     ],
-    "usesAi": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "other",
+        "how": "generated"
+      }
+    ],
     "addedOn": "2026-10-09",
     "threadLastPostOn": "2026-10-09",
     "needs": [
@@ -60,15 +66,25 @@
   "canUpdate": "no",
   "canRemove": "no",
   "aiUse": {
-    "quote": "Option 2: LLM Conversion package\n- This is a zip with an AI/LLM prompt in a text file and a migration map .json file. The idea with this is you give an LLM of your choice a zip of your 1.3.1 save file, along with the json migration map, and paste the prompt in the text file into the LLM. It theoretically should give it the ability to migrate your save and spit back a converted 2.0.0 ready save you can load up with 2.0.0 installed.\nI have tested this with Chat GPT using 5.6 Sol on High (in Chat Mode) and it works great. Lower thinking levels/models should still work but I'd recommend at least Medium.\nI tried it with Gemini and it was straight poopooass because Gemini wouldn't even recognize I was attaching the files in the chat. If you pay for a better version it might work. I haven't tried it with other LLMs yet, but if you do, please let me know your results.",
-    "usesAi": false
+    "quote": "Option 2: LLM Conversion package\n- This is a zip with an AI/LLM prompt in a text file and a migration map .json file. The idea with this is you give an LLM of your choice a zip of your 1.3.1 save file, along with the json migration map, and paste the prompt in the text file into the LLM. It theoretically should give it the ability to migrate your save and spit back a converted 2.0.0 ready save you can load up with 2.0.0 installed.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "other",
+        "how": "generated"
+      }
+    ],
+    "tools": [
+      "Chat GPT",
+      "Gemini"
+    ]
   },
   "rawCategories": [
     "Faction Mods"
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1558387123881512990/1558387124091355146/Core_Continued_copy.png?ex=6adb129b&is=6ad9c11b&hm=10da935a4a599512c9d45acc2b8bfdca369fd621d207bc90889c7f78ff566376&",
+      "url": "https://cdn.discordapp.com/attachments/1558387123881512990/1558387124091355146/Core_Continued_copy.png?ex=6adbbb5b&is=6ada69db&hm=e26088c741d755054af4868406ec567264e716fda4947b4cb53c5fa530bf8953&",
       "aiCaption": "A black and white UNSC emblem featuring an eagle holding a bomb, with the text 'Core Continued' below it.",
       "aiKind": "logo",
       "aiFit": "good",

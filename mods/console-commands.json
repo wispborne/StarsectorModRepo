@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T20:51:37.661004Z",
+  "generatedAt": "2026-10-23T08:30:57.407176Z",
   "listing": {
     "id": "console-commands",
     "name": "Console Commands",
@@ -51,7 +51,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>An official update to console commands that overhauls the interface to feel more modern and provide additional quality of life.</p><p><strong>Download</strong>: <a href=\"https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip</a><br><strong>Forum Page</strong>: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=4106.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=4106.0</a><br><strong>Changelog &amp; Previous versions</strong>: <a href=\"https://github.com/LazyWizard/console-commands/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/console-commands/releases</a></p><pre><code>Version 4.0.0\n\n- Complete visual overhaul of the legacy UI.\n- Added command and argument autocompletion &amp; suggestion.\n- Added syntax hints for command parameters.\n- Now remembers the last 30 commands, even across game restarts.\n- The runcode command now displays live compile error warnings.\n- Reverted the mods version system back to the original format.\n- Added version checker changelog &amp; download support.\n- Added \"History\" command.\n\nKeybinds\n\n- CTRL + Backspace: open console\n- Enter: confirm command\n- Left/Right: move cursor\n- Up/Down: Scroll through command history/select autocompletion\n- Tab: confirm autocompletion\n\nLegacy UI\n\n- The legacy UI can still be re-enabled in \"ConsoleCommands/data/console/console_settings.json\".\n- New features added with this version are not available in the legacy UI.\n\nFor Modders\n\n- Added \"BaseCommandWithSuggestion\". Implement it to create a command with autocomplete suggestions.\n- Use the \"getSuggestions\" method to return a list of the provided suggestions for your command.\n- \"parameter\" tells you which parameter the suggestions are for (0 is the first arg).\n- \"previous\" are the other arguments the user entered before the current one.</code></pre>",
-  "aiDescription": "Provides a custom overlay to input commands using keybinds. Includes numerous universal, campaign, and combat commands for cheating or debugging. Allows users to write, compile, and run Java code directly in the game using the Janino library.",
+  "aiDescription": "Provides a custom overlay to input various campaign and combat commands. Allows users to write, compile, and run Java code directly in the game using the Janino library. Supports user-created commands and includes a legacy UI option.",
   "saveCompatibilityText": "Doesn't require a new game, and can be safely untagged from a running game without issues",
   "removalCompatibilityText": "can be safely untagged from a running game without issues",
   "canAdd": "yes",
@@ -73,7 +73,7 @@
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1423713681312583851/image.png?ex=6adb9030&is=6ada3eb0&hm=1555a0b41ee24913867ea640437e23fa1b104e1e6443d330a5260757aa68419a&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1423713681312583851/image.png?ex=6adc38f0&is=6adae770&hm=ca7e11e6eea25fd79f3d2faa38141a5af10b58fe6b4c1840f6fe4b60778e2b49&",
       "aiCaption": "A screenshot of a console window showing code with the command 'runcode' and a loop using Console.showMessage.",
       "aiKind": "screenshot",
       "aiFit": "okay",

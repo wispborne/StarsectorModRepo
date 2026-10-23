@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T20:51:37.661004Z",
+  "generatedAt": "2026-10-23T08:30:57.407176Z",
   "listing": {
     "id": "show-encounter-stats",
     "name": "[0.98] Show Encounter Stats v1.1.2",
@@ -19,10 +19,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.1.2",
     "imageUrl": "https://i.imgur.com/Jk6rWFR.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1457151130739020042/1457151130969833554/screenshot616.png?ex=6adb427e&is=6ad9f0fe&hm=640700307a1528afeb2a46b65bdd67315f51f136d31975cfeb0e35b6d2305160&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1457151130739020042/1457151130969833554/screenshot616.png?ex=6adbeb3e&is=6ada99be&hm=b8788254961411f23b4a7a0f00ac951ee1b5476617ef3efb883f894dd7f18121&",
     "summary": "Small mod that adds various info when you encounter a fleet but before deciding to engage it.",
     "summaryIsGenerated": false,
-    "aiSummary": "Displays fleet statistics like ship counts, deployment points, and autoresolve strength before engaging an enemy.",
+    "aiSummary": "Displays fleet strength statistics, including ship counts, deployment points, and estimated experience bonuses, before engaging in combat.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -60,13 +60,13 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Download link: <a href=\"https://github.com/Seekers6967/starsector-show_encounter_stats/releases/latest/download/ShowEncounterStats.rar\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Seekers6967/starsector-show_encounter_stats/releases/latest/download/ShowEncounterStats.rar</a></p><p>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=34734\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=34734</a></p><p>Small mod that adds various info when you encounter a fleet but before deciding to engage it.</p><p>Displays information such as number of ships on each side, DP total, autoresolve strenght (Fleet Power or FP) and the estimated +%EXP bonus due to battle difficulty (using vanilla calcs). Excludes civilian ships from the number of ships and DP count, as they are not really relevant but it does count the FP they contribute.</p>",
-  "aiDescription": "Shows detailed encounter information including total DP, Fleet Power, and estimated experience bonuses. It handles multi-fleet encounters by combining enemy stats and supports viewing ongoing battles between allied and enemy forces. Civilian ships are excluded from ship counts but their contribution to fleet strength is tracked separately.",
+  "aiDescription": "Shows detailed information about enemy and allied fleets during encounters, such as total deployment points and autoresolve strength. It calculates the expected experience bonus based on battle difficulty and can display officer counts and levels. The mod supports ongoing battles, allowing players to assess the strength of clashing fleets before deciding to intervene.",
   "saveCompatibilityText": "it can be added or removed mid save",
   "removalCompatibilityText": "it can be added or removed mid save",
   "canAdd": "yes",
   "canRemove": "yes",
   "aiUse": {
-    "quote": "Refactored code (read, made a mess of the code myself, then had chatgpt clean it up ending up with more of a mess, im sorry).",
+    "quote": "then had chatgpt clean it up ending up with more of a mess",
     "usesAi": true,
     "uses": [
       {
@@ -84,21 +84,21 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1457151130969833554/screenshot616.png?ex=6adb427e&is=6ad9f0fe&hm=640700307a1528afeb2a46b65bdd67315f51f136d31975cfeb0e35b6d2305160&",
+      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1457151130969833554/screenshot616.png?ex=6adbeb3e&is=6ada99be&hm=b8788254961411f23b4a7a0f00ac951ee1b5476617ef3efb883f894dd7f18121&",
       "aiCaption": "A pre-battle screen showing fleet strength statistics for the Hegemony Detachment.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1457151463427018834/screenshot504.png?ex=6adb42cd&is=6ad9f14d&hm=007998728e202709e8d4f43d9ec22b451d1cb1e3da7a8ab8dcf13d760ed18d72&",
+      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1457151463427018834/screenshot504.png?ex=6adbeb8d&is=6ada9a0d&hm=cb9c61e1a30faed9a63d6761bc83dd40a132bc13a2f73bd848768ed01f9f2808&",
       "aiCaption": "A detailed encounter screen listing TriTach Phase Corps forces and their deployment points.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1461040405062615276/image.png?ex=6adb90e9&is=6ada3f69&hm=981508d66e53fc8c35f1ff7455a678b8b48a85acf3d61dbbc20c910983aeda54&",
+      "url": "https://cdn.discordapp.com/attachments/1457151130739020042/1461040405062615276/image.png?ex=6adc39a9&is=6adae829&hm=abd7b8a2821f46d10ccf5968b4f69d4934f6f34fe348d031fd4f7eb5c3b01e1c&",
       "aiCaption": "An encounter screen displaying officer skills and fleet statistics for the Luddic Church Holy Armada.",
       "aiKind": "screenshot",
       "aiFit": "good",
@@ -149,6 +149,7 @@
     "1.1.1": "Fixed bug that made AI cores not count as officers.",
     "1.1.0": "THIS UPDATE CHANGES THE INTERNAL MOD ID, YOU WILL TO SELECT IT AGAIN AS THE GAME WILL THINK ITS A NEW MOD.\n\nSave-compat (as all updates will be since utility mod).\n&nbsp;\nAdded lunalib support with 4 toggles:\n- Shorten Descriptions: massively decrease the amount of text, not really needed if you just use the current features but once I implement ways to show every ship individually and such, well ur gonna need it. Default is false.\n- Show Civilian Ships FP: toggles showing how much fleet strenght is contributed by civ ships, if false the line wont be shown but it will count towards the total fleet strenght. Default is true.\n- Count civilian ships: self explanatory, counts civ ships as if they were combat ships, counting them as total ships and their DP. Default is false.\n- Show officer count: New feature! toggles wether to show how many officers each fleet has and their average level. Default is true.\n&nbsp; &nbsp;\nRefactored code (read, made a mess of the code myself, then had chatgpt clean it up ending up with more of a mess, im sorry).\n\nAdded a bug (yippee): Does not count enemy flagship officer for some reason, will be fixed soon."
   },
+  "license": "DO WHATEVER YOU WANT",
   "sourceCodeUrl": "https://github.com/Seekers6967/starsector-show_encounter_stats",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34734",

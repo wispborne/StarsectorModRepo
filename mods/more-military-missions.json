@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T20:51:37.661004Z",
+  "generatedAt": "2026-10-23T08:30:57.407176Z",
   "listing": {
     "id": "more-military-missions",
     "name": "More Military Missions",
@@ -24,9 +24,9 @@
     "gameVersion": "0.98a",
     "modVersion": "0.5.0",
     "imageUrl": "https://i.imgur.com/lcB3PkW.png",
-    "summary": "A mod for adding a defense oriented bar mission.",
+    "summary": "Are you tired that all military missions basically amounts to go to point A, then possibly destroy a fleet? Introducing the",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds various new military missions including orbital defense, convoy escort, VIP rescue, and scavenger trading.",
+    "aiSummary": "Adds defense-oriented bar missions where fleets attack you instead of you attacking them.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -57,7 +57,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><strong>Orbital Defense</strong>: a defense oriented bar mission.<br><strong>Repair Mission</strong>: companion mission to repair your orbitals faster after it gets blown up<br><strong>Mercantile Convoy Escort</strong>: Join trade fleets instead of ignoring them or hunting them down like pirates.<br><strong>VIP mission</strong>: add mission to distress calls to make it worthwhile<br><strong>Scavenger Trading</strong>: Trade with salvage fleets (including scavengers and prospectors) for salvage intel or swap commodities.<br><strong>Pick Your Ships</strong>: New game choice that allows you to pick your starting ships<br><strong>Force Auto Resolve</strong>: If your fleet is much bigger than the enemy, adds an option to auto resolve battles even if enemy is not interested in fleeing.<br><strong>Military Custom Bounty</strong>: reworked difficulty logic to allow faster scaling and scale past vanilla difficulty</p><p>Direct download: <a href=\"https://drive.google.com/uc?export=download&amp;id=1sQzpgePAb6FUkq6bPPP7G__-7E9WpH-i\" rel=\"nofollow noopener\" target=\"_blank\">https://drive.google.com/uc?export=download&amp;id=1sQzpgePAb6FUkq6bPPP7G__-7E9WpH-i</a><br>Forum: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=26880\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=26880</a></p>",
-  "aiDescription": "Introduces a defense mission where fleets attack your station instead of you attacking theirs. Adds companion missions for repairing stations, escorting trade convoys, responding to distress calls, and trading with salvage fleets. Includes quality-of-life features like picking starting ships and forcing auto-resolve for large battles.",
+  "aiDescription": "Introduces an Orbital Defense Mission where players fight alongside orbital stations against multiple enemy fleets. Includes companion missions like Repair Materials Delivery and Mercantile Convoy Escort, as well as VIP missions and scavenger trading options. Allows players to pick starting ships and force auto-resolve for large fleet battles.",
   "saveCompatibilityText": "can be freely added to existing saves (but not removed)",
   "removalCompatibilityText": "(but not removed)",
   "canAdd": "yes",
@@ -118,7 +118,7 @@
     }
   ],
   "changelog": {
-    "0.5.0": "- Military Custom Bounty:\n&nbsp;- reworked difficulty logic to allow faster scaling and scale past vanilla difficulty\n&nbsp; - in general, taking the biggest bounty increases difficulty, and taking the smallest bounty decreases it\n&nbsp; - difficulty maximum can be set in luna settings\n- Defense Mission:\n&nbsp;- removed an inflate call in reportBattleOccurred and prevents invasion fleets from being deflated instead\n&nbsp;- can now change invasion probability in LunaLib\n- Escort Mission: removed an inflate call in reportBattleOccurred and prevents trade fleets from being deflated instead",
+    "0.5.0": "- Military Custom Bounty:\n- reworked difficulty logic to allow faster scaling and scale past vanilla difficulty\n  - in general, taking the biggest bounty increases difficulty, and taking the smallest bounty decreases it\n  - difficulty maximum can be set in luna settings\n- Defense Mission:\n- removed an inflate call in reportBattleOccurred and prevents invasion fleets from being deflated instead\n- can now change invasion probability in LunaLib\n- Escort Mission: removed an inflate call in reportBattleOccurred and prevents trade fleets from being deflated instead",
     "0.4.7": "- Defense Mission: fixed a crash involving non-vanilla station industry class and added more exception guards\n- updated game version to 0.98a-RC7",
     "0.4.6": "- Defense Mission: fixed a visual issue where station has 0 fleet points"
   },

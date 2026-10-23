@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T20:51:37.661004Z",
+  "generatedAt": "2026-10-23T08:30:57.407176Z",
   "listing": {
     "id": "autotrader",
     "name": "AutoTrader",
@@ -17,10 +17,11 @@
     "gameVersion": "0.98a",
     "modVersion": "0.0.1",
     "imageUrl": "https://i.imgur.com/recXtfd.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1504747884938268702/1504747885307236383/recXtfd.png?ex=6adb0d2c&is=6ad9bbac&hm=5d1940bcc85b4304cbc63a317b07ef18dbd48a1c32fd20540b2681aa26806031&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1504747884938268702/1504747885307236383/recXtfd.png?ex=6adbb5ec&is=6ada646c&hm=abd355ddd7ad7eb8183bf8779ac3a4e4985be2cbc79dbb6df75078c64e0de053&",
     "summary": "Sell your extra weapons and buy hullmods you don't know whenever you dock",
     "summaryIsGenerated": false,
-    "aiSummary": "Automatically sells surplus weapons and buys unknown hullmods upon docking.",
+    "aiSummary": "Automatically buys and sells weapons, fighter wings, and hullmods based on user-defined price thresholds when docking at planets.",
+    "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/spinloki/AutoTrader/releases/download/v0.0.1/AutoTrader.zip",
@@ -48,10 +49,10 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Sell your extra weapons and buy hullmods you don't know whenever you dock</p><p>Download: <a href=\"https://github.com/spinloki/AutoTrader/releases/download/v0.0.1/AutoTrader.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/spinloki/AutoTrader/releases/download/v0.0.1/AutoTrader.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35407.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35407.0</a></p>",
-  "aiDescription": "Executes standing buy and sell rules immediately when a planet interaction dialog opens. Allows setting per-item thresholds for weapons and fighters, with options to automatically purchase and learn unknown modspecs. Includes a configuration menu accessible via the intel screen for managing these settings.",
+  "aiDescription": "Executes standing buy and sell rules the moment a planet's interaction dialog opens. Allows users to set specific price limits for items and automatically purchase unknown hullmods. Includes a configuration menu with filtering, multi-select, and template application features.",
   "saveCompatibilityText": "Should be safe to add mid-save.",
   "removalCompatibilityText": "Not safe to remove, but can be completely disabled from the config menu.",
-  "canAdd": "depends",
+  "canAdd": "yes",
   "canRemove": "no",
   "aiUse": {
     "quote": "Most of this mod's code was generated using Claude Opus 4.7",
@@ -72,7 +73,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1504747884938268702/1504747885307236383/recXtfd.png?ex=6adb0d2c&is=6ad9bbac&hm=5d1940bcc85b4304cbc63a317b07ef18dbd48a1c32fd20540b2681aa26806031&",
+      "url": "https://cdn.discordapp.com/attachments/1504747884938268702/1504747885307236383/recXtfd.png?ex=6adbb5ec&is=6ada646c&hm=abd355ddd7ad7eb8183bf8779ac3a4e4985be2cbc79dbb6df75078c64e0de053&",
       "aiCaption": "A menu screen listing weapon items with 'Sell above' and 'Buy below' price columns.",
       "aiKind": "screenshot",
       "aiFit": "okay",

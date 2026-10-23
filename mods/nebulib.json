@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T20:51:37.661004Z",
+  "generatedAt": "2026-10-23T08:30:57.407176Z",
   "listing": {
     "id": "nebulib",
     "name": "NebuLib",
@@ -17,13 +17,13 @@
     "summary": "For users: This utility / library mod is used in my mods and therefor required to be installed along with them.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds five utility classes for modders to retrieve consistent string IDs for campaign entities like planets, stars, and stations.",
-    "hasDirectDownload": true,
+    "hasDirectDownload": false,
     "bestDownload": {
-      "url": "https://github.com/NebulaModLab/NebuLib/releases/download/v1.1.1/NebuLib-v1.1.1.zip",
-      "kind": "mirror",
-      "needsAnotherStep": false
+      "url": "https://github.com/NebulaModLab/NebuLib/releases/latest",
+      "kind": "direct",
+      "needsAnotherStep": true
     },
-    "downloadCount": 2,
+    "downloadCount": 1,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29589.0",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
@@ -34,7 +34,7 @@
   "descriptionHtml": "<div class=\"align-center\"><img src=\"https://i.ibb.co/PcdHJf0/Nebu-Lib-Banner-360x225.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><br><div class=\"align-center\"><span class=\"author-colour\" style=\"--c:#800080\"><strong><em>Please Read This Part</em></strong></span></div><div class=\"align-center\"><strong>For users:</strong> This utility / library mod is used in my mods and therefor required to be installed along with them.</div><div class=\"align-center\"><em><span class=\"author-colour\" style=\"--c:#ff0000\"><strong>Note:</strong></span> Currently there are no mods released yet that use this.</em></div><div class=\"align-center\"><strong>For modders:</strong> On the modding side of things, this mod has as use rather two simple goals, logical variables &amp; fixing consistency.</div><br><hr><div class=\"align-center\"><span class=\"author-colour\" style=\"--c:#800080\"><span class=\"size-big\"><strong>All text below is aimed at modders and people interested in how this mod works.</strong></span></span></div><div class=\"align-center\"><span class=\"author-colour\" style=\"--c:#800080\"><span class=\"size-big\"><strong>For regular users, you only need to click the download button.</strong></span></span></div><hr><br><div class=\"align-center\"><div class=\"table-scroll\"><table><tbody><tr><td><div class=\"align-center\"><span class=\"size-bigger\"><strong>Explanation</strong></span></div><br>The reason for making this was a personal need for consistency, and since I use it in my<br>own upcoming mod(s) I thought why not upload this one already as it so far won't receive<br>any updates soon unless I suddenly think of something new to add or someone else has<br>any suggestions of what I could add in the realm of data retrieval of string id's or other<br>variables that otherwise need to be manually put it.<br><div class=\"align-center\"><span class=\"size-bigger\"><strong>Functions</strong></span></div><div class=\"align-center\"><strong>This library adds 5 utility classes for mods &amp; modders to use:</strong></div><br><strong>NebulaeTypes:</strong><br>Contains the 3 nebula types, very straight forward.<br><br><strong>PlanetTypes:</strong><br>Seasoned modders may know that the game's own API also contains this class<br>in the form of \"Planets.java\". Same goes for \"StarTypes\". The reason for revamping<br>this class is due to for some reason nebulae and other things being present where<br>you wouldn't expect them. This basically fixes the illogical placement.<br><br><strong>SpecialSystemEntityTypes:</strong><br>This class contains \"special stations\" such as stellar mirrors &amp; -shades, derelicts, and more.<br><br><strong>StarTypes:</strong><br>As mentioned before, same story as for the planets. However here for some reason<br>gas giants were put in with the star types. (You may notice yes getting used to<br>these illogical placements can also fix the issue, for me this just felt better.)<br><br><strong>StationTypes:</strong><br>This class contains all the regular station types, from defensive stations to the<br>other types such as mining stations, research stations, pirate stations etc.<br><br><div class=\"align-center\"><span class=\"size-bigger\"><strong>Credits:</strong></span></div><br><span class=\"author-colour\" style=\"--c:#0000ff\"><strong>Fractal Softworks</strong></span> - For the original code and id's of the different entities to choose from.</td><td>                  </td><td><div class=\"align-center\"><span class=\"size-bigger\"><strong>Requirements</strong></span></div><div class=\"align-center\">Absolutely nothing, it's a lonesome utility mod :P</div><br><div class=\"align-center\"><a href=\"https://github.com/NebulaModLab/NebuLib/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.ibb.co/Dg9bnJb/Nebu-Lib-Download-colorfixed.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></div><br><div class=\"align-center\"><a href=\"https://github.com/NebulaModLab/NebuLib\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Git%20Repository-%20?style=for-the-badge&amp;logo=github&amp;labelColor=131313&amp;color=3d0a6d\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a> <a href=\"https://github.com/NebulaModLab/NebuLib/releases\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Changelogs-%20?style=for-the-badge&amp;logo=github&amp;labelColor=131313&amp;color=3d0a6d\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></div><br><hr><br><div class=\"align-center\"><span class=\"size-bigger\"><strong>How To Use (Modders)</strong></span></div><br>Wherever your code requires an identifying string <br>regarding Campaign Entities, you can use this library to quickly <br>insert the wanted string for the wanted station/entity.<br><br><details class=\"spoiler\"><summary>Code Example:</summary>PlanetAPI planet= system.addPlanet(<br>                \"planetId\",<br>                whatToSurround,<br>                \"planetName\",<br>                PlanetTypes.GAS_GIANT, // &lt; This mod<br>                angle,<br>                radius,<br>                orbitRadius,<br>                orbitDays<br>);</details></td></tr></tbody></table></div><br><a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br>NebuLib is licensed under a<br><a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" rel=\"nofollow noopener\" target=\"_blank\">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</a><br>Any derivative work must also comply with Starsector's EULA</div>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Provides a library of utility classes designed to fix illogical placements in the game's API regarding nebulae, gas giants, and special stations. It offers straightforward access to types for Nebulae, Planets, Special System Entities, Stars, and Stations. The mod aims to improve consistency and simplify data retrieval for modders.",
+  "aiDescription": "Provides a library of utility classes designed to fix illogical placements in the game's API regarding entity types. It includes classes for nebula types, planet types, special system entities, star types, and station types. Modders can use these classes to quickly insert correct identifying strings when adding planets or other entities via code.",
   "aiUse": {},
   "rawCategories": [],
   "gallery": [
@@ -72,15 +72,6 @@
     }
   ],
   "downloads": [
-    {
-      "url": "https://github.com/NebulaModLab/NebuLib/releases",
-      "directUrl": "https://github.com/NebulaModLab/NebuLib/releases/download/v1.1.1/NebuLib-v1.1.1.zip",
-      "fileName": "NebuLib-v1.1.1.zip",
-      "kind": "mirror",
-      "label": "",
-      "host": "GitHub",
-      "needsAnotherStep": false
-    },
     {
       "url": "https://github.com/NebulaModLab/NebuLib/releases/latest",
       "kind": "direct",

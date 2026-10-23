@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T20:51:37.661004Z",
+  "generatedAt": "2026-10-23T08:30:57.407176Z",
   "listing": {
     "id": "starsector-ship-weapon-editor-v",
     "name": "STARSECTOR Ship&Weapon Editor",
@@ -16,20 +16,23 @@
     "gameVersion": "0.8.1a",
     "modVersion": "2.7.4",
     "imageUrl": "http://i.imgur.com/xxgooYt.png",
-    "summary": "Here's Deathfly's fork: http://fractalsoftworks.com/forum/index.php?topic=11491",
-    "summaryIsGenerated": false,
-    "aiSummary": "Provides a graphical interface for editing ship data, weapon slots, variants, and fighter wings.",
+    "summary": "Provides a graphical editor for creating and modifying ship hulls, variants, weapons, and engine configurations.",
+    "summaryIsGenerated": true,
+    "aiSummary": "Provides a graphical editor for creating and modifying ship hulls, variants, weapons, and engine configurations.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Trylobot/sf-ship-ed/releases/download/v3.0.0-pre-alpha-2/sf-ship-ed-3.0.0-pre-alpha-2.zip",
       "kind": "direct",
       "needsAnotherStep": false
     },
-    "downloadCount": 1,
+    "downloadCount": 36,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=375.0",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "isTool": true,
+    "nicknames": [
+      "sf-ship-ed"
+    ],
     "addedOn": "2011-09-27",
     "threadLastPostOn": "2022-02-04",
     "needs": []
@@ -38,7 +41,7 @@
   "descriptionHtml": "<a href=\"https://github.com/Trylobot/sf-ship-ed/releases\" rel=\"nofollow noopener\" target=\"_blank\"><strong><span class=\"size-bigger\">Download latest stable version</span><span class=\"size-big\"> <u>v2.7.4</u></span></strong> <img src=\"http://i.imgur.com/xxgooYt.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><img src=\"http://i.imgur.com/EGlOScg.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><strong><a href=\"https://github.com/Trylobot/sf-ship-ed\" rel=\"nofollow noopener\" target=\"_blank\">View Source</a> | <a href=\"https://github.com/Trylobot/sf-ship-ed/issues\" rel=\"nofollow noopener\" target=\"_blank\">Report Issues</a> | <a href=\"https://github.com/Trylobot/sf-ship-ed/projects\" rel=\"nofollow noopener\" target=\"_blank\">See Upcoming Features</a></strong><br><br>Here's Deathfly's fork: <a href=\"http://fractalsoftworks.com/forum/index.php?topic=11491\" rel=\"nofollow noopener\" target=\"_blank\">http://fractalsoftworks.com/forum/index.php?topic=11491</a><br>I will try to keep this post in-sync with Deathfly's post as much as I can, and cross-post releases. I will tag my releases with [Trylobot], and presumably Deathfly will tag his similarly.<br><br><strong>Changelog</strong> <code><br>______________________________________________________________________________<br>editor version 2.7.4 (starsector 0.8.1a) [Deathfly &amp; Trylobot]<br><br>FEATURES<br>- Variant: added \"wings\" mode (add/remove fighter wings from variant)<br>- Ship/Variant: renders fighter wing sprites and available slots<br>- Ship/Variant: prevents adding more wings than ship has capacity for<br>- Variant: warns if adding more variant wings than variant has OPs for<br>- Variant: added \"goalVariant\", \"quality\" to details (strings) editor<br><br>BUGFIXES<br>- Ship: saves coversColor<br><br></code><details class=\"spoiler\"><summary>Spoiler</summary><code><br>______________________________________________________________________________<br>editor version 2.7.3 (starsector 0.8.1a) [Trylobot]<br><br>FEATURES<br>- SHIP / BUILT-IN WINGS EDITING MODE ADDED<br>  press \"1\" (ship mode), \"D\" (load), \"N\" (built-in wings submodule)<br><br>OTHER<br>- skeleton code / boilerplate necessary for Skin editing has been added,<br>    but this mode doesn't do anything yet (so don't get too excited if you see it in the menus)<br>- heavy code maintenance / cleanup / refactoring<br><br>______________________________________________________________________________<br>editor version 2.7.2 (starsector 0.8.1a) [Trylobot]<br><br>BUGFIXES<br>- Fixed bug #17 \"Weapon Group changes in variant mode not saving.\"<br>- Added goalVariant, permaMods fields to TStarfarerVariant.type.bmx<br>- Fixed bug #15 \"Selected weapon slot not displayed during weapon group assignment (variant mode)\"<br>- Also moved the weapon groups list to the left side of the screen, so that the selected weapon can be seen more easily.<br>- Added a keyboard help entry in variant mode for toggling autofire with \"A\"<br><br>______________________________________________________________________________<br>editor version 2.7.1 (starsector 0.7.2a) [Deathfly]<br><br>BUGFIXES<br>- Fix up the \"Clear Data\"(or say “Create New Data”?) function.<br>- In ship edit mode it will no make the sprite display freeze anymore.<br>- In variant edit mode it will now try to create an empty new variant called \"New\" for edit.<br>- In weapon edit mode, it will create an new weapon file.<br>______________________________________________________________________________<br>editor version 2.7.0 (starsector 0.7.2a)<br><br>MAXGUI MIGRATION<br>- Add menu bar.<br>- Make editor resizable while running.<br>- Add an \"Unsaved changes warning\" when you may discards your unsaved changes.<br><br>UNDO / REDO<br>- Will consider a serial string editing actions as one step due to it is too annoying to capture every keys.<br><br>SET CENTER OF MASS, COLLISION RADIUS, SHIELD CENTER, SHIELD RADIUS<br>- Left Mouse Click now can only used for set center.<br>- Ctrl + Left Mouse Click now can used to set radius without reset the center frist.<br><br>LAUNCH BAYS EDITOR<br>- Ctrl + Left Mouse Click always add a new launch bay. <br>- Hold down Shift will lock on the nearest launch bay.<br>- Shift + Left Mouse Click will add a new launch port to the locked lauch bay. <br>- Remove the Right Mouse Click function.<br><br>SHIP BOUNDS POLYGON EDITOR<br>- Ctrl + Left Mouse Click now will try to insert new bound vertex between the nearest bound segment ends.<br><br>DECORATIVE WEAPON TYPE<br>- Same as \"Built-in Weapon Edit Mode\", but for decorative weapons.<br><br>WEAPON RENDERER<br>- Can render all build-in and deco weapons in ship edit mode. And render all weapons in variant edit mode.<br>- Hit \"F5\" can toggle weapon renderer from \"render in 100% opacity\", \"render in 50% opacity\", and \"do not render\".<br>- Can use F6, F7, and F8 to Play, Stop and Reset all weapon animations, if there any.<br>- In \"Weapon Slots Edit Mode\", \"Built-in/Deco weapon Edit Mode\", and \"Variant Edit Mode\", arrow keys can use to control weapon animation on selceted slot.(See on screen help.)<br><br>WEAPON EDITOR<br>- Will properly parse and recode a .wpn file.<br>- Will display weapon offsets properly. For hardpoint and turret, both.<br>- Will display cursor coordinate properly.<br>- Make the glow on weapon more closer to in game visual.<br>- String editor for weapon now will provide accessibility to most weapon parameters.<br>- Guides will mark the weapon's pivot point out.<br><br>MINOR CHANGES<br>- Add SYNERGY and COMPOSITE weapon slots support. <br>- Add \"coversColor\" support.<br>- Improve the performance for Preview All function.<br>- Replace the default background with a less obscure one.<br>- Add a filter that can fit out deco weapons when place weapon in non-deco slot.<br>- Enable language localisation. <br><br>SETTINGS<br>- Add \"custom_bg_image\" that can set path for using custom background.<br>- Add \"performance_mode\", set to 1 can simplify some drawing process and result a better performance.<br>- Add \"fluxmod_limit_override\", set to 1 can override the 10/20/30/50 max flux vants/caps limit in variant edit mode.<br>- Add \"scale_help_UI\", set to 1 can enable help UI zooming for extreme resolution ratio.(Or you can set \"font_size\" instead.)<br>- Add \"scale_help_UI_scale_level\". If it set to 0, help UI will auto zoom.<br>- Add \"custom_FONT\" that can set path for custom font.<br>- Add \"UTF8_support\", set to 1 to enable UTF-8 support, to decode UTF-8(without BOM) data file.<br>- Add \"localization_file\" that can set path for LanguageDefinition file.<br><br>- Make engine flames looks more close to in game visual.<br>- Rework String data editing console. Make insert characters practical.<br>- Rework all \"item selector\" to fit some way too looong item list.<br>- Guides precision increase to 0.5.<br><br>BUGFIXES<br>- Can safely remove weapon slots with built-in weapon in it.<br>- Simplified help UI text drawing method for better performance. <br>- Fixed a crash when try to remove a weapon slot/engine/launch bay while there isn't anyone.<br>- When rename a weapons slot, the built-in weapon in that slot will got removed now.<br>- Fixed a issue that the rjson core will mistakenly discard \"0\" for integer output.<br><br>______________________________________________________________________________<br>editor version 2.6.4 (starsector 0.7.1a)<br>- credit to zaphide for pull request!<br>- support for HYBRID weapon types<br>- support for longer weapon lists<br>______________________________________________________________________________<br>editor version 2.6.3 (starsector 0.7a RC1)<br>- ship variants will no longer assign DECORATIVE, SYSTEM or LAUNCH_BAY weapons<br>______________________________________________________________________________<br>editor version 2.6.2 (starsector 0.6.1a)<br>- full support for built-in hull mods<br>- silently ignores trailing \"f\" in JSON floating-point number literals<br>- rows starting with '#' in .csv files will now be skipped<br>- ship data csv columns updated<br>______________________________________________________________________________<br>editor version 2.6.1 (starsector 0.54.1a)<br>- added support for \"DECORATIVE\" weapon/slot types<br>______________________________________________________________________________<br>editor version 2.6 (starsector 0.54.1a)<br>- weapon editor can modify offsets (possibly buggy)<br>- weapon editor can set images<br>- weapon editor can switch between turret/hardpoint mode<br>- tilde [~] now toggles vanilla data on/off and forces a reload of all data<br>- compatible with \"Starsector\" name change<br>______________________________________________________________________________<br>editor version 2.5 (starfarer 0.53.1a RC5)<br>- added weapon editor prototype (incomplete)<br>- added more detailed logging in sf-ship-ed.log<br>- fixed: custom engines output with incorrect field name 'type_'<br>______________________________________________________________________________<br>editor version 2.4.5 (starfarer 0.53.1a RC5)<br>- fixed: strange data corruption bugs on main ship and variant string editors<br>______________________________________________________________________________<br>editor version 2.4.4 (starfarer 0.53.1a RC5)<br>- fixed: +/- keys not working<br>- fixed: synchronization of hull/variant/csv names<br>______________________________________________________________________________<br>editor version 2.4.3 (starfarer 0.53.1a RC5)<br>- fixed: incorrectly encoding weapon slots (fatal error)<br>______________________________________________________________________________<br>editor version 2.4.2 (starfarer 0.53.1a RC5)<br>- fixed: weapon groups list misbehaving<br>______________________________________________________________________________<br>editor version 2.4.1 (starfarer 0.53.1a RC5)<br>- fixed: variant data incompatible with ship data if certain ship data changed<br>- fixed: empty JSON containers  {} [] \"\"  always being encoded as null<br>- fixed: cannot load vanilla data in Linux (probably)<br>- fixed: quoted newlines in CSV data<br>- fixed: can't set hullmods in variant if ship has no weapon slots<br>- misc: HOME key is now equivalent to ESCAPE key<br>- feature: direct value entry for weapon arcs and angles (press T on a weapon)<br>______________________________________________________________________________<br>editor version 2.4.1a (starfarer 0.53.1a RC5)<br>PRE-RELEASE: more bugfixes coming soon!<br>- fixed: can't set weapons for newly-added built-in ship weapon slots<br>- fixed: variant weapon list stays open after assigning a weapon<br>- enhanced: in mode 1, when loading existing ship data, all other modes<br>  are automatically populated with data associated with the loaded hull<br>- feature: in mode 1, press CTRL+ALT+[N] to clear out all JSON/CSV data<br>- some other misc. bug fixes<br>______________________________________________________________________________<br>editor version 2.4 (starfarer 0.53.1a RC5)<br>- added support for fighter wings (wing_data.csv) editing: mode [4]<br>  with graphical formation preview!<br>______________________________________________________________________________<br>editor version 2.3 (starfarer 0.53.1a RC5)<br>- added support for BUILT_IN and SYSTEM weapons<br>  includes being able to set the weapon from *.SHIP mode<br>  and includes not being able to modify the built-in weapons in *.VARIANT mode<br>  and includes not counting OPs from built-in weapons in *.VARIANT mode<br>- added support for Custom Engine STYLE ID:<br>  this is HIGHLY RECOMMENDED to use over the STYLE SPEC per-engine.<br>  But to use it, you must first define your Engine Style ID in the following:<br>    data/config/engine_styles.json<br>- fixed bug in CSV Loader to properly quote fields containing commas<br>______________________________________________________________________________<br>editor version 2.2.3 (starfarer 0.53a)<br>- bugfix for a crash related to custom engines<br>______________________________________________________________________________<br>editor version 2.2.2 (starfarer 0.53a)<br>- added support for CUSTOM engines; press T while in Engines mode<br>______________________________________________________________________________<br>editor version 2.2.1 (starfarer 0.53a)<br>- added support for Starfarer 0.53a:<br>  - csv mode: added explicit support for PHASE as a shield type, and declared<br>    'system id' as a string type so it won't try to graph it.<br>______________________________________________________________________________<br>editor version 2.2 (starfarer 0.52a)<br>- ship: in bounds mode, weapons, engines and launch bays modes,<br>  you can now hold CTRL+ALT while RIGHT-CLICK dragging to drag all<br>  the entities on-screen at once.<br>- weapon slots: weapon slots are now assigned names with zero-padded numbers<br>  so that they can be sorted more easily<br>______________________________________________________________________________<br>editor version 2.1 (starfarer 0.52a)<br>- ship: launch bay mode; press L to use<br>- variant: weapon group autofire attribute added; press A to toggle<br>- variant: max weapon groups increased to 5<br>______________________________________________________________________________<br>editor version 2.0.3 (starfarer 0.51a)<br>- fixed bug with shield-center Y-coordinate being interpreted incorrectly<br>______________________________________________________________________________<br>editor version 2.0.2 (starfarer 0.51a)<br>- fixed bug with not always saving collision radius and shield radius<br>______________________________________________________________________________<br>editor version 2.0.1 (starfarer 0.51a)<br>- fixed bug with string editing that prevented some characters from being<br>  entered sometimes<br>- fixed bug with CSV editing (new data template)<br>- fixed bug where variant OP max was not observing the current CSV data<br>______________________________________________________________________________<br>editor version 2.0 (starfarer 0.51a)<br>- can now edit single rows of ship_data.csv, and save into an existing file<br>  (find and update existing row by ID, else insert new row) or into a new file<br>- all known statistical data from all loaded ship CSV data is shown in a<br>  handy bar graph so you can see where your ship falls in the grand scheme<br>- corresponding CSV row attempted to be auto-loaded when loading a *.ship<br>- made ship darker when editing weapon slots or strings<br>- smoother zooming (continually integrated easing)<br>- fixed long-standing bug (since version 0.1) with global overlay<br>  positions when panning &amp; zooming<br>______________________________________________________________________________<br>editor version 1.9.7 (starfarer 0.51a)<br>- displays more information in *.variant mode<br>- fixed bug where small weapons were being allowed in large slots, and also<br>  restricted universal slots to exact weapon size-match<br>______________________________________________________________________________<br>editor version 1.9.6 (starfarer 0.51a)<br>- mirrored-pair editing of weapon-slots and engine-slots has been implemented<br>- improved help text; added status bar; reduced clutter<br>- altered ghost-previews for all modes to make more sense contextually<br>- bugfixes related to validating weapon-sizes and -types for variant mode<br>- fixed bug where variant was not being notified when weapon slot is removed<br>- misc polish &amp; improvements internally<br>______________________________________________________________________________<br>editor version 1.9.3 (starfarer 0.51a)<br>- added default enum values for when no data is loaded (to prevent crash)<br>- fixed bug that caused a crash when editing weapons<br>- fixed bug that allowed weapon slots to be created with duplicate ids<br>______________________________________________________________________________<br>editor version 1.9.2 (starfarer 0.51a)<br>- fixed bug that caused invalid *.csv files to crash the editor<br>  now they are ignored<br>- editor automatically creates \"sf-ship-ed.log\" that shows what's being loaded<br>______________________________________________________________________________<br>editor version 1.9.1 (starfarer 0.51a)<br>- users of editor in a Mac OS running Wine can now provide the starfarer<br>  install dir with success<br>- variant hullID updated automatically<br>- ship image loaded automatically when ship data is loaded<br>- if an image is manually loaded, the editor will search upwards for a<br>  \"graphics\" directory; if it is found, the path to the image will be inserted<br>  into the ship data; otherwise it will remain unmodified<br>- default save-file-names for *.ship and *.variant<br>______________________________________________________________________________<br>editor version 1.9 (starfarer 0.51a)<br>- string editing is made faster for values that are enums; instead of typing<br>  them, use arrow left/right to choose a value from the list of acceptable<br>  values. the field is updated immediately.<br>- can now open, edit and save *.variants - use [1] and [2] to toggle between<br>  *.ship mode and *.variant mode; still use [D] and [V] to open/save<br>- click a weapon slot to assign a weapon from the list of weapons that are<br>  valid to occupy that slot; filters based on size &amp; type of slot from<br>  currently loaded *.ship data<br>- press M to load a mod; it will be noted in the settings data so that it is<br>  auto-loaded on next startup of the editor; this will add the mod's data<br>  to the stock data for weapon slot selection and OP cost analysis &amp; validation<br>- While in variant mode:<br>  Press T to edit variant string-data<br>  Press G to edit weapon groups<br>  Press F &amp; C to increment flux mods. Shift+F &amp; Shift+C to decrement. They<br>    will cap out at the limit for your ship's hull size<br>  Press H to select hull mods<br>    If you exceed the OP max specified in the ship CSV for the ship's hullID,<br>    it will be red-coloured but it will not otherwise prevent you<br>- WARNING: it is now REQUIRED that Starfarer be installed on the computer<br>  where the editor is being used, as the vanilla data is automatically loaded<br>  to speed up selection of multi-select values, and to prevent the editor<br>  from needing to be explicitly updated when Starfarer adds new such values<br>- fixed bug with key states after opening system dialogs in windows<br>______________________________________________________________________________<br>editor version 1.2 (starfarer 0.51a)<br>- can now use +/- as alternative to mousewheel for zooming<br>______________________________________________________________________________<br>editor version 1.1 (starfarer 0.51a)<br>- made zoom feature not ***<br>- added mirrored-mode adding of weapons &amp; engines<br>- auto-saves last-used path for images and data (finally)<br>______________________________________________________________________________<br>editor version 1.0 (starfarer 0.51a)<br>- added string data editor [T]<br>- to edit strings for weapons and engines, press [T] from weapon or engine<br>  editing modes [W] or [E] which will allow you to edit the strings for that<br>  specific instance<br>- added weapons and engine locations to preview mode [P]<br>- when creating weapons and engines, automatically duplicates properties<br>  of nearest to speed up creation of similar slots<br>- more reasonable defaults for certain values<br>- preview cursor more context-sensitive<br>______________________________________________________________________________<br>editor version 0.4 (starfarer 0.51a)<br>- added engine slot editor<br>______________________________________________________________________________  <br>editor version 0.3 (starfarer 0.51a)<br>- added weapon slot editor, per request<br>- strengthened JSON decoder; ignores # comments and performs implicit type-<br>  conversion and uses reflection to automatically encode/decode from/to plain<br>  objects<br>______________________________________________________________________________   <br>editor version 0.2 (starfarer 0.35a preview rc2)<br>- fixed bug; data view not updating when you press \"N\" (new data)<br>  or \"I\" (load ship image)<br>- fixed bug; empty arrays being encoded as empty objects<br>- improved data view; added column-wrap and reduced font size<br>  to fit more information on screen<br>- program icon (windows only)<br>- added collision radius mode<br>- added preview all mode<br>______________________________________________________________________________   <br>editor version 0.1 (starfarer 0.35a preview rc2)<br>- initial release<br><br></code></details><br><strong>Versions</strong> <details class=\"spoiler\"><summary>Spoiler</summary><ul><li><a href=\"https://github.com/Trylobot/sf-ship-ed/releases/tag/v2.7.4\" rel=\"nofollow noopener\" target=\"_blank\">version 2.7.4 (Deathfly &amp; Trylobot)</a></li><li><a href=\"https://github.com/Trylobot/sf-ship-ed/releases/tag/v2.7.3\" rel=\"nofollow noopener\" target=\"_blank\">version 2.7.3 (Trylobot)</a></li><li><a href=\"https://github.com/Trylobot/sf-ship-ed/releases/tag/v2.7.2\" rel=\"nofollow noopener\" target=\"_blank\">version 2.7.2 (Trylobot)</a></li><li><a href=\"https://github.com/Deathfly/sf-ship-ed/releases/tag/v2.7.1\" rel=\"nofollow noopener\" target=\"_blank\">version 2.7.1 (Deathfly)</a></li><li><a href=\"https://github.com/Deathfly/sf-ship-ed/releases/tag/v2.7.0\" rel=\"nofollow noopener\" target=\"_blank\">version 2.7.0 (Deathfly)</a></li><li><a href=\"https://github.com/Trylobot/sf-ship-ed/releases/tag/v2.6.4\" rel=\"nofollow noopener\" target=\"_blank\">version 2.6.4 (Trylobot)</a></li><li><a href=\"https://github.com/Trylobot/sf-ship-ed/releases/tag/2.6.3\" rel=\"nofollow noopener\" target=\"_blank\">version 2.6.3 (Trylobot)</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.6.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.6.2</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.6.1.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.6.1</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.6.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.6</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.5.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.5</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.5.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.4.5</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.4.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.4.4</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.3.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.4.3</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.4.2</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.1.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.4.1</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.1a.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.4.1a</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.4</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.3.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.3</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.2.3.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.2.3</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.2.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.2.2</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.2.1.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.2.1</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.2</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.1.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.1</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.0.1.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.0.1</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.0.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 2.0</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v1.9.7.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 1.9.7</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v1.9.6.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 1.9.6</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v1.9.3.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 1.9.3</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v1.9.1.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 1.9.1</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v1.0.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 1.0</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v0.4.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 0.4</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v0.3.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 0.3</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v0.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 0.2</a></li><li><a href=\"http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v0.1.zip\" rel=\"nofollow noopener\" target=\"_blank\">version 0.1</a></li></ul></details><br><img src=\"http://i.imgur.com/mUmZ3NU.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\">",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Allows users to modify ship hulls, engine placements, and weapon configurations through a visual editor. It supports editing variant data, including flux mods and hull modifications, while validating against game constraints like OP limits. The tool includes features for managing fighter wings and decorative weapons, with options for custom backgrounds and localization.",
+  "aiDescription": "This tool allows users to edit ship data files, including hull shapes, weapon slots, and variant definitions. It supports visual editing of ship bounds, launch bays, and fighter wings. The editor also includes features for managing weapon groups and hull mods within variants.",
   "aiUse": {},
   "rawCategories": [],
   "gallery": [
@@ -73,6 +76,319 @@
       "label": "Download latest stable version v2.7.4",
       "host": "GitHub",
       "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/Trylobot/sf-ship-ed/releases/tag/v2.7.4",
+      "directUrl": "https://github.com/Trylobot/sf-ship-ed/releases/download/v3.0.0-pre-alpha-2/sf-ship-ed-3.0.0-pre-alpha-2.zip",
+      "fileName": "sf-ship-ed-3.0.0-pre-alpha-2.zip",
+      "kind": "direct",
+      "label": "version 2.7.4 (Deathfly & Trylobot)",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/Trylobot/sf-ship-ed/releases/tag/v2.7.3",
+      "directUrl": "https://github.com/Trylobot/sf-ship-ed/releases/download/v3.0.0-pre-alpha-2/sf-ship-ed-3.0.0-pre-alpha-2.zip",
+      "fileName": "sf-ship-ed-3.0.0-pre-alpha-2.zip",
+      "kind": "direct",
+      "label": "version 2.7.3 (Trylobot)",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/Trylobot/sf-ship-ed/releases/tag/v2.7.2",
+      "directUrl": "https://github.com/Trylobot/sf-ship-ed/releases/download/v3.0.0-pre-alpha-2/sf-ship-ed-3.0.0-pre-alpha-2.zip",
+      "fileName": "sf-ship-ed-3.0.0-pre-alpha-2.zip",
+      "kind": "direct",
+      "label": "version 2.7.2 (Trylobot)",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/Trylobot/sf-ship-ed/releases/tag/v2.6.4",
+      "directUrl": "https://github.com/Trylobot/sf-ship-ed/releases/download/v3.0.0-pre-alpha-2/sf-ship-ed-3.0.0-pre-alpha-2.zip",
+      "fileName": "sf-ship-ed-3.0.0-pre-alpha-2.zip",
+      "kind": "direct",
+      "label": "version 2.6.4 (Trylobot)",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/Trylobot/sf-ship-ed/releases/tag/2.6.3",
+      "directUrl": "https://github.com/Trylobot/sf-ship-ed/releases/download/v3.0.0-pre-alpha-2/sf-ship-ed-3.0.0-pre-alpha-2.zip",
+      "fileName": "sf-ship-ed-3.0.0-pre-alpha-2.zip",
+      "kind": "direct",
+      "label": "version 2.6.3 (Trylobot)",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.6.2.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.6.2.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.6.2.zip",
+      "kind": "direct",
+      "label": "version 2.6.2",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.6.1.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.6.1.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.6.1.zip",
+      "kind": "direct",
+      "label": "version 2.6.1",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.6.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.6.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.6.zip",
+      "kind": "direct",
+      "label": "version 2.6",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.5.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.5.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.5.zip",
+      "kind": "direct",
+      "label": "version 2.5",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.5.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.5.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.4.5.zip",
+      "kind": "direct",
+      "label": "version 2.4.5",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.4.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.4.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.4.4.zip",
+      "kind": "direct",
+      "label": "version 2.4.4",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.3.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.3.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.4.3.zip",
+      "kind": "direct",
+      "label": "version 2.4.3",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.2.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.2.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.4.2.zip",
+      "kind": "direct",
+      "label": "version 2.4.2",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.1.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.1.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.4.1.zip",
+      "kind": "direct",
+      "label": "version 2.4.1",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.1a.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.1a.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.4.1a.zip",
+      "kind": "direct",
+      "label": "version 2.4.1a",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.4.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.4.zip",
+      "kind": "direct",
+      "label": "version 2.4",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.3.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.3.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.3.zip",
+      "kind": "direct",
+      "label": "version 2.3",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.2.3.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.2.3.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.2.3.zip",
+      "kind": "direct",
+      "label": "version 2.2.3",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.2.2.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.2.2.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.2.2.zip",
+      "kind": "direct",
+      "label": "version 2.2.2",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.2.1.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.2.1.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.2.1.zip",
+      "kind": "direct",
+      "label": "version 2.2.1",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.2.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.2.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.2.zip",
+      "kind": "direct",
+      "label": "version 2.2",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.1.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.1.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.1.zip",
+      "kind": "direct",
+      "label": "version 2.1",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.0.1.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.0.1.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.0.1.zip",
+      "kind": "direct",
+      "label": "version 2.0.1",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.0.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v2.0.zip?dl=1",
+      "fileName": "sf-ship-ed_v2.0.zip",
+      "kind": "direct",
+      "label": "version 2.0",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v1.9.7.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v1.9.7.zip?dl=1",
+      "fileName": "sf-ship-ed_v1.9.7.zip",
+      "kind": "direct",
+      "label": "version 1.9.7",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v1.9.6.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v1.9.6.zip?dl=1",
+      "fileName": "sf-ship-ed_v1.9.6.zip",
+      "kind": "direct",
+      "label": "version 1.9.6",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v1.9.3.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v1.9.3.zip?dl=1",
+      "fileName": "sf-ship-ed_v1.9.3.zip",
+      "kind": "direct",
+      "label": "version 1.9.3",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v1.9.1.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v1.9.1.zip?dl=1",
+      "fileName": "sf-ship-ed_v1.9.1.zip",
+      "kind": "direct",
+      "label": "version 1.9.1",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v1.0.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v1.0.zip?dl=1",
+      "fileName": "sf-ship-ed_v1.0.zip",
+      "kind": "direct",
+      "label": "version 1.0",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v0.4.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v0.4.zip?dl=1",
+      "fileName": "sf-ship-ed_v0.4.zip",
+      "kind": "direct",
+      "label": "version 0.4",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v0.3.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v0.3.zip?dl=1",
+      "fileName": "sf-ship-ed_v0.3.zip",
+      "kind": "direct",
+      "label": "version 0.3",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v0.2.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v0.2.zip?dl=1",
+      "fileName": "sf-ship-ed_v0.2.zip",
+      "kind": "direct",
+      "label": "version 0.2",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v0.1.zip",
+      "directUrl": "http://dl.dropbox.com/u/14340846/Starfarer%20Ship%20Editor/sf-ship-ed_v0.1.zip?dl=1",
+      "fileName": "sf-ship-ed_v0.1.zip",
+      "kind": "direct",
+      "label": "version 0.1",
+      "host": "Dropbox",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/Deathfly/sf-ship-ed/releases/tag/v2.7.1",
+      "directUrl": "https://github.com/Deathfly/sf-ship-ed/releases/tag/v2.7.1",
+      "kind": "direct",
+      "label": "version 2.7.1 (Deathfly)",
+      "host": "GitHub",
+      "needsAnotherStep": true
+    },
+    {
+      "url": "https://github.com/Deathfly/sf-ship-ed/releases/tag/v2.7.0",
+      "directUrl": "https://github.com/Deathfly/sf-ship-ed/releases/tag/v2.7.0",
+      "kind": "direct",
+      "label": "version 2.7.0 (Deathfly)",
+      "host": "GitHub",
+      "needsAnotherStep": true
     }
   ],
   "changelog": {

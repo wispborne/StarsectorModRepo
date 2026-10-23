@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T20:51:37.661004Z",
+  "generatedAt": "2026-10-23T08:30:57.407176Z",
   "listing": {
     "id": "stat-derived-ship-costs-the-kelly-blue-book-of-space",
     "name": "Stat-Derived Ship Costs \"The Kelly Blue Book of Space\"",
@@ -17,10 +17,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.1.4",
     "imageUrl": "https://raw.githubusercontent.com/Compterra/Stat-Derived-Ship-Costs/main/graphics/icon/SDSC.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1520697507787575407/1520697508349743205/SDSC.png?ex=6adb116b&is=6ad9bfeb&hm=9e218004a094572f5da50ab8b1b5c8d25c8f0a87cfedf3e7261e285b7c532150&",
-    "summary": "An in-space Kelly Blue Book for Starsector ships.",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1520697507787575407/1520697508349743205/SDSC.png?ex=6adbba2b&is=6ada68ab&hm=70b26d639b91bf5724e0cb8010935309faa81e2aef0bb2f7a3c2ffd5ab82806a&",
+    "summary": "Stat-Derived Ship Costs replaces static ship prices with values derived from hull stats, visible condition, market channel, and local economy context. Clean ships keep their prestige. D-modded ships actually sell like damaged goods.",
     "summaryIsGenerated": false,
-    "aiSummary": "Replaces static ship prices with values derived from hull stats, condition, and market context.",
+    "aiSummary": "Replaces static ship prices with values derived from hull stats, condition, market channel, and local economy context.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -33,6 +33,9 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1520697507787575407/1520697507787575407",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "nicknames": [
+      "SDSC"
+    ],
     "lastReleaseDate": "2026-07-18T00:00:00.000Z",
     "addedOn": "2026-06-26",
     "threadLastPostOn": "2026-07-16",
@@ -48,12 +51,10 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>\"The Kelly Blue Book of Spaceships\"</p><p>The most important immersion mod for any modded Starsector run. Ships are no longer priced by vibes, they are appraised by their actual hull stats, condition, rarity, logistics burden, and market channel.</p><p>Stat-Derived Ship Costs acts like a Kelly Blue Book for spaceships. It evaluates loaded ship hulls and replaces arbitrary market prices with stat-derived values that better reflect what a ship is actually worth in the Sector.</p><p>Powerful ships are not nerfed. The economy simply recognizes them. If a ship is trash, the market will reflect that.</p><p>That sleek destroyer might still look amazing, but the ugly frigate you used to ignore may suddenly reveal itself as the better buy! Especially when you realize you can deploy three of them for the same DP cost.</p><p>Features:</p><ul><li>Stat-derived ship hull pricing</li><li>Highly Tunable</li><li>Positive Faction Relations give dynamic discounts</li><li>D-mod condition pricing</li><li>Open, military, and black market unique price behavior</li><li>Rarity, logistics, and market-context adjustments</li><li>Hull value report generation</li><li>Designed for heavily modded games with inconsistent ship pricing</li><li>Will flip your logic when composing fleets</li></ul><p>Save Compatibility Notice</p><p>Safe to add to an existing save.<br>Safe to remove, but ship prices will return to normal after the mod is disabled and the game is restarted.</p><p>A full restart is recommended after updating.</p><p>Download: <a href=\"https://github.com/Compterra/Stat-Derived-Ship-Costs/archive/refs/heads/main.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Compterra/Stat-Derived-Ship-Costs/archive/refs/heads/main.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35645.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35645.0</a></p>",
-  "aiDescription": "Derives ship value from hull statistics rather than fixed vanilla prices. Damaged ships sell for less, while clean ships retain their prestige. Pricing behavior varies by market channel and local economy conditions.",
+  "aiDescription": "Replaces static ship prices with values calculated from hull stats, visible condition, market channel, and local economy context. Damaged ships sell for less, while clean ships retain their value. Pricing behavior varies between open, military, and black markets, with selling prices adjusted to reflect buyer motives and margins.",
   "saveCompatibilityText": "Safe to add to an existing save.",
-  "updateCompatibilityText": "A full restart is recommended after updating.",
   "removalCompatibilityText": "Safe to remove, but ship prices will return to normal after the mod is disabled and the game is restarted.",
   "canAdd": "yes",
-  "canUpdate": "depends",
   "canRemove": "yes",
   "aiUse": {},
   "rawCategories": [
@@ -61,7 +62,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1520697507787575407/1520697508349743205/SDSC.png?ex=6adb116b&is=6ad9bfeb&hm=9e218004a094572f5da50ab8b1b5c8d25c8f0a87cfedf3e7261e285b7c532150&",
+      "url": "https://cdn.discordapp.com/attachments/1520697507787575407/1520697508349743205/SDSC.png?ex=6adbba2b&is=6ada68ab&hm=70b26d639b91bf5724e0cb8010935309faa81e2aef0bb2f7a3c2ffd5ab82806a&",
       "aiCaption": "A blue shield logo featuring an open book with a white rocket ship launching from its pages against a starry background.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -104,9 +105,7 @@
       "oldVersion": "1.0.3",
       "newVersion": "1.1.4",
       "gameVersion": "0.98a",
-      "changelogNotes": "Updated LunaLib’s D-hull minimum from 4 to 1\n\nPlease reset the mod to defaults in LunaLib",
-      "updateCompatibilityText": "A full restart is recommended after updating.",
-      "canUpdate": "depends"
+      "changelogNotes": "Updated LunaLib’s D-hull minimum from 4 to 1\n\nPlease reset the mod to defaults in LunaLib"
     }
   ],
   "threadLastPostOn": "2026-07-16",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T20:51:37.661004Z",
+  "generatedAt": "2026-10-23T08:30:57.407176Z",
   "listing": {
     "id": "starsector-language-pack-french",
     "name": "Starsector Language Pack - French",
@@ -18,7 +18,7 @@
     "imageUrl": "https://raw.githubusercontent.com/mipsou/starsector_lang_pack_fr/main/pics/03_dialogue-pirate-fr.png",
     "summary": "French translation mod for Starsector 0.98a-RC8.",
     "summaryIsGenerated": false,
-    "aiSummary": "Translates game text, including dialogue, quests, events, codex entries, skills, hullmods, weapons, ship systems, factions, ranks, fleet names, missions, tooltips, loading tips, ship names, commodities, and industries, into French.",
+    "aiSummary": "Translates game text, including dialogue, quests, codex entries, and UI elements, into French.",
     "saveCompatible": false,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -39,7 +39,7 @@
   "descriptionHtml": "<strong>[0.98a] Starsector Language Pack - French v2.0.0-rc2</strong><br><br>French translation mod for Starsector 0.98a-RC8.<br><br><strong>What's translated:</strong><br><ul><li>40,000+ lines of dialogue, quests, events (rules.csv)</li><li>Full Codex (Spacer's Handbook — combat, UI, tech types)</li><li>Skills, hullmods, weapons, ship systems</li><li>Factions, ranks, fleet names</li><li>Missions, tooltips, loading tips</li><li>Ship names, commodities, industries</li></ul><br><strong>Known limitations:</strong><br>Some UI labels remain in English (hardcoded in Java): deployment panel, combat HUD (FLUX, HULL, CR), character creation screen. A detailed report has been sent to Alex.<br><br><strong>Download:</strong><br><a href=\"https://github.com/mipsou/starsector_lang_pack_fr/releases/tag/v2.0.0-rc2\" rel=\"nofollow noopener\" target=\"_blank\">GitHub Release v2.0.0-rc2</a><br><br><strong>Installation:</strong><br>1. Download the ZIP<br>2. Extract into <code>mods/</code><br>3. Enable in launcher<br>4. New game recommended<br><br><strong>Compatibility:</strong><br>Compatible with any mod that doesn't override the same vanilla data files (<code>rules.csv</code>, <code>descriptions.csv</code>, <code>strings.json</code>). Most gameplay/ship/faction mods work fine.<br><br><strong>Feedback &amp; bugs:</strong><br><a href=\"https://github.com/mipsou/starsector_lang_pack_fr/issues\" rel=\"nofollow noopener\" target=\"_blank\">GitHub Issues</a><br><br><a href=\"https://github.com/mipsou/starsector_lang_pack_fr\" rel=\"nofollow noopener\" target=\"_blank\">GitHub Repository</a>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Provides a comprehensive French translation for Starsector 0.98a-RC8. It covers over 40,000 lines of dialogue, quests, and events, as well as the full Codex, skills, hullmods, weapons, ship systems, factions, ranks, fleet names, missions, tooltips, loading tips, ship names, commodities, and industries. Some hardcoded UI labels remain in English.",
+  "aiDescription": "Provides a comprehensive French translation for Starsector. It covers over 40,000 lines of dialogue, the full Codex, skills, hullmods, weapons, ship systems, factions, and missions. Some hardcoded UI labels remain in English.",
   "saveCompatibilityText": "New game recommended",
   "canAdd": "no",
   "aiUse": {},
@@ -95,7 +95,7 @@
   "changelog": {
     "2.0.15": "This release fixes a critical incompatibility between the French Language Pack and Nexerelin.\n\nUntil now, players running the French Language Pack alongside Nexerelin (with its dependencies LazyLib and MagicLib) experienced two separate crashes: one when loading the game, and another when starting a new game, where the Nexerelin faction selection screen failed to appear. In practice, this made the French Language Pack unusable for a large portion of the community, since Nexerelin is one of the most widely installed mods for Starsector.\n\nBoth crashes are now fixed. The French Language Pack is fully compatible with Nexerelin: the game loads correctly, new games start as expected with the faction selection screen, and all French translations remain intact.\n\nIf you previously had to choose between the French Language Pack and Nexerelin, you no longer have to. We recommend updating to v2.0.15.",
     "2.0.13": "Starsector loads only one strings.json — first mod in enabled_mods.json wins, no merge. The FR pack was listed first and silently overwrote UI keys from your other mods.\n\nFixed:\n LunaLib : Save All / Reset / keyboard shortcuts\n MagicLib : bounties, achievements, paintjobs, subsystems\n Tahlan Shipworks : full UI\n UAF + Diable Avionics : all UI keys intact\n\n40,000+ lines translated. Compatible 0.98a-RC8.",
-    "2.0.12": "Starsector loads only one strings.json — first mod in enabled_mods.json wins, no merge. The FR pack was listed first and silently overwrote UI keys from your other mods.\n\nFixed:\n LunaLib : Save All / Reset / keyboard shortcuts\n MagicLib : bounties, achievements, paintjobs, subsystems\n Tahlan Shipworks : full UI\n UAF + Diable Avionics : all UI keys intact\n\n40,000+ lines translated. Compatible 0.98a-RC8."
+    "2.0.10": "Aptitudes translated: Combat, Leadership, Technology, Industry\n Fleet abilities (13): Transceiver, Phase Skimmer, Precision Strike, Drive Burn...\n Planet types (45): Cryovolcanic, Arid, Frozen, Barren-Desertic...\n Submarkets : Open Market, Black Market, Storage\n\nThese were broken since v2.0.7. Fixed via Java runtime reflection patch -- no conflict with content mods (Tahlan, UAF, etc.)."
   },
   "license": "EUPL 1.2",
   "sourceCodeUrl": "https://github.com/mipsou/starsector_lang_pack_fr",
