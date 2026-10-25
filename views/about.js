@@ -152,7 +152,7 @@ export async function render(root) {
             + 'guess from the pictures or the writing.',
             [
                 'On Browse, the "AI use" filter has presets such as "No AI images" '
-                + 'and "No vibecode", or Custom to choose what AI was used for. '
+                + 'and "No vibecoded mods", or Custom to choose what AI was used for. '
                 + 'Most presets keep mods that do not say, or have not been checked. '
                 + '"Absolutely no AI" shows only mods whose author says no AI was used. '
                 + 'In the search box, ',

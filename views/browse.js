@@ -6,8 +6,8 @@
 // a filtered list brings back the same list.
 
 import {
-  aiSparkle, aiSummaryBanner, aiSummaryNote, buildHash, categoryChips, clear,
-  currentGameVersion, downloadButton, el, favoriteToggle,
+  aiSparkle, aiSummaryBanner, aiSummaryNote, askForName, askYesNo, buildHash, categoryChips,
+  clear, countedAcross, currentGameVersion, downloadButton, el, favoriteToggle,
   formatDay, gameVersionFamily, gameVersions, hashQuery, howLongAgo,
   imageUrlOf, isDiscordOnly, joinNames, modHref, modList, modName,
   MOD_VERSION_NOTE,
@@ -18,9 +18,14 @@ import {
   neededModKey, requiredModCounts,
 } from '../lib.js';
 import {
-  AI_AREAS, AI_GROUPS, AI_HIDE, AI_LEVELS, AI_ONLY, AI_PRESETS, aiFilterFromAddress,
-  aiFilterIsOn, aiFilterOff, aiFilterToAddress, countedAreas, keepsForAi, withPreset,
+  AI_AREAS, AI_GROUPS, AI_HIDE, AI_LEVELS, AI_ONLY, AI_PRESETS,
+  aiFilterIsOn, aiFilterOff, countedAreas, keepsForAi, withPreset,
 } from '../ai_filter.js';
+import {
+  ANY_GAME, NO_GAME, NO_REQUIREMENTS, NOT, ONLY, SWITCHES, aiFilterWords, describeFilters,
+  filterQuery, filtersToAddress, keepFilters, matchingSaved, readFilters, readSavedFilters,
+  restoreSaved, savedFiltersJson, savedNamed, withSaved, withoutSaved,
+} from '../filter_set.js';
 import { compileSearch } from '../search.js';
 
 const VIEW_KEY = 'starmodderView';
@@ -29,57 +34,6 @@ const VIEW_KEY = 'starmodderView';
 const LAYOUT_KEY = 'starmodderBrowseLayout';
 const FILTERS_KEY = 'starmodderBrowseFilters';
 const PANELS_KEY = 'starmodderFilterPanels';
-const NO_REQUIREMENTS = '__none__';
-/// The game version filter's two choices that are not a release: every mod,
-/// and the mods that do not say which release they are for.
-const ANY_GAME = 'any';
-const NO_GAME = 'none';
-
-/// The switches, each a plain yes-or-no question about one field. Each has
-/// three states: off, on (keep the mods that answer yes) and "not" (keep the
-/// mods that answer no). A press moves to the next state. `notLabel` and
-/// `notTitle` are what the switch says in the "not" state, and `keepWhenNot`,
-/// where there is one, decides "not" in place of "everything `keep` turns away".
-const SWITCHES = [
-  {
-    key: 'download',
-    label: 'Has a download',
-    title: 'Only mods with a link that goes straight to a file.',
-    notLabel: 'No direct download',
-    notTitle: 'Only mods with no link that goes straight to a file.',
-    keep: (mod) => mod.hasDirectDownload === true,
-  },
-  {
-    key: 'source',
-    label: 'Source code linked',
-    title: 'Only mods with publicly available source code.',
-    notLabel: 'No source code linked',
-    notTitle: 'Only mods with no link to their source code.',
-    keep: (mod) => mod.sourceIsPublic === true,
-  },
-  {
-    key: 'addable',
-    label: 'Safe to add mid-game',
-    title: 'Only mods the author says are safe to add mid-game.',
-    notLabel: 'Not safe to add mid-game',
-    notTitle: 'Only mods the author says are not safe to add mid-game.',
-    keep: (mod) => mod.saveCompatible === true,
-    // Most mods never say. "Not" means the author said no, not that nobody
-    // said anything.
-    keepWhenNot: (mod) => mod.saveCompatible === false,
-  },
-  {
-    key: 'nowip',
-    label: 'Hide works in progress',
-    title: 'Hide mods marked as unfinished in their thread.',
-    notLabel: 'Only works in progress',
-    notTitle: 'Only mods marked as unfinished in their thread.',
-    keep: (mod) => mod.isWorkInProgress !== true,
-  },
-];
-const ONLY = 'only';
-const NOT = 'not';
-
 // Checkbox marks from Tabler. All three are present; style.css shows the
 // current state. A dash means some boxes in the group are checked.
 const TRI_BOX_MARKS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
@@ -90,21 +44,6 @@ const TRI_BOX_MARKS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor
 // Dot for the selected radio button.
 const RADIO_MARK = '<svg viewBox="0 0 24 24" focusable="false">'
   + '<circle class="mark-on" cx="12" cy="12" r="5" fill="currentColor"/></svg>';
-
-/// The switches as the address names them: `only=a,b` and `not=c`. A key in
-/// both counts as "only".
-function switchesFromAddress(query) {
-  const picked = new Map();
-  for (const state of [NOT, ONLY]) {
-    for (const key of (query.get(state) || '').split(',')) {
-      if (SWITCHES.some((option) => option.key === key)) picked.set(key, state);
-    }
-  }
-  return picked;
-}
-
-const switchKeysIn = (switches, wanted) =>
-  [...switches].filter(([, state]) => state === wanted).map(([key]) => key).join(',');
 
 const SORTS = [
   // Only offered while there is something typed, and picked for the reader
@@ -137,6 +76,10 @@ function browseQuery(query) {
   }
 }
 
+/// Saves what is in the address for the next plain visit to Browse. Only a
+/// change the reader makes on Browse calls this. Opening Browse from a link
+/// (Home, a shared link, the search box at the top) shows that link's list
+/// and leaves what was remembered alone.
 function rememberFilters(hash) {
   const query = new URLSearchParams(hash.split('?')[1] || '');
   query.delete('page');
@@ -144,6 +87,17 @@ function rememberFilters(hash) {
     localStorage.setItem(FILTERS_KEY, query.toString());
   } catch {
     // The address still keeps the selection when storage is unavailable.
+  }
+}
+
+/// The filters Browse remembers, without the search, the sort or the page.
+/// Empty when it remembers nothing, which means the current release and
+/// nothing else, the same as a first visit to Browse.
+export function rememberedBrowseFilters(currentVersion) {
+  try {
+    return keepFilters(localStorage.getItem(FILTERS_KEY) || '', currentVersion);
+  } catch {
+    return '';
   }
 }
 
@@ -169,18 +123,11 @@ export async function render(root, parts) {
   const query = browseQuery(hashQuery());
   const state = {
     search: query.get('q') || '',
-    game: gameFromAddress(query, currentVersion),
-    needs: query.get('needs') || '',
-    // "Miscellaneous" was called "Everything else" once, and links to it
-    // were shared under that name.
-    category: query.get('category') === 'Everything else'
-      ? 'Miscellaneous' : (query.get('category') || ''),
+    ...readFilters(query, currentVersion),
     author: query.get('author') || '',
     sort: SORTS.some((s) => s.key === query.get('sort')) ? query.get('sort')
       : ((query.get('q') || '') ? 'relevance' : 'current'),
     seed: Number(query.get('seed')) || newSeed(),
-    switches: switchesFromAddress(query),
-    ai: aiFilterFromAddress(query),
     page: Math.max(0, Number(query.get('page')) || 0),
     pageSize: pageSizePreference(),
     view: localStorage.getItem(VIEW_KEY) === 'rows' ? 'rows' : 'grid',
@@ -220,8 +167,13 @@ export async function render(root, parts) {
   // address, which already holds everything the reader had picked.
   drawControls({ top: controls, side, layout }, mods, state, () => {
     state.page = 0;
-    saveState(state);
+    saveState(state, true);
     drawResults(results, mods, state);
+  }, (saved) => {
+    // A saved filter replaces the filters and leaves the search and the sort.
+    Object.assign(state, readFilters(saved, currentVersion), { page: 0 });
+    saveState(state, true);
+    render(root, parts);
   }, (which) => {
     try {
       localStorage.setItem(LAYOUT_KEY, which);
@@ -232,22 +184,19 @@ export async function render(root, parts) {
   });
   drawResults(results, mods, state);
 
-  function saveState(shown) {
+  /// Writes the address. `remember` also saves it for the next plain visit,
+  /// and is only passed when the reader changed something on this page.
+  function saveState(shown, remember = false) {
     const hash = buildHash(['browse'], {
       q: shown.search,
       // The current release is what the page opens on, so it needs no mention.
-      game: shown.game === shown.currentVersion ? '' : shown.game,
-      needs: shown.needs,
-      category: shown.category,
+      ...filtersToAddress(shown, shown.currentVersion),
       author: shown.author,
       sort: shown.sort === 'current' ? '' : shown.sort,
       seed: shown.sort === 'random' ? shown.seed : '',
-      only: switchKeysIn(shown.switches, ONLY),
-      not: switchKeysIn(shown.switches, NOT),
-      ...aiFilterToAddress(shown.ai),
       page: shown.page || '',
     });
-    rememberFilters(hash);
+    if (remember) rememberFilters(hash);
     replaceHash(hash);
   }
 
@@ -263,12 +212,12 @@ export async function render(root, parts) {
     fillResultLine(countLine, all, matches, shown,
       () => {
         shown.game = ANY_GAME;
-        saveState(shown);
+        saveState(shown, true);
         render(root, parts);
       },
       () => {
         shown.ai = aiFilterOff();
-        saveState(shown);
+        saveState(shown, true);
         render(root, parts);
       });
     into.append(countLine);
@@ -276,7 +225,7 @@ export async function render(root, parts) {
     if (!matches.length) {
       into.append(nothingMatched(() => {
         clearFilters(shown);
-        saveState(shown);
+        saveState(shown, true);
         render(root, parts);
       }));
       return;
@@ -301,21 +250,6 @@ export async function render(root, parts) {
 export function sortInUse(state) {
   if (state.sort === 'relevance' && !state.search.trim()) return 'current';
   return state.sort;
-}
-
-/// The game version the address asks for. With none named, the page opens on
-/// the current release: nineteen pages of A-to-Z over every game release anyone
-/// ever built for is not a list anybody reads.
-function gameFromAddress(query, currentVersion) {
-  const asked = query.get('game');
-  if (asked === ANY_GAME || asked === NO_GAME) return asked;
-  // The filter works on the number a game release shares, so a link saved back
-  // when it held a full spelling ("0.98a") still finds the same mods.
-  if (asked) return gameVersionFamily(asked);
-  // Links from before the current release was picked by default asked for
-  // every release with `older=1`.
-  if (query.get('older') === '1' || !currentVersion) return ANY_GAME;
-  return currentVersion;
 }
 
 /// The line above the results: how many matched, and — while the list is on
@@ -467,107 +401,20 @@ function choiceList(entries, chosen, onPick) {
 /// top they sit in rows above the results. At the side the switches, the
 /// categories and the game versions are lists in folding panels, and only the
 /// search box, the sort and the view buttons stay above the results.
-function drawControls(places, mods, state, onChange, onLayout) {
+function drawControls(places, mods, state, onChange, onSaved, onLayout) {
   const { top, side, layout } = places;
   const atSide = layout === 'side';
 
-  // The category table is redrawn whenever anything else changes, because its counts
-  // are of what picking that category would really show. Counting the whole list
-  // would have a category read 182 and then hand back 104, since older game
-  // versions are left out to begin with.
-  const chips = el('div', {});
-  const drawChips = () => {
-    const wouldMatch = mods.filter(
-        (mod) => matchesFilters(mod, { ...state, category: '' }));
-    const row = categoryChips(wouldMatch, {
-      chosen: state.category,
-      onPick: (picked) => { state.category = picked; changed(); },
-    });
-    clear(chips);
-    // Nothing matching means no table to draw. `append` turns a null into the
-    // word "null" on the page, so the row has to be checked rather than handed
-    // straight over.
-    if (row) chips.append(row);
-  };
-  // At the side the game versions are a list too, counted the same way as the
-  // categories: what picking that version would really show.
-  const versionsHolder = el('div', {});
-  const drawVersions = () => {
-    const wouldMatch = mods.filter(
-        (mod) => matchesFilters(mod, { ...state, game: ANY_GAME }));
-    const entries = gameVersions(wouldMatch)
-      .map((v) => ({ value: v.family, label: v.label, count: v.count }));
-    const unknown = wouldMatch.filter((mod) => !mod.gameVersion).length;
-    if (unknown) entries.push({ value: NO_GAME, label: 'No game version', count: unknown });
-    clear(versionsHolder);
-    // Turning off the one that is picked shows every release.
-    versionsHolder.append(choiceList(entries, state.game,
-      (v) => { state.game = v || ANY_GAME; changed(); }));
-  };
-  // Counts use the mods shown by the other filters. Redraw them with the
-  // other controls so they stay up to date.
-  const aiHolder = el('div', {});
-  const aiMenuLabel = el('span');
-  // All and None share the side panel's heading.
-  // In the top layout, they share the box's small "AI use" heading.
-  const aiAllOrNone = el('span', { class: 'ai-all-none' });
-  for (const [label, pick] of [['All', true], ['None', false]]) {
-    const button = el('button', {
-      type: 'button', class: 'link-button', text: label,
-      title: pick ? 'Select all.' : 'Deselect all.',
-    });
-    button.addEventListener('click', (event) => {
-      // Keep the side panel open when All or None is pressed.
-      event.preventDefault();
-      state.ai.parts = pick ? new Set(AI_AREAS) : new Set();
-      changed();
-    });
-    aiAllOrNone.append(button);
-  }
-  const aiMenu = el('details', { class: 'ai-filter-menu' }, [
-    el('summary', { class: 'btn', title: 'Choose which kinds of AI use to filter by.' },
-      [aiMenuLabel]),
-    el('div', { class: 'ai-filter-box' }, [
-      atSide ? null : el('div', { class: 'ai-filter-box-head' }, [
-        el('span', { text: 'AI use' }), aiAllOrNone,
-      ]),
-      aiHolder,
-    ]),
-  ]);
-  // Align the menu with its button, then shift it to fit on screen.
-  aiMenu.addEventListener('toggle', () => {
-    if (!aiMenu.open) return;
-    const box = aiMenu.querySelector('.ai-filter-box');
-    box.style.left = '0px';
-    const edge = 16;
-    const { left, right } = box.getBoundingClientRect();
-    const shift = Math.max(edge - left, Math.min(0, window.innerWidth - edge - right));
-    box.style.left = `${shift}px`;
-  });
-  const drawAiFilter = () => {
-    const wouldMatch = mods.filter(
-        (mod) => matchesFilters(mod, { ...state, ai: aiFilterOff() }));
-    // Restore keyboard focus after redrawing the controls.
-    const focused = aiHolder.contains(document.activeElement)
-      ? document.activeElement.dataset.focus : null;
-    clear(aiHolder);
-    aiHolder.append(aiFilterBody(wouldMatch, state.ai, (next) => {
-      if (next) state.ai = next;
-      changed();
-    }));
-    if (focused) aiHolder.querySelector(`[data-focus="${focused}"]`)?.focus();
-    // Show the current filter in the top button.
-    aiMenuLabel.textContent = aiMenuWords(state.ai);
-    aiMenu.querySelector('summary').classList.toggle('on', aiFilterIsOn(state.ai));
-    // All and None change the parts, which only Custom shows.
-    aiAllOrNone.classList.toggle('unused', state.ai.preset !== 'custom');
-  };
-  const changed = () => {
-    drawChips();
-    drawAiFilter();
-    if (atSide) drawVersions();
+  // The saved filters menu names the saved filter in use, so it is brought up
+  // to date on every change.
+  let saved = null;
+  const filters = filterControls(mods, state, () => {
+    saved.refresh();
     onChange();
-  };
+  }, { atSide });
+  const { changed } = filters;
+  saved = savedFiltersMenu(() => filterQuery(state, state.currentVersion), onSaved,
+    state.currentVersion, { asPanel: atSide, gameLabel: gameLabelsOf(mods) });
 
   /// The sort in use before a search began, put back when the box is emptied.
   let sortBeforeSearch = null;
@@ -606,17 +453,6 @@ function drawControls(places, mods, state, onChange, onLayout) {
     changed();
   });
 
-  const versions = gameVersions(mods);
-  const needed = neededMods(mods);
-  // At the side the panel's heading names the dropdown, so it carries no label.
-  const requiresDropdown = dropdown(atSide ? '' : 'Requires',
-    [NO_REQUIREMENTS, ...needed], state.needs,
-    (v) => { state.needs = v; changed(); },
-    {
-      anyLabel: '—',
-      labels: { [NO_REQUIREMENTS]: 'Standalone (no requirements)' },
-    });
-
   // "Best match" is only in the list while something is typed, so the dropdown
   // is rebuilt whenever that changes rather than drawn once like the others.
   const sortHolder = el('div', { class: 'sort-holder' });
@@ -647,6 +483,172 @@ function drawControls(places, mods, state, onChange, onLayout) {
     showShuffleAgain();
   };
   drawSort();
+
+  const layoutSwitch = layoutToggle(layout, onLayout);
+
+  if (atSide) {
+    top.append(
+      el('div', { class: 'search-row' }, [searchHelpField(search)]),
+      el('div', { class: 'filters' }, [
+        sortHolder, el('span', { class: 'filters-gap' }), views, layoutSwitch,
+      ]),
+    );
+    // On a phone, the column sits above the results. Only the switches start open.
+    // Long lists would push the mods down by a screen or more.
+    // On any screen, panels keep the state the reader chose.
+    const phone = window.matchMedia('(max-width: 900px)').matches;
+    side.append(
+      filterPanel('Saved filters', saved.node, !phone),
+      filterPanel('Show', filters.switches, true),
+      filterPanel('Category', filters.chips, !phone),
+      // The list starts on the current release. Few readers change it.
+      filterPanel('Game version', filters.versionsHolder, false),
+      filterPanel('Requires', filters.requiresDropdown, !phone),
+      filterPanel('AI use', filters.aiHolder, !phone, filters.aiAllOrNone),
+    );
+    return;
+  }
+
+  top.append(el('div', { class: 'search-row' }, [searchHelpField(search), views, layoutSwitch]));
+  // The categories come before the dropdowns: picking a category is what most
+  // readers want first, and a row you can see beats a list you have to open.
+  top.append(filters.chips);
+  top.append(el('div', { class: 'filters' }, [
+    filters.gameDropdown,
+    filters.requiresDropdown,
+    sortHolder,
+    filters.switches,
+    filters.aiMenu,
+    saved.node,
+  ]));
+}
+
+/// The filter controls on their own, without the search box, the sort or the
+/// view and layout buttons: the categories, the game version, the requires
+/// choice, the switches and the AI use filter. Browse places them beside its
+/// search; Home places them in its filter bar. Each keeps its counts up to
+/// date as the others change, and `onChange` runs after every change.
+///
+/// `atSide` draws the side column's kind: lists and tick boxes rather than a
+/// table, dropdowns and buttons. `categories` is `'table'` for Browse's table
+/// of categories or `'dropdown'` for a plain dropdown.
+export function filterControls(mods, state, onChange,
+    { atSide = false, categories = 'table' } = {}) {
+  // The category table is redrawn whenever anything else changes, because its counts
+  // are of what picking that category would really show. Counting the whole list
+  // would have a category read 182 and then hand back 104, since older game
+  // versions are left out to begin with.
+  const chips = el('div', {});
+  const drawChips = () => {
+    if (categories !== 'table') return;
+    const wouldMatch = mods.filter(
+        (mod) => matchesFilters(mod, { ...state, category: '' }));
+    const row = categoryChips(wouldMatch, {
+      chosen: state.category,
+      onPick: (picked) => { state.category = picked; changed(); },
+    });
+    clear(chips);
+    // Nothing matching means no table to draw. `append` turns a null into the
+    // word "null" on the page, so the row has to be checked rather than handed
+    // straight over.
+    if (row) chips.append(row);
+  };
+  // At the side the game versions are a list too, counted the same way as the
+  // categories: what picking that version would really show.
+  const versionsHolder = el('div', {});
+  const drawVersions = () => {
+    if (!atSide) return;
+    const wouldMatch = mods.filter(
+        (mod) => matchesFilters(mod, { ...state, game: ANY_GAME }));
+    const entries = gameVersions(wouldMatch)
+      .map((v) => ({ value: v.family, label: v.label, count: v.count }));
+    const unknown = wouldMatch.filter((mod) => !mod.gameVersion).length;
+    if (unknown) entries.push({ value: NO_GAME, label: 'No game version', count: unknown });
+    clear(versionsHolder);
+    // Turning off the one that is picked shows every release.
+    versionsHolder.append(choiceList(entries, state.game,
+      (v) => { state.game = v || ANY_GAME; changed(); }));
+  };
+  // Counts use the mods shown by the other filters. Redraw them with the
+  // other controls so they stay up to date.
+  const aiHolder = el('div', {});
+  const aiMenuLabel = el('span');
+  // All and None share the side panel's heading.
+  // In the top layout, they share the box's small "AI use" heading.
+  const aiAllOrNone = el('span', { class: 'ai-all-none' });
+  for (const [label, pick] of [['All', true], ['None', false]]) {
+    const button = el('button', {
+      type: 'button', class: 'link-button', text: label,
+      title: pick ? 'Select all.' : 'Deselect all.',
+    });
+    button.addEventListener('click', (event) => {
+      // Keep the side panel open when All or None is pressed.
+      event.preventDefault();
+      state.ai.parts = pick ? new Set(AI_AREAS) : new Set();
+      changed();
+    });
+    aiAllOrNone.append(button);
+  }
+  const aiMenu = popMenu(
+    el('summary', { class: 'btn', title: 'Choose which kinds of AI use to filter by.' },
+      [aiMenuLabel]),
+    [
+      atSide ? null : el('div', { class: 'ai-filter-box-head' }, [
+        el('span', { text: 'AI use' }), aiAllOrNone,
+      ]),
+      aiHolder,
+    ],
+    'ai-filter-menu');
+  const drawAiFilter = () => {
+    const wouldMatch = mods.filter(
+        (mod) => matchesFilters(mod, { ...state, ai: aiFilterOff() }));
+    // Restore keyboard focus after redrawing the controls.
+    const focused = aiHolder.contains(document.activeElement)
+      ? document.activeElement.dataset.focus : null;
+    clear(aiHolder);
+    aiHolder.append(aiFilterBody(wouldMatch, state.ai, (next) => {
+      if (next) state.ai = next;
+      changed();
+    }));
+    if (focused) aiHolder.querySelector(`[data-focus="${focused}"]`)?.focus();
+    // Show the current filter in the top button.
+    aiMenuLabel.textContent = aiFilterWords(state.ai);
+    aiMenu.querySelector('summary').classList.toggle('on', aiFilterIsOn(state.ai));
+    // All and None change the parts, which only Custom shows.
+    aiAllOrNone.classList.toggle('unused', state.ai.preset !== 'custom');
+  };
+  const changed = () => {
+    drawChips();
+    drawAiFilter();
+    drawVersions();
+    onChange();
+  };
+
+  const versions = gameVersions(mods);
+  const needed = neededMods(mods);
+  // At the side the panel's heading names the dropdown, so it carries no label.
+  const requiresDropdown = dropdown(atSide ? '' : 'Requires',
+    [NO_REQUIREMENTS, ...needed], state.needs,
+    (v) => { state.needs = v; changed(); },
+    {
+      anyLabel: '—',
+      labels: { [NO_REQUIREMENTS]: 'Standalone (no requirements)' },
+    });
+
+  const gameDropdown = dropdown('Game version', [...versions.map((v) => v.family), NO_GAME],
+    state.game === ANY_GAME ? '' : state.game,
+    (v) => { state.game = v || ANY_GAME; changed(); },
+    {
+      labels: {
+        ...Object.fromEntries(versions.map((v) => [v.family, `${v.label} (${v.count})`])),
+        [NO_GAME]: `No game version (${mods.filter((mod) => !mod.gameVersion).length})`,
+      },
+    });
+
+  const categoryDropdown = categories === 'dropdown'
+    ? dropdown('Category', countedAcross(mods, (mod) => mod.categories).map(([name]) => name),
+      state.category, (v) => { state.category = v; changed(); })
+    : null;
 
   // Along the top each switch is a button that lights up; at the side it is a
   // box with its label, the way a list of filters usually reads. Either way a
@@ -686,52 +688,160 @@ function drawControls(places, mods, state, onChange, onLayout) {
 
   for (const option of SWITCHES) addSwitch(option);
 
-  const layoutSwitch = layoutToggle(layout, onLayout);
   drawChips();
   drawAiFilter();
+  drawVersions();
 
-  if (atSide) {
-    drawVersions();
-    top.append(
-      el('div', { class: 'search-row' }, [searchHelpField(search)]),
-      el('div', { class: 'filters' }, [
-        sortHolder, el('span', { class: 'filters-gap' }), views, layoutSwitch,
-      ]),
-    );
-    // On a phone, the column sits above the results. Only the switches start open.
-    // Long lists would push the mods down by a screen or more.
-    // On any screen, panels keep the state the reader chose.
-    const phone = window.matchMedia('(max-width: 900px)').matches;
-    side.append(
-      filterPanel('Show', switches, true),
-      filterPanel('Category', chips, !phone),
-      // The list starts on the current release. Few readers change it.
-      filterPanel('Game version', versionsHolder, false),
-      filterPanel('Requires', requiresDropdown, !phone),
-      filterPanel('AI use', aiHolder, !phone, aiAllOrNone),
-    );
-    return;
+  return {
+    chips, versionsHolder, aiHolder, aiAllOrNone, aiMenu, requiresDropdown, gameDropdown,
+    categoryDropdown, switches, changed,
+  };
+}
+
+/// A button that opens a box of controls over the page, used for the AI use
+/// filter and saved filters along the top. The box is moved to fit on screen
+/// as it opens.
+function popMenu(summary, content, className) {
+  const menu = el('details', { class: `filter-menu ${className}` }, [
+    summary,
+    el('div', { class: 'filter-menu-box' }, content),
+  ]);
+  // Align the menu with its button, then shift it to fit on screen.
+  menu.addEventListener('toggle', () => {
+    if (!menu.open) return;
+    const box = menu.querySelector('.filter-menu-box');
+    box.style.left = '0px';
+    const edge = 16;
+    const { left, right } = box.getBoundingClientRect();
+    const shift = Math.max(edge - left, Math.min(0, window.innerWidth - edge - right));
+    box.style.left = `${shift}px`;
+  });
+  return menu;
+}
+
+/// Turns a game version's number into the spelling most mods use: "0.98" into
+/// "0.98a".
+export function gameLabelsOf(mods) {
+  const labels = new Map(gameVersions(mods).map((v) => [v.family, v.label]));
+  return (family) => labels.get(family) || family;
+}
+
+// --- Saved filters ---
+
+const SAVED_KEY = 'starmodderSavedFilters';
+
+/// The reader's saved filters. Empty when storage is blocked or the list
+/// cannot be read; an unreadable list is not written over until the reader
+/// saves something.
+function savedFilters() {
+  try {
+    return readSavedFilters(localStorage.getItem(SAVED_KEY));
+  } catch {
+    return [];
   }
+}
 
-  top.append(el('div', { class: 'search-row' }, [searchHelpField(search), views, layoutSwitch]));
-  // The categories come before the dropdowns: picking a category is what most
-  // readers want first, and a row you can see beats a list you have to open.
-  top.append(chips);
-  top.append(el('div', { class: 'filters' }, [
-    dropdown('Game version', [...versions.map((v) => v.family), NO_GAME],
-      state.game === ANY_GAME ? '' : state.game,
-      (v) => { state.game = v || ANY_GAME; changed(); },
-      {
-        labels: {
-          ...Object.fromEntries(versions.map((v) => [v.family, `${v.label} (${v.count})`])),
-          [NO_GAME]: `No game version (${mods.filter((mod) => !mod.gameVersion).length})`,
-        },
-      }),
-    requiresDropdown,
-    sortHolder,
-    switches,
-    aiMenu,
-  ]));
+/// The saved filter that holds exactly the filters in `query`, or null.
+export function savedFilterInUse(query, currentVersion) {
+  return matchingSaved(savedFilters(), query, currentVersion);
+}
+
+function storeSavedFilters(list) {
+  try {
+    localStorage.setItem(SAVED_KEY, savedFiltersJson(list));
+  } catch {
+    // Without storage the list cannot be kept.
+  }
+}
+
+/// The "Saved filters" menu, shared by Browse and Home. It lists the saved
+/// filters; pressing one applies it, its × deletes it at once with an Undo,
+/// and the last line saves the filters in use under a name.
+///
+/// `current()` gives the filters on the page as a query, and `apply(query)`
+/// puts a saved one in their place. The saved filter that matches what is on
+/// the page is marked, and its name shown on the button. Which one is in use
+/// is worked out each time by comparing filters, never stored, so changing a
+/// filter after picking one simply stops it matching.
+///
+/// `asPanel` gives the plain list for the side column's folding panel rather
+/// than a button that opens it. `refresh()` brings it up to date after a change.
+export function savedFiltersMenu(current, apply, currentVersion,
+    { asPanel = false, gameLabel = (family) => family } = {}) {
+  const label = el('span');
+  const body = el('div', { class: 'saved-filters' });
+  const node = asPanel ? body
+    : popMenu(el('summary', { class: 'btn', title: 'Save and reuse sets of filters.' },
+      [label]), [body], 'saved-filters-menu');
+  /// What Undo puts back: the last saved filter deleted, and where it was.
+  let removed = null;
+
+  const draw = () => {
+    const list = savedFilters();
+    const match = matchingSaved(list, current(), currentVersion);
+    label.textContent = match ? `Saved filters: ${match.name}` : 'Saved filters';
+    if (!asPanel) node.querySelector('summary').classList.toggle('on', Boolean(match));
+    clear(body);
+
+    for (const entry of list) {
+      const on = entry === match;
+      const pick = el('button', {
+        type: 'button', class: on ? 'saved-pick on' : 'saved-pick',
+        'aria-pressed': String(on), text: entry.name,
+        title: describeFilters(readFilters(entry.filters, currentVersion), gameLabel)
+          || 'All filters are off.',
+      });
+      pick.addEventListener('click', () => {
+        removed = null;
+        if (!asPanel) node.open = false;
+        apply(entry.filters);
+      });
+      const drop = el('button', {
+        type: 'button', class: 'saved-delete', text: '×',
+        title: 'Delete', 'aria-label': `Delete ${entry.name}`,
+      });
+      drop.addEventListener('click', () => {
+        const out = withoutSaved(savedFilters(), entry.name);
+        storeSavedFilters(out.list);
+        removed = out.removed;
+        draw();
+      });
+      body.append(el('div', { class: 'saved-row' }, [pick, drop]));
+    }
+    if (!list.length && !removed) {
+      body.append(el('p', { class: 'saved-none', text: 'No saved filters yet.' }));
+    }
+
+    if (removed) {
+      const undo = el('button', { type: 'button', class: 'link-button', text: 'Undo' });
+      undo.addEventListener('click', () => {
+        storeSavedFilters(restoreSaved(savedFilters(), removed));
+        removed = null;
+        draw();
+      });
+      body.append(el('p', { class: 'saved-undo' }, [
+        el('span', { text: `Deleted “${removed.entry.name}”. ` }), undo,
+      ]));
+    }
+
+    const save = el('button', {
+      type: 'button', class: 'link-button', text: 'Save current filters…',
+    });
+    save.addEventListener('click', async () => {
+      const name = await askForName('Save current filters');
+      if (!name) return;
+      const taken = savedNamed(savedFilters(), name);
+      if (taken && !await askYesNo('Replace saved filter?',
+        `Replace “${taken.name}” with the current filters?`,
+        { yes: 'Replace', no: 'Cancel' })) return;
+      storeSavedFilters(withSaved(savedFilters(), name, current()));
+      removed = null;
+      draw();
+    });
+    body.append(el('div', { class: 'saved-save' }, [save]));
+  };
+  draw();
+  return { node, refresh: draw };
 }
 
 /// The two mode buttons sit above the parts, one above the other.
@@ -746,15 +856,6 @@ const AI_LEVEL_LABELS = {
     null],
   any: ['anything at all', null],
 };
-
-/// Show the current filter in the top button even when the menu is closed.
-function aiMenuWords(filter) {
-  if (!aiFilterIsOn(filter)) return 'AI use';
-  if (filter.preset !== 'custom') {
-    return `AI use: ${AI_PRESETS.find((preset) => preset.key === filter.preset).label}`;
-  }
-  return filter.mode === AI_HIDE ? 'AI use: hiding' : 'AI use: only';
-}
 
 /// The presets, then, for Custom only, controls for mode, parts, AI use level
 /// and optional parts. Counts use `mods`, the mods left after the other
@@ -888,10 +989,10 @@ function aiCheckRow(label, count, state, focusKey, title, onPress, extraClass = 
   return button;
 }
 
-// Along the top, the AI use filter floats over the results, so a press
-// anywhere else shuts it.
+// Along the top, the AI use filter and saved filters float over the results,
+// so a press anywhere else shuts them.
 document.addEventListener('pointerdown', (event) => {
-  for (const menu of document.querySelectorAll('.ai-filter-menu[open]')) {
+  for (const menu of document.querySelectorAll('.filter-menu[open]')) {
     if (!menu.contains(event.target)) menu.open = false;
   }
 });

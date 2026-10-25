@@ -65,7 +65,7 @@ export const AI_PRESETS = [
   },
   { key: 'noimages', label: 'No AI images', settings: { parts: ART_AREAS } },
   {
-    key: 'novibecode', label: 'No vibecode', title: 'Hide mods entirely written with AI.',
+    key: 'novibecode', label: 'No vibecoded mods', title: 'Hide mods entirely written with AI.',
     // Code that AI wrote all of, with no human edits stated.
     settings: { parts: ['code'], level: 'made', wholeOnly: true },
   },
@@ -74,7 +74,7 @@ export const AI_PRESETS = [
 
 /// Starting settings: the "No filter" preset, which hides nothing.
 /// `wholeOnly` counts a use only when AI did all of that part. Only the
-/// "No vibecode" preset sets it.
+/// "No vibecoded mods" preset sets it.
 export function aiFilterOff() {
   return {
     preset: 'off',

@@ -10,7 +10,13 @@ import {
   howLongAgo, imageUrlOf, modHref, modList, modName, noteWithMore,
   releaseFeed, thumbnail,
 } from '../lib.js';
-import { modCard } from './browse.js';
+import {
+  filterControls, gameLabelsOf, matchesFilters, modCard, rememberedBrowseFilters,
+  savedFilterInUse, savedFiltersMenu,
+} from './browse.js';
+import {
+  describeFilters, filterQuery, filtersAreOff, filtersToAddress, noFilters, readFilters,
+} from '../filter_set.js';
 
 /// How many recently added mods are loaded into the strip. It shows whole rows
 /// of them — one by default, up to three — so this only has to be enough to
@@ -21,27 +27,198 @@ const RECENT_COUNT = 24;
 const ROW_CHOICES = [1, 2, 3];
 const ROWS_KEY = 'starmodderRecentRows';
 
+/// Home's own filters, kept apart from Browse's: a set of filters as a query
+/// string (see `filter_set.js`). They are not in the address, which stays
+/// `#/home`.
+const FILTERS_KEY = 'starmodderHomeFilters';
+/// Home's filters for this visit, kept here too so they still work when the
+/// browser refuses storage.
+let homeFiltersThisVisit = null;
+
+function homeFilters() {
+  if (homeFiltersThisVisit != null) return homeFiltersThisVisit;
+  try {
+    homeFiltersThisVisit = localStorage.getItem(FILTERS_KEY);
+  } catch {
+    // Storage is blocked: start with every filter off.
+  }
+  // Every filter off, every game version.
+  if (homeFiltersThisVisit == null) homeFiltersThisVisit = 'game=any';
+  return homeFiltersThisVisit;
+}
+
+function setHomeFilters(query) {
+  homeFiltersThisVisit = query;
+  try {
+    localStorage.setItem(FILTERS_KEY, query);
+  } catch {
+    // Kept for this visit only.
+  }
+}
+
 function recentRowsPreference() {
   const saved = Number(localStorage.getItem(ROWS_KEY));
   return ROW_CHOICES.includes(saved) ? saved : 1;
 }
 
-export async function render(root) {
+/// `filtersOpen` keeps the filter bar open when the page is drawn again from
+/// inside it.
+export async function render(root, parts, { filtersOpen = false } = {}) {
   const [list, feed] = await Promise.all([modList(), releaseFeed()]);
   const mods = list.mods || [];
   const releases = feed.releases || [];
   const byId = new Map(mods.map((mod) => [mod.id, mod]));
   const currentVersion = currentGameVersion(mods);
 
+  // Browse's own state with an empty search, so Home filters by exactly
+  // Browse's rules.
+  const state = {
+    search: '', author: '', ...readFilters(homeFilters(), currentVersion), currentVersion,
+  };
+
+  // The sections are drawn again on every change. The bar is drawn once, so
+  // its controls keep their place and the keyboard stays where it was.
+  const sections = el('div', { class: 'stack' });
+  const drawSections = () => {
+    sections.querySelector('.strip')?.fitRows?.disconnect();
+    clear(sections);
+    const off = filtersAreOff(state);
+    const keep = (mod) => off || matchesFilters(mod, state);
+    // Home's filters go along into Browse, the game version always.
+    const linkFilters = filtersToAddress(state);
+    sections.append(...[
+      recentlyAdded(mods.filter(keep), currentVersion, linkFilters, !off),
+      browseByCategory(off ? mods
+        : mods.filter((mod) => matchesFilters(mod, { ...state, category: '' })),
+      state.category, linkFilters, !off),
+      releasesPanel(releases.filter((release) => {
+        const mod = byId.get(release.modId);
+        // A release whose mod is not on the list cannot be checked against
+        // the filters, so it is only shown while nothing is filtered.
+        return off || (mod && keep(mod));
+      }), byId, releases.length > 0),
+    ].filter(Boolean));
+  };
+
   // The mods added recently first, then the categories and the releases.
   clear(root);
   root.append(el('div', { class: 'stack' }, [
+    filterBar(mods, state, currentVersion, filtersOpen, () => {
+      setHomeFilters(filterQuery(state, currentVersion));
+      drawSections();
+    }, (open) => render(root, parts, { filtersOpen: open })),
     aiSummaryBanner(() => render(root)),
-    recentlyAdded(mods, currentVersion),
-    browseByCategory(mods),
-    releasesPanel(releases, byId),
+    sections,
     feedLine(),
   ]));
+  drawSections();
+}
+
+/// The bar at the top of Home that holds its filters. It always starts shut,
+/// naming the filters that are on, or the saved filter they match.
+///
+/// `onChange` runs after a control changes `state`. `redraw` draws the whole
+/// page again, for the changes that replace every filter at once: Clear, Copy
+/// from Browse and picking a saved filter. None of them changes what Browse
+/// remembers. It is given whether the bar is open, so the bar stays as it was.
+function filterBar(mods, state, currentVersion, open, onChange, redraw) {
+  const gameLabel = gameLabelsOf(mods);
+  const words = el('span', { class: 'home-filters-words' });
+  const clearAll = el('button', { type: 'button', class: 'link-button', text: 'Clear' });
+  clearAll.addEventListener('click', (event) => {
+    // The button sits in the bar's heading, which would open the bar too.
+    event.preventDefault();
+    setHomeFilters(filterQuery(noFilters(), currentVersion));
+    redraw(bar.open);
+  });
+  const replaceWith = (query) => {
+    setHomeFilters(filterQuery(readFilters(query, currentVersion), currentVersion));
+    redraw(bar.open);
+  };
+
+  const current = () => filterQuery(state, currentVersion);
+  const saved = savedFiltersMenu(current, replaceWith, currentVersion, { gameLabel });
+  const drawWords = () => {
+    const off = filtersAreOff(state);
+    const match = off ? null : savedFilterInUse(current(), currentVersion);
+    words.textContent = off ? '' : match ? match.name : describeFilters(state, gameLabel);
+    clearAll.hidden = off;
+  };
+  const controls = filterControls(mods, state, () => {
+    drawWords();
+    saved.refresh();
+    onChange();
+  }, { categories: 'dropdown' });
+
+  const copy = el('button', {
+    type: 'button', class: 'btn btn-with-icon',
+    title: 'Use Browse’s filters on Home. Browse’s filters stay the same.',
+  }, [el('span', { class: 'button-icon', html: COPY_ICON }), 'Copy filters from Browse page']);
+  // Copying replaces every filter on Home, so the first press only asks.
+  // A press anywhere else, or the keyboard leaving the button, puts it back.
+  const copyLabel = copy.lastChild;
+  const pressedElsewhere = (event) => {
+    if (!copy.contains(event.target)) stopAsking();
+  };
+  const stopAsking = () => {
+    copy.classList.remove('confirming');
+    copyLabel.textContent = 'Copy filters from Browse page';
+    document.removeEventListener('pointerdown', pressedElsewhere);
+  };
+  copy.addEventListener('click', () => {
+    if (copy.classList.contains('confirming')) {
+      stopAsking();
+      replaceWith(rememberedBrowseFilters(currentVersion));
+      return;
+    }
+    copy.classList.add('confirming');
+    copyLabel.textContent = 'Are you sure? Click to confirm.';
+    document.addEventListener('pointerdown', pressedElsewhere);
+  });
+  copy.addEventListener('blur', stopAsking);
+
+  drawWords();
+  const bar = el('details', { class: 'panel home-filters' }, [
+    el('summary', { class: 'home-filters-head' }, [
+      el('span', { class: 'home-filters-title' }, [
+        el('span', { class: 'home-filters-icon', html: FILTER_ICON }), 'Filters',
+      ]),
+      words, clearAll,
+    ]),
+    el('div', { class: 'filters' }, [
+      copy,
+      controls.gameDropdown,
+      controls.categoryDropdown,
+      controls.requiresDropdown,
+      controls.switches,
+      controls.aiMenu,
+      saved.node,
+    ]),
+  ]);
+  bar.open = open;
+  return bar;
+}
+
+// Tabler icons (MIT): copy and filter.
+const COPY_ICON = tablerIcon('<path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666'
+  + 'a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666'
+  + 'a2.667 2.667 0 0 1 -2.667 -2.667z"/>'
+  + '<path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2'
+  + 'h10c.75 0 1.158 .385 1.5 1"/>');
+const FILTER_ICON = tablerIcon('<path d="M4 4h16v2.172a2 2 0 0 1 -.586 1.414l-4.414 4.414'
+  + 'v7l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227z"/>');
+
+function tablerIcon(paths) {
+  return '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+    + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+    + 'stroke-linejoin="round" focusable="false" aria-hidden="true">'
+    + paths + '</svg>';
+}
+
+/// Said in place of a section whose every entry the filters hid, so an empty
+/// section never looks like missing data.
+function allHidden() {
+  return el('p', { class: 'all-hidden', text: 'Everything is hidden by your filters.' });
 }
 
 /// Offers a feed subscription even before any releases have been recorded.
@@ -54,23 +231,33 @@ function feedLine() {
 
 /// The categories, as a small table under the recently added mods. It is the
 /// front door for a reader who does not know what they are looking for yet.
-function browseByCategory(mods) {
-  const chips = categoryChips(mods);
-  if (!chips) return null;
+///
+/// `mods` are the mods every filter but the category lets through, so each
+/// count is what picking that category would show. `filtering` says whether
+/// any filter is on.
+function browseByCategory(mods, chosen, linkFilters, filtering) {
+  const chips = categoryChips(mods, { chosen, linkParams: linkFilters });
+  if (!chips && !filtering) return null;
 
   return el('section', { class: 'stack' }, [
     el('h2', { class: 'section-title', text: 'Browse by category' }),
-    chips,
-    el('a', { href: buildHash(['browse']), text: 'See all →' }),
+    chips || allHidden(),
+    el('a', { href: buildHash(['browse'], linkFilters), text: 'See all →' }),
   ]);
 }
 
-function releasesPanel(releases, byId) {
+/// `releases` are the ones the filters let through. `anyRecorded` says
+/// whether there were any before filtering.
+function releasesPanel(releases, byId, anyRecorded) {
   const head = el('div', { class: 'section-head' }, [
     el('h2', { class: 'section-title', text: 'Recent updates' }),
   ]);
   const panel = el('div', { class: 'stack' }, [head]);
 
+  if (!releases.length && anyRecorded) {
+    panel.append(allHidden());
+    return panel;
+  }
   if (!releases.length) {
     panel.append(el('div', { class: 'notice' }, [
       el('h3', { text: 'No releases yet' }),
@@ -212,13 +399,16 @@ function groupByDay(releases) {
 /// A short strip of the mods added most recently, near the top of the page.
 /// It is what keeps the page worth reading while the release feed is still
 /// filling up.
-function recentlyAdded(mods, currentVersion) {
+///
+/// `mods` are the mods the filters let through, so the strip is filtered
+/// first and then cut to the newest. `filtering` says whether any filter is on.
+function recentlyAdded(mods, currentVersion, linkFilters, filtering) {
   const newest = mods
     .filter((mod) => mod.addedOn)
     .sort((a, b) => b.addedOn.localeCompare(a.addedOn))
     .slice(0, RECENT_COUNT);
 
-  if (!newest.length) return null;
+  if (!newest.length && !filtering) return null;
 
   const strip = el('div', { class: 'strip' });
   for (const mod of newest) {
@@ -271,7 +461,7 @@ function recentlyAdded(mods, currentVersion) {
       el('h2', { class: 'section-title', text: 'Recently added' }),
       picker,
     ]),
-    strip,
-    el('a', { href: buildHash(['browse'], { sort: 'newest' }), text: 'See all →' }),
+    newest.length ? strip : allHidden(),
+    el('a', { href: buildHash(['browse'], { ...linkFilters, sort: 'newest' }), text: 'See all →' }),
   ]);
 }

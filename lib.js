@@ -1252,6 +1252,52 @@ export function noteWithMore(shortText, { title, paragraphs, moreLabel }) {
 /// it, and it is thrown away on closing rather than left in the page — nothing
 /// here is worth keeping between presses.
 export function openInfoDialog(title, paragraphs) {
+  openBox(title, paragraphs.map((text) => el('p', { class: 'about-line', text })));
+}
+
+/// Asks for a name in a box over the page. Resolves to the name, trimmed, or
+/// to null when the reader closes the box. A blank name cannot be sent.
+export function askForName(title, { label = 'Name', confirm = 'Save' } = {}) {
+  return new Promise((resolve) => {
+    const input = el('input', { type: 'text', class: 'name-input', maxlength: '80' });
+    const ok = el('button', { type: 'submit', class: 'btn btn-primary', text: confirm, disabled: '' });
+    const cancel = el('button', { type: 'button', class: 'btn', text: 'Cancel' });
+    const form = el('form', { class: 'name-form' }, [
+      el('label', { class: 'name-label' }, [el('span', { text: label }), input]),
+      el('div', { class: 'dialog-buttons' }, [cancel, ok]),
+    ]);
+    let answer = null;
+    const shut = openBox(title, [form], { focus: input, onShut: () => resolve(answer) });
+    input.addEventListener('input', () => { ok.disabled = !input.value.trim(); });
+    cancel.addEventListener('click', shut);
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!input.value.trim()) return;
+      answer = input.value.trim();
+      shut();
+    });
+  });
+}
+
+/// Asks a yes-or-no question in a box over the page. Resolves to true only
+/// when the reader presses `yes`; closing the box counts as no.
+export function askYesNo(title, text, { yes = 'Yes', no = 'No' } = {}) {
+  return new Promise((resolve) => {
+    const yesButton = el('button', { type: 'button', class: 'btn btn-primary', text: yes });
+    const noButton = el('button', { type: 'button', class: 'btn', text: no });
+    let answer = false;
+    const shut = openBox(title, [
+      el('p', { class: 'about-line', text }),
+      el('div', { class: 'dialog-buttons' }, [noButton, yesButton]),
+    ], { focus: yesButton, onShut: () => resolve(answer) });
+    noButton.addEventListener('click', shut);
+    yesButton.addEventListener('click', () => { answer = true; shut(); });
+  });
+}
+
+/// The box the three above share: a heading with a ×, then `body`. Returns
+/// the function that closes it. `onShut` runs once, however it was closed.
+function openBox(title, body, { focus = null, onShut = () => {} } = {}) {
   // Where the keyboard was before this opened, so closing it puts the reader
   // back on the button they pressed.
   const cameFrom = document.activeElement;
@@ -1262,17 +1308,22 @@ export function openInfoDialog(title, paragraphs) {
   const dialog = el('dialog', { class: 'info-dialog' }, [
     el('div', { class: 'info-inner' }, [
       el('div', { class: 'info-head' }, [el('h2', { text: title }), close]),
-      ...paragraphs.map((text) => el('p', { class: 'about-line', text })),
+      ...body,
     ]),
   ]);
 
   // Closing means taking it out of the page, not only shutting it. Every way
   // out goes through here, and it is safe to call twice.
+  let shutAlready = false;
   const shut = () => {
     window.removeEventListener('hashchange', shut);
     if (dialog.open) dialog.close();
     dialog.remove();
     if (cameFrom && cameFrom.focus) cameFrom.focus();
+    if (!shutAlready) {
+      shutAlready = true;
+      onShut();
+    }
   };
 
   close.addEventListener('click', shut);
@@ -1294,7 +1345,8 @@ export function openInfoDialog(title, paragraphs) {
 
   document.body.append(dialog);
   dialog.showModal();
-  close.focus();
+  (focus || close).focus();
+  return shut;
 }
 
 // The box the "Remove mod from Starmodder" button opens. Shared by a mod's
@@ -1707,8 +1759,10 @@ export function requiredModCounts(mods) {
 /// This is the only way to browse by category that a reader can actually use. The
 /// dropdown it replaces held 26 overlapping names; the site publishes thirteen
 /// and shows them all at once.
+///
+/// `linkParams` are more address values for each link, such as Home's filters.
 export function categoryChips(mods, opts = {}) {
-  const { chosen = null, onPick = null } = opts;
+  const { chosen = null, onPick = null, linkParams = {} } = opts;
 
   const inOrder = countedAcross(mods, (mod) => mod.categories);
   if (!inOrder.length) return null;
@@ -1718,7 +1772,7 @@ export function categoryChips(mods, opts = {}) {
     const on = category === chosen;
     const chip = el(onPick ? 'button' : 'a', {
       class: on ? 'category-cell on' : 'category-cell',
-      href: onPick ? null : buildHash(['browse'], { category }),
+      href: onPick ? null : buildHash(['browse'], { ...linkParams, category }),
       'aria-pressed': onPick ? String(on) : null,
       'aria-label': `${category}, ${count} mod${count === 1 ? '' : 's'}`,
     }, [

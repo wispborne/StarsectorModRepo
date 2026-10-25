@@ -985,11 +985,11 @@ button.check-row { align-items: center; }
   margin-left: auto; color: var(--text-dim); font-size: var(--type-tiny);
   font-variant-numeric: tabular-nums;
 }
-/* The top button opens the same controls over the results. */
-.ai-filter-menu { position: relative; }
-.ai-filter-menu > summary { list-style: none; }
-.ai-filter-menu > summary::-webkit-details-marker { display: none; }
-.ai-filter-box {
+/* The AI use and saved filters buttons open their controls over the results. */
+.filter-menu { position: relative; }
+.filter-menu > summary { list-style: none; }
+.filter-menu > summary::-webkit-details-marker { display: none; }
+.filter-menu-box {
   position: absolute; z-index: 10; top: calc(100% + 6px); left: 0;
   width: 300px; max-width: calc(100vw - 32px); padding: var(--pad-cell);
   max-height: min(70vh, 640px); overflow-y: auto;
@@ -997,6 +997,55 @@ button.check-row { align-items: center; }
   border-radius: 8px; box-shadow: var(--lifted);
 }
 .filters-gap { flex: 1 1 auto; }
+
+/* Saved filters: a list of names, each with its delete button, then the line
+   that saves the filters in use. The same list sits in a box along the top
+   and in a panel at the side. */
+.saved-filters { display: flex; flex-direction: column; gap: 2px; font-size: var(--type-small); }
+.saved-row { display: flex; align-items: center; gap: 4px; }
+.saved-pick {
+  flex: 1 1 auto; min-width: 0; text-align: left;
+  background: none; border: 1px solid transparent; border-radius: 6px;
+  padding: 4px 8px; font: inherit; color: var(--primary); cursor: pointer;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.saved-pick:hover { background: var(--primary-soft); }
+.saved-pick.on { background: var(--on-soft); border-color: var(--on); color: var(--on); font-weight: 600; }
+.saved-delete {
+  flex: none; background: none; border: none; cursor: pointer; padding: 2px 8px;
+  color: var(--text-dim); font: inherit; line-height: 1;
+}
+.saved-delete:hover { color: var(--error); }
+.saved-none, .saved-undo { margin: 0; padding: 4px 8px; color: var(--text-dim); }
+.saved-save { padding: 4px 8px; }
+.filter-menu-box .saved-filters { min-width: 220px; }
+
+/* Home's filter bar: a slim strip at the top of the page that opens to show
+   the filters. Shut, it says which filters are on. */
+.home-filters { padding: var(--pad-cell); }
+.home-filters-head {
+  display: flex; align-items: baseline; gap: var(--gap); flex-wrap: wrap;
+  cursor: pointer; list-style: none;
+}
+.home-filters-head::-webkit-details-marker { display: none; }
+.home-filters-title { font-weight: 600; }
+.home-filters .btn.confirming { border-color: var(--warning); color: var(--warning); }
+.home-filters-icon { display: inline-flex; margin-right: 6px; vertical-align: -0.135em; }
+.home-filters-title::after { content: ' \25BE'; color: var(--text-dim); }
+.home-filters[open] .home-filters-title::after { content: ' \25B4'; }
+.home-filters-words { min-width: 0; color: var(--on); font-size: var(--type-small); }
+.home-filters-head .link-button { font-size: var(--type-small); }
+.home-filters[open] > .filters { margin-top: var(--gap); }
+/* A long requirement name would push its dropdown past a phone's edge. */
+.home-filters .filter-label { max-width: 100%; }
+.home-filters select { min-width: 0; max-width: 100%; }
+.all-hidden { margin: 0; color: var(--text-dim); font-size: var(--type-small); }
+
+/* The box that asks for a saved filter's name, and the one that asks before
+   replacing one. */
+.name-form { display: flex; flex-direction: column; gap: var(--gap); }
+.name-label { display: flex; flex-direction: column; gap: 6px; font-size: var(--type-small); color: var(--text-dim); }
+.dialog-buttons { display: flex; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
 @media (max-width: 900px) {
   .browse-split { grid-template-columns: minmax(0, 1fr); }
   .browse-filters { position: static; max-height: none; overflow: visible; }
