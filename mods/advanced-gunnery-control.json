@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T16:48:18.945718Z",
+  "generatedAt": "2026-10-25T18:41:12.552059Z",
   "listing": {
     "id": "advanced-gunnery-control",
     "name": "Advanced Gunnery Control",
@@ -22,10 +22,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.19.1",
     "imageUrl": "https://cdn.discordapp.com/attachments/1203074774289481728/1203074774872358953/image.png?ex=6adbc3b2&is=6ada7232&hm=879ef1ebe2f051e26cd1a6c67a63ea59fddc5e0b00659f5e15e328611ec4aefe&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1203074774289481728/1203074774872358953/image.png?ex=6ade66b2&is=6add1532&hm=687e01b6bfd155a77902d22628f82d73e1ed959f2605819010f6165f8acbe48f&",
-    "summary": "Apply one or more tags for each weapon group to customize their behavior on auto-fire",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1203074774289481728/1203074774872358953/image.png?ex=6adf0f72&is=6addbdf2&hm=6323121f2610670f05bf01010e7c8eea6161ca74843cac21f77446cbd9ed4ef5&",
+    "summary": "Have you ever been frustrated with your Burst PDs firing all their charges at the enemy shield right before a salvo of Harpoons hits you? Have you ever wondered why your Devastator Cannon deems it necessary to fire at a single Frigate at max range?",
     "summaryIsGenerated": false,
-    "aiSummary": "Lets you customize weapon behavior on auto-fire by applying tags to weapon groups.",
+    "aiSummary": "Customizes weapon behavior on auto-fire using tags and ship modes.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -59,7 +59,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><strong>A utility mod allowing you to customize weapon behavior on autofire, such as e.g. targeting/avoiding shields.</strong></p><p>Requires MagicLib and LazyLib. LunaLib is required to use LunaSettings (though Settings.editme still works)</p><p>Install and press J in combat, in refit, or on the world map to open a GUI.</p><p>Features:</p><ul><li>Many tags, such as targeting or avoiding shields, PD mode and many many more</li><li>GUI-based configuration in combat/refit or on the campaign map</li><li>Ability to automate tags via automatic customizable suggested tags and fleet-wide weapon-composition based tags</li><li>Tags are automatically saved between combats and reloads</li><li>Seamlessly switch between simple mode (6 tags) and advanced mode (over 20 tags)</li><li>Customize AI-controlled ship behavior through ship modes in advanced mode</li><li>Customize most aspects of the mod through LunaLib settings</li><li>Manually control multiple weapon groups at once using the Merge tag</li></ul><p>Can be updated/added/removed to/from ongoing campaigns.</p><pre><code>To mod-authors:\nIf you want to integrate with AGC to improve ship/weapon AI behavior of your faction, check the readme. Feel free to ping me if you need help or want to request a special mode.\nExample integration code: <a href=\"https://github.com/DesperatePeter/starsector-symbiotic-void-creatures/blob/main/src/tecrys/svc/hullmods/BGECarapace.kt#L98\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/DesperatePeter/starsector-symbiotic-void-creatures/blob/main/src/tecrys/svc/hullmods/BGECarapace.kt#L98</a></code></pre><p>Videos:<br>AGC 1.15 Showcase: <a href=\"https://youtu.be/N5SIRMo7Pxc\" rel=\"nofollow noopener\" target=\"_blank\">https://youtu.be/N5SIRMo7Pxc</a><br>AGC in 60s: <a href=\"https://youtu.be/2T3xNqy2HQA\" rel=\"nofollow noopener\" target=\"_blank\">https://youtu.be/2T3xNqy2HQA</a></p><p>Forum: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=21280.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=21280.0</a><br>Download: <a href=\"https://github.com/DesperatePeter/starsector-advanced-weapon-control/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/DesperatePeter/starsector-advanced-weapon-control/releases</a></p>",
-  "aiDescription": "Applies tags to weapon groups to control targeting, shield avoidance, and PD mode. Provides a GUI for configuration during combat, refit, or campaign map. Allows customization of AI-controlled ship behavior through ship modes and supports creating custom default tags.",
+  "aiDescription": "Allows players to apply tags to weapon groups to control targeting, shield avoidance, and PD mode. Includes a GUI for configuration during combat or on the campaign map. Supports customization of AI-controlled ship behavior through ship modes.",
   "saveCompatibilityText": "Can be safely added to/updated/removed from ongoing campaigns",
   "removalCompatibilityText": "Can be safely added to/updated/removed from ongoing campaigns",
   "canAdd": "yes",
@@ -70,7 +70,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1203074774289481728/1203074774872358953/image.png?ex=6ade66b2&is=6add1532&hm=687e01b6bfd155a77902d22628f82d73e1ed959f2605819010f6165f8acbe48f&",
+      "url": "https://cdn.discordapp.com/attachments/1203074774289481728/1203074774872358953/image.png?ex=6adf0f72&is=6addbdf2&hm=6323121f2610670f05bf01010e7c8eea6161ca74843cac21f77446cbd9ed4ef5&",
       "aiCaption": "A wide title picture showing the mod's gun control menu with weapon groups and a ship sprite, labeled 'Advanced Gunnery Control'.",
       "aiKind": "banner",
       "aiFit": "good",
@@ -98,5 +98,11 @@
   "releases": [],
   "threadLastPostOn": "2026-10-23",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "LunaLib",
+      "id": "lunalib"
+    }
+  ]
 }

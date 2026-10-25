@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T16:48:18.945718Z",
+  "generatedAt": "2026-10-25T18:41:12.552059Z",
   "listing": {
     "id": "omega-core-everywhere",
     "name": "Omega Core Everywhere",
@@ -15,6 +15,7 @@
       "discord"
     ],
     "gameVersion": "0.98a",
+    "modVersion": "1.0.0",
     "imageUrl": "https://fractalsoftworks.com/forum/index.php?action=dlattach;attach=15979;type=avatar",
     "summary": "Omega cores drop from destroyed Omega ships",
     "summaryIsGenerated": false,
@@ -53,9 +54,9 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>This mod will allow you to put in omega cores in every industry giving unique buffs. Has unique interactions with indevo, AOTD, tasc.</p><p>forum post:</p><p><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36168.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36168.0</a></p>",
-  "aiDescription": "Allows destroyed Omega ships to drop their command cores with varying probabilities based on ship size. Installs Omega cores into colony buildings to grant powerful bonuses, such as doubled production or instant station recovery. Supports base game buildings as well as those from Industrial Evolution, Vaults of Knowledge, and Terraforming & Station Construction.",
-  "saveCompatibilityText": "Yes.",
-  "removalCompatibilityText": "Yes. The building effects come off before every save, so the save does not depend on this mod. Everything already handed out stays: delivered goods, officer levels, Hypercognition, restored ships and reputation.",
+  "aiDescription": "Allows destroyed Omega ships to drop their command cores, with drop rates scaling by ship size. Installing an Omega core in a colony building grants powerful bonuses, such as doubled production or enhanced defenses. These effects apply to buildings in the base game and several supported mods.",
+  "saveCompatibilityText": "Can I add it to an existing save?\nYes.",
+  "removalCompatibilityText": "Can I remove it from a save?\nYes. The building effects come off before every save, so the save does not depend on this mod. Everything already handed out stays: delivered goods, officer levels, Hypercognition, restored ships and reputation.",
   "canAdd": "yes",
   "canRemove": "yes",
   "aiUse": {
@@ -108,5 +109,17 @@
   "releases": [],
   "threadLastPostOn": "2026-10-18",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Industrial.Evolution",
+      "id": "industrial-evolution"
+    },
+    {
+      "name": "AoTD Vaults of Knowledge"
+    },
+    {
+      "name": "Terraforming & Station Construction"
+    }
+  ]
 }

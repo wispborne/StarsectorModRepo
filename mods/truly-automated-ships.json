@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T16:48:18.945718Z",
+  "generatedAt": "2026-10-25T18:41:12.552059Z",
   "listing": {
     "id": "truly-automated-ships",
     "name": "Truly Automated Ships v2.0",
@@ -20,7 +20,7 @@
     "imageUrl": "https://i.imgur.com/dZffAwM.png",
     "summary": "This mod intends to change the way AI officers assigned to automated ships affect the rest of your fleet.",
     "summaryIsGenerated": false,
-    "aiSummary": "Changes how AI cores on automated ships affect fleet efficiency by reducing automated ship points but increasing operational costs.",
+    "aiSummary": "Changes how AI cores affect automated ships by reducing their automated ship points while increasing resource costs.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/TobiaFi/TrulyAutomatedShips/releases/download/v2.0/TrulyAutomatedShips_2.0.zip",
@@ -45,7 +45,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>This mod changes automated ships so that they use less automated points when outfitted with an AI core officer, at the cost of reduced operational time.</p><p>In the vanilla game, AI officers increase the \"automated ship points\" of the ship they're attached to, and to me it doesn't make too much sense. If your automated fleet relies on the computing power of the rest of the fleet to coordinate itself - and that's why having too many automated ships leads to a decrease in maximum efficiency for all of them - then grabbing a tonne of GPUs and stitching them together with a ship should actually lift some of the weight from your regular ships, not add even more!</p><p>With this mod, when you slap a supercomputer on a hull, it will actually make the ship more autonomous, and decrease its \"automated ship points,\" leaving you with the ability to increase the size of your automated fleet even more! But beware: all of this added computing power will be a huge drain on your resources. After all, you wouldn't expect a giant AI core with the capacity to manage entire planets to be easy to sustain, would you? The good news is that small ships will be reasonably cheap, but as hull size increases, so do operational requirements.</p><pre><code>Changelog:\n2.0\nRemoved the previous downside for AI cores on automated ships (increased supply maintenance costs). It wasn't fun, just boring\nAdded downside of increased CR cost for deployment\nAdded downside of reduced PPT\nAdded downside of increased CR consumption during combat after PPT has expired</code></pre><pre><code>When using this mod on a preexisting savefile, you'll need to remove all cores that you already have on your ships and then put them back in. Otherwise, the game won't update their CR according to the mod. If you already have some cores integrated into ships by the time you install this mod, that ship's CR calculation will stay bugged. There's nothing I can do at the moment.</code></pre><p>Download: <a href=\"https://github.com/TobiaFi/TrulyAutomatedShips/releases/download/v2.0/TrulyAutomatedShips_2.0.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/TobiaFi/TrulyAutomatedShips/releases/download/v2.0/TrulyAutomatedShips_2.0.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=21547.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=21547.0</a></p>",
-  "aiDescription": "Modifies the interaction between AI officers and automated ships to make larger automated fleets more viable. Installing an AI core reduces the ship's automated ship points, allowing for a bigger fleet, but increases deployment costs, reduces peak performance time, and accelerates combat readiness decay. The effects scale based on the type of core installed and the size of the ship's hull.",
+  "aiDescription": "Modifies the interaction between AI officers and automated ships to make larger automated fleets more viable. Installing an AI core reduces the ship's automated ship points based on core type and hull size, allowing for a larger fleet capacity. However, this autonomy comes at the cost of increased Combat Readiness consumption during deployment and combat, as well as reduced peak performance time.",
   "saveCompatibilityText": "When using this mod on a preexisting savefile, you'll need to remove all cores that you already have on your ships and then put them back in. Otherwise, the game won't update their CR according to the mod. If you already have some cores integrated into ships by the time you install this mod, that ship's CR calculation will stay bugged.",
   "canAdd": "depends",
   "aiUse": {},
@@ -157,5 +157,11 @@
   ],
   "threadLastPostOn": "2026-10-19",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Tahlan Shipworks",
+      "id": "tahlan-shipworks"
+    }
+  ]
 }

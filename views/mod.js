@@ -69,6 +69,13 @@ export async function render(root, parts) {
     return;
   }
 
+  // Taken-down mods have a file that tells us to show the not-found view.
+  // The host keeps serving deleted files for up to a week.
+  if (detail.gone) {
+    notFound.render(root);
+    return;
+  }
+
   // An old address whose mod was joined into another: on to that mod's page.
   if (detail.movedTo) {
     address().redirect(modHref(detail.movedTo));
