@@ -1251,8 +1251,10 @@ export function noteWithMore(shortText, { title, paragraphs, moreLabel }) {
 /// It is a real `<dialog>`, so Escape closes it and the keyboard stays inside
 /// it, and it is thrown away on closing rather than left in the page — nothing
 /// here is worth keeping between presses.
+///
+/// Each paragraph is a string, or a list of strings and elements such as links.
 export function openInfoDialog(title, paragraphs) {
-  openBox(title, paragraphs.map((text) => el('p', { class: 'about-line', text })));
+  openBox(title, paragraphs.map((parts) => el('p', { class: 'about-line' }, parts)));
 }
 
 /// Asks for a name in a box over the page. Resolves to the name, trimmed, or
@@ -1351,12 +1353,15 @@ function openBox(title, body, { focus = null, onShut = () => {} } = {}) {
 
 // The box the "Remove mod from Starmodder" button opens. Shared by a mod's
 // page and the About page so the two always say the same thing.
-const TAKEDOWN_TITLE = 'Remove mod from Starmodder';
-const TAKEDOWN_PARAGRAPHS = [
-  'To ask me to remove a mod, send a direct message to Wispborne on the Starsector forum '
-    + 'or to Wisp on Discord.',
-  "Message me from the account you use to post your mods. That lets me confirm you're the author.",
-  "You can ask me to remove one mod or all your mods. I only remove mods at the author's request.",
+const TAKEDOWN_TITLE = 'Takedown request';
+const FORUM_PROFILE_URL = 'https://fractalsoftworks.com/forum/index.php?action=pm;sa=send;u=7678';
+const takedownParagraphs = () => [
+  [
+    'To request a mod or mods be removed, send a DM to ',
+    el('a', { href: FORUM_PROFILE_URL, target: '_blank', rel: 'noopener noreferrer', text: 'Wispborne' }),
+    ' on the Starsector forum or to Wisp on Discord (@142592906178330624).',
+  ],
+  "Please message from the account you use to post your mods.",
 ];
 
 /// The "Remove mod from Starmodder" button. It only opens a box saying how to
@@ -1365,7 +1370,7 @@ export function takedownButton() {
   const button = el('button', {
     type: 'button', class: 'btn', text: 'Remove mod from Starmodder',
   });
-  button.addEventListener('click', () => openInfoDialog(TAKEDOWN_TITLE, TAKEDOWN_PARAGRAPHS));
+  button.addEventListener('click', () => openInfoDialog(TAKEDOWN_TITLE, takedownParagraphs()));
   return button;
 }
 
