@@ -131,7 +131,53 @@ export function repairGameVersion(version) {
   let text = String(version ?? '').trim().replace(/^v\s*\.?\s*/i, '');
   if (text.startsWith('.')) text = `0${text}`;
   if (/^\d{2}(?![\d.])/.test(text)) text = `0.${text}`;
-  return text;
+  return fixMistypedRelease(text);
+}
+
+/// Known Starsector release numbers. `fixMistypedRelease` checks for typos
+/// against this list. Other numbers are left alone unless they match a typo.
+/// A game release newer than the list, such as 0.99a, is left alone; the list needs no update for new game versions.
+const RELEASES = new Set([
+  '0.1', '0.2', '0.3', '0.31', '0.32', '0.33', '0.34', '0.35',
+  '0.5', '0.51', '0.52', '0.52.1', '0.53', '0.53.1', '0.54', '0.54.1',
+  '0.6', '0.6.1', '0.6.2', '0.65', '0.65.1', '0.65.2',
+  '0.7', '0.7.1', '0.7.2', '0.8', '0.8.1', '0.9', '0.9.1',
+  '0.95', '0.95.1', '0.96', '0.97', '0.98',
+]);
+
+/// Fixes an extra dot ("0.9.8a" is 0.98a), a missing dot ("0.81a" is 0.8.1a),
+/// or a letter between numbers ("0.95a.1a" is 0.95.1a).
+/// Changes the version only when the fix matches exactly one known release.
+function fixMistypedRelease(text) {
+  const match = /^(\d+(?:\.\d+)*)(.*)$/.exec(text);
+  if (!match) return text;
+  const [, number, rest] = match;
+  // Check for a letter between numbers first.
+  // The number before the letter may also be a known release.
+  const lettered = /^([a-z]+)\.(\d+)(.*)$/i.exec(rest);
+  if (lettered && RELEASES.has(`${number}.${lettered[2]}`)) {
+    return `${number}.${lettered[2]}${lettered[3] || lettered[1]}`;
+  }
+  if (RELEASES.has(number)) return text;
+
+  const readings = new Set();
+  const add = (candidate) => {
+    if (RELEASES.has(candidate)) readings.add(candidate);
+  };
+  const [major, ...others] = number.split('.');
+  const minor = others.join('.');
+  // Try removing each dot after the first.
+  for (let i = 1; i < others.length; i++) {
+    add(`${major}.${others.slice(0, i).join('.')}${others.slice(i).join('.')}`);
+  }
+  // Try adding a dot between digits after the first dot.
+  if (others.length === 1) {
+    for (let i = 1; i < minor.length; i++) {
+      add(`${major}.${minor.slice(0, i)}.${minor.slice(i)}`);
+    }
+  }
+  if (readings.size !== 1) return text;
+  return `${[...readings][0]}${rest}`;
 }
 
 /// The number part of a game version, which every spelling of one release

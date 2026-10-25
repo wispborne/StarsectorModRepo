@@ -614,6 +614,8 @@ main {
 .notice h3 { margin-top: 0; }
 .notice p { margin: 0; color: var(--text-dim); }
 .notice-action { padding-top: var(--gap); }
+.not-found h2 { margin-top: 0; }
+.not-found .not-found-links { display: flex; flex-wrap: wrap; gap: var(--gap); padding-top: var(--gap); }
 
 .breadcrumbs { font-size: var(--type-small); color: var(--text-dim); margin-bottom: 12px; }
 .crumb-sep { margin: 0 6px; opacity: 0.6; }
@@ -674,7 +676,7 @@ main {
   display: inline-flex; align-items: center; gap: 7px;
 }
 .btn-with-icon:hover { text-decoration: none; }
-.github-icon { display: inline-flex; }
+.github-icon, .button-icon { display: inline-flex; }
 
 /* On a card it sits at the foot, under the badges, and spans the card: a
    download is the card's main action and belongs in the reader's line of sight,
@@ -1525,12 +1527,16 @@ button.check-row { align-items: center; }
 .btn-with-icon .original-page-icon,
 .btn-with-icon .view-icon,
 .btn-with-icon .github-icon,
+.btn-with-icon .button-icon,
 .badge.source-link .original-page-icon,
 .big-picture-source .original-page-icon,
 .check-row .tri-box,
 .settings-icon,
 .ai-banner-hide-icon,
 .post-switch-icon { transform: translateY(0.06em); }
+/* The speech bubble's tail makes it reach further down than up, so it sits a
+   little higher than the rest. */
+.btn-with-icon .report-icon { transform: translateY(0.04em); }
 /* The Discord post under the forum post: a little more room than between
    the parts of one group, so the two read as two posts. */
 #section-discord-post { margin-top: calc((var(--gap-wide) - var(--gap)) / 2); }
@@ -1771,6 +1777,12 @@ a.chip.needed:hover { background: var(--primary-bar); text-decoration: none; }
 .feed-note { color: var(--text-dim); font-size: var(--type-small); margin: 0; }
 .about-line { margin: 0 0 10px; }
 .about-line:last-child { margin-bottom: 0; }
+.about-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--gap); }
+
+.changelog-entry + .changelog-entry { margin-top: var(--gap-wide); }
+.changelog-entry h3 { margin: 0 0 4px; }
+.changelog-entry p, .changelog-entry ul { margin: 0 0 6px; }
+.changelog-build { color: var(--text-dim); font-size: var(--type-tiny); }
 
 /* A mod's name is plain text until you point at it. Said once here rather than
    four times, once per place a name turns up. */
@@ -1968,9 +1980,69 @@ body.picture-open { overflow: hidden; }
 }
 .footer-note { margin-left: auto; }
 
+/* --- Reports --- */
+
+.report-head { display: flex; flex-direction: column; gap: 4px; margin-bottom: var(--gap); }
+.report-head > h2 { margin: 0; }
+.report-about { margin: 0; color: var(--text-dim); font-size: var(--type-small); }
+.report h3 { margin: 0; font-size: var(--type-normal); }
+
+/* Names share a column so the bars line up. */
+.bar-list {
+  display: grid; grid-template-columns: minmax(0, max-content) minmax(0, 1fr);
+  gap: 6px var(--gap); align-items: center;
+}
+.bar-name {
+  max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-size: var(--type-small); color: var(--text);
+}
+a.bar-name:hover { color: var(--primary); }
+.bar-link { display: flex; align-items: center; gap: 8px; min-width: 0; color: var(--text-dim); }
+a.bar-link:hover { text-decoration: none; color: var(--primary); }
+.bar-track { flex: 1; height: 14px; border-radius: 3px; background: var(--primary-faint); }
+.bar-fill { display: block; height: 100%; border-radius: 3px; background: var(--primary-bar); }
+.bar-fill.on { background: var(--on); }
+.bar-fill.dim { background: var(--border); }
+a.bar-link:hover .bar-fill { background: var(--primary-bar-lit); }
+.bar-count { min-width: 3ch; font-size: var(--type-small); font-variant-numeric: tabular-nums; }
+
+/* Each column has a count, a bar and a label.
+   Year or month labels mark the start of each group. */
+.report-columns {
+  display: flex; align-items: stretch; gap: 3px; overflow-x: auto;
+  padding-bottom: 4px;
+}
+.column {
+  flex: 1 0 18px; display: flex; flex-direction: column; align-items: center;
+  gap: 2px; min-width: 18px;
+}
+.report-columns.wide .column { flex-basis: 28px; }
+.report-columns.dense { gap: 1px; }
+.report-columns.dense .column { flex-basis: 6px; min-width: 6px; }
+.report-columns.dense .column-count, .report-columns.dense .column-label { display: none; }
+.column-count {
+  min-height: 1.2em; font-size: var(--type-note); color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+}
+.column-track {
+  width: 100%; height: 140px; display: flex; align-items: flex-end;
+  background: var(--primary-faint); border-radius: 3px 3px 0 0;
+}
+.column-fill { display: block; width: 100%; background: var(--primary-bar); border-radius: 3px 3px 0 0; }
+.column:hover .column-fill { background: var(--primary-bar-lit); }
+.column-label, .column-group {
+  font-size: var(--type-note); color: var(--text-dim); white-space: nowrap;
+}
+.column-group { min-height: 1.2em; color: var(--text); }
+/* Group labels extend right from their first column. */
+.column.starts-group { align-items: stretch; }
+.column.starts-group .column-label { text-align: center; }
+.column.starts-group .column-group { width: 0; overflow: visible; }
+
 /* --- Phones --- */
 
 @media (max-width: 640px) {
+  .bar-name { max-width: 140px; }
   .header-inner { gap: 10px; padding: 8px 12px; }
   .brand { font-size: var(--type-big); }
   .site-nav { order: 3; flex-basis: 100%; }

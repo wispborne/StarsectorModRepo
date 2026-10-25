@@ -2,11 +2,11 @@
 // problem.
 
 import {
-    clear, el, formatDay, modList, PROBLEM_REPORT_BASE,
+    clear, el, formatDay, modList, PROBLEM_REPORT_BASE, SITE_CODE_URL,
 } from '../lib.js';
 
 const MOD_REPO_URL = 'https://github.com/wispborne/StarsectorModRepo';
-const SCRAPER_URL = 'https://github.com/wispborne/Mod_Repo_Scraper';
+const SCRAPER_URL = SITE_CODE_URL;
 const WISP_URL = 'https://github.com/wispborne';
 const TRIOS_URL = 'https://fractalsoftworks.com/forum/index.php?topic=29674';
 const QBMBAMM_URL = 'https://github.com/theRoastSuckling/QBMBAMM';
@@ -40,6 +40,29 @@ export async function render(root) {
     root.append(el('div', {class: 'stack'}, [
         el('div', {class: 'page-head'}, [
             el('h1', {text: 'About Starmodder'}),
+        ]),
+        el('div', {class: 'about-actions'}, [
+            iconButton('updates.xml', FEED_ICON, 'Release feed'),
+            iconButton('#/changelog', CHANGELOG_ICON, 'Changelog'),
+            // The site's own code.
+            el('a', {
+                class: 'btn btn-with-icon',
+                href: SCRAPER_URL,
+                target: '_blank',
+                rel: 'noopener',
+            }, [
+                el('span', {class: 'github-icon', html: GITHUB_ICON}),
+                'GitHub',
+            ]),
+            el('a', {
+                class: 'btn btn-primary btn-with-icon',
+                href: PROBLEM_REPORT_BASE,
+                target: '_blank',
+                rel: 'noopener nofollow',
+            }, [
+                el('span', {class: 'button-icon report-icon', html: REPORT_ICON}),
+                'Report a problem',
+            ]),
         ]),
 
     section('What is this?', [
@@ -92,8 +115,17 @@ export async function render(root) {
             'The current setup relies on the moderation teams of the Forum and USC to decide what mods'
             + ' to allow. From the Starmodder side, everything is entirely automated.',
             'Dealing with issues such as: how NSFW is too NSFW, whether a mod stole someone else\'s work,'
-            + ' corporate copyright, what is considered hate speech, takedown requests, political mods, targeted mods etc.'
-            + ' These are not how I\'d like to spend my free time.'
+            + ' corporate copyright, what is considered hate speech, political mods, targeted mods etc.'
+            + ' These are not how I\'d like to spend my free time.',
+            [
+                'Takedown requests are the exception. If you made a mod and want it taken off Starmodder, '
+                + 'open an issue on ',
+                githubLink(`${MOD_REPO_URL}/issues`, 'the StarsectorModRepo repo'),
+                ' or message me. I\'ll remove it. You can ask me to remove one mod or every mod that credits you. '
+                + 'The list of removed mods is public, in ',
+                githubLink(`${MOD_REPO_URL}/blob/main/takedowns.json`, 'takedowns.json'),
+                '.',
+            ],
         ]),
 
         section('How is AI used?', [
@@ -128,32 +160,6 @@ export async function render(root) {
             ],
         ]),
 
-        el('p', {}, [
-            el('a', {
-                class: 'btn',
-                href: 'updates.xml',
-                text: 'Feed',
-            }),
-            el('span', {text: ' '}),
-            // The site's own code.
-            el('a', {
-                class: 'btn btn-with-icon',
-                href: SCRAPER_URL,
-                target: '_blank',
-                rel: 'noopener',
-            }, [
-                el('span', {class: 'github-icon', html: GITHUB_ICON}),
-                'GitHub',
-            ]),
-            el('span', {text: ' '}),
-            el('a', {
-                class: 'btn btn-primary',
-                href: PROBLEM_REPORT_BASE,
-                target: '_blank',
-                rel: 'noopener nofollow',
-                text: 'Report a problem',
-            }),
-        ]),
     ]));
 }
 
@@ -165,6 +171,29 @@ function section(title, paragraphs) {
             {class: 'about-line'},
             typeof content === 'string' ? [content] : content,
         )),
+    ]);
+}
+
+// Tabler icons (MIT): rss, history and message-report.
+const FEED_ICON = tablerIcon('<path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>'
+    + '<path d="M4 4a16 16 0 0 1 16 16"/><path d="M4 11a9 9 0 0 1 9 9"/>');
+const CHANGELOG_ICON = tablerIcon('<path d="M12 8l0 4l2 2"/>'
+    + '<path d="M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5"/>');
+const REPORT_ICON = tablerIcon('<path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5'
+    + 'l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z"/>'
+    + '<path d="M12 8v3"/><path d="M12 14v.01"/>');
+
+function tablerIcon(paths) {
+    return '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+        + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+        + 'stroke-linejoin="round" focusable="false" aria-hidden="true">'
+        + paths + '</svg>';
+}
+
+function iconButton(href, icon, label) {
+    return el('a', {class: 'btn btn-with-icon', href}, [
+        el('span', {class: 'button-icon', html: icon}),
+        label,
     ]);
 }
 

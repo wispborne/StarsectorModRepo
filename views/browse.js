@@ -7,7 +7,6 @@
 
 import {
   aiSparkle, aiSummaryBanner, aiSummaryNote, buildHash, categoryChips, clear,
-  countedAcross,
   currentGameVersion, downloadButton, el, favoriteToggle,
   formatDay, gameVersionFamily, gameVersions, hashQuery, howLongAgo,
   imageUrlOf, isDiscordOnly, joinNames, modHref, modList, modName,
@@ -16,6 +15,7 @@ import {
   fullAiSummaryOnHover, searchHelpField, summaryTitle,
   summaryToShow,
   versionStanding, versionStandingNote, viewToggle,
+  neededModKey, requiredModCounts,
 } from '../lib.js';
 import {
   AI_AREAS, AI_GROUPS, AI_HIDE, AI_LEVELS, AI_ONLY, aiFilterFromAddress,
@@ -877,9 +877,9 @@ function dropdown(label, values, chosen, onPick, opts = {}) {
 }
 
 /// Required mods, ordered by how many mods require them.
+/// Count "Lazy Lib" and "LazyLib" as one name.
 function neededMods(mods) {
-  return countedAcross(mods, (mod) => (mod.needs || []).map((n) => n.name))
-    .map(([name]) => name);
+  return requiredModCounts(mods).map((required) => required.name);
 }
 
 function clearFilters(state) {
@@ -942,8 +942,8 @@ export function matchesFilters(mod, state) {
   if (state.category && !(mod.categories || []).includes(state.category)) return false;
   if (state.needs === NO_REQUIREMENTS) {
     if ((mod.needs || []).length) return false;
-  } else if (state.needs
-      && !(mod.needs || []).some((n) => n.name === state.needs)) return false;
+  } else if (state.needs && !(mod.needs || [])
+      .some((n) => neededModKey(n.name) === neededModKey(state.needs))) return false;
   if (state.author && !(mod.authors || []).includes(state.author)) return false;
   for (const option of SWITCHES) {
     const picked = state.switches.get(option.key);

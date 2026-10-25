@@ -51,10 +51,31 @@ export async function data(name) {
   }
 }
 
+/// A fetch that got an answer, but not the file it wanted. [status] is the
+/// answer's status; [notJson] says a successful answer was not JSON, which is
+/// what a host that answers a missing file with the front page sends.
+export class FetchError extends Error {
+  constructor(message, { status = null, notJson = false } = {}) {
+    super(message);
+    this.status = status;
+    this.notJson = notJson;
+  }
+}
+
+/// True when [err] means the file is not there, rather than that fetching it
+/// went wrong: a 404, or a successful answer that is not JSON.
+export function isMissingFile(err) {
+  return err instanceof FetchError && (err.status === 404 || (err.notJson && err.status < 400));
+}
+
 async function fetchJson(url) {
   const res = await fetch(url, { credentials: 'omit' });
-  if (!res.ok) throw new Error(`${res.status} ${res.statusText} for ${url}`);
-  return res.json();
+  if (!res.ok) throw new FetchError(`${res.status} ${res.statusText} for ${url}`, { status: res.status });
+  try {
+    return await res.json();
+  } catch {
+    throw new FetchError(`${url} did not come back as JSON`, { status: res.status, notJson: true });
+  }
 }
 
 /// Every mod, as `mods.json` holds it.
@@ -1626,6 +1647,39 @@ export function countedAcross(mods, pick) {
     .sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])));
 }
 
+/// Match names by letters and digits so "LazyLib" and "Lazy Lib" count as one.
+export function neededModKey(name) {
+  return String(name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+/// Count how many mods need each mod, highest count first.
+/// Use the most common spelling of each name.
+/// Keep the id if any entry links to the mod's page.
+export function requiredModCounts(mods) {
+  const groups = new Map();
+  for (const mod of mods || []) {
+    const counted = new Set();
+    for (const need of mod.needs || []) {
+      const key = neededModKey(need.name);
+      if (!key || counted.has(key)) continue;
+      counted.add(key);
+      const group = groups.get(key) || { count: 0, id: null, spellings: new Map() };
+      group.count += 1;
+      group.id = group.id || need.id || null;
+      group.spellings.set(need.name, (group.spellings.get(need.name) || 0) + 1);
+      groups.set(key, group);
+    }
+  }
+  return [...groups.values()]
+    .map((group) => ({
+      name: [...group.spellings.entries()]
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0][0],
+      id: group.id,
+      count: group.count,
+    }))
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+}
+
 /// The categories as a small table: a name and how many mods are in it on
 /// each line, in as many columns as the page has room for. Each line is a link
 /// to that category on the browse page, or, on Browse, a button that picks it.
@@ -1856,7 +1910,9 @@ export function gameVersions(mods) {
     }
     const entry = families.get(family);
     entry.count += 1;
-    entry.spellings.set(version, (entry.spellings.get(version) || 0) + 1);
+    // Count "0.9.8a" as "0.98a" after fixing the typo.
+    const spelling = repairGameVersion(version);
+    entry.spellings.set(spelling, (entry.spellings.get(spelling) || 0) + 1);
   }
 
   return [...families.values()]
@@ -1864,10 +1920,17 @@ export function gameVersions(mods) {
       family: entry.family,
       count: entry.count,
       // The spelling most mods use, so "0.98a" wins over one stray "0.98".
+      // Break ties with a final letter: "0.54.1a" wins over "0.54.1".
       label: [...entry.spellings.entries()]
-        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0][0],
+        .sort((a, b) => b[1] - a[1]
+          || endsInLetter(b[0]) - endsInLetter(a[0])
+          || a[0].localeCompare(b[0]))[0][0],
     }))
     .sort((a, b) => compareGameVersions(b.family, a.family));
+}
+
+function endsInLetter(text) {
+  return /[a-z]$/i.test(text) ? 1 : 0;
 }
 
 /// The game version the site treats as current: the highest one enough mods
@@ -1882,6 +1945,9 @@ export function currentGameVersion(mods) {
 /// mod to be taken down. Everything here is collected off other people's posts
 /// by a machine, so some of it will be wrong and there has to be one obvious
 /// place to say so.
+/// Where the website's own code lives. Commit links on the site point into it.
+export const SITE_CODE_URL = 'https://github.com/wispborne/Mod_Repo_Scraper';
+
 export const PROBLEM_REPORT_BASE =
   'https://github.com/wispborne/StarsectorModRepo/issues/new';
 

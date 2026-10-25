@@ -9,7 +9,7 @@ import {
   formatMoment, go, imageChoice, imageUrlOf, inlinePictures,
   loading,
   favorites, modHref, modList, modName,
-  preparePageScroll, restorePageScroll, searchHelpField, setAiSummaryMode,
+  preparePageScroll, restorePageScroll, searchHelpField, setAiSummaryMode, SITE_CODE_URL,
   setAiNoteChoice, setImageChoice, setInlinePictures,
   THEMES, applyTheme, setThemePreference, themePreference,
   thumbnail, watchFavorites,
@@ -22,10 +22,9 @@ import * as mod from './views/mod.js';
 import * as author from './views/author.js';
 import * as about from './views/about.js';
 import * as favoritesView from './views/favorites.js';
-
-/// Where this site's code lives. The commit in the footer links into it, so
-/// a bug report can name the exact build.
-const REPO_URL = 'https://github.com/wispborne/Mod_Repo_Scraper';
+import * as reports from './views/reports.js';
+import * as notFound from './views/not_found.js';
+import * as changelog from './views/changelog.js';
 
 /// The one place that knows what the address bar means: which page it names,
 /// how to build a link to another, and when the reader has moved.
@@ -35,6 +34,7 @@ const NAV = [
   { route: 'home', label: 'Home' },
   { route: 'browse', label: 'Browse mods' },
   { route: 'favorites', label: 'Favorites' },
+  { route: 'reports', label: 'Reports' },
   { route: 'about', label: 'About' },
 ];
 
@@ -45,6 +45,8 @@ const ROUTES = {
   authors: (root, parts) => author.render(root, parts),
   about: (root, parts) => about.render(root, parts),
   favorites: (root, parts) => favoritesView.render(root, parts),
+  reports: (root) => reports.render(root),
+  changelog: (root) => changelog.render(root),
   // The old address for the favorites page. Shared links carry it, so it has to
   // keep working.
   list: (root, parts) => favoritesView.render(root, parts),
@@ -93,6 +95,13 @@ function renderNav(viewId) {
   }
 }
 
+/// The path the host answered with `404.html`, when this document is that page.
+/// The address is left as the reader typed it. Moving on from it routes as
+/// usual, and coming back to it shows the not-found view again.
+const notFoundPath = document.querySelector('meta[name="starmodder-page"][content="not-found"]')
+  ? location.pathname
+  : null;
+
 async function route() {
   // Before anything is cleared, so the view being left can still find out where
   // its reader had got to.
@@ -105,6 +114,13 @@ async function route() {
 
   const root = document.getElementById('app');
   clear(root).append(loading());
+
+  if (notFoundPath !== null && location.pathname === notFoundPath) {
+    renderNav('');
+    notFound.render(root);
+    window.scrollTo(0, 0);
+    return;
+  }
 
   const handler = ROUTES[viewId];
   if (!handler) {
@@ -167,7 +183,7 @@ async function showBuild() {
 
     const commit = el('a', {
       text: build.commit,
-      href: `${REPO_URL}/commit/${build.commit}`,
+      href: `${SITE_CODE_URL}/commit/${build.commit}`,
       rel: 'nofollow noopener',
     });
     line.replaceChildren(`v${build.build} · `, commit, ` · ${build.date}`);
@@ -485,6 +501,7 @@ window.addEventListener('DOMContentLoaded', () => {
   site.watch(route);
   // The front document with nothing after it is Home. Saying so in the address
   // costs no history entry and means every page on the site names itself.
-  if (!site.parts().length) site.replace('#/home');
+  // The not-found page keeps the address the reader typed.
+  if (!site.parts().length && notFoundPath === null) site.replace('#/home');
   route();
 });

@@ -9,7 +9,7 @@ import {
   aiOnModPages, aiSparkle, aiSummaryNote, aiSummaryOf, imageCaption, imageHoverText,
   clear,
   currentGameVersion, DATA_BASE, downloadButton, el, errorPanel, expandAllButton, formatDay,
-  favoriteToggle, formatMoment, imageUrlOf, inlinePictures, joinNames, quickTip,
+  favoriteToggle, formatMoment, imageUrlOf, inlinePictures, isMissingFile, joinNames, quickTip,
   setAiOnModPages, setInlinePictures, summaryToShow,
   modDetail, modHref, modList, modName, MOD_VERSION_NOTE,
   NO_DESCRIPTION, pageIcon, picture, showPicture, summaryTitle,
@@ -17,6 +17,7 @@ import {
 } from '../lib.js';
 import { address } from '../address.js';
 import { SUPPORT_ICONS } from '../support_icons.js';
+import * as notFound from './not_found.js';
 
 // How many rows each of the side column's two short lists shows.
 const RELATED_SIDE_COUNT = 5;
@@ -57,13 +58,14 @@ export async function render(root, parts) {
   let detail;
   try {
     detail = await modDetail(id);
-  } catch {
-    clear(root).append(el('div', { class: 'notice' }, [
-      el('h3', { text: 'No such mod' }),
-      el('p', { text: `There is no mod at "${id}". It may have been taken down, `
-        + 'or the link may be wrong.' }),
-      el('p', {}, [el('a', { href: '#/browse', text: 'Browse every mod →' })]),
-    ]));
+  } catch (err) {
+    // Only a file that is not there means there is no such mod. A dropped
+    // connection or a server error says so instead, with its reason.
+    if (isMissingFile(err)) {
+      notFound.render(root);
+    } else {
+      clear(root).append(errorPanel(new Error(`This mod could not be loaded: ${err && err.message ? err.message : err}`)));
+    }
     return;
   }
 
