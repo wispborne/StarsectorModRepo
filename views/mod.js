@@ -13,7 +13,7 @@ import {
   setAiOnModPages, setInlinePictures, summaryToShow,
   modDetail, modHref, modList, modName, MOD_VERSION_NOTE,
   NO_DESCRIPTION, pageIcon, picture, showPicture, summaryTitle,
-  versionStanding, versionStandingNote, withSource,
+  takedownButton, versionStanding, versionStandingNote, withSource,
 } from '../lib.js';
 import { address } from '../address.js';
 import { SUPPORT_ICONS } from '../support_icons.js';
@@ -160,6 +160,7 @@ export async function render(root, parts) {
       ]),
     ]),
     rawInfo(detail, id),
+    el('div', {}, [takedownButton()]),
   ]));
 }
 
@@ -1380,16 +1381,26 @@ function sideCard(heading, rows) {
   ]);
 }
 
+/// Other mods as chips, linked to their pages when available. Optional mods
+/// use outlined chips instead of filled chips to show they are not required.
+function neededChips(mods, optional) {
+  const kind = optional ? 'chip needed optional' : 'chip needed';
+  return el('div', { class: 'needs-chips' }, mods.map((needed) =>
+    needed.id
+      ? el('a', { class: kind, href: modHref(needed.id), text: needed.name })
+      : el('span', {
+          class: `${kind} unknown`, text: needed.name,
+          title: 'No page available for this mod.',
+        })));
+}
+
 function compatibility(detail, currentVersion) {
   const listing = detail.listing || {};
   const needs = (listing.needs || []).length
-    ? sideFact('Requires', el('div', { class: 'needs-chips' }, listing.needs.map((needed) =>
-      needed.id
-        ? el('a', { class: 'chip needed', href: modHref(needed.id), text: needed.name })
-        : el('span', {
-            class: 'chip needed unknown', text: needed.name,
-            title: 'No page available for this requirement.',
-          }))))
+    ? sideFact('Requires', neededChips(listing.needs, false))
+    : null;
+  const optional = (detail.optionalNeeds || []).length
+    ? sideFact('Optional', neededChips(detail.optionalNeeds, true))
     : null;
   const saveRows = saves(detail);
   return sideCard('Compatibility', [
@@ -1401,6 +1412,7 @@ function compatibility(detail, currentVersion) {
         }), { beside: true })
       : null,
     needs,
+    optional,
     saveRows ? el('div', { class: 'side-fact' }, [saveRows]) : null,
   ]);
 }

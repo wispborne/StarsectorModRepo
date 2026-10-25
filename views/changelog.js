@@ -16,9 +16,9 @@ export async function render(root) {
   let entries;
   try {
     const res = await fetch('./changelog.json', { credentials: 'omit' });
-    if (!res.ok) throw new Error('This copy of the site has no changelog.');
+    if (!res.ok) throw new Error('No changelog.');
     entries = await res.json();
-    if (!Array.isArray(entries)) throw new Error('The changelog would not read.');
+    if (!Array.isArray(entries)) throw new Error('Unable to load changelog.');
   } catch (err) {
     clear(root).append(errorPanel(err));
     return;
@@ -28,7 +28,7 @@ export async function render(root) {
   root.append(el('div', { class: 'stack' }, [
     el('div', { class: 'page-head' }, [
       el('h1', { text: 'Changelog' }),
-      el('span', { class: 'sub', text: 'Changes to Starmodder itself, newest first.' }),
+      el('h3', { text: 'Note: these are all AI-slop, read to your own tolerance.' }),
     ]),
     ...byDay(entries).map(([day, list]) => el('section', { class: 'panel changelog-day' }, [
       el('h2', { text: formatDay(day) || day }),

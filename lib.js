@@ -1297,6 +1297,26 @@ export function openInfoDialog(title, paragraphs) {
   close.focus();
 }
 
+// The box the "Remove mod from Starmodder" button opens. Shared by a mod's
+// page and the About page so the two always say the same thing.
+const TAKEDOWN_TITLE = 'Remove mod from Starmodder';
+const TAKEDOWN_PARAGRAPHS = [
+  'To ask me to remove a mod, send a direct message to Wispborne on the Starsector forum '
+    + 'or to Wisp on Discord.',
+  "Message me from the account you use to post your mods. That lets me confirm you're the author.",
+  "You can ask me to remove one mod or all your mods. I only remove mods at the author's request.",
+];
+
+/// The "Remove mod from Starmodder" button. It only opens a box saying how to
+/// ask: a takedown is done by hand, at the author's request.
+export function takedownButton() {
+  const button = el('button', {
+    type: 'button', class: 'btn', text: 'Remove mod from Starmodder',
+  });
+  button.addEventListener('click', () => openInfoDialog(TAKEDOWN_TITLE, TAKEDOWN_PARAGRAPHS));
+  return button;
+}
+
 /// One button that opens every fold in [container] matching [selector], and
 /// closes them all again once they are open. Home's release list and a mod's
 /// Changelog tab both carry one.

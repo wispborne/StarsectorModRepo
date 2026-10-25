@@ -18,8 +18,8 @@ import {
   neededModKey, requiredModCounts,
 } from '../lib.js';
 import {
-  AI_AREAS, AI_GROUPS, AI_HIDE, AI_LEVELS, AI_ONLY, aiFilterFromAddress,
-  aiFilterIsOn, aiFilterOff, aiFilterToAddress, countedAreas, keepsForAi,
+  AI_AREAS, AI_GROUPS, AI_HIDE, AI_LEVELS, AI_ONLY, AI_PRESETS, aiFilterFromAddress,
+  aiFilterIsOn, aiFilterOff, aiFilterToAddress, countedAreas, keepsForAi, withPreset,
 } from '../ai_filter.js';
 import { compileSearch } from '../search.js';
 
@@ -551,11 +551,16 @@ function drawControls(places, mods, state, onChange, onLayout) {
     const focused = aiHolder.contains(document.activeElement)
       ? document.activeElement.dataset.focus : null;
     clear(aiHolder);
-    aiHolder.append(aiFilterBody(wouldMatch, state.ai, () => changed()));
+    aiHolder.append(aiFilterBody(wouldMatch, state.ai, (next) => {
+      if (next) state.ai = next;
+      changed();
+    }));
     if (focused) aiHolder.querySelector(`[data-focus="${focused}"]`)?.focus();
     // Show the current filter in the top button.
     aiMenuLabel.textContent = aiMenuWords(state.ai);
     aiMenu.querySelector('summary').classList.toggle('on', aiFilterIsOn(state.ai));
+    // All and None change the parts, which only Custom shows.
+    aiAllOrNone.classList.toggle('unused', state.ai.preset !== 'custom');
   };
   const changed = () => {
     drawChips();
@@ -745,14 +750,43 @@ const AI_LEVEL_LABELS = {
 /// Show the current filter in the top button even when the menu is closed.
 function aiMenuWords(filter) {
   if (!aiFilterIsOn(filter)) return 'AI use';
+  if (filter.preset !== 'custom') {
+    return `AI use: ${AI_PRESETS.find((preset) => preset.key === filter.preset).label}`;
+  }
   return filter.mode === AI_HIDE ? 'AI use: hiding' : 'AI use: only';
 }
 
-/// Controls for mode, parts, AI use level and optional parts.
-/// Counts use `mods`, the mods left after the other filters.
+/// The presets, then, for Custom only, controls for mode, parts, AI use level
+/// and optional parts. Counts use `mods`, the mods left after the other
+/// filters. `onChange` takes the new filter when a preset replaces it.
 function aiFilterBody(mods, filter, onChange) {
   const body = el('div', { class: 'ai-filter' });
   const set = (change) => { change(); onChange(); };
+
+  const presets = el('div', {
+    class: 'check-list', role: 'radiogroup', 'aria-label': 'AI use filter',
+  });
+  for (const preset of AI_PRESETS) {
+    const on = filter.preset === preset.key;
+    const custom = preset.key === 'custom';
+    const shown = custom ? null : withPreset(filter, preset.key);
+    const count = custom ? null : mods.filter((mod) => keepsForAi(mod, shown)).length;
+    const button = el('button', {
+      type: 'button', class: `check-row radio${on ? ' on' : ''}`, role: 'radio',
+      'aria-checked': String(on), title: preset.title ?? null,
+      'data-focus': `preset-${preset.key}`,
+    }, [
+      el('span', { class: 'tri-box', 'aria-hidden': 'true', html: RADIO_MARK }),
+      el('span', { text: preset.label }),
+      count == null ? null : el('span', { class: 'check-count', text: String(count) }),
+    ]);
+    button.addEventListener('click', () => {
+      if (!on) onChange(withPreset(filter, preset.key));
+    });
+    presets.append(button);
+  }
+  body.append(presets);
+  if (filter.preset !== 'custom') return body;
 
   const modes = el('div', {
     class: 'view-toggle ai-modes', role: 'group', 'aria-label': 'AI use filter',

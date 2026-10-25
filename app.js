@@ -22,9 +22,10 @@ import * as mod from './views/mod.js';
 import * as author from './views/author.js';
 import * as about from './views/about.js';
 import * as favoritesView from './views/favorites.js';
+import * as guide from './views/guide.js';
 import * as reports from './views/reports.js';
-import * as notFound from './views/not_found.js';
 import * as changelog from './views/changelog.js';
+import * as notFound from './views/not_found.js';
 
 /// The one place that knows what the address bar means: which page it names,
 /// how to build a link to another, and when the reader has moved.
@@ -35,7 +36,11 @@ const NAV = [
   { route: 'browse', label: 'Browse mods' },
   { route: 'favorites', label: 'Favorites' },
   { route: 'reports', label: 'Reports' },
-  { route: 'about', label: 'About' },
+  // A page of its own rather than a hash, and a button rather than a section
+  // of the site: a plain click opens the guide over the page the reader is on.
+  { route: guide.GUIDE_ROUTE, label: guide.GUIDE_TITLE, href: `${guide.GUIDE_ROUTE}/`, guide: true },
+  // At the right end of the bar, beside Settings.
+  { route: 'about', label: 'About', end: true },
 ];
 
 const ROUTES = {
@@ -47,6 +52,7 @@ const ROUTES = {
   favorites: (root, parts) => favoritesView.render(root, parts),
   reports: (root) => reports.render(root),
   changelog: (root) => changelog.render(root),
+  [guide.GUIDE_ROUTE]: (root) => guide.render(root),
   // The old address for the favorites page. Shared links carry it, so it has to
   // keep working.
   list: (root, parts) => favoritesView.render(root, parts),
@@ -64,16 +70,32 @@ let stopWatchingList = null;
 
 function renderNav(viewId) {
   const nav = document.getElementById('nav');
+  const navEnd = document.getElementById('nav-end');
   clear(nav);
+  if (navEnd) clear(navEnd);
   if (stopWatchingList) stopWatchingList();
   stopWatchingList = null;
 
   for (const item of NAV) {
+    if (item.guide && guide.guideButtonHidden()) continue;
     const link = el('a', {
-      href: `#/${item.route}`,
-      class: item.route === viewId ? 'active' : '',
-      text: item.label,
-    });
+      href: item.href || `#/${item.route}`,
+      class: [item.guide ? 'nav-guide' : '', item.route === viewId ? 'active' : '']
+        .filter(Boolean).join(' '),
+    }, item.guide
+      ? [el('span', { class: 'nav-guide-icon', html: guide.GUIDE_ICON }), item.label]
+      : [item.label]);
+    // Opens the guide in a box, unless the reader is already on its page.
+    // A click with a key held down is left alone, so a new tab still gets the
+    // page. Stopping the click here keeps the site's link handling, which
+    // listens on the whole page, from going to the page as well.
+    if (item.guide) {
+      link.addEventListener('click', (e) => {
+        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        e.preventDefault();
+        if (item.route !== viewId) guide.openGuide();
+      });
+    }
     // How many mods are favorited, so the reader sees the count building up
     // without going to look.
     if (item.route === 'favorites') {
@@ -91,7 +113,7 @@ function renderNav(viewId) {
     if (item.route === 'browse') {
       link.addEventListener('click', () => browse.forgetSearch());
     }
-    nav.append(link);
+    (item.end && navEnd ? navEnd : nav).append(link);
   }
 }
 
@@ -101,6 +123,9 @@ function renderNav(viewId) {
 const notFoundPath = document.querySelector('meta[name="starmodder-page"][content="not-found"]')
   ? location.pathname
   : null;
+
+// Hiding or showing the guide's button redraws the bar on whatever page is open.
+guide.onGuideButtonChange(() => renderNav(site.parts()[0] || 'home'));
 
 async function route() {
   // Before anything is cleared, so the view being left can still find out where

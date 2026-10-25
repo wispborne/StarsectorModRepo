@@ -16,6 +16,10 @@
 // addresses are caught here and turned into history entries instead, and the
 // router draws the new page without the site restarting.
 
+/// The site's pages that are a folder of their own at the top level, beside
+/// `mods/`. Each one's folder name is also its route.
+export const PAGE_FOLDERS = ['how-to-install-mods'];
+
 /// The route parts of a hash like `#/foo/bar?x=1`: ['foo','bar'].
 function partsOfHash(hash) {
   const path = String(hash || '').replace(/^#\/?/, '').split('?')[0];
@@ -60,7 +64,8 @@ export function siteAddress({
 
   /// The part of a path below the site's root, with any `index.html` and
   /// surrounding slashes off. Null when the address is not a page this site
-  /// draws, '' for the front document, `mods/<id>` for a mod's page.
+  /// draws, '' for the front document, `mods/<id>` for a mod's page, and the
+  /// folder's name for one of [PAGE_FOLDERS].
   ///
   /// Our pages are folders — the site's own, and one per mod. Anything else
   /// under the root is a file the site fetches rather than a page it draws:
@@ -91,6 +96,7 @@ export function siteAddress({
     if (rest === null) return null;
     if (rest === '') return partsOfHash(url.hash);
     const bits = rest.split('/').map(decodeURIComponent);
+    if (bits.length === 1 && PAGE_FOLDERS.includes(bits[0])) return bits;
     return bits.length === 2 && bits[0] === 'mods' ? bits : null;
   }
 

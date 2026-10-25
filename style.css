@@ -389,7 +389,17 @@ h3 { font-size: var(--type-big); line-height: 1.25; margin: 0 0 6px; }
   border-bottom: 2px solid transparent;
 }
 .site-nav a:hover { color: var(--text); text-decoration: none; }
+/* The entries at the right end of the bar take only the room they need. */
+.site-nav.nav-end { flex: 0 0 auto; }
 .site-nav a.active { color: var(--on); border-bottom-color: var(--on); }
+/* "How to install mods" opens a box rather than a section of the site, so it
+   is in the action colour with an icon, to stand out from the entries beside
+   it. */
+.site-nav a.nav-guide {
+  color: var(--primary); display: inline-flex; align-items: center; gap: 5px;
+}
+.site-nav a.nav-guide.active { color: var(--on); }
+.nav-guide-icon, .nav-guide-icon svg { display: block; width: 1.1em; height: 1.1em; flex-shrink: 0; }
 .nav-count {
   display: inline-block; margin-left: 6px; padding: 0 6px;
   border-radius: 999px; background: var(--on-soft);
@@ -399,8 +409,11 @@ h3 { font-size: var(--type-big); line-height: 1.25; margin: 0 0 6px; }
    `display` above would otherwise beat `hidden` and leave an empty pill. */
 .nav-count[hidden] { display: none; }
 
+/* The same padding and see-through bottom line as the nav links, so its words
+   sit on the same line as theirs. */
 .settings-button {
-  background: none; border: none; padding: 0; font: inherit;
+  background: none; border: none; border-bottom: 2px solid transparent;
+  padding: 6px 0; font: inherit;
   font-size: var(--type-small); color: var(--text-dim); cursor: pointer;
   white-space: nowrap; display: inline-flex; align-items: center; gap: 5px;
 }
@@ -431,6 +444,26 @@ h3 { font-size: var(--type-big); line-height: 1.25; margin: 0 0 6px; }
 .info-dialog { width: min(560px, calc(100vw - 32px)); overflow: auto; }
 .info-inner { padding: var(--pad-block); display: flex; flex-direction: column; gap: var(--gap); }
 .info-inner .about-line { color: var(--text-dim); font-size: var(--type-small); margin: 0; }
+
+/* The install guide, in its box and on its own page. */
+.guide-dialog { width: min(640px, calc(100vw - 32px)); }
+.guide-foot {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: var(--gap);
+}
+.guide-hide { display: flex; align-items: center; flex-wrap: wrap; gap: var(--gap); }
+.guide-note { color: var(--text-dim); font-size: var(--type-small); }
+.guide-toggle {
+  background: none; border: 1px solid var(--border); border-radius: 6px;
+  padding: var(--pad-cell); cursor: pointer; font: inherit; font-size: var(--type-small);
+  color: var(--primary);
+}
+.guide-toggle:hover { background: var(--primary-faint); }
+.guide { display: flex; flex-direction: column; gap: var(--gap); line-height: 1.5; }
+.guide > * { margin: 0; }
+.guide h2 { font-size: var(--type-big); }
+.guide h2:not(:first-child) { margin-top: var(--gap); }
+.guide ol { padding: 0 0 0 calc(var(--gap) * 2); display: flex; flex-direction: column; gap: var(--gap); }
 
 /* The note above a list, saying where the list came from. The amber edge is
    the same one the site uses for anything a reader should weigh before
@@ -942,7 +975,7 @@ button.check-row { align-items: center; }
   font-size: var(--type-tiny); font-weight: 400;
 }
 /* Show All and None only when the parts they change are visible. */
-.filter-panel:not([open]) .ai-all-none { display: none; }
+.filter-panel:not([open]) .ai-all-none, .ai-all-none.unused { display: none; }
 .ai-filter-box-head {
   display: flex; align-items: baseline; margin-bottom: 8px; font-weight: 600;
 }
@@ -1533,7 +1566,8 @@ button.check-row { align-items: center; }
 .check-row .tri-box,
 .settings-icon,
 .ai-banner-hide-icon,
-.post-switch-icon { transform: translateY(0.06em); }
+.post-switch-icon,
+.nav-guide-icon { transform: translateY(0.06em); }
 /* The speech bubble's tail makes it reach further down than up, so it sits a
    little higher than the rest. */
 .btn-with-icon .report-icon { transform: translateY(0.04em); }
@@ -1588,6 +1622,10 @@ button.check-row { align-items: center; }
 }
 a.chip.needed:hover { background: var(--primary-bar); text-decoration: none; }
 .chip.needed.unknown { background: var(--surface-container); color: var(--text-dim); }
+/* Outlines show that these mods are optional. */
+.chip.needed.optional { background: none; box-shadow: inset 0 0 0 1px var(--primary-soft); }
+a.chip.needed.optional:hover { background: var(--primary-soft); }
+.chip.needed.optional.unknown { box-shadow: inset 0 0 0 1px var(--border); }
 
 /* Where the code is kept: a badge in the text colour that links to it, or a
    grey one. The text colour is white on dark themes and dark on Light, which
@@ -2045,7 +2083,12 @@ a.bar-link:hover .bar-fill { background: var(--primary-bar-lit); }
   .bar-name { max-width: 140px; }
   .header-inner { gap: 10px; padding: 8px 12px; }
   .brand { font-size: var(--type-big); }
-  .site-nav { order: 3; flex-basis: 100%; }
+  .site-nav { order: 3; flex-basis: 100%; flex-wrap: wrap; }
+  /* An entry's words stay on one line; an entry that does not fit goes to
+     the next line whole. */
+  .site-nav a { white-space: nowrap; }
+  /* On a phone these stay on the first line, beside Settings. */
+  .site-nav.nav-end { order: 0; flex-basis: auto; margin-left: auto; }
   .header-search { order: 4; flex: 1 1 100%; }
   .release-thumb { display: none; }
   .site-nav a { padding: 6px 10px; }

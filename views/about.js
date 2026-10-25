@@ -2,13 +2,15 @@
 // problem.
 
 import {
-    clear, el, formatDay, modList, PROBLEM_REPORT_BASE, SITE_CODE_URL,
+    clear, el, formatDay, modList, PROBLEM_REPORT_BASE, SITE_CODE_URL, takedownButton,
 } from '../lib.js';
+import { GUIDE_ICON, GUIDE_ROUTE, GUIDE_TITLE, openGuide } from './guide.js';
 
 const MOD_REPO_URL = 'https://github.com/wispborne/StarsectorModRepo';
 const SCRAPER_URL = SITE_CODE_URL;
 const WISP_URL = 'https://github.com/wispborne';
-const TRIOS_URL = 'https://fractalsoftworks.com/forum/index.php?topic=29674';
+// TriOS's own page on this site.
+const TRIOS_PAGE = 'mods/trios-launcher-mod-manager-toolkit/';
 const QBMBAMM_URL = 'https://github.com/theRoastSuckling/QBMBAMM';
 
 // Inline GitHub mark; inherits the button colour.
@@ -41,7 +43,9 @@ export async function render(root) {
         el('div', {class: 'page-head'}, [
             el('h1', {text: 'About Starmodder'}),
         ]),
+        // The guide is always here, even with its top-bar button hidden.
         el('div', {class: 'about-actions'}, [
+            guideButton(),
             iconButton('updates.xml', FEED_ICON, 'Release feed'),
             iconButton('#/changelog', CHANGELOG_ICON, 'Changelog'),
             // The site's own code.
@@ -81,7 +85,7 @@ export async function render(root) {
         'Starmodder is made by ',
         githubLink(WISP_URL, 'Wisp'),
         ' (developer of ',
-        githubLink(TRIOS_URL, 'TriOS'),
+        el('a', {href: TRIOS_PAGE, text: 'TriOS'}),
         '). Its scraper combines code written by Wisp with a Dart port and fork of ',
         githubLink(QBMBAMM_URL, 'QBMBAMM'),
         ', originally made by theRoastSuckling aka kyuubi_.',
@@ -117,15 +121,14 @@ export async function render(root) {
             'Dealing with issues such as: how NSFW is too NSFW, whether a mod stole someone else\'s work,'
             + ' corporate copyright, what is considered hate speech, political mods, targeted mods etc.'
             + ' These are not how I\'d like to spend my free time.',
-            [
-                'Takedown requests are the exception. If you made a mod and want it taken off Starmodder, '
-                + 'open an issue on ',
-                githubLink(`${MOD_REPO_URL}/issues`, 'the StarsectorModRepo repo'),
-                ' or message me. I\'ll remove it. You can ask me to remove one mod or every mod that credits you. '
-                + 'The list of removed mods is public, in ',
-                githubLink(`${MOD_REPO_URL}/blob/main/takedowns.json`, 'takedowns.json'),
-                '.',
-            ],
+        ]),
+
+        section('Removing your mods', [
+            'If you made a mod, you can ask me to remove it from Starmodder. You can ask for one mod '
+            + 'or all your mods.',
+            'I only remove mods at the author\'s request. The button below explains how to contact me '
+            + 'and confirm you\'re the author.',
+            [takedownButton()],
         ]),
 
         section('How is AI used?', [
@@ -148,8 +151,10 @@ export async function render(root) {
             + 'means they have not been read for this yet. The site does not '
             + 'guess from the pictures or the writing.',
             [
-                'On Browse, "Hide AI use" hides mods by what AI was used for. '
-                + 'Mods that do not say, or have not been checked, stay visible. '
+                'On Browse, the "AI use" filter has presets such as "No AI images" '
+                + 'and "No vibecode", or Custom to choose what AI was used for. '
+                + 'Most presets keep mods that do not say, or have not been checked. '
+                + '"Absolutely no AI" shows only mods whose author says no AI was used. '
                 + 'In the search box, ',
                 el('code', {text: 'has:ai'}),
                 ' finds mods whose author says AI was used, and ',
@@ -159,7 +164,6 @@ export async function render(root) {
                 ' in front of either to leave those mods out.',
             ],
         ]),
-
     ]));
 }
 
@@ -195,6 +199,18 @@ function iconButton(href, icon, label) {
         el('span', {class: 'button-icon', html: icon}),
         label,
     ]);
+}
+
+function guideButton() {
+    // A link, so it is the same height as the links beside it. A plain click
+    // opens the guide in a box, the same as the top bar's button.
+    const link = iconButton(`${GUIDE_ROUTE}/`, GUIDE_ICON, GUIDE_TITLE);
+    link.addEventListener('click', (e) => {
+        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        e.preventDefault();
+        openGuide();
+    });
+    return link;
 }
 
 function githubLink(href, text) {
