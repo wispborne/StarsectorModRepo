@@ -1623,6 +1623,58 @@ function downloadLabel(best) {
   return best.needsAnotherStep ? 'Download page' : 'Download';
 }
 
+// The TriOS logo's triangle, from TriLink's favicon (Apache-2.0), without
+// the ring around it, which is too thin to draw at button size. One colour,
+// so it takes the button's text colour. Copied in as path data so nothing
+// loads from an outside host.
+const TRIOS_TRIANGLE = ''
+  + '<path d="M142.864 44.077c7.675 13.052 15.417 26.067 23.013 39.167 13.53 23.3'
+  + '37 26.977 46.723 40.445 70.097.913 1.585 2.096 3.163 2.432 4.886.273 1.403-.'
+  + '102 3.396-.999 4.415-.704.8-3.017 1.157-3.981.604-10.239-5.868-20.44-11.814-'
+  + '30.447-18.068-3.336-2.084-4.03-5.695-3.724-9.717 1.43-18.755-7.475-33.823-24'
+  + '.5-41.885-5.966-2.825-9.183-7.116-8.96-14.1.32-9.988-.003-19.996.16-29.993.0'
+  + '3-1.825 1.07-3.633 2.39-5.496 1.886 0 3.028.044 4.17.09zm-70.558 74.231c13.4'
+  + '88-23.373 26.725-46.47 40.184-69.436 1.157-1.974 3.787-3.085 5.734-4.597 1.1'
+  + '84 2.342 3.29 4.646 3.39 7.033.394 9.474-.04 18.98.23 28.464.191 6.7-2.71 10'
+  + '.936-8.62 13.725-13.054 6.162-21.286 16.275-23.891 30.576-.649 3.56-.822 7.3'
+  + '31-.445 10.924.608 5.795-1.945 9.686-6.53 12.44-8.7 5.225-17.466 10.35-26.36'
+  + '4 15.226-1.586.87-3.943.332-5.944.444.044-2.144-.669-4.707.25-6.366 7.094-12'
+  + '.806 14.503-25.437 22.006-38.433"/><path d="M190.113 173.865c2.787 2.31 7.85'
+  + '6 2.795 6.656 7.36-1.286 4.888-6.047 3.139-9.431 3.148-39.144.1-78.288.125-1'
+  + '17.43-.06-2.967-.013-7.725-.995-8.527-2.867-1.901-4.434 3.289-5.339 5.98-7.0'
+  + '06 7.354-4.556 15.001-8.635 22.425-13.082 4.737-2.838 9.205-2.762 13.408.73 '
+  + '14.321 11.894 35.24 13.162 51.58.315 4.662-3.665 9.294-3.77 14.302-.77 6.853'
+  + ' 4.107 13.802 8.053 21.037 12.232"/>';
+const TRIOS_SVG_START = '<svg viewBox="47.3 32.35 164 164" width="1em" '
+  + 'height="1em" fill="currentColor" focusable="false" aria-hidden="true">';
+// The full logo's nine small dots inside the triangle, for the big button.
+const TRIOS_ICON = TRIOS_SVG_START + TRIOS_TRIANGLE
+  + '<path d="M134.13 112.95c-2.49 3.218-5.608 4.31-8.318 1.805-1.566-1.447-2.604'
+  + '-4.685-2.185-6.779.647-3.238 3.721-4.782 7.004-3.637 3.84 1.34 5.35 4.221 3.'
+  + '499 8.612zm-15.863-2.441c1.379 2.539 3.255 4.94 3.143 7.243-.071 1.472-2.984'
+  + ' 3.733-4.807 3.929-1.8.193-4.497-1.323-5.558-2.917-.919-1.38-.9-4.744.14-5.7'
+  + '56 1.6-1.556 4.43-1.849 7.082-2.5zm19.528 1.286c3.043-2.369 6.16-2.625 8.219'
+  + '.088 1.236 1.628 1.797 4.74 1.12 6.635-1.208 3.39-4.323 4.392-7.755 2.765-3.'
+  + '52-1.67-4.077-4.72-1.584-9.488m-29.746 22.337c-3.209-2.493-4.322-5.605-1.803'
+  + '-8.319 1.454-1.565 4.693-2.605 6.786-2.183 3.228.65 4.78 3.713 3.633 7.006-1'
+  + '.344 3.86-4.239 5.32-8.616 3.496m19.412.654c-4.679-3.091-5.71-6.384-3.101-9.'
+  + '438 2.403-2.814 5.588-3.433 8.237-.852 1.386 1.35 2.315 4.161 1.988 6.06-.56'
+  + '8 3.289-3.29 4.743-7.124 4.23m25.323-7.317c.46 4.315-1.358 7.31-5.165 7.221-'
+  + '2.163-.05-5.525-2.342-6.04-4.248-.51-1.878 1.297-5.477 3.149-6.66 3.366-2.15'
+  + ' 6.24-.132 8.056 3.687m-36.558 7.607c4.326.112 7.022 2.234 6.518 6.058-.273 '
+  + '2.07-2.754 5.176-4.52 5.379-2.103.241-5.552-1.576-6.557-3.483-1.978-3.751.31'
+  + '4-6.547 4.559-7.954m26.309 11.711c-4.567.416-7.572-1.56-7.251-5.648.166-2.12'
+  + ' 2.792-5.326 4.728-5.669 1.941-.344 5.342 1.74 6.429 3.693 1.789 3.214-.286 '
+  + '5.95-3.906 7.624m-14.309-5.711c4.327.112 7.024 2.238 6.526 6.057-.27 2.07-2.'
+  + '758 5.174-4.528 5.38-2.101.243-5.55-1.576-6.557-3.483-1.983-3.755.317-6.545 '
+  + '4.559-7.954"/>'
+  + '</svg>';
+// On a card or row the nine dots are each less than a pixel and blur into
+// a smudge, so one dot stands in for them.
+const TRIOS_ICON_SMALL = TRIOS_SVG_START.replace('<svg ', '<svg class="trios-small" ')
+  + TRIOS_TRIANGLE
+  + '<circle cx="129" cy="128" r="14"/></svg>';
+
 // The icons beside "Cards" and "Rows": four boxes, and three lines each with a
 // dot at the front. Outline, like the site's other icons (Tabler shapes).
 const VIEW_ICONS = {
@@ -1684,7 +1736,7 @@ const ORIGINAL_PAGES = [
     // Discord's is a solid shape — so this one is filled. Copied in as path
     // data so nothing loads from an outside host.
     field: 'discordUrl', name: 'Discord', label: 'On Discord',
-    icon: '<svg viewBox="0 0 24 24" width="1em" height="1em" '
+    icon: '<svg class="discord-mark" viewBox="0 0 24 24" width="1em" height="1em" '
       + 'fill="currentColor" focusable="false" aria-hidden="true">'
       + '<path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 '
       + '00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762'
@@ -1719,10 +1771,6 @@ function originalPageOf(mod) {
   return ORIGINAL_PAGES.find((page) => mod[page.field]) || null;
 }
 
-/// The small site-owned icon for a `forumUrl` / `discordUrl` / `nexusUrl`
-/// field, as an SVG string. The mod page's fallback button uses it too, so
-/// there is one copy of each icon and the page never fetches one from an
-/// outside host. Empty for a field with no icon.
 /// Where a picture was posted, as the picture viewer names it, and which of a
 /// mod's addresses leads to that post.
 const PICTURE_SOURCES = {
@@ -1737,6 +1785,10 @@ export function withSource(image, source, detail) {
   return { ...image, source, sourceUrl: page ? detail[page.field] || null : null };
 }
 
+/// The small site-owned icon for a `forumUrl` / `discordUrl` / `nexusUrl`
+/// field, as an SVG string. The mod page's fallback button uses it too, so
+/// there is one copy of each icon and the page never fetches one from an
+/// outside host. Empty for a field with no icon.
 export function pageIcon(field) {
   const page = ORIGINAL_PAGES.find((p) => p.field === field);
   return page ? page.icon : '';
@@ -1786,17 +1838,25 @@ export function downloadButton(mod, opts = {}) {
   const label = best ? downloadLabel(best)
     : originalPage.label;
   const count = mod.downloadCount || 0;
+  // A TriOS link carries the TriOS logo. With nothing to download, the button
+  // opens the forum, Discord or Nexus page, so it carries that site's icon
+  // like the mod page's button does.
+  const triosIcon = big ? TRIOS_ICON : TRIOS_ICON_SMALL;
+  const icon = best ? (best.kind === 'trios' ? triosIcon : null) : originalPage.icon;
   const button = el('a', {
-    class: `btn btn-primary download-btn${big ? ' btn-big' : ''}`,
+    class: `btn btn-primary download-btn${big ? ' btn-big' : ''}${icon ? ' btn-with-icon' : ''}`,
     href,
     rel: 'noopener nofollow',
     target: '_blank',
-    text: label,
+    text: icon ? null : label,
     'aria-label': `${label}: ${modName(mod)}`,
     title: count > 1
       ? `${count} downloads.`
       : null,
-  });
+  }, icon ? [
+    el('span', { class: 'original-page-icon', html: icon, 'aria-hidden': 'true' }),
+    el('span', { text: label }),
+  ] : []);
   // On a card and on a row the button sits inside, or on top of, one big link
   // to the mod's page. Without this a press would follow that link as well.
   button.addEventListener('click', (e) => { e.stopPropagation(); });

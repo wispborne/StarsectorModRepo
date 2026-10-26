@@ -698,6 +698,7 @@ main {
   flex-shrink: 0; box-sizing: border-box;
 }
 .download-btn:hover { text-decoration: none; }
+.download-btn.btn-with-icon { justify-content: center; }
 
 /* A summary card or row that knows both where to download a mod and where the
    author posted it keeps one straight action edge. The download owns three
@@ -1639,6 +1640,11 @@ button.check-row { align-items: center; }
 /* The speech bubble's tail makes it reach further down than up, so it sits a
    little higher than the rest. */
 .btn-with-icon .report-icon { transform: translateY(0.04em); }
+/* Discord's logo reaches higher above the capitals than it reaches below the
+   baseline. This moves the drawn shape, on top of the line above. */
+.discord-mark { transform: translateY(0.015em); }
+/* The card's TriOS triangle sits a quarter of a pixel low at card size. */
+.trios-small { transform: translateY(-0.02em); }
 /* The Discord post under the forum post: a little more room than between
    the parts of one group, so the two read as two posts. */
 #section-discord-post { margin-top: calc((var(--gap-wide) - var(--gap)) / 2); }
