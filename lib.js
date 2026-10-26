@@ -410,7 +410,10 @@ export const THEMES = [
   { id: 'player', name: 'Player' },
   { id: 'one-dark', name: 'One Dark' },
   { id: 'one-dark-blue', name: 'One Dark Blue' },
-  { id: 'independents', name: 'Independents' },
+  { id: 'independents-light', name: 'Independents' },
+  // Kept as 'independents' so readers who already picked it keep the look
+  // they picked.
+  { id: 'independents', name: 'Independents (Darker)' },
   { id: 'lavender', name: 'Lavender' },
   { id: 'knights-of-ludd', name: 'Knights of Ludd' },
   { id: 'sindrian-diktat', name: 'Sindrian Diktat' },

@@ -241,12 +241,23 @@
 [data-theme="one-dark-blue"] {
   --secondary: var(--primary);
 }
-/* Also Browser Default's colours on dark pages. */
-[data-theme="independents"], [data-theme="browser-default"], :root:where(:not([data-theme])) {
+/* Independents (Darker): TriOS's own Independents colours. */
+[data-theme="independents"] {
   --primary: #B8BCC4;
   --secondary: #FFD737;
   --surface: #101216;
   --surface-container: #1A1D23;
+}
+/* Independents: the same grey and yellow on a lighter grey. Also Browser
+   Default's colours on dark pages. The text is a little darker than the other
+   themes' too, which keeps it about 12 to 1 against the panels. */
+[data-theme="independents-light"], [data-theme="browser-default"], :root:where(:not([data-theme])) {
+  --primary: #C0C4CB;
+  --secondary: #FAD236;
+  --surface: #16191E;
+  --surface-container: #22252B;
+  --text: rgb(215, 220, 235);
+  --text-dim: rgb(137, 147, 166);
 }
 [data-theme="lavender"] {
   --primary: #C0A2E8;
@@ -348,6 +359,9 @@ a:hover { text-decoration: underline; }
 :where(p, .prose) a:where(:not(.btn)) {
   text-decoration: underline;
   text-decoration-color: var(--primary-ghost);
+  /* One pixel at every size, as on the forum. Left to the browser, the line
+     grows with the text, and a link in a post's title was underlined heavily. */
+  text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
 :where(p, .prose) a:where(:not(.btn)):hover { text-decoration-color: currentColor; }
@@ -1748,7 +1762,21 @@ a.chip.needed.optional:hover { background: var(--primary-soft); }
   margin: 0 0 10px; padding: 4px 0 4px 12px;
   border-left: 2px solid var(--border); color: var(--text-dim);
 }
-.prose pre { white-space: pre-wrap; overflow-x: auto; }
+/* A code block is a box of its own, as on the forum: long lines scroll
+   sideways and a long block scrolls inside the box. */
+.prose pre {
+  margin: 0 0 10px; padding: 8px 12px; overflow: auto; max-height: 24em;
+  white-space: pre; text-align: left; font-size: var(--type-small);
+  background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+}
+.prose pre code { font-size: inherit; }
+/* A divider is one faint line, as on the forum, rather than the browser's
+   two-pixel ridge. The forum leaves a little under a line of room above and
+   below it. */
+.prose hr {
+  margin: 0.9em 0; height: 0; border: 0;
+  border-top: 1px solid color-mix(in srgb, var(--text) 22%, transparent);
+}
 .prose a { overflow-wrap: anywhere; }
 
 /* The pictures from the author's post, where they put them. Never wider than
@@ -1782,6 +1810,9 @@ a.chip.needed.optional:hover { background: var(--primary-soft); }
 /* Centred and right-aligned blocks, as the author laid them out. */
 .prose .align-center { text-align: center; }
 .prose .align-right { text-align: right; }
+/* The forum keeps a list's items left-aligned inside a centred block, so each
+   line starts beside its bullet. */
+.prose :is(.align-center, .align-right) :is(ul, ol) { text-align: left; }
 
 /* The author's sizes, as four steps on the site's own scale. */
 .prose .size-small { font-size: var(--type-small); }
