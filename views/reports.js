@@ -35,10 +35,6 @@ export async function render(root) {
   root.append(el('div', { class: 'stack' }, [
     el('div', { class: 'page-head' }, [
       el('h1', { text: 'Reports' }),
-      el('span', {
-        class: 'sub',
-        text: `${mods.length} mods on the site.`,
-      }),
     ]),
     report('Dependency use count',
       null,

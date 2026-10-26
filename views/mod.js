@@ -1424,14 +1424,13 @@ function compatibility(detail, currentVersion) {
   ]);
 }
 
-/// The mod's pages elsewhere: its forum thread, its Discord post, its Nexus
-/// page. They also say where the mod was found, so there is no separate line
-/// for that.
+/// The mod's pages elsewhere: its forum thread and its Discord post. They also
+/// say where the mod was found, so there is no separate line for that. The site
+/// does not link to Nexus Mods.
 function linksOut(detail) {
   const links = [
     ['Forum thread', detail.forumUrl, pageIcon('forumUrl')],
     ['Discord', detail.discordUrl, pageIcon('discordUrl')],
-    ['Nexus Mods', detail.nexusUrl, EXTERNAL_ICON],
     ['Full changelog', detail.changelogUrl, CHANGELOG_ICON],
   ].filter(([, url]) => url);
   if (!links.length) return null;
@@ -1450,13 +1449,6 @@ const CHANGELOG_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="
   + '<path d="M13 5h8"/><path d="M13 9h5"/><path d="M13 15h8"/><path d="M13 19h5"/>'
   + '<path d="M3 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/>'
   + '<path d="M3 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/></svg>';
-
-// Tabler external-link icon, for a page that has no mark of its own here.
-const EXTERNAL_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
-  + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
-  + 'stroke-linejoin="round" focusable="false" aria-hidden="true">'
-  + '<path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"/>'
-  + '<path d="M11 13l9 -9"/><path d="M15 4h5v5"/></svg>';
 
 // Tabler code icon.
 const CODE_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '

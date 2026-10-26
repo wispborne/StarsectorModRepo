@@ -290,7 +290,7 @@ const FIELDS = {
   version: (mod) => [mod.gameVersion],
   gameversion: (mod) => [mod.gameVersion],
   modversion: (mod) => [mod.modVersion],
-  // Where the mod was found: forum, discord or nexus. `source:` was its first
+  // Where the mod was found: forum or discord. `source:` was its first
   // name and still works, but reads too much like source code.
   from: (mod) => mod.sources || [],
   url: (mod) => [mod.forumUrl, mod.discordUrl,

@@ -440,8 +440,8 @@ export function applyTheme() {
 // --- Which of a mod's two pictures to show ---
 
 /// "post" (the default) shows the picture from the author's forum post;
-/// "announcement" shows the one from the Discord or Nexus post the mod was
-/// announced in. Most mods only have one picture, and those look the same
+/// "announcement" shows the one from the Discord post the mod was announced
+/// in. Most mods only have one picture, and those look the same
 /// either way.
 export const IMAGE_CHOICES = ['post', 'announcement'];
 const IMAGE_KEY = 'starmodderPicture';
@@ -944,8 +944,9 @@ function placePageScroll(saved) {
 /// for the reader who wants the full file after all.
 ///
 /// [images] is the list of `{url, caption}` still on the page, and [at] is
-/// which one to open first. A picture can also carry `source` (`forum`,
-/// `discord` or `nexus`) and `sourceUrl`, the post it came from.
+/// which one to open first. A picture can also carry `source` (`forum` or
+/// `discord`) and `sourceUrl`, the post it came from. A picture from anywhere
+/// else is shown without saying where it came from.
 export function showPicture(images, at = 0) {
   if (!images || !images.length) return;
 
@@ -1761,13 +1762,6 @@ const ORIGINAL_PAGES = [
       + '1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>'
       + '</svg>',
   },
-  {
-    field: 'nexusUrl', name: 'Nexus Mods', label: 'On Nexus Mods',
-    icon: '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
-      + 'stroke="currentColor" stroke-width="2" stroke-linejoin="round" '
-      + 'focusable="false" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/>'
-      + '<path d="m9 16 6-8M9 8v8M15 8v8"/></svg>',
-  },
 ];
 
 function originalPageOf(mod) {
@@ -1775,11 +1769,11 @@ function originalPageOf(mod) {
 }
 
 /// Where a picture was posted, as the picture viewer names it, and which of a
-/// mod's addresses leads to that post.
+/// mod's addresses leads to that post. The site does not name Nexus Mods, so a
+/// picture from there has no entry.
 const PICTURE_SOURCES = {
   forum: { field: 'forumUrl', words: 'forum' },
   discord: { field: 'discordUrl', words: 'Discord' },
-  nexus: { field: 'nexusUrl', words: 'Nexus Mods' },
 };
 
 /// A picture as the viewer takes it, with the post it came from.
@@ -1788,8 +1782,7 @@ export function withSource(image, source, detail) {
   return { ...image, source, sourceUrl: page ? detail[page.field] || null : null };
 }
 
-/// The small site-owned icon for a `forumUrl` / `discordUrl` / `nexusUrl`
-/// field, as an SVG string. The mod page's fallback button uses it too, so
+/// The small site-owned icon for a `forumUrl` / `discordUrl` field, as an SVG string. The mod page's fallback button uses it too, so
 /// there is one copy of each icon and the page never fetches one from an
 /// outside host. Empty for a field with no icon.
 export function pageIcon(field) {
@@ -1821,16 +1814,16 @@ function originalPageButton(mod, page) {
 /// "Download". The builder has already put them in order, so this shows the
 /// first — the same thing TriOS's catalog does on a mod's card.
 ///
-/// Where there is both a download and an original forum, Discord or Nexus page,
+/// Where there is both a download and an original forum thread or Discord post,
 /// summary cards and rows split the same fixed width between them. The
 /// original-page icon gets a narrow fixed width and the download the rest. The large
 /// button on the mod's own page stays single because that page already carries
 /// the original link beside it.
 ///
 /// A quarter of mods have nothing to download, so the button offers the mod's
-/// own place on the web instead — its forum thread, Discord post or Nexus Mods
-/// page. A mod with none of those gets no button, because a button that goes
-/// nowhere is worse than no button.
+/// own place on the web instead — its forum thread or Discord post. The site
+/// does not link to Nexus Mods. A mod with neither gets no button, because a
+/// button that goes nowhere is worse than no button.
 export function downloadButton(mod, opts = {}) {
   const { big = false } = opts;
   const best = mod.bestDownload || null;
@@ -1842,7 +1835,7 @@ export function downloadButton(mod, opts = {}) {
     : originalPage.label;
   const count = mod.downloadCount || 0;
   // A TriOS link carries the TriOS logo. With nothing to download, the button
-  // opens the forum, Discord or Nexus page, so it carries that site's icon
+  // opens the forum thread or Discord post, so it carries that site's icon
   // like the mod page's button does.
   const triosIcon = big ? TRIOS_ICON : TRIOS_ICON_SMALL;
   const icon = best ? (best.kind === 'trios' ? triosIcon : null) : originalPage.icon;
