@@ -22,8 +22,8 @@ import {
   aiFilterIsOn, aiFilterOff, countedAreas, keepsForAi, withPreset,
 } from '../ai_filter.js';
 import {
-  ANY_GAME, NO_GAME, NO_REQUIREMENTS, NOT, ONLY, POSTED_ON, SWITCHES, aiFilterWords,
-  describeFilters, postedOn,
+  ANY_GAME, DATE_FILTERS, NO_GAME, NO_REQUIREMENTS, NOT, ONLY, POSTED_ON, SWITCHES, aiFilterWords,
+  datesAreOn, describeFilters, inDates, noDates, postedOn,
   filterQuery, filtersToAddress, keepFilters, matchingSaved, readFilters, readSavedFilters,
   restoreSaved, savedFiltersJson, savedNamed, withSaved, withoutSaved,
 } from '../filter_set.js';
@@ -286,7 +286,7 @@ export async function render(root, parts) {
         render(root, parts);
       },
       () => {
-        shown.ai = aiFilterOff();
+        Object.assign(shown, withoutOtherFilters(shown));
         saveState(shown, true);
         render(root, parts);
       });
@@ -328,7 +328,7 @@ export function sortInUse(state) {
 ///
 /// It fills a line that is already on the page rather than making a new one,
 /// because that is what gets it read out.
-function fillResultLine(line, all, matches, state, onShowEveryRelease, onAiFilterOff) {
+function fillResultLine(line, all, matches, state, onShowEveryRelease, onOtherFiltersOff) {
   clear(line);
   line.append(el('span', {
     text: matches.length === all.length
@@ -336,17 +336,18 @@ function fillResultLine(line, all, matches, state, onShowEveryRelease, onAiFilte
       : `${matches.length} of ${all.length} mods shown.`,
   }));
 
-  // Show the hidden count even when the filter panel is closed.
-  if (aiFilterIsOn(state.ai)) {
-    const left = all.filter((mod) => matchesFilters(mod, { ...state, ai: aiFilterOff() })).length
-      - matches.length;
-    if (left > 0) {
-      const off = el('button', { class: 'link-button', text: 'Clear AI filter' });
-      off.addEventListener('click', onAiFilterOff);
-      line.append(el('span', {
-        text: ` ${left} hidden by the AI use filter. `,
-      }), off);
-    }
+  // Shown even when the filter panel is closed. The search and the game
+  // version are left out: the box shows the search, and the game version
+  // has its own link below.
+  const unfiltered = withoutOtherFilters(state);
+  const hidden = all.filter((mod) => matchesFilters(mod, unfiltered)).length
+    - matches.length;
+  if (hidden > 0) {
+    const off = el('button', { class: 'link-button', text: 'Clear filters' });
+    off.addEventListener('click', onOtherFiltersOff);
+    line.append(el('span', {
+      text: ` ${hidden} hidden by your filters. `,
+    }), off);
   }
 
   if (!state.currentVersion || state.game !== state.currentVersion) return;
@@ -578,6 +579,9 @@ function drawControls(places, mods, state, onChange, onSaved, onLayout) {
       filterPanel('Category', filters.chips, !phone),
       filterPanel('From', filters.postedOnHolder, !phone),
       filterPanel('AI use', filters.aiHolder, !phone, filters.aiAllOrNone),
+      // Few readers change the dates, so the panel starts shut unless a date
+      // is set.
+      filterPanel('Dates', filters.datesHolder, datesAreOn(state.dates)),
       // The list starts on the current release. Few readers change it.
       filterPanel('Game version', filters.versionsHolder, false),
       filterPanel('Requires', filters.requiresDropdown, !phone),
@@ -598,6 +602,7 @@ function drawControls(places, mods, state, onChange, onSaved, onLayout) {
     sortHolder,
     filters.switches,
     filters.aiMenu,
+    filters.datesMenu,
     saved.node,
     copyFromHome,
   ]));
@@ -711,11 +716,37 @@ export function filterControls(mods, state, onChange,
     postedOnHolder.append(choiceList(entries, state.from,
       (v) => { state.from = v; changed(); }));
   };
+  // The date filters: one slider for each, from the earliest day any mod has
+  // to the latest. Both ends move, and the calendar button at each end picks
+  // an exact day. An end left at the edge of the slider means no limit.
+  const knownDays = mods.flatMap((mod) => DATE_FILTERS.map((option) => option.dayOf(mod)))
+    .filter(Boolean).sort();
+  const sliders = knownDays.length
+    ? DATE_FILTERS.map((option) => dateSlider(option, knownDays[0], knownDays.at(-1),
+      state, () => changed()))
+    : [];
+  const datesHolder = el('div', { class: 'date-filters' }, sliders.map((slider) => slider.node));
+  const clearDates = el('button', { type: 'button', class: 'link-button', text: 'Clear dates' });
+  clearDates.addEventListener('click', () => {
+    state.dates = noDates();
+    changed();
+  });
+  datesHolder.append(clearDates);
+  const datesMenu = popMenu(el('summary', { class: 'btn' }, ['Dates']), [datesHolder],
+    'date-filter-menu');
+  const drawDates = () => {
+    const on = datesAreOn(state.dates);
+    clearDates.hidden = !on;
+    datesMenu.querySelector('summary').classList.toggle('on', on);
+    for (const slider of sliders) slider.draw();
+  };
+
   const changed = () => {
     drawChips();
     drawAiFilter();
     drawVersions();
     drawPostedOn();
+    drawDates();
     onChange();
   };
 
@@ -794,10 +825,12 @@ export function filterControls(mods, state, onChange,
   drawAiFilter();
   drawVersions();
   drawPostedOn();
+  drawDates();
 
   return {
     chips, versionsHolder, aiHolder, aiAllOrNone, aiMenu, requiresDropdown, gameDropdown,
-    categoryDropdown, postedOnDropdown, postedOnHolder, switches, changed,
+    categoryDropdown, postedOnDropdown, postedOnHolder, datesHolder, datesMenu, switches,
+    changed,
   };
 }
 
@@ -820,6 +853,132 @@ function popMenu(summary, content, className) {
     box.style.left = `${shift}px`;
   });
   return menu;
+}
+
+// Tabler icon (MIT): calendar.
+const CALENDAR_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+  + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+  + 'stroke-linejoin="round" focusable="false" aria-hidden="true">'
+  + '<path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12'
+  + 'a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/></svg>';
+
+const DAY_MS = 24 * 60 * 60 * 1000;
+const dayNumber = (day) => Math.round(Date.parse(`${day}T00:00:00Z`) / DAY_MS);
+const dayOfNumber = (number) => new Date(number * DAY_MS).toISOString().slice(0, 10);
+const shortDay = (day) => new Date(`${day}T00:00:00Z`).toLocaleDateString(undefined,
+  { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+
+/// One date filter as a slider with two ends, from `firstDay` to `lastDay`.
+/// Each end has a calendar button that picks an exact day. An end at the edge
+/// of the slider is stored as '' (no limit), so a mod added tomorrow is not
+/// left out by a slider that was never moved. The filter is applied when an
+/// end is let go, not on every step of a drag. `draw` puts the slider back in
+/// step with `state.dates`, which a Clear replaces.
+function dateSlider(option, firstDay, lastDay, state, onChange) {
+  const low = dayNumber(firstDay);
+  const high = dayNumber(lastDay);
+  const picked = () => state.dates[option.key];
+  const fill = el('div', { class: 'date-fill' });
+  const slider = el('div', { class: 'date-slider' }, [el('div', { class: 'date-track' }, [fill])]);
+  const ends = {};
+
+  const numberOf = (end) => {
+    const day = picked()[end];
+    const number = day ? dayNumber(day) : (end === 'from' ? low : high);
+    return Math.min(high, Math.max(low, number));
+  };
+  // A day at the edge of the slider means no limit.
+  const store = (end, number) => {
+    const atEdge = end === 'from' ? number <= low : number >= high;
+    picked()[end] = atEdge ? '' : dayOfNumber(number);
+  };
+  const show = (from, to) => {
+    const span = Math.max(1, high - low);
+    fill.style.left = `${((from - low) / span) * 100}%`;
+    fill.style.right = `${((high - to) / span) * 100}%`;
+    for (const [end, number] of [['from', from], ['to', to]]) {
+      const { thumb, words } = ends[end];
+      thumb.value = String(number);
+      const text = shortDay(dayOfNumber(number));
+      words.textContent = text;
+      words.classList.toggle('open', end === 'from' ? number <= low : number >= high);
+      thumb.setAttribute('aria-valuetext', text);
+    }
+    slider.classList.toggle('limited', from > low || to < high);
+    // When both ends meet at the far right, the first end has to be on top or
+    // it could never be moved back.
+    ends.from.thumb.style.zIndex = from > low + (high - low) / 2 ? '2' : '';
+  };
+
+  for (const end of ['from', 'to']) {
+    const name = `${option.label}, ${end === 'from' ? 'first day' : 'last day'}`;
+    const thumb = el('input', {
+      type: 'range', class: 'date-thumb', min: String(low), max: String(high), step: '1',
+      'aria-label': name,
+    });
+    // The ends cannot pass each other.
+    thumb.addEventListener('input', () => {
+      let from = Number(ends.from.thumb.value);
+      let to = Number(ends.to.thumb.value);
+      if (from > to) {
+        if (end === 'from') from = to;
+        else to = from;
+      }
+      show(from, to);
+    });
+    thumb.addEventListener('change', () => {
+      store(end, Number(thumb.value));
+      onChange();
+    });
+    slider.append(thumb);
+
+    // The browser's own calendar, opened from a small button. The box it
+    // belongs to is never seen.
+    const box = el('input', {
+      type: 'date', class: 'date-pick-box', tabindex: '-1', 'aria-hidden': 'true',
+      min: firstDay, max: lastDay,
+    });
+    const button = el('button', {
+      type: 'button', class: 'date-pick', 'aria-label': `Pick the ${name.toLowerCase()}`,
+      html: CALENDAR_ICON,
+    });
+    button.addEventListener('click', () => {
+      box.value = dayOfNumber(numberOf(end));
+      try {
+        box.showPicker();
+      } catch {
+        box.focus();
+      }
+    });
+    box.addEventListener('change', () => {
+      if (!box.value) return;
+      const number = Math.min(high, Math.max(low, dayNumber(box.value)));
+      // A first day after the last moves the last day too, and the other way round.
+      const other = end === 'from' ? 'to' : 'from';
+      if (end === 'from' ? number > numberOf(other) : number < numberOf(other)) {
+        store(other, number);
+      }
+      store(end, number);
+      onChange();
+    });
+    const words = el('span', { class: 'date-day' });
+    ends[end] = { thumb, words };
+    // The calendar buttons sit at the outside edges, under the ends they move.
+    const pick = el('span', { class: 'date-pick-wrap' }, [button, box]);
+    ends[end].node = el('span', { class: `date-end date-end-${end}` },
+      end === 'from' ? [pick, words] : [words, pick]);
+  }
+
+  const draw = () => show(numberOf('from'), numberOf('to'));
+  draw();
+  return {
+    node: el('div', { class: 'date-row' }, [
+      el('span', { class: 'date-label', text: option.label }),
+      slider,
+      el('div', { class: 'date-ends' }, [ends.from.node, ends.to.node]),
+    ]),
+    draw,
+  };
 }
 
 /// Turns a game version's number into the spelling most mods use: "0.98" into
@@ -1129,7 +1288,24 @@ function clearFilters(state) {
   state.author = '';
   state.switches.clear();
   state.ai = aiFilterOff();
+  state.dates = noDates();
   state.page = 0;
+}
+
+/// The filters with every one turned off except the search and the game
+/// version, which the result line does not count as filters.
+function withoutOtherFilters(state) {
+  return {
+    ...state,
+    needs: '',
+    category: '',
+    from: '',
+    author: '',
+    switches: new Map(),
+    ai: aiFilterOff(),
+    dates: noDates(),
+    page: 0,
+  };
 }
 
 function nothingMatched(onClear) {
@@ -1184,6 +1360,7 @@ export function matchesFilters(mod, state) {
   } else if (state.needs && !(mod.needs || [])
       .some((n) => neededModKey(n.name) === neededModKey(state.needs))) return false;
   if (!postedOn(mod, state.from)) return false;
+  if (!inDates(mod, state.dates)) return false;
   if (state.author && !(mod.authors || []).includes(state.author)) return false;
   for (const option of SWITCHES) {
     const picked = state.switches.get(option.key);

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T20:45:31.652782Z",
+  "generatedAt": "2026-10-26T21:45:24.314694Z",
   "listing": {
     "id": "custom-battle-music",
     "name": "Custom Battle Music",
@@ -32,6 +32,7 @@
     "isWorkInProgress": false,
     "addedOn": "2022-05-29",
     "threadLastPostOn": "2026-06-09",
+    "editedOn": "2025-04-21",
     "needs": []
   },
   "description": "CUSTOM BATTLE MUSIC\n\nThis mod is made in order to add custom battle music to the game.\nYou can now add songs that fit factions for the base game or even from mods.\nYou can also add music to fleets and ships.\nIt is very easy to modify and implement.\nNow contains music for every major faction in the game.\n\nFor Developers:\n\nFor Devellopers\nTo add compatibility for your mod you just need to add this in your .faction\n\"music\": {\n\"battle\": \"music_faction_battle\"\n\"battle_retreat\": \"music_faction_battle\",\n\"battle_advantage\": \"music_faction_battle\",\n\"battle_losing\": \"music_faction_battle\",\n\"battle_destroy\": \"music_faction_battle\"\n}\n\nand you also need to add the list of songs for your faction in the config file sounds.json.\n{\n\"music\": {\n\"music_faction_battle\": [\n{\n\"source\": \"sounds/music/\",\n\"volume\": 0.15,\n\"file\": \"song1.ogg\"\n}\n]\n}\n}\n\nThe name of the list of songs can be different from the one above and need to be different from any other existing list.\nYou can also use song lists present in the game already.\n\nAdvanced tutorial and explanation\n\nconfig.json\nsimulation_ost: Activates a particular music when in simulation (Deactivate if no music exist)\nmission_ost: Activates particular music during missions\n\nMod with Custom Battle Music implemented: (Outdated)\nGundam UC\nGundam Iron-Blooded Orphan - Factions\nThe Sunrider\n\nDownload",

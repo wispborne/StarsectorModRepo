@@ -1,5 +1,5 @@
 // A set of filters: the game version, the category, the requires choice, where
-// the mod was posted, the four switches and the AI use filter. Browse, Home
+// the mod was posted, the four switches, the AI use filter and the post dates. Browse, Home
 // and saved filters all use it.
 //
 // A set is written in Browse's own address format (`game=…&only=…&ai=…`), so
@@ -99,10 +99,89 @@ export function postedOn(mod, from) {
   return !option || option.keep(mod);
 }
 
+/// The date filters. Each keeps the mods whose day falls between a first and
+/// a last day, both included, and either end can be left open. A mod with no
+/// day is left out while the filter is on: nobody can say it is in the range.
+/// Days are `YYYY-MM-DD`, so comparing the text compares the days.
+export const DATE_FILTERS = [
+  {
+    key: 'posted',
+    label: 'Posted',
+    dayOf: (mod) => mod.addedOn,
+  },
+  {
+    key: 'edited',
+    label: 'Last edited',
+    // A post that was never edited counts from the day it was posted.
+    dayOf: (mod) => mod.editedOn || mod.addedOn,
+  },
+];
+
+const DAY = /^\d{4}-\d{2}-\d{2}$/;
+
+/// The date filters with nothing picked.
+export function noDates() {
+  return Object.fromEntries(DATE_FILTERS.map((option) => [option.key, { from: '', to: '' }]));
+}
+
+/// The date filters as the address names them: `postedfrom=…&postedto=…`.
+/// Anything that is not a day is dropped.
+export function datesFromAddress(query) {
+  const dates = noDates();
+  for (const option of DATE_FILTERS) {
+    for (const end of ['from', 'to']) {
+      const day = query.get(option.key + end) || '';
+      if (DAY.test(day)) dates[option.key][end] = day;
+    }
+  }
+  return dates;
+}
+
+function datesToAddress(dates) {
+  const values = {};
+  for (const option of DATE_FILTERS) {
+    values[`${option.key}from`] = dates?.[option.key]?.from || '';
+    values[`${option.key}to`] = dates?.[option.key]?.to || '';
+  }
+  return values;
+}
+
+/// Whether any date filter is on.
+export function datesAreOn(dates) {
+  return DATE_FILTERS.some((option) => dates?.[option.key]?.from || dates?.[option.key]?.to);
+}
+
+/// Whether a mod's days fall where the date filters ask.
+export function inDates(mod, dates) {
+  for (const option of DATE_FILTERS) {
+    const { from, to } = dates?.[option.key] || {};
+    if (!from && !to) continue;
+    const day = option.dayOf(mod);
+    if (!day) return false;
+    if (from && day < from) return false;
+    if (to && day > to) return false;
+  }
+  return true;
+}
+
+/// The date filters that are on, a few words each: "Posted 2024-01-01 to
+/// 2025-06-30", "Last edited since 2026-01-01".
+function datesInWords(dates) {
+  const words = [];
+  for (const option of DATE_FILTERS) {
+    const { from, to } = dates?.[option.key] || {};
+    if (from && to) words.push(`${option.label} ${from} to ${to}`);
+    else if (from) words.push(`${option.label} since ${from}`);
+    else if (to) words.push(`${option.label} up to ${to}`);
+  }
+  return words;
+}
+
 /// The address keys a set is written with, in the order they are written.
 /// `older` and `hideai` are only read, from old links.
 const SET_KEYS = ['game', 'category', 'needs', 'from', 'only', 'not', 'ai', 'aiparts',
-  'ailevel', 'aioptional'];
+  'ailevel', 'aioptional',
+  ...DATE_FILTERS.flatMap((option) => [`${option.key}from`, `${option.key}to`])];
 
 const asQuery = (query) =>
   query instanceof URLSearchParams ? query : new URLSearchParams(query || '');
@@ -155,6 +234,7 @@ export function readFilters(query, currentVersion) {
     from: POSTED_ON.some((option) => option.key === q.get('from')) ? q.get('from') : '',
     switches: switchesFromAddress(q),
     ai: aiFilterFromAddress(q),
+    dates: datesFromAddress(q),
   };
 }
 
@@ -170,6 +250,7 @@ export function filtersToAddress(filters, currentVersion = null) {
     only: switchKeysIn(filters.switches, ONLY),
     not: switchKeysIn(filters.switches, NOT),
     ...aiFilterToAddress(filters.ai),
+    ...datesToAddress(filters.dates),
   };
 }
 
@@ -206,13 +287,14 @@ function comparable(query, currentVersion) {
 /// off. This is how Home starts.
 export function filtersAreOff(filters) {
   return filters.game === ANY_GAME && !filters.category && !filters.needs && !filters.from
-    && !filters.switches.size && !aiFilterIsOn(filters.ai);
+    && !filters.switches.size && !aiFilterIsOn(filters.ai) && !datesAreOn(filters.dates);
 }
 
 /// The set with every filter off.
 export function noFilters() {
   return {
     game: ANY_GAME, category: '', needs: '', from: '', switches: new Map(), ai: aiFilterOff(),
+    dates: noDates(),
   };
 }
 
@@ -242,6 +324,7 @@ export function describeFilters(filters, gameLabel = (family) => family) {
     if (picked) words.push(picked === NOT ? option.notLabel : option.label);
   }
   if (aiFilterIsOn(filters.ai)) words.push(aiFilterWords(filters.ai));
+  words.push(...datesInWords(filters.dates));
   return words.join(' · ');
 }
 

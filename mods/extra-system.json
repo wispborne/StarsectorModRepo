@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T20:45:31.652782Z",
+  "generatedAt": "2026-10-26T21:45:24.314694Z",
   "listing": {
     "id": "extra-system",
     "name": "Extra System",
@@ -31,6 +31,7 @@
     "isWorkInProgress": false,
     "addedOn": "2016-01-12",
     "threadLastPostOn": "2017-10-27",
+    "editedOn": "2016-03-03",
     "needs": []
   },
   "description": "A mod that make your ships stronger and stronger.\n\nDownLoad\n\nSupport Version Checker\n\nPress Ctrl+Q to call the Interaction in campaign.\nUse different resources to upgrade your ship.\n\n*The ShipLevel System*\nEach ship has a random quality about 0.5~1.5. It decides the cost and the degree of upgrade.\n\nUpgrade has about 40% chance of success at the minimum.\n\n-What is decided by the abilities-\n\nThe efficiency-\nFrigate(10):100% Destroyer(15):80% Cruiser(20):60% Capital Ship(25):40%\n-\n(It means if one of the ship's ability is upgraded completely, frigate has 100% power of it, but capital ship only has 40%)\n\nDurability:\nHullpoints, armor, weapon health, engine health\nWeaponProficiency:\nWeapon range, weapon damage, rate of fire\nLogistics:\nCR per deployment, weapon ammo, crew, ship repair rate, CR recovery, fuel use\nMobility:\nMax speed, acceleration, deceleration, max turn rate, turn acceleration\nTechnology:\nFlux capacity and disspation, weapon flux cost, shield efficiency\n\n*Achievements System*(TEST)\nExamples:\n\nSpoiler\n\nYou will achieve some achievements when you finish doing something like \"Gain 10000 credits.\"\nUse \"Show Achievements\" to see the achievements you have ever got.\n\nYou can see these in \"data/config/achievements.csv\", and players or modders can use it to add your own achievements.\nJust put the following code in your mod (where the achievement were achieved) after you complete your csv's editing. And, don't forget to make this code just run for one time.\n\nSpoiler\nGlobal.getSector().getPersistentData().put(\"Your Achievement's id\", true);\n\nScreenshots:\n\nSpoiler\n\nChangeLog:\n\nSpoiler\n3.3\nUpdate to 0.7.2a, BUT IT NEEDS TO BE TEST.\nAdded Achievements System.\n1.23\nA bit sprites updated.\nMaybe some bugs fixed?Ugh.\n1.22\nFixed the bug that quality can only affect the upgrade cost.\nDecreased the resources' cost.\nMade some tooltips like:\n\n0.1.1f released\n1.17\nfixed some bug and translation mistakes.\n0.1.1a released\n1.13\n0.1.0f released",

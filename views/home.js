@@ -142,6 +142,7 @@ function filterBar(mods, state, currentVersion, open, onChange, redraw) {
       controls.postedOnDropdown,
       controls.switches,
       controls.aiMenu,
+      controls.datesMenu,
       saved.node,
     ]),
   ]);

@@ -6,7 +6,7 @@
 
 import {
   AI_SUMMARY_CHOICES, aiNoteChoice, aiSummaryMode, buildHash, clear, el, errorPanel, formatDay,
-  formatMoment, go, imageChoice, imageUrlOf, inlinePictures,
+  formatMoment, go, hideQuickTip, imageChoice, imageUrlOf, inlinePictures,
   loading,
   favorites, modHref, modList, modName,
   preparePageScroll, restorePageScroll, searchHelpField, setAiSummaryMode, SITE_CODE_URL,
@@ -132,6 +132,7 @@ async function route() {
   // Before anything is cleared, so the view being left can still find out where
   // its reader had got to.
   const savedScroll = preparePageScroll(site.scrollKey());
+  hideQuickTip();
 
   const parts = site.parts();
   const viewId = parts[0] || 'home';

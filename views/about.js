@@ -12,6 +12,9 @@ const WISP_URL = 'https://github.com/wispborne';
 // TriOS's own page on this site.
 const TRIOS_PAGE = 'mods/trios-launcher-mod-manager-toolkit/';
 const QBMBAMM_URL = 'https://github.com/theRoastSuckling/QBMBAMM';
+const FORUM_URL = 'https://fractalsoftworks.com/forum/index.php';
+// The forum thread that links to the Unofficial Starsector Discord.
+const DISCORD_URL = 'https://fractalsoftworks.com/forum/index.php?topic=11488.0';
 
 // Inline GitHub mark; inherits the button colour.
 const GITHUB_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em" '
@@ -70,8 +73,13 @@ export async function render(root) {
         ]),
 
     section('What is this?', [
-      'Starmodder is an easier way to view, filter, and sort mods posted on the official Starsector '
-        + 'forum and the Unofficial Starsector Discord.',
+      [
+        'Starmodder is an easier way to view, filter, and sort mods posted on the ',
+        externalLink(FORUM_URL, 'official Starsector forum'),
+        ' and the ',
+        externalLink(DISCORD_URL, 'Unofficial Starsector Discord'),
+        '.',
+      ],
       [
         'This is ',
         el('em', {text: 'not'}),
@@ -83,11 +91,11 @@ export async function render(root) {
     section('Who made this?', [
       [
         'Starmodder is made by ',
-        githubLink(WISP_URL, 'Wisp'),
+        externalLink(WISP_URL, 'Wisp'),
         ' (developer of ',
         el('a', {href: TRIOS_PAGE, text: 'TriOS'}),
         '). Its scraper combines code written by Wisp with a Dart port and fork of ',
-        githubLink(QBMBAMM_URL, 'QBMBAMM'),
+        externalLink(QBMBAMM_URL, 'QBMBAMM'),
         ', originally made by theRoastSuckling aka kyuubi_.',
       ],
         'AI wrote the code for the website itself.'
@@ -95,10 +103,13 @@ export async function render(root) {
 
     section('How does it work?', [
             [
-                githubLink(SCRAPER_URL, 'A scraper'),
-                ' collects mod information from forum threads and Discord mod '
-                + 'channels, then merges it ',
-                githubLink(MOD_REPO_URL, 'all together'),
+                externalLink(SCRAPER_URL, 'A scraper'),
+                ' collects mod information from ',
+                externalLink(FORUM_URL, 'forum'),
+                ' threads and ',
+                externalLink(DISCORD_URL, 'Discord'),
+                ' mod channels, then merges it ',
+                externalLink(MOD_REPO_URL, 'all together'),
                 ', then builds this site from that merge. TriOS uses the same data.'
             ],
             collectedOn
@@ -107,17 +118,22 @@ export async function render(root) {
                 : 'The site updates twice a day.',
             [
                 'It is available in the ',
-                githubLink(MOD_REPO_URL, 'Starsector Mod Repo'),
+                externalLink(MOD_REPO_URL, 'Starsector Mod Repo'),
                 ' repo. The scraper\'s code is in the ',
-                githubLink(SCRAPER_URL, 'Mod Repo Scraper'),
+                externalLink(SCRAPER_URL, 'Mod Repo Scraper'),
                 ' repo.',
             ],
         ]),
 
         section('Why not let people upload mods?', [
             'Moderation.',
-            'The current setup relies on the moderation teams of the Forum and USC to decide what mods'
-            + ' to allow. From the Starmodder side, everything is entirely automated.',
+            [
+                'The current setup relies on the moderation teams of the ',
+                externalLink(FORUM_URL, 'Forum'),
+                ' and ',
+                externalLink(DISCORD_URL, 'USC'),
+                ' to decide what mods to allow. From the Starmodder side, everything is entirely automated.',
+            ],
             'Dealing with issues such as: how NSFW is too NSFW, whether a mod stole someone else\'s work,'
             + ' corporate copyright, what is considered hate speech, political mods, targeted mods etc.'
             + ' These are not how I\'d like to spend my free time.',
@@ -213,7 +229,7 @@ function guideButton() {
     return link;
 }
 
-function githubLink(href, text) {
+function externalLink(href, text) {
     return el('a', {
         href,
         target: '_blank',

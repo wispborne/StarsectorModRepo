@@ -178,6 +178,8 @@
    block's dark text, and it puts "switched on" back to the main colour, as the
    default does. */
 [data-theme="light"] {
+  /* The browser's own parts of a control, such as a date box's calendar. */
+  --controls-scheme: light;
   --primary: rgb(0, 104, 119);
   --secondary: rgb(0, 108, 127);
   --surface: rgb(240, 244, 250);
@@ -288,6 +290,7 @@
    unreadable, and an action nobody can read is not an action. */
 @media (prefers-color-scheme: light) {
   :root:not([data-theme]), [data-theme="browser-default"] {
+    --controls-scheme: light;
     --primary: rgb(0, 104, 119);
     --secondary: rgb(0, 108, 127);
     --surface: rgb(240, 244, 250);
@@ -811,7 +814,8 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
 /* The browser's own clear cross is hidden; the site draws its own. */
 .search-box::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
 .search-clear {
-  position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+  /* Centred by layout, not by a move, so its cross stays on whole pixels. */
+  position: absolute; right: 4px; top: 0; bottom: 0; margin: auto 0;
   display: flex; align-items: center; justify-content: center;
   width: 22px; height: 22px; padding: 0;
   background: none; border: none; border-radius: 4px;
@@ -1018,7 +1022,63 @@ button.check-row { align-items: center; }
   margin-left: auto; color: var(--text-dim); font-size: var(--type-tiny);
   font-variant-numeric: tabular-nums;
 }
-/* The AI use and saved filters buttons open their controls over the results. */
+/* The date filters: each row is its name, a slider with two ends, then the
+   day at each end with a calendar button on its outside edge. The slider is
+   two range inputs laid over one track; only their thumbs take the pointer,
+   so either end can be grabbed. The track is inset by half a thumb, so the
+   coloured part runs from the middle of one thumb to the middle of the other. */
+.date-filters { display: flex; flex-direction: column; gap: var(--gap); font-size: var(--type-small); }
+.date-row { display: flex; flex-direction: column; gap: 4px; }
+.date-label { font-weight: 600; }
+.date-slider { position: relative; height: 20px; }
+.date-track {
+  position: absolute; left: 8px; right: 8px; top: 8px; height: 4px;
+  border-radius: 2px; background: var(--border);
+}
+.date-fill { position: absolute; top: 0; bottom: 0; border-radius: 2px; background: var(--on); }
+.date-thumb {
+  position: absolute; inset: 0; width: 100%; height: 20px; margin: 0;
+  background: none; pointer-events: none; -webkit-appearance: none; appearance: none;
+}
+.date-thumb::-webkit-slider-runnable-track { background: none; border: none; }
+.date-thumb::-moz-range-track { background: none; border: none; }
+.date-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; pointer-events: auto; cursor: pointer;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--on); border: 2px solid var(--surface-container);
+}
+.date-thumb::-moz-range-thumb {
+  pointer-events: auto; cursor: pointer; box-sizing: border-box;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--on); border: 2px solid var(--surface-container);
+}
+/* A slider that limits nothing is grey, so it does not read as switched on. */
+.date-slider:not(.limited) .date-fill { background: var(--text-dim); }
+.date-slider:not(.limited) .date-thumb::-webkit-slider-thumb { background: var(--text-dim); }
+.date-slider:not(.limited) .date-thumb::-moz-range-thumb { background: var(--text-dim); }
+.date-thumb:focus-visible { outline: none; }
+.date-thumb:focus-visible::-webkit-slider-thumb { outline: 2px solid var(--primary); outline-offset: 2px; }
+.date-thumb:focus-visible::-moz-range-thumb { outline: 2px solid var(--primary); outline-offset: 2px; }
+.date-ends { display: flex; justify-content: space-between; gap: 8px; }
+.date-end { display: flex; align-items: center; gap: 2px; min-width: 0; white-space: nowrap; }
+/* An end at the edge of the slider sets no limit, so its day is dim. */
+.date-day.open { color: var(--text-dim); }
+.date-pick-wrap { position: relative; display: inline-flex; }
+.date-pick {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: none; border: none; border-radius: 4px; padding: 3px; cursor: pointer;
+  color: var(--text-dim); font: inherit; line-height: 1;
+}
+.date-pick:hover { color: var(--primary); background: var(--primary-soft); }
+/* The box the calendar belongs to. It is never seen, but the calendar opens
+   where it sits, so it sits under the button. */
+.date-pick-box {
+  position: absolute; left: 0; bottom: 0; width: 100%; height: 100%;
+  opacity: 0; pointer-events: none; padding: 0; border: none;
+  color-scheme: var(--controls-scheme, dark);
+}
+.date-filters > .link-button { align-self: flex-start; font-size: var(--type-small); }
+/* The AI use, dates and saved filters buttons open their controls over the results. */
 .filter-menu { position: relative; }
 .filter-menu > summary { list-style: none; }
 .filter-menu > summary::-webkit-details-marker { display: none; }
@@ -1103,7 +1163,8 @@ button.check-row { align-items: center; }
 }
 .view-toggle > .btn.on,
 .view-toggle > .btn:hover { z-index: 1; }
-.view-icon, .view-icon svg { display: block; width: 1em; height: 1em; flex-shrink: 0; }
+/* Whole pixels, so the icons' 1px lines stay sharp. */
+.view-icon, .view-icon svg { display: block; width: 14px; height: 14px; flex-shrink: 0; }
 
 .mod-grid {
   display: grid; gap: var(--gap-cells);
@@ -1638,7 +1699,9 @@ button.check-row { align-items: center; }
    the baseline: its middle on the capitals' middle. This moves it there. Not
    further: lining it up with the small letters instead makes it hang below
    the baseline, which looks low. An icon alone in its button
-   (`.original-page-btn`) is not beside words and stays centred. */
+   (`.original-page-btn`) is not beside words and stays centred. The move is
+   rounded to a whole pixel: a part-pixel move puts the icon's lines between
+   pixels and blurs them. */
 .side-link-list .original-page-icon,
 .post-heading .original-page-icon,
 .btn-with-icon .original-page-icon,
@@ -1651,15 +1714,10 @@ button.check-row { align-items: center; }
 .settings-icon,
 .ai-banner-hide-icon,
 .post-switch-icon,
-.nav-guide-icon { transform: translateY(0.06em); }
+.nav-guide-icon { transform: translateY(round(0.06em, 1px)); }
 /* The speech bubble's tail makes it reach further down than up, so it sits a
    little higher than the rest. */
-.btn-with-icon .report-icon { transform: translateY(0.04em); }
-/* Discord's logo reaches higher above the capitals than it reaches below the
-   baseline. This moves the drawn shape, on top of the line above. */
-.discord-mark { transform: translateY(0.015em); }
-/* The card's TriOS triangle sits a quarter of a pixel low at card size. */
-.trios-small { transform: translateY(-0.02em); }
+.btn-with-icon .report-icon { transform: translateY(round(0.04em, 1px)); }
 /* The Discord post under the forum post: a little more room than between
    the parts of one group, so the two read as two posts. */
 #section-discord-post { margin-top: calc((var(--gap-wide) - var(--gap)) / 2); }
@@ -1740,7 +1798,7 @@ a.chip.needed.optional:hover { background: var(--primary-soft); }
 /* Centring the logo on the line puts it a little above the middle of the
    capital letters beside it, which a short, flat-topped mark like Ko-fi's
    shows. This moves it onto the letters' middle. */
-.support-icon { transform: translateY(0.06em); }
+.support-icon { transform: translateY(round(0.06em, 1px)); }
 .support-links a:hover {
   border-color: var(--primary); color: var(--primary); text-decoration: none;
 }

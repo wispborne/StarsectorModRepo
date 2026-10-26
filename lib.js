@@ -195,7 +195,10 @@ export function quickTip(node, text) {
 }
 
 let shownTip = null;
-function hideQuickTip() {
+// The router calls this on every page change. A link on our own pages moves
+// the address with `pushState`, which fires no event, and the page under the
+// pointer is taken away, so `pointerleave` never comes either.
+export function hideQuickTip() {
   shownTip?.remove();
   shownTip = null;
 }
@@ -1680,19 +1683,20 @@ const TRIOS_ICON_SMALL = TRIOS_SVG_START.replace('<svg ', '<svg class="trios-sma
   + '<circle cx="129" cy="128" r="14"/></svg>';
 
 // The icons beside "Cards" and "Rows": four boxes, and three lines each with a
-// dot at the front. Outline, like the site's other icons (Tabler shapes).
+// dot at the front. Drawn one unit to a pixel, with each 1px line on a whole
+// pixel, so they stay sharp; Tabler's 24-unit shapes blurred at this size.
 const VIEW_ICONS = {
-  grid: '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
-    + 'stroke="currentColor" stroke-width="2" stroke-linejoin="round" '
+  grid: '<svg viewBox="0 0 14 14" width="14" height="14" fill="none" '
+    + 'stroke="currentColor" stroke-width="1" '
     + 'focusable="false" aria-hidden="true">'
-    + '<rect x="4" y="4" width="6" height="6" rx="1"/>'
-    + '<rect x="14" y="4" width="6" height="6" rx="1"/>'
-    + '<rect x="4" y="14" width="6" height="6" rx="1"/>'
-    + '<rect x="14" y="14" width="6" height="6" rx="1"/></svg>',
-  rows: '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
-    + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+    + '<rect x="2.5" y="2.5" width="3" height="3"/>'
+    + '<rect x="8.5" y="2.5" width="3" height="3"/>'
+    + '<rect x="2.5" y="8.5" width="3" height="3"/>'
+    + '<rect x="8.5" y="8.5" width="3" height="3"/></svg>',
+  rows: '<svg viewBox="0 0 14 14" width="14" height="14" fill="currentColor" '
     + 'focusable="false" aria-hidden="true">'
-    + '<path d="M9 6h11M9 12h11M9 18h11M5 6v.01M5 12v.01M5 18v.01"/></svg>',
+    + '<path d="M2 3h1v1H2zM2 7h1v1H2zM2 11h1v1H2zM5 3h7v1H5zM5 7h7v1H5zM5 11h7v1H5z"/>'
+    + '</svg>',
 };
 
 /// The Cards and Rows pair of buttons, each with its icon beside the word.

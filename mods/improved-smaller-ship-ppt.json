@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T20:45:31.652782Z",
+  "generatedAt": "2026-10-26T21:45:24.314694Z",
   "listing": {
     "id": "improved-smaller-ship-ppt",
     "name": "Improved Smaller Ship PPT",
@@ -27,6 +27,7 @@
     "isWorkInProgress": false,
     "addedOn": "2025-10-21",
     "threadLastPostOn": "2025-10-23",
+    "editedOn": "2025-10-21",
     "needs": []
   },
   "description": "I personally don't understand why smaller ships shouldn't last as long in battle as bigger ships, and I dislike having wolfpack strategies fail against endgame enemies because my ships ran out of PPT even with Hardened Subsystems, Combat Endurance, not using Safety Overrides, etc. I made this small script that increases PPT for all ships programmatically:\nFrigates: +20% (rounded to nearest multiple of 10) but capped at 400 (because of Monitor).\nDestroyers: +10% (rounded to nearest multiple of 10).\nCruisers: +5% (rounded to nearest multiple of 10).\nCapitals: No change.\n\nHere are the script contents before being compiled (I detest java):\n\nSpoiler\npackage data.scripts.plugins;\n\nimport com.fs.starfarer.api.BaseModPlugin;\nimport com.fs.starfarer.api.Global;\nimport com.fs.starfarer.api.combat.ShipHullSpecAPI;\nimport com.fs.starfarer.api.combat.ShipAPI.HullSize;\n\npublic class ISSPPT_ModPlugin extends BaseModPlugin {\n\n@Override\npublic void onApplicationLoad() throws Exception {\n// Iterate through all the ship hull specifications loaded by the game.\nfor (ShipHullSpecAPI hullSpec : Global.getSettings().getAllShipHullSpecs()) {\n\n// Get the ship's original Peak Performance Time.\nfloat originalPPT = hullSpec.getNoCRLossSeconds();\nfloat newPPT = originalPPT;\n\n// Check the hull size and apply changes accordingly.\nif (hullSpec.getHullSize() == HullSize.FRIGATE) {\n// REFINED LOGIC: Only modify frigates if their original PPT is less than the 400s cap.\nif (originalPPT < 400f) {\n// Frigates: +20%, rounded to nearest 10, capped at 400.\nnewPPT = originalPPT * 1.2f;\nnewPPT = Math.round(newPPT / 10f) * 10;\nnewPPT = Math.min(newPPT, 400f); // Cap the result.\n}\n\n} else if (hullSpec.getHullSize() == HullSize.DESTROYER) {\n// Destroyers: +10%, rounded to nearest 10.\nnewPPT = originalPPT * 1.1f;\nnewPPT = Math.round(newPPT / 10f) * 10;\n\n} else if (hullSpec.getHullSize() == HullSize.CRUISER) {\n// Cruisers: +5%, rounded to nearest 10.\nnewPPT = originalPPT * 1.05f;\nnewPPT = Math.round(newPPT / 10f) * 10;\n}\n\n// If the PPT has changed, apply the new value.\nif (newPPT != originalPPT) {\nhullSpec.setNoCRLossSeconds(newPPT);\n}\n}\n}\n}\n\nI have a compiled version that I can potentially upload, but I'm feeling too lazy to create another repository account, and I am not going to put this in the account I use for work stuff. Is it acceptable to provide something like \"mega\" or \"rapidshare\" link to the archive file?\n\nEDIT: Link to mod archive (7zip): https://mega.nz/file/Y20lGK5a#h7JaaNwYToh289rfwx3w2BE1xALls6saE0UBlzWZa0w",
