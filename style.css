@@ -1038,8 +1038,10 @@ button.check-row { align-items: center; }
 .filter-menu-box .saved-filters { min-width: 220px; }
 
 /* Home's filter bar: a slim strip at the top of the page that opens to show
-   the filters. Shut, it says which filters are on. */
-.home-filters { padding: var(--pad-cell); }
+   the filters. Shut, it says which filters are on, and sits close above the
+   sections it filters. `.panel` here so a panel's own padding does not win. */
+.panel.home-filters { padding: var(--pad-cell); }
+.home-filters:not([open]) { margin-bottom: calc(var(--gap) - var(--gap-wide)); }
 .home-filters-head {
   display: flex; align-items: baseline; gap: var(--gap); flex-wrap: wrap;
   cursor: pointer; list-style: none;
