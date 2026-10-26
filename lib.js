@@ -1822,8 +1822,8 @@ function originalPageButton(mod, page) {
 /// first — the same thing TriOS's catalog does on a mod's card.
 ///
 /// Where there is both a download and an original forum, Discord or Nexus page,
-/// summary cards and rows split the same fixed width between them. The download
-/// keeps three quarters and the original-page icon gets one quarter. The large
+/// summary cards and rows split the same fixed width between them. The
+/// original-page icon gets a narrow fixed width and the download the rest. The large
 /// button on the mod's own page stays single because that page already carries
 /// the original link beside it.
 ///

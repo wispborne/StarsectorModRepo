@@ -715,14 +715,15 @@ main {
 .download-btn.btn-with-icon { justify-content: center; }
 
 /* A summary card or row that knows both where to download a mod and where the
-   author posted it keeps one straight action edge. The download owns three
-   quarters of the old button width. The original page owns the last quarter. */
+   author posted it keeps one straight action edge. The original-page button is
+   only an icon, so it gets a narrow fixed width and the download gets the rest:
+   "Install with TriOS" and its logo need about 110 pixels on their own. */
 .download-actions {
-  display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+  display: grid; grid-template-columns: minmax(0, 1fr) 34px;
   flex-shrink: 0; box-sizing: border-box;
 }
 .download-actions > .download-btn {
-  min-width: 0; padding-left: 6px; padding-right: 6px;
+  min-width: 0; padding-left: 10px; padding-right: 10px;
   border-radius: 6px 0 0 6px; font-size: var(--type-tiny);
 }
 .original-page-btn {
@@ -763,14 +764,14 @@ main {
 
 /* On a row it sits inline at the end, in a column of its own width so every
    button in the list starts and ends in the same place. */
-.mod-row > .download-btn, .mod-row > .download-actions { width: 148px; }
+.mod-row > .download-btn, .mod-row > .download-actions { width: 168px; }
 .mod-row > .download-btn, .mod-row > .download-actions { margin-right: 10px; }
 
 /* On a release row it follows "Read changelog", so both of the row's actions
    are together at its end. The summary spaces its own children, so this needs
    no margin of its own — only a width, so the rows line up down the page. */
 .release > summary > .download-btn,
-.release > summary > .download-actions { width: 148px; }
+.release > summary > .download-actions { width: 168px; }
 
 input[type="text"], input[type="search"], select {
   background: var(--surface-2); color: var(--text);
