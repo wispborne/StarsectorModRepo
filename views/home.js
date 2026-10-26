@@ -11,8 +11,8 @@ import {
   releaseFeed, thumbnail,
 } from '../lib.js';
 import {
-  filterControls, gameLabelsOf, matchesFilters, modCard, rememberedBrowseFilters,
-  savedFilterInUse, savedFiltersMenu,
+  copyFiltersButton, filterControls, gameLabelsOf, homeFilters, matchesFilters, modCard,
+  rememberedBrowseFilters, savedFilterInUse, savedFiltersMenu, setHomeFilters,
 } from './browse.js';
 import {
   describeFilters, filterQuery, filtersAreOff, filtersToAddress, noFilters, readFilters,
@@ -26,35 +26,6 @@ const RECENT_COUNT = 24;
 /// How many rows the strip can be asked to show.
 const ROW_CHOICES = [1, 2, 3];
 const ROWS_KEY = 'starmodderRecentRows';
-
-/// Home's own filters, kept apart from Browse's: a set of filters as a query
-/// string (see `filter_set.js`). They are not in the address, which stays
-/// `#/home`.
-const FILTERS_KEY = 'starmodderHomeFilters';
-/// Home's filters for this visit, kept here too so they still work when the
-/// browser refuses storage.
-let homeFiltersThisVisit = null;
-
-function homeFilters() {
-  if (homeFiltersThisVisit != null) return homeFiltersThisVisit;
-  try {
-    homeFiltersThisVisit = localStorage.getItem(FILTERS_KEY);
-  } catch {
-    // Storage is blocked: start with every filter off.
-  }
-  // Every filter off, every game version.
-  if (homeFiltersThisVisit == null) homeFiltersThisVisit = 'game=any';
-  return homeFiltersThisVisit;
-}
-
-function setHomeFilters(query) {
-  homeFiltersThisVisit = query;
-  try {
-    localStorage.setItem(FILTERS_KEY, query);
-  } catch {
-    // Kept for this visit only.
-  }
-}
 
 function recentRowsPreference() {
   const saved = Number(localStorage.getItem(ROWS_KEY));
@@ -103,18 +74,19 @@ export async function render(root, parts, { filtersOpen = false } = {}) {
   // The mods added recently first, then the categories and the releases.
   clear(root);
   root.append(el('div', { class: 'stack' }, [
+    aiSummaryBanner(() => render(root)),
     filterBar(mods, state, currentVersion, filtersOpen, () => {
       setHomeFilters(filterQuery(state, currentVersion));
       drawSections();
     }, (open) => render(root, parts, { filtersOpen: open })),
-    aiSummaryBanner(() => render(root)),
     sections,
     feedLine(),
   ]));
   drawSections();
 }
 
-/// The bar at the top of Home that holds its filters. It always starts shut,
+/// The bar near the top of Home, under the AI summaries banner, that holds its
+/// filters. It always starts shut,
 /// naming the filters that are on, or the saved filter they match.
 ///
 /// `onChange` runs after a control changes `state`. `redraw` draws the whole
@@ -150,32 +122,9 @@ function filterBar(mods, state, currentVersion, open, onChange, redraw) {
     onChange();
   }, { categories: 'dropdown' });
 
-  const copy = el('button', {
-    type: 'button', class: 'btn btn-with-icon',
-    title: 'Use Browse’s filters on Home. Browse’s filters stay the same.',
-  }, [el('span', { class: 'button-icon', html: COPY_ICON }), 'Copy filters from Browse page']);
-  // Copying replaces every filter on Home, so the first press only asks.
-  // A press anywhere else, or the keyboard leaving the button, puts it back.
-  const copyLabel = copy.lastChild;
-  const pressedElsewhere = (event) => {
-    if (!copy.contains(event.target)) stopAsking();
-  };
-  const stopAsking = () => {
-    copy.classList.remove('confirming');
-    copyLabel.textContent = 'Copy filters from Browse page';
-    document.removeEventListener('pointerdown', pressedElsewhere);
-  };
-  copy.addEventListener('click', () => {
-    if (copy.classList.contains('confirming')) {
-      stopAsking();
-      replaceWith(rememberedBrowseFilters(currentVersion));
-      return;
-    }
-    copy.classList.add('confirming');
-    copyLabel.textContent = 'Are you sure? Click to confirm.';
-    document.addEventListener('pointerdown', pressedElsewhere);
-  });
-  copy.addEventListener('blur', stopAsking);
+  const copy = copyFiltersButton('Copy filters from Browse page',
+    'Use Browse’s filters on Home. Browse’s filters stay the same.',
+    () => replaceWith(rememberedBrowseFilters(currentVersion)));
 
   drawWords();
   const bar = el('details', { class: 'panel home-filters' }, [
@@ -190,6 +139,7 @@ function filterBar(mods, state, currentVersion, open, onChange, redraw) {
       controls.gameDropdown,
       controls.categoryDropdown,
       controls.requiresDropdown,
+      controls.postedOnDropdown,
       controls.switches,
       controls.aiMenu,
       saved.node,
@@ -199,12 +149,7 @@ function filterBar(mods, state, currentVersion, open, onChange, redraw) {
   return bar;
 }
 
-// Tabler icons (MIT): copy and filter.
-const COPY_ICON = tablerIcon('<path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666'
-  + 'a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666'
-  + 'a2.667 2.667 0 0 1 -2.667 -2.667z"/>'
-  + '<path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2'
-  + 'h10c.75 0 1.158 .385 1.5 1"/>');
+// Tabler icon (MIT): filter.
 const FILTER_ICON = tablerIcon('<path d="M4 4h16v2.172a2 2 0 0 1 -.586 1.414l-4.414 4.414'
   + 'v7l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227z"/>');
 

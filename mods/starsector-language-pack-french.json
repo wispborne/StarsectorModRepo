@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "starsector-language-pack-french",
     "name": "Starsector Language Pack - French",
@@ -13,19 +13,21 @@
     "sources": [
       "forum"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "2.0.15",
     "imageUrl": "https://raw.githubusercontent.com/mipsou/starsector_lang_pack_fr/main/pics/03_dialogue-pirate-fr.png",
     "summary": "French translation mod for Starsector 0.98a-RC8.",
     "summaryIsGenerated": false,
-    "aiSummary": "Translates game text, including dialogue, quests, events, and the Codex, into French.",
+    "aiSummary": "Translates game text, including dialogue, quests, codex entries, and UI elements, into French.",
+    "saveCompatible": false,
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/mipsou/starsector_lang_pack_fr/releases/download/v2.0.15/starsector-lang-pack-fr-v2.0.15.zip",
       "kind": "direct",
       "needsAnotherStep": false
     },
-    "downloadCount": 2,
+    "downloadCount": 7,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35135.0",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
@@ -38,9 +40,9 @@
   "descriptionHtml": "<strong>[0.98a] Starsector Language Pack - French v2.0.0-rc2</strong><br><br>French translation mod for Starsector 0.98a-RC8.<br><br><strong>What's translated:</strong><br><ul><li>40,000+ lines of dialogue, quests, events (rules.csv)</li><li>Full Codex (Spacer's Handbook — combat, UI, tech types)</li><li>Skills, hullmods, weapons, ship systems</li><li>Factions, ranks, fleet names</li><li>Missions, tooltips, loading tips</li><li>Ship names, commodities, industries</li></ul><br><strong>Known limitations:</strong><br>Some UI labels remain in English (hardcoded in Java): deployment panel, combat HUD (FLUX, HULL, CR), character creation screen. A detailed report has been sent to Alex.<br><br><strong>Download:</strong><br><a href=\"https://github.com/mipsou/starsector_lang_pack_fr/releases/tag/v2.0.0-rc2\" rel=\"nofollow noopener\" target=\"_blank\">GitHub Release v2.0.0-rc2</a><br><br><strong>Installation:</strong><br>1. Download the ZIP<br>2. Extract into <code>mods/</code><br>3. Enable in launcher<br>4. New game recommended<br><br><strong>Compatibility:</strong><br>Compatible with any mod that doesn't override the same vanilla data files (<code>rules.csv</code>, <code>descriptions.csv</code>, <code>strings.json</code>). Most gameplay/ship/faction mods work fine.<br><br><strong>Feedback &amp; bugs:</strong><br><a href=\"https://github.com/mipsou/starsector_lang_pack_fr/issues\" rel=\"nofollow noopener\" target=\"_blank\">GitHub Issues</a><br><br><a href=\"https://github.com/mipsou/starsector_lang_pack_fr\" rel=\"nofollow noopener\" target=\"_blank\">GitHub Repository</a>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Provides a comprehensive French translation for Starsector. It covers over 40,000 lines of dialogue, quests, and events, as well as the full Codex, skills, hullmods, weapons, ship systems, factions, ranks, fleet names, missions, tooltips, loading tips, ship names, commodities, industries, aptitudes, fleet abilities, planet types, and submarkets. It uses a Java mod plugin to translate hardcoded UI text via the public API without modifying vanilla files or using reflection hacks.",
+  "aiDescription": "Translates over 40,000 lines of dialogue, quests, and events, as well as the full Codex, skills, hullmods, weapons, and ship systems. It also translates factions, ranks, fleet names, missions, tooltips, and ship names. Some hardcoded UI labels remain in English.",
   "saveCompatibilityText": "New game recommended",
-  "canAdd": "depends",
+  "canAdd": "no",
   "aiUse": {},
   "rawCategories": [
     "Utility mods"
@@ -74,6 +76,51 @@
     }
   ],
   "downloads": [
+    {
+      "url": "https://github.com/mipsou/starsector_lang_pack_fr/releases/tag/v2.0.0-rc2",
+      "directUrl": "https://github.com/mipsou/starsector_lang_pack_fr/releases/download/v2.0.15/starsector-lang-pack-fr-v2.0.15.zip",
+      "fileName": "starsector-lang-pack-fr-v2.0.15.zip",
+      "kind": "direct",
+      "label": "GitHub Release v2.0.0-rc2",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/mipsou/starsector_lang_pack_fr/releases/tag/v2.0.0",
+      "directUrl": "https://github.com/mipsou/starsector_lang_pack_fr/releases/download/v2.0.15/starsector-lang-pack-fr-v2.0.15.zip",
+      "fileName": "starsector-lang-pack-fr-v2.0.15.zip",
+      "kind": "direct",
+      "label": "GitHub Release v2.0.0",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/mipsou/starsector_lang_pack_fr/releases/tag/v2.0.2",
+      "directUrl": "https://github.com/mipsou/starsector_lang_pack_fr/releases/download/v2.0.15/starsector-lang-pack-fr-v2.0.15.zip",
+      "fileName": "starsector-lang-pack-fr-v2.0.15.zip",
+      "kind": "direct",
+      "label": "GitHub Release v2.0.2",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/mipsou/starsector_lang_pack_fr/releases/tag/v2.0.3",
+      "directUrl": "https://github.com/mipsou/starsector_lang_pack_fr/releases/download/v2.0.15/starsector-lang-pack-fr-v2.0.15.zip",
+      "fileName": "starsector-lang-pack-fr-v2.0.15.zip",
+      "kind": "direct",
+      "label": "GitHub Release v2.0.3",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
+    {
+      "url": "https://github.com/mipsou/starsector_lang_pack_fr/releases/tag/v2.0.10",
+      "directUrl": "https://github.com/mipsou/starsector_lang_pack_fr/releases/download/v2.0.15/starsector-lang-pack-fr-v2.0.15.zip",
+      "fileName": "starsector-lang-pack-fr-v2.0.15.zip",
+      "kind": "direct",
+      "label": "v2.0.10 -- GitHub Releases",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    },
     {
       "url": "https://github.com/mipsou/starsector_lang_pack_fr/releases/tag/v2.0.15",
       "directUrl": "https://github.com/mipsou/starsector_lang_pack_fr/releases/download/v2.0.15/starsector-lang-pack-fr-v2.0.15.zip",

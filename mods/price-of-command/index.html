@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Price of Command">
   <meta property="og:description" content="Allows your officers to get tired, get injured, and, in the worst case, die.">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1203147246233722890/1203148068661502054/memorial.png?ex=6adc07f4&amp;is=6adab674&amp;hm=f2218767fe485070a7d23669a28ffbbf1847d90f958de4730920d367673b3aab&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1203147246233722890/1203148068661502054/memorial.png?ex=6adffc74&amp;is=6adeaaf4&amp;hm=cae87d5dfcaeb20d53ce4b802260ea90ec09d0c15e3a5fed2372443941d7ca05&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Price of Command</h1><p>A Starsector mod by atlanticaccent. For Starsector 0.97a. Version 0.0.10.</p><p>Allows your officers to get tired, get injured, and, in the worst case, die.</p><p><a href="https://github.com/atlanticaccent/price-of-command/releases/download/0.0.10/price-of-command.zip" rel="nofollow noopener">Download</a> · <a href="https://discord.com/channels/187635036525166592/1203147246233722890/1203147246233722890" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/atlanticaccent/price-of-command" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/magiclib/">MagicLib</a></li><li><a href="mods/lunalib/">LunaLib</a></li></ul></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Price of Command</h1><p>A Starsector mod by atlanticaccent. For Starsector 0.97a. Version 0.0.10.</p><p>Allows your officers to get tired, get injured, and, in the worst case, die.</p><p><a href="https://github.com/atlanticaccent/price-of-command/releases/download/0.0.10/price-of-command.zip" rel="nofollow noopener">Download</a> · <a href="https://discord.com/channels/187635036525166592/1203147246233722890/1203147246233722890" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/atlanticaccent/price-of-command" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/magiclib-2/">MagicLib</a></li><li><a href="mods/lunalib/">LunaLib</a></li></ul><h2>Optional</h2><ul><li><a href="mods/console-commands/">Console Commands</a></li></ul></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="../../">
   <title>JaydeeProficiencies | Starmodder</title>
-  <meta name="description" content="JaydeeProficiencies is a generic Library Mod used by JaydeePiracy and related projects.">
+  <meta name="description" content="Enables the full customisation of the Player Faction and UI color palette in game">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="JaydeeProficiencies">
-  <meta property="og:description" content="JaydeeProficiencies is a generic Library Mod used by JaydeePiracy and related projects.">
+  <meta property="og:description" content="Enables the full customisation of the Player Faction and UI color palette in game">
   <meta property="og:image" content="https://github.com/Jaydee8652/JaydeeImageRepository/blob/main/Color.gif?raw=true">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>JaydeeProficiencies</h1><p>A Starsector mod by Jaydee8652. For Starsector 0.98a. Version 2.0.0.</p><p>JaydeeProficiencies is a generic Library Mod used by JaydeePiracy and related projects.</p><p><a href="https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FJaydee8652%2FJaydeeProficiencies%2Freleases%2Flatest%2Fdownload%2FJaydee8652_Jaydee8652_JaydeeProficiencies.version%22%2C%22id%22%3A%22JaydeeProficiencies%22%2C%22version%22%3A%222.0.0%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FMagicLibStarsector%2FMagicLib%2Fmaster%2Fmagiclib.version%22%2C%22id%22%3A%22MagicLib%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%7D" rel="nofollow noopener">Install with TriOS</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=36201.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/Jaydee8652/JaydeeProficiencies" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/magiclib/">MagicLib</a></li><li><a href="mods/lunalib/">LunaLib</a></li></ul><h2>Forum post</h2><p>JaydeeProficiencies</p><p>JaydeeProficiencies is a generic Library Mod used by JaydeePiracy and related projects.</p><p>For PlayersEnables the full customisation of the Player Faction and UI color palette in game</p><p>Runs a series of validator functionsValidator functions are run on game load.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>JaydeeProficiencies</h1><p>A Starsector mod by Jaydee8652. For Starsector 0.98a. Version 2.0.0.</p><p>Enables the full customisation of the Player Faction and UI color palette in game</p><p><a href="https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FJaydee8652%2FJaydeeProficiencies%2Freleases%2Flatest%2Fdownload%2FJaydee8652_Jaydee8652_JaydeeProficiencies.version%22%2C%22id%22%3A%22JaydeeProficiencies%22%2C%22version%22%3A%222.0.0%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FMagicLibStarsector%2FMagicLib%2Fmaster%2Fmagiclib.version%22%2C%22id%22%3A%22MagicLib%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%7D" rel="nofollow noopener">Install with TriOS</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=36201.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/Jaydee8652/JaydeeProficiencies" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/magiclib-2/">MagicLib</a></li><li><a href="mods/lunalib/">LunaLib</a></li></ul><h2>Forum post</h2><p>JaydeeProficiencies</p><p>JaydeeProficiencies is a generic Library Mod used by JaydeePiracy and related projects.</p><p>For Players<br>Enables the full customisation of the Player Faction and UI color palette in game</p><p>Runs a series of validator functions<br>Validator functions are run on game load.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="UNSF - FULL RELEASE">
   <meta property="og:description" content="United Nation Space Force is Stargate inspired mod, that adds well Stargate stuff">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1284307938311147680/1284307938462404619/UNSF_FLAG.png?ex=6adca2b9&amp;is=6adb5139&amp;hm=776b553707839583b24d2dcb4703181c8b3d4513e6ca699dfa6d4231ac9dac5f&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1284307938311147680/1284307938462404619/UNSF_FLAG.png?ex=6adfee79&amp;is=6ade9cf9&amp;hm=dd19c643280ae6b40da7d25982292832a95d43a8135817f92f743282c5b2ae21&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -118,6 +125,27 @@
             <label title="Leave the text out. The sparkle before the summary still marks it as AI.">
               <input type="radio" name="ai-note" value="hide">
               <span>Hide</span>
+            </label>
+          </div>
+        </div>
+      </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
             </label>
           </div>
         </div>

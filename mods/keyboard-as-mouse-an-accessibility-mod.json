@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "keyboard-as-mouse-an-accessibility-mod",
     "name": "Keyboard As Mouse - An Accessibility(?) Mod",
@@ -16,10 +16,9 @@
       "discord"
     ],
     "gameVersion": "0.98a",
-    "modVersion": "0.0.1",
     "summary": "This mod is built on a sort of library I'm referring to as True Input Faker, which it uses to generate fake mouse events (and possibly fake keyboard events in the future) by injecting itself between Starsector and the LWJGL game library it's built on.",
     "summaryIsGenerated": false,
-    "aiSummary": "Allows using the keyboard to control the in-game cursor for clicks, movement, scrolling, and dragging.",
+    "aiSummary": "Allows using the keyboard to control the in-game cursor, including clicks, movement, scrolling, and dragging.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/atlanticaccent/true-input-faker/releases/download/0.0.1/true-input-faker.zip",
@@ -38,12 +37,12 @@
       }
     ]
   },
-  "description": "Injects itself between the game and its library to generate fake mouse events. It enables keyboard control for left clicks, right clicks, mouse movement, scrolling, and click-and-hold actions. While not fully ergonomic and containing some quirks, it allows keyboard access to all mouse-dependent features.",
-  "descriptionHtml": "<p>Injects itself between the game and its library to generate fake mouse events. It enables keyboard control for left clicks, right clicks, mouse movement, scrolling, and click-and-hold actions. While not fully ergonomic and containing some quirks, it allows keyboard access to all mouse-dependent features.</p>",
+  "description": "Allows using the keyboard to control the in-game cursor, including clicks, movement, scrolling, and dragging. It injects fake mouse events between the game and its underlying library. While mostly a proof of concept, it enables keyboard control for all mouse-required actions, though with some ergonomic quirks and bugs.",
+  "descriptionHtml": "<p>Allows using the keyboard to control the in-game cursor, including clicks, movement, scrolling, and dragging. It injects fake mouse events between the game and its underlying library. While mostly a proof of concept, it enables keyboard control for all mouse-required actions, though with some ergonomic quirks and bugs.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>This mod is built on a sort of library I'm referring to as True Input Faker, which it uses to generate fake mouse events (and possibly fake keyboard events in the future) by injecting itself between Starsector and the LWJGL game library it's built on.</p><p>Mostly a proof of concept, this mod is a simplistic \"accessibility\" mod that allows using the keyboard to control the in-game cursor. This includes using the keyboard for:</p><ul><li>Left clicks</li><li>Right clicks</li><li>Mouse movement</li><li>Scrolling</li><li>Click-and-hold/drag</li></ul><p>This isn't entirely ergonomic, and there are still some quirks/bugs (notably, basically all input except mouse movement, scrolling and clicks will not be processed when an inventory item stack is selected).</p><p>However, strictly speaking, everything in the game that requires a mouse can be controlled via the keyboard with this mod, even the combat layer though it's extremely difficult to do so. There's also plenty of overlap between the default keybinds I've chosen and the game's keybinds, though those can be reconfigured fairly easily.</p><p>Requires LazyLib.<br>Optionally depends on LunaLib for editing keybinds.</p><p>Source: <a href=\"https://github.com/atlanticaccent/true-input-faker\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/atlanticaccent/true-input-faker</a><br>Download: <a href=\"https://github.com/atlanticaccent/true-input-faker/releases/download/0.0.1/true-input-faker.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/atlanticaccent/true-input-faker/releases/download/0.0.1/true-input-faker.zip</a></p>",
-  "aiDescription": "Injects itself between the game and its library to generate fake mouse events. It enables keyboard control for left clicks, right clicks, mouse movement, scrolling, and click-and-hold actions. While not fully ergonomic and containing some quirks, it allows keyboard access to all mouse-dependent features.",
+  "aiDescription": "Allows using the keyboard to control the in-game cursor, including clicks, movement, scrolling, and dragging. It injects fake mouse events between the game and its underlying library. While mostly a proof of concept, it enables keyboard control for all mouse-required actions, though with some ergonomic quirks and bugs.",
   "aiUse": {},
   "rawCategories": [
     "Other/Misc.",
@@ -68,5 +67,11 @@
   "discordUrl": "https://discord.com/channels/187635036525166592/1374159887872819311/1374159887872819311",
   "releases": [],
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "LunaLib",
+      "id": "lunalib"
+    }
+  ]
 }

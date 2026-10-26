@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Crab Shack</h1><p>A Starsector mod by crab. For Starsector 0.98a. Version 0.5.5111.</p><p>An unserious mod that contains whatever I happened to think was funny at the moment. Has quests, ships with weird mechanics, lots of dialog, special items, boss fights, exploration content, fishing, etc...</p><p><a href="https://drive.google.com/uc?export=download&amp;id=1yE3TGA59C0iA47Q-KG-iwjYtwL7R8OKI" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=35624.0" rel="nofollow noopener">Forum thread</a></p><h2>Requires</h2><ul><li><a href="mods/magiclib/">MagicLib</a></li><li><a href="mods/graphicslib/">GraphicsLib</a></li></ul><h2>Optional</h2><ul><li><a href="mods/secrets-of-the-frontier/">Secrets of the Frontier</a></li><li><a href="mods/second-in-command/">Second-in-Command</a></li><li><a href="mods/nexerelin/">Nexerelin</a></li></ul><h2>Forum post</h2><p>Crab Shack</p><p>Requires MagicLib</p><p>Requires GraphicsLib</p><p>Additional content when enabled with the following mods :</p><p>Secrets of the Frontier</p><p>Second in Command</p><p>Nexerelin</p><p>YE OLDE DOWNLOAD LINK</p><p>(also supports Lunalib's version checker)</p><p>An unserious mod that contains whatever I happened to think was funny at the moment. Has quests, ships with weird mechanics, lots of dialog, special items, boss fights, exploration content, fishing, etc...</p><p>A non-exhaustive list of previews below</p><p>Exploration stuff</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Crab Shack</h1><p>A Starsector mod by crab. For Starsector 0.98a. Version 0.5.5111.</p><p>An unserious mod that contains whatever I happened to think was funny at the moment. Has quests, ships with weird mechanics, lots of dialog, special items, boss fights, exploration content, fishing, etc...</p><p><a href="https://drive.google.com/uc?export=download&amp;id=1yE3TGA59C0iA47Q-KG-iwjYtwL7R8OKI" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=35624.0" rel="nofollow noopener">Forum thread</a></p><h2>Requires</h2><ul><li><a href="mods/magiclib-2/">MagicLib</a></li><li><a href="mods/graphicslib/">GraphicsLib</a></li></ul><h2>Optional</h2><ul><li><a href="mods/secrets-of-the-frontier/">Secrets of the Frontier</a></li><li><a href="mods/second-in-command/">Second-in-Command</a></li><li><a href="mods/nexerelin/">Nexerelin</a></li></ul><h2>Forum post</h2><p>Crab Shack</p><p>Requires MagicLib</p><p>Requires GraphicsLib</p><p>Additional content when enabled with the following mods :</p><p>Secrets of the Frontier</p><p>Second in Command</p><p>Nexerelin</p><p>YE OLDE DOWNLOAD LINK</p><p>(also supports Lunalib's version checker)</p><p>An unserious mod that contains whatever I happened to think was funny at the moment. Has quests, ships with weird mechanics, lots of dialog, special items, boss fights, exploration content, fishing, etc...</p><p>A non-exhaustive list of previews below</p><p>Exploration stuff</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

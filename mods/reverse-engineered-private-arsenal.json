@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "reverse-engineered-private-arsenal",
     "name": "Reverse Engineered Private Arsenal",
@@ -15,10 +15,11 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "1.3.1",
     "imageUrl": "https://github.com/andrzejsokolowski/starsector-private-arsenal/blob/main/private-arsenal-1.0.0.png?raw=true",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1519108627770900611/1519108627930288248/icon-128.png?ex=6adf2ce8&is=6adddb68&hm=0658193d856476b3189597faf9ed8123bc2088d12eea389bff651aa04800e850&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1519108627770900611/1519108627930288248/icon-128.png?ex=6adfd5a8&is=6ade8428&hm=bd75e62ff8577f2562d91c300e571c4e7c98b254cee0b344292325da4a0d1806&",
     "summary": "Reverse Engineered Private Arsenal adds a colony industry chain that takes apart the weapons, fighters and ships you deposit, learns to reproduce them, and sells you copies from an integrated Private Arsenal submarket. Vanilla and modded gear alike.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds a colony industry chain that reverse engineers deposited weapons, fighters, and ships to sell copies in a private submarket.",
@@ -57,11 +58,11 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Ever wanted to copy that rare weapon or ship you found instead of hoping for a blueprint drop? Build a Reverse Engineering Hub on your colony. Deposit weapons, fighters, or ships into storage. Each day the hub researches one item. Once done, you get fifty copies to buy from an integrated Private Arsenal submarket at a configurable price.<br>The hub comes in three tiers. Tier 1 handles weapons, Tier 2 adds fighters, Tier 3 adds ships (but you only get their blueprints when improved). Assign an AI core for bonuses: it speeds up research AND cuts the Arsenal prices.<br>Requires LunaLib. Works with modded gear. Full source on GitHub. No credits needed.<br>Download: <a href=\"https://github.com/andrzejsokolowski/starsector-private-arsenal/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/andrzejsokolowski/starsector-private-arsenal/releases/latest</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35627.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35627.0</a></p><p>This mod is a complete rewrite of DarkQOL's private arsenal/reverse engineering industries. I opted to coalesce them into one thing.<br>DarkQOL's abandoned and buggy, so I fixed it up, changed the logic and balance, and gave it a small general feel update.<br>Most of the mod is configurable via lunaSettings.</p>",
-  "aiDescription": "Adds a three-tier Reverse Engineering Hub structure for player colonies. Deposits items into storage where they are analyzed based on hub tier and assigned AI core speed. Successful analysis stocks fifty copies of the item in a Private Arsenal submarket for purchase, with optional blueprint generation via story points.",
+  "aiDescription": "Adds a colony industry chain that reverse engineers deposited weapons, fighters, and ships to sell copies in a private submarket. The hub has three tiers that unlock different item types, and research speed and pricing depend on the assigned AI core. It supports vanilla and modded gear, with optional features like drone replicators and blueprint production.",
   "saveCompatibilityText": "Adding to an existing save is fine.",
   "removalCompatibilityText": "Removing it mid save is not recommended, as with any mod that adds industries and submarkets.",
   "canAdd": "yes",
-  "canRemove": "no",
+  "canRemove": "depends",
   "aiUse": {
     "quote": "Claude Code built this anyway.",
     "usesAi": true,
@@ -82,7 +83,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1519108627770900611/1519108627930288248/icon-128.png?ex=6adf2ce8&is=6adddb68&hm=0658193d856476b3189597faf9ed8123bc2088d12eea389bff651aa04800e850&",
+      "url": "https://cdn.discordapp.com/attachments/1519108627770900611/1519108627930288248/icon-128.png?ex=6adfd5a8&is=6ade8428&hm=bd75e62ff8577f2562d91c300e571c4e7c98b254cee0b344292325da4a0d1806&",
       "aiCaption": "Blueprint-style artwork showing three ship designs on a blue circular background.",
       "aiKind": "art",
       "aiFit": "good",
@@ -123,8 +124,7 @@
   ],
   "changelog": {
     "1.1.1": "Fixed a save-corruption crash where the Private Arsenal's stocked ships were stored with an invalid faction, throwing an error during save (worst after demolishing the hub, which left the submarket lingering in colony memory). The arsenal now always uses a valid faction, and demolishing the hub fully removes its submarkets.",
-    "1.1.0": "The Reverse Engineering Hub now researches several items of each type in parallel instead of one at a time, scaling with hub tier and item size (defaults give 6 weapons, 3 fighters, and 2 ships at tier 3). Slot counts and per-type sizes are configurable in LunaLib, and per-item notifications are now batched into one message per type.",
-    "1.0.0": "Initial public release. Reverse Engineering Hub structure in three tiers, with tier gated weapons, fighters and ships. Reverse Engineering Storage for depositing items and a Private Arsenal submarket that stocks fifty copies of everything you have reverse engineered. AI core driven research speed and Arsenal pricing, Combat Drone Replicator support, story point improvement that also produces real blueprints, and full LunaLib configuration."
+    "1.1.0": "The Reverse Engineering Hub now researches several items of each type in parallel instead of one at a time, scaling with hub tier and item size (defaults give 6 weapons, 3 fighters, and 2 ships at tier 3). Slot counts and per-type sizes are configurable in LunaLib, and per-item notifications are now batched into one message per type."
   },
   "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-private-arsenal",
   "supportLinks": [],
@@ -159,5 +159,11 @@
   ],
   "threadLastPostOn": "2026-10-05",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Astral Ascension",
+      "id": "astral-ascension"
+    }
+  ]
 }

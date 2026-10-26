@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Prasrity Scrapmasters">
   <meta property="og:description" content="Adds the Prasrity Scrapmasters, a collective of scavengers that comb battlefields for wrecks to return to life. ||In other words, trash men using trash ships to collect and create trash.||">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1224006388330795118/1224006389219856444/crest_Prasrity_Scrap_Master.jpg?ex=6adc1b88&amp;is=6adaca08&amp;hm=b7c96d57fcaa4cf795a88f6650c6ee1c2ef3a1e207664e1c5739dbb656bfd3d0&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1224006388330795118/1224006389219856444/crest_Prasrity_Scrap_Master.jpg?ex=6ae01008&amp;is=6adebe88&amp;hm=4b8160a39ebdcb1ed050bb5834021d321c59fe3081ac0234b921d625428ee9d6&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -118,6 +125,27 @@
             <label title="Leave the text out. The sparkle before the summary still marks it as AI.">
               <input type="radio" name="ai-note" value="hide">
               <span>Hide</span>
+            </label>
+          </div>
+        </div>
+      </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
             </label>
           </div>
         </div>

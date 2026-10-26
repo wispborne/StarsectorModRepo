@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "logistics-notifications",
     "name": "Logistics Notifications",
@@ -13,12 +13,13 @@
     "sources": [
       "forum"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "1.7.1",
     "imageUrl": "https://i.imgur.com/OmonWE1.png",
     "summary": "This utility mod shows how many days you have until you run out of supplies.",
     "summaryIsGenerated": false,
-    "aiSummary": "Shows remaining supply days and plays alarms when supplies or fuel drop below configured thresholds.",
+    "aiSummary": "Displays the number of days until supplies run out and plays an alarm when supplies or fuel fall below a configured threshold.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/SafariJohn/Misc-Starsector-Mods/raw/refs/heads/main/Log%20Not%201.7.1.zip",
@@ -29,6 +30,9 @@
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=17379.0",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "nicknames": [
+      "LogNot"
+    ],
     "addedOn": "2019-12-02",
     "threadLastPostOn": "2026-09-12",
     "needs": []
@@ -37,7 +41,7 @@
   "descriptionHtml": "<img src=\"https://i.imgur.com/OmonWE1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><span class=\"size-bigger\">Logistics Notifications</span><br><br><img src=\"https://i.imgur.com/XBQzq9p.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><span class=\"size-big\"><a href=\"https://github.com/SafariJohn/Misc-Starsector-Mods/raw/refs/heads/main/Log%20Not%201.7.1.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download v1.7.1</a></span><br><br>This utility mod shows how many days you have until you run out of supplies.<br><br>It also plays an alarm if your supplies or fuel fall below a threshold specified in the config.json.<br><br><details class=\"spoiler\"><summary>Changelog:</summary>Version 1.7.1<br>- Fixed fluctuation in supply display that occurred once per in-game day<br><br>Version 1.7.0<br>- Completely reworked the backend<br>- Added more configuration options<br><br>Version 1.6.1<br>- Fixed LogNot command not loading<br><br>Version 1.6.0<br>- Updated to 0.98a<br><br>Version 1.5.0<br>- Updated to 0.97a<br>- Converted code to Kotlin<br><br>Version 1.4.5<br>- Updated to 0.96a<br><br>Version 1.4.4<br>- Fixed crash from IndexOutOfBoundsException<br><br>Version 1.4.3<br>- If you have slowdown with this version, stop flying around with hundreds of ships<br><br>Version 1.4.2<br>- Fixed crash with lingering hint display cleanup<br><br>Version 1.4.1<br>- Fixed slowdown with large fleets<br>- Fixed lingering display after mod is disabled<br><br>Version 1.4.0<br>- Approximate days of supply is now shown in real time using hints area<br>  - can be disabled in config.json<br>- Notifications style is disabled, but can be reenabled in config.json<br>  - still used for alarms<br><br>Version 1.3.3<br>- Updated to 0.95a<br><br>Version 1.3.2<br>- Added config.json options for alarm sounds<br><br>Version 1.3.1<br>- Migrated version file to github.com<br><br>Version 1.3<br>- Added \"LogNot\" console command to check days of supply and ly of fuel<br><br>Version 1.2<br>- Fixed FPS drop with large fleets<br>- Supply calculation now accounts for being over capacity in fuel and personnel<br> <br>Version 1.1<br>- Moved alarm settings to config.json<br>- Added alarm as soon as alarm level of supplies or fuel reached<br>- Fixed on-load logistics notification<br><br>Version 1.0a<br>- Added missing version checker files.<br><br>Version 1.0<br>- Initial release</details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Displays the number of days until supplies run out. Plays an alarm if supplies or fuel fall below a threshold set in config.json. Includes a console command to check supply days and fuel light-years.",
+  "aiDescription": "Displays the number of days until supplies run out. Plays an alarm when supplies or fuel fall below a configured threshold. Includes a console command to check days of supply and light-years of fuel.",
   "aiUse": {},
   "rawCategories": [
     "Utility mods"
@@ -70,9 +74,8 @@
     }
   ],
   "changelog": {
-    "1.7.1": "- Fixed fluctuation in supply display that occurred once per in-game day",
-    "1.7.0": "- Completely reworked the backend\n- Added more configuration options",
-    "1.6.1": "- Fixed LogNot command not loading"
+    "1.7.1": "Fixed fluctuation in supply display that occurred once per in-game day",
+    "1.6.1": "Fixed LogNot command not loading"
   },
   "sourceCodeUrl": "https://github.com/SafariJohn/Misc-Starsector-Mods",
   "supportLinks": [],

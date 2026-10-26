@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "interastral-peace-casino",
     "name": "Interastral Peace Casino",
@@ -16,10 +16,11 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "1.6.3",
     "imageUrl": "https://github.com/zman406986/CasinoMod/blob/master/poker.png?raw=true",
-    "summary": "Gamble away your ships at the",
+    "summary": "4 minigames to test your luck:",
     "summaryIsGenerated": false,
     "aiSummary": "Adds a casino with poker, blackjack, gacha, and arena betting minigames.",
     "saveCompatible": true,
@@ -50,13 +51,13 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<h3>Gamble away your ships at the IPC!</h3><p>**Adds a casino where you can lose money via 4 minigames: **</p><ul><li>Poker (Player vs AI, Texas Holdem, inc. 2-player and 5-player variants)</li><li>Blackjack (6-decks, allows counting)</li><li>Ship Gacha (Genshin style, Tachy-Impact™)</li><li>Arena betting (Spaceship battle royale, has adaptive odds like horse betting)</li></ul><p><strong>New - a 5th one will be availible if my other mod, Cosmicon Dice, is also loaded</strong></p><p>Along with a debt system (but you <strong><em>don't</em></strong> want to owe the casino money)</p><ul><li>Plus a battle pass experience complete with daily ads (can be turned off)</li><li>Plus custom music and a lot of Genshin/Honkai Starrail Memes.</li></ul><p><strong>Cosmicon Collab:</strong> <a href=\"https://discord.com/channels/187635036525166592/1503113590150795497\" rel=\"nofollow noopener\" target=\"_blank\">https://discord.com/channels/187635036525166592/1503113590150795497</a><br>If the <strong><em>Cosmicon Dice</em></strong> mod is also loaded, you can spend stargems at the casino to play dice against a strong opponent and unlock the dice tournament for big rewards!<br>Note: You can remove either mod and keep playing the remaining mod's feature, but may lose saved progress of collab features.</p><p>Visit any Tri-Tachyon or player owned colony to play.<br>Should be compatible with everything and safe to add/remove mid game.<br><a href=\"https://s13.gifyu.com/images/bq6mu.gif\" rel=\"nofollow noopener\" target=\"_blank\">https://s13.gifyu.com/images/bq6mu.gif</a><br><a href=\"https://github.com/zman406986/CasinoMod/blob/master/poker.png?raw=true\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/zman406986/CasinoMod/blob/master/poker.png?raw=true</a><br><a href=\"https://s13.gifyu.com/images/bmu0W.gif\" rel=\"nofollow noopener\" target=\"_blank\">https://s13.gifyu.com/images/bmu0W.gif</a></p><h4>Almost all values are configurable (just edit <code>data/config/casino_settings.json</code>)</h4><p>Download: <a href=\"https://github.com/zman406986/CasinoMod/releases/download/v1.6.3/Casino.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/zman406986/CasinoMod/releases/download/v1.6.3/Casino.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=34918.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=34918.0</a></p><p>Fossic Forum Thread (for CN ver): <a href=\"https://www.fossic.org/thread-19096-1-1.html\" rel=\"nofollow noopener\" target=\"_blank\">https://www.fossic.org/thread-19096-1-1.html</a></p><p>Github: <a href=\"https://github.com/zman406986/CasinoMod\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/zman406986/CasinoMod</a><br>All code in this mod that isn't sloppy AI crap was produced by , thank them</p>",
-  "aiDescription": "Adds four minigames: Texas Hold'em Poker, Blackjack, Tachy-Impact gacha, and Spiral Abyss Arena. Players can purchase stargems with credits or pawn ships for them, and buy a VIP Pass for daily rewards and exclusive benefits. All game settings, including VIP costs, poker AI behavior, gacha rates, and arena odds, are configurable via a JSON file.",
+  "aiDescription": "Adds a casino accessible at Tri-Tachyon or player-owned markets. Features four minigames including Texas Hold'em, Blackjack, a gacha system, and an arena betting game. Includes a stargem currency system, VIP passes, and extensive configuration options.",
   "saveCompatibilityText": "Safe to add or remove mid-campaign!",
   "removalCompatibilityText": "Safe to add or remove mid-campaign!",
   "canAdd": "yes",
   "canRemove": "yes",
   "aiUse": {
-    "quote": "All code in this mod that isn't sloppy AI crap was produced by , thank them",
+    "quote": "All code in this mod that isn't sloppy AI crap was produced by @WolframSegler",
     "usesAi": true,
     "uses": [
       {
@@ -122,5 +123,11 @@
   "releases": [],
   "threadLastPostOn": "2026-08-15",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Cosmicon Dice",
+      "id": "cosmicon-dice"
+    }
+  ]
 }

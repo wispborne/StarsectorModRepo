@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "nerf-arms-dealers",
     "name": "Nerf Arms Dealers 1.0.1",
@@ -15,9 +15,11 @@
       "discord"
     ],
     "gameVersion": "0.97a",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1207052334610251826/1207052335054987334/image.png?ex=6adf0756&is=6addb5d6&hm=7c27ac6f9b9017f2ae60b2391b47356199aa83046ec96cc93210fc5aadb16b69&",
+    "modVersion": "1.0.1",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1207052334610251826/1207052335054987334/image.png?ex=6adfb016&is=6ade5e96&hm=f41797617f266ebadbbc35fad6fc658c0f483ddea79eb19689edee6b40f34e21&",
     "summary": "as the mod says it NERFS ARMS DEALERS -",
     "summaryIsGenerated": false,
+    "aiSummary": "Nerfs high-importance arms dealers to align their offerings with other importance levels.",
     "hasDirectDownload": false,
     "downloadCount": 0,
     "discordUrl": "https://discord.com/channels/187635036525166592/1207052334610251826/1207052334610251826",
@@ -26,15 +28,21 @@
     "addedOn": "2024-02-13",
     "needs": []
   },
-  "descriptionIsGenerated": false,
+  "description": "Adjusts the behavior of arms dealers that offer large quantities of ships, weapons, and fighters. The changes aim to make these high-importance dealers more consistent with the scaling of other importance levels.",
+  "descriptionHtml": "<p>Adjusts the behavior of arms dealers that offer large quantities of ships, weapons, and fighters. The changes aim to make these high-importance dealers more consistent with the scaling of other importance levels.</p>",
+  "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>as the mod says it NERFS ARMS DEALERS -</p><p>specifically the very important ones that offer u 1000 ships, weapons, and fighters, and arguably makes them more consistent with the scaling of the other importance levels of arms dealers.</p><p>The image shows the code changes in my mod vs how it is in vanilla</p><p>Download is down below</p><pre><code> changelog ig\n1.0 mod now exists and does stuff and hopefully works</code></pre><p>Any issues? Ping me. DM me. Call me on discord even if i dont respond and u really need to get my attention.</p><p><s>yes i know theres still some template mod stuff left around idc about removing it its harmless</s></p>",
+  "aiDescription": "Adjusts the behavior of arms dealers that offer large quantities of ships, weapons, and fighters. The changes aim to make these high-importance dealers more consistent with the scaling of other importance levels.",
+  "updateCompatibilityText": "probably save incompatible due to removal of bar_events.csv line",
+  "canUpdate": "depends",
+  "aiUse": {},
   "rawCategories": [
     "Quests and Bars"
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1207052334610251826/1207052335054987334/image.png?ex=6adf0756&is=6addb5d6&hm=7c27ac6f9b9017f2ae60b2391b47356199aa83046ec96cc93210fc5aadb16b69&",
+      "url": "https://cdn.discordapp.com/attachments/1207052334610251826/1207052335054987334/image.png?ex=6adfb016&is=6ade5e96&hm=f41797617f266ebadbbc35fad6fc658c0f483ddea79eb19689edee6b40f34e21&",
       "aiCaption": "A side-by-side comparison of Java code labeled 'MY MOD' and 'VANILLA', with text overlays reading 'SMART! SENSIBLE!' and 'STUPID! INSANE!'",
       "aiKind": "other",
       "aiFit": "okay",
@@ -42,7 +50,10 @@
     }
   ],
   "downloads": [],
-  "changelog": {},
+  "changelog": {
+    "1.0.1": "- now replaces bar_events.csv 'cpc' ID instead of defining a new 'cpcn' ID that references the new class, same for person_missions.csv",
+    "1.0": "mod now exists and does stuff and hopefully works"
+  },
   "supportLinks": [],
   "discordUrl": "https://discord.com/channels/187635036525166592/1207052334610251826/1207052334610251826",
   "releases": [],

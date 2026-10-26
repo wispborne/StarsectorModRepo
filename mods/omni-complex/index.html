@@ -34,6 +34,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -121,13 +128,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Omni Complex</h1><p>A Starsector mod by gruntmaster1. Version 1.21.</p><p>This is a heavily modified version of LazyWizard's Omnifactory mod (link here). The Omnifactory was a self replenishing station, whereas the Omni Complex is used for upgrading.</p><p><a href="http://download1580.mediafire.com/xfth8me4sn8grPqynqO2en_hpGSVtzCjTzExAs0UYu0BLe_HVPidnDyKGMha3HhA68yVDdMao8CmITnMbDwKO5H40xtXd9sei9mPkfphEh8i95ljk4L8uCluOohOHQeWdMWUBiM9aJtEF6r2twc-qYSmv98d76sB1dJLFSB1OiY/65bz8vmzp41tzfc/Omni+Complex+1.1.rar" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=5494.0" rel="nofollow noopener">Forum thread</a></p><h2>Optional</h2><ul><li>Freighter Start</li></ul><h2>Forum post</h2><p>Omni Complex Mod</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Omni Complex</h1><p>A Starsector mod by gruntmaster1. Version 1.21.</p><p>This is a heavily modified version of LazyWizard's Omnifactory mod (link here). The Omnifactory was a self replenishing station, whereas the Omni Complex is used for upgrading.</p><p><a href="http://download1580.mediafire.com/to2bly9oocfggvtrIJNvi9__VyF7b4Kdsg98kJQJBOHdzCDC5fl__nxBr_77tAPdKB7m8nBWvHb-Wyt0h6908LbPhK0xmbXTVCDsnate4BadoOt38Gpyqq22dPThFte-NfiBu_3lUP6sh-_xB9Xo9BpLqUMFi9XUL6ZPiy4XwjSk/65bz8vmzp41tzfc/Omni+Complex+1.1.rar" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=5494.0" rel="nofollow noopener">Forum thread</a></p><h2>Optional</h2><ul><li>Freighter Start</li></ul><h2>Forum post</h2><p>Omni Complex Mod</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

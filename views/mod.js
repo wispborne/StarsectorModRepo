@@ -12,7 +12,7 @@ import {
   favoriteToggle, formatMoment, imageUrlOf, inlinePictures, isMissingFile, joinNames, quickTip,
   setAiOnModPages, setInlinePictures, summaryToShow,
   modDetail, modHref, modList, modName, MOD_VERSION_NOTE,
-  NO_DESCRIPTION, pageIcon, picture, showPicture, summaryTitle,
+  NO_DESCRIPTION, pageIcon, picture, reduceMotion, showPicture, summaryTitle,
   takedownButton, versionStanding, versionStandingNote, withSource,
 } from '../lib.js';
 import { address } from '../address.js';
@@ -265,7 +265,7 @@ function jumpLinks(sections, entries) {
     const button = el('button', { class: 'link-button jump-link', type: 'button', text });
     button.addEventListener('click', () => {
       if (!node.isConnected && sections) sections.openHolding(node);
-      const smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const smooth = !reduceMotion();
       node.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
     });
     return button;

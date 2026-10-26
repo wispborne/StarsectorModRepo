@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="../../">
   <title>Project Moon Ship Names | Starmodder</title>
-  <meta name="description" content="A custom namelist I threw together for my amusement that I thought others might enjoy. Featuring names taken from the Project Moon games: Lobotomy Corporation, Library of Ruina, and Limbus Company.">
+  <meta name="description" content="A custom namelist I threw together for my amusement that I thought others might enjoy. Featuring names taken from the Project Moon games: Lobotomy Corporation, Library of Ruina, and Limbus Company. This mod may be freely added to or removed from saves. Fully compatible with other mods.">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Project Moon Ship Names">
-  <meta property="og:description" content="A custom namelist I threw together for my amusement that I thought others might enjoy. Featuring names taken from the Project Moon games: Lobotomy Corporation, Library of Ruina, and Limbus Company.">
+  <meta property="og:description" content="A custom namelist I threw together for my amusement that I thought others might enjoy. Featuring names taken from the Project Moon games: Lobotomy Corporation, Library of Ruina, and Limbus Company. This mod may be freely added to or removed from saves. Fully compatible with other mods.">
   <meta name="twitter:card" content="summary">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -34,6 +34,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -121,13 +128,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Project Moon Ship Names</h1><p>A Starsector mod by WitlessJester. For Starsector 0.98a. Version 1.0.</p><p>A custom namelist I threw together for my amusement that I thought others might enjoy. Featuring names taken from the Project Moon games: Lobotomy Corporation, Library of Ruina, and Limbus Company.</p><p><a href="https://github.com/wj267/Starsector_PMoonNamelist/archive/refs/tags/v1.0.0.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=35557.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/wj267/Starsector_PMoonNamelist" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Project Moon Ship Names</p><p>A custom namelist I threw together for my amusement that I thought others might enjoy. Featuring names taken from the Project Moon games: Lobotomy Corporation, Library of Ruina, and Limbus Company.<br>This mod may be freely added to or removed from saves.<br>Fully compatible with other mods.</p><p>Download Here</p><p>Names are tagged as Abnormality, EGO, and Mili for control when editing the faction name source files.</p><p>Abnormalities (Including Corrosions and Distortions): 194</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Project Moon Ship Names</h1><p>A Starsector mod by WitlessJester. For Starsector 0.98a. Version 1.0.</p><p>A custom namelist I threw together for my amusement that I thought others might enjoy. Featuring names taken from the Project Moon games: Lobotomy Corporation, Library of Ruina, and Limbus Company. This mod may be freely added to or removed from saves. Fully compatible with other mods.</p><p><a href="https://github.com/wj267/Starsector_PMoonNamelist/archive/refs/tags/v1.0.0.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=35557.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/wj267/Starsector_PMoonNamelist" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Project Moon Ship Names</p><p>A custom namelist I threw together for my amusement that I thought others might enjoy. Featuring names taken from the Project Moon games: Lobotomy Corporation, Library of Ruina, and Limbus Company.<br>This mod may be freely added to or removed from saves.<br>Fully compatible with other mods.</p><p>Download Here</p><p>Names are tagged as Abnormality, EGO, and Mili for control when editing the faction name source files.</p><p>Abnormalities (Including Corrosions and Distortions): 194</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

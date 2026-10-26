@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "hyperdrive",
     "name": "Hyperdrive",
@@ -17,12 +17,13 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "2.6.0",
     "imageUrl": "https://fractalsoftworks.com/forum/index.php?action=dlattach;attach=5051;type=avatar",
     "summary": "This mod allows your fleet to \"hyperwarp,\" traveling up to 15 light-years in mere seconds. The goal is to improve the QoL involved in travel as much as possible without disrupting normal gameplay more than necessary.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a fleet ability for instant long distance travel.",
+    "aiSummary": "Adds a fleet ability to instantly travel long distances by hyperwarping.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -44,7 +45,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Allows your fleet to \"hyperwarp,\" traveling up to 15 light-years in mere seconds.<br>Full description: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=17157.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=17157.0</a></p><p>Latest changes:</p><pre><code>2.6.0\n- Updated for Starsector version 0.98a and Java 17\n- Changed: Max burn level that can contribute to hyperwarp distance is now capped at 60 (to prevent being launched out of the galaxy when activated during a slipsurge boost)</code></pre><p>Full change log: <a href=\"https://github.com/NateNBJ/Hyperdrive/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/NateNBJ/Hyperdrive/releases</a><br>Download: <a href=\"https://github.com/NateNBJ/Hyperdrive/releases/latest/download/Hyperdrive.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/NateNBJ/Hyperdrive/releases/latest/download/Hyperdrive.zip</a></p>",
-  "aiDescription": "Allows fleets to hyperwarp up to 15 light-years in seconds. Warp distance depends on burn level and costs extra fuel. The ability can be unlocked by disabling remnant capital ships or completing specific questlines.",
+  "aiDescription": "Allows fleets to hyperwarp up to 15 light-years in seconds. The warp distance depends on the current burn level, and the ability requires more fuel and reduces ship combat readiness. It can be unlocked by disabling a remnant capital ship or completing a specific questline.",
   "saveCompatibilityText": "Can be added to existing games.",
   "removalCompatibilityText": "Can NOT be removed from games in which it was already used, but it can be disabled.",
   "canAdd": "yes",
@@ -84,5 +85,11 @@
   "releases": [],
   "threadLastPostOn": "2025-09-18",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "LunaLib",
+      "id": "lunalib"
+    }
+  ]
 }

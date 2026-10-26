@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "console-galaxy",
     "name": "Console Galaxy",
@@ -15,13 +15,14 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.96a",
     "modVersion": "2.0.8",
     "imageUrl": "https://i.imgur.com/uW6BH7e.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1241531400197509130/1241531613494644808/icon.png?ex=6adf382b&is=6adde6ab&hm=c5851e2622a839571b682610ba5cd0f5d5c599b6d50c2db63d0797acf62c94e2&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1241531400197509130/1241531613494644808/icon.png?ex=6adfe0eb&is=6ade8f6b&hm=18d06c26c0927b01b14895b1126069b651cd50896abb1918700d38e894a4b161&",
     "summary": "Search for your ideal system with the Console Commands, easy to use:",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds console commands to search star systems based on specific planetary conditions and hazards.",
+    "aiSummary": "Adds console commands to search the galaxy for star systems matching specific criteria like planet count, hazards, and conditions.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Anexgohan/ConsoleGalaxy/releases/latest/download/ConsoleGalaxy.zip",
@@ -42,7 +43,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Search the entire galaxy for those special planets or conditions from the comfort of the Console.</p><p>All releases are tested and working in Starsector v0.97a.RC11</p><p>This mod is a fork:<br>Not compatible with original \"Explore the Galaxy\"</p><p>Search for your ideal system with the Console Commands, easy to use:</p><p>Commands:</p><ol><li>Explore [all] [exclude/include] [hazard] [gate] [stableloc] [jumppoint] [planets] [conditions]</li></ol><p>Searches all star systems for specified conditions:</p><ul><li>all - write <code>all</code> to search even planets you haven't surveyed yet (default doesn’t search, if searched, sets survey level to full);</li><li>exclude/include - write <code>exclude/include</code> to exclude or include systems in the Core world and claimed systems (default: exclude)</li><li>planets - the minimum number of planets a system must include (default: planets=1)</li><li>gate - write <code>gate</code> to filter by systems that have a gate;</li><li>stableloc - write <code>stableloc=NUMBER</code> to filter by stable locations (default 0);</li><li>jumppoint - same as stableloc (default 0);</li><li>hazard - write <code>hazard=NUMBER</code> to filter by systems which planets are below or equal to the specified value (doesn’t filter by default);</li><li>[conditions] - a comma-separated, no-space list of planetary conditions that must be met (supports * as a wildcard), e.g.: \\[habitable=2,rare_ore*=1,*abundant=1] at least TWO habitable planets and ONE with transplutonic ore and ONE with ore/transplutonic ore that is abundant.</li></ul><p>Example: Explore all exclude planets=5 [habitable=2] gate</p><ol><li>SystemInRange &lt;entity&gt;[entity] [LY] [planets]</li></ol><p>Finds systems in specified range (integer) of an entity (coronal_tap, derelict_cryosleeper, inactive_gate):</p><ul><li>if two entities are listed coronal_tap,cryosleeper, a table will be shown at the end listing systems within range of both;</li><li>LY - distance in light years (default is 10);</li><li>planets - filters by number of planets</li></ul><p>Example: SystemInRange coronal_tap,cryosleeper 10</p>",
-  "aiDescription": "Provides a command-line interface for exploring the galaxy. Users can filter systems by planet count, hazard rating, gate presence, and specific resource conditions like habitability or ore abundance. It also includes a command to find systems within a certain light-year range of specific entities.",
+  "aiDescription": "Provides console commands to explore the galaxy for systems meeting specific criteria. Users can filter by planet count, hazard rating, gate presence, and planetary conditions. It also includes a command to find systems within a certain light-year range of specific entities.",
   "aiUse": {},
   "rawCategories": [
     "Exploration",
@@ -50,7 +51,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1241531400197509130/1241531613494644808/icon.png?ex=6adf382b&is=6adde6ab&hm=c5851e2622a839571b682610ba5cd0f5d5c599b6d50c2db63d0797acf62c94e2&",
+      "url": "https://cdn.discordapp.com/attachments/1241531400197509130/1241531613494644808/icon.png?ex=6adfe0eb&is=6ade8f6b&hm=18d06c26c0927b01b14895b1126069b651cd50896abb1918700d38e894a4b161&",
       "small": true,
       "source": "discord"
     },

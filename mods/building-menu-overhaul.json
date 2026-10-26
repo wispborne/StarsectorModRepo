@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "building-menu-overhaul",
     "name": "Building Menu Overhaul",
@@ -16,13 +16,14 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "2.1.0",
     "imageUrl": "https://i.imgur.com/cK0OJTY.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1325735923140530176/1325735923349979146/hyperdimensional_processor.png?ex=6adf08cb&is=6addb74b&hm=e86b7f234a94959babaa39692e9bbd213ef7944a4a1767e8e4f9ab4fd4b0b29c&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1325735923140530176/1325735923349979146/hyperdimensional_processor.png?ex=6adfb18b&is=6ade600b&hm=9c53e2fed2c09e5a7b882a6e9a91f8304f4756bc08aeebec10fbd518cc74c38e&",
     "summary": "This mod features overhaul to building menu introducing few useful things",
     "summaryIsGenerated": false,
-    "aiSummary": "Overhauls the building menu with a search bar, tag filters, dropdowns, upgrade path showcases, item usage displays, and an upgrade queue.",
+    "aiSummary": "Overhauls the building menu with a search bar, tag filters, dropdowns for variable industries, upgrade path showcases, item usage details, and an upgrade queue.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -35,11 +36,14 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1325735923140530176/1325735923140530176",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "nicknames": [
+      "BMO"
+    ],
     "addedOn": "2025-01-04",
     "threadLastPostOn": "2026-09-17",
     "needs": [
       {
-        "name": "Ashlib",
+        "name": "AshLib",
         "id": "ashlib"
       }
     ]
@@ -49,7 +53,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>In very short term : Overhaul for building menu that introduces searchbar, tag filters and a lof of useful stuff<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=31308.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=31308.0</a></p>",
-  "aiDescription": "Adds a dynamic search bar to filter industries by tags. Includes dropdown buttons for variable industries and shows upgrade paths and item usage for each industry. Allows queuing both industries and their upgrades.",
+  "aiDescription": "Overhauls the building menu with a search bar, tag filters, dropdowns for variable industries, upgrade path showcases, item usage details, and an upgrade queue.",
   "saveCompatibilityText": "Safe to add mid save",
   "canAdd": "yes",
   "aiUse": {},
@@ -61,14 +65,14 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1325735923140530176/1325735923349979146/hyperdimensional_processor.png?ex=6adf08cb&is=6addb74b&hm=e86b7f234a94959babaa39692e9bbd213ef7944a4a1767e8e4f9ab4fd4b0b29c&",
+      "url": "https://cdn.discordapp.com/attachments/1325735923140530176/1325735923349979146/hyperdimensional_processor.png?ex=6adfb18b&is=6ade600b&hm=9c53e2fed2c09e5a7b882a6e9a91f8304f4756bc08aeebec10fbd518cc74c38e&",
       "aiCaption": "A stylized metallic emblem with a red core.",
       "aiKind": "logo",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1325735923140530176/1326314557207220224/image.png?ex=6adf2970&is=6addd7f0&hm=43a5a58150f0a76a9cd7c2d51dc46dce5a3b923fa3752b27fde0869f3c0fcadc&",
+      "url": "https://cdn.discordapp.com/attachments/1325735923140530176/1326314557207220224/image.png?ex=6adfd230&is=6ade80b0&hm=c30f35ece2867156740703b3ffd45110972f48e392f2904f6ead5af02fbc1ab7&",
       "aiCaption": "An in-game menu showing details for an 'Extractive operation - Industry' facility.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -133,7 +137,7 @@
   "changelog": {
     "1.2.0": "-Show Upgrade Path now is for all industries within path itself rather than just first industry\n-Images of industries in all parts of UI now uses getCurrentImage\n-Added new Listener BuildingMenuListener : addBuildingstoBeHidden on specific market, so you can change also how other buildings appear outside of your mod",
     "1.1.6": "-Fixed issue with Codex closing not only codex itself but also building UI\n-Fixed issue with displaying industries that have tag to not be shown in building menu",
-    "1.1.5": "-Update to .98"
+    "1.1.5": "Update to .98"
   },
   "sourceCodeUrl": "https://github.com/Kaysaar/BMO",
   "supportLinks": [

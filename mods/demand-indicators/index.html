@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Demand Indicators</h1><p>A Starsector mod by SirHartley. For Starsector 0.98a. Version 1.0.f.</p><p>This mod adds small icons next to commodities on a market to show if they have excess or shortages, making it easier to identify worthwhile trading opportunities at a glance. It's terrific QOL.</p><p><a href="https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSirHartley%2FDemand.Indicators%2Fmaster%2FdemandIndicators.version%22%2C%22id%22%3A%22demandIndicators%22%2C%22version%22%3A%221.0.f%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%2C%22version%22%3A%222.0.5%22%7D" rel="nofollow noopener">Install with TriOS</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=31416.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1354976248111042760/1354976248111042760" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/SirHartley/Demand.Indicators" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/lunalib/">LunaLib</a></li></ul><h2>Forum post</h2><p>Save Compatible</p><p>Manual Download<br>Requires LunaLib to edit settings, but will work fine without it</p><p>Dependencies are automatically downloaded when installing with TriOS<br>Older versions and changelogs</p><p>Or support me on Ko-Fi</p><p>This mod adds small icons next to commodities on a market to show if they have excess or shortages, making it easier to identify worthwhile trading opportunities at a glance. It's terrific QOL.</p><p>Low visibility mode (toggle this on in the settings, requires LunaLib)</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Demand Indicators</h1><p>A Starsector mod by SirHartley. For Starsector 0.98a. Version 1.0.f.</p><p>This mod adds small icons next to commodities on a market to show if they have excess or shortages, making it easier to identify worthwhile trading opportunities at a glance. It's terrific QOL.</p><p><a href="https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSirHartley%2FDemand.Indicators%2Fmaster%2FdemandIndicators.version%22%2C%22id%22%3A%22demandIndicators%22%2C%22version%22%3A%221.0.f%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%2C%22version%22%3A%222.0.5%22%7D" rel="nofollow noopener">Install with TriOS</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=31416.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1354976248111042760/1354976248111042760" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/SirHartley/Demand.Indicators" rel="nofollow noopener">Source code</a></p><h2>Optional</h2><ul><li><a href="mods/lunalib/">LunaLib</a></li></ul><h2>Forum post</h2><p>Save Compatible</p><p>Manual Download<br>Requires LunaLib to edit settings, but will work fine without it</p><p>Dependencies are automatically downloaded when installing with TriOS<br>Older versions and changelogs</p><p>Or support me on Ko-Fi</p><p>This mod adds small icons next to commodities on a market to show if they have excess or shortages, making it easier to identify worthwhile trading opportunities at a glance. It's terrific QOL.</p><p>Low visibility mode (toggle this on in the settings, requires LunaLib)</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

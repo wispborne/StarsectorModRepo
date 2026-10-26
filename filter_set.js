@@ -1,6 +1,6 @@
-// A set of filters: the game version, the category, the requires choice, the
-// four switches and the AI use filter. Browse, Home and saved filters all use
-// it.
+// A set of filters: the game version, the category, the requires choice, where
+// the mod was posted, the four switches and the AI use filter. Browse, Home
+// and saved filters all use it.
 //
 // A set is written in Browse's own address format (`game=…&only=…&ai=…`), so
 // a set can go straight into a Browse link and a saved filter can be read
@@ -69,10 +69,40 @@ export const SWITCHES = [
   },
 ];
 
+/// Where a mod was posted, for the "From" filter. The mod index is the
+/// forum's own list of mods (today's, not the old posts for past game
+/// versions), so it is a smaller part of "any forum thread".
+export const POSTED_ON = [
+  {
+    key: 'index',
+    label: 'Forum: mod index',
+    title: 'Only mods the forum\'s mod index lists.',
+    keep: (mod) => mod.onModIndex === true,
+  },
+  {
+    key: 'forum',
+    label: 'Forum: any thread',
+    title: 'Only mods with a forum thread, listed on the mod index or not.',
+    keep: (mod) => (mod.sources || []).includes('forum'),
+  },
+  {
+    key: 'discord',
+    label: 'Discord',
+    title: 'Only mods posted on the Starsector Discord.',
+    keep: (mod) => (mod.sources || []).includes('discord'),
+  },
+];
+
+/// Whether a mod was posted where the filter asks. An empty choice keeps every mod.
+export function postedOn(mod, from) {
+  const option = POSTED_ON.find((each) => each.key === from);
+  return !option || option.keep(mod);
+}
+
 /// The address keys a set is written with, in the order they are written.
 /// `older` and `hideai` are only read, from old links.
-const SET_KEYS = ['game', 'category', 'needs', 'only', 'not', 'ai', 'aiparts', 'ailevel',
-  'aioptional'];
+const SET_KEYS = ['game', 'category', 'needs', 'from', 'only', 'not', 'ai', 'aiparts',
+  'ailevel', 'aioptional'];
 
 const asQuery = (query) =>
   query instanceof URLSearchParams ? query : new URLSearchParams(query || '');
@@ -122,6 +152,7 @@ export function readFilters(query, currentVersion) {
     category: q.get('category') === 'Everything else'
       ? 'Miscellaneous' : (q.get('category') || ''),
     needs: q.get('needs') || '',
+    from: POSTED_ON.some((option) => option.key === q.get('from')) ? q.get('from') : '',
     switches: switchesFromAddress(q),
     ai: aiFilterFromAddress(q),
   };
@@ -135,6 +166,7 @@ export function filtersToAddress(filters, currentVersion = null) {
     game: currentVersion && filters.game === currentVersion ? '' : filters.game,
     category: filters.category,
     needs: filters.needs,
+    from: filters.from,
     only: switchKeysIn(filters.switches, ONLY),
     not: switchKeysIn(filters.switches, NOT),
     ...aiFilterToAddress(filters.ai),
@@ -173,14 +205,14 @@ function comparable(query, currentVersion) {
 /// Whether a set hides nothing: every game version, and every other filter
 /// off. This is how Home starts.
 export function filtersAreOff(filters) {
-  return filters.game === ANY_GAME && !filters.category && !filters.needs
+  return filters.game === ANY_GAME && !filters.category && !filters.needs && !filters.from
     && !filters.switches.size && !aiFilterIsOn(filters.ai);
 }
 
 /// The set with every filter off.
 export function noFilters() {
   return {
-    game: ANY_GAME, category: '', needs: '', switches: new Map(), ai: aiFilterOff(),
+    game: ANY_GAME, category: '', needs: '', from: '', switches: new Map(), ai: aiFilterOff(),
   };
 }
 
@@ -203,6 +235,8 @@ export function describeFilters(filters, gameLabel = (family) => family) {
   if (filters.category) words.push(filters.category);
   if (filters.needs === NO_REQUIREMENTS) words.push('Standalone mods only');
   else if (filters.needs) words.push(`Requires ${filters.needs}`);
+  const from = POSTED_ON.find((option) => option.key === filters.from);
+  if (from) words.push(from.key === 'discord' ? 'From Discord' : from.label);
   for (const option of SWITCHES) {
     const picked = filters.switches.get(option.key);
     if (picked) words.push(picked === NOT ? option.notLabel : option.label);

@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Corrupt.Officials - Lower colony income, more rewarding growth</h1><p>A Starsector mod by SirHartley. For Starsector 0.98a. Version 1.0.b.</p><p>This is a challenge mode intended to balance out the extreme passive income colonies can provide. The mechanic imposes a diminishing-returns penalty on colonies whose net income exceeds a configurable cutoff.</p><p><a href="https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FSirHartley%2FCorrupt.Officials%2Fblob%2Fmaster%2Fcorruptofficials.version%22%2C%22id%22%3A%22corruptofficials%22%7D" rel="nofollow noopener">Install with TriOS</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=35125.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1487503296607424652/1487503296607424652" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/SirHartley/Corrupt.Officials" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Save Compatible</p><p>Manual download</p><p>Requires LunaLib to edit settings, but will work fine without it</p><p>Or support me on Ko-Fi</p><p>This is a challenge mode intended to balance out the extreme passive income colonies can provide.<br>The mechanic imposes a diminishing-returns penalty on colonies whose net income exceeds a configurable cutoff.</p><p>It is how I personally play the game.</p><p>The Math</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Corrupt.Officials - Lower colony income, more rewarding growth</h1><p>A Starsector mod by SirHartley. For Starsector 0.98a. Version 1.0.b.</p><p>This is a challenge mode intended to balance out the extreme passive income colonies can provide. The mechanic imposes a diminishing-returns penalty on colonies whose net income exceeds a configurable cutoff.</p><p><a href="https://github.com/SirHartley/Corrupt.Officials/releases/download/1.0.b/Corrupt.Officials1.0.b.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=35125.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1487503296607424652/1487503296607424652" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/SirHartley/Corrupt.Officials" rel="nofollow noopener">Source code</a></p><h2>Optional</h2><ul><li><a href="mods/lunalib/">LunaLib</a></li></ul><h2>Forum post</h2><p>Save Compatible</p><p>Manual download</p><p>Requires LunaLib to edit settings, but will work fine without it</p><p>Or support me on Ko-Fi</p><p>This is a challenge mode intended to balance out the extreme passive income colonies can provide.<br>The mechanic imposes a diminishing-returns penalty on colonies whose net income exceeds a configurable cutoff.</p><p>It is how I personally play the game.</p><p>The Math</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

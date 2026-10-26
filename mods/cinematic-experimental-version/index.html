@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Cinematic+</h1><p>A Starsector mod by TestingSubject. For Starsector 0.98a.</p><p>Cinematic+ is a mod that simulates cinematic effects in Starsector. It features effects such as lens flares and dynamic background and star fading. The mod was created specifically for Darksector, but it can also work without it.</p><p><a href="https://drive.google.com/uc?export=download&amp;id=1Mm4DkCCrNxlcKobbFsNqphBG_LinR7yR" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=33872.0" rel="nofollow noopener">Forum thread</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li></ul><h2>Forum post</h2><p>===EXPERIMENTAL VERSION===</p><p>Use for testing purpose only!</p><p>I'm releasing this version only because I'm not sure when it will be ready, or if it will be ready at all... but I want to share it now.<br>Added more lens effects related to the stars. Also added lens fading feature that depends on the distance to the star (smoother transitions). New lens effect for wormholes.</p><p>download</p><p>https://drive.google.com/file/d/1QZ7A9YDD_g--U3uJ5Xu_HGecKBVQElZr/view?usp=sharing</p><p>===EXPERIMENTAL VERSION ENDS HERE===</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Cinematic+</h1><p>A Starsector mod by TestingSubject. For Starsector 0.98a.</p><p>Cinematic+ is a mod that simulates cinematic effects in Starsector. It features effects such as lens flares and dynamic background and star fading. The mod was created specifically for Darksector, but it can also work without it.</p><p><a href="https://drive.google.com/uc?export=download&amp;id=1Mm4DkCCrNxlcKobbFsNqphBG_LinR7yR" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=33872.0" rel="nofollow noopener">Forum thread</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li></ul><h2>Optional</h2><ul><li><a href="mods/darksector/">Darksector</a></li></ul><h2>Forum post</h2><p>===EXPERIMENTAL VERSION===</p><p>Use for testing purpose only!</p><p>I'm releasing this version only because I'm not sure when it will be ready, or if it will be ready at all... but I want to share it now.<br>Added more lens effects related to the stars. Also added lens fading feature that depends on the distance to the star (smoother transitions). New lens effect for wormholes.</p><p>download</p><p>https://drive.google.com/file/d/1QZ7A9YDD_g--U3uJ5Xu_HGecKBVQElZr/view?usp=sharing</p><p>===EXPERIMENTAL VERSION ENDS HERE===</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

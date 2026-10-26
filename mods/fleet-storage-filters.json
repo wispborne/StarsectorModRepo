@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "fleet-storage-filters",
     "name": "Fleet Storage Filters",
@@ -21,12 +21,13 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "2.1.1c",
     "imageUrl": "https://fractalsoftworks.com/forum/avatars/default.png",
     "summary": "Got too many ships? Search through your hoard to find what you need.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a search filter to the fleet storage list to help locate specific ships.",
+    "aiSummary": "Adds a search bar to the fleet storage screen to filter ships by name.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -44,7 +45,7 @@
     "needs": [
       {
         "name": "MagicLib",
-        "id": "magiclib"
+        "id": "magiclib-2"
       },
       {
         "name": "LunaLib",
@@ -52,12 +53,12 @@
       }
     ]
   },
-  "description": "Fleet Storage Filter\n\nDirect Download Latest\n\nSource Code (Github)\n\nDescription\n\nGot too many ships? Search through your hoard to find what you need.\n\nShowcase (v2.0.0)\n\nhttps://vimeo.com/1108444256\n\nSafe to install/uninstall from existing saves\nRequires MagicLib, LunaLib\n\nChangelog\n\nSpoiler\n\nv2.0.1\nSearch is now case-insensitive and matches with hull name instead of internal id (thanks EnigmaniteZ)\n\nv2.1.0\nMoved the location of the search bar to not overlap with UI (thanks JamesTripleQ)\nSearch now uses fuzzy string matching, threshold might need tweaking\nThis version adds LunaLib as a dependency to enable the above\nVersion checker integration (tell me if its broken :P)\n\nv2.1.1\nLunaSettings integration for configuring fuzzy search threshold, search bar UI position\nFixed a storage list sorting bug\n\nv2.1.1a\nfixed an issue in the previous version\n\nv2.1.1b\nhotfix to restore previous sort behaviour\n\nv2.1.1c\nfixed sorting behaviour in non storage fleets\n\nCredits\n\nGenir: wrote the original mod and let me take over\nLukas04: code I referenced from LunaLib and Second in Command",
-  "descriptionHtml": "<div class=\"align-center\"><b><span class=\"size-bigger\">Fleet Storage Filter</span></b></div><hr><br><br><div class=\"align-center\"><b><a href=\"https://github.com/starry-dragon/starsector-fleet-storage-filter/releases/latest/download/Fleet-Storage-Filter.zip\" rel=\"nofollow noopener\" target=\"_blank\">Direct Download Latest</a></b></div><div class=\"align-center\"><i>Source Code (<a href=\"https://github.com/starry-dragon/starsector-fleet-storage-filter\" rel=\"nofollow noopener\" target=\"_blank\">Github</a>)</i></div><br><div class=\"align-center\"><b>Description</b></div><br><div class=\"align-center\">Got too many ships? Search through your hoard to find what you need.</div><br><div class=\"align-center\"><b>Showcase (v2.0.0)</b></div><div class=\"align-center\"><a href=\"https://vimeo.com/1108444256\" rel=\"nofollow noopener\" target=\"_blank\">https://vimeo.com/1108444256</a></div><br><div class=\"align-center\"><i>Safe to install/uninstall from existing saves<br><u>Requires MagicLib, LunaLib</u></i></div><br><div class=\"align-center\"><b>Changelog</b></div>Spoiler<div class=\"align-center\"><i>v2.0.1</i><br>Search is now case-insensitive and matches with hull name instead of internal id <i>(thanks EnigmaniteZ)</i><br><br><i>v2.1.0</i><br>Moved the location of the search bar to not overlap with UI <i>(thanks JamesTripleQ)</i><br>Search now uses fuzzy string matching, threshold might need tweaking<br><u>This version adds LunaLib as a dependency to enable the above</u><br>Version checker integration (tell me if its broken :P)<br><br><i>v2.1.1</i><br>LunaSettings integration for configuring fuzzy search threshold, search bar UI position<br>Fixed a storage list sorting bug<br><br><i>v2.1.1a</i><br>fixed an issue in the previous version<br><br><i>v2.1.1b</i><br>hotfix to restore previous sort behaviour<br><br><i>v2.1.1c</i><br>fixed sorting behaviour in non storage fleets</div><br><br><hr><br><div class=\"align-center\"><b>Credits</b></div><br><div class=\"align-center\"><i>Genir: wrote the original mod and let me take over<br>Lukas04: code I referenced from LunaLib and Second in Command</i></div>",
+  "description": "Fleet Storage Filter\n\nDirect Download Latest\n\nSource Code (Github)\n\nDescription\n\nGot too many ships? Search through your hoard to find what you need.\n\nShowcase (v2.0.0)\n\nhttps://vimeo.com/1108444256\n\nSafe to install/uninstall from existing saves\nRequires MagicLib, LunaLib\n\nChangelog\n\nSpoiler\nv2.0.1\nSearch is now case-insensitive and matches with hull name instead of internal id (thanks EnigmaniteZ)\n\nv2.1.0\nMoved the location of the search bar to not overlap with UI (thanks JamesTripleQ)\nSearch now uses fuzzy string matching, threshold might need tweaking\nThis version adds LunaLib as a dependency to enable the above\nVersion checker integration (tell me if its broken :P)\n\nv2.1.1\nLunaSettings integration for configuring fuzzy search threshold, search bar UI position\nFixed a storage list sorting bug\n\nv2.1.1a\nfixed an issue in the previous version\n\nv2.1.1b\nhotfix to restore previous sort behaviour\n\nv2.1.1c\nfixed sorting behaviour in non storage fleets\n\nCredits\n\nGenir: wrote the original mod and let me take over\nLukas04: code I referenced from LunaLib and Second in Command",
+  "descriptionHtml": "<div class=\"align-center\"><b><span class=\"size-bigger\">Fleet Storage Filter</span></b></div><hr><br><br><div class=\"align-center\"><b><a href=\"https://github.com/starry-dragon/starsector-fleet-storage-filter/releases/latest/download/Fleet-Storage-Filter.zip\" rel=\"nofollow noopener\" target=\"_blank\">Direct Download Latest</a></b></div><div class=\"align-center\"><i>Source Code (<a href=\"https://github.com/starry-dragon/starsector-fleet-storage-filter\" rel=\"nofollow noopener\" target=\"_blank\">Github</a>)</i></div><br><div class=\"align-center\"><b>Description</b></div><br><div class=\"align-center\">Got too many ships? Search through your hoard to find what you need.</div><br><div class=\"align-center\"><b>Showcase (v2.0.0)</b></div><div class=\"align-center\"><a href=\"https://vimeo.com/1108444256\" rel=\"nofollow noopener\" target=\"_blank\">https://vimeo.com/1108444256</a></div><br><div class=\"align-center\"><i>Safe to install/uninstall from existing saves<br><u>Requires MagicLib, LunaLib</u></i></div><br><div class=\"align-center\"><b>Changelog</b></div><details class=\"spoiler\"><summary>Spoiler</summary><div class=\"align-center\"><i>v2.0.1</i><br>Search is now case-insensitive and matches with hull name instead of internal id <i>(thanks EnigmaniteZ)</i><br><br><i>v2.1.0</i><br>Moved the location of the search bar to not overlap with UI <i>(thanks JamesTripleQ)</i><br>Search now uses fuzzy string matching, threshold might need tweaking<br><u>This version adds LunaLib as a dependency to enable the above</u><br>Version checker integration (tell me if its broken :P)<br><br><i>v2.1.1</i><br>LunaSettings integration for configuring fuzzy search threshold, search bar UI position<br>Fixed a storage list sorting bug<br><br><i>v2.1.1a</i><br>fixed an issue in the previous version<br><br><i>v2.1.1b</i><br>hotfix to restore previous sort behaviour<br><br><i>v2.1.1c</i><br>fixed sorting behaviour in non storage fleets</div></details><br><br><hr><br><div class=\"align-center\"><b>Credits</b></div><br><div class=\"align-center\"><i>Genir: wrote the original mod and let me take over<br>Lukas04: code I referenced from LunaLib and Second in Command</i></div>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Fleet Storage Filter lets you easily search through the hundreds of ships you hoarded at your colonies.</p><p><code>Can be safely added and removed from existing saves.</code></p><p>Download: <a href=\"https://github.com/Halke1986/starsector-fleet-storage-filter/releases/download/v2.0.0/FleetStorageFilter_v2.0.0.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Halke1986/starsector-fleet-storage-filter/releases/download/v2.0.0/FleetStorageFilter_v2.0.0.zip</a><br>Forum thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=33795\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=33795</a></p>",
-  "aiDescription": "Adds a search bar to the fleet storage interface. It supports case-insensitive and fuzzy string matching against hull names. The search threshold and UI position can be configured via settings.",
+  "aiDescription": "Adds a search bar to the fleet storage screen to filter ships by name. It supports case-insensitive and fuzzy string matching. The search bar position and fuzzy threshold can be configured via LunaLib settings.",
   "saveCompatibilityText": "Safe to install/uninstall from existing saves",
   "removalCompatibilityText": "Safe to install/uninstall from existing saves",
   "canAdd": "yes",

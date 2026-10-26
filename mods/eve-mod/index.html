@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="../../">
   <title>EVE Mod | Starmodder</title>
-  <meta name="description" content="More than 100 original EVE Online ships: frigates, destroyers, cruisers, battlecruisers, battleships, carriers, dreadnoughts. More to come">
+  <meta name="description" content="The mod is a total conversion, so don't look for vanilla stuff and don't try to integrate with other mods.">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="EVE Mod">
-  <meta property="og:description" content="More than 100 original EVE Online ships: frigates, destroyers, cruisers, battlecruisers, battleships, carriers, dreadnoughts. More to come">
+  <meta property="og:description" content="The mod is a total conversion, so don't look for vanilla stuff and don't try to integrate with other mods.">
   <meta property="og:image" content="http://www.dropbox.com/s/hc7m6g90rdjbpft/ships_22_small.png?dl=1">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>EVE Mod</h1><p>A Starsector mod by celestis. For Starsector 0.65.2a. Version 2.3.</p><p>More than 100 original EVE Online ships: frigates, destroyers, cruisers, battlecruisers, battleships, carriers, dreadnoughts. More to come</p><p><a href="https://www.dropbox.com/s/9314q960uvg9aqx/evemod_2.3.7z?dl=1" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=8020.0" rel="nofollow noopener">Forum thread</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li></ul><h2>Forum post</h2><p>Hello All!<br>Here I present the EVE Online mod for Starsector. A lot of improvements have been made since the first version, making the mod much more solid.<br>The mod is a total conversion, so don't look for vanilla stuff and don't try to integrate with other mods.</p><p>Working with v0.65.2a (RC2)<br>Current build: 6 (2.3) (22 February 2015).<br>Requires LazyLib<br>Download</p><p>What does the mod have in its current state:</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>EVE Mod</h1><p>A Starsector mod by celestis. For Starsector 0.65.2a. Version 2.3.</p><p>The mod is a total conversion, so don't look for vanilla stuff and don't try to integrate with other mods.</p><p><a href="https://www.dropbox.com/s/9314q960uvg9aqx/evemod_2.3.7z?dl=1" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=8020.0" rel="nofollow noopener">Forum thread</a></p><h2>Requires</h2><ul><li><a href="mods/lazylib/">LazyLib</a></li></ul><h2>Forum post</h2><p>Hello All!<br>Here I present the EVE Online mod for Starsector. A lot of improvements have been made since the first version, making the mod much more solid.<br>The mod is a total conversion, so don't look for vanilla stuff and don't try to integrate with other mods.</p><p>Working with v0.65.2a (RC2)<br>Current build: 6 (2.3) (22 February 2015).<br>Requires LazyLib<br>Download</p><p>What does the mod have in its current state:</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

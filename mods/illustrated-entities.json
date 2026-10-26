@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "illustrated-entities",
     "name": "Illustrated.Entities",
@@ -16,12 +16,13 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "2.0.c",
     "imageUrl": "https://i.imgur.com/xwYFklf.png",
     "summary": "This mod contains around 1300 AI-generated illustrations for colonies that have been manually sorted and edited. It adds pre-specified images to all vanilla planets and can add fitting images to modded and newly established colonies.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds custom images and editable descriptions to planets and colonies.",
+    "aiSummary": "Adds AI-generated illustrations to planets and colonies, allowing players to customize descriptions and visuals.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -38,7 +39,8 @@
     "aiUses": [
       {
         "area": "illustrations",
-        "how": "edited"
+        "how": "edited",
+        "extent": "all"
       }
     ],
     "addedOn": "2022-11-16",
@@ -59,22 +61,23 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><code>Change your colony descriptions and illustrations.</code></p><p>Adds images to all vanilla planets, a way to change them, 1300+ AI-generated illustrations to choose from for your own colonies, and allows you to edit and add descriptions to your own planets with an in-game UI.</p><p>VRAM-Impact is around 70 mb during normal gameplay because the mod only loads images that you look at <strong>and unloads them when you are done</strong>.</p><pre><code>Changelog:\n2.0.c - More crash fixes!\n2.0.b - Fixed a crash\n2.0.a - Absolutely massive update with 1300 new images\nRemoved all old trash AIslop images\nThe mod now actively unloads what you don't need = almost no VRAM use</code></pre><pre><code>+ Save Compatible with 2.0.\n+ Can be installed on an ongoing save\nThis means: The mod can be added if it was not present on game start, but can not be updated during an ongoing game if you started the save with an older version than 2.0!</code></pre><h3><a href=\"https://github.com/SirHartley/Illustrated.Entities/releases/download/2.0.c/Illustrated.Entities2.0.c.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download</a></h3><h3><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25649.0\" rel=\"nofollow noopener\" target=\"_blank\">Forum Thread</a></h3><h3><a href=\"https://patreon.com/SirHartley\" rel=\"nofollow noopener\" target=\"_blank\">Support my Efforts</a></h3><p>or buy me a <a href=\"https://Ko-fi.com/sirhartley\" rel=\"nofollow noopener\" target=\"_blank\">Ko-Fi</a></p><p><code>_________________________________</code></p><p><em>I sifted through 8000 images, manually edited 1300 images, and added 5000+ tags in an excel file. The file started talking back to me at some point.</em></p>",
-  "aiDescription": "Provides over 1300 AI-generated illustrations for vanilla and modded planets. Includes an in-game interface to change colony visuals and edit text descriptions for roleplaying. Features a custom image loader to minimize VRAM usage by only loading images for visited systems.",
+  "aiDescription": "Adds around 1300 AI-generated illustrations to vanilla and modded planets. Provides an in-game interface to change colony descriptions and select custom images. Features a random mode that picks fitting images based on planet attributes.",
   "saveCompatibilityText": "This can be added to ongoing games",
-  "updateCompatibilityText": "Save Compatible with v2.0",
   "removalCompatibilityText": "it will break saves if removed",
   "canAdd": "yes",
-  "canUpdate": "yes",
   "canRemove": "no",
   "aiUse": {
-    "quote": "I sifted through 8000 images, manually edited 1300 images, and added 5000+ tags in an excel file. The file started talking back to me at some point.",
+    "quote": "This mod contains around 1300 AI-generated illustrations for colonies that have been manually sorted and edited.",
     "usesAi": true,
     "uses": [
       {
         "area": "illustrations",
         "how": "edited",
-        "extent": "some"
+        "extent": "all"
       }
+    ],
+    "tools": [
+      "Midjourney"
     ]
   },
   "rawCategories": [
@@ -85,7 +88,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1373643033878466562/1373643034595561533/image.png?ex=6adf4bc4&is=6addfa44&hm=a4894cb11d8d0bd5fae6613ea0e76d5d61bdcb90e9e5a8b8eeee24324ec2ec3c&",
+      "url": "https://cdn.discordapp.com/attachments/1373643033878466562/1373643034595561533/image.png?ex=6adff484&is=6adea304&hm=6dc2b433ede445054d9def05cff81e760239ecd6632f8581924c59357af7c222&",
       "aiCaption": "A placeholder image indicating the picture is missing.",
       "aiKind": "missing",
       "aiFit": "poor",
@@ -307,8 +310,8 @@
   ],
   "changelog": {
     "1.2.b": "Adjusted - 0.97 compatibility",
-    "1.2.a": "Added - setting specifying if the pre-set images overwrite the existing vanilla illustrations. off by default.\nAdjusted - 0.96 compatibility\nFixed - Crash when abandoning a colony\nFixed - Custom set images are no longer lost on save reload\nFixed - Orbital Stations no longer have different visuals than planets until player leaves system\nFixed - Custom images now get retained when set via orbital station\nFixed - Custom images now immediately apply to orbital stations when leaving a planet",
-    "1.1.a": "General\nAdded - In-game overlay allowing you to change planet and colony descriptions and texts\nAdded - Setting to set the \"Display duplicates\" button to true by default\nFixed - Should now consistently apply illustrations to player owned planets without image\nFixed - Removed signature from image 12\nFixed - Added !cld tag to image 3"
+    "1.2.a": "Added - setting specifying if the pre-set images overwrite the existing vanilla illustrations. off by default.\n Adjusted - 0.96 compatibility\n Fixed - Crash when abandoning a colony\n Fixed - Custom set images are no longer lost on save reload\n Fixed - Orbital Stations no longer have different visuals than planets until player leaves system\n Fixed - Custom images now get retained when set via orbital station\n Fixed - Custom images now immediately apply to orbital stations when leaving a planet",
+    "1.1.a": "General\n Added - In-game overlay allowing you to change planet and colony descriptions and texts\n Added - Setting to set the \"Display duplicates\" button to true by default\n Fixed - Should now consistently apply illustrations to player owned planets without image\n Fixed - Removed signature from image 12\n Fixed - Added !cld tag to image 3"
   },
   "changelogUrl": "https://github.com/SirHartley/Illustrated.Entities/releases",
   "license": "CC BY-NC-SA 4.0",
@@ -330,5 +333,15 @@
   "releases": [],
   "threadLastPostOn": "2026-08-09",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Version Checker",
+      "id": "version-checker"
+    },
+    {
+      "name": "Unknown Skies",
+      "id": "unknown-skies"
+    }
+  ]
 }

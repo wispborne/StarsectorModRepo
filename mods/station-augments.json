@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "station-augments",
     "name": "Station Augments",
@@ -16,10 +16,10 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "2.4.3",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1354956605619175504/1354956606340731001/screenshot011.png?ex=6adc92ec&is=6adb416c&hm=b460527f5f222076648d4e18ec18515dd387a9fad53012d3253849383d5aaa01&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1354956605619175504/1354956606340731001/screenshot011.png?ex=6adf35ec&is=6adde46c&hm=f0fc166efc5e3128d7d10d4649f31dac067edcf7e85afbac64e9123cc303fe4d&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1354956605619175504/1354956606340731001/screenshot011.png?ex=6adfdeac&is=6ade8d2c&hm=d6c769927b069c457c6dfac6750937deb4426bb7213f7cd1d99d3b37be22130c&",
     "summary": "Adds station \"augments\" that drastically change the behavior and/or identity of your orbital station. Intended to be used alongside Station Refitting.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds station augments that drastically change the behavior and identity of orbital stations.",
@@ -44,7 +44,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><strong><em>CAN BE ADDED TO A SAVE (USE SA_generateAugments AND SA_genSpecialContent COMMANDS) - CANNOT BE REMOVED</em></strong></p><p>Adds station \"augments\" which allow you to modify your orbital station. While not as expansive as hullmods, this collection will still make stations just a bit more engaging.</p><p>Augments can be find by salvaging and at markets, and are an uncommon find. They do NOT dilute the loot pool, instead adding more loot in total. Augments can also be obtained by destroying a station with augments.<br>Augments are also applied to NPC markets, including modded markets.</p><p>The entire augment system was designed with other mods in mind, meaning other mods can create their own augments and apply augments to their own markets without a hard dependency.</p><p>Forum: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=30583.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=30583.0</a><br>Repo: <a href=\"https://github.com/nikothedude/Station-Augments\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/nikothedude/Station-Augments</a><br>Download: <a href=\"https://github.com/nikothedude/Station-Augments/releases/\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/nikothedude/Station-Augments/releases/</a></p>",
-  "aiDescription": "Adds station augments that drastically change the behavior and identity of orbital stations. These augments can be found via salvaging, destroying augmented stations, or purchasing them from a market. The system also applies augments to NPC markets, with each faction having its own unique pool.",
+  "aiDescription": "Adds station augments that drastically change the behavior and identity of orbital stations. These augments can be found via salvaging, destroying augmented stations, or purchasing them from a market. The system also applies augments to NPC markets, with each faction having its own unique pool of augments.",
   "saveCompatibilityText": "CAN BE ADDED TO A SAVE (USE SA_generateAugments AND SA_genSpecialContent COMMANDS)",
   "updateCompatibilityText": "SAVE COMPATIBLE",
   "removalCompatibilityText": "CANNOT BE REMOVED",
@@ -60,7 +60,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1354956605619175504/1354956606340731001/screenshot011.png?ex=6adf35ec&is=6adde46c&hm=f0fc166efc5e3128d7d10d4649f31dac067edcf7e85afbac64e9123cc303fe4d&",
+      "url": "https://cdn.discordapp.com/attachments/1354956605619175504/1354956606340731001/screenshot011.png?ex=6adfdeac&is=6ade8d2c&hm=d6c769927b069c457c6dfac6750937deb4426bb7213f7cd1d99d3b37be22130c&",
       "aiCaption": "A large station structure with multiple modules in space near a planet.",
       "aiKind": "screenshot",
       "aiFit": "good",
@@ -71,15 +71,15 @@
     {
       "url": "https://github.com/nikothedude/Station-Augments/releases/",
       "kind": "direct",
-      "label": "",
+      "label": "https://github.com/nikothedude/Station-Augments/releases/",
       "host": "github.com",
       "needsAnotherStep": true
     }
   ],
   "changelog": {
     "2.4.3": "SAVE COMPATIBLE\n\nFixes a crash with mining station, again",
-    "2.4.2": "SAVE COMPATIBLE\n\nAOTD users can now use tenebrium cells to apply shrouded beacon\nFixed sanctified station still spawning fleets even if luddic majority is inactive\nAxial overclocking now increases turnrate by 300%",
-    "2.4.1": "SAVE COMPATIBLE IF YOU DONT HAVE ANY DEPRECATED AUGMENTS\n\nFixes a mining station crash\nBubble shield is no longer penetrated by plasma cannons\nBubble shield uses opacity instead of jitter to communicate damage\n\nRemoves all deprecated augments"
+    "2.4.2": "AOTD users can now use tenebrium cells to apply shrouded beacon\nFixed sanctified station still spawning fleets even if luddic majority is inactive\nAxial overclocking now increases turnrate by 300%",
+    "2.4.1": "Fixes a mining station crash\nBubble shield is no longer penetrated by plasma cannons\nBubble shield uses opacity instead of jitter to communicate damage\n\nRemoves all deprecated augments"
   },
   "sourceCodeUrl": "https://github.com/nikothedude/Station-Augments",
   "supportLinks": [
@@ -94,5 +94,11 @@
   "releases": [],
   "threadLastPostOn": "2026-06-20",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Station Refitting",
+      "id": "station-refitting"
+    }
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "d-mod-services",
     "name": "D-MOD Services",
@@ -19,13 +19,13 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "3.2.0",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1203405171330252851/1203405171581788290/derelict_contingent.png?ex=6adba5e7&is=6ada5467&hm=187057c8efd812cc93737fffd344cb6634ef5383606cce832cea038f891f7168&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355784692338790573/1355784692489650258/derelict_contingent.png?ex=6adf9623&is=6ade44a3&hm=19dee24332051ccf84196dcc5de1cee03ada4c9dc6bb796097e1db293e6057f7&",
-    "summary": "Do you enjoy using Derelict Operations, but want to maximize its effectiveness even further? Do you wish you could nerf your own fleet without needlessly sacrificing your crews' worthless lives? Do you want your special Rugged Construction ship to have the least worst d-mods possible?",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1355784692338790573/1355784692489650258/derelict_contingent.png?ex=6ae03ee3&is=6adeed63&hm=13431acfe9b62f81592074d9b5e53d2190444d11d08b14fbac042d49acde41a3&",
+    "summary": "This utility mod adds a dialog option to any size 6 or higher markets, allowing you to add damage mods to any ships in your current fleet without needing to enter combat. This option provides two ways of gaining d-mods.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a dialog option to size 6 or higher markets for adding damage mods to fleet ships without combat.",
+    "aiSummary": "Adds a market dialog option to add damage mods to fleet ships without combat.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -47,7 +47,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Adds an option to apply damage mods to your ships when visiting a size 6 or higher market. Also includes s-mod removal for size 6 or higher markets with Orbital Works or Heavy Industry.</p><p><strong>Download</strong>: <a href=\"https://github.com/Tranquiliti/DMODServices/releases/latest/download/DMODServices.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/DMODServices/releases/latest/download/DMODServices.zip</a></p><p><strong>Releases and changelogs</strong>:<br><a href=\"https://github.com/Tranquiliti/DMODServices/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/DMODServices/releases</a></p><p><strong>Forum thread</strong>: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=26321.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=26321.0</a></p>",
-  "aiDescription": "Allows players to disable ships for random d-mods with credit compensation or select specific d-mods for a fee. It also provides options to remove s-mods, automate ships, and configure unrestorable tags via settings or LunaLib.",
+  "aiDescription": "Adds a dialog option to size 6 or higher markets, allowing you to add damage mods to any ships in your current fleet without needing to enter combat. Ships can be disabled to receive a random d-mod for credit compensation, or you can select specific d-mods for a hefty credit cost. It also offers an option to remove s-mods from ships in markets with an Orbital Works or Heavy Industry.",
   "saveCompatibilityText": "Safe to add to existing saves",
   "removalCompatibilityText": "safe to remove from existing saves",
   "canAdd": "yes",
@@ -59,7 +59,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1355784692338790573/1355784692489650258/derelict_contingent.png?ex=6adf9623&is=6ade44a3&hm=19dee24332051ccf84196dcc5de1cee03ada4c9dc6bb796097e1db293e6057f7&",
+      "url": "https://cdn.discordapp.com/attachments/1355784692338790573/1355784692489650258/derelict_contingent.png?ex=6ae03ee3&is=6adeed63&hm=13431acfe9b62f81592074d9b5e53d2190444d11d08b14fbac042d49acde41a3&",
       "aiCaption": "A logo featuring a yellow geometric emblem with red accents on a dark background.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -117,5 +117,11 @@
   "releases": [],
   "threadLastPostOn": "2026-05-15",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "LunaLib",
+      "id": "lunalib"
+    }
+  ]
 }

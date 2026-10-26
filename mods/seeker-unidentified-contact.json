@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "seeker-unidentified-contact",
     "name": "Seeker - Unidentified Contact",
@@ -18,7 +18,7 @@
     "modVersion": "0.65",
     "summary": "Update for a mod by Tartiflette",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds exploration content, bosses, and bounties with adjusted ship availability and faction doctrines.",
+    "aiSummary": "Adds exploration content, bosses, bounties, and faction ship adjustments.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip",
@@ -30,15 +30,20 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2025-05-10",
-    "needs": []
+    "needs": [
+      {
+        "name": "MagicLib",
+        "id": "magiclib-2"
+      }
+    ]
   },
-  "description": "Introduces new exploration content including bosses that generate mid-save. Adjusts hull availability across factions to increase variety and fixes various bugs related to bounties, custom starts, and ship mounts.",
-  "descriptionHtml": "<p>Introduces new exploration content including bosses that generate mid-save. Adjusts hull availability across factions to increase variety and fixes various bugs related to bounties, custom starts, and ship mounts.</p>",
+  "description": "Adds exploration content and bosses that generate mid-save. Adjusts hull availability across factions to increase variety and fixes various bugs related to bounties, custom starts, and ship mounts. Integrates with MagicLib for bounty board display.",
+  "descriptionHtml": "<p>Adds exploration content and bosses that generate mid-save. Adjusts hull availability across factions to increase variety and fixes various bugs related to bounties, custom starts, and ship mounts. Integrates with MagicLib for bounty board display.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>Update for a mod by Tartiflette</p><p><strong>Download:</strong><br><a href=\"https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip</a></p>",
-  "aiDescription": "Introduces new exploration content including bosses that generate mid-save. Adjusts hull availability across factions to increase variety and fixes various bugs related to bounties, custom starts, and ship mounts.",
-  "updateCompatibilityText": "(Requires a new game to take effect)",
+  "aiDescription": "Adds exploration content and bosses that generate mid-save. Adjusts hull availability across factions to increase variety and fixes various bugs related to bounties, custom starts, and ship mounts. Integrates with MagicLib for bounty board display.",
+  "updateCompatibilityText": "The ClearCommands mod no longer removes fleets spawned at the start of the game. (Requires a new game to take effect)",
   "canUpdate": "no",
   "aiUse": {},
   "rawCategories": [
@@ -59,8 +64,8 @@
     }
   ],
   "changelog": {
-    "0.65": "- The ClearCommands mod no longer removes fleets spawned at the start of the game. (Requires a new game to take effect)",
-    "0.64": "- Version checker now links to the new git repo. Thus, auto-update support is now present.\n - Edited bounties to avoid job_show_distance being \"vague\"\n - Fix staged bounties showing up when they shouldn't\n - Changed rarity of plague weapons and wings so random autofitted plague fleets actually use plague weapons.\n - Roughly aligned the siegfried's flux torpedoes With the new git repository and version checker linking to it, there will no longer be a need to check this channel for updates.\n Once MagicLib updates to version 1.5.7, fixing pre-existing bounties, I'll make a forum post for this mod.",
+    "0.65": "The ClearCommands mod no longer removes fleets spawned at the start of the game. (Requires a new game to take effect)",
+    "0.64": "- Version checker now links to the new git repo. Thus, auto-update support is now present.\n - Edited bounties to avoid job_show_distance being \"vague\"\n - Fix staged bounties showing up when they shouldn't\n - Changed rarity of plague weapons and wings so random autofitted plague fleets actually use plague weapons.\n - Roughly aligned the siegfried's flux torpedoes\n With the new git repository and version checker linking to it, there will no longer be a need to check this channel for updates.\n Once MagicLib updates to version 1.5.7, fixing pre-existing bounties, I'll make a forum post for this mod.",
     "0.63": "- Edited the terrible (tactical laser + integrated point defense) combo on several ships. Either by removing the IPDA, or replacing the tach lasers with LRPD.\n - Added no_dealer to relevant hulls: All Exotics, Titanic, Blitzkrieg, and Demeter.\n - Placed old guardian ship files into \"old\" directory under hulls, to avoid the error that it's missing in ship_data.csv in the logs."
   },
   "sourceCodeUrl": "https://github.com/S-Numan/Seeker",

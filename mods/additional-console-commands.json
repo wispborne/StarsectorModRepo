@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "additional-console-commands",
     "name": "Additional Console Commands",
@@ -17,12 +17,13 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
-    "modVersion": "1.3.2",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1301430483933986826/1302238550036709406/gibadvice.png?ex=6adc9ba8&is=6adb4a28&hm=0a72f5bc069391b039475665d50a70cc224fdc9cb7c73fb8b1e555edfc154f87&",
+    "modVersion": "1.3.16",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1301430483933986826/1302238550036709406/gibadvice.png?ex=6adfe768&is=6ade95e8&hm=e1bf88589b664ddf5334138d76aaad2e695211ad76078a98f76c7fe0bcf595a1&",
     "summary": "A few extra console commands. Presently includes the following:",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a variety of new console commands for managing factions, colonies, ships, and storage.",
+    "aiSummary": "Adds numerous console commands for managing factions, colonies, ships, and storage.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://www.dropbox.com/scl/fi/g97etju2g6smep9rrx18d/Additional-Console-Commands.zip?rlkey=ufo9lkg0xbsb932rpitb8ht5u&st=pwfvkcj0&dl=1",
@@ -48,7 +49,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>A few extra console commands.</p><p><a href=\"https://fractalsoftworks.com/forum/index.php?topic=30955.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=30955.0</a></p>",
-  "aiDescription": "Provides commands to annex factions, cleanse systems, find blueprints, and manage alliance members. It includes tools for adding items to storage, modifying skills, and spawning entities or encounters.",
+  "aiDescription": "Provides commands to annex factions, cleanse systems, and destroy factions. Includes utilities to find blueprints, hullmods, and unique items, as well as commands to add items to storage or modify skills and alliances.",
   "aiUse": {},
   "rawCategories": [
     "Other/Misc.",
@@ -68,9 +69,9 @@
     }
   ],
   "changelog": {
-    "1.3.16": "- AllModShips now includes modded ships that were being missed in certain circumstances.\n- New Commands: AllTagItems and AllTagShips\n&nbsp;&nbsp;&nbsp;- Adds all weapons/wings or ships with a specified tag to 'Storage'.",
-    "1.3.15": "- ShipEfficiency now accounts for ships that have supply/m costs that are modified by built-in hullmods.\n- New Command: ExposeHiddenTooltips\n&nbsp;&nbsp;&nbsp;- Will remove the ‘limited_tooltip_if_locked’ tag from all ships.\n&nbsp;&nbsp;&nbsp;- Does not persist through game restarts.\n- New Command: SpawnAbyssEncounter\n&nbsp;&nbsp;&nbsp;- Spawns a specified Abyssal hyperspace encounter. Must use in the Abyss itself.\n- SolidifyAlliance now uses the alliance name without spaces, is case-insensitive, and accepts a second argument to set the relationship anywhere between 50 and 100.",
-    "1.3.14": "- New Command: UnlockSimVariants\n&nbsp;&nbsp;&nbsp;- Unlocks all factions and ship variants for use in the simulator.\n&nbsp;&nbsp;&nbsp;- Using ‘dev’ as an argument will permanently unlock all dev-exclusive factions and ship variants; and cause all factions that know at least one ship to appear in the simulator, even if they haven’t been set to appear in the simulator at all.\n&nbsp;&nbsp;&nbsp;- Dev-exclusive factions will only appear during that game session – restarting the game will hide them again, and so the command must be reapplied."
+    "1.3.16": "- AllModShips now includes modded ships that were being missed in certain circumstances.\n- New Commands: AllTagItems and AllTagShips\n   - Adds all weapons/wings or ships with a specified tag to 'Storage'.",
+    "1.3.15": "- ShipEfficiency now accounts for ships that have supply/m costs that are modified by built-in hullmods.\n- New Command: ExposeHiddenTooltips\n   - Will remove the ‘limited_tooltip_if_locked’ tag from all ships.\n   - Does not persist through game restarts.\n- New Command: SpawnAbyssEncounter\n   - Spawns a specified Abyssal hyperspace encounter. Must use in the Abyss itself.\n- SolidifyAlliance now uses the alliance name without spaces, is case-insensitive, and accepts a second argument to set the relationship anywhere between 50 and 100.",
+    "1.3.14": "- New Command: UnlockSimVariants\n   - Unlocks all factions and ship variants for use in the simulator.\n   - Using ‘dev’ as an argument will permanently unlock all dev-exclusive factions and ship variants; and cause all factions that know at least one ship to appear in the simulator, even if they haven’t been set to appear in the simulator at all.\n   - Dev-exclusive factions will only appear during that game session – restarting the game will hide them again, and so the command must be reapplied."
   },
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30955.0",
@@ -78,5 +79,11 @@
   "releases": [],
   "threadLastPostOn": "2026-07-07",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Nexerelin",
+      "id": "nexerelin"
+    }
+  ]
 }

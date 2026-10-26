@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "magiclib",
     "name": "MagicLib",
@@ -20,13 +20,14 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
-    "modVersion": "1.5.8",
+    "modVersion": "1.5.8-dev14",
     "imageUrl": "https://i.imgur.com/BVvNdhO.jpg",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355301122121924730/1355301122532835572/magicLibSquare.png?ex=6adf2547&is=6addd3c7&hm=32319070cd57397330a317e1fa0b044178e699d3d5ea7c64d7c4696e459adfc8&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355301122121924730/1355301122532835572/magicLibSquare.png?ex=6adfce07&is=6ade7c87&hm=75918836bfd1627699ad1c5a96e4280b701de262d52c6a209baf4b3499c5c77c&",
     "summary": "The goal of MagicLib is to create a community-built library of useful (and well documented) scripts and plugins that can be leveraged and contributed to by every modder.",
     "summaryIsGenerated": false,
-    "aiSummary": "Provides a community-built library of scripts and plugins for modders.",
+    "aiSummary": "Provides a library of scripts and plugins for modders to use and contribute to.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/MagicLibStarsector/MagicLib/releases/latest/download/MagicLib.zip",
@@ -59,15 +60,20 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>A community-driven Starsector library of useful code that can be leveraged and contributed to by every modder.</p><h5>Download</h5><p><a href=\"https://github.com/MagicLibStarsector/MagicLib/releases/latest/download/MagicLib.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/MagicLibStarsector/MagicLib/releases/latest/download/MagicLib.zip</a></p><p>Changelogs: <a href=\"https://github.com/MagicLibStarsector/MagicLib/blob/master/CHANGELOGS.md\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/MagicLibStarsector/MagicLib/blob/master/CHANGELOGS.md</a><br>Forum: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25868.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=25868.0</a><br>Source: <a href=\"https://github.com/MagicLibStarsector/MagicLib\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/MagicLibStarsector/MagicLib</a></p>",
-  "aiDescription": "Offers a shared configuration system for cross-mod integration. Includes frameworks for achievements, paintjobs, bounties, and various gameplay mechanics like custom hullmods and subsystems.",
+  "aiDescription": "Provides a library of scripts and plugins for modders to use and contribute to. Includes frameworks for achievements, paintjobs, bounties, and cross-mod integration via a shared settings file.",
   "aiUse": {
     "quote": "Generative \"AI\" was used in creating the achievement icons. Lora: sxz-2dicon, model: Deliberate v2.",
     "usesAi": true,
     "uses": [
       {
         "area": "icons",
-        "how": "generated"
+        "how": "generated",
+        "extent": "some"
       }
+    ],
+    "tools": [
+      "Lora: sxz-2dicon",
+      "Deliberate v2"
     ]
   },
   "rawCategories": [
@@ -75,7 +81,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1355301122121924730/1355301122532835572/magicLibSquare.png?ex=6adf2547&is=6addd3c7&hm=32319070cd57397330a317e1fa0b044178e699d3d5ea7c64d7c4696e459adfc8&",
+      "url": "https://cdn.discordapp.com/attachments/1355301122121924730/1355301122532835572/magicLibSquare.png?ex=6adfce07&is=6ade7c87&hm=75918836bfd1627699ad1c5a96e4280b701de262d52c6a209baf4b3499c5c77c&",
       "aiCaption": "A logo featuring the letters 'ML' in white against a swirling blue and purple background.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -131,7 +137,7 @@
       "directUrl": "https://github.com/MagicLibStarsector/MagicLib/releases/latest/download/MagicLib.zip",
       "fileName": "MagicLib.zip",
       "kind": "direct",
-      "label": "Download",
+      "label": "",
       "host": "GitHub",
       "needsAnotherStep": false
     }
@@ -156,34 +162,5 @@
       "gameVersion": "0.9.1a"
     }
   ],
-  "addons": [
-    {
-      "name": "Achievements Pack",
-      "role": "addon",
-      "requires": "MagicLib",
-      "downloads": [
-        {
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=28545.0",
-          "kind": "direct",
-          "label": "Achievements Pack",
-          "host": "fractalsoftworks.com",
-          "needsAnotherStep": true
-        }
-      ]
-    },
-    {
-      "name": "Bounties Pack",
-      "role": "addon",
-      "requires": "MagicLib",
-      "downloads": [
-        {
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=23129.msg473243#msg473243",
-          "kind": "direct",
-          "label": "Bounties Pack",
-          "host": "fractalsoftworks.com",
-          "needsAnotherStep": true
-        }
-      ]
-    }
-  ]
+  "addons": []
 }

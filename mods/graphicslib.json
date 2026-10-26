@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "graphicslib",
     "name": "GraphicsLib",
@@ -20,13 +20,14 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "1.12.1",
     "imageUrl": "http://i.imgur.com/vPv4Tfp.gif",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1356178729646428170/1356178729805680650/vPv4Tfp.gif?ex=6adf0add&is=6addb95d&hm=e16c640dfbefdfc9c0fbc2c1d32dc05e47a176d6542c4fd73f01865644b91815&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1356178729646428170/1356178729805680650/vPv4Tfp.gif?ex=6adfb39d&is=6ade621d&hm=ba1384b941c1cade292eb3010a23395321c4dbf985bf6c69c06d25fa75648339&",
     "summary": "GraphicsLib is a mod package containing numerous graphical improvements, including a variety of effects plugins, a dynamic lighting engine, and a screen-space distortion shader.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds dynamic lighting, distortion shaders, and graphical enhancement plugins.",
+    "aiSummary": "Adds graphical improvements including dynamic lighting, distortion shaders, and post-processing effects.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://bitbucket.org/DarkRevenant/graphicslib/downloads/GraphicsLib_1.12.1.7z",
@@ -55,7 +56,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>GraphicsLib is a mod package containing numerous graphical improvements, including a variety of effects plugins, a dynamic lighting engine, and a screen-space distortion shader.  This library can also be used by other modders to implement unique shaders and make use of the built-in lighting, distortion, and post-processing APIs.</p><pre><code>Version 1.12.1 (May 23, 2025)\n- Enhanced AA Compatibility Mode when LunaLib is enabled\n\nVersion 1.12.0 (May 22, 2025)\n- Added LunaLib support for in-game settings changes\n  * Game restarts are NOT required to change settings\n- Fixed support for sprite sheets for weapons/ships/etc\n- Fixed a number of edge cases with texture loading that may have wasted unnecessary VRAM\n- Now capable of finding/preloading MIRV'd missile textures\n- No longer creates a hyperspace light in the Abyss</code></pre><p>Download: <a href=\"https://bitbucket.org/DarkRevenant/graphicslib/downloads/GraphicsLib_1.12.1.7z\" rel=\"nofollow noopener\" target=\"_blank\">https://bitbucket.org/DarkRevenant/graphicslib/downloads/GraphicsLib_1.12.1.7z</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=10982.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=10982.0</a></p>",
-  "aiDescription": "Provides a library for modders to implement custom shaders using built-in lighting and post-processing APIs. Includes features like auto-generated normal maps, enhanced ship destruction effects, and shield ripples.",
+  "aiDescription": "Adds a variety of effects plugins, a dynamic lighting engine, and a screen-space distortion shader. Provides a modding API for other modders to implement unique shaders and use built-in lighting, distortion, and post-processing features. Includes features like enhanced ship destruction, ship damage smoke, overload arcs, officer insignias, and shield ripples.",
   "aiUse": {},
   "rawCategories": [
     "Audio/Visual",
@@ -64,7 +65,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1356178729646428170/1356178729805680650/vPv4Tfp.gif?ex=6adf0add&is=6addb95d&hm=e16c640dfbefdfc9c0fbc2c1d32dc05e47a176d6542c4fd73f01865644b91815&",
+      "url": "https://cdn.discordapp.com/attachments/1356178729646428170/1356178729805680650/vPv4Tfp.gif?ex=6adfb39d&is=6ade621d&hm=ba1384b941c1cade292eb3010a23395321c4dbf985bf6c69c06d25fa75648339&",
       "aiCaption": "A logo featuring a blue 'S' symbol and the text 'Lib'.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -166,15 +167,15 @@
       "directUrl": "https://bitbucket.org/DarkRevenant/graphicslib/downloads/GraphicsLib_1.12.1.7z",
       "fileName": "GraphicsLib_1.12.1.7z",
       "kind": "direct",
-      "label": "Download GraphicsLib 1.12.1",
+      "label": "",
       "host": "Bitbucket",
       "needsAnotherStep": false
     }
   ],
   "changelog": {
-    "1.12.1": "- Enhanced AA Compatibility Mode when LunaLib is enabled",
-    "1.12.0": "- Added LunaLib support for in-game settings changes\n&nbsp; * Game restarts are NOT required to change settings\n- Fixed support for sprite sheets for weapons/ships/etc\n- Fixed a number of edge cases with texture loading that may have wasted unnecessary VRAM\n- Now capable of finding/preloading MIRV'd missile textures\n- No longer creates a hyperspace light in the Abyss",
-    "1.11.0": "- GraphicsLib will now automatically generate basic normal maps for ships, weapons, etc. which lack them\n&nbsp; * The resulting normal maps are cached on disk in the GraphicsLib/cache folder\n&nbsp; * The cache is invalidated/regenerated whenever the mod list changes (including because of a version number change)\n- GraphicsLib now uses a dynamic texture loader\n&nbsp; * Only the necessary material/normal/surface maps will be resident in memory\n&nbsp; * At the start of combat, it preloads all of the maps relevant for the ships (including all of their installed equipment) in every fleet participating in the battle, and unloads everything else\n&nbsp; * At the end of combat, it unloads everything that's not part of the player fleet\n&nbsp; * Any maps that were missed by the preload step are loaded immediately as they appear within view of the player\n&nbsp; * Very substantial reduction in VRAM usage in almost all cases (exceptions being stuff involving literally every ship/weapon, like the Arcade mission)\n&nbsp; * Reduction in overall game load time (even with auto-gen normal maps!)\n- Added to GRAPHICS_OPTIONS.ini:\n&nbsp; * \"preloadAllMaps\":\n&nbsp; &nbsp; - Preloads all material, normal, and surface maps\n&nbsp; &nbsp; - VRAM-intensive, but avoids pauses before combat and stuttering during combat as textures load in\n&nbsp; * \"autoGenNormals\"\n&nbsp; * \"defaultMaterialBrightness\":\n&nbsp; &nbsp; - If no material map is defined for an object, the base sprite is used instead\n&nbsp; &nbsp; - This setting controls the brightness of the base ship (and weapon covers) sprite when it is used in this capacity\n&nbsp; &nbsp; - The default value here is selected to match the style of the material maps included with GraphicsLib\n- New tags for ships, fighters, and weapons to adjust behavior:\n&nbsp; * \"graphicslib_no_autogen\":\n&nbsp; &nbsp; - Prevents auto-generated normal maps\n&nbsp; &nbsp; - Useful for saving VRAM for sprites that never actually appear in battle (e.g., images that only appear in the Codex)\n&nbsp; * \"graphicslib_autogen_override\":\n&nbsp; &nbsp; - Causes auto-generated normal maps for that ship/weapon/skin/whatever to count as \"real\" normal maps\n&nbsp; &nbsp; - Useful for skins that significantly change the geometry of the object\n&nbsp; * \"graphicslib_preload\":\n&nbsp; &nbsp; - Forces all maps (auto-gen or otherwise) associated with the ship/weapon/whatever to remain loaded at all times\n&nbsp; &nbsp; - Should be used sparingly\n- Adjusted default settings in the presets\n&nbsp; * \"High-End\" is the only preset with \"preloadAllMaps\" set to \"true\"\n&nbsp; * \"Low VRAM Compatibility\" now enables normal maps & auto-gen, thanks to the enormous VRAM savings afforded by the dynamic texture loader\n- Explicitly forced mipmaps for all loaded maps (doesn't appear to have any VRAM impact on my machine, so this probably doesn't have any practical effect, but...)\n- Fixed Buffalo Mk2 and Hammer (Single) not having any maps\n- Fixed the way GraphicsLib handles animated sprites; in short, only TURRET and HARDPOINT maps allow them now\n- Improved brightness/consistency of ships that lack a material map\n- Added new TextureData API functions:\n&nbsp; * getTextureDataWithAutoGen()\n&nbsp; &nbsp; - This function can be used to procedurally preload specific texture maps at the start of combat\n&nbsp; &nbsp; - In an EveryFrameScript or similar type of plugin, wait for \"graphicslib_preload\" to be set and then call this function for every map that should be preloaded\n&nbsp; &nbsp; - Useful for factions involving custom ship spawning\n&nbsp; * mapSpriteToMNSWithAutoGen()\n&nbsp; * autoGenNormalMap()\n&nbsp; * Intended for internal use:\n&nbsp; &nbsp; - autoGenMissingNormalMaps()\n&nbsp; &nbsp; - unloadAndPreloadTextures()"
+    "1.12.1": "Enhanced AA Compatibility Mode when LunaLib is enabled",
+    "1.12.0": "- Added LunaLib support for in-game settings changes\n  * Game restarts are NOT required to change settings\n- Fixed support for sprite sheets for weapons/ships/etc\n- Fixed a number of edge cases with texture loading that may have wasted unnecessary VRAM\n- Now capable of finding/preloading MIRV'd missile textures\n- No longer creates a hyperspace light in the Abyss",
+    "1.11.0": "- GraphicsLib will now automatically generate basic normal maps for ships, weapons, etc. which lack them\n  * The resulting normal maps are cached on disk in the GraphicsLib/cache folder\n  * The cache is invalidated/regenerated whenever the mod list changes (including because of a version number change)\n- GraphicsLib now uses a dynamic texture loader\n  * Only the necessary material/normal/surface maps will be resident in memory\n  * At the start of combat, it preloads all of the maps relevant for the ships (including all of their installed equipment) in every fleet participating in the battle, and unloads everything else\n  * At the end of combat, it unloads everything that's not part of the player fleet\n  * Any maps that were missed by the preload step are loaded immediately as they appear within view of the player\n  * Very substantial reduction in VRAM usage in almost all cases (exceptions being stuff involving literally every ship/weapon, like the Arcade mission)\n  * Reduction in overall game load time (even with auto-gen normal maps!)\n- Added to GRAPHICS_OPTIONS.ini:\n  * \"preloadAllMaps\":\n    - Preloads all material, normal, and surface maps\n    - VRAM-intensive, but avoids pauses before combat and stuttering during combat as textures load in\n  * \"autoGenNormals\"\n  * \"defaultMaterialBrightness\":\n    - If no material map is defined for an object, the base sprite is used instead\n    - This setting controls the brightness of the base ship (and weapon covers) sprite when it is used in this capacity\n    - The default value here is selected to match the style of the material maps included with GraphicsLib\n- New tags for ships, fighters, and weapons to adjust behavior:\n  * \"graphicslib_no_autogen\":\n    - Prevents auto-generated normal maps\n    - Useful for saving VRAM for sprites that never actually appear in battle (e.g., images that only appear in the Codex)\n  * \"graphicslib_autogen_override\":\n    - Causes auto-generated normal maps for that ship/weapon/skin/whatever to count as \"real\" normal maps\n    - Useful for skins that significantly change the geometry of the object\n  * \"graphicslib_preload\":\n    - Forces all maps (auto-gen or otherwise) associated with the ship/weapon/whatever to remain loaded at all times\n    - Should be used sparingly\n- Adjusted default settings in the presets\n  * \"High-End\" is the only preset with \"preloadAllMaps\" set to \"true\"\n  * \"Low VRAM Compatibility\" now enables normal maps & auto-gen, thanks to the enormous VRAM savings afforded by the dynamic texture loader\n- Explicitly forced mipmaps for all loaded maps (doesn't appear to have any VRAM impact on my machine, so this probably doesn't have any practical effect, but...)\n- Fixed Buffalo Mk2 and Hammer (Single) not having any maps\n- Fixed the way GraphicsLib handles animated sprites; in short, only TURRET and HARDPOINT maps allow them now\n- Improved brightness/consistency of ships that lack a material map\n- Added new TextureData API functions:\n  * getTextureDataWithAutoGen()\n    - This function can be used to procedurally preload specific texture maps at the start of combat\n    - In an EveryFrameScript or similar type of plugin, wait for \"graphicslib_preload\" to be set and then call this function for every map that should be preloaded\n    - Useful for factions involving custom ship spawning\n  * mapSpriteToMNSWithAutoGen()\n  * autoGenNormalMap()\n  * Intended for internal use:\n    - autoGenMissingNormalMaps()\n    - unloadAndPreloadTextures()"
   },
   "sourceCodeUrl": "https://bitbucket.org/DarkRevenant/graphicslib",
   "supportLinks": [
@@ -189,5 +190,11 @@
   "releases": [],
   "threadLastPostOn": "2026-09-09",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "LunaLib",
+      "id": "lunalib"
+    }
+  ]
 }

@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Extra Colony Items</h1><p>A Starsector mod by Eld. For Starsector 0.98a. Version 1.0.3.</p><p>Just a mod that add colony items.</p><p><a href="https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FEld3142%2FExtraColonyItems%2Fmain%2Feld_CI.version%22%2C%22id%22%3A%22eld_ci%22%2C%22version%22%3A%221.0.3%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FMagicLibStarsector%2FMagicLib%2Fmaster%2Fmagiclib.version%22%2C%22id%22%3A%22MagicLib%22%7D" rel="nofollow noopener">Install with TriOS</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=36090.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/Eld3142/ExtraColonyItems" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/magiclib/">MagicLib</a></li><li><a href="mods/lazylib/">LazyLib</a></li></ul><h2>Forum post</h2><p>Extra Colony Items<br>Add some colony items to Starsector.</p><p>Source code | Changelog and older versions</p><p>Required mods: MagicLib | LazyLib<br>Adding to an ongoing game: Yes, it's safe<br>Removing from an ongoing game: Destroy the items from the save first</p><p>What is this?</p><p>Just a mod that add colony items.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Extra Colony Items</h1><p>A Starsector mod by Eld. For Starsector 0.98a. Version 1.0.3.</p><p>Just a mod that add colony items.</p><p><a href="https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FEld3142%2FExtraColonyItems%2Fmain%2Feld_CI.version%22%2C%22id%22%3A%22eld_ci%22%2C%22version%22%3A%221.0.3%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FMagicLibStarsector%2FMagicLib%2Fmaster%2Fmagiclib.version%22%2C%22id%22%3A%22MagicLib%22%7D" rel="nofollow noopener">Install with TriOS</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=36090.0" rel="nofollow noopener">Forum thread</a> · <a href="https://github.com/Eld3142/ExtraColonyItems" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/magiclib-2/">MagicLib</a></li><li><a href="mods/lazylib/">LazyLib</a></li></ul><h2>Forum post</h2><p>Extra Colony Items<br>Add some colony items to Starsector.</p><p>Source code | Changelog and older versions</p><p>Required mods: MagicLib | LazyLib<br>Adding to an ongoing game: Yes, it's safe<br>Removing from an ongoing game: Destroy the items from the save first</p><p>What is this?</p><p>Just a mod that add colony items.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

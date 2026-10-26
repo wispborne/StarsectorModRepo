@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "patchlib",
     "name": "PatchLib",
@@ -15,11 +15,11 @@
       "discord"
     ],
     "gameVersion": "0.98a",
-    "modVersion": "1.0.1",
+    "modVersion": "1.0.2",
     "imageUrl": "https://imgur.com/VOkhFKZ.png",
     "summary": "PatchLib is a library mod that enables bytecode patching at runtime for starsector. To install it, simply drop the mod in to your mods folder like other mods. Only install it if a mod requires it.",
     "summaryIsGenerated": false,
-    "aiSummary": "Enables bytecode patching at runtime for Starsector.",
+    "aiSummary": "Enables runtime bytecode patching for Starsector and mods.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FPatchLib%2Frefs%2Fheads%2Fmaster%2FPatchLib.version%22%2C%22id%22%3A%22patchlib%22%7D",
@@ -39,11 +39,11 @@
       },
       {
         "area": "writing",
-        "how": "assisted"
+        "how": "assisted",
+        "extent": "all"
       }
     ],
     "addedOn": "2026-10-22",
-    "threadLastPostOn": "2026-10-23",
     "needs": []
   },
   "description": "PatchLib is a library mod that enables bytecode patching at runtime for starsector.\nTo install it, simply drop the mod in to your mods folder like other mods. Only install it if a mod requires it.\n\n[Incompatibility Warning] This mod is currently not compatible with mods that upgrade the games java version from 17 to 25+ (like Mikohime 28).\nHowever, the \"Fast Rendering\" mod fixes the issue that causes this incompatibility, so you can use that to prevent this issue.\n\nFor mod authors\n\nPatchLib allows modifying and redirecting existing code at runtime. This means that it can change the behaviour of starsector and mod code.\nIf you come from games with C# modding, it can be somewhat compared to the Harmony library, or Mixins if you are more involved with minecraft modding.\nThis capability is useful, as you may often find yourself in situations where you need a hook to modify some game behaviour, but there just is no API for it.\n\nPatchLib provides an annotation based API for other mods. With it you register your patches and patch handlers.\nThe example patch below hooks in to the addPostDescriptionSection and applyEffectsBeforeShipCreation methods from the Automated hullmod.\nBoth hooks insert code after the original methods ran, allowing us to add additional effects and tooltip descriptions.\n\nUnlike other ways to replace code, this doesnt require fully overwriting the plugin, which now allows multiple mods to insert their changes in to a single hullmod.\nThere are also countless examples where the game does not provide any way to replace the code, but with PatchLib you can insert hooks in to most of them.\n\nWiki\n\nPatchLib has its own wiki which explains and documents most of the details that you will need.\nThe wiki asumes that you have basic starsector modding and programming knowledge.\nhttps://github.com/Lukas22041/PatchLib/wiki\n\nWhen should you use PatchLib?\n\nPatchLib has a lot of utility, but it should generaly be the last resort to choose as your solution.\nThe game has a relatively vast API, which allows quite a lot of things if you stay within the scope of the base game.\nPatches should only be used if there are no other options, or if the other options require much worse solutions than a patch.\n\nAI generated content disclaimer\n\nThe libraries code has been co-developed with the help of Claude Code and the models Claude Fable 5, Claude Fable 5.1 and Claude Opus 5.5.\nThe generated pieces of code have been heavily tested and are understood decently well by me. No visual assets were created with generative AI.\nAll documentation is written by hand, but has had grammatical corrections applied through AI tools.\n\nCredits\n\nAlex: For making the game, and for allowing the release of this library.\nRaphw: For creating the ByteBuddy java library, which PatchLib heavily relies on.\nUnofficial Starsector Discord: For the users and mod authors that helped in testing the library.",
@@ -51,18 +51,20 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>A library mod that allows mods to patch the games code at runtime, letting them add code exactly where they need it, or modify existing behaviour.<br>The library by itself does not do anything, only install it if another mod requires it.</p><p><strong>Forum Page:</strong> <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36191.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36191.0</a><br><strong>Latest Download:</strong> <a href=\"https://github.com/Lukas22041/PatchLib/releases/latest/download/PatchLib.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Lukas22041/PatchLib/releases/latest/download/PatchLib.zip</a><br><strong>Old versions &amp; Changelogs:</strong> <a href=\"https://github.com/Lukas22041/PatchLib/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Lukas22041/PatchLib/releases</a></p><pre><code>\u001b[2;1;2m\u001b[38;2;222;64;64mIncompatibility\u001b[0m\u001b[2;2m\u001b[1;2m\u001b[0m\nPatchLib is currently incompatible with community-made upgrades of the game's Java version to Java 25 or higher. However, if you have Fast Rendering installed (<a href=\"https://fractalsoftworks.com/forum/index.php?topic=33870.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=33870.0</a>), it will work fine. This is because Fast Rendering fixes the issue that causes this incompatibility in the first place.</code></pre>",
-  "aiDescription": "Provides an annotation-based API for other mods to modify and redirect existing code at runtime. Allows multiple mods to insert changes into a single hullmod without fully overwriting plugins.",
+  "aiDescription": "Provides an annotation-based API for other mods to register patches and handlers. Allows modifying and redirecting existing code at runtime without fully overwriting plugins. Useful for hooking into game behavior where no API exists.",
   "aiUse": {
     "quote": "The libraries code has been co-developed with the help of Claude Code and the models Claude Fable 5, Claude Fable 5.1 and Claude Opus 5.5.\nThe generated pieces of code have been heavily tested and are understood decently well by me. No visual assets were created with generative AI.\nAll documentation is written by hand, but has had grammatical corrections applied through AI tools.",
     "usesAi": true,
     "uses": [
       {
         "area": "code",
-        "how": "assisted"
+        "how": "assisted",
+        "extent": "some"
       },
       {
         "area": "writing",
-        "how": "assisted"
+        "how": "assisted",
+        "extent": "all"
       }
     ],
     "tools": [
@@ -125,6 +127,7 @@
     }
   ],
   "changelog": {
+    "1.0.2": "- Added a warning for subtype matches on janino loaded classes that themself extend from janino loaded classes.\n- Improved the crash message when crashing due to using an old version of FR (0.6.8 and older)",
     "1.0.1": "- The \"TogglePatch\" command now allows toggling multiple patches at once\n- Made a specific crash provide a better error message."
   },
   "changelogUrl": "https://github.com/Lukas22041/PatchLib/releases",
@@ -133,13 +136,6 @@
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36191.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1562893773438980176/1562893773438980176",
   "releases": [],
-  "threadLastPostOn": "2026-10-23",
   "sameNameMods": [],
-  "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "Fast Rendering",
-      "id": "fast-rendering"
-    }
-  ]
+  "addons": []
 }

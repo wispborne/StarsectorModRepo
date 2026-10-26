@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "starship-legends",
     "name": "Starship Legends",
@@ -18,12 +18,13 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "2.6.0",
     "imageUrl": "https://i.imgur.com/ayIFXmf.png",
     "summary": "Starship Legends adds more personality and variety to ships, their crew, your officers, and NPC fleets using a trait/quirk system.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds personality and variety to ships, crew, officers, and NPC fleets through a dynamic trait and quirk system.",
+    "aiSummary": "Adds personality and variety to ships, crew, and NPCs using a trait system.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -45,7 +46,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Adds more personality and variety to ships, their crew, your officers, and NPC fleets using a trait/quirk system.<br>Full description: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=15321.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=15321.0</a></p><p>Latest changes:</p><pre><code>2.6.0:\n- Updated for Starsector version 0.98a and Java 17\n- Fixed d-mod removal bar events not being invalidated if the ship was restored between bar visits\n- Changed: Battle reports are now filed under \"fleet log\" tag instead of \"reports\" (to reduce clutter)\n- Changed: The intel screen now shows a list of the ship's current traits when displaying a sidegrade opportunity</code></pre><p>Full change log: <a href=\"https://github.com/NateNBJ/StarshipLegends/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/NateNBJ/StarshipLegends/releases</a><br>Download: <a href=\"https://github.com/NateNBJ/StarshipLegends/releases/latest/download/Starship.Legends.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/NateNBJ/StarshipLegends/releases/latest/download/Starship.Legends.zip</a></p>",
-  "aiDescription": "Ships earn traits based on their growing reputation, which influence performance. Crew loyalty affects combat effectiveness and trait quality. Enemy fleets also have reputations that modify their behavior and stats based on faction.",
+  "aiDescription": "Ships earn traits based on reputation growth, which influence their performance. Crew loyalty affects combat effectiveness and trait quality. Enemy fleets also have reputations and traits based on their faction and commander. Famous derelicts and flagships can be encountered and salvaged.",
   "saveCompatibilityText": "Can be added to existing games.",
   "updateCompatibilityText": "All updates are save-compatible unless stated otherwise.",
   "removalCompatibilityText": "Can NOT be removed from games in which it was already used, but it can be fully disabled.",
@@ -123,5 +124,11 @@
   "releases": [],
   "threadLastPostOn": "2026-10-01",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "LunaLib",
+      "id": "lunalib"
+    }
+  ]
 }

@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="../../">
   <title>Custom LPCs | Starmodder</title>
-  <meta name="description" content="Adds 1 hullmod, and 1 fighter wing.">
+  <meta name="description" content="Create your own fighter wings in-game!">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Custom LPCs">
-  <meta property="og:description" content="Adds 1 hullmod, and 1 fighter wing.">
+  <meta property="og:description" content="Create your own fighter wings in-game!">
   <meta property="og:image" content="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmxmdHk5bHZxenBocHpkaWxtcHQyNXhib3FjcHJremdhcXl0ZHhxMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JtXVFgdfHvJxkReMTg/giphy.gif">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Custom LPCs</h1><p>A Starsector mod by ymfah. For Starsector 0.97a. Version 1.2.0.</p><p>Adds 1 hullmod, and 1 fighter wing.</p><p><a href="https://github.com/ymfah/CustomLPCs/releases/" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=29658.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1223662562865053766/1223662562865053766" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/ymfah/CustomLPCs" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Custom LPCs v1.2.0</p><p>Create your own fighter wings in-game!</p><p>[How to Use]</p><p>Spoiler</p><p>Adds 1 hullmod, and 1 fighter wing.</p><p>Hullmod can be found during exploration, and wing is sold in independant/pirate/black market.</p><p>Apply hullmod to a ship, and the wing will become that ship!</p><p>LPC OP cost will dynamically change. Currently it is (DP Cost)*5. Example : https://imgur.com/a/ag8eZFO</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Custom LPCs</h1><p>A Starsector mod by ymfah. For Starsector 0.97a. Version 1.2.0.</p><p>Create your own fighter wings in-game!</p><p><a href="https://github.com/ymfah/CustomLPCs/releases/" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=29658.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1223662562865053766/1223662562865053766" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/ymfah/CustomLPCs" rel="nofollow noopener">Source code</a></p><h2>Forum post</h2><p>Custom LPCs v1.2.0</p><p>Create your own fighter wings in-game!</p><p>[How to Use]</p><p>Spoiler</p><p>Adds 1 hullmod, and 1 fighter wing.</p><p>Hullmod can be found during exploration, and wing is sold in independant/pirate/black market.</p><p>Apply hullmod to a ship, and the wing will become that ship!</p><p>LPC OP cost will dynamically change. Currently it is (DP Cost)*5. Example : https://imgur.com/a/ag8eZFO</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Parlay "Giving the pirates more" 0.8, Uomoz corvus compatible!</h1><p>A Starsector mod by maffo. Version 0.8.</p><p>Parlay aims to crate a better experience by adding more ships to the pirate faction. After all, who isnt the favorite punchbag of all factions, young and old alike? More ships to fight as player, and its will give the pirates more punch against other factions.</p><p><a href="http://download851.mediafire.com/986g5uy8g5kgCaTM-9npAiyRPkWJwKpC8K9YVuUd_TzDcOSj9swBB5coZLae-9SHbcAknVBCHCiExWzHhM1oKGjcLZAKtp6W6bzbCkN0_CJIHziX0uF74jRHrg_gtjou1dgrMn9rt2oGI3lkvyn2q9_8Nz36j30YL3TxiGIYoz1H/g0pxgpg2e4btu67/Parlay+0.5.rar" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=5952.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Parlay<br>The hidden base, tavern "VentFlux" cycle 207. Since the Hegemony had effectively shut off outside world contact.The hidden base was the only sign that piracy was still there in corvus.<br>Raiding was reduced to a suicide endavour, left to only the very brave, or desperate.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Parlay "Giving the pirates more" 0.8, Uomoz corvus compatible!</h1><p>A Starsector mod by maffo. Version 0.8.</p><p>Parlay aims to crate a better experience by adding more ships to the pirate faction. After all, who isnt the favorite punchbag of all factions, young and old alike? More ships to fight as player, and its will give the pirates more punch against other factions.</p><p><a href="http://download1581.mediafire.com/vg2ba9xhlzegSkkfp71KLUuFsSij4sVv-nRYoGilMPBlFDepeG1r8U5Sw-T9ALfS1ih4sVG5RPVFVHnMfUYBAFbt-gsHdtsgvKJV25SUT2mIquDYrr7moiUYYE5JLtGa_IJJLZPWz8P3n7WEXvdlKv6RedTmhy2hKqCmoA-BRZ6A/k47d4n68kl0yges/Parlay+0.8.rar" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=5952.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Parlay<br>The hidden base, tavern "VentFlux" cycle 207. Since the Hegemony had effectively shut off outside world contact.The hidden base was the only sign that piracy was still there in corvus.<br>Raiding was reduced to a suicide endavour, left to only the very brave, or desperate.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

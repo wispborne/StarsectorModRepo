@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "omm-freitag-corporation",
     "name": "OMM - Freitag Corporation",
@@ -15,14 +15,14 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "0.9.0c",
     "imageUrl": "https://i.imgur.com/4W47MGP.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1402958315352490034/1402958315595497512/image.png?ex=6adf2840&is=6addd6c0&hm=84dd27d7bb8301b20aa0ea20685e8735299079b8859b4d30845e8b5066c8d8da&",
-    "summary": "0.9.1 indev Notes: improved flag & crest some sprite updates added a ton of weapons (at least 12) changed Octocorallia bounds so it's easier to switch between it and the Orchestria in refit screen fix: Ecrevisse ship system did not apply force to targets properly, also increased cooldown updated Freitag Control Suite hullmod text to better convey drone mechanics to the player fixed the Sesarma hullmod logistics hullmod mismatch fixed multiple cases in which autofire control would not function correctly PD Drones will no longer get stuck in an infinite loop of starting and landing on the mothership 0.9.0c Release Notes: fixed a Null Pointer Exception in main mod plugin 0.9.0b Release Notes: fixed a crash due to mousing over the Monofilament Tow Cable Hullmod 0.9.0a Release Notes: slightly increased repair power of repair drone OMM no longer replaces any vanilla sound files",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1402958315352490034/1402958315595497512/image.png?ex=6adfd100&is=6ade7f80&hm=5cff6d51173a83178e0c4f090dda07bd5b87d3f52ee0ffa26519946b87cbebea&",
+    "summary": "a Mod in Development about Civilian Ships and their unique use in and outside of Combat.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds civilian ships with drone-based weapon systems, orbital platform deployment, and logistics-focused campaign abilities like algae farms.",
-    "saveCompatible": true,
+    "aiSummary": "Adds civilian ships that use drones for combat, deploy orbital platforms, and provide logistics support like algae farms.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Tecrys/OrbitalManipulation-Maintenance/releases/download/0.9.0c/OrbitalManipulationMaintenance.zip",
@@ -54,7 +54,7 @@
       },
       {
         "name": "MagicLib",
-        "id": "magiclib"
+        "id": "magiclib-2"
       }
     ]
   },
@@ -63,9 +63,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Download: <a href=\"https://github.com/Tecrys/OrbitalManipulation-Maintenance/releases/tag/0.9.0c\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tecrys/OrbitalManipulation-Maintenance/releases/tag/0.9.0c</a><br>Forum page: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=22142.msg333767#msg333767\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=22142.msg333767#msg333767</a></p><pre><code>0.9.1 indev Notes:\n- improved flag &amp; crest\n- some sprite updates\n- added a ton of weapons (at least 12)\n- changed Octocorallia bounds so it's easier to switch between it and the Orchestria in refit screen\n- fix: Ecrevisse ship system did not apply force to targets properly, also increased cooldown\n- updated Freitag Control Suite hullmod text to better convey drone mechanics to the player\n- fixed the Sesarma hullmod logistics hullmod mismatch\n- fixed multiple cases in which autofire control would not function correctly\n- PD Drones will no longer get stuck in an infinite loop of starting and landing on the mothership\n0.9.0c Release Notes:\n- fixed a Null Pointer Exception in main mod plugin\n0.9.0b Release Notes:\n- fixed a crash due to mousing over the Monofilament Tow Cable Hullmod\n0.9.0a Release Notes:\n- slightly increased repair power of repair drone\n- OMM no longer replaces any vanilla sound files</code></pre>",
-  "aiDescription": "Introduces a faction of civilian vessels that rely on surrounding drones for combat rather than fixed weapon mounts. These drones can swap weapons, aim at the cursor, and intercept enemy ordnance. Ships deploy orbital platforms automatically during battle and provide support buffs to allies. Campaign features include mobile algae farms that generate supplies and fuel while part of your fleet.",
-  "saveCompatibilityText": "can now be added to an ongoing save, Freitag HQ and all subsidiaries will spawn on game load",
-  "canAdd": "yes",
+  "aiDescription": "Introduces a faction of civilian vessels that rely on drone swarms for weaponry and defense instead of traditional mounts. These ships can deploy orbital platforms during combat and offer campaign abilities such as algae farms that generate supplies and fuel. The mod emphasizes support systems, including shield drones that intercept ordnance and repair drones that maintain fleet integrity.",
   "aiUse": {},
   "rawCategories": [
     "Faction Mods",
@@ -73,7 +71,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1402958315352490034/1402958315595497512/image.png?ex=6adf2840&is=6addd6c0&hm=84dd27d7bb8301b20aa0ea20685e8735299079b8859b4d30845e8b5066c8d8da&",
+      "url": "https://cdn.discordapp.com/attachments/1402958315352490034/1402958315595497512/image.png?ex=6adfd100&is=6ade7f80&hm=5cff6d51173a83178e0c4f090dda07bd5b87d3f52ee0ffa26519946b87cbebea&",
       "source": "discord"
     },
     {
@@ -177,15 +175,14 @@
       "directUrl": "https://github.com/Tecrys/OrbitalManipulation-Maintenance/releases/download/0.9.0c/OrbitalManipulationMaintenance.zip",
       "fileName": "OrbitalManipulationMaintenance.zip",
       "kind": "direct",
-      "label": "click the banner to download",
+      "label": "",
       "host": "GitHub",
       "needsAnotherStep": false
     }
   ],
   "changelog": {
-    "0.9.0c": "- fixed a Null Pointer Exception in main mod plugin",
-    "0.9.0b": "- fixed a crash due to mousing over the Monofilament Tow Cable Hullmod",
-    "0.9.0a": "- slightly increased repair power of repair drone\n- OMM no longer replaces any vanilla sound files"
+    "0.9.0c": "fixed a Null Pointer Exception in main mod plugin",
+    "0.9.0b": "fixed a crash due to mousing over the Monofilament Tow Cable Hullmod"
   },
   "sourceCodeUrl": "https://github.com/Tecrys/OrbitalManipulation-Maintenance",
   "supportLinks": [],
@@ -194,5 +191,25 @@
   "releases": [],
   "threadLastPostOn": "2026-09-12",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Terraforming & Station Construction"
+    },
+    {
+      "name": "Commissioned Crews",
+      "id": "commissioned-crews"
+    },
+    {
+      "name": "VicPad"
+    },
+    {
+      "name": "Stellar Networks",
+      "id": "stellar-networks"
+    },
+    {
+      "name": "Combat Background Enhanced",
+      "id": "combat-background-enhanced"
+    }
+  ]
 }

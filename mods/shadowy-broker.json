@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "shadowy-broker",
     "name": "Shadowy Broker",
@@ -18,7 +18,7 @@
     "imageUrl": "https://i.imgur.com/P7Vf4Vh.png",
     "summary": "This small mod adds an interaction option to contact the Shadowy Broker, a mysterious and cocky hacker-turned-financial-advisor that might just help you find profitable trade routes, for a small fee. A smooth and seamless experience, 60% of the time it works every time.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a market interaction option to hire a hacker-turned-financial-advisor for profitable trade route analysis.",
+    "aiSummary": "Adds a market interaction option to contact a hacker-turned-financial-advisor who identifies profitable trade routes for a fee.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -28,7 +28,7 @@
     },
     "downloadCount": 1,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=17877.0",
-    "sourceIsPublic": true,
+    "sourceIsPublic": false,
     "isWorkInProgress": false,
     "addedOn": "2020-02-04",
     "threadLastPostOn": "2026-06-26",
@@ -43,7 +43,7 @@
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\">Shadowy Broker</span><br><img src=\"https://i.imgur.com/P7Vf4Vh.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><span class=\"size-bigger\"><strong><a href=\"https://github.com/rubybrowncoat/Starsector-Shadowy-Broker-Releases/releases/download/v0.3.6/Shadowy.Broker-0.3.6.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download Link v0.3.6</a></strong></span><br>Requires <strong><a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a></strong></div><br><br>This small mod adds an interaction option to contact the Shadowy Broker, a mysterious and cocky hacker-turned-financial-advisor that might just help you find profitable trade routes, for a small fee. A smooth and seamless experience, 60% of the time it works every time.<br><br><strong>Compatibility</strong><br>I'm confident you can add and remove the mod without any worry and it shouldn't conflict with any other mod.<br><br><strong>Functional Details</strong><br><details class=\"spoiler\"><summary>Spoiler</summary>You can contact the Shadowy Broker from a new option when interacting with markets.<br><br><img src=\"https://i.imgur.com/FVCggF4.png?1\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br>Upon activation of the \"Market Analysis\" the Broker will return (or not, it depends heavily on market conditions and finances) the most profitable trade available to you between planets considering your available finances, available commodities, deficit and excess stockpiles on various markets. It's basically an automatic way to look at the resource breakdowns for a small fee. The result looks something like this:<br><br><img src=\"https://i.imgur.com/cAZqxwy.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br>The mod currently sports very basic configurability of the request you can make of the Broker. You can tell him how much cargo to simulate and what percentage of your credits you are willing to invest for the trade (excluding his 5000 credit fee, of course).<br><br><img src=\"https://i.imgur.com/jgDHwaV.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details><br><em>Current Plans</em><br>- Withdrawal (cashflow conversion) expenses, still at the planning stage<br>- New option: Loans<br>- More trade-specific utilities as they become apparent<br><br><strong><em>Changelog</em></strong><br><details class=\"spoiler\"><summary>Spoiler</summary>v0.3.6 - Maximum Travel - 2020/03/08<br>- The broker is now allowing customers to set their desired \"maximum travel distance\" so that they can better manage their time investment into profitable trades. This applies to both general market analysis and specific cargo offloads.<br>- Moved some configuration infrastructure around, some configuration options will have to be reset.<br><br>v0.3.2 - 2020/02/17<br>- Fixed a bug in bank withdrawal. Funds are still in the account, and you can now withdraw them.<br>- Fixed a bug in supply price and availability analysis for trade routes.<br>- Reduced wait time for new Broker trade interactions to 3 days (down from 7).<br>- Deposit interests will now follow the ebb and flow of economic growth, but the Broker will keep an eye on these and slash them if they get too much out of control.<br><br>v0.3.1 - In the interest of Banking - 2020/02/12<br>- The Shadowy Broker is now offering baseline 2% interest (compounded monthly) on credits deposited at his terminals. (i.e. an extremely rudimentary bank system)<br>- Also he can tell you when his systems are in need of an update. (i.e. Version Checker support)<br>- Fixed several bugs<br><br>v0.2.7 - 2020/02/09<br>- The Mainframe is now able to take into account tariffs for the units of cargo that have to be bought from tariffed Open Markets.<br>- The Broker now allows clients to specify an approach type to their trade runs (Lawful or Lawless) to filter out specific markets and commodity availabilities depending on the transponder stance they wish to keep.<br>- Squashed a couple big bugs.<br><br>v0.2.0 - 2020/02/07<br>- New Feature: The Broker has access to new software on the mainframe and can now help you find the best market to sell the unwanted commodities gathering dust in your cargo. For an even greater fee, of course.<br>- Streamlined some interactions<br><br>v0.1.5 - 2020/02/05<br>- Refactoring of the central calculation logic<br>- Some optimisations<br><br>v0.1.3 - 2020/02/04<br>- First Public Release</details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Adds a new market interaction option to contact a mysterious financial advisor. This advisor analyzes market conditions and finances to suggest the most profitable trade routes for a fee. It also includes basic banking features like interest on deposits and configurable simulation parameters.",
+  "aiDescription": "Adds a new option when interacting with markets to contact the Shadowy Broker. The Broker analyzes market conditions, finances, and stockpiles to suggest the most profitable trade routes for a small fee. It also offers basic banking features like interest on deposits and configurable simulation parameters.",
   "saveCompatibilityText": "I'm confident you can add and remove the mod without any worry and it shouldn't conflict with any other mod.",
   "removalCompatibilityText": "I'm confident you can add and remove the mod without any worry and it shouldn't conflict with any other mod.",
   "canAdd": "yes",
@@ -94,11 +94,10 @@
     }
   ],
   "changelog": {
-    "0.3.6": "- The broker is now allowing customers to set their desired \"maximum travel distance\" so that they can better manage their time investment into profitable trades. This applies to both general market analysis and specific cargo offloads.\n- Moved some configuration infrastructure around, some configuration options will have to be reset.",
+    "0.3.6": "Maximum Travel - 2020/03/08\n- The broker is now allowing customers to set their desired \"maximum travel distance\" so that they can better manage their time investment into profitable trades. This applies to both general market analysis and specific cargo offloads.\n- Moved some configuration infrastructure around, some configuration options will have to be reset.",
     "0.3.2": "- Fixed a bug in bank withdrawal. Funds are still in the account, and you can now withdraw them.\n- Fixed a bug in supply price and availability analysis for trade routes.\n- Reduced wait time for new Broker trade interactions to 3 days (down from 7).\n- Deposit interests will now follow the ebb and flow of economic growth, but the Broker will keep an eye on these and slash them if they get too much out of control.",
-    "0.3.1": "- The Shadowy Broker is now offering baseline 2% interest (compounded monthly) on credits deposited at his terminals. (i.e. an extremely rudimentary bank system)\n- Also he can tell you when his systems are in need of an update. (i.e. Version Checker support)\n- Fixed several bugs"
+    "0.3.1": "In the interest of Banking - 2020/02/12\n- The Shadowy Broker is now offering baseline 2% interest (compounded monthly) on credits deposited at his terminals. (i.e. an extremely rudimentary bank system)\n- Also he can tell you when his systems are in need of an update. (i.e. Version Checker support)\n- Fixed several bugs"
   },
-  "sourceCodeUrl": "https://github.com/rubybrowncoat/Starsector-Shadowy-Broker-Releases",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=17877.0",
   "releases": [],

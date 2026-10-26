@@ -22,7 +22,8 @@ import {
   aiFilterIsOn, aiFilterOff, countedAreas, keepsForAi, withPreset,
 } from '../ai_filter.js';
 import {
-  ANY_GAME, NO_GAME, NO_REQUIREMENTS, NOT, ONLY, SWITCHES, aiFilterWords, describeFilters,
+  ANY_GAME, NO_GAME, NO_REQUIREMENTS, NOT, ONLY, POSTED_ON, SWITCHES, aiFilterWords,
+  describeFilters, postedOn,
   filterQuery, filtersToAddress, keepFilters, matchingSaved, readFilters, readSavedFilters,
   restoreSaved, savedFiltersJson, savedNamed, withSaved, withoutSaved,
 } from '../filter_set.js';
@@ -113,6 +114,75 @@ export function forgetSearch() {
   } catch {
     // Without storage nothing was saved, so there is nothing to forget.
   }
+}
+
+/// Home's own filters, kept apart from Browse's: a set of filters as a query
+/// string (see `filter_set.js`). They are not in Home's address, which stays
+/// `#/home`. Home reads and changes them; Browse only reads them, to copy them.
+const HOME_FILTERS_KEY = 'starmodderHomeFilters';
+/// Home's filters for this visit, kept here too so they still work when the
+/// browser refuses storage.
+let homeFiltersThisVisit = null;
+
+export function homeFilters() {
+  if (homeFiltersThisVisit != null) return homeFiltersThisVisit;
+  try {
+    homeFiltersThisVisit = localStorage.getItem(HOME_FILTERS_KEY);
+  } catch {
+    // Storage is blocked: start with every filter off.
+  }
+  // Every filter off, every game version.
+  if (homeFiltersThisVisit == null) homeFiltersThisVisit = 'game=any';
+  return homeFiltersThisVisit;
+}
+
+export function setHomeFilters(query) {
+  homeFiltersThisVisit = query;
+  try {
+    localStorage.setItem(HOME_FILTERS_KEY, query);
+  } catch {
+    // Kept for this visit only.
+  }
+}
+
+// Tabler icon (MIT): copy.
+const COPY_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+  + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+  + 'stroke-linejoin="round" focusable="false" aria-hidden="true">'
+  + '<path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666'
+  + 'a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666'
+  + 'a2.667 2.667 0 0 1 -2.667 -2.667z"/>'
+  + '<path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2'
+  + 'h10c.75 0 1.158 .385 1.5 1"/></svg>';
+
+/// A button that copies the other page's filters over this page's: Home's
+/// copies Browse's, and Browse's copies Home's. Copying replaces every filter,
+/// so the first press only asks. A press anywhere else, or the keyboard
+/// leaving the button, puts it back.
+export function copyFiltersButton(label, title, onCopy) {
+  const copy = el('button', { type: 'button', class: 'btn btn-with-icon', title },
+    [el('span', { class: 'button-icon', html: COPY_ICON }), label]);
+  const words = copy.lastChild;
+  const pressedElsewhere = (event) => {
+    if (!copy.contains(event.target)) stopAsking();
+  };
+  const stopAsking = () => {
+    copy.classList.remove('confirming');
+    words.textContent = label;
+    document.removeEventListener('pointerdown', pressedElsewhere);
+  };
+  copy.addEventListener('click', () => {
+    if (copy.classList.contains('confirming')) {
+      stopAsking();
+      onCopy();
+      return;
+    }
+    copy.classList.add('confirming');
+    words.textContent = 'Are you sure? Click to confirm.';
+    document.addEventListener('pointerdown', pressedElsewhere);
+  });
+  copy.addEventListener('blur', stopAsking);
+  return copy;
 }
 
 export async function render(root, parts) {
@@ -415,6 +485,11 @@ function drawControls(places, mods, state, onChange, onSaved, onLayout) {
   const { changed } = filters;
   saved = savedFiltersMenu(() => filterQuery(state, state.currentVersion), onSaved,
     state.currentVersion, { asPanel: atSide, gameLabel: gameLabelsOf(mods) });
+  // Copying Home's filters works like picking a saved filter: the filters are
+  // replaced, and the search and the sort are kept.
+  const copyFromHome = copyFiltersButton('Copy filters from Home',
+    'Use Home’s filters on Browse. Home’s filters stay the same.',
+    () => onSaved(homeFilters()));
 
   /// The sort in use before a search began, put back when the box is emptied.
   let sortBeforeSearch = null;
@@ -499,12 +574,15 @@ function drawControls(places, mods, state, onChange, onSaved, onLayout) {
     const phone = window.matchMedia('(max-width: 900px)').matches;
     side.append(
       filterPanel('Saved filters', saved.node, !phone),
-      filterPanel('Show', filters.switches, true),
+      filterPanel('Filter', filters.switches, true),
       filterPanel('Category', filters.chips, !phone),
+      filterPanel('From', filters.postedOnHolder, !phone),
+      filterPanel('AI use', filters.aiHolder, !phone, filters.aiAllOrNone),
       // The list starts on the current release. Few readers change it.
       filterPanel('Game version', filters.versionsHolder, false),
       filterPanel('Requires', filters.requiresDropdown, !phone),
-      filterPanel('AI use', filters.aiHolder, !phone, filters.aiAllOrNone),
+      // In a box of its own, so the column does not stretch the button.
+      el('div', {}, [copyFromHome]),
     );
     return;
   }
@@ -516,10 +594,12 @@ function drawControls(places, mods, state, onChange, onSaved, onLayout) {
   top.append(el('div', { class: 'filters' }, [
     filters.gameDropdown,
     filters.requiresDropdown,
+    filters.postedOnDropdown,
     sortHolder,
     filters.switches,
     filters.aiMenu,
     saved.node,
+    copyFromHome,
   ]));
 }
 
@@ -617,10 +697,25 @@ export function filterControls(mods, state, onChange,
     // All and None change the parts, which only Custom shows.
     aiAllOrNone.classList.toggle('unused', state.ai.preset !== 'custom');
   };
+  // At the side, where a mod was posted is a list with counts, like the game
+  // versions.
+  const postedOnHolder = el('div', {});
+  const drawPostedOn = () => {
+    if (!atSide) return;
+    const wouldMatch = mods.filter((mod) => matchesFilters(mod, { ...state, from: '' }));
+    const entries = POSTED_ON.map((option) => ({
+      value: option.key, label: option.label,
+      count: wouldMatch.filter(option.keep).length,
+    }));
+    clear(postedOnHolder);
+    postedOnHolder.append(choiceList(entries, state.from,
+      (v) => { state.from = v; changed(); }));
+  };
   const changed = () => {
     drawChips();
     drawAiFilter();
     drawVersions();
+    drawPostedOn();
     onChange();
   };
 
@@ -643,6 +738,13 @@ export function filterControls(mods, state, onChange,
         ...Object.fromEntries(versions.map((v) => [v.family, `${v.label} (${v.count})`])),
         [NO_GAME]: `No game version (${mods.filter((mod) => !mod.gameVersion).length})`,
       },
+    });
+
+  const postedOnDropdown = dropdown('From', POSTED_ON.map((option) => option.key),
+    state.from, (v) => { state.from = v; changed(); },
+    {
+      anyLabel: 'Anywhere',
+      labels: Object.fromEntries(POSTED_ON.map((option) => [option.key, option.label])),
     });
 
   const categoryDropdown = categories === 'dropdown'
@@ -691,10 +793,11 @@ export function filterControls(mods, state, onChange,
   drawChips();
   drawAiFilter();
   drawVersions();
+  drawPostedOn();
 
   return {
     chips, versionsHolder, aiHolder, aiAllOrNone, aiMenu, requiresDropdown, gameDropdown,
-    categoryDropdown, switches, changed,
+    categoryDropdown, postedOnDropdown, postedOnHolder, switches, changed,
   };
 }
 
@@ -1022,6 +1125,7 @@ function clearFilters(state) {
   state.game = state.currentVersion || ANY_GAME;
   state.needs = '';
   state.category = '';
+  state.from = '';
   state.author = '';
   state.switches.clear();
   state.ai = aiFilterOff();
@@ -1079,6 +1183,7 @@ export function matchesFilters(mod, state) {
     if ((mod.needs || []).length) return false;
   } else if (state.needs && !(mod.needs || [])
       .some((n) => neededModKey(n.name) === neededModKey(state.needs))) return false;
+  if (!postedOn(mod, state.from)) return false;
   if (state.author && !(mod.authors || []).includes(state.author)) return false;
   for (const option of SWITCHES) {
     const picked = state.switches.get(option.key);

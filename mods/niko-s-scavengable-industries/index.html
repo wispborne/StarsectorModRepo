@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Niko's Scavengable Industries">
   <meta property="og:description" content="Adds a number (eleven, currently) of industries obtainable through looting, markets, and raiding!">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1563289442263892059/1563289442532331652/gas_giant_mining.png?ex=6add163f&amp;is=6adbc4bf&amp;hm=a88c5e9c25833b5d23eef6ae316a7245a5a41e485becb1d6adbc9e9e6b395a6e&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1563289442263892059/1563289442532331652/gas_giant_mining.png?ex=6adfb93f&amp;is=6ade67bf&amp;hm=67578fb968c05484874c40a40cbc3fdd20c683dc2f70d7b6bcbefb8533b3921d&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Niko's Scavengable Industries</h1><p>A Starsector mod by NikoTheGuyDude, zoeythegirlgal. For Starsector 0.98a. Version 1.0.0.</p><p>Adds a number (eleven, currently) of industries obtainable through looting, markets, and raiding!</p><p><a href="https://github.com/nikothedude/niko_scavengeableindustries/releases/download/1.0.0/Niko.s.Scavengable.Industries.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=36195.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1563289442263892059/1563289442263892059" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/nikothedude/niko_scavengeableindustries" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/magiclib/">MagicLib</a></li><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/lunalib/">LunaLib</a></li></ul><h2>Optional</h2><ul><li><a href="mods/patchlib/">PatchLib</a></li><li><a href="mods/building-menu-overhaul/">Building Menu Overhaul</a></li></ul><h2>Forum post</h2><p>Niko's Scavengable Industries</p><p>Requires MagicLib, LazyLib and LunaLib, with optional Patchlib integration!</p><p>Use Building Menu Overhaul for full functionality.</p><p>Adds a number (eleven, currently) of industries obtainable through looting, markets, and raiding!</p><p>These industries generally fill niche roles vanilla industries do not satisfy.</p><p>Examples</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Niko's Scavengable Industries</h1><p>A Starsector mod by NikoTheGuyDude, zoeythegirlgal. For Starsector 0.98a. Version 1.0.0.</p><p>Adds a number (eleven, currently) of industries obtainable through looting, markets, and raiding!</p><p><a href="https://github.com/nikothedude/niko_scavengeableindustries/releases/download/1.0.0/Niko.s.Scavengable.Industries.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=36195.0" rel="nofollow noopener">Forum thread</a> · <a href="https://discord.com/channels/187635036525166592/1563289442263892059/1563289442263892059" rel="nofollow noopener">Discord post</a> · <a href="https://github.com/nikothedude/niko_scavengeableindustries" rel="nofollow noopener">Source code</a></p><h2>Requires</h2><ul><li><a href="mods/magiclib-2/">MagicLib</a></li><li><a href="mods/lazylib/">LazyLib</a></li><li><a href="mods/lunalib/">LunaLib</a></li></ul><h2>Optional</h2><ul><li><a href="mods/patchlib/">PatchLib</a></li><li><a href="mods/building-menu-overhaul/">Building Menu Overhaul</a></li></ul><h2>Forum post</h2><p>Niko's Scavengable Industries</p><p>Requires MagicLib, LazyLib and LunaLib, with optional Patchlib integration!</p><p>Use Building Menu Overhaul for full functionality.</p><p>Adds a number (eleven, currently) of industries obtainable through looting, markets, and raiding!</p><p>These industries generally fill niche roles vanilla industries do not satisfy.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

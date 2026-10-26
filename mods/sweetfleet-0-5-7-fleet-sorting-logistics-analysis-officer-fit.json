@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "sweetfleet-0-5-7-fleet-sorting-logistics-analysis-officer-fit",
     "name": "SweetFleet 0.5.7 - fleet sorting, logistics analysis, officer fit",
@@ -21,7 +21,7 @@
     "imageUrl": "https://raw.githubusercontent.com/daerogami/sweet-fleet/dev/assets/icon.png",
     "summary": "SweetFleet is a utility mod that makes fleet management less of a chore: multi-criteria sorting with editable presets, a logistics/affordability screen, officer-to-ship fit suggestions, and Fleet-tab buttons so you can reach it without leaving the screen.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds multi-criteria fleet sorting, logistics analysis, and officer fit suggestions.",
+    "aiSummary": "Adds multi-criteria fleet sorting, logistics analysis, and officer fit suggestions to the fleet management interface.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -55,7 +55,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>SweetFleet is a utility QoL mod: multi-criteria fleet sorting with editable global presets, a logistics/affordability screen (overreach flags + Efficiency Overhaul hints), officer-fit suggestions (including your commander), and SF Sort / SF Settings on the Fleet tab. Hotkeys F8 (sort) / F7 (analyze). Requires LazyLib; Console Commands optional.<br>Developed with heavy use of Cursor Auto mode (AI coding agents) — I directed design and tested in-game; report bugs with starsector.log.</p><pre><code>Changelog:\n0.5.7\nAdded - civilian hull sorting parameter\nChanged - the default sort preset is now a more thorough chain\n0.5.6\nAdded - First public release (sort presets, analysis, officer fit, Fleet-tab buttons)\nFixed - Officer-fit / cost-analysis crashes, Fleet-tab drag crash, button hover flicker</code></pre><pre><code>Save Compatibility Notice\nSafe to add or remove mid-campaign. Sort presets live in saves/common and survive mod updates.</code></pre><p>Download: <a href=\"https://github.com/daerogami/sweet-fleet/releases/download/0.5.7/SweetFleet-0.5.7.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/daerogami/sweet-fleet/releases/download/0.5.7/SweetFleet-0.5.7.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35839\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35839</a></p><p><a href=\"https://github.com/daerogami/sweet-fleet/raw/dev/assets/icon.png\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/daerogami/sweet-fleet/raw/dev/assets/icon.png</a></p>",
-  "aiDescription": "Provides multi-criteria sorting with editable presets and a logistics screen for analyzing supply and fuel costs. Suggests optimal officer assignments based on skills and hull types. Includes Fleet-tab buttons and hotkeys for quick access to these features.",
+  "aiDescription": "Provides multi-criteria sorting with editable presets and a logistics screen for analyzing supply, fuel, and value. Suggests optimal officer assignments based on hull type and skill. Adds buttons to the Fleet tab for easy access to sorting and settings.",
   "saveCompatibilityText": "Save-safe: Yes - add or remove mid-campaign",
   "updateCompatibilityText": "Sort presets live in saves/common and survive mod updates.",
   "removalCompatibilityText": "Save-safe: Yes - add or remove mid-campaign",
@@ -63,7 +63,7 @@
   "canUpdate": "yes",
   "canRemove": "yes",
   "aiUse": {
-    "quote": "This mod was developed with heavy use of Cursor Auto mode (AI coding agents). I directed the design and tested in-game; the implementation was largely produced by those models.",
+    "quote": "This mod was developed with heavy use of Cursor Auto mode (AI coding agents). I directed the design and tested in-game; the implementation was largely produced by those models. Treat it accordingly - please report bugs with a starsector.log if something breaks.",
     "usesAi": true,
     "uses": [
       {
@@ -142,8 +142,8 @@
     }
   ],
   "changelog": {
-    "0.5.7": "Added civilian hull sorting parameter\nChanged the default sort preset to a more thorough chain",
-    "0.5.6": "Fixed a crash when opening officer-fit suggestions\nFixed a crash in cost analysis when a ship was flagged for hull value\nFixed SF Sort / SF Settings hover flicker\nPreset names with a percent sign are cleaned to avoid display errors",
+    "0.5.7": "Added civilian hull sorting parameter\n Changed the default sort preset to a more thorough chain",
+    "0.5.6": "Fixed a crash when opening officer-fit suggestions\n Fixed a crash in cost analysis when a ship was flagged for hull value\n Fixed SF Sort / SF Settings hover flicker\n Preset names with a percent sign are cleaned to avoid display errors",
     "0.5.5": "Fixed Fleet-tab crash when dragging a ship with the SweetFleet buttons shown"
   },
   "sourceCodeUrl": "https://github.com/daerogami/sweet-fleet",
@@ -153,5 +153,11 @@
   "releases": [],
   "threadLastPostOn": "2026-10-08",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Console Commands",
+      "id": "console-commands"
+    }
+  ]
 }

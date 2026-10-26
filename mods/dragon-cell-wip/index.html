@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Dragon Cell</h1><p>A Starsector mod by tfsdragon. For Starsector 0.98a.</p><p>Overview: This faction are mainly located inside a new black hole system on the north east side of the map far away from the core worlds and a single station located in Yma and is mainly a civilization of small space lizard looking mammals(yes mammals :3) whose fighting stratagem involves on swarming their enemies with a lot of fighters on the field while dealing damage with sturdy ships.</p><p><a href="https://drive.google.com/drive/folders/10OMCzj6AyZu8odNZQllrJ8ufqvMdU2Oa" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=34073.0" rel="nofollow noopener">Forum thread</a></p><h2>Requires</h2><ul><li><a href="mods/nexerelin/">Nexerelin</a></li><li><a href="mods/magiclib/">MagicLib</a></li><li><a href="mods/lazylib/">LazyLib</a></li></ul><h2>Forum post</h2><p>NOTE: Will pretty much be in a sort of developer hell mode since I will occasionally update my mod depending on my IRL time. So don't expect too much update being thrown inside the mod.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Dragon Cell</h1><p>A Starsector mod by tfsdragon. For Starsector 0.98a.</p><p>Overview: This faction are mainly located inside a new black hole system on the north east side of the map far away from the core worlds and a single station located in Yma and is mainly a civilization of small space lizard looking mammals(yes mammals :3) whose fighting stratagem involves on swarming their enemies with a lot of fighters on the field while dealing damage with sturdy ships.</p><p><a href="https://drive.google.com/drive/folders/10OMCzj6AyZu8odNZQllrJ8ufqvMdU2Oa" rel="nofollow noopener">Download page</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=34073.0" rel="nofollow noopener">Forum thread</a></p><h2>Requires</h2><ul><li><a href="mods/nexerelin/">Nexerelin</a></li><li><a href="mods/magiclib-2/">MagicLib</a></li><li><a href="mods/lazylib/">LazyLib</a></li></ul><h2>Forum post</h2><p>NOTE: Will pretty much be in a sort of developer hell mode since I will occasionally update my mod depending on my IRL time. So don't expect too much update being thrown inside the mod.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

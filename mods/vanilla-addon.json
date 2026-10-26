@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "vanilla-addon",
     "name": "Vanilla addon - variants mod",
@@ -15,7 +15,7 @@
     "imageUrl": "https://fractalsoftworks.com/forum/index.php?action=dlattach;attach=12020;type=avatar",
     "summary": "This mod adds 296+ (new variants in vanilla game. Only variants of vanilla ships. There is no new ships in this mod. None :)",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds over 296 new ship variants to vanilla fleets without changing fleet composition or adding new ships.",
+    "aiSummary": "Adds over 296 new variants to vanilla ships, randomizing them in vanilla fleets without changing fleet composition or adding new ships.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "http://download1531.mediafire.com/2u5q4c1kdkngDabSNlEikoV83Qdy6U8g8xix-5Ph1mFpkW3Ej2I1J4ZIfR5tDRycJb1OKBGhCF0sal1DOHZbGwDRbA9NdtpnBSE8-8NVRcD3HjeDKLP_GXxE66MGohp4Tg2YQdcwFxnHdZlcqvZaxpoRG_08ipEkAJQY5dTLQaOT/gtke2cri2dmbbol/addon_v2.1.zip",
@@ -34,7 +34,7 @@
   "descriptionHtml": "First of all most important thing: this mod wouldn't be possible if there wasn't master coder LAAAAAAAAZYYYYYY WIIIIZAAAAAAARD (LazyWizard). All i have was idea and this dude make my idea reality :) So he did all new code and i did all variants :)<br><br><div class=\"align-center\"><strong><span class=\"size-biggest\"><u><a href=\"http://www.mediafire.com/?gtke2cri2dmbbol\" rel=\"nofollow noopener\" target=\"_blank\">VANILLA ADDON v2.1</a></u></span></strong></div><br><br>This mod adds 296+ (new variants in vanilla game. Only variants of vanilla ships. There is no new ships in this mod. None :)<br>This mod randomize all vanilla variants in all vanilla fleets. It do NOT CHANGE vanilla fleets composition. So , this is mod for all those people who love to play pure vanilla game it will not introduce any new weapon, nothing. All variants are in vanilla OP boundaries. <br>So, to sum it. You will face same vanilla fleets with same ships BUT all ships will have different variants every time new fleet is spawn. Well i hope you like it :)<br><br>Update 2.1:<br>Added new \"elite\", variants for Paragon (Alex's Paragon ;D, he choose it), Onslaught, Dominator, Odyssey, Medusa, Hammerhead and Enforcer. This variants have 50% more OP so they can simulate AI captains with Technology skill on max :) <br><br>Version 2.0 <br>So, what did I do in this version?<br><br>Pirates - have own set of variants.<br>Independents - have own set of variants.<br>Hegemony - have own set of variants.<br>Tri - have own set of variants.<br><br>This means that all faction will have variants that will only appears in that fraction fleets.<br><br>Compatible with other mods that use vanilla fleets compositions.<br><br><strong>UOMOZ CORVUS COMPATIBILITY EXPLANATION:</strong><br><br>Ok people with LW guidance i manage to make UC compatible with vanilla addon mod. So this is what you must do:<br><br>1. Change Corvus.java located in Uomoz Corvus\\data\\scripts\\world\\corvus    with this one: <a href=\"http://www.mediafire.com/view/?hacihaq6cj929po\" rel=\"nofollow noopener\" target=\"_blank\">http://www.mediafire.com/view/?hacihaq6cj929po</a><br><br>OR<br><br>2. In Locate Corvus.java in Uomoz Corvus\\data\\scripts\\world\\corvus  open Corvus.java and find this:<br><pre><code>                SectorEntityToken token = system.createToken(0, 15000);<br>\t\tHegemonySDFSpawnPoint sdfSpawn = new HegemonySDFSpawnPoint(sector, system, 30, 1, token, hegemonyStation);<br>\t\tspawnSDF(sector, system, hegemonyStation); <br>\t\t          <br></code></pre>Now, change last line so it go like this:<br><pre><code>                SectorEntityToken token = system.createToken(0, 15000);<br>\t\tHegemonySDFSpawnPoint sdfSpawn = new HegemonySDFSpawnPoint(sector, system, 30, 1, token, hegemonyStation);<br> \t\tsdfSpawn.spawnFleet();           <br></code></pre><br>Both methods do same thing :)<br>That is it. Now UC is compatibile with Vanilla addon, but remember if you want to play UC without vanilla addon you must get back that line or entire Corvus.java.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Randomizes the variants of vanilla ships in all vanilla fleets. It does not introduce new weapons or change fleet composition, keeping all variants within vanilla OP boundaries. Faction-specific variant sets are added for Pirates, Independents, Hegemony, and Tri.",
+  "aiDescription": "Adds over 296 new variants to vanilla ships, randomizing them in vanilla fleets without changing fleet composition or adding new ships. Each faction receives its own unique set of variants, ensuring distinct appearances for Pirates, Independents, Hegemony, and Tri fleets. Version 2.1 introduces elite variants with 50% more OP for specific ships to simulate high-tech AI captains.",
   "aiUse": {},
   "rawCategories": [],
   "gallery": [],
@@ -51,7 +51,7 @@
   ],
   "changelog": {
     "2.1": "Added new \"elite\", variants for Paragon (Alex's Paragon ;D, he choose it), Onslaught, Dominator, Odyssey, Medusa, Hammerhead and Enforcer. This variants have 50% more OP so they can simulate AI captains with Technology skill on max :)",
-    "2.0": "So, what did I do in this version?\n\nPirates - have own set of variants.\nIndependents - have own set of variants.\nHegemony - have own set of variants.\nTri - have own set of variants.\n\nThis means that all faction will have variants that will only appears in that fraction fleets."
+    "2.0": "So, what did I do in this version?\n\nPirates - have own set of variants.\nIndependents - have own set of variants.\nHegemony - have own set of variants.\nTri - have own set of variants.\n\nThis means that all faction will have variants that will only appears in that fraction fleets.\n\nCompatible with other mods that use vanilla fleets compositions."
   },
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=4605.0",

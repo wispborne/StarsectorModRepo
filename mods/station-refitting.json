@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "station-refitting",
     "name": "Station Refitting",
@@ -17,10 +17,10 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "1.0.0",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1437171102626611282/1437171103691702272/screenshot079.png?ex=6adc66a4&is=6adb1524&hm=4e2d5f0496d08d7b2ea6aa64e51ac2b4b3304578e0e848a6781f9c52d2fad168&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1437171102626611282/1437171103691702272/screenshot079.png?ex=6adf09a4&is=6addb824&hm=e85ad2b18881ffc31f36bc55e797bbc8c5d08067a379d6289fa70a33c1f2998c&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1437171102626611282/1437171103691702272/screenshot079.png?ex=6adfb264&is=6ade60e4&hm=c42db910b5546e337dc318e38dc71a94bb7cf3e46be10287ef3e74f7defd9a63&",
     "summary": "Enables station refitting. Variants save across upgrades, damage, and are only lost if the station is deconstructed.",
     "summaryIsGenerated": false,
     "aiSummary": "Enables station refitting and autogenerates OP costs for stations.",
@@ -45,7 +45,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Enables station refitting. Variants save across upgrades, damage, and are only lost if the station is deconstructed.<br>Additionally, autogenerates OP costs for stations, even modded. Hullmod blacklists are also in place, to prevent things getting <em>too</em> silly.</p><p>Can be <strong>added</strong> and <strong>removed</strong> from saves.</p><p>To use this mod, click your station industry and then the refit button.</p><p>Download: <a href=\"https://github.com/nikothedude/Station-Refitting/releases/\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/nikothedude/Station-Refitting/releases/</a><br>Repo: <a href=\"https://github.com/nikothedude/Station-Refitting\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/nikothedude/Station-Refitting</a><br>Forum: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=34439\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=34439</a></p>",
-  "aiDescription": "Enables station refitting. Variants save across upgrades and damage, and are only lost if the station is deconstructed. Autogenerates OP costs for stations, even modded ones, using a hullmod blacklist to prevent excessive power.",
+  "aiDescription": "Enables station refitting, allowing variants to save across upgrades and damage. Autogenerates OP costs for stations, including modded ones, using a hullmod blacklist to prevent excessive power.",
   "saveCompatibilityText": "CAN BE ADDED AND REMOVED FROM SAVES AT WILL",
   "removalCompatibilityText": "CAN BE ADDED AND REMOVED FROM SAVES AT WILL",
   "canAdd": "yes",
@@ -58,7 +58,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1437171102626611282/1437171103691702272/screenshot079.png?ex=6adf09a4&is=6addb824&hm=e85ad2b18881ffc31f36bc55e797bbc8c5d08067a379d6289fa70a33c1f2998c&",
+      "url": "https://cdn.discordapp.com/attachments/1437171102626611282/1437171103691702272/screenshot079.png?ex=6adfb264&is=6ade60e4&hm=c42db910b5546e337dc318e38dc71a94bb7cf3e46be10287ef3e74f7defd9a63&",
       "aiCaption": "A game screen showing the refitting interface for a 'Star Fortress' station with hull features and mods listed.",
       "aiKind": "screenshot",
       "aiFit": "good",
@@ -69,7 +69,7 @@
     {
       "url": "https://github.com/nikothedude/Station-Refitting/releases/",
       "kind": "direct",
-      "label": "Download:",
+      "label": "https://github.com/nikothedude/Station-Refitting/releases/",
       "host": "github.com",
       "needsAnotherStep": true
     }
@@ -92,5 +92,11 @@
   "releases": [],
   "threadLastPostOn": "2026-08-03",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Station Augments",
+      "id": "station-augments"
+    }
+  ]
 }

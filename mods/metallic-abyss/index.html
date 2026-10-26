@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Metallic Abyss">
   <meta property="og:description" content="Just a set of reskins I made some time ago, now as MagicPaintjobs">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1362472098756563004/1362472099461202132/rat_aboleth.png?ex=6adf8686&amp;is=6ade3506&amp;hm=a8a809e7d0c4805dc675e8e30bdd4f34aa1d0fb931f120ba7b6130ab2bc4ebf8&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1362472098756563004/1362472099461202132/rat_aboleth.png?ex=6ae02f46&amp;is=6adeddc6&amp;hm=7fa4426d1a541b05998e84a23dd20e121689682568d0f3eaaa9ec5acf0de7396&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -118,6 +125,27 @@
             <label title="Leave the text out. The sparkle before the summary still marks it as AI.">
               <input type="radio" name="ai-note" value="hide">
               <span>Hide</span>
+            </label>
+          </div>
+        </div>
+      </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
             </label>
           </div>
         </div>

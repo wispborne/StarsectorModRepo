@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "detailed-combat-results",
     "name": "Detailed Combat Results",
@@ -19,13 +19,15 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "5.4.5",
     "imageUrl": "https://i.imgur.com/5GyrqKjl.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1356121233439330474/1356121233594515466/logo.jpg?ex=6adf7e11&is=6ade2c91&hm=1db2bf716f36090abd63084a1c9caafea6d2ef77a1a09e83f596397b9e208270&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1356121233439330474/1356121233594515466/logo.jpg?ex=6ae026d1&is=6aded551&hm=8674f56cee43a5d6116c38167ab8af56e6db848cd78fb1931dd92b88736a7137&",
     "summary": "Ever wonder how many ships you've killed? Or how a new ship load-out you've created is performing in combat? Or how useless a cautious officer is in an Onslaught? No more guessing, now you can know for sure!",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds detailed post-combat reports showing ship performance, weapon stats, and kill counts.",
+    "aiSummary": "Adds detailed post-combat reports and performance tracking for ships and weapons.",
+    "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://raw.githubusercontent.com/Nickwwest/StarSectorMods/main/mods/DetailedCombatResults.5.4.5.zip",
@@ -37,6 +39,9 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1356121233439330474/1356121233439330474",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "nicknames": [
+      "DCR"
+    ],
     "lastReleaseDate": "2026-10-09T00:00:00.000Z",
     "addedOn": "2017-01-10",
     "threadLastPostOn": "2026-10-18",
@@ -47,8 +52,10 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Get a weapon level breakdown of damage per battle along with the ability to aggregate data over multiple battles.</p>",
-  "aiDescription": "Provides a detailed combat report on the Intel screen summarizing ship performance over time or per battle. Includes individual weapon performance data and kill counts for various hull sizes. Configured via LunaLib and compatible with most other mods.",
+  "aiDescription": "Provides detailed post-combat reports on the Intel screen. Includes summaries of ship performance over time or per battle, individual weapon performance, and kill counts by hull size. Configured via LunaLib and compatible with most other mods.",
+  "saveCompatibilityText": "Easy to use, just add the mod and you're good to go.",
   "removalCompatibilityText": "Disabling the mod is possible, see instructions below",
+  "canAdd": "yes",
   "canRemove": "yes",
   "aiUse": {},
   "rawCategories": [
@@ -56,7 +63,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1356121233439330474/1356121233594515466/logo.jpg?ex=6adf7e11&is=6ade2c91&hm=1db2bf716f36090abd63084a1c9caafea6d2ef77a1a09e83f596397b9e208270&",
+      "url": "https://cdn.discordapp.com/attachments/1356121233439330474/1356121233594515466/logo.jpg?ex=6ae026d1&is=6aded551&hm=8674f56cee43a5d6116c38167ab8af56e6db848cd78fb1931dd92b88736a7137&",
       "aiCaption": "A green magnifying glass icon with a bar chart inside, representing the Detailed Combat Results mod.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -96,10 +103,10 @@
   ],
   "changelog": {
     "5.4.5": "Fixed error (NoSuchMethodError) in missile interception tracking that could occur after a Starsector update",
-    "5.4.4": "Many, many performance improvements (code is about 2x as fast)\nHits counting is more accurate\nOther minor bug fixes",
-    "5.4.3": "Hits are now counted properly\nMany other minor code bug fixes"
+    "5.4.4": "Many, many performance improvements (code is about 2x as fast)\n Hits counting is more accurate\n Other minor bug fixes",
+    "5.4.3": "Hits are now counted properly\n Many other minor code bug fixes"
   },
-  "license": "MIT License (Do what ever you want, creators not liable)",
+  "license": "MIT License",
   "sourceCodeUrl": "https://bitbucket.org/NickWWest/starsectorcombatanalytics",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=11551",

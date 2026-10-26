@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "stardust-ventures",
     "name": "Stardust Ventures",
@@ -15,13 +15,14 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "0.9.6",
     "imageUrl": "https://i.imgur.com/eDRviol.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1363273985625952386/1363273985785204786/stardust_ventures_crest.png?ex=6adf2596&is=6addd416&hm=c060007752d341dd353b92ec6c1f4c9ab19bbf7028cf9580a9f41ef7be4610d4&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1363273985625952386/1363273985785204786/stardust_ventures_crest.png?ex=6adfce56&is=6ade7cd6&hm=0183ee394e8bf09c6f37c2b54ede15cf6b1d4a6dfe875cbd8202cc37c0833adc&",
     "summary": "Stardust Ventures was a minor shipyard during the years of the Domain, focused almost exclusively on the creation of long range exploration and colonization ships. Their proprietary core system allowed safe passage through hyperspace storms and other dangerous phenomena.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a new faction with light, fast midline ships designed for long-range exploration and hyperspace travel.",
+    "aiSummary": "Adds a new faction, shipyard, and fleet of exploration and combat ships.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -30,7 +31,7 @@
       "needsAnotherStep": false
     },
     "downloadCount": 1,
-    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22966.msg345175#msg345175",
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22966.0",
     "discordUrl": "https://discord.com/channels/187635036525166592/1363273985625952386/1363273985625952386",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
@@ -42,7 +43,7 @@
     "needs": [
       {
         "name": "MagicLib",
-        "id": "magiclib"
+        "id": "magiclib-2"
       },
       {
         "name": "LazyLib",
@@ -55,7 +56,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Stardust Ventures is a minor shipyard in control of the Talia system, just northeast of the core worlds. Many of the ships and equipment of this shipyard have been integrated into the vanilla midline fleets with the Hegemony, League, and Diktat all getting different sets of gear.</p><p>The mod is customizable, with the Faction and independent worlds shops able to be turned on or off for new saves. Either can also be can be added mid-save, though of course turning them off mid-save will not remove them.</p><p>Download:<br><a href=\"https://github.com/Mephansteras/Stardust_Ventures/releases/download/stardust_ventures_v0.9.6/Stardust.Ventures.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Mephansteras/Stardust_Ventures/releases/download/stardust_ventures_v0.9.6/Stardust.Ventures.zip</a><br>Forum:<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=22966.msg345175#msg345175\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=22966.msg345175#msg345175</a></p>",
-  "aiDescription": "Introduces the Stardust Ventures corporation as a neutral faction with its own home system and colonies. Provides a variety of mainline, export, and pirate ships that feature extended fuel range and resistance to hyperspace hazards. Includes new weapons such as proton guns, fel lasers, plasma casters, and cloudburst missiles.",
+  "aiDescription": "Adds a new faction with its own home system and colonies, along with a variety of ships, weapons, and hullmods. The ships are designed for long-range exploration with enhanced fuel efficiency and hyperspace hazard resistance, and offer fleet-wide agility bonuses when used together. The mod includes export versions of ships for other factions, optional shops on independent planets, and a custom Nexerelin start scenario.",
   "saveCompatibilityText": "This mod is fairly configurable, and is safe to add mid-save.",
   "canAdd": "yes",
   "aiUse": {},
@@ -66,14 +67,14 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1363273985625952386/1363273985785204786/stardust_ventures_crest.png?ex=6adf2596&is=6addd416&hm=c060007752d341dd353b92ec6c1f4c9ab19bbf7028cf9580a9f41ef7be4610d4&",
+      "url": "https://cdn.discordapp.com/attachments/1363273985625952386/1363273985785204786/stardust_ventures_crest.png?ex=6adfce56&is=6ade7cd6&hm=0183ee394e8bf09c6f37c2b54ede15cf6b1d4a6dfe875cbd8202cc37c0833adc&",
       "aiCaption": "A logo featuring four cyan four-pointed stars arranged in a diamond pattern on a black background.",
       "aiKind": "logo",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1363273985625952386/1423445687634362368/stardust_storm_herald_heg.png?ex=6adf33da&is=6adde25a&hm=9f5ee7fcfec1acbd12822bd936ebbb32b7dddad362b2a0016b550afeb4b10b2c&",
+      "url": "https://cdn.discordapp.com/attachments/1363273985625952386/1423445687634362368/stardust_storm_herald_heg.png?ex=6adfdc9a&is=6ade8b1a&hm=8418369fff2ff65b5ac2100edf0d94e01f169ddae8f72fe06d8b0aa2975ddbe7&",
       "aiCaption": "Top-down view of a large grey and orange spaceship with multiple engine pods.",
       "aiKind": "art",
       "aiFit": "good",
@@ -148,16 +149,22 @@
     }
   ],
   "changelog": {
-    "0.9.6": "Rebalanced Storm Herald OP and DP to match Eagle\n\t\t\t\t\t\t\t\tUpdated some variants\n\t\t\t\t\t\t\t\tAdded Hegemony Storm Herald variant\n\t\t\t\t\t\t\t\tSlightly increased tracking of Diana's weapon projectiles\n\t\t\t\t\t\t\t\tReduced the DP cost of the Cosmic Horror",
-    "0.9.5": "Stargazer Resprite and Hullmod addition to mark planets with ruins as important\n\t\t\t\t\t\t\t\tDiana's weapons now have mining capabilities in Nex\n\t\t\t\t\t\t\t\tFixed some minor descriptions\n\t\t\t\t\t\t\t\tUpdated some variants\n\t\t\t\t\t\t\t\tOort Travelers get some minor sprite updates and dimmable cores",
-    "0.9.4": "Crash Fix\n\t\t\t\t\t\t\tFixed a crash with nex random sector and adjusted sector\n\t\t\t\t\t\t\tAdded SDV Ship name list\n\t\t\t\t\t\t\tFixed Cloudburst missile description"
+    "0.9.6": "Rebalanced Storm Herald OP and DP to match Eagle\n      Updated some variants\n      Added Hegemony Storm Herald variant\n      Slightly increased tracking of Diana's weapon projectiles\n      Reduced the DP cost of the Cosmic Horror",
+    "0.9.5": "Stargazer Resprite and Hullmod addition to mark planets with ruins as important\n      Diana's weapons now have mining capabilities in Nex\n      Fixed some minor descriptions\n      Updated some variants\n      Oort Travelers get some minor sprite updates and dimmable cores",
+    "0.9.4": "Fixed a crash with nex random sector and adjusted sector\n      Added SDV Ship name list\n      Fixed Cloudburst missile description"
   },
   "sourceCodeUrl": "https://github.com/Mephansteras/Stardust_Ventures",
   "supportLinks": [],
-  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22966.msg345175#msg345175",
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22966.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1363273985625952386/1363273985625952386",
   "releases": [],
   "threadLastPostOn": "2026-09-24",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "LunaLib",
+      "id": "lunalib"
+    }
+  ]
 }

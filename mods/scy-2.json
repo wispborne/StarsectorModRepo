@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "scy-2",
     "name": "Scy",
@@ -18,10 +18,10 @@
     "gameVersion": "0.95.1a",
     "modVersion": "1.66rc3",
     "imageUrl": "https://i.imgur.com/gNzbvcT.jpg",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1215684494057541683/1215684494779093022/banner.png?ex=6adf7369&is=6ade21e9&hm=9addf199fe2de30472262592f4307becbc5608e8add389c8ef24464bac82f003&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1215684494057541683/1215684494779093022/banner.png?ex=6ae01c29&is=6adecaa9&hm=e0846cff8fc7f2692b528be6d29946b1daf085f84b8c4ed684d9bd232528dd17&",
     "summary": "Skirmisher to the core, Scyan ships have a deep flux pool to make the most out of an hit-run, and slightly better speed to manage to disengage. On the other hand they have slightly more fragile hulls, narrow shields, terrible flux dissipation (relying on venting instead) and fewer weapon mounts.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a new faction with skirmisher-style ships featuring modular armor, teleporting guns, and phase missiles.",
+    "aiSummary": "Adds a faction of skirmisher ships with deep flux pools, wolf pack tactics, and unique weapons like teleporting guns and phase missiles.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -43,7 +43,7 @@
       },
       {
         "name": "MagicLib",
-        "id": "magiclib"
+        "id": "magiclib-2"
       }
     ]
   },
@@ -52,16 +52,18 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>As the previous maintainer is unable to update as of this moment, here is the latest patch for SCY.</p><p>Blood-thirsty pirates for some, ruthless slavers for others, treacherous spies for the rest... The Sector is a tough place to live in, and like many others the Scyan people have been forced to compromise their principles in order to survive.</p><p>All credits to Tartiflette and those he credited. Please consider subscribing to his Patreon: <a href=\"https://www.patreon.com/tartiflette\" rel=\"nofollow noopener\" target=\"_blank\">https://www.patreon.com/tartiflette</a>.</p><p><strong>This can be added mid-save and the faction will spawn.</strong></p><p>Download: <a href=\"https://github.com/Starficz/scy-nation/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Starficz/scy-nation/releases/latest</a><br>Forum: <a href=\"http://fractalsoftworks.com/forum/index.php?topic=8010.0\" rel=\"nofollow noopener\" target=\"_blank\">http://fractalsoftworks.com/forum/index.php?topic=8010.0</a></p>",
-  "aiDescription": "Introduces the Scy Nation faction, characterized by fragile hulls, narrow shields, and high damage output. Ships rely on wolf pack tactics and advanced engineering features like laser torpedoes and miniguns. The mod includes custom weapons, ship systems, and a unique origin story involving a nomadic colony.",
+  "aiDescription": "Introduces the Scy Nation faction, featuring ships designed for hit-and-run combat with fragile hulls and narrow shields. These vessels rely on venting for flux dissipation and use wolf pack tactics to isolate targets. The faction mixes advanced engineering to produce unique ships and weapons, including modular armor, teleporting guns, and laser torpedoes.",
   "saveCompatibilityText": "This can be added mid-save and the faction will spawn.",
+  "updateCompatibilityText": "Always DELETE the old version before extracting the new one",
   "canAdd": "yes",
+  "canUpdate": "no",
   "aiUse": {},
   "rawCategories": [
     "Faction Mods"
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1215684494057541683/1215684494779093022/banner.png?ex=6adf7369&is=6ade21e9&hm=9addf199fe2de30472262592f4307becbc5608e8add389c8ef24464bac82f003&",
+      "url": "https://cdn.discordapp.com/attachments/1215684494057541683/1215684494779093022/banner.png?ex=6ae01c29&is=6adecaa9&hm=e0846cff8fc7f2692b528be6d29946b1daf085f84b8c4ed684d9bd232528dd17&",
       "aiCaption": "A wide title banner with the text \"Scy Nation\" and the tagline \"Keep the future alive.\" against a red nebula background with ship sprites.",
       "aiKind": "banner",
       "aiFit": "good",
@@ -170,16 +172,16 @@
     }
   ],
   "changelog": {
-    "1.66": "[RC3]\n - Fixed Scyan fleet effect not being removed properly.\n\n[RC2]\n - Added a null check to prevent an obscure crash in refit related to modular armor.\n - Scyan Engineering hullmod now use merged modSettings.json entries to define incompatibilities. The tooltip diplays that list.\n\n - Removed the Lightweight Plating, Reactive Armor and Minimal Preparation hullmods, moved them to the Torchships And Deadly Armaments mod.\n - Added two tiny outpost stations in vanilla sectors to increase Scy's presence outside of Acheron, particularly with Nexerelin.\n - Removed the Lightweight Plating, Reactive Armor and Minimal Preparation hullmods, moved them to the Torchships And Deadly Armaments mod.\n - Added two tiny outpost stations in vanilla sectors to increase Scy's presence outside of Acheron, particularly with Nexerelin.\n\nBALANCING:\n - Mild miscellaneous buffs to:\n   . LVDS (range)\n   . Laser Torpedo Rack (op)\n\n - Siren-class cruiser:\n   . Base number of special teleporting shells reduced to 4 from 5. (regeneration unchanged at 50s per ammo)\n   . Toggling off the Siren ship system without firing returns the unused charge and negates the cooldown.\n   . Teleporting shell now only deals Frag damage. (to make it more usable to save an over-extended allied ship)\n\nBUGFIXES/IMPROVEMENTS:\n - Added a stat display to the Modular Armor hullmod\n - Fixed missing stealth mechanic for the player fleet.\n - Hopefully finally fixed the Keto's main gun crash.\n - Fixed missing system for the Aklys fighter.\n - Clarified many short descriptions and stats.",
-    "1.65": "BALANCING:\n - Cluster Torpedo Launcher: Added 3s arming time to the carrier missile.\n\nBUGFIXES/IMPROVEMENTS:\n - Fixed various crashes due to 0.95.1 API changes.\n - Removed the civilian and raider hullmods from all logistic ships.\n - Renamed the Manticore-class to Androphagos-class.",
-    "1.64": "[RC6] Fixed Nexerelin Random mode crash.\n[RC5]\n - Nemean Lion system now behaves properly under AI control.\n - Acheron's generation tweaked so that there is no longer so much empty space with the next procgen system.\n - Miniguns no longer listed as benefitting from energy modifiers (they still do, but the mount type shenanigans broke the refit screen).\n - Hopefully plugged the last memory leak from Scy.\n - Added Civilian and fake Militarized Subsystems hullmods built-in to all civies, as a horribly convoluted workaround to the skill thresholds issue.\n\nSingularity Torpedo:\n   . Removed from all variants and from Scy's available blueprints.\n   . It is now only available from rare salvage, and will probably be moved to Seeker/TaDA at some point along the Light Plating, Reactive Armor and Economical Maintenance hullmods.\n\nBALANCING:\n\n - Phased Missile Launcher: Ammo increased to 15 from 12.\n\n - Cluster Torpedo Launcher: Ammo increased to 10 from 6.\n\n - Arc Missile:\n   . Hp raised to 400 from 200,\n   . Damage stats messed with (but not the arcs),\n   . Rack OP cost lowered to 3 from 4.\n\n - KAcc mk.1:\n   . Damage per shot reduced to 150 from 160,\n   . DPS increased to 150 from 140,\n   . Flux to fire reduced to 165 from 173.\n   . Overall slightly more efficient with a cleaner stat card, fits better as a third alternative between the Railgun and LDA.\n\n - KAcc mk.2:\n   . Flux to fire reduced to 480 from 500,\n   . Now fires in bursts of 2 rounds.\n   . A smidgen more flux efficient, half the burst damage of the Heavy Needler, but a decent armor pen and causes very long overloads.\n\n - KAcc mk.3: DPS increased to 333 Kinetic dmg/s from 300.\n\n - HEMor mk.1: Flux to fire reduced to 210 from 235.\n\n - HEMor mk.2: Flux to fire reduced to 600 from 700.\n\n - Light Energy Blaster: Flux to fire reduced to 360 from 400.\n\n - Most PD weapons received the NO_TURN_BOOST_WHILE_IDLE tag with adjusted turn rates.\n\n - Balius-class freighter: Cargo capacity increased to 350 from 250.\n\n - Balius-class tanker: Fuel capacity increased to 600 from 500.\n\nBUGFIXES/IMPROVEMENTS:\n\n - Restored Nexerelin random mode compatibility for 0.95a.\n - Fixed *many* memory leaks. (Can't say how significant they were, but every bit helps I suppose)\n - Slight code optimization.\n - Fixed some typos here and there.\n - Cross-mods compatibilities updated.\n - Every single weapon was redrawn to ensure they are displayed sharp in the game. Lots of reworked muzzle and glow effects."
+    "1.66": "- Fixed Scyan fleet effect not being removed properly.\n\n[RC2]\n - Added a null check to prevent an obscure crash in refit related to modular armor.\n - Scyan Engineering hullmod now use merged modSettings.json entries to define incompatibilities. The tooltip diplays that list.\n\n - Removed the Lightweight Plating, Reactive Armor and Minimal Preparation hullmods, moved them to the Torchships And Deadly Armaments mod.\n - Added two tiny outpost stations in vanilla sectors to increase Scy's presence outside of Acheron, particularly with Nexerelin.\n - Removed the Lightweight Plating, Reactive Armor and Minimal Preparation hullmods, moved them to the Torchships And Deadly Armaments mod.\n - Added two tiny outpost stations in vanilla sectors to increase Scy's presence outside of Acheron, particularly with Nexerelin.\n\nBALANCING:\n - Mild miscellaneous buffs to:\n   . LVDS (range)\n   . Laser Torpedo Rack (op)\n\n - Siren-class cruiser:\n   . Base number of special teleporting shells reduced to 4 from 5. (regeneration unchanged at 50s per ammo)\n   . Toggling off the Siren ship system without firing returns the unused charge and negates the cooldown.\n   . Teleporting shell now only deals Frag damage. (to make it more usable to save an over-extended allied ship)\n\nBUGFIXES/IMPROVEMENTS:\n - Added a stat display to the Modular Armor hullmod\n - Fixed missing stealth mechanic for the player fleet.\n - Hopefully finally fixed the Keto's main gun crash.\n - Fixed missing system for the Aklys fighter.\n - Clarified many short descriptions and stats.",
+    "1.65": "- Cluster Torpedo Launcher: Added 3s arming time to the carrier missile.\n\nBUGFIXES/IMPROVEMENTS:\n - Fixed various crashes due to 0.95.1 API changes.\n - Removed the civilian and raider hullmods from all logistic ships.\n - Renamed the Manticore-class to Androphagos-class.",
+    "1.64": "Fixed Nexerelin Random mode crash.\n[RC5]\n - Nemean Lion system now behaves properly under AI control.\n - Acheron's generation tweaked so that there is no longer so much empty space with the next procgen system.\n - Miniguns no longer listed as benefitting from energy modifiers (they still do, but the mount type shenanigans broke the refit screen).\n - Hopefully plugged the last memory leak from Scy.\n - Added Civilian and fake Militarized Subsystems hullmods built-in to all civies, as a horribly convoluted workaround to the skill thresholds issue.\n\nSingularity Torpedo:\n   . Removed from all variants and from Scy's available blueprints.\n   . It is now only available from rare salvage, and will probably be moved to Seeker/TaDA at some point along the Light Plating, Reactive Armor and Economical Maintenance hullmods.\n\nBALANCING:\n\n - Phased Missile Launcher: Ammo increased to 15 from 12.\n\n - Cluster Torpedo Launcher: Ammo increased to 10 from 6.\n\n - Arc Missile:\n   . Hp raised to 400 from 200,\n   . Damage stats messed with (but not the arcs),\n   . Rack OP cost lowered to 3 from 4.\n\n - KAcc mk.1:\n   . Damage per shot reduced to 150 from 160,\n   . DPS increased to 150 from 140,\n   . Flux to fire reduced to 165 from 173.\n   . Overall slightly more efficient with a cleaner stat card, fits better as a third alternative between the Railgun and LDA.\n\n - KAcc mk.2:\n   . Flux to fire reduced to 480 from 500,\n   . Now fires in bursts of 2 rounds.\n   . A smidgen more flux efficient, half the burst damage of the Heavy Needler, but a decent armor pen and causes very long overloads.\n\n - KAcc mk.3: DPS increased to 333 Kinetic dmg/s from 300.\n\n - HEMor mk.1: Flux to fire reduced to 210 from 235.\n\n - HEMor mk.2: Flux to fire reduced to 600 from 700.\n\n - Light Energy Blaster: Flux to fire reduced to 360 from 400.\n\n - Most PD weapons received the NO_TURN_BOOST_WHILE_IDLE tag with adjusted turn rates.\n\n - Balius-class freighter: Cargo capacity increased to 350 from 250.\n\n - Balius-class tanker: Fuel capacity increased to 600 from 500.\n\nBUGFIXES/IMPROVEMENTS:\n\n - Restored Nexerelin random mode compatibility for 0.95a.\n - Fixed *many* memory leaks. (Can't say how significant they were, but every bit helps I suppose)\n - Slight code optimization.\n - Fixed some typos here and there.\n - Cross-mods compatibilities updated.\n - Every single weapon was redrawn to ensure they are displayed sharp in the game. Lots of reworked muzzle and glow effects."
   },
   "sourceCodeUrl": "https://bitbucket.org/CodingTartiflette/scy-nation-mod",
   "supportLinks": [
     {
       "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WYWX8DR5WPV8G",
       "type": "paypal",
-      "label": "PayPal"
+      "label": "Paypal"
     },
     {
       "url": "https://www.patreon.com/tartiflette",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "thorough-system-scan-was-system-wide-sensor-scan-en-translation",
     "name": "Thorough System Scan(was System Wide Sensor Scan) EN translation",
@@ -19,10 +19,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.2.3.1",
     "imageUrl": "https://i.ibb.co/xkzMSy2/013302v647ce6ck8szeq6z.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1363385456040873984/1363385456481403040/013302v647ce6ck8szeq6z.png?ex=6adf8d67&is=6ade3be7&hm=19f61f2eecba6433e41461f74a2931ef2a356327dee0d21fbbb03a5cbb18ba46&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1363385456040873984/1363385456481403040/013302v647ce6ck8szeq6z.png?ex=6ae03627&is=6adee4a7&hm=b8490d6d387fb28fc23d4a2210d02868742fa6b3641486045ceb4a98da4638f5&",
     "summary": "A mod that allows player fleet to scan entire star system at the cost of volatiles CR and time.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a campaign ability that allows the player to scan an entire star system for salvage and fleet locations at the cost of volatiles and ship readiness.",
+    "aiSummary": "Allows the player fleet to scan an entire star system to discover salvageable objects and track all fleets.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -56,7 +56,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>A mod that allows player fleet to scan entire star system at the cost of volatiles CR and time.<br>Made by Nitori_Tachyon<br>Fossic post: <a href=\"https://www.fossic.org/forum.php?mod=viewthread&amp;tid=15140&amp;extra=page%3D1\" rel=\"nofollow noopener\" target=\"_blank\">https://www.fossic.org/forum.php?mod=viewthread&amp;tid=15140&amp;extra=page%3D1</a><br>Forum link:<a href=\"https://fractalsoftworks.com/forum/index.php?topic=32638.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=32638.0</a><br>Github link:<a href=\"https://github.com/SaltyKarl/Thorough-System-Scan/tree/EN\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/SaltyKarl/Thorough-System-Scan/tree/EN</a><br>Requires both LunaLib and LazyLib<br>the rest is English translation of the Fossic post</p><h3>System Wide Sensor Scan</h3><h5>Adds an initially available campaign ability that allows the player to perform a System Wide Sensor Scan after a number of prerequisites have been met in order to discover salvage-worthy objects in the current system and temporarily have a view of all fleets in the system .</h5><p>The prerequisites are as follows:</p><p>Fleet sensor strength of at least 1000 (Can be adjusted via LunaLib).<br>Have enough volatiles in the cargo bay (see later for numerical calculations)<br>Be in the scanning position of the current system (see later for definition)</p><p>Skill effects are as follows:</p><p>-Consume a certain amount of volatiles<br>-Finds and marks salvageable objects across the system<br>-Temporarily obtains detailed information on the location and composition of all fleets in the system (from about three-quarters of the way through the end of the scan).<br>-Player fleets are highly visible and limited in movement speed during skill activation.<br>-Reduces the readiness of several ships in the fleet that provide sensor strength (see later for details).<br>-Reports the <strong>expected</strong> number of special items (including AI cores, ship blueprints, fighter wing blueprints, weapon blueprints, ship insertion blueprints, colony industrial specials, etc.) carried by all salvageable objects in the system at the completion of the scan, which may deviate slightly from the actual value (can be turned off in LunaLib)</p>",
-  "aiDescription": "Introduces a 'System-Scale Sensor Burst' ability that requires specific prerequisites, including fleet sensor strength and volatiles. Upon activation, the scan marks salvageable objects and provides temporary detailed information on all fleets in the system. The process consumes volatiles based on celestial bodies present and reduces the readiness of ships contributing to sensor strength.",
+  "aiDescription": "Adds a campaign ability that scans a whole star system, revealing salvageable items and the location of all fleets. The scan consumes volatiles and reduces the combat readiness of sensor-providing ships. It requires high fleet sensor strength and specific positioning within the system.",
   "saveCompatibilityText": "Can be added mid safe.",
   "canAdd": "yes",
   "aiUse": {},
@@ -66,7 +66,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1363385456040873984/1363385456481403040/013302v647ce6ck8szeq6z.png?ex=6adf8d67&is=6ade3be7&hm=19f61f2eecba6433e41461f74a2931ef2a356327dee0d21fbbb03a5cbb18ba46&",
+      "url": "https://cdn.discordapp.com/attachments/1363385456040873984/1363385456481403040/013302v647ce6ck8szeq6z.png?ex=6ae03627&is=6adee4a7&hm=b8490d6d387fb28fc23d4a2210d02868742fa6b3641486045ceb4a98da4638f5&",
       "aiCaption": "A Starsector system map showing the Zahratna Star System with orbital rings and various celestial bodies.",
       "aiKind": "screenshot",
       "aiFit": "good",
@@ -99,9 +99,9 @@
     }
   ],
   "changelog": {
-    "1.2.3.1": "bug fixes:\nfix for the volatile needed recalculation.",
-    "1.2.3": "bug fixes:\n(maybe) fixed the Memory leaks\nstar systems with a non stellar object as it's center no longer needs to be in scan location to scan",
-    "1.2.2.1": "Change:\nfor Performance reasons, rare item salvage log is generalized.\nbug fix:\nfix for making salvage log in hyperspace or some other non in system location causing CTD"
+    "1.2.3.1": "fix for the volatile needed recalculation.",
+    "1.2.3": "(maybe) fixed the Memory leaks\nstar systems with a non stellar object as it's center no longer needs to be in scan location to scan",
+    "1.2.2.1": "for Performance reasons, rare item salvage log is generalized.\nbug fix:\nfix for making salvage log in hyperspace or some other non in system location causing CTD"
   },
   "sourceCodeUrl": "https://github.com/SaltyKarl/Thorough-System-Scan",
   "supportLinks": [],

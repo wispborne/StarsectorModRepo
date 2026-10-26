@@ -12,6 +12,7 @@ import {
   preparePageScroll, restorePageScroll, searchHelpField, setAiSummaryMode, SITE_CODE_URL,
   setAiNoteChoice, setImageChoice, setInlinePictures,
   THEMES, applyTheme, setThemePreference, themePreference,
+  applyMotion, motionChoice, setMotionChoice,
   thumbnail, watchFavorites,
 } from './lib.js';
 import { address } from './address.js';
@@ -231,8 +232,10 @@ function mountSettings() {
     [...dialog.querySelectorAll('input[name="inline-pictures"]')];
   const aiNoteRadios = [...dialog.querySelectorAll('input[name="ai-note"]')];
   const themeRadios = mountThemeList(dialog.querySelector('#theme-list'));
+  const motionRadios = [...dialog.querySelectorAll('input[name="motion"]')];
 
   applyTheme();
+  applyMotion();
   open.addEventListener('click', () => {
     const ai = aiSummaryMode();
     for (const radio of aiRadios) radio.checked = radio.value === ai;
@@ -244,6 +247,8 @@ function mountSettings() {
     for (const radio of aiNoteRadios) radio.checked = radio.value === aiNote;
     const theme = themePreference();
     for (const radio of themeRadios) radio.checked = radio.value === theme;
+    const motion = motionChoice();
+    for (const radio of motionRadios) radio.checked = radio.value === motion;
     dialog.showModal();
   });
   close.addEventListener('click', () => dialog.close());
@@ -256,6 +261,12 @@ function mountSettings() {
   for (const radio of themeRadios) {
     radio.addEventListener('change', () => {
       if (radio.checked) setThemePreference(radio.value);
+    });
+  }
+  // Stop or start GIFs in place without redrawing the page.
+  for (const radio of motionRadios) {
+    radio.addEventListener('change', () => {
+      if (radio.checked) setMotionChoice(radio.value);
     });
   }
   for (const radio of aiRadios) {

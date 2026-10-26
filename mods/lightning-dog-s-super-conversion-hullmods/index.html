@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Lightning Dog's Super Conversion Hullmods">
   <meta property="og:description" content="Are you tired of ships not being playerbait? Are you exhausted at seeing things &quot;finely balanced&quot; to the point they're boring? Would you, maybe, just maybe, like to give that Onslaught (XIV) Manjets on top of it's burn drive? NOW YOU CAN!">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1204551308737126451/1204551308938448926/ldsc_banner.png?ex=6adf2893&amp;is=6addd713&amp;hm=271df8660ff83490dfc3fa566189a5e139d366d397fa2c92b10a79520e81fb3f&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1204551308737126451/1204551308938448926/ldsc_banner.png?ex=6adfd153&amp;is=6ade7fd3&amp;hm=ee1601e47134e2e2f24afe45a44e41bcf842d8ef66a3915e8f33de772cac0cd8&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Lightning Dog's Super Conversion Hullmods</h1><p>A Starsector mod by leviathan_5000. For Starsector 0.97a.</p><p>Are you tired of ships not being playerbait? Are you exhausted at seeing things "finely balanced" to the point they're boring? Would you, maybe, just maybe, like to give that Onslaught (XIV) Manjets on top of it's burn drive? NOW YOU CAN!</p><p><a href="https://discord.com/channels/187635036525166592/1204551308737126451/1204551308737126451" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Lightning Dog's Super Conversion Hullmods</h1><p>A Starsector mod by leviathan_5000. For Starsector 0.97a. Version 1.1.</p><p>Are you tired of ships not being playerbait? Are you exhausted at seeing things "finely balanced" to the point they're boring? Would you, maybe, just maybe, like to give that Onslaught (XIV) Manjets on top of it's burn drive? NOW YOU CAN!</p><p><a href="https://discord.com/channels/187635036525166592/1204551308737126451/1204551308737126451" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Out of Place Characters</h1><p>A Starsector mod by Foxy. For Starsector 0.96a.</p><p>It replaces all the character portraits in the game with celebrities. Yes, you will be one of those celebrities, so choose wisely!</p><p><a href="https://tzr.ro/mods/starsector/opc/opc.rar" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=24483.0" rel="nofollow noopener">Forum thread</a></p><h2>Optional</h2><ul><li><a href="mods/play-as-yourself/">Play as Yourself</a></li></ul><h2>Forum post</h2><p>Nota Bene: I legally do not take credit for any of the portraits as I did not give birth to any of these people! This is made in the spirit of good humor and should not be taken as a super serious mod. I certainly had a lot of fun making these.</p><p>Download here:</p><p>Spoiler<br>Q&amp;A!</p><p>What does this do?<br>It replaces all the character portraits in the game with celebrities. Yes, you will be one of those celebrities, so choose wisely!</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Out of Place Characters</h1><p>A Starsector mod by Foxy. For Starsector 0.96a.</p><p>It replaces all the character portraits in the game with celebrities. Yes, you will be one of those celebrities, so choose wisely!</p><p><a href="https://tzr.ro/mods/starsector/opc/opc.rar" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=24483.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Nota Bene: I legally do not take credit for any of the portraits as I did not give birth to any of these people! This is made in the spirit of good humor and should not be taken as a super serious mod. I certainly had a lot of fun making these.</p><p>Download here:</p><p>Spoiler<br>Q&amp;A!</p><p>What does this do?<br>It replaces all the character portraits in the game with celebrities. Yes, you will be one of those celebrities, so choose wisely!</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

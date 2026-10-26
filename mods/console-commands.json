@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "console-commands",
     "name": "Console Commands",
@@ -23,13 +23,14 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "2024.10.04",
     "imageUrl": "https://imgur.com/zoCketX.gif",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6adeeee1&is=6add9d61&hm=5d5d1eb6d53ba1837c291625e4bc6cbd34af4446129fa024d6bb6fae07b87479&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6adf97a1&is=6ade4621&hm=9eba47ddea5374a064948687982973ed8197976892006c89ffe6802d302b7987&",
     "summary": "An unofficial developer's console",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds an in-game developer console for executing commands and running code.",
+    "aiSummary": "Adds an in-game developer console for entering commands and running code.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -51,7 +52,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>An official update to console commands that overhauls the interface to feel more modern and provide additional quality of life.</p><p><strong>Download</strong>: <a href=\"https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip</a><br><strong>Forum Page</strong>: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=4106.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=4106.0</a><br><strong>Changelog &amp; Previous versions</strong>: <a href=\"https://github.com/LazyWizard/console-commands/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/console-commands/releases</a></p><pre><code>Version 4.0.0\n\n- Complete visual overhaul of the legacy UI.\n- Added command and argument autocompletion &amp; suggestion.\n- Added syntax hints for command parameters.\n- Now remembers the last 30 commands, even across game restarts.\n- The runcode command now displays live compile error warnings.\n- Reverted the mods version system back to the original format.\n- Added version checker changelog &amp; download support.\n- Added \"History\" command.\n\nKeybinds\n\n- CTRL + Backspace: open console\n- Enter: confirm command\n- Left/Right: move cursor\n- Up/Down: Scroll through command history/select autocompletion\n- Tab: confirm autocompletion\n\nLegacy UI\n\n- The legacy UI can still be re-enabled in \"ConsoleCommands/data/console/console_settings.json\".\n- New features added with this version are not available in the legacy UI.\n\nFor Modders\n\n- Added \"BaseCommandWithSuggestion\". Implement it to create a command with autocomplete suggestions.\n- Use the \"getSuggestions\" method to return a list of the provided suggestions for your command.\n- \"parameter\" tells you which parameter the suggestions are for (0 is the first arg).\n- \"previous\" are the other arguments the user entered before the current one.</code></pre>",
-  "aiDescription": "Provides a custom overlay to input various campaign and combat commands. Allows users to write, compile, and run Java code directly in the game using the Janino library. Supports user-created commands and includes a legacy UI option.",
+  "aiDescription": "Provides a custom overlay for inputting commands, including a large list of built-in cheats and utilities for campaign and combat. Allows users to write, compile, and run Java code directly in the game using the Janino library. Supports the creation of custom commands by other mods and includes a legacy UI option.",
   "saveCompatibilityText": "Doesn't require a new game, and can be safely untagged from a running game without issues",
   "removalCompatibilityText": "can be safely untagged from a running game without issues",
   "canAdd": "yes",
@@ -65,21 +66,21 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6adeeee1&is=6add9d61&hm=5d5d1eb6d53ba1837c291625e4bc6cbd34af4446129fa024d6bb6fae07b87479&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6adf97a1&is=6ade4621&hm=9eba47ddea5374a064948687982973ed8197976892006c89ffe6802d302b7987&",
       "aiCaption": "A dark game screen showing the text 'Console loaded, summon with CONTROL+BACKSPACE.' and a command prompt.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1422651666393600030/image.png?ex=6adef35c&is=6adda1dc&hm=f0837d14d688997235270dc70d8126b9f1e24e416f1d8f90e19c930b0d04fc90&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1422651666393600030/image.png?ex=6adf9c1c&is=6ade4a9c&hm=201b9622ddb5385805f70fa5ff113efbaf87e3023e60fddd86006a69e1c0abf5&",
       "aiCaption": "A console interface displaying instructions for commands like Enter, Tab, Left/Right, Up/Down, and an example command 'AddSpecial <specialId>'.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1423713681312583851/image.png?ex=6adf84b0&is=6ade3330&hm=37c6aa8d73b53fcc1e2b04626e99a9c8cfca62d5e25f7c2801cfd184914837b8&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1423713681312583851/image.png?ex=6ae02d70&is=6adedbf0&hm=b773aad9f32843c909d47b0028b3836f4a804718956004d420c5f8b1776dc769&",
       "aiCaption": "A screenshot of a console window showing code with the command 'runcode' and a loop using Console.showMessage.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -126,5 +127,11 @@
   "releases": [],
   "threadLastPostOn": "2026-10-04",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Version Checker",
+      "id": "version-checker"
+    }
+  ]
 }

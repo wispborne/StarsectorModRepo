@@ -10,7 +10,7 @@
   <meta property="og:site_name" content="Starmodder">
   <meta property="og:title" content="Moci ship pack first translation">
   <meta property="og:description" content="This mod is the first iteration of the translation of a Fossic mod of the same name.">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1453833823883366401/1453833826051690739/image.png?ex=6adf0303&amp;is=6addb183&amp;hm=70ffede85510ae7e4b612a0d29095485dd3f7cff4f9032eaff476f9af1d01cbb&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1453833823883366401/1453833826051690739/image.png?ex=6adfabc3&amp;is=6ade5a43&amp;hm=b31d185a4f2b8f0750584643a7edf6c6f250eff6f760f5bae831e9f88626b7a7&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -118,6 +125,27 @@
             <label title="Leave the text out. The sparkle before the summary still marks it as AI.">
               <input type="radio" name="ai-note" value="hide">
               <span>Hide</span>
+            </label>
+          </div>
+        </div>
+      </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
             </label>
           </div>
         </div>

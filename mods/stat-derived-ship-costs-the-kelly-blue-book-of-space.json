@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "stat-derived-ship-costs-the-kelly-blue-book-of-space",
     "name": "Stat-Derived Ship Costs \"The Kelly Blue Book of Space\"",
@@ -17,10 +17,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.1.4",
     "imageUrl": "https://raw.githubusercontent.com/Compterra/Stat-Derived-Ship-Costs/main/graphics/icon/SDSC.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1520697507787575407/1520697508349743205/SDSC.png?ex=6adf05eb&is=6addb46b&hm=fbe9d7a8824f60ce1747b6f0c8b1bd886a2f412c960598eaf4f4be9a060ad484&",
-    "summary": "Stat-Derived Ship Costs replaces static ship prices with values derived from hull stats, visible condition, market channel, and local economy context. Clean ships keep their prestige. D-modded ships actually sell like damaged goods.",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1520697507787575407/1520697508349743205/SDSC.png?ex=6adfaeab&is=6ade5d2b&hm=8e9cd9d98fd2c1bd056560abf376685f8ae6b6c66c8a5090031abe224663e532&",
+    "summary": "An in-space Kelly Blue Book for Starsector ships.",
     "summaryIsGenerated": false,
-    "aiSummary": "Replaces static ship prices with values derived from hull stats, condition, market channel, and local economy context.",
+    "aiSummary": "Replaces static ship prices with values derived from hull stats, condition, and market context.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -51,10 +51,12 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>\"The Kelly Blue Book of Spaceships\"</p><p>The most important immersion mod for any modded Starsector run. Ships are no longer priced by vibes, they are appraised by their actual hull stats, condition, rarity, logistics burden, and market channel.</p><p>Stat-Derived Ship Costs acts like a Kelly Blue Book for spaceships. It evaluates loaded ship hulls and replaces arbitrary market prices with stat-derived values that better reflect what a ship is actually worth in the Sector.</p><p>Powerful ships are not nerfed. The economy simply recognizes them. If a ship is trash, the market will reflect that.</p><p>That sleek destroyer might still look amazing, but the ugly frigate you used to ignore may suddenly reveal itself as the better buy! Especially when you realize you can deploy three of them for the same DP cost.</p><p>Features:</p><ul><li>Stat-derived ship hull pricing</li><li>Highly Tunable</li><li>Positive Faction Relations give dynamic discounts</li><li>D-mod condition pricing</li><li>Open, military, and black market unique price behavior</li><li>Rarity, logistics, and market-context adjustments</li><li>Hull value report generation</li><li>Designed for heavily modded games with inconsistent ship pricing</li><li>Will flip your logic when composing fleets</li></ul><p>Save Compatibility Notice</p><p>Safe to add to an existing save.<br>Safe to remove, but ship prices will return to normal after the mod is disabled and the game is restarted.</p><p>A full restart is recommended after updating.</p><p>Download: <a href=\"https://github.com/Compterra/Stat-Derived-Ship-Costs/archive/refs/heads/main.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Compterra/Stat-Derived-Ship-Costs/archive/refs/heads/main.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35645.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35645.0</a></p>",
-  "aiDescription": "Replaces static ship prices with values calculated from hull stats, visible condition, market channel, and local economy context. Damaged ships sell for less, while clean ships retain their value. Pricing behavior varies between open, military, and black markets, with selling prices adjusted to reflect buyer motives and margins.",
+  "aiDescription": "Replaces static ship prices with values derived from hull stats, visible condition, market channel, and local economy context. Damaged ships sell for less, while clean ships retain prestige. Pricing behavior varies by market type, and major economy levers are configurable.",
   "saveCompatibilityText": "Safe to add to an existing save.",
-  "removalCompatibilityText": "Safe to remove, but ship prices will return to normal after the mod is disabled and the game is restarted.",
+  "updateCompatibilityText": "A full restart is recommended after updating.",
+  "removalCompatibilityText": "Registers `SDSCTransactionGuard` as a transient campaign listener so the mod can be removed from existing saves.",
   "canAdd": "yes",
+  "canUpdate": "depends",
   "canRemove": "yes",
   "aiUse": {},
   "rawCategories": [
@@ -62,7 +64,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1520697507787575407/1520697508349743205/SDSC.png?ex=6adf05eb&is=6addb46b&hm=fbe9d7a8824f60ce1747b6f0c8b1bd886a2f412c960598eaf4f4be9a060ad484&",
+      "url": "https://cdn.discordapp.com/attachments/1520697507787575407/1520697508349743205/SDSC.png?ex=6adfaeab&is=6ade5d2b&hm=8e9cd9d98fd2c1bd056560abf376685f8ae6b6c66c8a5090031abe224663e532&",
       "aiCaption": "A blue shield logo featuring an open book with a white rocket ship launching from its pages against a starry background.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -89,7 +91,7 @@
     }
   ],
   "changelog": {
-    "1.1.4": "-Updated LunaLib’s D-hull minimum from 4 to 1\n\n Please reset the mod to defaults in LunaLib",
+    "1.1.4": "Updated LunaLib’s D-hull minimum from 4 to 1",
     "1.1.2": "-Eliminated stale market prices, cross-market contamination, unnecessary repricing, and a potential memory-retention issue.\n-Added full support for modular ships by pricing the core and attached modules from their actual stats.\n-Fixed SHIP_WITH_MODULES hulls being mistakenly excluded from SDSC pricing.\n-Improved modular storefront and codex pricing while removing ineffective fleet-wide refresh work.\n-Updated Version Checker to use GitHub’s live archive instead of the problematic recursive ZIP.",
     "1.0.5": "-Toggle off restores original values.\n-Hull specs now only store the stat-derived baseline.\n-Transaction-specific market/D-mod adjustments remain transaction-time only.\n-Removed the static submarket cache and full-economy reprice pass."
   },
@@ -105,7 +107,9 @@
       "oldVersion": "1.0.3",
       "newVersion": "1.1.4",
       "gameVersion": "0.98a",
-      "changelogNotes": "Updated LunaLib’s D-hull minimum from 4 to 1\n\nPlease reset the mod to defaults in LunaLib"
+      "changelogNotes": "Updated LunaLib’s D-hull minimum from 4 to 1\n\nPlease reset the mod to defaults in LunaLib",
+      "updateCompatibilityText": "A full restart is recommended after updating.",
+      "canUpdate": "depends"
     }
   ],
   "threadLastPostOn": "2026-07-16",

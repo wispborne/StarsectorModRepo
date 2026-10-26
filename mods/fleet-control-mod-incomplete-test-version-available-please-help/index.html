@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Fleet Control Mod</h1><p>A Starsector mod by Verrius. Version 1.8.</p><p>In this version, you can buy a station contract from the Temporary Fleet Center around Corvus II. From there, you should be able to interact with any planet in the sector and build your station there, as long as you have a contract.</p><p><a href="http://download1351.mediafire.com/04qex946ul2gbwH-i2CyIjrDnHX3f5-6C2rGyNBHqvEV8hEvE2aLuyaBmxJWcp1afwdrAAJoLOp-lgZBUJeqMOXuLVBHTlOlbIZFRkZDKZPOdmdQvtlsRTj1eMwAIupxSEf3JR5oc--mgVQsiUX6LTdg07RgwIIpWQ6JkeGZpg/4h3wvvg7po0at4w/Fleet+Control+v1.8.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=3758.0" rel="nofollow noopener">Forum thread</a></p><h2>Requires</h2><ul><li>AI Player Faction</li></ul><h2>Forum post</h2><p>Currently revamping the mod for Version .6, download for the old version above. Probably doesn't work, but I haven't tried. The new version will make use of the dialogue system, allow you to build stations wherever you like, and have much more control over precisely what your stations do. Will keep this thread updated as I move along.</p><p>Test version uploaded here.</p><p>Currently testing: Building, Facilities, Patrols.</p><p>Trading fleets are not available yet.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>Fleet Control Mod</h1><p>A Starsector mod by Verrius. Version 1.8.</p><p>In this version, you can buy a station contract from the Temporary Fleet Center around Corvus II. From there, you should be able to interact with any planet in the sector and build your station there, as long as you have a contract.</p><p><a href="http://download1351.mediafire.com/04qex946ul2gbwH-i2CyIjrDnHX3f5-6C2rGyNBHqvEV8hEvE2aLuyaBmxJWcp1afwdrAAJoLOp-lgZBUJeqMOXuLVBHTlOlbIZFRkZDKZPOdmdQvtlsRTj1eMwAIupxSEf3JR5oc--mgVQsiUX6LTdg07RgwIIpWQ6JkeGZpg/4h3wvvg7po0at4w/Fleet+Control+v1.8.zip" rel="nofollow noopener">Download</a> · <a href="https://fractalsoftworks.com/forum/index.php?topic=3758.0" rel="nofollow noopener">Forum thread</a></p><h2>Forum post</h2><p>Currently revamping the mod for Version .6, download for the old version above. Probably doesn't work, but I haven't tried. The new version will make use of the dialogue system, allow you to build stations wherever you like, and have much more control over precisely what your stations do. Will keep this thread updated as I move along.</p><p>Test version uploaded here.</p><p>Currently testing: Building, Facilities, Patrols.</p><p>Trading fleets are not available yet.</p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

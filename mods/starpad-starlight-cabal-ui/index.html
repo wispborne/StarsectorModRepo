@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="../../">
-  <title>STARPad | Starmodder</title>
+  <title>STARPad (Starlight Cabal UI) | Starmodder</title>
   <meta name="description" content="asciidoc .Turns your UI from Starsector Blue to Cabal Purple">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Starmodder">
-  <meta property="og:title" content="STARPad">
+  <meta property="og:title" content="STARPad (Starlight Cabal UI)">
   <meta property="og:description" content="asciidoc .Turns your UI from Starsector Blue to Cabal Purple">
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1477555725034193191/1478034053801181224/Cabal_SLIPSTREAM_EDITION.png?ex=6adcbe7a&amp;is=6adb6cfa&amp;hm=679a0ef23e2e5e995badf35b0c23c52ad02bf13dcc989963f4ba366f756369e5&amp;">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1477555725034193191/1477555725583515761/STARpad_flag.png?ex=6adf9e40&amp;is=6ade4cc0&amp;hm=a53580073f074c172f42e9dd08e51da14d38017d32f8a09039cf594a9582317e&amp;">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Pictures come from wherever the mod's author put them. Several of those
        hosts — Imgur most of all — answer 403 when they can see which page the
@@ -35,6 +35,13 @@
         document.documentElement.dataset.theme = theme;
       }
     } catch (e) {}
+    // Apply Settings → Animations before first paint; lib.js handles later changes.
+    var motion = null;
+    try { motion = localStorage.getItem('starmodderMotion'); } catch (e) {}
+    if (motion === 'off' || (motion !== 'on'
+        && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.documentElement.dataset.motion = 'reduce';
+    }
   </script>
   <!-- The release feed, so a feed reader offers to subscribe on any page. -->
   <link rel="alternate" type="application/atom+xml"
@@ -122,13 +129,34 @@
           </div>
         </div>
       </section>
+      <section class="settings-section" aria-labelledby="accessibility-title">
+        <h3 id="accessibility-title">Accessibility</h3>
+        <p>If off, mods with GIF previews won't autoplay. It will play if you click the image.</p>
+        <div class="setting-row">
+          <span id="motion-label">Animations</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="motion-label">
+            <label title="Use your device’s reduce motion setting (default).">
+              <input type="radio" name="motion" value="device">
+              <span>Default</span>
+            </label>
+            <label title="Play GIFs and other animations.">
+              <input type="radio" name="motion" value="on">
+              <span>On</span>
+            </label>
+            <label title="Stop animations and keep GIFs on their first frame. Open a GIF in the picture viewer to play it.">
+              <input type="radio" name="motion" value="off">
+              <span>Off</span>
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   </dialog>
 
   <!-- A mod's own page writes the mod's words between these two marks, so a
        search engine that does not run the script still reads them. The
        script empties this as it starts. -->
-  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>STARPad</h1><p>A Starsector mod by toasterdude. For Starsector 0.98a.</p><p>asciidoc .Turns your UI from Starsector Blue to Cabal Purple</p><p><a href="https://drive.google.com/uc?export=download&amp;id=1qZTqZjuxRR95NUlSq6im3StFsjbiQnmG" rel="nofollow noopener">Download</a> · <a href="https://discord.com/channels/187635036525166592/1477555725034193191/1477555725034193191" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
+  <main id="app" tabindex="-1"><!--page-body--><article class="stack page-text"><h1>STARPad (Starlight Cabal UI)</h1><p>A Starsector mod by toasterdude. For Starsector 0.98a.</p><p>asciidoc .Turns your UI from Starsector Blue to Cabal Purple</p><p><a href="https://drive.google.com/uc?export=download&amp;id=1qZTqZjuxRR95NUlSq6im3StFsjbiQnmG" rel="nofollow noopener">Download</a> · <a href="https://discord.com/channels/187635036525166592/1477555725034193191/1477555725034193191" rel="nofollow noopener">Discord post</a></p></article><div class="loading">Loading…</div><!--/page-body--></main>
 
   <footer class="site-footer">
     <span id="freshness" class="freshness"></span>

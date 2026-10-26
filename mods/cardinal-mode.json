@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "cardinal-mode",
     "name": "Cardinal Mode",
@@ -18,6 +18,7 @@
     "gameVersion": "0.97a",
     "summary": "A very lightweight mod that simply exposes the setting \"CardinalMode\", which, when set to true, enables you to move your ship according to absolute direction rather than relative facing.",
     "summaryIsGenerated": false,
+    "aiSummary": "Enables moving the ship according to absolute direction rather than relative facing.",
     "hasDirectDownload": false,
     "downloadCount": 0,
     "discordUrl": "https://discord.com/channels/187635036525166592/1305725664195772456/1305725664195772456",
@@ -26,9 +27,13 @@
     "addedOn": "2024-11-12",
     "needs": []
   },
-  "descriptionIsGenerated": false,
+  "description": "Exposes the CardinalMode setting to change ship movement controls. When enabled, movement keys correspond to absolute directions instead of the ship's facing. Turning requires using the shift-aiming option.",
+  "descriptionHtml": "<p>Exposes the CardinalMode setting to change ship movement controls. When enabled, movement keys correspond to absolute directions instead of the ship's facing. Turning requires using the shift-aiming option.</p>",
+  "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>A very lightweight mod that simply exposes the setting \"CardinalMode\", which, when set to true, enables you to move your ship according to absolute direction rather than relative facing.</p><p>Some notes on use:</p><ul><li>The setting is unfortunately made to override the function of your turn keys, rather than your strafe keys. This means if you want to turn your ship you have no choice but to use the \"shift-aiming\" option.</li><li>I have noticed that trying to input multiple direction keys at once (e.g. to go NW instead of just N) can result in weirdly inconsistent behavior if you're not facing an absolute direction. I would strongly recommend using this with \"Ship Direction Marker\" by PureTilt.</li></ul><p>A big thanks to Genir for making me aware of this setting, which is not documented whatsoever.</p>",
+  "aiDescription": "Exposes the CardinalMode setting to change ship movement controls. When enabled, movement keys correspond to absolute directions instead of the ship's facing. Turning requires using the shift-aiming option.",
+  "aiUse": {},
   "rawCategories": [
     "Quality of Life",
     "Other/Misc.",
@@ -41,5 +46,11 @@
   "discordUrl": "https://discord.com/channels/187635036525166592/1305725664195772456/1305725664195772456",
   "releases": [],
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Ship Direction Marker",
+      "id": "ship-direction-marker"
+    }
+  ]
 }

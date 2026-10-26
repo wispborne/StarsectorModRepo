@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "combat-chatter",
     "name": "Combat Chatter",
@@ -21,13 +21,14 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "1.15.2",
     "imageUrl": "http://i.imgur.com/r9nJR1S.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1208662889284509726/1208662889427378186/icon_chatter.png?ex=6adef488&is=6adda308&hm=2642169a018ffe1f0ecf59075ecb801e3e7d1aef188fac2aadbcf7c36922edee&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1208662889284509726/1208662889427378186/icon_chatter.png?ex=6adf9d48&is=6ade4bc8&hm=4b3ff3ef85817496d8fd70cd3c0dbd9fbbdf819eb9bc99d51179959ee5f9ff48&",
     "summary": "This simple mod lets ships in battle say some useful (and not-so-useful) things. Like so:",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds dialogue lines spoken by ships during combat and introductory splashes for specific fleet encounters.",
+    "aiSummary": "Adds dialogue lines to ships during combat and displays fleet introductions for specific encounters.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -49,7 +50,7 @@
       },
       {
         "name": "MagicLib",
-        "id": "magiclib"
+        "id": "magiclib-2"
       }
     ]
   },
@@ -58,7 +59,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>The talking ships mod.</p><p>Download: <a href=\"https://github.com/Histidine91/SS-CombatChatter/releases/download/v1.14.2/CombatChatter_1.14.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Histidine91/SS-CombatChatter/releases/download/v1.14.2/CombatChatter_1.14.2.zip</a><br>Changelog: <a href=\"https://github.com/Histidine91/SS-CombatChatter/wiki/Changelog\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Histidine91/SS-CombatChatter/wiki/Changelog</a><br>Forum thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=10399.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=10399.0</a><br>Nexus: <a href=\"https://www.nexusmods.com/starsector/mods/29\" rel=\"nofollow noopener\" target=\"_blank\">https://www.nexusmods.com/starsector/mods/29</a></p><p>Ko-Fi: <a href=\"https://ko-fi.com/R6R5Q52DU\" rel=\"nofollow noopener\" target=\"_blank\">https://ko-fi.com/R6R5Q52DU</a></p>",
-  "aiDescription": "Enables ships to speak useful or humorous comments during battles. It also displays a fleet introduction when encountering certain enemy types, factions, or strengths. The mod allows configuration of chatter settings and character assignments.",
+  "aiDescription": "Ships in battle speak useful and humorous lines based on their status and role. The mod also displays introductory splashes for certain encounters depending on the opposing fleet's type, faction, and strength. Configuration options allow users to toggle specific chatter types and assign custom characters to officers.",
   "saveCompatibilityText": "Can be added to or removed from an existing save.",
   "removalCompatibilityText": "Can be added to or removed from an existing save.",
   "canAdd": "yes",
@@ -71,7 +72,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1208662889284509726/1208662889427378186/icon_chatter.png?ex=6adef488&is=6adda308&hm=2642169a018ffe1f0ecf59075ecb801e3e7d1aef188fac2aadbcf7c36922edee&",
+      "url": "https://cdn.discordapp.com/attachments/1208662889284509726/1208662889427378186/icon_chatter.png?ex=6adf9d48&is=6ade4bc8&hm=4b3ff3ef85817496d8fd70cd3c0dbd9fbbdf819eb9bc99d51179959ee5f9ff48&",
       "aiCaption": "A small icon showing a teal radar or sonar display with concentric arcs and a circular blip.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -117,9 +118,9 @@
     }
   ],
   "changelog": {
-    "1.15.2": "## v1.15.2 (2026-04-25) ##\n* Character picker in refit additional options has some sorting; shows character IDs; can be used on non-officered ships\n&nbsp; &nbsp; * The generic officers are replaced when ship is stored or a 'real' officer is assigned and unassigned, so chatter character will also need to be repicked in that case\n* Add characters: menace_pirate, menace_rewa, menace_exconde\n* Add settings.json toggle for floating text\n* Threat and Dweller marked as no-chatter factions\n* Other scripts/mods can access the ignored ships map in combat plugin",
-    "1.15.1": "## v1.15.1 (2025-11-22) ##\n* Chatter characters can be assigned from LunaLib's refit additional options\n* Add enemy-related line substitutions (commander, flagship and faction)\n* Refactor ignored ship handling; allow ignoring by variant tag\n* Floating text lifetime based on text length; font size configurable in LunaLib mod settings\n* Disable enemy chatter for Threat and Dweller (for now?)\n* Fix a few typos\n* Clean up some error logging",
-    "1.15.0": "## v1.15.0 (2025-04-05) ##\n* Update for Starsector 0.98\n* Add a system for intro splashes when fighting a faction for the first time\n* Fix overload and out-of-missile messages being filtered out"
+    "1.15.2": "* Character picker in refit additional options has some sorting; shows character IDs; can be used on non-officered ships\n    * The generic officers are replaced when ship is stored or a 'real' officer is assigned and unassigned, so chatter character will also need to be repicked in that case\n* Add characters: menace_pirate, menace_rewa, menace_exconde\n* Add settings.json toggle for floating text\n* Threat and Dweller marked as no-chatter factions\n* Other scripts/mods can access the ignored ships map in combat plugin",
+    "1.15.1": "* Chatter characters can be assigned from LunaLib's refit additional options\n* Add enemy-related line substitutions (commander, flagship and faction)\n* Refactor ignored ship handling; allow ignoring by variant tag\n* Floating text lifetime based on text length; font size configurable in LunaLib mod settings\n* Disable enemy chatter for Threat and Dweller (for now?)\n* Fix a few typos\n* Clean up some error logging",
+    "1.15.0": "* Update for Starsector 0.98\n* Add a system for intro splashes when fighting a faction for the first time\n* Fix overload and out-of-missile messages being filtered out"
   },
   "changelogUrl": "https://github.com/Histidine91/SS-CombatChatter/wiki/Changelog",
   "sourceCodeUrl": "https://github.com/Histidine91/SS-CombatChatter",

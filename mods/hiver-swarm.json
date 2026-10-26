@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "hiver-swarm",
     "name": "Hiver Swarm",
@@ -19,6 +19,7 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "1.3.7",
     "imageUrl": "https://i.imgur.com/uiXpsfj.png",
@@ -41,6 +42,7 @@
     "aiUses": [
       {
         "area": "portraits",
+        "how": "generated",
         "optional": true
       }
     ],
@@ -57,7 +59,7 @@
       },
       {
         "name": "MagicLib",
-        "id": "magiclib"
+        "id": "magiclib-2"
       }
     ]
   },
@@ -66,7 +68,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Hiver Swarm is a non player enemy AI faction designed to be aggressive invaders and can colonize systems. An insectoid race that uses high tech bio-cybernetics to grow their living ships. Their home world is found in deep space and their relations range from inhospitable to hostile for all factions. Their exclusive living hull designs (seen below) allow them to regenerate their hulls in combat and to be tougher made than the average factions' making them a challenge to fight. They use custom made drones, energy pulse weapons and missiles but have been known to use captured Corvus ships.</p><p>They are vengeful toward the player and will become hostile on sight, you have been warned.</p><p>The mod comes with multiple optional files in the ZIP with instructions on what they do and how to enable them on the forum page as well as in a file named README in the ZIP.</p><p><a href=\"https://i.imgur.com/yVPzkVK.png\" rel=\"nofollow noopener\" target=\"_blank\">https://i.imgur.com/yVPzkVK.png</a><br>The second image is the alternate ship pack for players with entomophobia.<br><a href=\"https://i.imgur.com/EfDsdNT.png\" rel=\"nofollow noopener\" target=\"_blank\">https://i.imgur.com/EfDsdNT.png</a><br>Link to Support my Coffee Addiction: <a href=\"https://ko-fi.com/dazs825110\" rel=\"nofollow noopener\" target=\"_blank\">https://ko-fi.com/dazs825110</a><br>Forum <a href=\"https://fractalsoftworks.com/forum/index.php?topic=22965.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=22965.0</a><br>Download: <a href=\"https://drive.google.com/uc?export=download&amp;id=1qU06YXnPXJTxbPrVG5A1EHWiiqyxk7mP\" rel=\"nofollow noopener\" target=\"_blank\">https://drive.google.com/uc?export=download&amp;id=1qU06YXnPXJTxbPrVG5A1EHWiiqyxk7mP</a></p>",
-  "aiDescription": "Introduces a hostile alien race that uses bio-cybernetic technology to grow regenerating hulls. They utilize custom drones, energy weapons, and missiles to swarm enemies. The faction is designed as a challenging invader that requires a new game to appear.",
+  "aiDescription": "Introduces a hostile faction that uses bio-cybernetic ships capable of regenerating hulls in combat. The faction features custom drones, energy weapons, and missiles, and is designed to be a significant challenge. Multiple difficulty modes are available to adjust the faction's strength and aggression based on the number of other faction mods installed.",
   "saveCompatibilityText": "New game required to have them appear in the sector",
   "updateCompatibilityText": "Save compatible Note: Changes wil only take effect during the sector generation of a new game",
   "canAdd": "no",
@@ -77,6 +79,8 @@
     "uses": [
       {
         "area": "portraits",
+        "how": "generated",
+        "extent": "some",
         "optional": true
       }
     ]
@@ -181,9 +185,9 @@
     }
   ],
   "changelog": {
-    "1.3.7": "v1.3.7 - Save compatible Note: Changes wil only take effect during the sector generation of a new game\n&nbsp;&nbsp;&nbsp;-Ceruchus: Raised the armor from 1000 to 1400 - Was low for a heavy cruiser and died too easily\n&nbsp;&nbsp;&nbsp;-Note: I have received numerous concerning posts regarding the stability of Hiver planets so I made the following changes:\n&nbsp;&nbsp;&nbsp;-Tunguska Station: Removed Dense Atmosphere and changed the corrupted nanoforge to pristine on the heavy industry - less pollution = happier population\n&nbsp;&nbsp;&nbsp;-Fornax: Increased the population from 5 to 6 - Industry bloat was causing instability\n&nbsp;&nbsp;&nbsp;-Wazn: Changed the planet type from Dessert to Terran and removed Hot and dessert - It was not providing enough food for the Rizdet sector",
-    "1.3.6": "v1.3.6 - Save compatible\n&nbsp;&nbsp;&nbsp;-Hard Mode: Adjusted this difficulty to be 25% - Sorry I neglected this when I made the new difficulty\n&nbsp;&nbsp;&nbsp;-Hard mode: Added a new file labeled \"recoverableweapondata.csv\" - if you would like their weapons recoverable then delete weapon.data.csv and rename this file to weapon.data.csv\n&nbsp;&nbsp;&nbsp;-Extreme mode: Same file added as above\n&nbsp;&nbsp;&nbsp;-Standard, Hard and Extreme modes: Added a new file labeled \"dropable_special_items.csv\" If you want their bp to be loot able, delete special_items.csv and rename the new file to that\n&nbsp;&nbsp;&nbsp;-Edited the README file included in all versions to reflect these additions",
-    "1.3.5": "V1.3.5 - Save compatible\n&nbsp;&nbsp;&nbsp;-Added linked descriptions to the asteroid field sector entity tokens in Zesketet - TY Bugatti for letting me know\n&nbsp;&nbsp;&nbsp;-Increased the Fuel Capacity of the Cerambycidae by 800 and the cargo capacity of the Chalcosoma by 500 - TY Chikanuk for noting it was not enough for all the travel they do\n&nbsp;&nbsp;&nbsp;-Svrerresh Bio-Plasmic Launcher: Increased the range from 600 to 700 - Now matches the range of other hiver energy weapons for better engagement\n&nbsp;&nbsp;&nbsp;-Hard Mode Version: Increased the difficulty curve from 25% to 50% - Read multiple posts on discord that it was not hard enough - enjoy the pain :)\n&nbsp;&nbsp;&nbsp;-Fixed a pathing issue when replacing portraits to HI-Rez in Vplus and hardmode versions"
+    "1.3.7": "Save compatible Note: Changes wil only take effect during the sector generation of a new game\n   -Ceruchus: Raised the armor from 1000 to 1400 - Was low for a heavy cruiser and died too easily\n   -Note: I have received numerous concerning posts regarding the stability of Hiver planets so I made the following changes:\n   -Tunguska Station: Removed Dense Atmosphere and changed the corrupted nanoforge to pristine on the heavy industry - less pollution = happier population\n   -Fornax: Increased the population from 5 to 6 - Industry bloat was causing instability\n   -Wazn: Changed the planet type from Dessert to Terran and removed Hot and dessert - It was not providing enough food for the Rizdet sector",
+    "1.3.6": "Save compatible\n   -Hard Mode: Adjusted this difficulty to be 25% - Sorry I neglected this when I made the new difficulty\n   -Hard mode: Added a new file labeled \"recoverableweapondata.csv\" - if you would like their weapons recoverable then delete weapon.data.csv and rename this file to weapon.data.csv\n   -Extreme mode: Same file added as above\n   -Standard, Hard and Extreme modes: Added a new file labeled \"dropable_special_items.csv\" If you want their bp to be loot able, delete special_items.csv and rename the new file to that\n   -Edited the README file included in all versions to reflect these additions",
+    "1.3.5": "Save compatible\n   -Added linked descriptions to the asteroid field sector entity tokens in Zesketet - TY Bugatti for letting me know\n   -Increased the Fuel Capacity of the Cerambycidae by 800 and the cargo capacity of the Chalcosoma by 500 - TY Chikanuk for noting it was not enough for all the travel they do\n   -Svrerresh Bio-Plasmic Launcher: Increased the range from 600 to 700 - Now matches the range of other hiver energy weapons for better engagement\n   -Hard Mode Version: Increased the difficulty curve from 25% to 50% - Read multiple posts on discord that it was not hard enough - enjoy the pain :)\n   -Fixed a pathing issue when replacing portraits to HI-Rez in Vplus and hardmode versions"
   },
   "supportLinks": [
     {
@@ -197,5 +201,19 @@
   "releases": [],
   "threadLastPostOn": "2026-09-25",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Ruthless Sector",
+      "id": "ruthless-sector"
+    },
+    {
+      "name": "Xhan Empire",
+      "id": "xhan-empire"
+    },
+    {
+      "name": "Stellar Networks",
+      "id": "stellar-networks"
+    }
+  ]
 }

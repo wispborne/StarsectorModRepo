@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:55:01.660150Z",
+  "generatedAt": "2026-10-26T09:33:20.866701Z",
   "listing": {
     "id": "unknown-skies",
     "name": "Unknown Skies",
@@ -17,13 +17,14 @@
       "forum",
       "discord"
     ],
+    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "3.0.3",
     "imageUrl": "http://i.imgur.com/FZ8D8Gm.jpg",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1358489947614740762/1358489947874525314/FZ8D8Gm.jpg?ex=6adf8a5b&is=6ade38db&hm=b3fb624b0ed81b4709b558b3f152df2996e1392fea3b82005f1d47bf3a23274d&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1358489947614740762/1358489947874525314/FZ8D8Gm.jpg?ex=6ae0331b&is=6adee19b&hm=7a25f7b36ee4b931a6fa15ff3be145c15726749ea82aff724d8b6ac1ba332a7b&",
     "summary": "An update to Tartiflette's amazing mod, greatly expanding the variety of systems and planets you'll encounter while exploring along with many new backgrounds, unique planetary conditions and a few new ambiance sounds.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds new system backgrounds, planet types, star variants, and unique planetary conditions.",
+    "aiSummary": "Adds new system backgrounds, planet types, star variants, and unique planetary conditions to increase exploration variety.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/JamesTripleQ/Unknown-Skies/releases/latest",
@@ -35,12 +36,19 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1358489947614740762/1358489947614740762",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "nicknames": [
+      "US"
+    ],
     "addedOn": "2024-05-04",
     "threadLastPostOn": "2026-10-20",
     "needs": [
       {
         "name": "LunaLib",
         "id": "lunalib"
+      },
+      {
+        "name": "MagicLib",
+        "id": "magiclib-2"
       }
     ]
   },
@@ -49,8 +57,8 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>An update to Tartiflette's amazing mod,  greatly expanding the variety of systems and planets you'll encounter while exploring along with many new backgrounds, unique planetary conditions and a few new ambiance sounds.</p><p>Now updated for 0.98.</p><pre><code>Version 2.1.0\n- Updated to version 0.98.\n- Rebalanced hycean worlds to be much more in line with vanilla planets:\n   . Hycean planets are now rarer.\n   . Ores, Rare Ores and Ruins are slightly worse.\n   . Organics are considerably worse\n   . Atmospheric conditions tend to favour Thin Atmosphere.\n- Reverted Military Virus production bonus to +3 (was +4).\n- Fixed Crashed Drone having an incorrect size 6 effect.\n- Some minor optimization to stat calculations to prevent weird rounding errors.</code></pre><p>If you've been using an older version by manually updating the version number then it should be save compatible but no guarantees.</p><p>Download: <a href=\"https://github.com/JamesTripleQ/Unknown-Skies/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/JamesTripleQ/Unknown-Skies/releases/latest</a><br>Forum post: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=29876.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=29876.0</a><br>Original forum post: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=12041.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=12041.0</a></p>",
-  "aiDescription": "Expands the variety of systems and planets encountered while exploring. Adds 69 system backgrounds, 50 planet types, 14 star variants, and 17 uncommon or unique planetary conditions. Includes new ambiance sounds and additional names for planets and stars.",
-  "saveCompatibilityText": "Should be save compatible with the latest official version and the PMD version however some changes will not take effect on existing saves (no Abyss gen, Ice Giant tweaks, Windswept rename, etc.)",
+  "aiDescription": "Adds 69 system backgrounds, 50 planet types, 14 star variants, and 17 uncommon or unique planetary conditions. It increases the variety of planets within vanilla categories without changing the overall count of good or bad planets. The mod also includes new ambiance sounds and additional names for planets and stars.",
+  "saveCompatibilityText": "Should be save compatible with the latest official version and the PMD version however some changes will not take effect on existing saves (no Abyss gen, Ice Giant tweaks, Windswept rename, etc.).",
   "canAdd": "depends",
   "aiUse": {},
   "rawCategories": [
@@ -60,7 +68,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1358489947614740762/1358489947874525314/FZ8D8Gm.jpg?ex=6adf8a5b&is=6ade38db&hm=b3fb624b0ed81b4709b558b3f152df2996e1392fea3b82005f1d47bf3a23274d&",
+      "url": "https://cdn.discordapp.com/attachments/1358489947614740762/1358489947874525314/FZ8D8Gm.jpg?ex=6ae0331b&is=6adee19b&hm=7a25f7b36ee4b931a6fa15ff3be145c15726749ea82aff724d8b6ac1ba332a7b&",
       "aiCaption": "A wide title banner with the text 'UNKNOWN SKIES' in large white letters over a space-themed background.",
       "aiKind": "banner",
       "aiFit": "good",
@@ -114,7 +122,7 @@
   "changelog": {
     "3.0.3": "- Added LunaLib dependency\n- Star variants and the Artificial world lights can now be customized via LunaSettings\n- Added a toggleable Nexerelin compatibility that prevents the Sakura world from being colonized by other factions (off by default)\n- Retextured the 3.0 yellow stars to actually be yellow\n- Removed a leftover debug option that could occasionally cause issues\n- Fixed Sakura worlds not having the stated immigration buff\n- Fixed certain missing codex links",
     "3.0.2": "- Tweaked the Hybrid Production icon.\n- Fixed certain planets having static clouds.\n- Fixed an oversight that cause the Core Worlds to not have the appropriate system tag.",
-    "3.0.1": "- Tweaked the Sakura planet:\n&nbsp; &nbsp; . It can now spawn as the Red Planet.\n&nbsp; &nbsp; . It cannot spawn on a naturally occurring polluted world.\n&nbsp; &nbsp; . The condition no longer has an effect if the planet is polluted.\n&nbsp; &nbsp; . Renamed condition to Ever-Blooming Forest.\n&nbsp; &nbsp; . Fixed some condition effects having incorrect IDs.\n- Fixed the Red Planet not displaying its shield on certain US planets.\n- Minor text tweaks.\n- Removed some easter egg names.\n- Added a memKey that allow star swapping on non procgen systems (for modders).\n- Optimized the manual system fixer and added memKeys support (for modders)."
+    "3.0.1": "- Tweaked the Sakura planet:\n    . It can now spawn as the Red Planet.\n    . It cannot spawn on a naturally occurring polluted world.\n    . The condition no longer has an effect if the planet is polluted.\n    . Renamed condition to Ever-Blooming Forest.\n    . Fixed some condition effects having incorrect IDs.\n- Fixed the Red Planet not displaying its shield on certain US planets.\n- Minor text tweaks.\n- Removed some easter egg names.\n- Added a memKey that allow star swapping on non procgen systems (for modders).\n- Optimized the manual system fixer and added memKeys support (for modders)."
   },
   "sourceCodeUrl": "https://github.com/JamesTripleQ/Unknown-Skies",
   "supportLinks": [],
@@ -146,5 +154,15 @@
       "threadLastPostOn": "2024-03-08"
     }
   ],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Nexerelin",
+      "id": "nexerelin"
+    },
+    {
+      "name": "Industrial.Evolution",
+      "id": "industrial-evolution"
+    }
+  ]
 }
