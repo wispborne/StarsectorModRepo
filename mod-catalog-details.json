@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-10-26T18:07:12.746185Z",
   "meta": {
-    "generatedAt": "2026-10-26T21:45:22.681785Z",
+    "generatedAt": "2026-10-27T04:50:43.024642Z",
     "totalMods": 1075,
     "totalDetails": 1062,
     "totalAssumedDownloadEntries": 890,
@@ -78286,9 +78286,32 @@
               "canRemove": "no",
               "summary": {
                 "sentence": "Adds a roguelite campaign mode featuring branching maps, fleet building, and boss fights.",
-                "paragraph": "Integrates a Slay the Spire style roguelite into the campaign via a Descent Relay. Players fight through three acts of battles, shops, and events to earn rewards and payouts. The main fleet remains safe during runs, and progression unlocks harder difficulty levels and cross-save records."
+                "paragraph": "Integrates a Slay the Spire style roguelite into the main campaign via a Descent Relay. Players fight through three acts of battles, shops, and events to earn rewards and unlock harder ascension levels. The player's main fleet remains safe during runs, receiving only credit payouts upon completion."
               },
-              "aiUse": {}
+              "optionalNeeds": [
+                "Nexerelin",
+                "Random Assortment of Things",
+                "Combat Chatter",
+                "MagicLib",
+                "LazyLib",
+                "LunaLib",
+                "GraphicsLib"
+              ],
+              "aiUse": {
+                "quote": "Some or all assets and code in this mod were created using AI tools:\nCode: Claude Opus 5.5 (Anthropic), through Claude Code. It wrote most of the Java code, the build and test tooling configuration, and the design and API documentation.\nCode review: Claude was also used to review each milestone for bugs before release. No line of code reaches a release without a human review.\nArt: the banner at the top of this post was made with Z-Image Turbo (Alibaba's Tongyi Lab), an open image model run locally in ComfyUI, starting from vanilla Starsector portraits; its three captains are a nod to Slay the Spire's Ironclad, Silent and Defect. Nothing in the mod itself uses AI art: map and node icons are vanilla Starsector sprites.\nHow it was made: I designed the mod (the Run, the beacon types, the rules and the balance) and directed every change. Each milestone was then played and tested in game by me, against a checklist, before it was merged. The full source and the design notes are public on GitHub.",
+                "usesAi": true,
+                "uses": [
+                  {
+                    "area": "code",
+                    "how": "generated",
+                    "extent": "most"
+                  }
+                ],
+                "tools": [
+                  "Claude Opus 5.5",
+                  "Z-Image Turbo"
+                ]
+              }
             },
             "descriptionAnchors": {
               "startsWith": "The Descent Relay has opened somewhere in the core worlds.",
