@@ -6,7 +6,7 @@
 // so a thin page reads as deliberate instead of broken.
 
 import {
-  aiOnModPages, aiSparkle, aiSummaryNote, aiSummaryOf, imageCaption, imageHoverText,
+  aiOnModPages, aiSparkle, aiSummaryNote, aiSummaryOf, akaText, imageCaption, imageHoverText,
   clear,
   currentGameVersion, DATA_BASE, downloadButton, el, errorPanel, expandAllButton, formatDay,
   favoriteToggle, formatMoment, imageUrlOf, inlinePictures, isMissingFile, joinNames, quickTip,
@@ -354,7 +354,10 @@ function modHeader(mod, detail, shownName) {
     const authors = el('span', { class: 'mod-authors' }, ['by ']);
     mod.authors.forEach((name, i) => {
       if (i) authors.append(document.createTextNode(', '));
-      authors.append(el('a', { href: `#/authors/${encodeURIComponent(name)}`, text: name }));
+      authors.append(quickTip(
+        el('a', { href: `#/authors/${encodeURIComponent(name)}`, text: name }),
+        akaText(mod, name),
+      ));
     });
     byline.append(authors);
   }

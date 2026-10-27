@@ -2329,6 +2329,26 @@ export function joinNames(names) {
   return `${list.slice(0, -1).join(', ')} and ${list[list.length - 1]}`;
 }
 
+/// "Also known as" and the other names one credited person goes by on this
+/// mod, or null when they have none. Shown when the pointer is on their name.
+export function akaText(mod, author) {
+  const others = otherNamesOf(mod, author);
+  return others.length ? `Also known as ${joinNames(others)}` : null;
+}
+
+/// A mod's authors as `joinNames` writes them, with each name its own span so
+/// the pointer on it shows that person's other names.
+export function authorNames(mod, tag, attrs = {}) {
+  const node = el(tag, attrs);
+  const list = (mod.authors || []).filter(Boolean);
+  list.forEach((name, i) => {
+    if (i) node.append(document.createTextNode(i === list.length - 1 ? ' and ' : ', '));
+    const aka = akaText(mod, name);
+    node.append(aka ? quickTip(el('span', { text: name }), aka) : name);
+  });
+  return node;
+}
+
 /// How many rows a page holds. 0 means all of them at once.
 export const PAGE_SIZES = [24, 48, 96, 240, 0];
 const PAGE_SIZE_KEY = 'starmodderPageSize';

@@ -6,7 +6,7 @@
 // a filtered list brings back the same list.
 
 import {
-  aiSparkle, aiSummaryBanner, aiSummaryNote, askForName, askYesNo, buildHash, categoryChips,
+  aiSparkle, aiSummaryBanner, aiSummaryNote, askForName, askYesNo, authorNames, buildHash, categoryChips,
   clear, countedAcross, currentGameVersion, downloadButton, el, favoriteToggle,
   formatDay, gameVersionFamily, gameVersions, hashQuery, howLongAgo,
   imageUrlOf, isDiscordOnly, joinNames, modHref, modList, modName,
@@ -1457,7 +1457,7 @@ export function modCard(mod, currentVersion, { when = null } = {}) {
         el('div', { class: 'card-heading' }, [
           el('div', { class: 'card-title', text: modName(mod) }),
           (mod.authors || []).length
-            ? el('div', { class: 'card-authors', text: joinNames(mod.authors) })
+            ? authorNames(mod, 'div', { class: 'card-authors' })
             : null,
         ]),
         summaryLine(summary),
@@ -1484,7 +1484,7 @@ export function modRows(mods, currentVersion) {
         el('div', { class: 'row-main' }, [
           el('div', { class: 'row-heading' }, [
             el('span', { class: 'row-title', text: modName(mod) }),
-            names ? el('span', { class: 'row-authors', text: names }) : null,
+            names ? authorNames(mod, 'span', { class: 'row-authors' }) : null,
           ]),
           summaryLine(summaryToShow(mod)),
           categoryLine(mod.categories),
