@@ -1,18 +1,17 @@
 {
-  "generatedAt": "2026-10-27T04:50:44.716539Z",
+  "generatedAt": "2026-10-27T08:52:20.144258Z",
   "listing": {
     "id": "restock-mod-2-6-tested-with-6a",
     "name": "Restock Mod - 2.6. Tested with .6a",
     "displayName": "Restock Mod",
-    "authors": [
-      "Thaago"
-    ],
+    "authors": [],
     "otherAuthorNames": {},
     "categories": [],
     "sources": [
       "forum"
     ],
     "modVersion": "2.6",
+    "imageUrl": "https://fractalsoftworks.com/forum/avatars/default.png",
     "summary": "Never run out of ships again! This mod keeps the stations stocked with at least one copy of every ship hull - Tritachyon has the high tech hulls, the Hegemony/Pirates have copies of low and a few mid hulls, and the Diktat in Askonia has midline stuff.",
     "summaryIsGenerated": false,
     "aiSummary": "Keeps stations stocked with ship hulls, supplies, fuel, and weapons.",
@@ -22,7 +21,6 @@
     "sourceIsPublic": false,
     "isWorkInProgress": false,
     "addedOn": "2012-08-04",
-    "threadLastPostOn": "2014-11-23",
     "editedOn": "2013-09-19",
     "needs": []
   },
@@ -30,7 +28,7 @@
   "descriptionHtml": "V2.6: Tested with .6a. Added Ox and Construction Rig, included Askonia.<br><br>Never run out of ships again! This mod keeps the stations stocked with at least one copy of every ship hull - Tritachyon has the high tech hulls, the Hegemony/Pirates have copies of low and a few mid hulls, and the Diktat in Askonia has midline stuff. All stations are restocked with supplies, fuel, and weapons. The restock check happens once per second.<br><br>Let me know if I've forgotten any ships or if bugs pop up.<br><br>Download link is attached to this message below. :)<br><br>MCWarhammer's version for Uomoz' Corvus has not been updated - I'm sure that its going to change a heck of a lot. If after he's released people want a mod, either let me know or modify this mod yourself: its super easy and has comments in code telling you what to do.<br><br>Old notes:<br><details class=\"spoiler\"><summary>Spoiler</summary>V2.1: Tested with .54.1a. Added the Prometheus supertanker to all stations.<br><br>[VERSION 2.0]<br>New version! This version has much cleaner code and is even easier to modify! All the action happens in data/scripts/world/corvus/RestockSpawnPoint.java Add an array of ship names or fighter names, put in a check for the station you want to add them to (by name), and call addShips/addFighters.<br><br>[VERSION 1.1]<br><br>Will now keep all weapons stocked - if there are none of a weapon 4 new ones will appear, checked once per day.<br>Will now keep crew stocked - if none in a category, adds 5/25/100/200 crew to elite/veteran/regular/green. Checked once per day.<br><br>[MF Version] - feel free to make a new version for your own mod (if you want), just credit me for the original code if you distribute. :)<br><br>This version is more friendly towards other mods. It will add every ship and every fighter to EVERY station, no matter the name (free trade stations excluded on purpose).<br>To modify for use in combination with another mod:<br>In: data/scripts/world/corvus/RestockInit.java and data/scripts/world/corvus/RestockSpawnPoint.java<br>Modify any line that gets the system from \"corvus\" to whatever your system's name is in the mod. Should be once in each file. Don't change the folder structure (just leave it corvus).<br><br>In: data/scripts/world/corvus/RestockSpawnPoint.java<br>Scroll to the bottom - there are the lists of ships and wings that are added to every station. Add/remove whatever you'd like.<br><br>Old download totals:<br>2.1: 505<br>MCWarhammer's UoC: 337<br>2.0: 128<br>1.0: 499<br>mf: 167</details><br>[attachment deleted by admin]",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Ensures stations always have at least one copy of every ship hull available for purchase. Different factions stock different tiers of hulls, with high-tech ships at Tritachyon and midline ships at the Diktat. The mod also restocks supplies, fuel, and weapons, checking for shortages once per second.",
+  "aiDescription": "Ensures stations always have at least one copy of every ship hull available for purchase. Different factions stock different tiers of ships, with high-tech hulls at Tritachyon and midline ships at the Diktat. Stations are also restocked with supplies, fuel, and weapons, with checks occurring once per second.",
   "aiUse": {},
   "rawCategories": [],
   "gallery": [],
@@ -43,7 +41,6 @@
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=3650.0",
   "releases": [],
-  "threadLastPostOn": "2014-11-23",
   "sameNameMods": [],
   "addons": []
 }

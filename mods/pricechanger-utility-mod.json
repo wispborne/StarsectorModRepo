@@ -1,16 +1,15 @@
 {
-  "generatedAt": "2026-10-27T04:50:44.716539Z",
+  "generatedAt": "2026-10-27T08:52:20.144258Z",
   "listing": {
     "id": "pricechanger-utility-mod",
     "name": "PriceChanger Utility Mod",
-    "authors": [
-      "Thaago"
-    ],
+    "authors": [],
     "otherAuthorNames": {},
     "categories": [],
     "sources": [
       "forum"
     ],
+    "imageUrl": "https://fractalsoftworks.com/forum/avatars/default.png",
     "summary": "Here is a utility mod that should allow everyone to easily change the prices of their resources. It is specifically designed to support multiple mods using it simultaneously and should have no compatibility issues except for resource name clashes or location name clashes.",
     "summaryIsGenerated": false,
     "aiSummary": "Provides tools to change resource prices across different locations and sectors.",
@@ -20,14 +19,13 @@
     "sourceIsPublic": false,
     "isWorkInProgress": false,
     "addedOn": "2013-09-23",
-    "threadLastPostOn": "2013-09-24",
     "needs": []
   },
   "description": "Here is a utility mod that should allow everyone to easily change the prices of their resources. It is specifically designed to support multiple mods using it simultaneously and should have no compatibility issues except for resource name clashes or location name clashes. Attached below is the utility mod itself and a very basic implementation example: two resources (food and optics) with different prices at the hegemony, pirate, and tritach stations. To play with, enable both in the mods screen. Note that the example has a large CSV file for the resources. A python script is included in the example implementation that generates the large files easily.\n\nCapabilities:\nRegister resources and their default prices.\nEvery sectorEntityToken you register gets its own set of prices. Its cargo is automatically kept up to date with this price set, which can be changed at any time.\n----- If future mods enable trading with planets, other fleets, asteroids... this mod already works.\nThe player's inventory is automatically synched with the closest registered location.\nAdding a new resource to the game adds that resource (with the default price) to all existing price maps. This allows future modded content to be added with 0 compatibility issues.\nGet/set functions for individual and full pricemaps.\nAdd/remove resources for locations - extra convenience functions so you don't have to mess around with the resource id's.\n\nLimitations:\nCannot change the value of supplies - swapping out the supply objects for ones with different ID's makes the game not recognize them as supplies.\nCannot change the value of fuel - same reason.\nCannot change the value of crew/marines - same reason.\n-----If someone knows how to get around this, let me know!\n\nQuestions, comments, feature requests, or crash reports? This is NOT an economy mod - just the tools needed to change prices and a tiny example implementation.\nSource is available for the curious but still being tweaked.\n\n[attachment deleted by admin]",
   "descriptionHtml": "Here is a utility mod that should allow everyone to easily change the prices of their resources. It is specifically designed to support multiple mods using it simultaneously and should have no compatibility issues except for resource name clashes or location name clashes. Attached below is the utility mod itself and a very basic implementation example: two resources (food and optics) with different prices at the hegemony, pirate, and tritach stations. To play with, enable both in the mods screen. Note that the example has a large CSV file for the resources. A python script is included in the example implementation that generates the large files easily.<br><br>Capabilities:<br>Register resources and their default prices.<br>Every sectorEntityToken you register gets its own set of prices. Its cargo is automatically kept up to date with this price set, which can be changed at any time.<br>----- If future mods enable trading with planets, other fleets, asteroids... this mod already works.<br>The player's inventory is automatically synched with the closest registered location.<br>Adding a new resource to the game adds that resource (with the default price) to all existing price maps. This allows future modded content to be added with 0 compatibility issues.<br>Get/set functions for individual and full pricemaps.<br>Add/remove resources for locations - extra convenience functions so you don't have to mess around with the resource id's.<br><br>Limitations:<br>Cannot change the value of supplies - swapping out the supply objects for ones with different ID's makes the game not recognize them as supplies.<br>Cannot change the value of fuel - same reason.<br>Cannot change the value of crew/marines - same reason.<br>-----If someone knows how to get around this, let me know!<br><br>Questions, comments, feature requests, or crash reports? This is NOT an economy mod - just the tools needed to change prices and a tiny example implementation.<br>Source is available for the curious but still being tweaked.<br><br>[attachment deleted by admin]",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Registers resources and their default prices, allowing each sector entity to have its own price set. Automatically syncs the player's inventory with the closest registered location and updates existing price maps when new resources are added. Includes a basic implementation example with food and optics prices at various stations.",
+  "aiDescription": "Registers resources and their default prices, allowing each sector entity to have its own price set. Automatically syncs the player's inventory with the closest registered location and updates existing price maps when new resources are added. Includes a basic example implementation with food and optics at various stations.",
   "aiUse": {},
   "rawCategories": [],
   "gallery": [],
@@ -36,7 +34,6 @@
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=6896.0",
   "releases": [],
-  "threadLastPostOn": "2013-09-24",
   "sameNameMods": [],
   "addons": []
 }

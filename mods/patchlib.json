@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-27T04:50:44.716539Z",
+  "generatedAt": "2026-10-27T08:52:20.144258Z",
   "listing": {
     "id": "patchlib",
     "name": "PatchLib",
     "authors": [
-      "Lukas04"
+      "lukas04"
     ],
     "otherAuthorNames": {},
     "categories": [
@@ -19,7 +19,7 @@
     "imageUrl": "https://imgur.com/VOkhFKZ.png",
     "summary": "PatchLib is a library mod that enables bytecode patching at runtime for starsector. To install it, simply drop the mod in to your mods folder like other mods. Only install it if a mod requires it.",
     "summaryIsGenerated": false,
-    "aiSummary": "Enables runtime bytecode patching for Starsector and mods.",
+    "aiSummary": "Enables bytecode patching at runtime for Starsector.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FPatchLib%2Frefs%2Fheads%2Fmaster%2FPatchLib.version%22%2C%22id%22%3A%22patchlib%22%7D",
@@ -44,7 +44,6 @@
       }
     ],
     "addedOn": "2026-10-22",
-    "threadLastPostOn": "2026-10-25",
     "editedOn": "2026-10-22",
     "needs": []
   },
@@ -53,7 +52,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>A library mod that allows mods to patch the games code at runtime, letting them add code exactly where they need it, or modify existing behaviour.<br>The library by itself does not do anything, only install it if another mod requires it.</p><p><strong>Forum Page:</strong> <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36191.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36191.0</a><br><strong>Latest Download:</strong> <a href=\"https://github.com/Lukas22041/PatchLib/releases/latest/download/PatchLib.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Lukas22041/PatchLib/releases/latest/download/PatchLib.zip</a><br><strong>Old versions &amp; Changelogs:</strong> <a href=\"https://github.com/Lukas22041/PatchLib/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Lukas22041/PatchLib/releases</a></p><pre><code>\u001b[2;1;2m\u001b[38;2;222;64;64mIncompatibility\u001b[0m\u001b[2;2m\u001b[1;2m\u001b[0m\nPatchLib is currently incompatible with community-made upgrades of the game's Java version to Java 25 or higher. However, if you have Fast Rendering installed (<a href=\"https://fractalsoftworks.com/forum/index.php?topic=33870.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=33870.0</a>), it will work fine. This is because Fast Rendering fixes the issue that causes this incompatibility in the first place.</code></pre>",
-  "aiDescription": "Provides an annotation-based API for other mods to register patches and handlers. Allows modifying and redirecting existing code at runtime without fully overwriting plugins. Useful for hooking into game behavior where no API exists.",
+  "aiDescription": "Enables bytecode patching at runtime for Starsector. Provides an annotation based API for other mods to register patches and patch handlers. Allows modifying and redirecting existing code without fully overwriting plugins.",
   "aiUse": {
     "quote": "The libraries code has been co-developed with the help of Claude Code and the models Claude Fable 5, Claude Fable 5.1 and Claude Opus 5.5.\nThe generated pieces of code have been heavily tested and are understood decently well by me. No visual assets were created with generative AI.\nAll documentation is written by hand, but has had grammatical corrections applied through AI tools.",
     "usesAi": true,
@@ -138,7 +137,12 @@
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36191.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1562893773438980176/1562893773438980176",
   "releases": [],
-  "threadLastPostOn": "2026-10-25",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Fast Rendering",
+      "id": "fast-rendering"
+    }
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T04:50:44.716539Z",
+  "generatedAt": "2026-10-27T08:52:20.144258Z",
   "listing": {
     "id": "stop-stacking-me",
     "name": "Stop Stacking Me",
@@ -16,11 +16,12 @@
       "discord"
     ],
     "gameVersion": "0.98a",
-    "modVersion": "1.0.0",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616672152162304/image.png?ex=6ae0aa0d&is=6adf588d&hm=dfa97d22e277de8bea0b3b7f3bf9d840264f6bd2ce0d89a7b1f618f32a3dbccd&",
+    "modVersion": "1.0.2",
+    "imageUrl": "https://github.com/andrzejsokolowski/starsector-stopstackingme/blob/main/StopStackingMeIconBig.png?raw=true",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616672152162304/image.png?ex=6ae152cd&is=6ae0014d&hm=2068a8dcdede3db6cc97d91ad8b05ee8bff8e9137d57abebf231b81df98662af&",
     "summary": "Draws one sprite per cargo stack, instead of a pile of grey ghost copies behind it.",
     "summaryIsGenerated": false,
-    "aiSummary": "Draws one sprite per cargo stack instead of multiple grey ghost copies.",
+    "aiSummary": "Draws a single sprite for each cargo stack instead of multiple overlapping copies.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
@@ -37,13 +38,19 @@
     "aiUses": [
       {
         "area": "code",
-        "how": "generated",
-        "extent": "all"
+        "how": "generated"
+      },
+      {
+        "area": "icons",
+        "how": "generated"
+      },
+      {
+        "area": "writing",
+        "how": "generated"
       }
     ],
     "addedOn": "2026-08-30",
-    "threadLastPostOn": "2026-08-30",
-    "editedOn": "2026-08-30",
+    "editedOn": "2026-10-25",
     "needs": [
       {
         "name": "LunaLib",
@@ -55,28 +62,41 @@
       }
     ]
   },
-  "description": "StopStackingMe\n\nWHAT DOES THIS MOD DO?\n- Draws one sprite per cargo stack, instead of a pile of grey ghost copies behind it.\n\nDo you have three Heavy Maulers in your hold? Then the game draws three Heavy Maulers, piled up in one little tile, the two at the back tinted grey.\n\nIt's there to tell you how many you have. There is already a number in the corner doing exactly that.\n\nOne sprite. Every screen. The number stays. Helps with the visual clutter for me\n\nThe code is fully open source. You don't have to credit me. Claude Code built this anyway.\nRequires LunaLib and LazyLib.\n\nSettings\nIn LunaLib's settings menu (Shift+F2 in the campaign), under Icons.\nWeapons - one sprite only: on by default.\nCrew and marines - one sprite only: off by default. Those tiles pile up the same way, one extra portrait per 50 aboard.\nBoth apply on the next frame drawn, so you can flip one and watch the screen you are already looking at change.\n\nFAQ\nCan I add or remove it mid save?\nYes, both. Nothing of this mod is ever written into your save. It only changes how a screen is drawn while you are looking at it.\nDoes it change how much I actually have?\nNo. It only stops the extra sprites being drawn. The number in the corner is untouched, and so is everything the game does with the stack.\nThe sprite sits slightly lower when I have more than one.\nThat one is the game's own doing. When a tile holds more than one it shifts the front sprite down a few pixels to leave room for the pile behind it. The pile is gone, the shift stays.\nWhat about fighter LPCs, blueprints and AI cores?\nThose already draw a single sprite in vanilla. Nothing to fix.\nDoes it work in the simulator or in missions?\nNo, campaign only. Those run in a different part of the game.\n\nVersion log\n1.0.1\nLinked the mod to this forum thread.\n\n1.0.0\nFirst release. One sprite per cargo stack, everywhere the game stacks them, with a LunaLib toggle for crew and marines.",
-  "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\"><a href=\"https://github.com/andrzejsokolowski/starsector-stopstackingme/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><strong>StopStackingMe</strong></a></span><br><a href=\"https://github.com/andrzejsokolowski/starsector-stopstackingme/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/downloads/andrzejsokolowski/starsector-stopstackingme/total?style=for-the-badge&amp;label=download\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a>  <a href=\"https://github.com/andrzejsokolowski/starsector-stopstackingme\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/v/release/andrzejsokolowski/starsector-stopstackingme?display_name=tag&amp;sort=semver&amp;style=for-the-badge&amp;label=source\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></div><div class=\"align-center\"><strong><br>WHAT DOES THIS MOD DO?<br>- Draws one sprite per cargo stack, instead of a pile of grey ghost copies behind it.<br><br>Do you have three Heavy Maulers in your hold? Then the game draws three Heavy Maulers, piled up in one little tile, the two at the back tinted grey.<br><br>It's there to tell you how many you have. There is already a number in the corner doing exactly that.<br><br>One sprite. Every screen. The number stays. Helps with the visual clutter for me<br><br>The code is fully open source. You don't have to credit me. Claude Code built this anyway.<br><span class=\"author-colour\" style=\"--c:#ff0000\">Requires <strong>LunaLib</strong> and <strong>LazyLib</strong>.</span><br></strong></div><div class=\"align-center\"><hr><div class=\"align-center\"><span class=\"size-big\"><strong>Settings</strong></span></div><hr><ul><li>In LunaLib's settings menu (<strong>Shift+F2</strong> in the campaign), under <strong>Icons</strong>.</li><li><strong>Weapons - one sprite only</strong>: on by default.</li><li><strong>Crew and marines - one sprite only</strong>: off by default. Those tiles pile up the same way, one extra portrait per 50 aboard.</li><li>Both apply on the next frame drawn, so you can flip one and watch the screen you are already looking at change.</li></ul></div><details class=\"spoiler\"><summary>FAQ</summary><strong>Can I add or remove it mid save?</strong><br>Yes, both. Nothing of this mod is ever written into your save. It only changes how a screen is drawn while you are looking at it.<br><strong>Does it change how much I actually have?</strong><br>No. It only stops the extra sprites being drawn. The number in the corner is untouched, and so is everything the game does with the stack.<br><strong>The sprite sits slightly lower when I have more than one.</strong><br>That one is the game's own doing. When a tile holds more than one it shifts the front sprite down a few pixels to leave room for the pile behind it. The pile is gone, the shift stays.<br><strong>What about fighter LPCs, blueprints and AI cores?</strong><br>Those already draw a single sprite in vanilla. Nothing to fix.<br><strong>Does it work in the simulator or in missions?</strong><br>No, campaign only. Those run in a different part of the game.</details><details class=\"spoiler\"><summary>Version log</summary>1.0.1<br>Linked the mod to this forum thread.<br><br>1.0.0<br>First release. One sprite per cargo stack, everywhere the game stacks them, with a LunaLib toggle for crew and marines.</details>",
+  "description": "StopStackingMe\n\nWHAT DOES THIS MOD DO?\n- Draws one sprite per cargo stack, instead of a pile of grey ghost copies behind it.\n\nDo you have three Heavy Maulers in your hold? Then the game draws three Heavy Maulers, piled up in one little tile, the two at the back tinted grey.\n\nIt's there to tell you how many you have. There is already a number in the corner doing exactly that.\n\nOne sprite. Every screen. The number stays. Helps with the visual clutter for me\n\nRequires LunaLib and LazyLib.\n\nSettings\nIn LunaLib's settings menu (Shift+F2 in the campaign), under Icons.\nWeapons - one sprite only: on by default.\nCrew and marines - one sprite only: off by default. Those tiles pile up the same way, one extra portrait per 50 aboard.\nBoth apply on the next frame drawn, so you can flip one and watch the screen you are already looking at change.\n\nFAQ\nCan I add or remove it mid save?\nYes, both. Nothing of this mod is ever written into your save. It only changes how a screen is drawn while you are looking at it.\nDoes it change how much I actually have?\nNo. It only stops the extra sprites being drawn. The number in the corner is untouched, and so is everything the game does with the stack.\nThe sprite sits slightly lower when I have more than one.\nThat one is the game's own doing. When a tile holds more than one it shifts the front sprite down a few pixels to leave room for the pile behind it. The pile is gone, the shift stays.\nWhat about fighter LPCs, blueprints and AI cores?\nThose already draw a single sprite in vanilla. Nothing to fix.\nDoes it work in the simulator or in missions?\nNo, campaign only. Those run in a different part of the game.\n\nAI use disclaimer\nSome or all assets and code in this mod were created using AI tools:\nCode: Claude Code (Claude Opus 5 and Claude Opus 5.5)\nText (readme and this post): Claude Code (Claude Opus 5 and Claude Opus 5.5)\nIcon: Gemini\n\nLicense\nThis mod is under the CC0 (Creative Commons Zero) License, allowing you to do whatever you want with the code, without giving any credit to anyone.\nThe UIFramework code by Starficz inside it keeps its own licence (LGPL-3.0).\n\nVersion log\n1.0.2\nAdded the mod icon, which now also shows next to the mod in LunaLib's settings menu.\n\n1.0.1\nLinked the mod to this forum thread.\n\n1.0.0\nFirst release. One sprite per cargo stack, everywhere the game stacks them, with a LunaLib toggle for crew and marines.",
+  "descriptionHtml": "<div class=\"align-center\"><img src=\"https://github.com/andrzejsokolowski/starsector-stopstackingme/blob/main/StopStackingMeIconBig.png?raw=true\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><span class=\"size-biggest\"><a href=\"https://github.com/andrzejsokolowski/starsector-stopstackingme/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><b>StopStackingMe</b></a></span><br><a href=\"https://github.com/andrzejsokolowski/starsector-stopstackingme/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/downloads/andrzejsokolowski/starsector-stopstackingme/total?style=for-the-badge&amp;label=download\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a>  <a href=\"https://github.com/andrzejsokolowski/starsector-stopstackingme\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/v/release/andrzejsokolowski/starsector-stopstackingme?display_name=tag&amp;sort=semver&amp;style=for-the-badge&amp;label=source\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></div><div class=\"align-center\"><b><br>WHAT DOES THIS MOD DO?<br>- Draws one sprite per cargo stack, instead of a pile of grey ghost copies behind it.<br><br>Do you have three Heavy Maulers in your hold? Then the game draws three Heavy Maulers, piled up in one little tile, the two at the back tinted grey.<br><br>It's there to tell you how many you have. There is already a number in the corner doing exactly that.<br><br>One sprite. Every screen. The number stays. Helps with the visual clutter for me<br><br><span class=\"author-colour\" style=\"--c:#ff0000\">Requires <b>LunaLib</b> and <b>LazyLib</b>.</span><br></b></div><div class=\"align-center\"><hr><div class=\"align-center\"><span class=\"size-big\"><b>Settings</b></span></div><hr><ul><li>In LunaLib's settings menu (<b>Shift+F2</b> in the campaign), under <b>Icons</b>.</li><li><b>Weapons - one sprite only</b>: on by default.</li><li><b>Crew and marines - one sprite only</b>: off by default. Those tiles pile up the same way, one extra portrait per 50 aboard.</li><li>Both apply on the next frame drawn, so you can flip one and watch the screen you are already looking at change.</li></ul></div><details class=\"spoiler\"><summary>FAQ</summary><b>Can I add or remove it mid save?</b><br>Yes, both. Nothing of this mod is ever written into your save. It only changes how a screen is drawn while you are looking at it.<br><b>Does it change how much I actually have?</b><br>No. It only stops the extra sprites being drawn. The number in the corner is untouched, and so is everything the game does with the stack.<br><b>The sprite sits slightly lower when I have more than one.</b><br>That one is the game's own doing. When a tile holds more than one it shifts the front sprite down a few pixels to leave room for the pile behind it. The pile is gone, the shift stays.<br><b>What about fighter LPCs, blueprints and AI cores?</b><br>Those already draw a single sprite in vanilla. Nothing to fix.<br><b>Does it work in the simulator or in missions?</b><br>No, campaign only. Those run in a different part of the game.</details><details class=\"spoiler\"><summary>AI use disclaimer</summary>Some or all assets and code in this mod were created using AI tools:<br><ul><li>Code: Claude Code (Claude Opus 5 and Claude Opus 5.5)</li><li>Text (readme and this post): Claude Code (Claude Opus 5 and Claude Opus 5.5)</li><li>Icon: Gemini</li></ul></details><br><details class=\"spoiler\"><summary>License</summary>This mod is under the CC0 (Creative Commons Zero) License, allowing you to do whatever you want with the code, without giving any credit to anyone.<br>The UIFramework code by Starficz inside it keeps its own licence (LGPL-3.0).</details><br><details class=\"spoiler\"><summary>Version log</summary>1.0.2<br>Added the mod icon, which now also shows next to the mod in LunaLib's settings menu.<br><br>1.0.1<br>Linked the mod to this forum thread.<br><br>1.0.0<br>First release. One sprite per cargo stack, everywhere the game stacks them, with a LunaLib toggle for crew and marines.</details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Just a simple mod that stops sprite stacking for weapons.<br>I personally prefer it when sprites for weapons are only one-at-a-time, to more easily distinguish the thousands of weapons in the modsector.</p><p>Forum post: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35952.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35952.0</a></p>",
-  "aiDescription": "Replaces the stacked sprite visuals for cargo with a single sprite per stack. The item count remains visible. Includes toggles for weapons and crew/marines via LunaLib settings.",
-  "saveCompatibilityText": "Can I add or remove it mid save? Yes, both. Nothing of this mod is ever written into your save. It only changes how a screen is drawn while you are looking at it.",
-  "removalCompatibilityText": "Can I add or remove it mid save? Yes, both. Nothing of this mod is ever written into your save. It only changes how a screen is drawn while you are looking at it.",
+  "aiDescription": "Replaces the visual pile of grey ghost sprites behind stacked items with a single sprite. The item count remains visible in the corner. Includes toggles for weapons and crew/marines in the settings menu.",
+  "saveCompatibilityText": "Yes, both. Nothing of this mod is ever written into your save. It only changes how a screen is drawn while you are looking at it.",
+  "removalCompatibilityText": "Yes, both. Nothing of this mod is ever written into your save. It only changes how a screen is drawn while you are looking at it.",
   "canAdd": "yes",
   "canRemove": "yes",
   "aiUse": {
-    "quote": "Claude Code built this anyway.",
+    "quote": "Some or all assets and code in this mod were created using AI tools:\nCode: Claude Code (Claude Opus 5 and Claude Opus 5.5)\nText (readme and this post): Claude Code (Claude Opus 5 and Claude Opus 5.5)\nIcon: Gemini",
     "usesAi": true,
     "uses": [
       {
         "area": "code",
         "how": "generated",
-        "extent": "all"
+        "extent": "some"
+      },
+      {
+        "area": "writing",
+        "how": "generated",
+        "extent": "some"
+      },
+      {
+        "area": "icons",
+        "how": "generated",
+        "extent": "some"
       }
     ],
     "tools": [
-      "Claude Code"
+      "Claude Code",
+      "Claude Opus 5",
+      "Claude Opus 5.5",
+      "Gemini"
     ]
   },
   "rawCategories": [
@@ -84,25 +104,32 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616672152162304/image.png?ex=6ae0aa0d&is=6adf588d&hm=dfa97d22e277de8bea0b3b7f3bf9d840264f6bd2ce0d89a7b1f618f32a3dbccd&",
+      "url": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616672152162304/image.png?ex=6ae152cd&is=6ae0014d&hm=2068a8dcdede3db6cc97d91ad8b05ee8bff8e9137d57abebf231b81df98662af&",
       "aiCaption": "A game screen showing three ship sprites with the number 3 above each.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616723675119636/image.png?ex=6ae0aa19&is=6adf5899&hm=83f604545ec77e0e4d03fe39e7aeac6823b84f18f5749dd6a9cf1bcdfc72c3f3&",
+      "url": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616723675119636/image.png?ex=6ae152d9&is=6ae00159&hm=9f66f20b0034aeddb71dc6530794a42414ea9df1c872a76668459cb04d199ae4&",
       "aiCaption": "A game screen showing three ship sprites with the number 3 above each.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616739986772038/image.png?ex=6ae0aa1d&is=6adf589d&hm=03385b2a5a62d0b7beed36c6ca61ed6ea6b71b2bc7a5dc356872a0b54236a3e5&",
+      "url": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616739986772038/image.png?ex=6ae152dd&is=6ae0015d&hm=34ecd44d95a58820c48e080a904e5d5dcc2c7e803ac9f1ee840cac806c49c228&",
       "aiCaption": "A game interface showing tabs labeled 'All [1]' and 'Resources [2]' above three ship sprites.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
+    },
+    {
+      "url": "https://github.com/andrzejsokolowski/starsector-stopstackingme/blob/main/StopStackingMeIconBig.png?raw=true",
+      "aiCaption": "A logo showing a ship sprite with multiple weapon mounts crossed out by a large red X.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
     },
     {
       "url": "https://img.shields.io/github/downloads/andrzejsokolowski/starsector-stopstackingme/total?style=for-the-badge&amp;label=download",
@@ -125,15 +152,16 @@
     }
   ],
   "changelog": {
+    "1.0.2": "Added the mod icon, which now also shows next to the mod in LunaLib's settings menu.",
     "1.0.1": "Linked the mod to this forum thread.",
     "1.0.0": "First release. One sprite per cargo stack, everywhere the game stacks them, with a LunaLib toggle for crew and marines."
   },
+  "license": "CC0 (Creative Commons Zero)",
   "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-stopstackingme",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35952.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1543616671997108244/1543616671997108244",
   "releases": [],
-  "threadLastPostOn": "2026-08-30",
   "sameNameMods": [],
   "addons": []
 }

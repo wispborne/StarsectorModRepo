@@ -1,33 +1,20 @@
 {
-  "generatedAt": "2026-10-27T04:50:44.716539Z",
+  "generatedAt": "2026-10-27T08:52:20.144258Z",
   "listing": {
     "id": "fleet-storage-filters",
-    "name": "Fleet Storage Filters",
-    "authors": [
-      "Genir",
-      "starry_dragon"
-    ],
-    "otherAuthorNames": {
-      "Genir": [
-        "halke1986"
-      ]
-    },
-    "categories": [
-      "Utilities",
-      "Quality of life",
-      "Campaign and exploration"
-    ],
+    "name": "Fleet Storage Filter",
+    "authors": [],
+    "otherAuthorNames": {},
+    "categories": [],
     "sources": [
-      "forum",
-      "discord"
+      "forum"
     ],
-    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "2.1.1c",
     "imageUrl": "https://fractalsoftworks.com/forum/avatars/default.png",
     "summary": "Got too many ships? Search through your hoard to find what you need.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a search bar to the fleet storage screen to filter ships by name.",
+    "aiSummary": "Adds a search filter to the fleet storage list to help find specific ships.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -37,16 +24,14 @@
     },
     "downloadCount": 1,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=33916.0",
-    "discordUrl": "https://discord.com/channels/187635036525166592/1403385084681256982/1403385084681256982",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
-    "addedOn": "2025-08-08",
-    "threadLastPostOn": "2026-10-23",
+    "addedOn": "2025-08-28",
     "editedOn": "2025-10-16",
     "needs": [
       {
         "name": "MagicLib",
-        "id": "magiclib"
+        "id": "magiclib-2"
       },
       {
         "name": "LunaLib",
@@ -58,18 +43,13 @@
   "descriptionHtml": "<div class=\"align-center\"><b><span class=\"size-biggest\">Fleet Storage Filter</span></b></div><hr><br><br><div class=\"align-center\"><b><span class=\"size-big\"><a href=\"https://github.com/starry-dragon/starsector-fleet-storage-filter/releases/latest/download/Fleet-Storage-Filter.zip\" rel=\"nofollow noopener\" target=\"_blank\">Direct Download Latest</a></span></b></div><div class=\"align-center\"><i>Source Code (<a href=\"https://github.com/starry-dragon/starsector-fleet-storage-filter\" rel=\"nofollow noopener\" target=\"_blank\">Github</a>)</i></div><br><div class=\"align-center\"><b><span class=\"size-big\">Description</span></b></div><br><div class=\"align-center\">Got too many ships? Search through your hoard to find what you need.</div><br><div class=\"align-center\"><b><span class=\"size-big\">Showcase (v2.0.0)</span></b></div><div class=\"align-center\"><a href=\"https://vimeo.com/1108444256\" rel=\"nofollow noopener\" target=\"_blank\">https://vimeo.com/1108444256</a></div><br><div class=\"align-center\"><i><span class=\"size-big\">Safe to install/uninstall from existing saves<br><u>Requires MagicLib, LunaLib</u></span></i></div><br><div class=\"align-center\"><b>Changelog</b></div><details class=\"spoiler\"><summary>Spoiler</summary><div class=\"align-center\"><i>v2.0.1</i><br>Search is now case-insensitive and matches with hull name instead of internal id <i>(thanks EnigmaniteZ)</i><br><br><i>v2.1.0</i><br>Moved the location of the search bar to not overlap with UI <i>(thanks JamesTripleQ)</i><br>Search now uses fuzzy string matching, threshold might need tweaking<br><u>This version adds LunaLib as a dependency to enable the above</u><br>Version checker integration (tell me if its broken :P)<br><br><i>v2.1.1</i><br>LunaSettings integration for configuring fuzzy search threshold, search bar UI position<br>Fixed a storage list sorting bug<br><br><i>v2.1.1a</i><br>fixed an issue in the previous version<br><br><i>v2.1.1b</i><br>hotfix to restore previous sort behaviour<br><br><i>v2.1.1c</i><br>fixed sorting behaviour in non storage fleets</div></details><br><br><hr><br><div class=\"align-center\"><b><span class=\"size-big\">Credits</span></b></div><br><div class=\"align-center\"><i>Genir: wrote the original mod and let me take over<br>Lukas04: code I referenced from LunaLib and Second in Command</i></div>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p>Fleet Storage Filter lets you easily search through the hundreds of ships you hoarded at your colonies.</p><p><code>Can be safely added and removed from existing saves.</code></p><p>Download: <a href=\"https://github.com/Halke1986/starsector-fleet-storage-filter/releases/download/v2.0.0/FleetStorageFilter_v2.0.0.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Halke1986/starsector-fleet-storage-filter/releases/download/v2.0.0/FleetStorageFilter_v2.0.0.zip</a><br>Forum thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=33795\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=33795</a></p>",
-  "aiDescription": "Adds a search bar to the fleet storage screen to filter ships by name. It supports case-insensitive and fuzzy string matching. The search bar position and fuzzy threshold can be configured via LunaLib settings.",
+  "aiDescription": "Adds a search bar to the fleet storage interface. It supports case-insensitive and fuzzy string matching to help locate ships in large fleets. The search threshold and UI position can be configured via settings.",
   "saveCompatibilityText": "Safe to install/uninstall from existing saves",
   "removalCompatibilityText": "Safe to install/uninstall from existing saves",
   "canAdd": "yes",
   "canRemove": "yes",
   "aiUse": {},
-  "rawCategories": [
-    "Colonies",
-    "Quality of Life",
-    "Utility mods"
-  ],
+  "rawCategories": [],
   "gallery": [],
   "downloads": [
     {
@@ -90,9 +70,18 @@
   "sourceCodeUrl": "https://github.com/starry-dragon/starsector-fleet-storage-filter",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=33916.0",
-  "discordUrl": "https://discord.com/channels/187635036525166592/1403385084681256982/1403385084681256982",
   "releases": [],
-  "threadLastPostOn": "2026-10-23",
-  "sameNameMods": [],
+  "sameNameMods": [
+    {
+      "title": "Fleet Storage Filter",
+      "url": "https://fractalsoftworks.com/forum/index.php?topic=33795.0",
+      "id": "fleet-storage-filter",
+      "authors": [
+        "Genir"
+      ],
+      "gameVersion": "0.98a",
+      "modVersion": "2.0.0"
+    }
+  ],
   "addons": []
 }
