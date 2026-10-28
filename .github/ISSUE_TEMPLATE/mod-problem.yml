@@ -1,0 +1,49 @@
+# Opened from "Report a problem" on a mod's page on Starmodder. The page fills
+# in `title`, `mod`, `page` and `build` through the address, so those ids must
+# match `problemReportUrl` in site/lib.js.
+name: Problem with a mod's page
+description: Something on a mod's page is wrong, missing or broken.
+title: "Problem with "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Starmodder collects everything automatically from forum and Discord posts. Some of it will be wrong. Thanks for letting us know.
+
+        If you made this mod and want it taken off Starmodder, see "Removing your mods" on the [About page](https://starmodder.wispborne.com/#/about) instead.
+  - type: input
+    id: mod
+    attributes:
+      label: Mod
+      description: Filled in for you if you opened this form from the mod's page.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What is wrong?
+      options:
+        - Wrong information (name, author, version, category…)
+        - The download is broken, old or the wrong file
+        - Wrong or missing picture
+        - Two pages for one mod, or two mods on one page
+        - This is not a mod
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Tell us what it says now. Then tell us what it should say. A link to the right information helps.
+    validations:
+      required: true
+  - type: input
+    id: build
+    attributes:
+      label: Site version
+      description: Filled in for you. Leave it as it is.

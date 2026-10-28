@@ -1,0 +1,32 @@
+# Opened from "Report a problem" in Starmodder's footer. The page fills in
+# `page` and `build` through the address, so those ids must match
+# `problemReportUrl` in site/lib.js.
+name: Problem with the website
+description: Something on Starmodder is broken or hard to use.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For a problem with one mod's information, use "Problem with a mod's page" instead.
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Filled in for you if you opened this form from the site.
+  - type: textarea
+    id: details
+    attributes:
+      label: What happened?
+      description: What did you do? What did you expect? What happened instead? A screenshot helps.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      placeholder: Firefox on Windows, Chrome on Android…
+  - type: input
+    id: build
+    attributes:
+      label: Site version
+      description: Filled in for you. Leave it as it is.

@@ -2,7 +2,7 @@
 // problem.
 
 import {
-    clear, el, formatDay, modList, PROBLEM_REPORT_BASE, SITE_CODE_URL, takedownButton,
+    clear, el, formatDay, modList, PROBLEM_REPORT_CHOOSER, SITE_CODE_URL, takedownButton,
 } from '../lib.js';
 import { GUIDE_ICON, GUIDE_ROUTE, GUIDE_TITLE, openGuide } from './guide.js';
 
@@ -63,7 +63,7 @@ export async function render(root) {
             ]),
             el('a', {
                 class: 'btn btn-primary btn-with-icon',
-                href: PROBLEM_REPORT_BASE,
+                href: PROBLEM_REPORT_CHOOSER,
                 target: '_blank',
                 rel: 'noopener nofollow',
             }, [

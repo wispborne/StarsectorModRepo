@@ -1526,6 +1526,11 @@ button.check-row { align-items: center; }
   scrollbar-width: thin; scrollbar-color: var(--primary-bar) transparent;
 }
 .mod-side { gap: var(--gap); }
+/* A small, dim line for reporting a problem with the mod, below its facts. */
+.mod-report {
+  margin: 0; text-align: center;
+  color: var(--text-dim); font-size: var(--type-small);
+}
 /* Beside the mod, the cards about it are one panel: each keeps its heading,
    with a thin line running from the end of the heading to the panel's edge,
    which marks where a section starts without boxing it in. */
@@ -1546,13 +1551,14 @@ button.check-row { align-items: center; }
   .mod-layout {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: none;
-    grid-template-areas: "head" "get" "main" "side" "jumps" "related";
+    grid-template-areas: "head" "get" "main" "side" "report" "jumps" "related";
   }
   .mod-aside { display: contents; }
   .mod-get { grid-area: get; }
   .mod-side { grid-area: side; }
   .mod-jumps { grid-area: jumps; }
   .mod-related { grid-area: related; }
+  .mod-report { grid-area: report; }
 }
 
 /* The whole picture, same as the cards: bars either side are the price of

@@ -2214,15 +2214,80 @@ export function currentGameVersion(mods) {
   return found.length ? found[0].family : null;
 }
 
-/// Where a reader says something on a mod's page is wrong, or asks for their
-/// mod to be taken down. Everything here is collected off other people's posts
-/// by a machine, so some of it will be wrong and there has to be one obvious
-/// place to say so.
 /// Where the website's own code lives. Commit links on the site point into it.
 export const SITE_CODE_URL = 'https://github.com/wispborne/Mod_Repo_Scraper';
 
-export const PROBLEM_REPORT_BASE =
-  'https://github.com/wispborne/StarsectorModRepo/issues/new';
+/// One place to report errors in the details collected from other people's
+/// posts. Reports are GitHub issues on the published repo. Publishing copies
+/// the forms from `site/.github/ISSUE_TEMPLATE/` with the rest of the site.
+const ISSUES_URL = 'https://github.com/wispborne/StarsectorModRepo/issues/new';
+
+/// GitHub's page for picking one of the issue forms.
+export const PROBLEM_REPORT_CHOOSER = `${ISSUES_URL}/choose`;
+
+/// The form for each kind of report. Field names must match the form's `id`s
+/// for GitHub to fill them in.
+const REPORT_FORMS = {
+  mod: 'mod-problem.yml',
+  site: 'site-problem.yml',
+};
+
+// This build's version.json. Null until read, or if the file is missing
+// (when run straight from the repo).
+let knownBuild = null;
+let buildLoad = null;
+
+/// The site build: `{ build, commit, date }`, or null if `version.json` is
+/// missing. Read once and kept.
+///
+/// Fetch directly because `version.json` belongs to the site.
+/// Using `data()` with `?data=sample` would look in `sample-data/`,
+/// which has no version file.
+export function siteBuild() {
+  if (!buildLoad) {
+    buildLoad = fetch('./version.json', { credentials: 'omit' })
+      .then((res) => (res.ok ? res.json() : null))
+      .then((build) => {
+        knownBuild = build && build.commit ? build : null;
+        return knownBuild;
+      })
+      .catch(() => null);
+  }
+  return buildLoad;
+}
+
+/// The address of a new GitHub issue for [kind] (`mod` or `site`), with the
+/// form's fields filled in from [fields] and the site's build added.
+export function problemReportUrl(kind, fields = {}) {
+  const params = new URLSearchParams({ template: REPORT_FORMS[kind] });
+  for (const [name, value] of Object.entries(fields)) {
+    if (value) params.set(name, value);
+  }
+  if (knownBuild) params.set('build', `v${knownBuild.build} (${knownBuild.commit})`);
+  return `${ISSUES_URL}?${params}`;
+}
+
+/// A link to a new problem report. Calls [fieldsOf] before the link is opened
+/// to fill in the current page. Includes the site build once it has loaded.
+export function problemReportLink(kind, fieldsOf, attrs = {}, children = []) {
+  const link = el('a', {
+    target: '_blank', rel: 'noopener nofollow', ...attrs,
+  }, children);
+  const refresh = () => { link.href = problemReportUrl(kind, fieldsOf()); };
+  refresh();
+  link.addEventListener('pointerdown', refresh);
+  link.addEventListener('focus', refresh);
+  return link;
+}
+
+/// The page address for a report. Uses a mod's own address without `?data=`
+/// or the open tab.
+export function reportedPage(modId) {
+  // The base is set to the site's root at startup. This works from both
+  // the front page and another mod's page.
+  if (modId) return new URL(`mods/${encodeURIComponent(modId)}/`, document.baseURI).href;
+  return location.href;
+}
 
 /// How far behind the current game release a mod is: 'current', 'one-behind'
 /// or 'old'. Null when either version is unknown.

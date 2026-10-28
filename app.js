@@ -9,7 +9,8 @@ import {
   formatMoment, go, hideQuickTip, imageChoice, imageUrlOf, inlinePictures,
   loading,
   favorites, modHref, modList, modName,
-  preparePageScroll, restorePageScroll, searchHelpField, setAiSummaryMode, SITE_CODE_URL,
+  preparePageScroll, problemReportLink, reportedPage, restorePageScroll, searchHelpField,
+  setAiSummaryMode, siteBuild, SITE_CODE_URL,
   setAiNoteChoice, setImageChoice, setInlinePictures,
   THEMES, applyTheme, setThemePreference, themePreference,
   applyMotion, motionChoice, setMotionChoice,
@@ -195,29 +196,29 @@ async function showFreshness() {
 /// `version.json` is written by the release workflow, so it is only there in a
 /// published copy of the site. Run straight from the repo there is no such
 /// file, the fetch fails, and the footer simply carries no version line.
-///
-/// It is fetched by hand rather than through `data()` because it is part of
-/// the site, not part of the published data: `?data=sample` must not send it
-/// looking in `sample-data/`, where it would never be.
 async function showBuild() {
   const line = document.getElementById('build');
   if (!line) return;
-  try {
-    const res = await fetch('./version.json', { credentials: 'omit' });
-    if (!res.ok) return;
-    const build = await res.json();
-    if (!build || !build.commit) return;
+  const build = await siteBuild();
+  if (!build) return;
 
-    const commit = el('a', {
-      text: build.commit,
-      href: `${SITE_CODE_URL}/commit/${build.commit}`,
-      rel: 'nofollow noopener',
-    });
-    line.replaceChildren(`v${build.build} · `, commit, ` · ${build.date}`);
-    line.title = `Built from commit ${build.commit} on ${formatDay(build.date)}.`;
-  } catch {
-    // No version file, or one that would not read. Not worth a word on screen.
-  }
+  const commit = el('a', {
+    text: build.commit,
+    href: `${SITE_CODE_URL}/commit/${build.commit}`,
+    rel: 'nofollow noopener',
+  });
+  line.replaceChildren(`v${build.build} · `, commit, ` · ${build.date}`);
+  line.title = `Built from commit ${build.commit} on ${formatDay(build.date)}.`;
+}
+
+/// The footer's "Report a problem" link is for site problems.
+/// It includes the page the reader is on when they open it.
+function mountReportLink() {
+  const spot = document.getElementById('report-problem');
+  if (!spot) return;
+  spot.replaceWith(problemReportLink('site', () => ({ page: reportedPage() }), {
+    id: 'report-problem', text: 'Report a problem',
+  }));
 }
 
 // Apply settings immediately; picture and summary changes redraw the page.
@@ -534,6 +535,7 @@ window.addEventListener('DOMContentLoaded', () => {
   mountSkipLink();
   showFreshness();
   showBuild();
+  mountReportLink();
   // Back, Forward and every link to one of our own pages come through here.
   site.watch(route);
   // The front document with nothing after it is Home. Saying so in the address

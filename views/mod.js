@@ -12,7 +12,8 @@ import {
   favoriteToggle, formatMoment, imageUrlOf, inlinePictures, isMissingFile, joinNames, quickTip,
   setAiOnModPages, setInlinePictures, summaryToShow,
   modDetail, modHref, modList, modName, MOD_VERSION_NOTE,
-  NO_DESCRIPTION, openBox, pageIcon, picture, reduceMotion, showPicture, summaryTitle,
+  NO_DESCRIPTION, openBox, pageIcon, picture, problemReportLink, reduceMotion, reportedPage,
+  showPicture, summaryTitle,
   takedownButton, versionStanding, versionStandingNote, withSource,
 } from '../lib.js';
 import { address } from '../address.js';
@@ -162,6 +163,7 @@ export async function render(root, parts) {
           facts(detail),
           downloads(detail),
         ]),
+        reportThisMod(id, shownName),
         jumps && el('aside', { class: 'mod-jumps' }, [jumps]),
         relatedLists(mod, everyMod, currentVersion),
       ]),
@@ -169,6 +171,19 @@ export async function render(root, parts) {
     rawInfo(detail, id),
     el('div', {}, [takedownButton()]),
   ]));
+}
+
+/// Page details are collected by a program from other people's posts and can
+/// be wrong. The report fills in the mod and page for the reader.
+function reportThisMod(id, shownName) {
+  return el('p', { class: 'mod-report' }, [
+    'Something wrong on this page? ',
+    problemReportLink('mod', () => ({
+      title: `Problem with ${shownName}`,
+      mod: `${shownName} (${id})`,
+      page: reportedPage(id),
+    }), { text: 'Report a problem' }),
+  ]);
 }
 
 /// The mod's sections as tabs. A tab with nothing in it is not drawn, and a mod
