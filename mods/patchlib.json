@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T18:32:30.930615Z",
+  "generatedAt": "2026-10-28T06:08:38.762145Z",
   "listing": {
     "id": "patchlib",
     "name": "PatchLib",
@@ -15,7 +15,7 @@
       "discord"
     ],
     "gameVersion": "0.98a",
-    "modVersion": "1.0.2",
+    "modVersion": "1.0.3",
     "imageUrl": "https://imgur.com/VOkhFKZ.png",
     "summary": "PatchLib is a library mod that enables bytecode patching at runtime for starsector. To install it, simply drop the mod in to your mods folder like other mods. Only install it if a mod requires it.",
     "summaryIsGenerated": false,
@@ -128,6 +128,7 @@
     }
   ],
   "changelog": {
+    "1.0.3": "- Fixed an issue where ashes jar replacement broke most patches after anything tries to patch the \"BaseIndustry\" class.\n-> The \"BaseIndustry\" issue itself is not fixed, and likely wont be until the starsector update, but should have far less consequences",
     "1.0.2": "- Added a warning for subtype matches on janino loaded classes that themself extend from janino loaded classes.\n- Improved the crash message when crashing due to using an old version of FR (0.6.8 and older)",
     "1.0.1": "- The \"TogglePatch\" command now allows toggling multiple patches at once\n- Made a specific crash provide a better error message."
   },

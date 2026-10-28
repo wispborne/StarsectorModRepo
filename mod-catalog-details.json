@@ -1,11 +1,15 @@
 {
   "updatedAt": "2026-10-27T18:06:54.009523Z",
   "meta": {
-    "generatedAt": "2026-10-27T18:32:29.396033Z",
+    "generatedAt": "2026-10-28T06:08:37.291958Z",
     "totalMods": 1077,
     "totalDetails": 1064,
     "totalAssumedDownloadEntries": 906,
-    "placeholderDetailCount": 0
+    "placeholderDetailCount": 0,
+    "scrapeDurationSeconds": 3,
+    "modsScraped": 0,
+    "imagesDownloaded": 0,
+    "errors": 0
   },
   "index": [
     {
@@ -217516,7 +217520,7 @@
               "requiresManualStep": false
             }
           ],
-          "image": "ext:https://cdn.discordapp.com/attachments/1557265921276387348/1557265925713952918/title.png?backend=b2&ex=6ae18a69&is=6ae038e9&hm=44af7132fcfe3a36695f63b9037d962ec49ed3edeccea1fc3d292ce8967075d0&",
+          "image": "ext:https://cdn.discordapp.com/attachments/1557265921276387348/1557265925713952918/title.png?backend=b2&ex=6ae2dbe9&is=6ae18a69&hm=6e87b3fc22a80117df2d4290cef21a74d31c0128bdb1daea527f1549e5c44241&",
           "extras": {
             "version": "0.5.1",
             "changelog": {
@@ -217528,8 +217532,8 @@
             "saveCompatibility": "IMPORTANT - Not mid-save compatible",
             "canAdd": "no",
             "summary": {
-              "sentence": "Adds a new officer, questline, hyperspace skills, systems, and a new sector to explore.",
-              "paragraph": "Adds a new officer named Koyama Sinni and a questline to reach the Fourteenth Battlegroup's Lost Inheritance. Adds six new hyperspace topography skills and six new handcrafted systems. Adds the Orion Knot Sector, a mini-sector at the Gateway to the Domain Heartland, along with three new bosses."
+              "sentence": "Adds a new officer, questline, hyperspace skills, systems, bosses, and a new sector.",
+              "paragraph": "Adds a new officer named Koyama Sinni and a questline to reach a lost inheritance. Adds six levels of hyperspace topography skills, six new handcrafted systems, three new bosses, and a new mini-sector called the Orion Knot Sector."
             },
             "needs": [
               "GraphicsLib",
@@ -218016,10 +218020,11 @@
             }
           ],
           "extras": {
-            "version": "1.0.2",
+            "version": "1.0.3",
             "changelog": {
               "link": "https://github.com/Lukas22041/PatchLib/releases",
               "entries": {
+                "1.0.3": "- Fixed an issue where ashes jar replacement broke most patches after anything tries to patch the \"BaseIndustry\" class.\n-> The \"BaseIndustry\" issue itself is not fixed, and likely wont be until the starsector update, but should have far less consequences",
                 "1.0.2": "- Added a warning for subtype matches on janino loaded classes that themself extend from janino loaded classes.\n- Improved the crash message when crashing due to using an old version of FR (0.6.8 and older)",
                 "1.0.1": "- The \"TogglePatch\" command now allows toggling multiple patches at once\n- Made a specific crash provide a better error message."
               }
@@ -218027,7 +218032,7 @@
             "sourceCode": "https://github.com/Lukas22041/PatchLib",
             "summary": {
               "sentence": "Allows mods to patch game code at runtime to add or modify behavior.",
-              "paragraph": "Provides tools for mod authors to insert code into existing game methods, modify return values, and redirect calls using an annotation-based API. The library itself does nothing unless another mod requires it."
+              "paragraph": "Provides tools for mod authors to insert code into existing game methods, modify return values, and redirect calls using an annotation-based API. The library itself adds no content and is only required by other mods that use its patching capabilities."
             },
             "optionalNeeds": [
               "Fast Rendering"
@@ -218284,6 +218289,60 @@
               "quote": "No AI was used in the creation of this mod.",
               "usesAi": false
             }
+          }
+        }
+      ]
+    },
+    {
+      "threadId": "1564837755027193976",
+      "url": "https://discord.com/channels/187635036525166592/1564837755027193976/1564837755027193976",
+      "name": "Officer Extendedest",
+      "mods": [
+        {
+          "name": "Officer Extendedest",
+          "role": "main",
+          "downloads": [
+            {
+              "url": "https://github.com/Bass294/Officer-Extendedest/releases/latest/download/Officer_Extendedest.zip",
+              "label": "https://github.com/Bass294/Officer-Extendedest/releases/latest/download/Officer_Extendedest.zip",
+              "kind": "direct",
+              "resolvedDirectUrl": "https://github.com/Bass294/Officer-Extendedest/releases/latest/download/Officer_Extendedest.zip",
+              "sourceHost": "GitHub",
+              "fileName": "Officer_Extendedest.zip",
+              "requiresManualStep": false
+            }
+          ],
+          "image": "ext:https://cdn.discordapp.com/attachments/1564837755027193976/1564837921435951114/vwerfvfewrv.png?ex=6ae2b861&is=6ae166e1&hm=1acb098c88f0b29b1f89a7c95d1db579c874291f133d85e31b2b3d1774a1f1c1&",
+          "extras": {
+            "sourceCode": "https://github.com/Bass294/Officer-Extendedest",
+            "saveCompatibility": "Safe to add or remove to ongoing saves.",
+            "removalCompatibility": "Safe to add or remove to ongoing saves.",
+            "canAdd": "yes",
+            "canRemove": "yes",
+            "summary": {
+              "sentence": "Adds a mastery experience system that allows officers to respec their skills without changing their level.",
+              "paragraph": "Officers gain mastery experience from combat when at max level, with a portion contributing to a global pool. This experience can be spent to reset an officer's vanilla and elite skills, similar to AI cores. The global pool can cover costs if an individual officer lacks sufficient personal experience."
+            },
+            "needs": [
+              "patchlib"
+            ],
+            "aiUse": {
+              "quote": "Code/rules: Claude Opus 5.5, with Lukas04's starsector-knowledge skill, patchlib skill\nAI use disclaimer: see above",
+              "usesAi": true,
+              "uses": [
+                {
+                  "area": "code",
+                  "how": "generated"
+                }
+              ],
+              "tools": [
+                "Claude Opus 5.5"
+              ]
+            }
+          },
+          "descriptionAnchors": {
+            "startsWith": "Simple officer respecs. Safe to add",
+            "endsWith": "Officer levels are never modified."
           }
         }
       ]
