@@ -1948,10 +1948,15 @@ a.chip.needed.optional:hover { background: var(--primary-soft); }
 
 .thread-title { opacity: 0.8; font-size: var(--type-tiny); }
 
-/* "Part of <thread>", for a mod that shares its forum thread with others. It
+/* "From the forum thread <title>", for a mod that shares its forum thread (or
+   its Discord post) with others. It
    sits under the name and says why the thread it links is not about it alone,
    so it is a note about the mod rather than part of its title. */
 .part-of { color: var(--text-dim); font-size: var(--type-small); }
+/* The thread's name opens a box listing its other mods; it looks like the
+   link it used to be. */
+.part-of .link-button { text-decoration: none; }
+.part-of .link-button:hover { text-decoration: underline; }
 
 /* The other mods on the site carrying this one's name. It sits above the
    downloads, so a reader who came from outside meets it, and its facts wrap

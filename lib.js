@@ -1440,7 +1440,7 @@ export function askYesNo(title, text, { yes = 'Yes', no = 'No' } = {}) {
 
 /// The box the three above share: a heading with a ×, then `body`. Returns
 /// the function that closes it. `onShut` runs once, however it was closed.
-function openBox(title, body, { focus = null, onShut = () => {} } = {}) {
+export function openBox(title, body, { focus = null, onShut = () => {} } = {}) {
   // Where the keyboard was before this opened, so closing it puts the reader
   // back on the button they pressed.
   const cameFrom = document.activeElement;

@@ -12,7 +12,7 @@ import {
   favoriteToggle, formatMoment, imageUrlOf, inlinePictures, isMissingFile, joinNames, quickTip,
   setAiOnModPages, setInlinePictures, summaryToShow,
   modDetail, modHref, modList, modName, MOD_VERSION_NOTE,
-  NO_DESCRIPTION, pageIcon, picture, reduceMotion, showPicture, summaryTitle,
+  NO_DESCRIPTION, openBox, pageIcon, picture, reduceMotion, showPicture, summaryTitle,
   takedownButton, versionStanding, versionStandingNote, withSource,
 } from '../lib.js';
 import { address } from '../address.js';
@@ -133,7 +133,7 @@ export async function render(root, parts) {
   ]);
 
   const forumHeading = Boolean(detail.descriptionIsForumPost);
-  const header = modHeader(mod, detail, shownName);
+  const header = modHeader(mod, detail, shownName, everyMod, currentVersion);
   const jumps = jumpLinks(sections, [
     { node: header, text: 'Header' },
     forumPost && { node: forumPost, text: forumHeading ? 'Forum post' : 'About this mod' },
@@ -331,7 +331,7 @@ function tabKey(label) {
 }
 
 // The game version is not here: the Compatibility card at the side has it.
-function modHeader(mod, detail, shownName) {
+function modHeader(mod, detail, shownName, everyMod, currentVersion) {
   const chips = el('div', { class: 'mod-meta' });
   if (mod.modVersion) {
     chips.append(el('span', {
@@ -374,7 +374,7 @@ function modHeader(mod, detail, shownName) {
           'Original title: ',
           el('i', { text: mod.name }),
         ]),
-      partOfThreadLine(mod),
+      partOfThreadLine(mod, everyMod, currentVersion),
       el('div', { class: 'mod-summary-slot' }, [headSummary(mod)]),
       byline,
     ]),
@@ -407,20 +407,57 @@ function headPicture(mod) {
   return box;
 }
 
-function partOfThreadLine(mod) {
+function partOfThreadLine(mod, everyMod, currentVersion) {
   if (!mod.partOfThreadTitle) return null;
+  // The builder takes the title from the forum thread when the mod has one,
+  // and from the Discord post only when it does not.
+  const [where, url] = mod.forumUrl
+    ? ['forum thread', mod.forumUrl]
+    : mod.discordUrl ? ['Discord post', mod.discordUrl] : ['thread', null];
+  const together = url ? sameThreadMods(mod, url, everyMod) : [];
   const line = el('div', { class: 'sub part-of' }, [
-    document.createTextNode('Part of '),
+    document.createTextNode(`From the ${where} `),
   ]);
-  line.append(mod.forumUrl
-    ? el('a', {
-        href: mod.forumUrl, target: '_blank', rel: 'noopener nofollow',
-        text: mod.partOfThreadTitle,
-        title: 'A forum thread with several mods, including this one.',
-      })
-    : el('span', { text: mod.partOfThreadTitle }));
-  line.append(document.createTextNode(', a thread with multiple mods.'));
+  if (together.length > 1) {
+    const open = el('button', { type: 'button', class: 'link-button', text: mod.partOfThreadTitle });
+    open.addEventListener('click', () =>
+      threadDialog(mod, where, url, together, currentVersion));
+    line.append(open);
+  } else {
+    line.append(url
+      ? el('a', {
+          href: url, target: '_blank', rel: 'noopener nofollow',
+          text: mod.partOfThreadTitle,
+        })
+      : el('span', { text: mod.partOfThreadTitle }));
+  }
+  line.append(document.createTextNode('.'));
   return line;
+}
+
+/// Every published mod read off the same forum thread or Discord post, this
+/// one included. Two mods share a forum thread only when they came off the
+/// same one, since the catalog never joins two topics into one mod.
+function sameThreadMods(mod, url, everyMod) {
+  const key = mod.forumUrl ? 'forumUrl' : 'discordUrl';
+  return everyMod.filter((other) => other[key] === url);
+}
+
+/// The box the thread's name opens: a row for each of its mods and a button
+/// out to the thread.
+function threadDialog(mod, where, url, mods, currentVersion) {
+  const place = PLACES.find((p) => p.field === (mod.forumUrl ? 'forumUrl' : 'discordUrl'));
+  const list = relatedRows(mods, currentVersion);
+  const shut = openBox(mod.partOfThreadTitle, [
+    el('p', { class: 'about-line', text: `${mods.length} mods in the ${where}` }),
+    list,
+    el('div', {}, [placeButton(place, url)]),
+  ]);
+  // Moving to another mod's page changes the path, not the hash, so the box
+  // would otherwise stay open over the page it led to.
+  list.addEventListener('click', (e) => {
+    if (e.target.closest('a')) shut();
+  });
 }
 
 // Adapt a full download to the shared button’s compact download shape.
@@ -467,22 +504,11 @@ function howToGetIt(mod, detail) {
   if (plain) row.append(plainDownloadButton(plain, checked));
   const place = PLACES.find((p) => detail[p.field]);
   if (place) {
-    const icon = pageIcon(place.field);
-    const button = el('a', {
-      class: `btn btn-with-icon${first ? '' : ' btn-big'}`,
-      href: detail[place.field],
-      rel: 'noopener nofollow',
-      target: '_blank',
-    }, [
-      icon
-        ? el('span', { class: 'original-page-icon', html: icon, 'aria-hidden': 'true' })
-        : null,
-      el('span', { text: first ? place.also : place.alone }),
-    ]);
+    const button = placeButton(place, detail[place.field], { short: Boolean(first) });
     if (first) {
       row.append(button);
     } else {
-      button.classList.add('btn-solid');
+      button.classList.add('btn-big', 'btn-solid');
       card.append(button);
     }
   }
@@ -491,6 +517,23 @@ function howToGetIt(mod, detail) {
   row.append(favorite);
   card.append(row);
   return card;
+}
+
+/// The button to a mod's forum thread or Discord post, with that site's icon.
+/// `short` gives the shorter label used beside other buttons.
+function placeButton(place, url, { short = false } = {}) {
+  const icon = pageIcon(place.field);
+  return el('a', {
+    class: 'btn btn-with-icon',
+    href: url,
+    rel: 'noopener nofollow',
+    target: '_blank',
+  }, [
+    icon
+      ? el('span', { class: 'original-page-icon', html: icon, 'aria-hidden': 'true' })
+      : null,
+    el('span', { text: short ? place.also : place.alone }),
+  ]);
 }
 
 /// The source code, the license and the support links, in a card of their
@@ -1643,8 +1686,33 @@ function moreByHeading(mod) {
 /// and the mod's summary under the name. "Similar mods" also names the author
 /// after the name; under "More by" that would be the same name on every row.
 function relatedLists(mod, everyMod, currentVersion) {
-  const rows = (mods, { withAuthor = false } = {}) => el('div', { class: 'related-list' }, mods
-    .slice(0, RELATED_SIDE_COUNT)
+  const rows = (mods, options) =>
+    relatedRows(mods.slice(0, RELATED_SIDE_COUNT), currentVersion, options);
+
+  const theirs = theAuthorsOtherMods(mod, everyMod);
+  const alike = modsLikeThis(mod, everyMod);
+  const parts = [
+    theirs.length ? sideCard(moreByHeading(mod), [rows(theirs)]) : null,
+    alike.length ? sideCard('Similar mods', [rows(alike, { withAuthor: true })]) : null,
+  ].filter(Boolean);
+  if (!parts.length) return null;
+  return el('aside', { class: 'mod-related side-merged stack' }, parts);
+}
+
+/// A short row per mod: a small picture, the name with its game version at
+/// the right, and the mod's summary under the name. `withAuthor` also names
+/// the author after the name.
+function relatedRows(mods, currentVersion, { withAuthor = false } = {}) {
+  const summaryLine = (other) => summaryToShow(other)?.text || '';
+  // The row cuts the name, the author and the summary short, so all three
+  // are written out in full on hover.
+  const fullText = (other) => [
+    modName(other),
+    (other.authors || []).length ? `by ${joinNames(other.authors)}` : '',
+    summaryLine(other) ? `\n${summaryLine(other)}` : '',
+  ].filter(Boolean).join('\n');
+
+  return el('div', { class: 'related-list' }, mods
     .map((other) => quickTip(el('a', { class: 'related-row', href: modHref(other.id) }, [
       relatedThumb(other),
       el('span', { class: 'related-words' }, [
@@ -1666,23 +1734,6 @@ function relatedLists(mod, everyMod, currentVersion) {
           : null,
       ]),
     ]), () => fullText(other))));
-  const summaryLine = (other) => summaryToShow(other)?.text || '';
-  // The row cuts the name, the author and the summary short, so all three
-  // are written out in full on hover.
-  const fullText = (other) => [
-    modName(other),
-    (other.authors || []).length ? `by ${joinNames(other.authors)}` : '',
-    summaryLine(other) ? `\n${summaryLine(other)}` : '',
-  ].filter(Boolean).join('\n');
-
-  const theirs = theAuthorsOtherMods(mod, everyMod);
-  const alike = modsLikeThis(mod, everyMod);
-  const parts = [
-    theirs.length ? sideCard(moreByHeading(mod), [rows(theirs)]) : null,
-    alike.length ? sideCard('Similar mods', [rows(alike, { withAuthor: true })]) : null,
-  ].filter(Boolean);
-  if (!parts.length) return null;
-  return el('aside', { class: 'mod-related side-merged stack' }, parts);
 }
 
 /// The mod's picture, small, or its first letter where it has none — the same
