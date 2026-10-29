@@ -1463,15 +1463,20 @@ function sideCard(heading, rows) {
 
 /// Other mods as chips, linked to their pages when available. Optional mods
 /// use outlined chips instead of filled chips to show they are not required.
+/// A mod another requirement brought in says which one on hover.
 function neededChips(mods, optional) {
   const kind = optional ? 'chip needed optional' : 'chip needed';
-  return el('div', { class: 'needs-chips' }, mods.map((needed) =>
-    needed.id
+  return el('div', { class: 'needs-chips' }, mods.map((needed) => {
+    const chip = needed.id
       ? el('a', { class: kind, href: modHref(needed.id), text: needed.name })
       : el('span', {
           class: `${kind} unknown`, text: needed.name,
-          title: 'No page available for this mod.',
-        })));
+          title: needed.via ? null : 'No page available for this mod.',
+        });
+    if (!needed.via) return chip;
+    return quickTip(chip, `Required by ${needed.via}.`
+      + (needed.id ? '' : ' No page available for this mod.'));
+  }));
 }
 
 function compatibility(detail, currentVersion) {

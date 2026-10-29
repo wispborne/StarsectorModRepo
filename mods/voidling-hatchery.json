@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T17:23:23.618950Z",
+  "generatedAt": "2026-10-29T17:52:28.772023Z",
   "listing": {
     "id": "voidling-hatchery",
     "name": "Voidling Hatchery",
@@ -37,6 +37,21 @@
       {
         "name": "bananaFactory",
         "id": "bananafactory"
+      },
+      {
+        "name": "bananaLib",
+        "id": "bananalib",
+        "via": "bananaFactory"
+      },
+      {
+        "name": "sidebarLib",
+        "id": "sidebarlib",
+        "via": "bananaFactory"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "bananaLib"
       }
     ]
   },
