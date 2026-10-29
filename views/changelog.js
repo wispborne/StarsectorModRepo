@@ -11,6 +11,15 @@ import { clear, el, errorPanel, formatDay, SITE_CODE_URL } from '../lib.js';
 /// written that way), so it is shown as words, not as a heading.
 const LONGEST_HEADING = 120;
 
+// Tabler's "mood-sad-squint" (MIT), copied in as path data.
+const WARNING_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+  + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+  + 'stroke-linejoin="round" focusable="false" aria-hidden="true">'
+  + '<path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/>'
+  + '<path d="M14.5 16.05a3.5 3.5 0 0 0 -5 0"/>'
+  + '<path d="M8.5 11.5l1.5 -1.5l-1.5 -1.5"/>'
+  + '<path d="M15.5 11.5l-1.5 -1.5l1.5 -1.5"/></svg>';
+
 export async function render(root) {
   document.title = 'Changelog | Starmodder';
   let entries;
@@ -28,7 +37,10 @@ export async function render(root) {
   root.append(el('div', { class: 'stack' }, [
     el('div', { class: 'page-head' }, [
       el('h1', { text: 'Changelog' }),
-      el('h3', { text: 'Note: these are all AI-slop, read to your own tolerance.' }),
+      el('p', { class: 'changelog-warning' }, [
+        el('span', { class: 'warning-icon', html: WARNING_ICON }),
+        el('span', { text: 'Warning: the changelog is all AI slop.' }),
+      ]),
     ]),
     ...byDay(entries).map(([day, list]) => el('section', { class: 'panel changelog-day' }, [
       el('h2', { text: formatDay(day) || day }),

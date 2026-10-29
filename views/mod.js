@@ -8,13 +8,13 @@
 import {
   aiOnModPages, aiSparkle, aiSummaryNote, aiSummaryOf, akaText, imageCaption, imageHoverText,
   clear,
-  currentGameVersion, DATA_BASE, downloadButton, el, errorPanel, expandAllButton, formatDay,
+  currentGameVersion, DATA_BASE, DOWNLOAD_ICON, downloadButton, downloadButtonChoice, el, errorPanel, expandAllButton, formatDay,
   favoriteToggle, formatMoment, imageUrlOf, inlinePictures, isMissingFile, joinNames, quickTip,
   setAiOnModPages, setInlinePictures, summaryToShow,
   modDetail, modHref, modList, modName, MOD_VERSION_NOTE,
   NO_DESCRIPTION, openBox, pageIcon, picture, problemReportLink, reduceMotion, reportedPage,
   showPicture, summaryTitle,
-  takedownButton, versionStanding, versionStandingNote, withSource,
+  takedownButton, TRIOS_ICON_SMALL, versionStanding, versionStandingNote, withSource,
 } from '../lib.js';
 import { address } from '../address.js';
 import { SUPPORT_ICONS } from '../support_icons.js';
@@ -496,6 +496,12 @@ const PLACES = [
 function howToGetIt(mod, detail) {
   const list = detail.downloads || [];
   const { first, plain } = topDownloads(list);
+  // The big button uses the same Settings choice as the button
+  // on the mod's card.
+  const choice = downloadButtonChoice();
+  const [lead, other] = choice === 'file' && plain ? [plain, first] : [first, plain];
+  const place = PLACES.find((p) => detail[p.field]);
+  const placeFirst = Boolean(choice === 'page' && place && lead);
   const card = el('section', { class: 'panel side-card get-it' });
   // When the links were last read from the post, on hover over the download
   // buttons rather than a line of its own.
@@ -503,9 +509,9 @@ function howToGetIt(mod, detail) {
     ? `Links last checked ${formatMoment(detail.generatedAt)}`
     : null;
 
-  if (first) {
+  if (lead && !placeFirst) {
     const main = downloadButton(
-      { ...mod, bestDownload: bestOf(first), downloadCount: 1 },
+      { ...mod, bestDownload: bestOf(lead), plainDownload: null, downloadCount: 1 },
       { big: true },
     );
     main.classList.add('btn-solid');
@@ -516,15 +522,22 @@ function howToGetIt(mod, detail) {
   // Everything but the main button shares one row of smaller buttons, so the
   // card stays short.
   const row = el('div', { class: 'get-it-row' });
-  if (plain) row.append(plainDownloadButton(plain, checked));
-  const place = PLACES.find((p) => detail[p.field]);
-  if (place) {
-    const button = placeButton(place, detail[place.field], { short: Boolean(first) });
-    if (first) {
-      row.append(button);
-    } else {
-      button.classList.add('btn-big', 'btn-solid');
-      card.append(button);
+  if (placeFirst) {
+    const button = placeButton(place, detail[place.field]);
+    button.classList.add('btn-big', 'btn-solid');
+    card.append(button);
+    row.append(plainDownloadButton(lead, checked));
+    if (other) row.append(plainDownloadButton(other, checked));
+  } else {
+    if (other) row.append(plainDownloadButton(other, checked));
+    if (place) {
+      const button = placeButton(place, detail[place.field], { short: Boolean(lead) });
+      if (lead) {
+        row.append(button);
+      } else {
+        button.classList.add('btn-big', 'btn-solid');
+        card.append(button);
+      }
     }
   }
   const favorite = favoriteToggle(mod, { wide: true });
@@ -684,9 +697,11 @@ function creativeCommonsName(t) {
 }
 
 function plainDownloadButton(download, checked) {
+  const isTrios = download.kind === 'trios';
   const extension = /\.(zip|7z|rar|jar|tar\.gz|exe)$/i.exec(download.fileName || '');
-  const label = download.needsAnotherStep ? 'Download page'
-    : extension ? `Download .${extension[1].toLowerCase()}` : 'Download';
+  const label = isTrios ? 'TriOS'
+    : download.needsAnotherStep ? 'Download page'
+      : extension ? `Download .${extension[1].toLowerCase()}` : 'Download';
   return el('a', {
     class: 'btn btn-with-icon',
     href: download.directUrl || download.url,
@@ -694,17 +709,14 @@ function plainDownloadButton(download, checked) {
     target: '_blank',
     title: [download.fileName, checked].filter(Boolean).join('\n') || null,
   }, [
-    el('span', { class: 'original-page-icon', html: DOWNLOAD_ICON, 'aria-hidden': 'true' }),
+    el('span', {
+      class: 'original-page-icon',
+      html: isTrios ? TRIOS_ICON_SMALL : DOWNLOAD_ICON,
+      'aria-hidden': 'true',
+    }),
     el('span', { text: label }),
   ]);
 }
-
-// Tabler download icon.
-const DOWNLOAD_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
-  + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
-  + 'stroke-linejoin="round" focusable="false" aria-hidden="true">'
-  + '<path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"/>'
-  + '<path d="M7 11l5 5l5 -5"/><path d="M12 4l0 12"/></svg>';
 
 /// Where readers can support the author, as one line at the foot of the
 /// download card: near the moment a reader decides the mod is worth having,

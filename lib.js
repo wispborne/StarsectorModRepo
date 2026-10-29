@@ -458,6 +458,32 @@ export function setImageChoice(choice) {
   localStorage.setItem(IMAGE_KEY, choice);
 }
 
+// --- Main button on mods ---
+
+/// "trios" (the default) uses a TriOS link when there is one, as TriOS's catalog does.
+/// "file" uses the best plain download for readers who do not use TriOS.
+/// "page" opens the forum thread or Discord post.
+/// The small button beside it offers the download.
+export const DOWNLOAD_BUTTON_CHOICES = ['trios', 'file', 'page'];
+const DOWNLOAD_BUTTON_KEY = 'starmodderDownloadButton';
+
+export function downloadButtonChoice() {
+  try {
+    const saved = localStorage.getItem(DOWNLOAD_BUTTON_KEY);
+    return DOWNLOAD_BUTTON_CHOICES.includes(saved) ? saved : 'trios';
+  } catch {
+    return 'trios';
+  }
+}
+
+export function setDownloadButtonChoice(choice) {
+  try {
+    localStorage.setItem(DOWNLOAD_BUTTON_KEY, choice);
+  } catch {
+    // Ignore unavailable storage.
+  }
+}
+
 // Off replaces inline pictures with links without fetching the images.
 export const INLINE_PICTURE_CHOICES = ['on', 'off'];
 const INLINE_PICTURES_KEY = 'starmodderInlinePictures';
@@ -1678,9 +1704,16 @@ const TRIOS_ICON = TRIOS_SVG_START + TRIOS_TRIANGLE
   + '</svg>';
 // On a card or row the nine dots are each less than a pixel and blur into
 // a smudge, so one dot stands in for them.
-const TRIOS_ICON_SMALL = TRIOS_SVG_START.replace('<svg ', '<svg class="trios-small" ')
+export const TRIOS_ICON_SMALL = TRIOS_SVG_START.replace('<svg ', '<svg class="trios-small" ')
   + TRIOS_TRIANGLE
   + '<circle cx="129" cy="128" r="14"/></svg>';
+
+// Tabler download icon.
+export const DOWNLOAD_ICON = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" '
+  + 'stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+  + 'stroke-linejoin="round" focusable="false" aria-hidden="true">'
+  + '<path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"/>'
+  + '<path d="M7 11l5 5l5 -5"/><path d="M12 4l0 12"/></svg>';
 
 // The icons beside "Cards" and "Rows": four boxes, and three lines each with a
 // dot at the front. Drawn one unit to a pixel, with each 1px line on a whole
@@ -1828,16 +1861,68 @@ function originalPageButton(mod, page) {
 /// own place on the web instead — its forum thread or Discord post. The site
 /// does not link to Nexus Mods. A mod with neither gets no button, because a
 /// button that goes nowhere is worse than no button.
+///
+/// The reader picks the main button in Settings (`downloadButtonChoice`).
 export function downloadButton(mod, opts = {}) {
   const { big = false } = opts;
-  const best = mod.bestDownload || null;
+  const best = buttonDownloadOf(mod);
   const originalPage = originalPageOf(mod);
-  const href = best ? best.url : (originalPage ? mod[originalPage.field] : null);
-  if (!href) return null;
+  if (!best && !originalPage) return null;
 
+  // The reader chose the post as the main button. The wide button opens it.
+  // The small button beside it offers the download.
+  if (best && originalPage && !big && downloadButtonChoice() === 'page') {
+    return el('span', { class: 'download-actions' }, [
+      wideButton(mod, null, originalPage, false),
+      downloadIconButton(mod, best),
+    ]);
+  }
+
+  const button = wideButton(mod, best, originalPage, big);
+  if (big || !best || !originalPage) return button;
+
+  return el('span', { class: 'download-actions' }, [
+    button,
+    originalPageButton(mod, originalPage),
+  ]);
+}
+
+/// The best download for the button. Use the best plain download if there is one
+/// and the reader chose to skip TriOS links.
+function buttonDownloadOf(mod) {
+  if (downloadButtonChoice() === 'file' && mod.plainDownload) return mod.plainDownload;
+  return mod.bestDownload || null;
+}
+
+/// The small square button beside the wide one, when the wide one opens the
+/// forum thread or Discord post.
+function downloadIconButton(mod, best) {
+  const label = downloadLabel(best);
+  const button = el('a', {
+    class: 'btn btn-primary original-page-btn',
+    href: best.url,
+    rel: 'noopener nofollow',
+    target: '_blank',
+    title: label,
+    'aria-label': `${label}: ${modName(mod)}`,
+  }, [
+    el('span', {
+      class: 'original-page-icon',
+      html: best.kind === 'trios' ? TRIOS_ICON_SMALL : DOWNLOAD_ICON,
+      'aria-hidden': 'true',
+    }),
+  ]);
+  button.addEventListener('click', (e) => { e.stopPropagation(); });
+  return button;
+}
+
+/// The wide button: the download where there is one, else the mod's forum
+/// thread or Discord post.
+function wideButton(mod, best, originalPage, big) {
+  const href = best ? best.url : mod[originalPage.field];
   const label = best ? downloadLabel(best)
     : originalPage.label;
-  const count = mod.downloadCount || 0;
+  const count = best ? mod.downloadCount || 0 : 0;
   // A TriOS link carries the TriOS logo. With nothing to download, the button
   // opens the forum thread or Discord post, so it carries that site's icon
   // like the mod page's button does.
@@ -1860,12 +1945,7 @@ export function downloadButton(mod, opts = {}) {
   // On a card and on a row the button sits inside, or on top of, one big link
   // to the mod's page. Without this a press would follow that link as well.
   button.addEventListener('click', (e) => { e.stopPropagation(); });
-  if (big || !best || !originalPage) return button;
-
-  return el('span', { class: 'download-actions' }, [
-    button,
-    originalPageButton(mod, originalPage),
-  ]);
+  return button;
 }
 
 /// The button that favorites a mod, or takes it out of the favorites.

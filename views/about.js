@@ -42,12 +42,12 @@ export async function render(root) {
 
     document.title = 'About | Starmodder';
     clear(root);
-    root.append(el('div', {class: 'stack'}, [
-        el('div', {class: 'page-head'}, [
-            el('h1', {text: 'About Starmodder'}),
+    root.append(el('div', { class: 'stack' }, [
+        el('div', { class: 'page-head' }, [
+            el('h1', { text: 'About Starmodder' }),
         ]),
         // The guide is always here, even with its top-bar button hidden.
-        el('div', {class: 'about-actions'}, [
+        el('div', { class: 'about-actions' }, [
             guideButton(),
             iconButton('updates.xml', FEED_ICON, 'Release feed'),
             iconButton('#/changelog', CHANGELOG_ICON, 'Changelog'),
@@ -58,7 +58,7 @@ export async function render(root) {
                 target: '_blank',
                 rel: 'noopener',
             }, [
-                el('span', {class: 'github-icon', html: GITHUB_ICON}),
+                el('span', { class: 'github-icon', html: GITHUB_ICON }),
                 'GitHub',
             ]),
             el('a', {
@@ -67,41 +67,41 @@ export async function render(root) {
                 target: '_blank',
                 rel: 'noopener nofollow',
             }, [
-                el('span', {class: 'button-icon report-icon', html: REPORT_ICON}),
+                el('span', { class: 'button-icon report-icon', html: REPORT_ICON }),
                 'Report a problem',
             ]),
         ]),
 
-    section('What is this?', [
-      [
-        'Starmodder is an easier way to view, filter, and sort mods posted on the ',
-        externalLink(FORUM_URL, 'official Starsector forum'),
-        ' and the ',
-        externalLink(DISCORD_URL, 'Unofficial Starsector Discord'),
-        '.',
-      ],
-      [
-        'This is ',
-        el('em', {text: 'not'}),
-        ' a site like NexusMods; you cannot upload or manage mods here (see "Why not let people upload mods?" below). It is only '
-        + 'displaying mods from other sites in an easier format.',
-      ],
-    ]),
+        section('What is this?', [
+            [
+                'Starmodder is an easier way to view, filter, and sort mods posted on the ',
+                externalLink(FORUM_URL, 'official Starsector forum'),
+                ' and the ',
+                externalLink(DISCORD_URL, 'Unofficial Starsector Discord'),
+                '.',
+            ],
+            [
+                'This is ',
+                el('em', { text: 'not' }),
+                ' a site like NexusMods; you cannot upload or manage mods here (see "Why not let people upload mods?" below). It is only '
+                + 'displaying mods from other sites in an easier format.',
+            ],
+        ]),
 
-    section('Who made this?', [
-      [
-        'Starmodder is made by ',
-        externalLink(WISP_URL, 'Wisp'),
-        ' (developer of ',
-        el('a', {href: TRIOS_PAGE, text: 'TriOS'}),
-        '). Its scraper combines code written by Wisp with a Dart port and fork of ',
-        externalLink(QBMBAMM_URL, 'QBMBAMM'),
-        ', originally made by theRoastSuckling aka kyuubi_.',
-      ],
-        'AI wrote the code for the website itself.'
-    ]),
+        section('Who made this?', [
+            [
+                'Starmodder is made by ',
+                externalLink(WISP_URL, 'Wisp'),
+                ' (developer of ',
+                el('a', { href: TRIOS_PAGE, text: 'TriOS' }),
+                '). Its scraper combines code written by Wisp with a Dart port and fork of ',
+                externalLink(QBMBAMM_URL, 'QBMBAMM'),
+                ', originally made by theRoastSuckling aka kyuubi_.',
+            ],
+            'AI wrote the code for the website itself.'
+        ]),
 
-    section('How does it work?', [
+        section('How does it work?', [
             [
                 externalLink(SCRAPER_URL, 'A scraper'),
                 ' collects mod information from ',
@@ -113,8 +113,7 @@ export async function render(root) {
                 ', then builds this site from that merge. TriOS uses the same data.'
             ],
             collectedOn
-                ? `The site updates twice a day. It last ran: ${
-                    formatDay(collectedOn)}.`
+                ? `The site updates twice a day. It last ran: ${formatDay(collectedOn)}.`
                 : 'The site updates twice a day.',
             [
                 'It is available in the ',
@@ -147,51 +146,48 @@ export async function render(root) {
             [takedownButton()],
         ]),
 
-        section('How is AI used?', [
-            'The LLM runs on my own hardware in my own home; scraped forum mods are not sent to cloud providers.',
-            'AI writes summaries from forum posts and is marked with the sparkle icon.',
-            'You can choose when to see AI-generated mod summaries in Settings: "Only as a fallback" (no human desc available), '
-            + '"Always", or "Never".',
-            'With summaries enabled, mod pages can also show an AI summary in '
-            + 'the Description tab. You can hide it there for all mod pages.',
-            'AI also extracts details such as versions, changelogs, save compatibility, licenses'
-            + ', source code links, and more from the author\'s post.',
-        ]),
-
-        section('Does a mod say it was made with AI?', [
-            'Each mod page has an "AI use" line under Details. It shows what the '
-            + 'author says about using AI tools to make the mod, such as for '
-            + 'portraits, music or code. Point at it to read the author\'s own words.',
-            '"None" means the author says no AI was used. "Unknown" means the '
-            + 'mod\'s posts were read and say nothing about it. "Not checked yet" '
-            + 'means they have not been read for this yet. The site does not '
-            + 'guess from the pictures or the writing.',
-            [
-                'On Browse, the "AI use" filter has presets such as "No AI images" '
-                + 'and "No vibecoded mods", or Custom to choose what AI was used for. '
-                + 'Most presets keep mods that do not say, or have not been checked. '
-                + '"Absolutely no AI" shows only mods whose author says no AI was used. '
-                + 'In the search box, ',
-                el('code', {text: 'has:ai'}),
-                ' finds mods whose author says AI was used, and ',
-                el('code', {text: 'is:noai'}),
-                ' finds mods whose author says it was not. Put ',
-                el('code', {text: '-'}),
-                ' in front of either to leave those mods out.',
-            ],
+        section('AI Disclosure', [
+            subsection('...For data processing', [
+                'Scraped mod posts are read by an LLM to extract details and write summaries.',
+                'The LLM runs on my own hardware in my own home; scraped forum mods are not sent to cloud providers.',
+                'AI-written summaries are marked with a sparkle icon.',
+                'You can choose when to see AI-generated mod summaries in Settings: "Only as a fallback" (no human desc available), '
+                + '"Always", or "Never".',
+                'With summaries enabled, mod pages can also show an AI summary in '
+                + 'the Description tab. You can hide it there for all mod pages.',
+                'AI also extracts details such as versions, changelogs, save compatibility, licenses'
+                + ', source code links, and more from the author\'s post.',
+            ]),
+            subsection('...For coding this website', [
+                'The scraper software was originally "hand-written", but is now entirely written by AI.',
+                'The Starmodder website is entirely written by AI.'
+            ]),
         ]),
     ]));
 }
 
 function section(title, paragraphs) {
-    return el('section', {class: 'panel'}, [
-        el('h2', {text: title}),
-        ...paragraphs.map((content) => el(
-            'p',
-            {class: 'about-line'},
-            typeof content === 'string' ? [content] : content,
-        )),
+    return el('section', { class: 'panel' }, [
+        el('h2', { text: title }),
+        ...aboutLines(paragraphs),
     ]);
+}
+
+/// A heading and its paragraphs inside a section.
+function subsection(title, paragraphs) {
+    return el('section', { class: 'about-sub' }, [
+        el('h3', { text: title }),
+        ...aboutLines(paragraphs),
+    ]);
+}
+
+/// Each string or list of parts becomes a paragraph; a subsection is kept as it is.
+function aboutLines(paragraphs) {
+    return paragraphs.map((content) => content instanceof Node ? content : el(
+        'p',
+        { class: 'about-line' },
+        typeof content === 'string' ? [content] : content,
+    ));
 }
 
 // Tabler icons (MIT): rss, history and message-report.
@@ -211,8 +207,8 @@ function tablerIcon(paths) {
 }
 
 function iconButton(href, icon, label) {
-    return el('a', {class: 'btn btn-with-icon', href}, [
-        el('span', {class: 'button-icon', html: icon}),
+    return el('a', { class: 'btn btn-with-icon', href }, [
+        el('span', { class: 'button-icon', html: icon }),
         label,
     ]);
 }

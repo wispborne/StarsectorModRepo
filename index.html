@@ -17,7 +17,7 @@
        file still lives up here. address.js pins this to an absolute address as
        the site starts, so it stays right after the address has moved. -->
   <base href="./">
-  <title>Starmodder 4: Starsector mods</title>
+  <title>Starmodder: Starsector mods</title>
   <meta name="description" content="Starsector mods, with recent releases, downloads, changelogs and screenshots.">
   <!--/page-head-->
   <!-- Pictures come from wherever the mod's author put them. Several of those
@@ -59,7 +59,10 @@
   <a class="skip-link" href="#app">Skip to the page</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#/home">Starmodder</a>
+      <span class="brand-line">
+        <a class="brand" href="#/home">Starmodder</a>
+        <a id="brand-version" class="brand-version" href="#/changelog">4.0</a>
+      </span>
       <nav id="nav" class="site-nav" aria-label="Main"></nav>
       <div class="header-search">
         <input type="search" id="site-search" class="search-box"
@@ -86,6 +89,32 @@
       <section class="settings-section" aria-labelledby="appearance-title">
         <h3 id="appearance-title">Appearance</h3>
         <div id="theme-list" class="theme-list" role="radiogroup" aria-label="Theme"></div>
+      </section>
+      <section class="settings-section" aria-labelledby="download-button-title">
+        <h3 id="download-button-title">Main button on mods</h3>
+        <div class="choice-list" role="radiogroup" aria-label="Main button on mods">
+          <label class="choice">
+            <input type="radio" name="download-button" value="trios">
+            <span>
+              <span class="choice-name">Install with TriOS</span><br>
+              <span class="choice-note">Use TriOS when the mod has a link. Otherwise, download the file.</span>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="download-button" value="file">
+            <span>
+              <span class="choice-name">Download file</span><br>
+              <span class="choice-note">Skip TriOS links.</span>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="download-button" value="page">
+            <span>
+              <span class="choice-name">Open post</span><br>
+              <span class="choice-note">Open the forum thread or Discord post. Download with the small button beside it.</span>
+            </span>
+          </label>
+        </div>
       </section>
       <section class="settings-section" aria-labelledby="pictures-title">
         <h3 id="pictures-title">Mod images</h3>
