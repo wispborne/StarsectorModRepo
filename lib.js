@@ -2063,7 +2063,7 @@ const WAYS_TO_SEARCH = [
     says: [{ code: 'has:source' }, ', ', { code: 'has:download' }, ', ',
       { code: 'is:addable' }, ', ', { code: 'is:wip' }, ', ', { code: 'is:tool' }, ', ',
       { code: 'has:ai' }, ', ', { code: 'is:noai' },
-      '; add ', { code: '-' }, ' to leave those out: ', { code: '-is:wip' }],
+      '; add ', { code: '-' }, ' to exclude: ', { code: '-is:wip' }],
   },
 ];
 
