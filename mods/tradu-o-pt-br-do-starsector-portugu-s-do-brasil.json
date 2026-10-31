@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T18:08:12.720142Z",
+  "generatedAt": "2026-10-31T06:07:51.319219Z",
   "listing": {
     "id": "tradu-o-pt-br-do-starsector-portugu-s-do-brasil",
     "name": "Tradução PT-BR do Starsector (Português do Brasil)",
@@ -35,7 +35,7 @@
       }
     ],
     "addedOn": "2026-10-27",
-    "threadLastPostOn": "2026-10-27",
+    "editedOn": "2026-10-29",
     "needs": []
   },
   "description": "Tradução PT-BR do Starsector 0.98a-RC8\n\nTradução PT-BR do Starsector 0.98a-RC8\n\nEnglish: Brazilian Portuguese translation of Starsector 0.98a-RC8 (about 23,000 texts, including menus). Download below; extract next to starsector-core and run INSTALAR.bat. Based on the Chinese localization project by TruthOriginem.\n\nOlá! Esta é uma tradução do Starsector 0.98a-RC8 para o português do Brasil, gratuita para a comunidade.\n\nGitHub/Download: ArturMoreiraDeCarvalho/starsector-ptbr (kit completo, textos da tradução e ferramentas; erros podem ser reportados em Issues) ou aqui mesmo no chat meus bons\n\nO que foi traduzido\n\n23.049 textos, cerca de 507 mil palavras em inglês.\nDiálogos e eventos da campanha (rules.csv), que são a maior parte do jogo.\nDescrições de naves, armas, hullmods, sistemas, planetas e itens.\nMenus, tooltips, dicas, missões, habilidades e o Codex.\nTextos de interface que ficam dentro do código do jogo (starfarer_obf.jar e starfarer.api.jar).\n\nO que continua em inglês, por decisão\n\nNomes de naves e armas.\nLinhas de depuração e teste do desenvolvedor.\n\nComo foi feito\nA base foi o projeto de tradução para chinês TruthOriginem/Starsector-Localization-CN. Usei o mapa de campos traduzíveis do projeto deles para saber quais textos dos arquivos de dados e dos jars aparecem para o jogador, e o formato do kit (pasta localization + script de troca) também segue o deles. Os textos dos jars foram separados do código com a ferramenta jar-string-decoupler 1.0.1 e depois recolocados traduzidos.\n\nA tradução foi feita com apoio de IA e ainda não passou por uma revisão completa. Ela foi testada no jogo: carrega sem erros e a campanha funciona. Mas podem existir frases estranhas ou termos inconsistentes. Se encontrar erros, avise aqui no tópico ou abra uma Issue no GitHub, com o texto em inglês, o texto em português e onde ele aparece no jogo.\n\nInstalação (Windows)\nFeche o jogo antes de começar.\n\nExtraia o PTBR_Patch.zip dentro da pasta do Starsector, para que a pasta PTBR_Patch fique ao lado de starsector-core. Se baixou pelo GitHub (Code > Download ZIP), use a pasta kit\\PTBR_Patch de dentro do zip. Exemplo:\nC:\\Program Files (x86)\\Fractal Softworks\\Starsector\\starsector-core\nC:\\Program Files (x86)\\Fractal Softworks\\Starsector\\PTBR_Patch\n\nAbra em modo Administrador o PTBR_Patch\\INSTALAR.bat. e espere adicionar todos os patchs\nAbra o jogo normalmente.\n\nSe o instalador não achar o jogo, ele abre uma janela para você escolher a pasta. Se o jogo estiver em Arquivos de Programas, o Windows pede permissão de administrador; isso é normal.\n\nVoltar ao inglês: dois cliques em PTBR_Patch\\DESINSTALAR.bat. Antes de trocar qualquer arquivo, o instalador guarda o original em PTBR_Patch\\backup_original, então não apague essa pasta.\n\nLinux / macOS: com Python 3, rode dentro da pasta PTBR_Patch:\n\npython3 -X utf8 _swapLangFile.py pt   (aplica)\npython3 -X utf8 _swapLangFile.py en   (volta ao inglês)\n\nUse --game \"caminho\" se a pasta do jogo estiver em outro lugar. Linux e macOS não foram testados.\n\nAvisos importantes\n\nFunciona só no Starsector 0.98a-RC8.\nNão é um mod do launcher: o kit substitui arquivos do jogo, inclusive os dois jars. Por isso não aparece na lista de mods.\nSe outro mod ou tradução já tiver alterado os mesmos arquivos, o instalador não mexe neles e mostra quais são.\nTextos de mods não são traduzidos. A compatibilidade com mods não foi testada.\nAlgumas fontes do jogo (futura, ursula, arial13 e arial14) não têm acentos. Nelas, letras acentuadas podem não aparecer ou sair erradas.\n\nCréditos\n\nTruthOriginem e colaboradores da tradução chinesa (Starsector-Localization-CN), pelo mapa de textos e pelo modelo do kit.\nAutor do jar-string-decoupler.\nFractal Softworks, pelo jogo.\n\nBom jogo!",
@@ -77,7 +77,6 @@
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36208.0",
   "releases": [],
-  "threadLastPostOn": "2026-10-27",
   "sameNameMods": [],
   "addons": []
 }
