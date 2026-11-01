@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T07:09:22.101091Z",
+  "generatedAt": "2026-11-01T19:08:26.543677Z",
   "listing": {
     "id": "faction-mission-blacklist",
     "name": "Faction Mission Blacklist",
@@ -34,7 +34,6 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2026-10-31",
-    "threadLastPostOn": "2026-10-31",
     "needs": []
   },
   "description": "Faction Mission Blacklist\nStops vanilla delivery missions from always sending you to boss factions.\nType: Utility / QoL — completely safe to add to or remove from a save at any time.\n\nRelease page: v1.0.0 | Source: GitHub\n\nThe problem\nBoss factions like Adversary and Hivers are hostile to almost everyone, so their markets are always short on goods. The vanilla \"deliver X to Y\" bar event favors the biggest shortages, so nearly every delivery offer ends up pointing at a market you can't or don't want to go to:\n\nWhat this does\nVanilla already has an \"invalid mission target\" flag on markets that missions skip; mods just rarely set it. This mod:\n\nsets it on every market owned by a blacklisted faction\nre-checks once per in-game day, so new or conquered markets are covered\nclears it again if a market it flagged changes hands to a normal faction\nremoves all its flags right before the game saves and restores them right after, so nothing from this mod is ever stored in your save\n\nOther vanilla missions that check the same flag will also skip those factions. The factions' own content is unaffected.\n\nDefault blacklist: Adversary (adversary), Hiver (HIVER). Factions you don't have installed are ignored.\n\nAdding factions: add the faction ID to data/config/settings.json. IDs are the file names in a mod's data/world/factions/ folder, or use \"list factions\" with Console Commands.\nMod authors: you can blacklist your own boss faction from your mod's settings.json under the key factionMissionBlacklist_factions; Starsector merges the lists.\n\nInstallation: extract into Starsector/mods/ and enable in the launcher.\nSave compatible: Utility mod. Add it to or remove it from a save at any time: nothing from the mod is written into your save file, so removing it leaves the save exactly as if it had never been installed. Existing offers keep their destination; new ones are filtered. No dependencies.\n\nLicense: MIT, feel free to include it in your own mod or modpack.\n\n(Not affiliated with the Adversary or Hivers mods; no files from either mod are included.)\n\nSuggestions for other boss factions to add to the default blacklist are welcome!",
@@ -92,7 +91,6 @@
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36239.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1566265583148998757/1566265583148998757",
   "releases": [],
-  "threadLastPostOn": "2026-10-31",
   "sameNameMods": [],
   "addons": []
 }
