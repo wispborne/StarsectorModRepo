@@ -1,0 +1,98 @@
+{
+  "generatedAt": "2026-11-01T07:09:22.101091Z",
+  "listing": {
+    "id": "faction-mission-blacklist",
+    "name": "Faction Mission Blacklist",
+    "authors": [
+      "coolestofguys"
+    ],
+    "otherAuthorNames": {},
+    "categories": [
+      "Utilities",
+      "Quality of life"
+    ],
+    "sources": [
+      "forum",
+      "discord"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "1.0.0",
+    "imageUrl": "https://raw.githubusercontent.com/coolestofguys/FactionMissionBlacklist/main/screenshots/delivery_hiver_bad.png",
+    "summary": "Stops vanilla delivery missions from always sending you to boss factions. Type: Utility / QoL — completely safe to add to or remove from a save at any time.",
+    "summaryIsGenerated": false,
+    "aiSummary": "Prevents vanilla delivery missions from targeting markets owned by hostile boss factions.",
+    "saveCompatible": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://github.com/coolestofguys/FactionMissionBlacklist/releases/download/v1.0.0/FactionMissionBlacklist-1.0.0.zip",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36239.0",
+    "discordUrl": "https://discord.com/channels/187635036525166592/1566265583148998757/1566265583148998757",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2026-10-31",
+    "threadLastPostOn": "2026-10-31",
+    "needs": []
+  },
+  "description": "Faction Mission Blacklist\nStops vanilla delivery missions from always sending you to boss factions.\nType: Utility / QoL — completely safe to add to or remove from a save at any time.\n\nRelease page: v1.0.0 | Source: GitHub\n\nThe problem\nBoss factions like Adversary and Hivers are hostile to almost everyone, so their markets are always short on goods. The vanilla \"deliver X to Y\" bar event favors the biggest shortages, so nearly every delivery offer ends up pointing at a market you can't or don't want to go to:\n\nWhat this does\nVanilla already has an \"invalid mission target\" flag on markets that missions skip; mods just rarely set it. This mod:\n\nsets it on every market owned by a blacklisted faction\nre-checks once per in-game day, so new or conquered markets are covered\nclears it again if a market it flagged changes hands to a normal faction\nremoves all its flags right before the game saves and restores them right after, so nothing from this mod is ever stored in your save\n\nOther vanilla missions that check the same flag will also skip those factions. The factions' own content is unaffected.\n\nDefault blacklist: Adversary (adversary), Hiver (HIVER). Factions you don't have installed are ignored.\n\nAdding factions: add the faction ID to data/config/settings.json. IDs are the file names in a mod's data/world/factions/ folder, or use \"list factions\" with Console Commands.\nMod authors: you can blacklist your own boss faction from your mod's settings.json under the key factionMissionBlacklist_factions; Starsector merges the lists.\n\nInstallation: extract into Starsector/mods/ and enable in the launcher.\nSave compatible: Utility mod. Add it to or remove it from a save at any time: nothing from the mod is written into your save file, so removing it leaves the save exactly as if it had never been installed. Existing offers keep their destination; new ones are filtered. No dependencies.\n\nLicense: MIT, feel free to include it in your own mod or modpack.\n\n(Not affiliated with the Adversary or Hivers mods; no files from either mod are included.)\n\nSuggestions for other boss factions to add to the default blacklist are welcome!",
+  "descriptionHtml": "<span class=\"size-bigger\"><b>Faction Mission Blacklist</b></span><br><i>Stops vanilla delivery missions from always sending you to boss factions.</i><br><b>Type:</b> Utility / QoL — completely safe to add to or remove from a save at any time.<br><br><a href=\"https://github.com/coolestofguys/FactionMissionBlacklist/releases/download/v1.0.0/FactionMissionBlacklist-1.0.0.zip\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/coolestofguys/FactionMissionBlacklist/main/screenshots/download_button.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><b>Release page:</b> <a href=\"https://github.com/coolestofguys/FactionMissionBlacklist/releases/tag/v1.0.0\" rel=\"nofollow noopener\" target=\"_blank\">v1.0.0</a> | <b>Source:</b> <a href=\"https://github.com/coolestofguys/FactionMissionBlacklist\" rel=\"nofollow noopener\" target=\"_blank\">GitHub</a><br><br><b>The problem</b><br>Boss factions like Adversary and Hivers are hostile to almost everyone, so their markets are always short on goods. The vanilla \"deliver X to Y\" bar event favors the biggest shortages, so nearly every delivery offer ends up pointing at a market you can't or don't want to go to:<br><br><img src=\"https://raw.githubusercontent.com/coolestofguys/FactionMissionBlacklist/main/screenshots/delivery_hiver_bad.png\" alt=\"\" width=\"650\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://raw.githubusercontent.com/coolestofguys/FactionMissionBlacklist/main/screenshots/delivery_adversary_bad.png\" alt=\"\" width=\"650\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><b>What this does</b><br>Vanilla already has an \"invalid mission target\" flag on markets that missions skip; mods just rarely set it. This mod:<br><ul><li>sets it on every market owned by a blacklisted faction</li><li>re-checks once per in-game day, so new or conquered markets are covered</li><li>clears it again if a market it flagged changes hands to a normal faction</li><li>removes all its flags right before the game saves and restores them right after, so nothing from this mod is ever stored in your save</li></ul>Other vanilla missions that check the same flag will also skip those factions. The factions' own content is unaffected.<br><br><b>Default blacklist:</b> Adversary (adversary), Hiver (HIVER). Factions you don't have installed are ignored.<br><br><b>Adding factions:</b> add the faction ID to data/config/settings.json. IDs are the file names in a mod's data/world/factions/ folder, or use \"list factions\" with Console Commands.<br><b>Mod authors:</b> you can blacklist your own boss faction from your mod's settings.json under the key factionMissionBlacklist_factions; Starsector merges the lists.<br><br><b>Installation:</b> extract into Starsector/mods/ and enable in the launcher.<br><b>Save compatible:</b> Utility mod. Add it to or remove it from a save at any time: nothing from the mod is written into your save file, so removing it leaves the save exactly as if it had never been installed. Existing offers keep their destination; new ones are filtered. No dependencies.<br><br><b>License:</b> MIT, feel free to include it in your own mod or modpack.<br><br>(Not affiliated with the Adversary or Hivers mods; no files from either mod are included.)<br><br>Suggestions for other boss factions to add to the default blacklist are welcome!",
+  "descriptionIsGenerated": false,
+  "descriptionIsForumPost": true,
+  "discordPostHtml": "<p>Tired of \"<strong>Nod to the concerned man</strong>\" <strong>delivery contracts</strong> at the bar always sending you to <strong>Adversary</strong> or <strong>Hiver</strong> markets? This blacklists boss factions as delivery mission destinations, so the bar event picks normal markets instead.</p><p>Default blacklist: Adversary, Hiver. Add more factions in <code>data/config/settings.json</code>.</p><pre><code>Changelog:\n1.0.0\nAdded - Mod</code></pre><pre><code>Save Compatibility: safe to add or remove at any time.</code></pre><p>Download: <a href=\"https://github.com/coolestofguys/FactionMissionBlacklist/releases/download/v1.0.0/FactionMissionBlacklist-1.0.0.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/coolestofguys/FactionMissionBlacklist/releases/download/v1.0.0/FactionMissionBlacklist-1.0.0.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36239.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36239.0</a></p>",
+  "aiDescription": "Flags markets owned by blacklisted factions as invalid mission targets to prevent delivery offers from pointing to unreachable or unwanted locations. The blacklist is updated daily to account for new or conquered markets, and flags are cleared before saving to ensure no data is stored in the save file. Users can add custom factions to the blacklist via configuration files.",
+  "saveCompatibilityText": "completely safe to add to or remove from a save at any time",
+  "removalCompatibilityText": "completely safe to add to or remove from a save at any time",
+  "canAdd": "yes",
+  "canRemove": "yes",
+  "aiUse": {},
+  "rawCategories": [
+    "Quality of Life",
+    "Utility mods"
+  ],
+  "gallery": [
+    {
+      "url": "https://raw.githubusercontent.com/coolestofguys/FactionMissionBlacklist/main/screenshots/download_button.png",
+      "small": true,
+      "source": "forum"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/coolestofguys/FactionMissionBlacklist/main/screenshots/delivery_hiver_bad.png",
+      "aiCaption": "A mission dialogue screen showing a delivery contract offer with a starscape map and a red X mark.",
+      "aiKind": "screenshot",
+      "aiFit": "okay",
+      "source": "forum"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/coolestofguys/FactionMissionBlacklist/main/screenshots/delivery_adversary_bad.png",
+      "aiCaption": "A mission dialogue screen showing a delivery contract offer with a starscape map and a red X mark.",
+      "aiKind": "screenshot",
+      "aiFit": "okay",
+      "source": "forum"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/coolestofguys/FactionMissionBlacklist/releases/download/v1.0.0/FactionMissionBlacklist-1.0.0.zip",
+      "directUrl": "https://github.com/coolestofguys/FactionMissionBlacklist/releases/download/v1.0.0/FactionMissionBlacklist-1.0.0.zip",
+      "fileName": "FactionMissionBlacklist-1.0.0.zip",
+      "kind": "direct",
+      "label": "",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {},
+  "changelogUrl": "https://github.com/coolestofguys/FactionMissionBlacklist/releases/tag/v1.0.0",
+  "license": "MIT",
+  "sourceCodeUrl": "https://github.com/coolestofguys/FactionMissionBlacklist",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36239.0",
+  "discordUrl": "https://discord.com/channels/187635036525166592/1566265583148998757/1566265583148998757",
+  "releases": [],
+  "threadLastPostOn": "2026-10-31",
+  "sameNameMods": [],
+  "addons": []
+}
