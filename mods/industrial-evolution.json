@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T03:06:17.587731Z",
+  "generatedAt": "2026-11-02T03:25:57.707497Z",
   "listing": {
     "id": "industrial-evolution",
     "name": "Industrial.Evolution",
@@ -76,7 +76,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><code>A massive campaign content expansion for colonies and exploration.</code></p><p>Industrial Evolution aims to deepen the colonisation and exploration aspect of the game, bringing new gameplay features not available anywhere else, to support whatever playstyle you choose.<br>Can not be installed on an ongoing save.</p><pre><code>Changelog: \n4.1.b - Meteor and Museum fixes, Museum settings, S-Mod effect for Museum\n4.1.a - Meteor Swarms, Museum, so, so much polish and improvements and a bunch of bug fixes. Check the full changelog below.\n</code></pre><pre><code>+ Save compatible with 4.1\n- NOT Save compatible with 4.0\n- Can NOT be installed on an ongoing save\nThis means: The mod can't be added if it was not present on game start, and can only be safely updated if your prior version was 4.1</code></pre><h3><a href=\"https://github.com/SirHartley/Industrial.Evolution/releases/download/4.1.b/Industrial.Evolution4.1.b.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download</a></h3><h3><a href=\"https://fractalsoftworks.com/forum/index.php?topic=18011.0\" rel=\"nofollow noopener\" target=\"_blank\">Forum Thread</a></h3><h3><a href=\"https://patreon.com/SirHartley\" rel=\"nofollow noopener\" target=\"_blank\">Support my Efforts</a></h3><p>or buy me a <a href=\"https://Ko-fi.com/sirhartley\" rel=\"nofollow noopener\" target=\"_blank\">Ko-Fi</a></p><p><code>_________________________________</code></p><p><em>The feature creep will continue until morale improves</em></p>",
-  "aiDescription": "Adds over 20 new colony buildings with unique effects, including governance options and specialized facilities. Introduces new exploration content such as derelict industries, themed stations, and campaign layer hazards. Provides consumable items, missiles, and the ability to create fleet detachments on the fly. Expands vanilla gameplay with new administrator skills, pets, and reverse engineering capabilities.",
+  "aiDescription": "Adds over 20 new colony buildings with unique effects, including governance options and specialized infrastructure. Introduces new exploration content such as derelict stations, survey stories, and campaign layer hazards. Provides consumable items, missiles, and the ability to create fleet detachments on the fly. Expands vanilla gameplay with new administrator skills, pets, and reverse engineering capabilities.",
   "saveCompatibilityText": "This can NOT be added to ongoing games",
   "updateCompatibilityText": "Update 4.1.b is save compatible with 4.1.a",
   "removalCompatibilityText": "it will break saves if removed",
@@ -440,7 +440,7 @@
     "4.1.": "Version 4.1. is NOT save compatible with 4.0."
   },
   "changelogUrl": "https://github.com/SirHartley/Industrial.Evolution/releases",
-  "license": "CC BY-NC-ND 4.0",
+  "license": "CC BY-NC ND",
   "sourceCodeUrl": "https://github.com/SirHartley/Industrial.Evolution",
   "supportLinks": [
     {
@@ -462,12 +462,22 @@
   "addons": [],
   "optionalNeeds": [
     {
+      "name": "Version Checker",
+      "id": "version-checker"
+    },
+    {
       "name": "Grand.Colonies",
       "id": "grand-colonies"
     },
     {
       "name": "Substance.Abuse",
       "id": "substance-abuse"
+    }
+  ],
+  "conflicts": [
+    {
+      "name": "Arthrs mod",
+      "quote": "Fixed pets and added two new ones Made it stop crashing with Arthrs mod"
     }
   ]
 }
