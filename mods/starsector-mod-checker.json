@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T03:25:57.707497Z",
+  "generatedAt": "2026-11-02T09:47:04.055088Z",
   "listing": {
     "id": "starsector-mod-checker",
     "name": "[TOOL] - Starsector Mod Checker",
@@ -54,9 +54,9 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>This tool's purpose is to scan your /mods directory for any files that would crash starsector on runtime<br>Read how to use on the forum post:<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36202.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36202.0</a></p>",
-  "aiDescription": "Reads enabled mods the way the game does at startup and lists problematic files by mod, folder, and file. Identifies errors such as malformed data files, invalid weapon configurations, missing assets, and case-sensitive filename issues. Generates a report file that can be used to debug crashes.",
+  "aiDescription": "Scans mod files for syntax errors, missing fields, and invalid references that cause crashes. It lists issues by mod, folder, and file, saving the results to a text report. The tool runs on the game's bundled Java and requires no installation.",
   "aiUse": {
-    "quote": "Some or all assets and code in this mod were created using AI tools:\nCode: Claude Code (Claude Opus 5.5)\nText (readme and this post): Claude Code (Claude Opus 5.5)",
+    "quote": "Some or all assets and code in this mod were created using AI tools:\nCode: Claude Code (Claude Opus 5.5)",
     "usesAi": true,
     "uses": [
       {
@@ -71,7 +71,8 @@
       }
     ],
     "tools": [
-      "Claude Code (Claude Opus 5.5)"
+      "Claude Code",
+      "Claude Opus 5.5"
     ]
   },
   "rawCategories": [

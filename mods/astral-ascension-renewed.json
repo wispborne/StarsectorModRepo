@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T03:25:57.707497Z",
+  "generatedAt": "2026-11-02T09:47:04.055088Z",
   "listing": {
     "id": "astral-ascension-renewed",
     "name": "Astral Ascension Renewed",
@@ -17,10 +17,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.0.0",
     "imageUrl": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/graphics/icons/astral-ascension-renewed.png?raw=true",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1561448031746793633/1561448031990190271/astral-ascension-renewed.png?ex=6ae8d84d&is=6ae786cd&hm=02f170f35bfa0e977caafc4561b2f4507ae7162b9bd7a13776dde79a15d51d20&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1561448031746793633/1561448031990190271/astral-ascension-renewed.png?ex=6ae9810d&is=6ae82f8d&hm=2e6f8c4b2831da439f9a3389ce595bdb52722d30cb0abbf3c780fc7c637187ee&",
     "summary": "An Omega core can govern your colony, with three administrator skills of its own. Only an Omega core can take a colony past size 10, up to size 15.",
     "summaryIsGenerated": false,
-    "aiSummary": "Allows Omega cores to govern colonies, enabling them to grow into massive ecumenopolis worlds up to size 15.",
+    "aiSummary": "Lets an Omega core govern colonies, allowing them to grow past size 10 into massive ecumenopolis worlds.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
@@ -73,7 +73,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36167.msg532604#msg532604\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36167.msg532604#msg532604</a></p>",
-  "aiDescription": "Enables Omega cores to act as colony administrators with unique skills. Colonies can expand beyond the standard limit, transforming into Arcology Worlds, Ecumenopolises, and Hyper-Ecumenopolises with significant bonuses. Removing the core from a large colony triggers a civil war event.",
+  "aiDescription": "Assign an Omega core as a colony administrator to unlock three unique skills and allow the colony to grow up to size 15. Colonies past size 10 transform into Arcology Worlds, Ecumenopolises, and Hyper-Ecumenopolises, gaining significant bonuses to income, defense, and industry. Removing the Omega core from a large colony triggers a Great Civil War, dropping the colony's size and stability.",
   "saveCompatibilityText": "Can I add it to an existing save? Yes.",
   "removalCompatibilityText": "Can I remove it from a save? Not once a colony has an Omega core administrator or has grown past size 10.",
   "canAdd": "yes",
@@ -114,14 +114,14 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1561448031746793633/1561448031990190271/astral-ascension-renewed.png?ex=6ae8d84d&is=6ae786cd&hm=02f170f35bfa0e977caafc4561b2f4507ae7162b9bd7a13776dde79a15d51d20&",
+      "url": "https://cdn.discordapp.com/attachments/1561448031746793633/1561448031990190271/astral-ascension-renewed.png?ex=6ae9810d&is=6ae82f8d&hm=2e6f8c4b2831da439f9a3389ce595bdb52722d30cb0abbf3c780fc7c637187ee&",
       "aiCaption": "A screenshot of a planet surface featuring scattered green structures and illuminated settlements.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1561448031746793633/1561477035745091634/screenshot-hyper-ecumenopolis.png?ex=6ae84a90&is=6ae6f910&hm=996ef073dbf814c8fed5620fed4fd0daf256614d1f881dd4324061971915c33f&",
+      "url": "https://cdn.discordapp.com/attachments/1561448031746793633/1561477035745091634/screenshot-hyper-ecumenopolis.png?ex=6ae8f350&is=6ae7a1d0&hm=20e2948d8a2786ccbb474f1e31c603c60eb3899ea63476c2a47fab813b59653b&",
       "aiCaption": "A screenshot of a planet with an info box reading 'Aquamarine, Ecumenopolis World'.",
       "aiKind": "screenshot",
       "aiFit": "good",
@@ -215,9 +215,13 @@
     {
       "name": "Omega Core Everywhere",
       "id": "omega-core-everywhere"
-    },
+    }
+  ],
+  "conflicts": [
     {
-      "name": "AoTD - Theory of Toolbox"
+      "name": "Astral Ascension",
+      "id": "astral-ascension",
+      "quote": "Can I run it with the original Astral Ascension? No. This mod replaces it, and the game will not start with both enabled."
     }
   ]
 }

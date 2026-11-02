@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T03:25:57.707497Z",
+  "generatedAt": "2026-11-02T09:47:04.055088Z",
   "listing": {
     "id": "faction-mission-blacklist",
     "name": "Faction Mission Blacklist",
@@ -20,7 +20,7 @@
     "imageUrl": "https://raw.githubusercontent.com/coolestofguys/FactionMissionBlacklist/main/screenshots/delivery_hiver_bad.png",
     "summary": "Stops vanilla delivery missions from always sending you to boss factions. Type: Utility / QoL — completely safe to add to or remove from a save at any time.",
     "summaryIsGenerated": false,
-    "aiSummary": "Prevents vanilla delivery missions from targeting markets owned by hostile boss factions.",
+    "aiSummary": "Prevents delivery missions from targeting markets owned by hostile boss factions.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -41,7 +41,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Tired of \"<strong>Nod to the concerned man</strong>\" <strong>delivery contracts</strong> at the bar always sending you to <strong>Adversary</strong> or <strong>Hiver</strong> markets? This blacklists boss factions as delivery mission destinations, so the bar event picks normal markets instead.</p><p>Default blacklist: Adversary, Hiver. Add more factions in <code>data/config/settings.json</code>.</p><pre><code>Changelog:\n1.0.0\nAdded - Mod</code></pre><pre><code>Save Compatibility: safe to add or remove at any time.</code></pre><p>Download: <a href=\"https://github.com/coolestofguys/FactionMissionBlacklist/releases/download/v1.0.0/FactionMissionBlacklist-1.0.0.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/coolestofguys/FactionMissionBlacklist/releases/download/v1.0.0/FactionMissionBlacklist-1.0.0.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36239.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36239.0</a></p>",
-  "aiDescription": "Flags markets owned by blacklisted factions as invalid mission targets to prevent delivery offers from pointing to unreachable or unwanted locations. The blacklist is updated daily to account for new or conquered markets, and flags are cleared before saving to ensure no data is stored in the save file. Users can add custom factions to the blacklist via configuration files.",
+  "aiDescription": "Flags markets owned by blacklisted factions as invalid mission targets to prevent delivery offers from pointing to them. It updates these flags daily to account for new or conquered markets and ensures no data is written to the save file. The default blacklist includes Adversary and Hiver, but users can add other factions via configuration.",
   "saveCompatibilityText": "completely safe to add to or remove from a save at any time",
   "removalCompatibilityText": "completely safe to add to or remove from a save at any time",
   "canAdd": "yes",

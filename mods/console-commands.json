@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T03:25:57.707497Z",
+  "generatedAt": "2026-11-02T09:47:04.055088Z",
   "listing": {
     "id": "console-commands",
     "name": "Console Commands",
@@ -26,10 +26,10 @@
     "gameVersion": "0.98a",
     "modVersion": "2024.10.04",
     "imageUrl": "https://imgur.com/zoCketX.gif",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6ae8d221&is=6ae780a1&hm=4888c640a9014b06a22f8ccc65e87307a956af04965af3c666b2ab7f689e92c8&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6ae97ae1&is=6ae82961&hm=5925999b3ddfd1ee534b0ac1dfa34c251a76850211df655ab5e1624ef5138b9d&",
     "summary": "An unofficial developer's console",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds an in-game developer console for executing commands and running code.",
+    "aiSummary": "Adds an in-game developer console for entering commands and running code.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -52,7 +52,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>An official update to console commands that overhauls the interface to feel more modern and provide additional quality of life.</p><p><strong>Download</strong>: <a href=\"https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip</a><br><strong>Forum Page</strong>: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=4106.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=4106.0</a><br><strong>Changelog &amp; Previous versions</strong>: <a href=\"https://github.com/LazyWizard/console-commands/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/console-commands/releases</a></p><pre><code>Version 4.0.0\n\n- Complete visual overhaul of the legacy UI.\n- Added command and argument autocompletion &amp; suggestion.\n- Added syntax hints for command parameters.\n- Now remembers the last 30 commands, even across game restarts.\n- The runcode command now displays live compile error warnings.\n- Reverted the mods version system back to the original format.\n- Added version checker changelog &amp; download support.\n- Added \"History\" command.\n\nKeybinds\n\n- CTRL + Backspace: open console\n- Enter: confirm command\n- Left/Right: move cursor\n- Up/Down: Scroll through command history/select autocompletion\n- Tab: confirm autocompletion\n\nLegacy UI\n\n- The legacy UI can still be re-enabled in \"ConsoleCommands/data/console/console_settings.json\".\n- New features added with this version are not available in the legacy UI.\n\nFor Modders\n\n- Added \"BaseCommandWithSuggestion\". Implement it to create a command with autocomplete suggestions.\n- Use the \"getSuggestions\" method to return a list of the provided suggestions for your command.\n- \"parameter\" tells you which parameter the suggestions are for (0 is the first arg).\n- \"previous\" are the other arguments the user entered before the current one.</code></pre>",
-  "aiDescription": "Provides a custom overlay for entering commands, including universal, campaign, and combat cheats. Allows users to write, compile, and run Java code in-game using the Janino library. Supports user-created commands and includes a legacy console option for those preferring the previous UI.",
+  "aiDescription": "Provides a custom overlay for inputting commands, including a large list of built-in cheats and utilities for campaigns and combat. Allows users to write, compile, and run Java code directly in the game using the Janino library. Supports the creation of custom commands by modders and includes a legacy UI option for those preferring the older design.",
   "saveCompatibilityText": "Doesn't require a new game, and can be safely untagged from a running game without issues",
   "removalCompatibilityText": "can be safely untagged from a running game without issues",
   "canAdd": "yes",
@@ -66,21 +66,21 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6ae8d221&is=6ae780a1&hm=4888c640a9014b06a22f8ccc65e87307a956af04965af3c666b2ab7f689e92c8&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6ae97ae1&is=6ae82961&hm=5925999b3ddfd1ee534b0ac1dfa34c251a76850211df655ab5e1624ef5138b9d&",
       "aiCaption": "A dark game screen showing the text 'Console loaded, summon with CONTROL+BACKSPACE.' and a command prompt.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1422651666393600030/image.png?ex=6ae8d69c&is=6ae7851c&hm=05f8b27c76ba9e7ffbb7f8bed639254f033a6a0bf90ccbe29df50104b4652190&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1422651666393600030/image.png?ex=6ae97f5c&is=6ae82ddc&hm=ed0fb4315816e31205f568836da47497a59b8a2f1a668fdd7ddb24e8c2d77e47&",
       "aiCaption": "A console interface displaying instructions for commands like Enter, Tab, Left/Right, Up/Down, and an example command 'AddSpecial <specialId>'.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1423713681312583851/image.png?ex=6ae8bf30&is=6ae76db0&hm=cd5cc1147f8a62ac2777e23861e4927e144afe458c5b1fcd7b1f6a957e2c4159&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1423713681312583851/image.png?ex=6ae967f0&is=6ae81670&hm=2fd0fb97ab011c3c4c9e75c8c683db7e361531717d5765a715371d411c5af4bc&",
       "aiCaption": "A screenshot of a console window showing code with the command 'runcode' and a loop using Console.showMessage.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -132,6 +132,13 @@
     {
       "name": "Version Checker",
       "id": "version-checker"
+    }
+  ],
+  "conflicts": [
+    {
+      "name": "Halo - United Nations Space Command (UNSC)",
+      "id": "halo-united-nations-space-command",
+      "quote": "If your having an issue where the game only opens the Legacy Console, remove the \"Halo - United Nations Space Command (UNSC)\" mod if you have it. It appears that the mod ships a whole copy of an old version of Console commands, which overwrites all updated code."
     }
   ]
 }

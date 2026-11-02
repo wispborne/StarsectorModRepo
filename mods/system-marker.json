@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T03:25:57.707497Z",
+  "generatedAt": "2026-11-02T09:47:04.055088Z",
   "listing": {
     "id": "system-marker",
     "name": "System Marker",
@@ -17,7 +17,7 @@
     "gameVersion": "0.98a",
     "modVersion": "0.1.10",
     "imageUrl": "https://i.imgur.com/ExCF0za.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1367378432920649788/1367378433142816788/crest.webp?ex=6ae8ce27&is=6ae77ca7&hm=9c3c8262d1bd9d1764526e3797ee41741651d24c56d2433b8dd4cad907463387&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1367378432920649788/1367378433142816788/crest.webp?ex=6ae976e7&is=6ae82567&hm=aa734dc990281497cc35255f47c9e80a40c742666a07a5b95d8b2f156d159262&",
     "summary": "This mod adds several grafical information markers.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds graphical markers for ship systems, shields, ammo, repairs, torpedoes, and mines.",
@@ -48,7 +48,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Adds several grafical information markers</p><p>Requires LazyLib<br>Can be added and removed safely</p><p>This mod DOES NOT CONTAIN Flux Reticle,<br>and DOES NOT DEPENDENT ON Flux Reticle.<br>It WORKS WELL ALONE,<br>and ALSO works well with Flux Reticle.</p><p>Latest changelog:</p><pre><code>2026/03/20 0.1.10\nAmmo Remaining Marker - added two new mode\n -ring：Shows remaining ammo's ratio as a ring\n -percentage：Shows percentage of remaining ammo with numbers\nBUG Fix\n- Fixed [Thickness of Ship System Marker's ring] option didn't works</code></pre><p>Forum: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=28386.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=28386.0</a><br>Change Log: <a href=\"https://github.com/saya39/System_Marker/wiki/Change-Log\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/saya39/System_Marker/wiki/Change-Log</a><br>Download: <a href=\"https://github.com/saya39/System_Marker/releases/download/0.98a-0.1.10/System_Marker_0.1.10.7z\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/saya39/System_Marker/releases/download/0.98a-0.1.10/System_Marker_0.1.10.7z</a></p>",
-  "aiDescription": "Displays visual indicators for remaining system charges, shield status, weapon ammo, and repair progress. Includes warnings for incoming torpedoes and nearby mines with adjustable parameters.",
+  "aiDescription": "Displays visual indicators for remaining system cooldowns, shield status, weapon ammo, and repair progress. Warns about incoming torpedoes and mines with visual markers and audio alarms. Parameters can be customized via configuration files or in-game settings.",
   "saveCompatibilityText": "Can be added and removed safely",
   "removalCompatibilityText": "Can be added and removed safely",
   "canAdd": "yes",
@@ -59,7 +59,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1367378432920649788/1367378433142816788/crest.webp?ex=6ae8ce27&is=6ae77ca7&hm=9c3c8262d1bd9d1764526e3797ee41741651d24c56d2433b8dd4cad907463387&",
+      "url": "https://cdn.discordapp.com/attachments/1367378432920649788/1367378433142816788/crest.webp?ex=6ae976e7&is=6ae82567&hm=aa734dc990281497cc35255f47c9e80a40c742666a07a5b95d8b2f156d159262&",
       "aiCaption": "A game screenshot showing a cursor and circular markers near a bright explosion effect.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -138,10 +138,6 @@
     {
       "name": "LunaLib",
       "id": "lunalib"
-    },
-    {
-      "name": "Flux Reticle",
-      "id": "flux-reticle"
     }
   ]
 }

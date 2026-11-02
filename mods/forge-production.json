@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T03:25:57.707497Z",
+  "generatedAt": "2026-11-02T09:47:04.055088Z",
   "listing": {
     "id": "forge-production",
     "name": "Forge Production",
@@ -19,10 +19,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.1.13",
     "imageUrl": "https://raw.githubusercontent.com/Ontheheavens/Forge-Production/main/images/Title.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1360680207505162402/1360680208088174693/Art.png?ex=6ae8d3b1&is=6ae78231&hm=10e849b21bd29445d345888f521d82a7f7374fbedeccc8c612c2637330b26ec1&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1360680207505162402/1360680208088174693/Art.png?ex=6ae97c71&is=6ae82af1&hm=1c9617549e811f19af7b03a6250ff157ba1c2ec9c2ef18241ffc247f31367f3e&",
     "summary": "Acquire production hullmods from derelict mothership.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds production hullmods acquired from derelict motherships to manufacture supplies, fuel, machinery, and ships.",
+    "aiSummary": "Adds production hullmods acquired from derelict motherships to manufacture supplies, fuel, machinery, and ships from raw resources.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Alaricdragon/ForgeProduction/archive/refs/heads/master.zip",
@@ -45,7 +45,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>forge production! the one were you can make ships in your fleet. or fuel. or supplies. or...<br>form page: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=29778.msg436803#msg436803\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=29778.msg436803#msg436803</a><br>download link: <a href=\"https://github.com/Alaricdragon/ForgeProduction/archive/refs/heads/master.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Alaricdragon/ForgeProduction/archive/refs/heads/master.zip</a></p><pre><code>V1.1.8:\n    updated to starsector 0.98\n    added a settings to the forge_production_Settings.ini file called 'hull_builder_requires_rigs'. set this to false to forge ships without salvage rigs</code></pre>",
-  "aiDescription": "Acquire production hullmods from derelict motherships. Use their production capacities to make supplies, fuel, machinery and ships from raw resources. Manage production with comprehensive ability toggle and a control panel for finer regulation.",
+  "aiDescription": "Adds production hullmods acquired from derelict motherships to manufacture supplies, fuel, machinery, and ships from raw resources. Includes a control panel for fine regulation of production capacities and an interactive spreadsheet for planning resource ratios.",
   "removalCompatibilityText": "Cannot be removed from games in which it was already used.",
   "canRemove": "no",
   "aiUse": {},
@@ -56,7 +56,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1360680207505162402/1360680208088174693/Art.png?ex=6ae8d3b1&is=6ae78231&hm=10e849b21bd29445d345888f521d82a7f7374fbedeccc8c612c2637330b26ec1&",
+      "url": "https://cdn.discordapp.com/attachments/1360680207505162402/1360680208088174693/Art.png?ex=6ae97c71&is=6ae82af1&hm=1c9617549e811f19af7b03a6250ff157ba1c2ec9c2ef18241ffc247f31367f3e&",
       "aiCaption": "A banner showing a spaceship in space and various industrial scenes with the text 'Version 1.1.0'.",
       "aiKind": "banner",
       "aiFit": "good",
@@ -111,7 +111,6 @@
   ],
   "changelog": {
     "1.1.10": "save compatible with V1.1.4+\n changed forge_production_settings.ini names:\n bannedHullmods        -> hull_bannedHullmods\n allowedTags:          -> hull_production_allowedTags\n allowedManufacturers  -> hull_production_allowedManufacturers\n allowedFrigate        -> hull_production_allowedFrigate\n allowedDestroyer      -> hull_production_allowedDestroyer\n allowedCruiser        -> hull_production_allowedCruiser\n allowedCapital        -> hull_production_allowedCapital\n allowForcedVariants   -> hull_production_allowForcedVariants\n forcedVariants        -> hull_production_forcedVariants\n added new settings:\n hullmod_allowedFrigate\n hullmod_allowedDestroyer\n hullmod_allowedCruiser\n hullmod_allowedCapital\n hullmod_allowMultipleForgeMods",
-    "1.1.9": "save compatible with V1.1.4+\n added some settings to the forge_production_settings.ini:\n bannedHullmods\n allowedTags\n allowedManufacturers\n allowedFrigate\n allowedDestroyer\n allowedCruiser\n allowedCapital\n allowForcedVariants\n forcedVariants\n changed the default settings you are no longer forced to go slow by default. also you can use substance burn and emergency burn now. this is in the settings if you dislike this change.\n increased the senser profile debuff from 100 -> 300 (again, you can chance this in the settings).\n hull production no longer requires salvage rigs (this is a temp fix, I will be changing this back soon, but fixed.)",
     "1.1.8": "updated to starsector 0.98\n added a settings to the forge_production_Settings.ini file called 'hull_builder_requires_rigs'. set this to false to forge ships without salvage rigs"
   },
   "changelogUrl": "https://github.com/Alaricdragon/ForgeProduction/blob/master/changelog/changelog",

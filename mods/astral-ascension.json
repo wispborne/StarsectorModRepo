@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T03:25:57.707497Z",
+  "generatedAt": "2026-11-02T09:47:04.055088Z",
   "listing": {
     "id": "astral-ascension",
     "name": "Astral Ascension",
@@ -20,7 +20,8 @@
     "imageUrl": "https://i.imgur.com/Hg31maJ.png",
     "summary": "Astral Ascensions is a mod that uncaps colony sizes and provides end-game bonuses for the development of your colonies. Now instead of theoretically reaching size 10, a colony can reach size 100 - a full Googol of people living, breathing, and dying across the breadth of a single planet.",
     "summaryIsGenerated": false,
-    "aiSummary": "Uncaps colony sizes to 100 and adds end-game bonuses for colony development.",
+    "aiSummary": "Uncaps colony sizes up to 100 and adds end-game bonuses for colony development.",
+    "saveCompatible": false,
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Planetace/Astral-Ascension/releases/download/1.2.7/Astral.Ascension.1.2.7.zip",
@@ -42,9 +43,11 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Astral Ascension is a mod that expands the Vanilla Colony size limits from 10 to 100. Meaning an entire Googol of people can live and die on a single Starsector world. Planets that exceed size 10 will transform gradually into new and exciting planet classes, possessing powerful bonuses until achieving the status of an <strong>Astral World</strong> at size 21.</p><p>Also provides the ability for the game to drop Omega Cores, and can become custom administrators with unique and powerful colony bonuses. Tame the untamable, conquer the unfathomable. And remember, burn bright Starfarer.</p><pre><code>Changelog:\n1.2.7 - Updated Astral Ascension to Starsector 0.97.</code></pre><p>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=28273.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=28273.0</a><br>Releases: <a href=\"https://github.com/Planetace/Astral-Ascension/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Planetace/Astral-Ascension/releases</a></p>",
-  "aiDescription": "Allows colonies to grow up to size 100, granting unique planet types and market conditions at various milestones. Adds Omega Core Administrators with powerful colony bonuses and an Omega Repository for purchasing specialized equipment. Includes graphical updates for large colonies and support for console commands and LunaLib settings.",
-  "updateCompatibilityText": "This mod will break your saves if added or removed mid-game under principle.",
-  "canUpdate": "no",
+  "aiDescription": "Allows colonies to grow from size 11 to 100, granting unique planet types and market conditions at specific milestones. Adds Omega Core Administrators with powerful colony bonuses and an Omega Repository for purchasing specialized weaponry and vessels. Includes graphical updates like glow masks and planetary shields for high-population worlds.",
+  "saveCompatibilityText": "This mod will break your saves if added or removed mid-game under principle.",
+  "removalCompatibilityText": "This mod will break your saves if added or removed mid-game under principle.",
+  "canAdd": "no",
+  "canRemove": "no",
   "aiUse": {},
   "rawCategories": [
     "Colonies",
@@ -83,5 +86,16 @@
   "releases": [],
   "threadLastPostOn": "2026-09-26",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "conflicts": [
+    {
+      "name": "AOTD Crysosleep Module",
+      "quote": "AOTD Crysosleep Module (pre 2.0) - Known bug where the AOTD max size conflicts with the Astral Ascension Max Size, locking players out of AA content."
+    },
+    {
+      "name": "Terraforming and Station Construction",
+      "id": "terraforming-and-station-construction",
+      "quote": "TASC - the code that handles planet transformation cannot handle TASC Stations, likely due to their different nature to standard Starsector planets."
+    }
+  ]
 }
