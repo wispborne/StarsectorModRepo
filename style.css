@@ -1725,6 +1725,7 @@ button.check-row { align-items: center; }
 .ai-banner-hide-icon,
 .post-switch-icon,
 .changelog-warning .warning-icon,
+.side-icon,
 .nav-guide-icon { transform: translateY(round(0.06em, 1px)); }
 /* The speech bubble's tail makes it reach further down than up, so it sits a
    little higher than the rest. */
@@ -1784,6 +1785,11 @@ a.chip.needed:hover { background: var(--primary-bar); text-decoration: none; }
 .chip.needed.optional { background: none; box-shadow: inset 0 0 0 1px var(--primary-soft); }
 a.chip.needed.optional:hover { background: var(--primary-soft); }
 .chip.needed.optional.unknown { box-shadow: inset 0 0 0 1px var(--border); }
+/* Conflicts use the warning colour. */
+.chip.needed.conflict {
+  background: none; color: var(--warning); box-shadow: inset 0 0 0 1px var(--edge-warning);
+}
+a.chip.needed.conflict:hover { background: var(--warning-wash); }
 
 /* Where the code is kept: a badge in the text colour that links to it, or a
    grey one. The text colour is white on dark themes and dark on Light, which
@@ -1986,6 +1992,13 @@ a.chip.needed.optional:hover { background: var(--primary-soft); }
 .save-line { display: flex; flex-direction: column; gap: 2px; }
 .save-ask { display: flex; justify-content: space-between; align-items: center; gap: var(--gap); }
 .save-question { font-weight: 600; }
+/* The other labels in the Compatibility card look like the save questions,
+   so every row in the card reads as one level. */
+.compatibility .side-label { color: var(--text); font-weight: 600; font-size: var(--type-small); }
+/* Labels in the side cards have an icon in front, dim so the words lead. */
+.side-label.with-icon, .save-question { display: inline-flex; align-items: center; gap: 6px; }
+.side-icon, .side-icon svg { display: block; width: 14px; height: 14px; flex-shrink: 0; }
+.side-icon { color: var(--text-dim); }
 .save-words {
   min-width: 0; overflow-wrap: anywhere; font-style: italic; color: var(--text-dim);
 }
