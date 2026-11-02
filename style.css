@@ -65,6 +65,11 @@
   /* How light an author's own text colour may be, so it reads on this background. */
   --author-l-min: 0.72;
   --author-l-max: 0.95;
+  /* How strongly an author's table colours show over the page. */
+  --box-mix: 20%;
+  --box-l: 0.6;
+  --box-c: 4;
+  --box-line-mix: 40%;
   --lifted: 0 8px 24px rgba(0, 0, 0, 0.45);
   --badge-back: rgba(255, 255, 255, 0.02);
   /* Shading behind badges on card pictures. */
@@ -170,6 +175,11 @@
   /* How light an author's own text colour may be, so it reads on this background. */
   --author-l-min: 0.72;
   --author-l-max: 0.95;
+  /* How strongly an author's table colours show over the page. */
+  --box-mix: 20%;
+  --box-l: 0.6;
+  --box-c: 4;
+  --box-line-mix: 40%;
 }
 /* Light, for a reader who wants light pages whatever their computer is set
    to. The same colours as the light block at the end, written out a second time:
@@ -211,6 +221,11 @@
   /* How light an author's own text colour may be, so it reads on this background. */
   --author-l-min: 0.3;
   --author-l-max: 0.55;
+  /* How strongly an author's table colours show over the page. */
+  --box-mix: 70%;
+  --box-l: initial;
+  --box-c: 1;
+  --box-line-mix: 100%;
   --lifted: 0 8px 24px rgba(22, 30, 45, 0.16);
   --badge-back: rgba(22, 30, 45, 0.03);
   --over-picture-fade: linear-gradient(to top, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
@@ -322,6 +337,11 @@
     /* How light an author's own text colour may be, so it reads on this background. */
     --author-l-min: 0.3;
     --author-l-max: 0.55;
+    /* How strongly an author's table colours show over the page. */
+    --box-mix: 70%;
+    --box-l: initial;
+    --box-c: 1;
+    --box-line-mix: 100%;
     --lifted: 0 8px 24px rgba(22, 30, 45, 0.16);
     --badge-back: rgba(22, 30, 45, 0.03);
     --over-picture-fade: linear-gradient(to top, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
@@ -1910,12 +1930,59 @@ a.chip.needed.conflict:hover { background: var(--warning-wash); }
   margin-bottom: 4px;
 }
 
-/* A table scrolls sideways in its own box rather than widening the page. */
+/* A table scrolls sideways in its own box rather than widening the page. A
+   table inside a table's cell has no box of its own. */
 .prose .table-scroll { overflow-x: auto; margin: 0 0 10px; }
-.prose .table-scroll table { border-collapse: collapse; }
-.prose .table-scroll td, .prose .table-scroll th {
-  padding: 4px 8px; vertical-align: top; border: 1px solid var(--border);
+
+/* Tables are drawn the way the forum draws them: no lines unless the author
+   set some. The forum's complex tables carry their own background, lines,
+   padding, corners and widths, which the builder writes as the settings below.
+   Each is cleared on every table, row and cell first, so a table inside
+   another does not take its settings. The author's colours were chosen for
+   the forum's light pages, so each theme sets how they are laid over the page
+   (the --box-* names at the top): on dark pages a faint wash of the colour,
+   with its hue made stronger so a pale green still reads as green; on light
+   pages close to the author's own. The first background line is for browsers
+   that cannot work out a colour from another. A setting that is not there
+   leaves the colour, line or width that uses it out. */
+.prose table {
+  --bg: initial; --line: initial; --pad: initial; --round: initial; --w: initial;
+  border-collapse: separate; border-spacing: 0; max-width: 100%; overflow: hidden;
+  width: var(--w, auto);
+  background-color: color-mix(in srgb, var(--bg) var(--box-mix), transparent);
+  background-color: oklch(from var(--bg) var(--box-l, l) calc(c * var(--box-c)) h / var(--box-mix));
+  border: 1px solid color-mix(in srgb, var(--line) var(--box-line-mix), transparent);
+  border-radius: var(--round, 0);
 }
+.prose tr {
+  --row-bg: initial;
+  background-color: color-mix(in srgb, var(--row-bg) var(--box-mix), transparent);
+  background-color: oklch(from var(--row-bg) var(--box-l, l) calc(c * var(--box-c)) h / var(--box-mix));
+}
+.prose :is(td, th) {
+  --cell-bg: initial; --cell-pad: initial; --cell-line: initial; --w: initial;
+  padding: var(--cell-pad, var(--pad, 3px 6px)); vertical-align: top;
+  width: var(--w, auto);
+  background-color: color-mix(in srgb, var(--cell-bg) var(--box-mix), transparent);
+  background-color: oklch(from var(--cell-bg) var(--box-l, l) calc(c * var(--box-c)) h / var(--box-mix));
+  border-right: 1px solid color-mix(in srgb, var(--line) var(--box-line-mix), transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) var(--box-line-mix), transparent);
+  /* Long words still wrap, but a short one is never broken a letter at a
+     time to squeeze its column. */
+  overflow-wrap: break-word;
+}
+.prose :is(td, th):last-child { border-right: 0; }
+.prose tr:last-child > :is(td, th) { border-bottom: 0; }
+.prose :is(td, th)[style*="--cell-line"] {
+  border: 1px solid color-mix(in srgb, var(--cell-line) var(--box-line-mix), transparent);
+}
+.prose :is(td, th).no-line { border: 1px solid transparent; }
+/* A cell that only holds another table, such as one of a row of coloured
+   labels, leaves the spacing to that table. */
+.prose :is(td, th):has(> table:only-child) { padding: var(--cell-pad, var(--pad, 1px)); }
+/* A table in a centred or right-aligned block goes with it, as on the forum. */
+.prose .align-center table { margin-left: auto; margin-right: auto; }
+.prose .align-right table { margin-left: auto; margin-right: 0; }
 
 /* A YouTube video: its thumbnail with a play mark, and the player that takes
    its place when clicked. Both are the same 16:9 box, so nothing moves. */
@@ -2245,6 +2312,16 @@ a.bar-link:hover { text-decoration: none; color: var(--primary); }
 a.bar-link:hover .bar-fill { background: var(--primary-bar-lit); }
 .bar-count { min-width: 3ch; font-size: var(--type-small); font-variant-numeric: tabular-nums; }
 
+/* Each mod's name, then the conflicts its post names. */
+.conflict-list {
+  display: grid; grid-template-columns: minmax(0, max-content) minmax(0, 1fr);
+  gap: var(--gap); align-items: start;
+}
+.conflict-mod {
+  max-width: 260px; overflow-wrap: anywhere; font-size: var(--type-small); color: var(--text);
+}
+a.conflict-mod:hover { color: var(--primary); }
+
 /* Each column has a count, a bar and a label.
    Year or month labels mark the start of each group. */
 .report-columns {
@@ -2282,6 +2359,8 @@ a.bar-link:hover .bar-fill { background: var(--primary-bar-lit); }
 
 @media (max-width: 640px) {
   .bar-name { max-width: 140px; }
+  .conflict-list { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .conflict-list > .save-lines { margin-bottom: var(--gap); }
   .header-inner { gap: 10px; padding: 8px 12px; }
   .brand { font-size: var(--type-big); }
   .site-nav { order: 3; flex-basis: 100%; flex-wrap: wrap; }

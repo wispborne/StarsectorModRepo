@@ -88,6 +88,11 @@ export function releaseFeed() {
   return data('updates.json');
 }
 
+/// Reads every mod whose post names a conflict from `conflicts.json`.
+export function conflictList() {
+  return data('conflicts.json');
+}
+
 /// One mod's own file, fetched when its page opens. Kept for the rest of the
 /// visit like everything else, so going back to a mod does not fetch it again.
 export function modDetail(id) {

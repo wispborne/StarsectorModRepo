@@ -1,11 +1,11 @@
-// Reports use `mods.json` and `updates.json`.
+// Reports use `mods.json`, `updates.json` and `conflicts.json`.
 // Bars link to matching Browse filters where one exists.
 // Readers can use those links to check which mods were counted.
 //
 // Authors are not ranked by mod count. More mods does not mean better mods.
 
 import {
-  buildHash, clear, countedAcross, currentGameVersion, el, formatDay,
+  buildHash, clear, conflictList, countedAcross, currentGameVersion, el, formatDay,
   gameVersions, modHref, modList, quickTip, releaseFeed, requiredModCounts,
 } from '../lib.js';
 
@@ -18,17 +18,25 @@ const RECENT_MONTHS = 24;
 /// How many mods the most-releases list shows.
 const BUSIEST_SHOWN = 10;
 
+/// How many mods to show under "Most often named".
+const CONFLICTED_SHOWN = 10;
+
+/// How many mods the conflicts list shows before "Show all".
+const CONFLICTS_SHOWN = 10;
+
 const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
   'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 export async function render(root) {
-  const [list, feed] = await Promise.all([
+  const [list, feed, conflictFile] = await Promise.all([
     modList(),
-    // The other four reports work without a release list.
+    // The other reports work without a release list or a conflict list.
     releaseFeed().catch(() => null),
+    conflictList().catch(() => null),
   ]);
   const mods = list.mods || [];
   const releases = (feed && feed.releases) || [];
+  const conflicts = (conflictFile && conflictFile.mods) || [];
 
   document.title = 'Reports | Starmodder';
   clear(root);
@@ -53,6 +61,11 @@ export async function render(root) {
         ? `Since ${formatDay(oldestDay(releases))}`
         : 'No updates found yet.',
       releases.length ? releaseReport(releases) : null),
+    report('Conflicts',
+      conflicts.length
+        ? `${conflicts.length} mod${conflicts.length === 1 ? ' names a conflict in its own post' : 's name a conflict in their own posts'}.`
+        : 'No conflicts found yet.',
+      conflicts.length ? conflictReport(conflicts) : null),
   ]));
 }
 
@@ -202,6 +215,67 @@ function releaseReport(releases) {
     chart,
     busiest.length ? el('h3', { text: 'Most updates' }) : null,
     busiest.length ? barList(busiest) : null,
+  ]);
+}
+
+function conflictReport(conflicts) {
+  // Count each mod once per post that names it.
+  // Only count mods with a page.
+  const named = new Map();
+  for (const mod of conflicts) {
+    for (const conflict of mod.conflicts) {
+      if (!conflict.id) continue;
+      const entry = named.get(conflict.id) || { name: conflict.name, by: new Set() };
+      entry.by.add(mod.modName);
+      named.set(conflict.id, entry);
+    }
+  }
+  const mostNamed = [...named.entries()]
+    .filter(([, entry]) => entry.by.size > 1)
+    .sort((a, b) => b[1].by.size - a[1].by.size || a[1].name.localeCompare(b[1].name))
+    .slice(0, CONFLICTED_SHOWN)
+    .map(([id, entry]) => ({
+      label: entry.name,
+      count: entry.by.size,
+      labelHref: modHref(id),
+      tip: `Named by ${[...entry.by].join(', ')}`,
+    }));
+
+  const rows = (shown) => el('div', { class: 'conflict-list' }, shown.flatMap((mod) => [
+    el('a', { class: 'conflict-mod', href: modHref(mod.modId), text: mod.modName }),
+    el('div', { class: 'save-lines' }, mod.conflicts.map((conflict) =>
+      el('div', { class: 'save-line' }, [
+        el('div', { class: 'needs-chips' }, [conflict.id
+          ? el('a', { class: 'chip needed conflict', href: modHref(conflict.id), text: conflict.name })
+          : el('span', {
+              class: 'chip needed conflict unknown', text: conflict.name,
+              title: 'No page for this mod.',
+            })]),
+        el('q', { class: 'save-words', text: conflict.quote }),
+      ]))),
+  ]));
+
+  let list = rows(conflicts);
+  if (conflicts.length > CONFLICTS_SHOWN) {
+    const holder = el('div', {}, [rows(conflicts.slice(0, CONFLICTS_SHOWN))]);
+    let all = false;
+    const toggle = el('button', {
+      type: 'button', class: 'link-button report-more',
+      text: `Show all ${conflicts.length} mods`,
+    });
+    toggle.addEventListener('click', () => {
+      all = !all;
+      clear(holder).append(rows(all ? conflicts : conflicts.slice(0, CONFLICTS_SHOWN)));
+      toggle.textContent = all ? `Show first ${CONFLICTS_SHOWN} mods` : `Show all ${conflicts.length} mods`;
+    });
+    list = el('div', { class: 'stack' }, [holder, el('div', {}, [toggle])]);
+  }
+
+  return el('div', { class: 'stack' }, [
+    mostNamed.length ? el('h3', { text: 'Most often named' }) : null,
+    mostNamed.length ? barList(mostNamed) : null,
+    el('h3', { text: 'All conflicts' }),
+    list,
   ]);
 }
 
