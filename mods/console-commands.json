@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T07:07:54.865326Z",
+  "generatedAt": "2026-11-04T19:10:06.896580Z",
   "listing": {
     "id": "console-commands",
     "name": "Console Commands",
@@ -26,7 +26,7 @@
     "gameVersion": "0.98a",
     "modVersion": "2024.10.04",
     "imageUrl": "https://imgur.com/zoCketX.gif",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6aec1de1&is=6aeacc61&hm=bbe2fd8cc46b3b974d71f9f5e2a3b0b732574be6d7310ea9288d8166608809ca&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6aecc6a1&is=6aeb7521&hm=67d505a8608b7cf9bfcc1e0de5ba600f7606498b1aa1c8729adfed3a8a0c9e0a&",
     "summary": "An unofficial developer's console",
     "summaryIsGenerated": false,
     "aiSummary": "Adds an in-game developer console for entering commands and running code.",
@@ -43,7 +43,7 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2012-08-23",
-    "threadLastPostOn": "2026-10-04",
+    "threadLastPostOn": "2026-11-03",
     "editedOn": "2025-10-26",
     "needs": []
   },
@@ -52,7 +52,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>An official update to console commands that overhauls the interface to feel more modern and provide additional quality of life.</p><p><strong>Download</strong>: <a href=\"https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip</a><br><strong>Forum Page</strong>: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=4106.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=4106.0</a><br><strong>Changelog &amp; Previous versions</strong>: <a href=\"https://github.com/LazyWizard/console-commands/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/console-commands/releases</a></p><pre><code>Version 4.0.0\n\n- Complete visual overhaul of the legacy UI.\n- Added command and argument autocompletion &amp; suggestion.\n- Added syntax hints for command parameters.\n- Now remembers the last 30 commands, even across game restarts.\n- The runcode command now displays live compile error warnings.\n- Reverted the mods version system back to the original format.\n- Added version checker changelog &amp; download support.\n- Added \"History\" command.\n\nKeybinds\n\n- CTRL + Backspace: open console\n- Enter: confirm command\n- Left/Right: move cursor\n- Up/Down: Scroll through command history/select autocompletion\n- Tab: confirm autocompletion\n\nLegacy UI\n\n- The legacy UI can still be re-enabled in \"ConsoleCommands/data/console/console_settings.json\".\n- New features added with this version are not available in the legacy UI.\n\nFor Modders\n\n- Added \"BaseCommandWithSuggestion\". Implement it to create a command with autocomplete suggestions.\n- Use the \"getSuggestions\" method to return a list of the provided suggestions for your command.\n- \"parameter\" tells you which parameter the suggestions are for (0 is the first arg).\n- \"previous\" are the other arguments the user entered before the current one.</code></pre>",
-  "aiDescription": "Provides a custom overlay for inputting commands, including a large list of built-in cheats and utilities for campaigns and combat. Allows users to write, compile, and run Java code directly in the game using the Janino library. Supports the creation of custom commands by modders and includes a legacy UI option for those preferring the older design.",
+  "aiDescription": "Provides a custom overlay for inputting commands, including universal, campaign, and combat cheats. Allows users to write, compile, and run code in-game using the Janino library. Supports user-created commands and can be added or removed from a running game without issues.",
   "saveCompatibilityText": "Doesn't require a new game, and can be safely untagged from a running game without issues",
   "removalCompatibilityText": "can be safely untagged from a running game without issues",
   "canAdd": "yes",
@@ -66,21 +66,21 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6aec1de1&is=6aeacc61&hm=bbe2fd8cc46b3b974d71f9f5e2a3b0b732574be6d7310ea9288d8166608809ca&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6aecc6a1&is=6aeb7521&hm=67d505a8608b7cf9bfcc1e0de5ba600f7606498b1aa1c8729adfed3a8a0c9e0a&",
       "aiCaption": "A dark game screen showing the text 'Console loaded, summon with CONTROL+BACKSPACE.' and a command prompt.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1422651666393600030/image.png?ex=6aec225c&is=6aead0dc&hm=e0c628944de903ecb8b7cbf64d7096f7dbcfdfa5485de5cd34b45ad8dd04bb8c&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1422651666393600030/image.png?ex=6aeccb1c&is=6aeb799c&hm=67832bb07b92691e62368e8795f65353ebadb426eb744b4b371df273c92c43d2&",
       "aiCaption": "A console interface displaying instructions for commands like Enter, Tab, Left/Right, Up/Down, and an example command 'AddSpecial <specialId>'.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1423713681312583851/image.png?ex=6aec0af0&is=6aeab970&hm=ff80a9fa9f256f50bc0e1b4fce909f4078fdeab254edc0fdab41a488be922f65&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1423713681312583851/image.png?ex=6aecb3b0&is=6aeb6230&hm=d6f801076d9de55f2264540f97fd328e81d9cfbcd00914577bb4e4b38ba9773e&",
       "aiCaption": "A screenshot of a console window showing code with the command 'runcode' and a loop using Console.showMessage.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -125,7 +125,7 @@
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=4106.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1419747750987173908/1419747750987173908",
   "releases": [],
-  "threadLastPostOn": "2026-10-04",
+  "threadLastPostOn": "2026-11-03",
   "sameNameMods": [],
   "addons": [],
   "optionalNeeds": [
