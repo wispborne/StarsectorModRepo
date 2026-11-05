@@ -19,6 +19,7 @@ import {
 } from './lib.js';
 import { address } from './address.js';
 import { peopleMatching, suggestMods } from './search.js';
+import { completionGroup, completionsFor, pickCompletion } from './search_menu.js';
 import * as home from './views/home.js';
 import * as browse from './views/browse.js';
 import * as mod from './views/mod.js';
@@ -388,6 +389,8 @@ function mountHeaderSearch() {
   modList().then((list) => { mods = list.mods || []; }).catch(() => {});
 
   let activeIndex = -1;
+  /// The search terms being suggested, or null.
+  let completions = null;
   const suggestionRows = () => [...drop.querySelectorAll('.suggestion')];
   const setActive = (index) => {
     const rows = suggestionRows();
@@ -416,6 +419,7 @@ function mountHeaderSearch() {
     box.removeAttribute('aria-activedescendant');
   };
   const hide = () => {
+    completions = null;
     clear(drop);
     drop.hidden = true;
     box.setAttribute('aria-expanded', 'false');
@@ -436,8 +440,12 @@ function mountHeaderSearch() {
     // answers best. Both give nothing until there is something to look for.
     const hits = suggestMods(mods, wanted, SUGGESTION_COUNT);
     const people = peopleMatching(mods, wanted, PEOPLE_SUGGESTION_COUNT);
+    // Show terms such as `posted-on:` or its values first, to complete the word
+    // under the cursor.
+    completions = completionsFor(box, mods);
 
-    if (!hits.length && !people.length) { hide(); return; }
+    if (!hits.length && !people.length && !completions) { hide(); return; }
+    if (completions) drop.append(...completionGroup(box, completions));
     if (hits.length) {
       drop.append(el('div', { class: 'suggestion-group', text: 'Mods' }));
       for (const hit of hits) drop.append(suggestion(hit, hide));
@@ -453,6 +461,12 @@ function mountHeaderSearch() {
     box.setAttribute('aria-expanded', 'true');
   };
   box.addEventListener('input', showSuggestions);
+  // Moving the cursor can put it on a different word, with other terms to
+  // suggest.
+  box.addEventListener('keyup', (e) => {
+    if (['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) showSuggestions();
+  });
+  box.addEventListener('click', showSuggestions);
   // Clicking back into the box brings back the suggestions for what is
   // already in it.
   let hideLater = null;
@@ -472,13 +486,26 @@ function mountHeaderSearch() {
       setActive(next);
       return;
     }
+    // Tab inserts the selected search term, or the first if none is selected.
+    if (e.key === 'Tab' && !e.shiftKey && completions) {
+      const picked = activeIndex >= 0 ? rows[activeIndex] : null;
+      if (!picked || picked.classList.contains('completion')) {
+        e.preventDefault();
+        const index = picked ? rows.filter((row) => row.classList.contains('completion'))
+          .indexOf(picked) : 0;
+        pickCompletion(box, completions, completions.items[index]);
+        return;
+      }
+    }
     if (e.key === 'Enter') {
       // A row the reader picked with the arrow keys always wins. Otherwise
-      // Enter only opens a suggestion when it is the one and only answer —
-      // with several to choose from, opening the first is a guess, so the
-      // search page shows them all instead.
+      // Enter opens a suggestion only if there is one mod or person.
+      // With several results, the search page shows them all.
+      // Enter inserts a search term only if selected, so it can still search
+      // for the typed text.
+      const answers = rows.filter((row) => !row.classList.contains('completion'));
       const chosen = activeIndex >= 0 ? rows[activeIndex]
-        : (rows.length === 1 ? rows[0] : null);
+        : (answers.length === 1 ? answers[0] : null);
       if (chosen) {
         e.preventDefault();
         chosen.click();

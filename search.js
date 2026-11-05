@@ -3,6 +3,7 @@
 
 import { everyOtherName, modName } from './mod_names.js';
 import { NICKNAMES } from './nicknames.js';
+import { compareGameVersions, gameVersionFamily } from './version.js';
 
 // --- The clean-up ---
 
@@ -290,9 +291,9 @@ const FIELDS = {
   version: (mod) => [mod.gameVersion],
   gameversion: (mod) => [mod.gameVersion],
   modversion: (mod) => [mod.modVersion],
-  // Where the mod was found: forum or discord. `source:` was its first
-  // name and still works, but reads too much like source code.
-  from: (mod) => mod.sources || [],
+  // Where the mod was posted: forum or discord. `source:` was its first
+  // name and `from:` its second. Both still work, so old links keep working.
+  'posted-on': (mod) => mod.sources || [],
   url: (mod) => [mod.forumUrl, mod.discordUrl,
     mod.bestDownload && mod.bestDownload.url],
   summary: (mod) => [mod.summary],
@@ -300,8 +301,9 @@ const FIELDS = {
 // The plural reads as naturally as the singular, so both are accepted.
 FIELDS.authors = FIELDS.author;
 FIELDS.categories = FIELDS.category;
-FIELDS.source = FIELDS.from;
-FIELDS.sources = FIELDS.from;
+FIELDS.from = FIELDS['posted-on'];
+FIELDS.source = FIELDS['posted-on'];
+FIELDS.sources = FIELDS['posted-on'];
 
 /// The yes-or-no questions a reader can ask with `has:` or `is:`, as in
 /// `has:source` or `-is:wip`. The same questions as Browse's switches, plus
@@ -356,7 +358,7 @@ function closeOpenQuote(text) {
   return comma < 0 ? `${text}"` : `${text.slice(0, comma)}"${text.slice(comma)}`;
 }
 
-const FIELD_TERM = /^([a-z]+):(.*)$/is;
+const FIELD_TERM = /^([a-z][a-z-]*):(.*)$/is;
 
 /// One piece of a group, read as what it asks for. Gives back a list, because
 /// a plain word that clean-up turns into several ("seeker-unidentified") is
@@ -542,4 +544,215 @@ export function peopleMatching(mods, text, count) {
   return [...found.values()]
     .sort((a, b) => a.name.localeCompare(b.name))
     .slice(0, count);
+}
+
+// --- Suggesting search terms as they are typed ---
+
+/// Search terms in display order. Plural and older spellings (`authors`,
+/// `gameversion`, `from:`, `source:`) still work but are omitted to keep the list short.
+/// `values` lists what can follow the colon. For long lists, `needsTyping`
+/// waits for a letter before showing suggestions.
+const COMPLETION_FIELDS = [
+  { key: 'name', note: 'Mod name' },
+  {
+    key: 'author', note: 'Any author name', group: 'Authors',
+    needsTyping: true, values: authorValues,
+  },
+  { key: 'category', note: 'Category', group: 'Categories', values: categoryValues },
+  { key: 'version', note: 'Game version, e.g. 0.98', group: 'Game versions', values: versionValues },
+  { key: 'modversion', note: 'Mod version' },
+  {
+    key: 'posted-on', note: 'Forum or Discord', group: 'Posted on',
+    values: () => [
+      { value: 'forum', note: 'Starsector forum' },
+      { value: 'discord', note: 'Unofficial Starsector Discord' },
+    ],
+  },
+  { key: 'url', note: 'Mod links' },
+  { key: 'summary', note: 'Short mod summary' },
+  {
+    key: 'has', note: 'Has source code, a download or AI use', group: 'Has',
+    values: () => [
+      { value: 'source', note: 'Source code link' },
+      { value: 'download', note: 'Direct file download' },
+      { value: 'ai', note: 'The author says AI was used' },
+    ],
+  },
+  {
+    key: 'is', note: 'Is a work in progress, a tool, safe to add or made without AI',
+    group: 'Is',
+    values: () => [
+      { value: 'addable', note: 'Safe to add to a game in progress' },
+      { value: 'wip', note: 'Work in progress' },
+      { value: 'tool', note: 'Tool used alongside the game' },
+      { value: 'noai', note: 'The author says no AI was used' },
+    ],
+  },
+];
+
+/// Maps other field spellings to the suggested spelling.
+const COMPLETION_ALIASES = {
+  authors: 'author',
+  categories: 'category',
+  gameversion: 'version',
+  from: 'posted-on',
+  source: 'posted-on',
+  sources: 'posted-on',
+};
+
+/// How many suggestions the list shows at most.
+const MAX_COMPLETIONS = 8;
+
+/// Minimum mod count for a suggested game version. This keeps a version
+/// misread from one post from replacing valid suggestions.
+const VERSION_MIN_MODS = 3;
+
+const countNote = (count) => `${count} ${count === 1 ? 'mod' : 'mods'}`;
+
+/// Every person credited on a mod, A to Z. People are never listed by how many
+/// mods they have, here or anywhere else on the site.
+function authorValues(mods) {
+  const found = new Map();
+  for (const mod of mods) {
+    for (const name of mod.authors || []) {
+      const key = normalize(name);
+      if (key && !found.has(key)) found.set(key, { value: name });
+    }
+  }
+  return [...found.values()].sort((a, b) => a.value.localeCompare(b.value));
+}
+
+/// The categories in use, the most used first.
+function categoryValues(mods) {
+  const counts = new Map();
+  for (const mod of mods) {
+    for (const name of mod.categories || []) counts.set(name, (counts.get(name) || 0) + 1);
+  }
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([value, count]) => ({ value, note: countNote(count) }));
+}
+
+/// One entry per game release, newest first. Suggest the release number
+/// ("0.98", not "0.98a-RC8") because `version:` matches any version containing it.
+function versionValues(mods) {
+  const counts = new Map();
+  for (const mod of mods) {
+    if (!mod.gameVersion) continue;
+    const family = gameVersionFamily(mod.gameVersion);
+    if (!/\d/.test(family)) continue;
+    counts.set(family, (counts.get(family) || 0) + 1);
+  }
+  return [...counts.entries()]
+    .filter(([, count]) => count >= VERSION_MIN_MODS)
+    .sort((a, b) => compareGameVersions(b[0], a[0]))
+    .map(([value, count]) => ({ value, note: countNote(count) }));
+}
+
+const isTermBreak = (ch) => /\s|\+|,/.test(ch);
+
+/// Where the term under the cursor starts and ends. A term runs between
+/// spaces, plus signs and commas, except inside double quotes.
+function termAt(text, cursor) {
+  let start = 0;
+  let quoted = false;
+  for (let i = 0; i < cursor; i++) {
+    const ch = text[i];
+    if (ch === '"') quoted = !quoted;
+    else if (!quoted && isTermBreak(ch)) start = i + 1;
+  }
+  let end = cursor;
+  while (end < text.length) {
+    const ch = text[end];
+    if (ch === '"') quoted = !quoted;
+    else if (!quoted && isTermBreak(ch)) break;
+    end += 1;
+  }
+  return { start, end };
+}
+
+/// How well a value answers what was typed after the colon: 3 when the value
+/// starts with it, 2 when one of its words does, 1 when it is somewhere inside,
+/// and 0 when it is not there at all.
+function valueFit(value, typed) {
+  if (!typed) return 1;
+  const cleaned = normalize(value);
+  if (cleaned.startsWith(typed) || squash(cleaned).startsWith(squash(typed))) return 3;
+  if (cleaned.split(' ').some((word) => word.startsWith(typed))) return 2;
+  return cleaned.includes(typed) ? 1 : 0;
+}
+
+/// A value as it is typed into the box: in quotes when it has a space, a plus
+/// or a comma, any of which would otherwise end the term.
+const asTyped = (value) => (/[\s,+]/.test(value) ? `"${value}"` : value);
+
+/// The search terms to suggest for the term under the cursor, the way TriOS's
+/// search box suggests them.
+///
+/// - A word with no colon is matched against the names of the search terms,
+///   so `po` offers `posted-on:`. A lone minus offers every term with a minus.
+/// - After the colon, the values that term knows are offered: `posted-on:` offers
+///   forum and Discord, `category:` the categories in use, and so on.
+///
+/// Returns `{ start, end, group, items }`. `start` and `end` mark the text
+/// replaced by a selected item. Each item is `{ label, insert, note, kind }`.
+/// `kind` is `field` for a term name that needs a value, or `value` for a
+/// complete term. Returns null when there are no suggestions.
+/// A value already typed in full is not offered again.
+export function searchCompletions(mods, text, cursor) {
+  const typedText = String(text || '');
+  const at = Math.max(0, Math.min(cursor ?? typedText.length, typedText.length));
+  const { start, end } = termAt(typedText, at);
+  const term = typedText.slice(start, end);
+  const minus = term.startsWith('-') ? '-' : '';
+  const body = term.slice(minus.length);
+  if (body.startsWith('"')) return null;
+
+  const colon = body.indexOf(':');
+  if (colon < 0) {
+    if (!body && !minus) return null;
+    const wanted = body.toLowerCase();
+    if (!/^[a-z-]*$/.test(wanted)) return null;
+    const items = COMPLETION_FIELDS
+      .filter((field) => field.key.startsWith(wanted))
+      .map((field) => ({
+        label: `${minus}${field.key}:`,
+        insert: `${minus}${field.key}:`,
+        note: field.note,
+        kind: 'field',
+      }));
+    return items.length ? { start, end, group: 'Search by', items } : null;
+  }
+
+  const typedKey = body.slice(0, colon);
+  const key = typedKey.toLowerCase();
+  const field = COMPLETION_FIELDS.find((f) => f.key === (COMPLETION_ALIASES[key] || key));
+  if (!field || !field.values) return null;
+  const typedValue = normalize(body.slice(colon + 1).replace(/^"|"$/g, ''));
+  if (field.needsTyping && !typedValue) return null;
+
+  const items = field.values(mods || [])
+    .map((entry, order) => ({ entry, order, fit: valueFit(entry.value, typedValue) }))
+    .filter(({ entry, fit }) => fit > 0 && normalize(entry.value) !== typedValue)
+    .sort((a, b) => b.fit - a.fit || a.order - b.order)
+    .slice(0, MAX_COMPLETIONS)
+    .map(({ entry }) => ({
+      label: entry.value,
+      insert: `${minus}${typedKey}:${asTyped(entry.value)}`,
+      note: entry.note || '',
+      kind: 'value',
+    }));
+  return items.length ? { start, end, group: field.group, items } : null;
+}
+
+/// The text after a suggested item is picked, and where the cursor goes. The
+/// item takes the place of the whole term under the cursor. A finished term
+/// gets a space after it, ready for the next one, unless the next character
+/// already ends the term.
+export function applyCompletion(text, found, item) {
+  const before = text.slice(0, found.start);
+  const after = text.slice(found.end);
+  let inserted = item.insert;
+  if (item.kind === 'value' && !/^[\s,+]/.test(after)) inserted += ' ';
+  return { text: `${before}${inserted}${after}`, cursor: before.length + inserted.length };
 }

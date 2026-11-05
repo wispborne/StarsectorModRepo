@@ -654,6 +654,22 @@ h3 { font-size: var(--type-big); line-height: 1.25; margin: 0 0 6px; }
   border-bottom: 1px solid var(--border);
 }
 .person-thumb { background: var(--primary-faint); }
+/* Search terms such as `posted-on:` and their descriptions. Use the help panel's
+   example style because both show text the user can type. */
+.completion { cursor: pointer; }
+.completion-term {
+  flex: none;
+  font-family: inherit; font-size: var(--type-tiny); color: var(--text);
+  padding: 1px 6px; border: 1px solid var(--border); border-radius: 4px;
+  background: var(--surface-2); white-space: nowrap;
+}
+.completion-note {
+  min-width: 0; color: var(--text-dim); font-size: var(--type-tiny);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+/* Browse's search box can span the page. Limit the menu width to avoid
+   empty space beside short terms. */
+.completion-menu { right: auto; width: min(360px, 100%); max-height: 320px; overflow-y: auto; }
 .suggestion-name {
   color: var(--text); font-size: var(--type-small);
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
@@ -885,6 +901,8 @@ input:focus, select:focus { outline: none; border-color: var(--primary); }
    and the suggested mods step aside for it. */
 .search-field.help-off.help-asked .search-help { opacity: 1; visibility: visible; }
 .suggestions.behind-help { display: none; }
+/* Hide the help panel while Browse's suggestions occupy the same space. */
+.search-field.completing .search-help { opacity: 0; visibility: hidden; }
 
 .search-help p { margin: 0; font-size: var(--type-small); color: var(--text-dim); }
 .search-help p + p { margin-top: 7px; }

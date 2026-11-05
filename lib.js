@@ -2193,7 +2193,7 @@ const WAYS_TO_SEARCH = [
     name: 'Field search',
     says: [{ code: 'key:value' }, ' syntax, e.g. ', { code: 'author:Wisp' },
       ', ', { code: 'category:weapons' }, ', ', { code: 'version:0.97' }, ', ',
-      { code: 'from:discord' }],
+      { code: 'posted-on:discord' }],
   },
   {
     name: 'Has / is',

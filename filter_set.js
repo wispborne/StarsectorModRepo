@@ -69,7 +69,7 @@ export const SWITCHES = [
   },
 ];
 
-/// Where a mod was posted, for the "From" filter. The mod index is the
+/// Where a mod was posted, for the "Posted on" filter. The mod index is the
 /// forum's own list of mods (today's, not the old posts for past game
 /// versions), so it is a smaller part of "any forum thread".
 export const POSTED_ON = [
@@ -318,7 +318,7 @@ export function describeFilters(filters, gameLabel = (family) => family) {
   if (filters.needs === NO_REQUIREMENTS) words.push('Standalone mods only');
   else if (filters.needs) words.push(`Requires ${filters.needs}`);
   const from = POSTED_ON.find((option) => option.key === filters.from);
-  if (from) words.push(from.key === 'discord' ? 'From Discord' : from.label);
+  if (from) words.push(from.key === 'discord' ? 'Posted on Discord' : from.label);
   for (const option of SWITCHES) {
     const picked = filters.switches.get(option.key);
     if (picked) words.push(picked === NOT ? option.notLabel : option.label);

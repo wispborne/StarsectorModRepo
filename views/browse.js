@@ -28,6 +28,7 @@ import {
   restoreSaved, savedFiltersJson, savedNamed, withSaved, withoutSaved,
 } from '../filter_set.js';
 import { compileSearch } from '../search.js';
+import { attachCompletionMenu } from '../search_menu.js';
 
 const VIEW_KEY = 'starmodderView';
 /// Where the filters sit: in a column at the left (the default) or across
@@ -562,9 +563,13 @@ function drawControls(places, mods, state, onChange, onSaved, onLayout) {
 
   const layoutSwitch = layoutToggle(layout, onLayout);
 
+  // Add the "?" help panel and suggestions such as `posted-on:` to the search box.
+  const searchField = searchHelpField(search);
+  attachCompletionMenu(search, () => mods);
+
   if (atSide) {
     top.append(
-      el('div', { class: 'search-row' }, [searchHelpField(search)]),
+      el('div', { class: 'search-row' }, [searchField]),
       el('div', { class: 'filters' }, [
         sortHolder, el('span', { class: 'filters-gap' }), views, layoutSwitch,
       ]),
@@ -577,7 +582,7 @@ function drawControls(places, mods, state, onChange, onSaved, onLayout) {
       filterPanel('Saved filters', saved.node, !phone),
       filterPanel('Filter', filters.switches, true),
       filterPanel('Category', filters.chips, !phone),
-      filterPanel('From', filters.postedOnHolder, !phone),
+      filterPanel('Posted on', filters.postedOnHolder, !phone),
       filterPanel('AI use', filters.aiHolder, !phone, filters.aiAllOrNone),
       // Few readers change the dates, so the panel starts shut unless a date
       // is set.
@@ -591,7 +596,7 @@ function drawControls(places, mods, state, onChange, onSaved, onLayout) {
     return;
   }
 
-  top.append(el('div', { class: 'search-row' }, [searchHelpField(search), views, layoutSwitch]));
+  top.append(el('div', { class: 'search-row' }, [searchField, views, layoutSwitch]));
   // The categories come before the dropdowns: picking a category is what most
   // readers want first, and a row you can see beats a list you have to open.
   top.append(filters.chips);
@@ -771,7 +776,7 @@ export function filterControls(mods, state, onChange,
       },
     });
 
-  const postedOnDropdown = dropdown('From', POSTED_ON.map((option) => option.key),
+  const postedOnDropdown = dropdown('Posted on', POSTED_ON.map((option) => option.key),
     state.from, (v) => { state.from = v; changed(); },
     {
       anyLabel: 'Anywhere',
