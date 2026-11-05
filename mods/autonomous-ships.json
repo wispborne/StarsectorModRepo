@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T19:10:06.896580Z",
+  "generatedAt": "2026-11-05T05:34:10.187400Z",
   "listing": {
     "id": "autonomous-ships",
     "name": "Autonomous Ships",
@@ -16,14 +16,14 @@
     "modVersion": "0.6.1",
     "summary": "This mod adds new hullmods that allow the player to set predefined battle commands for AI-piloted ships in their fleet. e.g. The Auto retreat command hullmod will force the ship to retreat when below a certain hull integrity level.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds hullmods that set predefined battle commands for AI-piloted ships.",
-    "hasDirectDownload": true,
+    "aiSummary": "Adds hullmods that allow players to set predefined battle commands for AI-piloted ships, such as automatic retreats and aggression adjustments.",
+    "hasDirectDownload": false,
     "bestDownload": {
-      "url": "https://github.com/NightKev/autonomous-ships/releases/download/v0.6.1/autonomous-ships-0.6.1.zip",
+      "url": "https://github.com/NightKev/autonomous-ships/releases/",
       "kind": "direct",
-      "needsAnotherStep": false
+      "needsAnotherStep": true
     },
-    "downloadCount": 11,
+    "downloadCount": 1,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=13199.0",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
@@ -36,101 +36,11 @@
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\">Autonomous Ships</span><br><a href=\"https://github.com/NightKev/autonomous-ships/releases/\" rel=\"nofollow noopener\" target=\"_blank\">Downloads</a></div><br><span class=\"size-big\">Description</span><br><br>This mod adds new hullmods that allow the player to set predefined battle commands for AI-piloted ships in their fleet.<br>e.g. The <i>Auto retreat</i> command hullmod will force the ship to retreat when below a certain hull integrity level.<br><br>The command hullmods cost 0 ordnance points.<br><br><span class=\"size-big\">Current features</span><br><br><ul><br><li>Automatically retreat<br><ul><br><li>when the ship is below a certain hull integrity level. (3 different thresholds that can be customized via config file)</li><li>when the ship has no missile left. (The ship will only retreat if it has at least one missile weapon slot)</li><li>when the ship has exceeded its peak performance time.</li><li>when the ship is below a certain CR level. (60% or 40%)</li><li>when the ship doesn't have any order to follow. (Only takes effect after the enemy has been first encountered)</li></ul></li></ul><br><ul><li>Change the personality of ships without an officer to be more or less aggressive.</li></ul><br><span class=\"size-big\">Installation</span><br><br>Just download the mod and unpack the ZIP file into your <i>mods</i> folder.<br><br><span class=\"size-big\">Extra information</span><br><br><ul><br><li>To customize the retreat command hull integrity thresholds, edit <i>data/config/autonomous-ships.json</i>.</li><li>The retreat commands won't work in the simulator nor on the flagship (the ship you're piloting) even if it's on autopilot.</li><li>The source code is packaged with each release. There is also a <a href=\"https://github.com/NightKev/autonomous-ships\" rel=\"nofollow noopener\" target=\"_blank\">repository on Github</a> (the repo from the previous author is <a href=\"https://github.com/herve-quiroz/autonomous-ships\" rel=\"nofollow noopener\" target=\"_blank\">here</a>).</li><li>The mod supports <a href=\"http://fractalsoftworks.com/forum/index.php?topic=8181.0\" rel=\"nofollow noopener\" target=\"_blank\">Version Checker</a>.</li></ul><br><span class=\"size-big\">Future plans</span><br><br><ul><br><li>Escort?</li><li>Capture all navigation points?</li><li>Suggestions welcome!</li></ul><br><span class=\"size-big\">Credits</span><br><br><ul><br><li>HELMUT (icons)</li><li>hqz (original author)</li></ul><br><span class=\"size-big\">Version history</span><br><br><details class=\"spoiler\"><summary>Spoiler</summary><b><a href=\"https://github.com/NightKev/autonomous-ships/releases/tag/v0.6.1\" rel=\"nofollow noopener\" target=\"_blank\">0.6.1</a></b><br><ul><br><li>Added the \"Direct Retreat\" hullmod which changes the automatic retreat type (for ships with one of the retreat hullmods) from a standard defensive retreat to the \"get the hell out of here\" direct retreat.</li></ul><br><b><a href=\"https://github.com/NightKev/autonomous-ships/releases/tag/v0.6.0\" rel=\"nofollow noopener\" target=\"_blank\">0.6.0</a></b><br><ul><br><li>Added hullmods to change the personality of a ship (ships default to Steady in vanilla). Doesn't work on ships with officers or the flagship.</li></ul><br><b><a href=\"https://github.com/NightKev/autonomous-ships/releases/tag/v0.5.1\" rel=\"nofollow noopener\" target=\"_blank\">0.5.1</a></b><br><ul><br><li>Updated Version Checker support</li><li>Fixed the bug where removing non-AS hullmods would cause the hull- and cr-related AS hullmods to also be removed.</li></ul><br><b><a href=\"https://github.com/NightKev/autonomous-ships/releases/tag/v0.5.0\" rel=\"nofollow noopener\" target=\"_blank\">0.5.0</a></b><br><ul><br><li>Updated for Starsector 0.8.1a</li><li>\"Attack Fighters\" command removed due to vanilla fighter changes.</li><li>Removed LazyLib requirement for now (it was required by the now-removed fighter command).</li></ul><br><b><a href=\"http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.4.1.zip\" rel=\"nofollow noopener\" target=\"_blank\">0.4.1</a></b><br><ul><br><li>Fixed a crash with the \"attack fighter\" command.</li></ul><br><b><a href=\"http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.4.0.zip\" rel=\"nofollow noopener\" target=\"_blank\">0.4.0</a></b><br><ul><br><li>New command: retreat when the ship has no order to follow.</li><li>New command: attack the nearest fighter wing when the ship has no other order to follow.</li><li>Changed the icons for the hullmods, using a new set of icons from HELMUT.</li></ul><br><b><a href=\"http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.3.1.zip\" rel=\"nofollow noopener\" target=\"_blank\">0.3.1</a></b><br><ul><br><li>Added support for Version Checker.</li></ul><br><b><a href=\"http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.3.0.zip\" rel=\"nofollow noopener\" target=\"_blank\">0.3.0</a></b><br><ul><br><li>New command: retreat when exceeded peak performance time.</li><li>New commands: retreat when below 40% or 60% CR.</li><li>Changed the icons for the hullmods again, this time using the ones made by HELMUT.</li></ul><br><b><a href=\"http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.2.0.zip\" rel=\"nofollow noopener\" target=\"_blank\">0.2.0</a></b><br><ul><br><li>New command: retreat when no missiles left.</li><li>Changed the icons for the hullmods.</li></ul><br><b><a href=\"http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.1.0.zip\" rel=\"nofollow noopener\" target=\"_blank\">0.1.0</a></b><br><ul><br><li>Initial release.</li><li>New commands: auto retreat below hull integrity level. (3 levels)</li></ul></details><br><span class=\"size-big\">License</span><br><br>Note that the mod is licensed under the <a href=\"https://www.apache.org/licenses/LICENSE-2.0\" rel=\"nofollow noopener\" target=\"_blank\">Apache License v2.0</a>.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Adds hullmods that set predefined battle commands for AI-piloted ships. These commands include automatic retreat based on hull integrity, missile count, performance time, or combat readiness. It also allows changing the personality of ships without officers to be more or less aggressive.",
+  "aiDescription": "Adds hullmods that let players define specific battle commands for AI-controlled ships. These commands include automatic retreats based on hull integrity, missile count, or condition rating, as well as adjustments to ship aggression levels. The hullmods cost no ordnance points and can be customized via configuration files.",
   "aiUse": {},
   "rawCategories": [],
   "gallery": [],
   "downloads": [
-    {
-      "url": "https://github.com/NightKev/autonomous-ships/releases/tag/v0.6.1",
-      "directUrl": "https://github.com/NightKev/autonomous-ships/releases/download/v0.6.1/autonomous-ships-0.6.1.zip",
-      "fileName": "autonomous-ships-0.6.1.zip",
-      "kind": "direct",
-      "label": "0.6.1",
-      "host": "GitHub",
-      "needsAnotherStep": false
-    },
-    {
-      "url": "https://github.com/NightKev/autonomous-ships/releases/tag/v0.6.0",
-      "directUrl": "https://github.com/NightKev/autonomous-ships/releases/download/v0.6.1/autonomous-ships-0.6.1.zip",
-      "fileName": "autonomous-ships-0.6.1.zip",
-      "kind": "direct",
-      "label": "0.6.0",
-      "host": "GitHub",
-      "needsAnotherStep": false
-    },
-    {
-      "url": "https://github.com/NightKev/autonomous-ships/releases/tag/v0.5.1",
-      "directUrl": "https://github.com/NightKev/autonomous-ships/releases/download/v0.6.1/autonomous-ships-0.6.1.zip",
-      "fileName": "autonomous-ships-0.6.1.zip",
-      "kind": "direct",
-      "label": "0.5.1",
-      "host": "GitHub",
-      "needsAnotherStep": false
-    },
-    {
-      "url": "https://github.com/NightKev/autonomous-ships/releases/tag/v0.5.0",
-      "directUrl": "https://github.com/NightKev/autonomous-ships/releases/download/v0.6.1/autonomous-ships-0.6.1.zip",
-      "fileName": "autonomous-ships-0.6.1.zip",
-      "kind": "direct",
-      "label": "0.5.0",
-      "host": "GitHub",
-      "needsAnotherStep": false
-    },
-    {
-      "url": "http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.4.1.zip",
-      "directUrl": "http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.4.1.zip",
-      "fileName": "autonomous-ships-0.4.1.zip",
-      "kind": "direct",
-      "label": "0.4.1",
-      "host": "download.trancecode.org.s3.amazonaws.com",
-      "needsAnotherStep": false
-    },
-    {
-      "url": "http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.4.0.zip",
-      "directUrl": "http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.4.0.zip",
-      "fileName": "autonomous-ships-0.4.0.zip",
-      "kind": "direct",
-      "label": "0.4.0",
-      "host": "download.trancecode.org.s3.amazonaws.com",
-      "needsAnotherStep": false
-    },
-    {
-      "url": "http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.3.1.zip",
-      "directUrl": "http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.3.1.zip",
-      "fileName": "autonomous-ships-0.3.1.zip",
-      "kind": "direct",
-      "label": "0.3.1",
-      "host": "download.trancecode.org.s3.amazonaws.com",
-      "needsAnotherStep": false
-    },
-    {
-      "url": "http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.3.0.zip",
-      "directUrl": "http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.3.0.zip",
-      "fileName": "autonomous-ships-0.3.0.zip",
-      "kind": "direct",
-      "label": "0.3.0",
-      "host": "download.trancecode.org.s3.amazonaws.com",
-      "needsAnotherStep": false
-    },
-    {
-      "url": "http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.2.0.zip",
-      "directUrl": "http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.2.0.zip",
-      "fileName": "autonomous-ships-0.2.0.zip",
-      "kind": "direct",
-      "label": "0.2.0",
-      "host": "download.trancecode.org.s3.amazonaws.com",
-      "needsAnotherStep": false
-    },
-    {
-      "url": "http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.1.0.zip",
-      "directUrl": "http://download.trancecode.org.s3.amazonaws.com/starsector/autonomous-ships/autonomous-ships-0.1.0.zip",
-      "fileName": "autonomous-ships-0.1.0.zip",
-      "kind": "direct",
-      "label": "0.1.0",
-      "host": "download.trancecode.org.s3.amazonaws.com",
-      "needsAnotherStep": false
-    },
     {
       "url": "https://github.com/NightKev/autonomous-ships/releases/",
       "kind": "direct",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T19:10:06.896580Z",
+  "generatedAt": "2026-11-05T05:34:10.187400Z",
   "listing": {
     "id": "niko-s-scavengable-industries",
     "name": "Niko's Scavengable Industries",
@@ -21,10 +21,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.0.0",
     "imageUrl": "https://cdn.discordapp.com/attachments/1563289442263892059/1563289442532331652/gas_giant_mining.png?ex=6ae8f3bf&is=6ae7a23f&hm=c9cfe305abe3d3a64e5f468533e9e33c4cb666565a275429520f55bde59aac27&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1563289442263892059/1563289442532331652/gas_giant_mining.png?ex=6aec3f7f&is=6aeaedff&hm=6325ecd089cc7ac332acfd5119a1b8951e6a23cd1b170296b0d8d232e1c270fc&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1563289442263892059/1563289442532331652/gas_giant_mining.png?ex=6aece83f&is=6aeb96bf&hm=91d26042df5519c084d7730bffe2c491739d23c7d16763dd35a2873de8025225&",
     "summary": "Adds a number (eleven, currently) of industries obtainable through looting, markets, and raiding!",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds eleven industries obtainable through looting, markets, and raiding.",
+    "aiSummary": "Adds eleven new industries that can be obtained through looting, markets, and raiding, filling niche roles not covered by vanilla industries.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -37,7 +37,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1563289442263892059/1563289442263892059",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
-    "usesAi": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "assisted"
+      }
+    ],
     "addedOn": "2026-10-23",
     "threadLastPostOn": "2026-10-23",
     "editedOn": "2026-10-23",
@@ -61,23 +67,32 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Adds a few ways to customize your faction beyond just name!</p><p>Has optional <a href=\"https://discord.com/channels/187635036525166592/1562893773438980176\" rel=\"nofollow noopener\" target=\"_blank\">Patchlib</a> integration. Additionally, use <a href=\"https://fractalsoftworks.com/forum/index.php?topic=31308.0\" rel=\"nofollow noopener\" target=\"_blank\">Building Menu Overhaul</a> to enable certain sidegrade industries (optional).</p><p>Adds a number (<strong>eleven</strong>, currently) of industries obtainable through <strong>looting, markets, and raiding</strong>! (Additionally, has an optional set of lunasettings to add vanilla and certain modded industries to this pool and remove them from gamestart knowledge.)</p><p>Can be added to an existing save, but not removed. Run <strong>NSISetupFactionIndustries</strong> if adding to a new save.</p><p>More information present on forum thread.</p><p>Download: <a href=\"https://github.com/nikothedude/niko_scavengeableindustries/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/nikothedude/niko_scavengeableindustries/releases</a><br>Forum thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36195.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36195.0</a></p><p>AI Disclaimer - No AI was used in the creation of this mod.</p>",
-  "aiDescription": "Adds eleven industries obtainable through looting, markets, and raiding. These industries fill niche roles that vanilla industries do not satisfy. Examples include Orbital Flak Cannons, Innovation Shipworks, Nebula Skimming, and Cryosanctum. LunaSettings allow vanilla and modded industries to be added to the loot pool.",
+  "aiDescription": "Introduces a set of scavengable industries with unique functions, such as orbital flak cannons and nebula skimming. These industries are acquired via exploration, market purchases, or raiding specific colonies. The mod includes settings to control industry availability and drop rates, and integrates with other mods for enhanced functionality.",
   "saveCompatibilityText": "Can be added to existing saves, but not removed.",
   "updateCompatibilityText": "NOT SAVE COMPATIBLE",
-  "removalCompatibilityText": "but not removed.",
+  "removalCompatibilityText": "but not removed",
   "canAdd": "yes",
   "canUpdate": "no",
   "canRemove": "no",
   "aiUse": {
     "quote": "Only Intellij's simple autocomplete function, which is barely AI powered to begin with.",
-    "usesAi": false
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "assisted"
+      }
+    ],
+    "tools": [
+      "Intellij"
+    ]
   },
   "rawCategories": [
     "Colonies"
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1563289442263892059/1563289442532331652/gas_giant_mining.png?ex=6aec3f7f&is=6aeaedff&hm=6325ecd089cc7ac332acfd5119a1b8951e6a23cd1b170296b0d8d232e1c270fc&",
+      "url": "https://cdn.discordapp.com/attachments/1563289442263892059/1563289442532331652/gas_giant_mining.png?ex=6aece83f&is=6aeb96bf&hm=91d26042df5519c084d7730bffe2c491739d23c7d16763dd35a2873de8025225&",
       "aiCaption": "Artwork depicting a large space station or structure with pink energy beams in a cloudy sky.",
       "aiKind": "art",
       "aiFit": "good",
@@ -96,9 +111,9 @@
     }
   ],
   "changelog": {
-    "1.0.0": "NOT SAVE COMPATIBLE",
-    "0.5.0": "MAYBE SAVE COMPATIBLE - TODO TEST\n\nASB Terrain now has a per-instance VFX cooldown instead of per-fleet\nASB Flak shots can now optionally have a warning icon for their landing hspot\n\nBlast core mining now increases output further\n\nAdded an option to the largest market of a faction to raid for industry BPs\n\nFixed a bug with planetary defense network delays stacking",
-    "0.4.0": "PROBABLY SAVE COMPATIBLE\n\nNew industry - Planetary Defense Network\n    Sidegrade to Military Base\n    REQUIRES BUILDING MENU OVERHAUL OR IT WONT SPAWN!\n\n    Spawns 5 heavy patrols in orbit of the colony - 1 light patrol if improved\n    Delays incoming raids by 30 days\n    Caps colony size to 5\n    Much cheaper than a military base\n    +2x ground defense\n\n    Intended for use on outer colonies without much defense, or fortress worlds\n\nMilitary markets much more likely to sell military industry BPs\nSpruced up industry BPs + added design types\nAdded a few lunasettings\n\nAdded the cryosanctum crisis\nSpy bureau cannot be added if you dont have enough industries"
+    "1.0.0": "Full release Fixed a bug with factions not knowing their bps at game start",
+    "0.5.0": "ASB Terrain now has a per-instance VFX cooldown instead of per-fleet\nASB Flak shots can now optionally have a warning icon for their landing hspot\n\nBlast core mining now increases output further\n\nAdded an option to the largest market of a faction to raid for industry BPs\n\nFixed a bug with planetary defense network delays stacking",
+    "0.4.0": "New industry - Planetary Defense Network\n    Sidegrade to Military Base\n    REQUIRES BUILDING MENU OVERHAUL OR IT WONT SPAWN!\n\n    Spawns 5 heavy patrols in orbit of the colony - 1 light patrol if improved\n    Delays incoming raids by 30 days\n    Caps colony size to 5\n    Much cheaper than a military base\n    +2x ground defense\n\n    Intended for use on outer colonies without much defense, or fortress worlds\n\nMilitary markets much more likely to sell military industry BPs\nSpruced up industry BPs + added design types\nAdded a few lunasettings\n\nAdded the cryosanctum crisis\nSpy bureau cannot be added if you dont have enough industries"
   },
   "sourceCodeUrl": "https://github.com/nikothedude/niko_scavengeableindustries",
   "supportLinks": [],

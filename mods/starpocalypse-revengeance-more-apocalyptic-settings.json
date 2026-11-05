@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T19:10:06.896580Z",
+  "generatedAt": "2026-11-05T05:34:10.187400Z",
   "listing": {
     "id": "starpocalypse-revengeance-more-apocalyptic-settings",
     "name": "Starpocalypse Revengeance - more apocalyptic settings",
@@ -16,7 +16,7 @@
     "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_17577_1684932327.png",
     "summary": "Reduce weapon and combat ship availability, and make NPC colonies stronger.",
     "summaryIsGenerated": false,
-    "aiSummary": "Reduces weapon and combat ship availability and strengthens NPC colonies.",
+    "aiSummary": "Reduces weapon and combat ship availability while strengthening NPC colonies.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/frakern/starpocalypse/releases/latest",
@@ -36,7 +36,7 @@
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\"><b>Starpocalypse Revengeance</b></span><br><i>Reduce weapon and combat ship availability, and make NPC colonies stronger.</i><br><i>This is a 0.96a compatibility update of <a href=\"https://fractalsoftworks.com/forum/index.php?topic=21812.0\" rel=\"nofollow noopener\" target=\"_blank\">the mod made by Jaghaimo</a>. All thanks and credit to the original author</i> :)<br><br><a href=\"https://github.com/frakern/starpocalypse/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/v/release/frakern/starpocalypse?label=download%20latest&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a> <a href=\"https://github.com/frakern/starpocalypse\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/license/frakern/starpocalypse?label=browse%20source&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a> <a href=\"https://github.com/frakern/starpocalypse/issues\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/issues/frakern/starpocalypse?label=view%20ideas&amp;color=green&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></div><br>This minimod makes the following changes to the campaign layer of Starsector:<br><br><blockquote>1. Weapons and combat ships are scarce and highly regulated. As such, only Military Markets (and those pesky Black Markets) will sell higher tier weapons, LPCs, modspecs, and combat ships. Open Markets still sell civilian grade ships and low-tier combat ships and items.<br>    - Lawless factions (e.g. Pirates and Pathers) and Independents do not regular their markets. You can still find high-tier weapons and combat ships at their bases (both core and raider).<br>    - Contraband can happen, and when stability is low, some weapons and ships from Military Market can become \"legal\".<br>    - Conversely, when stability is high, higher value ships and weapons become too hot to trade on the Black Market.<br>2. There are no pristine ships, everything is d-modded. Including your starting fleet.<br>3. Access to most Black Markets is impossible while legally docked at the station. Additionally, you will need to pay bribes to transact your business (in lieu of tariffs).<br>4. Factions are armed to the teeth. All core markets have Ground Defences and Patrol HQ with larger size markets all receiving stations. Hidden bases (Pirates and Pathers raider bases) only get Ground Defences.<br>5. Your actions have consequences. When defeating a fleet, your reputation with other factions changes as well. Enemies of your enemy start to like you a bit, while their friends, less.<br>    - Similarly, targeting any colony item will be deemed as an act of war.<br>6. Blueprint packages are no longer lootable. You will have to collect blueprints one by one.<br>7. Baseline salvage is reduced and all ship recoveries cost a story point.<br>8. Finally, a skill is needed to use s-mods at all (no skill = 0 s-mods, with skill = 1 s-mod).</blockquote><br>All changes can be turned on and off in the settings.<br><br><a href=\"https://github.com/frakern/starpocalypse#readme\" rel=\"nofollow noopener\" target=\"_blank\">For information about how mod works and how to configure it, read README.md.</a><br><br><details class=\"spoiler\"><summary>Changelog</summary><i>Version 3.0.2</i><br>* Add adjustable setting for class of player ships subject to stingy recoveries.<br>* Adjust black market to allow some items at higher stability levels.<br>* Fix ShipDamager always applying 1 less dmod than max setting.<br>* Fix for Heavy Weapons being marked as illegal in markets of factions that do not regulate their sale.<br><br><i>Version 3.0.1</i><br>* Added setting for salvage multiplier<br>* Added removal of items from black markets based on stability<br>* Renamed black market tariffs to bribes<br>* Added more granular control for settings related to market defences<br>* Added compatibility with Nexerelin to stingy recoveries<br>* Split stingy recoveries settings to separate derelicts and combat recoveries<br>* Added option so combat stingy recoveries does not apply to player ships<br><br><i>Version 3.0.0</i><br>* Starsector 0.96a compatibility update</details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Restricts high-tier weapons and combat ships to military and black markets, with lawless factions exempt. Removes pristine ships, making all vessels damaged, including the starting fleet. Increases faction defenses and adds consequences for fleet defeats and colony attacks. Allows toggling each change in settings.",
+  "aiDescription": "Restricts high-tier weapons and ships to military and black markets, with legality varying by faction stability. Removes pristine ships from the game, making all vessels damaged. Increases faction defenses and adds consequences for fleet defeats that affect reputation across multiple factions.",
   "aiUse": {},
   "rawCategories": [],
   "gallery": [
@@ -76,5 +76,11 @@
   "releases": [],
   "threadLastPostOn": "2026-05-18",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Nexerelin",
+      "id": "nexerelin"
+    }
+  ]
 }

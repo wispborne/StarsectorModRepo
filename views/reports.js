@@ -5,7 +5,8 @@
 // Authors are not ranked by mod count. More mods does not mean better mods.
 
 import {
-  buildHash, clear, conflictList, countedAcross, currentGameVersion, el, formatDay,
+  buildHash, clear, CONFLICT_KIND_ORDER, CONFLICT_KINDS, conflictPill,
+  conflictList, countedAcross, currentGameVersion, el, formatDay,
   gameVersions, modHref, modList, quickTip, releaseFeed, requiredModCounts,
 } from '../lib.js';
 
@@ -241,16 +242,22 @@ function conflictReport(conflicts) {
       tip: `Named by ${[...entry.by].join(', ')}`,
     }));
 
+  // Count conflicts by kind.
+  // Skip conflicts with no kind.
+  const all = conflicts.flatMap((mod) => mod.conflicts);
+  const byKind = CONFLICT_KIND_ORDER
+    .map((kind) => ({
+      label: CONFLICT_KINDS[kind][0],
+      count: all.filter((conflict) => conflict.kind === kind).length,
+      tip: CONFLICT_KINDS[kind][1],
+    }))
+    .filter((row) => row.count);
+
   const rows = (shown) => el('div', { class: 'conflict-list' }, shown.flatMap((mod) => [
     el('a', { class: 'conflict-mod', href: modHref(mod.modId), text: mod.modName }),
     el('div', { class: 'save-lines' }, mod.conflicts.map((conflict) =>
       el('div', { class: 'save-line' }, [
-        el('div', { class: 'needs-chips' }, [conflict.id
-          ? el('a', { class: 'chip needed conflict', href: modHref(conflict.id), text: conflict.name })
-          : el('span', {
-              class: 'chip needed conflict unknown', text: conflict.name,
-              title: 'No page for this mod.',
-            })]),
+        conflictPill(conflict),
         el('q', { class: 'save-words', text: conflict.quote }),
       ]))),
   ]));
@@ -272,6 +279,8 @@ function conflictReport(conflicts) {
   }
 
   return el('div', { class: 'stack' }, [
+    byKind.length ? el('h3', { text: 'Conflict types' }) : null,
+    byKind.length ? barList(byKind) : null,
     mostNamed.length ? el('h3', { text: 'Most often named' }) : null,
     mostNamed.length ? barList(mostNamed) : null,
     el('h3', { text: 'All conflicts' }),

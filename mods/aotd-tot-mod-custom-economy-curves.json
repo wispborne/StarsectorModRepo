@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T19:10:06.896580Z",
+  "generatedAt": "2026-11-05T05:34:10.187400Z",
   "listing": {
     "id": "aotd-tot-mod-custom-economy-curves",
     "name": "AOTD: ToT Mod: Custom Economy Curves",
@@ -17,10 +17,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.0.2",
     "imageUrl": "https://github.com/andrzejsokolowski/starsector-toolbox-economy-curves/blob/main/graphics/icons/toolbox-economy-curves-small.png?raw=true",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1562282490251579532/1562282490419347556/toolbox-economy-curves-small.png?ex=6aec8a33&is=6aeb38b3&hm=aa8b959294c8b092063d878cbf6d6e91bafc11bf2953c9954dea218e0e72b8df&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1562282490251579532/1562282490419347556/toolbox-economy-curves-small.png?ex=6aed32f3&is=6aebe173&hm=5b5083691c02c7e1764ab851408ea7369dad19ab8366f5447a51dc091f839fc9&",
     "summary": "AoTD - Theory of Toolbox doubles a colony's food and domestic goods demand with every colony size, and doubles farm output with it. Light Industry and Heavy Industry do not double.",
     "summaryIsGenerated": false,
-    "aiSummary": "Lets you choose how colony demand and production scale with colony size.",
+    "aiSummary": "Allows players to customize how colony food and goods demand scales with size, replacing the default doubling mechanic.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
@@ -36,16 +36,13 @@
     "usesAi": true,
     "aiUses": [
       {
-        "area": "code",
-        "how": "generated"
+        "area": "code"
       },
       {
-        "area": "icons",
-        "how": "generated"
+        "area": "icons"
       },
       {
-        "area": "writing",
-        "how": "generated"
+        "area": "writing"
       }
     ],
     "lastReleaseDate": "2026-10-27T00:00:00.000Z",
@@ -72,7 +69,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Toolbox Economy Curves allows you to select from 5 different curve modes to make the ToT production and consumption numbers varied. <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36178\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36178</a></p><p>I recommend \"Gentle\"</p>",
-  "aiDescription": "Replaces the default exponential scaling of food and goods demand with selectable curves like Bend, Linear, or Gentle. Adjusts farm output, industry production, and upkeep costs to match the chosen curve. Modifies raid loot to take a percentage of stock rather than the entire surplus.",
+  "aiDescription": "Replaces the fixed exponential growth of colony demand and farm output with selectable curves like linear, gentle, or custom. Adjusts producer output and upkeep costs to match the chosen demand curve. Changes raid loot to be a percentage of the colony's stock rather than the entire surplus.",
   "saveCompatibilityText": "Safe to add to or remove from a game in progress: nothing from this mod is written into saves.",
   "removalCompatibilityText": "Safe to add to or remove from a game in progress: nothing from this mod is written into saves.",
   "canAdd": "yes",
@@ -82,24 +79,17 @@
     "usesAi": true,
     "uses": [
       {
-        "area": "code",
-        "how": "generated",
-        "extent": "some"
+        "area": "code"
       },
       {
-        "area": "writing",
-        "how": "generated",
-        "extent": "some"
+        "area": "writing"
       },
       {
-        "area": "icons",
-        "how": "generated",
-        "extent": "some"
+        "area": "icons"
       }
     ],
     "tools": [
-      "Claude Code",
-      "Claude Opus 5.5",
+      "Claude Code (Claude Opus 5.5)",
       "Gemini"
     ]
   },
@@ -108,7 +98,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1562282490251579532/1562282490419347556/toolbox-economy-curves-small.png?ex=6aec8a33&is=6aeb38b3&hm=aa8b959294c8b092063d878cbf6d6e91bafc11bf2953c9954dea218e0e72b8df&",
+      "url": "https://cdn.discordapp.com/attachments/1562282490251579532/1562282490419347556/toolbox-economy-curves-small.png?ex=6aed32f3&is=6aebe173&hm=5b5083691c02c7e1764ab851408ea7369dad19ab8366f5447a51dc091f839fc9&",
       "aiCaption": "A logo featuring a graph with two curves on a dark background.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -143,11 +133,11 @@
     }
   ],
   "changelog": {
-    "1.0.2": "Works with the Theory of Toolbox Scheduler Fork (StarsectorPrepatcher).\n Theory of Toolbox puts a 31 day \"Sudden surge of demand\" shortage on colonies whose demand rises. Switching the curve can trigger it once. It clears by itself.\n\n AI use disclaimer Some or all assets and code in this mod were created using AI tools:\n Code: Claude Code (Claude Opus 5.5)\n Text (readme and this post): Claude Code (Claude Opus 5.5)\n Icon: Gemini\n\n License This mod is under the CC0 (Creative Commons Zero) License, allowing you to do whatever you want with the code, without giving any credit to anyone.\n\n Version log 1.0.2\n Works with the Theory of Toolbox Scheduler Fork: it is told which colonies this mod changed, so it recalculates them.",
+    "1.0.2": "Works with the Theory of Toolbox Scheduler Fork: it is told which colonies this mod changed, so it recalculates them.",
     "1.0.1": "Added the forum topic link for Version Checker.",
     "1.0.0": "First stable release: size curves (Theory of Toolbox, Bend, Linear, Gentle, Custom growth, Custom list), Producers, upkeep that grows with output, and raid loot as a share of the colony's stock."
   },
-  "license": "CC0 (Creative Commons Zero)",
+  "license": "CC0 (Creative Commons Zero) License",
   "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-toolbox-economy-curves",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36178.0",

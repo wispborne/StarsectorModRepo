@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T19:10:06.896580Z",
+  "generatedAt": "2026-11-05T05:34:10.187400Z",
   "listing": {
     "id": "battlesize-based-skill-dp-values",
     "name": "Battlesize based skill DP values",
@@ -16,7 +16,7 @@
     "imageUrl": "https://i.imgur.com/8NhcB4S.png",
     "summary": "A mod that adjusts the skill DP limits based on the battlesize you set, rather than being static values. Changes get applied after game load, so if you change your battlesize limit, do a save/load cycle after to update the skills.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adjusts skill deployment point limits and maximum officer counts based on the configured battle size.",
+    "aiSummary": "Adjusts skill deployment point limits and officer caps based on the player's selected battle size.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Torashuu/ScalingSkillLimits/releases/download/v0.2.0/ScalingSkillLimits_v0.2.0.zip",
@@ -36,7 +36,7 @@
   "descriptionHtml": "<b>Features:</b><br>A mod that adjusts the skill DP limits based on the battlesize you set, rather than being static values. Changes get applied after game load, so if you change your battlesize limit, do a save/load cycle after to update the skills.<br><br>Additionally adjusts the maximum number of officers.<br><br>Example skill:<br><details class=\"spoiler\"><summary>Spoiler</summary>Values are the same at default battlesize:<br><img src=\"https://i.imgur.com/8NhcB4S.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.imgur.com/EIlKhVv.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br>..but scale as battlesize increases:<br><img src=\"https://i.imgur.com/M4UZgOS.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.imgur.com/cwaUayq.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br>Code snippet that appears to show reasoing 300 is the default:<br><img src=\"https://i.imgur.com/KPy6RMI.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details><br><b>Requirements:</b><br>None<br><br><b>Supports</b><br>Nexerelin Version Checker<br><br><b>Installation:</b><br>- Extract the archive into your Starsector\\mods folder<br>- Open the game launcher and enable the mod in the Mods section<br><br><b>Download:</b><br><a href=\"https://github.com/Torashuu/ScalingSkillLimits/releases/download/v0.2.0/ScalingSkillLimits_v0.2.0.zip\" rel=\"nofollow noopener\" target=\"_blank\"><br><img src=\"https://img.shields.io/github/downloads/Torashuu/ScalingSkillLimits/total?color=a&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><b>Changelog</b><br><details class=\"spoiler\"><summary>Spoiler</summary>v0.2.0<br>- default battlesize set to 400 from 300<br>- default battlesize made configurable through mod settings <br><br>v0.1.2<br>-default values for industry skills fixed<br><br>v0.1.1<br>-fixed issues where repeat loads would recursively alter the values. oops.<br><br>v0.1<br>-inital release</details><br>Comments are invited!",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Adjusts skill deployment point limits and maximum officer counts based on the configured battle size. Changes are applied after game load, requiring a save and load cycle if the battle size limit is changed. Values remain the same at the default battle size but scale as the battle size increases.",
+  "aiDescription": "Changes skill deployment point values dynamically to match the configured battle size limit. Also scales the maximum number of officers available. Requires a save and load cycle to apply changes after adjusting the battle size setting.",
   "aiUse": {},
   "rawCategories": [],
   "gallery": [
@@ -93,9 +93,8 @@
     }
   ],
   "changelog": {
-    "0.2.0": "- default battlesize set to 400 from 300\n- default battlesize made configurable through mod settings",
-    "0.1.2": "-default values for industry skills fixed",
-    "0.1.1": "-fixed issues where repeat loads would recursively alter the values. oops."
+    "0.1.2": "default values for industry skills fixed",
+    "0.1.1": "fixed issues where repeat loads would recursively alter the values. oops."
   },
   "sourceCodeUrl": "https://github.com/Torashuu/ScalingSkillLimits",
   "supportLinks": [],

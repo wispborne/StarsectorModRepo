@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T19:10:06.896580Z",
+  "generatedAt": "2026-11-05T05:34:10.187400Z",
   "listing": {
     "id": "additional-valkyrian-portraits",
     "name": "Additional Valkyrian Portraits",
@@ -14,9 +14,9 @@
     "gameVersion": "0.98a",
     "modVersion": "1.0.0",
     "imageUrl": "https://i.imgur.com/CXK6nxS.png",
-    "summary": "Adds non-anime style portraits for the Valkyrians faction.",
+    "summary": "Adds additional character portraits for the Valkyrians faction.",
     "summaryIsGenerated": true,
-    "aiSummary": "Adds non-anime style portraits for the Valkyrians faction.",
+    "aiSummary": "Adds additional character portraits for the Valkyrians faction.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://www.dropbox.com/scl/fi/6wbh3ft12q46ngfrmrgep/Additional-Valkyrian-Portraits-caedhin-1.0.0.zip?rlkey=kf3r492hip2achg3d074zkegi&st=jp3vbfpf&dl=1",
@@ -30,14 +30,34 @@
     "addedOn": "2026-04-14",
     "threadLastPostOn": "2026-06-15",
     "editedOn": "2026-06-13",
-    "needs": [],
+    "needs": [
+      {
+        "name": "Valkyrians",
+        "id": "valkyrians"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "Valkyrians"
+      },
+      {
+        "name": "GraphicsLib",
+        "id": "graphicslib",
+        "via": "Valkyrians"
+      },
+      {
+        "name": "MagicLib",
+        "id": "magiclib",
+        "via": "Valkyrians"
+      }
+    ],
     "partOfThreadTitle": "[0.98a] Edited Vanilla Portraits plus some extras"
   },
-  "description": "Provides additional character portraits for the Valkyrians faction. These portraits are edited to match a non-anime style consistent with the author's other work. The author notes that permission from the original mod author has not yet been secured.",
-  "descriptionHtml": "<p>Provides additional character portraits for the Valkyrians faction. These portraits are edited to match a non-anime style consistent with the author's other work. The author notes that permission from the original mod author has not yet been secured.</p>",
+  "description": "Provides extra non-anime style portraits for the Valkyrians mod. These additions aim to offer more variety and consistency for players using that faction.",
+  "descriptionHtml": "<p>Provides extra non-anime style portraits for the Valkyrians mod. These additions aim to offer more variety and consistency for players using that faction.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "aiDescription": "Provides additional character portraits for the Valkyrians faction. These portraits are edited to match a non-anime style consistent with the author's other work. The author notes that permission from the original mod author has not yet been secured.",
+  "aiDescription": "Provides extra non-anime style portraits for the Valkyrians mod. These additions aim to offer more variety and consistency for players using that faction.",
   "aiUse": {},
   "rawCategories": [],
   "gallery": [
@@ -91,7 +111,8 @@
   "conflicts": [
     {
       "name": "other portrait replacements",
-      "quote": "May conflict with other portrait replacements"
+      "quote": "May conflict with other portrait replacements",
+      "kind": "withNotes"
     }
   ],
   "partOfThreadTitle": "[0.98a] Edited Vanilla Portraits plus some extras"

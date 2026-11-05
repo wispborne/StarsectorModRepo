@@ -1810,6 +1810,52 @@ a.chip.needed.optional:hover { background: var(--primary-soft); }
   background: none; color: var(--warning); box-shadow: inset 0 0 0 1px var(--edge-warning);
 }
 a.chip.needed.conflict:hover { background: var(--warning-wash); }
+/* Mods that work together with notes, or where the author is unsure, use
+   an outline in the link colour. Only incompatible mods use the warning
+   colour. */
+.chip.needed.conflict.calm {
+  color: var(--primary); box-shadow: inset 0 0 0 1px var(--primary-soft);
+}
+a.chip.needed.conflict.calm:hover { background: var(--primary-soft); }
+.chip.needed.conflict.calm.unknown {
+  color: var(--text-dim); box-shadow: inset 0 0 0 1px var(--border);
+}
+/* Each conflict is shown in a box with rounded corners.
+   The mod's name comes first.
+   The kind comes next in a coloured section at the end.
+   The box has one outline around both parts.
+   The name has no outline of its own. */
+.conflict-pill {
+  display: inline-flex; align-self: flex-start; max-width: 100%; border-radius: 6px;
+  overflow: hidden; box-shadow: inset 0 0 0 1px var(--edge-warning);
+}
+.conflict-pill > .chip.needed.conflict { box-shadow: none; border-radius: 0; min-width: 0; }
+.conflict-kind {
+  display: flex; align-items: center; padding: 3px 8px; white-space: nowrap;
+  font-size: var(--type-tiny); color: var(--warning); background: var(--warning-wash);
+  border-left: 1px solid var(--edge-warning);
+}
+.conflict-pill.calm { box-shadow: inset 0 0 0 1px var(--primary-soft); }
+.conflict-pill.calm .conflict-kind {
+  color: var(--text-dim); background: none; border-left-color: var(--primary-soft);
+}
+/* The list scrolls when it is too tall. */
+.conflict-scroll {
+  display: flex; flex-direction: column; gap: var(--gap);
+  max-height: 22rem; overflow-y: auto; scrollbar-width: thin;
+}
+/* A small, dim button shows conflicts copied from other mods' posts. */
+.conflict-more {
+  align-self: flex-start; font-size: var(--type-tiny); color: var(--text-dim);
+  text-decoration: none;
+}
+.conflict-more:hover { color: var(--primary); text-decoration: underline; }
+.conflict-scroll [hidden] { display: none; }
+/* Quotes are cut to two lines. */
+.conflict-quote {
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2;
+  overflow: hidden;
+}
 
 /* Where the code is kept: a badge in the text colour that links to it, or a
    grey one. The text colour is white on dark themes and dark on Light, which
@@ -2063,8 +2109,18 @@ a.chip.needed.conflict:hover { background: var(--warning-wash); }
    so every row in the card reads as one level. */
 .compatibility .side-label { color: var(--text); font-weight: 600; font-size: var(--type-small); }
 /* Labels in the side cards have an icon in front, dim so the words lead. */
-.side-label.with-icon, .save-question { display: inline-flex; align-items: center; gap: 6px; }
-.side-icon, .side-icon svg { display: block; width: 14px; height: 14px; flex-shrink: 0; }
+:root { --side-icon-size: 14px; --side-icon-gap: 6px; }
+.side-label.with-icon, .save-question {
+  display: inline-flex; align-items: center; gap: var(--side-icon-gap);
+}
+.side-icon, .side-icon svg {
+  display: block; width: var(--side-icon-size); height: var(--side-icon-size); flex-shrink: 0;
+}
+/* What sits under a label with an icon starts where the label's words start,
+   not where its icon does. */
+.side-fact.with-icon:not(.beside) > .side-value, .save-line > .save-words {
+  margin-left: calc(var(--side-icon-size) + var(--side-icon-gap));
+}
 .side-icon { color: var(--text-dim); }
 .save-words {
   min-width: 0; overflow-wrap: anywhere; font-style: italic; color: var(--text-dim);

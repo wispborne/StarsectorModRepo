@@ -93,6 +93,58 @@ export function conflictList() {
   return data('conflicts.json');
 }
 
+/// Conflict labels, hover text, and whether the mods are incompatible.
+export const CONFLICT_KINDS = {
+  technical: ['Incompatible (Technical)',
+    'Using both can cause crashes, break saves or stop a feature '
+    + 'from working.', true, 'Technical'],
+  gameplay: ['Incompatible (Gameplay)',
+    'Nothing breaks, but using both is pointless or makes the game unbalanced.', true,
+    'Gameplay'],
+  withNotes: ['Compatible, with notes',
+    'Compatible but something was specifically called out that you should probably read.',
+    false, 'Works, but…'],
+  other: ['Other', '¯\\_(ツ)_/¯', false, 'Other'],
+};
+
+/// The order conflicts are listed in, incompatible ones first.
+export const CONFLICT_KIND_ORDER = ['technical', 'gameplay', 'withNotes', 'other'];
+
+/// True when [kind] means the two mods should not be used together. A
+/// conflict with no kind counts as incompatible, so it still gets noticed.
+export function isIncompatible(kind) {
+  return !CONFLICT_KINDS[kind] || CONFLICT_KINDS[kind][2];
+}
+
+/// The other mod uses the warning colour when incompatible.
+/// Otherwise, it uses the link colour.
+export function conflictChip(conflict) {
+  const kind = `chip needed conflict${isIncompatible(conflict.kind) ? '' : ' calm'}`;
+  return conflict.id
+    ? el('a', { class: kind, href: modHref(conflict.id), text: conflict.name })
+    : el('span', {
+        class: `${kind} unknown`, text: conflict.name,
+        title: 'No page for this mod.',
+      });
+}
+
+/// Each conflict is shown in a box with rounded corners.
+/// The other mod's name comes first.
+/// A short label for the kind comes at the end.
+/// Point at the label to see what the kind means. For the two incompatible
+/// kinds the hover also starts with the kind's full name.
+/// A conflict with no kind shows only the name.
+export function conflictPill(conflict) {
+  const known = CONFLICT_KINDS[conflict.kind];
+  const kind = known
+    ? quickTip(el('span', { class: 'conflict-kind', text: known[3] }),
+      known[2] ? `${known[0]}. ${known[1]}` : known[1])
+    : null;
+  return el('span', {
+    class: `conflict-pill${isIncompatible(conflict.kind) ? '' : ' calm'}`,
+  }, [conflictChip(conflict), kind]);
+}
+
 /// One mod's own file, fetched when its page opens. Kept for the rest of the
 /// visit like everything else, so going back to a mod does not fetch it again.
 export function modDetail(id) {

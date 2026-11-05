@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T19:10:06.896580Z",
+  "generatedAt": "2026-11-05T05:34:10.187400Z",
   "listing": {
     "id": "extra-systems-reloaded-oddisz-rewrite",
     "name": "Extra System Reloaded - Oddisz Edition",
@@ -16,10 +16,10 @@
     ],
     "gameVersion": "0.98a",
     "imageUrl": "https://github.com/andrzejsokolowski/starsector-extra-system-reloaded-oddisz/blob/main/ExtraSystemReloadedIconBig.png?raw=true",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1558594460030468147/1558594460416352366/ExtraSystemReloadedIconBig.png?ex=6aec4e74&is=6aeafcf4&hm=431628a66c9736fbc9bd0b743acc2af2b8ebcae430fe39979ef3adbe27965809&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1558594460030468147/1558594460416352366/ExtraSystemReloadedIconBig.png?ex=6aecf734&is=6aeba5b4&hm=9ce4f5b654544a8f72073cfba2a95f74ade7d09b1e692b97780f47542c7f3585&",
     "summary": "Lets you pour credits, materials and story points into the ships you love, until they are as overpowered as you can afford. Only your ships. Enemy fleets never get any of it.",
     "summaryIsGenerated": false,
-    "aiSummary": "Lets you upgrade your own ships with credits, materials, and story points to make them as powerful as you can afford.",
+    "aiSummary": "Adds a system to upgrade friendly ships with credits, materials, and story points, including hull quality and rare augments.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
@@ -67,9 +67,9 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36143.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36143.0</a></p><p>This mod was made as a \"commision\" of sorts.<br>Info on forum post</p>",
-  "aiDescription": "Adds an Extra Systems bay to friendly markets where you can buy upgrade levels for 13 different ship systems. Ships have random hull quality that multiplies these upgrades, which can be improved at shipyards. You can also find or craft rare augments that provide special effects, and pay for upgrades using credits, cargo, or Industrial Evolution components.",
-  "saveCompatibilityText": "Can I add it to an existing save?\nYes.",
-  "removalCompatibilityText": "Can I remove it from a save?\nNot once a ship has been upgraded: upgraded ships carry its hidden hull mod.",
+  "aiDescription": "Adds a ship upgrade system where players can invest credits, materials, and story points to enhance friendly ships with various upgrades, hull quality improvements, and rare augments. Enemy fleets do not receive these benefits. The mod integrates with shipyards and markets to allow for customization and power scaling.",
+  "saveCompatibilityText": "Yes.",
+  "removalCompatibilityText": "Not once a ship has been upgraded: upgraded ships carry its hidden hull mod.",
   "canAdd": "yes",
   "canRemove": "no",
   "aiUse": {
@@ -78,23 +78,19 @@
     "uses": [
       {
         "area": "code",
-        "how": "generated",
-        "extent": "some"
+        "how": "generated"
       },
       {
         "area": "writing",
-        "how": "generated",
-        "extent": "some"
+        "how": "generated"
       },
       {
         "area": "icons",
-        "how": "generated",
-        "extent": "some"
+        "how": "generated"
       }
     ],
     "tools": [
-      "Claude Code",
-      "Claude Opus 5.5",
+      "Claude Code (Claude Opus 5.5)",
       "Gemini"
     ]
   },
@@ -103,7 +99,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1558594460030468147/1558594460416352366/ExtraSystemReloadedIconBig.png?ex=6aec4e74&is=6aeafcf4&hm=431628a66c9736fbc9bd0b743acc2af2b8ebcae430fe39979ef3adbe27965809&",
+      "url": "https://cdn.discordapp.com/attachments/1558594460030468147/1558594460416352366/ExtraSystemReloadedIconBig.png?ex=6aecf734&is=6aeba5b4&hm=9ce4f5b654544a8f72073cfba2a95f74ade7d09b1e692b97780f47542c7f3585&",
       "aiCaption": "A dark octagonal emblem featuring a glowing blue circle with three upward-pointing chevrons inside.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -137,7 +133,7 @@
     }
   ],
   "changelog": {},
-  "license": "CC0 (Creative Commons Zero)",
+  "license": "CC0 (Creative Commons Zero) License",
   "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-extra-system-reloaded-oddisz",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36143.0",
@@ -150,6 +146,15 @@
     {
       "name": "Industrial.Evolution",
       "id": "industrial-evolution"
+    }
+  ],
+  "conflicts": [
+    {
+      "name": "LOST_SECTOR",
+      "id": "lost-sector",
+      "quote": "Incompatible with Extra Sytems Reloaded (Issue with Exotica integration that wil never be fixed)",
+      "kind": "technical",
+      "fromOtherMod": true
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T19:10:06.896580Z",
+  "generatedAt": "2026-11-05T05:34:10.187400Z",
   "listing": {
     "id": "console-commands",
     "name": "Console Commands",
@@ -52,9 +52,9 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>An official update to console commands that overhauls the interface to feel more modern and provide additional quality of life.</p><p><strong>Download</strong>: <a href=\"https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip</a><br><strong>Forum Page</strong>: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=4106.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=4106.0</a><br><strong>Changelog &amp; Previous versions</strong>: <a href=\"https://github.com/LazyWizard/console-commands/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/console-commands/releases</a></p><pre><code>Version 4.0.0\n\n- Complete visual overhaul of the legacy UI.\n- Added command and argument autocompletion &amp; suggestion.\n- Added syntax hints for command parameters.\n- Now remembers the last 30 commands, even across game restarts.\n- The runcode command now displays live compile error warnings.\n- Reverted the mods version system back to the original format.\n- Added version checker changelog &amp; download support.\n- Added \"History\" command.\n\nKeybinds\n\n- CTRL + Backspace: open console\n- Enter: confirm command\n- Left/Right: move cursor\n- Up/Down: Scroll through command history/select autocompletion\n- Tab: confirm autocompletion\n\nLegacy UI\n\n- The legacy UI can still be re-enabled in \"ConsoleCommands/data/console/console_settings.json\".\n- New features added with this version are not available in the legacy UI.\n\nFor Modders\n\n- Added \"BaseCommandWithSuggestion\". Implement it to create a command with autocomplete suggestions.\n- Use the \"getSuggestions\" method to return a list of the provided suggestions for your command.\n- \"parameter\" tells you which parameter the suggestions are for (0 is the first arg).\n- \"previous\" are the other arguments the user entered before the current one.</code></pre>",
-  "aiDescription": "Provides a custom overlay for inputting commands, including universal, campaign, and combat cheats. Allows users to write, compile, and run code in-game using the Janino library. Supports user-created commands and can be added or removed from a running game without issues.",
+  "aiDescription": "Provides a custom overlay for inputting commands, including universal, campaign, and combat cheats. Allows users to write, compile, and run code in-game using the Janino library. Supports user-created commands and includes a legacy console option for those preferring the previous UI.",
   "saveCompatibilityText": "Doesn't require a new game, and can be safely untagged from a running game without issues",
-  "removalCompatibilityText": "can be safely untagged from a running game without issues",
+  "removalCompatibilityText": "Doesn't require a new game, and can be safely untagged from a running game without issues",
   "canAdd": "yes",
   "canRemove": "yes",
   "aiUse": {},
@@ -139,6 +139,18 @@
       "name": "Halo - United Nations Space Command (UNSC)",
       "id": "halo-united-nations-space-command",
       "quote": "If your having an issue where the game only opens the Legacy Console, remove the \"Halo - United Nations Space Command (UNSC)\" mod if you have it. It appears that the mod ships a whole copy of an old version of Console commands, which overwrites all updated code."
+    },
+    {
+      "name": "Additional Console Commands",
+      "id": "additional-console-commands",
+      "quote": "This is strictly incompatible with LazyWizard's older version of console commands.",
+      "fromOtherMod": true
+    },
+    {
+      "name": "Realistic Combat",
+      "id": "realistic-combat",
+      "quote": "God mode and similar commands do not work Awaiting the return of Console Commands author LazyWizard to the forum.",
+      "fromOtherMod": true
     }
   ]
 }

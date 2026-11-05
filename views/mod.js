@@ -7,7 +7,7 @@
 
 import {
   aiOnModPages, aiSparkle, aiSummaryNote, aiSummaryOf, akaText, imageCaption, imageHoverText,
-  clear,
+  clear, conflictPill,
   currentGameVersion, DATA_BASE, DOWNLOAD_ICON, downloadButton, downloadButtonChoice, el, errorPanel, expandAllButton, formatDay,
   favoriteToggle, formatMoment, imageUrlOf, inlinePictures, isMissingFile, joinNames, quickTip,
   setAiOnModPages, setInlinePictures, summaryToShow,
@@ -1405,7 +1405,7 @@ function withoutLeadingAnswer(words, answer) {
 }
 
 function sideFact(label, value, { beside = false, labelTitle = null, icon = null } = {}) {
-  return el('div', { class: `side-fact${beside ? ' beside' : ''}` }, [
+  return el('div', { class: `side-fact${beside ? ' beside' : ''}${icon ? ' with-icon' : ''}` }, [
     el('span', {
       class: `side-label${labelTitle ? ' has-tip' : ''}${icon ? ' with-icon' : ''}`,
       title: labelTitle,
@@ -1481,14 +1481,44 @@ function neededChips(mods, extraClass = '') {
   }));
 }
 
-/// Each conflict has a quote below its chip to explain the problem.
-/// Some conflicts crash the game. Others only happen in very large battles.
+/// Each conflict shows the other mod and its kind.
+/// The author's quote is below them.
+/// Incompatible mods use the warning colour.
+/// Mods that work together with notes use the link colour.
+/// The quote is cut to two lines.
+/// Hover shows the whole quote only if it was cut.
+/// Conflicts copied from other mods' posts appear below the mod's own conflicts.
+/// They stay hidden until the reader presses "N from other mods' posts", or
+/// "Plus N more from other mods' posts" when the mod has conflicts of its own.
+/// The list scrolls when it is too tall.
 function conflictLines(conflicts) {
-  return el('div', { class: 'save-lines' }, conflicts.map((conflict) =>
-    el('div', { class: 'save-line' }, [
-      neededChips([conflict], 'conflict'),
-      el('q', { class: 'save-words', text: conflict.quote }),
-    ])));
+  const line = (conflict) => {
+    const quote = el('q', { class: 'save-words conflict-quote', text: conflict.quote });
+    quickTip(quote, () => (quote.scrollHeight > quote.clientHeight + 1 ? conflict.quote : null));
+    return el('div', { class: 'save-line' }, [conflictPill(conflict), quote]);
+  };
+  const own = conflicts.filter((conflict) => !conflict.fromOtherMod);
+  const copied = conflicts.filter((conflict) => conflict.fromOtherMod);
+  let more = null;
+  if (copied.length) {
+    const count = copied.length === 1
+      ? "1 from another mod's post" : `${copied.length} from other mods' posts`;
+    const shut = own.length ? `Plus ${count.replace(' from', ' more from')}` : count;
+    const list = el('div', { class: 'save-lines', hidden: true }, copied.map(line));
+    const button = el('button', {
+      type: 'button', class: 'link-button conflict-more', text: shut, 'aria-expanded': 'false',
+    });
+    button.addEventListener('click', () => {
+      list.hidden = !list.hidden;
+      button.setAttribute('aria-expanded', String(!list.hidden));
+      button.textContent = list.hidden ? shut : `Hide ${count}`;
+    });
+    more = el('div', { class: 'save-lines' }, [button, list]);
+  }
+  return el('div', { class: 'conflict-scroll' }, [
+    own.length ? el('div', { class: 'save-lines' }, own.map(line)) : null,
+    more,
+  ]);
 }
 
 function compatibility(detail, currentVersion) {
