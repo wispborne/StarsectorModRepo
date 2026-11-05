@@ -19,7 +19,7 @@ const RECENT_MONTHS = 24;
 /// How many mods the most-releases list shows.
 const BUSIEST_SHOWN = 10;
 
-/// How many mods to show under "Most often named".
+/// How many mods to show under "Most conflicted".
 const CONFLICTED_SHOWN = 10;
 
 /// How many mods the conflicts list shows before "Show all".
@@ -55,17 +55,15 @@ export async function render(root) {
       null,
       newModsReport(mods)),
     report('Mods by category',
-      'A mod can be in more than one category.',
+      'Mods can be in more than one category.',
       categoryReport(mods)),
     report('Updates by week',
       releases.length
         ? `Since ${formatDay(oldestDay(releases))}`
         : 'No updates found yet.',
       releases.length ? releaseReport(releases) : null),
-    report('Conflicts',
-      conflicts.length
-        ? `${conflicts.length} mod${conflicts.length === 1 ? ' names a conflict in its own post' : 's name a conflict in their own posts'}.`
-        : 'No conflicts found yet.',
+    report(`Conflicts (${conflicts.length})`,
+      '',
       conflicts.length ? conflictReport(conflicts) : null),
   ]));
 }
@@ -156,14 +154,14 @@ function newModsReport(mods) {
   let all = false;
   const toggle = el('button', {
     type: 'button', class: 'link-button report-more',
-    text: `Show all months since ${first.slice(0, 4)}`,
+    text: `Show all since ${first.slice(0, 4)}`,
   });
   toggle.addEventListener('click', () => {
     all = !all;
     clear(holder).append(columns(all ? months : months.slice(-RECENT_MONTHS)));
     toggle.textContent = all
       ? `Show last ${RECENT_MONTHS} months`
-      : `Show all months since ${first.slice(0, 4)}`;
+      : `Show all since ${first.slice(0, 4)}`;
     // Keep the newest months in view after switching.
     const scroller = holder.querySelector('.report-columns');
     if (scroller) scroller.scrollLeft = scroller.scrollWidth;
@@ -220,8 +218,10 @@ function releaseReport(releases) {
 }
 
 function conflictReport(conflicts) {
-  // Count each mod once per post that names it.
-  // Only count mods with a page.
+  // For each mod named as a conflict, list the mods whose posts name it.
+  // Count each mod once even if its post names the same conflict more than once.
+  // Only count named mods that have a page.
+  // A mod named by only one other mod is left out.
   const named = new Map();
   for (const mod of conflicts) {
     for (const conflict of mod.conflicts) {
@@ -239,20 +239,24 @@ function conflictReport(conflicts) {
       label: entry.name,
       count: entry.by.size,
       labelHref: modHref(id),
-      tip: `Named by ${[...entry.by].join(', ')}`,
+      tip: [...entry.by].join(', '),
     }));
 
   // Count conflicts by kind.
   // Skip conflicts with no kind.
+  // Use the warning colour for the two incompatible kinds of conflict.
   const all = conflicts.flatMap((mod) => mod.conflicts);
   const byKind = CONFLICT_KIND_ORDER
     .map((kind) => ({
       label: CONFLICT_KINDS[kind][0],
       count: all.filter((conflict) => conflict.kind === kind).length,
       tip: CONFLICT_KINDS[kind][1],
+      warn: CONFLICT_KINDS[kind][2],
     }))
     .filter((row) => row.count);
 
+  // Show each mod's name before the conflicts named in its own post.
+  // Show the author's quote below each conflict.
   const rows = (shown) => el('div', { class: 'conflict-list' }, shown.flatMap((mod) => [
     el('a', { class: 'conflict-mod', href: modHref(mod.modId), text: mod.modName }),
     el('div', { class: 'save-lines' }, mod.conflicts.map((conflict) =>
@@ -278,13 +282,14 @@ function conflictReport(conflicts) {
     list = el('div', { class: 'stack' }, [holder, el('div', {}, [toggle])]);
   }
 
-  return el('div', { class: 'stack' }, [
-    byKind.length ? el('h3', { text: 'Conflict types' }) : null,
-    byKind.length ? barList(byKind) : null,
-    mostNamed.length ? el('h3', { text: 'Most often named' }) : null,
-    mostNamed.length ? barList(mostNamed) : null,
-    el('h3', { text: 'All conflicts' }),
-    list,
+  // Each part has a heading above its content.
+  const part = (title, body) => el('div', { class: 'conflict-part' }, [
+    el('h3', { text: title }), body,
+  ]);
+  return el('div', { class: 'conflict-report' }, [
+    byKind.length ? part('Conflict types', barList(byKind)) : null,
+    mostNamed.length ? part('Most conflicted', barList(mostNamed)) : null,
+    part('All conflicts', list),
   ]);
 }
 
@@ -301,7 +306,8 @@ function barList(rows) {
       ? el('a', { class: 'bar-name', href: nameHref, text: row.label })
       : el('span', { class: 'bar-name', text: row.label });
     const fill = el('span', {
-      class: ['bar-fill', row.on ? 'on' : '', row.dim ? 'dim' : ''].filter(Boolean).join(' '),
+      class: ['bar-fill', row.on ? 'on' : '', row.dim ? 'dim' : '', row.warn ? 'warn' : '']
+        .filter(Boolean).join(' '),
     });
     fill.style.width = `${Math.max(1, (row.count / most) * 100)}%`;
     const bar = el(row.href ? 'a' : 'span', {

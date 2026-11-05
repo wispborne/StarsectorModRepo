@@ -2368,15 +2368,33 @@ a.bar-link:hover { text-decoration: none; color: var(--primary); }
 a.bar-link:hover .bar-fill { background: var(--primary-bar-lit); }
 .bar-count { min-width: 3ch; font-size: var(--type-small); font-variant-numeric: tabular-nums; }
 
-/* Each mod's name, then the conflicts its post names. */
-.conflict-list {
-  display: grid; grid-template-columns: minmax(0, max-content) minmax(0, 1fr);
-  gap: var(--gap); align-items: start;
+.bar-fill.warn { background: var(--edge-warning); }
+
+/* The report shows conflict kinds, the most often named mods, and all conflicts.
+   All three use the same name column width to keep bars and lists aligned. */
+.conflict-report {
+  --name-column: 240px;
+  display: flex; flex-direction: column; gap: var(--gap-wide);
+}
+.conflict-part { display: flex; flex-direction: column; gap: 8px; }
+.conflict-report .bar-list, .conflict-list {
+  grid-template-columns: minmax(0, var(--name-column)) minmax(0, 1fr);
+}
+/* Each mod's name comes before the conflicts named in its post.
+   A line separates mods. The name is level with the text of its first conflict. */
+.conflict-list { display: grid; column-gap: var(--gap); align-items: baseline; }
+.conflict-mod, .conflict-list > .save-lines {
+  padding: var(--gap) 0; border-top: 1px solid var(--border);
+}
+.conflict-mod:first-child, .conflict-mod:first-child + .save-lines {
+  padding-top: 0; border-top: none;
 }
 .conflict-mod {
-  max-width: 260px; overflow-wrap: anywhere; font-size: var(--type-small); color: var(--text);
+  overflow-wrap: anywhere; font-size: var(--type-small); font-weight: 600; color: var(--text);
 }
 a.conflict-mod:hover { color: var(--primary); }
+/* The report has no icons. Align the quote with the left edge of the conflict label. */
+.conflict-list .save-line > .save-words { margin-left: 0; }
 
 /* Each column has a count, a bar and a label.
    Year or month labels mark the start of each group. */
@@ -2415,8 +2433,11 @@ a.conflict-mod:hover { color: var(--primary); }
 
 @media (max-width: 640px) {
   .bar-name { max-width: 140px; }
-  .conflict-list { grid-template-columns: minmax(0, 1fr); gap: 6px; }
-  .conflict-list > .save-lines { margin-bottom: var(--gap); }
+  .conflict-report { --name-column: 140px; }
+  .conflict-list { grid-template-columns: minmax(0, 1fr); }
+  /* Put conflicts below the mod's name. Leave out the line between them. */
+  .conflict-list > .save-lines { padding-top: 6px; border-top: none; }
+  .conflict-mod { padding-bottom: 0; }
   .header-inner { gap: 10px; padding: 8px 12px; }
   .brand { font-size: var(--type-big); }
   .site-nav { order: 3; flex-basis: 100%; flex-wrap: wrap; }
