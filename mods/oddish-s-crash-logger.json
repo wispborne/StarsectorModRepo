@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T05:34:10.187400Z",
+  "generatedAt": "2026-11-05T07:32:50.933570Z",
   "listing": {
     "id": "oddish-s-crash-logger",
     "name": "Oddish's Crash Logger",
@@ -14,11 +14,10 @@
       "discord"
     ],
     "gameVersion": "0.98a",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1543971295207624804/1543971578734317699/image.png?ex=6ae934d5&is=6ae7e355&hm=0b67ce3ef8af41bd4b61faeaa49161b9f0b914c94ea08174255dd88a27bc68ef&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1543971295207624804/1543971578734317699/image.png?ex=6aed2955&is=6aebd7d5&hm=9deaf61194910d468e3764adadc7282b699fc59d77e75cfa9f60ee932703eed3&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1543971295207624804/1543971578734317699/image.png?ex=6aed2955&is=6aebd7d5&hm=9deaf61194910d468e3764adadc7282b699fc59d77e75cfa9f60ee932703eed3&",
     "summary": "This is just an extra crash information logger that I vibecoded for debugging another mod's development. I have since deleted the code as it was quite useless, but then later on claude told me that it actually WAS useful. I'm putting it up here as a mod if anyone wants to use it. It saves way more information about the game, mostly for LLM's to understand what went wrong. It's just an enormous dump of whatever I can dump, pretty much.",
     "summaryIsGenerated": false,
-    "aiSummary": "Logs extensive game state information to a text file for debugging crashes.",
+    "aiSummary": "Dumps extensive game state and crash information into a text file for analysis.",
     "hasDirectDownload": false,
     "downloadCount": 0,
     "discordUrl": "https://discord.com/channels/187635036525166592/1543971295207624804/1543971295207624804",
@@ -28,27 +27,25 @@
     "aiUses": [
       {
         "area": "code",
-        "how": "generated",
-        "extent": "all"
+        "how": "generated"
       }
     ],
     "addedOn": "2026-08-31",
     "needs": []
   },
-  "description": "Dumps a large amount of game data, including ship variants, hullmods, weapons, scripts, and thread states, into a text file. This detailed log is designed to help large language models analyze crash reports and identify potential fixes.",
-  "descriptionHtml": "<p>Dumps a large amount of game data, including ship variants, hullmods, weapons, scripts, and thread states, into a text file. This detailed log is designed to help large language models analyze crash reports and identify potential fixes.</p>",
+  "description": "Logs detailed information about the game, including mod content, scripts, listeners, and thread dumps. The output is designed to be analyzed by large-context LLMs to help identify and fix issues.",
+  "descriptionHtml": "<p>Logs detailed information about the game, including mod content, scripts, listeners, and thread dumps. The output is designed to be analyzed by large-context LLMs to help identify and fix issues.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>This is just an extra crash information logger that I vibecoded for debugging another mod's development. I have since deleted the code as it was quite useless, but then later on claude told me that it actually WAS useful. I'm putting it up here as a mod if anyone wants to use it.<br>It saves way more information about the game, mostly for LLM's to understand what went wrong. It's just an enormous dump of whatever I can dump, pretty much.</p>",
-  "aiDescription": "Dumps a large amount of game data, including ship variants, hullmods, weapons, scripts, and thread states, into a text file. This detailed log is designed to help large language models analyze crash reports and identify potential fixes.",
+  "aiDescription": "Logs detailed information about the game, including mod content, scripts, listeners, and thread dumps. The output is designed to be analyzed by large-context LLMs to help identify and fix issues.",
   "aiUse": {
     "quote": "I vibecoded for debugging another mod's development. I have since deleted the code as it was quite useless, but then later on claude told me that it actually WAS useful.",
     "usesAi": true,
     "uses": [
       {
         "area": "code",
-        "how": "generated",
-        "extent": "all"
+        "how": "generated"
       }
     ],
     "tools": [

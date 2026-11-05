@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T05:34:10.187400Z",
+  "generatedAt": "2026-11-05T07:32:50.933570Z",
   "listing": {
     "id": "lpc-editor",
     "name": "lpc editor",
@@ -14,11 +14,10 @@
       "discord"
     ],
     "gameVersion": "0.98a",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1512225609491808286/1512437233804775616/image.png?ex=6ae92eb0&is=6ae7dd30&hm=f18c1b61b20d9856290b33ccc1f3fc4978ed5005bf83d7426fecf50dbef3b31b&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1512225609491808286/1512437233804775616/image.png?ex=6aed2330&is=6aebd1b0&hm=6e2bf43b0287c67e07a249cacae5f10521a8fdee731ae8c05aba7a33d2c0eb9d&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1512225609491808286/1512437233804775616/image.png?ex=6aed2330&is=6aebd1b0&hm=6e2bf43b0287c67e07a249cacae5f10521a8fdee731ae8c05aba7a33d2c0eb9d&",
     "summary": "adds an lpc editor that allows you to edit your wings to put custom weapons on it to edit a wing you need to have a few conditions respected:",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds an editor to modify carrier wings and equip custom weapons.",
+    "aiSummary": "Adds a UI to customize fighter wing loadouts with weapons from cargo.",
     "hasDirectDownload": false,
     "downloadCount": 0,
     "discordUrl": "https://discord.com/channels/187635036525166592/1512225609491808286/1512225609491808286",
@@ -28,17 +27,17 @@
     "editedOn": "2026-06-08",
     "needs": []
   },
-  "description": "Adds an editor to modify carrier wings and equip custom weapons. Requires an LPC retool chip and whitelisted wings. Allows saving changes across campaigns and creating new wing variants.",
-  "descriptionHtml": "<p>Adds an editor to modify carrier wings and equip custom weapons. Requires an LPC retool chip and whitelisted wings. Allows saving changes across campaigns and creating new wing variants.</p>",
+  "description": "Allows players to edit whitelisted fighter wings by swapping in weapons held in cargo. The tool requires an LPC retool chip found at size 4+ markets and adds an editor button to carriers. Users can save custom configurations for use across campaigns or fabricate entirely new wing variants.",
+  "descriptionHtml": "<p>Allows players to edit whitelisted fighter wings by swapping in weapons held in cargo. The tool requires an LPC retool chip found at size 4+ markets and adds an editor button to carriers. Users can save custom configurations for use across campaigns or fabricate entirely new wing variants.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>adds an lpc editor that allows you to edit your wings to put custom weapons on it<br>to edit a wing you need to have a few conditions respected:<br>the wing must be whitelisted<br>the button is only added to carriers<br>you need to have weapons in your cargo<br>you must have an lpc retool chip can be found at any size 4+ market<br>to edit wings open the editor by pressing the lpc editor button this will bring you a ui where you can select the wing you want to edit wings are ordered in bay order<br>select weapon tab and choose a slot to edit only weapons in your cargo are considered<br>once youre done with your changes pressing save will save it allowing you to use it across your campaign and your other saves<br>select the fabricate button to create a brand new wing variant this consumes one chip<br>safe to add midsave probably<br><strong>NOT SAFE TO REMOVE</strong><br>modded wings are not taken into account by default they must be whitelisted for authors there is a template in config lpc_editor_config that will explain you how to do it<br>if you dont wanna wait for authors to update it i set the whitelist mode in the json in this file path to false<br>there are going to be crashes with some lpcs if they use decos or other shit so always make a save before editing anything<br>diable wings are hardcoded to not be editable sorry they always crash<br>dont expect save comp updates<br>report bugs here<br><a href=\"https://discord.com/channels/187635036525166592/1512225679679422484\" rel=\"nofollow noopener\" target=\"_blank\">https://discord.com/channels/187635036525166592/1512225679679422484</a><br>~~there is currently a crash with jaydeepiracy for now ~~</p>",
-  "aiDescription": "Adds an editor to modify carrier wings and equip custom weapons. Requires an LPC retool chip and whitelisted wings. Allows saving changes across campaigns and creating new wing variants.",
+  "aiDescription": "Allows players to edit whitelisted fighter wings by swapping in weapons held in cargo. The tool requires an LPC retool chip found at size 4+ markets and adds an editor button to carriers. Users can save custom configurations for use across campaigns or fabricate entirely new wing variants.",
   "saveCompatibilityText": "safe to add midsave probably",
-  "updateCompatibilityText": "dont expect save comp updates",
+  "updateCompatibilityText": "alright fixed weapon tab not working save comp",
   "removalCompatibilityText": "NOT SAFE TO REMOVE",
   "canAdd": "depends",
-  "canUpdate": "no",
+  "canUpdate": "yes",
   "canRemove": "no",
   "aiUse": {},
   "rawCategories": [
@@ -61,9 +60,7 @@
     }
   ],
   "downloads": [],
-  "changelog": {
-    "1.5.7": "removed magiclib as a dependency"
-  },
+  "changelog": {},
   "supportLinks": [],
   "discordUrl": "https://discord.com/channels/187635036525166592/1512225609491808286/1512225609491808286",
   "releases": [],
@@ -73,7 +70,8 @@
     {
       "name": "JaydeePiracy",
       "id": "jaydeepiracy",
-      "quote": "there is currently a crash with jaydeepiracy for now"
+      "quote": "there is currently a crash with jaydeepiracy for now",
+      "kind": "technical"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T05:34:10.187400Z",
+  "generatedAt": "2026-11-05T07:32:50.933570Z",
   "listing": {
     "id": "mimikko-assistant-v-0",
     "name": "Mimikko Assistant v (0.96/0.97)",
@@ -23,11 +23,10 @@
     ],
     "gameVersion": "0.97a",
     "modVersion": "0.97",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1214093776004317224/1214093776880935033/Cover_small.png?ex=6ae97bf1&is=6ae82a71&hm=fd2e7a4fcb014d3aa78f6b9c982e540d6ebedf964aee9b7bc891fa276d49d16d&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1214093776004317224/1214093776880935033/Cover_small.png?ex=6aecc7b1&is=6aeb7631&hm=fe2b3d38fcc3f2059964d845a544f16084c6d71b8158fbacac993abd6468ba17&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1214093776004317224/1214093776880935033/Cover_small.png?ex=6aecc7b1&is=6aeb7631&hm=fe2b3d38fcc3f2059964d845a544f16084c6d71b8158fbacac993abd6468ba17&",
     "summary": "Original Mod for Starsector by: SAVEmedley and 死萌 (Simeng)",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds 12 new officers and 4 admin based on characters from the Chinese virtual assistant app Mimikko Assistants.",
+    "aiSummary": "Adds 12 officers and 4 admins based on characters from a virtual assistant app, featuring unique skills, storylines, and rewards.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/MycophobiaSC/mimikko_tl/releases/download/v.07/mimikko096.tl.0.7.rar",
@@ -55,12 +54,12 @@
       }
     ]
   },
-  "description": "Adds 12 new officers and 4 admin based on characters from the Chinese virtual assistant app Mimikko Assistants. Each character has a unique skill, story line, and rewards like unique ships, skins, and weapons. A dorm in your colony allows interaction with assistants to gain quests and rewards as relationships grow.",
-  "descriptionHtml": "<p>Adds 12 new officers and 4 admin based on characters from the Chinese virtual assistant app Mimikko Assistants. Each character has a unique skill, story line, and rewards like unique ships, skins, and weapons. A dorm in your colony allows interaction with assistants to gain quests and rewards as relationships grow.</p>",
+  "description": "Introduces new characters with individual quests and stories that grant unique ships, skins, and weapons. Includes a colony dormitory for interacting with assistants to gain relationship points and unlock further content. Provides built-in officer cap increases when specific assistant pairs are assigned to ships.",
+  "descriptionHtml": "<p>Introduces new characters with individual quests and stories that grant unique ships, skins, and weapons. Includes a colony dormitory for interacting with assistants to gain relationship points and unlock further content. Provides built-in officer cap increases when specific assistant pairs are assigned to ships.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>Original Mod for Starsector by:<br>SAVEmedley and 死萌 (Simeng)</p><p>0.96 Version<br><a href=\"https://github.com/MycophobiaSC/mimikko_tl/releases/download/v.07/mimikko096.tl.0.7.rar\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/MycophobiaSC/mimikko_tl/releases/download/v.07/mimikko096.tl.0.7.rar</a></p><p>0.97 Mod Info Edit, not extensively tested but should work no problem (I might have gotten the wrong mod.info, will correct tonight once I’m home)<br><a href=\"https://github.com/MycophobiaSC/mimikko_tl/releases/download/v.07-97/mimikko096.tl.0.7.-.0.97.rar\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/MycophobiaSC/mimikko_tl/releases/download/v.07-97/mimikko096.tl.0.7.-.0.97.rar</a><br>(TL Update Mar 5-2024 v0.5)<br>Dependencies:<br>Lazy Lib/Magic Lib/Graphic Lib</p><p>There is a known issue that can break saves that can sometime be triggered by making one of Nonona’s skill elite(it will happen sometime after the skill is made elite). This does not always happen but we suggest you making multiple save to be sure. Since many assistant are seeing rework next patch that will likely fix this issue, and we aren’t able to pin point the cause, there will not be a hot fix for this issue.</p><p>Safe to add mid-save but some unique salvage are generated at sector gen and will only be available in a new game.</p><p>If playing with Nexerelin, the randomized sector option will make most assistants unobtainable (it is fine to use Nex, there is a unique start to go with it, just avoid randomized sector)</p>",
-  "aiDescription": "Adds 12 new officers and 4 admin based on characters from the Chinese virtual assistant app Mimikko Assistants. Each character has a unique skill, story line, and rewards like unique ships, skins, and weapons. A dorm in your colony allows interaction with assistants to gain quests and rewards as relationships grow.",
+  "aiDescription": "Introduces new characters with individual quests and stories that grant unique ships, skins, and weapons. Includes a colony dormitory for interacting with assistants to gain relationship points and unlock further content. Provides built-in officer cap increases when specific assistant pairs are assigned to ships.",
   "saveCompatibilityText": "Safe to add mid-save but some unique salvage are generated at sector gen and will only be available in a new game.",
   "canAdd": "depends",
   "aiUse": {},
@@ -133,10 +132,12 @@
   "releases": [],
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
+  "conflicts": [
     {
       "name": "Nexerelin",
-      "id": "nexerelin"
+      "id": "nexerelin",
+      "quote": "If playing with Nexerelin, the randomized sector option will make most assistants unobtainable (it is fine to use Nex, there is a unique start to go with it, just avoid randomized sector)",
+      "kind": "withNotes"
     }
   ]
 }

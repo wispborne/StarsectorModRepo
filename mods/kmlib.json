@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T05:34:10.187400Z",
+  "generatedAt": "2026-11-05T07:32:50.933570Z",
   "listing": {
     "id": "kmlib",
     "name": "KMLib",
@@ -18,7 +18,7 @@
     "modVersion": "0.5.2",
     "summary": "Currently in pre-release. Requires LazyLib and LunaLib. Safe to enable mid-save, uninstalled via settings.",
     "summaryIsGenerated": false,
-    "aiSummary": "Provides library support required for the political map mod.",
+    "aiSummary": "Provides library support and shared functionality for the KMU mod.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/Klark-Morrigan/Starsector-Mod-KMLib/releases/latest",
@@ -35,12 +35,12 @@
     "needs": [],
     "partOfThreadTitle": "Political Map - Sector Map Layers - KMU"
   },
-  "description": "Acts as a dependency for the main mod, handling core functionality and compatibility fixes. Includes updates for nebulae rendering and mod installer compatibility.",
-  "descriptionHtml": "<p>Acts as a dependency for the main mod, handling core functionality and compatibility fixes. Includes updates for nebulae rendering and mod installer compatibility.</p>",
+  "description": "Acts as a dependency for the KMU political map mod. It handles internal logic and compatibility features required by the main mod.",
+  "descriptionHtml": "<p>Acts as a dependency for the KMU political map mod. It handles internal logic and compatibility features required by the main mod.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>Currently in pre-release. Requires <strong>LazyLib</strong> and <strong>LunaLib</strong>. Safe to enable mid-save, uninstalled via settings.</p><p>Install it via <a href=\"https://trilink.wispborne.com/open.html?mod=%7B&quot;url&quot;%3A&quot;https%3A%2F%2Fgithub.com%2FKlark-Morrigan%2FStarsector-Mod-KMU%2Freleases%2Flatest%2Fdownload%2Fkmu-en.version&quot;%2C&quot;id&quot;%3A&quot;kmu&quot;%7D&amp;dep=%7B&quot;url&quot;%3A&quot;https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version&quot;%2C&quot;id&quot;%3A&quot;lw_lazylib&quot;%7D&amp;dep=%7B&quot;url&quot;%3A&quot;https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version&quot;%2C&quot;id&quot;%3A&quot;lunalib&quot;%7D&amp;dep=%7B&quot;url&quot;%3A&quot;https%3A%2F%2Fgithub.com%2FKlark-Morrigan%2FStarsector-Mod-KMLib%2Freleases%2Flatest%2Fdownload%2Fkmlib-en.version&quot;%2C&quot;id&quot;%3A&quot;kmlib&quot;%7D\" rel=\"nofollow noopener\" target=\"_blank\"><strong>TriOS</strong></a> or by downloading <a href=\"https://github.com/Klark-Morrigan/Starsector-Mod-KMLib/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><strong>KMLib</strong></a> (its dependency) and <a href=\"https://github.com/Klark-Morrigan/Starsector-Mod-KMU/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><strong>KMU</strong></a> (the mod itself).</p><p>The <strong>Political Map</strong> is the first among <strong>Sector Map Layers</strong> and focuses on populated colonies and their allegiances, with <strong>Faction</strong>, <strong>Alliance</strong>, and <strong>Claim</strong> views. It shows up primarily on the map screen and the intel screen, with a collapsible sidebar as its control interface.</p><p>Made compatible with <strong>Fast Rendering</strong>, <strong>Nexerelin</strong> (alliances), <strong>Random Assortment of Things</strong> (minimap replacement). Can <a href=\"https://www.youtube.com/watch?v=mA9gAeQeEhA\" rel=\"nofollow noopener\" target=\"_blank\">play <strong>Bad Apple</strong></a>.</p><p><strong>Bishop1664</strong> made a short <a href=\"https://www.youtube.com/watch?v=3BoDbbFrMPo\" rel=\"nofollow noopener\" target=\"_blank\">video showcase</a>.</p><p>Discuss in <a href=\"https://discord.com/channels/187635036525166592/1549091275167240272\" rel=\"nofollow noopener\" target=\"_blank\">https://discord.com/channels/187635036525166592/1549091275167240272</a><br>Forum thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36029.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36029.0</a></p>",
-  "aiDescription": "Acts as a dependency for the main mod, handling core functionality and compatibility fixes. Includes updates for nebulae rendering and mod installer compatibility.",
+  "aiDescription": "Acts as a dependency for the KMU political map mod. It handles internal logic and compatibility features required by the main mod.",
   "aiUse": {},
   "rawCategories": [
     "Utility mods",
@@ -58,8 +58,8 @@
   ],
   "changelog": {
     "0.5.2": "2nd fix for nebulae effects in Starscape mode ignoring map layer draw order. - Reported by MiniRockytheOracle .",
-    "0.5.1": "Fixed a rare issue where the map label font did not load properly under Fast Rendering and VRAM Optimizer . Reported by lChronosl .\n The dependencies section in mod_info.json is moved to the bottom of the file. Some mod installers read the first id field they see and overwrite dependency mods with the one being installed. Reported by NH4CI at Fossic .",
-    "0.5.0": "Fast Rendering crash resolved on the FR side. You'll get a note in-game if your FR needs an update to 0.9.1rc1+ . Props to Genir .\n Nebulae in Starscape mode no longer disregard draw order under campaign speed-up. Reported by MiniRockytheOracle .\n Non-API calls to vanilla or mod internals are guarded and stand down related functionality with a player notice, instead of crashing.\n Added a setting to toggle Decivilised colonies painting the map in absence of any factions, enabled by default. Decivilised systems - Should draw territory under the Map - Politics - Visuals tab. Requested by NoticeMeSenpai .\n The default survey level required for the map to see Decivilised colonies is set to full by default. If it's not your first install, your settings are untouched.\n Revealed faction colonies also reveal all Decivilised colonies in the system.\n Simplified Chinese localisation has been added as separate release ZIP."
+    "0.5.1": "Fixed a rare issue where the map label font did not load properly under Fast Rendering and VRAM Optimizer . Reported by lChronosl . The dependencies section in mod_info.json is moved to the bottom of the file. Some mod installers read the first id field they see and overwrite dependency mods with the one being installed. Reported by NH4CI at Fossic .",
+    "0.5.0": "Fast Rendering crash resolved on the FR side. You'll get a note in-game if your FR needs an update to 0.9.1rc1+ . Props to Genir . Nebulae in Starscape mode no longer disregard draw order under campaign speed-up. Reported by MiniRockytheOracle . Non-API calls to vanilla or mod internals are guarded and stand down related functionality with a player notice, instead of crashing. Added a setting to toggle Decivilised colonies painting the map in absence of any factions, enabled by default. Decivilised systems - Should draw territory under the Map - Politics - Visuals tab. Requested by NoticeMeSenpai . The default survey level required for the map to see Decivilised colonies is set to full by default. If it's not your first install, your settings are untouched. Revealed faction colonies also reveal all Decivilised colonies in the system. Simplified Chinese localisation has been added as separate release ZIP."
   },
   "sourceCodeUrl": "https://github.com/Klark-Morrigan/Starsector-Mod-KMLib",
   "supportLinks": [],

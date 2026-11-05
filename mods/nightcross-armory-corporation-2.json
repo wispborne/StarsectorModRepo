@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T05:34:10.187400Z",
+  "generatedAt": "2026-11-05T07:32:50.933570Z",
   "listing": {
     "id": "nightcross-armory-corporation-2",
     "name": "Nightcross Armory Corporation",
@@ -16,11 +16,10 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "1.2.3",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1355460993215500318/1355460993471484074/crest_nightcross.png?ex=6ae8f4ac&is=6ae7a32c&hm=a420fa3b25900f3e9bb4ca4362222e8c0d6338c1718e51b1e950aa4a047e25fd&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355460993215500318/1355460993471484074/crest_nightcross.png?ex=6aece92c&is=6aeb97ac&hm=a93d83978a62dc309b95b21be59fd6a73a09578600ac5ebe482c98d92abe6deb&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1355460993215500318/1355460993471484074/crest_nightcross.png?ex=6aece92c&is=6aeb97ac&hm=a93d83978a62dc309b95b21be59fd6a73a09578600ac5ebe482c98d92abe6deb&",
     "summary": "This is a faction I've been working on for some time. I first started modding back in 2019, before going on hiatus and coming back around 0.97, at which point I found out to my amazement that my source code mostly still worked!",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a high-tech faction with fast, shielded ships, specialized weapons, and a unique star system.",
+    "aiSummary": "Adds a high-tech faction with fast ships, specialized weapons, and unique hullmods.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/YukiMonsai/nightcross-armory/releases/download/2.1.6/Nightcross.zip",
@@ -33,14 +32,24 @@
     "isWorkInProgress": false,
     "addedOn": "2025-03-29",
     "editedOn": "2025-05-02",
-    "needs": []
+    "needs": [
+      {
+        "name": "GraphicsLib",
+        "id": "graphicslib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "GraphicsLib"
+      }
+    ]
   },
-  "description": "Introduces a new faction featuring capital ships, cruisers, destroyers, and frigates designed for high speed and flux capacity. Includes over 30 factional weapons, fighter squadrons, and a modular hullmod called Plasma Aggregator. The faction operates in a star system with independent markets selling their gear, utilizing shielded ships that trade flux dissipation for reduced costs when shields are down.",
-  "descriptionHtml": "<p>Introduces a new faction featuring capital ships, cruisers, destroyers, and frigates designed for high speed and flux capacity. Includes over 30 factional weapons, fighter squadrons, and a modular hullmod called Plasma Aggregator. The faction operates in a star system with independent markets selling their gear, utilizing shielded ships that trade flux dissipation for reduced costs when shields are down.</p>",
+  "description": "Introduces a new faction featuring capital ships, cruisers, destroyers, frigates, fighters, and various weapons. Ships emphasize speed and flux capacity over armor, utilizing shield-based mechanics for risk-reward gameplay. Includes a star system with independent markets selling faction-specific gear and integrates GraphicsLib for visual effects.",
+  "descriptionHtml": "<p>Introduces a new faction featuring capital ships, cruisers, destroyers, frigates, fighters, and various weapons. Ships emphasize speed and flux capacity over armor, utilizing shield-based mechanics for risk-reward gameplay. Includes a star system with independent markets selling faction-specific gear and integrates GraphicsLib for visual effects.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p><a href=\"https://github.com/YukiMonsai/nightcross-armory/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/YukiMonsai/nightcross-armory/releases</a></p><p>This is a faction I've been working on for some time. I first started modding back in 2019, before going on hiatus and coming back around 0.97, at which point I found out to my amazement that my source code <em>mostly</em> still worked!</p><p>Contains:</p><ul><li>one capital, three cruisers, three destroyers, and two frigates. Generally high tech with light armor, high movement speed, high flux capacity, but relatively low flux dissipation, offset by a universal hullmod for shielded ships that reduces flux costs when shields are off for a high risk/reward playstyle. They also lose zero-flux bonus when they sustain hull damage, to make them less frustrating to play against them when they have long-ranged weapons.</li><li>5 fighter LPCs (still trying to figure out fighter balance in general)</li><li>About 30 or so factional weapons, including 3 types of missiles and a bunch of energy, synergy, and hybrid types. Energy weapons generally deal less damage with worse efficiency than most energy weapons, but longer range. The beams are the opposite--more damage than common beam weapons, but less range.</li><li>One modular hullmod (Plasma Aggregator)</li><li>A star system with independent/pirate markets including special submarkets that sell NCA gear (since they don't have any official market)</li><li>Graphicslib integration (normal maps only), plus fancy lights and doodads.</li></ul>",
-  "aiDescription": "Introduces a new faction featuring capital ships, cruisers, destroyers, and frigates designed for high speed and flux capacity. Includes over 30 factional weapons, fighter squadrons, and a modular hullmod called Plasma Aggregator. The faction operates in a star system with independent markets selling their gear, utilizing shielded ships that trade flux dissipation for reduced costs when shields are down.",
+  "aiDescription": "Introduces a new faction featuring capital ships, cruisers, destroyers, frigates, fighters, and various weapons. Ships emphasize speed and flux capacity over armor, utilizing shield-based mechanics for risk-reward gameplay. Includes a star system with independent markets selling faction-specific gear and integrates GraphicsLib for visual effects.",
   "aiUse": {},
   "rawCategories": [
     "Ship Pack",
@@ -104,8 +113,8 @@
   ],
   "changelog": {
     "1.2.3": "Increased Xanthe Terra acceleration\n Replaced Xanthe Terra system with a new gravity mine system, sort of a hybrid between harbinger and doom systems",
-    "1.2.2": "New weapon: pyrolance, light pyrolance\n New phase destroyer: Xanthe Terra\n Improved haas beamer sweep effect\n Fixed a bug that made it so only one ionic plasma decimator could do its bonus damage at a time\n Bitcrush HMG dmg 70->80, flux /shot 35->40\n Reworked Chrip/Tarantella PD graphics",
-    "1.2.1": "Added NCA contacts to Graveyard Station\n New weapon: Pyrorifle\n New hullmod: Armor Energizer Matrix\n Dynamic grid -> now gives +25/20/15/10% vent speed\n Reworked the way Tidal Grid works, now permanent after being in phase for a while, lasts until next phase dive\n Tempus spatium flux 10000 -> 9500\n Tempus spatium dissipation 700 -> 600\n Fixed stero sound on chirp pd\n Increased HPF reload speed by 50%\n Fix magu tessera engines not rotating properly, increased speed at which they rotate\n Fixed pyrowisp max ammo bonus not stacking with expanded missile racks\n Increased heavy pyrowisp rate of fire (not reload speed)\n Bitcrush HMG now has much more punch to its sound effect\n Chirp and Tarantella PD now fire over allies\n Tarantella now has slower fire rate\n Chirp PD and tarantella PD range +100\n Flamestrike damage 250 -> 320 (HE), flux/shot 220 -> 240\n Stunpulse OP 7 -> 6\n Mini electron laser and burst electron laser now have 1.0 flux efficiency\n silence combat laser OP 7 -> 6\n String of Pearls X flux 200 -> 225, hp 1000 -> 1100\n Mare Crisium X flux 225 -> 250, hp 1400 -> 1500"
+    "1.2.2": "New weapon: pyrolance, light pyrolance New phase destroyer: Xanthe Terra Improved haas beamer sweep effect Fixed a bug that made it so only one ionic plasma decimator could do its bonus damage at a time Bitcrush HMG dmg 70->80, flux /shot 35->40 Reworked Chrip/Tarantella PD graphics",
+    "1.2.1": "Added NCA contacts to Graveyard Station New weapon: Pyrorifle New hullmod: Armor Energizer Matrix Dynamic grid -> now gives +25/20/15/10% vent speed Reworked the way Tidal Grid works, now permanent after being in phase for a while, lasts until next phase dive Tempus spatium flux 10000 -> 9500 Tempus spatium dissipation 700 -> 600 Fixed stero sound on chirp pd Increased HPF reload speed by 50% Fix magu tessera engines not rotating properly, increased speed at which they rotate Fixed pyrowisp max ammo bonus not stacking with expanded missile racks Increased heavy pyrowisp rate of fire (not reload speed) Bitcrush HMG now has much more punch to its sound effect Chirp and Tarantella PD now fire over allies Tarantella now has slower fire rate Chirp PD and tarantella PD range +100 Flamestrike damage 250 -> 320 (HE), flux/shot 220 -> 240 Stunpulse OP 7 -> 6 Mini electron laser and burst electron laser now have 1.0 flux efficiency silence combat laser OP 7 -> 6 String of Pearls X flux 200 -> 225, hp 1000 -> 1100 Mare Crisium X flux 225 -> 250, hp 1400 -> 1500"
   },
   "sourceCodeUrl": "https://github.com/YukiMonsai/nightcross-armory",
   "supportLinks": [],

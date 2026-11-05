@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T05:34:10.187400Z",
+  "generatedAt": "2026-11-05T07:32:50.933570Z",
   "listing": {
     "id": "privateering-commission-overhaul",
     "name": "Privateering - A faction commission overhaul",
@@ -21,7 +21,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1409610329524142191/1409610499980791888/image.png?ex=6aeccf94&is=6aeb7e14&hm=6153cf2f9d19c9b777c62731eba930fe9a00515b59ef39b03bfbce695cf520ac&",
     "summary": "Reworks commissions to be a less passive, becoming a more active element within your playthrough. This is done through rebalancing commissions, adding a new resource called requisition bonds, and adding a small event-based progression system for commissions.",
     "summaryIsGenerated": false,
-    "aiSummary": "Reworks commissions to be more active by rebalancing payments, adding requisition bonds, and introducing favorability progression.",
+    "aiSummary": "Reworks commissions to be more active by adding requisition bonds and rebalancing income.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -67,7 +67,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>A simple overhaul to faction commissions.<br>The goal of the mod is to add a few more features to commissions while making them feel less \"passive\" overall.</p><p><strong>Latest Download</strong>: <a href=\"https://github.com/Lukas22041/Privateering/releases/latest/download/Privateering.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Lukas22041/Privateering/releases/latest/download/Privateering.zip</a><br><strong>Forum Post</strong>: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=33914\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=33914</a></p><p><strong>Commission Rebalance</strong><br>Vanilla commissions scale by level, with the formula being 20000 + (5000*level) , maxing at <strong>95k</strong> credits per month.<br>This mod reduces the basic pay to a measly non-scaling <strong>15k</strong> credits per month.<br>The catch is that certain maintenance costs, like supplies and officers, now have <strong>50%</strong> of their upkeep covered by your faction.</p><p><strong>Requisition Bonds</strong><br>Requisition bonds are a new resource. They are accquired when fighting fleets hostile to your commission faction.<br>A bond is equal to 500 credits, <strong>but can only be spent by meeting with your commission supervisor.</strong><br>The supervisor is a new NPC which has several options for spending bonds like custom production, hiring mercs and repairing d-mods.</p><p><strong>Favorability</strong><br>The mod adds a new major event, called Faction Favorability.<br>As you support the faction, you gain more favor with it, resulting in being rewarded with slight bonuses.</p><pre><code>-Not compatible with AoTD - Questions of Loyalty \n-Works fine with other Ashes modules.</code></pre>",
-  "aiDescription": "Reworks commissions to be a less passive element of gameplay. It reduces monthly commission payments but adds a new resource called requisition bonds earned from defeating hostile fleets. These bonds can be spent on services like custom production, repairing dmods, or hiring mercenaries. The mod also introduces a favorability system where defeating opponents improves your standing with the commissioned faction.",
+  "aiDescription": "Reworks commissions to be a less passive element of gameplay. Adds a new resource called requisition bonds earned from defeating hostile fleets. Reduces monthly commission payments but covers 50% of fleet maintenance costs. Introduces a favorability progression system that grants benefits for staying with a faction.",
   "saveCompatibilityText": "The mod can be added mid-save . Not all updates are save compatible, check the changelog for details on if they are.",
   "updateCompatibilityText": "Not all updates are save compatible, check the changelog for details on if they are.",
   "canAdd": "yes",
@@ -186,7 +186,8 @@
   "conflicts": [
     {
       "name": "Ashes of the Domain - Questions of Loyalty",
-      "quote": "Not compatible with \"Ashes of the Domain - Questions of Loyalty\". Other ashes modules are compatible."
+      "quote": "Not compatible with \"Ashes of the Domain - Questions of Loyalty\". Other ashes modules are compatible.",
+      "kind": "technical"
     }
   ]
 }
