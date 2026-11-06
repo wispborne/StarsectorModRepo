@@ -1797,6 +1797,9 @@ button.check-row { align-items: center; }
   background: var(--primary-faint);
 }
 .needs-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+/* Mods where any one is enough, joined by "or". */
+.needs-one-of { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.needs-or { color: var(--text-dim); font-size: var(--type-small); }
 /* The license badge and the source code badge, side by side on one row. */
 /* The license as plain words beside the source code badge: it is something
    to read, not something to press. */

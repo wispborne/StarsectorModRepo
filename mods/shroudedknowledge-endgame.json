@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T07:08:25.008941Z",
+  "generatedAt": "2026-11-06T19:07:37.621704Z",
   "listing": {
     "id": "shroudedknowledge-endgame",
     "name": "ShroudedKnowledge endgame",
@@ -36,6 +36,8 @@
       }
     ],
     "addedOn": "2026-11-04",
+    "threadLastPostOn": "2026-11-05",
+    "editedOn": "2026-11-05",
     "needs": []
   },
   "description": "Compatibility\nStarsector: 0.98a-RC8\nMods\nI tested it with several mods that I use, including Nexelerim and Ashes of the Domain, and I haven't encountered any errors so far.\nI tested it in an lategame, modded playthrough and it worked correctly, so it is safe to add to an existing save file. However , I don't have every known mod installed; there might be some incompatibilities with mods that alter Shroud fleets, as the code relies on them to award points.\nAlmost all assets and code in this mod were created using AI tools: GPT-6 Luna\nI was wondering why the Shroud faction lacked content related to colonies or the endgame. I checked the forums to see if anything like that already existed, but I couldn't find anything.\nI was also curious about how Starsector mods are made, so I decided to give modding a try and create this mod. Almost everything was generated with ChatGPT (GPT-6 Luna), though.\nIt was a fun experiment, and I'd love to hear what you think! I'm still learning how to program, so I know there's plenty of room for improvement. I'll keep refining things as I go, and any help or feedback would be greatly appreciated!\nIf you have any ideas on what I should add, I'm open to them and will gladly read them.\n\nI think \"vibe coding\" is something I could easily fall into :P\n\nHow it works\nThe crisis progresses through a threat system ranging from 0 to 300 points.\nYou earn points by defeating Shroud fleets: Lesser Manifestation 20 pts, Greater Manifestation 30 pts, Transcendent Manifestation 50 pts.\nAs the threat grows, the Sector approaches two major milestones:\n\n150 Threat Points: Preparations for the first Shroud manifestation begin.\n\na party of 3 fleets of Precursors(Shrouded Fleets)\nYou will have 40 days until the fleets reach your location; they will try to find you wherever you go.\n\n300 Threat Points: A Shrouded Dweller expedition is launched.(They will launch a attack against your best colony)\nA fleet of a lot of eyes and more than 3 Shrouded Maw are expected ,Other support fleets may also arrive.\nYou will have 50 days until this happens.\n\nIf you know how to do it, you can use the test in ShroudedKnowledgeManager.java and look for:\npublic void testThreatPoints() {\naddThreatPoints(1, \"Test\");\n}\nChange the 1 to 150 or 300 so you can test it more quickly—at least until I release a patch that makes the process easier.\n\nSource & Changelog (GitHub)",
@@ -88,6 +90,7 @@
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36262.0",
   "releases": [],
+  "threadLastPostOn": "2026-11-05",
   "sameNameMods": [],
   "addons": [],
   "conflicts": [

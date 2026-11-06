@@ -208,9 +208,19 @@ function undoClearLine() {
 function everythingItRequires(found, byId, view, currentVersion, mine) {
   const listed = new Set(found.map((mod) => mod.id));
   const wanted = new Map();
+  // Mods that are one choice of several ("any one is enough"). "Favorite all"
+  // leaves them out, so it never stars every choice.
+  const choices = new Set();
   for (const mod of found) {
-    for (const needed of mod.needs || []) {
+    const needs = mod.needs || [];
+    for (const needed of needs) {
       if (needed.id && listed.has(needed.id)) continue;
+      if (needed.oneOf != null) {
+        const group = needs.filter((other) => other.oneOf === needed.oneOf);
+        // A favorited mod from the group already covers it.
+        if (group.some((other) => other.id && listed.has(other.id))) continue;
+        if (needed.id) choices.add(needed.id);
+      }
       wanted.set(needed.id || needed.name, needed);
     }
   }
@@ -223,16 +233,17 @@ function everythingItRequires(found, byId, view, currentVersion, mine) {
     if (mod) known.push(mod);
     else unknown.push(needed.name);
   }
+  const toStar = known.filter((mod) => !choices.has(mod.id));
 
   // On the reader's own list, one press stars every required mod this site
   // has a page for. A shared list is somebody else's, so it is left alone.
   const head = el('div', { class: 'section-head' }, [
     el('h2', { text: 'Also required' }),
   ]);
-  if (mine && known.length) {
+  if (mine && toStar.length) {
     const all = el('button', { class: 'btn', text: 'Favorite all' });
     all.addEventListener('click', () => {
-      setFavorites([...favorites(), ...known.map((mod) => mod.id)]);
+      setFavorites([...favorites(), ...toStar.map((mod) => mod.id)]);
     });
     head.append(all);
   }

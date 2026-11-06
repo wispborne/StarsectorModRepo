@@ -1468,7 +1468,7 @@ function sideCard(heading, rows, extraClass = '') {
 /// A mod another requirement brought in says which one on hover.
 function neededChips(mods, extraClass = '') {
   const kind = `chip needed ${extraClass}`.trim();
-  return el('div', { class: 'needs-chips' }, mods.map((needed) => {
+  const chipOf = (needed) => {
     const chip = needed.id
       ? el('a', { class: kind, href: modHref(needed.id), text: needed.name })
       : el('span', {
@@ -1478,7 +1478,27 @@ function neededChips(mods, extraClass = '') {
     if (!needed.via) return chip;
     return quickTip(chip, `Required by ${needed.via}.`
       + (needed.id ? '' : ' No page available for this mod.'));
-  }));
+  };
+  // Mods with the same `oneOf` number are one choice: any one of them is
+  // enough. They are drawn together, joined by "or".
+  const parts = [];
+  const groups = new Map();
+  for (const needed of mods) {
+    if (needed.oneOf == null) {
+      parts.push(chipOf(needed));
+      continue;
+    }
+    let group = groups.get(needed.oneOf);
+    if (!group) {
+      group = el('span', { class: 'needs-one-of' });
+      groups.set(needed.oneOf, group);
+      parts.push(group);
+    } else {
+      group.append(el('span', { class: 'needs-or', text: 'or' }));
+    }
+    group.append(chipOf(needed));
+  }
+  return el('div', { class: 'needs-chips' }, parts);
 }
 
 /// Each conflict shows the other mod and its kind.
