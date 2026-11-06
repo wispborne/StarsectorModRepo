@@ -1,12 +1,12 @@
 {
   "guide": "https://fractalsoftworks.com/forum/index.php?topic=36046.0",
   "guideDate": "2026-09-21",
-  "lastPassAt": "2026-11-06T21:38:39.462478Z",
+  "lastPassAt": "2026-11-06T22:04:04.357108Z",
   "counts": {
-    "threads": 150,
-    "failed": 6,
-    "imperfect": 119,
-    "follows": 25,
+    "threads": 146,
+    "failed": 21,
+    "imperfect": 105,
+    "follows": 20,
     "unknown": 0
   },
   "items": [
@@ -25,7 +25,13 @@
     {
       "id": "aiDisclaimer",
       "label": "AI use disclaimer, if AI was used",
-      "reason": "AI use not explained",
+      "reason": "Incomplete AI use disclaimer",
+      "required": true
+    },
+    {
+      "id": "exeSourceCode",
+      "label": "Source code for an .exe",
+      "reason": "No source code for the .exe",
       "required": true
     },
     {
@@ -90,7 +96,7 @@
       "author": "DonaldAzerbaijian",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36165.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:38:38.944790Z",
+      "checkedAt": "2026-11-06T22:01:59.441165Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -116,7 +122,7 @@
       "author": "TresDisco",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36154.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:24:49.080916Z",
+      "checkedAt": "2026-11-06T21:53:19.126187Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -125,9 +131,14 @@
       "title": "[0.98a] 4.0.0 Ship&Weapon Editor",
       "author": "IceFire",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35821.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:33:22.317656Z",
+      "status": "failed",
+      "checkedAt": "2026-11-06T21:55:35.014720Z",
       "missing": [
+        {
+          "id": "exeSourceCode",
+          "reason": "No source code for the .exe",
+          "required": true
+        },
         {
           "id": "sourceCode",
           "reason": "No source code",
@@ -149,7 +160,7 @@
           "required": false
         }
       ],
-      "missingRequired": 0
+      "missingRequired": 1
     },
     {
       "topicId": 36079,
@@ -157,7 +168,7 @@
       "author": "Xepel",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36079.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:34:35.843551Z",
+      "checkedAt": "2026-11-06T21:57:24.482885Z",
       "missing": [
         {
           "id": "reusePermissions",
@@ -172,9 +183,15 @@
       "title": "[0.98a] Advanced Modifications (v1.1)",
       "author": "|_PHOENIX_|",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36217.0",
-      "status": "follows",
-      "checkedAt": "2026-11-06T21:24:53.791111Z",
-      "missing": [],
+      "status": "imperfect",
+      "checkedAt": "2026-11-06T21:53:30.184364Z",
+      "missing": [
+        {
+          "id": "warningsVisible",
+          "reason": "Important warnings hard to find",
+          "required": false
+        }
+      ],
       "missingRequired": 0
     },
     {
@@ -183,7 +200,7 @@
       "author": "No101SHArkKnight",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36214.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:32:31.321193Z",
+      "checkedAt": "2026-11-06T21:54:48.933639Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -204,7 +221,7 @@
       "author": "Barber",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36161.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:35:33.903978Z",
+      "checkedAt": "2026-11-06T21:58:28.281167Z",
       "missing": [
         {
           "id": "warningsVisible",
@@ -220,7 +237,7 @@
       "author": "alp7292",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36258.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:24:23.271847Z",
+      "checkedAt": "2026-11-06T21:51:58.534372Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -230,7 +247,7 @@
       "author": "Audax",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=24550.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:37:23.996474Z",
+      "checkedAt": "2026-11-06T22:00:30.652848Z",
       "missing": [
         {
           "id": "reusePermissions",
@@ -245,10 +262,21 @@
       "title": "[0.98a] Arc Light Bureau English Translation - v1.12.3en1",
       "author": "Mirarara",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36110.0",
-      "status": "follows",
-      "checkedAt": "2026-11-06T21:34:12.495131Z",
-      "missing": [],
-      "missingRequired": 0
+      "status": "failed",
+      "checkedAt": "2026-11-06T21:56:50.075726Z",
+      "missing": [
+        {
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
+          "required": true
+        },
+        {
+          "id": "reusePermissions",
+          "reason": "No reuse permissions stated",
+          "required": false
+        }
+      ],
+      "missingRequired": 1
     },
     {
       "topicId": 18751,
@@ -256,7 +284,7 @@
       "author": "shoi",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=18751.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:32:53.133958Z",
+      "checkedAt": "2026-11-06T21:55:14.738873Z",
       "missing": [
         {
           "id": "reusePermissions",
@@ -272,7 +300,7 @@
       "author": "Kaysaar",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=30808.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:33:08.390739Z",
+      "checkedAt": "2026-11-06T21:55:59.283335Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -309,7 +337,7 @@
       "author": "Belt",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36004.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:37:32.895943Z",
+      "checkedAt": "2026-11-06T22:00:30.756380Z",
       "missing": [
         {
           "id": "saveCompatibility",
@@ -329,9 +357,15 @@
       "title": "[0.98] - Astral Ascension Renewed",
       "author": "oddisz",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36167.0",
-      "status": "follows",
-      "checkedAt": "2026-11-06T21:36:16.913727Z",
-      "missing": [],
+      "status": "imperfect",
+      "checkedAt": "2026-11-06T21:58:57.875365Z",
+      "missing": [
+        {
+          "id": "warningsVisible",
+          "reason": "Important warnings hard to find",
+          "required": false
+        }
+      ],
       "missingRequired": 0
     },
     {
@@ -340,7 +374,7 @@
       "author": "rolfos",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=34642.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:33:02.349148Z",
+      "checkedAt": "2026-11-06T21:55:35.115520Z",
       "missing": [
         {
           "id": "downloadNearTop",
@@ -371,7 +405,7 @@
       "author": "standardheadache",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36107.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:34:17.308234Z",
+      "checkedAt": "2026-11-06T21:56:50.279368Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -402,7 +436,7 @@
       "author": "Bass294",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36242.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:23:15.281133Z",
+      "checkedAt": "2026-11-06T21:54:23.639308Z",
       "missing": [
         {
           "id": "reusePermissions",
@@ -418,7 +452,7 @@
       "author": "Aris",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35731.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:35:23.357838Z",
+      "checkedAt": "2026-11-06T21:58:17.547601Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -444,7 +478,7 @@
       "author": "willthefunperson",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=29877.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:37:56.550571Z",
+      "checkedAt": "2026-11-06T22:01:03.690650Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -470,7 +504,7 @@
       "author": "Osart",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36030.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:36:01.963218Z",
+      "checkedAt": "2026-11-06T21:58:57.875365Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -491,7 +525,7 @@
       "author": "OmegaEntertainment",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35688.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:33:35.936939Z",
+      "checkedAt": "2026-11-06T21:56:09.626379Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -522,7 +556,7 @@
       "author": "Kaysaar",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=31308.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:37:21.442909Z",
+      "checkedAt": "2026-11-06T22:00:19.797007Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -559,7 +593,7 @@
       "author": "SeltsamerNordlander",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36219.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:32:56.923077Z",
+      "checkedAt": "2026-11-06T21:55:24.364699Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -585,7 +619,7 @@
       "author": "Dazs",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=24433.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:23:45.489305Z",
+      "checkedAt": "2026-11-06T21:53:07.165537Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -606,7 +640,7 @@
       "author": "Purple Nebula",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36243.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:24:11.499314Z",
+      "checkedAt": "2026-11-06T21:51:41.945640Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -616,7 +650,7 @@
       "author": "Ceres",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=34176.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:35:47.830771Z",
+      "checkedAt": "2026-11-06T21:58:28.281167Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -642,7 +676,7 @@
       "author": "Histidine",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=10399.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:38:06.586565Z",
+      "checkedAt": "2026-11-06T22:01:03.692649Z",
       "missing": [
         {
           "id": "reusePermissions",
@@ -658,7 +692,7 @@
       "author": "SirHartley",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35125.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:32:50.141797Z",
+      "checkedAt": "2026-11-06T21:55:14.737876Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -668,7 +702,7 @@
       "author": "crab",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35624.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:38:31.469643Z",
+      "checkedAt": "2026-11-06T22:01:51.961399Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -689,7 +723,7 @@
       "author": "Ubik-",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36234.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:24:53.279045Z",
+      "checkedAt": "2026-11-06T21:53:19.126187Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -699,7 +733,7 @@
       "author": "Kevin Flemming",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35918.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:38:39.456162Z",
+      "checkedAt": "2026-11-06T22:01:59.441165Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -730,7 +764,7 @@
       "author": "Nick XR",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=11551.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:32:18.726195Z",
+      "checkedAt": "2026-11-06T21:54:34.903367Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -746,7 +780,7 @@
       "author": "After",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35818.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:31:18.005052Z",
+      "checkedAt": "2026-11-06T21:54:02.031537Z",
       "missing": [
         {
           "id": "reusePermissions",
@@ -762,13 +796,8 @@
       "author": "JAL28",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=22852.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:24:40.990820Z",
+      "checkedAt": "2026-11-06T21:52:46.867926Z",
       "missing": [
-        {
-          "id": "downloadNearTop",
-          "reason": "Download buried or inside a spoiler",
-          "required": false
-        },
         {
           "id": "reusePermissions",
           "reason": "No reuse permissions stated",
@@ -783,11 +812,16 @@
       "author": "defarius",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36246.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:22:42.511047Z",
+      "checkedAt": "2026-11-06T21:52:27.001499Z",
       "missing": [
         {
           "id": "requirementsByDownload",
           "reason": "Requirements not stated near download",
+          "required": false
+        },
+        {
+          "id": "warningsVisible",
+          "reason": "Important warnings hard to find",
           "required": false
         }
       ],
@@ -799,7 +833,7 @@
       "author": "Levianeer",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=33489.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:35:10.454976Z",
+      "checkedAt": "2026-11-06T21:58:06.570586Z",
       "missing": [
         {
           "id": "saveCompatibility",
@@ -819,9 +853,14 @@
       "title": "[0.98a-RC8] Dynamic Asteroids v1.0.0",
       "author": "keltuze",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36261.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:22:42.510895Z",
+      "status": "failed",
+      "checkedAt": "2026-11-06T21:52:10.208042Z",
       "missing": [
+        {
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
+          "required": true
+        },
         {
           "id": "requirementsByDownload",
           "reason": "Requirements not stated near download",
@@ -843,23 +882,28 @@
           "required": false
         }
       ],
-      "missingRequired": 0
+      "missingRequired": 1
     },
     {
       "topicId": 27284,
       "title": "[0.98a] Emergent Threats/IX Revival v1.4.2",
       "author": "vicegrip",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=27284.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:23:26.221139Z",
+      "status": "failed",
+      "checkedAt": "2026-11-06T21:52:46.866922Z",
       "missing": [
+        {
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
+          "required": true
+        },
         {
           "id": "requirementsByDownload",
           "reason": "Requirements not stated near download",
           "required": false
         }
       ],
-      "missingRequired": 0
+      "missingRequired": 1
     },
     {
       "topicId": 33840,
@@ -867,7 +911,7 @@
       "author": "Ashrac",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=33840.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:24:45.189354Z",
+      "checkedAt": "2026-11-06T21:53:19.126187Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -893,7 +937,7 @@
       "author": "Anjasnare",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35933.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:34:03.074740Z",
+      "checkedAt": "2026-11-06T21:56:21.616049Z",
       "missing": [
         {
           "id": "downloadNearTop",
@@ -929,16 +973,11 @@
       "author": "Portals",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36072.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:23:15.281670Z",
+      "checkedAt": "2026-11-06T21:51:58.533369Z",
       "missing": [
         {
           "id": "requirementsByDownload",
           "reason": "Requirements not stated near download",
-          "required": false
-        },
-        {
-          "id": "warningsVisible",
-          "reason": "Important warnings hard to find",
           "required": false
         }
       ],
@@ -950,7 +989,7 @@
       "author": "Eld",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36090.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:34:07.784818Z",
+      "checkedAt": "2026-11-06T21:56:39.716326Z",
       "missing": [
         {
           "id": "reusePermissions",
@@ -966,7 +1005,7 @@
       "author": "oddisz",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36143.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:36:33.208964Z",
+      "checkedAt": "2026-11-06T21:59:31.468823Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -976,7 +1015,7 @@
       "author": "MoffHul11",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=34787.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:35:30.627531Z",
+      "checkedAt": "2026-11-06T21:58:17.534562Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -1002,7 +1041,7 @@
       "author": "coolestofguys",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36239.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:31:54.764888Z",
+      "checkedAt": "2026-11-06T21:54:12.272007Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -1012,11 +1051,11 @@
       "author": "Genir",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=33870.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:23:42.314734Z",
+      "checkedAt": "2026-11-06T21:53:30.287131Z",
       "missing": [
         {
-          "id": "warningsVisible",
-          "reason": "Important warnings hard to find",
+          "id": "requirementsByDownload",
+          "reason": "Requirements not stated near download",
           "required": false
         },
         {
@@ -1033,8 +1072,13 @@
       "author": "S-Numan",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=33414.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:37:16.306170Z",
+      "checkedAt": "2026-11-06T22:00:19.657563Z",
       "missing": [
+        {
+          "id": "longMaterialInSpoilers",
+          "reason": "Long sections not in spoilers",
+          "required": false
+        },
         {
           "id": "reusePermissions",
           "reason": "No reuse permissions stated",
@@ -1049,7 +1093,7 @@
       "author": "AcoreAI",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36198.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:36:46.302824Z",
+      "checkedAt": "2026-11-06T21:59:52.148733Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -1075,7 +1119,7 @@
       "author": "willthefunperson",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=31629.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:33:55.086168Z",
+      "checkedAt": "2026-11-06T21:56:39.629672Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -1106,11 +1150,16 @@
       "author": "LordKhorne",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=33697.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:22:57.159059Z",
+      "checkedAt": "2026-11-06T21:57:17.621964Z",
       "missing": [
         {
           "id": "downloadNearTop",
           "reason": "Download buried or inside a spoiler",
+          "required": false
+        },
+        {
+          "id": "requirementsByDownload",
+          "reason": "Requirements not stated near download",
           "required": false
         },
         {
@@ -1132,7 +1181,7 @@
       "author": "IceFire",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35588.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:33:14.944458Z",
+      "checkedAt": "2026-11-06T21:55:45.331610Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -1148,6 +1197,11 @@
           "id": "requirementsByDownload",
           "reason": "Requirements not stated near download",
           "required": false
+        },
+        {
+          "id": "reusePermissions",
+          "reason": "No reuse permissions stated",
+          "required": false
         }
       ],
       "missingRequired": 0
@@ -1158,7 +1212,7 @@
       "author": "HarryVanguard",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=34701.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:33:11.982900Z",
+      "checkedAt": "2026-11-06T21:55:45.173582Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -1184,7 +1238,7 @@
       "author": "HarryVanguard",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=34955.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:33:18.020889Z",
+      "checkedAt": "2026-11-06T21:55:45.206032Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -1210,7 +1264,7 @@
       "author": "Dark.Revenant",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=10982.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:32:18.727043Z",
+      "checkedAt": "2026-11-06T21:54:48.932635Z",
       "missing": [
         {
           "id": "saveCompatibility",
@@ -1236,7 +1290,7 @@
       "author": "caccus",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35762.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:36:58.489066Z",
+      "checkedAt": "2026-11-06T21:59:44.489431Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -1257,7 +1311,7 @@
       "author": "kemptastic",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36037.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:34:48.335959Z",
+      "checkedAt": "2026-11-06T21:57:35.723747Z",
       "missing": [
         {
           "id": "reusePermissions",
@@ -1273,11 +1327,16 @@
       "author": "kemptastic",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36142.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:32:34.144481Z",
+      "checkedAt": "2026-11-06T21:55:02.142907Z",
       "missing": [
         {
           "id": "shortDescriptionFirst",
           "reason": "No short description at the top",
+          "required": false
+        },
+        {
+          "id": "reusePermissions",
+          "reason": "No reuse permissions stated",
           "required": false
         }
       ],
@@ -1289,7 +1348,7 @@
       "author": "Blank_",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35803.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:35:54.691255Z",
+      "checkedAt": "2026-11-06T21:58:45.738943Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -1314,17 +1373,17 @@
       "title": "[0.98a] Hartley's Mods",
       "author": "SirHartley",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=34161.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:24:33.413036Z",
+      "status": "failed",
+      "checkedAt": "2026-11-06T21:53:07.245799Z",
       "missing": [
+        {
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
+          "required": true
+        },
         {
           "id": "sourceCode",
           "reason": "No source code",
-          "required": false
-        },
-        {
-          "id": "requirementsByDownload",
-          "reason": "Requirements not stated near download",
           "required": false
         },
         {
@@ -1333,7 +1392,7 @@
           "required": false
         }
       ],
-      "missingRequired": 0
+      "missingRequired": 1
     },
     {
       "topicId": 28377,
@@ -1341,7 +1400,7 @@
       "author": "NeoLemon",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=28377.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:32:15.859836Z",
+      "checkedAt": "2026-11-06T21:54:34.904368Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -1367,28 +1426,12 @@
       "missingRequired": 0
     },
     {
-      "topicId": 18011,
-      "title": "[0.98a] Industrial.Evolution - Campaign content expansion",
-      "author": "SirHartley",
-      "url": "https://fractalsoftworks.com/forum/index.php?topic=18011.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:24:06.073084Z",
-      "missing": [
-        {
-          "id": "reusePermissions",
-          "reason": "No reuse permissions stated",
-          "required": false
-        }
-      ],
-      "missingRequired": 0
-    },
-    {
       "topicId": 35978,
       "title": "[0.98a] Intel - Renewed v1.3.0",
       "author": "oddisz",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35978.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:33:38.179191Z",
+      "checkedAt": "2026-11-06T21:56:09.523607Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -1398,7 +1441,7 @@
       "author": "Jaydee8652",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=31076.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:23:54.178340Z",
+      "checkedAt": "2026-11-06T21:52:46.978608Z",
       "missing": [
         {
           "id": "reusePermissions",
@@ -1414,7 +1457,7 @@
       "author": "Jaydee8652",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36201.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:37:36.377931Z",
+      "checkedAt": "2026-11-06T21:59:57.477222Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -1435,28 +1478,12 @@
       "missingRequired": 0
     },
     {
-      "topicId": 36266,
-      "title": "[0.98a] Jonah's Colony Manager v2.40.1 (WIP)",
-      "author": "Mjolniar",
-      "url": "https://fractalsoftworks.com/forum/index.php?topic=36266.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:23:26.221731Z",
-      "missing": [
-        {
-          "id": "pictures",
-          "reason": "No pictures",
-          "required": false
-        }
-      ],
-      "missingRequired": 0
-    },
-    {
       "topicId": 35145,
       "title": "[0.98a-RC8] Kadur Remnant 3.2.4 support3 (maintained version)",
       "author": "Timid",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35145.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:37:44.671344Z",
+      "checkedAt": "2026-11-06T22:00:48.882907Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -1482,7 +1509,7 @@
       "author": "SturmOgre",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35752.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:34:45.468708Z",
+      "checkedAt": "2026-11-06T21:57:35.543245Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -1508,16 +1535,11 @@
       "author": "Mamick",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=31649.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:32:47.808162Z",
+      "checkedAt": "2026-11-06T21:55:14.737876Z",
       "missing": [
         {
           "id": "requirementsByDownload",
           "reason": "Requirements not stated near download",
-          "required": false
-        },
-        {
-          "id": "longMaterialInSpoilers",
-          "reason": "Long sections not in spoilers",
           "required": false
         },
         {
@@ -1534,7 +1556,7 @@
       "author": "SafariJohn",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=17379.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:32:59.788950Z",
+      "checkedAt": "2026-11-06T21:55:35.014720Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -1560,7 +1582,7 @@
       "author": "SeltsamerNordlander",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36197.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:36:37.910114Z",
+      "checkedAt": "2026-11-06T21:59:31.463397Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -1578,6 +1600,11 @@
           "required": false
         },
         {
+          "id": "longMaterialInSpoilers",
+          "reason": "Long sections not in spoilers",
+          "required": false
+        },
+        {
           "id": "reusePermissions",
           "reason": "No reuse permissions stated",
           "required": false
@@ -1590,9 +1617,14 @@
       "title": "[0.98a-rc8][WIP] Marines Mod",
       "author": "dro_429",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36238.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:23:03.913310Z",
+      "status": "failed",
+      "checkedAt": "2026-11-06T21:51:41.948645Z",
       "missing": [
+        {
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
+          "required": true
+        },
         {
           "id": "downloadNearTop",
           "reason": "Download buried or inside a spoiler",
@@ -1609,12 +1641,17 @@
           "required": false
         },
         {
+          "id": "warningsVisible",
+          "reason": "Important warnings hard to find",
+          "required": false
+        },
+        {
           "id": "reusePermissions",
           "reason": "No reuse permissions stated",
           "required": false
         }
       ],
-      "missingRequired": 0
+      "missingRequired": 1
     },
     {
       "topicId": 35977,
@@ -1622,7 +1659,7 @@
       "author": "GaiusCassius",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35977.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:37:02.482867Z",
+      "checkedAt": "2026-11-06T21:59:57.269371Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -1648,7 +1685,7 @@
       "author": "ERROR_CODE 509",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36061.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:33:52.937014Z",
+      "checkedAt": "2026-11-06T21:56:31.848230Z",
       "missing": [
         {
           "id": "saveCompatibility",
@@ -1669,7 +1706,7 @@
       "author": "Aelaris",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36093.0",
       "status": "failed",
-      "checkedAt": "2026-11-06T21:38:37.312540Z",
+      "checkedAt": "2026-11-06T22:01:52.064019Z",
       "missing": [
         {
           "id": "externalDownload",
@@ -1710,7 +1747,7 @@
       "author": "IceFire",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=31181.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:38:14.163598Z",
+      "checkedAt": "2026-11-06T22:01:18.783146Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -1736,11 +1773,16 @@
       "author": "oddisz",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36202.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:36:55.111116Z",
+      "checkedAt": "2026-11-06T21:59:57.269371Z",
       "missing": [
         {
           "id": "requirementsByDownload",
           "reason": "Requirements not stated near download",
+          "required": false
+        },
+        {
+          "id": "saveCompatibility",
+          "reason": "Save compatibility not stated",
           "required": false
         },
         {
@@ -1749,8 +1791,7 @@
           "required": false
         }
       ],
-      "missingRequired": 0,
-      "unanswered": 1
+      "missingRequired": 0
     },
     {
       "topicId": 36049,
@@ -1758,18 +1799,8 @@
       "author": "Zuttser",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36049.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:34:20.175859Z",
+      "checkedAt": "2026-11-06T21:57:06.460423Z",
       "missing": [
-        {
-          "id": "downloadNearTop",
-          "reason": "Download buried or inside a spoiler",
-          "required": false
-        },
-        {
-          "id": "requirementsByDownload",
-          "reason": "Requirements not stated near download",
-          "required": false
-        },
         {
           "id": "saveCompatibility",
           "reason": "Save compatibility not stated",
@@ -1789,7 +1820,7 @@
       "author": "PureTilt",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=18474.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:37:05.758151Z",
+      "checkedAt": "2026-11-06T22:00:09.168869Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -1815,8 +1846,13 @@
       "author": "blazingblazed",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36170.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:31:38.482914Z",
+      "checkedAt": "2026-11-06T21:54:01.928849Z",
       "missing": [
+        {
+          "id": "downloadNearTop",
+          "reason": "Download buried or inside a spoiler",
+          "required": false
+        },
         {
           "id": "requirementsByDownload",
           "reason": "Requirements not stated near download",
@@ -1841,7 +1877,7 @@
       "author": "Spectros",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35489.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:24:30.664551Z",
+      "checkedAt": "2026-11-06T21:52:27.104578Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -1862,7 +1898,7 @@
       "author": "Histidine",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=9175.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:24:33.412746Z",
+      "checkedAt": "2026-11-06T21:52:27.104578Z",
       "missing": [
         {
           "id": "shortDescriptionFirst",
@@ -1883,7 +1919,7 @@
       "author": "NikoTheGuyDude",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36195.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:36:26.437125Z",
+      "checkedAt": "2026-11-06T21:59:21.428471Z",
       "missing": [
         {
           "id": "downloadNearTop",
@@ -1914,7 +1950,7 @@
       "author": "IceFire",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=31976.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:24:53.892578Z",
+      "checkedAt": "2026-11-06T21:53:30.287131Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -1940,11 +1976,16 @@
       "author": "oddisz",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36175.0",
       "status": "failed",
-      "checkedAt": "2026-11-06T21:35:57.457295Z",
+      "checkedAt": "2026-11-06T21:58:45.758164Z",
       "missing": [
         {
           "id": "gameVersionInTitle",
           "reason": "No game version in title",
+          "required": true
+        },
+        {
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
           "required": true
         },
         {
@@ -1963,7 +2004,7 @@
           "required": false
         }
       ],
-      "missingRequired": 1
+      "missingRequired": 2
     },
     {
       "topicId": 36168,
@@ -1971,7 +2012,7 @@
       "author": "oddisz",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36168.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:32:25.997357Z",
+      "checkedAt": "2026-11-06T21:54:48.933639Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -1981,7 +2022,7 @@
       "author": "MiniRockytheOracle",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35995.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:33:43.413885Z",
+      "checkedAt": "2026-11-06T21:56:18.842535Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -2002,11 +2043,11 @@
       "author": "coolestofguys",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36183.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:36:09.950366Z",
+      "checkedAt": "2026-11-06T21:59:08.240862Z",
       "missing": [
         {
-          "id": "longMaterialInSpoilers",
-          "reason": "Long sections not in spoilers",
+          "id": "warningsVisible",
+          "reason": "Important warnings hard to find",
           "required": false
         },
         {
@@ -2023,7 +2064,7 @@
       "author": "Dazs",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=22882.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:38:39.377405Z",
+      "checkedAt": "2026-11-06T22:01:37.112638Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -2033,11 +2074,6 @@
         {
           "id": "requirementsByDownload",
           "reason": "Requirements not stated near download",
-          "required": false
-        },
-        {
-          "id": "warningsVisible",
-          "reason": "Important warnings hard to find",
           "required": false
         },
         {
@@ -2054,7 +2090,7 @@
       "author": "Mycophobia",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=29956.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:31:18.004501Z",
+      "checkedAt": "2026-11-06T21:53:46.978366Z",
       "missing": [
         {
           "id": "reusePermissions",
@@ -2070,7 +2106,7 @@
       "author": "Lukas04",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36191.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:24:49.081352Z",
+      "checkedAt": "2026-11-06T21:53:07.245799Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -2096,7 +2132,7 @@
       "author": "alp7292",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36233.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:33:04.808256Z",
+      "checkedAt": "2026-11-06T21:55:24.261913Z",
       "missing": [
         {
           "id": "downloadNearTop",
@@ -2132,7 +2168,7 @@
       "author": "TrevThor",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36059.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:33:49.864748Z",
+      "checkedAt": "2026-11-06T21:56:31.856231Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -2163,7 +2199,7 @@
       "author": "Contractor",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36038.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:31:18.003849Z",
+      "checkedAt": "2026-11-06T21:53:46.978366Z",
       "missing": [
         {
           "id": "warningsVisible",
@@ -2179,7 +2215,7 @@
       "author": "willthefunperson",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36108.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:34:33.181420Z",
+      "checkedAt": "2026-11-06T21:57:24.585396Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -2204,16 +2240,21 @@
       "title": "[0.98a] Piracy Reworked v0.2.0",
       "author": "pogoman",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35956.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:33:47.304501Z",
+      "status": "failed",
+      "checkedAt": "2026-11-06T21:56:29.288269Z",
       "missing": [
+        {
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
+          "required": true
+        },
         {
           "id": "reusePermissions",
           "reason": "No reuse permissions stated",
           "required": false
         }
       ],
-      "missingRequired": 0
+      "missingRequired": 1
     },
     {
       "topicId": 36035,
@@ -2221,7 +2262,7 @@
       "author": "Seldion",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36035.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:24:11.501748Z",
+      "checkedAt": "2026-11-06T21:51:58.534372Z",
       "missing": [
         {
           "id": "reusePermissions",
@@ -2237,7 +2278,7 @@
       "author": "LittlePleb",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36237.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:31:36.025885Z",
+      "checkedAt": "2026-11-06T21:54:12.082477Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -2258,7 +2299,7 @@
       "author": "Flonxen",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36080.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:33:59.387932Z",
+      "checkedAt": "2026-11-06T21:56:39.938294Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -2269,6 +2310,11 @@
           "id": "downloadNearTop",
           "reason": "Download buried or inside a spoiler",
           "required": false
+        },
+        {
+          "id": "requirementsByDownload",
+          "reason": "Requirements not stated near download",
+          "required": false
         }
       ],
       "missingRequired": 0
@@ -2278,26 +2324,37 @@
       "title": "[0.98a] Political Map - Sector Map Layers - KMU 0.2.1",
       "author": "Klark Morrigan",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36029.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:35:14.447584Z",
+      "status": "failed",
+      "checkedAt": "2026-11-06T21:58:06.467709Z",
       "missing": [
+        {
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
+          "required": true
+        },
         {
           "id": "reusePermissions",
           "reason": "No reuse permissions stated",
           "required": false
         }
       ],
-      "missingRequired": 0
+      "missingRequired": 1
     },
     {
       "topicId": 36111,
       "title": "[0.98a] Portrait Changer 1.0.7b - Updated English Version",
       "author": "Mirarara",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36111.0",
-      "status": "follows",
-      "checkedAt": "2026-11-06T21:35:27.971191Z",
-      "missing": [],
-      "missingRequired": 0
+      "status": "failed",
+      "checkedAt": "2026-11-06T21:58:17.528050Z",
+      "missing": [
+        {
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
+          "required": true
+        }
+      ],
+      "missingRequired": 1
     },
     {
       "topicId": 36231,
@@ -2305,11 +2362,16 @@
       "author": "SeltsamerNordlander",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36231.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:32:02.137938Z",
+      "checkedAt": "2026-11-06T21:54:12.169369Z",
       "missing": [
         {
           "id": "sourceCode",
           "reason": "No source code",
+          "required": false
+        },
+        {
+          "id": "warningsVisible",
+          "reason": "Important warnings hard to find",
           "required": false
         },
         {
@@ -2326,7 +2388,7 @@
       "author": "InsertSampleText",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36078.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:34:30.721930Z",
+      "checkedAt": "2026-11-06T21:57:17.622965Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -2352,7 +2414,7 @@
       "author": "SirHartley",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36236.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:32:34.144779Z",
+      "checkedAt": "2026-11-06T21:55:02.142907Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -2362,16 +2424,11 @@
       "author": "King Alfonzo",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=13236.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:38:34.950641Z",
+      "checkedAt": "2026-11-06T22:01:51.961901Z",
       "missing": [
         {
           "id": "sourceCode",
           "reason": "No source code",
-          "required": false
-        },
-        {
-          "id": "downloadNearTop",
-          "reason": "Download buried or inside a spoiler",
           "required": false
         },
         {
@@ -2388,47 +2445,11 @@
       "author": "Purple Nebula",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36240.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:32:04.903088Z",
+      "checkedAt": "2026-11-06T21:54:23.536244Z",
       "missing": [
         {
-          "id": "reusePermissions",
-          "reason": "No reuse permissions stated",
-          "required": false
-        }
-      ],
-      "missingRequired": 0
-    },
-    {
-      "topicId": 34636,
-      "title": "[0.98] Red Horizon Pact update #2",
-      "author": "LordKhorne",
-      "url": "https://fractalsoftworks.com/forum/index.php?topic=34636.0",
-      "status": "failed",
-      "checkedAt": "2026-11-06T21:22:54.493109Z",
-      "missing": [
-        {
-          "id": "aiDisclaimer",
-          "reason": "AI use not explained",
-          "required": true
-        },
-        {
-          "id": "downloadNearTop",
-          "reason": "Download buried or inside a spoiler",
-          "required": false
-        },
-        {
-          "id": "requirementsByDownload",
-          "reason": "Requirements not stated near download",
-          "required": false
-        },
-        {
-          "id": "saveCompatibility",
-          "reason": "Save compatibility not stated",
-          "required": false
-        },
-        {
-          "id": "shortDescriptionFirst",
-          "reason": "No short description at the top",
+          "id": "warningsVisible",
+          "reason": "Important warnings hard to find",
           "required": false
         },
         {
@@ -2437,23 +2458,28 @@
           "required": false
         }
       ],
-      "missingRequired": 1
+      "missingRequired": 0
     },
     {
       "topicId": 36126,
       "title": "[0.98a] Refit Filters (Weapon Class) 3.2.8",
       "author": "Sztarek",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36126.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:35:07.905980Z",
+      "status": "failed",
+      "checkedAt": "2026-11-06T21:57:46.091731Z",
       "missing": [
+        {
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
+          "required": true
+        },
         {
           "id": "requirementsByDownload",
           "reason": "Requirements not stated near download",
           "required": false
         }
       ],
-      "missingRequired": 0
+      "missingRequired": 1
     },
     {
       "topicId": 35590,
@@ -2461,11 +2487,16 @@
       "author": "happycrow",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35590.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:33:40.649218Z",
+      "checkedAt": "2026-11-06T21:56:21.609626Z",
       "missing": [
         {
           "id": "sourceCode",
           "reason": "No source code",
+          "required": false
+        },
+        {
+          "id": "requirementsByDownload",
+          "reason": "Requirements not stated near download",
           "required": false
         }
       ],
@@ -2477,7 +2508,7 @@
       "author": "oddisz",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35627.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:37:49.485256Z",
+      "checkedAt": "2026-11-06T22:00:48.778465Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -2487,7 +2518,7 @@
       "author": "Eld",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36117.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:34:23.043428Z",
+      "checkedAt": "2026-11-06T21:57:01.647574Z",
       "missing": [
         {
           "id": "reusePermissions",
@@ -2502,13 +2533,13 @@
       "title": "[0.98a]Sagitarius Concordat by Crusader1603",
       "author": "Crusader1603",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35559.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:37:10.981921Z",
+      "status": "failed",
+      "checkedAt": "2026-11-06T22:00:09.148175Z",
       "missing": [
         {
-          "id": "downloadNearTop",
-          "reason": "Download buried or inside a spoiler",
-          "required": false
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
+          "required": true
         },
         {
           "id": "requirementsByDownload",
@@ -2521,7 +2552,7 @@
           "required": false
         }
       ],
-      "missingRequired": 0
+      "missingRequired": 1
     },
     {
       "topicId": 36088,
@@ -2529,7 +2560,7 @@
       "author": "WolframSegler",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36088.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:34:52.841814Z",
+      "checkedAt": "2026-11-06T21:57:30.012714Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -2550,7 +2581,7 @@
       "author": "caccus",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36134.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:31:59.475444Z",
+      "checkedAt": "2026-11-06T21:54:23.536244Z",
       "missing": [
         {
           "id": "longMaterialInSpoilers",
@@ -2566,7 +2597,7 @@
       "author": "Mr_fun1_1",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36114.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:34:40.350502Z",
+      "checkedAt": "2026-11-06T21:57:06.357368Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -2576,7 +2607,7 @@
       "author": "Icaros",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36262.0",
       "status": "failed",
-      "checkedAt": "2026-11-06T21:22:36.673989Z",
+      "checkedAt": "2026-11-06T21:52:10.313035Z",
       "missing": [
         {
           "id": "externalDownload",
@@ -2602,7 +2633,7 @@
       "author": "BertiBert",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36089.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:34:05.328197Z",
+      "checkedAt": "2026-11-06T21:56:50.180216Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -2628,7 +2659,7 @@
       "author": "Ubik-",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36176.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:36:05.341235Z",
+      "checkedAt": "2026-11-06T21:58:57.875365Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -2638,7 +2669,7 @@
       "author": "oddisz",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35983.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:35:41.483102Z",
+      "checkedAt": "2026-11-06T21:58:28.178771Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -2648,7 +2679,7 @@
       "author": "blazingblazed",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36147.0",
       "status": "failed",
-      "checkedAt": "2026-11-06T21:35:20.711905Z",
+      "checkedAt": "2026-11-06T21:57:46.294906Z",
       "missing": [
         {
           "id": "externalDownload",
@@ -2683,9 +2714,14 @@
       "title": "Star Trek Across Dimensions [0.98]",
       "author": "superjosh250",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=16224.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:22:39.542557Z",
+      "status": "failed",
+      "checkedAt": "2026-11-06T21:52:10.207042Z",
       "missing": [
+        {
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
+          "required": true
+        },
         {
           "id": "saveCompatibility",
           "reason": "Save compatibility not stated",
@@ -2697,7 +2733,7 @@
           "required": false
         }
       ],
-      "missingRequired": 0
+      "missingRequired": 1
     },
     {
       "topicId": 36148,
@@ -2705,7 +2741,7 @@
       "author": "AyoKeito",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36148.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:35:05.129132Z",
+      "checkedAt": "2026-11-06T21:57:46.090723Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -2736,7 +2772,7 @@
       "author": "oddisz",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35856.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:33:24.693008Z",
+      "checkedAt": "2026-11-06T21:55:59.180370Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -2746,7 +2782,7 @@
       "author": "dynafire",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36140.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:34:42.770997Z",
+      "checkedAt": "2026-11-06T21:57:35.543245Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -2767,7 +2803,7 @@
       "author": "oddisz",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35850.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:33:27.847589Z",
+      "checkedAt": "2026-11-06T21:56:06.963640Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -2777,7 +2813,7 @@
       "author": "oddisz",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35952.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:33:30.100478Z",
+      "checkedAt": "2026-11-06T21:55:55.904365Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -2787,7 +2823,7 @@
       "author": "IceFire",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=31978.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:38:10.477657Z",
+      "checkedAt": "2026-11-06T22:01:03.692649Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -2797,6 +2833,11 @@
         {
           "id": "downloadNearTop",
           "reason": "Download buried or inside a spoiler",
+          "required": false
+        },
+        {
+          "id": "requirementsByDownload",
+          "reason": "Requirements not stated near download",
           "required": false
         },
         {
@@ -2823,7 +2864,7 @@
       "author": "SirHartley",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=24378.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:31:36.026122Z",
+      "checkedAt": "2026-11-06T21:53:46.876518Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -2833,7 +2874,7 @@
       "author": "Audax",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=25418.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:37:36.377285Z",
+      "checkedAt": "2026-11-06T22:00:30.652848Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -2854,7 +2895,7 @@
       "author": "IceFire",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=31977.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:31:31.416317Z",
+      "checkedAt": "2026-11-06T21:54:02.031537Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -2862,13 +2903,18 @@
           "required": false
         },
         {
-          "id": "downloadNearTop",
-          "reason": "Download buried or inside a spoiler",
+          "id": "requirementsByDownload",
+          "reason": "Requirements not stated near download",
           "required": false
         },
         {
-          "id": "requirementsByDownload",
-          "reason": "Requirements not stated near download",
+          "id": "saveCompatibility",
+          "reason": "Save compatibility not stated",
+          "required": false
+        },
+        {
+          "id": "reusePermissions",
+          "reason": "No reuse permissions stated",
           "required": false
         }
       ],
@@ -2880,7 +2926,7 @@
       "author": "Mirarara",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36112.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:35:18.032464Z",
+      "checkedAt": "2026-11-06T21:58:06.570586Z",
       "missing": [
         {
           "id": "pictures",
@@ -2895,16 +2941,21 @@
       "title": "[0.98a] Tactical Combat Overhaul v0.31.2",
       "author": "Reaper0008",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36171.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:36:30.737179Z",
+      "status": "failed",
+      "checkedAt": "2026-11-06T21:59:21.428471Z",
       "missing": [
+        {
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
+          "required": true
+        },
         {
           "id": "reusePermissions",
           "reason": "No reuse permissions stated",
           "required": false
         }
       ],
-      "missingRequired": 0
+      "missingRequired": 1
     },
     {
       "topicId": 29441,
@@ -2912,7 +2963,7 @@
       "author": "Audax",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=29441.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:38:27.988018Z",
+      "checkedAt": "2026-11-06T22:01:37.112638Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -2933,37 +2984,11 @@
       "author": "pogoman",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35955.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:23:03.913691Z",
+      "checkedAt": "2026-11-06T21:51:41.948645Z",
       "missing": [
         {
           "id": "reusePermissions",
           "reason": "No reuse permissions stated",
-          "required": false
-        }
-      ],
-      "missingRequired": 0
-    },
-    {
-      "topicId": 28121,
-      "title": "[0.98a]The Domain Reformed update #24",
-      "author": "LordKhorne",
-      "url": "https://fractalsoftworks.com/forum/index.php?topic=28121.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:24:03.307210Z",
-      "missing": [
-        {
-          "id": "downloadNearTop",
-          "reason": "Download buried or inside a spoiler",
-          "required": false
-        },
-        {
-          "id": "requirementsByDownload",
-          "reason": "Requirements not stated near download",
-          "required": false
-        },
-        {
-          "id": "saveCompatibility",
-          "reason": "Save compatibility not stated",
           "required": false
         }
       ],
@@ -2975,7 +3000,7 @@
       "author": "Selkie",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=29124.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:37:18.866936Z",
+      "checkedAt": "2026-11-06T22:00:19.657563Z",
       "missing": [
         {
           "id": "shortDescriptionFirst",
@@ -2996,7 +3021,7 @@
       "author": "Akarthus",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=33081.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:38:21.023763Z",
+      "checkedAt": "2026-11-06T22:01:18.783146Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -3022,7 +3047,7 @@
       "author": "Aktriaz000",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=33800.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:37:56.561758Z",
+      "checkedAt": "2026-11-06T22:00:48.778465Z",
       "missing": [
         {
           "id": "sourceCode",
@@ -3043,7 +3068,7 @@
       "author": "ThunderCrims",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=33690.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:38:24.189222Z",
+      "checkedAt": "2026-11-06T22:01:18.783146Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -3069,7 +3094,7 @@
       "author": "oddisz",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36178.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:36:12.526084Z",
+      "checkedAt": "2026-11-06T21:59:08.320778Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -3078,9 +3103,14 @@
       "title": "[0.98a-RC8] Tradução PT-BR do Starsector (Português do Brasil).",
       "author": "Minato",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36208.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:32:45.555685Z",
+      "status": "failed",
+      "checkedAt": "2026-11-06T21:55:24.364699Z",
       "missing": [
+        {
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
+          "required": true
+        },
         {
           "id": "requirementsByDownload",
           "reason": "Requirements not stated near download",
@@ -3092,12 +3122,17 @@
           "required": false
         },
         {
+          "id": "warningsVisible",
+          "reason": "Important warnings hard to find",
+          "required": false
+        },
+        {
           "id": "reusePermissions",
           "reason": "No reuse permissions stated",
           "required": false
         }
       ],
-      "missingRequired": 0
+      "missingRequired": 1
     },
     {
       "topicId": 21547,
@@ -3105,7 +3140,7 @@
       "author": "LizardToby",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=21547.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:35:51.006275Z",
+      "checkedAt": "2026-11-06T21:58:45.689448Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -3126,7 +3161,7 @@
       "author": "Killer of Fate",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=32236.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:37:07.909817Z",
+      "checkedAt": "2026-11-06T22:00:09.200278Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -3156,10 +3191,21 @@
       "title": "[0.98a-RC8] Universal Missile Regeneration 1.0.1",
       "author": "kemptastic",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36118.0",
-      "status": "follows",
-      "checkedAt": "2026-11-06T21:34:26.728294Z",
-      "missing": [],
-      "missingRequired": 0
+      "status": "failed",
+      "checkedAt": "2026-11-06T21:57:14.550889Z",
+      "missing": [
+        {
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
+          "required": true
+        },
+        {
+          "id": "warningsVisible",
+          "reason": "Important warnings hard to find",
+          "required": false
+        }
+      ],
+      "missingRequired": 1
     },
     {
       "topicId": 34917,
@@ -3167,7 +3213,7 @@
       "author": "Vexlia Artemiss",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=34917.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:32:40.128083Z",
+      "checkedAt": "2026-11-06T21:55:02.162058Z",
       "missing": [
         {
           "id": "reusePermissions",
@@ -3183,7 +3229,7 @@
       "author": "DeCell",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=35788.0",
       "status": "failed",
-      "checkedAt": "2026-11-06T21:32:10.023424Z",
+      "checkedAt": "2026-11-06T21:54:34.903367Z",
       "missing": [
         {
           "id": "gameVersionInTitle",
@@ -3209,7 +3255,7 @@
       "author": "Apricot",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36188.0",
       "status": "follows",
-      "checkedAt": "2026-11-06T21:36:40.977970Z",
+      "checkedAt": "2026-11-06T21:59:31.464397Z",
       "missing": [],
       "missingRequired": 0
     },
@@ -3218,16 +3264,21 @@
       "title": "[0.98a] Wide Horizons - Expanding the Universe",
       "author": "Taiwendo",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=33348.0",
-      "status": "imperfect",
-      "checkedAt": "2026-11-06T21:23:54.178591Z",
+      "status": "failed",
+      "checkedAt": "2026-11-06T22:01:37.113637Z",
       "missing": [
+        {
+          "id": "aiDisclaimer",
+          "reason": "Incomplete AI use disclaimer",
+          "required": true
+        },
         {
           "id": "reusePermissions",
           "reason": "No reuse permissions stated",
           "required": false
         }
       ],
-      "missingRequired": 0
+      "missingRequired": 1
     },
     {
       "topicId": 36153,
@@ -3235,7 +3286,7 @@
       "author": "neoysod",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36153.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:36:20.596342Z",
+      "checkedAt": "2026-11-06T21:59:21.325549Z",
       "missing": [
         {
           "id": "requirementsByDownload",
@@ -3266,7 +3317,7 @@
       "author": "Apricot",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36177.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:36:51.319571Z",
+      "checkedAt": "2026-11-06T21:59:44.503117Z",
       "missing": [
         {
           "id": "pictures",
@@ -3287,7 +3338,7 @@
       "author": "NikoTheGuyDude",
       "url": "https://fractalsoftworks.com/forum/index.php?topic=36193.0",
       "status": "imperfect",
-      "checkedAt": "2026-11-06T21:36:23.569653Z",
+      "checkedAt": "2026-11-06T21:59:08.320778Z",
       "missing": [
         {
           "id": "downloadNearTop",
