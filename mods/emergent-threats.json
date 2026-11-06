@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T19:10:03.903650Z",
+  "generatedAt": "2026-11-06T07:08:25.008941Z",
   "listing": {
     "id": "emergent-threats",
     "name": "Emergent Threats",
@@ -19,10 +19,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.4.2",
     "imageUrl": "https://i.imgur.com/diqBZlS.jpg",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355071745366822950/1355071745811288165/diqBZlS.webp?ex=6aee21a8&is=6aecd028&hm=2d73895f782f53123cb3ce11fd7f95f1c63627a3196414224c8fd3604ff11a1f&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355071745366822950/1355071745811288165/diqBZlS.webp?ex=6aeeca68&is=6aed78e8&hm=49d306e51e27aaacbc63bd74cd91a09eaad4082abe81a8c4ca42fd880bafa2da&",
     "summary": "This Remnant focused mod seeks to make the faction a true challenge for the late game, while offering the player a chance to try out unique technologies on captured and modified drone ships.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds new Remnant challenges, unique drone ships, and content for multiple factions including new missions and hullmods.",
+    "aiSummary": "Adds challenging late-game Remnant content, new faction ships and weapons, and unique missions with special rewards.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/vice-grip/starsector-mod-emergent-threats/releases/download/v1.4.2/EmergentThreats_v1.4.2.zip",
@@ -49,20 +49,36 @@
         "how": "generated"
       }
     ],
-    "lastReleaseDate": "2026-10-21T00:00:00.000Z",
+    "lastReleaseDate": "2026-11-06T00:00:00.000Z",
     "addedOn": "2023-06-14",
-    "threadLastPostOn": "2026-11-04",
     "editedOn": "2026-11-03",
-    "needs": []
+    "needs": [
+      {
+        "name": "MagicLib",
+        "id": "magiclib-2"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      },
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "PatchLib",
+        "id": "patchlib"
+      }
+    ]
   },
-  "description": "Emergent Threats/IX Revival: Download Version 1.4.2\nGithub link with patch notes.\n\nThis Remnant focused mod seeks to make the faction a true challenge for the late game, while offering the player a chance to try out unique technologies on captured and modified drone ships. The mod also adds new content for the Sindrian Diktat, Tri-Tachyon, Persean League, Independents, and new missions with unique rewards to challenge the player.\n\nFights against the Remnant may become extremely hard, especially if you do not have many other Remnant related mods installed. Pick your battles carefully. If you find the battles too difficult, you can make adjustments in LunaLib settings. Cross-mod content for Second In Command, Hazard Mining Incorporated, and Random Assortment of Things can also be toggled there.\n\nEmergent Threats: IX Revival\nThe mod .zip file comes bundled with the 9th Domain Battlegroup standalone mod. This antagonist faction was first created in the now abandoned Arsenal Expansion mod by Inventor Raccoon, and has been revived with permission. Both ET mods can be used independently, but will interact with each other with extra content. Note that if you are running a bootleg version of Arsenal Expansion, you should disable the original's battlegroup in its mod settings to avoid two versions of the faction spawning at the same time.\n\nChangelog\n\nSpoiler\nv1.4.2 should be compatible with v1.1+\n\nEmergent Threats\nMisc\n-Fixed a bug where attacking the Diamond Nexus fleet in A Thousand Cuts while never even starting a conversation with it will cause the enemy fleet to not drop the Cyanine Core\n-The mission Thousand Cuts now offers the greatest amount of loot through fighting (Salvageable Nephos destroyers and Mokosh, Nemesis Doctrine biochip, Nephos blueprint, Remnant rare fighters blueprint, Temporal Desynchronizer, Cyanine Core and shards) while each of the peaceful paths offer only a subset of the loot (ships and core, or biochip and blueprint, plus Temporal Desynchronizer)\n-The Temporal Desynchronizer item will now be detached when handed out to players so they won't miss it if they forego salvaging the Mokosh, and it will always be received on each mission outcome aside from leaving and asking for nothing\n\nHullmods\n-Mokosh hullmods Stabilized Temporal Shell and Temporal Desynchronizer text slightly updated for better clarity\n\nIX Revival]\nMisc\n-Fixed a crash issue with running IX Revival without Nexerelin\n\nTranslator notes are on GitHub\n\nv1.4.1 should be compatible with v1.1+\n\nEmergent Threats\nMisc\n-Minor refactoring for ease of translation\n-New AI administrator skill requires PatchLib to work, so please install with the mod update\n\nColonies\n-The Cyanine Immutable AI core obtained from the mission A Thousand Cuts can now be used as a colony administrator, and possesses a special skill that makes it not receive Hegemony or Pather scrutiny\n\nIndustry\n-Added a version of the Surveillance Center from IX Revival to Emergent Threats that is only buildable when IX Revival is not enabled, does not come with Panopticon mechanics but will accept Cyanine Core/Shard in additional to standard cores (+2 stability, extra +2 alpha/Cyanine core, +1 beta/Cyanine shard)\n\nShips\n-Equalizer (EX) forward point defense turret arcs updated to cover forward arc\n\nWeapons\n-Hydromagnetic Cannon updated on-hit graphics and text\n-Warp Drone Assembler/Constructor damage lowered from 800 Kinetic + 400 Energy to 600 Kinetic + 200 Energy\n\nHullmods\n-Updated some sprite swapping hullmods to reduce graphics load\n\nIX Revival\nMisc\n-Minor refactoring for ease of translation\n-Added new LunaLib graphics options for swapping ship sprites, located in the Visuals tab\n-(Nex) reverted vassal mechanics between Trinity Worlds and IX Battlegroup to a standard alliance, this fix only applies to new games, will be updated again after Nexerelin patches the current bug when an alliance vassal's destruction crashes the game\n-Fixed several bugs related to the panopticon core/node structure logic after a foreign conquest, thanks to Bass for the coding help\n-Added a compatibility fix so update is now properly backwards compatible with v1.1+ saves\n\nColonies\n-(ET required) The Panopticon Instance, obtained by starting the game as a Colony Administrator, trading a PK to the IX Battlegroup for normalized relations, or stealing the ones already present on IX/TW worlds, can now also be used as a colony administrator, and possesses two special skills\n-A Panopticon Instance colony administrator in charge of a colony with a Military Base or High Command grants uses of the Hunter Killer Drone hullmod, allowing you to deploy 1 or 2 Candor (IX) frigates in your fleet, each with enhanced performance and without any deployment cost\n\nIndustry\n-Surveillance center updated, Alpha cores/Cyanine Core (from ET) can now also be used for +2 extra stability, or Beta cores/Cyanine Shard for +1 stability\n\nShips\n-Added mod setting toggles (start menu/F3) and in-game LunaLib ship fitting drop down menu options for changing the appearances of IX Battlegroup ships to mimic default high-tech colors, sparing everyone's eyes from the horrors of the weed fleet, this is a separate system than magicLib ship skins since certain edge cases are easier handled by custom code (a similar toggle for Trinity Worlds ships is planned for the future)\n-Equalizer (IX/TW) forward point defense turret arcs updated to cover forward arc\n-Radiant (HG) and Tigershark (HG) bounty ships receive improved performance, see hullmod Panopticon Interface (Primary) notes\n\nWeapons\n-ER Heavy Lacerator fixed a bug where this built-in only Trinity Worlds weapon would be available for purchase and construction\n-Morningstar/Lightbringer CIWS firing sound made quieter, Brightburn still has slightly louder firing sound\n-Spearwall firing sound made quieter and Stormwall firing sound slightly lower pitch to make the two slightly less jarring when paired together\n\nHullmods\n-The Panopticon Interface (Primary) on bounty ships from the mission A Theory of Mind will now also function as either a Panoptic Interface (Command) for most AI cores, temporarily granting them the Sword of the Fleet skill, or as a Panoptic Interface (Tactical) when a Panopticon Core/Instance with SotF is present, further enhancing performance in the same manner as a human officer with the skill\n-Hunter Killer Drone hullmod, using a Panopticon Instance administrator at a colony with a Military Base or High Command allows player to convert 1-2 Candor (IX) frigates equipped with Panopticon Interface (Command) into hunter-killer drones\n\nTranslator notes are on GitHub\n\nIX Battlegroup Preview\n\nSpoiler\n\nRemnant Ship Preview\n\nSpoiler\n\nLampetia Drone Mothership\nFast moving battlecarrier derived from the militarized Odyssey (TT)\n\nIncandescent Drone Battleship\nAggressive battleship armed with dual Hydromagnetic Cannons that degrade enemy ship performance\n\nResplendent Command Droneship\nHeavy carrier capable of mass deploying a swarm of drones, or enhancing a smaller number of bombers\n\nJubilant Missile Droneship\nA light missile cruiser that packs a heavy opening punch\n\nEffulgent Droneship\nA missile variant of the Fulgent for supporting Remnant fleets at range\n\nCandor (EMP) Gunship\nA deadly frigate that can fire its EMP emitter and other weapons at the same time\n\nHelia Strategic Bomber\nReaper torpedo bomber, with the firepower of the Cobra but twice the numbers\n\nSundog Defender\nMobile artillery that stays with the mothership while also providing point defense\n\nBolide Hunter-Killer\nA new threat encountered at Nexus stations.\n\nFaction Ship Preview\n\nSpoiler\nExperimental Hulls\n\nPrototype High Tech designs recovered by Tri-Tachyon, with rarely seen experimental ship systems.\n\nOdyssey (TT) Battlecarrier\nFast and versatile carrier based on the Odyssey and perfected by Tri-Tachyon\n\nAquilon Battlecruiser\nVariable munitions battlecruiser with a ship system suited to every situation\n\nGlycon Missile Cruiser\nA high-tech cruiser with staying power that uses small missiles to devastating effect\n\nMaquech Escort Carrier\nA Buffalo carrier conversion for those who can't afford better\n\nCandor Gunship\nA nimble skirmisher with built-in light ion cannons\n\nHellfire Colossus Battlecruiser\nIf it works but it gets you killed, your pirate friends will be very glad it works\n\nBanteng Long-haul Freighter\nA versatile long range freighter designed to haul both fuel and cargo at the same time\n\nProteus Carrier\nDespite the carrier's paint job, the League has turned a lemon into lemonade\n\nExhortation Battlecarrier\nOf course the fleet carrier for the Diktat would be fearsome and glorious!\n\nUnifier Flight Deck Cruiser\nA carrier-cruiser hybrid that went into production due to a word from the Supreme Executor\n\nPreceptor Escort Carrier\nA converted freighter since relegated to the Diktat Navy\n\nKite (LG) Gunship\nThe humble shuttle converted into a carrier based gunship\n\nEstoc Bomber\nA DEM torpedo with a biological guidance system\n\nSpatha Heavy Fighter\nThe Diktat's latest standard heavy fighter, capable yet extremely overbuilt\n\nGladius (LG) Heavy Fighter\nAn experimental fighter reserved for the Lion's Guard\n\nMission Bounties\n\nSpoiler\n\nResplendent (EX) Command Carrier\nA relic of the last war.\n\nMutilator Phase Destroyer\nA harbinger of the next war.\n\nMimesis Modified Superfreighter\nAn insatiable avatar of greed.\n\nPraxis Modified Cruiser\nA deadly skirmisher.\n\nInvictus (LG) Dreadnought\nA reborn titan controlled by a madman.\n\nOnslaught (LG) Battleship\nA sentimental relic.\n\nWeapon Preview\n\nSpoiler\n\nDeadeye Plasma Seeker\nA heavy energy weapon that can track its target.\n\nAtropos MIRV\nA long range strike weapon with plentiful ammo.\n\nX-Ray Pulse Laser\nExtended range pulse laser, a reliable workhorse among large energy weapons.\n\nKinetic Blaster (modded)\nErsatz [SUPER ALABASTER] pulse weapon with high anti-shield burst damage but extreme weakness against armor.\n\nSiege Burst Laser\nA Diktat (re)invention, bulky and power hungry, but effective against both shields and armor.\n\nTactical Burst Laser\nA smaller Siege Burst Laser that works on a similar principle.\n\nIon Streamer\nAn ultralight EMP beam weapon.\n\nStinger Catapult\nA point defense mine launcher.\n\nHullmod Preview\n\nSpoiler\n\nAdaptive Subsystems\nUnique one-per-ship Remnant hullmods that enhance ship performance, often in unusual ways.\nThey are dynamically added to all Remnant ships encountered by the player, even those from other mods.\n\nAlso includes new Emergent Technologies hullmods that will modify your ships in unique and interesting ways.\n\nMany more existing variants of Remnant ships have been refit, making them much more challenging in fleet battles. Revisions have also been made to Sindrian Diktat and Tri-Tachyon doctrine, making Lion's Guard ships more commonplace and available on the market, and Tri-Tachyon carriers more prevalent.\n\nIn addition, face off against unique enemies in new missions picked up from the unsanctioned bounty board, each with unique rewards (available at level 8+, aside from Faith and Fury and Project Mayfly which require level 12+):\n\nTo Hunt a White Whale: Face off against a pirate queen for a chance to gain a set of unique blueprints.\nHigh and Mighty: Crash a black market arms deal between a smuggler and the Diktat Navy.\nShattered Fortress: Preserve the peace by striking against a Lion's Guard secret weapon.\nGaining Vantage: Track down a mysterious ghost ship and learn its secrets.\nA Diamond in the Dark: Begin the hunt for the dark mover at the center of the enemies you have faced.\nFaith and Fury: Intercept a mixed Pirate and Pather fleet led by a charismatic warlord who has found religion.\nProject Mayfly (requires failing Faith and Fury): Put a halt to a dangerous secret project in the Persean League.\nCleaning up a Mess (requires HMI): Chase down rumors of a gate activation and face off against an unusual enemy.\nA Theory of Mind (requires IX Revival): Investigate a strange meeting between numerous AI drones.\n\nOther Features and Changes\n\nA new threat encountered in the Circumfix system.\nSwap the built-in weapons on numerous Onslaught variants (formerly Onslaught Radical Rearming).\nAdds Adaptive Subsystem hullmod support for various mods with Remnant content.\n(IX Revival) two new factions, the IX Battlegroup and their allies the Trinity Worlds with their own ships and weapons.\n(Second In Command) Two new aptitudes, Andradanism for the Sindrian Diktat and Synthesis for the IX Battlegroup.\n(Nexerelin) New Large Carrier game starts for the Proteus and Exhortation.\nNew hullmods for Hazard Mining Incorporated, Random Assortment of Things, Underworld.\nDisables Expanded Deck Crew, Rescue Shuttle on automated ships.\nChanges to the performance of Lux and Flash fighter drones (can be undone).\nNew sound for the Autopulse Laser (can be undone).\n\nFuture Plans\n\nAdd new content for the Diamond Nexus, allowing players to fight spawned Remnant fleets while still supporting Midnight Dissonant at Prism.\n\nArt/Music Credit\n\nSpoiler\nturkler: Odyssey (TT)/Odyssey (IX)/Lampetia, Invictus (LG), Onslaught (LG)\nInventor Raccoon: Flourish and original Arsenal Expansion IX Battlegroup content\nHELMUT: Estoc, Spatha, Sundog, Bolide, Glycon, Maquech, Onslaught (LG), Incandescent, Hydromagnetic Cannon, X-Ray Pulse Laser, LR Burst Laser, Siege Burst Laser, Deadeye Plasma Seeker, Ion Streamer, Electrostatic Projector, Lightbringer CIWS, Twin Tactical Laser, Soliton Burst Emitter, Antecedent Device, Vampyr DEM\nSnrasha, Tartiflette, tenoki: Resplendent\nTartiflette: Starquake/Starquake (TW)/Ultimatum (IX), Stonefish/Stonefish (TW)\nEnderHero00: Mutilator\nBigBeans: Praxis\nMr.Crimeguru: Banteng, Casimir (IX), Hetman (IX), Maxim (IX)\nNeoLemon, Procrasadini: Bellicose (EX), Hellfire Colossus, Thunderbox\nCatfish: Thunderbox\nshoggoth: Mandrake (IX/EX/TW)\ntesser: Antimatter Stabilizer, Deluge Seeking Repeater, Industrial Nano-replicator, Signal Masker\nPasswalker, theDragn: Iconoclast/Iris (IX/EX), Flamebreaker (IX/EX), Tigershark (IX/EX), Equalizer (IX/EX)\nBananana: Aquilon/Aquilon (IX), Aggressor/Aggressor (IX/T), Torchbearer/Torchbearer (E)\njiu: Proteus\nkirbo: Firebird (A/TW)\nKing Alfonso: Ionos (TW)/Conflux (TW)\nMiniDeth3: Aurora (TW)\nNeon: Chevalier, Hemlock\nnoof: Firetail (T)\nPogre: Subjugator (T)\nmae1strom: Mokosh (IX) reactor\nTankz745: Voltaic Multipulser\n\nAmber: IX encounter music\nFesliyan Studios: IX colony music\n\nWith further edits by me. Various ship stats are also based on those found in High Tech Expansion by theDragn.\n\nAI was used to generate a small number of hullmod icons, one location image, and one NPC portrait set. All coding, writing, and other art and sprite work is made by hand.\n\nA big thank you to everyone whose freely shared ship and weapon sprites went into make this mod. Without you providing the foundations, none of this would have been possible.\n\nEmergent Threats by vicegrip is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.",
-  "descriptionHtml": "<div class=\"align-center\"><img src=\"https://i.imgur.com/diqBZlS.jpg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><span class=\"size-bigger\"><a href=\"https://github.com/vice-grip/starsector-mod-emergent-threats/releases/download/v1.4.2/EmergentThreats_v1.4.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">Emergent Threats/IX Revival: Download Version 1.4.2</a></span><br><a href=\"https://github.com/vice-grip/starsector-mod-emergent-threats/releases/tag/v1.4.2\" rel=\"nofollow noopener\" target=\"_blank\">Github link with patch notes.</a></div><br>This Remnant focused mod seeks to make the faction a true challenge for the late game, while offering the player a chance to try out unique technologies on captured and modified drone ships. The mod also adds new content for the Sindrian Diktat, Tri-Tachyon, Persean League, Independents, and new missions with unique rewards to challenge the player. <br><br>Fights against the Remnant may become extremely hard, especially if you do not have many other Remnant related mods installed. Pick your battles carefully. If you find the battles too difficult, you can make adjustments in <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a> settings. Cross-mod content for Second In Command, Hazard Mining Incorporated, and Random Assortment of Things can also be toggled there.<br><br><b>Emergent Threats: IX Revival</b><br>The mod .zip file comes bundled with the 9th Domain Battlegroup <b>standalone mod</b>. This antagonist faction was first created in the now abandoned <a href=\"https://fractalsoftworks.com/forum/index.php?topic=11536.0\" rel=\"nofollow noopener\" target=\"_blank\">Arsenal Expansion</a> mod by Inventor Raccoon, and has been revived with permission. Both ET mods can be used independently, but will interact with each other with extra content. Note that if you are running a bootleg version of Arsenal Expansion, you should disable the original's battlegroup in its mod settings to avoid two versions of the faction spawning at the same time.<br><br><b>Changelog</b><br><details class=\"spoiler\"><summary>Spoiler</summary>v1.4.2 should be compatible with v1.1+<br><br><b>Emergent Threats</b><br><b>Misc</b><br>-Fixed a bug where attacking the Diamond Nexus fleet in A Thousand Cuts while never even starting a conversation with it will cause the enemy fleet to not drop the Cyanine Core<br>-The mission Thousand Cuts now offers the greatest amount of loot through fighting (Salvageable Nephos destroyers and Mokosh, Nemesis Doctrine biochip, Nephos blueprint, Remnant rare fighters blueprint, Temporal Desynchronizer, Cyanine Core and shards) while each of the peaceful paths offer only a subset of the loot (ships and core, or biochip and blueprint, plus Temporal Desynchronizer)<br>-The Temporal Desynchronizer item will now be detached when handed out to players so they won't miss it if they forego salvaging the Mokosh, and it will always be received on each mission outcome aside from leaving and asking for nothing<br><br><b>Hullmods</b><br>-Mokosh hullmods Stabilized Temporal Shell and Temporal Desynchronizer text slightly updated for better clarity<br><br><b>IX Revival]</b><br><b>Misc</b><br>-Fixed a crash issue with running IX Revival without Nexerelin<br><br>Translator notes are on GitHub<br><br>v1.4.1 should be compatible with v1.1+<br><br><b>Emergent Threats</b><br><b>Misc</b><br>-Minor refactoring for ease of translation<br>-New AI administrator skill requires PatchLib to work, so please install with the mod update<br><br><b>Colonies</b><br>-The Cyanine Immutable AI core obtained from the mission A Thousand Cuts can now be used as a colony administrator, and possesses a special skill that makes it not receive Hegemony or Pather scrutiny<br><br><b>Industry</b><br>-Added a version of the Surveillance Center from IX Revival to Emergent Threats that is only buildable when IX Revival is not enabled, does not come with Panopticon mechanics but will accept Cyanine Core/Shard in additional to standard cores (+2 stability, extra +2 alpha/Cyanine core, +1 beta/Cyanine shard)<br><br><b>Ships</b><br>-Equalizer (EX) forward point defense turret arcs updated to cover forward arc<br><br><b>Weapons</b><br>-Hydromagnetic Cannon updated on-hit graphics and text<br>-Warp Drone Assembler/Constructor damage lowered from 800 Kinetic + 400 Energy to 600 Kinetic + 200 Energy<br><br><b>Hullmods</b><br>-Updated some sprite swapping hullmods to reduce graphics load<br><br><b>IX Revival</b><br><b>Misc</b><br>-Minor refactoring for ease of translation<br>-Added new LunaLib graphics options for swapping ship sprites, located in the Visuals tab<br>-(Nex) reverted vassal mechanics between Trinity Worlds and IX Battlegroup to a standard alliance, this fix only applies to new games, will be updated again after Nexerelin patches the current bug when an alliance vassal's destruction crashes the game<br>-Fixed several bugs related to the panopticon core/node structure logic after a foreign conquest, thanks to Bass for the coding help<br>-Added a compatibility fix so update is now properly backwards compatible with v1.1+ saves <br><br><b>Colonies</b><br>-(ET required) The Panopticon Instance, obtained by starting the game as a Colony Administrator, trading a PK to the IX Battlegroup for normalized relations, or stealing the ones already present on IX/TW worlds, can now also be used as a colony administrator, and possesses two special skills<br>-A Panopticon Instance colony administrator in charge of a colony with a Military Base or High Command grants uses of the Hunter Killer Drone hullmod, allowing you to deploy 1 or 2 Candor (IX) frigates in your fleet, each with enhanced performance and without any deployment cost<br><br><b>Industry</b><br>-Surveillance center updated, Alpha cores/Cyanine Core (from ET) can now also be used for +2 extra stability, or Beta cores/Cyanine Shard for +1 stability<br><br><b>Ships</b><br>-Added mod setting toggles (start menu/F3) and in-game LunaLib ship fitting drop down menu options for changing the appearances of IX Battlegroup ships to mimic default high-tech colors, sparing everyone's eyes from the horrors of the weed fleet, this is a separate system than magicLib ship skins since certain edge cases are easier handled by custom code (a similar toggle for Trinity Worlds ships is planned for the future)<br>-Equalizer (IX/TW) forward point defense turret arcs updated to cover forward arc<br>-Radiant (HG) and Tigershark (HG) bounty ships receive improved performance, see hullmod Panopticon Interface (Primary) notes<br><br><b>Weapons</b><br>-ER Heavy Lacerator fixed a bug where this built-in only Trinity Worlds weapon would be available for purchase and construction<br>-Morningstar/Lightbringer CIWS firing sound made quieter, Brightburn still has slightly louder firing sound<br>-Spearwall firing sound made quieter and Stormwall firing sound slightly lower pitch to make the two slightly less jarring when paired together<br><br><b>Hullmods</b><br>-The Panopticon Interface (Primary) on bounty ships from the mission A Theory of Mind will now also function as either a Panoptic Interface (Command) for most AI cores, temporarily granting them the Sword of the Fleet skill, or as a Panoptic Interface (Tactical) when a Panopticon Core/Instance with SotF is present, further enhancing performance in the same manner as a human officer with the skill<br>-Hunter Killer Drone hullmod, using a Panopticon Instance administrator at a colony with a Military Base or High Command allows player to convert 1-2 Candor (IX) frigates equipped with Panopticon Interface (Command) into hunter-killer drones<br><br>Translator notes are on GitHub</details><br><b>IX Battlegroup Preview</b><br><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/7j3pcYV.jpeg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details><br><b>Remnant Ship Preview</b><br><div class=\"align-center\"><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/j4sk1Nm.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Lampetia Drone Mothership</b><br>Fast moving battlecarrier derived from the militarized Odyssey (TT)<br><br><img src=\"https://i.imgur.com/M3rKx36.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Incandescent Drone Battleship</b><br>Aggressive battleship armed with dual Hydromagnetic Cannons that degrade enemy ship performance<br><br><img src=\"https://i.imgur.com/oaxG3g9.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"https://i.imgur.com/OPkcYwW.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Resplendent Command Droneship</b><br>Heavy carrier capable of mass deploying a swarm of drones, or enhancing a smaller number of bombers<br><br><img src=\"https://i.imgur.com/SpObxXD.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Jubilant Missile Droneship</b><br>A light missile cruiser that packs a heavy opening punch<br><br><img src=\"https://i.imgur.com/qYd7zuF.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Effulgent Droneship</b><br>A missile variant of the Fulgent for supporting Remnant fleets at range<br><br><img src=\"https://i.imgur.com/u7Xqfzv.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Candor (EMP) Gunship</b><br>A deadly frigate that can fire its EMP emitter and other weapons at the same time<br><br><img src=\"https://i.imgur.com/P6ykjxm.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"https://i.imgur.com/T8tVh54.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Helia Strategic Bomber</b><br>Reaper torpedo bomber, with the firepower of the Cobra but twice the numbers<br><br><img src=\"https://i.imgur.com/a6KsOjG.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Sundog Defender</b><br>Mobile artillery that stays with the mothership while also providing point defense<br><br><img src=\"https://i.imgur.com/AF111GO.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Bolide Hunter-Killer</b><br>A new threat encountered at Nexus stations.</details></div><br><b>Faction Ship Preview</b><br><div class=\"align-center\"><details class=\"spoiler\"><summary>Spoiler</summary><details class=\"spoiler\"><summary>Experimental Hulls</summary><img src=\"https://i.imgur.com/TgXyg8C.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br>Prototype High Tech designs recovered by Tri-Tachyon, with rarely seen experimental ship systems.</details><br><img src=\"https://i.imgur.com/WSQ1Ubb.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Odyssey (TT) Battlecarrier</b><br>Fast and versatile carrier based on the Odyssey and perfected by Tri-Tachyon<br><br><img src=\"https://i.imgur.com/n2j52o1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Aquilon Battlecruiser</b><br>Variable munitions battlecruiser with a ship system suited to every situation<br><br><img src=\"https://i.imgur.com/B4pvYd5.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Glycon Missile Cruiser</b><br>A high-tech cruiser with staying power that uses small missiles to devastating effect<br><br><img src=\"https://i.imgur.com/nItD4by.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Maquech Escort Carrier</b><br>A Buffalo carrier conversion for those who can't afford better<br><br><img src=\"https://i.imgur.com/Mw1ZL0Y.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Candor Gunship</b><br>A nimble skirmisher with built-in light ion cannons<br><br><img src=\"https://i.imgur.com/aEzNEfF.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Hellfire Colossus Battlecruiser</b><br>If it works but it gets you killed, your pirate friends will be very glad it works<br><br><img src=\"https://i.imgur.com/fqEkKsA.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\">  <img src=\"https://i.imgur.com/yZTaN9X.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Banteng Long-haul Freighter</b><br>A versatile long range freighter designed to haul both fuel and cargo at the same time<br><br><img src=\"https://i.imgur.com/GQcp8qN.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Proteus Carrier</b><br>Despite the carrier's paint job, the League has turned a lemon into lemonade<br><br><img src=\"https://i.imgur.com/3E7sruX.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Exhortation Battlecarrier</b><br>Of course the fleet carrier for the Diktat would be fearsome and glorious!<br><br><img src=\"https://i.imgur.com/t7Qv3tC.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Unifier Flight Deck Cruiser</b><br>A carrier-cruiser hybrid that went into production due to a word from the Supreme Executor<br><br><img src=\"https://i.imgur.com/9eTNSio.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Preceptor Escort Carrier</b><br>A converted freighter since relegated to the Diktat Navy<br><br><img src=\"https://i.imgur.com/gTBSAoT.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Kite (LG) Gunship</b><br>The humble shuttle converted into a carrier based gunship<br><br><img src=\"https://i.imgur.com/r7EQscH.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Estoc Bomber</b><br>A DEM torpedo with a biological guidance system<br><br><img src=\"https://i.imgur.com/TxcdD4r.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Spatha Heavy Fighter</b><br>The Diktat's latest standard heavy fighter, capable yet extremely overbuilt<br><br><img src=\"https://i.imgur.com/V1hPxO4.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Gladius (LG) Heavy Fighter</b><br>An experimental fighter reserved for the Lion's Guard</details></div><br><b>Mission Bounties</b><br><div class=\"align-center\"><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/Guqto9o.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Resplendent (EX) Command Carrier</b><br>A relic of the last war.<br><br><img src=\"https://i.imgur.com/E9GrpCg.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Mutilator Phase Destroyer</b><br>A harbinger of the next war.<br><br><img src=\"https://i.imgur.com/6eBUKfz.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Mimesis Modified Superfreighter</b><br>An insatiable avatar of greed.<br><br><img src=\"https://i.imgur.com/OcudEKh.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Praxis Modified Cruiser</b><br>A deadly skirmisher.<br><br><img src=\"https://i.imgur.com/HalSZPW.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Invictus (LG) Dreadnought</b><br>A reborn titan controlled by a madman.<br><br><img src=\"https://i.imgur.com/jP3qAu7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Onslaught (LG) Battleship</b><br>A sentimental relic.</details></div><br><b>Weapon Preview</b><br><div class=\"align-center\"><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/ElLYjKk.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Deadeye Plasma Seeker</b><br>A heavy energy weapon that can track its target.<br><br><img src=\"https://i.imgur.com/lTf6jbk.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Atropos MIRV</b><br>A long range strike weapon with plentiful ammo.<br><br><img src=\"https://i.imgur.com/rqWkbZ2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>X-Ray Pulse Laser</b><br>Extended range pulse laser, a reliable workhorse among large energy weapons.<br><br><img src=\"https://i.imgur.com/tkEbkb6.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Kinetic Blaster (modded)</b><br>Ersatz [SUPER ALABASTER] pulse weapon with high anti-shield burst damage but extreme weakness against armor.<br><br><img src=\"https://i.imgur.com/x0rUv4E.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Siege Burst Laser</b><br>A Diktat (re)invention, bulky and power hungry, but effective against both shields and armor.<br><br><img src=\"https://i.imgur.com/pjRguuL.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Tactical Burst Laser</b><br>A smaller Siege Burst Laser that works on a similar principle.<br><br><img src=\"https://i.imgur.com/BYZYA6I.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Ion Streamer</b><br>An ultralight EMP beam weapon.<br><br><img src=\"https://i.imgur.com/Mvn5kIu.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Stinger Catapult</b><br>A point defense mine launcher.</details></div><br><b>Hullmod Preview</b><br><div class=\"align-center\"><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/BikOyaB.jpg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Adaptive Subsystems</b><br>Unique one-per-ship Remnant hullmods that enhance ship performance, often in unusual ways. <br>They are dynamically added to all Remnant ships encountered by the player, even those from other mods.<br><br>Also includes new Emergent Technologies hullmods that will modify your ships in unique and interesting ways.</details></div><br>Many more existing variants of Remnant ships have been refit, making them much more challenging in fleet battles. Revisions have also been made to Sindrian Diktat and Tri-Tachyon doctrine, making Lion's Guard ships more commonplace and available on the market, and Tri-Tachyon carriers more prevalent.<br><br>In addition, face off against unique enemies in new missions picked up from the unsanctioned bounty board, each with unique rewards (available at level 8+, aside from Faith and Fury and Project Mayfly which require level 12+):<br><ul><li>To Hunt a White Whale: Face off against a pirate queen for a chance to gain a set of unique blueprints.</li><li>High and Mighty: Crash a black market arms deal between a smuggler and the Diktat Navy.</li><li>Shattered Fortress: Preserve the peace by striking against a Lion's Guard secret weapon.</li><li>Gaining Vantage: Track down a mysterious ghost ship and learn its secrets.</li><li>A Diamond in the Dark: Begin the hunt for the dark mover at the center of the enemies you have faced.</li><li>Faith and Fury: Intercept a mixed Pirate and Pather fleet led by a charismatic warlord who has found religion.</li><li>Project Mayfly (requires failing Faith and Fury): Put a halt to a dangerous secret project in the Persean League.</li><li>Cleaning up a Mess (requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=13236.0\" rel=\"nofollow noopener\" target=\"_blank\">HMI</a>): Chase down rumors of a gate activation and face off against an unusual enemy.</li><li>A Theory of Mind (requires IX Revival): Investigate a strange meeting between numerous AI drones.</li></ul><br><b>Other Features and Changes</b><br><ul><li>A new threat encountered in the Circumfix system.</li><li>Swap the built-in weapons on numerous Onslaught variants (formerly Onslaught Radical Rearming).</li><li>Adds Adaptive Subsystem hullmod support for various mods with Remnant content.</li><li>(IX Revival) two new factions, the IX Battlegroup and their allies the Trinity Worlds with their own ships and weapons.</li><li>(Second In Command) Two new aptitudes, Andradanism for the Sindrian Diktat and Synthesis for the IX Battlegroup.</li><li>(Nexerelin) New Large Carrier game starts for the Proteus and Exhortation.</li><li>New hullmods for <a href=\"https://fractalsoftworks.com/forum/index.php?topic=13236.0\" rel=\"nofollow noopener\" target=\"_blank\">Hazard Mining Incorporated</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=26260.0\" rel=\"nofollow noopener\" target=\"_blank\">Random Assortment of Things</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=11002.0\" rel=\"nofollow noopener\" target=\"_blank\">Underworld</a>.</li><li>Disables Expanded Deck Crew, Rescue Shuttle on automated ships.</li><li>Changes to the performance of Lux and Flash fighter drones (can be undone).</li><li>New sound for the Autopulse Laser (can be undone).</li></ul><br><b>Future Plans</b><br><ul><li>Add new content for the Diamond Nexus, allowing players to fight spawned Remnant fleets while still supporting Midnight Dissonant at Prism.</li></ul><br><b>Art/Music Credit</b><details class=\"spoiler\"><summary>Spoiler</summary>turkler: Odyssey (TT)/Odyssey (IX)/Lampetia, Invictus (LG), Onslaught (LG)<br>Inventor Raccoon: Flourish and original Arsenal Expansion IX Battlegroup content<br>HELMUT: Estoc, Spatha, Sundog, Bolide, Glycon, Maquech, Onslaught (LG), Incandescent, Hydromagnetic Cannon, X-Ray Pulse Laser, LR Burst Laser, Siege Burst Laser, Deadeye Plasma Seeker, Ion Streamer, Electrostatic Projector, Lightbringer CIWS, Twin Tactical Laser, Soliton Burst Emitter, Antecedent Device, Vampyr DEM<br>Snrasha, Tartiflette, tenoki: Resplendent<br>Tartiflette: Starquake/Starquake (TW)/Ultimatum (IX), Stonefish/Stonefish (TW)<br>EnderHero00: Mutilator<br>BigBeans: Praxis<br>Mr.Crimeguru: Banteng, Casimir (IX), Hetman (IX), Maxim (IX)<br>NeoLemon, Procrasadini: Bellicose (EX), Hellfire Colossus, Thunderbox<br>Catfish: Thunderbox<br>shoggoth: Mandrake (IX/EX/TW)<br>tesser: Antimatter Stabilizer, Deluge Seeking Repeater, Industrial Nano-replicator, Signal Masker<br>Passwalker, theDragn: Iconoclast/Iris (IX/EX), Flamebreaker (IX/EX), Tigershark (IX/EX), Equalizer (IX/EX)<br>Bananana: Aquilon/Aquilon (IX), Aggressor/Aggressor (IX/T), Torchbearer/Torchbearer (E)<br>jiu: Proteus<br>kirbo: Firebird (A/TW)<br>King Alfonso: Ionos (TW)/Conflux (TW)<br>MiniDeth3: Aurora (TW)<br>Neon: Chevalier, Hemlock<br>noof: Firetail (T)<br>Pogre: Subjugator (T)<br>mae1strom: Mokosh (IX) reactor<br>Tankz745: Voltaic Multipulser<br><br>Amber: IX encounter music<br>Fesliyan Studios: IX colony music<br><br>With further edits by me. Various ship stats are also based on those found in High Tech Expansion by theDragn.</details><br>AI was used to generate a small number of hullmod icons, one location image, and one NPC portrait set. All coding, writing, and other art and sprite work is made by hand.<br><br>A big thank you to everyone whose freely shared ship and weapon sprites went into make this mod. Without you providing the foundations, none of this would have been possible.<br><br>Emergent Threats by vicegrip is licensed under a <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" rel=\"nofollow noopener\" target=\"_blank\">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</a>",
+  "description": "This Remnant focused mod seeks to make the faction a true challenge for the late game, while offering the player a chance to try out unique technologies on captured and modified drone ships. The mod also adds new content for the Sindrian Diktat, Tri-Tachyon, Persean League, Independents, and new missions with unique rewards to challenge the player.",
+  "descriptionHtml": "This Remnant focused mod seeks to make the faction a true challenge for the late game, while offering the player a chance to try out unique technologies on captured and modified drone ships. The mod also adds new content for the Sindrian Diktat, Tri-Tachyon, Persean League, Independents, and new missions with unique rewards to challenge the player.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>A mod for Starsector that makes the Remnant and Sindrian Diktat more challenging to fight. Also adds new ships, boss bounties, weapons, hullmods, and the IX Battlegroup hostile faction.</p><p>The mod is split into two parts, the core Emergent Threats, and the ET: IX Revival faction submod (the 9th Domain Battlegroup was originally created by Inventor Raccoon for Arsenal Expansion, and is re-added with permission). The two parts interact with each other but can be used separately.</p><p>v1.4.2 github direct link: <a href=\"https://github.com/vice-grip/starsector-mod-emergent-threats/releases/download/v1.4.2/EmergentThreats_v1.4.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/vice-grip/starsector-mod-emergent-threats/releases/download/v1.4.2/EmergentThreats_v1.4.2.zip</a><br>v1.4.2 forum page: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=27284\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=27284</a></p>",
-  "aiDescription": "Overhauls the Remnant faction to provide late-game difficulty and introduces captured drone ships with unique technologies. Adds new ships, weapons, and hullmods for the Sindrian Diktat, Tri-Tachyon, Persean League, and Independents. Includes new missions with unique rewards and integrates with several other mods for cross-content.",
+  "aiDescription": "Makes the Remnant faction a significant late-game threat by introducing powerful drone ships and adaptive subsystems. Adds new vessels, weapons, and hullmods for the Sindrian Diktat, Tri-Tachyon, Persean League, and Independents. Includes a series of unique bounty missions that offer rare blueprints and modified ships as rewards.",
   "updateCompatibilityText": "v1.4.2 should be compatible with v1.1+",
-  "canUpdate": "depends",
+  "canUpdate": "yes",
   "aiUse": {
     "quote": "AI was used to generate a small number of hullmod icons, one location image, and one NPC portrait set. All coding, writing, and other art and sprite work is made by hand.",
     "usesAi": true,
@@ -93,224 +109,224 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1355071745811288165/diqBZlS.webp?ex=6aee21a8&is=6aecd028&hm=2d73895f782f53123cb3ce11fd7f95f1c63627a3196414224c8fd3604ff11a1f&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1355071745811288165/diqBZlS.webp?ex=6aeeca68&is=6aed78e8&hm=49d306e51e27aaacbc63bd74cd91a09eaad4082abe81a8c4ca42fd880bafa2da&",
       "aiCaption": "A space battle scene featuring large, ornate ships with purple shield domes firing red and blue weapons.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1355071746331639929/7j3pcYV.jpeg?ex=6aee21a8&is=6aecd028&hm=8af35ff9550910c77ce356fc507a908b248831739043611ee5dd4f64951deba5&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1355071746331639929/7j3pcYV.jpeg?ex=6aeeca68&is=6aed78e8&hm=949c1bca2331a373498bdc1ccb20fa9d8e2a145e9e7bfbe82462b06134e4137a&",
       "aiCaption": "A grid displaying numerous ship sprites in grey and green color schemes against a starry background.",
       "aiKind": "art",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1360369192167145624/Untitled.png?ex=6aeda0c9&is=6aec4f49&hm=a37b88231e2ea900d213b265a11b9960598d1b001b6536cb6927ceb01e2a9825&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1360369192167145624/Untitled.png?ex=6aee4989&is=6aecf809&hm=108ccdaade310a52743b83446e4ad322fe1627199320d1deccc1abdebc254059&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1374967130939723877/Untitled.jpg?ex=6aee002d&is=6aecaead&hm=2d0e24bd4875b9857b698086f9a132df5125089078158a448f824cc09c683ad1&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1374967130939723877/Untitled.jpg?ex=6aeea8ed&is=6aed576d&hm=a1c9d98334d4ca184146a5d3153392bada681d7286fee695edf600149e3853e4&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1397033680135786597/1.jpg?ex=6aeddbc0&is=6aec8a40&hm=4b4981c902f2e3b01af7d74d24f51dd9bb5949ef6b19b7e6c07885efa4e29476&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1397033680135786597/1.jpg?ex=6aee8480&is=6aed3300&hm=c79ca1bc2d534f4677f5edd39ca3d405437fba5af1af66a60c49bbe1d2265187&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1397033680521658378/2.jpg?ex=6aeddbc1&is=6aec8a41&hm=1f7f9bc5a2a6600387d2d8c21a0d17f7aa6fd8220420e91f018745f6f8f0dcf7&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1397033680521658378/2.jpg?ex=6aee8481&is=6aed3301&hm=b7387975121dc9d9ce564da4ed17d8f667976ee2a7a217ed0e2899e2824b3e99&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1397033680832041133/3.jpg?ex=6aeddbc1&is=6aec8a41&hm=6dacc107370c061330d25c0d5c84b7db37cddfdb3cdc966c66177a7c0b9e914a&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1397033680832041133/3.jpg?ex=6aee8481&is=6aed3301&hm=1f741554ebf4f806fc5a6b3db42c8edd41be51b45ff44ad8806711726c60b2e1&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1403095199252742227/Untitled.png?ex=6aed7f7b&is=6aec2dfb&hm=dd933a473f3e702ed819033f41c1c6dbbe9a69d2c9ea1ef31c7da136c146cbdd&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1403095199252742227/Untitled.png?ex=6aee283b&is=6aecd6bb&hm=f7aecfb297587d4368923d20764c042df20de010164ff391ac210ff83f5ae9d2&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1403556849638441112/Untitled.jpg?ex=6aeddbed&is=6aec8a6d&hm=5f8c063bf0285f950e9846c60bfea4cb83f613ca46b4f97009e47f857a193b32&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1403556849638441112/Untitled.jpg?ex=6aee84ad&is=6aed332d&hm=c4537f42d0b363c8d9c9f7c0adb104c39508f51a651a20ee9986d9d903a60393&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1406048053386805350/omen_tw.png?ex=6aedb18b&is=6aec600b&hm=ecb75cb1eecc896584a10d18f569e6c8278067873507518fcfbee56fda2ebc89&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1406048053386805350/omen_tw.png?ex=6aee5a4b&is=6aed08cb&hm=43142982b23d8e8643b84b964e444ff3bee8915abdf76e685fdd825ebd29f44d&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1406148244719013990/scarab_ix.png?ex=6aee0eda&is=6aecbd5a&hm=8d46ac16382f2c08a0e463010a7b4c2316559aba6d6c0f9a337bed23815c1348&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1406148244719013990/scarab_ix.png?ex=6aeeb79a&is=6aed661a&hm=67bb48e7e16915e71af621ba9a00e7f230e4eda7b8969277f5c2280e4921a215&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1407661938204348417/stonefish_tw.png?ex=6aeda1d7&is=6aec5057&hm=43f603a7c48b47febb367ca8fdae11b616f3a88c41089ed30df87a235a7ef44e&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1407661938204348417/stonefish_tw.png?ex=6aee4a97&is=6aecf917&hm=8dce1495070b8c1f15b608a40e2ade924855d7a219d61520108ec2521f1f2409&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1407661938519052340/iconoclast_tw.png?ex=6aeda1d7&is=6aec5057&hm=41a10e7c6d576c78a231b90d65efa8087dd7f8df2ec4709ed66fbbdd6503fb56&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1407661938519052340/iconoclast_tw.png?ex=6aee4a97&is=6aecf917&hm=ada5c1393d96572a252823807f093561488de9b72d29868b82fab3c6ba0d2fce&",
       "small": true,
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1407661938858786866/starquake_tw.png?ex=6aeda1d7&is=6aec5057&hm=45d6dc55c507e142ddf0ee74649626a9150f319f379b0d8e863ef33a59954a43&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1407661938858786866/starquake_tw.png?ex=6aee4a97&is=6aecf917&hm=ec444f4fde0ae537a009bd90ad95c93717ba3afedc1af9284bb161dac4fe67e9&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1412277386862661633/Untitled.png?ex=6aedf18f&is=6aeca00f&hm=27292ec9b2669f6f7cd14dec911caf8b5fc41eec51db77937620c7b24575b0ea&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1412277386862661633/Untitled.png?ex=6aee9a4f&is=6aed48cf&hm=316731a4dee301a07f82429f596c70a541ae853f8e392771cfe21367b7c82062&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1414766046388420618/Untitled.png?ex=6aedc4ce&is=6aec734e&hm=9c105ebd01c7438c2db6227dc4d53541be2c48dfbf199180397158f9aaa4c509&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1414766046388420618/Untitled.png?ex=6aee6d8e&is=6aed1c0e&hm=39244ed6b95f55c144319aee6c1231517e77f5cad777c3a64b2ae295bee85ecd&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1420229500410793994/Untitled.png?ex=6aedde8b&is=6aec8d0b&hm=f932355e1d0aafb3073f0c19a334d8a16c40efc4311a982f83118996a5e5c5e2&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1420229500410793994/Untitled.png?ex=6aee874b&is=6aed35cb&hm=4981c4666ea87694b47ab72ab1185b8d5500605f24491a28c7f90ea5fde8dd59&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1420229500804796536/Untitled2.png?ex=6aedde8b&is=6aec8d0b&hm=4ef3ec06795223e0a4d661351107abcdd5d8d3af00c99f723ee30b8453f9efdd&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1420229500804796536/Untitled2.png?ex=6aee874b&is=6aed35cb&hm=d991709c9e858f06032db0af392ed515ffd006d7fd0bc6b47d966dc7be9ca31d&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1420576586918264844/1.png?ex=6aedd04b&is=6aec7ecb&hm=4ebd3c98cdadfe36d5cc8cdc77fb212aae2dad21a7504d7e830aff5d28ad4701&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1420576586918264844/1.png?ex=6aee790b&is=6aed278b&hm=c8cf57cfff9677dbcedab5e1c492c10c300a9d456a4479c8853d04a0cfb294c1&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1422796820932722729/Untitled.png?ex=6aedfb0c&is=6aeca98c&hm=ed527428ddc46e9cec5a7612ca13aadbe4bc394f0cffa90ae5a2d6ce1d83c6a1&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1422796820932722729/Untitled.png?ex=6aeea3cc&is=6aed524c&hm=b1a33a884e4be6784fb9ec003ce88a6a41c45f0d26a08e1a4c14c081f807923a&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1432795192527814706/Untitled.png?ex=6aee1981&is=6aecc801&hm=60005dcedf0a059107ba17e019b9ca772d217be83f60e732455080412710291b&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1432795192527814706/Untitled.png?ex=6aeec241&is=6aed70c1&hm=53d86c56d157f6a62ac54e8bc3143bda912c747df933ce42758897b87f768e21&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1446450732676157450/atlas_tt.png?ex=6aedae38&is=6aec5cb8&hm=ca0aeb0489a73cb0bea58bad7bbbdae9b307f8c6b0e57cb53f9520523dcea4b3&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1446450732676157450/atlas_tt.png?ex=6aee56f8&is=6aed0578&hm=931fe784b44513cf5cabc3cc19fd506fea22093e87ab870d2c7b7b179f5e4427&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1484362572076417024/Untitled.jpg?ex=6aedd59f&is=6aec841f&hm=e9f4510308ec50b8982c05317e8127e28562cf0a4ce5aea30172963e23897545&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1484362572076417024/Untitled.jpg?ex=6aee7e5f&is=6aed2cdf&hm=a5df5a16d8d3de3f6fd7d4ec25b5c261a7951c2b9adf76f94560f831250eac23&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1507830490936246272/587116912-565bf41e-aac7-4115-ae41-88adae0dcac3.jpg?ex=6aed8453&is=6aec32d3&hm=b7321d8bf3c0fc2e2b7a0dd5d6351b2d04b933877958af87ffd39b049a8e6312&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1507830490936246272/587116912-565bf41e-aac7-4115-ae41-88adae0dcac3.jpg?ex=6aee2d13&is=6aecdb93&hm=951c73f156d52ed11649ed63d53f2dc0081feaee0eff3dfde59f812d5e33481a&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1521345859193933834/Untitled.png?ex=6aede7fe&is=6aec967e&hm=d0435b9dbee69195d8bc7471a8007256d8b97096f986ddc30270f3ded2125ed6&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1521345859193933834/Untitled.png?ex=6aee90be&is=6aed3f3e&hm=b651a7f0b3e5de1d0e60c9459e400c3cd9b925199a1a0ef8028c4c42b14ae581&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1522405230958870538/conflux.png?ex=6aedce1b&is=6aec7c9b&hm=9bfa0b3c11bd9ae4205c11a040f6fbf35c2cf72ea190d9de977a8435d1afcac1&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1522405230958870538/conflux.png?ex=6aee76db&is=6aed255b&hm=2cbca67365e38de6b353d087ed604ada64508b8e5fdf60e12e3d356fc8de2f8b&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1524840458528751738/fury_tw.png?ex=6aee1857&is=6aecc6d7&hm=000edfb3bd822ca83c27f05d3fd2b2a692e57b8c031a88ff7a35e7fae42c6316&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1524840458528751738/fury_tw.png?ex=6aeec117&is=6aed6f97&hm=7c686b40b8a1c2e37043b0a25bdd3ae5cd8daa1b1880f874b866defa9ab04b89&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1530329287977074759/Untitled.jpg?ex=6aeda0f6&is=6aec4f76&hm=58fb9c5900f93b22cbac33d4a6af9eade17b3e765d64103d97e745ebc1038be1&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1530329287977074759/Untitled.jpg?ex=6aee49b6&is=6aecf836&hm=1de92a58b4cb3ddd3cc90b1c27e04f5460430f4dfc9ace2230b7eddb7758e3a2&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1545875697023582359/Untitled.png?ex=6aed7f2f&is=6aec2daf&hm=11db0b06c78eb5fa26303cd6065707341cdff132ebcd9b20f9ceec6210086545&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1545875697023582359/Untitled.png?ex=6aee27ef&is=6aecd66f&hm=3b36dc644bea5a712974d81e5445cf3d310f8b9549bd77af0ab75736d071c132&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1562221631139741787/images.jpg?ex=6aeda305&is=6aec5185&hm=a4cd4a0752d624eab4fa87f8c0955588e29b90b5a7e973f2ca41ab8d5014321e&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1562221631139741787/images.jpg?ex=6aee4bc5&is=6aecfa45&hm=63baf4691b516b0d54bee0d473609f81dd747fb101a1ad6214a91409dce8eb35&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1564759189660766368/Untitled.jpg?ex=6aeda3ce&is=6aec524e&hm=7a556aad472c3235062ef685ac8d4bcfa742be509feed7e44e62780281ba395c&",
+      "url": "https://cdn.discordapp.com/attachments/1355071745366822950/1564759189660766368/Untitled.jpg?ex=6aee4c8e&is=6aecfb0e&hm=64e9990c373cfab6a80a9bb37fa46464fa4b4c629df65bd727a1b7f7fa2e6663&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1204019797642448896/diqBZlS.jpg?ex=6aedb451&is=6aec62d1&hm=4d3c0ebed312d9d350b77c6f5bee94278ebec53696b6d1dcd093a4af7197b52c&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1204019797642448896/diqBZlS.jpg?ex=6aee5d11&is=6aed0b91&hm=fa30d7332736184cc51ff277f8ff58c36c9e6a19287d3ba580b36327bf74ec0d&",
       "aiCaption": "A space battle scene featuring large, ornate ships with shields and smaller fighters engaging in combat.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1226136927896342621/ix.png?ex=6aedbf00&is=6aec6d80&hm=500b9391ef725ce68f86c3a5a6144ac0f0fe9db066e9153ea4b1d23a88369ed7&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1226136927896342621/ix.png?ex=6aee67c0&is=6aed1640&hm=4f54d8f3b12f2a74777eeefa8bab67565d9426fbba3d7c615095e00ad8515e93&",
       "aiCaption": "A dialogue interface showing a conversation with Base Commander Terry Yarih regarding planetkiller weapons, including portrait and faction status.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1230132002443759739/aquilon.png?ex=6aedc734&is=6aec75b4&hm=64004e829b294a41660f22779cb52e1a430ee09002ce22c8eefa1fbcd44bf3a7&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1230132002443759739/aquilon.png?ex=6aee6ff4&is=6aed1e74&hm=33ee41ed2abb7b580406439fe098a550824c6d09d0eeeef88662041875a5cddc&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1230132002670247977/aquilon_ix.png?ex=6aedc734&is=6aec75b4&hm=3ebe99afe2db90cd6b0782fc7707e983d67d58a89d12183721684347b6ef76c7&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1230132002670247977/aquilon_ix.png?ex=6aee6ff4&is=6aed1e74&hm=2fce30647728eb7a2733f00e3c278766a7e196c3b0014f14def205df90818cf0&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1234034038830927892/screenshot020.png?ex=6aee2182&is=6aecd002&hm=58354c51b74f0750c1277516556c5baad2f42adcda63f64fcee871de0ef096e9&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1234034038830927892/screenshot020.png?ex=6aeeca42&is=6aed78c2&hm=62d393cfcc84157cbbc1f080012c8f3d46df4c0f4dee6bda997651ebe662253a&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1234034039069868053/screenshot021.png?ex=6aee2182&is=6aecd002&hm=ad2ef083ef49318b3d254d6bdfe9eb97bf24b5c005e92d3161d97e6207ba05ff&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1234034039069868053/screenshot021.png?ex=6aeeca42&is=6aed78c2&hm=05bceda5f8ebc1603abe0d6b14be57319d47a342c2d8ad2576fab15ea9a5d749&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1236808062610964663/proteus.png?ex=6aedad04&is=6aec5b84&hm=256afde45928bd4cebfc6088552ea841a492f57580f13847664a4d86aa5760b8&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1236808062610964663/proteus.png?ex=6aee55c4&is=6aed0444&hm=13021c3a78cb568baf017dec0bc7671d30cd352e55c624d1107dd597d860d73b&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1268484233337507860/radiant.png?ex=6aed8e80&is=6aec3d00&hm=c76aa8e939b5d3b86b2fdabdfc64fb5ef8f63bb03cf0a9708c4158e6de898505&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1268484233337507860/radiant.png?ex=6aee3740&is=6aece5c0&hm=b1f5d508bb4c687af0d40468630707a9e4fac3004ba9fdecef0a2e17d1ce45d2&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1272816493020844042/trinity_worlds.jpg?ex=6aed7f3b&is=6aec2dbb&hm=0f29579344d9b6fbdd13f8eaaefc779ea0721c61bfde6b2e0a8f18b62e64a53a&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1272816493020844042/trinity_worlds.jpg?ex=6aee27fb&is=6aecd67b&hm=e380844cca66dff5a1486553b9547015262ebc3b649a8adcd0fb5654cc553e08&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1272816493381292145/tw_meme.jpg?ex=6aed7f3b&is=6aec2dbb&hm=9eef2ca20dc2778a3545bd28b627669e8fcc7d7e679637b4a7180576c5933814&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1272816493381292145/tw_meme.jpg?ex=6aee27fb&is=6aecd67b&hm=ec3d0f9f25a4131c50eb7359ea2dda869e6a4bcb9ef53fd65988da1985e440f4&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1274688057643372564/1.png?ex=6aedb6c3&is=6aec6543&hm=aabc96b0cf4b1a548f6bd1765227999713f72d05789a9ea2982c1df883a7823f&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1274688057643372564/1.png?ex=6aee5f83&is=6aed0e03&hm=fc1c268c62d78a040cfddc1756a9dd5334578d4744f977edae909f54be648300&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1282219742924636211/synthesis.png?ex=6aee1671&is=6aecc4f1&hm=fa1de0d812da87ebf0fd6578a5b779e9bc53cb83b2cf63c5d1f285d116c44b7f&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1282219742924636211/synthesis.png?ex=6aeebf31&is=6aed6db1&hm=ce74cf0cab24567bc7a597ccfc6d1868421cc7a906d25245fdb4d613383112e4&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1283890050211254322/potato.png?ex=6aed9289&is=6aec4109&hm=69db29d31357c9ce25fb61ad917333dc95d3f94536364c9526766a8bf6c1042a&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1283890050211254322/potato.png?ex=6aee3b49&is=6aece9c9&hm=f845d859e93930c8f1db66687a62930ef797b0b0cab231ca3a9bc4519f403b5f&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1291642516466303059/dominator_te.png?ex=6aee1715&is=6aecc595&hm=e0b97bbb1d831cd24ba9acce8a938989e95f7e370dba2dd50b4f34d3a427fa85&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1291642516466303059/dominator_te.png?ex=6aeebfd5&is=6aed6e55&hm=4edd14d12cd6391233cb5b8b512cea5431a8f3a14e82aed63c789466d13bc1af&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1293330847122067568/1.jpg?ex=6aeda3f6&is=6aec5276&hm=f842644c6b8b8e2cf42a9c8d1c996925bf824e02921689829632928484b2f432&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1293330847122067568/1.jpg?ex=6aee4cb6&is=6aecfb36&hm=e6247024bb877ea709b657ed64d7b093cbdb2394436b7d6af438bea4bd35986c&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1293330847365075016/2.jpg?ex=6aeda3f6&is=6aec5276&hm=0e280a897541cc3c63e451275502c762380d707ad1d7bd6311cd7f8b04b19a6f&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1293330847365075016/2.jpg?ex=6aee4cb6&is=6aecfb36&hm=01957f4c80f09f07c3fd2d344237e9f2ae95b8d0acb515510a990f70e2461c7d&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1295954217533706391/Untitled.png?ex=6aedf4ab&is=6aeca32b&hm=0e356b1e4b068a969cdadb6c597fd9fbba09b1696617bda5ddbeae0903efb924&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1295954217533706391/Untitled.png?ex=6aee9d6b&is=6aed4beb&hm=8e650b9a21d9ff292c60c719b3682937f338a2958e57cf906c98b7d567d405b8&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1337539268729372743/Untitled.png?ex=6aeda143&is=6aec4fc3&hm=573fe4a20cc568e9ee6a6dbc09a61e0c5251821a4511e41f59f37e8cd11a1a69&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1337539268729372743/Untitled.png?ex=6aee4a03&is=6aecf883&hm=6c09fe7a28412de990b359dc9c942cdc2344e98a6216d2c2d905a77435df2169&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1337539358281961543/thunderbox.png?ex=6aeda159&is=6aec4fd9&hm=9bc2f00722cf955b2af45904b283059ffe3f60adb2b00d072dde2c0d8c029875&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1337539358281961543/thunderbox.png?ex=6aee4a19&is=6aecf899&hm=ce2e0ed6827af746717e4d41381783afa699330325f3888633535f0f96e0e78f&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1349580308382613634/qgev2fd1pcne1.jpg?ex=6aededdb&is=6aec9c5b&hm=ee39a81bae58ebc7893e0c66750effe12c472727a127cb29f74e6dca40b9c6ab&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1349580308382613634/qgev2fd1pcne1.jpg?ex=6aee969b&is=6aed451b&hm=24960ef0b135dce6ea8f4de46eaa2417f50a4cb13746b2159b5eda219383ef3b&",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1350212988564410431/Untitled.png?ex=6aed9816&is=6aec4696&hm=e1f5bf46f2e11b66de73489c4096b28f365232b25367cdb73b137f6f47a5efad&",
+      "url": "https://cdn.discordapp.com/attachments/1204019797373751306/1350212988564410431/Untitled.png?ex=6aee40d6&is=6aecef56&hm=ba684dd12675049be8494af79b11c1f5a3ee4c523ae52ba1e0649e5e98a2d6fb&",
       "source": "discord"
     },
     {
@@ -536,16 +552,27 @@
     }
   ],
   "changelog": {
-    "1.4.2": "should be compatible with v1.1+\n\n Emergent Threats\n Misc\n-Fixed a bug where attacking the Diamond Nexus fleet in A Thousand Cuts while never even starting a conversation with it will cause the enemy fleet to not drop the Cyanine Core\n-The mission Thousand Cuts now offers the greatest amount of loot through fighting (Salvageable Nephos destroyers and Mokosh, Nemesis Doctrine biochip, Nephos blueprint, Remnant rare fighters blueprint, Temporal Desynchronizer, Cyanine Core and shards) while each of the peaceful paths offer only a subset of the loot (ships and core, or biochip and blueprint, plus Temporal Desynchronizer)\n-The Temporal Desynchronizer item will now be detached when handed out to players so they won't miss it if they forego salvaging the Mokosh, and it will always be received on each mission outcome aside from leaving and asking for nothing\n\n Hullmods\n-Mokosh hullmods Stabilized Temporal Shell and Temporal Desynchronizer text slightly updated for better clarity\n\n IX Revival]\n Misc\n-Fixed a crash issue with running IX Revival without Nexerelin",
-    "1.4.1": "should be compatible with v1.1+\n\n Emergent Threats\n Misc\n-Minor refactoring for ease of translation\n-New AI administrator skill requires PatchLib to work, so please install with the mod update\n\n Colonies\n-The Cyanine Immutable AI core obtained from the mission A Thousand Cuts can now be used as a colony administrator, and possesses a special skill that makes it not receive Hegemony or Pather scrutiny\n\n Industry\n-Added a version of the Surveillance Center from IX Revival to Emergent Threats that is only buildable when IX Revival is not enabled, does not come with Panopticon mechanics but will accept Cyanine Core/Shard in additional to standard cores (+2 stability, extra +2 alpha/Cyanine core, +1 beta/Cyanine shard)\n\n Ships\n-Equalizer (EX) forward point defense turret arcs updated to cover forward arc\n\n Weapons\n-Hydromagnetic Cannon updated on-hit graphics and text\n-Warp Drone Assembler/Constructor damage lowered from 800 Kinetic + 400 Energy to 600 Kinetic + 200 Energy\n\n Hullmods\n-Updated some sprite swapping hullmods to reduce graphics load\n\n IX Revival\n Misc\n-Minor refactoring for ease of translation\n-Added new LunaLib graphics options for swapping ship sprites, located in the Visuals tab\n-(Nex) reverted vassal mechanics between Trinity Worlds and IX Battlegroup to a standard alliance, this fix only applies to new games, will be updated again after Nexerelin patches the current bug when an alliance vassal's destruction crashes the game\n-Fixed several bugs related to the panopticon core/node structure logic after a foreign conquest, thanks to Bass for the coding help\n-Added a compatibility fix so update is now properly backwards compatible with v1.1+ saves\n\n Colonies\n-(ET required) The Panopticon Instance, obtained by starting the game as a Colony Administrator, trading a PK to the IX Battlegroup for normalized relations, or stealing the ones already present on IX/TW worlds, can now also be used as a colony administrator, and possesses two special skills\n-A Panopticon Instance colony administrator in charge of a colony with a Military Base or High Command grants uses of the Hunter Killer Drone hullmod, allowing you to deploy 1 or 2 Candor (IX) frigates in your fleet, each with enhanced performance and without any deployment cost\n\n Industry\n-Surveillance center updated, Alpha cores/Cyanine Core (from ET) can now also be used for +2 extra stability, or Beta cores/Cyanine Shard for +1 stability\n\n Ships\n-Added mod setting toggles (start menu/F3) and in-game LunaLib ship fitting drop down menu options for changing the appearances of IX Battlegroup ships to mimic default high-tech colors, sparing everyone's eyes from the horrors of the weed fleet, this is a separate system than magicLib ship skins since certain edge cases are easier handled by custom code (a similar toggle for Trinity Worlds ships is planned for the future)\n-Equalizer (IX/TW) forward point defense turret arcs updated to cover forward arc\n-Radiant (HG) and Tigershark (HG) bounty ships receive improved performance, see hullmod Panopticon Interface (Primary) notes\n\n Weapons\n-ER Heavy Lacerator fixed a bug where this built-in only Trinity Worlds weapon would be available for purchase and construction\n-Morningstar/Lightbringer CIWS firing sound made quieter, Brightburn still has slightly louder firing sound\n-Spearwall firing sound made quieter and Stormwall firing sound slightly lower pitch to make the two slightly less jarring when paired together\n\n Hullmods\n-The Panopticon Interface (Primary) on bounty ships from the mission A Theory of Mind will now also function as either a Panoptic Interface (Command) for most AI cores, temporarily granting them the Sword of the Fleet skill, or as a Panoptic Interface (Tactical) when a Panopticon Core/Instance with SotF is present, further enhancing performance in the same manner as a human officer with the skill"
+    "1.4.2": "should be compatible with v1.1+\n\n Emergent Threats\n Misc\n-Fixed a bug where attacking the Diamond Nexus fleet in A Thousand Cuts while never even starting a conversation with it will cause the enemy fleet to not drop the Cyanine Core\n-The mission Thousand Cuts now offers the greatest amount of loot through fighting (Salvageable Nephos destroyers and Mokosh, Nemesis Doctrine biochip, Nephos blueprint, Remnant rare fighters blueprint, Temporal Desynchronizer, Cyanine Core and shards) while each of the peaceful paths offer only a subset of the loot (ships and core, or biochip and blueprint, plus Temporal Desynchronizer)\n-The Temporal Desynchronizer item will now be detached when handed out to players so they won't miss it if they forego salvaging the Mokosh, and it will always be received on each mission outcome aside from leaving and asking for nothing\n\n Hullmods\n-Mokosh hullmods Stabilized Temporal Shell and Temporal Desynchronizer text slightly updated for better clarity\n\n IX Revival]\n Misc\n-Fixed a crash issue with running IX Revival without Nexerelin\n\nTranslator notes are on GitHub\n\nv1.4.1 should be compatible with v1.1+\n\n Emergent Threats\n Misc\n-Minor refactoring for ease of translation\n-New AI administrator skill requires PatchLib to work, so please install with the mod update\n\n Colonies\n-The Cyanine Immutable AI core obtained from the mission A Thousand Cuts can now be used as a colony administrator, and possesses a special skill that makes it not receive Hegemony or Pather scrutiny\n\n Industry\n-Added a version of the Surveillance Center from IX Revival to Emergent Threats that is only buildable when IX Revival is not enabled, does not come with Panopticon mechanics but will accept Cyanine Core/Shard in additional to standard cores (+2 stability, extra +2 alpha/Cyanine core, +1 beta/Cyanine shard)\n\n Ships\n-Equalizer (EX) forward point defense turret arcs updated to cover forward arc\n\n Weapons\n-Hydromagnetic Cannon updated on-hit graphics and text\n-Warp Drone Assembler/Constructor damage lowered from 800 Kinetic + 400 Energy to 600 Kinetic + 200 Energy\n\n Hullmods\n-Updated some sprite swapping hullmods to reduce graphics load\n\n IX Revival\n Misc\n-Minor refactoring for ease of translation\n-Added new LunaLib graphics options for swapping ship sprites, located in the Visuals tab\n-(Nex) reverted vassal mechanics between Trinity Worlds and IX Battlegroup to a standard alliance, this fix only applies to new games, will be updated again after Nexerelin patches the current bug when an alliance vassal's destruction crashes the game\n-Fixed several bugs related to the panopticon core/node structure logic after a foreign conquest, thanks to Bass for the coding help\n-Added a compatibility fix so update is now properly backwards compatible with v1.1+ saves",
+    "1.4.1": "should be compatible with v1.1+\n\n Emergent Threats\n Misc\n-Minor refactoring for ease of translation\n-New AI administrator skill requires PatchLib to work, so please install with the mod update\n\n Colonies\n-The Cyanine Immutable AI core obtained from the mission A Thousand Cuts can now be used as a colony administrator, and possesses a special skill that makes it not receive Hegemony or Pather scrutiny\n\n Industry\n-Added a version of the Surveillance Center from IX Revival to Emergent Threats that is only buildable when IX Revival is not enabled, does not come with Panopticon mechanics but will accept Cyanine Core/Shard in additional to standard cores (+2 stability, extra +2 alpha/Cyanine core, +1 beta/Cyanine shard)\n\n Ships\n-Equalizer (EX) forward point defense turret arcs updated to cover forward arc\n\n Weapons\n-Hydromagnetic Cannon updated on-hit graphics and text\n-Warp Drone Assembler/Constructor damage lowered from 800 Kinetic + 400 Energy to 600 Kinetic + 200 Energy\n\n Hullmods\n-Updated some sprite swapping hullmods to reduce graphics load\n\n IX Revival\n Misc\n-Minor refactoring for ease of translation\n-Added new LunaLib graphics options for swapping ship sprites, located in the Visuals tab\n-(Nex) reverted vassal mechanics between Trinity Worlds and IX Battlegroup to a standard alliance, this fix only applies to new games, will be updated again after Nexerelin patches the current bug when an alliance vassal's destruction crashes the game\n-Fixed several bugs related to the panopticon core/node structure logic after a foreign conquest, thanks to Bass for the coding help\n-Added a compatibility fix so update is now properly backwards compatible with v1.1+ saves"
   },
   "changelogUrl": "https://github.com/vice-grip/starsector-mod-emergent-threats/releases/tag/v1.4.2",
-  "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License",
+  "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.",
   "sourceCodeUrl": "https://github.com/vice-grip/starsector-mod-emergent-threats",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=27284",
   "discordUrl": "https://discord.com/channels/187635036525166592/1355071745366822950/1355071745366822950",
   "releases": [
+    {
+      "modId": "emergent-threats",
+      "modName": "Emergent Threats",
+      "seenOn": "2026-11-06",
+      "oldVersion": "1.4.0",
+      "newVersion": "1.4.2",
+      "gameVersion": "0.98a",
+      "changelogNotes": "should be compatible with v1.1+\n\n Emergent Threats\n Misc\n-Fixed a bug where attacking the Diamond Nexus fleet in A Thousand Cuts while never even starting a conversation with it will cause the enemy fleet to not drop the Cyanine Core\n-The mission Thousand Cuts now offers the greatest amount of loot through fighting (Salvageable Nephos destroyers and Mokosh, Nemesis Doctrine biochip, Nephos blueprint, Remnant rare fighters blueprint, Temporal Desynchronizer, Cyanine Core and shards) while each of the peaceful paths offer only a subset of the loot (ships and core, or biochip and blueprint, plus Temporal Desynchronizer)\n-The Temporal Desynchronizer item will now be detached when handed out to players so they won't miss it if they forego salvaging the Mokosh, and it will always be received on each mission outcome aside from leaving and asking for nothing\n\n Hullmods\n-Mokosh hullmods Stabilized Temporal Shell and Temporal Desynchronizer text slightly updated for better clarity\n\n IX Revival]\n Misc\n-Fixed a crash issue with running IX Revival without Nexerelin\n\nTranslator notes are on GitHub\n\nv1.4.1 should be compatible with v1.1+\n\n Emergent Threats\n Misc\n-Minor refactoring for ease of translation\n-New AI administrator skill requires PatchLib to work, so please install with the mod update\n\n Colonies\n-The Cyanine Immutable AI core obtained from the mission A Thousand Cuts can now be used as a colony administrator, and possesses a special skill that makes it not receive Hegemony or Pather scrutiny\n\n Industry\n-Added a version of the Surveillance Center from IX Revival to Emergent Threats that is only buildable when IX Revival is not enabled, does not come with Panopticon mechanics but will accept Cyanine Core/Shard in additional to standard cores (+2 stability, extra +2 alpha/Cyanine core, +1 beta/Cyanine shard)\n\n Ships\n-Equalizer (EX) forward point defense turret arcs updated to cover forward arc\n\n Weapons\n-Hydromagnetic Cannon updated on-hit graphics and text\n-Warp Drone Assembler/Constructor damage lowered from 800 Kinetic + 400 Energy to 600 Kinetic + 200 Energy\n\n Hullmods\n-Updated some sprite swapping hullmods to reduce graphics load\n\n IX Revival\n Misc\n-Minor refactoring for ease of translation\n-Added new LunaLib graphics options for swapping ship sprites, located in the Visuals tab\n-(Nex) reverted vassal mechanics between Trinity Worlds and IX Battlegroup to a standard alliance, this fix only applies to new games, will be updated again after Nexerelin patches the current bug when an alliance vassal's destruction crashes the game\n-Fixed several bugs related to the panopticon core/node structure logic after a foreign conquest, thanks to Bass for the coding help\n-Added a compatibility fix so update is now properly backwards compatible with v1.1+ saves",
+      "updateCompatibilityText": "v1.4.2 should be compatible with v1.1+",
+      "canUpdate": "yes"
+    },
     {
       "modId": "emergent-threats",
       "modName": "Emergent Threats",
@@ -565,13 +592,12 @@
       "changelogNotes": "should be compatible with v1.1+"
     }
   ],
-  "threadLastPostOn": "2026-11-04",
   "sameNameMods": [],
   "addons": [],
   "optionalNeeds": [
     {
-      "name": "LunaLib",
-      "id": "lunalib"
+      "name": "Nexerelin",
+      "id": "nexerelin"
     },
     {
       "name": "Second-in-Command",
@@ -588,14 +614,6 @@
     {
       "name": "Underworld",
       "id": "underworld"
-    },
-    {
-      "name": "Nexerelin",
-      "id": "nexerelin"
-    },
-    {
-      "name": "PatchLib",
-      "id": "patchlib"
     }
   ],
   "conflicts": [
@@ -605,12 +623,6 @@
       "quote": "Known to be incompatible with Emergent Threats",
       "kind": "technical",
       "fromOtherMod": true
-    },
-    {
-      "name": "Arsenal Expansion",
-      "id": "arsenal-expansion",
-      "quote": "Note that if you are running a bootleg version of Arsenal Expansion, you should disable the original's battlegroup in its mod settings to avoid two versions of the faction spawning at the same time.",
-      "kind": "withNotes"
     }
   ]
 }
