@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-11-06T19:06:47.835755Z",
   "meta": {
-    "generatedAt": "2026-11-06T22:10:11.105566Z",
+    "generatedAt": "2026-11-08T01:15:53.399086Z",
     "totalMods": 1095,
     "totalDetails": 1081,
     "totalAssumedDownloadEntries": 918,
@@ -78136,8 +78136,8 @@
               },
               "sourceCode": "https://github.com/Lukas22041/PatchLib",
               "summary": {
-                "sentence": "Enables bytecode patching at runtime for Starsector.",
-                "paragraph": "Enables bytecode patching at runtime for Starsector. Provides an annotation based API for other mods to register patches and patch handlers. Allows modifying and redirecting existing code without fully overwriting plugins."
+                "sentence": "Enables bytecode patching at runtime to modify game and mod code behavior.",
+                "paragraph": "Provides an annotation-based API for registering patches and handlers to hook into existing methods. Allows multiple mods to insert changes into a single plugin without overwriting it entirely."
               },
               "optionalNeeds": [
                 "Fast Rendering"
@@ -78155,13 +78155,11 @@
                 "uses": [
                   {
                     "area": "code",
-                    "how": "assisted",
-                    "extent": "some"
+                    "how": "assisted"
                   },
                   {
                     "area": "writing",
-                    "how": "assisted",
-                    "extent": "some"
+                    "how": "assisted"
                   }
                 ],
                 "tools": [
@@ -78173,7 +78171,7 @@
               }
             },
             "descriptionAnchors": {
-              "startsWith": "PatchLib is a library mod that enables bytecode patching at runtime for starsector.",
+              "startsWith": "PatchLib is a library mod that enables",
               "endsWith": "Only install it if a mod requires it."
             }
           }
@@ -223470,7 +223468,7 @@
             "sourceCode": "https://github.com/Lukas22041/PatchLib",
             "summary": {
               "sentence": "Provides a library for other mods to patch game code at runtime using annotations.",
-              "paragraph": "Allows mod authors to insert code into existing game methods, modify return values and parameters, skip original code, and redirect calls. It uses an annotation-based API where developers define patches that the library applies in the background."
+              "paragraph": "Allows mod authors to insert code into existing game methods, modify return values and parameters, skip original code, and redirect calls. It uses an annotation-based API where metadata tells the library which classes and methods to target."
             },
             "optionalNeeds": [
               "Fast Rendering"
