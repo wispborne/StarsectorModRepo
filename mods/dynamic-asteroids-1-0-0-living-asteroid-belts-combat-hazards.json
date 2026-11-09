@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-08T01:15:55.078390Z",
+  "generatedAt": "2026-11-09T02:56:04.322299Z",
   "listing": {
     "id": "dynamic-asteroids-1-0-0-living-asteroid-belts-combat-hazards",
-    "name": "Dynamic Asteroids 2.0.4 (Cyclone Edition) - Living Belts, Formations & 360° Trajectories",
+    "name": "Dynamic Asteroids 2.0.6 (Cyclone Derelict+AI) - Living Belts, Formations & 360° Trajectories",
     "displayName": "Dynamic Asteroids",
     "authors": [
       "keltuze"
@@ -17,19 +17,19 @@
       "discord"
     ],
     "gameVersion": "0.98a",
-    "modVersion": "2.0.4",
+    "modVersion": "2.0.6",
     "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_38479_1793833566.png",
-    "summary": "I've wanted active, moving asteroid fields in Starsector for about 5 years. In vanilla, asteroids are completely static and just sit there as lifeless obstacles.",
+    "summary": "For years, I wanted active, moving asteroid fields in Starsector. In the vanilla game, asteroids are completely static, sitting there as lifeless environmental obstacles. I created this mod from scratch to turn them into active, rushing rivers of cosmic debris during combat!",
     "summaryIsGenerated": false,
-    "aiSummary": "Replaces static asteroids with dynamic fields that drift across the battlefield in rolling waves.",
+    "aiSummary": "Replaces static asteroid belts with dynamic fields of moving rocks that flow across the battlefield.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
-      "url": "https://gofile.io/d/fgKH2x3r",
+      "url": "https://github.com/keltuze/DynamicAsteroids",
       "kind": "direct",
       "needsAnotherStep": true
     },
-    "downloadCount": 1,
+    "downloadCount": 2,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36261.0",
     "discordUrl": "https://discord.com/channels/187635036525166592/1567787631058624654/1567787631058624654",
     "sourceIsPublic": true,
@@ -40,11 +40,13 @@
         "area": "code",
         "how": "generated",
         "extent": "all"
+      },
+      {
+        "area": "other"
       }
     ],
     "addedOn": "2026-11-04",
-    "threadLastPostOn": "2026-11-05",
-    "editedOn": "2026-11-05",
+    "editedOn": "2026-11-08",
     "needs": [
       {
         "name": "LunaLib",
@@ -57,24 +59,28 @@
       }
     ]
   },
-  "description": "Dynamic Asteroids v1.0.0\nGame Version: Starsector 0.98a-RC8 (supports 0.97a)\nCompatibility: Java 8 (bytecode 52.0, works on vanilla and custom JREs)\nContact Discord: keltuze\n\n---\nMods DOWNLOADS\nhttps://gofile.io/d/fgKH2x3r\nhttps://github.com/keltuze/DynamicAsteroids\n\nAbout the mod:\nI've wanted active, moving asteroid fields in Starsector for about 5 years. In vanilla, asteroids are completely static and just sit there as lifeless obstacles. I kept looking for a mod that would make them actually drift and rush through battles, but never found one that felt right — so I finally stayed up all night coding this mod from scratch. Please don't judge too harshly, as this is my very first mod! An accidental side-effect of how the sequential spawning works is that the rocks naturally group up into rolling waves as they fly across the battlefield, which ended up looking surprisingly cool and cinematic in combat.\n\nHow it actually works (exact mechanics):\n* Vanilla asteroids are cleared on combat start so they don't sit motionless.\n* Asteroids continuously fly across the battlefield at a fixed 600 u/s (the upper safe speed limit of Starsector's physics engine before collision tunneling occurs).\n* Direction (25% each): At the start of each battle, 1 of 4 cardinal directions is rolled for the entire fight (Left to Right, Right to Left, Bottom to Top, or Top to Bottom).\n* Density Variety: Asteroid count is rolled once per battle between 70 and 160 rocks and kept at that number until combat ends.\n* 30-Second Lifespan: Each spawned rock lives for exactly 30 seconds, then dissolves into dust.\n* Collision Velocity Lock: When asteroids bump into each other, the physics engine normally slows them down into a traffic jam. The plugin actively restores their speed back to 600 u/s so rocks never crawl.\n* Flagship HUD: The bottom-left status indicator displays the flow direction, and the exact number of rocks in the current field.\n\nPerformance & Settings:\n\nIf 160 rocks cause FPS drops on your PC, you can easily lower the rock count in:\nmods/DynamicAsteroids/data/config/dynamic_asteroids_settings.json\n(change minFieldRocks and maxFieldRocks) or in-game via LunaLib (F2).\n\nP.S. Extreme version, the collision impact of each asteroid is greatly increased, so getting hit will shove and spin ships across the map. It's a lot more chaotic and fun.\n\nAI disclaimer\np.p.s Not a single line of code here was written by a human. All a human did was check, refine, and edit—acting as a creative director through dialogue with the machine.\nPotential issues and bugs were identified.\nThe impact on performance was assessed.\nThe consequences for game saves were evaluated.\nThere were hundreds of instructions for rewriting the functionality.\nThe mod was also completely overhauled once and rewritten from scratch, with the goal of keeping the codebase lightweight and clean.\n\np.s I think I managed to post this in the Discord channel. Looks like the mod is saved.\n\nold archive - check github",
-  "descriptionHtml": "<span class=\"size-bigger\"><b>Dynamic Asteroids v1.0.0</b></span><br><b>Game Version:</b> Starsector 0.98a-RC8 (supports 0.97a)<br><b>Compatibility:</b> Java 8 (bytecode 52.0, works on vanilla and custom JREs)<br><b>Contact Discord:</b> keltuze<br><br>---<br>Mods <b>DOWNLOADS</b><br><a href=\"https://gofile.io/d/fgKH2x3r\" rel=\"nofollow noopener\" target=\"_blank\">https://gofile.io/d/fgKH2x3r</a><br><a href=\"https://github.com/keltuze/DynamicAsteroids\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/keltuze/DynamicAsteroids</a><br><br><b>About the mod:</b><br>I've wanted active, moving asteroid fields in Starsector for about 5 years. In vanilla, asteroids are completely static and just sit there as lifeless obstacles. I kept looking for a mod that would make them actually drift and rush through battles, but never found one that felt right — so I finally stayed up all night coding this mod from scratch. Please don't judge too harshly, as this is my very first mod! An accidental side-effect of how the sequential spawning works is that the rocks naturally group up into rolling waves as they fly across the battlefield, which ended up looking surprisingly cool and cinematic in combat.<br><br><b>How it actually works (exact mechanics):</b><br>* Vanilla asteroids are cleared on combat start so they don't sit motionless.<br>* Asteroids continuously fly across the battlefield at a fixed <b>600 u/s</b> (the upper safe speed limit of Starsector's physics engine before collision tunneling occurs).<br>* <b>Direction (25% each):</b> At the start of each battle, 1 of 4 cardinal directions is rolled for the entire fight (Left to Right, Right to Left, Bottom to Top, or Top to Bottom).<br>* <b>Density Variety:</b> Asteroid count is rolled once per battle between <b>70 and 160 rocks</b> and kept at that number until combat ends.<br>* <b>30-Second Lifespan:</b> Each spawned rock lives for exactly 30 seconds, then dissolves into dust.<br>* <b>Collision Velocity Lock:</b> When asteroids bump into each other, the physics engine normally slows them down into a traffic jam. The plugin actively restores their speed back to 600 u/s so rocks never crawl.<br>* <b>Flagship HUD:</b> The bottom-left status indicator displays the flow direction, and the exact number of rocks in the current field.<br><br><b>Performance &amp; Settings:</b><br><br>If 160 rocks cause FPS drops on your PC, you can easily lower the rock count in:<br>mods/DynamicAsteroids/data/config/dynamic_asteroids_settings.json <br>(change minFieldRocks and maxFieldRocks) or in-game via <b>LunaLib (F2)</b>.<br><br>P.S. Extreme version, the collision impact of each asteroid is greatly increased, so getting hit will shove and spin ships across the map. It's a lot more chaotic and fun.<br><br><details class=\"spoiler\"><summary>AI disclaimer</summary>p.p.s Not a single line of code here was written by a human. All a human did was check, refine, and edit—acting as a creative director through dialogue with the machine.<br>Potential issues and bugs were identified.<br>The impact on performance was assessed.<br>The consequences for game saves were evaluated.<br>There were hundreds of instructions for rewriting the functionality.<br>The mod was also completely overhauled once and rewritten from scratch, with the goal of keeping the codebase lightweight and clean.</details><br>p.s I think I managed to post this in the Discord channel. Looks like the mod is saved.<br><br>old archive - check github",
+  "description": "🌌 Dynamic Asteroids\nBreathes dynamic life into static asteroid belts!\n\nGame Version: Starsector 0.98a-RC8 (Supports 0.97a)\nCompatibility: Java 8 (Works seamlessly on vanilla and custom JREs)\nMod Author & Contact (Discord): keltuze\n\n📦 DOWNLOADS & SOURCE\n🔗 GitHub Repository & Releases\n📦 Alternative Mirror (Gofile)\n\n🚀 About the Mod\nFor years, I wanted active, moving asteroid fields in Starsector. In the vanilla game, asteroids are completely static, sitting there as lifeless environmental obstacles. I created this mod from scratch to turn them into active, rushing rivers of cosmic debris during combat!\n\nBecause of how the sequential spawning works, the rocks naturally group up into rolling waves as they fly across the battlefield, creating a surprisingly cool and cinematic backdrop for your space battles.\n\n⚙️ How It Works (Exact Mechanics)\n\nVanilla Cleanup: Static vanilla asteroids are automatically cleared at combat start so they don't sit motionless.\nVelocity Lock: Asteroids continuously fly across the battlefield at a fixed 600 u/s (the upper safe speed limit of Starsector's physics engine before collision tunneling occurs). The plugin dynamically resets their speed back to 600 u/s if they bump into each other, preventing traffic jams.\nDynamic Direction: At the start of each battle, 1 of 4 cardinal directions is rolled for the entire fight (Left to Right, Right to Left, Bottom to Top, or Top to Bottom).\nDensity Variety: The asteroid count is rolled once per battle between 70 and 160 rocks and maintained at that density until combat ends.\n30-Second Lifespan: Each spawned rock lives for exactly 30 seconds before safely dissolving into space dust.\nFlagship HUD UI: A status indicator in the bottom-left of your screen displays the active flow direction and the exact number of rocks currently on the field.\n\n💻 Performance & Settings Configuration\nIf hosting up to 160 active rocks causes FPS drops on your setup, you can easily adjust the density limits on the fly in-game via LunaLib (F2).\n\nAlternatively, you can manually edit the config file at:\nmods/DynamicAsteroids/data/config/dynamic_asteroids_settings.json\n(Tweak the minFieldRocks and maxFieldRocks values to fit your performance needs).\n\nP.S. Looking for extra chaos? Try the Extreme version profiles where the collision impact of each asteroid is heavily multiplied, shoving and spinning ships across the map!\n\nAI Use & Development Disclaimer\nSome or all assets and code in this mod were created using AI tools.\nCode Architecture: Written entirely via AI prompts.\nHuman Involvement (Creative Director & Editor):\nChecked, refined, compiled, and edited all generated code.\nIdentified performance bugs and fixed collision scaling issues.\nAssessed campaign save-game compatibility to ensure stability.\nManaged extensive functional iterations and executed a clean, lightweight codebase rewrite from scratch.",
+  "descriptionHtml": "<div class=\"align-center\"><span class=\"size-bigger\"><b>🌌 Dynamic Asteroids</b></span><br><b>Breathes dynamic life into static asteroid belts!</b></div><br><b>Game Version:</b> Starsector 0.98a-RC8 (Supports 0.97a)<br><b>Compatibility:</b> Java 8 (Works seamlessly on vanilla and custom JREs)<br><b>Mod Author &amp; Contact (Discord):</b> keltuze<br><br><hr><br><div class=\"align-center\"><span class=\"size-big\"><b>📦 DOWNLOADS &amp; SOURCE</b></span><br>🔗 <a href=\"https://github.com/keltuze/DynamicAsteroids\" rel=\"nofollow noopener\" target=\"_blank\">GitHub Repository &amp; Releases</a><br>📦 <a href=\"https://gofile.io/d/fgKH2x3r\" rel=\"nofollow noopener\" target=\"_blank\">Alternative Mirror (Gofile)</a></div><br><hr><br><span class=\"author-colour\" style=\"--c:#54a0ff\"><b>🚀 About the Mod</b></span><br>For years, I wanted active, moving asteroid fields in Starsector. In the vanilla game, asteroids are completely static, sitting there as lifeless environmental obstacles. I created this mod from scratch to turn them into active, rushing rivers of cosmic debris during combat! <br><br>Because of how the sequential spawning works, the rocks naturally group up into rolling waves as they fly across the battlefield, creating a surprisingly cool and cinematic backdrop for your space battles. <br><br><span class=\"author-colour\" style=\"--c:#54a0ff\"><b>⚙️ How It Works (Exact Mechanics)</b></span><br><ul><li> <b>Vanilla Cleanup:</b> Static vanilla asteroids are automatically cleared at combat start so they don't sit motionless.</li><li> <b>Velocity Lock:</b> Asteroids continuously fly across the battlefield at a fixed <b>600 u/s</b> (the upper safe speed limit of Starsector's physics engine before collision tunneling occurs). The plugin dynamically resets their speed back to 600 u/s if they bump into each other, preventing traffic jams.</li><li> <b>Dynamic Direction:</b> At the start of each battle, 1 of 4 cardinal directions is rolled for the entire fight (Left to Right, Right to Left, Bottom to Top, or Top to Bottom).</li><li> <b>Density Variety:</b> The asteroid count is rolled once per battle between <b>70 and 160 rocks</b> and maintained at that density until combat ends.</li><li> <b>30-Second Lifespan:</b> Each spawned rock lives for exactly 30 seconds before safely dissolving into space dust.</li><li> <b>Flagship HUD UI:</b> A status indicator in the bottom-left of your screen displays the active flow direction and the exact number of rocks currently on the field.</li></ul><span class=\"author-colour\" style=\"--c:#54a0ff\"><b>💻 Performance &amp; Settings Configuration</b></span><br>If hosting up to 160 active rocks causes FPS drops on your setup, you can easily adjust the density limits on the fly in-game via <b>LunaLib (F2)</b>.<br><br>Alternatively, you can manually edit the config file at:<br>mods/DynamicAsteroids/data/config/dynamic_asteroids_settings.json <br>(Tweak the minFieldRocks and maxFieldRocks values to fit your performance needs).<br><br><i>P.S. Looking for extra chaos? Try the Extreme version profiles where the collision impact of each asteroid is heavily multiplied, shoving and spinning ships across the map! </i><br><br><hr><br><details class=\"spoiler\"><summary>AI Use &amp; Development Disclaimer</summary> Some or all assets and code in this mod were created using AI tools.<br><b>Code Architecture:</b> Written entirely via AI prompts.<br><b>Human Involvement (Creative Director &amp; Editor):</b><br><ul><li>Checked, refined, compiled, and edited all generated code.</li><li>Identified performance bugs and fixed collision scaling issues.</li><li>Assessed campaign save-game compatibility to ensure stability.</li><li>Managed extensive functional iterations and executed a clean, lightweight codebase rewrite from scratch.</li></ul></details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Breathes life into static asteroid belts!<br>In vanilla Starsector, asteroids just hang motionless in space. Dynamic Asteroids turns them into active, rushing rivers of space debris during combat.</p><p>Terrain Detection: Uses the campaign world map to strictly check if your fleet is inside an asteroid belt, field, or planetary ring (ASTEROID_BELT, ASTEROID_FIELD, RING).<br>Asteroid Fields / Belts:<br>Continuous Stream: Asteroids rush across the map along 1 of 4 cardinal directions (Left, Right, Up, Down — rolled 25% each at battle start).<br>Density: 70 to 160 rocks rolled once per combat. (new update 100-1000)<br>HUD Hazard Alert: The flagship's HUD displays the current drift direction and active field rock count.<br>Deep Space / Open Space (Outside Asteroid Belts):<br>Sparse Meteors: Only 4 to 10 stray rocks in the entire sector.<br>Irregular Spacing: Spawns with a randomized delay between 1.5s and 5.0s, ensuring rocks drift by sporadically one by one rather than forming a solid wave.<br>Quiet HUD: Shows calm situational info without emergency alarms.<br>Refit Simulator: Always models a full asteroid storm so you can stress-test ship shields and point defense.<br>Anti-Brake Cruise Control: Prevents physics engine collision dampening from stalling the rocks — asteroids actively maintain speed after impacts.<br>30-Second Lifespan: Asteroids expire gracefully with a soft dust puff after 30 seconds, preventing sector clutter and preserving FPS.<br>Mid-Campaign Safe: 100% safe to add or remove at any point in an ongoing campaign (pure combat engine plugin, writes zero data to save files).</p><p>Stress Test <a href=\"https://youtu.be/mda3KVTvqBE\" rel=\"nofollow noopener\" target=\"_blank\">https://youtu.be/mda3KVTvqBE</a> more asteroid!<br><a href=\"https://github.com/keltuze/DynamicAsteroids#-how-it-works\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/keltuze/DynamicAsteroids#-how-it-works</a></p><blockquote><p>p.s I hereby grant the game developers full, unrestricted rights to use, modify, and integrate the concepts, assets, and code from this mod into the official game. I would be absolutely thrilled to see these \"crazy asteroids\" become a native part of the universe.</p></blockquote>",
-  "aiDescription": "Clears vanilla asteroids at combat start and spawns new ones that fly continuously at a fixed speed. The direction of flow is randomized per battle, along with the total number of rocks. Each asteroid has a limited lifespan before dissolving, and collision physics are adjusted to prevent traffic jams.",
+  "aiDescription": "Clears vanilla asteroids at combat start and spawns new ones that fly in a random cardinal direction. The number of rocks varies per battle, and each rock dissolves after 30 seconds. A HUD indicator shows the current flow direction and rock count.",
   "saveCompatibilityText": "Mid-Campaign Safe: 100% safe to add or remove at any point in an ongoing campaign (pure combat engine plugin, writes zero data to save files).",
   "removalCompatibilityText": "Mid-Campaign Safe: 100% safe to add or remove at any point in an ongoing campaign (pure combat engine plugin, writes zero data to save files).",
   "canAdd": "yes",
   "canRemove": "yes",
   "aiUse": {
-    "quote": "Not a single line of code here was written by a human. All a human did was check, refine, and edit—acting as a creative director through dialogue with the machine.\nPotential issues and bugs were identified.\nThe impact on performance was assessed.\nThe consequences for game saves were evaluated.\nThere were hundreds of instructions for rewriting the functionality.\nThe mod was also completely overhauled once and rewritten from scratch, with the goal of keeping the codebase lightweight and clean.",
+    "quote": "Some or all assets and code in this mod were created using AI tools.\nCode Architecture: Written entirely via AI prompts.\nHuman Involvement (Creative Director & Editor):\nChecked, refined, compiled, and edited all generated code.\nIdentified performance bugs and fixed collision scaling issues.\nAssessed campaign save-game compatibility to ensure stability.\nManaged extensive functional iterations and executed a clean, lightweight codebase rewrite from scratch.",
     "usesAi": true,
     "uses": [
       {
         "area": "code",
         "how": "generated",
         "extent": "all"
+      },
+      {
+        "area": "other",
+        "extent": "some"
       }
     ]
   },
@@ -85,24 +91,26 @@
   "gallery": [],
   "downloads": [
     {
-      "url": "https://gofile.io/d/fgKH2x3r",
+      "url": "https://github.com/keltuze/DynamicAsteroids",
       "kind": "direct",
-      "label": "https://gofile.io/d/fgKH2x3r",
+      "label": "GitHub Repository & Releases",
+      "host": "github.com",
+      "needsAnotherStep": true
+    },
+    {
+      "url": "https://gofile.io/d/fgKH2x3r",
+      "kind": "mirror",
+      "label": "Alternative Mirror (Gofile)",
       "host": "gofile.io",
       "needsAnotherStep": true
     }
   ],
-  "changelog": {
-    "2.0.4": "Living Belts, Formations & 360° Trajectories",
-    "2.0.3": "Living Belts, Formations & 360° Trajectories",
-    "2.0.2": "Living Belts, Formations & 360° Trajectories"
-  },
+  "changelog": {},
   "sourceCodeUrl": "https://github.com/keltuze/DynamicAsteroids",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36261.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1567787631058624654/1567787631058624654",
   "releases": [],
-  "threadLastPostOn": "2026-11-05",
   "sameNameMods": [],
   "addons": []
 }

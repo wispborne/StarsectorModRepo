@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T01:15:55.078390Z",
+  "generatedAt": "2026-11-09T02:56:04.322299Z",
   "mods": [
     {
       "modId": "a-vanilla-balance-tweak",
@@ -224,9 +224,9 @@
       "modName": "CJY's Toy Box",
       "conflicts": [
         {
-          "name": "Halo Dynamics 1.8.0",
-          "quote": "the the new Halo Dynamics 1.8.0 update (which isnt translated at the moment) conflicts with CJY.",
-          "kind": "technical"
+          "name": "Halo Dynamics",
+          "quote": "the new Halo Dynamics 1.8.0 update (which isnt translated at the moment) conflicts with CJY.",
+          "kind": "withNotes"
         }
       ]
     },
@@ -494,6 +494,17 @@
           "id": "second-in-command",
           "quote": "Second-in-Command may make Humanity less useful because of the way it changes or removes Neural Link behavior.",
           "kind": "gameplay"
+        },
+        {
+          "name": "Industrial.Evolution",
+          "id": "industrial-evolution",
+          "quote": "If yer really scared, avoid IndEvo or Terraforming or anything else that touches the planets in general",
+          "kind": "withNotes"
+        },
+        {
+          "name": "Terraforming",
+          "quote": "If yer really scared, avoid IndEvo or Terraforming or anything else that touches the planets in general",
+          "kind": "withNotes"
         }
       ]
     },
@@ -670,7 +681,7 @@
         {
           "name": "Phase Anchor",
           "quote": "This mod modifies the Phase Anchor hullmod.",
-          "kind": "withNotes"
+          "kind": "technical"
         }
       ]
     },
@@ -942,7 +953,7 @@
       "conflicts": [
         {
           "name": "Diable Avionics",
-          "id": "diable-avionics-2",
+          "id": "diable-avionics",
           "quote": "Diable Avionics: All ship systems that switch player control to fighters, under certain conditions, will CTD.",
           "kind": "technical"
         },
@@ -1142,6 +1153,18 @@
       ]
     },
     {
+      "modId": "tradu-o-pt-br-do-starsector-portugu-s-do-brasil",
+      "modName": "Tradução PT-BR do Starsector (Português do Brasil)",
+      "conflicts": [
+        {
+          "name": "VRAM Optimizer",
+          "id": "vram-optimizer",
+          "quote": "Fontes quebradas com o VRAM Optimizer (causa não confirmada): se as letras ficarem embaralhadas com esse mod ativo, o cache de texturas dele pode estar guardando a versão antiga das fontes.",
+          "kind": "withNotes"
+        }
+      ]
+    },
+    {
       "modId": "uaf-portraits",
       "modName": "UAF Portraits",
       "conflicts": [
@@ -1247,17 +1270,6 @@
           "id": "nexerelin",
           "quote": "I will be honest, i havent really checked if this is compatible with giant mods like say, Nexerelin. I have 0 clue if it will work with that, and its not something i plan to look into any time soon.",
           "kind": "other"
-        }
-      ]
-    },
-    {
-      "modId": "wide-horizons",
-      "modName": "Wide Horizons (Basic) - Expanding the Universe",
-      "conflicts": [
-        {
-          "name": "RAT's Procgen Configurator",
-          "quote": "I'll be updating the forum post to clearly state that RAT's Procgen Configurator is currently not compatible, and I will also look into restructuring how theme generation is handled in a future update to avoid this kind of overlap entirely.",
-          "kind": "technical"
         }
       ]
     },

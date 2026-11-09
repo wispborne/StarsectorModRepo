@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T01:15:55.078390Z",
+  "generatedAt": "2026-11-09T02:56:04.322299Z",
   "listing": {
     "id": "starsector-mod-checker",
     "name": "[TOOL] - Starsector Mod Checker",
@@ -20,12 +20,12 @@
     "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_29380_1786313917.png",
     "summary": "It reads every mod you have enabled the way Starsector does when it starts, and lists the files that would crash the game or break something, by mod, folder and file.",
     "summaryIsGenerated": false,
-    "aiSummary": "Scans enabled mods for file errors that would crash the game or break content before you start playing.",
-    "hasDirectDownload": true,
+    "aiSummary": "Scans enabled mods for files that would crash the game or break functionality.",
+    "hasDirectDownload": false,
     "bestDownload": {
-      "url": "//starsectormodchecker.zip",
+      "url": "https://github.com/andrzejsokolowski/starsector-mod-checker/releases/latest",
       "kind": "direct",
-      "needsAnotherStep": false
+      "needsAnotherStep": true
     },
     "downloadCount": 1,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36202.0",
@@ -54,9 +54,9 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>This tool's purpose is to scan your /mods directory for any files that would crash starsector on runtime<br>Read how to use on the forum post:<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36202.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36202.0</a></p>",
-  "aiDescription": "Runs as a standalone program using the game's Java to read mod files exactly as Starsector does. It identifies missing fields, syntax errors, and invalid references that cause crashes or warnings. Generates a report listing issues by mod, folder, and file to help fix problems before launching the game.",
+  "aiDescription": "Reads mod data using the same logic as the game startup to identify errors in weapons, projectiles, hulls, and other assets. It lists issues by mod, folder, and file, distinguishing between crashes, warnings, and notes. The tool runs externally without modifying any files.",
   "aiUse": {
-    "quote": "Some or all assets and code in this mod were created using AI tools:\nCode: Claude Code (Claude Opus 5.5)\nText (readme and this post): Claude Code (Claude Opus 5.5)",
+    "quote": "Some or all assets and code in this mod were created using AI tools:\nCode: Claude Code (Claude Opus 5.5)",
     "usesAi": true,
     "uses": [
       {
@@ -91,19 +91,17 @@
   ],
   "downloads": [
     {
-      "url": "//starsectormodchecker.zip",
-      "directUrl": "//starsectormodchecker.zip",
-      "fileName": "StarsectorModChecker.zip",
+      "url": "https://github.com/andrzejsokolowski/starsector-mod-checker/releases/latest",
       "kind": "direct",
-      "label": "StarsectorModChecker.zip",
-      "host": "starsectormodchecker.zip",
-      "needsAnotherStep": false
+      "label": "Starsector Mod Checker",
+      "host": "github.com",
+      "needsAnotherStep": true
     }
   ],
   "changelog": {
     "1.0.0": "First release."
   },
-  "license": "CC0 (Creative Commons Zero) License",
+  "license": "CC0 (Creative Commons Zero)",
   "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-mod-checker",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36202.0",

@@ -1,9 +1,10 @@
 {
-  "generatedAt": "2026-11-08T01:15:55.078390Z",
+  "generatedAt": "2026-11-09T02:56:04.322299Z",
   "listing": {
     "id": "mod-that-kills-autofit",
     "name": "Mod that kills autofit",
     "authors": [
+      "gord",
       "gord_f"
     ],
     "otherAuthorNames": {},
@@ -12,36 +13,61 @@
       "Campaign and exploration"
     ],
     "sources": [
+      "forum",
       "discord"
     ],
     "gameVersion": "0.98a",
-    "summary": "Kills enemy autofit on the campaign layer (they now use the fits the mod author gave them)",
+    "summary": "Requires nothing, uses a FleetInflationListener to overwrite what autofit fits",
     "summaryIsGenerated": false,
-    "aiSummary": "Disables enemy auto-fit on the campaign layer so they use predefined fits.",
-    "hasDirectDownload": false,
-    "downloadCount": 0,
+    "aiSummary": "Overwrites autofit results to match base fits and install specific mods.",
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://github.com/gordonheroa/mod-that-kills-autofit/archive/refs/heads/main.zip",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36276.0",
     "discordUrl": "https://discord.com/channels/187635036525166592/1563265773395378377/1563265773395378377",
-    "sourceIsPublic": false,
+    "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": false,
     "addedOn": "2026-10-23",
-    "editedOn": "2026-10-24",
+    "editedOn": "2026-11-07",
     "needs": []
   },
-  "description": "Prevents enemies from using auto-fit on the campaign layer. Instead, they utilize specific fits provided by the mod author.",
-  "descriptionHtml": "<p>Prevents enemies from using auto-fit on the campaign layer. Instead, they utilize specific fits provided by the mod author.</p>",
-  "descriptionIsGenerated": true,
-  "descriptionIsForumPost": false,
+  "description": "I accidentally put it in a zip inside a folder inside a zip\n\nDownload link\n\nRequires nothing, uses a FleetInflationListener to overwrite what autofit fits\n\nCopies fit s mods if there are any, tries to match amount of s mods if the base fit has less smods than the autofit.\n\nInstalls s mod in this order: sARU, expmags if base on fit, reinforced bulkheads, flux distributor, and insulated with no checks.\n\nDoes check original variants\n\nGame doesn't crash when removed\n\nNo ai used",
+  "descriptionHtml": "I accidentally put it in a zip inside a folder inside a zip<br><br><a href=\"https://github.com/gordonheroa/mod-that-kills-autofit/archive/refs/heads/main.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download link</a><br><br>Requires nothing, uses a FleetInflationListener to overwrite what autofit fits<br><br>Copies fit s mods if there are any, tries to match amount of s mods if the base fit has less smods than the autofit.<br><br>Installs s mod in this order: sARU, expmags if base on fit, reinforced bulkheads, flux distributor, and insulated with no checks.<br><br>Does check original variants<br><br>Game doesn't crash when removed<br><br>No ai used",
+  "descriptionIsGenerated": false,
+  "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Kills enemy autofit on the campaign layer (they now use the fits the mod author gave them)</p><p><a href=\"https://discord.com/channels/187635036525166592/1563265773395378377/1563656278230835431\" rel=\"nofollow noopener\" target=\"_blank\">https://discord.com/channels/187635036525166592/1563265773395378377/1563656278230835431</a></p>",
-  "aiDescription": "Prevents enemies from using auto-fit on the campaign layer. Instead, they utilize specific fits provided by the mod author.",
-  "aiUse": {},
+  "aiDescription": "Uses a FleetInflationListener to overwrite what autofit fits. Copies fit mods if present and tries to match the amount of s-mods in the base fit. Installs s-mods in a specific order: sARU, expmags if base on fit, reinforced bulkheads, flux distributor, and insulated.",
+  "removalCompatibilityText": "Game doesn't crash when removed",
+  "canRemove": "yes",
+  "aiUse": {
+    "quote": "No ai used",
+    "usesAi": false
+  },
   "rawCategories": [
-    "Quality of Life",
-    "Misc. Campaign Mods"
+    "Misc. Campaign Mods",
+    "Quality of Life"
   ],
   "gallery": [],
-  "downloads": [],
+  "downloads": [
+    {
+      "url": "https://github.com/gordonheroa/mod-that-kills-autofit/archive/refs/heads/main.zip",
+      "directUrl": "https://github.com/gordonheroa/mod-that-kills-autofit/archive/refs/heads/main.zip",
+      "fileName": "main.zip",
+      "kind": "direct",
+      "label": "Download link",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
   "changelog": {},
+  "sourceCodeUrl": "https://github.com/gordonheroa/mod-that-kills-autofit",
   "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36276.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1563265773395378377/1563265773395378377",
   "releases": [],
   "sameNameMods": [],

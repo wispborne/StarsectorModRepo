@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-11-09T02:56:04.322299Z",
+  "listing": {
+    "id": "read-aloud-alpha-experimental",
+    "name": "Read Aloud [Alpha][Experimental]",
+    "displayName": "Read Aloud",
+    "authors": [
+      "LastAi"
+    ],
+    "otherAuthorNames": {},
+    "categories": [],
+    "sources": [
+      "forum"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "0.1.0",
+    "summary": "Hear Starsector's dialogs read aloud: a speaker button for every conversation, event and encounter.",
+    "summaryIsGenerated": false,
+    "aiSummary": "Adds a speaker button to dialogs, events, and encounters to read text aloud using system or AI voices.",
+    "saveCompatible": true,
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://github.com/LastAi/Starsector-ReadAloud/releases/download/v0.1.0-alpha/ReadAloud-0.1.0-alpha.zip",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36271.0",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "generated",
+        "extent": "all"
+      },
+      {
+        "area": "writing",
+        "how": "generated"
+      }
+    ],
+    "addedOn": "2026-11-06",
+    "threadLastPostOn": "2026-11-06",
+    "editedOn": "2026-11-06",
+    "needs": []
+  },
+  "description": "[0.98a] Read Aloud [Alpha][Experimental]\nHear Starsector's dialogs read aloud: a speaker button for every conversation, event and encounter.\n\nProject page (GitHub): github.com/LastAi/Starsector-ReadAloud\nDownload the latest release (0.1.0 Alpha): Read Aloud 0.1.0 Alpha\n\nRequirements: none; Read Aloud works on its own with your system voice.\nOptional, and highly recommended:\n\nLunaLib (which needs LazyLib): in-game settings, voice pickers with samples, and the AI voice status page.\nRead Aloud: AI Voices (included in the release as a second zip): natural AI voices instead of the robotic system voice.\n\nA note from the author\nI've been a longtime fan of Starsector; it's one of my favorite games. However, I'm dyslexic. Very dyslexic, and Starsector is a very text-heavy game.\n\nGames like Stellaris are also very text-heavy, and discovering the screen reader option in that game changed the way I look at games. I've been thinking about how I might make a mod that brings that idea to Starsector, and now I finally have a way to bring it to life.\n\nAI use disclaimer\nSome or all of the code and text in this mod were created using AI tools:\n\nCode: Claude (Anthropic), used through Claude Code. That covers all of the code: the Read Aloud mod and the AI Voices companion app.\nText: Claude also drafted the README, the settings descriptions and this post. The note from the author above is my own words, with only the spelling and grammar fixed.\nArt: none. The mod has no images of its own.\n\nHow I worked: I designed the mod and decided what it should do. I directed the AI step by step, then reviewed and tested the results in the game myself.\n\nAI at runtime (optional AI Voices add-on only): the add-on uses AI text-to-speech models to make the voices: Kitten TTS (recommended), F5-TTS or Chatterbox. They run locally on your own computer, and no text is sent to any online service. The models are downloaded from their authors when you install an engine, and each one has its own license (notably, the F5-TTS model is non-commercial).\nThe main Read Aloud mod uses no AI at runtime. Without the add-on, it reads with your operating system's built-in voice.\n\nWhat it does\nA speaker button appears in interaction dialogs: events, bar encounters, station contacts, fleet encounters and exploration. Click it, or press F8, to hear the latest text. Click again to stop. It reads only what's new since your last choice, not the whole conversation again.\n\nA narrator plus male and female character voices. By default, text in quotation marks is read in the character's voice and the rest by the narrator. You can also have the character read everything, or one voice read it all.\nVoice pools (optional): each character gets their own voice and keeps it every time they speak. Nothing is stored in your save.\nAuto-read (optional): new text is read as it appears, without pressing anything.\nChoices (optional): the list of options is read too, one by one.\nPronunciation fixes for names the voices get wrong (in data/config/readaloud.json).\nSafe to add to or remove from a save.\n\nInstall\n\nDownload ReadAloud-0.1.0-alpha.zip, and ReadAloudAI-0.1.0-alpha.zip if you want AI voices, from the release page.\nUnzip them into Starsector/mods/ and enable them in the launcher.\nAI voices only: run mods/ReadAloudAI/companion/start.cmd (Windows) or sh start.sh (Linux, macOS) once. It downloads its own copy of Python (about 50 MB) and opens a setup page in your browser, where you install an engine. Kitten TTS is recommended (about 3 GB; an NVIDIA GPU helps but isn't needed). Nothing is installed system-wide, and you don't need Python yourself.\n\nAfter that, the game starts the AI voice app by itself when it needs it. Only enabling or disabling a mod needs a game restart; setting up, quitting or changing the app never does. If the app can't be used, a message next to the speaker button says why and what to do, and the system voice reads instead.\n\nSettings\nWith LunaLib: Mod Settings (F2 on the campaign map, or from the title screen). Read Aloud's page has the voices, who reads what, auto-read and the hotkey; saving plays a sample of the voices you changed. The AI Voices add-on gets its own page showing whether the app is running, its engine and voices, with pickers for the narrator, male and female voices.\nWithout LunaLib: edit mods/ReadAloud/data/config/readaloud.json.\n\nAlpha: known limits\n\nTested on Windows 11 only. Linux and macOS should work but haven't been tried.\nKitten TTS was tested; the F5-TTS and Chatterbox installs weren't.\nSome dialogs from other mods may not show the button, or may read oddly.\n\nReporting problems\nPlease post here or open an issue on GitHub, and attach starsector.log (Read Aloud's lines start with [ReadAloud]). For AI voices, also attach mods/ReadAloudAI/companion/runtime/companion.log.\n\nLicense: MIT. LunaLib by Lukas04 and LazyLib by LazyWizard are not included; they're only used when installed. The AI engines are downloaded by the companion app under their own licenses, shown on its setup page.",
+  "descriptionHtml": "<span class=\"size-biggest\"><b>[0.98a] Read Aloud [Alpha][Experimental]</b></span><br><i>Hear Starsector's dialogs read aloud: a speaker button for every conversation, event and encounter.</i><br><br><b>Project page (GitHub):</b> <a href=\"https://github.com/LastAi/Starsector-ReadAloud\" rel=\"nofollow noopener\" target=\"_blank\">github.com/LastAi/Starsector-ReadAloud</a><br><b>Download the latest release (0.1.0 Alpha):</b> <a href=\"https://github.com/LastAi/Starsector-ReadAloud/releases/tag/v0.1.0-alpha\" rel=\"nofollow noopener\" target=\"_blank\">Read Aloud 0.1.0 Alpha</a><br><br><span class=\"size-small\"><b>Requirements:</b> none; Read Aloud works on its own with your system voice.</span><br><span class=\"size-small\"><b>Optional, and highly recommended:</b></span><br><ul><li><span class=\"size-small\"><b><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a></b> (which needs <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a>): in-game settings, voice pickers with samples, and the AI voice status page.</span></li><li><span class=\"size-small\"><b>Read Aloud: AI Voices</b> (included in the release as a second zip): natural AI voices instead of the robotic system voice.</span></li></ul><hr><br><span class=\"size-big\"><b>A note from the author</b></span><br>I've been a longtime fan of Starsector; it's one of my favorite games. However, I'm dyslexic. <i>Very</i> dyslexic, and Starsector is a very text-heavy game.<br><br>Games like Stellaris are also very text-heavy, and discovering the screen reader option in that game changed the way I look at games. I've been thinking about how I might make a mod that brings that idea to Starsector, and now I finally have a way to bring it to life.<br><br><hr><br><span class=\"size-big\"><b>AI use disclaimer</b></span><br>Some or all of the code and text in this mod were created using AI tools:<br><ul><li><b>Code:</b> Claude (Anthropic), used through Claude Code. That covers all of the code: the Read Aloud mod and the AI Voices companion app.</li><li><b>Text:</b> Claude also drafted the README, the settings descriptions and this post. The note from the author above is my own words, with only the spelling and grammar fixed.</li><li><b>Art:</b> none. The mod has no images of its own.</li></ul>How I worked: I designed the mod and decided what it should do. I directed the AI step by step, then reviewed and tested the results in the game myself.<br><br><b>AI at runtime (optional AI Voices add-on only):</b> the add-on uses AI text-to-speech models to make the voices: Kitten TTS (recommended), F5-TTS or Chatterbox. They run <b>locally on your own computer</b>, and no text is sent to any online service. The models are downloaded from their authors when you install an engine, and each one has its own license (notably, the F5-TTS model is non-commercial).<br>The main Read Aloud mod uses no AI at runtime. Without the add-on, it reads with your operating system's built-in voice.<br><br><hr><br><span class=\"size-big\"><b>What it does</b></span><br>A <b>speaker button</b> appears in interaction dialogs: events, bar encounters, station contacts, fleet encounters and exploration. Click it, or press <b>F8</b>, to hear the latest text. Click again to stop. It reads only what's new since your last choice, not the whole conversation again.<br><br><ul><li><b>A narrator plus male and female character voices.</b> By default, text in quotation marks is read in the character's voice and the rest by the narrator. You can also have the character read everything, or one voice read it all.</li><li><b>Voice pools</b> (optional): each character gets their own voice and keeps it every time they speak. Nothing is stored in your save.</li><li><b>Auto-read</b> (optional): new text is read as it appears, without pressing anything.</li><li><b>Choices</b> (optional): the list of options is read too, one by one.</li><li><b>Pronunciation fixes</b> for names the voices get wrong (in data/config/readaloud.json).</li><li>Safe to add to or remove from a save.</li></ul><br><span class=\"size-big\"><b>Install</b></span><br><ol><li>Download ReadAloud-0.1.0-alpha.zip, and ReadAloudAI-0.1.0-alpha.zip if you want AI voices, from the <a href=\"https://github.com/LastAi/Starsector-ReadAloud/releases/tag/v0.1.0-alpha\" rel=\"nofollow noopener\" target=\"_blank\">release page</a>.</li><li>Unzip them into Starsector/mods/ and enable them in the launcher.</li><li><b>AI voices only:</b> run mods/ReadAloudAI/companion/start.cmd (Windows) or sh start.sh (Linux, macOS) once. It downloads its own copy of Python (about 50 MB) and opens a setup page in your browser, where you install an engine. Kitten TTS is recommended (about 3 GB; an NVIDIA GPU helps but isn't needed). Nothing is installed system-wide, and you don't need Python yourself.</li></ol>After that, the game starts the AI voice app by itself when it needs it. Only enabling or disabling a mod needs a game restart; setting up, quitting or changing the app never does. If the app can't be used, a message next to the speaker button says why and what to do, and the system voice reads instead.<br><br><span class=\"size-big\"><b>Settings</b></span><br>With LunaLib: <b>Mod Settings</b> (F2 on the campaign map, or from the title screen). Read Aloud's page has the voices, who reads what, auto-read and the hotkey; saving plays a sample of the voices you changed. The AI Voices add-on gets its own page showing whether the app is running, its engine and voices, with pickers for the narrator, male and female voices.<br>Without LunaLib: edit mods/ReadAloud/data/config/readaloud.json.<br><br><span class=\"size-big\"><b>Alpha: known limits</b></span><br><ul><li>Tested on Windows 11 only. Linux and macOS should work but haven't been tried.</li><li>Kitten TTS was tested; the F5-TTS and Chatterbox installs weren't.</li><li>Some dialogs from other mods may not show the button, or may read oddly.</li></ul><br><span class=\"size-big\"><b>Reporting problems</b></span><br>Please post here or open an <a href=\"https://github.com/LastAi/Starsector-ReadAloud/issues\" rel=\"nofollow noopener\" target=\"_blank\">issue on GitHub</a>, and attach starsector.log (Read Aloud's lines start with [ReadAloud]). For AI voices, also attach mods/ReadAloudAI/companion/runtime/companion.log.<br><br><span class=\"size-small\">License: MIT. LunaLib by Lukas04 and LazyLib by LazyWizard are not included; they're only used when installed. The AI engines are downloaded by the companion app under their own licenses, shown on its setup page.</span>",
+  "descriptionIsGenerated": false,
+  "descriptionIsForumPost": true,
+  "aiDescription": "Provides a hotkey and button to hear the latest dialog text in conversations, bar encounters, and exploration. It supports narrator and character voices, with options for auto-reading new text and reading choice lists. The mod can use built-in system voices or optional local AI text-to-speech models.",
+  "saveCompatibilityText": "Safe to add to or remove from a save.",
+  "removalCompatibilityText": "Safe to add to or remove from a save.",
+  "canAdd": "yes",
+  "canRemove": "yes",
+  "aiUse": {
+    "quote": "Some or all of the code and text in this mod were created using AI tools:\nCode: Claude (Anthropic), used through Claude Code. That covers all of the code: the Read Aloud mod and the AI Voices companion app.\nText: Claude also drafted the README, the settings descriptions and this post. The note from the author above is my own words, with only the spelling and grammar fixed.\nArt: none. The mod has no images of its own.\nHow I worked: I designed the mod and decided what it should do. I directed the AI step by step, then reviewed and tested the results in the game myself.\nAI at runtime (optional AI Voices add-on only): the add-on uses AI text-to-speech models to make the voices: Kitten TTS (recommended), F5-TTS or Chatterbox. They run locally on your own computer , and no text is sent to any online service. The models are downloaded from their authors when you install an engine, and each one has its own license (notably, the F5-TTS model is non-commercial).\nThe main Read Aloud mod uses no AI at runtime.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "generated",
+        "extent": "all"
+      },
+      {
+        "area": "writing",
+        "how": "generated",
+        "extent": "some"
+      }
+    ],
+    "tools": [
+      "Claude (Anthropic)",
+      "Claude Code"
+    ]
+  },
+  "rawCategories": [],
+  "gallery": [],
+  "downloads": [
+    {
+      "url": "https://github.com/LastAi/Starsector-ReadAloud/releases/tag/v0.1.0-alpha",
+      "directUrl": "https://github.com/LastAi/Starsector-ReadAloud/releases/download/v0.1.0-alpha/ReadAloud-0.1.0-alpha.zip",
+      "fileName": "ReadAloud-0.1.0-alpha.zip",
+      "kind": "direct",
+      "label": "Read Aloud 0.1.0 Alpha",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {},
+  "license": "MIT",
+  "sourceCodeUrl": "https://github.com/LastAi/Starsector-ReadAloud",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36271.0",
+  "releases": [],
+  "threadLastPostOn": "2026-11-06",
+  "sameNameMods": [],
+  "addons": [
+    {
+      "name": "Read Aloud: AI Voices",
+      "role": "addon",
+      "requires": "Read Aloud",
+      "downloads": [
+        {
+          "url": "https://github.com/LastAi/Starsector-ReadAloud/releases/tag/v0.1.0-alpha",
+          "directUrl": "https://github.com/LastAi/Starsector-ReadAloud/releases/download/v0.1.0-alpha/ReadAloud-0.1.0-alpha.zip",
+          "fileName": "ReadAloud-0.1.0-alpha.zip",
+          "kind": "direct",
+          "label": "Read Aloud 0.1.0 Alpha",
+          "host": "GitHub",
+          "needsAnotherStep": false
+        }
+      ]
+    }
+  ],
+  "optionalNeeds": [
+    {
+      "name": "LunaLib",
+      "id": "lunalib"
+    }
+  ]
+}
