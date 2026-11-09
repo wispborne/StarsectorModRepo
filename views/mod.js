@@ -65,7 +65,7 @@ export async function render(root, parts) {
     if (isMissingFile(err)) {
       notFound.render(root);
     } else {
-      clear(root).append(errorPanel(new Error(`This mod could not be loaded: ${err && err.message ? err.message : err}`)));
+      clear(root).append(errorPanel(new Error(`Unable to load this mod: ${err && err.message ? err.message : err}`)));
     }
     return;
   }
@@ -1912,7 +1912,7 @@ function rawInfoBody(detail, id) {
       await navigator.clipboard.writeText(JSON.stringify(detail, null, 2));
       copy.textContent = 'Copied';
     } catch {
-      copy.textContent = 'Could not copy';
+      copy.textContent = 'Unable to copy';
     }
     setTimeout(() => { copy.textContent = 'Copy as JSON'; }, 2000);
   });

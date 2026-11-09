@@ -66,7 +66,7 @@ async function guideContent() {
   if (!words) {
     words = fetch('./how-to-install-mods.html', { credentials: 'omit' })
       .then((res) => {
-        if (!res.ok) throw new Error(`The guide could not be loaded (${res.status}).`);
+        if (!res.ok) throw new Error(`Unable to load the guide (${res.status}).`);
         return res.text();
       })
       .catch((err) => {

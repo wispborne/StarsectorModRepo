@@ -765,7 +765,7 @@ const PICTURE_KINDS = {
 /// not read it. Empty when the reader has turned AI words off.
 export function imageAiFacts(image) {
   if (aiSummaryMode() === 'never' || aiOnModPages() === 'hide') return '';
-  if (image.aiUnreadable) return 'AI: could not read this picture';
+  if (image.aiUnreadable) return 'AI: unable to read this picture';
   const parts = [];
   if (image.aiKind) {
     parts.push(PICTURE_KINDS[image.aiKind] || image.aiKind[0].toUpperCase() + image.aiKind.slice(1));
@@ -1234,7 +1234,7 @@ export function showPicture(images, at = 0) {
   shot.addEventListener('error', () => {
     middle.classList.remove('is-loading');
     shot.hidden = true;
-    note.textContent = 'Could not load this picture.';
+    note.textContent = 'Unable to load this picture.';
     note.hidden = false;
   });
 
