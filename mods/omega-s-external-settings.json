@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T07:25:48.244251Z",
+  "generatedAt": "2026-11-10T15:49:59.568304Z",
   "listing": {
     "id": "omega-s-external-settings",
     "name": "Omega's External Settings",
@@ -18,7 +18,7 @@
     "modVersion": "1.1.2",
     "summary": "With what is unironically a DIY toolkit, you can go into the settings.json file of this mod and change vanilla settings like fleet size, the maximum size of battles, and even how many S-Mods you can put on your ships, all without touching the vanilla settings.json file!",
     "summaryIsGenerated": false,
-    "aiSummary": "Lets users modify vanilla game settings like fleet size and battle limits via a custom configuration file.",
+    "aiSummary": "Lets you change vanilla game settings like fleet size and battle limits via a custom JSON file.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://drive.google.com/drive/folders/1C1-EI3CVfRgqLsztJwvvmWX083XXXocq?usp=drive_link",
@@ -43,7 +43,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>So, are you like me, and <em>definitely</em> didn't go into the vanilla files to change certain values because you wanted to make things more fun (or absolutely insane, because why not)?</p><p>...yeah, about that.</p><p>Now you (...and I, lmao) <em>don't have to do that</em>, with Omega's Misc Tweaks!</p><p>With what is unironically a DIY toolkit, you can go into the settings.json file of this mod and change vanilla settings like fleet size, the maximum size of battles, and even how many S-Mods you can put on your ships, all without touching the vanilla settings.json file!</p><p>Forum Link: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=30736\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=30736</a></p><p>(Disclaimer, this mod does not actually make changes on its own, it just acts as a way for users, myself included, to make some of the changes they want without going into the vanilla settings.json file to do so....which is why I marked this topic as utility even though it's what certain people would call a \"DIY toolkit\")</p><p>:)</p>",
-  "aiDescription": "Provides a DIY toolkit for editing vanilla game parameters without modifying core game files. Users can adjust settings such as maximum fleet size, battle scale, S-Mod limits, AI core drop rates, and sensor mechanics through a dedicated JSON configuration.",
+  "aiDescription": "Provides a DIY toolkit for modifying vanilla game values without editing the core files. Users can adjust settings such as maximum fleet size, battle scale, S-Mod slots, AI core drop rates, and sensor mechanics by editing a local configuration file.",
   "aiUse": {},
   "rawCategories": [
     "Utility mods"
@@ -85,8 +85,8 @@
   ],
   "changelog": {
     "1.1.2": "Yet another update to hopefully make it work this time because I messed up the positioning of the { and } symbols and put way too f*ckin' many of them.",
-    "1.1.1": "Update to make the mod actually f*cking work , lmao.\n\nPlease delete and reinstall as soon as possible.",
-    "1.1": "Update to add a bunch more settings (chance of AI cores dropping from ships, Hostile Activity, stats for flux vents and capacitors, contacts, and sensor mechanics).\n\nRebranded because people in the USC Discord called the name \"deceptive\" because they didn't bother to read the description in mod info.\n\nUpdated the description in order to clarify how things work."
+    "1.1.1": "Update to make the mod actually f*cking work , lmao. Please delete and reinstall as soon as possible.",
+    "1.1": "Update to add a bunch more settings (chance of AI cores dropping from ships, Hostile Activity, stats for flux vents and capacitors, contacts, and sensor mechanics). Rebranded because people in the USC Discord called the name \"deceptive\" because they didn't bother to read the description in mod info. Updated the description in order to clarify how things work."
   },
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30736",
@@ -97,9 +97,10 @@
   "addons": [],
   "conflicts": [
     {
-      "name": "https://fractalsoftworks.com/forum/index.php?topic=22191.0/https://discord.com/channels/187635036525166592/1221501671855755294",
-      "quote": "this mod is apparently incompatible with \"https://fractalsoftworks.com/forum/index.php?topic=22191.0/https://discord.com/channels/187635036525166592/1221501671855755294\".",
-      "kind": "technical"
+      "name": "Fleet Size By DP",
+      "id": "fleet-size-by-dp",
+      "quote": "this mod is apparently incompatible with \"Fleet Size by DP\". Currently, a possible solution is to remove the line modifying player fleet size (\"maxShipsInFleet\":whatever you changed this to,) in the settings.json of Omega's External Settings, due to the fact that this mod is somehow overriding Fleet Size by DP.",
+      "kind": "withNotes"
     }
   ]
 }

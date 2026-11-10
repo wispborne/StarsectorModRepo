@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T07:25:48.244251Z",
+  "generatedAt": "2026-11-10T15:49:59.568304Z",
   "listing": {
     "id": "second-in-command",
     "name": "Second-in-Command",
@@ -22,7 +22,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1354933898462625873/1492207436977930300/image.png?ex=6af3f638&is=6af2a4b8&hm=68d47212b2c68e0e0d99d560b7d809fa96a4d5fdd8ad2df40f752a64dcfc0350&",
     "summary": "Second-in-Command is a full overhaul of the games skill system. It replaces the existing skill screen with new UI that functions differently to before. Make sure to read the compatibility section further below before downloading.",
     "summaryIsGenerated": false,
-    "aiSummary": "Overhauls the skill system by replacing non-combat skills with assignable Executive Officers.",
+    "aiSummary": "Overhauls the skill system by replacing non-combat skills with assignable Executive Officers who provide specialized aptitudes.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FSecondInCommand%2Fmain%2FSecondInCommand.version%22%2C%22id%22%3A%22second_in_command%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fbitbucket.org%2FDarkRevenant%2Fgraphicslib%2Fdownloads%2FgraphicsLib.version%22%2C%22id%22%3A%22shaderLib%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FMagicLibStarsector%2FMagicLib%2Fmaster%2Fmagiclib.version%22%2C%22id%22%3A%22MagicLib%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%7D",
@@ -35,7 +35,7 @@
       "needsAnotherStep": false
     },
     "downloadCount": 2,
-    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30407.0",
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30407",
     "discordUrl": "https://discord.com/channels/187635036525166592/1354933898462625873/1354933898462625873",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
@@ -48,8 +48,8 @@
         "id": "lunalib"
       },
       {
-        "name": "GraphicsLib",
-        "id": "graphicslib"
+        "name": "ShaderLib",
+        "id": "shaderlib"
       },
       {
         "name": "MagicLib",
@@ -66,7 +66,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>A skill system rework that almost entirely replaces the original system with a new one.<br>More information on it can be found on its forum page.</p><p><strong>Forum</strong>: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=30407\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=30407</a><br><strong>Download</strong>: <a href=\"https://github.com/Lukas22041/SecondInCommand/releases/latest/download/Second-in-Command.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Lukas22041/SecondInCommand/releases/latest/download/Second-in-Command.zip</a><br><strong>Previous Versions</strong>: <a href=\"https://github.com/Lukas22041/SecondInCommand/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Lukas22041/SecondInCommand/releases</a></p>",
-  "aiDescription": "Replaces the Leadership, Technology, and Industry skill trees with three slots for Executive Officers. Each officer has an aptitude that determines the skills they provide, allowing players to specialize their fleet builds. The player retains their own skill points for combat skills, while officers manage logistical and support abilities. NPCs also utilize this system, gaining officers and skills as they become stronger.",
+  "aiDescription": "Replaces the Leadership, Technology, and Industry skill trees with three slots for Executive Officers. Each officer has an aptitude that determines which of 125 new skills they provide when assigned. The player retains their own skill points to spend on vanilla combat skills, allowing for more specialized fleet builds without sacrificing piloting ability.",
   "saveCompatibilityText": "Yes, but there will be some weirdness with skillpoints.",
   "canAdd": "depends",
   "aiUse": {},
@@ -223,7 +223,7 @@
       "label": "Patreon"
     }
   ],
-  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30407.0",
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30407",
   "discordUrl": "https://discord.com/channels/187635036525166592/1354933898462625873/1354933898462625873",
   "releases": [],
   "threadLastPostOn": "2026-10-30",
@@ -243,7 +243,8 @@
       "kind": "technical"
     },
     {
-      "name": "A New Level of Confidence",
+      "name": "A New Level (Of Confidence, and Power)",
+      "id": "a-new-level",
       "quote": "Notably, this mod is not compatible with most other mods that perform changes to vanilla skills or the system. Those are currently: Quality Captains , A New Level of Confidence , Truly Automated Ships & Adjustable Skill Thresholds .",
       "kind": "technical"
     },

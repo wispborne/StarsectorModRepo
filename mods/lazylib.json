@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T07:25:48.244251Z",
+  "generatedAt": "2026-11-10T15:49:59.568304Z",
   "listing": {
     "id": "lazylib",
     "name": "LazyLib",
@@ -24,7 +24,7 @@
     "imageUrl": "http://www.gravatar.com/avatar/f8cb22c8ff6fcf531a26044fcd9f051c.png",
     "summary": "LazyLib is not a regular mod. It doesn't add any ships, weapons or factions. In fact, it doesn't change anything at all in your game! All it does is make writing code for mods easier.",
     "summaryIsGenerated": false,
-    "aiSummary": "Provides a library of utility methods for modders to simplify complex coding tasks like collision detection and sector messages.",
+    "aiSummary": "Provides a library of utility methods for modders to simplify complex coding tasks like collision detection and sector messaging.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/LazyWizard/lazylib/releases/download/3.0/LazyLib.3.0.zip",
@@ -46,7 +46,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>LazyLib 3.0 is out, adding compatibility for Starsector 0.98a. This release includes an upgrade to the latest version of Kotlin as well as a few new features and bugfixes.</p><p>Download: <a href=\"https://github.com/LazyWizard/lazylib/releases/download/3.0/LazyLib.3.0.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/lazylib/releases/download/3.0/LazyLib.3.0.zip</a><br>Changelog: <a href=\"https://github.com/LazyWizard/lazylib/releases/tag/3.0\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/lazylib/releases/tag/3.0</a><br>Forum thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=5444.0</a><br>Online documentation: <a href=\"https://lazywizard.github.io/lazylib/\" rel=\"nofollow noopener\" target=\"_blank\">https://lazywizard.github.io/lazylib/</a></p>",
-  "aiDescription": "Offers a collection of helper classes for handling vectors, math, combat entities, and UI rendering. It serves as a shared dependency for other mods, ensuring consistent behavior and reducing code clutter. The library includes tools for campaign management, OpenGL drawing, and formatted text display.",
+  "aiDescription": "This library contains numerous helper classes and methods designed to make writing code for mods easier. It handles complicated tasks such as collision detection, formatted sector messages, and vector math, allowing modders to implement features with fewer lines of code. The library is intended to sit in the background and only execute when called by other mods.",
   "aiUse": {},
   "rawCategories": [
     "Libraries"
@@ -91,5 +91,11 @@
   "releases": [],
   "threadLastPostOn": "2026-03-20",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Version Checker",
+      "id": "version-checker"
+    }
+  ]
 }

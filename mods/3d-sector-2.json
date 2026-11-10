@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T07:25:48.244251Z",
+  "generatedAt": "2026-11-10T15:49:59.568304Z",
   "listing": {
     "id": "3d-sector-2",
     "name": "3D Sector V0.3.5",
@@ -25,7 +25,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1559645440188874795/1559645440969019453/screenshot010.png?ex=6af36d01&is=6af21b81&hm=50c14d9bf93f75b43534a155aef484a18074e4565449f525a71bb5c5479675f1&",
     "summary": "A Utility/Conversion Mod for starsector, it is still a work in progress, especially on the graphical end since there are no premade assets, but otherwise it should be playable from start to finish.",
     "summaryIsGenerated": false,
-    "aiSummary": "Converts battles into a 3D tactical view with flight controls and 3D shields.",
+    "aiSummary": "Converts Starsector battles into a 3D tactical experience with custom controls and visual effects.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
@@ -60,13 +60,13 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36154.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36154.0</a></p><p>Should work afaik, i'm on a mac but I tested it on my friends PC (Windows) and except some graphical flickering issues (mainly on the back burners and weapon slots in the UI) the game seemed to run fine. Commands using Tab can be a bit awkward at times but map objectives are captured fine.</p><p>It might or might not work on Modded ships, Modded Ships that use vanilla weapons and subsystems should work fine.</p><p>Controls:<br>Shift - strafe down vertically<br>Space - strafe up vertically<br>T - Tactical view, i like to use it to see the whole battlefield at once.<br>l-alt - use for free-cam rotation<br>j - Spectating<br>[ and ] - rotate spectating.<br>G - Hide UI<br>P-Pause</p><p>Or could be unplayable though, do let me know.</p>",
-  "aiDescription": "Replaces 2D battles with a 3D flight simulation where ships are built from their sprites. Adds a 3D command map, customizable controls, and support for modded ships and weapons. Campaign progression remains unchanged, and battles can be finished in 2D if needed.",
+  "aiDescription": "Replaces the standard 2D battle view with a 3D environment where ships, shields, and weapons are rendered in three dimensions. It includes a new command view for tactical fleet management and allows players to toggle between 3D and vanilla 2D battles. The mod reads existing ship data to generate 3D shapes dynamically, ensuring compatibility with most mods without requiring separate models.",
   "saveCompatibilityText": "Can be added Mid-Game?: Yes",
   "removalCompatibilityText": "Removing from an ongoing game: Safe",
   "canAdd": "yes",
   "canRemove": "yes",
   "aiUse": {
-    "quote": "AI was used to create the Mesh Rendering and Simulation engine for the Mod, and to create Fleet AI used for 3D.\nCode: Claude (Anthropic), through Claude Code\nThere are no AI-generated images: ship shapes are built from the vanilla sprites while the game runs.\nEdit: There are at this point 57 Custom hull models made by Hyper3D rodin",
+    "quote": "AI was used to create the Mesh Rendering and Simulation engine for the Mod, and to create Fleet AI used for 3D.",
     "usesAi": true,
     "uses": [
       {
@@ -80,7 +80,7 @@
       }
     ],
     "tools": [
-      "Claude",
+      "Claude (Anthropic)",
       "Claude Code",
       "Hyper3D rodin"
     ]

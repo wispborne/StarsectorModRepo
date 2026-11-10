@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T07:25:48.244251Z",
+  "generatedAt": "2026-11-10T15:49:59.568304Z",
   "listing": {
     "id": "hiver-swarm",
     "name": "Hiver Swarm",
@@ -24,7 +24,7 @@
     "imageUrl": "https://i.imgur.com/uiXpsfj.png",
     "summary": "Hiver Swarm is a non player enemy AI faction designed to be aggressive invaders and can colonize systems. An insectoid race that uses high tech bio-cybernetics to grow their living ships. Their home world is found in deep space and their relations range from inhospitable to hostile for all factions.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds an aggressive insectoid faction with living ships that colonize systems and attack the player.",
+    "aiSummary": "Adds an aggressive insectoid faction with living ships that colonize systems and attack the player on sight.",
     "saveCompatible": false,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -68,13 +68,13 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Hiver Swarm is a non player enemy AI faction designed to be aggressive invaders and can colonize systems. An insectoid race that uses high tech bio-cybernetics to grow their living ships. Their home world is found in deep space and their relations range from inhospitable to hostile for all factions. Their exclusive living hull designs (seen below) allow them to regenerate their hulls in combat and to be tougher made than the average factions' making them a challenge to fight. They use custom made drones, energy pulse weapons and missiles but have been known to use captured Corvus ships.</p><p>They are vengeful toward the player and will become hostile on sight, you have been warned.</p><p>The mod comes with multiple optional files in the ZIP with instructions on what they do and how to enable them on the forum page as well as in a file named README in the ZIP.</p><p><a href=\"https://i.imgur.com/yVPzkVK.png\" rel=\"nofollow noopener\" target=\"_blank\">https://i.imgur.com/yVPzkVK.png</a><br>The second image is the alternate ship pack for players with entomophobia.<br><a href=\"https://i.imgur.com/EfDsdNT.png\" rel=\"nofollow noopener\" target=\"_blank\">https://i.imgur.com/EfDsdNT.png</a><br>Link to Support my Coffee Addiction: <a href=\"https://ko-fi.com/dazs825110\" rel=\"nofollow noopener\" target=\"_blank\">https://ko-fi.com/dazs825110</a><br>Forum <a href=\"https://fractalsoftworks.com/forum/index.php?topic=22965.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=22965.0</a><br>Download: <a href=\"https://drive.google.com/uc?export=download&amp;id=1qU06YXnPXJTxbPrVG5A1EHWiiqyxk7mP\" rel=\"nofollow noopener\" target=\"_blank\">https://drive.google.com/uc?export=download&amp;id=1qU06YXnPXJTxbPrVG5A1EHWiiqyxk7mP</a></p>",
-  "aiDescription": "Introduces a hostile alien race that uses bio-cybernetic ships capable of regenerating hulls in combat. The faction features custom drones, energy weapons, and missiles, and can be installed in four difficulty variations. Players can optionally enable purchasable ships, alternate mechanical graphics, and playable faction status.",
+  "aiDescription": "Introduces a hostile alien race featuring bio-cybernetic ships capable of regenerating hulls in combat. The faction uses custom drones, energy weapons, and missiles, and is designed to be a significant mid-game challenge. Multiple difficulty modes are available to adjust their strength based on the number of other faction mods installed.",
   "saveCompatibilityText": "New game required to have them appear in the sector",
   "updateCompatibilityText": "Save compatible Note: Changes wil only take effect during the sector generation of a new game",
   "canAdd": "no",
-  "canUpdate": "depends",
+  "canUpdate": "yes",
   "aiUse": {
-    "quote": "Optional AI enhanced Hiver portraits (Install instructions in the README file)",
+    "quote": "-Added an optional set of higher resolution AI made portraits for players who prefer that look, instructions in the README file - TY Bisaster for your help",
     "usesAi": true,
     "uses": [
       {
@@ -185,9 +185,9 @@
     }
   ],
   "changelog": {
-    "1.3.7": "Save compatible Note: Changes wil only take effect during the sector generation of a new game\n   -Ceruchus: Raised the armor from 1000 to 1400 - Was low for a heavy cruiser and died too easily\n   -Note: I have received numerous concerning posts regarding the stability of Hiver planets so I made the following changes:\n   -Tunguska Station: Removed Dense Atmosphere and changed the corrupted nanoforge to pristine on the heavy industry - less pollution = happier population\n   -Fornax: Increased the population from 5 to 6 - Industry bloat was causing instability\n   -Wazn: Changed the planet type from Dessert to Terran and removed Hot and dessert - It was not providing enough food for the Rizdet sector",
-    "1.3.6": "Save compatible\n   -Hard Mode: Adjusted this difficulty to be 25% - Sorry I neglected this when I made the new difficulty\n   -Hard mode: Added a new file labeled \"recoverableweapondata.csv\" - if you would like their weapons recoverable then delete weapon.data.csv and rename this file to weapon.data.csv\n   -Extreme mode: Same file added as above\n   -Standard, Hard and Extreme modes: Added a new file labeled \"dropable_special_items.csv\" If you want their bp to be loot able, delete special_items.csv and rename the new file to that\n   -Edited the README file included in all versions to reflect these additions",
-    "1.3.5": "Save compatible\n   -Added linked descriptions to the asteroid field sector entity tokens in Zesketet - TY Bugatti for letting me know\n   -Increased the Fuel Capacity of the Cerambycidae by 800 and the cargo capacity of the Chalcosoma by 500 - TY Chikanuk for noting it was not enough for all the travel they do\n   -Svrerresh Bio-Plasmic Launcher: Increased the range from 600 to 700 - Now matches the range of other hiver energy weapons for better engagement\n   -Hard Mode Version: Increased the difficulty curve from 25% to 50% - Read multiple posts on discord that it was not hard enough - enjoy the pain :)\n   -Fixed a pathing issue when replacing portraits to HI-Rez in Vplus and hardmode versions"
+    "1.3.7": "-Ceruchus: Raised the armor from 1000 to 1400 - Was low for a heavy cruiser and died too easily\n   -Note: I have received numerous concerning posts regarding the stability of Hiver planets so I made the following changes:\n   -Tunguska Station: Removed Dense Atmosphere and changed the corrupted nanoforge to pristine on the heavy industry - less pollution = happier population\n   -Fornax: Increased the population from 5 to 6 - Industry bloat was causing instability\n   -Wazn: Changed the planet type from Dessert to Terran and removed Hot and dessert - It was not providing enough food for the Rizdet sector",
+    "1.3.6": "-Hard Mode: Adjusted this difficulty to be 25% - Sorry I neglected this when I made the new difficulty\n   -Hard mode: Added a new file labeled \"recoverableweapondata.csv\" - if you would like their weapons recoverable then delete weapon.data.csv and rename this file to weapon.data.csv\n   -Extreme mode: Same file added as above\n   -Standard, Hard and Extreme modes: Added a new file labeled \"dropable_special_items.csv\" If you want their bp to be loot able, delete special_items.csv and rename the new file to that\n   -Edited the README file included in all versions to reflect these additions",
+    "1.3.5": "-Added linked descriptions to the asteroid field sector entity tokens in Zesketet - TY Bugatti for letting me know\n   -Increased the Fuel Capacity of the Cerambycidae by 800 and the cargo capacity of the Chalcosoma by 500 - TY Chikanuk for noting it was not enough for all the travel they do\n   -Svrerresh Bio-Plasmic Launcher: Increased the range from 600 to 700 - Now matches the range of other hiver energy weapons for better engagement\n   -Hard Mode Version: Increased the difficulty curve from 25% to 50% - Read multiple posts on discord that it was not hard enough - enjoy the pain :)\n   -Fixed a pathing issue when replacing portraits to HI-Rez in Vplus and hardmode versions"
   },
   "supportLinks": [
     {
@@ -201,7 +201,72 @@
   "releases": [],
   "threadLastPostOn": "2026-10-31",
   "sameNameMods": [],
-  "addons": [],
+  "addons": [
+    {
+      "name": "Standard mode",
+      "role": "variant",
+      "requires": "Hiver Swarm",
+      "downloads": [
+        {
+          "url": "https://drive.google.com/uc?export=download&id=1qU06YXnPXJTxbPrVG5A1EHWiiqyxk7mP",
+          "directUrl": "https://drive.google.com/uc?export=download&id=1qU06YXnPXJTxbPrVG5A1EHWiiqyxk7mP",
+          "fileName": "Hiver Swarm.zip",
+          "kind": "direct",
+          "label": "Standard mode: Standard ships with an aggressive invasive nature and recoverable ships/weapons, unrecoverable bp - For players with (4-7) faction mods installed",
+          "host": "Google Drive",
+          "needsAnotherStep": false
+        }
+      ]
+    },
+    {
+      "name": "Vanilla plus",
+      "role": "variant",
+      "requires": "Hiver Swarm",
+      "downloads": [
+        {
+          "url": "https://drive.google.com/uc?export=download&id=173vk7eMmUsOdh8p7TW2ZsVm6C3Mv2t9o",
+          "directUrl": "https://drive.google.com/uc?export=download&id=173vk7eMmUsOdh8p7TW2ZsVm6C3Mv2t9o",
+          "fileName": "Hiver SwarmVplus.zip",
+          "kind": "direct",
+          "label": "Vanilla plus: Ships 10% weaker vs the player, a much lower aggressive invasive nature, no sat bombing and recoverable ships/weapons/bp - For players with few (0-3) faction mods installed",
+          "host": "Google Drive",
+          "needsAnotherStep": false
+        }
+      ]
+    },
+    {
+      "name": "Hard Mode",
+      "role": "variant",
+      "requires": "Hiver Swarm",
+      "downloads": [
+        {
+          "url": "https://drive.google.com/uc?export=download&id=1Uzp43u6kG4FuOaLA1ZoHslLS7I2hySNZ",
+          "directUrl": "https://drive.google.com/uc?export=download&id=1Uzp43u6kG4FuOaLA1ZoHslLS7I2hySNZ",
+          "fileName": "Hiver SwarmHmode.zip",
+          "kind": "direct",
+          "label": "Hard Mode: Enhanced ships that are 25% tougher vs the player as well as game controlled fleets and unrecoverable ships/weapons/bp - For players with multiple (8-11) faction mods installed",
+          "host": "Google Drive",
+          "needsAnotherStep": false
+        }
+      ]
+    },
+    {
+      "name": "Extreme Mode",
+      "role": "variant",
+      "requires": "Hiver Swarm",
+      "downloads": [
+        {
+          "url": "https://drive.google.com/uc?export=download&id=1kRYb7D0qfQLRhkD80ns_5Orv_yPdesGc",
+          "directUrl": "https://drive.google.com/uc?export=download&id=1kRYb7D0qfQLRhkD80ns_5Orv_yPdesGc",
+          "fileName": "Hiver SwarmEXmode.zip",
+          "kind": "direct",
+          "label": "Extreme Mode: Enhanced ships that are 50% tougher vs the player as well as game controlled fleets and unrecoverable ships/weapons/bp - For players with multiple (12+) faction mods installed and looking for an extreme challenge - Deadly you have been warned",
+          "host": "Google Drive",
+          "needsAnotherStep": false
+        }
+      ]
+    }
+  ],
   "optionalNeeds": [
     {
       "name": "Ruthless Sector",
@@ -213,7 +278,7 @@
     },
     {
       "name": "Stellar Networks",
-      "id": "stellar-networks"
+      "id": "stellar-networks-2"
     }
   ]
 }

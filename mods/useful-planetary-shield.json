@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T07:25:48.244251Z",
+  "generatedAt": "2026-11-10T15:49:59.568304Z",
   "listing": {
     "id": "useful-planetary-shield",
     "name": "Useful Planetary Shield",
@@ -16,7 +16,7 @@
     "imageUrl": "https://raw.githubusercontent.com/pogoman/UsefulPlanetaryShield/main/screenshots/shield_tooltip.png",
     "summary": "Makes the Planetary Shield industry actually absorb orbital bombardment - in vanilla it does nothing against it (only a x3 ground-defense multiplier, meteor suppression and a shield texture).",
     "summaryIsGenerated": false,
-    "aiSummary": "Makes planetary shields absorb orbital bombardment by reducing disruption, stability loss, and preventing pollution or decivilization.",
+    "aiSummary": "Makes the Planetary Shield industry absorb orbital bombardment by reducing disruption and stability loss, preventing pollution and decivilization.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -45,7 +45,7 @@
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\"><b>Useful Planetary Shield</b></span><br><i>v0.1.2 — for Starsector 0.98a-RC5</i></div><br><hr><br><br><span class=\"size-bigger\"><b>Download</b></span><br><br><a href=\"https://github.com/pogoman/UsefulPlanetaryShield/releases/download/v0.1.2/UsefulPlanetaryShield-0.1.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">UsefulPlanetaryShield-0.1.2.zip</a><br><br>Extract into your Starsector <code>mods/</code> folder and enable it in the launcher.<br><br><hr><br><br><span class=\"size-bigger\"><b>Features</b></span><br><br><ul><br><li>Makes the Planetary Shield industry actually absorb orbital bombardment - in vanilla it does nothing against it (only a x3 ground-defense multiplier, meteor suppression and a shield texture).</li><li>While the shield is operational (built and not disrupted), a tactical or saturation bombardment is largely absorbed:</li><ul><br><li>Industry disruption cut to 50% of its normal duration</li><li>Stability loss from the bombardment cut to 50%</li><li>No pollution inflicted on habitable worlds</li><li>The colony cannot be reduced in size by a saturation strike</li><li>The colony cannot be decivilized, by bombardment or by stability collapse</li></ul><li>Tradeoff: the vanilla x3 ground-defense bonus is removed - the shield stops bombs, not marines.</li><li>Absorbing a strike knocks the shield generator offline (at least 60 days for a tactical strike, the full halved disruption for a saturation strike), so a shielded colony shrugs off the first strike and is exposed until it repairs. A sustained campaign still gets through - you just cannot be one-shotted.</li><li>Works against every source of bombardment: Luddic Path, Remnant and Sindrian Diktat colony crises, and any modded faction that bombards you.</li><li>Configurable: disruption/stability percentages, individual toggles for the pollution / size / deciv protections, restore the vanilla ground-defense bonus, and restrict the effect to player colonies only.</li><li>For Starsector 0.98a-RC5. LunaLib optional (in-game config menu; otherwise reads <code>data/config/settings.json</code>). Safe to add to an existing save; safe to remove after turning off \"Block Decivilization\" and loading+saving once. Conflicts with any mod that replaces the vanilla <code>planetaryshield</code> industry plugin.</li></ul><br><div class=\"align-center\"><img src=\"https://raw.githubusercontent.com/pogoman/UsefulPlanetaryShield/main/screenshots/shield_tooltip.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><br><hr><br><div class=\"align-center\"><span class=\"size-bigger\"><b>Recommended mod collection for ultimate late game experience</b></span></div><div class=\"align-center\"><i>Standalone, safe to add mid-save, can be run together or separately.</i></div><br><ul><br><li><b><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35955\" rel=\"nofollow noopener\" target=\"_blank\">Threat Incursion</a></b> — the threat colonizes the sector and invades the core worlds. Disrupt their supply chains and besiege the entrenched hives into decline.</li><li><b><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35957\" rel=\"nofollow noopener\" target=\"_blank\">Commerce Wars</a></b> — dominate a faction's markets or the military balance and they push back: ultimatums, tribute, enforcement fleets.</li><li><b><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35956\" rel=\"nofollow noopener\" target=\"_blank\">Piracy Reworked</a></b> — the underworld runs on your money: black-market trade funds a self-sustaining pirate war economy.</li><li><b><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35940\" rel=\"nofollow noopener\" target=\"_blank\">Remnant Retribution</a></b> — a late-game colony crisis.</li><li><b><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35939\" rel=\"nofollow noopener\" target=\"_blank\">Useful Planetary Shield</a></b> — planetary shields finally do something: they absorb orbital bombardment.</li></ul><hr><br><br><i>Disclaimer: This post and mod were written using Claude's Fable AI model.</i>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Makes planetary shields absorb orbital bombardment by reducing disruption, stability loss, and preventing pollution or decivilization. The shield generator goes offline for a period after absorbing a strike, leaving the colony exposed until it repairs. It works against all sources of bombardment and includes configurable options for protection levels and scope.",
+  "aiDescription": "The shield absorbs tactical and saturation bombardments, cutting industry disruption and stability loss to 50% and blocking pollution or size reduction. It removes the vanilla ground-defense bonus in exchange for this protection. The generator goes offline after absorbing a strike, leaving the colony vulnerable until repaired.",
   "saveCompatibilityText": "Safe to add to an existing save",
   "removalCompatibilityText": "safe to remove after turning off \"Block Decivilization\" and loading+saving once",
   "canAdd": "yes",
@@ -97,13 +97,6 @@
     {
       "name": "LunaLib",
       "id": "lunalib"
-    }
-  ],
-  "conflicts": [
-    {
-      "name": "any mod that replaces the vanilla planetaryshield industry plugin",
-      "quote": "Conflicts with any mod that replaces the vanilla planetaryshield industry plugin.",
-      "kind": "technical"
     }
   ]
 }

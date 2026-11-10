@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T07:25:48.244251Z",
+  "generatedAt": "2026-11-10T15:49:59.568304Z",
   "listing": {
     "id": "stop-stacking-me",
     "name": "Stop Stacking Me",
@@ -21,7 +21,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1543616671997108244/1543616672152162304/image.png?ex=6af3c7cd&is=6af2764d&hm=df3c9b4e42677c8cfce6a432def5b446223190cc39f6b465231a2fc84609a05e&",
     "summary": "Draws one sprite per cargo stack, instead of a pile of grey ghost copies behind it.",
     "summaryIsGenerated": false,
-    "aiSummary": "Draws a single sprite for each cargo stack instead of multiple overlapping copies.",
+    "aiSummary": "Draws a single sprite for stacked cargo items instead of multiple overlapping copies.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
@@ -69,9 +69,9 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Just a simple mod that stops sprite stacking for weapons.<br>I personally prefer it when sprites for weapons are only one-at-a-time, to more easily distinguish the thousands of weapons in the modsector.</p><p>Forum post: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35952.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35952.0</a></p>",
-  "aiDescription": "Replaces the visual pile of grey ghost sprites behind stacked items with a single sprite. The item count remains visible in the corner. Includes toggles for weapons and crew/marines via LunaLib settings.",
-  "saveCompatibilityText": "Yes, both. Nothing of this mod is ever written into your save. It only changes how a screen is drawn while you are looking at it.",
-  "removalCompatibilityText": "Yes, both. Nothing of this mod is ever written into your save. It only changes how a screen is drawn while you are looking at it.",
+  "aiDescription": "Replaces the visual pile of grey ghost sprites behind stacked items in the campaign with a single icon. The quantity number remains visible, and toggles allow applying this change to weapons or crew separately.",
+  "saveCompatibilityText": "Yes, both.",
+  "removalCompatibilityText": "Yes, both.",
   "canAdd": "yes",
   "canRemove": "yes",
   "aiUse": {
@@ -80,18 +80,15 @@
     "uses": [
       {
         "area": "code",
-        "how": "generated",
-        "extent": "some"
+        "how": "generated"
       },
       {
         "area": "writing",
-        "how": "generated",
-        "extent": "some"
+        "how": "generated"
       },
       {
         "area": "icons",
-        "how": "generated",
-        "extent": "some"
+        "how": "generated"
       }
     ],
     "tools": [

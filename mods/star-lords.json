@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T07:25:48.244251Z",
+  "generatedAt": "2026-11-10T15:49:59.568304Z",
   "listing": {
     "id": "star-lords",
     "name": "Star Lords - Mount & Blade Campaign in Space - Update v0.3.78  [Deluth/Alaricdragon]",
@@ -20,7 +20,7 @@
     "imageUrl": "https://raw.githubusercontent.com/Deluth-git/Starlords/master/example/starlords_readme5.PNG",
     "summary": "Star Lords attempts to bring the world of Starsector to life with many character-centric features. No longer will your only allies be nameless faction fleets who you'll meet once and never again.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds dozens of unique Lords with personalities, fleets, and agendas who roam the map, manage fiefs, and engage in political intrigue.",
+    "aiSummary": "Adds dozens of unique Lords with personalities, fleets, and political agendas who roam the sector, manage fiefs, and engage in campaigns.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -44,7 +44,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>I forgot to actually upload the update. so it should be online now im going to bed goodnight</p>",
-  "aiDescription": "Introduces a campaign system inspired by Mount & Blade where Lords levy taxes, build fleets, and wage war independently. Players can interact with these characters through quests, feasts, and political maneuvering to gain influence or recruit them. The mod includes systems for defection, prisoner ransoming, and dynamic lord generation.",
+  "aiDescription": "Introduces a complex system where Lords collect taxes, build fleets, and interact through a new political framework. Players can form alliances, complete quests, and influence faction politics by currying favor with these characters. The mod includes features like feasts, defection mechanics, prisoner ransoms, and large-scale military campaigns led by appointed Marshals.",
   "saveCompatibilityText": "This mod may be added to existing savegames",
   "updateCompatibilityText": "All updates are save-compatible unless stated otherwise.",
   "removalCompatibilityText": "but may not be removed after being added",
@@ -115,6 +115,13 @@
     {
       "name": "Nexerelin",
       "id": "nexerelin"
+    }
+  ],
+  "conflicts": [
+    {
+      "name": "MMM",
+      "quote": "There is a known incompatibility with MMM, since they overwrite some base game missions in a way which lords cannot give those missions. Accepting these missions will cause CTD.",
+      "kind": "technical"
     }
   ]
 }
