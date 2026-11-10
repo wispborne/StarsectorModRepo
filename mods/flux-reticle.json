@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T15:49:59.568304Z",
+  "generatedAt": "2026-11-10T19:30:58.003396Z",
   "listing": {
     "id": "flux-reticle",
     "name": "Flux Reticle",
@@ -21,7 +21,7 @@
     "imageUrl": "https://i.imgur.com/Iv8x4u0.png",
     "summary": "This mod replaces the default cursor during combat with a reticle that displays flux level. It also allows you to toggle \"strafe and turn to cursor\" behavior during battle by pressing \"K\"",
     "summaryIsGenerated": false,
-    "aiSummary": "Replaces the default combat cursor with a flux-displaying reticle and adds a toggle for strafe-and-turn behavior.",
+    "aiSummary": "Replaces the combat cursor with a flux-displaying reticle and adds strafe toggling controls.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -44,7 +44,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Replaces the default cursor during combat with a reticle that displays flux level.<br>Full description: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=18166.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=18166.0</a></p><p>Latest changes:</p><pre><code>1.4.0:\n- Updated for Starsector version 0.98a and Java 17\n- Added LunaSettings integration (finally)</code></pre><p>Full change log: <a href=\"https://github.com/NateNBJ/FluxReticle/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/NateNBJ/FluxReticle/releases</a><br>Download: <a href=\"https://github.com/NateNBJ/FluxReticle/releases/latest/download/Flux.Reticle.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/NateNBJ/FluxReticle/releases/latest/download/Flux.Reticle.zip</a></p>",
-  "aiDescription": "Replaces the default combat cursor with a reticle that displays the ship's flux level. Allows players to toggle the 'strafe and turn to cursor' behavior during battle using a customizable hotkey. Remembers the player's preference for each hull type to avoid repeated toggling.",
+  "aiDescription": "Replaces the default combat cursor with a reticle that shows current flux levels. Adds a hotkey to toggle strafe and turn-to-cursor behavior, remembering preferences per hull type. Allows customization of reticle size, colors, and hotkeys via an options file.",
   "saveCompatibilityText": "Can be added to existing games.",
   "removalCompatibilityText": "Can be removed from games in which it was already used.",
   "canAdd": "yes",
@@ -92,8 +92,8 @@
   "addons": [],
   "optionalNeeds": [
     {
-      "name": "LunaLib",
-      "id": "lunalib"
+      "name": "Version Checker",
+      "id": "version-checker"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T15:49:59.568304Z",
+  "generatedAt": "2026-11-10T19:30:58.003396Z",
   "listing": {
     "id": "slightly-better-tech-mining",
     "name": "Slightly Better Tech-Mining",
@@ -18,7 +18,7 @@
     "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_9954_1622810328.png",
     "summary": "Tech-Mining. It's... an industry. It's an industry that gives you diminishing returns of items you want, and decent credits-worth of... useless materials that other industries supply in vaster quantities.",
     "summaryIsGenerated": false,
-    "aiSummary": "Overhauls the tech-mining industry to remove useless material outputs and replace diminishing returns with a depletion floor or reset system.",
+    "aiSummary": "Removes useless materials and depletion penalties from tech-mining industries while adding configurable depletion modes.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://www.patreon.com/posts/60097706",
@@ -40,7 +40,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Fixed stupid decision that reduced compatibility.</p>",
-  "aiDescription": "Removes low-value materials like fuel and supplies from tech-mining outputs, increasing the yield of desired items while maintaining total value. Replaces the story point bonus with a depletion reset or floor mechanic, making ruins more valuable over time. Adds a tooltip to track the exact level of depletion.",
+  "aiDescription": "Eliminates low-value outputs like fuel, supplies, and volatiles from tech-mining, redistributing their value to more useful items. Removes the story point bonus and depletion mechanics for tech mines, making ruins effectively permanent once claimed. Adds a tooltip showing exact depletion levels if present, and offers two configurable modes: depletion floor and depletion reset.",
   "saveCompatibilityText": "Safe to add to saves (although any existing tech mines will need rebuilding)",
   "updateCompatibilityText": "Fixed stupid decision that reduced compatibility.",
   "removalCompatibilityText": "unfortunately not safe to remove from saves",
@@ -69,5 +69,11 @@
   "releases": [],
   "threadLastPostOn": "2025-05-06",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Better Colonies",
+      "id": "better-colonies"
+    }
+  ]
 }

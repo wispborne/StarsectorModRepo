@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T15:49:59.568304Z",
+  "generatedAt": "2026-11-10T19:30:58.003396Z",
   "listing": {
     "id": "more-bar-missions",
     "name": "More Bar Missions",
@@ -24,7 +24,7 @@
     "imageUrl": "https://i.imgur.com/hpk6FXf.png",
     "summary": "A mod to increases the frequency of bar missions and ensure every market has some missions.",
     "summaryIsGenerated": false,
-    "aiSummary": "Increases the frequency of bar missions and ensures every market has some available.",
+    "aiSummary": "Increases the frequency of bar missions and ensures every market offers them.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -57,7 +57,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Never see an empty bar again!</p><p>Increases the frequency of bar missions and ensure every market has some missions.</p><p>Supports all recurring vanilla bar missions.</p><p>direct download: <a href=\"https://drive.google.com/uc?export=download&amp;id=1xNJpAk3REwdxEkSPDI1_WNumDAJCtCT1\" rel=\"nofollow noopener\" target=\"_blank\">https://drive.google.com/uc?export=download&amp;id=1xNJpAk3REwdxEkSPDI1_WNumDAJCtCT1</a><br>forum link: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=26974\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=26974</a></p>",
-  "aiDescription": "Adds a new bar manager that runs alongside the vanilla system to handle recurring missions. It allows multiple markets to offer the same mission independently and treats mission limits as suggestions when necessary. This prevents bars from becoming empty due to mission lockouts.",
+  "aiDescription": "Replaces the vanilla bar mission logic with a new manager that allows independent mission generation per market. It prevents markets from locking out missions for extended periods and treats event limits as suggestions rather than hard caps, ensuring players rarely encounter empty bars.",
   "saveCompatibilityText": "Can be freely added and removed from saves!",
   "removalCompatibilityText": "Can be freely added and removed from saves!",
   "canAdd": "yes",
@@ -90,7 +90,7 @@
   "changelog": {
     "0.0.6": "- guard against unexpected mission creation exceptions\n- treat bar_events.csv missions with very large timeouts (>= 1000000000f) as 1 off missions\n- recompile for Java 17 and 0.98a-RC5",
     "0.0.5": "- changed version string to 0.97a-RC6\n- note: you might need \"-Xverify:none\" in your vmparams if you don't want to enable LunaLib and you ran into\n  \"java.lang.NoClassDefFoundError: lunalib/lunaSettings/LunaSettingsListener\" issue\n- added $market.noBar check\n- make it less likely that priority events will crowd out non-priority ones",
-    "0.0.4": "made the mod compatible with Java7, update if you run into \"java.lang.NoSuchMethodError: java.lang.String.join\""
+    "0.0.4": "- made the mod compatible with Java7, update if you run into \"java.lang.NoSuchMethodError: java.lang.String.join\""
   },
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=26974",

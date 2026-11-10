@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T15:49:59.568304Z",
+  "generatedAt": "2026-11-10T19:30:58.003396Z",
   "listing": {
     "id": "appro-light",
     "name": "Appro-Light",
@@ -20,10 +20,10 @@
     "gameVersion": "0.97a",
     "modVersion": "1.3.3",
     "imageUrl": "https://i.imgur.com/RpK6fKy.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1219089878831202477/1219089880370643024/approTitle.gif?ex=6af3bfed&is=6af26e6d&hm=2438b5a6070e10a89f14f5445ed06ccf2bb509d4d5b8dbacb5ebc29d9393cea3&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1219089878831202477/1219089880370643024/approTitle.gif?ex=6af468ad&is=6af3172d&hm=8d7da0b979d6408bf5034a173018d701781f334e9cd080b1a9cdc6254e060d11&",
     "summary": "Adds the high-tech Appro-Light Council faction to the core worlds, located in the Agustin system located approximately near Duzahk.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds the Appro-Light Council faction with unique ships, systems, and a complex economy based on Prime parts and Gil.",
+    "aiSummary": "Adds a high-tech faction with unique ships, systems, and campaign mechanics to the core worlds.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://drive.google.com/uc?export=download&id=1KUmRWxYugEzL2FskhhsxkzH4E4FlnVxm",
@@ -45,7 +45,7 @@
       },
       {
         "name": "MagicLib",
-        "id": "magiclib"
+        "id": "magiclib-2"
       },
       {
         "name": "GraphicsLib",
@@ -58,7 +58,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>:fac_approlight: Mod by: Originem</p><p>Adds a high-tech faction located in the Agustin system (located near Duzahk), with a slew of unique ships, weapons, fighters, and hullmods.</p><p><strong>DISCLAIMER: Technically not a 0.97 version, so you'll have to change the version number in <code>mod_info.json</code>. (If this isn't allowed for me to post like this, I'll quickly change it)</strong></p><p>Forum post: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=26531.msg393998#msg393998\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=26531.msg393998#msg393998</a></p><p>Download: <a href=\"https://drive.google.com/uc?export=download&amp;id=1KUmRWxYugEzL2FskhhsxkzH4E4FlnVxm\" rel=\"nofollow noopener\" target=\"_blank\">https://drive.google.com/uc?export=download&amp;id=1KUmRWxYugEzL2FskhhsxkzH4E4FlnVxm</a></p><p>Now without crashcode! (I was given the go-ahead by Originem) <s>but I'd be very surprised if anyone on this discord managed to even find a version of fairy empire to use</s></p>",
-  "aiDescription": "Introduces the Appro-Light Council faction located in the Agustin system, featuring a wide variety of unique ships, hullmods, and weapons. Players can engage in faction-specific missions, trade Prime parts for AI cores and blueprints, and interact with unique characters like the Speaker and Keel Higgs. The mod includes a custom economy using Gil, a currency earned through missions or exchanged for credits, which allows for the purchase of high-grade equipment and Prime parts.",
+  "aiDescription": "Introduces the Appro-Light Council faction located in the Agustin system. Features include unique ship variants, clone officers, special stations for missions and trading, and dynamic events involving rival fleets and secret meetings.",
   "updateCompatibilityText": "fixed some issues with the bounties, please redownload the mod (version number is the same)",
   "canUpdate": "yes",
   "aiUse": {},
@@ -69,7 +69,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1219089878831202477/1219089880370643024/approTitle.gif?ex=6af3bfed&is=6af26e6d&hm=2438b5a6070e10a89f14f5445ed06ccf2bb509d4d5b8dbacb5ebc29d9393cea3&",
+      "url": "https://cdn.discordapp.com/attachments/1219089878831202477/1219089880370643024/approTitle.gif?ex=6af468ad&is=6af3172d&hm=8d7da0b979d6408bf5034a173018d701781f334e9cd080b1a9cdc6254e060d11&",
       "aiCaption": "A title picture with the text 'ApproLight' and Chinese characters over a space station background.",
       "aiKind": "banner",
       "aiFit": "good",
@@ -186,7 +186,7 @@
     }
   ],
   "changelog": {
-    "1.3.3": "-Much of ApproLightPlus content was integrated (excluding Ancient Secrets and Knights Arbiter)\n-Further sprite polishing, particularly for fighters\n-A lot of balance changes (I did translate the changelog)"
+    "1.3.3": "-several balance changes\n-imported all approlightplus content not tied to Ancient Secrets or Knights Arbiter\n-bugfixes\n-etc.\n(Check the Changelog_EN file for the actual changelog)"
   },
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=26531.msg393998#msg393998",
@@ -202,9 +202,15 @@
         "Originem"
       ],
       "gameVersion": "0.9.1a",
-      "modVersion": "0.8.6RC1",
+      "modVersion": "0.8.6-RC1",
       "threadLastPostOn": "2025-10-13"
     }
   ],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Diable Avionics",
+      "id": "diable-avionics-2"
+    }
+  ]
 }
