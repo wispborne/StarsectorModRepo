@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T21:31:27.981416Z",
+  "generatedAt": "2026-11-10T07:25:20.385668Z",
   "listing": {
     "id": "shroudedknowledge-endgame",
     "name": "ShroudedKnowledge endgame",
@@ -15,7 +15,7 @@
     "imageUrl": "https://i.imgur.com/M68CLFE.png",
     "summary": "The crisis progresses through a threat system ranging from 0 to 300 points. You earn points by defeating Shroud fleets: Lesser Manifestation 20 pts, Greater Manifestation 30 pts, Transcendent Manifestation 50 pts. As the threat grows, the Sector approaches two major milestones:",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds an endgame crisis for the Shroud faction where defeating their fleets increases a threat level that triggers major invasions.",
+    "aiSummary": "Adds an endgame crisis where defeating Shroud fleets increases a threat level, triggering escalating invasions.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "downloadCount": 0,
@@ -24,11 +24,6 @@
     "isWorkInProgress": false,
     "usesAi": true,
     "aiUses": [
-      {
-        "area": "code",
-        "how": "generated",
-        "extent": "all"
-      },
       {
         "area": "other",
         "how": "generated",
@@ -44,18 +39,13 @@
   "descriptionHtml": "<img src=\"https://i.imgur.com/exBO5Yv.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><b>Compatibility</b><br>Starsector: 0.98a-RC8<br><b>Mods </b><br>I tested it with several mods that I use, including Nexelerim and Ashes of the Domain, and I haven't encountered any errors so far.<br>I tested it in an lategame, modded playthrough and it worked correctly, so it is safe to add to an existing save file. However , I don't have every known mod installed; there might be some incompatibilities with mods that alter Shroud fleets, as the code relies on them to award points.<br><b>Almost all assets and code in this mod were created using AI tools: GPT-6 Luna</b><br>I was wondering why the Shroud faction lacked content related to colonies or the endgame. I checked the forums to see if anything like that already existed, but I couldn't find anything.<br>I was also curious about how Starsector mods are made, so I decided to give modding a try and create this mod. Almost everything was generated with ChatGPT (GPT-6 Luna), though.<br>It was a fun experiment, and I'd love to hear what you think! I'm still learning how to program, so I know there's plenty of room for improvement. I'll keep refining things as I go, and any help or feedback would be greatly appreciated!                                                                                                                                                                                                                                    <br><b>If you have any ideas on what I should add, I'm open to them and will gladly read them.</b><br><br>I think \"vibe coding\" is something I could easily fall into :P <br><img src=\"https://i.imgur.com/M68CLFE.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\">                                                                                                                                                                                                           <br><details class=\"spoiler\"><summary>How it works</summary>                                                                                                                                                                                                                                                                    The crisis progresses through a threat system ranging from 0 to 300 points.<br>You earn points by defeating Shroud fleets: Lesser Manifestation 20 pts, Greater Manifestation 30 pts, Transcendent Manifestation 50 pts.<br>As the threat grows, the Sector approaches two major milestones:<br><br>150 Threat Points: Preparations for the first Shroud manifestation begin.<br><br>a party of 3 fleets of Precursors(Shrouded Fleets)<br>You will have 40 days until the fleets reach your location; they will try to find you wherever you go.<br><br>300 Threat Points: A Shrouded Dweller expedition is launched.(They will launch a attack against your best colony) <br>A fleet of a lot of eyes and more than 3 Shrouded Maw are expected ,Other support fleets may also arrive.<br>You will have 50 days until this happens.<br><br>If you know how to do it, you can use the test in ShroudedKnowledgeManager.java and look for:<br>public void testThreatPoints() {<br>addThreatPoints(1, \"Test\");<br>}<br>Change the 1 to 150 or 300 so you can test it more quickly—at least until I release a patch that makes the process easier.                                                                                                                                                                                </details><a href=\"https://github.com/IcarosA2000/ShroudedKnowledge\" rel=\"nofollow noopener\" target=\"_blank\">Source &amp; Changelog (GitHub)</a>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Players earn threat points by destroying specific Shroud fleet types. At 150 points, precursor fleets begin hunting the player with a 40-day deadline. At 300 points, a massive expedition attacks the player's best colony after a 50-day countdown.",
+  "aiDescription": "Tracks a threat score from 0 to 300 based on battles against Shroud factions. Reaching 150 points initiates a pursuit by Precursor fleets within 40 days. At 300 points, a major expedition attacks the player's best colony after 50 days.",
   "saveCompatibilityText": "it is safe to add to an existing save file",
   "canAdd": "yes",
   "aiUse": {
     "quote": "Almost all assets and code in this mod were created using AI tools: GPT-6 Luna",
     "usesAi": true,
     "uses": [
-      {
-        "area": "code",
-        "how": "generated",
-        "extent": "all"
-      },
       {
         "area": "other",
         "how": "generated",
@@ -97,7 +87,7 @@
     {
       "name": "mods that alter Shroud fleets",
       "quote": "there might be some incompatibilities with mods that alter Shroud fleets, as the code relies on them to award points.",
-      "kind": "technical"
+      "kind": "withNotes"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T21:31:27.981416Z",
+  "generatedAt": "2026-11-10T07:25:20.385668Z",
   "listing": {
     "id": "tactical-combat-overhaul",
     "name": "(Paused Development) Tactical Combat Overhaul v0.31.2",
@@ -18,10 +18,10 @@
     "gameVersion": "0.98a",
     "modVersion": "0.31.2",
     "imageUrl": "https://i.imgur.com/sqGp31X.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1561624243626840174/1561624243849134101/pad_blueprint_hightech.png?ex=6af35fa9&is=6af20e29&hm=a717e46e837757bd21b2c08302817c00749af4af08c86337817f9f0c21525f54&",
-    "summary": "Select ships, give move and attack orders, set formations, stances and control groups, or jump into any ship and fly it yourself.",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1561624243626840174/1561624243849134101/pad_blueprint_hightech.png?ex=6af40869&is=6af2b6e9&hm=5bf155f5555604e6e3c0c7b1dd220ba334c54760e89a38311d04ac23d93eff15&",
+    "summary": "Command your fleet like an RTS, and fight with grounded, tactical rules.",
     "summaryIsGenerated": false,
-    "aiSummary": "Overhauls fleet combat with RTS-style command, realistic armor and ammo mechanics, radar, and a detailed boarding system.",
+    "aiSummary": "Adds RTS-style fleet command, realistic armor and damage mechanics, radar systems, and boarding actions to combat.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -60,9 +60,9 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>A combat overhaul that turns battles into tactical fleet engagements. Command your fleet like an RTS, or jump into any ship and fly it yourself.</p><p><strong>Command</strong></p><ul><li>RTS controls: box select, orders, formations, control groups, attack-move</li><li>Stances: Aggressive, Defensive, Hold ground, Evasive and Rescue</li><li>Fog of war, larger battlefields, and two new objectives: the Supply FOB and the Repair Dock</li></ul><p><strong>Combat</strong></p><ul><li>Armor penetration, ricochets, sloped plates, cook-offs and fires</li><li>Ballistic guns have limited ammo, refilled mid-battle by supply ships</li><li>Reactor power alongside flux, and meltdowns from deep hits </li><li>Ships burn and break up while their crew escape in pods</li></ul><p><strong>Missiles and sensors</strong></p><ul><li>Radar missiles need a track to launch; IR missiles chase heat and can be fooled by flares</li><li>Datalinks, ECM and noise jamming, plus a radar scope when you fly a ship</li></ul><p><strong>Boarding</strong></p><ul><li>Send marines to take ships in deck by deck combat</li><li>Orders (Assault, Methodical, Sabotage, Withdraw), marine experience, desperate measures taken by defenders.</li></ul><p><strong>Logistics</strong></p><ul><li>Repair tenders, tugs that tow stranded ships, security droids and new hullmods</li><li>NPC fleets bring their own support ships and use TCO's hullmods too</li></ul><p>Built to work with other mods: their ships, weapons and missiles fit TCO's rules automatically.</p><p><strong>Requires:</strong> Starsector 0.98a-RC8.<br><strong>Recommended:</strong> LunaLib (in-game settings, where every major system can be tuned or turned off) and PatchLib (Several improvements, see the changelog)</p><p><strong>Download:</strong> <a href=\"https://github.com/reaperyeah420-cpu/Tactical-Combat-Overhaul/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/reaperyeah420-cpu/Tactical-Combat-Overhaul/releases</a><br><strong>Forum post:</strong> <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36171.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36171.0</a></p><p>Mod thread: <a href=\"https://discord.com/channels/187635036525166592/1561820584726503425\" rel=\"nofollow noopener\" target=\"_blank\">https://discord.com/channels/187635036525166592/1561820584726503425</a> (feedback goes here)</p><p>Removing TCO from an ongoing save isn't supported.</p><p>DISCLAIMER: While most of the code is made entirely by me, some workarounds and solutions were made using an AI Agent.</p>",
-  "aiDescription": "Transforms fleet combat into a real-time strategy experience with direct ship control, formations, and stances. Introduces realistic armor mechanics where shells penetrate, ricochet, and cause fires, alongside limited ammo and reactor power management. Adds radar detection, missile types, and a detailed boarding system where marines capture enemy ships deck by deck.",
-  "saveCompatibilityText": "can be added to an existing save",
-  "removalCompatibilityText": "Removing it from a save it has been used in is not supported",
+  "aiDescription": "Lets players control fleets with real-time strategy controls like box selection and formations. Introduces detailed ship damage models including penetration, fires, and escape pods. Adds logistics such as limited ammo, reactor power management, and repair tenders. Includes radar detection, electronic warfare, and deck-by-deck boarding mechanics.",
+  "saveCompatibilityText": "can be added to an existing save.",
+  "removalCompatibilityText": "Removing it from a save it has been used in is not supported.",
   "canAdd": "yes",
   "canRemove": "no",
   "aiUse": {
@@ -71,7 +71,8 @@
     "uses": [
       {
         "area": "code",
-        "how": "assisted"
+        "how": "assisted",
+        "extent": "some"
       }
     ]
   },
@@ -80,14 +81,14 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1561624243626840174/1561624243849134101/pad_blueprint_hightech.png?ex=6af35fa9&is=6af20e29&hm=a717e46e837757bd21b2c08302817c00749af4af08c86337817f9f0c21525f54&",
+      "url": "https://cdn.discordapp.com/attachments/1561624243626840174/1561624243849134101/pad_blueprint_hightech.png?ex=6af40869&is=6af2b6e9&hm=5bf155f5555604e6e3c0c7b1dd220ba334c54760e89a38311d04ac23d93eff15&",
       "aiCaption": "A stylized device icon with the text 'TCO' on a screen.",
       "aiKind": "logo",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1561624243626840174/1561627042125189190/image.png?ex=6af36244&is=6af210c4&hm=0d3c6de9bcd2f13bcf213173af12858f0d52f2a195b859bd49ef94a4c4c7090c&",
+      "url": "https://cdn.discordapp.com/attachments/1561624243626840174/1561627042125189190/image.png?ex=6af40b04&is=6af2b984&hm=5c56b27bfe1ee6b9116ff0a872e800ae4fee1ad18962a5992d6e4bebcdde1bff&",
       "caption": "RTS Mode UI",
       "aiCaption": "A gameplay screenshot showing a single ship in RTS mode with UI elements for controls and status.",
       "aiKind": "screenshot",
@@ -95,14 +96,14 @@
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1561624243626840174/1561956903645356093/image.png?ex=6af343f9&is=6af1f279&hm=f1b35311eb90a3eeeb7dfb690af0e5476118313c21ea4a0b5c544a5a21249734&",
+      "url": "https://cdn.discordapp.com/attachments/1561624243626840174/1561956903645356093/image.png?ex=6af3ecb9&is=6af29b39&hm=5999dc0adfbb9cd0d0c7c5322fd049c5216d8c44955a1512167b41021aefbbd4&",
       "aiCaption": "A post-battle summary screen showing options like 'Pursue them' and 'Take command of the action', along with fleet status for 'Your forces' and 'Pirate Fleet'.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1561624243626840174/1562988782402150491/image.png?ex=6af3107c&is=6af1befc&hm=b7caf183795ed65ccf5f9004cf4b9e6ac0cb8c6c44f34282c6fbe7c6128091b7&",
+      "url": "https://cdn.discordapp.com/attachments/1561624243626840174/1562988782402150491/image.png?ex=6af3b93c&is=6af267bc&hm=d994d7c43b8b41e27272670819cab16c1b9b76ad8ac0ea28c84eeb1754b05402&",
       "aiCaption": "A complex tactical view showing multiple ships, radar ranges, and detailed control panels on the right side.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -142,10 +143,9 @@
   ],
   "changelog": {
     "0.31.2": "Fixed an issue where captured player ships are refitted by the AI.\nImproved transparency on enemy boarding and added a way to get your ships back in battle.\nWinning a battle where the other side has captured ships from you and they intend to flee allows you to retake your ships back.",
-    "0.31.0": "Command ships. Fit a Combat Information Center to a capital (or an Auxiliary CIC to a cruiser) and it becomes\nyour fleet's eyes: a long-range radar with a sector scan, a built-in ESM suite, faster reports to the rest of the\nfleet, sensor picket drones, and a control panel in RTS mode. Lose it, and your fleet loses its picture for a while.\nElectronic warfare. Scramble enemy radars, barrage-jam an area, jam incoming radar missiles and disrupt enemy\nfire control. All of it runs on reactor power.\nThe enemy only knows what it has found. The AI no longer sees your whole fleet. It acts on what its ships spot or\ntrack, and sends hunting groups to look for you when it has nothing to fight.\nNew hullmods. Passive Sensor Suite (ESM), Anti-Radiation Missile Conversion, Tandem Warheads, Militia Lockers,\nExpanded Propellant, Blowout Panels, Breaching Charges, Thermal Dispersal Plating, Wet Magazine Stowage, and three\npower hullmods.\nThe Threat boards. Threat ships send waves of their fragments to board you. They're weak and easy to shoot down,\nbut there are a lot of them, and a ship they take has its whole crew killed and is left drifting.\nMissiles hit harder. Every radar missile does 50% more damage and sprint at their target over the last\nstretch.\nOptional PatchLib support. With PatchLib installed you get fuller fog of war, an AI that understands reactor\npower, power stats in the refit screen, and more. Without it old fallbacks are used.",
+    "0.31.0": "Command ships. Fit a Combat Information Center to a capital (or an Auxiliary CIC to a cruiser) and it becomes\nyour fleet's eyes: a long-range radar with a sector scan, a built-in ESM suite, faster reports to the rest of the\nfleet, sensor picket drones, and a control panel in RTS mode. Lose it, and your fleet loses its picture for a while.\nElectronic warfare. Scramble enemy radars, barrage-jam an area, jam incoming radar missiles and disrupt enemy\nfire control. All of it runs on reactor power.\nThe enemy only knows what it has found. The AI no longer sees your whole fleet. It acts on what its ships spot or\ntrack, and sends hunting groups to look for you when it has nothing to fight.\nNew hullmods. Passive Sensor Suite (ESM), Anti-Radiation Missile Conversion, Tandem Warheads, Militia Lockers,\nExpanded Propellant, Blowout Panels, Breaching Charges, Thermal Dispersal Plating, Wet Magazine Stowage, and three\npower hullmods.\nThe Threat boards. Threat ships send waves of their fragments to board you. They're weak and easy to shoot down,\nbut there are a lot of them, and a ship they take has its whole crew killed and is left drifting.\nMissiles hit harder. Every radar missile does 50% more damage and sprint at their target over the last\nstretch.\nOptional PatchLib support. With PatchLib installed you get fuller fog of war, an AI that understands reactor\npower, power stats in the refit screen, and more. Without it old fallbacks are used.\n\nAnd more, check the changelog on github.",
     "0.30.0": "First public release"
   },
-  "changelogUrl": "https://github.com/reaperyeah420-cpu/Tactical-Combat-Overhaul/releases",
   "sourceCodeUrl": "https://github.com/reaperyeah420-cpu/Tactical-Combat-Overhaul",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36171.0",

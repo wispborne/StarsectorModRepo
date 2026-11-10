@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T21:31:27.981416Z",
+  "generatedAt": "2026-11-10T07:25:20.385668Z",
   "listing": {
     "id": "zoey-s-faction-customization",
     "name": "Zoey's Faction Customization",
@@ -23,7 +23,7 @@
     "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_12931_1661628195.png",
     "summary": "Adds a few ways to customize your faction!",
     "summaryIsGenerated": false,
-    "aiSummary": "Allows players to customize faction colors, fleet and rank names, descriptions, and commodity legality with mechanical effects.",
+    "aiSummary": "Lets you customize faction colors, fleet names, rank titles, descriptions, and legal/illegal commodities.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -36,7 +36,13 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1563000548658253924/1563000548658253924",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
-    "usesAi": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "assisted"
+      }
+    ],
     "addedOn": "2026-10-22",
     "threadLastPostOn": "2026-10-22",
     "editedOn": "2026-10-23",
@@ -64,14 +70,23 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Adds a few ways to customize your faction beyond just name!</p><p>Requires <a href=\"https://discord.com/channels/187635036525166592/1562893773438980176\" rel=\"nofollow noopener\" target=\"_blank\">Patchlib</a>.</p><h3>Modules</h3><ol><li>Commodities - Most commodities can now be toggled between legal and illegal. Changing from the default has <strong>mechanical implications</strong> for all of your colonies.</li><li>Fleet names</li><li>Post/Rank titles</li><li>Faction color</li><li>Faction description</li></ol><p>Cannot be removed from existing saves, but can be added.</p><p>Download: <a href=\"https://github.com/nikothedude/Zoey-s-Faction-Customization/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/nikothedude/Zoey-s-Faction-Customization/releases</a><br>Forum thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36193.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36193.0</a></p><p>AI Disclaimer - No AI was used in the creation of this mod.</p>",
-  "aiDescription": "Provides tools to change faction visual and textual elements, including colors, fleet names, and rank titles. Enables modification of faction descriptions and the legality of specific commodities, which can trigger mechanical effects. These customizations are accessible through the faction panel and bespoke intel pages.",
-  "saveCompatibilityText": "Can be added to existing saves",
-  "removalCompatibilityText": "but not removed",
+  "aiDescription": "Provides options to change faction color, fleet names, post/rank names, and faction description. It also allows modifying legal and illegal commodities with optional mechanical effects that can be disabled via LunaLib settings.",
+  "saveCompatibilityText": "Can be added to existing saves, but not removed.",
+  "removalCompatibilityText": "but not removed.",
   "canAdd": "yes",
   "canRemove": "no",
   "aiUse": {
     "quote": "Only Intellij's simple autocomplete function, which is barely AI powered to begin with.",
-    "usesAi": false
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "assisted"
+      }
+    ],
+    "tools": [
+      "Intellij"
+    ]
   },
   "rawCategories": [
     "Colonies",
@@ -79,7 +94,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1563000548658253924/1563000548808982588/industries24.png?ex=6af31b71&is=6af1c9f1&hm=0c0dd0f12b7c19299fb8a4c5f1f16ee06b58af7e3e97f53e97642cbb0fdc17d1&",
+      "url": "https://cdn.discordapp.com/attachments/1563000548658253924/1563000548808982588/industries24.png?ex=6af3c431&is=6af272b1&hm=90221c21a4220d8f5ac9a1a430c4382edee9c09e97a3402cf32cc144f1e6262e&",
       "aiCaption": "A mostly empty picture.",
       "aiKind": "other",
       "aiFit": "poor",

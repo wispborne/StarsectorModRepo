@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T21:31:27.981416Z",
+  "generatedAt": "2026-11-10T07:25:20.385668Z",
   "mods": [
     {
       "modId": "a-vanilla-balance-tweak",
@@ -493,7 +493,7 @@
           "name": "Second-in-Command",
           "id": "second-in-command",
           "quote": "Second-in-Command may make Humanity less useful because of the way it changes or removes Neural Link behavior.",
-          "kind": "gameplay"
+          "kind": "withNotes"
         },
         {
           "name": "Industrial.Evolution",
@@ -509,11 +509,29 @@
       ]
     },
     {
+      "modId": "united-nations-space-command-continued",
+      "modName": "Halo - United Nations Space Command: Continued (UNSC) (LEGACY)",
+      "conflicts": [
+        {
+          "name": "Halo HomeSystems",
+          "id": "halo-homesystems",
+          "quote": "This fork is not compatabile with Halo HomeSystems or UNSC Reborn.",
+          "kind": "technical"
+        },
+        {
+          "name": "Halo - UNSC Reborn",
+          "id": "halo-unsc-reborn",
+          "quote": "This fork is not compatabile with Halo HomeSystems or UNSC Reborn.",
+          "kind": "technical"
+        }
+      ]
+    },
+    {
       "modId": "halo-unsc-reborn",
       "modName": "Halo - UNSC Reborn",
       "conflicts": [
         {
-          "name": "original UNSC mod",
+          "name": "UNSC",
           "quote": "not save-compatible with the original UNSC mod, and not meant to be run alongside it - both define the same faction and the same ship IDs.",
           "kind": "technical"
         }
@@ -849,6 +867,29 @@
       ]
     },
     {
+      "modId": "portrait-changer-1-0-7b-updated-english-version",
+      "modName": "Portrait Changer",
+      "conflicts": [
+        {
+          "name": "Starsector or other mods",
+          "quote": "Changing story-critical or otherwise important NPCs may interfere with scripts from Starsector or other mods.",
+          "kind": "withNotes"
+        }
+      ]
+    },
+    {
+      "modId": "pre-battle-deployment-orders",
+      "modName": "Pre-battle Deployment Orders",
+      "conflicts": [
+        {
+          "name": "Divisions: Command and Control | Combat AI Overhaul",
+          "id": "divisions-command-and-control-combat-ai-overhaul",
+          "quote": "Incompatible if used simultaneously with Divisions: Command and Control, though you can toggle between enabling them for your fleet without any problems.",
+          "kind": "withNotes"
+        }
+      ]
+    },
+    {
       "modId": "privateering-commission-overhaul",
       "modName": "Privateering - A faction commission overhaul",
       "conflicts": [
@@ -1001,7 +1042,7 @@
         {
           "name": "mods that alter Shroud fleets",
           "quote": "there might be some incompatibilities with mods that alter Shroud fleets, as the code relies on them to award points.",
-          "kind": "technical"
+          "kind": "withNotes"
         }
       ]
     },
@@ -1012,6 +1053,17 @@
         {
           "name": "CSS version",
           "quote": "Incompatible with the CSS version above!",
+          "kind": "technical"
+        }
+      ]
+    },
+    {
+      "modId": "ssmp-star-sector-multiplayer-1-5-2-pre-release-testing",
+      "modName": "SSMP - Star Sector Multiplayer",
+      "conflicts": [
+        {
+          "name": "all other mods",
+          "quote": "Open your game and enable SSMP, then disable all other mods",
           "kind": "technical"
         }
       ]
@@ -1058,6 +1110,18 @@
           "name": "EMH",
           "quote": "it is COMPLETELY INCOMPATIBLE you annto use station refitting with emh",
           "kind": "technical"
+        }
+      ]
+    },
+    {
+      "modId": "stepspeedup",
+      "modName": "StepSpeedup",
+      "conflicts": [
+        {
+          "name": "SpeedUp",
+          "id": "speedup",
+          "quote": "SpeedUp by DarkRevenant is the established speed mod, and it works well. It is built around separate hotkeys that each hold or toggle a fixed multiplier, and multipliers from several active hotkeys stack together.",
+          "kind": "gameplay"
         }
       ]
     },
@@ -1281,6 +1345,17 @@
           "id": "nexerelin",
           "quote": "I will be honest, i havent really checked if this is compatible with giant mods like say, Nexerelin. I have 0 clue if it will work with that, and its not something i plan to look into any time soon.",
           "kind": "other"
+        }
+      ]
+    },
+    {
+      "modId": "wide-horizons",
+      "modName": "Wide Horizons (Basic) - Expanding the Universe",
+      "conflicts": [
+        {
+          "name": "RAT's Procgen Configurator",
+          "quote": "I'll be updating the forum post to clearly state that RAT's Procgen Configurator is currently not compatible, and I will also look into restructuring how theme generation is handled in a future update to avoid this kind of overlap entirely.",
+          "kind": "technical"
         }
       ]
     },

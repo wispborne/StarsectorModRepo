@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T21:31:27.981416Z",
+  "generatedAt": "2026-11-10T07:25:20.385668Z",
   "listing": {
     "id": "orbital-raceways",
     "name": "Orbital Raceways",
@@ -18,10 +18,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.0.1",
     "imageUrl": "https://i.imgur.com/Q9o4bde.jpeg",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1562698436824801340/1562698437005414420/orbital_raceways.png?ex=6af35394&is=6af20214&hm=cd0fc04cd95fd712da87ecb5fbb9cbe6d9377cf0ecd36a819ee400808e3044f1&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1562698436824801340/1562698437005414420/orbital_raceways.png?ex=6af3fc54&is=6af2aad4&hm=254c9952c42420ae5fee80d6f8cf7321900db16d5c39c6db4be74ef9d97f1c91&",
     "summary": "A race circuit opens above Asharu (you can change the host world in the config). Every month a new field of frigates takes the grid. Bet credits on the racers from the Intel screen during the first 7 days of the month. It adds a long-term credit sink and a bit of gambling flavor to the campaign.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a monthly orbital frigate race with betting, a VIP lounge, and configurable race parameters.",
+    "aiSummary": "Adds a monthly orbital frigate racing event with betting, standings, and VIP rewards.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -38,7 +38,7 @@
     "aiUses": [
       {
         "area": "code",
-        "how": "assisted"
+        "how": "generated"
       },
       {
         "area": "icons",
@@ -55,10 +55,12 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>GAMBLE your CREDITS at the RACETRACK!</p><p>Adds a fully fleshed out racetrack gambling system accessible through the intel menu where you can wage bets on monthly frigate races and unlock member exclusive amenities</p><p>Forum Page: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36183.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36183.0</a></p><p>Direct Download: <a href=\"https://github.com/coolestofguys/OrbitalRaceways/releases/download/v.1.0.1/OrbitalRaceways.rar\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/coolestofguys/OrbitalRaceways/releases/download/v.1.0.1/OrbitalRaceways.rar</a></p>",
-  "aiDescription": "Adds a monthly orbital frigate race with a betting system, allowing players to wager credits on racers from the Intel screen. Includes a VIP lounge, membership rewards, and a special December Grand Prix event. The mod is fully configurable via a JSON file, allowing users to change the host world, racers, and odds.",
+  "aiDescription": "Introduces a race circuit above a configurable host world where players can bet on frigates each month. Features include Elo-based pilot standings, membership rewards points, special events like the December Grand Prix, and a VIP lounge. The system acts as a credit sink with real-world gambling odds and does not require other mods.",
   "saveCompatibilityText": "Adding to an existing save: Moderate testing, 100% success rate.",
+  "updateCompatibilityText": "Updating: this is the first release.",
   "removalCompatibilityText": "Removing from a save: not safe. Removing the mod from a save in progress can cause errors, so please don't. If you want it out of your way, open the mod's Intel screen and turn Notifications to OFF. That hides its alerts, so you can ignore the races for the rest of your game.",
   "canAdd": "yes",
+  "canUpdate": "depends",
   "canRemove": "no",
   "aiUse": {
     "quote": "Some of the code and assets in this mod were created using AI tools:\nCode: Claude (Anthropic). I directed the design, tested everything in game and made the balance decisions.\nGraphics: Market Icon was generated with Gemini 3.5.",
@@ -66,12 +68,13 @@
     "uses": [
       {
         "area": "code",
-        "how": "assisted",
+        "how": "generated",
         "extent": "some"
       },
       {
         "area": "icons",
-        "how": "generated"
+        "how": "generated",
+        "extent": "some"
       }
     ],
     "tools": [
@@ -85,7 +88,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1562698436824801340/1562698437005414420/orbital_raceways.png?ex=6af35394&is=6af20214&hm=cd0fc04cd95fd712da87ecb5fbb9cbe6d9377cf0ecd36a819ee400808e3044f1&",
+      "url": "https://cdn.discordapp.com/attachments/1562698436824801340/1562698437005414420/orbital_raceways.png?ex=6af3fc54&is=6af2aad4&hm=254c9952c42420ae5fee80d6f8cf7321900db16d5c39c6db4be74ef9d97f1c91&",
       "aiCaption": "A circular emblem featuring a checkered racing flag wrapped around a planet with orbital rings.",
       "aiKind": "logo",
       "aiFit": "good",

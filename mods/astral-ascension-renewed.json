@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T21:31:27.981416Z",
+  "generatedAt": "2026-11-10T07:25:20.385668Z",
   "listing": {
     "id": "astral-ascension-renewed",
     "name": "Astral Ascension Renewed",
@@ -17,10 +17,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.0.0",
     "imageUrl": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/graphics/icons/astral-ascension-renewed.png?raw=true",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1561448031746793633/1561448031990190271/astral-ascension-renewed.png?ex=6af3644d&is=6af212cd&hm=34636ec1501c48488c5ef8c836d959e052439000193ceebd29691f6f7024f6b7&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1561448031746793633/1561448031990190271/astral-ascension-renewed.png?ex=6af40d0d&is=6af2bb8d&hm=9d9fa18246d41831a9968467e29f43083a6795d55ee691976e0cece821ef217b&",
     "summary": "An Omega core can govern your colony, with three administrator skills of its own. Only an Omega core can take a colony past size 10, up to size 15.",
     "summaryIsGenerated": false,
-    "aiSummary": "Enables Omega cores to govern colonies, allowing them to grow to size 15 and transform into massive city-worlds with enhanced bonuses.",
+    "aiSummary": "Allows Omega cores to govern colonies and expand them into massive ecumenopolis worlds.",
     "saveCompatible": true,
     "hasDirectDownload": false,
     "bestDownload": {
@@ -36,16 +36,20 @@
     "usesAi": true,
     "aiUses": [
       {
-        "area": "code"
+        "area": "code",
+        "how": "generated"
       },
       {
-        "area": "icons"
+        "area": "icons",
+        "how": "generated"
       },
       {
-        "area": "illustrations"
+        "area": "illustrations",
+        "how": "generated"
       },
       {
-        "area": "writing"
+        "area": "writing",
+        "how": "generated"
       }
     ],
     "lastReleaseDate": "2026-10-20T00:00:00.000Z",
@@ -69,8 +73,8 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36167.msg532604#msg532604\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36167.msg532604#msg532604</a></p>",
-  "aiDescription": "Allows Omega cores to serve as colony administrators, enabling colonies to grow beyond the standard size limit up to size 15. These larger colonies transform into Arcology Worlds, Ecumenopolises, or Hyper-Ecumenopolises, gaining significant bonuses to production, defense, and fleet size. Removing an Omega core from a large colony triggers a Great Civil War, reducing the colony size and stability.",
-  "saveCompatibilityText": "Yes.",
+  "aiDescription": "Enables an Omega core to act as a colony administrator with unique skills. Allows colonies to grow beyond the standard size limit up to size 15, transforming them into Arcology Worlds, Ecumenopolises, or Hyper-Ecumenopolises. Removing the Omega core from these large colonies triggers a civil war.",
+  "saveCompatibilityText": "Can I add it to an existing save? Yes.",
   "removalCompatibilityText": "Not once a colony has an Omega core administrator or has grown past size 10.",
   "canAdd": "yes",
   "canRemove": "no",
@@ -79,16 +83,20 @@
     "usesAi": true,
     "uses": [
       {
-        "area": "code"
+        "area": "code",
+        "how": "generated"
       },
       {
-        "area": "writing"
+        "area": "writing",
+        "how": "generated"
       },
       {
-        "area": "icons"
+        "area": "icons",
+        "how": "generated"
       },
       {
-        "area": "illustrations"
+        "area": "illustrations",
+        "how": "generated"
       }
     ],
     "tools": [
@@ -101,14 +109,14 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1561448031746793633/1561448031990190271/astral-ascension-renewed.png?ex=6af3644d&is=6af212cd&hm=34636ec1501c48488c5ef8c836d959e052439000193ceebd29691f6f7024f6b7&",
+      "url": "https://cdn.discordapp.com/attachments/1561448031746793633/1561448031990190271/astral-ascension-renewed.png?ex=6af40d0d&is=6af2bb8d&hm=9d9fa18246d41831a9968467e29f43083a6795d55ee691976e0cece821ef217b&",
       "aiCaption": "A screenshot of a planet surface featuring scattered green structures and illuminated settlements.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1561448031746793633/1561477035745091634/screenshot-hyper-ecumenopolis.png?ex=6af2d690&is=6af18510&hm=d0993f10b20bfe9856fad7e0878dfda1340aa6928e97defe400db826cfdb3b2a&",
+      "url": "https://cdn.discordapp.com/attachments/1561448031746793633/1561477035745091634/screenshot-hyper-ecumenopolis.png?ex=6af37f50&is=6af22dd0&hm=bc46fc4ad82aa4bc8440fa9f24412265cf14cd4b0a287dce5d139c23ced0cf2d&",
       "aiCaption": "A screenshot of a planet with an info box reading 'Aquamarine, Ecumenopolis World'.",
       "aiKind": "screenshot",
       "aiFit": "good",
@@ -193,5 +201,11 @@
   ],
   "threadLastPostOn": "2026-10-21",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Console Commands",
+      "id": "console-commands"
+    }
+  ]
 }
