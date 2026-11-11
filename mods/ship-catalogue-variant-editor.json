@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T19:30:58.003396Z",
+  "generatedAt": "2026-11-11T10:05:03.971162Z",
   "listing": {
     "id": "ship-catalogue-variant-editor",
     "name": "Ship Catalogue/Variant Editor",
@@ -26,7 +26,7 @@
     "imageUrl": "https://i.imgur.com/9W6pz9f.png?1",
     "summary": "Provides four out of campaign missions (accessible in the title screen):",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds campaign missions to browse and filter vanilla and modded ships, variants, and weapons.",
+    "aiSummary": "Adds in-game missions to browse ship lists, filter by mod or spoiler status, and validate variants.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -52,7 +52,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<pre><code>Version 1.8.4\n\n+    babes i literally do not know what's in here aside from that it's an update for 0.97a\n+    functionality shouldn't have changed but you can look at the commit on github if you care</code></pre><p>Download: <a href=\"https://github.com/RustyCabbage/ShipCatalogueVariantEditor/releases/download/v1.8.4/SCVE.v1.8.4.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/RustyCabbage/ShipCatalogueVariantEditor/releases/download/v1.8.4/SCVE.v1.8.4.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=21591.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=21591.0</a> (not updated im lazy see u next year)<br>Source: <a href=\"https://github.com/RustyCabbage/ShipCatalogueVariantEditor/\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/RustyCabbage/ShipCatalogueVariantEditor/</a></p>",
-  "aiDescription": "Provides missions accessible from the title screen to view sorted lists of vanilla and modded ships. Includes tools for custom searches via CSV files and a list of variants with common issues. Allows players to filter ships and weapons to avoid spoilers or focus on specific mod content.",
+  "aiDescription": "Provides four out-of-campaign missions accessible from the title screen for viewing vanilla ships, modded ships, custom searches via CSV, and variant validation. Includes filters for ships, weapons, and wings to manage spoilers and focus on specific gear. Allows permanent modification of S-Mods for testing builds without loading a campaign.",
   "saveCompatibilityText": "This mod is safe to add and remove from your saves.",
   "removalCompatibilityText": "This mod is safe to add and remove from your saves.",
   "canAdd": "yes",
@@ -89,7 +89,8 @@
   ],
   "changelog": {
     "1.7.5": "-added ability to check knownShips and priorityShips in custom mission\n-added options for known/priority weapons/wings for custom filters\n-added showRestricted to custom_wing_filter.csv\n-added LunaLib version checker support (as in the changelog. i'll figure the rest out later eventually :tm:)\n\n-fixed issue with Officer Details hullmod crashing. Thanks to Helmut Kohl!\n-fixed invalid weapons being restricted instead of set to unavailable\n-fixed issues with logging that were present in v1.7.4.1",
-    "1.7.3": "-new mission for modular hulls -idr what else :)"
+    "1.7.3": "-new mission for modular hulls\n-idr what else :)",
+    "1.7.0": "-added ability to add officers for sim testing\n-ship names now use the hull id (someone will find that useful maybe)\n-sweep sweep"
   },
   "changelogUrl": "https://raw.githubusercontent.com/RustyCabbage/ShipCatalogueVariantEditor/main/changelog.txt",
   "sourceCodeUrl": "https://github.com/RustyCabbage/ShipCatalogueVariantEditor",
@@ -99,5 +100,21 @@
   "releases": [],
   "threadLastPostOn": "2026-07-30",
   "sameNameMods": [],
-  "addons": []
+  "addons": [
+    {
+      "name": "SCVE",
+      "role": "variant",
+      "downloads": [
+        {
+          "url": "https://github.com/RustyCabbage/ShipCatalogueVariantDesigner/releases/download/1.4.0/SCVE.v1.4.0.zip",
+          "directUrl": "https://github.com/RustyCabbage/ShipCatalogueVariantDesigner/releases/download/1.4.0/SCVE.v1.4.0.zip",
+          "fileName": "SCVE.v1.4.0.zip",
+          "kind": "direct",
+          "label": "SCVE v1.4.0",
+          "host": "GitHub",
+          "needsAnotherStep": false
+        }
+      ]
+    }
+  ]
 }

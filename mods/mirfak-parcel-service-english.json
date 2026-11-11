@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T19:30:58.003396Z",
+  "generatedAt": "2026-11-11T10:05:03.971162Z",
   "listing": {
     "id": "mirfak-parcel-service-english",
     "name": "Mirfak Parcel Service English Translation",
@@ -16,9 +16,9 @@
       "discord"
     ],
     "gameVersion": "0.98a",
-    "modVersion": "0.7.4-EN",
+    "modVersion": "0.7.4b-EN",
     "imageUrl": "https://i.imgur.com/yhMWN1B.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1569127673593073896/1569127674692108348/Mirfak_Parcel_Service.png?ex=6af44dc6&is=6af2fc46&hm=d545a971b58ff39d0a0f81fc714f15f09e4022dfa443893a84e706ae16084e23&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1569127673593073896/1569127674692108348/Mirfak_Parcel_Service.png?ex=6af4f686&is=6af3a506&hm=cff7ea0cd08a5e789a9806c1241f5e4873b752c6942ed98a6cc2f74a3030e702&",
     "summary": "Mirfak Parcel Service is a logistics company on the Hegemony's fringe. Everyone calls it neutral, non-military and friendly. They deliver anything, anywhere in the Core Worlds, from bulk commodities to a handful of personal letters.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds a neutral logistics faction with armed freighters, custom ships, unique weapons, and a store system.",
@@ -45,7 +45,7 @@
       }
     ],
     "addedOn": "2026-11-08",
-    "editedOn": "2026-11-09",
+    "editedOn": "2026-11-11",
     "needs": [
       {
         "name": "LazyLib",
@@ -53,7 +53,7 @@
       },
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
       },
       {
         "name": "GraphicsLib",
@@ -91,21 +91,21 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1569127673593073896/1569127674692108348/Mirfak_Parcel_Service.png?ex=6af44dc6&is=6af2fc46&hm=d545a971b58ff39d0a0f81fc714f15f09e4022dfa443893a84e706ae16084e23&",
+      "url": "https://cdn.discordapp.com/attachments/1569127673593073896/1569127674692108348/Mirfak_Parcel_Service.png?ex=6af4f686&is=6af3a506&hm=cff7ea0cd08a5e789a9806c1241f5e4873b752c6942ed98a6cc2f74a3030e702&",
       "aiCaption": "The Mirfak logo featuring a yellow and white arrow graphic next to the text 'Mirfak'.",
       "aiKind": "logo",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1569127673593073896/1569128496092151989/Mirfak_Parcel_Service_2.png?ex=6af44e8a&is=6af2fd0a&hm=b644261284d68f187c218f81dd28890ef6f702a4ab92adf91e7db18f1c15b0a6&",
+      "url": "https://cdn.discordapp.com/attachments/1569127673593073896/1569128496092151989/Mirfak_Parcel_Service_2.png?ex=6af4f74a&is=6af3a5ca&hm=8ad9169c1f742c46eb2bc1a57311a284d0be6869d3739741688e3c0652290621&",
       "aiCaption": "A collection of various spaceship sprites arranged in rows on a grey background, with the Mirfak logo in the top right corner.",
       "aiKind": "art",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1569127673593073896/1569128496930889830/perm_slip.png?ex=6af44e8a&is=6af2fd0a&hm=5fda852233f005686c6273a418015195f5f75096e7fef31b9364f74a7ae1e72c&",
+      "url": "https://cdn.discordapp.com/attachments/1569127673593073896/1569128496930889830/perm_slip.png?ex=6af4f74a&is=6af3a5ca&hm=a90c567f9bbfc59851cd63ab76b68ca32cbbdff40756078472ab8d61b69af7cb&",
       "aiCaption": "A screenshot of a forum post containing Chinese text discussing translation authorization for the mod.",
       "aiKind": "other",
       "aiFit": "poor",
@@ -144,7 +144,10 @@
       "needsAnotherStep": false
     }
   ],
-  "changelog": {},
+  "changelog": {
+    "0.7.4b-EN": "Fixed missing Longbow and Crossbow sprites on Linux (file name capitalization mismatches).\n Fixed the Fowling Piece projectile sprite pointing to the wrong folder (missing on all systems).",
+    "0.7.4-EN": "Added Version Checker support. You'll now get an in-game notice when a new English version is out.\n Fixed the Needle Case weapon missing its sprites. A hidden character in its image file names had been garbled, so the game couldn't find them.\n Renamed 29 garbled file and folder names (author's art sources, design notes and reference files) to plain English. None of these are loaded by the game, but the garbled names could cause problems when unzipping on Windows."
+  },
   "sourceCodeUrl": "https://github.com/MrPossible001/mirfak-parcel-service-english",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36279.0",

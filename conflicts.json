@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T19:30:58.003396Z",
+  "generatedAt": "2026-11-11T10:05:03.971162Z",
   "mods": [
     {
       "modId": "a-vanilla-balance-tweak",
@@ -43,7 +43,7 @@
           "name": "Grand Sector",
           "id": "grand-sector",
           "quote": "This mod incompatible with Grand Sector, since it does the same thing and more.",
-          "kind": "technical"
+          "kind": "gameplay"
         }
       ]
     },
@@ -143,7 +143,7 @@
           "name": "Domain Explorarium Expansion",
           "id": "domain-explorarium-expansion",
           "quote": "Posted a wee update that should fix the issue mentioned here (an issue that arises with DEX):",
-          "kind": "technical"
+          "kind": "withNotes"
         }
       ]
     },
@@ -232,8 +232,8 @@
       "modName": "CJY's Toy Box",
       "conflicts": [
         {
-          "name": "Halo Dynamics",
-          "quote": "the new Halo Dynamics 1.8.0 update (which isnt translated at the moment) conflicts with CJY.",
+          "name": "Halo Dynamics 1.8.0",
+          "quote": "please note that the the new Halo Dynamics 1.8.0 update (which isnt translated at the moment) conflicts with CJY.",
           "kind": "withNotes"
         }
       ]
@@ -441,17 +441,6 @@
       ]
     },
     {
-      "modId": "fleet-size-by-dp",
-      "modName": "Fleet Size By DP",
-      "conflicts": [
-        {
-          "name": "other mods",
-          "quote": "there have been a couple odd conflicts with other mods in the past that were causing issues when used together.",
-          "kind": "technical"
-        }
-      ]
-    },
-    {
       "modId": "fuel-siphoning",
       "modName": "Fuel Siphoning",
       "conflicts": [
@@ -635,18 +624,6 @@
       ]
     },
     {
-      "modId": "interastral-peace-casino",
-      "modName": "Interastral Peace Casino",
-      "conflicts": [
-        {
-          "name": "Cosmicon Dice",
-          "id": "cosmicon-dice",
-          "quote": "Note: Cosmicon is not removal safe mid-campaign",
-          "kind": "withNotes"
-        }
-      ]
-    },
-    {
       "modId": "jaydeepiracy",
       "modName": "JaydeePiracy",
       "conflicts": [
@@ -687,7 +664,7 @@
       "conflicts": [
         {
           "name": "JaydeePiracy",
-          "id": "jaydeepiracy",
+          "id": "jaydeepiracy-2",
           "quote": "there is currently a crash with jaydeepiracy for now",
           "kind": "technical"
         }
@@ -736,6 +713,23 @@
       ]
     },
     {
+      "modId": "mimikko-assistants",
+      "modName": "Mimikko Assistants",
+      "conflicts": [
+        {
+          "name": "Industry Evolution Academies",
+          "quote": "No known mod conflicts, but the unique admin can sometime be trained by the Industry Evolution Academies.",
+          "kind": "gameplay"
+        },
+        {
+          "name": "Nexerelin",
+          "id": "nexerelin",
+          "quote": "If playing with Nexerelin, the randomized sector option will make most assistants unobtainable (it is fine to use Nex, there is a unique start to go with it, just avoid randomized sector)",
+          "kind": "withNotes"
+        }
+      ]
+    },
+    {
       "modId": "modified-industry-requirements",
       "modName": "Modified Industry Requirements",
       "conflicts": [
@@ -754,18 +748,6 @@
           "name": "Ashes of The Domain Vaults of Knowledge",
           "quote": "This mod is incompatible with Ashes of The Domain Vaults of Knowledge and any other that modifies the same entries.",
           "kind": "technical"
-        }
-      ]
-    },
-    {
-      "modId": "more-military-missions",
-      "modName": "More Military Missions",
-      "conflicts": [
-        {
-          "name": "Nexerelin",
-          "id": "nexerelin",
-          "quote": "Won't show up if you're running Nexerelin.",
-          "kind": "withNotes"
         }
       ]
     },
@@ -805,13 +787,25 @@
       ]
     },
     {
+      "modId": "nijigen-extend-standalone-pack-update-08-31-yrex",
+      "modName": "Nijigen Extend || Standalone Pack || Update 08/31 [YREX]",
+      "conflicts": [
+        {
+          "name": "Yuri Expedition",
+          "id": "yuri-expedition",
+          "quote": "Important : Do not use this mod with any lower version of YRXP.",
+          "kind": "technical"
+        }
+      ]
+    },
+    {
       "modId": "nomadic-survival",
       "modName": "Nomadic Survival",
       "conflicts": [
         {
           "name": "Fuel Siphoning",
           "id": "fuel-siphoning",
-          "quote": "This mod already includes Fuel Siphoning , and they can't be used together.",
+          "quote": "Compatible with all mods except for Fuel Siphoning and Perilous Expanse (due to overlapping functionality)",
           "kind": "gameplay"
         },
         {
@@ -916,7 +910,7 @@
         {
           "name": "Nomadic Survival",
           "id": "nomadic-survival",
-          "quote": "Compatible with all mods except for Fuel Siphoning and Nomadic Survival (due to overlapping functionality)",
+          "quote": "Nomadic Survival is an alternative version of this mod, so only one should be used at a time.",
           "kind": "gameplay"
         }
       ]
@@ -953,6 +947,24 @@
           "name": "Mods that affect the Sindrian Diktat .faction file",
           "quote": "Mods that affect the Sindrian Diktat .faction file may cause crashes.",
           "kind": "technical"
+        }
+      ]
+    },
+    {
+      "modId": "planetary-shield-access-control",
+      "modName": "Planetary Shield: Access Control",
+      "conflicts": [
+        {
+          "name": "Nexerelin",
+          "id": "nexerelin",
+          "quote": "Fixed a bug where the combination of Nexerelin random mode and the Industrial Evolution mod caused PS:AC to crash with a null pointer exception.",
+          "kind": "withNotes"
+        },
+        {
+          "name": "Industrial.Evolution",
+          "id": "industrial-evolution",
+          "quote": "Fixed a bug where the combination of Nexerelin random mode and the Industrial Evolution mod caused PS:AC to crash with a null pointer exception.",
+          "kind": "withNotes"
         }
       ]
     },
@@ -1091,8 +1103,8 @@
       ]
     },
     {
-      "modId": "rigel-security-translation-of-beta-version",
-      "modName": "Rigel Security - Translation of Beta",
+      "modId": "rigel-security",
+      "modName": "Rigel Security",
       "conflicts": [
         {
           "name": "Advanced Gunnery AI",
@@ -1107,7 +1119,7 @@
       "conflicts": [
         {
           "name": "Diable Avionics",
-          "id": "diable-avionics-2",
+          "id": "diable-avionics-4",
           "quote": "Diable Avionics: All ship systems that switch player control to fighters, under certain conditions, will CTD.",
           "kind": "technical"
         },
@@ -1115,6 +1127,18 @@
           "name": "SpeedUp",
           "id": "speedup",
           "quote": "SpeedUp: Bullet time is not supported.",
+          "kind": "withNotes"
+        }
+      ]
+    },
+    {
+      "modId": "scan-those-gates",
+      "modName": "Scan Those Gates",
+      "conflicts": [
+        {
+          "name": "LunaLib",
+          "id": "lunalib",
+          "quote": "However, it will not work with a LunaLib version less than v1.7.4.",
           "kind": "withNotes"
         }
       ]
@@ -1360,8 +1384,8 @@
       "conflicts": [
         {
           "name": "Extra Submarkets",
-          "quote": "This mod grew out of Extra Submarkets but is a separate mod now. Do not run both.",
-          "kind": "technical"
+          "quote": "This mod idea grew out of Extra Submarkets, but it is a separate mod now. You can run both but they will overlap in functionality.",
+          "kind": "gameplay"
         }
       ]
     },
@@ -1407,6 +1431,17 @@
           "name": "VRAM Optimizer",
           "id": "vram-optimizer",
           "quote": "Fontes quebradas com o VRAM Optimizer (causa não confirmada): se as letras ficarem embaralhadas com esse mod ativo, o cache de texturas dele pode estar guardando a versão antiga das fontes.",
+          "kind": "withNotes"
+        }
+      ]
+    },
+    {
+      "modId": "trios-launcher-mod-manager-toolkit",
+      "modName": "TriOS: Launcher/Mod Manager/Toolkit",
+      "conflicts": [
+        {
+          "name": "MOSS",
+          "quote": "MOSS may complain about duplicate mods, however, because TriOS/SMOL allow multiple versions and MOSS doesn't (as of 2024).",
           "kind": "withNotes"
         }
       ]

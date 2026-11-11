@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T19:30:58.003396Z",
+  "generatedAt": "2026-11-11T10:05:03.971162Z",
   "listing": {
     "id": "more-military-missions",
     "name": "More Military Missions",
@@ -25,7 +25,7 @@
     "imageUrl": "https://i.imgur.com/lcB3PkW.png",
     "summary": "A mod for adding a defense oriented bar mission.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds various military missions including orbital defense, convoy escort, and VIP distress calls.",
+    "aiSummary": "Adds various military missions including orbital defense, convoy escort, VIP rescue, and scavenger trading.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -44,7 +44,7 @@
     "needs": [
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
       },
       {
         "name": "LunaLib",
@@ -53,7 +53,7 @@
       {
         "name": "LazyLib",
         "id": "lazylib",
-        "via": "LunaLib"
+        "via": "MagicLib"
       }
     ]
   },
@@ -62,9 +62,9 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><strong>Orbital Defense</strong>: a defense oriented bar mission.<br><strong>Repair Mission</strong>: companion mission to repair your orbitals faster after it gets blown up<br><strong>Mercantile Convoy Escort</strong>: Join trade fleets instead of ignoring them or hunting them down like pirates.<br><strong>VIP mission</strong>: add mission to distress calls to make it worthwhile<br><strong>Scavenger Trading</strong>: Trade with salvage fleets (including scavengers and prospectors) for salvage intel or swap commodities.<br><strong>Pick Your Ships</strong>: New game choice that allows you to pick your starting ships<br><strong>Force Auto Resolve</strong>: If your fleet is much bigger than the enemy, adds an option to auto resolve battles even if enemy is not interested in fleeing.<br><strong>Military Custom Bounty</strong>: reworked difficulty logic to allow faster scaling and scale past vanilla difficulty</p><p>Direct download: <a href=\"https://drive.google.com/uc?export=download&amp;id=1sQzpgePAb6FUkq6bPPP7G__-7E9WpH-i\" rel=\"nofollow noopener\" target=\"_blank\">https://drive.google.com/uc?export=download&amp;id=1sQzpgePAb6FUkq6bPPP7G__-7E9WpH-i</a><br>Forum: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=26880\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=26880</a></p>",
-  "aiDescription": "Introduces an Orbital Defense Mission where fleets attack a station instead of the player attacking them. Adds companion missions like Repair Materials Delivery, Mercantile Convoy Escort, VIP Missions, and Scavenger Trading. Includes features for picking starting ships, forcing auto-resolve on large battles, and customizing military bounties.",
+  "aiDescription": "Introduces new bar missions such as defending stations from invasion fleets, escorting mercantile convoys, and responding to distress calls. It also includes features for picking starting ships, forcing auto-resolve on large battles, and customizing bounty difficulty.",
   "saveCompatibilityText": "can be freely added to existing saves (but not removed)",
-  "removalCompatibilityText": "can be freely added to existing saves (but not removed)",
+  "removalCompatibilityText": "(but not removed)",
   "canAdd": "yes",
   "canRemove": "no",
   "aiUse": {},
@@ -132,13 +132,5 @@
   "releases": [],
   "threadLastPostOn": "2026-09-05",
   "sameNameMods": [],
-  "addons": [],
-  "conflicts": [
-    {
-      "name": "Nexerelin",
-      "id": "nexerelin",
-      "quote": "Won't show up if you're running Nexerelin.",
-      "kind": "withNotes"
-    }
-  ]
+  "addons": []
 }

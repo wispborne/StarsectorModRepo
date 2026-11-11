@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T19:30:58.003396Z",
+  "generatedAt": "2026-11-11T10:05:03.971162Z",
   "listing": {
     "id": "take-no-prisoners",
     "name": "Take No Prisoners",
@@ -40,7 +40,12 @@
     "needs": [
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "MagicLib"
       }
     ]
   },
@@ -48,9 +53,9 @@
   "descriptionHtml": "<div class=\"align-center\"><b><span class=\"size-biggest\">Take No Prisoners</span></b></div><br><div class=\"align-center\"><a href=\"https://github.com/wispborne/takenoprisoners/releases/latest/download/TakeNoPrisoners.zip\" rel=\"nofollow noopener\" target=\"_blank\"><b><span class=\"size-biggest\"><u>Download</u></span></b></a><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25868.0\" rel=\"nofollow noopener\" target=\"_blank\">MagicLib</a>  <br>SAFE TO ADD TO EXISTING SAVES.<br><a href=\"https://github.com/wispborne/takenoprisoners\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/downloads/wispborne/takenoprisoners/total?color=blue&amp;logo=github&amp;label=total%20downloads\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><a href=\"https://github.com/wispborne/takenoprisoners\" rel=\"nofollow noopener\" target=\"_blank\">view source code</a><br><br>Take No Prisoners allows you to take enemy officers captive and have a one-on-one conversation with them. Most vanilla factions have their own defined dialogues as part of this mod, so the prisoners you capture will be different across factions, and sometimes even within factions!<br><br>Save-compatible, but cannot be removed from a save once it is added. It is probably incompatible with Capture Officers and Crew, but doesn't have other known incompatibilities.<br><br><span class=\"size-big\"><b>NOTE: This mod is done, completed, finished. It will receive game compatibility updates and simple bug fixes only.</b></span><br><b>It is currently the exact same mod that PresidentMattDamon made - the *only* change I have made is to reduce the \"View Prisoners\" ability cooldown.</b><br>I have no plans to implement new features. The original author, PresidentMattDamon, is no longer able to work on the mod and <a href=\"https://i.imgur.com/mJthSdL.png\" rel=\"nofollow noopener\" target=\"_blank\">has granted me permission to keep it alive</a>, as it was a mainstay on many modlists.</div><br><hr><br><br><b><span class=\"size-bigger\">How does it work?</span></b><br>Destroying enemy fleets from most vanilla and modded factions will give you prisoners.<br>These prisoners can be viewed using the \"View Prisoners\" ability on the hotbar.<br><br><img src=\"https://i.imgur.com/vUFzRQ7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br>This ability opens up a UI that allows you to interact with your prisoners. Each prisoner has specific actions that can be taken to deal with them, but the main point of the mod is the Talk button, which opens up a dialog with them.<br><br><img src=\"https://i.imgur.com/FC6Q683.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.imgur.com/j3QkWQJ.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br>Choosing to work with your prisoner will often have better results than lying or killing them, and can even result in gaining benefits. You can still choose to execute, ransom or release your prisoners; but for most officers it isn't as simple as bribing them to get a free level 7 officer, nor is it as easy as clicking a button to get some free credits by ransoming them back to their own faction from anywhere in the sector.<br><br><hr><br><br><span class=\"size-big\">For <b>mod authors</b></span>, the mod is fully extensible for your own faction and even your own officers.<br>A great example of a special implementation is in the <a href=\"https://fractalsoftworks.com/forum/index.php?topic=24215.0\" rel=\"nofollow noopener\" target=\"_blank\"><b>PAGSM Sindrian Fuel Company</b></a> mod, which adds full conversations with some of their important officers.<br><br><b>Changelog</b><br>0.17.1<br>- Recompile for 0.98a &amp; updated mod_info.json.<br>- Added icon, shown in TriOS.<br><br>0.17.0<br>- Recompile for 0.97a &amp; updated mod_info.json.<br>- Lowered cooldown for View Prisoners ability.<br>- No other changes. This is basically the same as the 0.16.1 release.<br><br>0.16.1<br>- Last release by PresidentMattDamon.<br><br><b>Credits</b><br>PresidentMattDamon, who made the mod.<br><br>License: CC BY-NC-ND (don't sell, don't fork/modify. learning from it is totally fine)",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Capturing enemy officers from various factions unlocks unique dialogues and interaction options. Players can talk to prisoners, choose to work with them for benefits, or execute, ransom, and release them. The mod is extensible for mod authors to add custom faction and officer conversations.",
+  "aiDescription": "Capturing enemy officers unlocks a menu where they can be talked to, bribed, ransomed, or executed. Dialogue options vary by faction and officer, offering unique outcomes for cooperation versus hostility. The system integrates with vanilla factions and supports extensibility for modded content.",
   "saveCompatibilityText": "SAFE TO ADD TO EXISTING SAVES.",
-  "removalCompatibilityText": "cannot be removed from a save once it is added",
+  "removalCompatibilityText": "cannot be removed from a save once it is added.",
   "canAdd": "yes",
   "canRemove": "no",
   "aiUse": {},

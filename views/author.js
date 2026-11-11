@@ -7,8 +7,11 @@
 
 import {
   breadcrumbs, clear, currentGameVersion, el, joinNames, modList, otherNamesOf,
+  viewToggle,
 } from '../lib.js';
-import { modGrid, sortMods } from './browse.js';
+import {
+  browseView, modGrid, modRows, setBrowseView, sortMods,
+} from './browse.js';
 
 export async function render(root, parts) {
   const wanted = parts[0];
@@ -42,22 +45,40 @@ export async function render(root, parts) {
   }
 
   const otherNames = alsoKnownAs(mods, wanted);
+  const sorted = sortMods(mods, 'name');
+  const currentVersion = currentGameVersion(list.mods || []);
+
+  let view = browseView();
+  const holder = el('div');
+  const drawMods = () => {
+    clear(holder);
+    holder.append(view === 'rows'
+      ? modRows(sorted, currentVersion) : modGrid(sorted, currentVersion));
+  };
+  drawMods();
 
   root.append(el('div', { class: 'stack' }, [
-    el('div', { class: 'page-head' }, [
-      el('h1', { text: bestSpelling(mods, wanted) }),
-      el('span', {
-        class: 'sub',
-        text: `has ${mods.length} mod${mods.length === 1 ? '' : 's'}`,
+    el('div', { class: 'author-head' }, [
+      el('div', { class: 'page-head' }, [
+        el('h1', { text: bestSpelling(mods, wanted) }),
+        el('span', {
+          class: 'sub',
+          text: `has ${mods.length} mod${mods.length === 1 ? '' : 's'}`,
+        }),
+        otherNames.length
+          ? el('span', {
+              class: 'sub',
+              text: `Also known as ${joinNames(otherNames)}.`,
+            })
+          : null,
+      ]),
+      viewToggle(() => view, (which) => {
+        view = which;
+        setBrowseView(which);
+        drawMods();
       }),
-      otherNames.length
-        ? el('span', {
-            class: 'sub',
-            text: `Also known as ${joinNames(otherNames)}.`,
-          })
-        : null,
     ]),
-    modGrid(sortMods(mods, 'name'), currentGameVersion(list.mods || [])),
+    holder,
   ]));
 }
 

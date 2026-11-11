@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T19:30:58.003396Z",
+  "generatedAt": "2026-11-11T10:05:03.971162Z",
   "listing": {
     "id": "scan-those-gates",
     "name": "Scan Those Gates",
@@ -23,10 +23,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.5.8",
     "imageUrl": "https://github.com/AEROassault/ScanThoseGates/blob/master/ScanThoseGates%20Banner.png?raw=true",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1370133954098626620/1370133954274918461/gate_active.png?ex=6af425ee&is=6af2d46e&hm=2b53244abf0ee67b20a277fbbb6022da95630aeb55339cc18c07057e6090a49b&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1370133954098626620/1370133954274918461/gate_active.png?ex=6af4ceae&is=6af37d2e&hm=06197cfdd3abbd660834493a1c63fc0dae6efc099ab9d7692d5fbf9a2494e0d6&",
     "summary": "Scan Those Gates adds three abilities.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds abilities to remotely scan gates, Coronal Hypershunts, and Cryosleepers, adding their locations to the intel screen and map.",
+    "aiSummary": "Adds abilities to remotely scan gates, hypershunts, and cryosleepers, adding their locations to the intel screen and map.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -35,7 +35,7 @@
       "needsAnotherStep": false
     },
     "downloadCount": 1,
-    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=24651.0",
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=24651",
     "discordUrl": "https://discord.com/channels/187635036525166592/1370133954098626620/1370133954098626620",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
@@ -49,7 +49,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Adds abilities to remotely activate gates and reveal the locations of Domain-era Cryosleepers and Coronal Hypershunts.</p><pre><code>Changelog:\nv1.5.8: Update for Starsector 0.98a and Java 17.</code></pre><p>Download: <a href=\"https://github.com/AEROassault/ScanThoseGates/releases/latest/download/ScanThoseGates.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/AEROassault/ScanThoseGates/releases/latest/download/ScanThoseGates.zip</a><br>Forum Post: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=24651\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=24651</a></p>",
-  "aiDescription": "Provides three new abilities: Remote Gate Scan, Remote Hypershunt Survey, and Remote Cryosleeper Survey. These abilities scan specific structures in the sector and add their locations to the intel screen under the Megastructures tab or the general intel screen. Markers are also added to the intel map for these locations.",
+  "aiDescription": "Provides three remote survey abilities for gates, Coronal Hypershunts, and Cryosleepers. Scanned locations are added to the intel screen under Megastructures or as gate intel, with markers on the intel map. Options allow revealing gates in marketless systems or activating them.",
   "saveCompatibilityText": "If the mod is added after a game has been started, the abilities will be automatically added.",
   "removalCompatibilityText": "Scan Those Gates can be safely removed from an active game by running the console command \"RemoveScanThoseGates\", saving the game, and then removing the mod.",
   "canAdd": "yes",
@@ -62,7 +62,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1370133954098626620/1370133954274918461/gate_active.png?ex=6af425ee&is=6af2d46e&hm=2b53244abf0ee67b20a277fbbb6022da95630aeb55339cc18c07057e6090a49b&",
+      "url": "https://cdn.discordapp.com/attachments/1370133954098626620/1370133954274918461/gate_active.png?ex=6af4ceae&is=6af37d2e&hm=06197cfdd3abbd660834493a1c63fc0dae6efc099ab9d7692d5fbf9a2494e0d6&",
       "aiCaption": "A circular emblem with a glowing blue ring on a black background.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -106,10 +106,10 @@
     "1.1": "fixed crashes caused by gates added by mods that do not have expected gateData. Adds error logging"
   },
   "changelogUrl": "https://github.com/AEROassault/ScanThoseGates/releases",
-  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "license": "CC BY-NC-SA 4.0",
   "sourceCodeUrl": "https://github.com/AEROassault/ScanThoseGates",
   "supportLinks": [],
-  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=24651.0",
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=24651",
   "discordUrl": "https://discord.com/channels/187635036525166592/1370133954098626620/1370133954098626620",
   "releases": [],
   "threadLastPostOn": "2026-04-19",
@@ -119,6 +119,14 @@
     {
       "name": "LunaLib",
       "id": "lunalib"
+    }
+  ],
+  "conflicts": [
+    {
+      "name": "LunaLib",
+      "id": "lunalib",
+      "quote": "However, it will not work with a LunaLib version less than v1.7.4.",
+      "kind": "withNotes"
     }
   ]
 }

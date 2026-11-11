@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T19:30:58.003396Z",
+  "generatedAt": "2026-11-11T10:05:03.971162Z",
   "listing": {
     "id": "shark-utility-console",
     "name": "Shark Utility Console v1.0.0",
@@ -18,11 +18,10 @@
     ],
     "gameVersion": "0.97a",
     "modVersion": "1.0.0",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1229925569924304896/1229925854851764384/image.png?ex=6aed0736&is=6aebb5b6&hm=149927570b787af3afd4edfeb1a2b05f30e144e12d64cbd89155604ab7ee9fb4&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1229925569924304896/1229925854851764384/image.png?ex=6af44776&is=6af2f5f6&hm=1583f93d6aa650391fb6bf7130299b54725678f867c93d0f557c7fef7b9f5cb8&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1229925569924304896/1229925854851764384/image.png?ex=6af4f036&is=6af39eb6&hm=2c68f24c8f66bffe39fa60fd75710447d7c6f4c2a22cf43a5ca63a65c42b1441&",
     "summary": "Have you ever wondered how to find the exact ship that will suit your needs? Or a weapon with very specific requirements/parameters?",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds console commands to search for ships and weapons based on specific parameters.",
+    "aiSummary": "Adds findships and findweapons commands to the game's console for querying ships and weapons by specific parameters.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/RkShaRkz/Starsector-IntelliJ-Template/releases/download/release-vayra-merged-v3.3.14/DOWNLOAD_ME_VayraMerged_v3.3.14.zip",
@@ -37,12 +36,12 @@
     "editedOn": "2024-04-16",
     "needs": []
   },
-  "description": "Provides findships and findweapons commands that allow querying by any parameter. Users can filter results using criteria such as size, weapon type, damage type, range, or cargo capacity.",
-  "descriptionHtml": "<p>Provides findships and findweapons commands that allow querying by any parameter. Users can filter results using criteria such as size, weapon type, damage type, range, or cargo capacity.</p>",
+  "description": "Introduces two new console commands: findships and findweapons. These allow users to search for ships and weapons matching complex criteria such as size, damage type, range, or cargo capacity. The commands support flexible syntax for combining multiple conditions.",
+  "descriptionHtml": "<p>Introduces two new console commands: findships and findweapons. These allow users to search for ships and weapons matching complex criteria such as size, damage type, range, or cargo capacity. The commands support flexible syntax for combining multiple conditions.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>Have you ever wondered how to find the exact ship that will suit your needs? Or a weapon with very specific requirements/parameters?</p><p>worry no more. my utility console brings two new commands:<br><strong>findships</strong> - used to find ships that match certain criteria<br>example: <code>findships large ballistic &gt; 2</code> or <code>findships { large ballistic &gt; 3, cargo &gt; 800, frigate }</code>. read the help for it, it can query by any (and every) parameter.<br><strong>findweapons</strong> - used to find weapons that match certain criteria<br>example: <code>findweapons { large, beam, damagetype = he }</code> or <code>findweapons { large, missile, range &gt; 4000 }</code>. read the help, it can query by any (and i think every) parameter. except damage. or OP.</p><p>do try to break them. please report commands which <strong>should</strong> have worked, but didn't. ofc, do try to fix the command yourself first, but the syntactic parsing could be fucked up somewhere.</p><p><a href=\"https://github.com/RkShaRkz/Starsector-IntelliJ-Template/releases/tag/release-utilityconsole-v1.0.0\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/RkShaRkz/Starsector-IntelliJ-Template/releases/tag/release-utilityconsole-v1.0.0</a></p><p>bugreports welcome. here or github. if reporting to github, make sure to specify it's for utilityconsole, since the repo is used for most of my mods.</p>",
-  "aiDescription": "Provides findships and findweapons commands that allow querying by any parameter. Users can filter results using criteria such as size, weapon type, damage type, range, or cargo capacity.",
+  "aiDescription": "Introduces two new console commands: findships and findweapons. These allow users to search for ships and weapons matching complex criteria such as size, damage type, range, or cargo capacity. The commands support flexible syntax for combining multiple conditions.",
   "aiUse": {},
   "rawCategories": [
     "Quality of Life",
@@ -51,7 +50,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1229925569924304896/1229925854851764384/image.png?ex=6af44776&is=6af2f5f6&hm=1583f93d6aa650391fb6bf7130299b54725678f867c93d0f557c7fef7b9f5cb8&",
+      "url": "https://cdn.discordapp.com/attachments/1229925569924304896/1229925854851764384/image.png?ex=6af4f036&is=6af39eb6&hm=2c68f24c8f66bffe39fa60fd75710447d7c6f4c2a22cf43a5ca63a65c42b1441&",
       "aiCaption": "A screenshot of the Shark Utility Console showing a command line interface with weapon search results.",
       "aiKind": "screenshot",
       "aiFit": "okay",

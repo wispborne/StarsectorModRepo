@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T19:30:58.003396Z",
+  "generatedAt": "2026-11-11T10:05:03.971162Z",
   "listing": {
     "id": "adjusted-sector",
     "name": "Adjusted Sector",
@@ -24,12 +24,12 @@
       "discord"
     ],
     "gameVersion": "0.98a",
-    "modVersion": "0.7.1",
+    "modVersion": "0.7",
     "imageUrl": "https://i.imgur.com/3qk9YqV.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1525075086665842859/1525075087126958161/asd.PNG?ex=6af438db&is=6af2e75b&hm=8cf6ae930fdf91c8c6aebdd83dbcc6a323b29edcbc6068947bab67689f422411&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1525075086665842859/1525075087126958161/asd.PNG?ex=6af4e19b&is=6af3901b&hm=935a476fed247aab7c4395e8a9fd5106bb23f8fe8856d11f8485b54de1eb32ca&",
     "summary": "This mod overrides procgen system, allowing you to change size of the sector, number of generated constellations, and more importantly - adjust number of themed constellations.",
     "summaryIsGenerated": false,
-    "aiSummary": "Overrides procedural generation to allow customization of sector size, constellation counts, and themed content density.",
+    "aiSummary": "Lets you customize the generated sector's size, constellation density, and frequency of specific themes like ruins and remnants.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://tinyurl.com/adjustedsector71",
@@ -52,7 +52,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><em>Do you like exploration? Do you ever wanted your current playthrough last forever? Do you unsatisfied with the amount of stuff you can find and/or kill in Sector? Suffer no more!</em></p><p>This mod allows you to change the following to your heart's content:</p><ul><li>The size of the Sector - both in terms of size and the number of stars.</li><li>The amount of \"themed\" star constellations, such as Derelict, Ruined, or [REDACTED].</li><li>The particularities of the content related to aforementioned \"themed\" stuff - probabilities of low/high [REDACTED], chance of graveyards in Ruined systems, etc.</li><li>The amount of Gates, Cryosleepers, Motherships, Coronal Taps.</li><li>Accessibility bonus (which is need for greater-size-wise Sectors).</li></ul><p>The mod as of current moment doesn't have any dependencies. Unfortunately it also means manual work with settings. For now.</p><p><strong>Changelog:</strong></p><pre><code>2023.09.12 - 0.6.0:\n- Added additonal presets with detailed description.\n2023.09.18 - 0.6.1:\n- Added additional settings that rule % chance of Ruin-themed things spawned (such as Mining Stations, Research Stations, Ship Graveyards).\n2023.09.18 - 0.6.2:\n- Added additional settings that rule % chance of Misc-themed things spawned (such as Research Stations, Ship Graveyards).\n- Added additional setting that controls how much secondary star systems game \"skips\" while adding content, for Misc and Ruin themes.\n2026.07.10 - 0.7:\n- Updated mod to 0.98a. Fixed the issue related to storm map generation. LunaLib later.\n2026.07.15 - 0.7.1:\n- Fixed issue that could cause vanilla theme generation to take effect instead of Adjusted one</code></pre><p>Download link: <a href=\"https://tinyurl.com/adjustedsector71\" rel=\"nofollow noopener\" target=\"_blank\">https://tinyurl.com/adjustedsector71</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=17331.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=17331.0</a></p><p><em>Do you like mod authors who disappear into aether for 2-3 years?</em><br><em>P.s.: Below is the example of \"the farthest i've managed to push this thing (320 constellations) in modded playthrough whilst remaining at 30 fps minimum.</em></p>",
-  "aiDescription": "Allows players to adjust the width and height of the map, as well as the total number of constellations. It provides detailed controls for the frequency of Remnant, Ruin, and Misc-themed systems, including specific probabilities for spawning stations, graveyards, and derelicts. The mod also includes settings to regulate colony accessibility penalties in larger sectors and offers presets for different performance targets.",
+  "aiDescription": "Overrides procedural generation to allow detailed adjustment of sector dimensions and star system counts. Provides configuration options for themed constellations, including Remnants, Ruins, and Misc, as well as special objects like Gates, Coronal Taps, and XIV Legions. Includes presets for various sector sizes and hyperstorm patterns to optimize performance.",
   "aiUse": {},
   "rawCategories": [
     "Other/Misc.",
@@ -60,7 +60,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1525075086665842859/1525075087126958161/asd.PNG?ex=6af438db&is=6af2e75b&hm=8cf6ae930fdf91c8c6aebdd83dbcc6a323b29edcbc6068947bab67689f422411&",
+      "url": "https://cdn.discordapp.com/attachments/1525075086665842859/1525075087126958161/asd.PNG?ex=6af4e19b&is=6af3901b&hm=935a476fed247aab7c4395e8a9fd5106bb23f8fe8856d11f8485b54de1eb32ca&",
       "aiCaption": "A hyperspace map screen from Starsector showing a dense grid of star systems and constellations.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -163,17 +163,17 @@
   "addons": [],
   "conflicts": [
     {
-      "name": "Grand Sector",
-      "id": "grand-sector",
-      "quote": "This mod incompatible with Grand Sector, since it does the same thing and more.",
-      "kind": "technical"
-    },
-    {
       "name": "ProcGenConfigs",
       "id": "procgenconfigs",
       "quote": "It is incompatible with Adjusted Sector and Wide Horizons .",
       "kind": "technical",
       "fromOtherMod": true
+    },
+    {
+      "name": "Grand Sector",
+      "id": "grand-sector",
+      "quote": "This mod incompatible with Grand Sector, since it does the same thing and more.",
+      "kind": "gameplay"
     }
   ]
 }

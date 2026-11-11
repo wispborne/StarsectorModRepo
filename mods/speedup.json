@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T19:30:58.003396Z",
+  "generatedAt": "2026-11-11T10:05:03.971162Z",
   "listing": {
     "id": "speedup",
     "name": "SpeedUp",
@@ -21,11 +21,10 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "1.2.2",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1356188328755593346/1356188328961118249/sPEED.png?ex=6aeceb8e&is=6aeb9a0e&hm=f8ca0462aee259d4299b2076b107c29c8d5ad671c4046e76032c650a2d05afae&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1356188328755593346/1356188328961118249/sPEED.png?ex=6af42bce&is=6af2da4e&hm=ea758a67ae99ef3619358742e5ea0db3c92e9eb2f33821c20081654f37b5ff1a&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1356188328755593346/1356188328961118249/sPEED.png?ex=6af4d48e&is=6af3830e&hm=218274afd65ca1580a695dd241ea0e069966672a9a150b7fe2633fdd41477196&",
     "summary": "Ever wish the game would go by quicker while you're flying your lumbering Paragon up to the line of battle? Ever wanted to push \"fast forward\" while your fleet mopped up the remnants of an enemy fleet? Ever wanted to speed through a trivial Derelicts fight? This mod is for you!",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds customizable hotkeys to increase game speed during combat and campaign phases.",
+    "aiSummary": "Lets players speed up or slow down combat and campaign time using customizable hotkeys.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://bitbucket.org/DarkRevenant/speedup/downloads/SpeedUp_1.2.2.7z",
@@ -47,7 +46,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><strong><em>Warning:</em></strong><em> We <u>strongly recommend</u> setting your frame rate cap in data/config/settings.json to <strong>at least 120</strong> to avoid AI and hit detection issues!</em></p><p>Ever wish the game would go by quicker while you're flying your lumbering Paragon up to the line of battle?  Ever wanted to push \"fast forward\" while your fleet mopped up the remnants of an enemy fleet?  Ever wanted to speed through a trivial Derelicts fight?  This mod is for you!</p><p>Hold the middle mouse button and the game becomes 2x faster.  You can also press the caps lock key to toggle fast mode at your leisure.  The B button toggles the slow-down effect of phase systems.</p><p>The following are <em>NOT RECOMMENDED</em> for pitched battles due to causing problems with AI and hit detection: F3 applies a 6x multiplier, and control-capslock causes the game to run in as-fast-as-possible mode.</p><p>Controls are fully customizable by editing SpeedUp/data/config/SPEED_UP.json.  You can even set custom time scaling factors on separate inputs, if you like.</p><pre><code>Version 1.2.2 (April 7, 2025)\n- Updated for Starsector 0.98a-RC7\n- Improved the calculation for calculating dynamic speed multipliers\n\nVersion 1.2.1 (March 31, 2025)\n- Updated for Starsector 0.98a\n- Fixed a logical bug preventing dynamic changes in speed multipliers</code></pre><p>Download: <a href=\"https://bitbucket.org/DarkRevenant/speedup/downloads/SpeedUp_1.2.2.7z\" rel=\"nofollow noopener\" target=\"_blank\">https://bitbucket.org/DarkRevenant/speedup/downloads/SpeedUp_1.2.2.7z</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=13394.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=13394.0</a></p>",
-  "aiDescription": "Allows players to accelerate gameplay using middle mouse button, Caps Lock, or other configurable keys. Includes options for different speed multipliers and the ability to disable phase system slowdowns. Controls are fully customizable via a JSON configuration file.",
+  "aiDescription": "Allows users to accelerate gameplay by holding the middle mouse button or pressing Caps Lock. It includes options to disable phase system slowdowns and set custom time scaling factors via a configuration file.",
   "aiUse": {},
   "rawCategories": [
     "Quality of Life",
@@ -55,7 +54,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1356188328755593346/1356188328961118249/sPEED.png?ex=6af42bce&is=6af2da4e&hm=ea758a67ae99ef3619358742e5ea0db3c92e9eb2f33821c20081654f37b5ff1a&",
+      "url": "https://cdn.discordapp.com/attachments/1356188328755593346/1356188328961118249/sPEED.png?ex=6af4d48e&is=6af3830e&hm=218274afd65ca1580a695dd241ea0e069966672a9a150b7fe2633fdd41477196&",
       "aiCaption": "A text list showing '6x speed-up.' and multiple lines of '2x speed-up.'",
       "aiKind": "other",
       "aiFit": "okay",
@@ -74,6 +73,8 @@
     }
   ],
   "changelog": {
+    "1.2.2": "- Updated for Starsector 0.98a-RC7\n- Improved the calculation for calculating dynamic speed multipliers",
+    "1.2.1": "- Updated for Starsector 0.98a\n- Fixed a logical bug preventing dynamic changes in speed multipliers",
     "1.2.0": "- Added option to make a hotkey disable all other active hotkeys (set \"disableOthers\" to true in config)\n- Added default hotkey, F3 toggles 6x speed\n- Added default hotkey, F4 clears all active hotkeys and sets speed to 1x\n- Fixed hotkey state persisting after combat (probably affected 1.1.1 and 1.1.2, haven't verified)\n- Fixed invalid activate hotkey in config file\n- Minor optimizations"
   },
   "sourceCodeUrl": "https://bitbucket.org/DarkRevenant/speedup",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T19:30:58.003396Z",
+  "generatedAt": "2026-11-11T10:05:03.971162Z",
   "listing": {
     "id": "high-tech-expansion",
     "name": "High Tech Expansion",
@@ -21,10 +21,10 @@
     "gameVersion": "0.98a",
     "modVersion": "2.0.5",
     "imageUrl": "https://raw.githubusercontent.com/theDragn/HTE/main/hte_lineup.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1242523800604774473/1242523800910696560/crest_tritachyon.png?ex=6af4a077&is=6af34ef7&hm=8ab8701c388942edc943f6b629fab26cfd3b36c38d76e315dbbfbdefe2c95a05&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1242523800604774473/1242523800910696560/crest_tritachyon.png?ex=6af54937&is=6af3f7b7&hm=424a0b69418a38b23586bc6a80dc58425577994538d390ea07a9891a24fb52dd&",
     "summary": "Adds a number of high-tech ships and weapons. Requires Magiclib and Lazylib. Has support for GraphicsLib shaders, but doesn't require it.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a number of high-tech ships and weapons.",
+    "aiSummary": "Adds a variety of high-tech ships and weapons to the game.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -43,7 +43,7 @@
     "needs": [
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
       },
       {
         "name": "LazyLib",
@@ -56,7 +56,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>We're back!</p><pre><code>Overall Changes:\n- Full ship and weapon rebalance, and a fairly serious contraction in scope.\n- A number of new sprites.\n- Rebuilt variants.\n- IV, CO, and AK reskins removed.\n- Bounties removed.\n- Now safe for forum posting... or is it? (yes, it is)</code></pre><p>Note: The links below will be kept updated for the most recent version.<br>direct download: <a href=\"https://github.com/theDragn/HTE/releases/latest/download/HTE.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/theDragn/HTE/releases/latest/download/HTE.zip</a><br>forums: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=30075.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=30075.0</a><br>source: <a href=\"https://github.com/theDragn/HTE\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/theDragn/HTE</a><br>full 2.0 changelog here: <a href=\"https://github.com/theDragn/HTE/releases/tag/2.0.0\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/theDragn/HTE/releases/tag/2.0.0</a></p><p>requires lazylib and magiclib</p>",
-  "aiDescription": "Adds a number of high-tech ships and weapons. Requires Magiclib and Lazylib. Has support for GraphicsLib shaders, but doesn't require it.",
+  "aiDescription": "Introduces new high-tech vessels and armaments. It supports GraphicsLib shaders for enhanced visuals but does not strictly require them.",
   "saveCompatibilityText": "Save compatible with existing saves",
   "updateCompatibilityText": "but not any version of itself prior to 2.0.1.",
   "canAdd": "yes",
@@ -67,14 +67,14 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1242523800604774473/1242523800910696560/crest_tritachyon.png?ex=6af4a077&is=6af34ef7&hm=8ab8701c388942edc943f6b629fab26cfd3b36c38d76e315dbbfbdefe2c95a05&",
+      "url": "https://cdn.discordapp.com/attachments/1242523800604774473/1242523800910696560/crest_tritachyon.png?ex=6af54937&is=6af3f7b7&hm=424a0b69418a38b23586bc6a80dc58425577994538d390ea07a9891a24fb52dd&",
       "aiCaption": "A white emblem featuring a stylized symbol on a blue background.",
       "aiKind": "logo",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1242523800604774473/1246526740864569354/equality.png?ex=6af4affe&is=6af35e7e&hm=1df9643b9c04988654000b9fd0fe352dd607ec9f886d19ad0305ef50ec117b44&",
+      "url": "https://cdn.discordapp.com/attachments/1242523800604774473/1246526740864569354/equality.png?ex=6af558be&is=6af4073e&hm=aef9fad2eaa7c293a554b7c1bcdc5aa9eda8a3d0f169f305e3117d34cc6480c7&",
       "aiCaption": "Ship art showing the top-down view of a large, symmetrical grey vessel with multiple circular engine components.",
       "aiKind": "art",
       "aiFit": "good",
@@ -115,7 +115,7 @@
     "2.0.3": "Rapid fix for the Tigershark's hullmod (worked as intended, description was screwy) and the Incursion being burn 7, not 8."
   },
   "changelogUrl": "https://github.com/thedragn/HTE/releases",
-  "sourceCodeUrl": "https://github.com/theDragn/HTE/tree/main/src",
+  "sourceCodeUrl": "https://github.com/theDragn/HTE",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30075.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1242523800604774473/1242523800604774473",
@@ -132,5 +132,11 @@
       "gameVersion": "0.95a"
     }
   ],
-  "addons": []
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "GraphicsLib",
+      "id": "graphicslib"
+    }
+  ]
 }

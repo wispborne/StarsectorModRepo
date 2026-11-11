@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T19:30:58.003396Z",
+  "generatedAt": "2026-11-11T10:05:03.971162Z",
   "listing": {
     "id": "goathead-aviation-bureau-en-edition",
     "name": "Goathead Aviation Bureau - EN Edition",
@@ -17,11 +17,10 @@
     "gameVersion": "0.98",
     "modVersion": "1.10.10",
     "imageUrl": "https://i.imgur.com/lxGv2WK.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1429559769470996490/1429559770410647694/goathead_new_flag.png?ex=6af42089&is=6af2cf09&hm=4ad2f4c528f5ad025012dbb1ef4585e79ee5511702fe017248b7e157f071470e&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1429559769470996490/1429559770410647694/goathead_new_flag.png?ex=6af4c949&is=6af377c9&hm=569ba9226a13a55abe7eb104c3523f41d9bc50e7e1151d8f20f96a038f6dbd72&",
     "summary": "After a lengthy evacuation process, the Aviation Bureau eventually settled in two restored orbital stations, located in the Taivassija system south-west of the Core Worlds.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a new faction with ships designed for high speed or firepower, often at the expense of armor and shields.",
-    "saveCompatible": false,
+    "aiSummary": "Adds a faction with ships focused on high firepower and speed but lacking solid armor and shields.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://drive.google.com/uc?export=download&id=11lYh89lo9p2iQ-hOO8GTn3MOHPaoxIEN",
@@ -33,6 +32,12 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1429559769470996490/1429559769470996490",
     "sourceIsPublic": false,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "other"
+      }
+    ],
     "addedOn": "2023-02-08",
     "threadLastPostOn": "2026-06-27",
     "editedOn": "2025-10-21",
@@ -43,7 +48,7 @@
       },
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
       },
       {
         "name": "GraphicsLib",
@@ -56,23 +61,29 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p><strong><em>Mod by: Mimeio</em></strong></p><p>\"When speed is life\"<br>A faction focused around high speed and close ranged firepower.</p><p><strong>This is the final update</strong>, made by Achi Cirno: focusing on implementing the faction's special \"station\", also minor bugfixes<br>🍞: <a href=\"https://drive.google.com/uc?export=download&amp;id=11lYh89lo9p2iQ-hOO8GTn3MOHPaoxIEN\" rel=\"nofollow noopener\" target=\"_blank\">https://drive.google.com/uc?export=download&amp;id=11lYh89lo9p2iQ-hOO8GTn3MOHPaoxIEN</a></p>",
-  "aiDescription": "Introduces the Goathead Aviation Bureau, a faction settled in two orbital stations in the Taivassija system. Their ships follow a midline design philosophy, tending towards high firepower or speed while generally lacking solid armor and shields.",
-  "saveCompatibilityText": "not save compatible with previous versions as two ships (the Sprouting Dockyards ones) were removed",
-  "canAdd": "no",
-  "aiUse": {},
+  "aiDescription": "Introduces the Goathead Aviation Bureau, a faction settled in restored orbital stations. Their ships follow a midline design philosophy, prioritizing speed and firepower over defense. The update includes faction stations and campaign graphic changes.",
+  "aiUse": {
+    "quote": "On AI generated content:\nSpoiler\nlink to the model mentioned",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "other"
+      }
+    ]
+  },
   "rawCategories": [
     "Faction Mods"
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1429559769470996490/1429559770410647694/goathead_new_flag.png?ex=6af42089&is=6af2cf09&hm=4ad2f4c528f5ad025012dbb1ef4585e79ee5511702fe017248b7e157f071470e&",
+      "url": "https://cdn.discordapp.com/attachments/1429559769470996490/1429559770410647694/goathead_new_flag.png?ex=6af4c949&is=6af377c9&hm=569ba9226a13a55abe7eb104c3523f41d9bc50e7e1151d8f20f96a038f6dbd72&",
       "aiCaption": "A stylized logo featuring a goat skull with mechanical wings and horns.",
       "aiKind": "logo",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1429559769470996490/1429559771085668493/screenshot040.png?ex=6af42089&is=6af2cf09&hm=732ed90740e292034c6675744c0c2c17d2602009fe2bbebfd3e7cb7b736699f9&",
+      "url": "https://cdn.discordapp.com/attachments/1429559769470996490/1429559771085668493/screenshot040.png?ex=6af4c949&is=6af377c9&hm=89ede3266c46fe2fb9e3cca37a6f52a5e19f09a7b048b162fd06c6053fea21de&",
       "aiCaption": "A large, complex spaceship firing a massive red energy beam in space.",
       "aiKind": "screenshot",
       "aiFit": "good",
@@ -126,8 +137,7 @@
     }
   ],
   "changelog": {
-    "1.9.10": "Fixed a crash for the Infallible when the 5th deck was filled but the first 4 decks were empty\n\nTranslation change: fixed the effect text from the Starlight's hullmod rendering as \"????!\"",
-    "1.9.9": "New unimplemented thingmajig\n\nNew builtin hullmod: Goathead Fervor\nNew faction hullmod: Flux Shifter\n\nSeveral ship resprites/refreshes/touchups\n\nNew music\n\nSeveral balance changes, particularly to ship systems\n\nA little bar event to eventually start a proper questline"
+    "1.10.10": "versions 1.10.10 and \"onward\" finally implement the faction's station, some campaign level graphic changes, and minor bugfixes."
   },
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=26083.0",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T19:30:58.003396Z",
+  "generatedAt": "2026-11-11T10:05:03.971162Z",
   "listing": {
     "id": "customizable-star-systems",
     "name": "Customizable Star Systems",
@@ -21,10 +21,10 @@
     "gameVersion": "0.98a",
     "modVersion": "3.0.2",
     "imageUrl": "https://i.imgur.com/1Mvl10A.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355783739241791660/1355783739627671562/Discord_Image.png?ex=6af4ad40&is=6af35bc0&hm=db6e32fec944013af91ac9e8af5b3230f29a26b151370b0697547f42d6312f40&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355783739241791660/1355783739627671562/Discord_Image.png?ex=6af55600&is=6af40480&hm=d001924f3871454e9aabc369831a5a6df7f6c2ade44751b11b981ca35cb8772d&",
     "summary": "This utility mod adds the ability to create customized star systems upon creating a new game. These custom star systems are configured via a JSON file in this mod's config folder, offering a simpler, code-free way of creating your ideal star system.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds the ability to create customized star systems upon creating a new game.",
+    "aiSummary": "Adds the ability to create customized star systems via JSON configuration files.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -47,7 +47,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Create your own custom star systems via a JSON file in this mod's config folder! Includes a default custom star system, with superb candidates for colonization.</p><p><strong>Download</strong>:<br><a href=\"https://github.com/Tranquiliti/CustomizableStarSystems/releases/download/v3.0.2/CustomizableStarSystems-v3.0.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/CustomizableStarSystems/releases/download/v3.0.2/CustomizableStarSystems-v3.0.2.zip</a></p><p><strong>Releases and Changelogs</strong>: <a href=\"https://github.com/Tranquiliti/CustomizableStarSystems/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/CustomizableStarSystems/releases</a></p><p><strong>Forum Thread</strong>: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=27785.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=27785.0</a></p>",
-  "aiDescription": "Adds the ability to create customized star systems upon creating a new game. These custom star systems are configured via a JSON file in this mod's config folder, offering a simpler, code-free way of creating your ideal star system. By default, it generates a randomly-placed custom star system with remarkable planets and system objectives. With either Console Commands or LunaLib installed alongside this mod, additional custom star systems can be spawned into existing saves via commands or LunaSnippets.",
+  "aiDescription": "Allows users to define custom star systems using a simple JSON file without needing code. It includes a default randomly-placed system with remarkable planets and objectives, as well as templates and presets for creating new ones. With optional support libraries, additional systems can be spawned into existing saves.",
   "saveCompatibilityText": "Safe to add to existing saves",
   "removalCompatibilityText": "safe to remove from existing saves (though already-generated systems will remain in place)",
   "canAdd": "yes",
@@ -58,7 +58,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1355783739241791660/1355783739627671562/Discord_Image.png?ex=6af4ad40&is=6af35bc0&hm=db6e32fec944013af91ac9e8af5b3230f29a26b151370b0697547f42d6312f40&",
+      "url": "https://cdn.discordapp.com/attachments/1355783739241791660/1355783739627671562/Discord_Image.png?ex=6af55600&is=6af40480&hm=d001924f3871454e9aabc369831a5a6df7f6c2ade44751b11b981ca35cb8772d&",
       "aiCaption": "A stylized planet surrounded by a glowing yellow corona against a dark red background.",
       "aiKind": "art",
       "aiFit": "good",
@@ -106,7 +106,7 @@
   "changelog": {
     "3.0.2": "Added \"memoryKey\" support for the custom star system itself",
     "3.0.1": "Added \"tags\" option to apply tags to any entity\n Generated player markets no longer have people automatically added to them\n- Done for parity with vanilla colonization mechanics\n System objectives (e.g., Comm Relays, Nav Buoys, Sensor Arrays) now point down to their focus entity\n Updated some error messages to include the cause in the stack trace\n The \"SpawnCustomStarSystems\" command and LunaSnippet now print the stack trace to starsector.log if an error occurs",
-    "3.0.0": "Added \"systemAge\" option to determine the age of the custom star system\n Added \"wreck\" entity, which creates a derelict ship\n Added \"orbitClockwise\" option for \"ring\" and \"asteroid_belt\" entities\n Fixed \"emptyLocation\" not supporting orbits if it was not used as the system center\n Removed nearly all instances of automatic system tagging\n- This includes the \"isCoreWorldSystem\" option, which is removed in favor of using the \"systemTags\" option\n- \"systemTags\" now defaults to only applying the \"theme_misc\" tag if it is omitted or empty\n People are now automatically added to a custom star system's markets if spawned mid-game\n Fixed bug with \"setLocation\" option regarding the constellation list having duplicate constellations\n Moved Console Commands commands to src folder"
+    "3.0.0": "Update for Starsector 0.98a)\n Added \"systemAge\" option to determine the age of the custom star system\n Added \"wreck\" entity, which creates a derelict ship\n Added \"orbitClockwise\" option for \"ring\" and \"asteroid_belt\" entities\n Fixed \"emptyLocation\" not supporting orbits if it was not used as the system center\n Removed nearly all instances of automatic system tagging\n- This includes the \"isCoreWorldSystem\" option, which is removed in favor of using the \"systemTags\" option\n- \"systemTags\" now defaults to only applying the \"theme_misc\" tag if it is omitted or empty\n People are now automatically added to a custom star system's markets if spawned mid-game\n Fixed bug with \"setLocation\" option regarding the constellation list having duplicate constellations\n Moved Console Commands commands to src folder"
   },
   "changelogUrl": "https://github.com/Tranquiliti/CustomizableStarSystems/releases",
   "sourceCodeUrl": "https://github.com/Tranquiliti/CustomizableStarSystems",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T19:30:58.003396Z",
+  "generatedAt": "2026-11-11T10:05:03.971162Z",
   "listing": {
     "id": "price-of-command",
     "name": "Price of Command 0.0.10",
@@ -17,8 +17,7 @@
     ],
     "gameVersion": "0.97a",
     "modVersion": "0.0.10",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1203147246233722890/1203148068661502054/memorial.png?ex=6aed2b74&is=6aebd9f4&hm=241c82487deebbf421daaa6bbf097975d00e1262fddc6f28b56d85dee01cb121&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1203147246233722890/1203148068661502054/memorial.png?ex=6af46bb4&is=6af31a34&hm=cf2ea5765b28bf6a4b1752aef1fde080f9685576fda5755ab0d44d07415f5bd9&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1203147246233722890/1203148068661502054/memorial.png?ex=6af51474&is=6af3c2f4&hm=4cfe09740b1bd46e048cc4d57b54ea60e00003a410207c179e5462ebe20086fb&",
     "summary": "Allows your officers to get tired, get injured, and, in the worst case, die.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds officer fatigue, injury, and death mechanics while making officers cheaper and more numerous.",
@@ -41,7 +40,7 @@
       },
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
       },
       {
         "name": "LunaLib",
@@ -49,12 +48,12 @@
       }
     ]
   },
-  "description": "Officers can now become tired, injured, or die during battles. To balance this, hiring costs are reduced and roster limits are increased. The mod provides APIs for other authors to implement custom conditions.",
-  "descriptionHtml": "<p>Officers can now become tired, injured, or die during battles. To balance this, hiring costs are reduced and roster limits are increased. The mod provides APIs for other authors to implement custom conditions.</p>",
+  "description": "Officers can now become tired, injured, or die during combat. To balance this, hiring costs are reduced and the maximum roster size is increased. The mod provides APIs for other authors to implement custom conditions.",
+  "descriptionHtml": "<p>Officers can now become tired, injured, or die during combat. To balance this, hiring costs are reduced and the maximum roster size is increased. The mod provides APIs for other authors to implement custom conditions.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "discordPostHtml": "<p>Allows your officers to get tired, get injured, and, in the worst case, <strong>die</strong>. <code> </code></p><p>To compensate for the increased demands this puts on your officers, officers are now cheaper to hire, pay, and are more numerous. Additionally, you can now have a greater number on your roster.<br>Mod authors may be interested in implementing their own \"conditions\" like fatigue and injuries. A number of methods are available for other mod authors to hook into.</p><pre><code>Requires:\nLazyLib, MagicLib, LunaLib\nOptional:\nConsole Commands - Lets you inflict and heal the conditions currently in the mod, as well as just kill an officer (but why?)</code></pre><p><strong><em>Not balanced AT ALL</em></strong><br><strong><em>Not save compatible AT ALL with versions prior to 0.0.5</em></strong></p><p><strong>Changelog:</strong></p><pre><code>0.0.10 BETA \n- Mod now functions again after being completely broken by reflection shenanigans\n0.0.9 BETA\n- Now compatible (hopefully) with all RCs of 0.97\n0.0.8 BETA\n- Injuries avoided by a successful roll on the crew survival stat would be lost and not resolve correctly, resulting in a permanent bugged Injury skill and a permanently missing actual skill\n  - I recommend installing Console Commands and giving your officers a free skill if you believe you've been impacted\n- The table detailing officer conditions in the After Action Report will no longer extend out of frame when officers have longer names\n0.0.7 BETA\n- Base roster size configurable through LunaLib\n- Conditions resolving no longer causes a crash (oops)\n0.0.6 BETA\n- 0.97 compatibility\n0.0.5 BETA\nFeatures:\n- Scars now do something\n  - Officers may now be more cowardly or reckless when facing certain adversaries...\n- More configs\n- Crew loss reduction multipliers (ie: Blast Doors) should now reduce the chance of officers being injured. Or, this being a beta and my brain being fried on a Sunday night, it will crash your game.\n- Maybe other stuff? I don't remember\n- lots and lots of bug fixes\n- oh probably a very annoying option that will break your muscle memory in fleet encounter dialogs\nNOT SAVE COMPATIBLE WITH VERSION PRIOR TO 0.0.5</code></pre><p>Download: <a href=\"https://github.com/atlanticaccent/price-of-command/releases/download/0.0.10/price-of-command.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/atlanticaccent/price-of-command/releases/download/0.0.10/price-of-command.zip</a></p>",
-  "aiDescription": "Officers can now become tired, injured, or die during battles. To balance this, hiring costs are reduced and roster limits are increased. The mod provides APIs for other authors to implement custom conditions.",
+  "aiDescription": "Officers can now become tired, injured, or die during combat. To balance this, hiring costs are reduced and the maximum roster size is increased. The mod provides APIs for other authors to implement custom conditions.",
   "updateCompatibilityText": "Not save compatible AT ALL with versions prior to 0.0.5",
   "canUpdate": "depends",
   "aiUse": {},
@@ -64,7 +63,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1203147246233722890/1203148068661502054/memorial.png?ex=6af46bb4&is=6af31a34&hm=cf2ea5765b28bf6a4b1752aef1fde080f9685576fda5755ab0d44d07415f5bd9&",
+      "url": "https://cdn.discordapp.com/attachments/1203147246233722890/1203148068661502054/memorial.png?ex=6af51474&is=6af3c2f4&hm=4cfe09740b1bd46e048cc4d57b54ea60e00003a410207c179e5462ebe20086fb&",
       "aiCaption": "A simple icon of a lit candle on a stand.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -85,7 +84,7 @@
   "changelog": {
     "0.0.10": "Mod now functions again after being completely broken by reflection shenanigans",
     "0.0.9": "Now compatible (hopefully) with all RCs of 0.97",
-    "0.0.8": "- Injuries avoided by a successful roll on the crew survival stat would be lost and not resolve correctly, resulting in a permanent bugged Injury skill and a permanently missing actual skill\n - I recommend installing Console Commands and giving your officers a free skill if you believe you've been impacted\n- The table detailing officer conditions in the After Action Report will no longer extend out of frame when officers have longer names"
+    "0.0.8": "Injuries avoided by a successful roll on the crew survival stat would be lost and not resolve correctly, resulting in a permanent bugged Injury skill and a permanently missing actual skill - I recommend installing Console Commands and giving your officers a free skill if you believe you've been impacted - The table detailing officer conditions in the After Action Report will no longer extend out of frame when officers have longer names"
   },
   "sourceCodeUrl": "https://github.com/atlanticaccent/price-of-command",
   "supportLinks": [],

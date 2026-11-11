@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T19:30:58.003396Z",
+  "generatedAt": "2026-11-11T10:05:03.971162Z",
   "listing": {
     "id": "nomadic-survival",
     "name": "Nomadic Survival",
@@ -21,7 +21,7 @@
     "imageUrl": "https://i.imgur.com/BRSbpKC.png",
     "summary": "Nomadic Survival makes exploration more interesting by adding sites to planets that allow you to perform various operations. It's a mod about crafting the resources you need instead of returning home to restock.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds planetary operation sites for crafting resources and an optional drive field anomaly mechanic that limits fuel range to encourage exploration.",
+    "aiSummary": "Adds planetary operations for crafting resources and an optional anomaly mechanic that limits fuel tanker utility.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -44,12 +44,12 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Makes exploration more interesting by adding sites to planets that allow you to perform various operations.<br>It's a mod about crafting the resources you need instead of returning home to restock.</p><p>It also adds a (completely optional) challenge that dramatically limits the usefulness of fuel tankers.<br>This makes it necessary to scavenge, steal, and craft fuel as you go.</p><p>Full description: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=26255.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=26255.0</a></p><p>Latest changes:</p><pre><code>1.5.0:\n- Updated for Starsector version 0.98a and Java 17\n- Fixed a rare error that could occur intermittently while loading saves for some users\n- Added support for specifying the minimum abundance capacity and abundance per month of operation types\n- Added support for forcing operations to spawn at colonized planets\n- Added support for defining specific planetary conditions as op requirements, even if they're part of a condition group\n- Changed: By default, planet ops may no longer require skills to perform (to improve out-of-the-box compatibility with Second in Command)\n- Changed: New operations are now created any time newly added operation types are detected. Previously this only occurred if an update to this mod was also detected.\n- Improved addition of newly added operations to more closely resemble initial spawn distribution</code></pre><p>Full change log: <a href=\"https://github.com/NateNBJ/NomadicSurvival/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/NateNBJ/NomadicSurvival/releases</a><br>Download: <a href=\"https://github.com/NateNBJ/NomadicSurvival/releases/latest/download/Nomadic.Survival.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/NateNBJ/NomadicSurvival/releases/latest/download/Nomadic.Survival.zip</a></p>",
-  "aiDescription": "Introduces over 50 types of planetary operations that allow players to convert commodities, such as metals and organics, into supplies and fuel. Includes an optional challenge mechanic where traveling through hyperspace drains fuel and generates anomaly data, incentivizing players to scavenge and craft resources rather than relying on fuel tankers. Features an intel logging system to track discovered sites and a fuel siphoning ability for nebulae.",
+  "aiDescription": "Introduces sites on planets where players can convert commodities into supplies, fuel, or other goods. Includes a fleet ability to siphon fuel from nebulae and an optional drive field anomaly that converts fuel into data during long hyperspace jumps. These features encourage scavenging and crafting over traditional resupply methods.",
   "saveCompatibilityText": "Can be added to existing games.",
   "updateCompatibilityText": "All updates are save-compatible unless stated otherwise.",
   "removalCompatibilityText": "Can NOT be removed from games in which it was already used.",
   "canAdd": "yes",
-  "canUpdate": "yes",
+  "canUpdate": "depends",
   "canRemove": "no",
   "aiUse": {},
   "rawCategories": [
@@ -134,15 +134,23 @@
       "id": "lunalib"
     },
     {
+      "name": "Version Checker",
+      "id": "version-checker"
+    },
+    {
       "name": "Nexerelin",
       "id": "nexerelin"
+    },
+    {
+      "name": "Captain's Log",
+      "id": "captain-s-log"
     }
   ],
   "conflicts": [
     {
       "name": "Fuel Siphoning",
       "id": "fuel-siphoning",
-      "quote": "This mod already includes Fuel Siphoning , and they can't be used together.",
+      "quote": "Compatible with all mods except for Fuel Siphoning and Perilous Expanse (due to overlapping functionality)",
       "kind": "gameplay"
     },
     {

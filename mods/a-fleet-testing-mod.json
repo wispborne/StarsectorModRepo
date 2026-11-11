@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T19:30:58.003396Z",
+  "generatedAt": "2026-11-11T10:05:03.971162Z",
   "listing": {
     "id": "a-fleet-testing-mod",
     "name": "A Fleet Testing Mod",
@@ -23,10 +23,10 @@
     "gameVersion": "0.98a",
     "modVersion": "1.3.0",
     "imageUrl": "https://i.imgur.com/KwoXLJJ.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355786044192063548/1355786044389199942/officer_training.png?ex=6af4af66&is=6af35de6&hm=8a3f899fd61a42f547f24d74d63b0ddc2c2fd4f52e3de036ab25f10cfef3ed09&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355786044192063548/1355786044389199942/officer_training.png?ex=6af55826&is=6af406a6&hm=cf6a035ea2c2abed3241d45a6f0f43504398cba8cb4db505bb8c4fa513c91d02&",
     "summary": "This mod introduces target practice variants of vanilla ships to the simulator, provides two main menu missions for fleet/station versus fleet tests, adds several Console Commands commands that help with testing fleets in the campaign, and includes test-only MagicBounties in Asharu featuring [REDACTED] fleets.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds console commands, simulator targets, and main menu missions to facilitate fleet testing and theorycrafting.",
+    "aiSummary": "Adds fleet testing tools including console commands, simulator variants, and main menu missions.",
     "saveCompatible": true,
     "hasDirectDownload": true,
     "bestDownload": {
@@ -45,7 +45,12 @@
     "needs": [
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "MagicLib"
       }
     ]
   },
@@ -54,7 +59,7 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "discordPostHtml": "<p>Introduces several fleet testing tools to help with campaign fleet testing and analysis, including: target practice ships in the simulator, two main menu missions, several Console Commands commands, and test-only [REDACTED] MagicBounties.</p><p><strong>Download (Console Commands mod highly-recommended)</strong>: <a href=\"https://github.com/Tranquiliti/AFleetTestingMod/releases/latest/download/AFleetTestingMod.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/AFleetTestingMod/releases/latest/download/AFleetTestingMod.zip</a></p><p><strong>Releases and changelogs</strong>: <a href=\"https://github.com/Tranquiliti/AFleetTestingMod/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/AFleetTestingMod/releases</a></p><p><strong>Forum thread</strong>: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=27367.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=27367.0</a></p>",
-  "aiDescription": "Introduces target practice variants of vanilla ships and two main menu missions for testing fleet and station strength. Provides a suite of console commands to spawn specific enemy fleets, modify ship damage and modifications, and display detailed fleet statistics. Includes test-only bounties in the Asharu sector for practicing against Remnant Ordo fleets.",
+  "aiDescription": "Introduces target practice ship variants to the battle simulator and provides two main menu missions for fleet versus fleet and station versus fleet tests. Adds numerous console commands to assist with campaign testing, such as spawning faction fleets, managing d-mods and s-mods, and viewing fleet statistics. Includes test-only MagicBounties featuring Remnant Ordo fleets.",
   "saveCompatibilityText": "Safe to add to existing saves",
   "removalCompatibilityText": "safe to remove from existing saves",
   "canAdd": "yes",
@@ -67,7 +72,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1355786044192063548/1355786044389199942/officer_training.png?ex=6af4af66&is=6af35de6&hm=8a3f899fd61a42f547f24d74d63b0ddc2c2fd4f52e3de036ab25f10cfef3ed09&",
+      "url": "https://cdn.discordapp.com/attachments/1355786044192063548/1355786044389199942/officer_training.png?ex=6af55826&is=6af406a6&hm=cf6a035ea2c2abed3241d45a6f0f43504398cba8cb4db505bb8c4fa513c91d02&",
       "aiCaption": "A close-up of a character's face with green digital overlays and interface elements.",
       "aiKind": "screenshot",
       "aiFit": "good",

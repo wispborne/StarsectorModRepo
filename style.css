@@ -2342,12 +2342,13 @@ body.picture-open { overflow: hidden; }
 /* --- Favorites --- */
 
 /* The heading and its count on the left, the buttons on the right, lined up
-   on the heading's foot. On a narrow screen the buttons wrap underneath. */
-.fav-head {
+   on the heading's foot. On a narrow screen the buttons wrap underneath. An
+   author's page lays out its heading and Cards/Rows buttons the same way. */
+.fav-head, .author-head {
   display: flex; gap: var(--gap); flex-wrap: wrap;
   align-items: flex-end; justify-content: space-between;
 }
-.fav-head > .page-head { margin-bottom: 0; }
+.fav-head > .page-head, .author-head > .page-head { margin-bottom: 0; }
 .fav-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 /* The view switch sits apart from the list's own buttons. */
 .fav-actions > .view-toggle { margin-left: 8px; }

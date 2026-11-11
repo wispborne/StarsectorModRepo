@@ -30,6 +30,8 @@ import {
 import { compileSearch } from '../search.js';
 import { attachCompletionMenu } from '../search_menu.js';
 
+/// Cards or rows. An author's page uses the same choice, since it is the same
+/// kind of list.
 const VIEW_KEY = 'starmodderView';
 /// Where the filters sit: in a column at the left (the default) or across
 /// the top.
@@ -201,7 +203,7 @@ export async function render(root, parts) {
     seed: Number(query.get('seed')) || newSeed(),
     page: Math.max(0, Number(query.get('page')) || 0),
     pageSize: pageSizePreference(),
-    view: localStorage.getItem(VIEW_KEY) === 'rows' ? 'rows' : 'grid',
+    view: browseView(),
     currentVersion,
   };
 
@@ -526,7 +528,7 @@ function drawControls(places, mods, state, onChange, onSaved, onLayout) {
 
   const views = viewToggle(() => state.view, (which) => {
     state.view = which;
-    localStorage.setItem(VIEW_KEY, which);
+    setBrowseView(which);
     changed();
   });
 
@@ -1430,6 +1432,19 @@ function shufflePlace(id, seed) {
 }
 
 // --- Drawing the mods ---
+
+/// Cards unless the reader picked rows on Browse or on an author's page.
+export function browseView() {
+  try {
+    return localStorage.getItem(VIEW_KEY) === 'rows' ? 'rows' : 'grid';
+  } catch {
+    return 'grid';
+  }
+}
+
+export function setBrowseView(which) {
+  try { localStorage.setItem(VIEW_KEY, which); } catch { /* still works, just not kept */ }
+}
 
 export function modGrid(mods, currentVersion) {
   const grid = el('div', { class: 'mod-grid' });
