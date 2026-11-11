@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T20:44:27.879717Z",
+  "generatedAt": "2026-11-11T21:15:40.819046Z",
   "mods": [
     {
       "id": "outdated-the-thule-legacy",
@@ -112,7 +112,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "Combat Chatter",
@@ -176,7 +176,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -415,7 +415,12 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     },
@@ -558,7 +563,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35316.0",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35316",
       "discordUrl": "https://discord.com/channels/187635036525166592/1498797054959288393/1498797054959288393",
       "sourceIsPublic": false,
       "isWorkInProgress": false,
@@ -616,7 +621,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -871,7 +876,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Valkyrians"
         }
       ],
@@ -1091,7 +1096,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Second-in-Command"
         },
         {
@@ -1149,7 +1154,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -1209,7 +1214,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -1302,7 +1307,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -1376,7 +1381,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -1985,37 +1990,6 @@
       "needs": []
     },
     {
-      "id": "amazigh-s-ship-foundry-2",
-      "name": "Amazigh's Ship Foundry",
-      "authors": [
-        "thedarkgod"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.98a",
-      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "summaryIsGenerated": true,
-      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://download844.mediafire.com/hsyclvpzdjggDyRrTdQI2AalaRL3PPJmaHzNBxvaKcgo1MzwEd4E2DUWI3abgEnM-foumXFg8p_m_yHR1MgLQpBqNOEdegDsQjQaTnz_ePCGd4sEkGm1MtbJp9Z3cLKdeM9Kp0zaMKfQgvORWGVcWAFv-mOyCDiais2IWRZvtew/0cdwv0cyhxj0cnt/A_S-F.zip",
-        "kind": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2026-08-23",
-      "threadLastPostOn": "2026-08-24",
-      "editedOn": "2026-08-26",
-      "needs": [],
-      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
-    },
-    {
       "id": "amazigh-s-ship-foundry",
       "name": "Amazigh's Ship Foundry",
       "authors": [
@@ -2060,13 +2034,44 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "Particle Engine",
           "id": "particle-engine"
         }
       ]
+    },
+    {
+      "id": "amazigh-s-ship-foundry-2",
+      "name": "Amazigh's Ship Foundry",
+      "authors": [
+        "thedarkgod"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.98a",
+      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "summaryIsGenerated": true,
+      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://download844.mediafire.com/hsyclvpzdjggDyRrTdQI2AalaRL3PPJmaHzNBxvaKcgo1MzwEd4E2DUWI3abgEnM-foumXFg8p_m_yHR1MgLQpBqNOEdegDsQjQaTnz_ePCGd4sEkGm1MtbJp9Z3cLKdeM9Kp0zaMKfQgvORWGVcWAFv-mOyCDiais2IWRZvtew/0cdwv0cyhxj0cnt/A_S-F.zip",
+        "kind": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2026-08-23",
+      "threadLastPostOn": "2026-08-24",
+      "editedOn": "2026-08-26",
+      "needs": [],
+      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
     },
     {
       "id": "an-ok-portrait-pack",
@@ -2157,7 +2162,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "Nexerelin",
@@ -2558,6 +2563,32 @@
       ]
     },
     {
+      "id": "apex-design-collective-2",
+      "name": "Apex Design Collective",
+      "authors": [
+        "theDragn"
+      ],
+      "otherAuthorNames": {
+        "theDragn": [
+          "iryx.gay"
+        ]
+      },
+      "categories": [
+        "Factions"
+      ],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.95.1a",
+      "summaryIsGenerated": false,
+      "hasDirectDownload": false,
+      "downloadCount": 0,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22704.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "needs": []
+    },
+    {
       "id": "apex-design-collective",
       "name": "Apex Design Collective",
       "authors": [
@@ -2601,7 +2632,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -2616,32 +2647,6 @@
           "id": "lunalib"
         }
       ]
-    },
-    {
-      "id": "apex-design-collective-2",
-      "name": "Apex Design Collective",
-      "authors": [
-        "theDragn"
-      ],
-      "otherAuthorNames": {
-        "theDragn": [
-          "iryx.gay"
-        ]
-      },
-      "categories": [
-        "Factions"
-      ],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.95.1a",
-      "summaryIsGenerated": false,
-      "hasDirectDownload": false,
-      "downloadCount": 0,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22704.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "needs": []
     },
     {
       "id": "apex-design-collective-skin-basalt",
@@ -2688,7 +2693,27 @@
       "needs": [
         {
           "name": "Apex Design Collective",
-          "id": "apex-design-collective-2"
+          "id": "apex-design-collective"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib",
+          "via": "Apex Design Collective"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "Apex Design Collective"
+        },
+        {
+          "name": "GraphicsLib",
+          "id": "graphicslib",
+          "via": "Apex Design Collective"
+        },
+        {
+          "name": "LunaLib",
+          "id": "lunalib",
+          "via": "Apex Design Collective"
         }
       ]
     },
@@ -2741,7 +2766,27 @@
       "needs": [
         {
           "name": "Apex Design Collective",
-          "id": "apex-design-collective-2"
+          "id": "apex-design-collective"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib",
+          "via": "Apex Design Collective"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "Apex Design Collective"
+        },
+        {
+          "name": "GraphicsLib",
+          "id": "graphicslib",
+          "via": "Apex Design Collective"
+        },
+        {
+          "name": "LunaLib",
+          "id": "lunalib",
+          "via": "Apex Design Collective"
         }
       ]
     },
@@ -2790,7 +2835,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -2836,7 +2881,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -2887,7 +2932,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -2936,7 +2981,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Appro-Light"
         },
         {
@@ -3110,7 +3155,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -3271,7 +3316,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -3350,7 +3395,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -3397,7 +3442,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -3517,7 +3562,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -3575,7 +3620,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Nexerelin"
         }
       ]
@@ -3861,7 +3906,12 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     },
@@ -4007,7 +4057,7 @@
         "needsAnotherStep": true
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36167.0",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36167.msg532604#msg532604",
       "discordUrl": "https://discord.com/channels/187635036525166592/1561448031746793633/1561448031746793633",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -5228,7 +5278,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -6180,7 +6230,6 @@
       "sourceIsPublic": true,
       "isWorkInProgress": false,
       "addedOn": "2024-08-03",
-      "threadLastPostOn": "2026-09-08",
       "editedOn": "2025-06-10",
       "needs": [
         {
@@ -6189,7 +6238,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -6236,7 +6285,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LunaLib",
@@ -6439,7 +6488,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -6993,7 +7042,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ],
       "partOfThreadTitle": "Re: [0.98a] Hazard Mining Incorporated (Getting Messy Ed., 0.5.0e)"
@@ -7306,7 +7355,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -7645,7 +7694,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35860",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35860.0",
       "discordUrl": "https://discord.com/channels/187635036525166592/1536302622720528394/1536302622720528394",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -7803,37 +7852,6 @@
       ]
     },
     {
-      "id": "carter-s-freetraders-2",
-      "name": "Carter's Freetraders",
-      "authors": [
-        "thedarkgod"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.98a",
-      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "summaryIsGenerated": true,
-      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://download1980.mediafire.com/rtm2ry4t595gBJWv3I3j0zmdF1teuPEmYQokePNj1g164AZYMk2JcVrdgJCxDXGUvcR2xfk-oHf8oS2xERuwqzp7z04JXQGNTEkIejkzDyrjtwY2vA6zS4CCE9DfvBa18VVjPN8heT7kmMSBNUwZ26N9ZIwj-HwBukWLUpFwV_Uy/5fslxbu3t2h10vg/Carter%5C%27s+Freetraders-3.2.4.zip",
-        "kind": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2026-08-23",
-      "threadLastPostOn": "2026-08-24",
-      "editedOn": "2026-08-26",
-      "needs": [],
-      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
-    },
-    {
       "id": "carter-s-freetraders",
       "name": "Carter's Freetraders",
       "authors": [
@@ -7893,9 +7911,40 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
+    },
+    {
+      "id": "carter-s-freetraders-2",
+      "name": "Carter's Freetraders",
+      "authors": [
+        "thedarkgod"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.98a",
+      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "summaryIsGenerated": true,
+      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://download1980.mediafire.com/rtm2ry4t595gBJWv3I3j0zmdF1teuPEmYQokePNj1g164AZYMk2JcVrdgJCxDXGUvcR2xfk-oHf8oS2xERuwqzp7z04JXQGNTEkIejkzDyrjtwY2vA6zS4CCE9DfvBa18VVjPN8heT7kmMSBNUwZ26N9ZIwj-HwBukWLUpFwV_Uy/5fslxbu3t2h10vg/Carter%5C%27s+Freetraders-3.2.4.zip",
+        "kind": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2026-08-23",
+      "threadLastPostOn": "2026-08-24",
+      "editedOn": "2026-08-26",
+      "needs": [],
+      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
     },
     {
       "id": "carter-s-junk-hull-mods",
@@ -7950,9 +7999,40 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
+    },
+    {
+      "id": "caymon-s-ship-pack-2",
+      "name": "Caymon's Ship Pack",
+      "authors": [
+        "thedarkgod"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.98a",
+      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "summaryIsGenerated": true,
+      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://download1339.mediafire.com/26of8gvf6txgps3zsPgvKhfUdKCDM7JHP9Ka8YjhyNnndOILHQlFVlThj5ii_ev5nDYfTQdnfRT7bF36QybTJ1cweoqfLTSlDiwCUnqfCwIYZF4Z6gpjZsiDOqLS8KeDnDaYHKkWKOfj1LmkgoAz4BmDMW7s-IuYSaNVcppHjWdN/p07ygc3iaqfllyg/Caymon%5C%27s+Ship+Pack.zip",
+        "kind": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2026-08-23",
+      "threadLastPostOn": "2026-08-24",
+      "editedOn": "2026-08-26",
+      "needs": [],
+      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
     },
     {
       "id": "caymon-s-ship-pack",
@@ -7995,40 +8075,14 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
-    },
-    {
-      "id": "caymon-s-ship-pack-2",
-      "name": "Caymon's Ship Pack",
-      "authors": [
-        "thedarkgod"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.98a",
-      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "summaryIsGenerated": true,
-      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://download1339.mediafire.com/26of8gvf6txgps3zsPgvKhfUdKCDM7JHP9Ka8YjhyNnndOILHQlFVlThj5ii_ev5nDYfTQdnfRT7bF36QybTJ1cweoqfLTSlDiwCUnqfCwIYZF4Z6gpjZsiDOqLS8KeDnDaYHKkWKOfj1LmkgoAz4BmDMW7s-IuYSaNVcppHjWdN/p07ygc3iaqfllyg/Caymon%5C%27s+Ship+Pack.zip",
-        "kind": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2026-08-23",
-      "threadLastPostOn": "2026-08-24",
-      "editedOn": "2026-08-26",
-      "needs": [],
-      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
     },
     {
       "id": "cebby-ship-pack",
@@ -8295,7 +8349,12 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     },
@@ -8690,7 +8749,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Hazard Mining Incorporated"
         }
       ]
@@ -8929,7 +8988,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -9001,7 +9060,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=31870.0",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=31870.msg468795#msg468795",
       "discordUrl": "https://discord.com/channels/187635036525166592/1355010562139885748/1355010562139885748",
       "sourceIsPublic": false,
       "isWorkInProgress": false,
@@ -9096,7 +9155,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -9150,7 +9209,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Combat Chatter"
         }
       ]
@@ -9571,7 +9630,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -9982,7 +10041,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -9991,7 +10050,7 @@
         {
           "name": "LazyLib",
           "id": "lazylib",
-          "via": "GraphicsLib"
+          "via": "MagicLib"
         }
       ]
     },
@@ -10128,7 +10187,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -10369,7 +10428,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Combat Chatter"
         }
       ]
@@ -10564,7 +10623,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Tahlan Shipworks"
         }
       ]
@@ -10698,7 +10757,7 @@
       "needs": [
         {
           "name": "Diable Avionics",
-          "id": "diable-avionics"
+          "id": "diable-avionics-3"
         }
       ]
     },
@@ -10734,7 +10793,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -10876,7 +10935,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Nexerelin"
         }
       ]
@@ -11020,33 +11079,6 @@
       "needs": []
     },
     {
-      "id": "dassault-mikoyan-engineering",
-      "name": "Dassault-Mikoyan Engineering",
-      "authors": [
-        "Harmful Mechanic"
-      ],
-      "otherAuthorNames": {
-        "Harmful Mechanic": [
-          "soren",
-          "søren"
-        ]
-      },
-      "categories": [
-        "Factions"
-      ],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.95.1a",
-      "summaryIsGenerated": false,
-      "hasDirectDownload": false,
-      "downloadCount": 0,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=11322.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "needs": []
-    },
-    {
       "id": "dassault-mikoyan-engineering-2",
       "name": "Dassault-Mikoyan Engineering",
       "authors": [
@@ -11076,6 +11108,33 @@
       "editedOn": "2026-08-26",
       "needs": [],
       "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
+    },
+    {
+      "id": "dassault-mikoyan-engineering",
+      "name": "Dassault-Mikoyan Engineering",
+      "authors": [
+        "Harmful Mechanic"
+      ],
+      "otherAuthorNames": {
+        "Harmful Mechanic": [
+          "soren",
+          "søren"
+        ]
+      },
+      "categories": [
+        "Factions"
+      ],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.95.1a",
+      "summaryIsGenerated": false,
+      "hasDirectDownload": false,
+      "downloadCount": 0,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=11322.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "needs": []
     },
     {
       "id": "daudinator-xiv",
@@ -11349,30 +11408,6 @@
       "needs": []
     },
     {
-      "id": "delete",
-      "name": "Delete",
-      "authors": [
-        "zanagrave"
-      ],
-      "otherAuthorNames": {},
-      "categories": [
-        "Ships and weapons",
-        "Portraits and flags"
-      ],
-      "sources": [
-        "discord"
-      ],
-      "gameVersion": "0.97a",
-      "summaryIsGenerated": false,
-      "hasDirectDownload": false,
-      "downloadCount": 0,
-      "discordUrl": "https://discord.com/channels/187635036525166592/1214342779862257724/1304224180337643581",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2024-11-07",
-      "needs": []
-    },
-    {
       "id": "vanilla-illustrations-remaster",
       "name": "Delete",
       "authors": [
@@ -11408,6 +11443,30 @@
         }
       ],
       "addedOn": "2026-08-23",
+      "needs": []
+    },
+    {
+      "id": "delete",
+      "name": "Delete",
+      "authors": [
+        "zanagrave"
+      ],
+      "otherAuthorNames": {},
+      "categories": [
+        "Ships and weapons",
+        "Portraits and flags"
+      ],
+      "sources": [
+        "discord"
+      ],
+      "gameVersion": "0.97a",
+      "summaryIsGenerated": false,
+      "hasDirectDownload": false,
+      "downloadCount": 0,
+      "discordUrl": "https://discord.com/channels/187635036525166592/1214342779862257724/1304224180337643581",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2024-11-07",
       "needs": []
     },
     {
@@ -11619,7 +11678,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -11636,7 +11695,7 @@
         {
           "name": "LazyLib",
           "id": "lazylib",
-          "via": "GraphicsLib"
+          "via": "MagicLib"
         }
       ],
       "partOfThreadTitle": "[0.98a] [WIP] Derelict Start, Remnant Start, Omega Start & Threat Start"
@@ -11774,7 +11833,7 @@
       "needs": [
         {
           "name": "Diable Avionics",
-          "id": "diable-avionics"
+          "id": "diable-avionics-3"
         },
         {
           "name": "Arma Armatura",
@@ -11786,47 +11845,42 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
     {
-      "id": "diable-avionics",
+      "id": "diable-avionics-3",
       "name": "Diable Avionics",
       "authors": [
-        "Caymon Joestar",
-        "Tartiflette"
+        "FlashFrozen"
       ],
       "otherAuthorNames": {},
       "categories": [
         "Factions"
       ],
       "sources": [
-        "forum",
-        "discord"
+        "forum"
       ],
-      "onModIndex": true,
-      "gameVersion": "0.98a",
-      "modVersion": "2.9.5.3",
-      "imageUrl": "https://i.imgur.com/yX8diMJ.png",
-      "announcementImageUrl": "https://cdn.discordapp.com/attachments/1373166321931649034/1373166322124460212/diable_banner.webp?ex=6af5f38b&is=6af4a20b&hm=1cee7007627d72f5c38a90f369d3fae0034494c5ce8f2d9631fb9c2b63f7f16e&",
-      "summary": "Claiming ownership over millions of people's possessions might seem like a bold claim, but that is one the Diable Avionics Corporation intends to enforce, with deadly means if necessary.",
+      "gameVersion": "0.65.1a",
+      "modVersion": "1.05",
+      "imageUrl": "http://i.imgur.com/sYS3oSa.png",
+      "summary": "TO: CITIZENS OF SECTOR 7",
       "summaryIsGenerated": false,
-      "aiSummary": "Adds the Diable Avionics faction, featuring ships that rely on mobility and swarms of Wanzer mechs.",
+      "aiSummary": "Adds a faction of red ships and weapons to the game.",
       "hasDirectDownload": true,
       "bestDownload": {
-        "url": "https://github.com/CaymonJoestar/Diable-Avionics/releases/download/V2.9.5/Diable-Avionics.zip",
+        "url": "http://download1529.mediafire.com/udttk1r2xqxgNGbzOhgcc1-Z7LSBPs7ZTUSdGjmCJorfZfCUlvYN_LC5gX_3jUp6eBROk6dEOH0RJG2yS4F1CN3M-EG8lZmGkgcJeRophzThw2JIYLsBHhmRLOiqrKDeiJ9JNFDR32cKb4XoJmecPzJUcIPibvRDe8LtbCSWvzJs/689jq1dndcdx5r1/Diable+Avionics+1.05.zip",
         "kind": "direct",
         "needsAnotherStep": false
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29432.0",
-      "discordUrl": "https://discord.com/channels/187635036525166592/1373166321931649034/1373166321931649034",
-      "sourceIsPublic": true,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=8147.0",
+      "sourceIsPublic": false,
       "isWorkInProgress": false,
-      "addedOn": "2024-03-08",
-      "threadLastPostOn": "2026-10-07",
-      "editedOn": "2026-06-15",
+      "addedOn": "2014-08-03",
+      "threadLastPostOn": "2015-12-19",
+      "editedOn": "2015-12-01",
       "needs": []
     },
     {
@@ -11873,43 +11927,9 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
-    },
-    {
-      "id": "diable-avionics-3",
-      "name": "Diable Avionics",
-      "authors": [
-        "FlashFrozen"
-      ],
-      "otherAuthorNames": {},
-      "categories": [
-        "Factions"
-      ],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.65.1a",
-      "modVersion": "1.05",
-      "imageUrl": "http://i.imgur.com/sYS3oSa.png",
-      "summary": "TO: CITIZENS OF SECTOR 7",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds a faction of red ships and weapons to the game.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "http://download1529.mediafire.com/udttk1r2xqxgNGbzOhgcc1-Z7LSBPs7ZTUSdGjmCJorfZfCUlvYN_LC5gX_3jUp6eBROk6dEOH0RJG2yS4F1CN3M-EG8lZmGkgcJeRophzThw2JIYLsBHhmRLOiqrKDeiJ9JNFDR32cKb4XoJmecPzJUcIPibvRDe8LtbCSWvzJs/689jq1dndcdx5r1/Diable+Avionics+1.05.zip",
-        "kind": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=8147.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2014-08-03",
-      "threadLastPostOn": "2015-12-19",
-      "editedOn": "2015-12-01",
-      "needs": []
     },
     {
       "id": "diable-avionics-4",
@@ -11948,9 +11968,48 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
+    },
+    {
+      "id": "diable-avionics",
+      "name": "Diable Avionics",
+      "authors": [
+        "Caymon Joestar",
+        "Tartiflette"
+      ],
+      "otherAuthorNames": {},
+      "categories": [
+        "Factions"
+      ],
+      "sources": [
+        "forum",
+        "discord"
+      ],
+      "onModIndex": true,
+      "gameVersion": "0.98a",
+      "modVersion": "2.9.5.3",
+      "imageUrl": "https://i.imgur.com/yX8diMJ.png",
+      "announcementImageUrl": "https://cdn.discordapp.com/attachments/1373166321931649034/1373166322124460212/diable_banner.webp?ex=6af5f38b&is=6af4a20b&hm=1cee7007627d72f5c38a90f369d3fae0034494c5ce8f2d9631fb9c2b63f7f16e&",
+      "summary": "Claiming ownership over millions of people's possessions might seem like a bold claim, but that is one the Diable Avionics Corporation intends to enforce, with deadly means if necessary.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds the Diable Avionics faction, featuring ships that rely on mobility and swarms of Wanzer mechs.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://github.com/CaymonJoestar/Diable-Avionics/releases/download/V2.9.5/Diable-Avionics.zip",
+        "kind": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29432.0",
+      "discordUrl": "https://discord.com/channels/187635036525166592/1373166321931649034/1373166321931649034",
+      "sourceIsPublic": true,
+      "isWorkInProgress": false,
+      "addedOn": "2024-03-08",
+      "threadLastPostOn": "2026-10-07",
+      "editedOn": "2026-06-15",
+      "needs": []
     },
     {
       "id": "diable-avionics-skin-luxurious-bronze",
@@ -11998,7 +12057,7 @@
       "needs": [
         {
           "name": "Diable Avionics",
-          "id": "diable-avionics"
+          "id": "diable-avionics-3"
         }
       ]
     },
@@ -12053,7 +12112,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -12234,7 +12293,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -13014,7 +13073,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -13058,7 +13117,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -13252,7 +13311,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Second-in-Command"
         },
         {
@@ -13546,7 +13605,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -13589,7 +13648,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -13850,7 +13909,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -14001,7 +14060,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -14162,7 +14221,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "BoxUtil",
@@ -14305,7 +14364,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -14475,7 +14534,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Nexerelin"
         }
       ]
@@ -14760,7 +14819,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LunaLib",
@@ -14814,11 +14873,58 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
           "id": "lazylib"
+        }
+      ]
+    },
+    {
+      "id": "exotica-technologies-4",
+      "name": "Exotica Technologies",
+      "authors": [
+        "presidentmattdamon"
+      ],
+      "otherAuthorNames": {},
+      "categories": [
+        "Content expansions"
+      ],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.96a",
+      "modVersion": "1.8.5",
+      "imageUrl": "https://i.imgur.com/T5VS6oG.png",
+      "summary": "Adds RPG-style upgrades and exotics to ships that enhance stats without using OP or hullmod slots.",
+      "summaryIsGenerated": true,
+      "aiSummary": "Adds RPG-style upgrades and exotics to ships that enhance stats without using OP or hullmod slots.",
+      "saveCompatible": true,
+      "hasDirectDownload": false,
+      "downloadCount": 0,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=24660.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2022-05-28",
+      "threadLastPostOn": "2024-03-08",
+      "editedOn": "2024-03-08",
+      "needs": [
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
+        },
+        {
+          "name": "Combat Activators",
+          "id": "combat-activators"
         }
       ]
     },
@@ -14862,53 +14968,6 @@
       "threadLastPostOn": "2026-04-28",
       "editedOn": "2025-04-25",
       "needs": []
-    },
-    {
-      "id": "exotica-technologies-4",
-      "name": "Exotica Technologies",
-      "authors": [
-        "presidentmattdamon"
-      ],
-      "otherAuthorNames": {},
-      "categories": [
-        "Content expansions"
-      ],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.96a",
-      "modVersion": "1.8.5",
-      "imageUrl": "https://i.imgur.com/T5VS6oG.png",
-      "summary": "Adds RPG-style upgrades and exotics to ships that enhance stats without using OP or hullmod slots.",
-      "summaryIsGenerated": true,
-      "aiSummary": "Adds RPG-style upgrades and exotics to ships that enhance stats without using OP or hullmod slots.",
-      "saveCompatible": true,
-      "hasDirectDownload": false,
-      "downloadCount": 0,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=24660.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2022-05-28",
-      "threadLastPostOn": "2024-03-08",
-      "editedOn": "2024-03-08",
-      "needs": [
-        {
-          "name": "LunaLib",
-          "id": "lunalib"
-        },
-        {
-          "name": "MagicLib",
-          "id": "magiclib-2"
-        },
-        {
-          "name": "LazyLib",
-          "id": "lazylib"
-        },
-        {
-          "name": "Combat Activators",
-          "id": "combat-activators"
-        }
-      ]
     },
     {
       "id": "expanded-administrators",
@@ -15153,7 +15212,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -15312,7 +15371,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -15915,7 +15974,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -15978,7 +16037,6 @@
       "isWorkInProgress": false,
       "lastReleaseDate": "2026-11-06T00:00:00.000Z",
       "addedOn": "2025-08-19",
-      "threadLastPostOn": "2026-11-10",
       "editedOn": "2026-11-04",
       "needs": []
     },
@@ -16595,7 +16653,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=33795.0",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=33795",
       "discordUrl": "https://discord.com/channels/187635036525166592/1403385084681256982/1403385084681256982",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -16645,7 +16703,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LunaLib",
@@ -16654,7 +16712,7 @@
         {
           "name": "LazyLib",
           "id": "lazylib",
-          "via": "LunaLib"
+          "via": "MagicLib"
         }
       ]
     },
@@ -16729,7 +16787,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 2,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=33414.0",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=33414",
       "discordUrl": "https://discord.com/channels/187635036525166592/1413395448370167879/1413395448370167879",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -16743,7 +16801,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -17004,40 +17062,6 @@
       "needs": []
     },
     {
-      "id": "forge-production-2",
-      "name": "Forge Production",
-      "authors": [
-        "Ontheheavens"
-      ],
-      "otherAuthorNames": {},
-      "categories": [
-        "Miscellaneous"
-      ],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.96a",
-      "modVersion": "1.1.3",
-      "imageUrl": "https://raw.githubusercontent.com/Ontheheavens/Forge-Production/main/images/Title.png",
-      "summary": "Acquire production hullmods from derelict mothership.",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds production hullmods acquired from derelict motherships to manufacture supplies, fuel, machinery, and ships from raw resources.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://github.com/Ontheheavens/Forge-Production/releases/download/v1.1.3/Forge.Production.1.1.3.zip",
-        "kind": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22961.0",
-      "sourceIsPublic": true,
-      "isWorkInProgress": false,
-      "addedOn": "2021-11-14",
-      "threadLastPostOn": "2024-04-17",
-      "editedOn": "2024-04-17",
-      "needs": []
-    },
-    {
       "id": "forge-production",
       "name": "Forge Production",
       "authors": [
@@ -17078,6 +17102,40 @@
       "lastReleaseDate": "2026-07-14T00:00:00.000Z",
       "addedOn": "2024-04-16",
       "editedOn": "2026-07-13",
+      "needs": []
+    },
+    {
+      "id": "forge-production-2",
+      "name": "Forge Production",
+      "authors": [
+        "Ontheheavens"
+      ],
+      "otherAuthorNames": {},
+      "categories": [
+        "Miscellaneous"
+      ],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.96a",
+      "modVersion": "1.1.3",
+      "imageUrl": "https://raw.githubusercontent.com/Ontheheavens/Forge-Production/main/images/Title.png",
+      "summary": "Acquire production hullmods from derelict mothership.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds production hullmods acquired from derelict motherships to manufacture supplies, fuel, machinery, and ships from raw resources.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://github.com/Ontheheavens/Forge-Production/releases/download/v1.1.3/Forge.Production.1.1.3.zip",
+        "kind": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22961.0",
+      "sourceIsPublic": true,
+      "isWorkInProgress": false,
+      "addedOn": "2021-11-14",
+      "threadLastPostOn": "2024-04-17",
+      "editedOn": "2024-04-17",
       "needs": []
     },
     {
@@ -17123,7 +17181,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -17174,7 +17232,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -17278,7 +17336,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LunaLib",
@@ -17553,7 +17611,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -17708,7 +17766,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -17899,7 +17957,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -17942,7 +18000,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -18099,7 +18157,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=20463",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=20463.0",
       "discordUrl": "https://discord.com/channels/187635036525166592/1203898704562753586/1203898704562753586",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -18196,7 +18254,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -18387,7 +18445,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -18501,7 +18559,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -18638,7 +18696,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "Nexerelin",
@@ -18775,7 +18833,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -19010,7 +19068,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Nexerelin"
         }
       ]
@@ -19103,7 +19161,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -19576,7 +19634,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -19762,7 +19820,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -20137,7 +20195,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -20195,7 +20253,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LunaLib",
@@ -20232,7 +20290,7 @@
         "needsAnotherStep": true
       },
       "downloadCount": 2,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=28804.msg423601#msg423601",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=28804.0",
       "discordUrl": "https://discord.com/channels/187635036525166592/1203906866560630815/1203906866560630815",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -20265,7 +20323,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -20420,6 +20478,37 @@
       "needs": []
     },
     {
+      "id": "hazard-mining-incorporated-2",
+      "name": "Hazard Mining Incorporated",
+      "authors": [
+        "thedarkgod"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.98a",
+      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "summaryIsGenerated": true,
+      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://download844.mediafire.com/e292r75lovsg2CFjhMmHugtvbAOxQKpoFow98gxiX44pfaUPE4cU9_L9GL8kkk-8FrDL0GuxBpazOqN1eGMJzahRVPG1S_MZvzbxkzzA3ioGnrAtm_8CxoDeYv9YCJ07GFaOJtQX39WOGi-e-q8zSLOES4b89DeogXGZ3NRrdSPT/04f0je8bl0pcdu1/HMI+%28Hazard+Mining+Incorporated%29.zip",
+        "kind": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2026-08-23",
+      "threadLastPostOn": "2026-08-24",
+      "editedOn": "2026-08-26",
+      "needs": [],
+      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
+    },
+    {
       "id": "hazard-mining-incorporated",
       "name": "Hazard Mining Incorporated",
       "authors": [
@@ -20469,40 +20558,9 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
-    },
-    {
-      "id": "hazard-mining-incorporated-2",
-      "name": "Hazard Mining Incorporated",
-      "authors": [
-        "thedarkgod"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.98a",
-      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "summaryIsGenerated": true,
-      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://download844.mediafire.com/e292r75lovsg2CFjhMmHugtvbAOxQKpoFow98gxiX44pfaUPE4cU9_L9GL8kkk-8FrDL0GuxBpazOqN1eGMJzahRVPG1S_MZvzbxkzzA3ioGnrAtm_8CxoDeYv9YCJ07GFaOJtQX39WOGi-e-q8zSLOES4b89DeogXGZ3NRrdSPT/04f0je8bl0pcdu1/HMI+%28Hazard+Mining+Incorporated%29.zip",
-        "kind": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2026-08-23",
-      "threadLastPostOn": "2026-08-24",
-      "editedOn": "2026-08-26",
-      "needs": [],
-      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
     },
     {
       "id": "hazard-mining-supervillains",
@@ -20544,7 +20602,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ],
       "partOfThreadTitle": "Re: [0.98a] Hazard Mining Incorporated (Getting Messy Ed., 0.5.0e)"
@@ -20699,7 +20757,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -20721,32 +20779,6 @@
       "hasDirectDownload": false,
       "downloadCount": 0,
       "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=23908.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "needs": []
-    },
-    {
-      "id": "high-tech-expansion-2",
-      "name": "High Tech Expansion",
-      "authors": [
-        "theDragn"
-      ],
-      "otherAuthorNames": {
-        "theDragn": [
-          "iryx.gay"
-        ]
-      },
-      "categories": [
-        "Content expansions"
-      ],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.95a",
-      "summaryIsGenerated": false,
-      "hasDirectDownload": false,
-      "downloadCount": 0,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=19548.0",
       "sourceIsPublic": false,
       "isWorkInProgress": false,
       "needs": []
@@ -20796,13 +20828,39 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
           "id": "lazylib"
         }
       ]
+    },
+    {
+      "id": "high-tech-expansion-2",
+      "name": "High Tech Expansion",
+      "authors": [
+        "theDragn"
+      ],
+      "otherAuthorNames": {
+        "theDragn": [
+          "iryx.gay"
+        ]
+      },
+      "categories": [
+        "Content expansions"
+      ],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.95a",
+      "summaryIsGenerated": false,
+      "hasDirectDownload": false,
+      "downloadCount": 0,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=19548.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "needs": []
     },
     {
       "id": "hiigaran-descendants",
@@ -20840,7 +20898,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -20896,13 +20954,13 @@
         "discord"
       ],
       "onModIndex": true,
-      "gameVersion": "0.98a",
-      "modVersion": "1.5.5",
+      "gameVersion": "0.98.5a",
+      "modVersion": "1.5.6",
       "imageUrl": "https://i.imgur.com/ISSBOvS.png",
       "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355057895791923335/1355057896051839087/crest_hillock.png?ex=6af5fdc2&is=6af4ac42&hm=94ad3b7382a777370e7a1b19358af34e697b2bd24685749db06b90f671ab0476&",
       "summary": "Uncover the fragmented story of a distant binary system, and what became of it, through the vessels and blueprints you acquire. Codex entries have been scrubbed 'lost' over time. Collect them through exploration, underworld dealings, or lucky finds with Independents to access their descriptions.",
       "summaryIsGenerated": false,
-      "aiSummary": "Adds new ships, fighters, weapons, and station modules tied to a narrative about a lost binary system.",
+      "aiSummary": "Adds ships, fighters, weapons, and station modules tied to a narrative about a lost binary system.",
       "hasDirectDownload": true,
       "bestDownload": {
         "url": "https://github.com/HankHillock/HPST/releases/latest/download/hpst.zip",
@@ -20917,9 +20975,9 @@
       "nicknames": [
         "HPST"
       ],
+      "lastReleaseDate": "2026-11-11T00:00:00.000Z",
       "addedOn": "2024-04-07",
-      "threadLastPostOn": "2026-06-29",
-      "editedOn": "2026-06-16",
+      "editedOn": "2026-05-23",
       "needs": []
     },
     {
@@ -20982,7 +21040,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -21490,7 +21548,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -22009,7 +22067,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -22411,7 +22469,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "Nexerelin",
@@ -22492,7 +22550,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Arma Armatura"
         }
       ]
@@ -22536,7 +22594,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Arma Armatura"
         }
       ]
@@ -22624,7 +22682,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -22830,37 +22888,6 @@
       ]
     },
     {
-      "id": "jaydeepiracy-2",
-      "name": "JaydeePiracy",
-      "authors": [
-        "thedarkgod"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.98a",
-      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "summaryIsGenerated": true,
-      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://download1584.mediafire.com/kr7mvxs92rogMfQeocfQtvYisud0sMjwEYDOVtGjtCenNjfLTPBexXq36BlUpm4k8F-a9iZW3M3i5QCHGDtBCj5IcT3gfU66NFYiUlnqbnnxK8z1VxdclpRdC65objuGE3gbsdpQiTjr1d-aMKuTnHmGWAbLf-6-e0awlGSYJec/r6hug3u5z8043yo/JaydeePiracy.zip",
-        "kind": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2026-08-23",
-      "threadLastPostOn": "2026-08-24",
-      "editedOn": "2026-08-26",
-      "needs": [],
-      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
-    },
-    {
       "id": "jaydeepiracy",
       "name": "JaydeePiracy",
       "authors": [
@@ -22912,7 +22939,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "JaydeeProficiencies"
         },
         {
@@ -22923,9 +22950,40 @@
         {
           "name": "LazyLib",
           "id": "lazylib",
-          "via": "LunaLib"
+          "via": "MagicLib"
         }
       ]
+    },
+    {
+      "id": "jaydeepiracy-2",
+      "name": "JaydeePiracy",
+      "authors": [
+        "thedarkgod"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.98a",
+      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "summaryIsGenerated": true,
+      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://download1584.mediafire.com/kr7mvxs92rogMfQeocfQtvYisud0sMjwEYDOVtGjtCenNjfLTPBexXq36BlUpm4k8F-a9iZW3M3i5QCHGDtBCj5IcT3gfU66NFYiUlnqbnnxK8z1VxdclpRdC65objuGE3gbsdpQiTjr1d-aMKuTnHmGWAbLf-6-e0awlGSYJec/r6hug3u5z8043yo/JaydeePiracy.zip",
+        "kind": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2026-08-23",
+      "threadLastPostOn": "2026-08-24",
+      "editedOn": "2026-08-26",
+      "needs": [],
+      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
     },
     {
       "id": "jaydeeproficiencies",
@@ -22964,7 +23022,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LunaLib",
@@ -22973,7 +23031,7 @@
         {
           "name": "LazyLib",
           "id": "lazylib",
-          "via": "LunaLib"
+          "via": "MagicLib"
         }
       ]
     },
@@ -23028,37 +23086,6 @@
       "needs": []
     },
     {
-      "id": "junk-pirates-2",
-      "name": "Junk Pirates",
-      "authors": [
-        "Computica"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_2776_1783242438.png",
-      "summary": "A restored compatibility release of mendonca's Junk Pirates, PACK, and ASP Syndicate content for Starsector 0.98a-RC8. This fork is a local restoration pass for modern Starsector.",
-      "summaryIsGenerated": false,
-      "aiSummary": "Restores Junk Pirates, PACK, and ASP Syndicate content with dependency updates, Nexerelin faction setup, save-load recovery, relation cleanup, LunaLib settings, Starship Legends support, first-pass ship balance, and cross-mod compatibility work.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://github.com/Compterra/Starsector-CFF-JunkPirates/archive/refs/heads/main.zip",
-        "kind": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35651.0",
-      "sourceIsPublic": true,
-      "isWorkInProgress": false,
-      "addedOn": "2026-06-26",
-      "threadLastPostOn": "2026-11-10",
-      "editedOn": "2026-07-16",
-      "needs": [],
-      "partOfThreadTitle": "Computica's Faction Forks - Updated 7/16/2026 | Stellar Networks Released"
-    },
-    {
       "id": "junk-pirates",
       "name": "Junk Pirates",
       "authors": [
@@ -23100,6 +23127,37 @@
           "id": "lazylib"
         }
       ]
+    },
+    {
+      "id": "junk-pirates-2",
+      "name": "Junk Pirates",
+      "authors": [
+        "Computica"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_2776_1783242438.png",
+      "summary": "A restored compatibility release of mendonca's Junk Pirates, PACK, and ASP Syndicate content for Starsector 0.98a-RC8. This fork is a local restoration pass for modern Starsector.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Restores Junk Pirates, PACK, and ASP Syndicate content with dependency updates, Nexerelin faction setup, save-load recovery, relation cleanup, LunaLib settings, Starship Legends support, first-pass ship balance, and cross-mod compatibility work.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://github.com/Compterra/Starsector-CFF-JunkPirates/archive/refs/heads/main.zip",
+        "kind": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35651.0",
+      "sourceIsPublic": true,
+      "isWorkInProgress": false,
+      "addedOn": "2026-06-26",
+      "threadLastPostOn": "2026-11-10",
+      "editedOn": "2026-07-16",
+      "needs": [],
+      "partOfThreadTitle": "Computica's Faction Forks - Updated 7/16/2026 | Stellar Networks Released"
     },
     {
       "id": "junk-pirates-3",
@@ -23192,50 +23250,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
-        }
-      ]
-    },
-    {
-      "id": "kadur-remnant",
-      "name": "Kadur Remnant",
-      "authors": [
-        "Vayra"
-      ],
-      "otherAuthorNames": {},
-      "categories": [
-        "Factions"
-      ],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.95a",
-      "modVersion": "3.2.3",
-      "imageUrl": "https://i.imgur.com/AFZAQiL.png",
-      "summary": "New starting options when used with Vayra's Sector, including a starting option aligned with the Kadur Remnant",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds the Kadur Remnant faction, featuring unique ships, weapons, and lore.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://drive.google.com/uc?authuser=0&id=1cBtUSfKUNf3NM7sL-5JrDasWWaj1OfDo&export=download",
-        "kind": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 2,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=6649.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2013-09-14",
-      "threadLastPostOn": "2024-11-27",
-      "editedOn": "2021-04-10",
-      "needs": [
-        {
-          "name": "LazyLib",
-          "id": "lazylib"
-        },
-        {
-          "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -23281,6 +23296,49 @@
       "threadLastPostOn": "2026-10-02",
       "editedOn": "2026-10-07",
       "needs": []
+    },
+    {
+      "id": "kadur-remnant",
+      "name": "Kadur Remnant",
+      "authors": [
+        "Vayra"
+      ],
+      "otherAuthorNames": {},
+      "categories": [
+        "Factions"
+      ],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.95a",
+      "modVersion": "3.2.3",
+      "imageUrl": "https://i.imgur.com/AFZAQiL.png",
+      "summary": "New starting options when used with Vayra's Sector, including a starting option aligned with the Kadur Remnant",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds the Kadur Remnant faction, featuring unique ships, weapons, and lore.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://drive.google.com/uc?authuser=0&id=1cBtUSfKUNf3NM7sL-5JrDasWWaj1OfDo&export=download",
+        "kind": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 2,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=6649.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2013-09-14",
+      "threadLastPostOn": "2024-11-27",
+      "editedOn": "2021-04-10",
+      "needs": [
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib"
+        }
+      ]
     },
     {
       "id": "kaleidoscope",
@@ -23405,7 +23463,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -23450,40 +23508,6 @@
       "needs": []
     },
     {
-      "id": "kazeron-navarchy-2",
-      "name": "Kazeron Navarchy",
-      "authors": [
-        "PeachPatrol"
-      ],
-      "otherAuthorNames": {},
-      "categories": [
-        "Content expansions"
-      ],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.95a",
-      "modVersion": "1.2",
-      "imageUrl": "https://i.imgur.com/SCrvPRQ.png",
-      "summary": "Adds several skins to the Persean League, each with the Kazeron Navarchy hullmod built in. They appear occasionally in Persean League markets and fleets.",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds colorful ship skins for the Persean League with a unique hullmod.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://github.com/PeachPatrol/Kazeron-Navarchy/files/6461315/Kazeron.Navarchy-1.2.zip",
-        "kind": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=21554.0",
-      "sourceIsPublic": true,
-      "isWorkInProgress": false,
-      "addedOn": "2021-05-08",
-      "threadLastPostOn": "2024-05-25",
-      "editedOn": "2021-05-11",
-      "needs": []
-    },
-    {
       "id": "kazeron-navarchy",
       "name": "Kazeron Navarchy",
       "authors": [
@@ -23523,6 +23547,40 @@
       "addedOn": "2024-02-05",
       "threadLastPostOn": "2026-09-08",
       "editedOn": "2026-06-08",
+      "needs": []
+    },
+    {
+      "id": "kazeron-navarchy-2",
+      "name": "Kazeron Navarchy",
+      "authors": [
+        "PeachPatrol"
+      ],
+      "otherAuthorNames": {},
+      "categories": [
+        "Content expansions"
+      ],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.95a",
+      "modVersion": "1.2",
+      "imageUrl": "https://i.imgur.com/SCrvPRQ.png",
+      "summary": "Adds several skins to the Persean League, each with the Kazeron Navarchy hullmod built in. They appear occasionally in Persean League markets and fleets.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds colorful ship skins for the Persean League with a unique hullmod.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://github.com/PeachPatrol/Kazeron-Navarchy/files/6461315/Kazeron.Navarchy-1.2.zip",
+        "kind": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=21554.0",
+      "sourceIsPublic": true,
+      "isWorkInProgress": false,
+      "addedOn": "2021-05-08",
+      "threadLastPostOn": "2024-05-25",
+      "editedOn": "2021-05-11",
       "needs": []
     },
     {
@@ -23634,7 +23692,12 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     },
@@ -23721,7 +23784,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -24061,37 +24124,6 @@
       "partOfThreadTitle": "Computica's Faction Forks - Updated 7/16/2026 | Stellar Networks Released"
     },
     {
-      "id": "kyeltziv-technocracy-2",
-      "name": "Kyeltziv Technocracy",
-      "authors": [
-        "thedarkgod"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.98a",
-      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "summaryIsGenerated": true,
-      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://download1346.mediafire.com/cpnpv96ifp2gjNHMguuBbqVxVQzDSV8W-9mnyNtTm5wKclYShJrc0d6GfgcL1MMXeo0dkBTWuhHzvkknk8t-OuXo2LQfm_PDzsVuAx5rQkVYkVZew8AVz9Nw_ouOka4nwAXucgF06gHXmNEenjoJ6ZtjwYyR3Yx5NMkf8La1-EVg/5i08iy5uxhcw7ku/Kyeltziv+Technocracy.zip",
-        "kind": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2026-08-23",
-      "threadLastPostOn": "2026-08-24",
-      "editedOn": "2026-08-26",
-      "needs": [],
-      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
-    },
-    {
       "id": "kyeltziv-technocracy",
       "name": "Kyeltziv Technocracy",
       "authors": [
@@ -24134,9 +24166,40 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
+    },
+    {
+      "id": "kyeltziv-technocracy-2",
+      "name": "Kyeltziv Technocracy",
+      "authors": [
+        "thedarkgod"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.98a",
+      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "summaryIsGenerated": true,
+      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://download1346.mediafire.com/cpnpv96ifp2gjNHMguuBbqVxVQzDSV8W-9mnyNtTm5wKclYShJrc0d6GfgcL1MMXeo0dkBTWuhHzvkknk8t-OuXo2LQfm_PDzsVuAx5rQkVYkVZew8AVz9Nw_ouOka4nwAXucgF06gHXmNEenjoJ6ZtjwYyR3Yx5NMkf8La1-EVg/5i08iy5uxhcw7ku/Kyeltziv+Technocracy.zip",
+        "kind": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2026-08-23",
+      "threadLastPostOn": "2026-08-24",
+      "editedOn": "2026-08-26",
+      "needs": [],
+      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
     },
     {
       "id": "lakhesis-monarchy",
@@ -24407,7 +24470,12 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     },
@@ -24455,7 +24523,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -24961,7 +25029,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -25170,7 +25238,12 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     },
@@ -25209,7 +25282,12 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     },
@@ -25328,7 +25406,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -25383,7 +25461,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -25438,7 +25516,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "BoxUtil",
@@ -25489,7 +25567,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "BoxUtil",
@@ -25570,7 +25648,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -25769,7 +25847,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Nexerelin"
         }
       ]
@@ -25824,7 +25902,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -25974,7 +26052,7 @@
       "needs": [
         {
           "name": "Diable Avionics",
-          "id": "diable-avionics"
+          "id": "diable-avionics-3"
         }
       ]
     },
@@ -26044,7 +26122,12 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     },
@@ -26076,31 +26159,6 @@
       "addedOn": "2013-11-04",
       "threadLastPostOn": "2013-11-28",
       "editedOn": "2013-11-04",
-      "needs": []
-    },
-    {
-      "id": "magiclib-2",
-      "name": "MagicLib",
-      "authors": [
-        "Tartiflette"
-      ],
-      "otherAuthorNames": {},
-      "categories": [
-        "Libraries"
-      ],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.9.1a",
-      "imageUrl": "https://i.imgur.com/IvuvzLk.jpg",
-      "summaryIsGenerated": false,
-      "hasDirectDownload": false,
-      "downloadCount": 0,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=13718.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2018-10-26",
-      "editedOn": "2023-03-07",
       "needs": []
     },
     {
@@ -26159,6 +26217,31 @@
       ]
     },
     {
+      "id": "magiclib-2",
+      "name": "MagicLib",
+      "authors": [
+        "Tartiflette"
+      ],
+      "otherAuthorNames": {},
+      "categories": [
+        "Libraries"
+      ],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.9.1a",
+      "imageUrl": "https://i.imgur.com/IvuvzLk.jpg",
+      "summaryIsGenerated": false,
+      "hasDirectDownload": false,
+      "downloadCount": 0,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=13718.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2018-10-26",
+      "editedOn": "2023-03-07",
+      "needs": []
+    },
+    {
       "id": "magnetar-the-mission",
       "name": "Magnetar!: The Mission",
       "displayName": "Magnetar! : The Mission",
@@ -26203,7 +26286,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -26541,7 +26624,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Arma Armatura"
         }
       ]
@@ -26630,7 +26713,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Nexerelin"
         }
       ]
@@ -26699,32 +26782,6 @@
       "needs": []
     },
     {
-      "id": "metelson-industries",
-      "name": "Metelson Industries",
-      "authors": [
-        "Azmond"
-      ],
-      "otherAuthorNames": {},
-      "categories": [
-        "Factions"
-      ],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.9.1a",
-      "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_3457_1679417685.png",
-      "summaryIsGenerated": false,
-      "hasDirectDownload": false,
-      "downloadCount": 0,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=8100.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2014-06-30",
-      "threadLastPostOn": "2024-03-13",
-      "editedOn": "2024-03-12",
-      "needs": []
-    },
-    {
       "id": "metelson-industries-2",
       "name": "Metelson Industries",
       "authors": [
@@ -26760,6 +26817,32 @@
       "addedOn": "2024-03-17",
       "threadLastPostOn": "2026-09-26",
       "editedOn": "2024-06-15",
+      "needs": []
+    },
+    {
+      "id": "metelson-industries",
+      "name": "Metelson Industries",
+      "authors": [
+        "Azmond"
+      ],
+      "otherAuthorNames": {},
+      "categories": [
+        "Factions"
+      ],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.9.1a",
+      "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_3457_1679417685.png",
+      "summaryIsGenerated": false,
+      "hasDirectDownload": false,
+      "downloadCount": 0,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=8100.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2014-06-30",
+      "threadLastPostOn": "2024-03-13",
+      "editedOn": "2024-03-12",
       "needs": []
     },
     {
@@ -27001,7 +27084,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -27055,7 +27138,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -27234,7 +27317,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -27691,7 +27774,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LunaLib",
@@ -28119,7 +28202,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -28244,7 +28327,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LunaLib",
@@ -28253,7 +28336,7 @@
         {
           "name": "LazyLib",
           "id": "lazylib",
-          "via": "LunaLib"
+          "via": "MagicLib"
         }
       ]
     },
@@ -28840,7 +28923,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -28905,7 +28988,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -29055,7 +29138,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -29088,6 +29171,37 @@
       "addedOn": "2024-02-13",
       "editedOn": "2024-02-19",
       "needs": []
+    },
+    {
+      "id": "nes-s-saw-2",
+      "name": "Nes's SAW",
+      "authors": [
+        "thedarkgod"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.98a",
+      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "summaryIsGenerated": true,
+      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://download1346.mediafire.com/kdplli56mfvgqJWD5sgZXdEL-8Tfbu9z5c2vZk2UxZKqW8vaXrj_Hus2oAyKl4Myw6MkHEdayHPIDrP2LQFbzGZRdtN9VBoGS3okPBDpwzZzJhL5q5YJ-Gz0m3VrVp6CPSjyDC7pxXdONgYnqK5NNE4HNxYpXybuY4K_Q53hR9sI/2f3i85p1evqch0m/Nes%5C%27s+SAW.zip",
+        "kind": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2026-08-23",
+      "threadLastPostOn": "2026-08-24",
+      "editedOn": "2026-08-26",
+      "needs": [],
+      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
     },
     {
       "id": "nes-s-saw",
@@ -29140,40 +29254,9 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
-    },
-    {
-      "id": "nes-s-saw-2",
-      "name": "Nes's SAW",
-      "authors": [
-        "thedarkgod"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.98a",
-      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "summaryIsGenerated": true,
-      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://download1346.mediafire.com/kdplli56mfvgqJWD5sgZXdEL-8Tfbu9z5c2vZk2UxZKqW8vaXrj_Hus2oAyKl4Myw6MkHEdayHPIDrP2LQFbzGZRdtN9VBoGS3okPBDpwzZzJhL5q5YJ-Gz0m3VrVp6CPSjyDC7pxXdONgYnqK5NNE4HNxYpXybuY4K_Q53hR9sI/2f3i85p1evqch0m/Nes%5C%27s+SAW.zip",
-        "kind": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2026-08-23",
-      "threadLastPostOn": "2026-08-24",
-      "editedOn": "2026-08-26",
-      "needs": [],
-      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
     },
     {
       "id": "neutrino-corp",
@@ -29448,7 +29531,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -29499,7 +29582,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Nexerelin"
         }
       ]
@@ -29696,7 +29779,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -29748,7 +29831,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -29802,7 +29885,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -29928,7 +30011,12 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     },
@@ -29964,7 +30052,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35859",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35859.0",
       "discordUrl": "https://discord.com/channels/187635036525166592/1536301835801862224/1536301835801862224",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -30253,7 +30341,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -30767,7 +30855,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -30784,7 +30872,7 @@
         {
           "name": "LazyLib",
           "id": "lazylib",
-          "via": "GraphicsLib"
+          "via": "MagicLib"
         }
       ],
       "partOfThreadTitle": "[0.98a] [WIP] Derelict Start, Remnant Start, Omega Start & Threat Start"
@@ -30951,7 +31039,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -31143,7 +31231,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -31200,22 +31288,25 @@
         ]
       },
       "categories": [
-        "Utilities"
+        "Ships and weapons",
+        "Miscellaneous"
       ],
       "sources": [
         "discord"
       ],
       "gameVersion": "0.98.5a",
       "modVersion": "2.1",
-      "summary": "Version 2.1 simple to put it in 0.98.5",
+      "imageUrl": "https://cdn.discordapp.com/attachments/1570169638598484018/1570179733935628389/sleek1-3.png?ex=6af62755&is=6af4d5d5&hm=98d84c3159b18571021878ab21aab4fed5a5baa35c3c4c71487eb342fb2e843a&",
+      "summary": "A mod made by me and <@142370041839484928> ,with the sprite provided by <@312119593089105921> we present Onslaught sleek a prototype Hegemony Onslaught that was never supposed to see production besides for a test demonstration! It now circulates through merc fleets and markets but at a very rare chance so be on the lookout in them markets and possibly take a shot at the merc fleet to try out this baby for yourself!",
       "summaryIsGenerated": false,
-      "aiSummary": "Adds the Onslaught Sleek and other Onslaught variants.",
+      "aiSummary": "Adds a rare prototype Hegemony Onslaught ship and several bounty ships to merc fleets and markets.",
       "hasDirectDownload": false,
       "downloadCount": 0,
       "discordUrl": "https://discord.com/channels/187635036525166592/1570169638598484018/1570169638598484018",
       "sourceIsPublic": false,
       "isWorkInProgress": false,
       "addedOn": "2026-11-11",
+      "editedOn": "2026-11-11",
       "needs": []
     },
     {
@@ -31335,7 +31426,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -31625,7 +31716,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -31714,7 +31805,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -31888,7 +31979,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -31936,7 +32027,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -32008,7 +32099,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -32591,7 +32682,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -32633,7 +32724,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -33593,7 +33684,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -34334,7 +34425,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LunaLib",
@@ -34448,7 +34539,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -34883,7 +34974,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -34994,7 +35085,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -35034,7 +35125,12 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     },
@@ -35211,7 +35307,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "prv Starworks"
         }
       ]
@@ -35290,7 +35386,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -35942,7 +36038,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -36034,7 +36130,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -36104,7 +36200,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -36413,7 +36509,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Nexerelin"
         },
         {
@@ -37072,7 +37168,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -37089,7 +37185,7 @@
         {
           "name": "LazyLib",
           "id": "lazylib",
-          "via": "GraphicsLib"
+          "via": "MagicLib"
         }
       ],
       "partOfThreadTitle": "[0.98a] [WIP] Derelict Start, Remnant Start, Omega Start & Threat Start"
@@ -37438,7 +37534,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -37758,7 +37854,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -37833,7 +37929,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -37945,7 +38041,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Roider Union"
         },
         {
@@ -37995,7 +38091,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "RetroLib",
@@ -38047,7 +38143,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -38272,7 +38368,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -38675,7 +38771,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -38733,7 +38829,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -38848,37 +38944,6 @@
       "partOfThreadTitle": "MOD -  The TINY MOD collection. Mods without graphics. (178+ mods)"
     },
     {
-      "id": "scalartech-solutions-2",
-      "name": "ScalarTech Solutions",
-      "authors": [
-        "thedarkgod"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.98a",
-      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "summaryIsGenerated": true,
-      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://download947.mediafire.com/rkeyoqlzgnbgMUSZA8pF8-UCTgNK_9plSQg5H5Y11j-al3dBtptUkBKeb3A7Q0W750f91eHuz_CmpDkbDV6lBk53MOiRoB5Mko-2yQNg9BCYqhLclnyZX73PfkJOCEZfgPG7wrh69UQhdQCTSiwW49PsJZ7qp-i8pPkMOJhqVz5m/yb9iloaegzrc5uw/scalartech-solutions-0.9.3b.zip",
-        "kind": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2026-08-23",
-      "threadLastPostOn": "2026-08-24",
-      "editedOn": "2026-08-26",
-      "needs": [],
-      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
-    },
-    {
       "id": "scalartech-solutions",
       "name": "ScalarTech Solutions",
       "authors": [
@@ -38921,9 +38986,40 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
+    },
+    {
+      "id": "scalartech-solutions-2",
+      "name": "ScalarTech Solutions",
+      "authors": [
+        "thedarkgod"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.98a",
+      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "summaryIsGenerated": true,
+      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://download947.mediafire.com/rkeyoqlzgnbgMUSZA8pF8-UCTgNK_9plSQg5H5Y11j-al3dBtptUkBKeb3A7Q0W750f91eHuz_CmpDkbDV6lBk53MOiRoB5Mko-2yQNg9BCYqhLclnyZX73PfkJOCEZfgPG7wrh69UQhdQCTSiwW49PsJZ7qp-i8pPkMOJhqVz5m/yb9iloaegzrc5uw/scalartech-solutions-0.9.3b.zip",
+        "kind": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2026-08-23",
+      "threadLastPostOn": "2026-08-24",
+      "editedOn": "2026-08-26",
+      "needs": [],
+      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
     },
     {
       "id": "scan-those-gates",
@@ -39279,7 +39375,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -39327,7 +39423,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -39368,7 +39464,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -39413,7 +39509,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -39453,7 +39549,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36134.msg531820#msg531820",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36134.0",
       "discordUrl": "https://discord.com/channels/187635036525166592/1557265921276387348/1557265921276387348",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -39486,7 +39582,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -39543,7 +39639,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -39616,7 +39712,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -39719,7 +39815,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -39781,7 +39877,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Second-in-Command"
         },
         {
@@ -39905,7 +40001,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LunaLib",
@@ -39957,7 +40053,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -40192,7 +40288,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -40235,7 +40331,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -40286,7 +40382,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "Nexerelin",
@@ -40422,7 +40518,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -40818,7 +40914,12 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     },
@@ -40954,7 +41055,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Nexerelin"
         }
       ]
@@ -42144,7 +42245,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -42626,7 +42727,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -42715,7 +42816,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -42861,7 +42962,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -43048,7 +43149,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -43560,7 +43661,7 @@
       "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_17341_1698645086.png",
       "summary": "Got Fancy New Apple Mac with M1 / M2 Chip On It?, How About Upgrading Starsector to run Natively on Apple Silicon Chips. This Conversion Kit Allow You to Gain roughly from 30% up to 85% Performance Overhead thats loses due Rosetta Translation within MacOS enviroment.",
       "summaryIsGenerated": false,
-      "aiSummary": "Replaces the bundled Java runtime with a native Apple Silicon version to improve performance.",
+      "aiSummary": "Replaces the bundled Java runtime with a native Apple Silicon version to improve performance on M1, M2, and M3 Macs.",
       "hasDirectDownload": true,
       "bestDownload": {
         "url": "https://github.com/Yumeris/Miko_repo/releases/download/Mac/Apple.Silicon.Starsector.Conversion.Kit.F2.zip",
@@ -43573,7 +43674,6 @@
       "sourceIsPublic": false,
       "isWorkInProgress": false,
       "addedOn": "2023-10-24",
-      "threadLastPostOn": "2026-06-30",
       "editedOn": "2024-02-06",
       "needs": []
     },
@@ -44394,17 +44494,7 @@
       "needs": [
         {
           "name": "ScalarTech Solutions",
-          "id": "scalartech-solutions"
-        },
-        {
-          "name": "LazyLib",
-          "id": "lazylib",
-          "via": "ScalarTech Solutions"
-        },
-        {
-          "name": "MagicLib",
-          "id": "magiclib-2",
-          "via": "ScalarTech Solutions"
+          "id": "scalartech-solutions-2"
         }
       ]
     },
@@ -44831,7 +44921,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -45110,7 +45200,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -45247,7 +45337,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -45501,7 +45591,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35839.0",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35839",
       "discordUrl": "https://discord.com/channels/187635036525166592/1534674229969158235/1534674229969158235",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -45595,7 +45685,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -45655,7 +45745,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "AdvancedGunneryControl",
@@ -45925,7 +46015,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -45972,7 +46062,12 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     },
@@ -46106,7 +46201,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -46456,7 +46551,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -46675,7 +46770,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -46740,7 +46835,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -46990,7 +47085,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Nexerelin"
         }
       ]
@@ -47036,7 +47131,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 2,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29124",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29124.0",
       "discordUrl": "https://discord.com/channels/187635036525166592/1208245045497438288/1208245045497438288",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -47068,7 +47163,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -47914,7 +48009,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -48023,7 +48118,12 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     },
@@ -48101,7 +48201,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -48592,7 +48692,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -48609,7 +48709,7 @@
         {
           "name": "LazyLib",
           "id": "lazylib",
-          "via": "GraphicsLib"
+          "via": "MagicLib"
         }
       ],
       "partOfThreadTitle": "[0.98a] [WIP] Derelict Start, Remnant Start, Omega Start & Threat Start"
@@ -48652,7 +48752,12 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     },
@@ -48785,7 +48890,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -48839,7 +48944,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -49015,7 +49120,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 2,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=25485.0",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=25485",
       "discordUrl": "https://discord.com/channels/187635036525166592/1388797312696057918/1388797312696057918",
       "sourceIsPublic": false,
       "isWorkInProgress": false,
@@ -49107,7 +49212,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -49213,7 +49318,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "WVNU"
@@ -49396,7 +49501,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -49451,7 +49556,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -49705,7 +49810,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -49819,7 +49924,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "Nexerelin",
@@ -49879,7 +49984,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -49936,7 +50041,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -50408,7 +50513,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -50765,6 +50870,37 @@
       "needs": []
     },
     {
+      "id": "underworld-2",
+      "name": "Underworld",
+      "authors": [
+        "thedarkgod"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.98a",
+      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "summaryIsGenerated": true,
+      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://download1648.mediafire.com/lrcmwqvqgedgZIhcOQA4gVfBbcEBTZ6GswFGgFvqQi8DHBHJpdxzahz4ZZ4zvsD4SgJlUYT5C-X-hNezmkiakTRerNiXKnmBxDeP4NTITDhdbLqnJu6IGoc-pyvmf5NVPKwTY0aOuVlabOatld1-tT5Wm0jbMHGR8LqB0ub-AnE/c1uabjnfs9r2rh9/Underworld.zip",
+        "kind": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2026-08-23",
+      "threadLastPostOn": "2026-08-24",
+      "editedOn": "2026-08-26",
+      "needs": [],
+      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
+    },
+    {
       "id": "underworld",
       "name": "Underworld",
       "authors": [
@@ -50816,37 +50952,6 @@
           "id": "graphicslib"
         }
       ]
-    },
-    {
-      "id": "underworld-2",
-      "name": "Underworld",
-      "authors": [
-        "thedarkgod"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.98a",
-      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "summaryIsGenerated": true,
-      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://download1648.mediafire.com/lrcmwqvqgedgZIhcOQA4gVfBbcEBTZ6GswFGgFvqQi8DHBHJpdxzahz4ZZ4zvsD4SgJlUYT5C-X-hNezmkiakTRerNiXKnmBxDeP4NTITDhdbLqnJu6IGoc-pyvmf5NVPKwTY0aOuVlabOatld1-tT5Wm0jbMHGR8LqB0ub-AnE/c1uabjnfs9r2rh9/Underworld.zip",
-        "kind": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2026-08-23",
-      "threadLastPostOn": "2026-08-24",
-      "editedOn": "2026-08-26",
-      "needs": [],
-      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
     },
     {
       "id": "united-aurora-federation",
@@ -50948,7 +51053,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "Nexerelin",
@@ -51097,39 +51202,6 @@
       "needs": []
     },
     {
-      "id": "unknown-skies-3",
-      "name": "Unknown Skies",
-      "authors": [
-        "presidentmattdamon"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.97a",
-      "modVersion": "1.0.3",
-      "imageUrl": "https://i.imgur.com/0OFyLKT.png",
-      "summary": "This mod significantly expands the variety of systems and planets you'll encounter while exploring.",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds new system backgrounds, planet types, and planetary conditions to increase exploration variety.",
-      "saveCompatible": true,
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://www.patreon.com/tartiflette",
-        "kind": "direct",
-        "needsAnotherStep": true
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29288.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2024-02-26",
-      "threadLastPostOn": "2024-03-08",
-      "editedOn": "2024-03-08",
-      "needs": []
-    },
-    {
       "id": "unknown-skies-2",
       "name": "Unknown Skies",
       "authors": [
@@ -51162,6 +51234,39 @@
       "addedOn": "2017-04-26",
       "threadLastPostOn": "2025-12-10",
       "editedOn": "2023-03-19",
+      "needs": []
+    },
+    {
+      "id": "unknown-skies-3",
+      "name": "Unknown Skies",
+      "authors": [
+        "presidentmattdamon"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.97a",
+      "modVersion": "1.0.3",
+      "imageUrl": "https://i.imgur.com/0OFyLKT.png",
+      "summary": "This mod significantly expands the variety of systems and planets you'll encounter while exploring.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds new system backgrounds, planet types, and planetary conditions to increase exploration variety.",
+      "saveCompatible": true,
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://www.patreon.com/tartiflette",
+        "kind": "direct",
+        "needsAnotherStep": true
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29288.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2024-02-26",
+      "threadLastPostOn": "2024-03-08",
+      "editedOn": "2024-03-08",
       "needs": []
     },
     {
@@ -51289,7 +51394,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -51843,7 +51948,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -51946,7 +52051,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
@@ -52853,7 +52958,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -52917,7 +53022,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
@@ -53134,7 +53239,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Nexerelin"
         }
       ]
@@ -54125,7 +54230,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2",
+          "id": "magiclib",
           "via": "Nexerelin"
         }
       ]
@@ -54205,30 +54310,35 @@
       "needs": []
     },
     {
-      "id": "xhan-empire-2",
+      "id": "xhan-empire-3",
       "name": "Xhan Empire",
       "authors": [
-        "Peplat"
+        "thedarkgod"
       ],
       "otherAuthorNames": {},
-      "categories": [
-        "Factions"
-      ],
+      "categories": [],
       "sources": [
         "forum"
       ],
-      "gameVersion": "0.97a",
-      "imageUrl": "https://i.imgur.com/IfwL7xU.png",
-      "summaryIsGenerated": false,
-      "hasDirectDownload": false,
-      "downloadCount": 0,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=17972.0",
+      "gameVersion": "0.98a",
+      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "summaryIsGenerated": true,
+      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://download1322.mediafire.com/dvcmcojhojigbBenR7bZoycXEq3jqz_3vDoAtYV04U5lujuzIo0ZtIA6A8JWnlEEHtNAL9Qje44kSE2wAABhTs1Z1XGNBi7TskITlOSnmP8GoBsZhE_2FwZeJVQCW9Pr5gVNID4N8mphynCmVg2dTR_DSbXtdtXd8FoALtAj8TY/usl95s9cj7n48p1/XhanEmpire.zip",
+        "kind": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
       "sourceIsPublic": false,
       "isWorkInProgress": false,
-      "addedOn": "2020-02-13",
-      "threadLastPostOn": "2025-05-20",
-      "editedOn": "2025-04-21",
-      "needs": []
+      "addedOn": "2026-08-23",
+      "threadLastPostOn": "2026-08-24",
+      "editedOn": "2026-08-26",
+      "needs": [],
+      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
     },
     {
       "id": "xhan-empire",
@@ -54271,40 +54381,35 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         }
       ]
     },
     {
-      "id": "xhan-empire-3",
+      "id": "xhan-empire-2",
       "name": "Xhan Empire",
       "authors": [
-        "thedarkgod"
+        "Peplat"
       ],
       "otherAuthorNames": {},
-      "categories": [],
+      "categories": [
+        "Factions"
+      ],
       "sources": [
         "forum"
       ],
-      "gameVersion": "0.98a",
-      "summary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "summaryIsGenerated": true,
-      "aiSummary": "Provides refined collision models and adjusted radii for this ship pack.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://download1322.mediafire.com/dvcmcojhojigbBenR7bZoycXEq3jqz_3vDoAtYV04U5lujuzIo0ZtIA6A8JWnlEEHtNAL9Qje44kSE2wAABhTs1Z1XGNBi7TskITlOSnmP8GoBsZhE_2FwZeJVQCW9Pr5gVNID4N8mphynCmVg2dTR_DSbXtdtXd8FoALtAj8TY/usl95s9cj7n48p1/XhanEmpire.zip",
-        "kind": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35919.0",
+      "gameVersion": "0.97a",
+      "imageUrl": "https://i.imgur.com/IfwL7xU.png",
+      "summaryIsGenerated": false,
+      "hasDirectDownload": false,
+      "downloadCount": 0,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=17972.0",
       "sourceIsPublic": false,
       "isWorkInProgress": false,
-      "addedOn": "2026-08-23",
-      "threadLastPostOn": "2026-08-24",
-      "editedOn": "2026-08-26",
-      "needs": [],
-      "partOfThreadTitle": "Finer Ship Collisions [0.98a]"
+      "addedOn": "2020-02-13",
+      "threadLastPostOn": "2025-05-20",
+      "editedOn": "2025-04-21",
+      "needs": []
     },
     {
       "id": "xiii-vanilla-ships",
@@ -54429,7 +54534,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "GraphicsLib",
@@ -54488,7 +54593,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "Nexerelin",
@@ -54581,7 +54686,7 @@
       "needs": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LunaLib",
@@ -54590,7 +54695,7 @@
         {
           "name": "LazyLib",
           "id": "lazylib",
-          "via": "LunaLib"
+          "via": "MagicLib"
         }
       ]
     },
@@ -54677,7 +54782,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "Particle Engine",
@@ -54803,7 +54908,7 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LazyLib",
