@@ -15,12 +15,33 @@
 import {
   AI_HIDE, AI_PRESETS, aiFilterFromAddress, aiFilterIsOn, aiFilterOff, aiFilterToAddress,
 } from './ai_filter.js';
-import { gameVersionFamily } from './version.js';
+import { gameVersionFamily, versionsThatRunOn } from './version.js';
 
 /// The game version filter's two choices that are not a release: every mod,
 /// and the mods that do not say which release they are for.
 export const ANY_GAME = 'any';
 export const NO_GAME = 'none';
+
+/// The game version filter can name several releases, joined with commas
+/// ("0.98.5,0.98"). These are the releases it names, newest first as written.
+export function gamesIn(game) {
+  if (!game || game === ANY_GAME || game === NO_GAME) return [];
+  return game.split(',').filter(Boolean);
+}
+
+/// The game version filter Browse opens on: the current release, plus any
+/// earlier release whose mods still run on it (`versionsThatRunOn`). On
+/// 0.98.5a that is "0.98.5,0.98". Empty when there is no current release.
+export function defaultGame(currentVersion) {
+  return versionsThatRunOn(currentVersion).join(',');
+}
+
+/// Whether a mod is for one of the releases the game version filter asks for.
+export function inGame(mod, game) {
+  if (!game || game === ANY_GAME) return true;
+  if (game === NO_GAME) return !mod.gameVersion;
+  return Boolean(mod.gameVersion) && gamesIn(game).includes(gameVersionFamily(mod.gameVersion));
+}
 /// The requires choice for mods that need nothing else.
 export const NO_REQUIREMENTS = '__none__';
 export const ONLY = 'only';
@@ -206,18 +227,23 @@ export function switchKeysIn(switches, wanted) {
 }
 
 /// The game version the address asks for. With none named, the page opens on
-/// the current release: nineteen pages of A-to-Z over every game release anyone
-/// ever built for is not a list anybody reads.
+/// the current release (and any earlier one whose mods still run on it):
+/// nineteen pages of A-to-Z over every game release anyone ever built for is
+/// not a list anybody reads.
 export function gameFromAddress(query, currentVersion) {
   const asked = query.get('game');
   if (asked === ANY_GAME || asked === NO_GAME) return asked;
   // The filter works on the number a game release shares, so a link saved back
   // when it held a full spelling ("0.98a") still finds the same mods.
-  if (asked) return gameVersionFamily(asked);
+  if (asked) {
+    const games = [...new Set(asked.split(',').map((each) => each.trim()).filter(Boolean)
+      .map(gameVersionFamily))];
+    if (games.length) return games.join(',');
+  }
   // Links from before the current release was picked by default asked for
   // every release with `older=1`.
   if (query.get('older') === '1' || !currentVersion) return ANY_GAME;
-  return currentVersion;
+  return defaultGame(currentVersion);
 }
 
 /// Reads a set from a query string or URLSearchParams. Anything that is not a
@@ -239,11 +265,11 @@ export function readFilters(query, currentVersion) {
 }
 
 /// A set as address values, for `buildHash`. Empty values are left for the
-/// caller to drop. The current release is left out, because a missing `game`
-/// means the current release; pass no `currentVersion` to always write it.
+/// caller to drop. The default game versions are left out, because a missing
+/// `game` means them; pass no `currentVersion` to always write it.
 export function filtersToAddress(filters, currentVersion = null) {
   return {
-    game: currentVersion && filters.game === currentVersion ? '' : filters.game,
+    game: currentVersion && filters.game === defaultGame(currentVersion) ? '' : filters.game,
     category: filters.category,
     needs: filters.needs,
     from: filters.from,
@@ -313,7 +339,9 @@ export function aiFilterWords(filter) {
 export function describeFilters(filters, gameLabel = (family) => family) {
   const words = [];
   if (filters.game === NO_GAME) words.push('No game version listed');
-  else if (filters.game && filters.game !== ANY_GAME) words.push(gameLabel(filters.game));
+  else if (gamesIn(filters.game).length) {
+    words.push(gamesIn(filters.game).map(gameLabel).join(' and '));
+  }
   if (filters.category) words.push(filters.category);
   if (filters.needs === NO_REQUIREMENTS) words.push('Standalone mods only');
   else if (filters.needs) words.push(`Requires ${filters.needs}`);

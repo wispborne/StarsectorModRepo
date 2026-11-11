@@ -135,15 +135,35 @@ export function repairGameVersion(version) {
 }
 
 /// Known Starsector release numbers. `fixMistypedRelease` checks for typos
-/// against this list. Other numbers are left alone unless they match a typo.
-/// A game release newer than the list, such as 0.99a, is left alone; the list needs no update for new game versions.
+/// against this list, and `previousGameRelease` reads the release before
+/// another one from it. Other numbers are left alone unless they match a typo.
+/// A game release newer than the list, such as 0.99a, still works. Add it
+/// here when it comes out, so its typos are fixed and the release after it
+/// knows which one came before.
 const RELEASES = new Set([
   '0.1', '0.2', '0.3', '0.31', '0.32', '0.33', '0.34', '0.35',
   '0.5', '0.51', '0.52', '0.52.1', '0.53', '0.53.1', '0.54', '0.54.1',
   '0.6', '0.6.1', '0.6.2', '0.65', '0.65.1', '0.65.2',
   '0.7', '0.7.1', '0.7.2', '0.8', '0.8.1', '0.9', '0.9.1',
-  '0.95', '0.95.1', '0.96', '0.97', '0.98',
+  '0.95', '0.95.1', '0.96', '0.97', '0.98', '0.98.5',
 ]);
+
+/// The game release that came out just before [family] ("0.98.5" gives
+/// "0.98", "0.98" gives "0.97"). A release with three parts also counts the
+/// one it is a patch of, so "0.99.1" gives "0.99" even before 0.99 is in the
+/// list. Null when nothing came before.
+export function previousGameRelease(family) {
+  if (!family) return null;
+  const candidates = new Set(RELEASES);
+  const parent = /^(\d+\.\d+)\.\d+$/.exec(family);
+  if (parent) candidates.add(parent[1]);
+  let best = null;
+  for (const release of candidates) {
+    if (compareGameVersions(release, family) >= 0) continue;
+    if (!best || compareGameVersions(release, best) > 0) best = release;
+  }
+  return best;
+}
 
 /// Fixes an extra dot ("0.9.8a" is 0.98a), a missing dot ("0.81a" is 0.8.1a),
 /// or a letter between numbers ("0.95a.1a" is 0.95.1a).
@@ -181,11 +201,23 @@ function fixMistypedRelease(text) {
 }
 
 /// The number part of a game version, which every spelling of one release
-/// shares: "0.98a-RC8" and "0.98" are both "0.98".
+/// shares: "0.98a-RC8" and "0.98" are both "0.98". "0.98.5a" is "0.98.5".
 export function gameVersionFamily(version) {
   const repaired = repairGameVersion(version);
   const match = /^(\d+(?:\.\d+)*)/.exec(repaired);
   return match ? match[1] : repaired;
+}
+
+/// Game releases that still run the mods made for an earlier release.
+/// 0.98.5a only added to the modding API, so 0.98a mods still run on it.
+const RUNS_MODS_FOR = new Map([['0.98.5', ['0.98']]]);
+
+/// The game versions whose mods run on [current]: [current] itself, newest
+/// first, then any earlier release in `RUNS_MODS_FOR`. Browse's default list
+/// shows all of them. "0.98.5" gives ["0.98.5", "0.98"].
+export function versionsThatRunOn(current) {
+  if (!current) return [];
+  return [current, ...(RUNS_MODS_FOR.get(current) || [])];
 }
 
 /// A game version rewritten so `compareVersions` puts it in release order.

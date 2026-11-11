@@ -23,7 +23,7 @@ import {
 } from '../ai_filter.js';
 import {
   ANY_GAME, DATE_FILTERS, NO_GAME, NO_REQUIREMENTS, NOT, ONLY, POSTED_ON, SWITCHES, aiFilterWords,
-  datesAreOn, describeFilters, inDates, noDates, postedOn,
+  datesAreOn, defaultGame, describeFilters, gamesIn, inDates, inGame, noDates, postedOn,
   filterQuery, filtersToAddress, keepFilters, matchingSaved, readFilters, readSavedFilters,
   restoreSaved, savedFiltersJson, savedNamed, withSaved, withoutSaved,
 } from '../filter_set.js';
@@ -353,7 +353,7 @@ function fillResultLine(line, all, matches, state, onShowEveryRelease, onOtherFi
     }), off);
   }
 
-  if (!state.currentVersion || state.game !== state.currentVersion) return;
+  if (!state.currentVersion || state.game !== defaultGame(state.currentVersion)) return;
 
   const added = all.filter((mod) => matchesFilters(mod, { ...state, game: ANY_GAME })).length
     - matches.length;
@@ -654,6 +654,8 @@ export function filterControls(mods, state, onChange,
         (mod) => matchesFilters(mod, { ...state, game: ANY_GAME }));
     const entries = gameVersions(wouldMatch)
       .map((v) => ({ value: v.family, label: v.label, count: v.count }));
+    const both = defaultChoice(entries, state.currentVersion);
+    if (both) entries.unshift(both);
     const unknown = wouldMatch.filter((mod) => !mod.gameVersion).length;
     if (unknown) entries.push({ value: NO_GAME, label: 'No game version', count: unknown });
     clear(versionsHolder);
@@ -758,6 +760,9 @@ export function filterControls(mods, state, onChange,
   };
 
   const versions = gameVersions(mods);
+  const bothVersions = defaultChoice(
+    versions.map((v) => ({ value: v.family, label: v.label, count: v.count })),
+    state.currentVersion);
   const needed = neededMods(mods);
   // At the side the panel's heading names the dropdown, so it carries no label.
   const requiresDropdown = dropdown(atSide ? '' : 'Requires',
@@ -768,11 +773,14 @@ export function filterControls(mods, state, onChange,
       labels: { [NO_REQUIREMENTS]: 'Standalone (no requirements)' },
     });
 
-  const gameDropdown = dropdown('Game version', [...versions.map((v) => v.family), NO_GAME],
+  const gameDropdown = dropdown('Game version',
+    [...(bothVersions ? [bothVersions.value] : []), ...versions.map((v) => v.family), NO_GAME],
     state.game === ANY_GAME ? '' : state.game,
     (v) => { state.game = v || ANY_GAME; changed(); },
     {
       labels: {
+        ...(bothVersions
+          ? { [bothVersions.value]: `${bothVersions.label} (${bothVersions.count})` } : {}),
         ...Object.fromEntries(versions.map((v) => [v.family, `${v.label} (${v.count})`])),
         [NO_GAME]: `No game version (${mods.filter((mod) => !mod.gameVersion).length})`,
       },
@@ -985,6 +993,22 @@ function dateSlider(option, firstDay, lastDay, state, onChange) {
       el('div', { class: 'date-ends' }, [ends.from.node, ends.to.node]),
     ]),
     draw,
+  };
+}
+
+/// The game version choice Browse opens on when it names more than one
+/// release: "0.98.5a and 0.98a", counting the mods of both. Null when the
+/// default is a single release, which is already a choice of its own.
+/// [entries] are the single releases as `{ value, label, count }`.
+function defaultChoice(entries, currentVersion) {
+  const games = gamesIn(defaultGame(currentVersion));
+  if (games.length < 2) return null;
+  const parts = games.map((game) => entries.find((entry) => entry.value === game)
+    || { value: game, label: game, count: 0 });
+  return {
+    value: games.join(','),
+    label: parts.map((part) => part.label).join(' and '),
+    count: parts.reduce((sum, part) => sum + part.count, 0),
   };
 }
 
@@ -1288,7 +1312,7 @@ function neededMods(mods) {
 
 function clearFilters(state) {
   state.search = '';
-  state.game = state.currentVersion || ANY_GAME;
+  state.game = defaultGame(state.currentVersion) || ANY_GAME;
   state.needs = '';
   state.category = '';
   state.from = '';
@@ -1343,24 +1367,18 @@ function searchScore(mod, text) {
   return scores.get(mod);
 }
 
-/// True when a mod is built for the game release the site treats as current.
-/// A mod that does not say which release it is for is kept — an unknown version
-/// is not the same as an old one.
+/// True when a mod runs on the game release the site treats as current: one
+/// built for it, or for an earlier release whose mods still run on it (0.98a
+/// on 0.98.5a). A mod that does not say which release it is for is kept — an
+/// unknown version is not the same as an old one.
 export function isForCurrentGame(mod, currentVersion) {
   if (!currentVersion || !mod.gameVersion) return true;
-  return gameVersionFamily(mod.gameVersion) === currentVersion;
-}
-
-/// Whether a mod is on the game version the filter is set to.
-function onGameVersion(mod, game) {
-  if (!game || game === ANY_GAME) return true;
-  if (game === NO_GAME) return !mod.gameVersion;
-  return Boolean(mod.gameVersion) && gameVersionFamily(mod.gameVersion) === game;
+  return gamesIn(defaultGame(currentVersion)).includes(gameVersionFamily(mod.gameVersion));
 }
 
 export function matchesFilters(mod, state) {
   if (searchScore(mod, state.search) < 0) return false;
-  if (!onGameVersion(mod, state.game)) return false;
+  if (!inGame(mod, state.game)) return false;
   if (state.category && !(mod.categories || []).includes(state.category)) return false;
   if (state.needs === NO_REQUIREMENTS) {
     if ((mod.needs || []).length) return false;

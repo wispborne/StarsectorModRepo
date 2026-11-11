@@ -11,7 +11,8 @@ import { everyOtherName, modName, otherNamesOf } from './mod_names.js';
 
 export { everyOtherName, modName, otherNamesOf };
 import {
-  compareGameVersions, compareVersions, gameVersionFamily, repairGameVersion,
+  compareGameVersions, compareVersions, gameVersionFamily,
+  previousGameRelease, repairGameVersion,
 } from './version.js';
 
 export { compareGameVersions, compareVersions, gameVersionFamily, repairGameVersion };
@@ -2433,13 +2434,9 @@ export function versionStanding(mod, current) {
   const family = gameVersionFamily(mod.gameVersion);
   if (family === current) return 'current';
 
-  // One behind means the last part is one lower — "0.97" against "0.98".
-  const a = family.split('.').map(Number);
-  const b = current.split('.').map(Number);
-  if (a.length === b.length && a.slice(0, -1).join('.') === b.slice(0, -1).join('.')
-      && b[b.length - 1] - a[a.length - 1] === 1) {
-    return 'one-behind';
-  }
+  // One behind means the release just before the current one: "0.97" before
+  // "0.98", and "0.98" before "0.98.5".
+  if (family === previousGameRelease(current)) return 'one-behind';
   return 'old';
 }
 
