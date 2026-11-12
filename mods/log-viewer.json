@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-11-12T07:05:09.534395Z",
+  "listing": {
+    "id": "log-viewer",
+    "name": "Log Viewer",
+    "authors": [
+      "s_numan"
+    ],
+    "otherAuthorNames": {},
+    "categories": [
+      "Utilities"
+    ],
+    "sources": [
+      "discord"
+    ],
+    "gameVersion": "0.98a",
+    "modVersion": "1.2.0",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121253741203657/Ig7PWp5.png?ex=6af51109&is=6af3bf89&hm=c47890581f771f72418e975d559745fa8a4c89276bcf2a073f8366fdf2cca4fb&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121253741203657/Ig7PWp5.png?ex=6af66289&is=6af51109&hm=8f2f34273cf4c8e20a7dfb44a56966b7e94f99de0bc0009ae1e67fc359fb8ae7&",
+    "summary": "View logs from starsector.log inside the game.",
+    "summaryIsGenerated": false,
+    "aiSummary": "Displays game logs directly within the Starsector interface via a scroller or console integration.",
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip",
+      "kind": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 1,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35325",
+    "discordUrl": "https://discord.com/channels/187635036525166592/1500121066666983635/1500121066666983635",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "addedOn": "2026-05-02",
+    "editedOn": "2026-05-02",
+    "needs": []
+  },
+  "description": "Shows starsector.log entries on screen with sound effects and configurable filters. It integrates with the Console Commands mod for viewing logs in its console. The tool is designed to help mod developers see error logs immediately as they occur.",
+  "descriptionHtml": "<p>Shows starsector.log entries on screen with sound effects and configurable filters. It integrates with the Console Commands mod for viewing logs in its console. The tool is designed to help mod developers see error logs immediately as they occur.</p>",
+  "descriptionIsGenerated": true,
+  "descriptionIsForumPost": false,
+  "discordPostHtml": "<p>View logs from starsector.log inside the game.</p><p>Forum: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35325\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35325</a></p><p>Download: <a href=\"https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip</a></p>",
+  "aiDescription": "Shows starsector.log entries on screen with sound effects and configurable filters. It integrates with the Console Commands mod for viewing logs in its console. The tool is designed to help mod developers see error logs immediately as they occur.",
+  "aiUse": {},
+  "rawCategories": [
+    "Utility mods"
+  ],
+  "gallery": [
+    {
+      "url": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121253741203657/Ig7PWp5.png?ex=6af66289&is=6af51109&hm=8f2f34273cf4c8e20a7dfb44a56966b7e94f99de0bc0009ae1e67fc359fb8ae7&",
+      "aiCaption": "A Starsector game screen showing a log overlay with yellow text warnings about failed JSON finds and weapon paintjobs.",
+      "aiKind": "screenshot",
+      "aiFit": "good",
+      "source": "discord"
+    },
+    {
+      "url": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121308791443598/Oy2oJUf.png?ex=6af66296&is=6af51116&hm=88d2035151852cd1b904061d5fbe42330d32393a65b8bb1a5b1f45ba68c67e45&",
+      "aiCaption": "A console window displaying numerous warning logs regarding MagicPaintjobManager and TextureData failures.",
+      "aiKind": "screenshot",
+      "aiFit": "okay",
+      "source": "discord"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip",
+      "directUrl": "https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip",
+      "fileName": "LogViewer.zip",
+      "kind": "direct",
+      "label": "https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {
+    "1.2.0": "Reduced amount of logs cached before onApplicationLoad to prevent using too much memory.",
+    "1.1.1": "Changed default settings to to only display logs of level ERROR on the top of the screen, instead of level WARN and above. WARN logs are logged to the console as usual.",
+    "1.1.0": "Now gets almost every log from even before onApplicationLoad - Thanks to Lukas04"
+  },
+  "sourceCodeUrl": "https://github.com/S-Numan/LogViewer",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35325",
+  "discordUrl": "https://discord.com/channels/187635036525166592/1500121066666983635/1500121066666983635",
+  "releases": [],
+  "sameNameMods": [],
+  "addons": [],
+  "optionalNeeds": [
+    {
+      "name": "Console Commands",
+      "id": "console-commands"
+    }
+  ]
+}
