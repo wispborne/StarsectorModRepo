@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-12T19:06:33.882439Z",
+  "generatedAt": "2026-11-12T23:07:16.151189Z",
   "mods": {
     "outdated-the-thule-legacy": {
       "summary": "MY BROTHERS. WE WERE FORGED IN VICTORY. A VICTORY THAT ENDED THE GREAT WAR AND BROUGHT",
@@ -7694,6 +7694,15 @@
           "id": "project-mistral-a-diable-armaa-expansion-mod"
         }
       ],
+      "conflicts": [
+        {
+          "name": "Strikecraft Standalone",
+          "id": "strikecraft-standalone",
+          "quote": "Do NOT run this mod alongside armaa, use one or the other. Besides there being no reason to do so as armaa contains everything in this mod to start with, the two will also crash the game if used alongside eachother.",
+          "kind": "technical",
+          "fromOtherMod": true
+        }
+      ],
       "saveCompatible": true,
       "canAdd": "yes",
       "canUpdate": "depends",
@@ -8627,6 +8636,11 @@
         "Content Expansions",
         "Ship Pack"
       ],
+      "otherAuthorNames": {
+        "liam556": [
+          "vanessa_556"
+        ]
+      },
       "addedOn": "2020-02-03",
       "editedOn": "2025-03-29",
       "needs": [
@@ -9107,7 +9121,8 @@
           "id": "carter-s-freetraders"
         },
         {
-          "name": "Vulpoids"
+          "name": "Vulpoids - Lost Project",
+          "id": "vulpoids-lost-project"
         },
         {
           "name": "Yunru Industries"
@@ -13302,20 +13317,24 @@
           "id": "the-scrappers-faction-mod-54a-very-minor-tweaks"
         },
         {
-          "name": "Gun Runners"
+          "name": "Gun Runners mod",
+          "id": "gun-runners-mod"
         },
         {
           "name": "Starfarer Extended for",
           "id": "starfarer-extended"
         },
         {
-          "name": "TimCorp"
+          "name": "The TimCORP Mod",
+          "id": "the-timcorp-mod"
         },
         {
-          "name": "Hoplites of Corinth"
+          "name": "The Hoplites of Corinth",
+          "id": "the-hoplites-of-corinth"
         },
         {
-          "name": "Confederacy of Free Stars"
+          "name": "The Confederacy of Free Stars",
+          "id": "the-confederacy-of-free-stars"
         }
       ],
       "aiUse": {}
@@ -15505,7 +15524,8 @@
       ],
       "conflicts": [
         {
-          "name": "Halo Dynamics 1.8.0",
+          "name": "Halo Dynamics Ship Industry",
+          "id": "halo-dynamics-ship-industry",
           "quote": "please note that the the new Halo Dynamics 1.8.0 update (which isnt translated at the moment) conflicts with CJY.",
           "kind": "withNotes"
         }
@@ -28604,7 +28624,8 @@
       ],
       "optionalNeeds": [
         {
-          "name": "ARMAA"
+          "name": "Arma Armatura",
+          "id": "arma-armatura"
         }
       ],
       "aiUse": {},
@@ -31102,7 +31123,8 @@
           "name": "Scrappers"
         },
         {
-          "name": "Shadow Order"
+          "name": "The Shadow Order",
+          "id": "the-shadow-order"
         }
       ],
       "conflicts": [
@@ -31211,7 +31233,8 @@
       "editedOn": "2012-08-14",
       "optionalNeeds": [
         {
-          "name": "fleet control"
+          "name": "Fleet Control Mod",
+          "id": "fleet-control-mod-incomplete-test-version-available-please-help"
         }
       ],
       "aiUse": {},
@@ -32700,7 +32723,8 @@
       "editedOn": "2013-01-28",
       "optionalNeeds": [
         {
-          "name": "Uomoz's Corvus 17"
+          "name": "Background Mod - Uomoz's Corvus",
+          "id": "background-mod-uomoz-s-corvus"
         }
       ],
       "aiUse": {},
@@ -32945,7 +32969,8 @@
       ],
       "optionalNeeds": [
         {
-          "name": "Terraforming & Station Construction"
+          "name": "Terraforming and Station Construction",
+          "id": "terraforming-and-station-construction"
         },
         {
           "name": "Commissioned Crews",
@@ -36676,16 +36701,22 @@
       ],
       "conflicts": [
         {
-          "name": "UNSC",
+          "name": "Halo - United Nations Space Command (UNSC)",
+          "id": "halo-united-nations-space-command",
+          "quote": "not save-compatible with the original UNSC mod, and not meant to be run alongside it - both define the same faction and the same ship IDs.",
+          "kind": "technical"
+        },
+        {
+          "name": "Halo - United Nations Space Command: Core Continued (UNSC)",
+          "id": "halo-united-nations-space-command-continued-unsc-legacy",
           "quote": "not save-compatible with the original UNSC mod, and not meant to be run alongside it - both define the same faction and the same ship IDs.",
           "kind": "technical"
         },
         {
           "name": "Halo - United Nations Space Command: Continued (UNSC) (LEGACY)",
           "id": "united-nations-space-command-continued",
-          "quote": "This fork is not compatabile with Halo HomeSystems or UNSC Reborn.",
-          "kind": "technical",
-          "fromOtherMod": true
+          "quote": "not save-compatible with the original UNSC mod, and not meant to be run alongside it - both define the same faction and the same ship IDs.",
+          "kind": "technical"
         }
       ],
       "canUpdate": "no",
@@ -36812,6 +36843,13 @@
           "name": "Console Commands",
           "id": "console-commands",
           "quote": "If your having an issue where the game only opens the Legacy Console, remove the \"Halo - United Nations Space Command (UNSC)\" mod if you have it. It appears that the mod ships a whole copy of an old version of Console commands, which overwrites all updated code.",
+          "kind": "technical",
+          "fromOtherMod": true
+        },
+        {
+          "name": "Halo - UNSC Reborn",
+          "id": "halo-unsc-reborn",
+          "quote": "not save-compatible with the original UNSC mod, and not meant to be run alongside it - both define the same faction and the same ship IDs.",
           "kind": "technical",
           "fromOtherMod": true
         }
@@ -36990,6 +37028,22 @@
         {
           "name": "Starpocalypse",
           "id": "starpocalypse"
+        }
+      ],
+      "conflicts": [
+        {
+          "name": "Halo - UNSC Reborn",
+          "id": "halo-unsc-reborn",
+          "quote": "not save-compatible with the original UNSC mod, and not meant to be run alongside it - both define the same faction and the same ship IDs.",
+          "kind": "technical",
+          "fromOtherMod": true
+        },
+        {
+          "name": "Halo HomeSystems",
+          "id": "halo-homesystems",
+          "quote": "NOT COMPATIBLE WITH ORIGINAL OR EXPANDED UNSC MOD.",
+          "kind": "technical",
+          "fromOtherMod": true
         }
       ],
       "canAdd": "depends",
@@ -37178,7 +37232,8 @@
       ],
       "conflicts": [
         {
-          "name": "Expanded UNSC Mod",
+          "name": "Halo - United Nations Space Command: Core Continued (UNSC)",
+          "id": "halo-united-nations-space-command-continued-unsc-legacy",
           "quote": "NOT COMPATIBLE WITH ORIGINAL OR EXPANDED UNSC MOD.",
           "kind": "technical"
         },
@@ -38935,7 +38990,18 @@
       "editedOn": "2024-03-22",
       "needs": [
         {
-          "name": "ArmaA"
+          "name": "Arma Armatura",
+          "id": "arma-armatura"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "Arma Armatura"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib-2",
+          "via": "Arma Armatura"
         }
       ],
       "aiUse": {},
@@ -38970,7 +39036,18 @@
       "addedOn": "2026-01-11",
       "needs": [
         {
-          "name": "ArmaA"
+          "name": "Arma Armatura",
+          "id": "arma-armatura"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "Arma Armatura"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib-2",
+          "via": "Arma Armatura"
         }
       ],
       "aiUse": {},
@@ -56628,7 +56705,8 @@
           "name": "AoTD Vaults of Knowledge"
         },
         {
-          "name": "Terraforming & Station Construction"
+          "name": "Terraforming and Station Construction",
+          "id": "terraforming-and-station-construction"
         }
       ],
       "saveCompatible": true,
@@ -71096,7 +71174,8 @@
       "editedOn": "2026-02-25",
       "optionalNeeds": [
         {
-          "name": "ArmaA"
+          "name": "Arma Armatura",
+          "id": "arma-armatura"
         }
       ],
       "aiUse": {},
@@ -80241,7 +80320,8 @@
       "addedOn": "2026-03-05",
       "conflicts": [
         {
-          "name": "armaa",
+          "name": "Arma Armatura",
+          "id": "arma-armatura",
           "quote": "Do NOT run this mod alongside armaa, use one or the other. Besides there being no reason to do so as armaa contains everything in this mod to start with, the two will also crash the game if used alongside eachother.",
           "kind": "technical"
         }
