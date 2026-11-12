@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T23:07:16.151189Z",
+  "generatedAt": "2026-11-12T23:10:39.822328Z",
   "listing": {
     "id": "decolib",
     "name": "DecoLib",
@@ -13,15 +13,15 @@
     "sources": [
       "forum"
     ],
-    "gameVersion": "0.97a",
-    "modVersion": "0.3",
+    "gameVersion": "0.98.5a",
+    "modVersion": "0.4",
     "imageUrl": "http://www.silverinsanity.com/~wyvern/icon.png",
     "summary": "DecoLib is the library mod that contains the actual code for mirroring weapons, and is required for Mirror.",
     "summaryIsGenerated": false,
-    "aiSummary": "Provides the underlying code library required for weapon mirroring functionality.",
+    "aiSummary": "Provides the underlying code library required for mirroring weapon sprites.",
     "hasDirectDownload": true,
     "bestDownload": {
-      "url": "https://www.silverinsanity.com/~wyvern/DecoLib-0.3.zip",
+      "url": "https://www.silverinsanity.com/~wyvern/DecoLib-0.4.zip",
       "kind": "direct",
       "needsAnotherStep": false
     },
@@ -30,16 +30,14 @@
     "sourceIsPublic": false,
     "isWorkInProgress": false,
     "addedOn": "2022-11-02",
-    "threadLastPostOn": "2025-05-15",
-    "editedOn": "2025-12-27",
     "needs": [],
-    "partOfThreadTitle": "[0.97a-RC11] Mirror 1.4 & DecoLib 0.3"
+    "partOfThreadTitle": "[0.98.5a] Mirror 1.5 & DecoLib 0.4"
   },
   "description": "DecoLib is the library mod that contains the actual code for mirroring weapons, and is required for Mirror.",
   "descriptionHtml": "DecoLib is the library mod that contains the actual code for mirroring weapons, and is required for Mirror.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Contains the core logic and scripts needed to mirror weapons on ships. It is designed as a dependency for other mods that wish to implement similar features without forcing players to install specific content packs.",
+  "aiDescription": "Contains the core logic for reflecting weapons based on their installation position. It is designed as a standalone dependency to allow other modders to implement similar features without requiring the full Mirror mod.",
   "aiUse": {},
   "rawCategories": [
     "Utility mods"
@@ -55,25 +53,24 @@
   ],
   "downloads": [
     {
-      "url": "https://www.silverinsanity.com/~wyvern/DecoLib-0.3.zip",
-      "directUrl": "https://www.silverinsanity.com/~wyvern/DecoLib-0.3.zip",
-      "fileName": "DecoLib-0.3.zip",
+      "url": "https://www.silverinsanity.com/~wyvern/DecoLib-0.4.zip",
+      "directUrl": "https://www.silverinsanity.com/~wyvern/DecoLib-0.4.zip",
+      "fileName": "DecoLib-0.4.zip",
       "kind": "direct",
-      "label": "Download DecoLib v0.3",
+      "label": "Download DecoLib v0.4",
       "host": "www.silverinsanity.com",
       "needsAnotherStep": false
     }
   ],
   "changelog": {
+    "0.4": "Updated for Starsector 0.98.5a Fixed at least one sneaky little bug that nobody else noticed",
     "0.3": "Updated for Starsector 0.97a\n Changed mod to work via included jar file instead of uncompiled scripts\n The source code is still included; you can find it inside the jar",
-    "0.2": "Updated for Starsector 0.96a\n Implemented mirroring for animated weapons\n Added a 0.1 degree margin of error for deciding that a weapon counts as pointing forwards i.e. 'forwards' is considered to be turret angles from -90.1 to 90.1\n this is relevant for ORA hulls, whose turret layouts include subtle asymmetries to help address AI issues with broadside ships.\n\n Removed special handling intended for 0.95.1's buggy asymmetric missile turrets",
-    "0.1": "Initial release for Starsector 0.95.1a"
+    "0.2": "Updated for Starsector 0.96a\n Implemented mirroring for animated weapons\n Added a 0.1 degree margin of error for deciding that a weapon counts as pointing forwards i.e. 'forwards' is considered to be turret angles from -90.1 to 90.1\n this is relevant for ORA hulls, whose turret layouts include subtle asymmetries to help address AI issues with broadside ships.\n\n Removed special handling intended for 0.95.1's buggy asymmetric missile turrets"
   },
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=25579.0",
   "releases": [],
-  "threadLastPostOn": "2025-05-15",
   "sameNameMods": [],
   "addons": [],
-  "partOfThreadTitle": "[0.97a-RC11] Mirror 1.4 & DecoLib 0.3"
+  "partOfThreadTitle": "[0.98.5a] Mirror 1.5 & DecoLib 0.4"
 }
