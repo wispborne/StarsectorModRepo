@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T07:05:09.534395Z",
+  "generatedAt": "2026-11-12T17:05:06.807022Z",
   "mods": [
     {
       "modId": "a-vanilla-balance-tweak",
@@ -1119,7 +1119,7 @@
       "conflicts": [
         {
           "name": "Diable Avionics",
-          "id": "diable-avionics-3",
+          "id": "diable-avionics",
           "quote": "Diable Avionics: All ship systems that switch player control to fighters, under certain conditions, will CTD.",
           "kind": "technical"
         },
@@ -1220,7 +1220,7 @@
       ]
     },
     {
-      "modId": "star-lords",
+      "modId": "star-lords-2",
       "modName": "Star Lords",
       "conflicts": [
         {
@@ -1231,7 +1231,7 @@
       ]
     },
     {
-      "modId": "star-lords-2",
+      "modId": "star-lords",
       "modName": "Star Lords",
       "conflicts": [
         {
@@ -1429,7 +1429,7 @@
         {
           "name": "VRAM Optimizer",
           "id": "vram-optimizer",
-          "quote": "Fontes quebradas com o VRAM Optimizer (causa não confirmada): se as letras ficarem embaralhadas com esse mod ativo, o cache de texturas dele pode estar guardando a versão antiga das fontes.",
+          "quote": "Fontes quebradas com o VRAM Optimizer (causa não confirmada): o cache de texturas pode estar guardando a versão antiga das fontes. Para testar, desative o VRAM Optimizer, ou rode o DDSCreator.exe dele com Purge Metadata e depois ProcessMods.",
           "kind": "withNotes"
         }
       ]
@@ -1493,6 +1493,18 @@
           "id": "fleet-control-mod-incomplete-test-version-available-please-help",
           "quote": "Running this mod with any mods that attempt to significantly utilize Java code to do big gamecode stuff, such as with the Fleet Control Mod, is not recommended , due to the large under-the-hood changes that were made to make this mod functional.",
           "kind": "technical"
+        }
+      ]
+    },
+    {
+      "modId": "veteran-refits",
+      "modName": "Veteran Refits",
+      "conflicts": [
+        {
+          "name": "Progressive S-Mods",
+          "id": "progressive-s-mods",
+          "quote": "Don't use it together with Progressive S-Mods. Both raise the same S-mod limit stat.",
+          "kind": "gameplay"
         }
       ]
     },
