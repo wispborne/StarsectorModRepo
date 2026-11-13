@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "pluto-station-builder",
     "name": "Pluto Station Builder",
@@ -15,12 +15,16 @@
     "imageUrl": "https://i.ibb.co/fVqC1xtf/1.png",
     "summary": "A Starsector 0.98a-RC8 mod that lets you build the Pluto Mining Station from Ashes of the Domain in any lava-type colony and control it — switch between peaceful mining and combat lockdown from an industry dialog. No AoTD files touched. No reflection. No patches.",
     "summaryIsGenerated": false,
-    "aiSummary": "Lets you build and control a Pluto Mining Station from Ashes of the Domain in any lava-type colony.",
-    "saveCompatible": true,
+    "aiSummary": "Allows players to build and control the Pluto Mining Station from Ashes of the Domain in any lava-type colony.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://drive.google.com/uc?export=download&id=1bBLsGcq__4eoxmIa5-D47czwuQoRHnbm",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -30,27 +34,32 @@
     "addedOn": "2026-09-28",
     "threadLastPostOn": "2026-09-28",
     "editedOn": "2026-09-30",
-    "needs": [
-      {
-        "name": "Ashes of the Domain — Vaults of Knowledge"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib"
-      },
-      {
-        "name": "AshLib",
-        "id": "ashlib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "Ashes of the Domain — Vaults of Knowledge"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
+        },
+        {
+          "name": "Ashlib"
+        }
+      ]
+    }
   },
   "description": "Pluto Station Builder\nBring the Domain's industrial might back to life.\n\nEarly Beta — publishing for initial testing. Feedback welcome.\n\nWhat is this?\n\nA Starsector 0.98a-RC8 mod that lets you build the Pluto Mining Station from Ashes of the Domain in any lava-type colony and control it — switch between peaceful mining and combat lockdown from an industry dialog. No AoTD files touched. No reflection. No patches.\n\nFeatures\n\n• Build the station — a new Pluto Station Construction industry spawns the megastructure in orbit, restores all sections, and removes itself.\n• Combat Mode — the station rotates toward the nearest hostile fleet and cuts it apart with a red laser. Fleet CR drains; at zero the fleet dies.\n• Mining Mode — the station rotates back to the planet and resumes AoTD mining.\n• Line-of-sight — fleets behind planets are ignored, the station picks the next clean target.\n• Persistent state — mode is saved and restored after reload.\n• Zero conflicts — works on top of AoTD using only its official API.\n\nRequirements\n\nStarsector 0.98a-RC8, Ashes of the Domain — Vaults of Knowledge, LazyLib, Ashlib.\n\nInstall\n\nDrop PlutoStation into Starsector/mods/, enable in launcher, start a new game or load an existing save.\n\nDownload\n\nPluto Station Builder — Early Beta (Google Drive)\n\nKnown limitations (beta)\n\n• Only works with the Pluto station.\n• AoTD window-glow sprite is temporarily hidden in combat mode.\n• Planets block shots on purpose.\n• Edge cases are possible — please report.\n\nReporting bugs\n\nSend starsector.log with lines matching [PlutoStation/Combat], [PlutoStation/Beam], or [PlutoStation/Builder], plus a short description.\n\nCredits\n\nkaysaar — author of Ashes of the Domain, whose Pluto megastructure is the entire foundation of this mod. Thanks for permission to publish.\n\nLicense\n\nPublished with permission of AoTD author. Do not redistribute AoTD assets as part of this mod.",
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\"><b>Pluto Station Builder</b></span><br><i>Bring the Domain's industrial might back to life.</i><br><br><b>Early Beta</b> — publishing for initial testing. Feedback welcome.</div><br><hr><br><br><div class=\"align-center\"><img src=\"https://i.ibb.co/fVqC1xtf/1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><br><hr><br><br><b>What is this?</b><br><br>A Starsector 0.98a-RC8 mod that lets you build the Pluto Mining Station from <i>Ashes of the Domain</i> in any lava-type colony and control it — switch between peaceful mining and combat lockdown from an industry dialog. No AoTD files touched. No reflection. No patches.<br><br><b>Features</b><br><br>• Build the station — a new Pluto Station Construction industry spawns the megastructure in orbit, restores all sections, and removes itself.<br>• Combat Mode — the station rotates toward the nearest hostile fleet and cuts it apart with a red laser. Fleet CR drains; at zero the fleet dies.<br>• Mining Mode — the station rotates back to the planet and resumes AoTD mining.<br>• Line-of-sight — fleets behind planets are ignored, the station picks the next clean target.<br>• Persistent state — mode is saved and restored after reload.<br>• Zero conflicts — works on top of AoTD using only its official API.<br><br><b>Requirements</b><br><br>Starsector 0.98a-RC8, Ashes of the Domain — Vaults of Knowledge, LazyLib, Ashlib.<br><br><b>Install</b><br><br>Drop PlutoStation into Starsector/mods/, enable in launcher, start a new game or load an existing save.<br><br><b>Download</b><br><br><a href=\"https://drive.google.com/uc?export=download&amp;id=1bBLsGcq__4eoxmIa5-D47czwuQoRHnbm\" rel=\"nofollow noopener\" target=\"_blank\">Pluto Station Builder — Early Beta (Google Drive)</a><br><br><b>Known limitations (beta)</b><br><br>• Only works with the Pluto station.<br>• AoTD window-glow sprite is temporarily hidden in combat mode.<br>• Planets block shots on purpose.<br>• Edge cases are possible — please report.<br><br><b>Reporting bugs</b><br><br>Send starsector.log with lines matching [PlutoStation/Combat], [PlutoStation/Beam], or [PlutoStation/Builder], plus a short description.<br><br><b>Credits</b><br><br>kaysaar — author of Ashes of the Domain, whose Pluto megastructure is the entire foundation of this mod. Thanks for permission to publish.<br><br><b>License</b><br><br>Published with permission of AoTD author. Do not redistribute AoTD assets as part of this mod.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Adds an industry to construct a megastructure that can switch between peaceful mining and combat lockdown. In combat mode, it targets hostile fleets with a laser beam, draining their command rating until they are destroyed. The station's mode is persistent across game reloads.",
-  "saveCompatibilityText": "start a new game or load an existing save",
-  "canAdd": "yes",
+  "aiDescription": "Adds a new industry to construct the Pluto Mining Station in orbit around lava-type colonies. The station can switch between peaceful mining mode and a combat lockdown mode that targets hostile fleets with a laser beam.",
+  "saveCompat": {
+    "adding": {
+      "quote": "start a new game or load an existing save",
+      "answer": "yes"
+    }
+  },
   "aiUse": {},
   "rawCategories": [],
   "gallery": [
@@ -67,18 +76,31 @@
       "url": "https://drive.google.com/uc?export=download&id=1bBLsGcq__4eoxmIa5-D47czwuQoRHnbm",
       "directUrl": "https://drive.google.com/uc?export=download&id=1bBLsGcq__4eoxmIa5-D47czwuQoRHnbm",
       "fileName": "PlutoStation.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "Pluto Station Builder — Early Beta (Google Drive)",
       "host": "Google Drive",
       "needsAnotherStep": false
     }
   ],
   "changelog": {},
-  "license": "Published with permission of AoTD author. Do not redistribute AoTD assets as part of this mod.",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36080.0",
   "releases": [],
   "threadLastPostOn": "2026-09-28",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "Ashes of the Domain — Vaults of Knowledge"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      },
+      {
+        "name": "Ashlib"
+      }
+    ]
+  }
 }

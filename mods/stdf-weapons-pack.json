@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "stdf-weapons-pack",
     "name": "STDF Weapons Pack 0.1.0",
@@ -23,7 +23,7 @@
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Zone51alex/STDF-Weapons-Pack/releases/download/0.1.0/STDF.Weapons.Pack.Mod.0.1.0.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -32,28 +32,29 @@
     "isWorkInProgress": false,
     "addedOn": "2024-04-24",
     "editedOn": "2024-06-05",
-    "needs": [
-      {
-        "name": "ScalarTech Solutions",
-        "id": "scalartech-solutions"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib",
-        "via": "ScalarTech Solutions"
-      },
-      {
-        "name": "MagicLib",
-        "id": "magiclib",
-        "via": "ScalarTech Solutions"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "ScalarTech Solutions",
+          "id": "scalartech-solutions"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "ScalarTech Solutions"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib",
+          "via": "ScalarTech Solutions"
+        }
+      ]
+    }
   },
   "description": "Provides new weapons specifically tailored for the Scalartech Solutions faction. The pack is compatible with game version 0.96 and requires the base Scalartech Solutions mod to function.",
   "descriptionHtml": "<p>Provides new weapons specifically tailored for the Scalartech Solutions faction. The pack is compatible with game version 0.96 and requires the base Scalartech Solutions mod to function.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "discordPostHtml": "<p>STDF Weapons Pack 0.0.2</p>",
   "aiDescription": "Provides new weapons specifically tailored for the Scalartech Solutions faction. The pack is compatible with game version 0.96 and requires the base Scalartech Solutions mod to function.",
   "aiUse": {},
   "rawCategories": [
@@ -66,7 +67,7 @@
       "url": "https://github.com/Zone51alex/STDF-Weapons-Pack/releases/download/0.1.0/STDF.Weapons.Pack.Mod.0.1.0.zip",
       "directUrl": "https://github.com/Zone51alex/STDF-Weapons-Pack/releases/download/0.1.0/STDF.Weapons.Pack.Mod.0.1.0.zip",
       "fileName": "STDF.Weapons.Pack.Mod.0.1.0.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "https://github.com/Zone51alex/STDF-Weapons-Pack/releases/download/0.1.0/STDF.Weapons.Pack.Mod.0.1.0.zip",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -82,5 +83,23 @@
   "discordUrl": "https://discord.com/channels/187635036525166592/1232578724067807294/1232600663725445150",
   "releases": [],
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "ScalarTech Solutions",
+        "id": "scalartech-solutions"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "ScalarTech Solutions"
+      },
+      {
+        "name": "MagicLib",
+        "id": "magiclib",
+        "via": "ScalarTech Solutions"
+      }
+    ]
+  }
 }

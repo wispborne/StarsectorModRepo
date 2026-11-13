@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "seed-reporter",
     "name": "SEED Reporter",
@@ -23,15 +23,19 @@
     "gameVersion": "0.98.5a",
     "modVersion": "2.0.0",
     "imageUrl": "https://i.imgur.com/7xY5tPA.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1373830034523164772/1373830034795790418/found_planet_data.png?ex=6af7b4ec&is=6af6636c&hm=c025478780e743322b56eb4b7911f8651d6ac56e305a8043d7aa409d8070b826&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1373830034523164772/1373830034795790418/found_planet_data.png?ex=6af85dac&is=6af70c2c&hm=d017fa1cfad4684901744bda07767f4e147b37ec05c820d13ab26bdd9e768f5f&",
     "summary": "This utility mod adds the ability to display information about a sector seed upon loading a new game or when running the RunSEEDReport command on an existing save.",
     "summaryIsGenerated": false,
-    "aiSummary": "Displays detailed information about sector seeds and assists with automated seed hunting.",
-    "saveCompatible": true,
+    "aiSummary": "Displays detailed information about sector seeds and assists in finding specific features by bypassing time-skip steps and auto-saving notable seeds.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Tranquiliti/SEEDReporter/releases/latest/download/SEEDReporter.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -43,25 +47,34 @@
     "addedOn": "2025-05-18",
     "threadLastPostOn": "2026-11-11",
     "editedOn": "2026-11-11",
-    "needs": [
-      {
-        "name": "Console Commands",
-        "id": "console-commands"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "Console Commands",
+          "id": "console-commands"
+        }
+      ]
+    }
   },
   "description": "SEED Reporter\n\nRequires Console Commands!\n\nIncludes LunaLib support\nSafe to add to existing saves, and safe to remove from existing saves\n\nMod details\n\nThis utility mod adds the ability to display information about a sector seed upon loading a new game or when running the RunSEEDReport command on an existing save. The reported information includes the location of Coronal Hypershunts (and their defender variants), Domain-era Cryosleepers, exceptional officer pods, and even specific star systems or planets (via configurable search settings in this mod's seedreporterSettings.json).\n\nPlus, this mod supports seed-hunting efforts by adding a new game option that completely bypasses the time-skip step - resulting in faster new game creation - and by automatically saving seeds with remarkable features to a file in Starsector's saves/common folder. A basic AutoHotkey script is included in the mod download to constantly create new games in Starsector without player intervention; combined with the automatic seed-saving, this mod will help you find your perfect seed in no time!*\n\n*Targeted towards vanilla or vanilla-adjacent games; reliablity of seed information not guaranteed when running any mod that interferes with procedural generation!\n\nAdditional information (recommended to read!)\nUpon loading a new game, and using the original settings, the mod will provide information about the following points-of-interest (and more!):\nStar system containing the Sentinel planet\nNameless Rock\nDomain-era Cryosleepers\nDomain-era Motherships\nFully-operational Remnant battlestations\nInactive Gates\nLegion (XIV) wrecks\nStar systems that fulfill specific criteria (see this mod's seedreporterSettings.json to modify the existing star system filters)\nExceptional officer pods, including the officer's skill set\nCoronal Hypershunts, including the defender variants\n\nThe seed string (followed by the relevant shorthands) will be automatically saved to Starsector/saves/common/seedreporter_savedSeeds.json.data - categorized by game version and current system date - if any of the following conditions are fulfilled:\n{!TV} - all Coronal Hypershunts contain the same exact defender variants (note that there is no guarantee they will drop 4 of the same large weapon; physically defeating the defenders is still required to verify the drops!)\n{!EO} - at least one combination of exceptional officer templates has been found\n{[any character]} - a star system filter with a specified \"saveShorthand\" contains at least one result\n\nCaveats\nCompletely skipping the time-pass step during new game creation will result in a different Nameless Rock location than expected, as its location is normally determined after the time-pass step. If playing in modded games, the same is true for anything else that also generates after the time-pass step.\nThe new game option to skip the time-pass step will not appear if a mod, such as Nexerelin, overrides the new game creation process.\n\nLatest changelogs\nv2.0.0: https://github.com/Tranquiliti/SEEDReporter/releases/tag/v2.0.0\nv1.1.0: https://github.com/Tranquiliti/SEEDReporter/releases/tag/v1.1.0\nv1.0.0: https://github.com/Tranquiliti/SEEDReporter/releases/tag/v1.0.0\n\nCredits\nLazyWizard - For the Console Commands mod!\nbrobinett - For implementing the multi-planet system search feature\nStarsector Forums - For the helpful modding tutorials and information\nUnofficial Starsector Chat Discord - For the helpful modding information and tips\nAlex and the Fractal Softworks team - For the amazing game that is Starsector!",
   "descriptionHtml": "<div class=\"align-center\"><img src=\"https://i.imgur.com/7xY5tPA.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><span class=\"size-biggest\"><span class=\"author-colour\" style=\"--c:#800080\">SEED Reporter</span></span><br><br><span class=\"size-biggest\">Requires <b><a href=\"https://fractalsoftworks.com/forum/index.php?topic=4106.0\" rel=\"nofollow noopener\" target=\"_blank\">Console Commands</a></b>!</span><br><br><a href=\"https://github.com/Tranquiliti/SEEDReporter/releases/latest/download/SEEDReporter.zip\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/downloads/Tranquiliti/SEEDReporter/total?color=yellowgreen&amp;label=Download%20latest&amp;logo=github&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br>Includes <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a> support<br>Safe to add to existing saves, and safe to remove from existing saves<br><br><a href=\"https://github.com/Tranquiliti/SEEDReporter/releases\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/static/v1?label=View&amp;logo=github&amp;message=Releases%20and%20changelogs&amp;color=darkgray&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><a href=\"https://github.com/Tranquiliti/SEEDReporter\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/static/v1?label=View&amp;logo=github&amp;message=Github%20repository&amp;color=black&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><hr><br><span class=\"size-biggest\">Mod details</span><br><br><span class=\"size-bigger\">This utility mod adds the ability to<b> display information about a sector seed</b> upon loading a new game or when running the <i>RunSEEDReport</i> command on an existing save. The reported information includes <b>the location of Coronal Hypershunts</b> (and their defender variants), <b>Domain-era Cryosleepers</b>, <b>exceptional officer pods</b>, and even <b>specific star systems or planets</b> (via configurable search settings in this mod's <i>seedreporterSettings.json</i>).<br><br>Plus, this mod supports seed-hunting efforts by adding a <b>new game option that completely bypasses the time-skip step</b> - resulting in faster new game creation - and by <b>automatically saving seeds with remarkable features</b> to a file in Starsector's <i>saves/common</i> folder. A basic AutoHotkey script is included in the mod download to constantly create new games in Starsector without player intervention; combined with the automatic seed-saving, this mod will help you find your perfect seed in no time!<sup>*</sup></span><br><br><sup>*</sup>Targeted towards vanilla or vanilla-adjacent games; reliablity of seed information <b>not guaranteed</b> when running any mod that interferes with procedural generation!<br><br><hr></div><br><details class=\"spoiler\"><summary>Additional information (recommended to read!)</summary>Upon loading a new game, and using the original settings, the mod will provide information about the following points-of-interest (and more!):<br><ul><li>Star system containing the Sentinel planet</li><li>Nameless Rock</li><li>Domain-era Cryosleepers</li><li>Domain-era Motherships</li><li>Fully-operational Remnant battlestations</li><li>Inactive Gates</li><li>Legion (XIV) wrecks</li><li>Star systems that fulfill specific criteria (see this mod's <i>seedreporterSettings.json</i> to modify the existing star system filters)</li><li>Exceptional officer pods, including the officer's skill set</li><li>Coronal Hypershunts, including the defender variants</li></ul><br>The seed string (followed by the relevant shorthands) will be automatically saved to <i>Starsector/saves/common/seedreporter_savedSeeds.json.data</i> - categorized by game version and current system date - if any of the following conditions are fulfilled:<br><ul><li><i>{!TV}</i> - all Coronal Hypershunts contain the same exact defender variants (note that there is <i>no guarantee</i> they will drop 4 of the same large weapon; physically defeating the defenders is still required to verify the drops!)</li><li><i>{!EO}</i> - at least one combination of exceptional officer templates has been found</li><li><i>{[any character]}</i> - a star system filter with a specified \"saveShorthand\" contains at least one result</li></ul></details><br><details class=\"spoiler\"><summary>Caveats</summary><ul><li>Completely skipping the time-pass step during new game creation will result in a different Nameless Rock location than expected, as its location is normally determined after the time-pass step. If playing in modded games, the same is true <b>for anything else that also generates after the time-pass step</b>.</li><li>The new game option to skip the time-pass step <b>will not appear if a mod, such as Nexerelin, overrides the new game creation process</b>.</li></ul></details><br><details class=\"spoiler\"><summary>Latest changelogs</summary><b>v2.0.0</b>: <a href=\"https://github.com/Tranquiliti/SEEDReporter/releases/tag/v2.0.0\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/SEEDReporter/releases/tag/v2.0.0</a><br><b>v1.1.0</b>: <a href=\"https://github.com/Tranquiliti/SEEDReporter/releases/tag/v1.1.0\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/SEEDReporter/releases/tag/v1.1.0</a><br><b>v1.0.0</b>: <a href=\"https://github.com/Tranquiliti/SEEDReporter/releases/tag/v1.0.0\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/SEEDReporter/releases/tag/v1.0.0</a></details><br><div class=\"align-center\"><hr><br><span class=\"size-biggest\"><b>Credits</b></span><br><b>LazyWizard</b> - For the Console Commands mod!<br><b>brobinett</b> - For implementing the multi-planet system search feature<br><b>Starsector Forums</b> - For the helpful modding tutorials and information<br><b>Unofficial Starsector Chat Discord</b> - For the helpful modding information and tips<br><b>Alex and the Fractal Softworks team</b> - For the amazing game that is Starsector!<br><br><a href=\"https://github.com/Tranquiliti/SEEDReporter/blob/main/LICENSE\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/license/Tranquiliti/AFleetTestingMod?style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></div>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p>Displays information about a sector seed - which includes points-of-interest locations like Domain-era Cryosleepers, Coronal Hypershunts (and their defender variants), and more - upon loading a new game or running the <em>RunSEEDReport</em> command.</p><p>Also includes additional tools to assist in seed-hunting endeavors.</p><p>**Download (Console Commands mod required: <a href=\"https://discord.com/channels/187635036525166592/1419747750987173908)**\" rel=\"nofollow noopener\" target=\"_blank\">https://discord.com/channels/187635036525166592/1419747750987173908)**</a>: <a href=\"https://github.com/Tranquiliti/SEEDReporter/releases/latest/download/SEEDReporter.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/SEEDReporter/releases/latest/download/SEEDReporter.zip</a></p><p><strong>Releases and changelogs</strong>: <a href=\"https://github.com/Tranquiliti/SEEDReporter/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/SEEDReporter/releases</a></p><p><strong>Forum thread</strong>: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=33116.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=33116.0</a></p>",
-  "aiDescription": "Shows locations of specific points of interest like Coronal Hypershunts and Cryosleepers when loading a game or running a command. It speeds up new game creation by bypassing the time-skip step and automatically saves seeds containing remarkable features to a file. An included AutoHotkey script allows for automated seed generation without player intervention.",
-  "saveCompatibilityText": "Safe to add to existing saves",
-  "updateCompatibilityText": "save-compatible with previous versions.",
-  "removalCompatibilityText": "safe to remove from existing saves",
-  "canAdd": "yes",
-  "canUpdate": "yes",
-  "canRemove": "yes",
+  "aiDescription": "Adds functionality to report on sector seed details such as Coronal Hypershunts, Cryosleepers, and exceptional officer pods. It speeds up new game creation by skipping the time-skip step and automatically saves seeds with remarkable features to a file for easier hunting.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Safe to add to existing saves",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "safe to remove from existing saves",
+      "answer": "yes"
+    },
+    "latestUpdateNote": {
+      "quote": "save-compatible with previous versions.",
+      "answer": "yes"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Other/Misc.",
@@ -69,7 +82,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1373830034523164772/1373830034795790418/found_planet_data.png?ex=6af7b4ec&is=6af6636c&hm=c025478780e743322b56eb4b7911f8651d6ac56e305a8043d7aa409d8070b826&",
+      "url": "https://cdn.discordapp.com/attachments/1373830034523164772/1373830034795790418/found_planet_data.png?ex=6af85dac&is=6af70c2c&hm=d017fa1cfad4684901744bda07767f4e147b37ec05c820d13ab26bdd9e768f5f&",
       "aiCaption": "A circular icon featuring a blue globe with a grid pattern and a magnifying glass.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -108,7 +121,7 @@
       "url": "https://github.com/Tranquiliti/SEEDReporter/releases/latest/download/SEEDReporter.zip",
       "directUrl": "https://github.com/Tranquiliti/SEEDReporter/releases/latest/download/SEEDReporter.zip",
       "fileName": "SEEDReporter.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -128,17 +141,27 @@
       "oldVersion": "v1.1.0",
       "newVersion": "2.0.0",
       "gameVersion": "0.98.5a",
-      "updateCompatibilityText": "save-compatible with previous versions.",
-      "canUpdate": "yes"
+      "updateNote": {
+        "quote": "save-compatible with previous versions.",
+        "answer": "yes"
+      }
     }
   ],
   "threadLastPostOn": "2026-11-11",
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "LunaLib",
-      "id": "lunalib"
-    }
-  ]
+  "requirements": {
+    "required": [
+      {
+        "name": "Console Commands",
+        "id": "console-commands"
+      }
+    ],
+    "optional": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ]
+  }
 }

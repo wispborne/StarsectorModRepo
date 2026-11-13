@@ -9,7 +9,8 @@ import {
   aiOnModPages, aiSparkle, aiSummaryNote, aiSummaryOf, akaText, imageCaption, imageHoverText,
   clear, conflictPill,
   currentGameVersion, DATA_BASE, DOWNLOAD_ICON, downloadButton, downloadButtonChoice, el, errorPanel, expandAllButton, formatDay,
-  favoriteToggle, formatMoment, imageUrlOf, inlinePictures, isMissingFile, joinNames, quickTip,
+  favoriteToggle, formatMoment, imageUrlOf, inlinePictures, isMissingFile, isTool, joinNames, quickTip,
+  optionalModsOf, requiredModsOf,
   setAiOnModPages, setInlinePictures, summaryToShow,
   modDetail, modHref, modList, modName, MOD_VERSION_NOTE,
   NO_DESCRIPTION, openBox, pageIcon, picture, problemReportLink, reduceMotion, reportedPage,
@@ -118,14 +119,13 @@ export async function render(root, parts) {
     galleryCount.hidden = !count;
   });
 
-  // Each post sits in a holder that is never swapped out, so a post that
+  // The post sits in a holder that is never swapped out, so a post that
   // redraws itself (pictures on or off) is still the one its tab and its jump
   // link point at.
   const forumPost = holderFor(description(detail), 'post');
-  const discordPostPart = holderFor(discordPost(detail), 'discord-post');
 
   const sections = tabs(id, [
-    { label: 'Description', parts: [aiSummary(detail, mod), forumPost, discordPostPart] },
+    { label: 'Description', parts: [aiSummary(detail, mod), forumPost] },
     { label: 'Gallery', countNode: galleryCount, parts: [galleryPanel] },
     // The author's changelog and the releases this site noticed are one
     // question — what changed, and when — so they share a tab.
@@ -138,7 +138,6 @@ export async function render(root, parts) {
   const jumps = jumpLinks(sections, [
     { node: header, text: 'Header' },
     forumPost && { node: forumPost, text: forumHeading ? 'Forum post' : 'About this mod' },
-    discordPostPart && { node: discordPostPart, text: 'Discord post' },
   ]);
 
   // The header above the mod on the left; the side column at the right starts
@@ -354,7 +353,7 @@ function modHeader(mod, detail, shownName, everyMod, currentVersion) {
     }));
   }
   if (mod.isWorkInProgress) chips.append(el('span', { class: 'badge wip', text: 'Work in progress' }));
-  if (mod.isTool) {
+  if (isTool(mod)) {
     chips.append(el('span', {
       class: 'badge tool', text: 'Tool',
       title: 'A separate program, such as a launcher or mod editor.',
@@ -479,10 +478,10 @@ function threadDialog(mod, where, url, mods, currentVersion) {
 function bestOf(download) {
   return {
     url: download.directUrl || download.url,
-    kind: download.kind,
+    kind: download.type,
     // A TriOS link is never counted as needing another step: opening it is the
     // point of it. The same rule the builder sorts by.
-    needsAnotherStep: download.kind !== 'trios' && Boolean(download.needsAnotherStep),
+    needsAnotherStep: download.type !== 'trios' && Boolean(download.needsAnotherStep),
   };
 }
 
@@ -697,7 +696,7 @@ function creativeCommonsName(t) {
 }
 
 function plainDownloadButton(download, checked) {
-  const isTrios = download.kind === 'trios';
+  const isTrios = download.type === 'trios';
   const extension = /\.(zip|7z|rar|jar|tar\.gz|exe)$/i.exec(download.fileName || '');
   const label = isTrios ? 'TriOS'
     : download.needsAnotherStep ? 'Download page'
@@ -745,7 +744,7 @@ function supportLinks(detail) {
 /// both [howToGetIt] and [downloads], so the two can never disagree.
 function topDownloads(list) {
   const first = list[0];
-  const plain = first?.kind === 'trios' ? list.find((d) => d.kind !== 'trios') : null;
+  const plain = first?.type === 'trios' ? list.find((d) => d.type !== 'trios') : null;
   return { first, plain };
 }
 
@@ -770,10 +769,10 @@ function downloadRow(download) {
   // The file's name where we know it, then the link's own words from the post
   // (or the name the AI gave it). The words after that are ours, and
   // "Download" is only used where the link gets you the file.
-  const label = download.kind === 'trios' ? 'Install with TriOS'
+  const label = download.type === 'trios' ? 'Install with TriOS'
     : download.fileName || download.label
       || (download.needsAnotherStep ? 'Download page'
-        : download.kind === 'mirror' ? 'Mirror' : 'Download');
+        : download.type === 'mirror' ? 'Mirror' : 'Download');
   const where = download.url ? `${download.url}` : "...something";
   return el('div', { class: 'download' }, [
     el('a', {
@@ -784,7 +783,7 @@ function downloadRow(download) {
       text: label,
       title: download.needsAnotherStep
         ? `Opens ${where}`
-        : (download.kind === 'mirror' ? 'A mirror of the main download.' : null),
+        : (download.type === 'mirror' ? 'A mirror of the main download.' : null),
     }),
     download.host ? el('span', { class: 'badge', text: download.host }) : null,
   ]);
@@ -798,9 +797,6 @@ function description(detail, { collapsed = false } = {}) {
   const own = Boolean(formatted || text);
 
   if (!own) {
-    // The Discord post below is the author's own words, so "no description"
-    // would not be true.
-    if (detail.discordPostHtml) return null;
     return el('section', { class: 'panel' }, [
       el('h2', { text: 'About this mod' }),
       el('p', { class: 'no-description', text: NO_DESCRIPTION }),
@@ -827,19 +823,6 @@ function description(detail, { collapsed = false } = {}) {
     ],
   });
   return section;
-}
-
-/// The mod's Discord post. Its markdown was turned into tags when the site was
-/// built, and the same sanitizer as a forum post has been over it.
-function discordPost(detail) {
-  if (!detail.discordPostHtml) return null;
-  return foldingPost({
-    heading: 'Discord post',
-    icon: pageIcon('discordUrl'),
-    body: postBody(detail.discordPostHtml, (image) => withSource(image, 'discord', detail)),
-    state: { collapsed: false },
-    switches: [],
-  });
 }
 
 /// A post under its heading, with a "Collapse" link that folds a long one to a
@@ -1335,8 +1318,8 @@ function addonBox(list, heading) {
   for (const addon of list) {
     box.append(el('div', {}, [
       el('h3', { text: addon.name }),
-      addon.requires
-        ? el('div', { class: 'card-authors', text: `Requires ${addon.requires}` })
+      addon.parentMod
+        ? el('div', { class: 'card-authors', text: `Requires ${addon.parentMod}` })
         : null,
       el('div', { class: 'download-list' }, (addon.downloads || []).map(downloadRow)),
     ]));
@@ -1360,9 +1343,10 @@ const SAVE_ANSWERS = {
 // when the author supplied text.
 function saves(detail) {
   const questions = [
-    ['Add mid-game?', detail.saveCompatibilityText, detail.canAdd, true, 'add'],
-    ['Update mid-game?', detail.updateCompatibilityText, detail.canUpdate, false, 'update'],
-    ['Remove from game?', detail.removalCompatibilityText, detail.canRemove, true, 'remove'],
+    ['Add mid-game?', detail.saveCompat?.adding?.quote, detail.saveCompat?.adding?.answer, true, 'add'],
+    ['Update mid-game?', detail.saveCompat?.latestUpdateNote?.quote,
+      detail.saveCompat?.latestUpdateNote?.answer, false, 'update'],
+    ['Remove from game?', detail.saveCompat?.removing?.quote, detail.saveCompat?.removing?.answer, true, 'remove'],
   ];
   if (!questions.some(([, words]) => words)) return null;
 
@@ -1543,11 +1527,11 @@ function conflictLines(conflicts) {
 
 function compatibility(detail, currentVersion) {
   const listing = detail.listing || {};
-  const needs = (listing.needs || []).length
-    ? sideFact('Requires', neededChips(listing.needs), { icon: 'requires' })
+  const needs = requiredModsOf(listing).length
+    ? sideFact('Requires', neededChips(requiredModsOf(listing)), { icon: 'requires' })
     : null;
-  const optional = (detail.optionalNeeds || []).length
-    ? sideFact('Optional', neededChips(detail.optionalNeeds, 'optional'), { icon: 'optional' })
+  const optional = optionalModsOf(detail).length
+    ? sideFact('Optional', neededChips(optionalModsOf(detail), 'optional'), { icon: 'optional' })
     : null;
   const conflicts = (detail.conflicts || []).length
     ? sideFact('Conflicts', conflictLines(detail.conflicts), { icon: 'conflicts' })
@@ -1719,7 +1703,7 @@ function withoutOuterQuotes(quote) {
 function aiUseLabel(use) {
   const area = use.area[0].toUpperCase() + use.area.slice(1);
   const amount = aiUseAmount(use).join(' ');
-  const notes = [amount, use.optional ? 'optional' : null].filter(Boolean);
+  const notes = [amount, use.isOptional ? 'optional' : null].filter(Boolean);
   return notes.length ? `${area} (${notes.join(', ')})` : area;
 }
 
@@ -1742,7 +1726,7 @@ function aiUseSentence(use) {
   const area = use.area[0].toUpperCase() + use.area.slice(1);
   const parts = aiUseAmount(use);
   const text = parts.length ? `${area}: ${parts.join(' ')}.` : `${area}.`;
-  return use.optional ? `${text} Optional.` : text;
+  return use.isOptional ? `${text} Optional.` : text;
 }
 
 // Same-name entries may be older threads, forks, or unrelated mods.

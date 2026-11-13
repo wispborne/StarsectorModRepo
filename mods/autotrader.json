@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "autotrader",
     "name": "AutoTrader",
@@ -17,14 +17,19 @@
     "gameVersion": "0.98a",
     "modVersion": "0.0.1",
     "imageUrl": "https://i.imgur.com/recXtfd.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1504747884938268702/1504747885307236383/recXtfd.png?ex=6af7656c&is=6af613ec&hm=59d289d6d7d4137c34ef213b0b11b278bc59244f847d8e454f5299c9e714be93&",
-    "summary": "Sell your extra weapons and buy hullmods you don't know whenever you dock",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1504747884938268702/1504747885307236383/recXtfd.png?ex=6af80e2c&is=6af6bcac&hm=1a4eb9c422c15b20efed23e86b56440fc4e9d7cb8dc6c86c1e96975ab3c3a94f&",
+    "summary": "AutoTrader runs your standing buy/sell rules the moment you open a planet's interaction dialog. Set a sell threshold for that Light Machine Gun you keep accumulating, a buy threshold for Heavy Needlers, tell it to grab any modspec you haven't learned.",
     "summaryIsGenerated": false,
-    "aiSummary": "Automatically sells surplus weapons and buys hullmods based on user-defined price thresholds when docking.",
+    "aiSummary": "Automatically executes configured buy and sell rules for weapons, fighter wings, and hullmods when a planet's interaction dialog opens.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/spinloki/AutoTrader/releases/download/v0.0.1/AutoTrader.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -41,19 +46,23 @@
     ],
     "addedOn": "2026-05-15",
     "threadLastPostOn": "2026-11-03",
-    "editedOn": "2026-05-17",
-    "needs": []
+    "editedOn": "2026-05-17"
   },
   "description": "[0.98a] AutoTrader v0.0.1\n\nSell your extra weapons and buy hullmods you don't know whenever you dock\n\nAutoTrader runs your standing buy/sell rules the moment you open a planet's interaction dialog. Set a sell threshold for that Light Machine Gun you keep accumulating, a buy threshold for Heavy Needlers, tell it to grab any modspec you haven't learned.\n\nAccess the configuration menu through the AutoTrader intel, which is found in the Trade tab in the intel screen.\n\nFeatures\n\nPer-item thresholds. For every weapon and fighter wing in the game, set \"sell above N\" and \"buy below N\". Leave either blank to skip that direction.\nRuns on first approach. Transactions happen the moment the planet dialog opens, so when you click into the market screen, your inventory already reflects what AutoTrader did. A per-stack log line is posted for every sale and purchase.\nHullmod hunting. Optionally buy unknown modspecs (open market, black market, or both) and auto-learn them on the spot.\nDecent QoL. A custom configuration screen accessible from the intel tab: filter by text search, size/type, or only the items that you hold. Multi-select with an option to apply a template to your full selection at once, and a \"Set Reasonable Defaults\" button for quick first-time setup.\n\nNo dependencies. Should be safe to add mid-save. Not safe to remove, but can be completely disabled from the config menu.\n\nDownload: GitHub\n\nAI Usage Disclosure: Most of this mod's code was generated using Claude Opus 4.7",
   "descriptionHtml": "<span class=\"size-biggest\"><b>[0.98a] AutoTrader v0.0.1</b></span><br><br><b>Sell your extra weapons and buy hullmods you don't know whenever you dock</b><br><br>AutoTrader runs your standing buy/sell rules the moment you open a planet's interaction dialog. Set a sell threshold for that Light Machine Gun you keep accumulating, a buy threshold for Heavy Needlers, tell it to grab any modspec you haven't learned.<br><br><b>Access the configuration menu through the AutoTrader intel, which is found in the Trade tab in the intel screen.</b><br><br><img src=\"https://i.imgur.com/recXtfd.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><b>Features</b><br><ul><br><li><b>Per-item thresholds.</b> For every weapon and fighter wing in the game, set \"sell above N\" and \"buy below N\". Leave either blank to skip that direction.</li><li><b>Runs on first approach.</b> Transactions happen the moment the planet dialog opens, so when you click into the market screen, your inventory already reflects what AutoTrader did. A per-stack log line is posted for every sale and purchase.</li><li><b>Hullmod hunting.</b> Optionally buy unknown modspecs (open market, black market, or both) and auto-learn them on the spot.</li><li><b>Decent QoL.</b> A custom configuration screen accessible from the intel tab: filter by text search, size/type, or only the items that you hold. Multi-select with an option to apply a template to your full selection at once, and a \"Set Reasonable Defaults\" button for quick first-time setup.</li></ul><br>No dependencies. Should be safe to add mid-save. Not safe to remove, but can be completely disabled from the config menu.<br><br>Download: <a href=\"https://github.com/spinloki/AutoTrader/releases/download/v0.0.1/AutoTrader.zip\" rel=\"nofollow noopener\" target=\"_blank\">GitHub</a><br><br><i>AI Usage Disclosure: Most of this mod's code was generated using Claude Opus 4.7</i>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p>Sell your extra weapons and buy hullmods you don't know whenever you dock</p><p>Download: <a href=\"https://github.com/spinloki/AutoTrader/releases/download/v0.0.1/AutoTrader.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/spinloki/AutoTrader/releases/download/v0.0.1/AutoTrader.zip</a><br>Forum Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35407.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35407.0</a></p>",
-  "aiDescription": "Executes standing buy and sell rules immediately upon opening a planet's interaction dialog. Allows setting per-item price thresholds for weapons and fighters, with options to automatically purchase and learn unknown hullmod specifications. Includes a configuration interface accessible via the intel screen for managing these settings.",
-  "saveCompatibilityText": "Should be safe to add mid-save.",
-  "removalCompatibilityText": "Not safe to remove, but can be completely disabled from the config menu.",
-  "canAdd": "depends",
-  "canRemove": "no",
+  "aiDescription": "Automatically executes configured buy and sell rules for weapons, fighter wings, and hullmods when a planet's interaction dialog opens. Supports per-item price thresholds and automatic learning of unknown hullmods. Includes a configuration menu accessible from the intel tab with filtering and template options.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Should be safe to add mid-save.",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "Not safe to remove, but can be completely disabled from the config menu.",
+      "answer": "no"
+    }
+  },
   "aiUse": {
     "quote": "Most of this mod's code was generated using Claude Opus 4.7",
     "usesAi": true,
@@ -73,7 +82,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1504747884938268702/1504747885307236383/recXtfd.png?ex=6af7656c&is=6af613ec&hm=59d289d6d7d4137c34ef213b0b11b278bc59244f847d8e454f5299c9e714be93&",
+      "url": "https://cdn.discordapp.com/attachments/1504747884938268702/1504747885307236383/recXtfd.png?ex=6af80e2c&is=6af6bcac&hm=1a4eb9c422c15b20efed23e86b56440fc4e9d7cb8dc6c86c1e96975ab3c3a94f&",
       "aiCaption": "A menu screen listing weapon items with 'Sell above' and 'Buy below' price columns.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -92,7 +101,7 @@
       "url": "https://github.com/spinloki/AutoTrader/releases/download/v0.0.1/AutoTrader.zip",
       "directUrl": "https://github.com/spinloki/AutoTrader/releases/download/v0.0.1/AutoTrader.zip",
       "fileName": "AutoTrader.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "GitHub",
       "host": "GitHub",
       "needsAnotherStep": false

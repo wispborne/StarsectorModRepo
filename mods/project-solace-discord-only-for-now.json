@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "project-solace-discord-only-for-now",
     "name": "Project Solace (Discord only for now)",
@@ -25,7 +25,7 @@
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/CosmicFishi/Project-Solace/releases/download/v0.4.2a/Project-Solace-v0.4.2a.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -34,25 +34,30 @@
     "isWorkInProgress": false,
     "addedOn": "2024-02-05",
     "editedOn": "2024-12-22",
-    "needs": [
-      {
-        "name": "MagicLib",
-        "id": "magiclib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "MagicLib",
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
+        }
+      ]
+    }
   },
   "description": "Introduces two new factions: Solace, which focuses on firepower and suppression, and Enmity, which specializes in beams and fighters. Includes exploration elements such as ships and encounters, along with superweapons that can be traded for at high reputation levels.",
   "descriptionHtml": "<p>Introduces two new factions: Solace, which focuses on firepower and suppression, and Enmity, which specializes in beams and fighters. Includes exploration elements such as ships and encounters, along with superweapons that can be traded for at high reputation levels.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "discordPostHtml": "<p>Contents:</p><ul><li>Solace faction with some niches focused on firepower and suppression.</li><li>Enmity faction focus on beams and fighters.</li><li>Exploration contents: ships, encounters...</li><li>Supaweapons</li><li>Nex integrated (Highly recommend since some feature do require Nex).</li></ul><p>Requires MagicLib and LazyLib</p><p>Q&amp;A:</p><ul><li>How do i get Supaweapons? <ul><li>Contact the person in change at the main Solace faction planet, you gotta be in good relation to the faction for the trade option to be unlocked</li></ul></li><li>Am i actually a bird ?<ul><li>yes no</li></ul></li></ul><pre><code>Ping me for bugs/feedbacks/complains</code></pre><p>Github: <a href=\"https://github.com/CosmicFishi/Project-Solace\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/CosmicFishi/Project-Solace</a><br>Direct Download: <a href=\"https://github.com/CosmicFishi/Project-Solace/releases/download/v0.4.2a/Project-Solace-v0.4.2a.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/CosmicFishi/Project-Solace/releases/download/v0.4.2a/Project-Solace-v0.4.2a.zip</a></p>",
   "aiDescription": "Introduces two new factions: Solace, which focuses on firepower and suppression, and Enmity, which specializes in beams and fighters. Includes exploration elements such as ships and encounters, along with superweapons that can be traded for at high reputation levels.",
-  "updateCompatibilityText": "Confirmed: Not save compatible with earlier version sorry lads",
-  "canUpdate": "no",
+  "saveCompat": {
+    "latestUpdateNote": {
+      "quote": "Confirmed: Not save compatible with earlier version sorry lads",
+      "answer": "no"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Exploration",
@@ -100,7 +105,7 @@
       "url": "https://github.com/CosmicFishi/Project-Solace/releases/download/v0.4.2a/Project-Solace-v0.4.2a.zip",
       "directUrl": "https://github.com/CosmicFishi/Project-Solace/releases/download/v0.4.2a/Project-Solace-v0.4.2a.zip",
       "fileName": "Project-Solace-v0.4.2a.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "https://github.com/CosmicFishi/Project-Solace/releases/download/v0.4.2a/Project-Solace-v0.4.2a.zip",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -115,5 +120,17 @@
   "discordUrl": "https://discord.com/channels/187635036525166592/1203892896844095569/1203892896844095569",
   "releases": [],
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "MagicLib",
+        "id": "magiclib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      }
+    ]
+  }
 }

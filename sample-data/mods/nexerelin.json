@@ -23,16 +23,20 @@
     "summary": "Adds diplomacy, invasions and a full 4X layer on top of the campaign.",
     "summaryIsGenerated": false,
     "aiSummary": "A campaign overhaul: alliances, invasions, diplomacy and a start of your own choosing.",
-    "saveCompatible": false,
+    "saveCompat": {
+      "adding": {
+        "answer": "no"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FHistidine91%2FNexerelin%2Fmaster%2Fnexerelin.version%22%2C%22id%22%3A%22nexerelin%22%2C%22version%22%3A%220.12.2%22%7D",
-      "kind": "trios",
+      "type": "trios",
       "needsAnotherStep": false
     },
     "plainDownload": {
       "url": "https://github.com/Histidine91/Nexerelin/releases/download/v0.12.2/Nexerelin_0.12.2.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 3,
@@ -49,22 +53,29 @@
     },
     "threadLastPostOn": "2026-08-14",
     "addedOn": "2024-03-11",
-    "needs": [
-      {
-        "name": "LazyLib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LazyLib"
+        }
+      ]
+    }
   },
   "description": "Nexerelin is a campaign overhaul. Factions fight each other over markets, you can start as one of them or on your own, and you can invade, defend, trade and make alliances. It works with most other faction mods.",
   "descriptionHtml": "<p><b>Nexerelin</b> is a campaign overhaul. Factions fight each other over markets, you can start as one of them or on your own, and you can invade, defend, trade and make alliances.</p><img src=\"https://fractalsoftworks.com/forum/index.php?action=dlattach;topic=9175.0;attach=61234;image\" alt=\"The diplomacy screen\" width=\"900\" height=\"506\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><p>It works with most other faction mods. The code is at <a href=\"https://github.com/Histidine91/Nexerelin\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Histidine91/Nexerelin</a>.</p><ul><li>Diplomacy between every faction</li><li>Invasions you can join or stop</li><li>Your own colonies, run as a faction</li></ul><p><a href=\"https://github.com/Histidine91/Nexerelin/releases\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/badge/download-v0.12.2-blue\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></p><div class=\"align-center\"><span class=\"size-bigger\"><span class=\"author-colour\" style=\"--c:#ff7700\">Features</span></span></div><details class=\"spoiler\"><summary>Changelog</summary><span class=\"author-colour\" style=\"--c:#000000\">v0.12.2</span><br>* Invasion fleets no longer stall outside a blockaded market</details><blockquote><cite>Quote from: Histidine on August 14, 2026</cite>Strategic AI now plans invasions a month ahead.</blockquote><div class=\"table-scroll\"><table><tbody><tr><td><div class=\"align-center\"><strong>Diplomacy</strong></div></td><td><div class=\"align-center\"><strong>Invasions</strong></div></td><td><div class=\"align-center\"><strong>Colonies</strong></div></td></tr></tbody></table></div><a class=\"video-link\" href=\"https://www.youtube.com/watch?v=9fRQzyMvl7k\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.ytimg.com/vi/9fRQzyMvl7k/hqdefault.jpg\" alt=\"Video on YouTube\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<h4>Nexerelin</h4><p>4X in Starsector. <strong>Requires</strong> LazyLib and MagicLib.</p><ul><li>Invade and take over markets</li><li>Diplomacy between factions</li></ul>",
   "aiDescription": "A campaign overhaul for Starsector: it adds diplomacy between factions, invasions and territory that changes hands, and a choice of starts including one as a faction of your own.",
-  "saveCompatibilityText": "Requires a new game.",
-  "canAdd": "no",
-  "canRemove": "no",
-  "removalCompatibilityText": "Cannot be removed from a save.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Requires a new game.",
+      "answer": "no"
+    },
+    "removing": {
+      "quote": "Cannot be removed from a save.",
+      "answer": "no"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Megamods",
@@ -89,7 +100,7 @@
   "downloads": [
     {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FHistidine91%2FNexerelin%2Fmaster%2Fnexerelin.version%22%2C%22id%22%3A%22nexerelin%22%2C%22version%22%3A%220.12.2%22%7D",
-      "kind": "trios",
+      "type": "trios",
       "label": "Install with TriOS",
       "host": "trilink.wispborne.com",
       "needsAnotherStep": true
@@ -98,7 +109,7 @@
       "url": "https://github.com/Histidine91/Nexerelin/releases/download/v0.12.2/Nexerelin_0.12.2.zip",
       "directUrl": "https://github.com/Histidine91/Nexerelin/releases/download/v0.12.2/Nexerelin_0.12.2.zip",
       "fileName": "Nexerelin_0.12.2.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "Download v0.12.2",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -106,7 +117,7 @@
     {
       "url": "https://www.mediafire.com/file/abc123/Nexerelin_0.12.2.zip/file",
       "fileName": "Nexerelin_0.12.2.zip",
-      "kind": "mirror",
+      "type": "mirror",
       "label": "MediaFire mirror",
       "host": "MediaFire",
       "needsAnotherStep": true
@@ -141,7 +152,19 @@
   "threadLastPostOn": "2026-08-14",
   "sameNameMods": [],
   "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "LazyLib"
+      }
+    ]
+  },
   "conflicts": [
-    { "name": "Industrial.Evolution", "id": "industrial-evolution", "quote": "Random sector mode crashes on start with Industrial.Evolution installed.", "kind": "technical" }
+    {
+      "name": "Industrial.Evolution",
+      "id": "industrial-evolution",
+      "quote": "Random sector mode crashes on start with Industrial.Evolution installed.",
+      "type": "technical"
+    }
   ]
 }

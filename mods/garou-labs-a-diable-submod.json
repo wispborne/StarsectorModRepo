@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "garou-labs-a-diable-submod",
     "name": "Garou Labs: A Diable Submod",
@@ -16,7 +16,7 @@
     "gameVersion": "0.98a",
     "modVersion": "0.71",
     "imageUrl": "https://cdn.discordapp.com/attachments/1518509487508422706/1526845879003119718/garou_whiteout.png?ex=6af56408&is=6af41288&hm=580ac0351c0fd441a9776ace4eb8d86185a0579bbf354d8ec2f558e15f4f12c9&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1518509487508422706/1526845879003119718/garou_whiteout.png?ex=6af80708&is=6af6b588&hm=64dedac2994709d1887b6b5356af8bf46bb06164bf7f4ce332df88128e4a644e&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1518509487508422706/1526845879003119718/garou_whiteout.png?ex=6af8afc8&is=6af75e48&hm=ba4585ba1a51c76e611177679295e167520d0caae39ffaf1e299c9796d0a47a8&",
     "summary": "Hey folks. It's been a while since this got updated - several game versions and a change of hands for Diable itself- but now that <@312627217559715840> got to the rebalance and re-format to not use the original diableavionics prefix, it is finally ready to go. This also means there aren't patch notes, because it's been years.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds various weapons and ships, including a frigate with a weapon swapper, midline converts, and large meson family variants.",
@@ -27,25 +27,40 @@
     "isWorkInProgress": false,
     "addedOn": "2026-06-22",
     "editedOn": "2026-07-15",
-    "needs": [
-      {
-        "name": "Diable Avionics",
-        "id": "diable-avionics"
-      },
-      {
-        "name": "Unknown Skies",
-        "id": "unknown-skies"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "Diable Avionics",
+          "id": "diable-avionics"
+        },
+        {
+          "name": "Unknown Skies",
+          "id": "unknown-skies"
+        },
+        {
+          "name": "LunaLib",
+          "id": "lunalib",
+          "via": "Unknown Skies"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "LunaLib"
+        }
+      ]
+    }
   },
   "description": "Introduces new vessels such as the Manta convert, the Shahana strike beam, and the Thales defensive sweeper. It also includes a frigate equipped with a weapon swapping mechanism.",
   "descriptionHtml": "<p>Introduces new vessels such as the Manta convert, the Shahana strike beam, and the Thales defensive sweeper. It also includes a frigate equipped with a weapon swapping mechanism.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "discordPostHtml": "<p>Hey folks. It's been a while since this got updated - several game versions and a change of hands for Diable itself- but now that  got to the rebalance and re-format to not use the original diableavionics_ prefix, it is finally ready to go. This also means there aren't patch notes, because it's been years.</p><p>Adds a pile of weapons and ships, including a neat frigate with a weapon swapper, a set of midline converts (including the Manta, made with permission!) and large versions of the meson family- the Shahana, a massive strike beam, and the Thales, a defensive four-beam sweeper! Please enjoy and yell if bug.</p>",
   "aiDescription": "Introduces new vessels such as the Manta convert, the Shahana strike beam, and the Thales defensive sweeper. It also includes a frigate equipped with a weapon swapping mechanism.",
-  "updateCompatibilityText": "Probably a save breaker, but feel free to test.",
-  "canUpdate": "depends",
+  "saveCompat": {
+    "latestUpdateNote": {
+      "quote": "Probably a save breaker, but feel free to test.",
+      "answer": "depends"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Ship Pack",
@@ -53,21 +68,21 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1518509487508422706/1526845879003119718/garou_whiteout.png?ex=6af80708&is=6af6b588&hm=64dedac2994709d1887b6b5356af8bf46bb06164bf7f4ce332df88128e4a644e&",
+      "url": "https://cdn.discordapp.com/attachments/1518509487508422706/1526845879003119718/garou_whiteout.png?ex=6af8afc8&is=6af75e48&hm=ba4585ba1a51c76e611177679295e167520d0caae39ffaf1e299c9796d0a47a8&",
       "aiCaption": "A top-down view of a red ship sprite with white markings.",
       "aiKind": "art",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1518509487508422706/1526845879326347416/garou_bigdest.png?ex=6af80709&is=6af6b589&hm=5d6a9b5795d8e572eaa1157f58990532598c0cf0244fdf89cf6d6f89dc80636b&",
+      "url": "https://cdn.discordapp.com/attachments/1518509487508422706/1526845879326347416/garou_bigdest.png?ex=6af8afc9&is=6af75e49&hm=5454416e9100104566bb69a32576b91107604f8115805f2dc351230fa267066b&",
       "aiCaption": "A top-down view of a red and white ship sprite with angular wings.",
       "aiKind": "art",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1518509487508422706/1526845879649177740/garou_fog.png?ex=6af80709&is=6af6b589&hm=77620f335d3286a7f7608f65e0b6f1dfeb1ea251b652a705c70d8708c1565025&",
+      "url": "https://cdn.discordapp.com/attachments/1518509487508422706/1526845879649177740/garou_fog.png?ex=6af8afc9&is=6af75e49&hm=97a63d2e43853a247b4ed1f88023918e4bc1522d797cc408b66f559bb2248139&",
       "aiCaption": "A top-down view of a complex red ship sprite with multiple sections.",
       "aiKind": "art",
       "aiFit": "good",
@@ -82,5 +97,27 @@
   "discordUrl": "https://discord.com/channels/187635036525166592/1518509487508422706/1518509487508422706",
   "releases": [],
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "Diable Avionics",
+        "id": "diable-avionics"
+      },
+      {
+        "name": "Unknown Skies",
+        "id": "unknown-skies"
+      },
+      {
+        "name": "LunaLib",
+        "id": "lunalib",
+        "via": "Unknown Skies"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "LunaLib"
+      }
+    ]
+  }
 }

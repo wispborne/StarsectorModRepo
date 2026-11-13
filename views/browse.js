@@ -15,7 +15,7 @@ import {
   fullAiSummaryOnHover, searchHelpField, summaryTitle,
   summaryToShow,
   versionStanding, versionStandingNote, viewToggle,
-  neededModKey, requiredModCounts,
+  isTool, neededModKey, requiredModCounts, requiredModsOf,
 } from '../lib.js';
 import {
   AI_AREAS, AI_GROUPS, AI_HIDE, AI_LEVELS, AI_ONLY, AI_PRESETS,
@@ -1381,8 +1381,8 @@ export function matchesFilters(mod, state) {
   if (!inGame(mod, state.game)) return false;
   if (state.category && !(mod.categories || []).includes(state.category)) return false;
   if (state.needs === NO_REQUIREMENTS) {
-    if ((mod.needs || []).length) return false;
-  } else if (state.needs && !(mod.needs || [])
+    if (requiredModsOf(mod).length) return false;
+  } else if (state.needs && !requiredModsOf(mod)
       .some((n) => neededModKey(n.name) === neededModKey(state.needs))) return false;
   if (!postedOn(mod, state.from)) return false;
   if (!inDates(mod, state.dates)) return false;
@@ -1576,7 +1576,7 @@ function badges(mod, currentVersion) {
     }));
   }
   if (mod.isWorkInProgress) out.push(el('span', { class: 'badge wip', text: 'WIP' }));
-  if (mod.isTool) {
+  if (isTool(mod)) {
     out.push(el('span', {
       class: 'badge tool', text: 'Tool',
       title: 'A separate program, such as a launcher or mod editor.',

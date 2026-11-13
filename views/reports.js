@@ -249,7 +249,7 @@ function conflictReport(conflicts) {
   const byKind = CONFLICT_KIND_ORDER
     .map((kind) => ({
       label: CONFLICT_KINDS[kind][0],
-      count: all.filter((conflict) => conflict.kind === kind).length,
+      count: all.filter((conflict) => conflict.type === kind).length,
       tip: CONFLICT_KINDS[kind][1],
       warn: CONFLICT_KINDS[kind][2],
     }))

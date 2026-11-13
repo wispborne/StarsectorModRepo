@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "fleet-accounting",
     "name": "Fleet Accounting",
@@ -23,7 +23,7 @@
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/AlbertHiisky/FleetAccounting/releases/latest/download/FleetAccounting.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -31,23 +31,24 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2025-01-20",
-    "needs": [
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib",
-        "via": "LunaLib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "LunaLib"
+        }
+      ]
+    }
   },
   "description": "Allows all fleet composition data statistics to be enabled in LunaLib settings, showing them even without relevant skills. This ensures visibility of stats like those from Second-in-Command. It also adds civilian ships to the displayed list.",
   "descriptionHtml": "<p>Allows all fleet composition data statistics to be enabled in LunaLib settings, showing them even without relevant skills. This ensures visibility of stats like those from Second-in-Command. It also adds civilian ships to the displayed list.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "discordPostHtml": "<p><a href=\"https://github.com/AlbertHiisky/FleetAccounting/releases/latest/download/FleetAccounting.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/AlbertHiisky/FleetAccounting/releases/latest/download/FleetAccounting.zip</a></p><p>Do you like playing with Second-in-Command? Good. Do you struggle to count up to whatever number of Atlases you are casually fielding in your fleet? Me too. Then this mod is for you (and me, I guess).</p><p>Firstly, now all fleet composition data statistics can be enabled in LunaLib settings to show even if you don't have any skills that work off that statistic. Yes, that means that you can see whose even with SiC installed. Secondly, adds \"civilian ships\" to that list, just because I can.</p><p>If you have ideas for other useful items to show in that window, ping me.</p>",
   "aiDescription": "Allows all fleet composition data statistics to be enabled in LunaLib settings, showing them even without relevant skills. This ensures visibility of stats like those from Second-in-Command. It also adds civilian ships to the displayed list.",
   "aiUse": {},
   "rawCategories": [
@@ -68,7 +69,7 @@
       "url": "https://github.com/AlbertHiisky/FleetAccounting/releases/latest/download/FleetAccounting.zip",
       "directUrl": "https://github.com/AlbertHiisky/FleetAccounting/releases/latest/download/FleetAccounting.zip",
       "fileName": "FleetAccounting.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "https://github.com/AlbertHiisky/FleetAccounting/releases/latest/download/FleetAccounting.zip",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -81,10 +82,23 @@
   "releases": [],
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "Second-in-Command",
-      "id": "second-in-command"
-    }
-  ]
+  "requirements": {
+    "required": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "LunaLib"
+      }
+    ],
+    "optional": [
+      {
+        "name": "Second-in-Command",
+        "id": "second-in-command"
+      }
+    ]
+  }
 }

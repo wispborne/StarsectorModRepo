@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "3d-sector-2",
     "name": "3D Sector V0.3.5",
@@ -22,15 +22,19 @@
     "gameVersion": "0.98a",
     "modVersion": "0.3.8",
     "imageUrl": "https://raw.githubusercontent.com/winters791/starsector-3d/refs/heads/main/screenshots/aurora_doom.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1559645440188874795/1559645440969019453/screenshot010.png?ex=6af76181&is=6af61001&hm=0ec0dff6d7c3bc698df9dad55d675ee55c0f9d9d59617aa166dde1cff5f170f3&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1559645440188874795/1559645440969019453/screenshot010.png?ex=6af80a41&is=6af6b8c1&hm=435d6bc58953aa8efdc9c54e2165ba4162eb36a603f557dd9f07ce5da326e3d3&",
     "summary": "A Utility/Conversion Mod for starsector, it is still a work in progress, especially on the graphical end since there are no premade assets, but otherwise it should be playable from start to finish.",
     "summaryIsGenerated": false,
-    "aiSummary": "Converts Starsector battles into a 3D tactical experience with custom controls and visual effects.",
-    "saveCompatible": true,
+    "aiSummary": "Converts Starsector battles into 3D with dynamic shields, tactical maps, and configurable flight controls.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/winters791/starsector-3d/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": true
     },
     "downloadCount": 1,
@@ -43,28 +47,27 @@
       {
         "area": "code",
         "how": "generated"
-      },
-      {
-        "area": "sprites",
-        "how": "generated"
       }
     ],
     "lastReleaseDate": "2026-10-21T00:00:00.000Z",
     "addedOn": "2026-10-13",
-    "threadLastPostOn": "2026-11-03",
-    "editedOn": "2026-10-23",
-    "needs": []
+    "editedOn": "2026-10-23"
   },
   "description": "3D Sector\n\nRequired mods: None\nCan be added Mid-Game?: Yes\nRemoving from an ongoing game: Safe\n\nWhat is this?\nA Utility/Conversion Mod for starsector, it is still a work in progress, especially on the graphical end since there are no premade assets, but otherwise it should be playable from start to finish.\n\nAll the weapons and systems are implemented according to vanilla values and behaviour\nShields become 3D cones. Omni shields turn toward threats on their own.\nAll vanilla ship systems should work with 3D VFX.\nOfficer skills do carry over similar to vanilla.\nCommand view (T) 3D tactical map, replace the vanilla \"TAB\" button map, uses cp just like the original with more features to suit 3D look.\nSettings - Everything is in [tt]data/config/s3d_tuning.json[/tt]: key bindings, flight feel, ranges, AI and other things for fine tuning.\n\nScreenshots\n\nControls\n\nMouse: steer\nLeft click: fire the selected group\nRight click: shield / phase\n1-7: select weapon group, Ctrl/Cmd + 1-7: toggle autofire\nW / S: throttle, X: all stop\nA / D: strafe, Space / Shift: up / down\nQ / E: roll, L: auto-level\nF: ship system, V: vent, R: lock target, Z: fighters engage / regroup\nHold Alt or middle mouse: look around, Mouse wheel: zoom\nT: command view, J: spectate ([ and ] to switch ships)\nTap Cmd (Mac) or Ctrl: pause\nTab: vanilla command map (deploy reserves, full retreat)\nF11: hide HUD, F9 twice: finish the battle in vanilla 2D\n\nCompatibility and known issues\nOther mods: Modded hulls, weapons and hullmods are read from the game's own data, so most of them work without changes. If 3D doesn't know a modded ship system or weapon script, the weapon still fires and deals its normal damage, but the special effect is missing. Each time the game starts, it writes [tt]saves/common/s3d_compatibility.txt.data[/tt], a list of anything from your enabled mods that doesn't fully work in 3D.\nFor modders: You can add support with three small CSV files. No Java is needed, and your mod won't depend on this one. See [tt]MODDING.md[/tt] in the download.\n\nOfficer personalities don't change how AI ships fight yet.\nThis is a beta. If a battle goes wrong, press F9 twice to finish it in 2D.\n\nFAQ\nDoes this change the campaign?\nNo. Only the battles change. Nothing is stored in your save.\n\nCan I play some battles in 2D?\nPress F9 twice during a battle to finish it in vanilla 2D, or set battle.enabled to false in s3d_tuning.json to turn 3D off completely.\n\nWhy do the ships look like that?\nEach ship's 3D shape is built from its 2D sprite when the battle loads, so every vanilla and modded ship works without needing a separate model. If you prefer a lower-fidelity look, try the retro filter.\n\nThe game runs slowly in big battles.\nPress I to show the performance readout, and include it in your bug report along with the files listed below.\n\nLooking for 3D artists\nI'd love help from people who model. Ship models go into an open-source add-on, Starsector 3D - Ship Models, with your name in its credits. One ship or twenty, any help counts.\n\nI have made some AI assisted custom models for some of the ships (around 40 in total), but to avoid the use of AI generated art i'm making this an open project where anyone can contribute to make 3D models for the ships, see the github for more info.\n[/list]\n\nWhat a model needs\nIt matches the ship's sprite seen from above, because weapons, engines and shields sit where the sprite says. A Blender script fits and scales your model to the sprite for you and reports how well it lines up.\nNo modelled guns. The game draws each ship's actual loadout on its mounts, so leave the mounts empty or flat.\nTriangle budget: up to 80k for capitals, 40k for cruisers, 20k for destroyers, 10k for frigates.\nSTL, OBJ or GLB. Untextured is fine (the game paints it with the ship's sprite); a textured GLB keeps its own paint.\nIt's your own work, or its license allows sharing. Contributions are published under CC BY 4.0, or CC0 if you prefer.\n\nHow to take part\nIf you use GitHub: follow CONTRIBUTING.md and open a pull request.\nIf you'd rather not touch git: post a link to your model here or send me a PM with the ship and the license, and I'll fit it and add it with credit.\n\nSay in this thread which ship you're working on, so two people don't model the same one.\n\nQuestions and ideas are welcome below.\n\nDownload Starsector 3D | Ship models repository\n\nAttribution / Acknowledgement\nHalke     The ship AI borrows ideas from AI Tweaks, rebuilt for 3D. No code was copied.\nAlex and Fractal Softworks     Starsector. All ship art, sounds and fonts come from the game at runtime and are not redistributed.\n\nAI use disclaimer\nAI was used to create the Mesh Rendering and Simulation engine for the Mod, and to create Fleet AI used for 3D.\nCode: Claude (Anthropic), through Claude Code\n\nThere are no AI-generated images: ship shapes are built from the vanilla sprites while the game runs.\nEdit: There are at this point 57 Custom hull models made by Hyper3D rodin all of which are due to be replaced once actual human generated Models are received\n\nPermissions\nCode: Feel free to use/share it however you want.\nFeedback and bug reports\nFeedback and suggestions are very welcome.\nFor bugs, post here or report an issue. Please include your game and mod versions, your enabled mods and what happened. Attach these files from [tt]saves/common/[/tt]: [tt]s3d_last_battle.txt.data[/tt], plus [tt]s3d_last_error.txt.data[/tt] if it exists. Together they contain the battle log, your mod list and your system info.\nThanks for playing!",
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\"><b>3D Sector</b></span><br><br><a href=\"https://github.com/winters791/starsector-3d/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/v/release/winters791/starsector-3d?style=for-the-badge&amp;logo=github&amp;label=Download\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a> <a href=\"https://github.com/winters791/starsector-3d\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Source-GitHub-gray?style=for-the-badge&amp;logo=github\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><b>Required mods:</b> None<br><b>Can be added Mid-Game?:</b> Yes<br><b>Removing from an ongoing game:</b> Safe<br><br><hr><br><span class=\"size-bigger\"><b>What is this?</b></span><br>A Utility/Conversion Mod for starsector, it is still a work in progress, especially on the graphical end since there are no premade assets, but otherwise it should be playable from start to finish.<br><br><ul><li>All the weapons and systems are implemented according to vanilla values and behaviour</li><li>Shields become 3D cones. Omni shields turn toward threats on their own.</li><li>All vanilla ship systems should work with 3D VFX.</li><li>Officer skills do carry over similar to vanilla.</li><li><b>Command view (T)</b> 3D tactical map, replace the vanilla \"TAB\" button map, uses cp just like the original with more features to suit 3D look.</li><li><b>Settings</b> - Everything is in [tt]data/config/s3d_tuning.json[/tt]: key bindings, flight feel, ranges, AI and other things for fine tuning.</li></ul><br><br><details class=\"spoiler\"><summary>Screenshots</summary><div class=\"align-center\"><img src=\"https://raw.githubusercontent.com/winters791/starsector-3d/refs/heads/main/screenshots/aurora_doom.png\" alt=\"\" width=\"750\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://raw.githubusercontent.com/winters791/starsector-3d/main/screenshots/SpaceStation.png\" alt=\"\" width=\"750\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://raw.githubusercontent.com/winters791/starsector-3d/refs/heads/main/screenshots/odysseyvonslaught.png\" alt=\"\" width=\"750\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://raw.githubusercontent.com/winters791/starsector-3d/main/screenshots/Command_View.png\" alt=\"\" width=\"750\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://raw.githubusercontent.com/winters791/starsector-3d/refs/heads/main/screenshots/hegvtri.png\" alt=\"\" width=\"750\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div></details><br><details class=\"spoiler\"><summary>Controls</summary><div class=\"align-center\"><img src=\"https://raw.githubusercontent.com/winters791/starsector-3d/main/screenshots/controls1.png\" alt=\"\" width=\"750\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://raw.githubusercontent.com/winters791/starsector-3d/main/screenshots/controls2.png\" alt=\"\" width=\"750\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><b>Mouse</b>: steer<br><b>Left click</b>: fire the selected group<br><b>Right click</b>: shield / phase<br><b>1-7</b>: select weapon group, <b>Ctrl/Cmd + 1-7</b>: toggle autofire<br><b>W / S</b>: throttle, <b>X</b>: all stop<br><b>A / D</b>: strafe, <b>Space / Shift</b>: up / down<br><b>Q / E</b>: roll, <b>L</b>: auto-level<br><b>F</b>: ship system, <b>V</b>: vent, <b>R</b>: lock target, <b>Z</b>: fighters engage / regroup<br><b>Hold Alt or middle mouse</b>: look around, <b>Mouse wheel</b>: zoom<br><b>T</b>: command view, <b>J</b>: spectate ([ and ] to switch ships)<br><b>Tap Cmd (Mac) or Ctrl</b>: pause<br><b>Tab</b>: vanilla command map (deploy reserves, full retreat)<br><b>F11</b>: hide HUD, <b>F9 twice</b>: finish the battle in vanilla 2D</details><br><details class=\"spoiler\"><summary>Compatibility and known issues</summary><b>Other mods:</b> Modded hulls, weapons and hullmods are read from the game's own data, so most of them work without changes. If 3D doesn't know a modded ship system or weapon script, the weapon still fires and deals its normal damage, but the special effect is missing. Each time the game starts, it writes [tt]saves/common/s3d_compatibility.txt.data[/tt], a list of anything from your enabled mods that doesn't fully work in 3D.<br><b>For modders:</b> You can add support with three small CSV files. No Java is needed, and your mod won't depend on this one. See [tt]MODDING.md[/tt] in the download.<br><br><ul><li>Officer personalities don't change how AI ships fight yet.</li><li>This is a beta. If a battle goes wrong, press F9 twice to finish it in 2D.</li></ul></details><br><details class=\"spoiler\"><summary>FAQ</summary><div class=\"table-scroll\"><table><tbody><tr><td> <b>Does this change the campaign?</b></td></tr><tr><td>No. Only the battles change. Nothing is stored in your save.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td> <b>Can I play some battles in 2D?</b></td></tr><tr><td>Press F9 twice during a battle to finish it in vanilla 2D, or set battle.enabled to false in s3d_tuning.json to turn 3D off completely.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td> <b>Why do the ships look like that?</b></td></tr><tr><td>Each ship's 3D shape is built from its 2D sprite when the battle loads, so every vanilla and modded ship works without needing a separate model. If you prefer a lower-fidelity look, try the retro filter.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td> <b>The game runs slowly in big battles.</b></td></tr><tr><td>Press I to show the performance readout, and include it in your bug report along with the files listed below.</td></tr></tbody></table></div></details><span class=\"size-big\"><b>Looking for 3D artists</b></span><br>I'd love help from people who model. Ship models go into an open-source add-on, <a href=\"https://github.com/winters791/starsector-3d-models\" rel=\"nofollow noopener\" target=\"_blank\">Starsector 3D - Ship Models</a>, with your name in its credits. One ship or twenty, any help counts.<br><br>I have made some AI assisted custom models for some of the ships (around 40 in total), but to avoid the use of AI generated art i'm making this an open project where anyone can contribute to make 3D models for the ships, see the github for more info.<br>[/list]<br><br><b>What a model needs</b><br><ul><li>It matches the ship's sprite seen from above, because weapons, engines and shields sit where the sprite says. A Blender script fits and scales your model to the sprite for you and reports how well it lines up.</li><li>No modelled guns. The game draws each ship's actual loadout on its mounts, so leave the mounts empty or flat.</li><li>Triangle budget: up to 80k for capitals, 40k for cruisers, 20k for destroyers, 10k for frigates.</li><li>STL, OBJ or GLB. Untextured is fine (the game paints it with the ship's sprite); a textured GLB keeps its own paint.</li><li>It's your own work, or its license allows sharing. Contributions are published under CC BY 4.0, or CC0 if you prefer.</li></ul><br><b>How to take part</b><br><ul><li>If you use GitHub: follow <a href=\"https://github.com/winters791/starsector-3d-models/blob/main/CONTRIBUTING.md\" rel=\"nofollow noopener\" target=\"_blank\">CONTRIBUTING.md</a> and open a pull request.</li><li>If you'd rather not touch git: post a link to your model here or send me a PM with the ship and the license, and I'll fit it and add it with credit.</li></ul>Say in this thread which ship you're working on, so two people don't model the same one.<br><br>Questions and ideas are welcome below.<br><br><a href=\"https://github.com/winters791/starsector-3d/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\">Download Starsector 3D</a> | <a href=\"https://github.com/winters791/starsector-3d-models\" rel=\"nofollow noopener\" target=\"_blank\">Ship models repository</a><br><br><details class=\"spoiler\"><summary>Attribution / Acknowledgement</summary><div class=\"table-scroll\"><table><tbody><tr><td> Halke </td><td>   </td><td> The ship AI borrows ideas from AI Tweaks, rebuilt for 3D. No code was copied. </td></tr><tr><td> Alex and Fractal Softworks </td><td>   </td><td> Starsector. All ship art, sounds and fonts come from the game at runtime and are not redistributed. </td></tr></tbody></table></div></details><br><details class=\"spoiler\"><summary>AI use disclaimer</summary>AI was used to create the Mesh Rendering and Simulation engine for the Mod, and to create Fleet AI used for 3D. <br><ul><li>Code: Claude (Anthropic), through Claude Code</li></ul>There are no AI-generated images: ship shapes are built from the vanilla sprites while the game runs.<br>Edit: There are at this point 57 Custom hull models made by Hyper3D rodin all of which are due to be replaced once actual human generated Models are received </details><br><hr><b>Permissions</b><br><b>Code:</b> Feel free to use/share it however you want.<br><hr><b>Feedback and bug reports</b><br>Feedback and suggestions are very welcome.<br>For bugs, post here or <a href=\"https://github.com/winters791/starsector-3d/issues\" rel=\"nofollow noopener\" target=\"_blank\">report an issue</a>. Please include your game and mod versions, your enabled mods and what happened. Attach these files from [tt]saves/common/[/tt]: [tt]s3d_last_battle.txt.data[/tt], plus [tt]s3d_last_error.txt.data[/tt] if it exists. Together they contain the battle log, your mod list and your system info.<br><div class=\"align-center\">Thanks for playing!</div></div>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36154.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36154.0</a></p><p>Should work afaik, i'm on a mac but I tested it on my friends PC (Windows) and except some graphical flickering issues (mainly on the back burners and weapon slots in the UI) the game seemed to run fine. Commands using Tab can be a bit awkward at times but map objectives are captured fine.</p><p>It might or might not work on Modded ships, Modded Ships that use vanilla weapons and subsystems should work fine.</p><p>Controls:<br>Shift - strafe down vertically<br>Space - strafe up vertically<br>T - Tactical view, i like to use it to see the whole battlefield at once.<br>l-alt - use for free-cam rotation<br>j - Spectating<br>[ and ] - rotate spectating.<br>G - Hide UI<br>P-Pause</p><p>Or could be unplayable though, do let me know.</p>",
-  "aiDescription": "Replaces the standard 2D battle view with a 3D environment where ships, shields, and weapons are rendered in three dimensions. It includes a new command view for tactical fleet management and allows players to toggle between 3D and vanilla 2D battles. The mod reads existing ship data to generate 3D shapes dynamically, ensuring compatibility with most mods without requiring separate models.",
-  "saveCompatibilityText": "Can be added Mid-Game?: Yes",
-  "removalCompatibilityText": "Removing from an ongoing game: Safe",
-  "canAdd": "yes",
-  "canRemove": "yes",
+  "aiDescription": "Replaces 2D combat with a 3D view where ships are built from their sprites. Shields become 3D cones that orient toward threats, and the command map is replaced by a 3D tactical display. All settings are adjustable via a JSON configuration file.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Can be added Mid-Game?: Yes",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "Removing from an ongoing game: Safe",
+      "answer": "yes"
+    }
+  },
   "aiUse": {
     "quote": "AI was used to create the Mesh Rendering and Simulation engine for the Mod, and to create Fleet AI used for 3D.",
     "usesAi": true,
@@ -72,17 +75,11 @@
       {
         "area": "code",
         "how": "generated"
-      },
-      {
-        "area": "sprites",
-        "how": "generated",
-        "extent": "some"
       }
     ],
     "tools": [
       "Claude (Anthropic)",
-      "Claude Code",
-      "Hyper3D rodin"
+      "Claude Code"
     ]
   },
   "rawCategories": [
@@ -90,77 +87,77 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1559645440969019453/screenshot010.png?ex=6af76181&is=6af61001&hm=0ec0dff6d7c3bc698df9dad55d675ee55c0f9d9d59617aa166dde1cff5f170f3&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1559645440969019453/screenshot010.png?ex=6af80a41&is=6af6b8c1&hm=435d6bc58953aa8efdc9c54e2165ba4162eb36a603f557dd9f07ce5da326e3d3&",
       "aiCaption": "A screenshot of a large orange 3D ship model in the game interface.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1559899973544448000/screenshot032.png?ex=6af7a5cf&is=6af6544f&hm=cc9b88fc31fb782e61812e1c272a38ff1ac015c76ada4faf66b5a73c132058da&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1559899973544448000/screenshot032.png?ex=6af84e8f&is=6af6fd0f&hm=169a463158056497d0026d7ca237daed35714f43405f4f2bb7769752888639be&",
       "aiCaption": "A render of an orange and grey 3D ship model against a starfield background.",
       "aiKind": "art",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679907648573601/odyssey.png?ex=6af78800&is=6af63680&hm=1acd5c8215552e87e5c8c5c73644290fb8059cc4b4393146418e8c4f9d31101d&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679907648573601/odyssey.png?ex=6af830c0&is=6af6df40&hm=82177b035bae56293334ce0a243f0f19588cdea61d5740b3548f87b8dbe2228b&",
       "aiCaption": "A screenshot showing a white and blue 3D ship model with the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679908671987793/conquest.png?ex=6af78800&is=6af63680&hm=9b0949a32b44c444e62c394232f267c2aaf982ff01570937f0212957d0fd6b69&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679908671987793/conquest.png?ex=6af830c0&is=6af6df40&hm=d59a85f9c4e6cebbe3946b10dcc3cef78dbe5c95a77ea15aef76321f2f49bd9c&",
       "aiCaption": "A screenshot of a beige 3D ship model with the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679909208719421/retribution.png?ex=6af78800&is=6af63680&hm=87980c585b01abaa83e39af63e55dd850ba878efed5e24d3b66740bfd1ed999a&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679909208719421/retribution.png?ex=6af830c0&is=6af6df40&hm=832121caf93a714f7b92373ec7f734eebafd67b0d71da70325683b8fdd9c31ae&",
       "aiCaption": "A screenshot of an orange 3D ship model with the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679909984796772/grendel.png?ex=6af78801&is=6af63681&hm=dd4c4087e8a0c4a2604de65c0e3d32f9c98abdd55c209e807cd3a8ca68c37dc3&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679909984796772/grendel.png?ex=6af830c1&is=6af6df41&hm=6e5f6360a56a5dbefc29224c5fb4ace17e46bc9168c8c64f462ce5fef985d73e&",
       "aiCaption": "A screenshot of a circular beige 3D ship model with the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679910668603513/mora.png?ex=6af78801&is=6af63681&hm=8affb0736ea527dcf2a4484c716ff65f0ebe473607bc14ca510af033630b7309&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679910668603513/mora.png?ex=6af830c1&is=6af6df41&hm=4c7dd6db89ffb7d3c1d93c4566309b1421edefe9a88b1d8f3f5d686b075259ad&",
       "aiCaption": "A screenshot of a reddish-brown 3D ship model with the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679911482302494/gryphon.png?ex=6af78801&is=6af63681&hm=106052b2e4986ee8dc5423bd44a8341242499840c615e58196a684759d5c182c&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679911482302494/gryphon.png?ex=6af830c1&is=6af6df41&hm=787378a46942b6e70d8903f7ca7bf9309707b8790e8eaf9c61fa78b5410c0115&",
       "aiCaption": "A screenshot of a beige 3D ship model with engine trails and the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679912140800060/falcon.png?ex=6af78801&is=6af63681&hm=22a139501a706f62907ef61238ef1123ae649671d13313982378e712b59549ef&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679912140800060/falcon.png?ex=6af830c1&is=6af6df41&hm=f86562a0cb6a71f2a485938546edf377e40b09a3a6600bb459db25d34927b6a9&",
       "aiCaption": "A screenshot of a white twin-hull 3D ship model with the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679913034055720/venture.png?ex=6af78801&is=6af63681&hm=b148cbe724d0652c9a871b264a95612d7916d42551aa1e0b562cccc0fb5247bf&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679913034055720/venture.png?ex=6af830c1&is=6af6df41&hm=23b425ebc8ad7a92f4e0e6096410ac9fc5f434a260e021f9db6beeb6e0e23708&",
       "aiCaption": "A screenshot showing a large beige 3D ship launching smaller ships with the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679913516408953/starliner.png?ex=6af78801&is=6af63681&hm=602b043d47a596775ee6932cc96189111f1568d557610ba3cae3e75c292d99eb&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679913516408953/starliner.png?ex=6af830c1&is=6af6df41&hm=85f63ad0db6e8c2d79bf0fd9b88c97e716666b3efaff55408d0dce4efaee2e36&",
       "source": "discord"
     },
     {
@@ -226,7 +223,7 @@
   "downloads": [
     {
       "url": "https://github.com/winters791/starsector-3d/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "label": "",
       "host": "github.com",
       "needsAnotherStep": true
@@ -249,7 +246,6 @@
       "gameVersion": "0.98"
     }
   ],
-  "threadLastPostOn": "2026-11-03",
   "sameNameMods": [],
   "addons": []
 }

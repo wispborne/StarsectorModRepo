@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "safety-override-for-capital-ships",
     "name": "Safety Override for capital ships",
@@ -22,7 +22,7 @@
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://www.dropbox.com/s/7dxmpxoe7ubpj8l/Safety%20Override%20mod%20v1.0.1.zip?dl=1",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -31,8 +31,7 @@
     "isWorkInProgress": false,
     "addedOn": "2017-07-09",
     "threadLastPostOn": "2021-04-21",
-    "editedOn": "2020-04-06",
-    "needs": []
+    "editedOn": "2020-04-06"
   },
   "description": "Download\n\nA mod that enable the Safety Override hullmod for capital ships, obviously. Possible side effect of growing a manly beard. The installation is the same as another mod.\n\nChangelogs\n\nSpoiler\nv1.0.1\n* Compatibility with the Ship/Weapon pack mod.\n\nv1.0\n* Initial release.\n\nSpecial thanks to MesoTroniK to help me figure out how to make it works.",
   "descriptionHtml": "<div class=\"align-center\"><img src=\"http://i.imgur.com/sZcwLV1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><br><br><div class=\"align-center\"><a href=\"https://www.dropbox.com/s/7dxmpxoe7ubpj8l/Safety%20Override%20mod%20v1.0.1.zip?dl=0\" rel=\"nofollow noopener\" target=\"_blank\"><span class=\"size-biggest\"><u><b>Download</b></u></span></a></div><br><br>A mod that enable the Safety Override hullmod for capital ships, obviously. Possible side effect of growing a manly beard. The installation is the same as another mod.<br><br><b>Changelogs</b><br><br><details class=\"spoiler\"><summary>Spoiler</summary>v1.0.1<br>* Compatibility with the Ship/Weapon pack mod.<br><br>v1.0<br>* Initial release.</details><br><br>Special thanks to MesoTroniK to help me figure out how to make it works.",
@@ -57,7 +56,7 @@
       "url": "https://www.dropbox.com/s/7dxmpxoe7ubpj8l/Safety%20Override%20mod%20v1.0.1.zip?dl=0",
       "directUrl": "https://www.dropbox.com/s/7dxmpxoe7ubpj8l/Safety%20Override%20mod%20v1.0.1.zip?dl=1",
       "fileName": "Safety Override mod v1.0.1.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "Download",
       "host": "Dropbox",
       "needsAnotherStep": false
@@ -73,10 +72,12 @@
   "threadLastPostOn": "2021-04-21",
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "Ship/Weapon Pack",
-      "id": "ship-weapon-pack"
-    }
-  ]
+  "requirements": {
+    "optional": [
+      {
+        "name": "Ship/Weapon Pack",
+        "id": "ship-weapon-pack"
+      }
+    ]
+  }
 }

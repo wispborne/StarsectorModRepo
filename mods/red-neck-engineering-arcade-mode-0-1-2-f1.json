@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "red-neck-engineering-arcade-mode-0-1-2-f1",
     "name": "Red Neck Engineering - Arcade Mode 0.1.2-F1",
@@ -19,14 +19,19 @@
     "gameVersion": "0.98a",
     "modVersion": "0.1.2-F1",
     "imageUrl": "https://github.com/OfficialZygorg/RedNeckEngineering_ArcadeMode/raw/master/icon.jpg",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1548069249409622130/1548069249824854107/icon.jpg?ex=6af77456&is=6af622d6&hm=c2320ae2dc96dd9b7dd584c15eb6d6a0cc8a937f688d430475bc78ac63206df9&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1548069249409622130/1548069249824854107/icon.jpg?ex=6af81d16&is=6af6cb96&hm=9525e10f4a05d2dac2be32e1def2b4183f956d5152f59a90630bd89ab442da1e&",
     "summary": "Adds a hullmod that modifies in a ship:",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a hullmod that adjusts ship maintenance and combat stats via hot-reloadable settings.",
+    "aiSummary": "Adds a hullmod that modifies ship stats like PPT, CR degradation, supplies, cargo, fuel, and crew capacity.",
+    "saveCompat": {
+      "adding": {
+        "answer": "depends"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/OfficialZygorg/RedNeckEngineering_ArcadeMode/releases/download/0.1.2-F1/RedNeckEngineering_ArcadeMode-0.1.2-F1.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -45,33 +50,42 @@
     "addedOn": "2026-02-10",
     "threadLastPostOn": "2026-09-18",
     "editedOn": "2026-09-18",
-    "needs": [
-      {
-        "name": "LazyLib",
-        "id": "lazylib"
-      },
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
+        },
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        }
+      ]
+    }
   },
   "description": "Red Neck Engineering - ArcadeMode\n\nAdds a hullmod that modifies in a ship:\nPPT, CR Degradation rate, Supplies Per Month, Supplies To Recover after a fight, Cargo capacity, Fuel capacity and Crew capacity\n\nAll of these values can be modified on the LunaLib settings in the main menu, without the need to reload the game (Hot changable).\n\nDownload: https://github.com/OfficialZygorg/RedNeckEngineering_ArcadeMode/releases/tag/latest\n\nRequires LazyLib:\nhttps://fractalsoftworks.com/forum/index.php?topic=5444.0]\nhttps://github.com/LazyWizard/lazylib\nRequires LunaLib:\nhttps://fractalsoftworks.com/forum/index.php?topic=25658.0\nhttps://github.com/Lukas22041/LunaLib\n\nI just wanted to take my time doing stuff in SS without worrying about the ships maintenance resource drain, and here we are!\nCredits on the modinfo.json\n\nChangelog:\n\nSpoiler\n0.1.2-F1\nSpoiler\nFixed:\n- CTD when hovering the hullmod\n- Hullmod not giving effects\n0.1.2\nSpoiler\nAdded:\n- LunaLib settings icon\n- Salvaging modifier\n\nModified:\n- Increased max CR degradation amount in settings\n- Zip generator to exclude one more file\n\nFixed:\n- CTD When going to the mod's LunaLib configs (Reported by HoeHarto [kecoasetan])\n0.1.1\nSpoiler\nAdded:\n- Versioning file\n- Changelog file\n- Update checker\n- Placeholder mod image for TriOS\n- Python script that makes a zip of the mod (Used ChatGPT because idk python)\n\nModified:\n- Revamped LunaLib settings\n- Revamped how the mod uses the settings\n- Made the mod a utility mod\n- Modified the README.md\n- Modified the hullmod descriptions\n\nFixed:\n- Lots of errors while Revamping\n\n!Unknown compatibility with 0.1.0 and bellow!\n!Unknown if you can disable the mod once you use it in a save!\n\nPersonal recommended mods:\n\nSpoiler\nAbsolute Movement: https://fractalsoftworks.com/forum/index.php?topic=35316.0",
   "descriptionHtml": "<div class=\"align-center\"><a href=\"https://github.com/OfficialZygorg/RedNeckEngineering_ArcadeMode/releases/tag/latest\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://github.com/OfficialZygorg/RedNeckEngineering_ArcadeMode/raw/master/icon.jpg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><span class=\"size-biggest\">Red Neck Engineering - ArcadeMode</span><br><br>Adds a hullmod that modifies in a ship:<br>PPT, CR Degradation rate, Supplies Per Month, Supplies To Recover after a fight, Cargo capacity, Fuel capacity and Crew capacity<br><br>All of these values can be modified on the LunaLib settings in the main menu, without the need to reload the game (Hot changable).<br><br>Download: <a href=\"https://github.com/OfficialZygorg/RedNeckEngineering_ArcadeMode/releases/tag/latest\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/OfficialZygorg/RedNeckEngineering_ArcadeMode/releases/tag/latest</a><br><br>Requires LazyLib:<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=5444.0</a>]<br><a href=\"https://github.com/LazyWizard/lazylib\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/lazylib</a><br>Requires LunaLib:<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=25658.0</a><br><a href=\"https://github.com/Lukas22041/LunaLib\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Lukas22041/LunaLib</a><br><br><img src=\"https://github.com/OfficialZygorg/RedNeckEngineering_ArcadeMode/blob/master/imgs/0.1.1-1.png?raw=true\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://github.com/OfficialZygorg/RedNeckEngineering_ArcadeMode/blob/master/imgs/0.1.1-2.png?raw=true\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><br>I just wanted to take my time doing stuff in SS without worrying about the ships maintenance resource drain, and here we are!<br>Credits on the modinfo.json<br><br>Changelog:<br><details class=\"spoiler\"><summary>Spoiler</summary>0.1.2-F1<br><details class=\"spoiler\"><summary>Spoiler</summary>Fixed:<br>- CTD when hovering the hullmod<br>- Hullmod not giving effects</details>0.1.2<br><details class=\"spoiler\"><summary>Spoiler</summary>Added:<br>- LunaLib settings icon<br>- Salvaging modifier<br><br>Modified:<br>- Increased max CR degradation amount in settings<br>- Zip generator to exclude one more file<br><br>Fixed:<br>- CTD When going to the mod's LunaLib configs (Reported by HoeHarto [kecoasetan])</details>0.1.1<br><details class=\"spoiler\"><summary>Spoiler</summary>Added:<br>- Versioning file<br>- Changelog file<br>- Update checker<br>- Placeholder mod image for TriOS<br>- Python script that makes a zip of the mod (Used ChatGPT because idk python)<br><br>Modified:<br>- Revamped LunaLib settings<br>- Revamped how the mod uses the settings<br>- Made the mod a utility mod<br>- Modified the README.md<br>- Modified the hullmod descriptions<br><br>Fixed:<br>- Lots of errors while Revamping<br><br>!Unknown compatibility with 0.1.0 and bellow!<br>!Unknown if you can disable the mod once you use it in a save!</details></details><br>Personal recommended mods:<br><details class=\"spoiler\"><summary>Spoiler</summary>Absolute Movement: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35316.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35316.0</a></details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p>RedNeckEngineering_ArcadeMode</p><p>Adds a hullmod that modifies in a ship:<br>PPT, CR Degradation rate, Supplies Per Month, Supplies To Recover after a fight, Cargo capacity, Fuel capacity and Crew capacity</p><p>All of these values can be modified on the LunaLib settings in the main menu, without the need to reload the game (Hot changable).</p><pre><code>Changelog:\nVersion 0.1.1\n\nAdded:\n\n    Versioning file\n    Changelog file\n    Update checker\n    Placeholder mod image for TriOS\n    Python script that makes a zip of the mod (Used ChatGPT because idk python)\n\nModified:\n\n    Revamped LunaLib settings\n    Revamped how the mod uses the settings\n    Made the mod a utility mod\n    Modified the README.md\n    Modified the hullmod descriptions\n\nFixed:\n\n    Lots of errors while Revamping\n\n!Unknown compatibility with 0.1.0 and bellow!\n!Unknown if you can disable the mod once you use it in a save!</code></pre><p>Fractalsoftworks page: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=34908\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=34908</a><br>Requires LazyLib:<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=5444.0</a><br><a href=\"https://github.com/LazyWizard/lazylib\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/lazylib</a><br>Requires LunaLib:<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=25658.0</a><br><a href=\"https://github.com/Lukas22041/LunaLib\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Lukas22041/LunaLib</a></p>",
-  "aiDescription": "Introduces a hullmod that modifies Power to Peak, CR degradation rate, supplies usage, cargo capacity, fuel capacity, and crew capacity. These values can be adjusted in the main menu using LunaLib settings without reloading the game.",
-  "saveCompatibilityText": "!Unknown if you can disable the mod once you use it in a save!",
-  "removalCompatibilityText": "!Unknown if you can disable the mod once you use it in a save!",
-  "canRemove": "depends",
+  "aiDescription": "Adds a hullmod that modifies ship stats including PPT, CR degradation rate, supplies per month, cargo capacity, fuel capacity, and crew capacity. All values can be adjusted via LunaLib settings in the main menu without reloading the game.",
+  "saveCompat": {
+    "adding": {
+      "quote": "!Unknown compatibility with 0.1.0 and bellow!",
+      "answer": "depends"
+    },
+    "removing": {
+      "quote": "Unknown if you can disable the mod once you use it in a save",
+      "answer": "depends"
+    }
+  },
   "aiUse": {
-    "quote": "Python script that makes a zip of the mod (Used ChatGPT because idk python)",
+    "quote": "(Used ChatGPT because idk python)",
     "usesAi": true,
     "uses": [
       {
         "area": "code",
-        "how": "generated"
+        "how": "generated",
+        "extent": "some"
       }
     ],
     "tools": [
@@ -84,7 +98,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1548069249409622130/1548069249824854107/icon.jpg?ex=6af77456&is=6af622d6&hm=c2320ae2dc96dd9b7dd584c15eb6d6a0cc8a937f688d430475bc78ac63206df9&",
+      "url": "https://cdn.discordapp.com/attachments/1548069249409622130/1548069249824854107/icon.jpg?ex=6af81d16&is=6af6cb96&hm=9525e10f4a05d2dac2be32e1def2b4183f956d5152f59a90630bd89ab442da1e&",
       "aiCaption": "A large, pixelated blue letter A on a dark background.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -119,14 +133,14 @@
       "url": "https://github.com/OfficialZygorg/RedNeckEngineering_ArcadeMode/releases/tag/latest",
       "directUrl": "https://github.com/OfficialZygorg/RedNeckEngineering_ArcadeMode/releases/download/0.1.2-F1/RedNeckEngineering_ArcadeMode-0.1.2-F1.zip",
       "fileName": "RedNeckEngineering_ArcadeMode-0.1.2-F1.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "",
       "host": "GitHub",
       "needsAnotherStep": false
     }
   ],
   "changelog": {
-    "0.1.2-F1": "Fixed:\n- CTD when hovering the hullmod\n- Hullmod not giving effects",
+    "0.1.2-F1": "Fixed: - CTD when hovering the hullmod - Hullmod not giving effects",
     "0.1.2": "Added:\n- LunaLib settings icon\n- Salvaging modifier\n\nModified:\n- Increased max CR degradation amount in settings\n- Zip generator to exclude one more file\n\nFixed:\n- CTD When going to the mod's LunaLib configs (Reported by HoeHarto [kecoasetan])",
     "0.1.1": "Added:\n- Versioning file\n- Changelog file\n- Update checker\n- Placeholder mod image for TriOS\n- Python script that makes a zip of the mod (Used ChatGPT because idk python)\n\nModified:\n- Revamped LunaLib settings\n- Revamped how the mod uses the settings\n- Made the mod a utility mod\n- Modified the README.md\n- Modified the hullmod descriptions\n\nFixed:\n- Lots of errors while Revamping"
   },
@@ -152,11 +166,25 @@
       "newVersion": "0.1.1",
       "gameVersion": "0.98",
       "changelogNotes": "Added:\n- Versioning file\n- Changelog file\n- Update checker\n- Placeholder mod image for TriOS\n- Python script that makes a zip of the mod (Used ChatGPT because idk python)\n\nModified:\n- Revamped LunaLib settings\n- Revamped how the mod uses the settings\n- Made the mod a utility mod\n- Modified the README.md\n- Modified the hullmod descriptions\n\nFixed:\n- Lots of errors while Revamping\n\n!Unknown compatibility with 0.1.0 and bellow!\n!Unknown if you can disable the mod once you use it in a save!",
-      "updateCompatibilityText": "!Unknown compatibility with 0.1.0 and bellow!",
-      "canUpdate": "depends"
+      "updateNote": {
+        "quote": "Unknown compatibility with 0.1.0 and bellow",
+        "answer": "depends"
+      }
     }
   ],
   "threadLastPostOn": "2026-09-18",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      },
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ]
+  }
 }

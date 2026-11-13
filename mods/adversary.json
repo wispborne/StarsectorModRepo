@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "adversary",
     "name": "Adversary",
@@ -22,15 +22,19 @@
     "gameVersion": "0.98.5a",
     "modVersion": "8.0.0",
     "imageUrl": "https://i.imgur.com/7Q0sLu1.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355783112998654033/1355783113136935054/adversary_crest.png?ex=6af7f86b&is=6af6a6eb&hm=d5e01e777d0dd37ee6031555a7eaa6d309a6e290b62f9d47ec151ad053c742a2&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355783112998654033/1355783113136935054/adversary_crest.png?ex=6af8a12b&is=6af74fab&hm=9ba77ced02e37af90c362cc34dda69f63a7f62d4b9aeaaba6c591b2b54bd13f2&",
     "summary": "This mod adds the \"Adversary\", a player-like faction equipped with nearly all vanilla ships, weapons, fighters, and hullmods. By default, they occupy an ideal star system located near the Core Worlds, with the best planetary conditions and industries for maximum commodity production and defenses.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a powerful, isolationist faction equipped with vanilla ships and weapons that serves as an end-game challenge.",
-    "saveCompatible": true,
+    "aiSummary": "Adds a player-like faction equipped with vanilla ships and weapons that occupies an ideal star system near the Core Worlds as an end-game challenge.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Tranquiliti/Adversary/releases/latest/download/Adversary.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -41,31 +45,38 @@
     "lastReleaseDate": "2026-11-12T00:00:00.000Z",
     "addedOn": "2022-12-28",
     "threadLastPostOn": "2026-11-11",
-    "editedOn": "2025-07-22",
-    "needs": [
-      {
-        "name": "Customizable Star Systems",
-        "id": "customizable-star-systems"
-      }
-    ]
+    "editedOn": "2026-11-12",
+    "requirements": {
+      "required": [
+        {
+          "name": "Customizable Star Systems",
+          "id": "customizable-star-systems"
+        }
+      ]
+    }
   },
   "description": "Adversary\n\nIncludes Nexerelin, LunaLib, and Commissioned Crews support, plus several MagicLib bounties and a few Customizable Star Systems presets\nSafe to add to existing saves, but not safe to remove from existing saves\n\nOnce an idealist inspired by the heroic actions of the Second AI War, the founder of an independent colony witnessed firsthand the corruption and selfishness running rampant across the Sector.\nNow, all that remains of them is a superpower faction, hellbent on preserving their own perfect worlds, no matter the means and no matter the cost.\n\nMod details\n\nThis mod adds the \"Adversary\", a player-like faction equipped with nearly all vanilla ships, weapons, fighters, and hullmods. By default, they occupy an ideal star system located near the Core Worlds, with the best planetary conditions and industries for maximum commodity production and defenses. Intended as a reliable user (and source) of most colony items, the Adversary serves as an alternative end-game challenge, with a dynamically-changing doctrine focused on recklessly swarming their enemies using ships, weapons, and fighters from all tech types, designations, and sizes.\n\nAdditional, non-default options for the Adversary faction can be enabled either though this mod's settings.json or, with the LunaLib library mod installed, through the LunaSettings UI config.\n\nScreenshots\n\nSupported/integrated mods\nNexerelin\nThe Adversary have their own diplomacy profile, highlighting both their vehement isolationism and their original wish to unite the Persean Sector. Note that the Optimal star system will still spawn in Random Core Worlds mode unless the \"enableAdversaryOptimal\" setting is disabled.\n\nCustomizable Star Systems\nThe Adversary mod also includes a customStarSystems.json that includes some preset Adversary star systems (disabled by default). These can be enabled to increase the challenge of taking on the Adversary faction. Note that, in Nexerelin's Random Core Worlds mode, the custom star systems will still generate when both the \"isEnabled\" option is set to 'true' for the customStarSystems.json star systems and the \"enableCustomStarSystems\" option is enabled in Customizable Star Systems' settings.json.\n\nFor a less chaotic experience when enabling the Adversary custom star systems, disabling the default Optimal spawn via settings.json or LunaSettings (i.e., setting \"enableAdversaryOptimal\" to false) is recommended.\n\nMagicBounties (MagicLib)\nCurrently, there are 8 MagicBounties (plus 10 more MagicBounties when \"enableAdversarySillyBounties\" is set to true in etiher this mod's settings.json or LunaLib's LunaSettings config), with most targeting the Adversary faction. At minimum, these bounties require the player to be at least level 15 before appearing on the bounty board. Listed below are few of these bounties, along with the factions hosting them:\nA Troublesome Mercenary - Independent, Tri-Tachyon\nThe Forbidden Path - Independent, Luddic Path\nNo Deserters Left Behind - Independent, Hegemony\n\nThese MagicBounties also have custom Second-in-Command mod support if that mod is enabled. When the \"enableAdversarySCSupport\" setting is enabled, all MagicBounties will use pre-configured executive officers instead of proc-gen ones, generally raising the bounty difficulty even further. This setting can be disabled should an incompatibility or crash occur due to mod updates.\n\nCommissioned Crews hullmod\nAdversary crews, wary of losing too much of their combat effectiveness just as the tides turn in their favor, eventually learn to keep their ship systems functional for as long as possible, even when faced with battles of attrition or overwhelming fatigue.\n\nOther mods\nUnknown Skies/Industrial.Evolution: Having either or both of these mods active also modifies the Optimal star system to use the new planet/star types, conditions, and industries. If desired, or if incompatibilities arise, these changes can be disabled via settings.json or LunaSettings.\nStarship Legends: Adversary fleet commanders, taking inspiration from the infamous Luddic Path, tend to modify their ships to focus exclusively on firepower and speed, to the detriment of their fleets' longevity and survivability. Expect Adversary fleets to have more damage potential, at the cost of less defensive capabilities - a tradeoff best summarized with an Old Earth saying: \"Kill or be killed\".\nBetter Colonies: The Adversary will partake in the Age of Innovation event, allowing them to improve their own industries over time.\n\nLatest changelogs\nv8.0.0: https://github.com/Tranquiliti/Adversary/releases/tag/v8.0.0\nv7.1.2: https://github.com/Tranquiliti/Adversary/releases/tag/v7.1.2\nv7.1.1: https://github.com/Tranquiliti/Adversary/releases/tag/v7.1.1\nv7.1.0: https://github.com/Tranquiliti/Adversary/releases/tag/v7.1.0\nv7.0.0: https://github.com/Tranquiliti/Adversary/releases/tag/v7.0.0\n\nCredits\nStarsector Forums - For the helpful modding tutorials and information\nUnofficial Starsector Chat Discord - For the helpful modding information and tips\nAlex and the Fractal Softworks team - For the amazing game that is Starsector!\nNissa - For fixing a few misspellings\n\nIf you're curious, the Adversary's flag is just a color-inverted version of an unused player flag.",
   "descriptionHtml": "<div class=\"align-center\"><img src=\"https://i.imgur.com/7Q0sLu1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><span class=\"size-biggest\"><span class=\"author-colour\" style=\"--c:#000080\">Adversary</span></span><br><br><a href=\"https://github.com/Tranquiliti/Adversary/releases/latest/download/Adversary.zip\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/downloads/Tranquiliti/Adversary/total?color=navy&amp;label=Download%20latest&amp;logo=github&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br>Includes<a href=\"https://fractalsoftworks.com/forum/index.php?topic=9175.0\" rel=\"nofollow noopener\" target=\"_blank\"> Nexerelin</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a>, and <a href=\"https://fractalsoftworks.com/forum/index.php?topic=16677.0\" rel=\"nofollow noopener\" target=\"_blank\">Commissioned Crews</a> support, plus several <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25868.0\" rel=\"nofollow noopener\" target=\"_blank\">MagicLib</a> bounties and a few <a href=\"https://fractalsoftworks.com/forum/index.php?topic=27785.0\" rel=\"nofollow noopener\" target=\"_blank\">Customizable Star Systems</a> presets<br>Safe to add to existing saves, but <u>not safe to remove from existing saves</u><br><br><a href=\"https://github.com/Tranquiliti/Adversary/releases\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/static/v1?label=View&amp;logo=github&amp;message=Releases%20and%20changelogs&amp;color=teal&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><a href=\"https://github.com/Tranquiliti/Adversary\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/static/v1?label=View&amp;logo=github&amp;message=Github%20repository&amp;color=salmon&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><hr><br><span class=\"size-big\">Once an idealist inspired by the heroic actions of the Second AI War, the founder of an independent colony witnessed firsthand the corruption and selfishness running rampant across the Sector.<br>Now, all that remains of them is a superpower faction, hellbent on preserving their own perfect worlds, no matter the means and no matter the cost.</span><br><br><hr><br><span class=\"size-biggest\">Mod details</span><br><br><span class=\"size-bigger\">This mod adds the \"Adversary\", <b>a player-like faction equipped with nearly all vanilla ships, weapons, fighters, and hullmods</b>. By default, they occupy <b>an ideal star system located near the Core Worlds</b>, with the best planetary conditions and industries for maximum commodity production and defenses. Intended as a reliable user (and source) of most colony items, the Adversary serves as an <b>alternative end-game challenge</b>, with a dynamically-changing doctrine focused on recklessly swarming their enemies using ships, weapons, and fighters from all tech types, designations, and sizes.<br><br>Additional, non-default options for the Adversary faction can be enabled either though this mod's <i>settings.json</i> or, with the LunaLib library mod installed, through the LunaSettings UI config.<br><br></span><hr></div><br><details class=\"spoiler\"><summary>Screenshots</summary><img src=\"https://i.imgur.com/8KV1SbX.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.imgur.com/29ZgsPk.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.imgur.com/LNVyg4Q.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details><br><details class=\"spoiler\"><summary>Supported/integrated mods</summary><details class=\"spoiler\"><summary>Nexerelin</summary>The Adversary have their own diplomacy profile, highlighting both their vehement isolationism and their original wish to unite the Persean Sector. Note that the Optimal star system will still spawn in Random Core Worlds mode unless the \"enableAdversaryOptimal\" setting is disabled.</details><br><details class=\"spoiler\"><summary>Customizable Star Systems</summary>The Adversary mod also includes a <i>customStarSystems.json</i> that includes some preset Adversary star systems (disabled by default). These can be enabled to increase the challenge of taking on the Adversary faction. Note that, in Nexerelin's Random Core Worlds mode, the custom star systems will still generate when both the \"isEnabled\" option is set to 'true' for the <i>customStarSystems.json</i> star systems and the \"enableCustomStarSystems\" option is enabled in Customizable Star Systems' <i>settings.json</i>.<br><br>For a less chaotic experience when enabling the Adversary custom star systems, disabling the default Optimal spawn via <i>settings.json</i> or LunaSettings (i.e., setting \"enableAdversaryOptimal\" to <i>false</i>) is recommended.</details><br><details class=\"spoiler\"><summary>MagicBounties (MagicLib)</summary>Currently, there are 8 MagicBounties (plus 10 more MagicBounties when \"enableAdversarySillyBounties\" is set to <i>true</i> in etiher this mod's <i>settings.json</i> or LunaLib's LunaSettings config), with most targeting the Adversary faction. At minimum, these bounties require the player to be <b>at least level 15</b> before appearing on the bounty board. Listed below are few of these bounties, along with the factions hosting them:<br><ul><li><span class=\"author-colour\" style=\"--c:#008080\">A Troublesome Mercenary</span> - Independent, Tri-Tachyon</li><li><span class=\"author-colour\" style=\"--c:#32cd32\">The Forbidden Path</span> - Independent, Luddic Path</li><li><span class=\"author-colour\" style=\"--c:#ffa500\">No Deserters Left Behind</span> - Independent, Hegemony</li></ul>These MagicBounties also have custom <b>Second-in-Command</b> mod support if that mod is enabled. When the \"enableAdversarySCSupport\" setting is enabled, all MagicBounties will use pre-configured executive officers instead of proc-gen ones, generally raising the bounty difficulty even further. This setting can be disabled should an incompatibility or crash occur due to mod updates.</details><br><details class=\"spoiler\"><summary>Commissioned Crews hullmod</summary>Adversary crews, wary of losing too much of their combat effectiveness just as the tides turn in their favor, eventually learn to keep their ship systems functional for as long as possible, even when faced with battles of attrition or overwhelming fatigue.<br><img src=\"https://i.imgur.com/f2pS3xU.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details><br><details class=\"spoiler\"><summary>Other mods</summary><ul><li><b>Unknown Skies/Industrial.Evolution:</b> Having either or both of these mods active also modifies the Optimal star system to use the new planet/star types, conditions, and industries. If desired, or if incompatibilities arise, these changes can be disabled via <i>settings.json</i> or LunaSettings.</li><li><b>Starship Legends:</b> Adversary fleet commanders, taking inspiration from the infamous Luddic Path, tend to modify their ships to focus exclusively on firepower and speed, to the detriment of their fleets' longevity and survivability. Expect Adversary fleets to have more damage potential, at the cost of less defensive capabilities - a tradeoff best summarized with an Old Earth saying: \"Kill or be killed\".</li><li><b>Better Colonies:</b> The Adversary will partake in the Age of Innovation event, allowing them to improve their own industries over time.</li></ul></details></details><br><details class=\"spoiler\"><summary>Latest changelogs</summary><b>v8.0.0</b>: <a href=\"https://github.com/Tranquiliti/Adversary/releases/tag/v8.0.0\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/Adversary/releases/tag/v8.0.0</a><br><b>v7.1.2</b>: <a href=\"https://github.com/Tranquiliti/Adversary/releases/tag/v7.1.2\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/Adversary/releases/tag/v7.1.2</a><br><b>v7.1.1</b>: <a href=\"https://github.com/Tranquiliti/Adversary/releases/tag/v7.1.1\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/Adversary/releases/tag/v7.1.1</a><br><b>v7.1.0</b>: <a href=\"https://github.com/Tranquiliti/Adversary/releases/tag/v7.1.0\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/Adversary/releases/tag/v7.1.0</a><br><b>v7.0.0</b>: <a href=\"https://github.com/Tranquiliti/Adversary/releases/tag/v7.0.0\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/Adversary/releases/tag/v7.0.0</a></details><br><div class=\"align-center\"><hr><br><span class=\"size-biggest\"><b>Credits</b></span><br><b>Starsector Forums</b> - For the helpful modding tutorials and information<br><b>Unofficial Starsector Chat Discord</b> - For the helpful modding information and tips<br><b>Alex and the Fractal Softworks team</b> - For the amazing game that is Starsector!<br><b>Nissa</b> - For fixing a few misspellings<br><br><a href=\"https://github.com/Tranquiliti/Adversary/blob/main/LICENSE\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/license/Tranquiliti/Adversary?style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><span class=\"size-small\">If you're curious, the Adversary's flag is just a color-inverted version of an unused player flag.</span></div>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p>Adds a player-like faction in an ideal star system, using most vanilla ships and weapons.</p><p>Also includes several endgame MagicBounties with MagicLib installed.</p><p><strong>Download</strong>:<br><a href=\"https://github.com/Tranquiliti/Adversary/releases/download/v7.1.2/Adversary-v7.1.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/Adversary/releases/download/v7.1.2/Adversary-v7.1.2.zip</a></p><p><strong>Releases and Changelogs</strong>:<br><a href=\"https://github.com/Tranquiliti/Adversary/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Tranquiliti/Adversary/releases</a></p><p><strong>Forum Thread</strong>: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25821.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=25821.0</a></p>",
-  "aiDescription": "Introduces the Adversary, a superpower faction located near the Core Worlds with ideal planetary conditions. They utilize a dynamic doctrine to swarm enemies with all tech types of ships and fighters. The mod includes support for various other mods like Nexerelin and MagicLib, offering custom bounties and star system presets.",
-  "saveCompatibilityText": "Safe to add to existing saves",
-  "removalCompatibilityText": "not safe to remove from existing saves",
-  "canAdd": "yes",
-  "canRemove": "no",
+  "aiDescription": "Introduces a faction called the Adversary that uses nearly all vanilla equipment and occupies a high-production star system. They serve as an alternative end-game challenge with a doctrine focused on swarming enemies using mixed tech types. The mod includes optional integrations for Nexerelin, LunaLib, MagicLib, and other mods to enhance diplomacy, bounties, and colony management.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Safe to add to existing saves",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "not safe to remove from existing saves",
+      "answer": "no"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Faction Mods"
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1355783112998654033/1355783113136935054/adversary_crest.png?ex=6af7f86b&is=6af6a6eb&hm=d5e01e777d0dd37ee6031555a7eaa6d309a6e290b62f9d47ec151ad053c742a2&",
+      "url": "https://cdn.discordapp.com/attachments/1355783112998654033/1355783113136935054/adversary_crest.png?ex=6af8a12b&is=6af74fab&hm=9ba77ced02e37af90c362cc34dda69f63a7f62d4b9aeaaba6c591b2b54bd13f2&",
       "aiCaption": "A stylized blue letter A logo with horizontal stripes.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -132,7 +143,7 @@
       "url": "https://github.com/Tranquiliti/Adversary/releases/latest/download/Adversary.zip",
       "directUrl": "https://github.com/Tranquiliti/Adversary/releases/latest/download/Adversary.zip",
       "fileName": "Adversary.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -157,38 +168,30 @@
   "threadLastPostOn": "2026-11-11",
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "Nexerelin",
-      "id": "nexerelin"
-    },
-    {
-      "name": "LunaLib",
-      "id": "lunalib"
-    },
-    {
-      "name": "Commissioned Crews",
-      "id": "commissioned-crews"
-    },
-    {
-      "name": "MagicLib",
-      "id": "magiclib"
-    },
-    {
-      "name": "Unknown Skies",
-      "id": "unknown-skies"
-    },
-    {
-      "name": "Industrial.Evolution",
-      "id": "industrial-evolution"
-    },
-    {
-      "name": "Starship Legends",
-      "id": "starship-legends"
-    },
-    {
-      "name": "Better Colonies",
-      "id": "better-colonies"
-    }
-  ]
+  "requirements": {
+    "required": [
+      {
+        "name": "Customizable Star Systems",
+        "id": "customizable-star-systems"
+      }
+    ],
+    "optional": [
+      {
+        "name": "Nexerelin",
+        "id": "nexerelin"
+      },
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "Commissioned Crews",
+        "id": "commissioned-crews"
+      },
+      {
+        "name": "MagicLib",
+        "id": "magiclib"
+      }
+    ]
+  }
 }

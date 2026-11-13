@@ -20,11 +20,15 @@
     "imageUrl": "https://fractalsoftworks.com/forum/index.php?action=dlattach;topic=15380.0;attach=70011;image",
     "summary": "Adds new industries, colony structures and a set of quests around them.",
     "summaryIsGenerated": false,
-    "saveCompatible": true,
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/SirHartley/IndEvo/releases/download/3.5.2g/Industrial.Evolution.3.5.2g.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -40,7 +44,7 @@
       {
         "area": "portraits",
         "how": "edited",
-        "optional": true
+        "isOptional": true
       }
     ],
     "lastReleaseDate": "2026-08-11T00:00:00.000Z",
@@ -51,24 +55,32 @@
     },
     "threadLastPostOn": "2026-07-30",
     "addedOn": "2024-08-19",
-    "needs": [
-      {
-        "name": "LazyLib"
-      },
-      {
-        "name": "MagicLib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LazyLib"
+        },
+        {
+          "name": "MagicLib"
+        }
+      ]
+    }
   },
   "description": "Industrial.Evolution adds a long list of new colony structures and industries, a handful of derelict things to find and repair, and several quest lines that tie them together.",
   "descriptionHtml": "<p>Adds new industries and colony structures, and a set of quests around them.</p><h3>What it adds</h3><ul><li>Twenty or so new industries</li><li>A questline that unlocks them</li></ul>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
   "aiDescription": "Adds a long line of new industries and structures to build on your colonies, from research stations to tourism, and a set of items that change what an industry does.",
-  "saveCompatibilityText": "Save compatible",
-  "canAdd": "yes",
-  "canUpdate": "depends",
-  "updateCompatibilityText": "New structures only appear on colonies built after updating.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Save compatible",
+      "answer": "yes"
+    },
+    "latestUpdateNote": {
+      "quote": "New structures only appear on colonies built after updating.",
+      "answer": "depends"
+    }
+  },
   "aiUse": {
     "quote": "\"The following assets in this mod were made with AI tools:\n- Officer portraits (optional), generated with Stable Diffusion and touched up by hand\n- Some of the code, with help from ChatGPT\"",
     "usesAi": true,
@@ -76,7 +88,7 @@
       {
         "area": "portraits",
         "how": "edited",
-        "optional": true
+        "isOptional": true
       },
       {
         "area": "code",
@@ -103,7 +115,7 @@
       "url": "https://github.com/SirHartley/IndEvo/releases/download/3.5.2g/Industrial.Evolution.3.5.2g.zip",
       "directUrl": "https://github.com/SirHartley/IndEvo/releases/download/3.5.2g/Industrial.Evolution.3.5.2g.zip",
       "fileName": "Industrial.Evolution.3.5.2g.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "Download 3.5.2g",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -138,13 +150,13 @@
     {
       "name": "Industrial.Evolution - Vanilla Structure Pack",
       "role": "addon",
-      "requires": "Industrial.Evolution",
+      "parentMod": "Industrial.Evolution",
       "downloads": [
         {
           "url": "https://github.com/SirHartley/IndEvo/releases/download/3.5.2g/IndEvo.VanillaStructures.zip",
           "directUrl": "https://github.com/SirHartley/IndEvo/releases/download/3.5.2g/IndEvo.VanillaStructures.zip",
           "fileName": "IndEvo.VanillaStructures.zip",
-          "kind": "direct",
+          "type": "direct",
           "label": "Vanilla Structure Pack",
           "host": "GitHub",
           "needsAnotherStep": false
@@ -152,15 +164,52 @@
       ]
     }
   ],
-  "optionalNeeds": [
-    { "name": "Nexerelin", "id": "nexerelin" },
-    { "name": "Kadur Remnant" }
-  ],
+  "requirements": {
+    "required": [
+      {
+        "name": "LazyLib"
+      },
+      {
+        "name": "MagicLib"
+      }
+    ],
+    "optional": [
+      {
+        "name": "Nexerelin",
+        "id": "nexerelin"
+      },
+      {
+        "name": "Kadur Remnant"
+      }
+    ]
+  },
   "conflicts": [
-    { "name": "Old Colony Overhaul", "quote": "Not compatible with Old Colony Overhaul, the game crashes on load.", "kind": "technical" },
-    { "name": "Nexerelin", "id": "nexerelin", "quote": "Random sector mode crashes on start with Industrial.Evolution installed.", "kind": "technical", "fromOtherMod": true },
-    { "name": "Planetary Academies", "quote": "Planetary Academies already includes the academy from this mod, so only use one.", "kind": "gameplay" },
-    { "name": "AoTD Governments", "quote": "Limited compatibility with AoTD Governments", "kind": "withNotes" },
-    { "name": "Colony Tweaks", "quote": "Colony Tweaks might not work with this, I have not tried it.", "kind": "other" }
+    {
+      "name": "Old Colony Overhaul",
+      "quote": "Not compatible with Old Colony Overhaul, the game crashes on load.",
+      "type": "technical"
+    },
+    {
+      "name": "Nexerelin",
+      "id": "nexerelin",
+      "quote": "Random sector mode crashes on start with Industrial.Evolution installed.",
+      "type": "technical",
+      "fromOtherMod": true
+    },
+    {
+      "name": "Planetary Academies",
+      "quote": "Planetary Academies already includes the academy from this mod, so only use one.",
+      "type": "gameplay"
+    },
+    {
+      "name": "AoTD Governments",
+      "quote": "Limited compatibility with AoTD Governments",
+      "type": "withNotes"
+    },
+    {
+      "name": "Colony Tweaks",
+      "quote": "Colony Tweaks might not work with this, I have not tried it.",
+      "type": "other"
+    }
   ]
 }

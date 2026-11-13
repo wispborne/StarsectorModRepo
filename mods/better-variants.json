@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "better-variants",
     "name": "Better Variants",
@@ -23,7 +23,7 @@
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/itBeABruhmoment/BetterVariants/releases/download/v1.5.0/BetterVariants1.5.0.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -33,12 +33,14 @@
     "addedOn": "2022-03-08",
     "threadLastPostOn": "2026-08-18",
     "editedOn": "2025-04-26",
-    "needs": [
-      {
-        "name": "Variants Lib",
-        "id": "variants-lib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "Variants Lib",
+          "id": "variants-lib"
+        }
+      ]
+    }
   },
   "description": "Better Variants aims to make combat more challenging by adjusting the composition of AI fleets. Features include:\n\nNew and reworked ship variants in AI fleets\nSmarter assignments of officers to ships and officer skills\nAutofit (ie random ship variants) being disabled for most vanilla factions and fleets\nSpecial, randomly occurring, themed fleets with unique compositions\nA bar mission for fighting themed fleets\nSettings which can be changed via Luna Lib or file (VariantsLib/data/variants_lib/variants_lib_settings.json and BetterVariants/data/bettervariants/better_variants_settings.json)",
   "descriptionHtml": "Better Variants aims to make combat more challenging by adjusting the composition of AI fleets. Features include:<br><ul><br><li>New and reworked ship variants in AI fleets</li><li>Smarter assignments of officers to ships and officer skills</li><li>Autofit (ie random ship variants) being disabled for most vanilla factions and fleets</li><li>Special, randomly occurring, themed fleets with unique compositions</li><li>A bar mission for fighting themed fleets</li><li>Settings which can be changed via Luna Lib or file (VariantsLib/data/variants_lib/variants_lib_settings.json and BetterVariants/data/bettervariants/better_variants_settings.json)</li></ul>",
@@ -91,7 +93,7 @@
       "url": "https://github.com/itBeABruhmoment/BetterVariants/releases/download/v1.5.0/BetterVariants1.5.0.zip",
       "directUrl": "https://github.com/itBeABruhmoment/BetterVariants/releases/download/v1.5.0/BetterVariants1.5.0.zip",
       "fileName": "BetterVariants1.5.0.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "download",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -109,10 +111,18 @@
   "threadLastPostOn": "2026-08-18",
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "LunaLib",
-      "id": "lunalib"
-    }
-  ]
+  "requirements": {
+    "required": [
+      {
+        "name": "Variants Lib",
+        "id": "variants-lib"
+      }
+    ],
+    "optional": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ]
+  }
 }

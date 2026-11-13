@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "player-merge-disabler",
     "name": "Player Merge Disabler",
@@ -19,11 +19,15 @@
     "summary": "This is designed so that the player faction file will not be merged with others. If you want a portrait pack to supply portraits to your faction, copy or rename the player.faction file in the portrait pack to playeralt.faction.",
     "summaryIsGenerated": false,
     "aiSummary": "Prevents the player faction file from merging with other mods' faction files.",
-    "saveCompatible": true,
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://drive.google.com/uc?export=download&id=1wsAg9k-2km_o8Va3gJSyb8pv2RuBNyZm",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -33,7 +37,6 @@
     "addedOn": "2022-07-31",
     "threadLastPostOn": "2026-09-20",
     "editedOn": "2026-09-07",
-    "needs": [],
     "partOfThreadTitle": "[0.98] Kon's Multi-Pack v.6.0.8 - 13th Battlegroup Player Faction"
   },
   "description": "This is designed so that the player faction file will not be merged with others.\nIf you want a portrait pack to supply portraits to your faction, copy or rename\nthe player.faction file in the portrait pack to playeralt.faction. This should allow\nyou to potentially create player factions with only the portraits you want.",
@@ -41,10 +44,16 @@
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
   "aiDescription": "Stops other mods from overwriting or changing the player's faction configuration. It allows users to manually manage portraits by renaming portrait pack files to playeralt.faction.",
-  "saveCompatibilityText": "Safe to add",
-  "removalCompatibilityText": "Unsafe to remove midsave.",
-  "canAdd": "yes",
-  "canRemove": "no",
+  "saveCompat": {
+    "adding": {
+      "quote": "Safe to add",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "Unsafe to remove midsave.",
+      "answer": "no"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Miscellaneous Mods"
@@ -55,7 +64,7 @@
       "url": "https://drive.google.com/uc?export=download&id=1wsAg9k-2km_o8Va3gJSyb8pv2RuBNyZm",
       "directUrl": "https://drive.google.com/uc?export=download&id=1wsAg9k-2km_o8Va3gJSyb8pv2RuBNyZm",
       "fileName": "Konturga - Faction Merge Disabler.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "Download",
       "host": "Google Drive",
       "needsAnotherStep": false

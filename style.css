@@ -1768,9 +1768,6 @@ button.check-row { align-items: center; }
 /* The speech bubble's tail makes it reach further down than up, so it sits a
    little higher than the rest. */
 .btn-with-icon .report-icon { transform: translateY(round(0.04em, 1px)); }
-/* The Discord post under the forum post: a little more room than between
-   the parts of one group, so the two read as two posts. */
-#section-discord-post { margin-top: calc((var(--gap-wide) - var(--gap)) / 2); }
 /* A section a jump lands on stops below the sticky bar, not under it. */
 .jump-target, .mod-head { scroll-margin-top: 72px; }
 /* "Forum post" and "Discord post": a small heading with its site's mark,
@@ -2112,10 +2109,13 @@ a.chip.needed.conflict.calm:hover { background: var(--primary-soft); }
 /* The other mods on the site carrying this one's name. It sits above the
    downloads, so a reader who came from outside meets it, and its facts wrap
    rather than being cut off — the whole point of the block is to be read. */
+.panel.name-share { padding-block: 12px; }
+.name-share > h3 { margin-bottom: 2px; }
 .name-share > .sub {
   color: var(--text-dim); font-size: var(--type-small);
-  margin: 0 0 var(--gap);
+  margin: 0 0 6px;
 }
+.name-share .row-inner { padding-block: 5px; }
 .name-share .row-sub { white-space: normal; overflow: visible; }
 .name-share .mod-row:last-child { border-bottom: none; }
 

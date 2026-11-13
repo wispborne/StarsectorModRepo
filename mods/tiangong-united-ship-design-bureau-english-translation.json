@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "tiangong-united-ship-design-bureau-english-translation",
     "name": "Tiangong Ship Design Bureau English Translation",
@@ -17,15 +17,19 @@
     "gameVersion": "0.98a",
     "modVersion": "2.5.9-en1",
     "imageUrl": "https://i.imgur.com/powMrSw.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1566742762836066334/1566742763007901696/icon.png?ex=6af77e27&is=6af62ca7&hm=340195501f9356faaafb67ae3ecb7c26cc9429b57a1bcee6ae37608d30e7cc7b&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1566742762836066334/1566742763007901696/icon.png?ex=6af826e7&is=6af6d567&hm=209bb78b0b77a8a74ca57a6a3098dda0b15eda390db1f542aad94bc17bd01b99&",
     "summary": "When the Gates went dark, four Domain institutions in the Persean Sector were left on their own: the Deep Space Strategy Bureau, the Persean Ordnance Depository (known as the Armory), the Tiangong Creation Bureau's research institute, and Xihe Heavy Industries.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds the Tiangong United faction with over 40 ships, unique weapons, and a new economy system.",
-    "saveCompatible": false,
+    "aiSummary": "Adds a new major faction with over 40 ships, unique weapons, and a War Merit economy system.",
+    "saveCompat": {
+      "adding": {
+        "answer": "depends"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/MrPossible001/Tiangong-Ship-Design-Bureau-ENG/releases/download/v2.5.9-eng/Tiangong_Ship_Design_Bureau_v2.5.9_ENG.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -43,43 +47,50 @@
     "addedOn": "2026-11-02",
     "threadLastPostOn": "2026-11-09",
     "editedOn": "2026-11-08",
-    "needs": [
-      {
-        "name": "LazyLib",
-        "id": "lazylib"
-      },
-      {
-        "name": "MagicLib",
-        "id": "magiclib"
-      },
-      {
-        "name": "GraphicsLib",
-        "id": "graphicslib"
-      },
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      },
-      {
-        "name": "BoxUtil",
-        "id": "box-util"
-      },
-      {
-        "name": "Nexerelin",
-        "id": "nexerelin"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib"
+        },
+        {
+          "name": "GraphicsLib",
+          "id": "graphicslib"
+        },
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        },
+        {
+          "name": "BoxUtil",
+          "id": "box-util"
+        },
+        {
+          "name": "Nexerelin",
+          "id": "nexerelin"
+        }
+      ]
+    }
   },
   "description": "\"Heir to the Domain. Enemy of the traitors. The reckoning is coming.\"\n\n>> Download v2.5.9-en1 <<\nGame version: 0.98a-RC8  |  Requires Nexerelin  |  Original Chinese release\n\nABOUT\n\nWhen the Gates went dark, four Domain institutions in the Persean Sector were left on their own: the Deep Space Strategy Bureau, the Persean Ordnance Depository (known as the Armory), the Tiangong Creation Bureau's research institute, and Xihe Heavy Industries. Waves of \"suspicious automated ships\" kept raiding them, and they answered fast. They merged into a provisional government that calls itself the last guardian of Domain law: the Tiangong United Ship Design Bureau.\n\nThe Bureau has charged Tri-Tachyon with high treason and broken with the Hegemony. On the eve of the Second AI War, it left the Core Worlds entirely. Now it builds its fleets out on the fringe and talks only to the few non-aligned groups it trusts.\n\nIt has not forgotten. It has not forgiven.\n\nFEATURES\n\nFaction & World\n\nTiangong United: a new major faction with full Nexerelin support\nArtificer: the home system, with the forge world Xuanji Forge, the shipyard world Tiangong Hub, the gas giant Pyrocore Gyre and the fortress world Garrison-Alpha\nNether: a black hole system holding the Event Horizon Institute\nVanguard: the Forward Outpost, the Bureau's foothold on the edge of the Core Worlds\nThe Abyss: monitoring stations, an abyssal gate, and a traitor base the Bureau wants destroyed\n\nFleet\n\nOver 40 ships, from nimble frigates to super-heavy dreadnoughts, plus carriers, armed merchants, survey and salvage ships\nCreation Bureau Titans: Domain-era superships, including the War Angel, Shadow Angel, Light Angel and the colossal Virtue Angel\n14 fighter wings, including the Forlorn Vanguard mechs: Ranger, Praetorian and Knight\n\nVirtue Angel\n\nThe Virtue Angel, the colossal Creation Bureau Titan\n\nArsenal\n\nDozens of unique weapons: the Phoenix Plasma Railgun, Skybreaker, Heaven's Wrath, Sunpiercer, Starfall, Heavenblade, Entropic Rending Lance, Void Projector, the Binary Star and Northwind missile families, and more\n50+ hullmods: Tiangong Forge Brand, Myriad Machines Linkage Core, Stardust Armor, Tiangang Shield, cargo/fuel/quarters conversions, and the Arterial Hub network that teleports supplies between linked ships\n\nEconomy & Systems\n\nUnique industries: the Stellar Nexus Drydock Array, the Armed Platform Hangar, the Stardust Memory Assembly Plant, and the Pulse Siphon Array, which draws Dysium from a black hole\nTiangong United Exchange: defeat Tri-Tachyon, Remnant, pirate and Luddic Path fleets to earn War Merit points, then spend them on ships, weapons and colony items\nVirtue Angel shipboard colony (optional, off by default, enable it in LunaLib): dock inside the Titan to repair, refit and trade, and run a colony with its own industry inside the hull\nThree blueprint packages to find: Creation Bureau, Auxiliary Ships and R&D\n\nShip Roster\nFrigates\nLongquan  |  Qingming  |  Yuchang  |  Xingxiang (advanced)\n\nDestroyers\nGouchen  |  Yaoguang  |  Breacher  |  War God (experimental)\n\nCruisers\nTengshe (fast)  |  Qianyu  |  Punisher  |  Yazi (heavy)  |  Yinglong (heavy)\n\nCarriers\nKaiyang (light)  |  Bifang (medium)  |  Tianxuan  |  Yinluan (fire support)\n\nCapital Ships\nTai'e (battlecruiser)  |  Onslaught (T-S) (fast battleship)  |  Fupeng  |  Tianyuan  |  Tianqiong  |  Viceroy (fortress)\n\nTitans\nWar Angel  |  Shadow Angel  |  Light Angel  |  Virtue Angel\n\nSupport\nLianzhou  |  Lianzhou Mk.II  |  Yunfan  |  Dianjin  |  Xingcha  |  Dizhu\n\n???\nSpike  |  Chaos\n\nREQUIREMENTS\n\nStarsector 0.98a-RC8\nLazyLib (3.0.0+)\nMagicLib (1.5.6+)\nGraphicLib (1.9.0+)\nLunaLib (2.0.3+)\nBoxUtil (1.5.2+)\nNexerelin\n\nINSTALLATION\n\nIf you have the Chinese version installed, remove it first. Both versions use the same mod ID.\nExtract the zip into Starsector/mods, so the path reads mods/Tiangong Ship Design Bureau [ENG]/mod_info.json.\nEnable the mod in the launcher and start a new game.\n\nNote: A new save is strongly recommended.\n\nTranslation Permission\n\nI asked the author, kickis, for permission to translate the mod and share it with the English-speaking community. The reply: \"It can.\" (可以, \"Yes, go ahead.\")\n\nAI Use Disclaimer\nThis translation was made with AI assistance and for a bit of polishing.\n\nCREDITS\n\nkickis: original mod (天工联合船舶设计局), including code, art, writing and design. Original release\nMrPossible: English translation, with the author's permission\n\nAll original content belongs to its author. This thread only distributes the English translation.\nSpotted a mistranslation or awkward wording? Let me know in this thread.",
   "descriptionHtml": "<div class=\"align-center\"><img src=\"https://i.imgur.com/powMrSw.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><i>\"Heir to the Domain. Enemy of the traitors. The reckoning is coming.\"</i><br><br><span class=\"size-bigger\"><b><a href=\"https://github.com/MrPossible001/Tiangong-Ship-Design-Bureau-ENG/releases/download/v2.5.9-eng/Tiangong_Ship_Design_Bureau_v2.5.9_ENG.zip\" rel=\"nofollow noopener\" target=\"_blank\">&gt;&gt; Download v2.5.9-en1 &lt;&lt;</a></b></span><br><span class=\"size-small\">Game version: 0.98a-RC8  |  Requires Nexerelin  |  <a href=\"https://www.fossic.org/thread-12809-1-1.html\" rel=\"nofollow noopener\" target=\"_blank\">Original Chinese release</a></span></div><br><hr><br><div class=\"align-center\"><span class=\"size-bigger\"><b><span class=\"author-colour\" style=\"--c:#f2b233\">ABOUT</span></b></span></div><br><div class=\"align-center\"><img src=\"https://i.imgur.com/kw4FnVq.jpeg\" alt=\"\" width=\"760\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><br>When the Gates went dark, four Domain institutions in the Persean Sector were left on their own: the Deep Space Strategy Bureau, the Persean Ordnance Depository <i>(known as the Armory)</i>, the Tiangong Creation Bureau's research institute, and Xihe Heavy Industries. Waves of \"suspicious automated ships\" kept raiding them, and they answered fast. They merged into a provisional government that calls itself the last guardian of Domain law: the <b>Tiangong United Ship Design Bureau</b>.<br><br>The Bureau has charged Tri-Tachyon with high treason and broken with the Hegemony. On the eve of the Second AI War, it left the Core Worlds entirely. Now it builds its fleets out on the fringe and talks only to the few non-aligned groups it trusts.<br><br><i>It has not forgotten. It has not forgiven.</i><br><br><hr><br><div class=\"align-center\"><span class=\"size-bigger\"><b><span class=\"author-colour\" style=\"--c:#f2b233\">FEATURES</span></b></span></div><br><span class=\"size-big\"><b><span class=\"author-colour\" style=\"--c:#f2b233\">Faction &amp; World</span></b></span><br><ul><li><b>Tiangong United</b>: a new major faction with full Nexerelin support</li><li><b>Artificer</b>: the home system, with the forge world Xuanji Forge, the shipyard world Tiangong Hub, the gas giant Pyrocore Gyre and the fortress world Garrison-Alpha</li><li><b>Nether</b>: a black hole system holding the Event Horizon Institute</li><li><b>Vanguard</b>: the Forward Outpost, the Bureau's foothold on the edge of the Core Worlds</li><li><b>The Abyss</b>: monitoring stations, an abyssal gate, and a traitor base the Bureau wants destroyed</li></ul><br><span class=\"size-big\"><b><span class=\"author-colour\" style=\"--c:#f2b233\">Fleet</span></b></span><br><ul><li><b>Over 40 ships</b>, from nimble frigates to super-heavy dreadnoughts, plus carriers, armed merchants, survey and salvage ships</li><li><b>Creation Bureau Titans</b>: Domain-era superships, including the War Angel, Shadow Angel, Light Angel and the colossal <b>Virtue Angel</b></li><li><b>14 fighter wings</b>, including the Forlorn Vanguard mechs: Ranger, Praetorian and Knight</li></ul><details class=\"spoiler\"><summary>Virtue Angel</summary><div class=\"align-center\"><img src=\"https://i.imgur.com/tF57eQt.jpeg\" alt=\"\" width=\"900\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><i>The Virtue Angel, the colossal Creation Bureau Titan</i></div></details><span class=\"size-big\"><b><span class=\"author-colour\" style=\"--c:#f2b233\">Arsenal</span></b></span><br><ul><li><b>Dozens of unique weapons</b>: the Phoenix Plasma Railgun, Skybreaker, Heaven's Wrath, Sunpiercer, Starfall, Heavenblade, Entropic Rending Lance, Void Projector, the Binary Star and Northwind missile families, and more</li><li><b>50+ hullmods</b>: Tiangong Forge Brand, Myriad Machines Linkage Core, Stardust Armor, Tiangang Shield, cargo/fuel/quarters conversions, and the <b>Arterial Hub</b> network that teleports supplies between linked ships</li></ul><br><span class=\"size-big\"><b><span class=\"author-colour\" style=\"--c:#f2b233\">Economy &amp; Systems</span></b></span><br><ul><li><b>Unique industries</b>: the Stellar Nexus Drydock Array, the Armed Platform Hangar, the Stardust Memory Assembly Plant, and the Pulse Siphon Array, which draws Dysium from a black hole</li><li><b>Tiangong United Exchange</b>: defeat Tri-Tachyon, Remnant, pirate and Luddic Path fleets to earn War Merit points, then spend them on ships, weapons and colony items</li><li><b>Virtue Angel shipboard colony</b> <i>(optional, off by default, enable it in LunaLib)</i>: dock inside the Titan to repair, refit and trade, and run a colony with its own industry inside the hull</li><li><b>Three blueprint packages</b> to find: Creation Bureau, Auxiliary Ships and R&amp;D</li></ul><br><details class=\"spoiler\"><summary>Ship Roster</summary><b><span class=\"author-colour\" style=\"--c:#f2b233\">Frigates</span></b><br>Longquan  |  Qingming  |  Yuchang  |  Xingxiang <i>(advanced)</i><br><br><b><span class=\"author-colour\" style=\"--c:#f2b233\">Destroyers</span></b><br>Gouchen  |  Yaoguang  |  Breacher  |  War God <i>(experimental)</i><br><br><b><span class=\"author-colour\" style=\"--c:#f2b233\">Cruisers</span></b><br>Tengshe <i>(fast)</i>  |  Qianyu  |  Punisher  |  Yazi <i>(heavy)</i>  |  Yinglong <i>(heavy)</i><br><br><b><span class=\"author-colour\" style=\"--c:#f2b233\">Carriers</span></b><br>Kaiyang <i>(light)</i>  |  Bifang <i>(medium)</i>  |  Tianxuan  |  Yinluan <i>(fire support)</i><br><br><b><span class=\"author-colour\" style=\"--c:#f2b233\">Capital Ships</span></b><br>Tai'e <i>(battlecruiser)</i>  |  Onslaught (T-S) <i>(fast battleship)</i>  |  Fupeng  |  Tianyuan  |  Tianqiong  |  Viceroy <i>(fortress)</i><br><br><b><span class=\"author-colour\" style=\"--c:#f2b233\">Titans</span></b><br>War Angel  |  Shadow Angel  |  Light Angel  |  Virtue Angel<br><br><b><span class=\"author-colour\" style=\"--c:#f2b233\">Support</span></b><br>Lianzhou  |  Lianzhou Mk.II  |  Yunfan  |  Dianjin  |  Xingcha  |  Dizhu<br><br><b><span class=\"author-colour\" style=\"--c:#f2b233\">???</span></b><br>Spike  |  Chaos</details><br><hr><br><div class=\"align-center\"><span class=\"size-bigger\"><b><span class=\"author-colour\" style=\"--c:#f2b233\">REQUIREMENTS</span></b></span></div><ul><li>Starsector <b>0.98a-RC8</b></li><li>LazyLib <i>(3.0.0+)</i></li><li>MagicLib <i>(1.5.6+)</i></li><li>GraphicLib <i>(1.9.0+)</i></li><li>LunaLib <i>(2.0.3+)</i></li><li>BoxUtil <i>(1.5.2+)</i></li><li>Nexerelin</li></ul><br><div class=\"align-center\"><span class=\"size-bigger\"><b><span class=\"author-colour\" style=\"--c:#f2b233\">INSTALLATION</span></b></span></div><ol><li>If you have the Chinese version installed, <b>remove it first</b>. Both versions use the same mod ID.</li><li>Extract the zip into <i>Starsector/mods</i>, so the path reads <i>mods/Tiangong Ship Design Bureau [ENG]/mod_info.json</i>.</li><li>Enable the mod in the launcher and start a new game.</li></ol><span class=\"author-colour\" style=\"--c:#ff6666\"><b>Note:</b> A new save is strongly recommended.</span><br><br><hr><br><details class=\"spoiler\"><summary>Translation Permission</summary><div class=\"align-center\"><img src=\"https://i.imgur.com/GCrnNe1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><br><i>I asked the author, kickis, for permission to translate the mod and share it with the English-speaking community. The reply: \"It can.\" (可以, \"Yes, go ahead.\")</i></details><br><details class=\"spoiler\"><summary>AI Use Disclaimer</summary>This translation was made with AI assistance and for a bit of polishing.</details><br><div class=\"align-center\"><span class=\"size-bigger\"><b><span class=\"author-colour\" style=\"--c:#f2b233\">CREDITS</span></b></span></div><ul><li><b>kickis</b>: original mod <i>(天工联合船舶设计局)</i>, including code, art, writing and design. <a href=\"https://www.fossic.org/thread-12809-1-1.html\" rel=\"nofollow noopener\" target=\"_blank\">Original release</a></li><li><b>MrPossible</b>: English translation, with the author's permission</li></ul><br><div class=\"align-center\"><span class=\"size-small\"><i>All original content belongs to its author. This thread only distributes the English translation.<br>Spotted a mistranslation or awkward wording? Let me know in this thread.</i></span></div>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p>Hello this is a full translation for the Tiangong United Ship Design Bureau ready for us English users! 🎉</p><ul><li><strong>Myriad Machines Linkage Core</strong>: Tiangong ships don't fight alone. Fleet members link into a shared combat network, and the more of them on the field, the stronger they all get.</li><li><strong>The Tiangong United Exchange</strong>: Destroy hostile ships to earn War Merit Tokens, then spend them at the Forward Outpost on ships, weapons, colony structures… or test your luck on the dice board.</li><li>And a few secrets</li></ul><p>**Forum Thread: ** <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36280.new#new\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36280.new#new</a></p><p><strong>Requirements</strong></p><ul><li>LazyLib, MagicLib, GraphicsLib, LunaLib, BoxUtil</li></ul><p>Original mod by <strong>kickis</strong></p><p>if you find anything wrong translation or otherwise plse post the problem here with the starsector.log and and describe what you were doing and ill do my best on my end or communicate with kickis</p>",
-  "aiDescription": "Introduces a major faction led by Domain loyalists who have broken away from the Hegemony. Features a home system with multiple worlds, including a black hole system and forward outposts. The fleet includes frigates, carriers, and massive Titans like the Virtue Angel. Players can earn War Merit points to unlock ships and items, and optionally manage a colony inside a Titan's hull.",
-  "saveCompatibilityText": "A new save is strongly recommended.",
-  "updateCompatibilityText": "No ship, weapon or item IDs changed, so existing saves still load.",
-  "canAdd": "no",
-  "canUpdate": "yes",
+  "aiDescription": "Adds a new major faction, the Tiangong United Ship Design Bureau, with full Nexerelin support. Includes over 40 ships, 14 fighter wings, dozens of unique weapons, and 50+ hullmods. Features a unique economy system based on War Merit points and a shipboard colony on the Virtue Angel Titan.",
+  "saveCompat": {
+    "adding": {
+      "quote": "A new save is strongly recommended.",
+      "answer": "depends"
+    },
+    "latestUpdateNote": {
+      "quote": "No ship, weapon or item IDs changed, so existing saves still load.",
+      "answer": "yes"
+    }
+  },
   "aiUse": {
     "quote": "This translation was made with AI assistance and for a bit of polishing.",
     "usesAi": true,
@@ -95,7 +106,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1566742762836066334/1566742763007901696/icon.png?ex=6af77e27&is=6af62ca7&hm=340195501f9356faaafb67ae3ecb7c26cc9429b57a1bcee6ae37608d30e7cc7b&",
+      "url": "https://cdn.discordapp.com/attachments/1566742762836066334/1566742763007901696/icon.png?ex=6af826e7&is=6af6d567&hm=209bb78b0b77a8a74ca57a6a3098dda0b15eda390db1f542aad94bc17bd01b99&",
       "aiCaption": "A circular emblem featuring a stylized spacecraft silhouette surrounded by stars on a dark blue background.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -103,14 +114,14 @@
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1566742762836066334/1566896706145222798/pic.png?ex=6af764c6&is=6af61346&hm=8e9a1f4d92673c03dece36b3c3e9adbf69abc6239d76478e3405540a258a069a&",
+      "url": "https://cdn.discordapp.com/attachments/1566742762836066334/1566896706145222798/pic.png?ex=6af80d86&is=6af6bc06&hm=0148685ca42aa4fe344c80ce523ad5449332242f9a08af1fb3460b842e3e9dff&",
       "aiCaption": "A screenshot of a forum discussion regarding the license application for translating the module.",
       "aiKind": "other",
       "aiFit": "poor",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1566742762836066334/1566932304415424543/pic_2.png?ex=6af785ed&is=6af6346d&hm=f89d303313e03f515adab3c7ce4fbd7d33842263ebed308abb553b77946aab4f&",
+      "url": "https://cdn.discordapp.com/attachments/1566742762836066334/1566932304415424543/pic_2.png?ex=6af82ead&is=6af6dd2d&hm=735f96ff99589d8054ea9ee756f6be56196b7a3c843f8503afc5f1b98909a5a7&",
       "aiCaption": "A title picture featuring an anime-style character surrounded by numerous white spaceships and a circular emblem.",
       "aiKind": "banner",
       "aiFit": "good",
@@ -150,7 +161,7 @@
       "url": "https://github.com/MrPossible001/Tiangong-Ship-Design-Bureau-ENG/releases/download/v2.5.9-eng/Tiangong_Ship_Design_Bureau_v2.5.9_ENG.zip",
       "directUrl": "https://github.com/MrPossible001/Tiangong-Ship-Design-Bureau-ENG/releases/download/v2.5.9-eng/Tiangong_Ship_Design_Bureau_v2.5.9_ENG.zip",
       "fileName": "Tiangong_Ship_Design_Bureau_v2.5.9_ENG.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": ">> Download v2.5.9-en1 <<",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -166,5 +177,33 @@
   "releases": [],
   "threadLastPostOn": "2026-11-09",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      },
+      {
+        "name": "MagicLib",
+        "id": "magiclib"
+      },
+      {
+        "name": "GraphicsLib",
+        "id": "graphicslib"
+      },
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "BoxUtil",
+        "id": "box-util"
+      },
+      {
+        "name": "Nexerelin",
+        "id": "nexerelin"
+      }
+    ]
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "morevanillabounties",
     "name": "MoreVanillaBounties",
@@ -19,39 +19,49 @@
     ],
     "gameVersion": "0.98a",
     "imageUrl": "https://cdn.discordapp.com/attachments/1358169304771858464/1358169304956276987/Yessssss.png?ex=6af4c93b&is=6af377bb&hm=d325d5141cf511d11a454d73b3be50b859409f609852557ca19675ce831a6515&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1358169304771858464/1358169304956276987/Yessssss.png?ex=6af76c3b&is=6af61abb&hm=88ba86ec3619efdb8f5ae5e3e367bf46ce1a44929ada41c01e6b89055276966e&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1358169304771858464/1358169304956276987/Yessssss.png?ex=6af814fb&is=6af6c37b&hm=1e0edfa6c5bd5dfbc14e8af29485eb1360431b04d17e31115fb2f5569b18a5c1&",
     "summary": "Adds More Vanilla bounties (3x more min and max) and More Vanilla bounties (Remnant, Derelict, Pather, and Mercenary bounties)",
     "summaryIsGenerated": false,
     "aiSummary": "Increases vanilla bounty values by three times and adds new Remnant, Derelict, Pather, and Mercenary bounty types.",
-    "saveCompatible": true,
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": false,
     "downloadCount": 0,
     "discordUrl": "https://discord.com/channels/187635036525166592/1358169304771858464/1358169304771858464",
     "sourceIsPublic": false,
     "isWorkInProgress": false,
     "addedOn": "2025-04-05",
-    "editedOn": "2026-10-18",
-    "needs": []
+    "editedOn": "2026-10-18"
   },
   "description": "Triples the minimum and maximum values for standard bounties. Introduces additional bounty categories including Remnant, Derelict, Pather, and Mercenary. Includes numerous configuration sliders via LunaLib.",
   "descriptionHtml": "<p>Triples the minimum and maximum values for standard bounties. Introduces additional bounty categories including Remnant, Derelict, Pather, and Mercenary. Includes numerous configuration sliders via LunaLib.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "discordPostHtml": "<p>Adds More Vanilla bounties (3x more min and max) and <em>More</em> Vanilla bounties (Remnant, Derelict, Pather, and Mercenary bounties)</p><p>Based on:<br>WasaBounties<br>Vayra's Sector</p><p>Errors/Bugs/Bad things:<br>AI cores have gender. AI cores can be built different and be level 7 gamma cores. AI cores don't drop.</p><p><strong>Removing this from your game bricks your save.</strong>, can be added midsave</p>",
   "aiDescription": "Triples the minimum and maximum values for standard bounties. Introduces additional bounty categories including Remnant, Derelict, Pather, and Mercenary. Includes numerous configuration sliders via LunaLib.",
-  "saveCompatibilityText": "can be added midsave",
-  "updateCompatibilityText": "No replacing the current version with this does not brick your save",
-  "removalCompatibilityText": "Removing this from your game bricks your save.",
-  "canAdd": "yes",
-  "canUpdate": "yes",
-  "canRemove": "no",
+  "saveCompat": {
+    "adding": {
+      "quote": "can be added midsave",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "Removing this from your game bricks your save.",
+      "answer": "no"
+    },
+    "latestUpdateNote": {
+      "quote": "No replacing the current version with this does not brick your save",
+      "answer": "yes"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Other/Misc."
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1358169304771858464/1358169304956276987/Yessssss.png?ex=6af76c3b&is=6af61abb&hm=88ba86ec3619efdb8f5ae5e3e367bf46ce1a44929ada41c01e6b89055276966e&",
+      "url": "https://cdn.discordapp.com/attachments/1358169304771858464/1358169304956276987/Yessssss.png?ex=6af814fb&is=6af6c37b&hm=1e0edfa6c5bd5dfbc14e8af29485eb1360431b04d17e31115fb2f5569b18a5c1&",
       "aiCaption": "A game screen showing a 'Personal Bounty - Eris Petra' mission with text and ship icons.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -65,10 +75,12 @@
   "releases": [],
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "LunaLib",
-      "id": "lunalib"
-    }
-  ]
+  "requirements": {
+    "optional": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ]
+  }
 }

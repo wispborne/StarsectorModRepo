@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "project-mistral-a-diable-armaa-expansion-mod",
     "name": "Project MISTRAL - a Diable/ArmaA Expansion Mod",
@@ -17,15 +17,19 @@
     "gameVersion": "0.98a",
     "modVersion": "0.5i",
     "imageUrl": "https://i.imgur.com/WwiEj1z.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1529687309132496976/1529687309501599915/angelos_icon.png?ex=6af7d152&is=6af67fd2&hm=d16ee919ce936576c14b6fc22af987bc3314c4a54e3058df5a025f95e0a2f392&",
-    "summary": "This mod adds:",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1529687309132496976/1529687309501599915/angelos_icon.png?ex=6af87a12&is=6af72892&hm=625d542898f45f4d5b422a3ade2b6a700a0d7abf13a3497d172abf8cae03c490&",
+    "summary": "New faction: Angelos Contingent: A faction of former Diable Avionics rebels with a luddic tilt, operating out of the Angelos trinary system near diable space. (generates mid-save)",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds the Angelos Contingent faction and new Diable/ArmaA strikecraft ships.",
-    "saveCompatible": true,
+    "aiSummary": "Adds the Angelos Contingent faction and a set of Diable-styled strikecraft ships.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Bass294/Project_MISTRAL/releases/latest/download/Project_MISTRAL.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -43,37 +47,48 @@
     "addedOn": "2026-07-22",
     "threadLastPostOn": "2026-09-09",
     "editedOn": "2026-08-16",
-    "needs": [
-      {
-        "name": "Arma Armatura",
-        "id": "arma-armatura"
-      },
-      {
-        "name": "MagicLib",
-        "id": "magiclib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib"
-      },
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "Arma Armatura",
+          "id": "arma-armatura"
+        },
+        {
+          "name": "Diable Avionics",
+          "id": "diable-avionics-2"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
+        },
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        }
+      ]
+    }
   },
   "description": "[0.98a] Project MISTRAL\n\nThis mod adds:\n\nNew faction: Angelos Contingent: A faction of former Diable Avionics rebels with a luddic tilt, operating out of the Angelos trinary system near diable space. (generates mid-save)\nCurrently includes 1 contact with rewards at 25, 50, 75, 100 rep, and a unique officer specializing in piloting Diable strikecraft.\nIncludes basic Nexerelin compatibility.\n\nNew ships:\nDiable Avionics hulls with some Arma Armatura Strikecraft. Ships from this mod forego micro-missiles for a more up-close playstyle.\n\n- Ame: A traditional frigate, a Diable-styled take on the wolf.\n- Sparrow: Missile-focused strikecraft wanzer with some calm-style defensive drones.\n- Hummingbird: Light strikecraft wanzer with temporal shell and attack drones.\n- Typhoon: A heavily armed Rime variant.\n- Stormsurge: Variant of the Gust with no bays, more guns, and phase grazer.\n- Tailwind: Heavy carrier based on the Gulf, with more bays, armaa recall system, and a special subsystem that can buff the strongest nearby strikecraft or fighter.\n- Sunrain: A variant of the Traverser Sunshower with more bays, phase grazer, and a dual version of the tailwind buffing subsystem.\nAll ships include red skins as magic paintjobs will full weapon and fighter color-swapping for the Diable purists.\n\nDOWNLOAD\n\nREQUIREMENTS\n\nThis mod currently REQUIRES Arma Armatura 3.2.6+\nand REQUIRES EITHER the Caymon Joestar OR \"Original Flavor\" version of Diable Avionics (due to skin compatibility reqs).\nAlso Magiclib, lazylib, lunalib.\n\nFind Arma Armatura here\n\nFind Diable Avionics-Joestar edition here\nFind Diable Avionics: Original Flavor here\n\nAlso compatible with Diable Armaaonics, a separate project working on directly porting the base Diable Wanzers into Armaa strikecraft.\nFind Diable Armaaonics here\n\nSHIPS\n\nSpoiler\n???, Hummingbird, Sparrow, and Ame\n\nTyphoon, Stormsurge, and Tailwind\n\nSunrain\n\nCREDITS\n\nSpoiler\nCredits to:\nSelkie for heavy collaboration and sprites, she drew the Ame and Stormsurge with help from Snazzypantsmcgree.\nYogurt Fox (who drew the DA skin for Sunshower), Shinsou (Traverser artist) and Hanliu (Traverser author) for their permission to use the excellent Sunshower (DA) sprite and elements for the VLS missiles, as well as Mycophobia for helping facilitate communication/translation with our CN friends! This mod would not be here if this sprite did not inspire me!\nTimid/Selkie for their work on Iron Shell which several parts of this mods code are based off, as well as some parts of KOL code and all those who worked on that mod.\n\nFlashfrozen/Tartiflette for their work on Diable Avionics, and all those who worked on the mod.\nShoi for their work on Armaa and all those who have worked on that mod, which several parts of this mod are based off. This mod is as much an armaa sub-mod as it is Diable!\nCaymen and Rogo for some assets/inspiration from their \"Nightingale\" Wanzer and their work on Diable.\nYuki, Noof, WMGreywind, Aero, Tidal, Histi, Crab, ApogeeKnight, Vexlia for some inspiration/code/help.\nPortraits are painted over/recolored/touched up official art from the tabletop game, Infinity.\nMusic is from PSOBB.\n\n(hope I didn't forget anyone)\n\nClaude Code AI was used for code assistance and file formatting. No AI was used in art, writing, or descriptions.\n\nNOTES\n\nThere is also a lunalib option to enable some depreciated bounties from the 0.1 version with some additional ships. I have not had the chance to rework them with the re-design of the faction. These include the MISTRAL, a large capital-sized bakraid, the Sunshower (DA) which is closer to the Traverser Sunshower than the Sunrain, and the Discordant, a gunboat 4-large pandemonium variant with the classic flicker system.\n\nAlso a hullmod accessible via lunalib options to change the engine aesthetics of Diable ships from a \"flicker\" to a pulsing glow.\n\nNOT SAVE COMPATIBLE IF YOU WERE USING THE OLD 0.1 VERSION FROM DISCORD.\n\nFUTURE\n\nI have plans to flesh out lore, quests, ships, ect. This is my first real mod and has been a lot of fun to work on! Going to take a bit of a break to game and try out some new mod updates before I resume work.",
   "descriptionHtml": "<div class=\"align-center\"><b><span class=\"size-biggest\">[0.98a] Project MISTRAL</span></b></div><div class=\"align-center\"><img src=\"https://i.imgur.com/WwiEj1z.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><br>This mod adds:<br><br>New faction: Angelos Contingent: A faction of former Diable Avionics rebels with a luddic tilt, operating out of the Angelos trinary system near diable space. (generates mid-save)<br>Currently includes 1 contact with rewards at 25, 50, 75, 100 rep, and a unique officer specializing in piloting Diable strikecraft.<br>Includes basic Nexerelin compatibility.<br><br>New ships:<br>Diable Avionics hulls with some Arma Armatura Strikecraft. Ships from this mod forego micro-missiles for a more up-close playstyle.<br><br>- Ame: A traditional frigate, a Diable-styled take on the wolf.<br>- Sparrow: Missile-focused strikecraft wanzer with some calm-style defensive drones.<br>- Hummingbird: Light strikecraft wanzer with temporal shell and attack drones.<br>- Typhoon: A heavily armed Rime variant.<br>- Stormsurge: Variant of the Gust with no bays, more guns, and phase grazer.<br>- Tailwind: Heavy carrier based on the Gulf, with more bays, armaa recall system, and a special subsystem that can buff the strongest nearby strikecraft or fighter.<br>- Sunrain: A variant of the Traverser Sunshower with more bays, phase grazer, and a dual version of the tailwind buffing subsystem.<br>All ships include red skins as magic paintjobs will full weapon and fighter color-swapping for the Diable purists.<br><br><div class=\"align-center\"><a href=\"https://github.com/Bass294/Project_MISTRAL/releases/latest/download/Project_MISTRAL.zip\" rel=\"nofollow noopener\" target=\"_blank\"><b><span class=\"size-biggest\">DOWNLOAD</span></b></a></div><br><br><div class=\"align-center\"><b><span class=\"size-biggest\">REQUIREMENTS</span></b></div><br>This mod currently <b>REQUIRES Arma Armatura 3.2.6+</b> <br>and <b>REQUIRES</b> <i>EITHER</i> the <b>Caymon Joestar</b> <i>OR</i> <b>\"Original Flavor\"</b> version of <b>Diable Avionics</b> (due to skin compatibility reqs).<br>Also Magiclib, lazylib, lunalib.<br><br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=18751.0\" rel=\"nofollow noopener\" target=\"_blank\">Find Arma Armatura here</a><br><br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=29432.0\" rel=\"nofollow noopener\" target=\"_blank\">Find Diable Avionics-Joestar edition here</a><br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35818.0\" rel=\"nofollow noopener\" target=\"_blank\">Find Diable Avionics: Original Flavor here</a><br><br>Also <i>compatible</i> with Diable Armaaonics, a separate project working on directly porting the base Diable Wanzers into Armaa strikecraft.<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=26984.0\" rel=\"nofollow noopener\" target=\"_blank\">Find Diable Armaaonics here</a><br><br><div class=\"align-center\"><b><span class=\"size-biggest\">SHIPS</span></b></div><div class=\"align-center\"><details class=\"spoiler\"><summary>Spoiler</summary>???, Hummingbird, Sparrow, and Ame<br><img src=\"https://i.imgur.com/RgpNoZx.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br>Typhoon, Stormsurge, and Tailwind<br><img src=\"https://i.imgur.com/MATftLr.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br>Sunrain<br><img src=\"https://i.imgur.com/xAA0wFu.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details></div><br><div class=\"align-center\"><b><span class=\"size-biggest\">CREDITS</span></b></div><details class=\"spoiler\"><summary>Spoiler</summary>Credits to:<br>Selkie for heavy collaboration and sprites, she drew the Ame and Stormsurge with help from Snazzypantsmcgree.<br>Yogurt Fox (who drew the DA skin for Sunshower), Shinsou (Traverser artist) and Hanliu (Traverser author) for their permission to use the excellent Sunshower (DA) sprite and elements for the VLS missiles, as well as Mycophobia for helping facilitate communication/translation with our CN friends! This mod would not be here if this sprite did not inspire me!<br>Timid/Selkie for their work on Iron Shell which several parts of this mods code are based off, as well as some parts of KOL code and all those who worked on that mod.<br><br>Flashfrozen/Tartiflette for their work on Diable Avionics, and all those who worked on the mod.<br>Shoi for their work on Armaa and all those who have worked on that mod, which several parts of this mod are based off. This mod is as much an armaa sub-mod as it is Diable!<br>Caymen and Rogo for some assets/inspiration from their \"Nightingale\" Wanzer and their work on Diable.<br>Yuki, Noof, WMGreywind, Aero, Tidal, Histi, Crab, ApogeeKnight, Vexlia for some inspiration/code/help.<br>Portraits are painted over/recolored/touched up official art from the tabletop game, Infinity.<br>Music is from PSOBB.<br><br>(hope I didn't forget anyone)</details><br>Claude Code AI was used for code assistance and file formatting. No AI was used in art, writing, or descriptions.<br><br><b><span class=\"size-biggest\">NOTES</span></b><br><br>There is also a lunalib option to enable some depreciated bounties from the 0.1 version with some additional ships. I have not had the chance to rework them with the re-design of the faction. These include the MISTRAL, a large capital-sized bakraid, the Sunshower (DA) which is closer to the Traverser Sunshower than the Sunrain, and the Discordant, a gunboat 4-large pandemonium variant with the classic flicker system.<br><br>Also a hullmod accessible via lunalib options to change the engine aesthetics of Diable ships from a \"flicker\" to a pulsing glow.<br><br><b>NOT SAVE COMPATIBLE IF YOU WERE USING THE OLD 0.1 VERSION FROM DISCORD.</b><br><br><b><span class=\"size-biggest\">FUTURE</span></b><br><br>I have plans to flesh out lore, quests, ships, ect. This is my first real mod and has been a lot of fun to work on! Going to take a bit of a break to game and try out some new mod updates before I resume work.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p>This mod adds a new faction: The Angelos Contingent, A faction of former Diable Avionics rebels with a luddic tilt, operating out of the Angelos trinary system near diable space. Using Diable Avionics-based hull designs with some Arma-Armatura-styled Strikecraft. Ships from this mod forego micro-missiles for a more up-close playstyle.</p><p>Pre-release updates/discussion will be here: </p><p>Forum thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35781.msg525989#msg525989\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35781.msg525989#msg525989</a></p><p>Direct Download: <a href=\"https://github.com/Bass294/Project_MISTRAL/releases/latest/download/Project_MISTRAL.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Bass294/Project_MISTRAL/releases/latest/download/Project_MISTRAL.zip</a><br><strong>This mod currently REQUIRES the pre-release version of Arma Armatura 3.2.6+ (sorry, signing you up to be beta-testers for Shoi) and the Caymon Joestar version of Diable (due to skin compatabiliy reqs).</strong> Please read the forum post for full details.<br><strong>NOT save compat with 0.1 version from the pre-release thread</strong></p>",
-  "aiDescription": "Introduces a new faction of former Diable Avionics rebels with a luddic tilt. Adds several new ships, including frigates, carriers, and strikecraft wanzers that focus on close-range combat over micro-missiles. Includes unique officer roles, contact rewards, and optional visual tweaks via Lunalib.",
-  "saveCompatibilityText": "generates mid-save",
-  "updateCompatibilityText": "NOT SAVE COMPATIBLE IF YOU WERE USING THE OLD 0.1 VERSION FROM DISCORD.",
-  "canAdd": "yes",
-  "canUpdate": "no",
+  "aiDescription": "Introduces the Angelos Contingent, a faction of former Diable Avionics rebels operating near Diable space. Includes new ships such as the Ame, Sparrow, Hummingbird, Typhoon, Stormsurge, Tailwind, and Sunrain. These ships feature a close-quarters playstyle and include red skins with full weapon and fighter color-swapping.",
+  "saveCompat": {
+    "adding": {
+      "quote": "generates mid-save",
+      "answer": "yes"
+    },
+    "latestUpdateNote": {
+      "quote": "NOT SAVE COMPATIBLE IF YOU WERE USING THE OLD 0.1 VERSION FROM DISCORD.",
+      "answer": "no"
+    }
+  },
   "aiUse": {
-    "quote": "Claude Code AI was used for code assistance and file formatting. No AI was used in art, writing,",
+    "quote": "Claude Code AI was used for code assistance and file formatting. No AI was used in art, writing, or descriptions.",
     "usesAi": true,
     "uses": [
       {
@@ -82,7 +97,7 @@
       }
     ],
     "tools": [
-      "Claude Code AI"
+      "Claude Code"
     ]
   },
   "rawCategories": [
@@ -90,7 +105,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1529687309132496976/1529687309501599915/angelos_icon.png?ex=6af7d152&is=6af67fd2&hm=d16ee919ce936576c14b6fc22af987bc3314c4a54e3058df5a025f95e0a2f392&",
+      "url": "https://cdn.discordapp.com/attachments/1529687309132496976/1529687309501599915/angelos_icon.png?ex=6af87a12&is=6af72892&hm=625d542898f45f4d5b422a3ade2b6a700a0d7abf13a3497d172abf8cae03c490&",
       "aiCaption": "A circular emblem featuring a purple background with gold stars arranged in a pattern.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -98,28 +113,28 @@
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1529687309132496976/1529687602481860770/ewrgewrg.png?ex=6af7d198&is=6af68018&hm=c3a635c3132dbc36f81b5015cc057d10e34acf8ba45a683bac120fae51e1fea5&",
+      "url": "https://cdn.discordapp.com/attachments/1529687309132496976/1529687602481860770/ewrgewrg.png?ex=6af87a58&is=6af728d8&hm=02120f2150bfbe6def8e1d35a23bc7b3da98b38f2d29507f07585f0abb6253f9&",
       "aiCaption": "A space battle scene showing ships firing blue beams and shields active.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1529687309132496976/1529687602876252180/wetgwetgwwetrgwert.png?ex=6af7d198&is=6af68018&hm=3d148a244606b30774de06c0f52b1df5caccfc52381846826e0959d3caef5426&",
+      "url": "https://cdn.discordapp.com/attachments/1529687309132496976/1529687602876252180/wetgwetgwwetrgwert.png?ex=6af87a58&is=6af728d8&hm=2d029454d9b602ac40f16df9de4a44b4504a2bbf291968930b62f6ec36169628&",
       "aiCaption": "A large purple capital ship launching fighters in a nebula.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1529687309132496976/1529687603237097512/wetgwetgwe.png?ex=6af7d198&is=6af68018&hm=ee76b81d9ca5e9230279b8644e2902022f4d50934a7709644b45bac80b57a172&",
+      "url": "https://cdn.discordapp.com/attachments/1529687309132496976/1529687603237097512/wetgwetgwe.png?ex=6af87a58&is=6af728d8&hm=9003092d98a4618e5d1ca8455a160921683393fafae856e400f53aaece9308ba&",
       "aiCaption": "Multiple capital ships and fighters engaged in combat with status bars visible.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1529687309132496976/1538648305133691001/breeeeze.png?ex=6af77566&is=6af623e6&hm=b729c0ed38d7e8736b164ef998eef488619c7f2b6e3f20177bbf2d0c5469dbba&",
+      "url": "https://cdn.discordapp.com/attachments/1529687309132496976/1538648305133691001/breeeeze.png?ex=6af81e26&is=6af6cca6&hm=1cb176b685c954f121cbb80ccf4ab77ebeb708acd85973be5ae68491c6ad2bf1&",
       "aiCaption": "A top-down view of a detailed purple and white ship sprite on a dark background.",
       "aiKind": "art",
       "aiFit": "good",
@@ -159,7 +174,7 @@
       "url": "https://github.com/Bass294/Project_MISTRAL/releases/latest/download/Project_MISTRAL.zip",
       "directUrl": "https://github.com/Bass294/Project_MISTRAL/releases/latest/download/Project_MISTRAL.zip",
       "fileName": "Project_MISTRAL.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "DOWNLOAD",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -178,14 +193,28 @@
   "threadLastPostOn": "2026-09-09",
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "Nexerelin",
-      "id": "nexerelin"
-    },
-    {
-      "name": "Diable ArmAonics",
-      "id": "diable-armaonics"
-    }
-  ]
+  "requirements": {
+    "required": [
+      {
+        "name": "Arma Armatura",
+        "id": "arma-armatura"
+      },
+      {
+        "name": "Diable Avionics",
+        "id": "diable-avionics-2"
+      },
+      {
+        "name": "MagicLib",
+        "id": "magiclib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      },
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ]
+  }
 }

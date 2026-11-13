@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "veteran-refits",
     "name": "Veteran Refits",
@@ -16,17 +16,21 @@
     "imageUrl": "https://i.imgur.com/RWr8kG7.png",
     "summary": "Veteran Refits gives your ships combat experience. A ship that fights earns XP. Spend that XP to raise the ship's S-mod limit, then build in or remove S-mods for credits. Vanilla's story-point build-in still works. This mod adds a second way to get S-mods.",
     "summaryIsGenerated": false,
-    "aiSummary": "Lets ships earn XP from combat to buy extra S-mod slots and install or remove S-mods for credits.",
-    "saveCompatible": true,
+    "aiSummary": "Lets you spend ship XP earned in combat on extra S-mod slots and build or remove S-mods for credits.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FAudazSchoen%2Fveteran-refits%2Fmain%2Fveteran_refits.version%22%2C%22id%22%3A%22xpsmods%22%2C%22version%22%3A%221.0.1%22%7D",
-      "kind": "trios",
+      "type": "trios",
       "needsAnotherStep": false
     },
     "plainDownload": {
       "url": "https://github.com/AudazSchoen/veteran-refits/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": true
     },
     "downloadCount": 2,
@@ -41,27 +45,35 @@
       }
     ],
     "addedOn": "2026-11-12",
-    "needs": [
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib",
-        "via": "LunaLib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "LunaLib"
+        }
+      ]
+    }
   },
   "description": "Veteran Refits\nYour ships earn XP in combat. Spend it on extra S-mod slots, then build in S-mods with credits instead of story points.\n\nRequires LunaLib\n\nAuthors note\nI've been a long time Starsector player and this is my first mod for the game. I really enjoy tinkering with Ships and have almost always played with the great Progressive S-Mods, but I've always felt like something is missing with the mod so I decided to make a spin on it. It's heavily influenced by PSM but does most things differently.\n\nThank you for reading and thanks to the modding community for countless hours of content for this game.\n\nAbout\nVeteran Refits gives your ships combat experience. A ship that fights earns XP. Spend that XP to raise the ship's S-mod limit, then build in or remove S-mods for credits.\nVanilla's story-point build-in still works. This mod adds a second way to get S-mods.\n\nFeatures\n\nShip XP from combat. Deployed ships earn XP for the hull damage they deal and for the enemy ships they help knock out. Ships in reserve get a share, and a deployed ship never earns less than that share.\nExtra S-mod slots. Spend a ship's XP to raise its S-mod limit. The raised limit also shows in the vanilla refit screen.\nBuild in and remove S-mods for credits, in a dialog styled after vanilla's build-in dialog. It also handles:\nenhancing built-in hullmods that have an S-mod effect, like vanilla\nmodules of multi-section ships (each module may use up to the main ship's limit)\nremoving S-mods for a fee (the bought slot stays)\n\nUpgrade indicators. A green arrow on refit ship cards marks ships that can buy their next slot. After each battle, a report lists the XP each ship earned and which ships have an upgrade available.\nEverything is configurable in LunaLib's mod settings, and changes apply without a restart.\n\nScreenshots\n\nSpoiler\n\nHow to use\nOpen the refit screen and press Ship upgrades under vanilla's Build in button (hotkey S). It also appears in the add-hullmod picker and in LunaLib's refit button list.\n\nBuy a slot: spend the ship's XP on an extra S-mod slot. This works anywhere.\nBuild in or remove: tick hullmods in the table, then press Confirm (G). You must be docked at a market, and it costs credits.\n\nInstallation\n\nInstall LunaLib.\nDownload Veteran-Refits-1.0.0.zip from GitHub Releases.\nUnzip it into Starsector/mods/, so you get mods/Veteran Refits/mod_info.json.\nEnable Veteran Refits and LunaLib in the launcher.\n\nSave compatibility\n\nCan be added to an existing save.\nCan't be removed from a save. A hidden hullmod is stored on your ships to apply the extra slots.\n\nCompatibility\n\nDon't use it together with Progressive S-Mods. Both raise the same S-mod limit stat.\nThe refit button and the ship card icons reach into the game's refit UI through reflection. If a game update breaks that, they switch off and log an error. The entry in LunaLib's refit button list keeps working.\n\nAI content disclaimer\nThis mod was made with an AI coding assistant, Claude (Anthropic), used through Claude Code.\n\nMe: designed the mod, decided its features and balance, and tested every change in game.\nClaude: wrote most of the code, based on my design, feedback and in-game screenshots.\n\nCredits and permissions\nSome techniques were learned from reading these mods. No code was copied.\n\nLunaLib by Lukas04: the refit button and panel API, the mod settings, and the workaround for reflection into the game's UI.\nProgressive S-Mods by qcwxezda and chdcl: the original idea of earning S-mods through ship XP, raising the S-mod limit with a hidden hullmod, and its build-in rules.\nExiled Sector by Portals: placing a button under vanilla's \"Build in\" button, and the refit screen's frame measurements.\n\nPermissions: the code is under the MIT license. You're free to reuse, modify and redistribute it, as long as the license notice is kept.\n\nBug reports and balance feedback are welcome in this thread or on GitHub. If something breaks, please attach your starsector.log.",
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\"><b>Veteran Refits</b></span><br><i>Your ships earn XP in combat. Spend it on extra S-mod slots, then build in S-mods with credits instead of story points.</i><br> <br><a href=\"https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FAudazSchoen%2Fveteran-refits%2Fmain%2Fveteran_refits.version%22%2C%22id%22%3A%22xpsmods%22%2C%22version%22%3A%221.0.1%22%7D\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://trilink.wispborne.com/badges/install-badge-forthebadge.svg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a> <a href=\"https://github.com/AudazSchoen/veteran-refits/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Download-GitHub-blue?style=for-the-badge&amp;logo=github\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a></div><br><hr><br><span class=\"size-bigger\"><b>Authors note</b></span><br>I've been a long time Starsector player and this is my first mod for the game. I really enjoy tinkering with Ships and have almost always played with the great Progressive S-Mods, but I've always felt like something is missing with the mod so I decided to make a spin on it. It's heavily influenced by PSM but does most things differently.<br><br>Thank you for reading and thanks to the modding community for countless hours of content for this game. <br><br><span class=\"size-bigger\"><b>About</b></span><br>Veteran Refits gives your ships combat experience. A ship that fights earns XP. Spend that XP to raise the ship's S-mod limit, then build in or remove S-mods for credits.<br>Vanilla's story-point build-in still works. This mod adds a second way to get S-mods.<br><br><span class=\"size-bigger\"><b>Features</b></span><br><ul><li><b>Ship XP from combat.</b> Deployed ships earn XP for the hull damage they deal and for the enemy ships they help knock out. Ships in reserve get a share, and a deployed ship never earns less than that share.</li><li><b>Extra S-mod slots.</b> Spend a ship's XP to raise its S-mod limit. The raised limit also shows in the vanilla refit screen.</li><li><b>Build in and remove S-mods for credits</b>, in a dialog styled after vanilla's build-in dialog. It also handles:<br><ul><li>enhancing built-in hullmods that have an S-mod effect, like vanilla</li><li>modules of multi-section ships (each module may use up to the main ship's limit)</li><li>removing S-mods for a fee (the bought slot stays)</li></ul></li><li><b>Upgrade indicators.</b> A green arrow on refit ship cards marks ships that can buy their next slot. After each battle, a report lists the XP each ship earned and which ships have an upgrade available.</li><li><b>Everything is configurable</b> in LunaLib's mod settings, and changes apply without a restart.</li></ul><br><span class=\"size-bigger\"><b>Screenshots</b></span><br><details class=\"spoiler\"><summary>Spoiler</summary><img src=\"https://i.imgur.com/RWr8kG7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.imgur.com/DarEfFn.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details><br><span class=\"size-bigger\"><b>How to use</b></span><br>Open the refit screen and press <b>Ship upgrades</b> under vanilla's <b>Build in</b> button (hotkey <b>S</b>). It also appears in the add-hullmod picker and in LunaLib's refit button list.<br><ul><li><b>Buy a slot:</b> spend the ship's XP on an extra S-mod slot. This works anywhere.</li><li><b>Build in or remove:</b> tick hullmods in the table, then press <b>Confirm (G)</b>. You must be docked at a market, and it costs credits.</li></ul>  <br><span class=\"size-bigger\"><b>Installation</b></span><br><ol><li>Install <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a>.</li><li>Download <b>Veteran-Refits-1.0.0.zip</b> from <a href=\"https://github.com/AudazSchoen/veteran-refits/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\">GitHub Releases</a>.</li><li>Unzip it into <b>Starsector/mods/</b>, so you get <b>mods/Veteran Refits/mod_info.json</b>.</li><li>Enable <b>Veteran Refits</b> and <b>LunaLib</b> in the launcher.</li></ol><br><span class=\"size-bigger\"><b>Save compatibility</b></span><br><ul><li><span class=\"author-colour\" style=\"--c:#008000\"><b>Can be added</b></span> to an existing save.</li><li><span class=\"author-colour\" style=\"--c:#ff0000\"><b>Can't be removed</b></span> from a save. A hidden hullmod is stored on your ships to apply the extra slots.</li></ul><br><span class=\"size-bigger\"><b>Compatibility</b></span><br><ul><li><b>Don't use it together with Progressive S-Mods.</b> Both raise the same S-mod limit stat.</li><li>The refit button and the ship card icons reach into the game's refit UI through reflection. If a game update breaks that, they switch off and log an error. The entry in LunaLib's refit button list keeps working.</li></ul><br><span class=\"size-bigger\"><b>AI content disclaimer</b></span><br>This mod was made with an AI coding assistant, Claude (Anthropic), used through Claude Code.<br><ul><li><b>Me:</b> designed the mod, decided its features and balance, and tested every change in game.</li><li><b>Claude:</b> wrote most of the code, based on my design, feedback and in-game screenshots.</li></ul><br><br><span class=\"size-big\"><b>Credits and permissions</b></span><br>Some techniques were learned from reading these mods. No code was copied.<br><ul><li><b><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a></b> by Lukas04: the refit button and panel API, the mod settings, and the workaround for reflection into the game's UI.</li><li><b><a href=\"https://fractalsoftworks.com/forum/index.php?topic=23006.0\" rel=\"nofollow noopener\" target=\"_blank\">Progressive S-Mods</a></b> by qcwxezda and chdcl: the original idea of earning S-mods through ship XP, raising the S-mod limit with a hidden hullmod, and its build-in rules.</li><li><b><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36072.0\" rel=\"nofollow noopener\" target=\"_blank\">Exiled Sector</a></b> by Portals: placing a button under vanilla's \"Build in\" button, and the refit screen's frame measurements.</li></ul><br><b>Permissions:</b> the code is under the <a href=\"https://github.com/AudazSchoen/veteran-refits/blob/main/LICENSE\" rel=\"nofollow noopener\" target=\"_blank\">MIT license</a>. You're free to reuse, modify and redistribute it, as long as the license notice is kept.<br><br>Bug reports and balance feedback are welcome in this thread or on <a href=\"https://github.com/AudazSchoen/veteran-refits/issues\" rel=\"nofollow noopener\" target=\"_blank\">GitHub</a>. If something breaks, please attach your <b>starsector.log</b>.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Ships gain experience based on damage dealt and kills. Players spend this XP to increase the number of available S-mod slots. The mod provides a custom interface to build in or remove these mods using credits, separate from the vanilla story point system.",
-  "saveCompatibilityText": "Can be added to an existing save.",
-  "removalCompatibilityText": "Can't be removed from a save. A hidden hullmod is stored on your ships to apply the extra slots.",
-  "canAdd": "yes",
-  "canRemove": "no",
+  "aiDescription": "Ships earn XP from dealing hull damage and helping knock out enemies. You can spend that XP to raise a ship's S-mod limit, which also updates the vanilla refit screen. A new dialog allows you to build in or remove S-mods for credits while docked at a market.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Can be added to an existing save.",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "Can't be removed from a save. A hidden hullmod is stored on your ships to apply the extra slots.",
+      "answer": "no"
+    }
+  },
   "aiUse": {
     "quote": "This mod was made with an AI coding assistant, Claude (Anthropic), used through Claude Code.\nMe: designed the mod, decided its features and balance, and tested every change in game.\nClaude: wrote most of the code, based on my design, feedback and in-game screenshots.",
     "usesAi": true,
@@ -73,6 +85,7 @@
       }
     ],
     "tools": [
+      "Claude (Anthropic)",
       "Claude Code"
     ]
   },
@@ -106,14 +119,14 @@
   "downloads": [
     {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FAudazSchoen%2Fveteran-refits%2Fmain%2Fveteran_refits.version%22%2C%22id%22%3A%22xpsmods%22%2C%22version%22%3A%221.0.1%22%7D",
-      "kind": "trios",
+      "type": "trios",
       "label": "",
       "host": "trilink.wispborne.com",
       "needsAnotherStep": true
     },
     {
       "url": "https://github.com/AudazSchoen/veteran-refits/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "label": "",
       "host": "github.com",
       "needsAnotherStep": true
@@ -127,12 +140,25 @@
   "releases": [],
   "sameNameMods": [],
   "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "LunaLib"
+      }
+    ]
+  },
   "conflicts": [
     {
       "name": "Progressive S-Mods",
       "id": "progressive-s-mods",
       "quote": "Don't use it together with Progressive S-Mods. Both raise the same S-mod limit stat.",
-      "kind": "gameplay"
+      "type": "gameplay"
     }
   ]
 }

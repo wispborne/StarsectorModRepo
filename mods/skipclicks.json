@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "skipclicks",
     "name": "SkipClicks v1.0.0",
@@ -20,12 +20,16 @@
     "imageUrl": "https://raw.githubusercontent.com/andrzejsokolowski/starsector-skipclicks/main/graphics/icons/skipclicks.png",
     "summary": "This is a mod that after making, I cannot play without. Pitch: 6 buttons to survey a planet goes down to 2. Holy hell does this save time. SkipClicks cuts the screens that never ask you anything, and keeps every screen where you choose something cutting redundant clicking by over 75% in some cases.",
     "summaryIsGenerated": false,
-    "aiSummary": "Reduces the number of clicks required for surveying planets, salvaging wrecks, opening cargo pods, and collecting battle loot.",
-    "saveCompatible": true,
+    "aiSummary": "Reduces redundant clicking in surveys, salvage, cargo pods, and battle loot screens.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/andrzejsokolowski/starsector-skipclicks/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": true
     },
     "downloadCount": 1,
@@ -41,7 +45,7 @@
       },
       {
         "area": "icons",
-        "how": "assisted"
+        "how": "generated"
       },
       {
         "area": "writing",
@@ -51,28 +55,35 @@
     "addedOn": "2026-11-07",
     "threadLastPostOn": "2026-11-08",
     "editedOn": "2026-11-08",
-    "needs": [
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib",
-        "via": "LunaLib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "LunaLib"
+        }
+      ]
+    }
   },
   "description": "Subject: [0.98a] SkipClicks 1.0.0 - fewer clicks for surveys, salvage, cargo pods and battle loot\n\nSkipClicks\n\nWHAT DOES THIS MOD DO?\nThis is a mod that after making, I cannot play without. Pitch: 6 buttons to survey a planet goes down to 2. Holy hell does this save time.\nSkipClicks cuts the screens that never ask you anything, and keeps every screen where you choose something cutting redundant clicking by over 75% in some cases.\nNeeds LunaLib. PatchLib is optional (only for the after-battle part).\n\nSurveying a planet\n\nWithout SkipClicks:\n\nOpen the planet.\nPerform a survey. The survey screen opens with the cost.\nPerform survey. A short animation shows the planet's features.\nContinue. Back to the planet, now with Establish a colony and Leave.\nLeave, back to the planet's main screen.\nLeave again.\n\nWith SkipClicks:\n\nOpen the planet.\nFast survey option appears - Something like \"Fast Survery (42 supplies) - Clicking it instantly finishes the survey and dups the findings into the dialog\nOptional: close the planet dialog after a fast survey when there are no ruins to explore.\n\nSalvaging\n\nWithout SkipClicks:\n\nScavenge hotbar skill. The risk screen opens with Assess and Leave.\nAssess. Now you see the requirements and the salvage effectiveness, with Begin salvage operations.\nBegin salvage operations.\nSometimes an accident: a damage report with only Continue.\nThe loot screen.\nA station, probe or cache then turns into a debris field, and you do it all again: scavenge, Assess, Begin salvage operations, loot.\n\nWith SkipClicks:\n\nScavenge. You land on the requirements screen right away.\nBegin salvage operations.\nThe loot screen, with the leftover debris field's loot already in it.\n\nDebris fields skip Assess. Derelicts, stations and caches skip Explore.\nNever skipped when automated defenses guard the target, so you can still leave before the fight. After you beat the defenses, no more screen with only Continue.\nA salvage accident goes to the message log and the loot screen opens right away.\nThe leftover debris gives the same loot and experience as scavenging it yourself, and no debris field is left behind. Demolishing a station still leaves its debris field.\n\nCargo pods\n\nWithout SkipClicks: open the pods, then Examine pod contents, then the contents.\nWith SkipClicks: open the pods, then the contents.\n\nUnlocked pods only. When you close the contents, the usual options are back (such as putting the pods into a stable orbit).\n\nAfter a battle\n\nWithout SkipClicks: Continue on the ship recovery screen, then a screen with only Pick through the wreckage, then the loot.\nWith SkipClicks (and PatchLib): Continue on the ship recovery screen, then the loot.\n\nCredits found in the wreckage go to the message log.\n\nSettings and compatibility\n\nEvery skip has its own switch in the LunaLib settings.\nEvery skip steps aside when another mod has its own quest, reward or options on that screen.\nWorks with Nexerelin's battle screen.\nSafe to add to or remove from a game in progress.\nPatchLib is only needed for the after-battle skip. Everything else works without it.\n\nAI use disclaimer\nSome or all assets and code in this mod were created using AI tools:\nCode: Claude Code (Claude Opus 5.5)\nText (readme and this post): Claude Code (Claude Opus 5.5)\nSettings icon: drawn by a script written with Claude Code (Claude Opus 5.5)\n\nLicense\nThis mod is under the CC0 (Creative Commons Zero) License, allowing you to do whatever you want with the code, without giving any credit to anyone.\n\nVersion log\n1.0.0\nFirst stable release. No gameplay changes since 0.3.0.\n\n0.3.0\nNew: skip the Continue after a salvage find that asks nothing.\nNew: skip the Continue after beating automated defenses.\nNew: unlocked cargo pods open straight to their contents.\nChanged: the salvage skips no longer override other mods' rules on the same screens (Secrets of the Frontier, Content Unlocking Missions and others).\n\n0.2.0\nNew: the debris field left by salvaging a station, probe, cache or derelict goes straight into the first loot screen.\n\n0.1.1\nFixed: Assess and Explore were never skipped when mods such as Exotica Technologies hook the salvage screen without adding an option.\n\n0.1.0\nFirst release.",
   "descriptionHtml": "Subject: [0.98a] SkipClicks 1.0.0 - fewer clicks for surveys, salvage, cargo pods and battle loot<br><br><div class=\"align-center\"><span class=\"size-biggest\"><a href=\"https://github.com/andrzejsokolowski/starsector-skipclicks/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><b>SkipClicks</b></a></span><br><img src=\"https://raw.githubusercontent.com/andrzejsokolowski/starsector-skipclicks/main/graphics/icons/skipclicks.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><a href=\"https://github.com/andrzejsokolowski/starsector-skipclicks/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/downloads/andrzejsokolowski/starsector-skipclicks/total?style=for-the-badge&amp;label=download\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a>  <a href=\"https://github.com/andrzejsokolowski/starsector-skipclicks\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/v/release/andrzejsokolowski/starsector-skipclicks?display_name=tag&amp;sort=semver&amp;style=for-the-badge&amp;label=source\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></div><div class=\"align-center\"><b><br>WHAT DOES THIS MOD DO?<br>This is a mod that after making, I cannot play without. Pitch: 6 buttons to survey a planet goes down to 2. Holy hell does this save time.<br>SkipClicks cuts the screens that never ask you anything, and keeps every screen where you choose something cutting redundant clicking by over 75% in some cases.<br>Needs LunaLib. PatchLib is optional (only for the after-battle part).<br></b></div><br><hr><div class=\"align-center\"><span class=\"size-big\"><b>Surveying a planet</b></span></div><hr><b>Without SkipClicks:</b><br><ol><li>Open the planet.</li><li>Perform a survey. The survey screen opens with the cost.</li><li>Perform survey. A short animation shows the planet's features.</li><li>Continue. Back to the planet, now with Establish a colony and Leave.</li><li>Leave, back to the planet's main screen.</li><li>Leave again.</li></ol><b>With SkipClicks:</b><br><ol><li>Open the planet.</li><li>Fast survey option appears - Something like \"Fast Survery (42 supplies) - Clicking it instantly finishes the survey and dups the findings into the dialog</li><li>Optional: close the planet dialog after a fast survey when there are no ruins to explore.</li></ol><br><hr><div class=\"align-center\"><span class=\"size-big\"><b>Salvaging</b></span></div><hr><b>Without SkipClicks:</b><br><ol><li>Scavenge hotbar skill. The risk screen opens with Assess and Leave.</li><li>Assess. Now you see the requirements and the salvage effectiveness, with Begin salvage operations.</li><li>Begin salvage operations.</li><li>Sometimes an accident: a damage report with only Continue.</li><li>The loot screen.</li><li>A station, probe or cache then turns into a debris field, and you do it all again: scavenge, Assess, Begin salvage operations, loot.</li></ol><b>With SkipClicks:</b><br><ol><li>Scavenge. You land on the requirements screen right away.</li><li>Begin salvage operations.</li><li>The loot screen, with the leftover debris field's loot already in it.</li></ol><ul><li>Debris fields skip Assess. Derelicts, stations and caches skip Explore.</li><li>Never skipped when automated defenses guard the target, so you can still leave before the fight. After you beat the defenses, no more screen with only Continue.</li><li>A salvage accident goes to the message log and the loot screen opens right away.</li><li>The leftover debris gives the same loot and experience as scavenging it yourself, and no debris field is left behind. Demolishing a station still leaves its debris field.</li></ul><br><hr><div class=\"align-center\"><span class=\"size-big\"><b>Cargo pods</b></span></div><hr><b>Without SkipClicks:</b> open the pods, then Examine pod contents, then the contents.<br><b>With SkipClicks:</b> open the pods, then the contents.<br><ul><li>Unlocked pods only. When you close the contents, the usual options are back (such as putting the pods into a stable orbit).</li></ul><br><hr><div class=\"align-center\"><span class=\"size-big\"><b>After a battle</b></span></div><hr><b>Without SkipClicks:</b> Continue on the ship recovery screen, then a screen with only Pick through the wreckage, then the loot.<br><b>With SkipClicks (and PatchLib):</b> Continue on the ship recovery screen, then the loot.<br><ul><li>Credits found in the wreckage go to the message log.</li></ul><br><hr><div class=\"align-center\"><span class=\"size-big\"><b>Settings and compatibility</b></span></div><hr><ul><li>Every skip has its own switch in the LunaLib settings.</li><li>Every skip steps aside when another mod has its own quest, reward or options on that screen.</li><li>Works with Nexerelin's battle screen.</li><li>Safe to add to or remove from a game in progress.</li><li><a href=\"https://github.com/Lukas22041/PatchLib\" rel=\"nofollow noopener\" target=\"_blank\">PatchLib</a> is only needed for the after-battle skip. Everything else works without it.</li></ul><br><details class=\"spoiler\"><summary>AI use disclaimer</summary>Some or all assets and code in this mod were created using AI tools:<br><ul><li>Code: Claude Code (Claude Opus 5.5)</li><li>Text (readme and this post): Claude Code (Claude Opus 5.5)</li><li>Settings icon: drawn by a script written with Claude Code (Claude Opus 5.5)</li></ul></details><br><details class=\"spoiler\"><summary>License</summary>This mod is under the CC0 (Creative Commons Zero) License, allowing you to do whatever you want with the code, without giving any credit to anyone.</details><br><details class=\"spoiler\"><summary>Version log</summary><b>1.0.0</b><br><ul><li>First stable release. No gameplay changes since 0.3.0.</li></ul><b>0.3.0</b><br><ul><li>New: skip the Continue after a salvage find that asks nothing.</li><li>New: skip the Continue after beating automated defenses.</li><li>New: unlocked cargo pods open straight to their contents.</li><li>Changed: the salvage skips no longer override other mods' rules on the same screens (Secrets of the Frontier, Content Unlocking Missions and others).</li></ul><b>0.2.0</b><br><ul><li>New: the debris field left by salvaging a station, probe, cache or derelict goes straight into the first loot screen.</li></ul><b>0.1.1</b><br><ul><li>Fixed: Assess and Explore were never skipped when mods such as Exotica Technologies hook the salvage screen without adding an option.</li></ul><b>0.1.0</b><br><ul><li>First release.</li></ul></details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36277\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36277</a><br>This mod saves tons of time you didn't even notice you were using by removing redundant dialogue options that are not really options, pointless screens and pointless waits.</p><p>More information on forum page on exactly what is changed</p>",
-  "aiDescription": "Automates repetitive confirmation screens for surveys, salvage operations, and post-battle loot collection. It skips intermediate steps like assessing risks or examining pod contents when no choices are presented, while preserving screens that require player input or involve combat.",
-  "saveCompatibilityText": "Safe to add to or remove from a game in progress.",
-  "removalCompatibilityText": "Safe to add to or remove from a game in progress.",
-  "canAdd": "yes",
-  "canRemove": "yes",
+  "aiDescription": "Cuts unnecessary screens that do not require player input, such as survey animations and salvage assessment steps. Streamlines the process of opening cargo pods and collecting battle loot. Maintains compatibility with other mods by stepping aside when they add custom options to these screens.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Safe to add to or remove from a game in progress.",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "Safe to add to or remove from a game in progress.",
+      "answer": "yes"
+    }
+  },
   "aiUse": {
     "quote": "Some or all assets and code in this mod were created using AI tools:\nCode: Claude Code (Claude Opus 5.5)\nText (readme and this post): Claude Code (Claude Opus 5.5)\nSettings icon: drawn by a script written with Claude Code (Claude Opus 5.5)",
     "usesAi": true,
@@ -87,7 +98,7 @@
       },
       {
         "area": "icons",
-        "how": "assisted"
+        "how": "generated"
       }
     ],
     "tools": [
@@ -120,7 +131,7 @@
   "downloads": [
     {
       "url": "https://github.com/andrzejsokolowski/starsector-skipclicks/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "label": "SkipClicks",
       "host": "github.com",
       "needsAnotherStep": true
@@ -131,7 +142,7 @@
     "0.3.0": "New: skip the Continue after a salvage find that asks nothing.\n New: skip the Continue after beating automated defenses.\n New: unlocked cargo pods open straight to their contents.\n Changed: the salvage skips no longer override other mods' rules on the same screens (Secrets of the Frontier, Content Unlocking Missions and others).",
     "0.2.0": "New: the debris field left by salvaging a station, probe, cache or derelict goes straight into the first loot screen."
   },
-  "license": "CC0 (Creative Commons Zero)",
+  "license": "CC0 (Creative Commons Zero) License",
   "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-skipclicks",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36277",
@@ -140,10 +151,23 @@
   "threadLastPostOn": "2026-11-08",
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "PatchLib",
-      "id": "patchlib"
-    }
-  ]
+  "requirements": {
+    "required": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "LunaLib"
+      }
+    ],
+    "optional": [
+      {
+        "name": "PatchLib",
+        "id": "patchlib"
+      }
+    ]
+  }
 }

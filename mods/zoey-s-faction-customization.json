@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "zoey-s-faction-customization",
     "name": "Zoey's Faction Customization",
@@ -23,12 +23,16 @@
     "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_12931_1661628195.png",
     "summary": "Adds a few ways to customize your faction!",
     "summaryIsGenerated": false,
-    "aiSummary": "Lets you customize faction colors, fleet names, rank titles, descriptions, and legal/illegal commodities.",
-    "saveCompatible": true,
+    "aiSummary": "Lets you change your faction color, fleet names, post/rank names, faction description, and illegal/legal commodities with mechanical effects.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/nikothedude/Zoey-s-Faction-Customization/releases/download/1.0.0/Zoey.s.Faction.Customization.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -36,57 +40,49 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1563000548658253924/1563000548658253924",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
-    "usesAi": true,
-    "aiUses": [
-      {
-        "area": "code",
-        "how": "assisted"
-      }
-    ],
+    "usesAi": false,
     "addedOn": "2026-10-22",
     "threadLastPostOn": "2026-10-22",
     "editedOn": "2026-10-23",
-    "needs": [
-      {
-        "name": "PatchLib",
-        "id": "patchlib"
-      },
-      {
-        "name": "MagicLib",
-        "id": "magiclib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib"
-      },
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "PatchLib",
+          "id": "patchlib"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
+        },
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        }
+      ]
+    }
   },
   "description": "Zoey's Faction Customization\n\nRequires Patchlib as well as MagicLib, LazyLib and LunaLib!\n\nWorks great with Illustrated Entities!\n\nAdds a few ways to customize your faction!\n\nFeatures:\nChange your faction color!\nChange your fleet names!\nChange your post/rank names!\nChange your faction description!\nChange your illegal/legal commodities, with mechanical effects! (Effects can be disabled in lunalib.)\n\nFaction description is accessed through your faction panel - all else is in bespoke intel pages within your faction intel category.\n\nCompatibility\nCan be added to existing saves, but not removed.\nFAQ\nThis modded commodity doesn't appear in the list!\nPester the mod author to add a commodity entry to their copy of data>campaign>ZFCCommoditySpecs.csv, not me!\nThe only thing that appears in intel is my faction color!\nThat's because you don't have your faction established yet. Most of the intel only appears if you have at least one colony.\nThis UI isn't impressive!\nI'm not a UI modder. It's... a weak point.\nWas AI used in the creation of this mod?\nOnly Intellij's simple autocomplete function, which is barely AI powered to begin with.\n\nDownload: https://github.com/nikothedude/Zoey-s-Faction-Customization/releases\nRepo: https://github.com/nikothedude/Zoey-s-Faction-Customization\n\nChangelog\n1.0.0\n\nInitial\n\nHey, what's with the name?\nTurns out I'm a girl. My mods will remain niko until I decide to change them to my new name.\nAnd no, this still isn't my IRL name :wink:\n\nModder information\nIf you want to add your special commodity to my commodity list, find data>campaign>ZFCCommoditySpecs.csv in my mod and copy it to yours. Create a new IllegalCommodityPlugin implementation (a rather simple class), and determine the category - STANDARD, TABOO, AI, or MISC.",
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\"><b>Zoey's Faction Customization</b></span></div><div class=\"align-center\"><u><i>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36191.0\" rel=\"nofollow noopener\" target=\"_blank\"> Patchlib</a> as well as MagicLib, LazyLib and LunaLib!</i></u></div><div class=\"align-center\"><u><i>Works great with <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25649.0\" rel=\"nofollow noopener\" target=\"_blank\"> Illustrated Entities</a>!</i></u></div><br><div class=\"align-center\">Adds a few ways to customize your faction!</div><br><div class=\"align-center\">Features:<br><ol><li>Change your faction color!</li><li>Change your fleet names!</li><li>Change your post/rank names!</li><li>Change your faction description!</li><li>Change your illegal/legal commodities, with <b>mechanical effects</b>! (Effects can be disabled in lunalib.)</li></ol></div><br><div class=\"align-center\">Faction description is accessed through your faction panel - all else is in bespoke intel pages within your faction intel category.</div><br><div class=\"align-center\"><span class=\"size-biggest\">Compatibility</span><br>Can be added to existing saves, but not removed.<br><span class=\"size-biggest\">FAQ</span><br><b>This modded commodity doesn't appear in the list!</b><br>Pester the mod author to add a commodity entry to their copy of data&gt;campaign&gt;ZFCCommoditySpecs.csv, not me!<br><b>The only thing that appears in intel is my faction color!</b><br>That's because you don't have your faction established yet. Most of the intel only appears if you have at least one colony.<br><b>This UI isn't impressive!</b><br>I'm not a UI modder. It's... a weak point.<br><b>Was AI used in the creation of this mod?</b><br>Only Intellij's simple autocomplete function, which is barely AI powered to begin with.</div><hr><br>Download: <a href=\"https://github.com/nikothedude/Zoey-s-Faction-Customization/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/nikothedude/Zoey-s-Faction-Customization/releases</a><br>Repo: <a href=\"https://github.com/nikothedude/Zoey-s-Faction-Customization\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/nikothedude/Zoey-s-Faction-Customization</a><br><details class=\"spoiler\"><summary>Changelog</summary>1.0.0<br><br>Initial</details><br><details class=\"spoiler\"><summary>Hey, what's with the name?</summary>Turns out I'm a girl. My mods will remain niko until I decide to change them to my new name.<br>And no, this still isn't my IRL name :wink:</details><br><details class=\"spoiler\"><summary>Modder information</summary>If you want to add your special commodity to my commodity list, find data&gt;campaign&gt;ZFCCommoditySpecs.csv in my mod and copy it to yours. Create a new IllegalCommodityPlugin implementation (a rather simple class), and determine the category - STANDARD, TABOO, AI, or MISC.</details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p>Adds a few ways to customize your faction beyond just name!</p><p>Requires <a href=\"https://discord.com/channels/187635036525166592/1562893773438980176\" rel=\"nofollow noopener\" target=\"_blank\">Patchlib</a>.</p><h3>Modules</h3><ol><li>Commodities - Most commodities can now be toggled between legal and illegal. Changing from the default has <strong>mechanical implications</strong> for all of your colonies.</li><li>Fleet names</li><li>Post/Rank titles</li><li>Faction color</li><li>Faction description</li></ol><p>Cannot be removed from existing saves, but can be added.</p><p>Download: <a href=\"https://github.com/nikothedude/Zoey-s-Faction-Customization/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/nikothedude/Zoey-s-Faction-Customization/releases</a><br>Forum thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36193.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36193.0</a></p><p>AI Disclaimer - No AI was used in the creation of this mod.</p>",
-  "aiDescription": "Provides options to change faction color, fleet names, post/rank names, and faction description. It also allows modifying legal and illegal commodities with optional mechanical effects that can be disabled via LunaLib settings.",
-  "saveCompatibilityText": "Can be added to existing saves, but not removed.",
-  "removalCompatibilityText": "but not removed.",
-  "canAdd": "yes",
-  "canRemove": "no",
+  "aiDescription": "Adds options to customize your faction color, fleet names, post/rank names, and faction description. Allows changing illegal and legal commodities, which can have mechanical effects. These features are accessed through the faction panel or bespoke intel pages within your faction intel category.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Can be added to existing saves",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "not removed",
+      "answer": "no"
+    }
+  },
   "aiUse": {
     "quote": "Only Intellij's simple autocomplete function, which is barely AI powered to begin with.",
-    "usesAi": true,
-    "uses": [
-      {
-        "area": "code",
-        "how": "assisted"
-      }
-    ],
-    "tools": [
-      "Intellij"
-    ]
+    "usesAi": false
   },
   "rawCategories": [
     "Colonies",
@@ -94,7 +90,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1563000548658253924/1563000548808982588/industries24.png?ex=6af7b8b1&is=6af66731&hm=06780e9fc98c60b4221a8de1792466bae1b80490814221fca58297694cdce812&",
+      "url": "https://cdn.discordapp.com/attachments/1563000548658253924/1563000548808982588/industries24.png?ex=6af86171&is=6af70ff1&hm=33f402380941a12f9b1453ade5b7c64c1a5e4252508c22b30bd843c19be32a6f&",
       "aiCaption": "A mostly empty picture.",
       "aiKind": "other",
       "aiFit": "poor",
@@ -106,7 +102,7 @@
       "url": "https://github.com/nikothedude/Zoey-s-Faction-Customization/releases",
       "directUrl": "https://github.com/nikothedude/Zoey-s-Faction-Customization/releases/download/1.0.0/Zoey.s.Faction.Customization.zip",
       "fileName": "Zoey.s.Faction.Customization.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "https://github.com/nikothedude/Zoey-s-Faction-Customization/releases",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -123,10 +119,30 @@
   "threadLastPostOn": "2026-10-22",
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "Illustrated.Entities",
-      "id": "illustrated-entities"
-    }
-  ]
+  "requirements": {
+    "required": [
+      {
+        "name": "PatchLib",
+        "id": "patchlib"
+      },
+      {
+        "name": "MagicLib",
+        "id": "magiclib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      },
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ],
+    "optional": [
+      {
+        "name": "Illustrated.Entities",
+        "id": "illustrated-entities"
+      }
+    ]
+  }
 }

@@ -157,7 +157,7 @@ export function aiFilterToAddress(filter) {
 
 /// Whether a use matches the level and optional settings, regardless of area.
 function useCounts(use, filter) {
-  if (filter.skipOptional && use.optional) return false;
+  if (filter.skipOptional && use.isOptional) return false;
   if (filter.wholeOnly && use.extent !== 'all') return false;
   if (!use.how) return true;
   const level = AI_LEVELS.find((each) => each.key === filter.level) || AI_LEVELS[2];

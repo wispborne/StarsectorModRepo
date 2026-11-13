@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "faction-doctrine-controller",
     "name": "Faction Doctrine Controller",
@@ -20,15 +20,19 @@
     "gameVersion": "0.98a",
     "modVersion": "1.1.6",
     "imageUrl": "https://i.imgur.com/hATcBF3.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1381803778570715147/1495115524252631232/fdc_1.png?ex=6af7f316&is=6af6a196&hm=48b659d74e7a4f247683e065676cc052d1c2c11a2396fc90729e0b76965d9901&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1381803778570715147/1495115524252631232/fdc_1.png?ex=6af89bd6&is=6af74a56&hm=439babbcfcb74f2f4f03f4250409662c76e6f00c146c69753351cf596d851854&",
     "summary": "Adds a Lunaconfig menu that allows you to change select doctrine values of all factions.",
     "summaryIsGenerated": false,
     "aiSummary": "Lets players adjust fleet size and ship class doctrines for all factions via a configuration menu.",
-    "saveCompatible": true,
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://www.dropbox.com/scl/fi/qqs4xmg08bonh3jk9jren/Faction-Doctrine-Controller.zip?rlkey=5g0zyyvrvmopxjs3hey7uowj8&st=qbp2hdcw&dl=1",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -39,28 +43,35 @@
     "addedOn": "2025-06-09",
     "threadLastPostOn": "2025-09-30",
     "editedOn": "2026-05-27",
-    "needs": [
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib",
-        "via": "LunaLib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "LunaLib"
+        }
+      ]
+    }
   },
   "description": "Adds a Lunaconfig menu that allows you to change select doctrine values of all factions.\n\nChange all factions' shipSize (average ship class) and numShips (fleet size) values.\nExclude specific factions from these changes with a csv blacklist.\n\nSet a limit on how large total fleet size multipliers can be.\nOptions for heavy industries (and related industries) to increase a faction's global fleet sizes.\nIncrease or decrease the frequency for ships of user defined tags in the player's fleets (e.g. midline_package, pirate_package, etc.)\nDecrease the frequency of modded ships in the vanilla factions' fleets (configurable).\nNormalize various Nexerelin faction relationship settings.\n\nSafe to add or remove to and from saves-in-progress.\n\nPictures\n\nRequires LunaLib.\n\nDownload",
   "descriptionHtml": "Adds a Lunaconfig menu that allows you to change select doctrine values of all factions.<br><ul><br><li>Change all factions' shipSize (average ship class) and numShips (fleet size) values.<br><ul><li>Exclude specific factions from these changes with a csv blacklist.</li></ul></li><li>Set a limit on how large total fleet size multipliers can be.</li><li>Options for heavy industries (and related industries) to increase a faction's global fleet sizes.</li><li>Increase or decrease the frequency for ships of user defined tags in the player's fleets (e.g. midline_package, pirate_package, etc.)</li><li>Decrease the frequency of modded ships in the vanilla factions' fleets (configurable).</li><li>Normalize various Nexerelin faction relationship settings.</li></ul><br>Safe to add or remove to and from saves-in-progress.<br><br><details class=\"spoiler\"><summary>Pictures</summary><img src=\"https://i.imgur.com/hATcBF3.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.imgur.com/npvUGEf.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.imgur.com/wxt5mmN.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a>.<br><br><a href=\"https://www.dropbox.com/scl/fi/qqs4xmg08bonh3jk9jren/Faction-Doctrine-Controller.zip?rlkey=5g0zyyvrvmopxjs3hey7uowj8&amp;st=qbp2hdcw&amp;dl=1\" rel=\"nofollow noopener\" target=\"_blank\">Download</a>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p>Adds a Lunaconfig menu that allows you to change select doctrine values of all factions.</p><ul><li>Change all factions' shipSize (average ship class) and numShips (fleet size) values.<ul><li>Exclude specific factions from these changes with a csv blacklist.</li></ul></li><li>Set a limit on how large total fleet size multipliers can be.</li><li>Options for heavy industries (and related industries) to increase a faction's global fleet sizes.</li><li>Increase or decrease the frequency for ships of user defined tags in the player's fleets (e.g. midline_package, pirate_package, etc.)</li><li>Modify the frequency of modded ships in the vanilla factions' fleets (configurable).</li><li>Normalize various Nexerelin faction relationship settings.</li></ul><p>Safe to add or remove to and from saves-in-progress.</p><p>Requires Lunalib.</p><p><a href=\"https://fractalsoftworks.com/forum/index.php?topic=33327.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=33327.0</a></p>",
   "aiDescription": "Provides tools to modify average ship class and fleet size values globally or per faction. It includes options to exclude specific factions using a blacklist, limit total fleet multipliers, and adjust the frequency of specific ship tags in player fleets. The mod also allows for normalizing Nexerelin faction relationships and controlling how often modded ships appear in vanilla faction fleets.",
-  "saveCompatibilityText": "Safe to add or remove to and from saves-in-progress.",
-  "removalCompatibilityText": "Safe to add or remove to and from saves-in-progress.",
-  "canAdd": "yes",
-  "canRemove": "yes",
+  "saveCompat": {
+    "adding": {
+      "quote": "Safe to add or remove to and from saves-in-progress.",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "Safe to add or remove to and from saves-in-progress.",
+      "answer": "yes"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Misc. Campaign Mods",
@@ -69,28 +80,28 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1381803778570715147/1495115524252631232/fdc_1.png?ex=6af7f316&is=6af6a196&hm=48b659d74e7a4f247683e065676cc052d1c2c11a2396fc90729e0b76965d9901&",
+      "url": "https://cdn.discordapp.com/attachments/1381803778570715147/1495115524252631232/fdc_1.png?ex=6af89bd6&is=6af74a56&hm=439babbcfcb74f2f4f03f4250409662c76e6f00c146c69753351cf596d851854&",
       "aiCaption": "A settings menu showing 'Industry Fleet Size Bonus' options with sliders for Heavy Industry and Orbital Works.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1381803778570715147/1495117214292902030/fdc_2.png?ex=6af7f4a9&is=6af6a329&hm=1f63d051c6fc773250943e549eaeabdb4fbbe6ab93d6808e6f4424b11a1d0448&",
+      "url": "https://cdn.discordapp.com/attachments/1381803778570715147/1495117214292902030/fdc_2.png?ex=6af89d69&is=6af74be9&hm=0384b4509f50ebf8ba6391043bd0bbf7939627497fe7954bc513f1a82e39f2b3&",
       "aiCaption": "A colony management screen for the Hegemony faction on a Volcanic World, displaying fleet size and ship quality statistics.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1381803778570715147/1495960562150936788/fdc_1.png?ex=6af7ba57&is=6af668d7&hm=b6253816c52e243d04c48e3961fac967654ac4ece11c419f8330299084f026a7&",
+      "url": "https://cdn.discordapp.com/attachments/1381803778570715147/1495960562150936788/fdc_1.png?ex=6af86317&is=6af71197&hm=0226b91d4015f36d34b9995261f746dd7814ae2d17c6bbfc39c9da24d30fe339&",
       "aiCaption": "A settings row labeled 'Increase Tag 1' with a text field containing 'koc_bp ; koc_c_bp'.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1381803778570715147/1495960562750718033/fdc_2.png?ex=6af7ba57&is=6af668d7&hm=5f931e8b292ba384361890b4827fb2e45915817cc2abd462f8d82490c448e62b&",
+      "url": "https://cdn.discordapp.com/attachments/1381803778570715147/1495960562750718033/fdc_2.png?ex=6af86317&is=6af71197&hm=576267338197eef041de90f3c6117faa03841315a8d41a6f9331d4b8da13bb4f&",
       "aiCaption": "A settings menu titled 'Nexerelin Diplomacy Adjustments' showing toggles for clearing faction relationships and dispositions.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -123,7 +134,7 @@
       "url": "https://www.dropbox.com/scl/fi/qqs4xmg08bonh3jk9jren/Faction-Doctrine-Controller.zip?rlkey=5g0zyyvrvmopxjs3hey7uowj8&st=qbp2hdcw&dl=1",
       "directUrl": "https://www.dropbox.com/scl/fi/qqs4xmg08bonh3jk9jren/Faction-Doctrine-Controller.zip?rlkey=5g0zyyvrvmopxjs3hey7uowj8&st=qbp2hdcw&dl=1",
       "fileName": "Faction-Doctrine-Controller.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "Download",
       "host": "Dropbox",
       "needsAnotherStep": false
@@ -141,12 +152,25 @@
   "threadLastPostOn": "2025-09-30",
   "sameNameMods": [],
   "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "LunaLib"
+      }
+    ]
+  },
   "conflicts": [
     {
       "name": "Second Wave Options",
       "id": "second-wave-options",
       "quote": "This likely won't play nice with any mod that tries to change faction doctrines midgame (Second Wave Options is the only one that I know of). Depending on load order, one will override the other's changes.",
-      "kind": "withNotes"
+      "type": "withNotes"
     }
   ]
 }

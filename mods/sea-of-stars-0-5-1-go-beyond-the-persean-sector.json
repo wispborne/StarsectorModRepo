@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "sea-of-stars-0-5-1-go-beyond-the-persean-sector",
     "name": "Sea of Stars",
@@ -23,15 +23,19 @@
     "gameVersion": "0.98a",
     "modVersion": "0.6.0",
     "imageUrl": "https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/forum-media-2026-10-07/Sea-of-Stars-banner-v2.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265925713952918/title.png?backend=b2&ex=6af7f3e9&is=6af6a269&hm=c970ebcb80dfcb7abfe4d3980997da3b56219d235b40aed0de0bb910334f309b&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265925713952918/title.png?backend=b2&ex=6af89ca9&is=6af74b29&hm=3ef9553e91fc53e6524dab65317988153a534dc7c50f4d02cd4ccdc4c440e2d7&",
     "summary": "Follow a master navigator across the Persean Abyss, retrace the Fourteenth Battlegroup's long journey from their staging ground in FOB Ithaca, and discover what they left behind in the Orion Knot Sector.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a recruitable navigator officer and an expedition quest through new hyperspace sectors.",
-    "saveCompatible": false,
+    "aiSummary": "Adds a new NPC officer, a story quest, and a new sector with six systems for deep-space exploration.",
+    "saveCompat": {
+      "adding": {
+        "answer": "no"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/v0.6.0/Chief-Navigator-0.6.0.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -46,45 +50,52 @@
         "how": "assisted"
       },
       {
-        "area": "illustrations",
-        "how": "edited"
+        "area": "sprites",
+        "how": "generated"
       }
     ],
     "lastReleaseDate": "2026-11-12T00:00:00.000Z",
     "addedOn": "2026-10-07",
     "threadLastPostOn": "2026-11-09",
-    "editedOn": "2026-10-28",
-    "needs": [
-      {
-        "name": "GraphicsLib",
-        "id": "graphicslib"
-      },
-      {
-        "name": "Combat Chatter",
-        "id": "combat-chatter"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib"
-      },
-      {
-        "name": "MagicLib",
-        "id": "magiclib"
-      }
-    ]
+    "editedOn": "2026-11-12",
+    "requirements": {
+      "required": [
+        {
+          "name": "GraphicsLib",
+          "id": "graphicslib"
+        },
+        {
+          "name": "Combat Chatter",
+          "id": "combat-chatter"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib"
+        }
+      ]
+    }
   },
   "description": "For Starsector 0.98a | Source Code | Issue Tracker\n\nRequires GraphicsLib 1.10.2+ and Combat Chatter 1.15.0+, LazyLib and MagicLib.\n\nWhat Does This Do?\n\nFollow a master navigator across the Persean Abyss, retrace the Fourteenth Battlegroup's long journey from their staging ground in FOB Ithaca, and discover what they left behind in the Orion Knot Sector.\n\nAdds Sinni, a master navigator, recruitable officer, and unusually persuasive advocate for taking a very small fleet somewhere very far away.\n\nHer ancestor Helen crossed the Abyss with the withdrawing Fourteenth Battlegroup. The account of that journey survived. Sinni has reconstructed the route in reverse, and she needs your fleet and skills to make it to the other side.\n\nThe expedition leads from Waypoint Troy to the Orion Knot, with six remote systems, dangerous currents, abandoned Domain installations, and Forward Operating Base Ithaca, a military macrobase built on a scale the Persean Sector has largely forgotten.\n\nTHIS IS A BETA, SO STABILITY WILL BE IN PROGRESS FOR THE NEXT FEW WEEKS\n\nSEND YO CRASH LOGS/MODLIST HERE\n\nWhat Is in This Mod?\n\nNew NPC contact and officer: Sinni, with her own bar introduction, Eventide tea briefing, exploration conversations, Combat Chatter, and ongoing navigation guidance.\nNew story quest: Adept of the Stars and Waves, an expedition into the Abyss and back through the Fourteenth Battlegroup's history.\nNew exploration quest: One More Horizon. Travel with Sinni and complete her stellar chart\nExpanded Hyperspace Topography: Five additional navigation tiers covering gravity-well slipsurges, improved Running Dark, larger generated currents, reduced storm damage, and Echo Mapping.\nNew Sector!!!: Welcome to the Orion Knot Sector, gateway to the Domain of Man's Heartland.\nSix new systems: The Odyssey Expanse, Avici, Sanzu, Ashen Verge, Last Light, and Devoured Reach.\n\nInstallation\n\nDownload Chief-Navigator-0.5.1.zip from the link above.\nExtract the Chief Navigator folder into Starsector/mods. mod_info.json should be directly inside the Chief Navigator folder.\nInstall GraphicsLib 1.10.2+, Combat Chatter 1.15.0+, LazyLib, and MagicLib. Enable Chief Navigator and its dependencies in the launcher.\nRestart Starsector, then start a new campaign or load an existing one.\n\nFAQ\n\nIs it mid-save compatible?\n\nNo, there are some mod incompatibility issues that have to be identified. Add to your midsave files at your own risk.\n\nHow do I meet Sinni?\n\nReach max level of Hyperspace Topography Data, Discover the Onslaught Mk 1, then visit a market bar and look for the note from the woman drinking tea. Accept her proposal, then visit her office on Eventide to hear the expedition briefing and reveal Waypoint Troy.\n\nHow difficult is it?\n\nThis is an expedition where fleet efficiency, supplies, fuel, navigation, and replacement hulls matter. The entry limit keeps your starting force small, and the later battles expect you to make use of what you find in the Orion Knot. Strong recommendation for being max level, or if you are playing with Second in Command, having a full roster of max level officers.\n\nI'm lost?\n\nCall Sinni through Contacts for the current objective and directions from your present location. Once you reach the Orion Knot, she can also open its dedicated system chart.\n\nKnown incompatibilities?\n\nCompatibility with every large mod combination has not been established. If something breaks, please report it here or on GitHub with your mod list, a description of what happened, and the relevant starsector.log.\n\nAI Statement\n\n5.6 and 6.1 Sol was used to help with programming, debugging, and editing. Artwork was made with Codex and Photoshop, and edited Starsector-derived assets. Don't worry, I'm a professional.\n\nMusic Credits\n\nSpoiler\nRising Up\nProd. Ryini Beats\nRecording\n\nHeart of Corruption\nMusic by Lappy\nRecording\n\nWatcher of the Cycle -Scene02- (NoVox)\nMusic by zippy\nRecording\n\nMy Gospel is Gunpowder - vocal and instrumental versions\nLappy and Autodidactic Studios, featuring The Epoch House Choir; Christina R on the vocal version\nVocal recording and license record | Instrumental recording\n\nAbyssal Rhapsody\nMusic by Lappy\nRecording\n\nLord of Ashes\nMusic by Lappy\nRecording\n\nThe Savor of Tomorrow\nMusic by Lappy\nRecording\n\nGlistening Ripples\nMusic by PeriTune (Sei Mutsuki)\nOfficial track page | Usage terms\n\nVanilla Shrouded Dweller encounter music\nStarsector / Fractal Softworks and its music creators\nReferenced from the installed game.\n\nMusic belongs to its respective creators and is excluded from the mod's MIT license. Complete repository credits | Third-party notices\n\nChangelog\n\n10/7/2026 - Version 0.5.1\nAdded support for first installation into an existing campaign.\n\nVersion 0.5.0\nPackaged the Sinni expedition, six Orion Knot systems, FOB Ithaca, five Labors, and post-Labor hunts as an installable release for Starsector 0.98a.\n\nSource and License\n\nOriginal project code, dialogue, documentation, and original assets are available under the MIT License. Third-party music and Starsector-derived material retain their respective owners' terms.\n\nIf you fork or build on the repository, please let me know. I would be interested in seeing what you make.\n\nAnd as always, thank you for playing.",
   "descriptionHtml": "<div class=\"align-center\"><img src=\"https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/forum-media-2026-10-07/Sea-of-Stars-banner-v2.png\" alt=\"\" width=\"1800\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><br><div class=\"align-center\"><img src=\"https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/forum-media-2026-10-07/Budai1-forum-500px-12fps.gif\" alt=\"\" width=\"700\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/forum-media-2026-10-07/segment2-forum-500px-12fps.gif\" alt=\"\" width=\"700\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><div class=\"align-center\"><img src=\"https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/forum-media-2026-10-07/sanzu2-forum-500px-12fps.gif\" alt=\"\" width=\"700\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/forum-media-2026-10-07/ithaca2-forum-500px-12fps.gif\" alt=\"\" width=\"700\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><br><div class=\"align-center\"><a href=\"https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/v0.6.0/Chief-Navigator-0.6.0.zip\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/forum-media-2026-10-07/download-button.png\" alt=\"\" height=\"96\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></div><br><div class=\"align-center\"><span class=\"size-big\">For Starsector 0.98a | <a href=\"https://github.com/c4tntnitro-netizen/Chief-Navigator\" rel=\"nofollow noopener\" target=\"_blank\">Source Code</a> | <a href=\"https://github.com/c4tntnitro-netizen/Chief-Navigator/issues\" rel=\"nofollow noopener\" target=\"_blank\">Issue Tracker</a></span></div><br><div class=\"align-center\"><span class=\"size-big\">Requires GraphicsLib 1.10.2+ and Combat Chatter 1.15.0+, LazyLib and MagicLib. </span></div><br><br><div class=\"align-center\"><b><span class=\"size-biggest\">What Does This Do?</span></b></div><br><div class=\"align-center\"><span class=\"size-biggest\">Follow a master navigator across the Persean Abyss, retrace the Fourteenth Battlegroup's long journey from their staging ground in FOB Ithaca, and discover what they left behind in the Orion Knot Sector.</span></div><br><div class=\"align-center\"><span class=\"size-biggest\">Adds Sinni, a master navigator, recruitable officer, and unusually persuasive advocate for taking a very small fleet somewhere very far away.</span></div><br><div class=\"align-center\"><span class=\"size-biggest\">Her ancestor Helen crossed the Abyss with the withdrawing Fourteenth Battlegroup. The account of that journey survived. Sinni has reconstructed the route in reverse, and she needs your fleet and skills to make it to the other side.</span></div><br><div class=\"align-center\"><span class=\"size-biggest\">The expedition leads from Waypoint Troy to the Orion Knot, with six remote systems, dangerous currents, abandoned Domain installations, and Forward Operating Base Ithaca, a military macrobase built on a scale the Persean Sector has largely forgotten.</span></div><br><div class=\"align-center\"><img src=\"https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/forum-media-2026-10-07/sinni-contact.png\" alt=\"\" width=\"1350\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><div class=\"align-center\"><span class=\"size-biggest\"><span class=\"author-colour\" style=\"--c:#ff0000\">THIS IS A BETA, SO STABILITY WILL BE IN PROGRESS FOR THE NEXT FEW WEEKS</span></span></div><a href=\"https://drive.google.com/drive/u/0/folders/12zbTfvzn-_K3FT4JC4nCeClbRArrqYuP\" rel=\"nofollow noopener\" target=\"_blank\"><span class=\"size-biggest\">SEND YO CRASH LOGS/MODLIST HERE</span><br></a><br><br><div class=\"align-center\"><b><span class=\"size-biggest\">What Is in This Mod?</span></b></div><br><ul><li><span class=\"size-biggest\"><b>New NPC contact and officer:</b> Sinni, with her own bar introduction, Eventide tea briefing, exploration conversations, Combat Chatter, and ongoing navigation guidance.</span></li><li><span class=\"size-biggest\"><b>New story quest:</b> Adept of the Stars and Waves, an expedition into the Abyss and back through the Fourteenth Battlegroup's history.</span></li><li><span class=\"size-biggest\"><b>New exploration quest:</b> One More Horizon. Travel with Sinni and complete her stellar chart</span></li><li><span class=\"size-biggest\"><b>Expanded Hyperspace Topography:</b> Five additional navigation tiers covering gravity-well slipsurges, improved Running Dark, larger generated currents, reduced storm damage, and Echo Mapping.</span></li><li><span class=\"size-biggest\"><b>New Sector!!!:</b> Welcome to the Orion Knot Sector, gateway to the Domain of Man's Heartland.</span></li><li><span class=\"size-biggest\"><b>Six new systems:</b> The Odyssey Expanse, Avici, Sanzu, Ashen Verge, Last Light, and Devoured Reach.</span></li></ul><br><div class=\"align-center\"><img src=\"https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/forum-media-2026-10-07/sinni_skills.png\" alt=\"\" width=\"550\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><img src=\"https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/forum-media-2026-10-07/fob-ithaca-overview.png\" alt=\"\" width=\"950\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><br><b><span class=\"size-biggest\">Installation</span></b><br><br><ul><li><span class=\"size-bigger\">Download Chief-Navigator-0.5.1.zip from the link above.</span></li><li><span class=\"size-bigger\">Extract the Chief Navigator folder into Starsector/mods. mod_info.json should be directly inside the Chief Navigator folder.</span></li><li><span class=\"size-bigger\">Install GraphicsLib 1.10.2+, Combat Chatter 1.15.0+, LazyLib, and MagicLib. Enable Chief Navigator and its dependencies in the launcher.</span></li><li><span class=\"size-bigger\">Restart Starsector, then start a new campaign or load an existing one.</span></li></ul><br><br><b><span class=\"size-biggest\">FAQ</span></b><br><br><span class=\"size-bigger\"><b>Is it mid-save compatible?</b></span><br><br><span class=\"size-bigger\">No, there are some mod incompatibility issues that have to be identified. Add to your midsave files at your own risk.</span><br><br><span class=\"size-bigger\"><b>How do I meet Sinni?</b></span><br><br><span class=\"size-bigger\">Reach max level of Hyperspace Topography Data, Discover the Onslaught Mk 1, then visit a market bar and look for the note from the woman drinking tea. Accept her proposal, then visit her office on Eventide to hear the expedition briefing and reveal Waypoint Troy.</span><br><br><span class=\"size-bigger\"><b>How difficult is it?</b></span><br><br><span class=\"size-bigger\">This is an expedition where fleet efficiency, supplies, fuel, navigation, and replacement hulls matter. The entry limit keeps your starting force small, and the later battles expect you to make use of what you find in the Orion Knot. Strong recommendation for being max level, or if you are playing with Second in Command, having a full roster of max level officers.</span><br><br><span class=\"size-bigger\"><b>I'm lost?</b></span><br><br><span class=\"size-bigger\">Call Sinni through Contacts for the current objective and directions from your present location. Once you reach the Orion Knot, she can also open its dedicated system chart.</span><br><br><span class=\"size-bigger\"><b>Known incompatibilities?</b></span><br><br><span class=\"size-bigger\">Compatibility with every large mod combination has not been established. If something breaks, please report it here or on GitHub with your mod list, a description of what happened, and the relevant starsector.log.</span><br><br><b><span class=\"size-biggest\">AI Statement</span></b><br><br><span class=\"size-bigger\">5.6 and 6.1 Sol was used to help with programming, debugging, and editing. Artwork was made with Codex and Photoshop, and edited Starsector-derived assets. Don't worry, I'm a professional.</span><br><br><b><span class=\"size-biggest\">Music Credits</span></b><br><br><details class=\"spoiler\"><summary>Spoiler</summary><blockquote><b>Rising Up</b><br>Prod. Ryini Beats<br><a href=\"https://www.youtube.com/watch?v=ZqttIDUBYlg\" rel=\"nofollow noopener\" target=\"_blank\">Recording</a><br><br><b>Heart of Corruption</b><br>Music by Lappy<br><a href=\"https://www.youtube.com/watch?v=gBaNsd3Ycc8\" rel=\"nofollow noopener\" target=\"_blank\">Recording</a><br><br><b>Watcher of the Cycle -Scene02- (NoVox)</b><br>Music by zippy<br><a href=\"https://www.youtube.com/watch?v=R-4y_0oisEo\" rel=\"nofollow noopener\" target=\"_blank\">Recording</a><br><br><b>My Gospel is Gunpowder - vocal and instrumental versions</b><br>Lappy and Autodidactic Studios, featuring The Epoch House Choir; Christina R on the vocal version<br><a href=\"https://www.newgrounds.com/audio/listen/1497762\" rel=\"nofollow noopener\" target=\"_blank\">Vocal recording and license record</a> | <a href=\"https://www.youtube.com/watch?v=skkZwYFoa-0\" rel=\"nofollow noopener\" target=\"_blank\">Instrumental recording</a><br><br><b>Abyssal Rhapsody</b><br>Music by Lappy<br><a href=\"https://www.youtube.com/watch?v=gW2_9Vz_aFI\" rel=\"nofollow noopener\" target=\"_blank\">Recording</a><br><br><b>Lord of Ashes</b><br>Music by Lappy<br><a href=\"https://www.youtube.com/watch?v=4nrI88fmc-I\" rel=\"nofollow noopener\" target=\"_blank\">Recording</a><br><br><b>The Savor of Tomorrow</b><br>Music by Lappy<br><a href=\"https://www.youtube.com/watch?v=vLWEkvpPBDY\" rel=\"nofollow noopener\" target=\"_blank\">Recording</a><br><br><b>Glistening Ripples</b><br>Music by PeriTune (Sei Mutsuki)<br><a href=\"https://peritune.com/blog/2026/03/21/glistening-ripples/\" rel=\"nofollow noopener\" target=\"_blank\">Official track page</a> | <a href=\"https://peritune.com/about/\" rel=\"nofollow noopener\" target=\"_blank\">Usage terms</a><br><br><b>Vanilla Shrouded Dweller encounter music</b><br>Starsector / Fractal Softworks and its music creators<br>Referenced from the installed game.<br><br>Music belongs to its respective creators and is excluded from the mod's MIT license. <a href=\"https://github.com/c4tntnitro-netizen/Chief-Navigator#music-credits\" rel=\"nofollow noopener\" target=\"_blank\">Complete repository credits</a> | <a href=\"https://github.com/c4tntnitro-netizen/Chief-Navigator/blob/main/THIRD_PARTY_NOTICES.md\" rel=\"nofollow noopener\" target=\"_blank\">Third-party notices</a></blockquote></details><br><br><b><span class=\"size-biggest\">Changelog</span></b><br><br><blockquote><ul><li><b>10/7/2026 - Version 0.5.1</b><br><ul><li>Added support for first installation into an existing campaign.</li></ul></li><li><b>Version 0.5.0</b><br><ul><li>Packaged the Sinni expedition, six Orion Knot systems, FOB Ithaca, five Labors, and post-Labor hunts as an installable release for Starsector 0.98a.</li></ul></li></ul></blockquote><br><br><b><span class=\"size-biggest\">Source and License</span></b><br><br><span class=\"size-bigger\">Original project code, dialogue, documentation, and original assets are available under the <a href=\"https://github.com/c4tntnitro-netizen/Chief-Navigator/blob/main/LICENSE\" rel=\"nofollow noopener\" target=\"_blank\">MIT License</a>. Third-party music and Starsector-derived material retain their respective owners' terms.</span><br><br><span class=\"size-bigger\">If you fork or build on the repository, please let me know. I would be interested in seeing what you make.</span><br><br><span class=\"size-bigger\">And as always, thank you for playing.</span>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p>Adds a new officer, Koyama Sinni, and her Questline to reach the Fourteenth Battlegroup's Lost Inheritance -- the Defense Macrocomplex known as FOB Ithaca. Travel with her with a limited exploration fleet to discover the Orion Knot Sector</p><p><strong>Since this is a beta, there are stability issues, so please send me your logs and mod list here:</strong></p><p><a href=\"https://drive.google.com/drive/folders/1FMj7JH217Vb2WL-L4naIxTBOBszPIR7K?dmr=1&amp;ec=wgc-drive-%5Bmodule%5D-goto\" rel=\"nofollow noopener\" target=\"_blank\">https://drive.google.com/drive/folders/1FMj7JH217Vb2WL-L4naIxTBOBszPIR7K?dmr=1&amp;ec=wgc-drive-%5Bmodule%5D-goto</a></p><p>**Forum Thread: **<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36134.msg531820#msg531820\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36134.msg531820#msg531820</a></p><p><strong>BETA Release Link:</strong><br><a href=\"https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/v0.5.1/Chief-Navigator-0.5.1.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/v0.5.1/Chief-Navigator-0.5.1.zip</a></p><p><strong>What this mod contains:</strong></p><ul><li>** New NPC: **</li></ul><p>Koyama Sinni. Your Chief Navigator.</p><ul><li>** New Hyperspace Skills**</li></ul><p>Adds 6 more levels of Hyperspace Topography Skills to Learn</p><ul><li>** New Questline**</li></ul><p>Undergo a great trial to save the Orion Knot Sector. In order to recruit Sinni as an officer and unlock the Orion Knot Sector:</p><ol><li>Reach max level of Hyperspace Topography Data</li></ol><ol><li>Find the Onslaught Mk 1</li></ol><ol><li>Find her drinking tea at a bar. </li></ol><ul><li>** New Systems**</li></ul><p>Six new handcrafted systems, several with unique environments. Alpha Odyssey, Ashen Verge, Devoured Reach, Sanzu, Avici, Last Light</p><ul><li>** New Sector!!!**</li></ul><p>The Orion Knot Sector, a mini-sector that stands at the Gateway to the Domain Heartland</p><p><strong>IMPORTANT</strong> - <strong>Not mid-save compatible</strong></p><ul><li>** New Bosses**</li></ul><p>Three new bosses.</p><p>**Requirements: **</p><p>GraphicsLib 1.10.2 or newer<br>Combat Chatter 1.15.0 or newer<br>Starsector 0.98a</p><p><strong>Recent fixes</strong></p><p>Updated the wall module and drifitng wall sprites to more high quality upscales.</p><p>Fixed a crash caused by a boss' custom weapons having their description be malformed.</p><p>Implemented a possible fix(?) for heavenly strike not spawning in. Current theory is the breach defense gate does not spawn during Labor V.</p>",
-  "aiDescription": "Introduces Sinni, a master navigator who guides the player's fleet on a journey to the Orion Knot Sector. The mod adds six new star systems, expanded hyperspace topography mechanics, and story quests involving the Fourteenth Battlegroup's history.",
-  "saveCompatibilityText": "No, there are some mod incompatibility issues that have to be identified. Add to your midsave files at your own risk.",
-  "updateCompatibilityText": "upadting from 0.5.X to 0.6.0 will likely brick your save.",
-  "canAdd": "no",
-  "canUpdate": "no",
+  "aiDescription": "Introduces Sinni, a master navigator and recruitable officer, who leads an expedition across the Persean Abyss. The mod adds the Orion Knot Sector, featuring six new systems, dangerous currents, and a large military macrobase. It also expands hyperspace topography with five additional navigation tiers and new exploration quests.",
+  "saveCompat": {
+    "adding": {
+      "quote": "No, there are some mod incompatibility issues that have to be identified. Add to your midsave files at your own risk.",
+      "answer": "no"
+    },
+    "latestUpdateNote": {
+      "quote": "upadting from 0.5.X to 0.6.0 will likely brick your save.",
+      "answer": "no"
+    }
+  },
   "aiUse": {
-    "quote": "5.6 and 6.1 Sol was used to help with programming, debugging, and editing. Artwork was made with Codex and Photoshop, and edited Starsector-derived assets. Don't worry, I'm a professional.",
+    "quote": "5.6 and 6.1 Sol was used to help with programming, debugging, and editing. Artwork was made with Codex and Photoshop, and edited Starsector-derived assets.",
     "usesAi": true,
     "uses": [
       {
@@ -92,12 +103,13 @@
         "how": "assisted"
       },
       {
-        "area": "illustrations",
-        "how": "edited"
+        "area": "sprites",
+        "how": "generated"
       }
     ],
     "tools": [
-      "Sol",
+      "5.6",
+      "6.1 Sol",
       "Codex"
     ]
   },
@@ -108,64 +120,64 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265925713952918/title.png?backend=b2&ex=6af7f3e9&is=6af6a269&hm=c970ebcb80dfcb7abfe4d3980997da3b56219d235b40aed0de0bb910334f309b&",
+      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265925713952918/title.png?backend=b2&ex=6af89ca9&is=6af74b29&hm=3ef9553e91fc53e6524dab65317988153a534dc7c50f4d02cd4ccdc4c440e2d7&",
       "aiCaption": "A wide title picture showing a figure with long white hair looking at a starry sky with red nebulae, with the text 'Sea of Stars' in the center.",
       "aiKind": "banner",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265927668760686/map.png?backend=b2&ex=6af7f3e9&is=6af6a269&hm=d304558e4cd0df8f19327f0442d1a7330837bf7dfa352278dc2796e07ccef411&",
+      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265927668760686/map.png?backend=b2&ex=6af89ca9&is=6af74b29&hm=45e9fe3422c098326844d38e0c50f650157726be9a456370551d1c5bf713ffd4&",
       "aiCaption": "A navigation chart titled 'Orion Knot Sector' showing star systems like 'The Odyssey Expanse', 'Ashen Verge', and 'Avici'.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265928398315561/sinni_skills.png?backend=b2&ex=6af7f3e9&is=6af6a269&hm=5c80f10e7800742a94f413b9a7923497970c9c98e25278adc8c219eb1543a5c1&",
+      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265928398315561/sinni_skills.png?backend=b2&ex=6af89ca9&is=6af74b29&hm=f6cea98e0a32fefb9cdc66d37ee41d3797d3709a79a1064892009998455ca095&",
       "aiCaption": "A screenshot of a skill tree interface showing various abilities and descriptions related to hyperspace navigation and slipstreams.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265930763898970/sanzu2.gif?backend=b2&ex=6af7f3ea&is=6af6a26a&hm=c2f629dd50c5b213b1a69faf34dfe5f109e8365e43ef43d3b5c4c743a41700ab&",
+      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265930763898970/sanzu2.gif?backend=b2&ex=6af89caa&is=6af74b2a&hm=febdac5b1fef9a9b3e0fa24b5bf08ae11b774fb2f3d22c2665a0a861f83dbcdc&",
       "aiUnreadable": true,
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265931732914216/ITHACA.png?backend=b2&ex=6af7f3ea&is=6af6a26a&hm=59a14c820ef652147135efdcfd651fa13658cf777f419a4a80ca3117fd16f0cd&",
+      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265931732914216/ITHACA.png?backend=b2&ex=6af89caa&is=6af74b2a&hm=67dbb627efe40d53c3f181b2af61bb8087040a96f3087ee105843eb04b81cc45&",
       "aiCaption": "A screenshot of a large ring-shaped space station structure in orbit near a bright star and nebula.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265933582598176/Budai1.gif?backend=b2&ex=6af7f3eb&is=6af6a26b&hm=22cbc841f88ac580bade77e3aabf5896fe5886f1ee06419e1869d82e520c959d&",
+      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265933582598176/Budai1.gif?backend=b2&ex=6af89cab&is=6af74b2b&hm=faa94f5051a4581c1cdfb6270a256ef8902faecc778e9dcdcf02de5e7d61d693&",
       "aiUnreadable": true,
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265934115414096/sinii_info.png?backend=b2&ex=6af7f3eb&is=6af6a26b&hm=10330ec3e784ff5536da5488a2bdbbc1554d0fec1d1022debf8a500f86909141&",
+      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265934115414096/sinii_info.png?backend=b2&ex=6af89cab&is=6af74b2b&hm=96c53d999da78366703744bee5422e45abf06017a16cda34ed2fde3a7d7b3915&",
       "aiCaption": "A character portrait labeled 'New NPC - Koyama Sinni' with descriptive text about her role in Hyperspace travel.",
       "aiKind": "art",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265935830618143/ithaca3compress.gif?backend=b2&ex=6af7f3eb&is=6af6a26b&hm=e1d0cb6734bf8eabcd14c36d1d674f66bab47699d81969fc43dc2ccff8e5ec20&",
+      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557265935830618143/ithaca3compress.gif?backend=b2&ex=6af89cab&is=6af74b2b&hm=21fef38a519833f64cee817b3ec6e1ac316657ed86ca8feeceb106a563233a73&",
       "aiUnreadable": true,
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557267578714460190/image.png?backend=b2&ex=6af7f573&is=6af6a3f3&hm=12b76c20ff1ea5bc1aaf250ceeac808db00b36e56e84033beb1a5ad435ef752c&",
+      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1557267578714460190/image.png?backend=b2&ex=6af89e33&is=6af74cb3&hm=54b5bb38647c5f66dac44ad4690db72eb45c47cb2ea955aa371db303deb36361&",
       "aiCaption": "A screenshot of code with the large text 'Kill Me' overlaid on it.",
       "aiKind": "other",
       "aiFit": "poor",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1559052261852717076/image.png?ex=6af7dc11&is=6af68a91&hm=75a1291910bd795535a6d8825602f3f9bb3b4deb9b0fa3c504327947fdd970eb&",
+      "url": "https://cdn.discordapp.com/attachments/1557265921276387348/1559052261852717076/image.png?ex=6af884d1&is=6af73351&hm=929d2ab34c2e06b2328c3aea6a2067dee1b11f795d32a4df5b4f0e22500a4c35&",
       "aiCaption": "A screenshot of a fanfiction page for 'Brave, Wandering Youth' by Caccus.",
       "aiKind": "other",
       "aiFit": "poor",
@@ -238,7 +250,7 @@
       "url": "https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/v0.6.0/Chief-Navigator-0.6.0.zip",
       "directUrl": "https://github.com/c4tntnitro-netizen/Chief-Navigator/releases/download/v0.6.0/Chief-Navigator-0.6.0.zip",
       "fileName": "Chief-Navigator-0.6.0.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -261,11 +273,33 @@
       "oldVersion": "0.5.1",
       "newVersion": "0.6.0",
       "gameVersion": "0.98a",
-      "updateCompatibilityText": "upadting from 0.5.X to 0.6.0 will likely brick your save.",
-      "canUpdate": "no"
+      "updateNote": {
+        "quote": "upadting from 0.5.X to 0.6.0 will likely brick your save.",
+        "answer": "no"
+      }
     }
   ],
   "threadLastPostOn": "2026-11-09",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "GraphicsLib",
+        "id": "graphicslib"
+      },
+      {
+        "name": "Combat Chatter",
+        "id": "combat-chatter"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      },
+      {
+        "name": "MagicLib",
+        "id": "magiclib"
+      }
+    ]
+  }
 }

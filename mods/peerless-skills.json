@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "peerless-skills",
     "name": "Peerless Skills",
@@ -20,11 +20,11 @@
     "imageUrl": "https://raw.githubusercontent.com/c4tntnitro-netizen/Peerless-Skills/main/docs/assets/peerless-skills-screenshot.png",
     "summary": "Offers Lv 3 Piloting skills for your character, just like before 0.95 when Alex cruelly took them from us. Miss you, 15% CR on piloted ship only.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds Level 3 Piloting skills to the character skill tree.",
+    "aiSummary": "Restores Level 3 Piloting skills for characters, including the 15% critical hit chance effect on piloted ships.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/c4tntnitro-netizen/Peerless-Skills/releases/download/v0.1/Peerless-Skills-v0.1.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -35,36 +35,40 @@
     "aiUses": [
       {
         "area": "code",
-        "how": "generated"
+        "how": "generated",
+        "extent": "all"
       }
     ],
     "addedOn": "2026-11-06",
     "threadLastPostOn": "2026-11-06",
     "editedOn": "2026-11-07",
-    "needs": [
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib",
-        "via": "LunaLib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "LunaLib"
+        }
+      ]
+    }
   },
   "description": "Peerless Skills v0.1\nOffers Lv 3 Piloting skills for your character, just like before 0.95 when Alex cruelly took them from us. Miss you, 15% CR on piloted ship only.\n\nDownload | All fourteen skill effects\n\nTraining\n\nOpen Intel > Contacts > your character's Peerless training contact.\n\nCompleting the Galatia questline grants one Peerless point. Main story line of Hall of Triumph and Sea of Stars also grant one point each for completing their main stories.\n\nOptional post-cap XP progression is off by default. Enable it through LunaLib to earn additional points with XP after the skill cap.\n\nnotes\n\nSiC compatible\n\nSafety Overrides and Field Modulation: Field Modulation cancels an SO ship's first overload. It does not clear flux or bypass SO's no-vent restriction.\n\nPhase Anchor and Combat Endurance: excess damage can trigger both Phase Anchor and Combat Endurance at the same time.\n\nThere is a rare crash bug if you rapidly upgrade and reassign peerless skills then esc out of the skill screen. Hard to reproduce. I think I fixed it.\n\nAI use disclaimer\nOnly code in this mod was created using AI tools:\nCode: Claude\n\nMIT license like always",
   "descriptionHtml": "<b>Peerless Skills v0.1</b><br>Offers Lv 3 Piloting skills for your character, just like before 0.95 when Alex cruelly took them from us. Miss you, 15% CR on piloted ship only. <br><br><a href=\"https://github.com/c4tntnitro-netizen/Peerless-Skills/releases/tag/v0.1\" rel=\"nofollow noopener\" target=\"_blank\">Download</a> | <a href=\"https://raw.githubusercontent.com/c4tntnitro-netizen/Peerless-Skills/main/docs/assets/peerless_effects_2x.png\" rel=\"nofollow noopener\" target=\"_blank\">All fourteen skill effects</a><br><br><img src=\"https://raw.githubusercontent.com/c4tntnitro-netizen/Peerless-Skills/main/docs/assets/peerless-skills-screenshot.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><b>Training</b><br><br>Open Intel &gt; Contacts &gt; your character's Peerless training contact. <br><br>Completing the Galatia questline grants one Peerless point. Main story line of Hall of Triumph and Sea of Stars also grant one point each for completing their main stories. <br><br>Optional post-cap XP progression is off by default. Enable it through LunaLib to earn additional points with XP after the skill cap.<br><br><b>notes</b><br><br>SiC compatible<br><br><b>Safety Overrides and Field Modulation:</b> Field Modulation cancels an SO ship's first overload. It does not clear flux or bypass SO's no-vent restriction. <br><br><b>Phase Anchor and Combat Endurance:</b> excess damage can trigger both Phase Anchor and Combat Endurance at the same time.<br><br>There is a rare crash bug if you rapidly upgrade and reassign peerless skills then esc out of the skill screen. Hard to reproduce. I think I fixed it. <br><br><details class=\"spoiler\"><summary>AI use disclaimer</summary>Only code in this mod was created using AI tools:<br><ul><li>Code: Claude</li></ul></details><br><br>MIT license like always",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Restores high-level piloting perks that were removed in a previous game update. These skills provide bonuses such as increased hull integrity for piloted ships. Points are earned by completing specific questlines, with optional XP-based progression available via LunaLib.",
+  "aiDescription": "Restores Level 3 Piloting skills for characters, including the 15% critical hit chance effect on piloted ships. Training is available through specific contacts and questlines, with optional post-cap progression via LunaLib.",
   "aiUse": {
     "quote": "Only code in this mod was created using AI tools:\nCode: Claude",
     "usesAi": true,
     "uses": [
       {
         "area": "code",
-        "how": "generated"
+        "how": "generated",
+        "extent": "all"
       }
     ],
     "tools": [
@@ -86,19 +90,32 @@
       "url": "https://github.com/c4tntnitro-netizen/Peerless-Skills/releases/tag/v0.1",
       "directUrl": "https://github.com/c4tntnitro-netizen/Peerless-Skills/releases/download/v0.1/Peerless-Skills-v0.1.zip",
       "fileName": "Peerless-Skills-v0.1.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "Download",
       "host": "GitHub",
       "needsAnotherStep": false
     }
   ],
   "changelog": {},
-  "license": "MIT license like always",
+  "license": "MIT",
   "sourceCodeUrl": "https://github.com/c4tntnitro-netizen/Peerless-Skills",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36268.0",
   "releases": [],
   "threadLastPostOn": "2026-11-06",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "LunaLib"
+      }
+    ]
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "pre-battle-deployment-orders",
     "name": "Pre-battle Deployment Orders",
@@ -17,11 +17,15 @@
     "summary": "Pre-battle Deployment Orders is a vanilla-balance friendly QoL mod that lets you apply in-battle orders as a saved preset before battles.",
     "summaryIsGenerated": false,
     "aiSummary": "Lets you apply in-battle orders as a saved preset before battles.",
-    "saveCompatible": true,
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://drive.proton.me/urls/1E0FFG1JP0#udVXsdybOGYH",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": true
     },
     "downloadCount": 1,
@@ -32,32 +36,35 @@
     "aiUses": [
       {
         "area": "code",
-        "how": "generated",
-        "extent": "all"
+        "how": "assisted"
       }
     ],
     "addedOn": "2026-10-30",
     "threadLastPostOn": "2026-11-09",
-    "editedOn": "2026-11-02",
-    "needs": []
+    "editedOn": "2026-11-02"
   },
   "description": "Pre-battle Deployment Orders is a vanilla-balance friendly QoL mod that lets you apply in-battle orders as a saved preset before battles.\n\nDownload Pre-battle Deployment Orders 1.4.0\nNo dependencies\n\nPress O to open the menu in Fleet or Refit screen, or click the top-left Orders button in Fleet screen.\n\nScreenshots\n\nFeatures\n\nAssign a lead ship and assign escorts to it. This can be chained\nIf no specific escorts are assigned, you can assign light/medium/heavy autofill escort\nAssign a lead ship or unassigned ship to Flank\nFlank ships automatically get a Capture order on their flank, or a Waypoint at midway near their edge if none is detected\nToggle Flank between seeking a capture order or waypoint-only\nToggle escort groups between Escort order or Defend order\nToggle reinforcements only applying Escort order when deploying in same batch, or allowing escorts to be deployed separately later and still apply the order\nToggle default Search & Destroy order fleetwide to unassigned/lead ships, assuming no autofill escort group exists\nOrders get assigned when ships are deployed, including reinforcements. No interference with player orders or changes during battle\n\nClean, vanilla-friendly UI design\nPlayer is informed of ships gone missing\nNo AI changes\nPreset management\n\nCompatibility\nIncompatible if used simultaneously with Divisions: Command and Control, though you can toggle between enabling them for your fleet without any problems.\n\nI am not aware of any other compatibility issues - I've been playtesting on my 120 modlist. Safe to install and remove* mid-save.\n\n* there will be some left over code classes and junk, but save will remain functional\n\nChangelog\n1.4.0 - added toggle between escort group order Defend or Escort, since Defend may be preferred in some use-cases. Added toggle to preset menu between escort reinforcements having to be in the same deployment batch to apply the order, or applying the Escort order even when joining later.\n1.3.1 - added auto escort functionality, without specific escort ships assigned. Increased Flank preference for capture points toward friendly spawn (bottom) edge. Added toggle between capture-seeking or waypoint-only Flank.\n1.2.2 - fixed menu opening while typing names in refit screen\n1.2.1 - slightly expanded Flank role's capture point search radius\n1.2.0 - added preset management submenu, added unobtrusive Orders button to Fleet screen, changed default keybind to 'O'\n\n!AI DISCLAIMER!\nVibecoded with Kimi K3.1 Pro Max",
   "descriptionHtml": "<b>Pre-battle Deployment Orders</b> is a vanilla-balance friendly QoL mod that lets you apply in-battle orders as a saved preset before battles.<br><br><a href=\"https://drive.proton.me/urls/1E0FFG1JP0#udVXsdybOGYH\" rel=\"nofollow noopener\" target=\"_blank\">Download Pre-battle Deployment Orders 1.4.0</a><br>No dependencies<br><br>Press <b>O</b> to open the menu in <b>Fleet</b> or <b>Refit</b> screen, or click the top-left <b>O</b>rders button in <b>Fleet</b> screen.<br><br><details class=\"spoiler\"><summary>Screenshots</summary><img src=\"https://i.imgur.com/sKSTtQw.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"> <img src=\"https://i.imgur.com/QRsvqzI.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"> <img src=\"https://i.imgur.com/WMb0GmG.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"> <img src=\"https://i.imgur.com/33W0cGe.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"> <img src=\"https://i.imgur.com/43DlYO6.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"> <img src=\"https://i.imgur.com/jJ5dOkD.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details><br><b>Features</b><br><br><ul><li>Assign a lead ship and assign escorts to it. This can be chained</li><li>If no specific escorts are assigned, you can assign light/medium/heavy autofill escort</li><li>Assign a lead ship or unassigned ship to Flank</li><li>Flank ships automatically get a Capture order on their flank, or a Waypoint at midway near their edge if none is detected</li><li>Toggle Flank between seeking a capture order or waypoint-only</li><li>Toggle escort groups between Escort order or Defend order</li><li>Toggle reinforcements only applying Escort order when deploying in same batch, or allowing escorts to be deployed separately later and still apply the order</li><li>Toggle default Search &amp; Destroy order fleetwide to unassigned/lead ships, assuming no autofill escort group exists</li><li>Orders get assigned when ships are deployed, including reinforcements. No interference with player orders or changes during battle</li></ul><br><ul><li>Clean, vanilla-friendly UI design</li><li>Player is informed of ships gone missing</li><li>No AI changes</li><li>Preset management</li></ul><br><b>Compatibility</b><br>Incompatible if used simultaneously with <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36246.0\" rel=\"nofollow noopener\" target=\"_blank\">Divisions: Command and Control</a>, though you can toggle between enabling them for your fleet without any problems. <br><br>I am not aware of any other compatibility issues - I've been playtesting on my 120 modlist. Safe to install and remove* mid-save.<br><br>* there will be some left over code classes and junk, but save will remain functional<br><br><b>Changelog</b><br>1.4.0 - added toggle between escort group order Defend or Escort, since Defend may be preferred in some use-cases. Added toggle to preset menu between escort reinforcements having to be in the same deployment batch to apply the order, or applying the Escort order even when joining later.<br>1.3.1 - added auto escort functionality, without specific escort ships assigned. Increased Flank preference for capture points toward friendly spawn (bottom) edge. Added toggle between capture-seeking or waypoint-only Flank.<br>1.2.2 - fixed menu opening while typing names in refit screen<br>1.2.1 - slightly expanded Flank role's capture point search radius<br>1.2.0 - added preset management submenu, added unobtrusive <b>O</b>rders button to Fleet screen, changed default keybind to 'O'<br><br><b>!AI DISCLAIMER!</b><br>Vibecoded with Kimi K3.1 Pro Max",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Allows players to configure fleet deployment strategies, such as assigning lead ships, escorts, and flank roles, via a pre-battle menu. These presets automatically assign orders when ships deploy, including reinforcements, without interfering with player commands during combat.",
-  "saveCompatibilityText": "Safe to install and remove* mid-save.",
-  "removalCompatibilityText": "Safe to install and remove* mid-save.",
-  "canAdd": "yes",
-  "canRemove": "yes",
+  "aiDescription": "Adds a quality-of-life feature that allows players to assign lead ships, escorts, and flank roles before combat begins. Supports preset management and various order toggles for escort groups and reinforcements. Designed to be vanilla-balance friendly with no AI changes.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Safe to install and remove* mid-save",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "Safe to install and remove* mid-save",
+      "answer": "yes"
+    }
+  },
   "aiUse": {
     "quote": "Vibecoded with Kimi K3.1 Pro Max",
     "usesAi": true,
     "uses": [
       {
         "area": "code",
-        "how": "generated",
-        "extent": "all"
+        "how": "assisted"
       }
     ],
     "tools": [
@@ -112,7 +119,7 @@
   "downloads": [
     {
       "url": "https://drive.proton.me/urls/1E0FFG1JP0#udVXsdybOGYH",
-      "kind": "direct",
+      "type": "direct",
       "label": "Download Pre-battle Deployment Orders 1.4.0",
       "host": "drive.proton.me",
       "needsAnotherStep": true
@@ -134,7 +141,7 @@
       "name": "Divisions: Command and Control | Combat AI Overhaul",
       "id": "divisions-command-and-control-combat-ai-overhaul",
       "quote": "Incompatible if used simultaneously with Divisions: Command and Control, though you can toggle between enabling them for your fleet without any problems.",
-      "kind": "withNotes"
+      "type": "withNotes"
     }
   ]
 }

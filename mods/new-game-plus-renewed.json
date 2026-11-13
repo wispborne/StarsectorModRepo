@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "new-game-plus-renewed",
     "name": "New Game Plus - Renewed",
@@ -14,29 +14,46 @@
     "imageUrl": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-newgameplus-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
     "summary": "Every level you gain, in any save, earns career points. Every new game opens a store next to your starting fleet where those points buy a head start: story points, skill points, levels, credits, supplies and more.",
     "summaryIsGenerated": false,
-    "aiSummary": "Grants career points for levels gained in any save to buy starting bonuses in new games.",
+    "aiSummary": "Earns career points from leveling up in any save, which can be spent on starting bonuses in new games.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": true
     },
     "downloadCount": 1,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36175.0",
-    "sourceIsPublic": false,
+    "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "other",
+        "how": "generated",
+        "extent": "all"
+      }
+    ],
     "addedOn": "2026-10-20",
     "threadLastPostOn": "2026-10-20",
     "editedOn": "2026-11-11",
-    "needs": [],
     "partOfThreadTitle": "Oddish's Mods"
   },
   "description": "Every level you gain, in any save, earns career points. Every new game\nopens a store next to your starting fleet where those points buy a head\nstart: story points, skill points, levels, credits, supplies and more.",
   "descriptionHtml": "Every level you gain, in any save, earns career points. Every new game<br>opens a store next to your starting fleet where those points buy a head<br>start: story points, skill points, levels, credits, supplies and more.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Tracks levels earned across all saves and converts them into career points. When starting a new game, you can spend these points at a store next to your fleet. The store offers head starts like story points, skill points, credits, and supplies.",
-  "aiUse": {},
+  "aiDescription": "Earns career points for every level gained in any save. New games include a store where these points can be spent on story points, skill points, levels, credits, and supplies.",
+  "aiUse": {
+    "quote": "I ONLY make mods using AI. I am way too tired to learn starsector modding after my day job. I make mods for myself, and post them here if people want to grab them.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "other",
+        "how": "generated",
+        "extent": "all"
+      }
+    ]
+  },
   "rawCategories": [],
   "gallery": [
     {
@@ -317,33 +334,19 @@
   "downloads": [
     {
       "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "label": "New Game Plus - Renewed",
       "host": "github.com",
       "needsAnotherStep": true
     }
   ],
   "changelog": {},
+  "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36175.0",
   "releases": [],
   "threadLastPostOn": "2026-10-20",
   "sameNameMods": [],
-  "addons": [
-    {
-      "name": "Toolbox Economy Curves",
-      "role": "addon",
-      "requires": "AoTD - Theory of Toolbox",
-      "downloads": [
-        {
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=36178",
-          "kind": "direct",
-          "label": "Toolbox Economy Curves",
-          "host": "fractalsoftworks.com",
-          "needsAnotherStep": true
-        }
-      ]
-    }
-  ],
+  "addons": [],
   "partOfThreadTitle": "Oddish's Mods"
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "cardinal-mode",
     "name": "Cardinal Mode",
@@ -24,14 +24,12 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1305725664195772456/1305725664195772456",
     "sourceIsPublic": false,
     "isWorkInProgress": false,
-    "addedOn": "2024-11-12",
-    "needs": []
+    "addedOn": "2024-11-12"
   },
   "description": "Exposes a hidden setting called CardinalMode. When enabled, ship movement is based on absolute directions rather than the ship's current orientation. Note that this overrides turn keys, requiring shift-aiming to rotate the ship.",
   "descriptionHtml": "<p>Exposes a hidden setting called CardinalMode. When enabled, ship movement is based on absolute directions rather than the ship's current orientation. Note that this overrides turn keys, requiring shift-aiming to rotate the ship.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "discordPostHtml": "<p>A very lightweight mod that simply exposes the setting \"CardinalMode\", which, when set to true, enables you to move your ship according to absolute direction rather than relative facing.</p><p>Some notes on use:</p><ul><li>The setting is unfortunately made to override the function of your turn keys, rather than your strafe keys. This means if you want to turn your ship you have no choice but to use the \"shift-aiming\" option.</li><li>I have noticed that trying to input multiple direction keys at once (e.g. to go NW instead of just N) can result in weirdly inconsistent behavior if you're not facing an absolute direction. I would strongly recommend using this with \"Ship Direction Marker\" by PureTilt.</li></ul><p>A big thanks to Genir for making me aware of this setting, which is not documented whatsoever.</p>",
   "aiDescription": "Exposes a hidden setting called CardinalMode. When enabled, ship movement is based on absolute directions rather than the ship's current orientation. Note that this overrides turn keys, requiring shift-aiming to rotate the ship.",
   "aiUse": {},
   "rawCategories": [
@@ -47,10 +45,12 @@
   "releases": [],
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "Ship Direction Marker",
-      "id": "ship-direction-marker"
-    }
-  ]
+  "requirements": {
+    "optional": [
+      {
+        "name": "Ship Direction Marker",
+        "id": "ship-direction-marker"
+      }
+    ]
+  }
 }

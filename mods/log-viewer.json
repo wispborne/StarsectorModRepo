@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "log-viewer",
     "name": "Log Viewer",
@@ -16,14 +16,14 @@
     "gameVersion": "0.98a",
     "modVersion": "1.2.0",
     "imageUrl": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121253741203657/Ig7PWp5.png?ex=6af51109&is=6af3bf89&hm=c47890581f771f72418e975d559745fa8a4c89276bcf2a073f8366fdf2cca4fb&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121253741203657/Ig7PWp5.png?ex=6af7b409&is=6af66289&hm=ca968bf5eac6a6ae8cc65cd9f75cb49087ffc7421c5f3357a2f8fb2fe08060b8&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121253741203657/Ig7PWp5.png?ex=6af85cc9&is=6af70b49&hm=722fc3c6a0fbbcc34c095225899085332566e369b3f971bfbcff42ddd1f68a67&",
     "summary": "View logs from starsector.log inside the game.",
     "summaryIsGenerated": false,
     "aiSummary": "Displays game logs directly within the Starsector interface via a scroller or console integration.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -32,14 +32,12 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2026-05-02",
-    "editedOn": "2026-05-02",
-    "needs": []
+    "editedOn": "2026-05-02"
   },
   "description": "Shows starsector.log entries on screen with sound effects and configurable filters. It integrates with the Console Commands mod for viewing logs in its console. The tool is designed to help mod developers see error logs immediately as they occur.",
   "descriptionHtml": "<p>Shows starsector.log entries on screen with sound effects and configurable filters. It integrates with the Console Commands mod for viewing logs in its console. The tool is designed to help mod developers see error logs immediately as they occur.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "discordPostHtml": "<p>View logs from starsector.log inside the game.</p><p>Forum: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35325\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=35325</a></p><p>Download: <a href=\"https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip</a></p>",
   "aiDescription": "Shows starsector.log entries on screen with sound effects and configurable filters. It integrates with the Console Commands mod for viewing logs in its console. The tool is designed to help mod developers see error logs immediately as they occur.",
   "aiUse": {},
   "rawCategories": [
@@ -47,14 +45,14 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121253741203657/Ig7PWp5.png?ex=6af7b409&is=6af66289&hm=ca968bf5eac6a6ae8cc65cd9f75cb49087ffc7421c5f3357a2f8fb2fe08060b8&",
+      "url": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121253741203657/Ig7PWp5.png?ex=6af85cc9&is=6af70b49&hm=722fc3c6a0fbbcc34c095225899085332566e369b3f971bfbcff42ddd1f68a67&",
       "aiCaption": "A Starsector game screen showing a log overlay with yellow text warnings about failed JSON finds and weapon paintjobs.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121308791443598/Oy2oJUf.png?ex=6af7b416&is=6af66296&hm=25221d7232c1dd64088afa0d7ab4bfd3b1b2f50f3ceade3fb7a9092e8c599e51&",
+      "url": "https://cdn.discordapp.com/attachments/1500121066666983635/1500121308791443598/Oy2oJUf.png?ex=6af85cd6&is=6af70b56&hm=97d31287e4c18ccaf0b213b6430f518a3faa7f905e7fdd5366a060581e5ea589&",
       "aiCaption": "A console window displaying numerous warning logs regarding MagicPaintjobManager and TextureData failures.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -66,7 +64,7 @@
       "url": "https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip",
       "directUrl": "https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip",
       "fileName": "LogViewer.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -84,10 +82,12 @@
   "releases": [],
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "Console Commands",
-      "id": "console-commands"
-    }
-  ]
+  "requirements": {
+    "optional": [
+      {
+        "name": "Console Commands",
+        "id": "console-commands"
+      }
+    ]
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "neutrino-detector-on-screen-display",
     "name": "Neutrino Detector On-Screen Display",
@@ -19,7 +19,7 @@
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/MildlyFootwear/starsector-NeutrinoOSD/releases/download/1.1.0/SASNeutrinoOSD1.1.0.7z",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -29,17 +29,19 @@
     "addedOn": "2024-10-18",
     "threadLastPostOn": "2025-08-06",
     "editedOn": "2025-01-14",
-    "needs": [
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib",
-        "via": "LunaLib"
-      }
-    ],
+    "requirements": {
+      "required": [
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "LunaLib"
+        }
+      ]
+    },
     "partOfThreadTitle": "[0.97a] Shoey's Assorted Stuff - Misc Mods (2025/01/15)"
   },
   "description": "Description: While Neutrino Detector is active, an OSD will show up near the hotbar listing detected entities that are not currently shown on the map. Configurable to show faction and distance, can be placed beside or above the hotbar, can be set to only show fleets while Sensor Burst is active.",
@@ -112,7 +114,7 @@
       "url": "https://github.com/MildlyFootwear/starsector-NeutrinoOSD/releases",
       "directUrl": "https://github.com/MildlyFootwear/starsector-NeutrinoOSD/releases/download/1.1.0/SASNeutrinoOSD1.1.0.7z",
       "fileName": "SASNeutrinoOSD1.1.0.7z",
-      "kind": "direct",
+      "type": "direct",
       "label": "https://github.com/MildlyFootwear/starsector-NeutrinoOSD/releases",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -126,5 +128,18 @@
   "threadLastPostOn": "2025-08-06",
   "sameNameMods": [],
   "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "LunaLib"
+      }
+    ]
+  },
   "partOfThreadTitle": "[0.97a] Shoey's Assorted Stuff - Misc Mods (2025/01/15)"
 }

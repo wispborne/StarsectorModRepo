@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "dedicated-repair-equipment-improvised-refinery",
     "name": "Dedicated Repair Equipment & Improvised Refinery | v0.0.1",
@@ -19,11 +19,15 @@
     "summary": "2 small mods that add their respective hullmods.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds a built-in hullmod for the Salvage Rig that speeds up repairs on one other ship while reducing supply costs and draining metals.",
-    "saveCompatible": true,
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Heniker/Starsector-Mods/releases/download/v0.0.2/Dedicated.Repair.Equipment.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -32,28 +36,35 @@
     "isWorkInProgress": false,
     "addedOn": "2024-07-29",
     "editedOn": "2024-07-29",
-    "needs": [
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib",
-        "via": "LunaLib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "LunaLib"
+        }
+      ]
+    }
   },
   "description": "This hullmod is built into the Salvage Rig and cannot be installed elsewhere. It increases repair speed for a single target ship within the fleet, though it does not affect CR recovery speed. While active, it reduces the cost of recovery supplies but drains metals proportional to that cost.",
   "descriptionHtml": "<p>This hullmod is built into the Salvage Rig and cannot be installed elsewhere. It increases repair speed for a single target ship within the fleet, though it does not affect CR recovery speed. While active, it reduces the cost of recovery supplies but drains metals proportional to that cost.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "discordPostHtml": "<p>2 small mods that add their respective hullmods.</p><h5>Dedicated Repair Equipment</h5><p>Ship with this hullmod can aid in repairs of a single other ship within fleet.<br>Increases repair speed, but not CR recovery speed.<br>While target is repairing/recovering CR - the recovery supplies cost will be reduced.<br>Drains metals while active proportional to target recovery cost.<br>Can not be installed. Built-in on Salvage Rig.</p><p>To prevent hullmod from activating - disable repairs on Salvage Rig or mothball it.</p><h5>Improvised Refinery</h5><p>Install an Improvised Refinery onto the ship. The Refinery can inefficiently convert Ore into Metals.<br>The conversion speed is based on CR and number of ships with hullmod within fleet. Having nanoforge in cargo also influences conversion speed and efficiency.<br>A logistics hullmod. Can only be installed on Capital class ships. Unlocks when player gets Makeshift Equipment skill. Can be randomly found in derelict structures.</p><p>Updates (effectively) in real-time.<br>Also adds the player ability to toggle refinery on/off.</p><p>DM me for bug reports &amp; feedback.</p><p>Or if you want to make the currently missing hullmod icons.</p><p>Both mods have LunaLib integration and are safe to add/remove from the ongoing game.</p><p><strong>But please make a separate save before removing or adding mod. This is still BETA...</strong></p><p><strong>Download:</strong> <a href=\"https://github.com/Heniker/Starsector-Mods/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Heniker/Starsector-Mods/releases</a></p>",
   "aiDescription": "This hullmod is built into the Salvage Rig and cannot be installed elsewhere. It increases repair speed for a single target ship within the fleet, though it does not affect CR recovery speed. While active, it reduces the cost of recovery supplies but drains metals proportional to that cost.",
-  "saveCompatibilityText": "safe to add/remove from the ongoing game",
-  "removalCompatibilityText": "safe to add/remove from the ongoing game",
-  "canAdd": "yes",
-  "canRemove": "yes",
+  "saveCompat": {
+    "adding": {
+      "quote": "safe to add/remove from the ongoing game",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "safe to add/remove from the ongoing game",
+      "answer": "yes"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Modular Hullmods"
@@ -64,7 +75,7 @@
       "url": "https://github.com/Heniker/Starsector-Mods/releases",
       "directUrl": "https://github.com/Heniker/Starsector-Mods/releases/download/v0.0.2/Dedicated.Repair.Equipment.zip",
       "fileName": "Dedicated.Repair.Equipment.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "https://github.com/Heniker/Starsector-Mods/releases",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -76,5 +87,18 @@
   "discordUrl": "https://discord.com/channels/187635036525166592/1267544165948985457/1267544165948985457",
   "releases": [],
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "LunaLib"
+      }
+    ]
+  }
 }

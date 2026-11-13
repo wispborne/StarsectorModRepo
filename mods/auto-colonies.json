@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "auto-colonies",
     "name": "Auto Colonies",
@@ -13,14 +13,23 @@
     ],
     "gameVersion": "0.98a",
     "imageUrl": "https://raw.githubusercontent.com/Mjolniar/auto-colonies/main/docs/images/banner.png?v=0301",
-    "summary": "Fully to semi-automatic colony and faction management, with a full interface of configurable options. Uses items, agents, administrators, and integrates with oodles of mods. Every action costs what it would cost you, plus a small fee you can change.",
+    "summary": "Automatic Faction and Colony management for Starsector 0.98a+0.98.5a.",
     "summaryIsGenerated": false,
-    "aiSummary": "Automates colony building, resource management, and faction interactions with configurable modes.",
-    "saveCompatible": true,
+    "aiSummary": "Automates colony building, item placement, fleet deployment, and economic management based on player-defined goals and doctrines.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FMjolniar%2Fauto-colonies%2Fmain%2FAutoColonies.version%22%2C%22id%22%3A%22jonah_tweaks%22%7D",
-      "kind": "direct",
+      "type": "trios",
+      "needsAnotherStep": false
+    },
+    "plainDownload": {
+      "url": "https://github.com/Mjolniar/auto-colonies/releases/latest",
+      "type": "direct",
       "needsAnotherStep": true
     },
     "downloadCount": 2,
@@ -32,44 +41,41 @@
       {
         "area": "code",
         "how": "generated"
-      },
-      {
-        "area": "writing",
-        "how": "generated"
       }
     ],
     "lastReleaseDate": "2026-11-10T00:00:00.000Z",
-    "addedOn": "2026-11-05",
-    "threadLastPostOn": "2026-11-11",
-    "needs": []
+    "addedOn": "2026-11-05"
   },
-  "description": "Auto Colonies\nColony management for Starsector 0.98a.\n\nSource code and guides\nRequired mods: none\nUpdating: delete the old mod folder in mods/ and extract the new one. The folder used to be named Colony Manager; the mod id is unchanged, so saves keep working. Settings stay with the save.\nSafe to add mid-game\n\nBreaks saves if removed\n\nNo known mod conflicts\n\nShort summary\nFully to semi-automatic colony and faction management, with a full interface of configurable options. Uses items, agents, administrators, and integrates with oodles of mods.\nEvery action costs what it would cost you, plus a small fee you can change.\nLong description\nMade for games with many colonies and the colony limit off. Written with Claude Code.\n\nThe Colony Autopilot button is on the colony screen (or right click Population & Infrastructure). Settings are on the Colony Autopilot tab in the intel screen and can be changed at any time.\n\nColonies start in Advisor (recommendations only). Approve: one proposal at a time to approve or reject. Auto: builds within your budget.\n\nItems and AI cores go in Autopilot Storage at any colony. It ships them where they are needed, for a fee and travel time.\n\nFeatures\nBuilding\nOne ranked build queue for all colonies, within your budget. A build must pay back within 36 months. Colonies are kept off 0 stability. Items, AI cores and administrators\nPuts your items and cores where they do the most, and hires and places administrators.\nAutopilot Storage\nDrop items and AI cores into Autopilot Storage at any colony. It ships them where they're needed for a fee and some travel time. Capital\nOne colony becomes your home port and, later, a trade hub.\nStations and stable locations\nColonies get stations as they grow, and relays, buoys and arrays go up at stable locations. Threats and colony crises\nPlans security when a colony is in danger and prices crises into what it builds. Optional: the Low profile expansion style lowers the odds of inspections, Pather cells and raids.\nMoney ladder and endgame\nFrom the Surplus money tier, part of free cash goes to stockpiles, growth, military, ships, new colonies, the economy and wonders, in the order a preset sets. In the endgame economy it builds for production, research and military over income. War (Nexerelin)\nOne War level, Off to Scorched (default Retaliate), and a stance per faction, Ally to Destroy. Defense fleets, raids, retakes, invasions, and bombardment after you authorize it.\nResearch and terraforming\nRuns research, terraforming, trade contracts and megastructures when their mods are installed. Costs\nEvery action costs the game's price plus a fee. Remote actions take travel time. Game balance is not changed.\nOn-screen log\nEach action shows as a short line like BUILD / Hot Springs: Planetary Shield (750k). The log has the full text. Settings\nColony Autopilot button on the colony screen, and a tab in the intel screen. 20 main rows with presets, the rest under Advanced. Modes: Advisor (default), Approve, Auto. Every setting\nMod integrations\nSupports 20+ colony mods. None are required. Full list in the Supported mods spoiler below. Audit page\nThe audit page lists everything it can change and what it costs.\nNew colonies (optional)\nOff by default. On Ask first or Auto it founds colonies by Nexerelin colony fleet or an Autopilot crew, at cost plus the fee. Patch notes\nEvery version's changes: patch notes.\n\nGetting started\nOpen a colony and hit Colony Autopilot.\nPick a goal, or leave it on Balanced.\nSet the mode to Auto and save the recommended setup.\nDrop items and AI cores into Autopilot Storage.\n\nAuto starts building right away. Advisor and Approve do not build on their own. Back up your save before trying Auto.\nGuides: getting started | how it builds | money and the endgame | war and security | items and cores | what it does with each mod | roadmap\n\nRecent changes\nBuild planner: one ranked build queue for all colonies and a 36-month payback limit (up to 120 months with surplus credits). A building Autopilot takes down stays off that colony's build list for a year.\nMoney tiers and the money ladder: from the Surplus tier, part of free cash goes to stockpiles, growth, military, ships, new colonies, the economy and wonders.\nNew colonies (Auto-expansion): Off, Ask first or Auto. Off by default.\nWar level and faction stances (Nexerelin): Off to Scorched, default Retaliate. Stances from Ally to Destroy on the new Factions page.\nSettings menu: 20 main rows in 6 groups, with presets. New Expansion, War and Factions pages.\nNot tested in a game yet: player-faction bombardment, Nexerelin colony fleets for the player, conquered-colony rebellions, invasions while commissioned, ceasefire answers, Stand down refunds, founding by an Autopilot crew.\nBack up your save before updating.\n\nFull roadmap\n\nSupported mods\nAll optional. Each one turns on by itself when its mod is enabled.\nLarge integrations\nNexerelin War level and faction stances: defense and relief fleets, raids, retakes, invasions, bombardment after you authorize it. Agents, diplomacy, sieges, colony fleets for New colonies, the Derelict Empire start.\nAshes of the Domain (Vaults of Knowledge, Theory of Toolbox), Building Menu Overhaul Research and research locks, synergies, management styles, trade contracts, production orders, special projects, megastructures, wonders and gates, Hypershunt Receivers.\nTerraforming Made Easy Special-world plans (Forge, Fortress, Paradise, Hive, Death, Waste), terraforming, Domain-era upgrades for comm relays, nav buoys and sensor arrays.\nIndustrial Evolution Ambassadors, edicts, VPC chips, specialized mining and refining, courier shipping.\nBuildings and colonies\nTerraforming & Station Construction (Boggled) Its terraforming projects and the buildings they need. Mining and siphon stations founded as new colonies (optional).\nRandom Assortment of Things Frontiers settlement.\nGrand.Colonies Builds past 12 buildings, with the extra upkeep counted.\nSubstance.Abuse Breweries and recipes.\nVolkov Industrial Conglomerate Viral contamination treatment first. Soil nanites only on vanilla farmland.\nRoider Union Dives and Union HQ valued by what they mine nearby beyond what the colony already makes. Roider Charters placed.\nPlanetary Shield: Access Control The shield valued as defense. Port kept closed while there are Pather cells.\nUnknown Skies, What We Left Behind, Astral Ascension Their mining conditions and water worlds. Planetless colonies kept safe.\nNiko's Scavengable Industries Builds the blueprints you know. The risky ones are left to you.\nJunk Yard Dogs, Carter's Freetraders Resource forges and the Biolab, with illegal goods counted.\nVulpoids Organ Farms, the Biotech Facility, its colony items, Profecto administrators. The Vulpoid Bioforge story is left to you.\nYunru Industries, Yunru's Worlds, Slightly Better Tech-Mining (one thread for all three) Secondary Drydocks, Auxiliary Shipbays, richer Tech-Mining.\nAuto Outfitting Plans producers for the goods its large weapon orders need.\nStations\nStation Augments Best augment loadout per station, the Mining Station augment, economic augments in well-defended systems.\nInterstellar Imperium, Knights of Ludd Their stations count like vanilla ones, plus the Imperium station line.\nItems and AI cores\nEmergent Threats (IX Revival) Antimatter Stabilizer conversion. Panopticon cores into the Surveillance Center.\nOmega Core Everywhere, Astral Ascension Renewed Omega cores go where they do the most, in a building or as an administrator.\nUnited Aurora Federation Its colony items placed by what they do.\nOddisz's mods\nCloning The three cloning industries, built when faster growth is worth it and there is room for the stability penalty.\nReverse Engineered Private Arsenal Left to you. Never built or taken down. Its core and Drone Replicator are not moved.\nSol Renewed Industries in Sol priced for what they add to its crisis meter. The meter is on the Crises page.\nToolbox Economy Curves, Coalesced Little Mods (forum thread, GitHub) The curve you pick is used as is. The pack gets the same handling as Cloning and the Private Arsenal.\nOther mods\nAny other mod Its deposits and colony items through the game's own tables. Its buildings measured on a test colony.\nChecked, nothing needed Better Colonies, Supply Forging, LOST_SECTOR, Kon's Player Faction Bundles, Galactic Constellate, Tri-Tachyon Expansion, Luddic Enhancement, Hillock, Hazard Mining, Hiver Swarm, Adversary, Gambling Den, Extra System Reloaded - Oddisz Edition, Hullmods - Renewed, Intel Renewed, StopBloatingMe, StopStackingMe, StarterPack, Discord Rich Presence.\n\nMod support requests go here or in GitHub issues.\n\nCompatibility and permissions\nCompatibility and known issues\nOptional integrations: Nexerelin, Ashes of the Domain, Terraforming Made Easy, Industrial Evolution, Random Assortment of Things, Station Augments, Emergent Threats and more (Supported mods, above)\nTested with: a list of about 100 mods. Every release is checked offline against every combination of the supported mods.\nKnown conflicts: none known\nKnown issues: expect bugs. Report them here or as GitHub issues, ideally with starsector-core/starsector.log, saves/common/colony_autopilot_diagnostics.json.data and your modlist. Permissions\nCode: free to use, change and reupload, in modpacks too. No credit needed. Do not sell it.\nAssets: none. The mod has no art.\n\nFAQ\nCan I add it to a game in progress?\nYes. It starts on Advisor, so nothing happens until you pick Approve or Auto. Do not remove it later: the Autopilot Storage tab is on your markets.\n\nDoes it change game balance?\nNo. Everything costs what it would cost you, plus a fee you can change, and shipping and hiring take travel time.\n\nCan it avoid colony crises?\nMostly. Pick Low profile, or set it under Settings, Expansion style. Pirates and the Persean League come from colony size alone; it prepares colonies for them.\n\nIt isn't building anything. Why?\nCheck the mode (Advisor only advises) and the budget. The getting started guide has a section on it.\n\nWill more mods be supported?\nYes. Mod support requests go here or in GitHub issues.\n\nAI use disclaimer\nSome or all assets and code in this mod were created using AI tools:\nCode: Claude Opus 5.5 (through Claude Code)\nDocs, patch notes and the offline build checks: Claude Opus 5.5\n\nNo additional training data. There's no art in the mod. I came up with what it should do and tested it in my own games; the AI wrote the code and checks it offline against every combination of the supported mods before each release.\n\nMade by Mjolniar | More: Auto Outfitting | all my mods on GitHub",
-  "descriptionHtml": "<div class=\"align-center\"><img src=\"https://raw.githubusercontent.com/Mjolniar/auto-colonies/main/docs/images/banner.png?v=0301\" alt=\"\" width=\"800\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><span class=\"size-biggest\"><b>Auto Colonies</b></span><br><i>Colony management for Starsector 0.98a.</i></div><br><div class=\"align-center\"><a href=\"https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FMjolniar%2Fauto-colonies%2Fmain%2FAutoColonies.version%22%2C%22id%22%3A%22jonah_tweaks%22%7D\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://trilink.wispborne.com/badges/install-badge-forthebadge.svg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a> <a href=\"https://github.com/Mjolniar/auto-colonies/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Download-GitHub-blue?style=for-the-badge&amp;logo=github\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a> <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/changelog.md\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Changelog-All_versions-gray?style=for-the-badge&amp;logo=github\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><a href=\"https://github.com/Mjolniar/auto-colonies\" rel=\"nofollow noopener\" target=\"_blank\">Source code and guides</a><br><b>Required mods:</b> none<br><b>Updating:</b> delete the old mod folder in mods/ and extract the new one. The folder used to be named Colony Manager; the mod id is unchanged, so saves keep working. Settings stay with the save.<br><div class=\"table-scroll\"><table><tbody><tr><td><table style=\"--bg:#d6e8d4;--pad:3px 10px;--round:12px\"><tbody><tr><td class=\"author-colour\" style=\"--c:#1d5e1d\"><span class=\"size-small\"><b>Safe to add mid-game</b></span></td></tr></tbody></table></td><td><table style=\"--bg:#efd0d0;--pad:3px 10px;--round:12px\"><tbody><tr><td class=\"author-colour\" style=\"--c:#7a1717\"><span class=\"size-small\"><b>Breaks saves if removed</b></span></td></tr></tbody></table></td><td><table style=\"--bg:#cfddef;--pad:3px 10px;--round:12px\"><tbody><tr><td class=\"author-colour\" style=\"--c:#1f3a66\"><span class=\"size-small\"><b>No known mod conflicts</b></span></td></tr></tbody></table></td></tr></tbody></table></div></div><br><div class=\"table-scroll\"><table style=\"--bg:#f3f6f8;--line:#c8d8e8;--pad:8px 14px;--round:6px;--w:100%\"><tbody><tr style=\"--row-bg:#c8d8e8\"><td><b>Short summary</b></td></tr><tr><td>Fully to semi-automatic colony and faction management, with a full interface of configurable options. Uses items, agents, administrators, and integrates with oodles of mods.<br>Every action costs what it would cost you, plus a small fee you can change.<br><details class=\"spoiler\"><summary>Long description</summary>Made for games with many colonies and the colony limit off. Written with Claude Code.<br><br>The Colony Autopilot button is on the colony screen (or right click Population &amp; Infrastructure). Settings are on the Colony Autopilot tab in the intel screen and can be changed at any time.<br><br>Colonies start in Advisor (recommendations only). Approve: one proposal at a time to approve or reject. Auto: builds within your budget.<br><br>Items and AI cores go in Autopilot Storage at any colony. It ships them where they are needed, for a fee and travel time.</details></td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table style=\"--bg:#f4f4f4;--line:#dedede;--pad:8px 14px;--round:6px;--w:100%\"><tbody><tr style=\"--row-bg:#dedede\"><td><b>Features</b></td></tr><tr><td><table style=\"--pad:6px 4px;--w:100%\"><tbody><tr><td style=\"--w:50%\"><b>Building</b><br>One ranked build queue for all colonies, within your budget. A build must pay back within 36 months. Colonies are kept off 0 stability.</td><td style=\"--w:50%\"><b>Items, AI cores and administrators</b><br>Puts your items and cores where they do the most, and hires and places administrators.</td></tr><tr><td style=\"--w:50%\"><b>Autopilot Storage</b><br>Drop items and AI cores into Autopilot Storage at any colony. It ships them where they're needed for a fee and some travel time.</td><td style=\"--w:50%\"><b>Capital</b><br>One colony becomes your home port and, later, a trade hub.</td></tr><tr><td style=\"--w:50%\"><b>Stations and stable locations</b><br>Colonies get stations as they grow, and relays, buoys and arrays go up at stable locations.</td><td style=\"--w:50%\"><b>Threats and colony crises</b><br>Plans security when a colony is in danger and prices crises into what it builds. Optional: the <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/low-profile.md\" rel=\"nofollow noopener\" target=\"_blank\">Low profile</a> expansion style lowers the odds of inspections, Pather cells and raids.</td></tr><tr><td style=\"--w:50%\"><b>Money ladder and endgame</b><br>From the Surplus money tier, part of free cash goes to stockpiles, growth, military, ships, new colonies, the economy and wonders, in the order a preset sets. In the endgame economy it builds for production, research and military over income.</td><td style=\"--w:50%\"><b>War (Nexerelin)</b><br>One War level, Off to Scorched (default Retaliate), and a stance per faction, Ally to Destroy. Defense fleets, raids, retakes, invasions, and bombardment after you authorize it.</td></tr><tr><td style=\"--w:50%\"><b>Research and terraforming</b><br>Runs research, terraforming, trade contracts and megastructures when their mods are installed.</td><td style=\"--w:50%\"><b>Costs</b><br>Every action costs the game's price plus a fee. Remote actions take travel time. Game balance is not changed.</td></tr><tr><td style=\"--w:50%\"><b>On-screen log</b><br>Each action shows as a short line like BUILD / Hot Springs: Planetary Shield (750k). The log has the full text.</td><td style=\"--w:50%\"><b>Settings</b><br>Colony Autopilot button on the colony screen, and a tab in the intel screen. 20 main rows with presets, the rest under Advanced. Modes: Advisor (default), Approve, Auto. <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/settings.md\" rel=\"nofollow noopener\" target=\"_blank\">Every setting</a></td></tr><tr><td style=\"--w:50%\"><b>Mod integrations</b><br>Supports 20+ colony mods. None are required. Full list in the Supported mods spoiler below.</td><td style=\"--w:50%\"><b>Audit page</b><br>The <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/audit.md\" rel=\"nofollow noopener\" target=\"_blank\">audit page</a> lists everything it can change and what it costs.</td></tr><tr><td style=\"--w:50%\"><b>New colonies (optional)</b><br>Off by default. On Ask first or Auto it founds colonies by Nexerelin colony fleet or an Autopilot crew, at cost plus the fee.</td><td style=\"--w:50%\"><b>Patch notes</b><br>Every version's changes: <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/changelog.md\" rel=\"nofollow noopener\" target=\"_blank\">patch notes</a>.</td></tr></tbody></table></td></tr></tbody></table></div><br><div class=\"table-scroll\"><table style=\"--bg:#f4f4f4;--line:#dedede;--pad:8px 14px;--round:6px;--w:100%\"><tbody><tr style=\"--row-bg:#dedede\"><td><b>Getting started</b></td></tr><tr><td><ol><li>Open a colony and hit Colony Autopilot.</li><li>Pick a goal, or leave it on Balanced.</li><li>Set the mode to Auto and save the recommended setup.</li><li>Drop items and AI cores into Autopilot Storage.</li></ol>Auto starts building right away. Advisor and Approve do not build on their own. Back up your save before trying Auto.<br>Guides: <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/getting-started.md\" rel=\"nofollow noopener\" target=\"_blank\">getting started</a> | <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/how-it-builds.md\" rel=\"nofollow noopener\" target=\"_blank\">how it builds</a> | <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/money.md\" rel=\"nofollow noopener\" target=\"_blank\">money and the endgame</a> | <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/war-and-security.md\" rel=\"nofollow noopener\" target=\"_blank\">war and security</a> | <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/items-and-cores.md\" rel=\"nofollow noopener\" target=\"_blank\">items and cores</a> | <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/supported-mods.md\" rel=\"nofollow noopener\" target=\"_blank\">what it does with each mod</a> | <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/roadmap.md\" rel=\"nofollow noopener\" target=\"_blank\">roadmap</a></td></tr></tbody></table></div><br><div class=\"table-scroll\"><table style=\"--bg:#f4f4f4;--line:#dedede;--pad:8px 14px;--round:6px;--w:100%\"><tbody><tr style=\"--row-bg:#dedede\"><td><b>Recent changes</b></td></tr><tr><td><ul><li>Build planner: one ranked build queue for all colonies and a 36-month payback limit (up to 120 months with surplus credits). A building Autopilot takes down stays off that colony's build list for a year.</li><li>Money tiers and the money ladder: from the Surplus tier, part of free cash goes to stockpiles, growth, military, ships, new colonies, the economy and wonders.</li><li>New colonies (Auto-expansion): Off, Ask first or Auto. Off by default.</li><li>War level and faction stances (Nexerelin): Off to Scorched, default Retaliate. Stances from Ally to Destroy on the new Factions page.</li><li>Settings menu: 20 main rows in 6 groups, with presets. New Expansion, War and Factions pages.</li><li>Not tested in a game yet: player-faction bombardment, Nexerelin colony fleets for the player, conquered-colony rebellions, invasions while commissioned, ceasefire answers, Stand down refunds, founding by an Autopilot crew.</li><li>Back up your save before updating.</li></ul><a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/roadmap.md\" rel=\"nofollow noopener\" target=\"_blank\">Full roadmap</a></td></tr></tbody></table></div><br><details class=\"spoiler\"><summary>Supported mods</summary>All optional. Each one turns on by itself when its mod is enabled.<br><div class=\"table-scroll\"><table style=\"--bg:#f8f8f8;--line:#dedede;--pad:4px 8px;--round:6px;--w:100%\"><tbody><tr style=\"--row-bg:#dedede\"><td style=\"--w:32%\"><b>Large integrations</b></td><td></td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=9175.0\" rel=\"nofollow noopener\" target=\"_blank\">Nexerelin</a></td><td>War level and faction stances: defense and relief fleets, raids, retakes, invasions, bombardment after you authorize it. Agents, diplomacy, sieges, colony fleets for New colonies, the Derelict Empire start.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=26307.0\" rel=\"nofollow noopener\" target=\"_blank\">Ashes of the Domain</a> (Vaults of Knowledge, Theory of Toolbox), <a href=\"https://fractalsoftworks.com/forum/index.php?topic=31308.0\" rel=\"nofollow noopener\" target=\"_blank\">Building Menu Overhaul</a></td><td>Research and research locks, synergies, management styles, trade contracts, production orders, special projects, megastructures, wonders and gates, Hypershunt Receivers.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=29441.0\" rel=\"nofollow noopener\" target=\"_blank\">Terraforming Made Easy</a></td><td>Special-world plans (Forge, Fortress, Paradise, Hive, Death, Waste), terraforming, Domain-era upgrades for comm relays, nav buoys and sensor arrays.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=18011.0\" rel=\"nofollow noopener\" target=\"_blank\">Industrial Evolution</a></td><td>Ambassadors, edicts, VPC chips, specialized mining and refining, courier shipping.</td></tr><tr style=\"--row-bg:#dedede\"><td style=\"--w:32%\"><b>Buildings and colonies</b></td><td></td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=17094.0\" rel=\"nofollow noopener\" target=\"_blank\">Terraforming &amp; Station Construction (Boggled)</a></td><td>Its terraforming projects and the buildings they need. Mining and siphon stations founded as new colonies (optional).</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=26260.0\" rel=\"nofollow noopener\" target=\"_blank\">Random Assortment of Things</a></td><td>Frontiers settlement.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=20986.0\" rel=\"nofollow noopener\" target=\"_blank\">Grand.Colonies</a></td><td>Builds past 12 buildings, with the extra upkeep counted.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=24378.0\" rel=\"nofollow noopener\" target=\"_blank\">Substance.Abuse</a></td><td>Breweries and recipes.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=19603.0\" rel=\"nofollow noopener\" target=\"_blank\">Volkov Industrial Conglomerate</a></td><td>Viral contamination treatment first. Soil nanites only on vanilla farmland.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=9547.0\" rel=\"nofollow noopener\" target=\"_blank\">Roider Union</a></td><td>Dives and Union HQ valued by what they mine nearby beyond what the colony already makes. Roider Charters placed.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=14990.0\" rel=\"nofollow noopener\" target=\"_blank\">Planetary Shield: Access Control</a></td><td>The shield valued as defense. Port kept closed while there are Pather cells.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=29876.0\" rel=\"nofollow noopener\" target=\"_blank\">Unknown Skies</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25205.0\" rel=\"nofollow noopener\" target=\"_blank\">What We Left Behind</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=28273.0\" rel=\"nofollow noopener\" target=\"_blank\">Astral Ascension</a></td><td>Their mining conditions and water worlds. Planetless colonies kept safe.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36195.0\" rel=\"nofollow noopener\" target=\"_blank\">Niko's Scavengable Industries</a></td><td>Builds the blueprints you know. The risky ones are left to you.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=22826.0\" rel=\"nofollow noopener\" target=\"_blank\">Junk Yard Dogs</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=24433.0\" rel=\"nofollow noopener\" target=\"_blank\">Carter's Freetraders</a></td><td>Resource forges and the Biolab, with illegal goods counted.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=29929.0\" rel=\"nofollow noopener\" target=\"_blank\">Vulpoids</a></td><td>Organ Farms, the Biotech Facility, its colony items, Profecto administrators. The Vulpoid Bioforge story is left to you.</td></tr><tr><td style=\"--w:32%\">Yunru Industries, Yunru's Worlds, Slightly Better Tech-Mining (<a href=\"https://fractalsoftworks.com/forum/index.php?topic=21968.0\" rel=\"nofollow noopener\" target=\"_blank\">one thread for all three</a>)</td><td>Secondary Drydocks, Auxiliary Shipbays, richer Tech-Mining.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://github.com/Mjolniar/auto-outfitting\" rel=\"nofollow noopener\" target=\"_blank\">Auto Outfitting</a></td><td>Plans producers for the goods its large weapon orders need.</td></tr><tr style=\"--row-bg:#dedede\"><td style=\"--w:32%\"><b>Stations</b></td><td></td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=30583.0\" rel=\"nofollow noopener\" target=\"_blank\">Station Augments</a></td><td>Best augment loadout per station, the Mining Station augment, economic augments in well-defended systems.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=8007.0\" rel=\"nofollow noopener\" target=\"_blank\">Interstellar Imperium</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=29124.0\" rel=\"nofollow noopener\" target=\"_blank\">Knights of Ludd</a></td><td>Their stations count like vanilla ones, plus the Imperium station line.</td></tr><tr style=\"--row-bg:#dedede\"><td style=\"--w:32%\"><b>Items and AI cores</b></td><td></td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=27284.0\" rel=\"nofollow noopener\" target=\"_blank\">Emergent Threats (IX Revival)</a></td><td>Antimatter Stabilizer conversion. Panopticon cores into the Surveillance Center.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36168.0\" rel=\"nofollow noopener\" target=\"_blank\">Omega Core Everywhere</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36167.0\" rel=\"nofollow noopener\" target=\"_blank\">Astral Ascension Renewed</a></td><td>Omega cores go where they do the most, in a building or as an administrator.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=12709.0\" rel=\"nofollow noopener\" target=\"_blank\">United Aurora Federation</a></td><td>Its colony items placed by what they do.</td></tr><tr style=\"--row-bg:#dedede\"><td style=\"--w:32%\"><b>Oddisz's mods</b></td><td></td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35130.0\" rel=\"nofollow noopener\" target=\"_blank\">Cloning</a></td><td>The three cloning industries, built when faster growth is worth it and there is room for the stability penalty.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35627.0\" rel=\"nofollow noopener\" target=\"_blank\">Reverse Engineered Private Arsenal</a></td><td>Left to you. Never built or taken down. Its core and Drone Replicator are not moved.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35983.0\" rel=\"nofollow noopener\" target=\"_blank\">Sol Renewed</a></td><td>Industries in Sol priced for what they add to its crisis meter. The meter is on the Crises page.</td></tr><tr><td style=\"--w:32%\">Toolbox Economy Curves, Coalesced Little Mods (<a href=\"https://fractalsoftworks.com/forum/index.php?topic=36178.0\" rel=\"nofollow noopener\" target=\"_blank\">forum thread</a>, <a href=\"https://github.com/andrzejsokolowski/starsector-coalesced-little-mods\" rel=\"nofollow noopener\" target=\"_blank\">GitHub</a>)</td><td>The curve you pick is used as is. The pack gets the same handling as Cloning and the Private Arsenal.</td></tr><tr style=\"--row-bg:#dedede\"><td style=\"--w:32%\"><b>Other mods</b></td><td></td></tr><tr><td style=\"--w:32%\">Any other mod</td><td>Its deposits and colony items through the game's own tables. Its buildings measured on a test colony.</td></tr><tr><td style=\"--w:32%\">Checked, nothing needed</td><td><a href=\"https://fractalsoftworks.com/forum/index.php?topic=17103.0\" rel=\"nofollow noopener\" target=\"_blank\">Better Colonies</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=17503.0\" rel=\"nofollow noopener\" target=\"_blank\">Supply Forging</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=27556.0\" rel=\"nofollow noopener\" target=\"_blank\">LOST_SECTOR</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25040.0\" rel=\"nofollow noopener\" target=\"_blank\">Kon's Player Faction Bundles</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=29622.0\" rel=\"nofollow noopener\" target=\"_blank\">Galactic Constellate</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=30322.0\" rel=\"nofollow noopener\" target=\"_blank\">Tri-Tachyon Expansion</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=15084.0\" rel=\"nofollow noopener\" target=\"_blank\">Luddic Enhancement</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=29727.0\" rel=\"nofollow noopener\" target=\"_blank\">Hillock</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=13236.0\" rel=\"nofollow noopener\" target=\"_blank\">Hazard Mining</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=22965.0\" rel=\"nofollow noopener\" target=\"_blank\">Hiver Swarm</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25821.0\" rel=\"nofollow noopener\" target=\"_blank\">Adversary</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35993.0\" rel=\"nofollow noopener\" target=\"_blank\">Gambling Den</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36143.0\" rel=\"nofollow noopener\" target=\"_blank\">Extra System Reloaded - Oddisz Edition</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35619.0\" rel=\"nofollow noopener\" target=\"_blank\">Hullmods - Renewed</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35978.0\" rel=\"nofollow noopener\" target=\"_blank\">Intel Renewed</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35850.0\" rel=\"nofollow noopener\" target=\"_blank\">StopBloatingMe</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35952.0\" rel=\"nofollow noopener\" target=\"_blank\">StopStackingMe</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35856.0\" rel=\"nofollow noopener\" target=\"_blank\">StarterPack</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35392.0\" rel=\"nofollow noopener\" target=\"_blank\">Discord Rich Presence</a>.</td></tr></tbody></table></div>Mod support requests go here or in GitHub issues.</details><hr><div class=\"table-scroll\"><table style=\"--bg:#f4f4f4;--line:#dedede;--pad:8px 14px;--round:6px;--w:100%\"><tbody><tr style=\"--row-bg:#dedede\"><td><b>Compatibility and permissions</b></td></tr><tr><td><table style=\"--pad:6px 4px;--w:100%\"><tbody><tr><td style=\"--w:50%\"><b>Compatibility and known issues</b><br><b>Optional integrations:</b> Nexerelin, Ashes of the Domain, Terraforming Made Easy, Industrial Evolution, Random Assortment of Things, Station Augments, Emergent Threats and more (Supported mods, above)<br><b>Tested with:</b> a list of about 100 mods. Every release is checked offline against every combination of the supported mods.<br><b>Known conflicts:</b> none known<br><b>Known issues:</b> expect bugs. Report them here or as <a href=\"https://github.com/Mjolniar/auto-colonies/issues\" rel=\"nofollow noopener\" target=\"_blank\">GitHub issues</a>, ideally with starsector-core/starsector.log, saves/common/colony_autopilot_diagnostics.json.data and your modlist.</td><td style=\"--w:50%\"><b>Permissions</b><br><b>Code:</b> free to use, change and reupload, in modpacks too. No credit needed. Do not sell it.<br><b>Assets:</b> none. The mod has no art.</td></tr></tbody></table></td></tr></tbody></table></div><br><details class=\"spoiler\"><summary>FAQ</summary><div class=\"table-scroll\"><table><tbody><tr><td><b>Can I add it to a game in progress?</b></td></tr><tr><td>Yes. It starts on Advisor, so nothing happens until you pick Approve or Auto. Do not remove it later: the Autopilot Storage tab is on your markets.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>Does it change game balance?</b></td></tr><tr><td>No. Everything costs what it would cost you, plus a fee you can change, and shipping and hiring take travel time.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>Can it avoid colony crises?</b></td></tr><tr><td>Mostly. Pick Low profile, or set it under Settings, Expansion style. Pirates and the Persean League come from colony size alone; it prepares colonies for them.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>It isn't building anything. Why?</b></td></tr><tr><td>Check the mode (Advisor only advises) and the budget. The getting started guide has a section on it.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>Will more mods be supported?</b></td></tr><tr><td>Yes. Mod support requests go here or in GitHub issues.</td></tr></tbody></table></div></details><details class=\"spoiler\"><summary>AI use disclaimer</summary>Some or all assets and code in this mod were created using AI tools:<br><ul><li>Code: Claude Opus 5.5 (through Claude Code)</li><li>Docs, patch notes and the offline build checks: Claude Opus 5.5</li></ul>No additional training data. There's no art in the mod. I came up with what it should do and tested it in my own games; the AI wrote the code and checks it offline against every combination of the supported mods before each release.</details><hr><div class=\"align-center\"><span class=\"size-small\">Made by <b>Mjolniar</b> | More: <a href=\"https://github.com/Mjolniar/auto-outfitting\" rel=\"nofollow noopener\" target=\"_blank\">Auto Outfitting</a> | <a href=\"https://github.com/Mjolniar\" rel=\"nofollow noopener\" target=\"_blank\">all my mods on GitHub</a></span></div>",
+  "description": "Auto Colonies\nAutomatic Faction and Colony management for Starsector 0.98a+0.98.5a.\n\nSource code and guides\nRequired mods: None.\nUpdating: Delete the old mod folder in mods/ (Auto Colonies or Colony Manager), then extract the new one. Saves and settings carry over.\nSafe to add mid-game\n\nBreaks saves if removed\n\nNo known mod conflicts\n\nShort summary\nColonies: Set your colony to Auto and have it place all your items, build all your buildings, and do everything a player would, automatically.\nCosts: To keep it fair, every action it takes will cost a small amount of credits, which is changeable in options.\n\nLong description\nIntended setup: This is designed to work with as few as a single colony and as many as about 20, which is what I've tested it to. Basically, the idea is that you start playing the game, and you don't really have any difference in the early game. You'll be playing and playing and playing until you found your initial colony. Once you found said colony, you right-click on Population Infrastructure and click on Colony Autopilot, and then you can pick a mode.\n\nTypically, I will pick Auto immediately and close it out, and then just let the colony manage itself. For the most part, it will make all the decisions in building all the buildings, deploying fleets, trying to defend itself, and managing itself. All I am responsible for is going around exploring, finding different planets, and trying to optimize where I want to have the empire relocated, but all the actual colony management itself is dictated to the mod instead of me.\n\nAlso, my job as the player is to go and explore and find colony items to give to the Autopilot, such as AI cores, nanoforges, synchrotron cores, and whatever else you can find. Put them in the Autopilot Storage, and then it grabs those and puts them where it thinks it should put them.\nModes: Currently working on a mod rewrite because the way it's implemented right now is poorly done. I would recommend currently just to use Auto if you're going to use this mod. The Advisor and Approve modes are basically identical currently. They just will show you in the Autopilot menu what it thinks the best buildings to build are, and have buttons for you to start the builds within that menu (with estimates for how much money they're going to earn and whether it's going to pay itself off in a good amount of time or not). I don't think that it's good now. I think once the rewrite's done, it'll be a bit better.\n\nFeatures\nBuilding\nIt automatically ranks the importance of buildings across all the mods that you have, or, if you don't have mods, just the vanilla buildings. It will try to build based on a balanced profile initially, or whatever profile you suggest, whether that's for ship hull construction, quality weapons, fuel, etc. It'll balance across them all, or it'll select income buildings primarily if that's what you would like. Items, AI cores and administrators\nThese are put depending on the doctrine you choose. There's storage for Autopilot specifically, and it will ship the items around, for a small fee and some time, to whatever colony needs the items, depending on how the buildout is running.\nMoney ladder and capital\nThe mod's been designed with a triage system for money, where it puts money where it thinks it's most important.\nInitially, it'll stockpile until it hits a certain amount, and then it'll begin to grow colonies.\nOnce they've grown enough, it'll start to work on the military, then building new ships and more patrols.\nIt'll start to make new colonies.\nIt'll start to balance your entire economy.\nIt'll start building wonders and optimizing everything, as well as picking your biggest and usually first colony as your home port/trade hub/capital. That is also changeable in the settings.\n\nWar (Nexerelin)\nThere are several war levels, and we start with the Retaliate setting being the default, as well as a default stance for every faction that's in the game. If there is a mod that's not included, let me know, and I'll get it included.\n\nTypically, the way this works is that if a war starts, we will retaliate until the war ends automatically. Your fleets will be made automatically, raid automatically, invade automatically, retake your planets automatically, etc. There are also options to attack Hegemony, AI inspections, Persean enforcement fleets, etc., for a cost  (off by default).\nSecurity\nTries to protect colonies from outside threats and will typically be kicked on automatically if some invasion force arrives in the system. Or it can be manually set permanently to have a planet be a security-based planet. This is different from fleet production. This is mainly to protect the planet, not to project outward force. Optional Low profile style. New colonies (optional)\nIf this is enabled, it will use the Nexerelin colony fleet option to send colony fleets out to what it believes would be the most useful planet to your current set of worlds, basically to enhance your empire. Whatever is the closest and the most \"optimal.\"\n\nThis can make mistakes and is only recommended once you have a relatively large empire and you're playing with limits off. Otherwise, I typically would not recommend using the automatic new colonies feature.\n\nThis would be something I would use if I had five colonies that were already size 5 population and I was playing with a 30-colony limit or something of that nature.\nCosts\nThe balance of this mod is that everything it does, every action it takes, will cost you a bit of money. This is in order to try and balance the fact that it's all automatic. I will say that just the fact that all of this is automatic and fast is very busted compared to the base game.\n\nHaving what is essentially an omega-level AI just choose to automatically build out all of your colonies quickly and efficiently will usually result in you raking in credits and resources very quickly. I'm working on a version that you will have to slowly unlock capability for, but that's going to take some time. In the meantime, this is a very fast and easy way to get colonies under quick management. Audit page. Settings\nCurrently, there's a button in the Intel tab for the Colony Autopilot, as well as a button on the colony screen itself. Working on putting this in the F3 menu under LunaLib. Every setting\n\nGetting started\nOpen a colony and click Colony Autopilot.\nPick a goal, or leave it on Balanced.\nSet the mode to Auto and save the recommended setup.\nPut items and AI cores into Autopilot Storage.\n\nAuto starts building at once. Back up your save before trying it.\nGuides: all guides\n\nStatus\nSaves: Back up your save before updating.\n\nSupported mods\nAll optional. Each integration turns on when its mod is enabled.\nLarge integrations\nNexerelin War level, faction stances, agents, diplomacy, sieges, colony fleets.\nAshes of the Domain (Vaults of Knowledge, Theory of Toolbox), Building Menu Overhaul Research, synergies, management styles, trade contracts, megastructures, wonders.\nTerraforming Made Easy Special-world plans, terraforming, Domain-era stable location upgrades.\nIndustrial Evolution Ambassadors, edicts, VPC chips, specialized mining and refining, courier shipping.\nBuildings and colonies\nTerraforming & Station Construction (Boggled) Terraforming projects. Mining and siphon stations as new colonies (optional).\nRandom Assortment of Things Frontiers settlement.\nGrand.Colonies Builds past 12 buildings, with the extra upkeep counted.\nSubstance.Abuse Breweries and recipes.\nVolkov Industrial Conglomerate Viral contamination treatment first. Soil nanites only on vanilla farmland.\nRoider Union Dives and Union HQ valued for the colony's own deposits. Roider Charters placed.\nPlanetary Shield: Access Control The shield valued as defense. Port kept closed while there are Pather cells.\nUnknown Skies, What We Left Behind, Astral Ascension Their mining conditions and water worlds. Planetless colonies kept safe.\nNiko's Scavengable Industries Builds known blueprints. Risky blueprints are left to you.\nJunk Yard Dogs, Carter's Freetraders Resource forges and the Biolab, with illegal goods counted.\nVulpoids Organ Farms, Biotech Facility, colony items, Profecto administrators.\nYunru Industries, Yunru's Worlds, Slightly Better Tech-Mining (one thread for all three) Secondary Drydocks, Auxiliary Shipbays, richer Tech-Mining.\nRogue Planets Its 31 conditions and synergy pairs in build values. Story worlds left to you.\nKadur Remnant, JaydeePiracy, Corrupt.Officials, Tahlan Shipworks, Gladiator Society, SCY, CJY's Toy Box, AI-Retrofits, Blue, Oculian Armada Their conditions and income rules in build values. Their shipyards count toward production. Story planets and risky buildings left to you.\nAuto Outfitting Plans producers for the goods its large weapon orders need.\nStations\nStation Augments Augment loadout per station.\nInterstellar Imperium, Knights of Ludd Their stations count like vanilla ones.\nItems and AI cores\nEmergent Threats (IX Revival) Antimatter Stabilizer conversion. Panopticon cores into the Surveillance Center.\nOmega Core Everywhere, Astral Ascension Renewed Omega core placement.\nUnited Aurora Federation Its colony items placed by what they do.\nOddisz's mods\nCloning Cloning industries built when faster growth pays off.\nReverse Engineered Private Arsenal Left to you.\nSol Renewed Builds in Sol priced for the crisis meter.\nToolbox Economy Curves, Coalesced Little Mods (forum thread, GitHub) Supported.\nOther mods\nAny other mod Deposits and items read from the game's tables. Buildings measured on a test colony.\n\nMod support requests go here or in GitHub issues.\n\nCompatibility and permissions\nCompatibility and known issues\nOptional integrations: See Supported mods.\nTested with: A list of about 100 mods. Every release is checked offline against every combination of the supported mods.\nKnown conflicts: None known.\nKnown issues: Expect bugs. Report them here or as GitHub issues, with starsector-core/starsector.log, saves/common/colony_autopilot_diagnostics.json.data and your modlist. Permissions\nCode: Free to use, change and reupload, in modpacks too. No credit needed. Do not sell it.\nAssets: None. The mod has no art.\n\nFAQ\nAdding to a game in progress\nSafe. Colonies start on Advisor. Removing the mod later breaks the save.\n\nColony crises\nLow profile lowers the odds (first colony dialog, or Settings, Expansion style). Pirate and Persean League crises come from colony size alone.\n\nNothing is being built\nCheck the mode (Advisor only gives recommendations) and the budget.\n\nAI use disclaimer\nSome or all assets and code in this mod were created using AI tools:\nCode, docs and offline build checks: Claude Opus 5.5 (through Claude Code).\nDesign and in-game testing: Mjolniar.\nTraining data: None added. Art: None.\n\nMade by Mjolniar | More: Auto Outfitting | all my mods on GitHub",
+  "descriptionHtml": "<div class=\"align-center\"><img src=\"https://raw.githubusercontent.com/Mjolniar/auto-colonies/main/docs/images/banner.png?v=0301\" alt=\"\" width=\"800\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><span class=\"size-biggest\"><b>Auto Colonies</b></span><br><i>Automatic Faction and Colony management for Starsector 0.98a+0.98.5a.</i></div><br><div class=\"align-center\"><a href=\"https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FMjolniar%2Fauto-colonies%2Fmain%2FAutoColonies.version%22%2C%22id%22%3A%22jonah_tweaks%22%7D\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://trilink.wispborne.com/badges/install-badge-forthebadge.svg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a> <a href=\"https://github.com/Mjolniar/auto-colonies/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Download-GitHub-blue?style=for-the-badge&amp;logo=github\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a> <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/changelog.md\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Changelog-All_versions-gray?style=for-the-badge&amp;logo=github\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><a href=\"https://github.com/Mjolniar/auto-colonies\" rel=\"nofollow noopener\" target=\"_blank\">Source code and guides</a><br><b>Required mods:</b> None.<br><b>Updating:</b> Delete the old mod folder in mods/ (Auto Colonies or Colony Manager), then extract the new one. Saves and settings carry over.<br><div class=\"table-scroll\"><table><tbody><tr><td><table style=\"--bg:#d6e8d4;--pad:3px 10px;--round:12px\"><tbody><tr><td class=\"author-colour\" style=\"--c:#1d5e1d\"><span class=\"size-small\"><b>Safe to add mid-game</b></span></td></tr></tbody></table></td><td><table style=\"--bg:#efd0d0;--pad:3px 10px;--round:12px\"><tbody><tr><td class=\"author-colour\" style=\"--c:#7a1717\"><span class=\"size-small\"><b>Breaks saves if removed</b></span></td></tr></tbody></table></td><td><table style=\"--bg:#cfddef;--pad:3px 10px;--round:12px\"><tbody><tr><td class=\"author-colour\" style=\"--c:#1f3a66\"><span class=\"size-small\"><b>No known mod conflicts</b></span></td></tr></tbody></table></td></tr></tbody></table></div></div><br><div class=\"table-scroll\"><table style=\"--bg:#f3f6f8;--line:#c8d8e8;--pad:8px 14px;--round:6px;--w:100%\"><tbody><tr style=\"--row-bg:#c8d8e8\"><td><b>Short summary</b></td></tr><tr><td><ul><li>Colonies: Set your colony to Auto and have it place all your items, build all your buildings, and do everything a player would, automatically.</li><li>Costs: To keep it fair, every action it takes will cost a small amount of credits, which is changeable in options.</li></ul><details class=\"spoiler\"><summary>Long description</summary><ul><li>Intended setup: This is designed to work with as few as a single colony and as many as about 20, which is what I've tested it to. Basically, the idea is that you start playing the game, and you don't really have any difference in the early game. You'll be playing and playing and playing until you found your initial colony. Once you found said colony, you right-click on Population Infrastructure and click on Colony Autopilot, and then you can pick a mode.<br><br>Typically, I will pick Auto immediately and close it out, and then just let the colony manage itself. For the most part, it will make all the decisions in building all the buildings, deploying fleets, trying to defend itself, and managing itself. All I am responsible for is going around exploring, finding different planets, and trying to optimize where I want to have the empire relocated, but all the actual colony management itself is dictated to the mod instead of me.<br><br>Also, my job as the player is to go and explore and find colony items to give to the Autopilot, such as AI cores, nanoforges, synchrotron cores, and whatever else you can find. Put them in the Autopilot Storage, and then it grabs those and puts them where it thinks it should put them.</li><li>Modes: Currently working on a mod rewrite because the way it's implemented right now is poorly done. I would recommend currently just to use Auto if you're going to use this mod. The Advisor and Approve modes are basically identical currently. They just will show you in the Autopilot menu what it thinks the best buildings to build are, and have buttons for you to start the builds within that menu (with estimates for how much money they're going to earn and whether it's going to pay itself off in a good amount of time or not). I don't think that it's good now. I think once the rewrite's done, it'll be a bit better.</li></ul></details></td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table style=\"--bg:#f4f4f4;--line:#dedede;--pad:8px 14px;--round:6px;--w:100%\"><tbody><tr style=\"--row-bg:#dedede\"><td><b>Features</b></td></tr><tr><td><table style=\"--pad:6px 4px;--w:100%\"><tbody><tr><td style=\"--w:50%\"><b>Building</b><br>It automatically ranks the importance of buildings across all the mods that you have, or, if you don't have mods, just the vanilla buildings. It will try to build based on a balanced profile initially, or whatever profile you suggest, whether that's for ship hull construction, quality weapons, fuel, etc. It'll balance across them all, or it'll select income buildings primarily if that's what you would like.</td><td style=\"--w:50%\"><b>Items, AI cores and administrators</b><br>These are put depending on the doctrine you choose. There's storage for Autopilot specifically, and it will ship the items around, for a small fee and some time, to whatever colony needs the items, depending on how the buildout is running.</td></tr><tr><td style=\"--w:50%\"><b>Money ladder and capital</b><br>The mod's been designed with a triage system for money, where it puts money where it thinks it's most important.<br><ol><li>Initially, it'll stockpile until it hits a certain amount, and then it'll begin to grow colonies.</li><li>Once they've grown enough, it'll start to work on the military, then building new ships and more patrols.</li><li>It'll start to make new colonies.</li><li>It'll start to balance your entire economy.</li><li>It'll start building wonders and optimizing everything, as well as picking your biggest and usually first colony as your home port/trade hub/capital. That is also changeable in the settings.</li></ol></td><td style=\"--w:50%\"><b>War (Nexerelin)</b><br>There are several war levels, and we start with the Retaliate setting being the default, as well as a default stance for every faction that's in the game. If there is a mod that's not included, let me know, and I'll get it included.<br><br>Typically, the way this works is that if a war starts, we will retaliate until the war ends automatically. Your fleets will be made automatically, raid automatically, invade automatically, retake your planets automatically, etc. There are also options to attack Hegemony, AI inspections, Persean enforcement fleets, etc., for a cost  (off by default).</td></tr><tr><td style=\"--w:50%\"><b>Security</b><br>Tries to protect colonies from outside threats and will typically be kicked on automatically if some invasion force arrives in the system. Or it can be manually set permanently to have a planet be a security-based planet. This is different from fleet production. This is mainly to protect the planet, not to project outward force. Optional <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/low-profile.md\" rel=\"nofollow noopener\" target=\"_blank\">Low profile</a> style.</td><td style=\"--w:50%\"><b>New colonies (optional)</b><br>If this is enabled, it will use the Nexerelin colony fleet option to send colony fleets out to what it believes would be the most useful planet to your current set of worlds, basically to enhance your empire. Whatever is the closest and the most \"optimal.\"<br><br>This can make mistakes and is only recommended once you have a relatively large empire and you're playing with limits off. Otherwise, I typically would not recommend using the automatic new colonies feature.<br><br>This would be something I would use if I had five colonies that were already size 5 population and I was playing with a 30-colony limit or something of that nature.</td></tr><tr><td style=\"--w:50%\"><b>Costs</b><br>The balance of this mod is that everything it does, every action it takes, will cost you a bit of money. This is in order to try and balance the fact that it's all automatic. I will say that just the fact that all of this is automatic and fast is very busted compared to the base game.<br><br>Having what is essentially an omega-level AI just choose to automatically build out all of your colonies quickly and efficiently will usually result in you raking in credits and resources very quickly. I'm working on a version that you will have to slowly unlock capability for, but that's going to take some time. In the meantime, this is a very fast and easy way to get colonies under quick management. <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/audit.md\" rel=\"nofollow noopener\" target=\"_blank\">Audit page</a>.</td><td style=\"--w:50%\"><b>Settings</b><br>Currently, there's a button in the Intel tab for the Colony Autopilot, as well as a button on the colony screen itself. Working on putting this in the F3 menu under LunaLib. <a href=\"https://github.com/Mjolniar/auto-colonies/blob/main/docs/settings.md\" rel=\"nofollow noopener\" target=\"_blank\">Every setting</a></td></tr></tbody></table></td></tr></tbody></table></div><br><div class=\"table-scroll\"><table style=\"--bg:#f4f4f4;--line:#dedede;--pad:8px 14px;--round:6px;--w:100%\"><tbody><tr style=\"--row-bg:#dedede\"><td><b>Getting started</b></td></tr><tr><td><ol><li>Open a colony and click Colony Autopilot.</li><li>Pick a goal, or leave it on Balanced.</li><li>Set the mode to Auto and save the recommended setup.</li><li>Put items and AI cores into Autopilot Storage.</li></ol>Auto starts building at once. Back up your save before trying it.<br>Guides: <a href=\"https://github.com/Mjolniar/auto-colonies#guides\" rel=\"nofollow noopener\" target=\"_blank\">all guides</a></td></tr></tbody></table></div><br><div class=\"table-scroll\"><table style=\"--bg:#f4f4f4;--line:#dedede;--pad:8px 14px;--round:6px;--w:100%\"><tbody><tr style=\"--row-bg:#dedede\"><td><b>Status</b></td></tr><tr><td><ul><li>Saves: Back up your save before updating.</li></ul></td></tr></tbody></table></div><br><details class=\"spoiler\"><summary>Supported mods</summary>All optional. Each integration turns on when its mod is enabled.<br><div class=\"table-scroll\"><table style=\"--bg:#f8f8f8;--line:#dedede;--pad:4px 8px;--round:6px;--w:100%\"><tbody><tr style=\"--row-bg:#dedede\"><td style=\"--w:32%\"><b>Large integrations</b></td><td></td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=9175.0\" rel=\"nofollow noopener\" target=\"_blank\">Nexerelin</a></td><td>War level, faction stances, agents, diplomacy, sieges, colony fleets.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=26307.0\" rel=\"nofollow noopener\" target=\"_blank\">Ashes of the Domain</a> (Vaults of Knowledge, Theory of Toolbox), <a href=\"https://fractalsoftworks.com/forum/index.php?topic=31308.0\" rel=\"nofollow noopener\" target=\"_blank\">Building Menu Overhaul</a></td><td>Research, synergies, management styles, trade contracts, megastructures, wonders.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=29441.0\" rel=\"nofollow noopener\" target=\"_blank\">Terraforming Made Easy</a></td><td>Special-world plans, terraforming, Domain-era stable location upgrades.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=18011.0\" rel=\"nofollow noopener\" target=\"_blank\">Industrial Evolution</a></td><td>Ambassadors, edicts, VPC chips, specialized mining and refining, courier shipping.</td></tr><tr style=\"--row-bg:#dedede\"><td style=\"--w:32%\"><b>Buildings and colonies</b></td><td></td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=17094.0\" rel=\"nofollow noopener\" target=\"_blank\">Terraforming &amp; Station Construction (Boggled)</a></td><td>Terraforming projects. Mining and siphon stations as new colonies (optional).</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=26260.0\" rel=\"nofollow noopener\" target=\"_blank\">Random Assortment of Things</a></td><td>Frontiers settlement.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=20986.0\" rel=\"nofollow noopener\" target=\"_blank\">Grand.Colonies</a></td><td>Builds past 12 buildings, with the extra upkeep counted.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=24378.0\" rel=\"nofollow noopener\" target=\"_blank\">Substance.Abuse</a></td><td>Breweries and recipes.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=19603.0\" rel=\"nofollow noopener\" target=\"_blank\">Volkov Industrial Conglomerate</a></td><td>Viral contamination treatment first. Soil nanites only on vanilla farmland.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=9547.0\" rel=\"nofollow noopener\" target=\"_blank\">Roider Union</a></td><td>Dives and Union HQ valued for the colony's own deposits. Roider Charters placed.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=14990.0\" rel=\"nofollow noopener\" target=\"_blank\">Planetary Shield: Access Control</a></td><td>The shield valued as defense. Port kept closed while there are Pather cells.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=29876.0\" rel=\"nofollow noopener\" target=\"_blank\">Unknown Skies</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25205.0\" rel=\"nofollow noopener\" target=\"_blank\">What We Left Behind</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=28273.0\" rel=\"nofollow noopener\" target=\"_blank\">Astral Ascension</a></td><td>Their mining conditions and water worlds. Planetless colonies kept safe.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36195.0\" rel=\"nofollow noopener\" target=\"_blank\">Niko's Scavengable Industries</a></td><td>Builds known blueprints. Risky blueprints are left to you.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=22826.0\" rel=\"nofollow noopener\" target=\"_blank\">Junk Yard Dogs</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=24433.0\" rel=\"nofollow noopener\" target=\"_blank\">Carter's Freetraders</a></td><td>Resource forges and the Biolab, with illegal goods counted.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=29929.0\" rel=\"nofollow noopener\" target=\"_blank\">Vulpoids</a></td><td>Organ Farms, Biotech Facility, colony items, Profecto administrators.</td></tr><tr><td style=\"--w:32%\">Yunru Industries, Yunru's Worlds, Slightly Better Tech-Mining (<a href=\"https://fractalsoftworks.com/forum/index.php?topic=21968.0\" rel=\"nofollow noopener\" target=\"_blank\">one thread for all three</a>)</td><td>Secondary Drydocks, Auxiliary Shipbays, richer Tech-Mining.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36337.0\" rel=\"nofollow noopener\" target=\"_blank\">Rogue Planets</a></td><td>Its 31 conditions and synergy pairs in build values. Story worlds left to you.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35145.0\" rel=\"nofollow noopener\" target=\"_blank\">Kadur Remnant</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36201.0\" rel=\"nofollow noopener\" target=\"_blank\">JaydeePiracy</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35125.0\" rel=\"nofollow noopener\" target=\"_blank\">Corrupt.Officials</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=14935.0\" rel=\"nofollow noopener\" target=\"_blank\">Tahlan Shipworks</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=33586.0\" rel=\"nofollow noopener\" target=\"_blank\">Gladiator Society</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=29535.0\" rel=\"nofollow noopener\" target=\"_blank\">SCY</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=35093.0\" rel=\"nofollow noopener\" target=\"_blank\">CJY's Toy Box</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=22261.0\" rel=\"nofollow noopener\" target=\"_blank\">AI-Retrofits</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=14041.0\" rel=\"nofollow noopener\" target=\"_blank\">Blue</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=9035.0\" rel=\"nofollow noopener\" target=\"_blank\">Oculian Armada</a></td><td>Their conditions and income rules in build values. Their shipyards count toward production. Story planets and risky buildings left to you.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://github.com/Mjolniar/auto-outfitting\" rel=\"nofollow noopener\" target=\"_blank\">Auto Outfitting</a></td><td>Plans producers for the goods its large weapon orders need.</td></tr><tr style=\"--row-bg:#dedede\"><td style=\"--w:32%\"><b>Stations</b></td><td></td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=30583.0\" rel=\"nofollow noopener\" target=\"_blank\">Station Augments</a></td><td>Augment loadout per station.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=8007.0\" rel=\"nofollow noopener\" target=\"_blank\">Interstellar Imperium</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=29124.0\" rel=\"nofollow noopener\" target=\"_blank\">Knights of Ludd</a></td><td>Their stations count like vanilla ones.</td></tr><tr style=\"--row-bg:#dedede\"><td style=\"--w:32%\"><b>Items and AI cores</b></td><td></td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=27284.0\" rel=\"nofollow noopener\" target=\"_blank\">Emergent Threats (IX Revival)</a></td><td>Antimatter Stabilizer conversion. Panopticon cores into the Surveillance Center.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36168.0\" rel=\"nofollow noopener\" target=\"_blank\">Omega Core Everywhere</a>, <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36167.0\" rel=\"nofollow noopener\" target=\"_blank\">Astral Ascension Renewed</a></td><td>Omega core placement.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=12709.0\" rel=\"nofollow noopener\" target=\"_blank\">United Aurora Federation</a></td><td>Its colony items placed by what they do.</td></tr><tr style=\"--row-bg:#dedede\"><td style=\"--w:32%\"><b>Oddisz's mods</b></td><td></td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35130.0\" rel=\"nofollow noopener\" target=\"_blank\">Cloning</a></td><td>Cloning industries built when faster growth pays off.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35627.0\" rel=\"nofollow noopener\" target=\"_blank\">Reverse Engineered Private Arsenal</a></td><td>Left to you.</td></tr><tr><td style=\"--w:32%\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35983.0\" rel=\"nofollow noopener\" target=\"_blank\">Sol Renewed</a></td><td>Builds in Sol priced for the crisis meter.</td></tr><tr><td style=\"--w:32%\">Toolbox Economy Curves, Coalesced Little Mods (<a href=\"https://fractalsoftworks.com/forum/index.php?topic=36178.0\" rel=\"nofollow noopener\" target=\"_blank\">forum thread</a>, <a href=\"https://github.com/andrzejsokolowski/starsector-coalesced-little-mods\" rel=\"nofollow noopener\" target=\"_blank\">GitHub</a>)</td><td>Supported.</td></tr><tr style=\"--row-bg:#dedede\"><td style=\"--w:32%\"><b>Other mods</b></td><td></td></tr><tr><td style=\"--w:32%\">Any other mod</td><td>Deposits and items read from the game's tables. Buildings measured on a test colony.</td></tr></tbody></table></div>Mod support requests go here or in GitHub issues.</details><hr><div class=\"table-scroll\"><table style=\"--bg:#f4f4f4;--line:#dedede;--pad:8px 14px;--round:6px;--w:100%\"><tbody><tr style=\"--row-bg:#dedede\"><td><b>Compatibility and permissions</b></td></tr><tr><td><table style=\"--pad:6px 4px;--w:100%\"><tbody><tr><td style=\"--w:50%\"><b>Compatibility and known issues</b><br><b>Optional integrations:</b> See Supported mods.<br><b>Tested with:</b> A list of about 100 mods. Every release is checked offline against every combination of the supported mods.<br><b>Known conflicts:</b> None known.<br><b>Known issues:</b> Expect bugs. Report them here or as <a href=\"https://github.com/Mjolniar/auto-colonies/issues\" rel=\"nofollow noopener\" target=\"_blank\">GitHub issues</a>, with starsector-core/starsector.log, saves/common/colony_autopilot_diagnostics.json.data and your modlist.</td><td style=\"--w:50%\"><b>Permissions</b><br><b>Code:</b> Free to use, change and reupload, in modpacks too. No credit needed. Do not sell it.<br><b>Assets:</b> None. The mod has no art.</td></tr></tbody></table></td></tr></tbody></table></div><br><details class=\"spoiler\"><summary>FAQ</summary><div class=\"table-scroll\"><table><tbody><tr><td><b>Adding to a game in progress</b></td></tr><tr><td>Safe. Colonies start on Advisor. Removing the mod later breaks the save.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>Colony crises</b></td></tr><tr><td>Low profile lowers the odds (first colony dialog, or Settings, Expansion style). Pirate and Persean League crises come from colony size alone.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>Nothing is being built</b></td></tr><tr><td>Check the mode (Advisor only gives recommendations) and the budget.</td></tr></tbody></table></div></details><details class=\"spoiler\"><summary>AI use disclaimer</summary>Some or all assets and code in this mod were created using AI tools:<br><ul><li>Code, docs and offline build checks: Claude Opus 5.5 (through Claude Code).</li><li>Design and in-game testing: Mjolniar.</li><li>Training data: None added. Art: None.</li></ul></details><hr><div class=\"align-center\"><span class=\"size-small\">Made by <b>Mjolniar</b> | More: <a href=\"https://github.com/Mjolniar/auto-outfitting\" rel=\"nofollow noopener\" target=\"_blank\">Auto Outfitting</a> | <a href=\"https://github.com/Mjolniar\" rel=\"nofollow noopener\" target=\"_blank\">all my mods on GitHub</a></span></div>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Provides a full interface for managing colonies automatically or semi-automatically. It handles building queues, item shipping, administrator hiring, and war strategies based on user-defined budgets and goals. Integrates with numerous other mods to expand its capabilities without requiring them.",
-  "saveCompatibilityText": "Safe to add mid-game",
-  "updateCompatibilityText": "The folder used to be named Colony Manager; the mod id is unchanged, so saves keep working.",
-  "removalCompatibilityText": "Breaks saves if removed",
-  "canAdd": "yes",
-  "canUpdate": "yes",
-  "canRemove": "no",
+  "aiDescription": "Automates faction and colony management by handling building construction, resource distribution, and military defense. It uses a triage system for money and can manage wars, security, and new colony expansion if enabled. Each automated action incurs a small credit cost to maintain balance.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Safe to add mid-game",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "Breaks saves if removed",
+      "answer": "no"
+    },
+    "latestUpdateNote": {
+      "quote": "Updating: Delete the old mod folder in mods/ (Auto Colonies or Colony Manager), then extract the new one. Saves and settings carry over.",
+      "answer": "yes"
+    }
+  },
   "aiUse": {
-    "quote": "Some or all assets and code in this mod were created using AI tools:\nCode: Claude Opus 5.5 (through Claude Code)\nDocs, patch notes and the offline build checks: Claude Opus 5.5\nNo additional training data. There's no art in the mod. I came up with what it should do and tested it in my own games; the AI wrote the code and checks it offline against every combination of the supported mods before each release.",
+    "quote": "Some or all assets and code in this mod were created using AI tools:\nCode, docs and offline build checks: Claude Opus 5.5 (through Claude Code).\nDesign and in-game testing: Mjolniar.\nTraining data: None added. Art: None.",
     "usesAi": true,
     "uses": [
       {
         "area": "code",
         "how": "generated"
-      },
-      {
-        "area": "writing",
-        "how": "generated"
       }
     ],
     "tools": [
-      "Claude Opus 5.5",
-      "Claude Code"
+      "Claude Opus 5.5"
     ]
   },
   "rawCategories": [],
@@ -100,14 +106,14 @@
   "downloads": [
     {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FMjolniar%2Fauto-colonies%2Fmain%2FAutoColonies.version%22%2C%22id%22%3A%22jonah_tweaks%22%7D",
-      "kind": "direct",
+      "type": "trios",
       "label": "",
       "host": "trilink.wispborne.com",
       "needsAnotherStep": true
     },
     {
       "url": "https://github.com/Mjolniar/auto-colonies/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "label": "",
       "host": "github.com",
       "needsAnotherStep": true
@@ -115,7 +121,6 @@
   ],
   "changelog": {},
   "changelogUrl": "https://github.com/Mjolniar/auto-colonies/blob/main/docs/changelog.md",
-  "license": "Code: free to use, change and reupload, in modpacks too. No credit needed. Do not sell it.",
   "sourceCodeUrl": "https://github.com/Mjolniar/auto-colonies",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36266.0",
@@ -137,144 +142,188 @@
       "gameVersion": "0.98a"
     }
   ],
-  "threadLastPostOn": "2026-11-11",
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "Nexerelin",
-      "id": "nexerelin"
-    },
-    {
-      "name": "Ashes Of The Domain",
-      "id": "ashes-of-the-domain"
-    },
-    {
-      "name": "Building Menu Overhaul",
-      "id": "building-menu-overhaul"
-    },
-    {
-      "name": "Terraforming Made Easy",
-      "id": "terraforming-made-easy"
-    },
-    {
-      "name": "Industrial.Evolution",
-      "id": "industrial-evolution"
-    },
-    {
-      "name": "Terraforming & Station Construction (Boggled)"
-    },
-    {
-      "name": "Random Assortment of Things",
-      "id": "random-assortment-of-things"
-    },
-    {
-      "name": "Grand.Colonies",
-      "id": "grand-colonies"
-    },
-    {
-      "name": "Substance.Abuse",
-      "id": "substance-abuse"
-    },
-    {
-      "name": "Volkov Industrial Conglomerate",
-      "id": "volkov-industrial-conglomerate"
-    },
-    {
-      "name": "Roider Union",
-      "id": "roider-union"
-    },
-    {
-      "name": "Planetary Shield: Access Control",
-      "id": "planetary-shield-access-control"
-    },
-    {
-      "name": "Unknown Skies",
-      "id": "unknown-skies"
-    },
-    {
-      "name": "What we left behind",
-      "id": "what-we-left-behind-2"
-    },
-    {
-      "name": "Astral Ascension",
-      "id": "astral-ascension"
-    },
-    {
-      "name": "Niko's Scavengable Industries",
-      "id": "niko-s-scavengable-industries"
-    },
-    {
-      "name": "Junk Yard Dogs",
-      "id": "junk-yard-dogs"
-    },
-    {
-      "name": "Carter's Freetraders",
-      "id": "carter-s-freetraders"
-    },
-    {
-      "name": "Vulpoids - Lost Project",
-      "id": "vulpoids-lost-project"
-    },
-    {
-      "name": "Yunru Industries"
-    },
-    {
-      "name": "Yunru's Worlds"
-    },
-    {
-      "name": "Slightly Better Tech-Mining",
-      "id": "slightly-better-tech-mining"
-    },
-    {
-      "name": "Auto Outfitting"
-    },
-    {
-      "name": "Station Augments",
-      "id": "station-augments"
-    },
-    {
-      "name": "Interstellar Imperium",
-      "id": "interstellar-imperium"
-    },
-    {
-      "name": "The Knights of Ludd",
-      "id": "the-knights-of-ludd"
-    },
-    {
-      "name": "Emergent Threats",
-      "id": "emergent-threats"
-    },
-    {
-      "name": "Omega Core Everywhere",
-      "id": "omega-core-everywhere"
-    },
-    {
-      "name": "Astral Ascension Renewed",
-      "id": "astral-ascension-renewed"
-    },
-    {
-      "name": "United Aurora Federation",
-      "id": "united-aurora-federation"
-    },
-    {
-      "name": "Cloning",
-      "id": "cloning-baseline-feature-complete"
-    },
-    {
-      "name": "Reverse Engineered Private Arsenal",
-      "id": "reverse-engineered-private-arsenal"
-    },
-    {
-      "name": "Sol Renewed",
-      "id": "sol-renewed"
-    },
-    {
-      "name": "AOTD: ToT Mod: Custom Economy Curves",
-      "id": "aotd-tot-mod-custom-economy-curves"
-    },
-    {
-      "name": "Coalesced Little Mods"
-    }
-  ]
+  "requirements": {
+    "optional": [
+      {
+        "name": "Nexerelin",
+        "id": "nexerelin"
+      },
+      {
+        "name": "Ashes Of The Domain",
+        "id": "ashes-of-the-domain"
+      },
+      {
+        "name": "Building Menu Overhaul",
+        "id": "building-menu-overhaul"
+      },
+      {
+        "name": "Terraforming Made Easy",
+        "id": "terraforming-made-easy"
+      },
+      {
+        "name": "Industrial.Evolution",
+        "id": "industrial-evolution"
+      },
+      {
+        "name": "Terraforming & Station Construction (Boggled)"
+      },
+      {
+        "name": "Random Assortment of Things",
+        "id": "random-assortment-of-things"
+      },
+      {
+        "name": "Grand.Colonies",
+        "id": "grand-colonies"
+      },
+      {
+        "name": "Substance.Abuse",
+        "id": "substance-abuse"
+      },
+      {
+        "name": "Volkov Industrial Conglomerate",
+        "id": "volkov-industrial-conglomerate"
+      },
+      {
+        "name": "Roider Union",
+        "id": "roider-union"
+      },
+      {
+        "name": "Planetary Shield: Access Control",
+        "id": "planetary-shield-access-control"
+      },
+      {
+        "name": "Unknown Skies",
+        "id": "unknown-skies"
+      },
+      {
+        "name": "What we left behind",
+        "id": "what-we-left-behind-2"
+      },
+      {
+        "name": "Astral Ascension",
+        "id": "astral-ascension"
+      },
+      {
+        "name": "Niko's Scavengable Industries",
+        "id": "niko-s-scavengable-industries"
+      },
+      {
+        "name": "Junk Yard Dogs",
+        "id": "junk-yard-dogs"
+      },
+      {
+        "name": "Carter's Freetraders",
+        "id": "carter-s-freetraders"
+      },
+      {
+        "name": "Vulpoids - Lost Project",
+        "id": "vulpoids-lost-project"
+      },
+      {
+        "name": "Yunru Industries"
+      },
+      {
+        "name": "Yunru's Worlds"
+      },
+      {
+        "name": "Slightly Better Tech-Mining",
+        "id": "slightly-better-tech-mining"
+      },
+      {
+        "name": "Rogue Planets",
+        "id": "rogue-planets"
+      },
+      {
+        "name": "Kadur Remnant",
+        "id": "kadur-remnant-2"
+      },
+      {
+        "name": "JaydeePiracy",
+        "id": "jaydeepiracy"
+      },
+      {
+        "name": "Corrupt.Officials",
+        "id": "corrupt-officials-lower-colony-income-more-rewarding-growth"
+      },
+      {
+        "name": "Tahlan Shipworks",
+        "id": "tahlan-shipworks"
+      },
+      {
+        "name": "Gladiator Society",
+        "id": "gladiator-society-2"
+      },
+      {
+        "name": "SCY",
+        "id": "scy"
+      },
+      {
+        "name": "CJY's Toy Box",
+        "id": "cjy-s-toy-box"
+      },
+      {
+        "name": "AI-Retrofits",
+        "id": "ai-retrofits"
+      },
+      {
+        "name": "Blue",
+        "id": "blue"
+      },
+      {
+        "name": "Oculian Armada"
+      },
+      {
+        "name": "Auto Outfitting"
+      },
+      {
+        "name": "Station Augments",
+        "id": "station-augments"
+      },
+      {
+        "name": "Interstellar Imperium",
+        "id": "interstellar-imperium"
+      },
+      {
+        "name": "The Knights of Ludd",
+        "id": "the-knights-of-ludd"
+      },
+      {
+        "name": "Emergent Threats",
+        "id": "emergent-threats"
+      },
+      {
+        "name": "Omega Core Everywhere",
+        "id": "omega-core-everywhere"
+      },
+      {
+        "name": "Astral Ascension Renewed",
+        "id": "astral-ascension-renewed"
+      },
+      {
+        "name": "United Aurora Federation",
+        "id": "united-aurora-federation"
+      },
+      {
+        "name": "Cloning",
+        "id": "cloning-baseline-feature-complete"
+      },
+      {
+        "name": "Reverse Engineered Private Arsenal",
+        "id": "reverse-engineered-private-arsenal"
+      },
+      {
+        "name": "Sol Renewed",
+        "id": "sol-renewed"
+      },
+      {
+        "name": "AOTD: ToT Mod: Custom Economy Curves",
+        "id": "aotd-tot-mod-custom-economy-curves"
+      },
+      {
+        "name": "Coalesced Little Mods"
+      }
+    ]
+  }
 }

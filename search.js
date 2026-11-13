@@ -314,9 +314,9 @@ FIELDS.sources = FIELDS['posted-on'];
 const FLAGS = {
   source: (mod) => mod.sourceIsPublic === true,
   download: (mod) => mod.hasDirectDownload === true,
-  addable: (mod) => mod.saveCompatible === true,
+  addable: (mod) => mod.saveCompat?.adding?.answer === 'yes',
   wip: (mod) => mod.isWorkInProgress === true,
-  tool: (mod) => mod.isTool === true,
+  tool: (mod) => (mod.types || []).includes('tool'),
   ai: (mod) => mod.usesAi === true,
   noai: (mod) => mod.usesAi === false,
 };

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "seeker-unidentified-contact",
     "name": "Seeker - Unidentified Contact",
@@ -22,7 +22,7 @@
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -33,17 +33,19 @@
       "SEEKER"
     ],
     "addedOn": "2025-05-10",
-    "editedOn": "2026-03-07",
-    "needs": []
+    "editedOn": "2026-03-07"
   },
   "description": "Introduces new ships, hulls, and weapons with adjusted availability across factions. Adds exploration events and boss fleets that generate mid-save. Includes custom starts for specific factions and integrates with the bounty board.",
   "descriptionHtml": "<p>Introduces new ships, hulls, and weapons with adjusted availability across factions. Adds exploration events and boss fleets that generate mid-save. Includes custom starts for specific factions and integrates with the bounty board.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "discordPostHtml": "<p>Update for a mod by Tartiflette</p><p><strong>Download:</strong><br><a href=\"https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip</a></p>",
   "aiDescription": "Introduces new ships, hulls, and weapons with adjusted availability across factions. Adds exploration events and boss fleets that generate mid-save. Includes custom starts for specific factions and integrates with the bounty board.",
-  "updateCompatibilityText": "(Requires a new game to take effect)",
-  "canUpdate": "no",
+  "saveCompat": {
+    "latestUpdateNote": {
+      "quote": "(Requires a new game to take effect)",
+      "answer": "no"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Weapon/Fighter Pack",
@@ -56,7 +58,7 @@
       "url": "https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip",
       "directUrl": "https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip",
       "fileName": "SEEKER.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -85,10 +87,12 @@
     }
   ],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "MagicLib",
-      "id": "magiclib"
-    }
-  ]
+  "requirements": {
+    "optional": [
+      {
+        "name": "MagicLib",
+        "id": "magiclib"
+      }
+    ]
+  }
 }

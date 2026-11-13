@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "customizable-regalia",
     "name": "Customizable Regalia",
@@ -17,11 +17,15 @@
     "summary": "Yea, this. Makes Regalia from Tahlan Shipworks behave like Virtuous from Diable Avionics. Safe to add to existing save file, not safe to remove (duh). Enjoy your Accelerated Ammo Feeder mechs with two energy weapons I guess.",
     "summaryIsGenerated": false,
     "aiSummary": "Changes the behavior of the Regalia mech to match that of the Virtuous mech.",
-    "saveCompatible": true,
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/AlbertHiisky/CustomRegalia/releases/latest/download/CustomRegalia.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -29,7 +33,64 @@
     "sourceIsPublic": false,
     "isWorkInProgress": false,
     "addedOn": "2025-01-10",
-    "needs": [
+    "requirements": {
+      "required": [
+        {
+          "name": "Tahlan Shipworks",
+          "id": "tahlan-shipworks"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "Tahlan Shipworks"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib",
+          "via": "Tahlan Shipworks"
+        }
+      ]
+    }
+  },
+  "description": "Adjusts the Regalia from Tahlan Shipworks so it functions like the Virtuous from Diable Avionics. This allows the mech to utilize two energy weapons, similar to the Accelerated Ammo Feeder configuration.",
+  "descriptionHtml": "<p>Adjusts the Regalia from Tahlan Shipworks so it functions like the Virtuous from Diable Avionics. This allows the mech to utilize two energy weapons, similar to the Accelerated Ammo Feeder configuration.</p>",
+  "descriptionIsGenerated": true,
+  "descriptionIsForumPost": false,
+  "aiDescription": "Adjusts the Regalia from Tahlan Shipworks so it functions like the Virtuous from Diable Avionics. This allows the mech to utilize two energy weapons, similar to the Accelerated Ammo Feeder configuration.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Safe to add to existing save file",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "not safe to remove (duh)",
+      "answer": "no"
+    }
+  },
+  "aiUse": {},
+  "rawCategories": [
+    "Ship Pack"
+  ],
+  "gallery": [],
+  "downloads": [
+    {
+      "url": "https://github.com/AlbertHiisky/CustomRegalia/releases/latest/download/CustomRegalia.zip",
+      "directUrl": "https://github.com/AlbertHiisky/CustomRegalia/releases/latest/download/CustomRegalia.zip",
+      "fileName": "CustomRegalia.zip",
+      "type": "direct",
+      "label": "https://github.com/AlbertHiisky/CustomRegalia/releases/latest/download/CustomRegalia.zip",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {},
+  "supportLinks": [],
+  "discordUrl": "https://discord.com/channels/187635036525166592/1327390390361264331/1327390390361264331",
+  "releases": [],
+  "sameNameMods": [],
+  "addons": [],
+  "requirements": {
+    "required": [
       {
         "name": "Tahlan Shipworks",
         "id": "tahlan-shipworks"
@@ -45,37 +106,5 @@
         "via": "Tahlan Shipworks"
       }
     ]
-  },
-  "description": "Adjusts the Regalia from Tahlan Shipworks so it functions like the Virtuous from Diable Avionics. This allows the mech to utilize two energy weapons, similar to the Accelerated Ammo Feeder configuration.",
-  "descriptionHtml": "<p>Adjusts the Regalia from Tahlan Shipworks so it functions like the Virtuous from Diable Avionics. This allows the mech to utilize two energy weapons, similar to the Accelerated Ammo Feeder configuration.</p>",
-  "descriptionIsGenerated": true,
-  "descriptionIsForumPost": false,
-  "discordPostHtml": "<p><a href=\"https://github.com/AlbertHiisky/CustomRegalia/releases/latest/download/CustomRegalia.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/AlbertHiisky/CustomRegalia/releases/latest/download/CustomRegalia.zip</a></p><p>Yea, this. Makes Regalia from Tahlan Shipworks behave like Virtuous from Diable Avionics. Safe to add to existing save file, not safe to remove (duh). Enjoy your Accelerated Ammo Feeder mechs with two energy weapons I guess.</p>",
-  "aiDescription": "Adjusts the Regalia from Tahlan Shipworks so it functions like the Virtuous from Diable Avionics. This allows the mech to utilize two energy weapons, similar to the Accelerated Ammo Feeder configuration.",
-  "saveCompatibilityText": "Safe to add to existing save file",
-  "removalCompatibilityText": "not safe to remove (duh)",
-  "canAdd": "yes",
-  "canRemove": "no",
-  "aiUse": {},
-  "rawCategories": [
-    "Ship Pack"
-  ],
-  "gallery": [],
-  "downloads": [
-    {
-      "url": "https://github.com/AlbertHiisky/CustomRegalia/releases/latest/download/CustomRegalia.zip",
-      "directUrl": "https://github.com/AlbertHiisky/CustomRegalia/releases/latest/download/CustomRegalia.zip",
-      "fileName": "CustomRegalia.zip",
-      "kind": "direct",
-      "label": "https://github.com/AlbertHiisky/CustomRegalia/releases/latest/download/CustomRegalia.zip",
-      "host": "GitHub",
-      "needsAnotherStep": false
-    }
-  ],
-  "changelog": {},
-  "supportLinks": [],
-  "discordUrl": "https://discord.com/channels/187635036525166592/1327390390361264331/1327390390361264331",
-  "releases": [],
-  "sameNameMods": [],
-  "addons": []
+  }
 }

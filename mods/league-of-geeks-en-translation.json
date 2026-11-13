@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "league-of-geeks-en-translation",
     "name": "League of Geeks (EN Translation)",
@@ -21,7 +21,7 @@
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://www.fossic.org/thread-6096-1-1.html",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": true
     },
     "downloadCount": 1,
@@ -30,23 +30,24 @@
     "isWorkInProgress": false,
     "addedOn": "2025-07-02",
     "editedOn": "2025-07-08",
-    "needs": [
-      {
-        "name": "MagicLib",
-        "id": "magiclib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib",
-        "via": "MagicLib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "MagicLib",
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
+        }
+      ]
+    }
   },
   "description": "Introduces a new faction and rebel subfaction centered around crystals and energy. Includes missions, bounties, and various crystal-based weaponry like beams, missiles, and mechas. Features a unique upgrading system that is still under testing.",
   "descriptionHtml": "<p>Introduces a new faction and rebel subfaction centered around crystals and energy. Includes missions, bounties, and various crystal-based weaponry like beams, missiles, and mechas. Features a unique upgrading system that is still under testing.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "discordPostHtml": "<p>Enjoy a rough G Translate / DeepL translation version of the League of Geeks provided by one of the CN Authors.</p><p>Energy focused faction &amp; rebel subfaction.<br>A few missions + some MagicLib bounties<br>Lots of sparkles &amp; revolves around crystals.<br>Unique upgrading system somewhere (Needs further testing)<br>Crystal beams; crystal missiles &amp; mechas.</p><p>Please feel free to tag if something is acting up</p>",
   "aiDescription": "Introduces a new faction and rebel subfaction centered around crystals and energy. Includes missions, bounties, and various crystal-based weaponry like beams, missiles, and mechas. Features a unique upgrading system that is still under testing.",
   "aiUse": {},
   "rawCategories": [
@@ -54,14 +55,14 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1389990707317706843/1389990966642872441/image.png?ex=6af7d537&is=6af683b7&hm=9cf55edfd38a03f002b88e07db8f7e655b5193b0c3a224f2d147d17f8a18c6b9&",
+      "url": "https://cdn.discordapp.com/attachments/1389990707317706843/1389990966642872441/image.png?ex=6af87df7&is=6af72c77&hm=110f2c6993f5a4e0e4b38d4564264a246a3d103132cb789704ad1c6f43caf5b5&",
       "aiCaption": "A screenshot of a forum discussion thread with user avatars and text posts.",
       "aiKind": "other",
       "aiFit": "poor",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1389990707317706843/1390483775062016120/image.png?ex=6af7a5ed&is=6af6546d&hm=d4000895383673a4aaa2015435e5a3af1ba217e0e1b64db006f7a014bac04262&",
+      "url": "https://cdn.discordapp.com/attachments/1389990707317706843/1390483775062016120/image.png?ex=6af84ead&is=6af6fd2d&hm=99e18750c4660237c0568ada009fac32aa61c6b1c90e7ac3ecab24c5c90354dc&",
       "aiCaption": "Ship art collage showing 'J GEEK Federation' and 'J GEEK REBEL' fleets with various ship sprites.",
       "aiKind": "art",
       "aiFit": "good",
@@ -71,7 +72,7 @@
   "downloads": [
     {
       "url": "https://www.fossic.org/thread-6096-1-1.html",
-      "kind": "direct",
+      "type": "direct",
       "label": "",
       "host": "www.fossic.org",
       "needsAnotherStep": true
@@ -82,5 +83,18 @@
   "discordUrl": "https://discord.com/channels/187635036525166592/1389990707317706843/1389990707317706843",
   "releases": [],
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "MagicLib",
+        "id": "magiclib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "MagicLib"
+      }
+    ]
+  }
 }

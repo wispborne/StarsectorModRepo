@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "missions-renewed",
     "name": "Missions - Renewed",
@@ -16,12 +16,16 @@
     "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_29380_1786313917.png",
     "summary": "Once your colonies earn millions a month, a 30k bar mission is not worth the trip. Missions - Renewed adds contracts in tiers 0 to 7, from pocket money to millions of credits.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds tiered contracts to bars that scale from small payouts to millions of credits.",
-    "saveCompatible": true,
+    "aiSummary": "Adds tiered bar contracts ranging from small payouts to millions of credits, with various job types like hauling, combat, and smuggling.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/andrzejsokolowski/starsector-missions-renewed/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": true
     },
     "downloadCount": 1,
@@ -32,7 +36,7 @@
     "aiUses": [
       {
         "area": "code",
-        "how": "generated"
+        "how": "assisted"
       },
       {
         "area": "icons",
@@ -40,44 +44,52 @@
       },
       {
         "area": "writing",
-        "how": "generated"
+        "how": "assisted"
       }
     ],
     "addedOn": "2026-11-10",
     "threadLastPostOn": "2026-11-10",
     "editedOn": "2026-11-10",
-    "needs": [
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib",
-        "via": "LunaLib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "LunaLib"
+        }
+      ]
+    }
   },
   "description": "Missions - Renewed\n\nWHAT DOES THIS MOD DO?\nOnce your colonies earn millions a month, a 30k bar mission is not worth the trip.\nMissions - Renewed adds contracts in tiers 0 to 7, from pocket money to millions of credits.\nNeeds LunaLib.\n\nContracts in the bar\n\nEvery bar has a chance (50 percent by default) to offer a contract. The bar option shows its tier and job type, for example \"Look over the contract (tier 5, hauling)\".\nTiers are random, but lean a little toward your fleet size, colony income and credits. A late-game fleet sees fewer tier 0 jobs, and every tier stays possible.\nEach contract pays an advance when you sign and the rest on completion.\nMissing the deadline or abandoning the contract charges a penalty, even if that leaves you in debt, and costs reputation with the client's faction.\nYou can hold 3 contracts at once. They are in the intel screen under Missions.\n\nJob types\n\nHauling: the client hands you the cargo: ore, metals, food, machinery and other trade goods. Deliver all of it to the named market before the deadline. Running off with the cargo costs more than it is worth.\nFuel run: the client fills your fuel tanks. Arrive with the full amount, so every jump on the way burns into the delivery unless you bring spare fuel.\nCrew transport: contract workers ride in your crew quarters. Crew lost in battle count against the delivery.\nContribution: bring goods you find or buy yourself to a construction project. At tiers 4 to 6 the project may ask for a colony item instead.\nInvestment: put up a stake and get it back with profit after 5 to 12 months. Pulling out early returns half the stake. Pirates and the Luddic Path do not offer them.\nCombat: someone was attacked near a planet in a nearby system and barely got away. Find the fleet that did it and destroy it.\nMarine operation: raid a market hostile to the client to knock out a named industry, or bring your own marines to a garrison.\nExpedition: haul supplies to a camp in an uncolonised system. Something may be waiting there.\nSmuggling: carry weapons, drugs or organs to a market where they are illegal.\nDocking at the destination completes a delivery job.\nClients you satisfy may offer to become contacts, more often at higher tiers.\nTier 0 hauling asks for 100 to 300 units and pays 5k to 20k. Tier 7 asks for 24,000 to 40,000 units and pays 3M to 4M. Enemy fleets grow from about 10 DP at tier 0 to about 500 DP at tier 7.\n\nSettings and compatibility\n\nLunaLib settings: chance of an offer per bar, how much the tier roll leans toward your strength, lowest and highest tier, each job type on or off, reward multiplier, enemy strength multiplier.\nDebug section in LunaLib with a test mode, off by default: spawn any job type at any tier at any bar, and complete or fail open contracts at once.\nDoes not take a place from other mods' bar events.\nCan be added to a game in progress. Removing it from a game in progress breaks that save.\n\nAI use disclaimer\nSome or all assets and code in this mod were created using AI tools:\nCode: Claude Code (Claude Opus 5.5)\nText (readme and this post): Claude Code (Claude Opus 5.5)\nSettings icon: drawn by a script written with Claude Code (Claude Opus 5.5)\n\nLicense\nThis mod is under the CC0 (Creative Commons Zero) License, allowing you to do whatever you want with the code, without giving any credit to anyone.\n\nVersion log\n0.4.4\nUpdate checkers and mod managers now link to the forum thread.\n\n0.4.3\nFixed a crash when opening the intel screen with a combat contract.\nCombat contracts no longer say who the enemy is. You only know where someone was attacked.\nEnemy fleets are much smaller at low tiers and are now measured in deployment points: about 10 DP at tier 0, 45 at tier 2, 180 at tier 4 and 500 at tier 7.\nHauling asks for more cargo at higher tiers, up to 24,000 to 40,000 units at tier 7.\nOffers name the client who supplies the cargo, and the penalty line now reads \"Contract failed\".\nShorter LunaLib descriptions.\n\n0.4.2\nNew gold icon in mod managers (TriOS) and in LunaLib's settings.\n\n0.4.1\nFixed: after your first contract in a session, the next bar offer closed the moment it opened.\nSome enemy fleets are now built the way the game builds its own, with the matching loot.\nLeftover contract fleets now leave. Offers that cannot be built no longer risk a crash.\nNew contacts have a contact type, so they offer work.\n\n0.4.0\nNew job types: combat, marine raids and garrisons, expeditions, smuggling.\nClients you satisfy may offer to become contacts.\nLunaLib: switches for the new job types and an enemy strength multiplier.\n\n0.3.0\nLunaLib: turn each job type on or off, and set the lowest and highest tier bars offer.\nTest mode moved to its own Debug section in LunaLib.\n\n0.2.0\nNew job types: fuel runs, crew transport, contributions (including colony items at tiers 4 to 6) and investments.\nNew LunaLib test mode: spawn any contract at any bar, and complete or fail open contracts at once.\nFixed: a bar with no contract on your last visit could hide its next contract for up to 40 days.\n\n0.1.0\nFirst release: tiered bar contracts and the first job type, hauling.",
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\"><a href=\"https://github.com/andrzejsokolowski/starsector-missions-renewed/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><b>Missions - Renewed</b></a></span><br><img src=\"https://raw.githubusercontent.com/andrzejsokolowski/starsector-missions-renewed/main/icon.png\" alt=\"\" width=\"128\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><a href=\"https://github.com/andrzejsokolowski/starsector-missions-renewed/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/downloads/andrzejsokolowski/starsector-missions-renewed/total?style=for-the-badge&amp;label=download\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a>  <a href=\"https://github.com/andrzejsokolowski/starsector-missions-renewed\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/v/release/andrzejsokolowski/starsector-missions-renewed?display_name=tag&amp;sort=semver&amp;style=for-the-badge&amp;label=source\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></div><div class=\"align-center\"><b><br>WHAT DOES THIS MOD DO?<br>Once your colonies earn millions a month, a 30k bar mission is not worth the trip.<br>Missions - Renewed adds contracts in tiers 0 to 7, from pocket money to millions of credits.<br>Needs LunaLib.<br></b></div><br><hr><div class=\"align-center\"><span class=\"size-big\"><b>Contracts in the bar</b></span></div><hr><ul><li>Every bar has a chance (50 percent by default) to offer a contract. The bar option shows its tier and job type, for example \"Look over the contract (tier 5, hauling)\".</li><li>Tiers are random, but lean a little toward your fleet size, colony income and credits. A late-game fleet sees fewer tier 0 jobs, and every tier stays possible.</li><li>Each contract pays an advance when you sign and the rest on completion.</li><li>Missing the deadline or abandoning the contract charges a penalty, even if that leaves you in debt, and costs reputation with the client's faction.</li><li>You can hold 3 contracts at once. They are in the intel screen under Missions.</li></ul><br><hr><div class=\"align-center\"><span class=\"size-big\"><b>Job types</b></span></div><hr><ul><li><b>Hauling:</b> the client hands you the cargo: ore, metals, food, machinery and other trade goods. Deliver all of it to the named market before the deadline. Running off with the cargo costs more than it is worth.</li><li><b>Fuel run:</b> the client fills your fuel tanks. Arrive with the full amount, so every jump on the way burns into the delivery unless you bring spare fuel.</li><li><b>Crew transport:</b> contract workers ride in your crew quarters. Crew lost in battle count against the delivery.</li><li><b>Contribution:</b> bring goods you find or buy yourself to a construction project. At tiers 4 to 6 the project may ask for a colony item instead.</li><li><b>Investment:</b> put up a stake and get it back with profit after 5 to 12 months. Pulling out early returns half the stake. Pirates and the Luddic Path do not offer them.</li><li><b>Combat:</b> someone was attacked near a planet in a nearby system and barely got away. Find the fleet that did it and destroy it.</li><li><b>Marine operation:</b> raid a market hostile to the client to knock out a named industry, or bring your own marines to a garrison.</li><li><b>Expedition:</b> haul supplies to a camp in an uncolonised system. Something may be waiting there.</li><li><b>Smuggling:</b> carry weapons, drugs or organs to a market where they are illegal.</li><li>Docking at the destination completes a delivery job.</li><li>Clients you satisfy may offer to become contacts, more often at higher tiers.</li><li>Tier 0 hauling asks for 100 to 300 units and pays 5k to 20k. Tier 7 asks for 24,000 to 40,000 units and pays 3M to 4M. Enemy fleets grow from about 10 DP at tier 0 to about 500 DP at tier 7.</li></ul><br><hr><div class=\"align-center\"><span class=\"size-big\"><b>Settings and compatibility</b></span></div><hr><ul><li>LunaLib settings: chance of an offer per bar, how much the tier roll leans toward your strength, lowest and highest tier, each job type on or off, reward multiplier, enemy strength multiplier.</li><li>Debug section in LunaLib with a test mode, off by default: spawn any job type at any tier at any bar, and complete or fail open contracts at once.</li><li>Does not take a place from other mods' bar events.</li><li>Can be added to a game in progress. Removing it from a game in progress breaks that save.</li></ul><br><details class=\"spoiler\"><summary>AI use disclaimer</summary>Some or all assets and code in this mod were created using AI tools:<br><ul><li>Code: Claude Code (Claude Opus 5.5)</li><li>Text (readme and this post): Claude Code (Claude Opus 5.5)</li><li>Settings icon: drawn by a script written with Claude Code (Claude Opus 5.5)</li></ul></details><br><details class=\"spoiler\"><summary>License</summary>This mod is under the CC0 (Creative Commons Zero) License, allowing you to do whatever you want with the code, without giving any credit to anyone.</details><br><details class=\"spoiler\"><summary>Version log</summary><b>0.4.4</b><br><ul><li>Update checkers and mod managers now link to the forum thread.</li></ul><b>0.4.3</b><br><ul><li>Fixed a crash when opening the intel screen with a combat contract.</li><li>Combat contracts no longer say who the enemy is. You only know where someone was attacked.</li><li>Enemy fleets are much smaller at low tiers and are now measured in deployment points: about 10 DP at tier 0, 45 at tier 2, 180 at tier 4 and 500 at tier 7.</li><li>Hauling asks for more cargo at higher tiers, up to 24,000 to 40,000 units at tier 7.</li><li>Offers name the client who supplies the cargo, and the penalty line now reads \"Contract failed\".</li><li>Shorter LunaLib descriptions.</li></ul><b>0.4.2</b><br><ul><li>New gold icon in mod managers (TriOS) and in LunaLib's settings.</li></ul><b>0.4.1</b><br><ul><li>Fixed: after your first contract in a session, the next bar offer closed the moment it opened.</li><li>Some enemy fleets are now built the way the game builds its own, with the matching loot.</li><li>Leftover contract fleets now leave. Offers that cannot be built no longer risk a crash.</li><li>New contacts have a contact type, so they offer work.</li></ul><b>0.4.0</b><br><ul><li>New job types: combat, marine raids and garrisons, expeditions, smuggling.</li><li>Clients you satisfy may offer to become contacts.</li><li>LunaLib: switches for the new job types and an enemy strength multiplier.</li></ul><b>0.3.0</b><br><ul><li>LunaLib: turn each job type on or off, and set the lowest and highest tier bars offer.</li><li>Test mode moved to its own Debug section in LunaLib.</li></ul><b>0.2.0</b><br><ul><li>New job types: fuel runs, crew transport, contributions (including colony items at tiers 4 to 6) and investments.</li><li>New LunaLib test mode: spawn any contract at any bar, and complete or fail open contracts at once.</li><li>Fixed: a bar with no contract on your last visit could hide its next contract for up to 40 days.</li></ul><b>0.1.0</b><br><ul><li>First release: tiered bar contracts and the first job type, hauling.</li></ul></details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Offers various job types like hauling, fuel runs, and combat missions with random tiers based on player strength. Includes settings for offer frequency, tier limits, and reward multipliers via LunaLib.",
-  "saveCompatibilityText": "Can be added to a game in progress.",
-  "removalCompatibilityText": "Removing it from a game in progress breaks that save.",
-  "canAdd": "yes",
-  "canRemove": "no",
+  "aiDescription": "Introduces a system of bar contracts with tiers 0 to 7, scaling rewards and difficulty based on fleet size and colony income. Includes job types such as hauling, fuel runs, crew transport, contributions, investments, combat, marine operations, expeditions, and smuggling. Contracts offer advances and penalties for failure, and can be managed through the intel screen.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Can be added to a game in progress.",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "Removing it from a game in progress breaks that save.",
+      "answer": "no"
+    }
+  },
   "aiUse": {
     "quote": "Some or all assets and code in this mod were created using AI tools:\nCode: Claude Code (Claude Opus 5.5)\nText (readme and this post): Claude Code (Claude Opus 5.5)\nSettings icon: drawn by a script written with Claude Code (Claude Opus 5.5)",
     "usesAi": true,
     "uses": [
       {
         "area": "code",
-        "how": "generated"
+        "how": "assisted"
       },
       {
         "area": "writing",
-        "how": "generated"
+        "how": "assisted"
       },
       {
         "area": "icons",
@@ -112,7 +124,7 @@
   "downloads": [
     {
       "url": "https://github.com/andrzejsokolowski/starsector-missions-renewed/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "label": "Missions - Renewed",
       "host": "github.com",
       "needsAnotherStep": true
@@ -123,12 +135,25 @@
     "0.4.3": "Fixed a crash when opening the intel screen with a combat contract.\n Combat contracts no longer say who the enemy is. You only know where someone was attacked.\n Enemy fleets are much smaller at low tiers and are now measured in deployment points: about 10 DP at tier 0, 45 at tier 2, 180 at tier 4 and 500 at tier 7.\n Hauling asks for more cargo at higher tiers, up to 24,000 to 40,000 units at tier 7.\n Offers name the client who supplies the cargo, and the penalty line now reads \"Contract failed\".\n Shorter LunaLib descriptions.",
     "0.4.2": "New gold icon in mod managers (TriOS) and in LunaLib's settings."
   },
-  "license": "CC0 (Creative Commons Zero)",
+  "license": "CC0 (Creative Commons Zero) License",
   "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-missions-renewed",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36287.0",
   "releases": [],
   "threadLastPostOn": "2026-11-10",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "LunaLib"
+      }
+    ]
+  }
 }

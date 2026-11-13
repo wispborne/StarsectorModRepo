@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "radial-menu",
     "name": "Radial.Menu",
@@ -18,20 +18,24 @@
     "gameVersion": "0.98a",
     "modVersion": "1.0.b",
     "imageUrl": "https://i.imgur.com/Q3PSa8A.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1566115615511543918/1566115615800827976/mod_post_icon_radial_menu.png?ex=6af7d913&is=6af68793&hm=55d392c82538fd6ff091341fcd9d7af085528f9cf37156cf13eb1aea3c28c656&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1566115615511543918/1566115615800827976/mod_post_icon_radial_menu.png?ex=6af881d3&is=6af73053&hm=96dd3040a16494801fde1e1abbd432746fc8336e44cddd71d481355926a61b6a&",
     "summary": "This mod adds a customizable radial menu for your campaign abilities. The vanilla ability bar was clearly not intended to hold more than 10 abilities. If you are playing with mods that add abilities this mod is a godsend. The muscle memory from other games kicks in within about 5 seconds of use.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a customizable radial menu for quick selection of campaign abilities.",
-    "saveCompatible": true,
+    "aiSummary": "Adds a customizable radial menu for selecting campaign abilities, supporting both click-to-choose and relative positional selection.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSirHartley%2FRadial.Menu%2Fmain%2Fradialmenu.version%22%2C%22id%22%3A%22radial_menu%22%2C%22version%22%3A%221.0.b%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%2C%22version%22%3A%222.0.5%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%2C%22version%22%3A%223.0.0%22%7D",
-      "kind": "trios",
+      "type": "trios",
       "needsAnotherStep": false
     },
     "plainDownload": {
       "url": "https://github.com/SirHartley/Radial.Menu/releases/download/1.0.b/Radial.Menu-1.0.b.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 2,
@@ -43,40 +47,47 @@
     "aiUses": [
       {
         "area": "code",
-        "how": "generated"
+        "how": "assisted"
       }
     ],
     "addedOn": "2026-10-31",
     "threadLastPostOn": "2026-10-31",
     "editedOn": "2026-11-04",
-    "needs": [
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
+        }
+      ]
+    }
   },
   "description": "Safe to add mid-game\n\nSafe to remove mid-game\n\nNo known mod conflicts\n\nRequires LunaLib | Requires LazyLib\nDependencies are automatically downloaded when installing with TriOS\nOlder versions and changelogs\n\nDescription\n\nThis mod adds a customizable radial menu for your campaign abilities.\nThe vanilla ability bar was clearly not intended to hold more than 10 abilities. If you are playing with mods that add abilities this mod is a godsend.\nThe muscle memory from other games kicks in within about 5 seconds of use.\n\nSupports both click-to-choose and relative positional selection (like in console games!).\n\nHold left Alt, B or right Ctrl on the campaign map, move onto an ability and release to use it. Release in the center or press Escape to cancel.\nHold left-click on a slot for half a second to assign an ability, clear the slot or create a submenu. I didn't use L-ctrl because it's used by console commands.\n\nYour layout is shared across saves & campaigns.\nHotkeys (a mouse button works too), slot counts, labels, tile tint, tooltips and animations can be changed in LunaLib's mod settings.\n\nIn Use\n\nFAQ\nHow do I open the menu?\nHold B, left Alt or right Ctrl on the campaign map. Move the cursor onto an ability and release the key to use it.\n\nHow do I cancel?\nMove the cursor back to the center before releasing, or press Escape.\n\nHow do I change what is on the wheel?\nHold left-click on a slot for half a second. A menu opens where you can assign an ability, clear the slot or turn it into a submenu.\n\nWhat are submenus?\nA submenu groups more abilities behind a single slot. Hover over it and move outward to reach its abilities. Each submenu can have its own icon and colour.\n\nHow many slots can I have?\nUp to 10 on the main wheel and up to 10 in each submenu. The defaults are 7 and 5, change them in LunaLib's mod settings.\n\nCan I change the hotkeys?\nYes, in LunaLib's mod settings. There are three hotkeys and an optional mouse button (Middle, Mouse 4 or Mouse 5). Click a keybind and press Escape to clear it.\n\nDoes the game keep running while the menu is open?\nNo, the game pauses while the wheel is open. Turn off \"Pause while open\" in the settings if you want it to keep running.\n\nDoes it work with modded abilities?\nYes. Any ability your fleet has can be assigned to a slot.\n\nWhy is a tile grey or glowing?\nGrey abilities can't be used right now. Active abilities glow, and abilities on cooldown show it on their tile.\n\nCan I see what an ability does?\nHover over it to see its tooltip.\n\nDo I have to set this up for every new save game?\nNo, your layout is shared across all campaigns. This means you can start a new save and do not have to set it up again. If you do not know an ability in that save yet, it'll show up in the spot it used to be assigned to when it is learned unless you overwrote the slot with a different ability.\n\nChange Log\nLink to GitHub\n\nAttribution / Acknowledgement\nPresident Matt Damon       Made the first prototype this mod was built off of.\nNEOysod       Made the original Wingman code that inspired this mod.\n\nAI use disclaimer\nSome or all assets and code in this mod were created using AI tools:\nCode: Claude Opus 5.5\nImages: Completely hand-made\n\nQ: Is this slop?\nA: I don't do slop, and I made enough mods by hand to prove it.\nThe use of LLM coding tools accelerates my work, it does not supplant it.\n\nInstallation\n\nNew to mods? See the install guide:\nAdding mods to your game:\nFirst Steps\n\nSupport\n\nWant to show support for my work?\n\nOr support me on Ko-Fi\n\nLicense\n\nCode licensed under GNU GPL v3\nor any later version.\n\nMy other mods",
   "descriptionHtml": "<div class=\"align-center\"><img src=\"https://i.imgur.com/Q3PSa8A.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><hr><div class=\"align-center\"><div class=\"table-scroll\"><table><tbody><tr><td><table style=\"--bg:#d6e8d4;--pad:3px 10px;--round:12px\"><tbody><tr><td class=\"author-colour\" style=\"--c:#1d5e1d\"><span class=\"size-small\"><b>Safe to add mid-game</b></span></td></tr></tbody></table></td><td><table style=\"--bg:#d6e8d4;--pad:3px 10px;--round:12px\"><tbody><tr><td class=\"author-colour\" style=\"--c:#1d5e1d\"><span class=\"size-small\"><b>Safe to remove mid-game</b></span></td></tr></tbody></table></td></tr></tbody></table></div></div><div class=\"align-center\"><div class=\"table-scroll\"><table><tbody><tr><td><table style=\"--bg:#cfddef;--pad:3px 10px;--round:12px\"><tbody><tr><td class=\"author-colour\" style=\"--c:#1f3a66\"><span class=\"size-small\"><b>No known mod conflicts</b></span></td></tr></tbody></table></td></tr></tbody></table></div></div><hr><div class=\"align-center\"><a href=\"https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSirHartley%2FRadial.Menu%2Fmain%2Fradialmenu.version%22%2C%22id%22%3A%22radial_menu%22%2C%22version%22%3A%221.0.b%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%2C%22version%22%3A%222.0.5%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%2C%22version%22%3A%223.0.0%22%7D\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://trilink.wispborne.com/badges/install-badge-forthebadge.svg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><a href=\"https://github.com/SirHartley/Radial.Menu/releases/download/1.0.b/Radial.Menu-1.0.b.zip\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Manual_Download-GitHub-24292f?style=for-the-badge&amp;logo=github\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><span class=\"size-small\">Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a></span> | <span class=\"size-small\">Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a></span><br><span class=\"size-small\">Dependencies are automatically downloaded when installing with TriOS</span><br><span class=\"size-small\"><a href=\"https://github.com/SirHartley/Radial.Menu/releases\" rel=\"nofollow noopener\" target=\"_blank\">Older versions and changelogs</a></span></div><hr><br><div class=\"align-center\"><div class=\"table-scroll\"><table style=\"--bg:#ecebe7;--pad:8px 18px;--w:100%\"><tbody><tr style=\"--row-bg:#dfddd4\"><td><div class=\"align-center\"><b>Description</b></div></td></tr><tr><td><div class=\"align-center\">This mod adds a <b>customizable radial menu</b> for your campaign abilities.<br>The vanilla ability bar was clearly not intended to hold more than 10 abilities. If you are playing with mods that add abilities this mod is a godsend.<br>The muscle memory from other games kicks in within about 5 seconds of use.<br><br>Supports both click-to-choose and relative positional selection (like in console games!).<br><br>Hold <b>left Alt, B</b> or <b>right Ctrl</b> on the campaign map, move onto an ability and release to use it. Release in the center or press Escape to cancel.<br>Hold left-click on a slot for half a second to assign an ability, clear the slot or create a submenu. I didn't use L-ctrl because it's used by console commands.</div><br><div class=\"align-center\">Your layout is shared across saves &amp; campaigns.<br>Hotkeys (a mouse button works too), slot counts, labels, tile tint, tooltips and animations can be changed in <b>LunaLib's mod settings</b>.</div></td></tr></tbody></table></div></div><br><div class=\"align-center\"><img src=\"https://s15.gifyu.com/images/bWZwK.gif\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><hr><details class=\"spoiler\"><summary>In Use</summary><img src=\"https://s15.gifyu.com/images/bWZwI.gif\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details></div><hr><details class=\"spoiler\"><summary>FAQ</summary><div class=\"table-scroll\"><table><tbody><tr><td><b>How do I open the menu?</b></td></tr><tr><td>Hold B, left Alt or right Ctrl on the campaign map. Move the cursor onto an ability and release the key to use it.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>How do I cancel?</b></td></tr><tr><td>Move the cursor back to the center before releasing, or press Escape.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>How do I change what is on the wheel?</b></td></tr><tr><td>Hold left-click on a slot for half a second. A menu opens where you can assign an ability, clear the slot or turn it into a submenu.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>What are submenus?</b></td></tr><tr><td>A submenu groups more abilities behind a single slot. Hover over it and move outward to reach its abilities. Each submenu can have its own icon and colour.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>How many slots can I have?</b></td></tr><tr><td>Up to 10 on the main wheel and up to 10 in each submenu. The defaults are 7 and 5, change them in LunaLib's mod settings.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>Can I change the hotkeys?</b></td></tr><tr><td>Yes, in LunaLib's mod settings. There are three hotkeys and an optional mouse button (Middle, Mouse 4 or Mouse 5). Click a keybind and press Escape to clear it.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>Does the game keep running while the menu is open?</b></td></tr><tr><td>No, the game pauses while the wheel is open. Turn off \"Pause while open\" in the settings if you want it to keep running.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>Does it work with modded abilities?</b></td></tr><tr><td>Yes. Any ability your fleet has can be assigned to a slot.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>Why is a tile grey or glowing?</b></td></tr><tr><td>Grey abilities can't be used right now. Active abilities glow, and abilities on cooldown show it on their tile.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>Can I see what an ability does?</b></td></tr><tr><td>Hover over it to see its tooltip.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>Do I have to set this up for every new save game?</b></td></tr><tr><td>No, your layout is shared across all campaigns. This means you can start a new save and do not have to set it up again. If you do not know an ability in that save yet, it'll show up in the spot it used to be assigned to when it is learned unless you overwrote the slot with a different ability.</td></tr></tbody></table></div></details><details class=\"spoiler\"><summary>Change Log</summary><a href=\"https://github.com/SirHartley/Radial.Menu/releases/\" rel=\"nofollow noopener\" target=\"_blank\">Link to GitHub</a></details><details class=\"spoiler\"><summary>Attribution / Acknowledgement</summary><div class=\"table-scroll\"><table><tbody><tr><td><b>President Matt Damon</b></td><td>      </td><td>Made the first prototype this mod was built off of.</td></tr><tr><td><b>NEOysod</b></td><td>      </td><td>Made the original Wingman code that inspired this mod.</td></tr></tbody></table></div></details><details class=\"spoiler\"><summary>AI use disclaimer</summary>Some or all assets and code in this mod were created using AI tools:<br><ul><li>Code: Claude Opus 5.5</li><li>Images: Completely hand-made</li></ul><br><b>Q: Is this slop? </b><br><b>A:</b> I don't do slop, and I made enough mods by hand to prove it.<br>The use of LLM coding tools accelerates my work, it does not supplant it.</details><hr><div class=\"table-scroll\"><table style=\"--w:100%\"><tbody><tr><td style=\"--cell-bg:#ececec;--cell-pad:0px;--w:32%\"><table style=\"--pad:6px 14px;--w:100%\"><tbody><tr style=\"--row-bg:#dcdcdc\"><td><div class=\"align-center\"><b>Installation</b></div></td></tr><tr><td><div class=\"align-center\">New to mods? See the install guide:<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25974.0\" rel=\"nofollow noopener\" target=\"_blank\">Adding mods to your game:<br>First Steps</a></div></td></tr></tbody></table></td><td style=\"--cell-pad:0px;--w:12px\"></td><td style=\"--cell-bg:#ececec;--cell-pad:0px;--w:32%\"><table style=\"--pad:6px 14px;--w:100%\"><tbody><tr style=\"--row-bg:#dcdcdc\"><td><div class=\"align-center\"><b>Support</b></div></td></tr><tr><td><div class=\"align-center\">Want to show support for my work?<br><a href=\"https://www.patreon.com/join/SirHartley\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/xQodpET.png\" alt=\"\" height=\"32\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><span class=\"size-small\">Or support me on <a href=\"https://ko-fi.com/sirhartley\" rel=\"nofollow noopener\" target=\"_blank\">Ko-Fi</a></span></div></td></tr></tbody></table></td><td style=\"--cell-pad:0px;--w:12px\"></td><td style=\"--cell-bg:#ececec;--cell-pad:0px;--w:32%\"><table style=\"--pad:6px 14px;--w:100%\"><tbody><tr style=\"--row-bg:#dcdcdc\"><td><div class=\"align-center\"><b>License</b></div></td></tr><tr><td><div class=\"align-center\"><a href=\"https://www.gnu.org/licenses/gpl-3.0.html\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/badge/License-GPL_v3-blue?style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br>Code licensed under GNU GPL v3<br>or any later version.</div></td></tr></tbody></table></td></tr></tbody></table></div><br><div class=\"table-scroll\"><table style=\"--bg:#ececec;--pad:6px 14px;--w:100%\"><tbody><tr style=\"--row-bg:#dcdcdc\"><td><div class=\"align-center\"><b>My other mods</b></div></td></tr><tr><td style=\"--cell-pad:14px\"><div class=\"align-center\"><table style=\"--pad:0px 4px\"><tbody><tr><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=18011.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/k6jGVS8.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=20986.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/tJ7FHHT.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25649.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/nLpPQnc.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=24378.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/ORHTmT9.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=31416.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/sV98XzC.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=31738.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/YHTKOwn.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=19210.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/rubUJxU.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35125.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/AO9LQbl.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=34161.0#:~:text=%5B0.98a%5D%20Useful.Tithes\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/Wn6fJRQ.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=34161.0#:~:text=%5B0.98a%5D%20Big%20Pilum%20Energy\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/foNUf16.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=34161.0#:~:text=%5B0.98a%5D%20Lost.Sector\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/nGcxyQ8.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=34161.0#:~:text=%5B0.98a%5D%20Disco.Balls\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/4rVRIke.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td></tr></tbody></table></div></td></tr></tbody></table></div>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p><code>Adds a customizable radial menu for your campaign abilities.</code></p><p>The vanilla ability bar was clearly not intended to hold more than 10 abilities. This is the fix.<br>The muscle memory from other games kicks in within about 5 seconds of use.</p><p>Supports both click-to-choose and relative positional selection (like in console games!).</p><p>Hold left Alt, B or right Ctrl on the campaign map, move onto an ability and release to use it. Release in the center or press Escape to cancel.</p><pre><code>Changelog:\n1.0.b\nInitial mod release</code></pre><pre><code>+ Save compatible + </code></pre><h3><a href=\"https://github.com/SirHartley/Radial.Menu/releases/download/1.0.b/Radial.Menu-1.0.b.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download</a></h3><h3><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36236.msg533606#new\" rel=\"nofollow noopener\" target=\"_blank\">Forum Thread</a></h3><h3><a href=\"https://www.patreon.com/c/SirHartley\" rel=\"nofollow noopener\" target=\"_blank\">Support my mods</a></h3><p><code>_________________________________</code></p><p><em>Stick all those consumables into one group to forget about them again! Insanely useful!</em></p>",
-  "aiDescription": "Replaces the standard ability bar with a radial interface that supports click-to-choose and positional selection. Users can assign abilities to slots, create submenus, and customize hotkeys, slot counts, and visual settings via LunaLib. The layout is shared across all saves and campaigns.",
-  "saveCompatibilityText": "Safe to add mid-game",
-  "removalCompatibilityText": "Safe to remove mid-game",
-  "canAdd": "yes",
-  "canRemove": "yes",
+  "aiDescription": "Adds a customizable radial menu for selecting campaign abilities, which is useful when playing with mods that add many abilities. Supports both click-to-choose and relative positional selection, with layouts shared across saves and campaigns. Hotkeys, slot counts, labels, and animations can be customized in LunaLib's mod settings.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Safe to add mid-game",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "Safe to remove mid-game",
+      "answer": "yes"
+    }
+  },
   "aiUse": {
     "quote": "Some or all assets and code in this mod were created using AI tools:\nCode: Claude Opus 5.5\nImages: Completely hand-made",
     "usesAi": true,
     "uses": [
       {
         "area": "code",
-        "how": "generated"
+        "how": "assisted"
       }
     ],
     "tools": [
@@ -89,7 +100,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1566115615511543918/1566115615800827976/mod_post_icon_radial_menu.png?ex=6af7d913&is=6af68793&hm=55d392c82538fd6ff091341fcd9d7af085528f9cf37156cf13eb1aea3c28c656&",
+      "url": "https://cdn.discordapp.com/attachments/1566115615511543918/1566115615800827976/mod_post_icon_radial_menu.png?ex=6af881d3&is=6af73053&hm=96dd3040a16494801fde1e1abbd432746fc8336e44cddd71d481355926a61b6a&",
       "aiCaption": "A black and white icon featuring a segmented radial menu symbol inside an octagonal frame.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -224,7 +235,7 @@
   "downloads": [
     {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSirHartley%2FRadial.Menu%2Fmain%2Fradialmenu.version%22%2C%22id%22%3A%22radial_menu%22%2C%22version%22%3A%221.0.b%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%2C%22version%22%3A%222.0.5%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%2C%22version%22%3A%223.0.0%22%7D",
-      "kind": "trios",
+      "type": "trios",
       "label": "",
       "host": "trilink.wispborne.com",
       "needsAnotherStep": true
@@ -233,7 +244,7 @@
       "url": "https://github.com/SirHartley/Radial.Menu/releases/download/1.0.b/Radial.Menu-1.0.b.zip",
       "directUrl": "https://github.com/SirHartley/Radial.Menu/releases/download/1.0.b/Radial.Menu-1.0.b.zip",
       "fileName": "Radial.Menu-1.0.b.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -252,7 +263,7 @@
     {
       "url": "https://ko-fi.com/sirhartley",
       "type": "kofi",
-      "label": "Ko-Fi"
+      "label": "Ko-fi"
     }
   ],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36236.0",
@@ -260,5 +271,17 @@
   "releases": [],
   "threadLastPostOn": "2026-10-31",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      }
+    ]
+  }
 }

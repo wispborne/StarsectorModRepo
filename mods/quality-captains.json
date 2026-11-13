@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "quality-captains",
     "name": "Quality Captains",
@@ -25,11 +25,15 @@
     "summary": "A gameplay-first, balance-friendly, fully-configurable skill overhaul.",
     "summaryIsGenerated": false,
     "aiSummary": "Overhauls every skill with multiple configurable trees and adds milestone-based perks.",
-    "saveCompatible": true,
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Dal-041/QualityCaptains/releases/latest/download/Quality.Captains.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -42,19 +46,23 @@
     ],
     "addedOn": "2021-04-16",
     "threadLastPostOn": "2026-06-30",
-    "editedOn": "2025-04-09",
-    "needs": []
+    "editedOn": "2025-04-09"
   },
   "description": "A gameplay-first, balance-friendly, fully-configurable skill overhaul.\n\n^Click the banner, it's waiting for you. Supports LunaLib ingame configuation.",
   "descriptionHtml": "<div class=\"align-center\"><b><span class=\"size-biggest\">A gameplay-first, balance-friendly, fully-configurable skill overhaul.</span></b></div><div class=\"align-center\"><a href=\"https://github.com/Dal-041/QualityCaptains/releases/latest/download/Quality.Captains.zip\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/sjt8XRX.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br>^Click the banner, it's waiting for you. Supports LunaLib ingame configuation. </div>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p><strong>A gameplay-first, balance friendly, completely configurable skill overhaul.</strong><br>QC brings QOL features, meaningful choices, and more than 300 options to tweak the game to perfection.<br>Every skill has been carefully curated for the the best features from every game version. Most skills are more flexible than before, designed to benefit every ship and excel on specialized craft.</p><ul><li>Every skill is balanced against all the others and the choices you make will be based on how you want to play.</li><li>Skills don't change their power based on your fleet size</li><li>Also makes ECM and Navigation battle effects way more fun.</li></ul><p>V1.5 introduced a <strong>perk system</strong> with milestones that your character automatically unlocks as they progress through the story. These milestones include powerful QOL features and most of the effects are completely fresh to the modiverse.</p><p>V1.6 incorporates a few of the latest skill effects in 0.97, but the best part is <strong>none of the +/- raw damage effects</strong> are included. Enjoy Starsector at its <strong>best</strong>, with the full texture of the game.</p><p>**Enjoy! Download is below ** or through the thread.</p><p>Direct DL: <a href=\"https://github.com/Dal-041/QualityCaptains/releases/latest/download/Quality.Captains.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Dal-041/QualityCaptains/releases/latest/download/Quality.Captains.zip</a><br>Thread: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=21038.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=21038.0</a></p>",
   "aiDescription": "Rebalances all skills across Combat, Leadership, Technology, and Industry categories. It restores classic effects like zero-flux speed boosts and removes fleet size penalties. The mod includes dynamic limits, a complete ECM and NAV overhaul, and over ten quality-of-life perks. All settings are fully customizable via LunaLib or configuration files.",
-  "saveCompatibilityText": "Yes! Quality Captains can be installed in previous save, though it may be a good idea to head to your storage before making the switch.",
-  "removalCompatibilityText": "As of 1.5.0 the answer is \"untested but probably not easily.\" There is an uninstallation-mode toggle available in the mod's settings that removes scripts but player perks may need manual editing.",
-  "canAdd": "yes",
-  "canRemove": "depends",
+  "saveCompat": {
+    "adding": {
+      "quote": "Yes! Quality Captains can be installed in previous save, though it may be a good idea to head to your storage before making the switch.",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "As of 1.5.0 the answer is \"untested but probably not easily.\" There is an uninstallation-mode toggle available in the mod's settings that removes scripts but player perks may need manual editing.",
+      "answer": "depends"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Misc. Campaign Mods",
@@ -94,7 +102,7 @@
       "url": "https://github.com/Dal-041/QualityCaptains/releases/latest/download/Quality.Captains.zip",
       "directUrl": "https://github.com/Dal-041/QualityCaptains/releases/latest/download/Quality.Captains.zip",
       "fileName": "Quality.Captains.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -113,18 +121,20 @@
   "threadLastPostOn": "2026-06-30",
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "LunaLib",
-      "id": "lunalib"
-    }
-  ],
+  "requirements": {
+    "optional": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ]
+  },
   "conflicts": [
     {
       "name": "Second-in-Command",
       "id": "second-in-command",
       "quote": "Notably, this mod is not compatible with most other mods that perform changes to vanilla skills or the system. Those are currently: Quality Captains , A New Level of Confidence , Truly Automated Ships & Adjustable Skill Thresholds .",
-      "kind": "technical",
+      "type": "technical",
       "fromOtherMod": true
     }
   ]

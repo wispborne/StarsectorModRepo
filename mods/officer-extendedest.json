@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "officer-extendedest",
     "name": "Officer Extendedest",
@@ -15,16 +15,19 @@
       "discord"
     ],
     "gameVersion": "0.98a",
-    "modVersion": "0.1",
     "imageUrl": "https://i.imgur.com/GzbSUh3.png",
     "summary": "Simple officer respecs. Safe to add or remove to ongoing saves. Compatible with officer extension.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a mastery experience system that allows officers to respec their combat and elite skills without changing their level.",
-    "saveCompatible": true,
+    "aiSummary": "Adds a mastery experience system that allows players to respec officer skills without altering officer levels.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/Bass294/Officer-Extendedest/releases/latest/download/Officer_Extendedest.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -35,38 +38,43 @@
     "usesAi": true,
     "aiUses": [
       {
-        "area": "code",
-        "how": "generated"
+        "area": "code"
       }
     ],
     "addedOn": "2026-10-28",
     "threadLastPostOn": "2026-11-06",
     "editedOn": "2026-11-09",
-    "needs": [
-      {
-        "name": "PatchLib",
-        "id": "patchlib"
-      }
-    ],
+    "requirements": {
+      "required": [
+        {
+          "name": "PatchLib",
+          "id": "patchlib"
+        }
+      ]
+    },
     "partOfThreadTitle": "[0.98a] Bass's Mini-Mods (Officer Extendedest + Riding Shotgun)"
   },
   "description": "Simple officer respecs. Safe to add or remove to ongoing saves. Compatible with officer extension.\n\n- Respec officers using a new system called \"mastery experience\".\n- Mastery experience is gained per-officer from combat while at max level.\n- An additional 10% of mastery exp gained is gained as global mastery exp.\n- A respec costs the exp needed to reach the officer's level from level 1.\n- Global mastery exp can substitute for officer mastery exp if insufficient.\n- All vanilla combat skills and elite skills may be changed (like AI cores!)\n- Officer levels are never modified.",
   "descriptionHtml": "Simple officer respecs. Safe to add or remove to ongoing saves. Compatible with officer extension.<br><br>- Respec officers using a new system called \"mastery experience\".<br>- Mastery experience is gained per-officer from combat while at max level.<br>- An additional 10% of mastery exp gained is gained as global mastery exp.<br>- A respec costs the exp needed to reach the officer's level from level 1.<br>- Global mastery exp can substitute for officer mastery exp if insufficient.<br>- All vanilla combat skills and elite skills may be changed (like AI cores!)<br>- Officer levels are never modified.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p>Simple officer respecs. Safe to add or remove to ongoing saves. Compatible with officer extension.</p><ul><li>Respec officers using a new system called \"mastery experience\".</li><li>Mastery experience is gained per-officer from combat while at max level.</li><li>An additional 10% of mastery exp gained is gained as global mastery exp.</li><li>A respec costs the exp needed to reach the officer's level from level 1.</li><li>Global mastery exp can substitute for officer mastery exp if insufficient.</li><li>All vanilla combat skills and elite skills may be changed (like AI cores!)</li><li>Officer levels are never modified.</li></ul><p>Credits:</p><p>Descriptions: Bass<br>Code/rules: Claude Opus 5.5, with Lukas04's starsector-knowledge skill, patchlib skill<br>AI use disclaimer: see above</p><p>Download link:<br><a href=\"https://github.com/Bass294/Officer-Extendedest/releases/latest/download/Officer_Extendedest.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/Bass294/Officer-Extendedest/releases/latest/download/Officer_Extendedest.zip</a></p><p>Forum thread:<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36242.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36242.0</a></p><p>Requires patchlib</p><p>Discussion/bug reports/ect:<br></p>",
-  "aiDescription": "Officers gain mastery experience from combat while at max level, with a portion contributing to a global pool. This experience can be spent to reset an officer's skills, allowing changes to all vanilla combat and elite abilities similar to AI cores.",
-  "saveCompatibilityText": "Safe to add or remove to ongoing saves.",
-  "removalCompatibilityText": "Safe to add or remove to ongoing saves.",
-  "canAdd": "yes",
-  "canRemove": "yes",
+  "aiDescription": "Adds a mastery experience system that allows players to respec officer skills. Officers gain mastery experience from combat at max level, which can be used to change vanilla and elite skills without altering officer levels.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Safe to add or remove to ongoing saves",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "Safe to add or remove to ongoing saves",
+      "answer": "yes"
+    }
+  },
   "aiUse": {
-    "quote": "Code/rules: Claude Opus 5.5\nAI use disclaimer: see above",
+    "quote": "Code/rules: Claude Opus 5.5",
     "usesAi": true,
     "uses": [
       {
-        "area": "code",
-        "how": "generated"
+        "area": "code"
       }
     ],
     "tools": [
@@ -78,21 +86,21 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1564837755027193976/1564837755610075166/fgrtgertgr.png?ex=6af7d03a&is=6af67eba&hm=2dea8643c47252295f47b9226a5058a53e3d8312c2cc4b4c3cb8e718288af62c&",
+      "url": "https://cdn.discordapp.com/attachments/1564837755027193976/1564837755610075166/fgrtgertgr.png?ex=6af878fa&is=6af7277a&hm=c8bbeb5cddec968d4ea4022275e69ab1d99074a8aa28bd3a461442e67c9987ac&",
       "aiCaption": "A meme image featuring anime characters in a classroom setting with a 'Change skills' sign.",
       "aiKind": "other",
       "aiFit": "poor",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1564837755027193976/1564837921435951114/vwerfvfewrv.png?ex=6af7d061&is=6af67ee1&hm=c5edae2cd5b967d7c278a19756f01406073245d64f2ae0c2bdf1b920ff04cebc&",
+      "url": "https://cdn.discordapp.com/attachments/1564837755027193976/1564837921435951114/vwerfvfewrv.png?ex=6af87921&is=6af727a1&hm=b3354e6a952ca9b0f7e01f0ab161601c85c581c7055f14b42c73fa2cd0999ac5&",
       "aiCaption": "A game interface showing a list of officers with anime portraits, skill icons, and stats under the header 'Select captain for the Dance Between Time (Vocifer-class)'.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1564837755027193976/1564837932463038606/werfewrfwergwteghert.png?ex=6af7d064&is=6af67ee4&hm=eee9c33f70ffc17338bf1534dcae56dfb7c5a044edce5f057dfac28af470b2ce&",
+      "url": "https://cdn.discordapp.com/attachments/1564837755027193976/1564837932463038606/werfewrfwergwteghert.png?ex=6af87924&is=6af727a4&hm=03c8c3db5113189e99bf9333f8f68d0ed70d5ba050499e30c3bb42e919970196&",
       "aiCaption": "A game menu titled 'Select skills for Selkie' displaying a grid of skill icons with instructions on selecting elite skills.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -160,15 +168,13 @@
       "url": "https://github.com/Bass294/Officer-Extendedest/releases/latest/download/Officer_Extendedest.zip",
       "directUrl": "https://github.com/Bass294/Officer-Extendedest/releases/latest/download/Officer_Extendedest.zip",
       "fileName": "Officer_Extendedest.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "DOWNLOAD",
       "host": "GitHub",
       "needsAnotherStep": false
     }
   ],
-  "changelog": {
-    "0.1": "Release"
-  },
+  "changelog": {},
   "sourceCodeUrl": "https://github.com/Bass294/Officer-Extendedest",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36242.0",
@@ -177,11 +183,19 @@
   "threadLastPostOn": "2026-11-06",
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "Officer Extension",
-      "id": "officer-extension"
-    }
-  ],
+  "requirements": {
+    "required": [
+      {
+        "name": "PatchLib",
+        "id": "patchlib"
+      }
+    ],
+    "optional": [
+      {
+        "name": "Officer Extension",
+        "id": "officer-extension"
+      }
+    ]
+  },
   "partOfThreadTitle": "[0.98a] Bass's Mini-Mods (Officer Extendedest + Riding Shotgun)"
 }

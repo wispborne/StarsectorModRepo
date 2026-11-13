@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "tidy-panels",
     "name": "Tidy.Panels",
@@ -17,15 +17,19 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "1.0.b",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1566985555701407904/1566985555982688286/mod_alignedbuttonsicon.png?ex=6af7b785&is=6af66605&hm=62778b0fc3e960214c557ec69cb847a7b681803ed32a632e1a2e498e867f8096&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1566985555701407904/1566985555982688286/mod_alignedbuttonsicon.png?ex=6af86045&is=6af70ec5&hm=5ca563ab750403ee596dce7ca17ff0ee9b72117603acdd4f0b284bce864fdaf0&",
     "summary": "QOL UI fixes, starting with the market / cargo list.",
     "summaryIsGenerated": false,
     "aiSummary": "Collapses cargo buttons and extends them on hover to align the storage button.",
-    "saveCompatible": true,
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/SirHartley/Tidy.Panels/releases/download/1.0.a/Tidy.Panels-1.0.a.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -34,21 +38,26 @@
     "isWorkInProgress": false,
     "addedOn": "2026-11-03",
     "editedOn": "2026-11-04",
-    "needs": [
-      {
-        "name": "PatchLib",
-        "id": "patchlib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "PatchLib",
+          "id": "patchlib"
+        }
+      ]
+    }
   },
   "description": "Fixes UI alignment issues in the market and cargo lists. It collapses all cargo buttons and extends them when hovered over, creating space for nine buttons in a single row. This prevents the player storage button from being misaligned.",
   "descriptionHtml": "<p>Fixes UI alignment issues in the market and cargo lists. It collapses all cargo buttons and extends them when hovered over, creating space for nine buttons in a single row. This prevents the player storage button from being misaligned.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "discordPostHtml": "<p><code>QOL UI fixes, starting with the market / cargo list.</code></p><p>Have you ever noticed that the storage button doesn't seem to align with any other cargo buttons? Has it made you mad? This is the mod for you!</p><p>Collapses all cargo buttons and extends them on hover, making space for 9 buttons in one row. Stops the player storage button from getting fucked.</p><p>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36191.0\" rel=\"nofollow noopener\" target=\"_blank\">Patchlib</a>.</p><pre><code>Changelog:\n1.0.b\nInitial mod release</code></pre><pre><code>+ Save compatible + </code></pre><h3><a href=\"https://github.com/SirHartley/Tidy.Panels/releases/download/1.0.a/Tidy.Panels-1.0.a.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download</a></h3><h3><s>Forum Thread</s></h3><h3><a href=\"https://www.patreon.com/c/SirHartley\" rel=\"nofollow noopener\" target=\"_blank\">Support my mods</a></h3><p><code>_________________________________</code></p><p>_ I've been ragebaited by this trash UI for seven years._</p>",
   "aiDescription": "Fixes UI alignment issues in the market and cargo lists. It collapses all cargo buttons and extends them when hovered over, creating space for nine buttons in a single row. This prevents the player storage button from being misaligned.",
-  "saveCompatibilityText": "+ Save compatible +",
-  "canAdd": "yes",
+  "saveCompat": {
+    "adding": {
+      "quote": "+ Save compatible +",
+      "answer": "yes"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Colonies",
@@ -57,7 +66,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1566985555701407904/1566985555982688286/mod_alignedbuttonsicon.png?ex=6af7b785&is=6af66605&hm=62778b0fc3e960214c557ec69cb847a7b681803ed32a632e1a2e498e867f8096&",
+      "url": "https://cdn.discordapp.com/attachments/1566985555701407904/1566985555982688286/mod_alignedbuttonsicon.png?ex=6af86045&is=6af70ec5&hm=5ca563ab750403ee596dce7ca17ff0ee9b72117603acdd4f0b284bce864fdaf0&",
       "small": true,
       "source": "discord"
     }
@@ -67,7 +76,7 @@
       "url": "https://github.com/SirHartley/Tidy.Panels/releases/download/1.0.a/Tidy.Panels-1.0.a.zip",
       "directUrl": "https://github.com/SirHartley/Tidy.Panels/releases/download/1.0.a/Tidy.Panels-1.0.a.zip",
       "fileName": "Tidy.Panels-1.0.a.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "Download",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -87,5 +96,13 @@
   "discordUrl": "https://discord.com/channels/187635036525166592/1566985555701407904/1566985555701407904",
   "releases": [],
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "PatchLib",
+        "id": "patchlib"
+      }
+    ]
+  }
 }

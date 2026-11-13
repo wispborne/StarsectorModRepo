@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "guarantee-rare-items",
     "name": "Guarantee Rare Items",
@@ -14,16 +14,20 @@
       "forum"
     ],
     "onModIndex": true,
-    "gameVersion": "0.98a",
-    "modVersion": "0.4.0",
+    "gameVersion": "0.98.5a",
+    "modVersion": "0.5.0",
     "summary": "This ensures that there is one salvageable instance of every special colony item in the whole sector upon sector generation. They'll be scattered across Research Stations, Mining Stations, and Orbital Habitats.",
     "summaryIsGenerated": false,
-    "aiSummary": "Ensures every special colony item has at least one salvageable instance in the sector upon generation.",
-    "saveCompatible": false,
+    "aiSummary": "Ensures one salvageable instance of every special colony item exists in the sector during generation.",
+    "saveCompat": {
+      "adding": {
+        "answer": "no"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
-      "url": "https://github.com/cypai/GuaranteeRareItems/releases/download/0.4.0/GuaranteeRareItems.7z",
-      "kind": "direct",
+      "url": "https://github.com/cypai/GuaranteeRareItems/releases/download/0.5.0/GuaranteeRareItems.7z",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -31,26 +35,32 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2023-03-03",
-    "threadLastPostOn": "2025-04-04",
-    "editedOn": "2025-04-22",
-    "needs": [
-      {
-        "name": "LazyLib",
-        "id": "lazylib"
-      },
-      {
-        "name": "MagicLib",
-        "id": "magiclib"
-      }
-    ]
+    "threadLastPostOn": "2026-11-12",
+    "editedOn": "2026-11-12",
+    "requirements": {
+      "required": [
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib"
+        }
+      ]
+    }
   },
   "description": "Guarantee Rare Items\n\nDownload\nGithub\n\nRequires LazyLib and MagicLib\n\nNow compatible with Version Checker.\n\nThis ensures that there is one salvageable instance of every special colony item in the whole sector upon sector generation. They'll be scattered across Research Stations, Mining Stations, and Orbital Habitats.\n\nWon't do anything for old saves, because it only adds the salvage during sector generation.\n\nComes with Industrial Evolution compatibility and JSON configuration. You can add or remove specific items and other salvage types by editing modSettings.json.",
-  "descriptionHtml": "<span class=\"size-biggest\"><b>Guarantee Rare Items</b></span><br><br><a href=\"https://github.com/cypai/GuaranteeRareItems/releases/download/0.4.0/GuaranteeRareItems.7z\" rel=\"nofollow noopener\" target=\"_blank\">Download</a><br><a href=\"https://github.com/cypai/GuaranteeRareItems\" rel=\"nofollow noopener\" target=\"_blank\">Github</a><br><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a> and <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25868.90\" rel=\"nofollow noopener\" target=\"_blank\">MagicLib</a><br><br>Now compatible with Version Checker.<br><br>This ensures that there is one salvageable instance of every special colony item in the whole sector upon sector generation. They'll be scattered across Research Stations, Mining Stations, and Orbital Habitats.<br><br>Won't do anything for old saves, because it only adds the salvage during sector generation.<br><br>Comes with Industrial Evolution compatibility and JSON configuration. You can add or remove specific items and other salvage types by editing modSettings.json.",
+  "descriptionHtml": "<span class=\"size-biggest\"><b>Guarantee Rare Items</b></span><br><br><a href=\"https://github.com/cypai/GuaranteeRareItems/releases/download/0.5.0/GuaranteeRareItems.7z\" rel=\"nofollow noopener\" target=\"_blank\">Download</a><br><a href=\"https://github.com/cypai/GuaranteeRareItems\" rel=\"nofollow noopener\" target=\"_blank\">Github</a><br><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a> and <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25868.90\" rel=\"nofollow noopener\" target=\"_blank\">MagicLib</a><br><br>Now compatible with Version Checker.<br><br>This ensures that there is one salvageable instance of every special colony item in the whole sector upon sector generation. They'll be scattered across Research Stations, Mining Stations, and Orbital Habitats.<br><br>Won't do anything for old saves, because it only adds the salvage during sector generation.<br><br>Comes with Industrial Evolution compatibility and JSON configuration. You can add or remove specific items and other salvage types by editing modSettings.json.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Scatters salvageable instances of all special colony items across Research Stations, Mining Stations, and Orbital Habitats during sector creation. Includes compatibility with Industrial Evolution and allows customization via JSON configuration.",
-  "saveCompatibilityText": "Won't do anything for old saves, because it only adds the salvage during sector generation.",
-  "canAdd": "no",
+  "aiDescription": "Scatters one salvageable copy of each special colony item across Research Stations, Mining Stations, and Orbital Habitats when a new sector is generated. Includes compatibility with Industrial Evolution and allows customization of items and salvage types via JSON configuration.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Won't do anything for old saves, because it only adds the salvage during sector generation.",
+      "answer": "no"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Miscellaneous Mods"
@@ -58,10 +68,10 @@
   "gallery": [],
   "downloads": [
     {
-      "url": "https://github.com/cypai/GuaranteeRareItems/releases/download/0.4.0/GuaranteeRareItems.7z",
-      "directUrl": "https://github.com/cypai/GuaranteeRareItems/releases/download/0.4.0/GuaranteeRareItems.7z",
+      "url": "https://github.com/cypai/GuaranteeRareItems/releases/download/0.5.0/GuaranteeRareItems.7z",
+      "directUrl": "https://github.com/cypai/GuaranteeRareItems/releases/download/0.5.0/GuaranteeRareItems.7z",
       "fileName": "GuaranteeRareItems.7z",
-      "kind": "direct",
+      "type": "direct",
       "label": "Download",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -72,13 +82,19 @@
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=26230.0",
   "releases": [],
-  "threadLastPostOn": "2025-04-04",
+  "threadLastPostOn": "2026-11-12",
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "Industrial.Evolution",
-      "id": "industrial-evolution"
-    }
-  ]
+  "requirements": {
+    "required": [
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      },
+      {
+        "name": "MagicLib",
+        "id": "magiclib"
+      }
+    ]
+  }
 }

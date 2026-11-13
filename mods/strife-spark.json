@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "strife-spark",
     "name": "Strife-Spark 1.02 RELEASE! - Starsector Roguelite Overhaul",
@@ -13,16 +13,20 @@
       "forum"
     ],
     "gameVersion": "0.98",
-    "modVersion": "1.02",
+    "modVersion": "1.0.2",
     "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_25653_1699999672.png",
     "summary": "Strife-Spark strips Starsector combat down to one ship: your flagship. You fight alone. Destroy ships in combat to build momentum and unlock temporary power surges. Earn progression points in the campaign to permanently gain powerful bonusses.",
     "summaryIsGenerated": false,
-    "aiSummary": "Restricts combat to a single flagship while adding momentum-based power-ups and permanent campaign progression.",
-    "saveCompatible": false,
+    "aiSummary": "Overhauls combat to focus on a single flagship ship, adding momentum-based power surges and permanent progression boons.",
+    "saveCompat": {
+      "adding": {
+        "answer": "no"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://drive.google.com/uc?export=download&id=1VebP_deEGet-_UyOQQ0Ccbv0B0csgusC",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -32,7 +36,56 @@
     "addedOn": "2025-10-15",
     "threadLastPostOn": "2025-12-12",
     "editedOn": "2025-11-05",
-    "needs": [
+    "requirements": {
+      "required": [
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib"
+        }
+      ]
+    }
+  },
+  "description": "Strife-Spark Release - Starsector Roguelite Overhaul\n\nDownload: https://drive.google.com/file/d/1VebP_deEGet-_UyOQQ0Ccbv0B0csgusC/view?usp=drive_link\n\nWARNING: Do not use on existing saves. Start a new game.\n\nIMPORTANT: Press Page Up from the campaign UI to open the progression interface. Press and hold Left Shift in combat to activate your flagship's engine boost ability.\n\n---\nWhat's Changed (1.0.1 to 1.0.2)\n\nSoundfix: Omega-state soundscape tuned — no longer annoying.\nDefensive fighter boons: Player fighters now have increased HP and deal more damage to missiles and fighters from the start. These values are configurable in balancedata.yaml.\n---\n\nWhat's Changed (Beta 2 to Release)\n\nCombat Momentum Reworked: Completely streamlined into 6 distinct levels plus 1 ultimate state. Cleaner escalation, sharper feedback, faster pacing.\n\nFlagship Engine Boost: The flagship gains the boost-ability. Hold Left Shift to trigger a massive engine power surge with a charge bar, cooldown, and cost: weapons lock during the boost and rotation speed is reduced. This lets you use any ship design, not just hit-and-run specialists.\n\nFull Config Exposure: Key balance-related values are tunable. Open the YAML file in the mod root and adjust boon values.\n\nOptional SystemScanner: Speeds up exploration of unknown systems on entry. Toggle it on in settings.json. Default: off.\n\nBalance Pass: Extensive playtesting across mod combinations. Your actual balance depends on which mods and ships you're running.\n\nOverview\n\nStrife-Spark strips Starsector combat down to one ship: your flagship. You fight alone. Destroy ships in combat to build momentum and unlock temporary power surges. Earn progression points in the campaign to permanently gain powerful bonusses.\n\n---\n\nKey Features\n\nOne Ship, One Battle: Only your flagged ship deploys. You can swap which ship holds the flagship role, but in combat, you're alone.\n\nMomentum Stacking: Each kill in battle builds momentum through 6 escalating levels, each unlocking stronger temporary bonuses—faster movement, harder-hitting weapons, critical strike chances, defensive fields slowing enemy fighters and missiles. Reach level 7 and unlock the ultimate state: OMEGA\n\nEngine Boost: Hold Left Shift in combat to trigger your flagship's engine overdrive. Massive boost with a charge bar and cooldown. Weapons shut down during the boost—use it to reposition, chase, or escape.\n\nPermanent Progression: Campaign Level cap is 40. Earn points through level-ups (vanilla xp) and spend them on 40 persistent boons across 13 distinct categories: EMP resistance, S-mod limits, critical attacks and more. Open the progression dialog with Page Up.\n\nReduced Logistics Burden: Flagship core reduces fuel and supply costs. Exploration and combat matter. Logistics don't get in the way.\n\nCombat Feedback: Compact in-combat UI shows your momentum tier and progress to the next. Visual and audio cues fire when you stack kills and hit progression milestones.\n\n---\n\nBalance Notes\n\nEarly game is hard. You need to pick fights carefully, isolate weaker targets, and work your way up. Ship selection is critical—finding better flagships is the primary form of progression.\n\nYou'll level faster than vanilla Starsector, especially in the later tiers. All of this is hugely impacted by your active mods and available ships, of course.\n\n---\n\nCompatibility\n\nRequires Lazylib and MagicLib\n\nDon't run with mods that replace vanilla leveling or install custom LevelupPlugins without checking first. Leveling overhauls will conflict.\n\nMix in your favorite content mods freely—ships, weapons, hullmods and so forth. Extra content works well in this flagship-centric context, though your balance may shift based on what you add.\n\nTested with vanilla and:\n- Diable Avionics\n- HMI\n- Imperium\n- Tahlan Shipworks\n- Underworld\n- Secrets of the Frontier\n- Emergent Threats\n- Everybody Loves KoC\n- Ruthless Sector\n- Stardust Ventures\n- Various ship/weapon packs\n\n---\n\nNotes\n\nHave fun with this. I'm open to feedback and ideas, although my family will surely appreciate it if I abstain from modding for a while ???",
+  "descriptionHtml": "<b>Strife-Spark Release - Starsector Roguelite Overhaul</b><br><br>Download:<a href=\"https://drive.google.com/file/d/1VebP_deEGet-_UyOQQ0Ccbv0B0csgusC/view?usp=drive_link\" rel=\"nofollow noopener\" target=\"_blank\"> https://drive.google.com/file/d/1VebP_deEGet-_UyOQQ0Ccbv0B0csgusC/view?usp=drive_link</a><br><br><b>WARNING:</b> Do not use on existing saves. Start a new game.<br><br><b>IMPORTANT:</b> Press Page Up from the campaign UI to open the progression interface. Press and hold <b>Left Shift</b> in combat to activate your flagship's engine boost ability.<br><br>---<br><b>What's Changed (1.0.1 to 1.0.2)</b><br><br>Soundfix: Omega-state soundscape tuned — no longer annoying.<br>Defensive fighter boons: Player fighters now have increased HP and deal more damage to missiles and fighters from the start. These values are configurable in balancedata.yaml.<br>---<br><br><b>What's Changed (Beta 2 to Release)</b><br><br><b>Combat Momentum Reworked:</b> Completely streamlined into 6 distinct levels plus 1 ultimate state. Cleaner escalation, sharper feedback, faster pacing.<br><br><b>Flagship Engine Boost:</b> The flagship gains the boost-ability. Hold Left Shift to trigger a massive engine power surge with a charge bar, cooldown, and cost: weapons lock during the boost and rotation speed is reduced. This lets you use any ship design, not just hit-and-run specialists.<br><br><b>Full Config Exposure:</b> Key balance-related values are tunable. Open the YAML file in the mod root and adjust boon values.<br><br><b>Optional SystemScanner:</b> Speeds up exploration of unknown systems on entry. Toggle it on in settings.json. Default: off.<br><br><b>Balance Pass:</b> Extensive playtesting across mod combinations. Your actual balance depends on which mods and ships you're running.<br><br><b>Overview</b><br><br>Strife-Spark strips Starsector combat down to one ship: your flagship. You fight alone. Destroy ships in combat to build momentum and unlock temporary power surges. Earn progression points in the campaign to permanently gain powerful bonusses.<br><br>---<br><br><b>Key Features</b><br><br><b>One Ship, One Battle:</b> Only your flagged ship deploys. You can swap which ship holds the flagship role, but in combat, you're alone. <br><br><b>Momentum Stacking:</b> Each kill in battle builds momentum through 6 escalating levels, each unlocking stronger temporary bonuses—faster movement, harder-hitting weapons, critical strike chances, defensive fields slowing enemy fighters and missiles. Reach level 7 and unlock the ultimate state: OMEGA<br><br><b>Engine Boost:</b> Hold Left Shift in combat to trigger your flagship's engine overdrive. Massive boost with a charge bar and cooldown. Weapons shut down during the boost—use it to reposition, chase, or escape.<br><br><b>Permanent Progression:</b> Campaign Level cap is 40. Earn points through level-ups (vanilla xp) and spend them on 40 persistent boons across 13 distinct categories: EMP resistance, S-mod limits, critical attacks and more. Open the progression dialog with Page Up.<br><br><b>Reduced Logistics Burden:</b> Flagship core reduces fuel and supply costs. Exploration and combat matter. Logistics don't get in the way.<br><br><b>Combat Feedback:</b> Compact in-combat UI shows your momentum tier and progress to the next. Visual and audio cues fire when you stack kills and hit progression milestones.<br><br>---<br><br><b>Balance Notes</b><br><br>Early game is hard. You need to pick fights carefully, isolate weaker targets, and work your way up. Ship selection is critical—finding better flagships is the primary form of progression.<br><br>You'll level faster than vanilla Starsector, especially in the later tiers. All of this is hugely impacted by your active mods and available ships, of course.<br><br>---<br><br><b>Compatibility</b><br><br>Requires Lazylib and MagicLib<br><br>Don't run with mods that replace vanilla leveling or install custom LevelupPlugins without checking first. Leveling overhauls will conflict.<br><br>Mix in your favorite content mods freely—ships, weapons, hullmods and so forth. Extra content works well in this flagship-centric context, though your balance may shift based on what you add.<br><br><b>Tested with vanilla and:</b><br>- Diable Avionics<br>- HMI<br>- Imperium<br>- Tahlan Shipworks<br>- Underworld<br>- Secrets of the Frontier<br>- Emergent Threats<br>- Everybody Loves KoC<br>- Ruthless Sector<br>- Stardust Ventures<br>- Various ship/weapon packs<br><br>---<br><br><b>Notes</b><br><br>Have fun with this. I'm open to feedback and ideas, although my family will surely appreciate it if I abstain from modding for a while ???",
+  "descriptionIsGenerated": false,
+  "descriptionIsForumPost": true,
+  "aiDescription": "Strips combat down to a single flagship ship, where kills build momentum to unlock temporary power surges. Adds a permanent progression system with 40 boons across 13 categories, accessible via a campaign interface. Includes an engine boost ability for the flagship and reduces logistics burdens to focus on exploration and combat.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Do not use on existing saves. Start a new game.",
+      "answer": "no"
+    }
+  },
+  "aiUse": {},
+  "rawCategories": [],
+  "gallery": [],
+  "downloads": [
+    {
+      "url": "https://drive.google.com/file/d/1VebP_deEGet-_UyOQQ0Ccbv0B0csgusC/view?usp=drive_link",
+      "directUrl": "https://drive.google.com/uc?export=download&id=1VebP_deEGet-_UyOQQ0Ccbv0B0csgusC",
+      "fileName": "Strife-Spark_102.zip",
+      "type": "direct",
+      "label": "https://drive.google.com/file/d/1VebP_deEGet-_UyOQQ0Ccbv0B0csgusC/view?usp=drive_link",
+      "host": "Google Drive",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {
+    "1.0.2": "Soundfix: Omega-state soundscape tuned — no longer annoying.\nDefensive fighter boons: Player fighters now have increased HP and deal more damage to missiles and fighters from the start. These values are configurable in balancedata.yaml.",
+    "Beta 2": "Combat Momentum Reworked: Completely streamlined into 6 distinct levels plus 1 ultimate state. Cleaner escalation, sharper feedback, faster pacing.\n\n Flagship Engine Boost: The flagship gains the boost-ability. Hold Left Shift to trigger a massive engine power surge with a charge bar, cooldown, and cost: weapons lock during the boost and rotation speed is reduced. This lets you use any ship design, not just hit-and-run specialists.\n\n Full Config Exposure: Key balance-related values are tunable. Open the YAML file in the mod root and adjust boon values.\n\n Optional SystemScanner: Speeds up exploration of unknown systems on entry. Toggle it on in settings.json. Default: off.\n\n Balance Pass: Extensive playtesting across mod combinations. Your actual balance depends on which mods and ships you're running."
+  },
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34265.0",
+  "releases": [],
+  "threadLastPostOn": "2025-12-12",
+  "sameNameMods": [],
+  "addons": [],
+  "requirements": {
+    "required": [
       {
         "name": "LazyLib",
         "id": "lazylib"
@@ -43,42 +96,11 @@
       }
     ]
   },
-  "description": "Strife-Spark Release - Starsector Roguelite Overhaul\n\nDownload: https://drive.google.com/file/d/1VebP_deEGet-_UyOQQ0Ccbv0B0csgusC/view?usp=drive_link\n\nWARNING: Do not use on existing saves. Start a new game.\n\nIMPORTANT: Press Page Up from the campaign UI to open the progression interface. Press and hold Left Shift in combat to activate your flagship's engine boost ability.\n\n---\nWhat's Changed (1.0.1 to 1.0.2)\n\nSoundfix: Omega-state soundscape tuned — no longer annoying.\nDefensive fighter boons: Player fighters now have increased HP and deal more damage to missiles and fighters from the start. These values are configurable in balancedata.yaml.\n---\n\nWhat's Changed (Beta 2 to Release)\n\nCombat Momentum Reworked: Completely streamlined into 6 distinct levels plus 1 ultimate state. Cleaner escalation, sharper feedback, faster pacing.\n\nFlagship Engine Boost: The flagship gains the boost-ability. Hold Left Shift to trigger a massive engine power surge with a charge bar, cooldown, and cost: weapons lock during the boost and rotation speed is reduced. This lets you use any ship design, not just hit-and-run specialists.\n\nFull Config Exposure: Key balance-related values are tunable. Open the YAML file in the mod root and adjust boon values.\n\nOptional SystemScanner: Speeds up exploration of unknown systems on entry. Toggle it on in settings.json. Default: off.\n\nBalance Pass: Extensive playtesting across mod combinations. Your actual balance depends on which mods and ships you're running.\n\nOverview\n\nStrife-Spark strips Starsector combat down to one ship: your flagship. You fight alone. Destroy ships in combat to build momentum and unlock temporary power surges. Earn progression points in the campaign to permanently gain powerful bonusses.\n\n---\n\nKey Features\n\nOne Ship, One Battle: Only your flagged ship deploys. You can swap which ship holds the flagship role, but in combat, you're alone.\n\nMomentum Stacking: Each kill in battle builds momentum through 6 escalating levels, each unlocking stronger temporary bonuses—faster movement, harder-hitting weapons, critical strike chances, defensive fields slowing enemy fighters and missiles. Reach level 7 and unlock the ultimate state: OMEGA\n\nEngine Boost: Hold Left Shift in combat to trigger your flagship's engine overdrive. Massive boost with a charge bar and cooldown. Weapons shut down during the boost—use it to reposition, chase, or escape.\n\nPermanent Progression: Campaign Level cap is 40. Earn points through level-ups (vanilla xp) and spend them on 40 persistent boons across 13 distinct categories: EMP resistance, S-mod limits, critical attacks and more. Open the progression dialog with Page Up.\n\nReduced Logistics Burden: Flagship core reduces fuel and supply costs. Exploration and combat matter. Logistics don't get in the way.\n\nCombat Feedback: Compact in-combat UI shows your momentum tier and progress to the next. Visual and audio cues fire when you stack kills and hit progression milestones.\n\n---\n\nBalance Notes\n\nEarly game is hard. You need to pick fights carefully, isolate weaker targets, and work your way up. Ship selection is critical—finding better flagships is the primary form of progression.\n\nYou'll level faster than vanilla Starsector, especially in the later tiers. All of this is hugely impacted by your active mods and available ships, of course.\n\n---\n\nCompatibility\n\nRequires Lazylib and MagicLib\n\nDon't run with mods that replace vanilla leveling or install custom LevelupPlugins without checking first. Leveling overhauls will conflict.\n\nMix in your favorite content mods freely—ships, weapons, hullmods and so forth. Extra content works well in this flagship-centric context, though your balance may shift based on what you add.\n\nTested with vanilla and:\n- Diable Avionics\n- HMI\n- Imperium\n- Tahlan Shipworks\n- Underworld\n- Secrets of the Frontier\n- Emergent Threats\n- Everybody Loves KoC\n- Ruthless Sector\n- Stardust Ventures\n- Various ship/weapon packs\n\n---\n\nNotes\n\nHave fun with this. I'm open to feedback and ideas, although my family will surely appreciate it if I abstain from modding for a while ???",
-  "descriptionHtml": "<b>Strife-Spark Release - Starsector Roguelite Overhaul</b><br><br>Download:<a href=\"https://drive.google.com/file/d/1VebP_deEGet-_UyOQQ0Ccbv0B0csgusC/view?usp=drive_link\" rel=\"nofollow noopener\" target=\"_blank\"> https://drive.google.com/file/d/1VebP_deEGet-_UyOQQ0Ccbv0B0csgusC/view?usp=drive_link</a><br><br><b>WARNING:</b> Do not use on existing saves. Start a new game.<br><br><b>IMPORTANT:</b> Press Page Up from the campaign UI to open the progression interface. Press and hold <b>Left Shift</b> in combat to activate your flagship's engine boost ability.<br><br>---<br><b>What's Changed (1.0.1 to 1.0.2)</b><br><br>Soundfix: Omega-state soundscape tuned — no longer annoying.<br>Defensive fighter boons: Player fighters now have increased HP and deal more damage to missiles and fighters from the start. These values are configurable in balancedata.yaml.<br>---<br><br><b>What's Changed (Beta 2 to Release)</b><br><br><b>Combat Momentum Reworked:</b> Completely streamlined into 6 distinct levels plus 1 ultimate state. Cleaner escalation, sharper feedback, faster pacing.<br><br><b>Flagship Engine Boost:</b> The flagship gains the boost-ability. Hold Left Shift to trigger a massive engine power surge with a charge bar, cooldown, and cost: weapons lock during the boost and rotation speed is reduced. This lets you use any ship design, not just hit-and-run specialists.<br><br><b>Full Config Exposure:</b> Key balance-related values are tunable. Open the YAML file in the mod root and adjust boon values.<br><br><b>Optional SystemScanner:</b> Speeds up exploration of unknown systems on entry. Toggle it on in settings.json. Default: off.<br><br><b>Balance Pass:</b> Extensive playtesting across mod combinations. Your actual balance depends on which mods and ships you're running.<br><br><b>Overview</b><br><br>Strife-Spark strips Starsector combat down to one ship: your flagship. You fight alone. Destroy ships in combat to build momentum and unlock temporary power surges. Earn progression points in the campaign to permanently gain powerful bonusses.<br><br>---<br><br><b>Key Features</b><br><br><b>One Ship, One Battle:</b> Only your flagged ship deploys. You can swap which ship holds the flagship role, but in combat, you're alone. <br><br><b>Momentum Stacking:</b> Each kill in battle builds momentum through 6 escalating levels, each unlocking stronger temporary bonuses—faster movement, harder-hitting weapons, critical strike chances, defensive fields slowing enemy fighters and missiles. Reach level 7 and unlock the ultimate state: OMEGA<br><br><b>Engine Boost:</b> Hold Left Shift in combat to trigger your flagship's engine overdrive. Massive boost with a charge bar and cooldown. Weapons shut down during the boost—use it to reposition, chase, or escape.<br><br><b>Permanent Progression:</b> Campaign Level cap is 40. Earn points through level-ups (vanilla xp) and spend them on 40 persistent boons across 13 distinct categories: EMP resistance, S-mod limits, critical attacks and more. Open the progression dialog with Page Up.<br><br><b>Reduced Logistics Burden:</b> Flagship core reduces fuel and supply costs. Exploration and combat matter. Logistics don't get in the way.<br><br><b>Combat Feedback:</b> Compact in-combat UI shows your momentum tier and progress to the next. Visual and audio cues fire when you stack kills and hit progression milestones.<br><br>---<br><br><b>Balance Notes</b><br><br>Early game is hard. You need to pick fights carefully, isolate weaker targets, and work your way up. Ship selection is critical—finding better flagships is the primary form of progression.<br><br>You'll level faster than vanilla Starsector, especially in the later tiers. All of this is hugely impacted by your active mods and available ships, of course.<br><br>---<br><br><b>Compatibility</b><br><br>Requires Lazylib and MagicLib<br><br>Don't run with mods that replace vanilla leveling or install custom LevelupPlugins without checking first. Leveling overhauls will conflict.<br><br>Mix in your favorite content mods freely—ships, weapons, hullmods and so forth. Extra content works well in this flagship-centric context, though your balance may shift based on what you add.<br><br><b>Tested with vanilla and:</b><br>- Diable Avionics<br>- HMI<br>- Imperium<br>- Tahlan Shipworks<br>- Underworld<br>- Secrets of the Frontier<br>- Emergent Threats<br>- Everybody Loves KoC<br>- Ruthless Sector<br>- Stardust Ventures<br>- Various ship/weapon packs<br><br>---<br><br><b>Notes</b><br><br>Have fun with this. I'm open to feedback and ideas, although my family will surely appreciate it if I abstain from modding for a while ???",
-  "descriptionIsGenerated": false,
-  "descriptionIsForumPost": true,
-  "aiDescription": "Limits deployment to one ship, allowing players to build momentum through kills for temporary buffs. Includes an engine boost ability for the flagship and a system for spending points on persistent boons. Reduces logistical costs to focus on exploration and combat.",
-  "saveCompatibilityText": "Do not use on existing saves. Start a new game.",
-  "canAdd": "no",
-  "aiUse": {},
-  "rawCategories": [],
-  "gallery": [],
-  "downloads": [
-    {
-      "url": "https://drive.google.com/file/d/1VebP_deEGet-_UyOQQ0Ccbv0B0csgusC/view?usp=drive_link",
-      "directUrl": "https://drive.google.com/uc?export=download&id=1VebP_deEGet-_UyOQQ0Ccbv0B0csgusC",
-      "fileName": "Strife-Spark_102.zip",
-      "kind": "direct",
-      "label": "https://drive.google.com/file/d/1VebP_deEGet-_UyOQQ0Ccbv0B0csgusC/view?usp=drive_link",
-      "host": "Google Drive",
-      "needsAnotherStep": false
-    }
-  ],
-  "changelog": {
-    "1.0.2": "Soundfix: Omega-state soundscape tuned — no longer annoying.\nDefensive fighter boons: Player fighters now have increased HP and deal more damage to missiles and fighters from the start. These values are configurable in balancedata.yaml.",
-    "Beta 2 to Release": "Combat Momentum Reworked: Completely streamlined into 6 distinct levels plus 1 ultimate state. Cleaner escalation, sharper feedback, faster pacing.\n\n Flagship Engine Boost: The flagship gains the boost-ability. Hold Left Shift to trigger a massive engine power surge with a charge bar, cooldown, and cost: weapons lock during the boost and rotation speed is reduced. This lets you use any ship design, not just hit-and-run specialists.\n\n Full Config Exposure: Key balance-related values are tunable. Open the YAML file in the mod root and adjust boon values.\n\n Optional SystemScanner: Speeds up exploration of unknown systems on entry. Toggle it on in settings.json. Default: off.\n\n Balance Pass: Extensive playtesting across mod combinations. Your actual balance depends on which mods and ships you're running."
-  },
-  "supportLinks": [],
-  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34265.0",
-  "releases": [],
-  "threadLastPostOn": "2025-12-12",
-  "sameNameMods": [],
-  "addons": [],
   "conflicts": [
     {
       "name": "mods that replace vanilla leveling or install custom LevelupPlugins",
       "quote": "Don't run with mods that replace vanilla leveling or install custom LevelupPlugins without checking first. Leveling overhauls will conflict.",
-      "kind": "technical"
+      "type": "technical"
     }
   ]
 }

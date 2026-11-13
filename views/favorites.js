@@ -11,7 +11,7 @@
 
 import {
   clear, currentGameVersion, el, favorites, favoritesHref, go,
-  hashQuery, modList, setFavorites, viewToggle, watchFavorites,
+  hashQuery, modList, requiredModsOf, setFavorites, viewToggle, watchFavorites,
 } from '../lib.js';
 import { modGrid, modRows } from './browse.js';
 
@@ -212,7 +212,7 @@ function everythingItRequires(found, byId, view, currentVersion, mine) {
   // leaves them out, so it never stars every choice.
   const choices = new Set();
   for (const mod of found) {
-    const needs = mod.needs || [];
+    const needs = requiredModsOf(mod);
     for (const needed of needs) {
       if (needed.id && listed.has(needed.id)) continue;
       if (needed.oneOf != null) {

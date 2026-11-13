@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "in-game-log-viewer",
     "name": "In Game Log",
@@ -16,16 +16,16 @@
     "imageUrl": "https://i.imgur.com/37bdtXY.png",
     "summary": "View logs from starsector.log inside the game.",
     "summaryIsGenerated": false,
-    "aiSummary": "Displays game logs on screen and in the console to assist mod developers.",
+    "aiSummary": "Displays starsector.log entries on-screen and in the console with sound effects.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FS-Numan%2FLogViewer%2Fmaster%2Flogviewer.version%22%2C%22id%22%3A%22SN_InGameLog%22%2C%22version%22%3A%221.3.0%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FLazyWizard%2Flazylib%2Freleases%2Fdownload%2F3.0%2FLazyLib.3.0.zip%22%2C%22id%22%3A%22lw_lazylib%22%7D",
-      "kind": "trios",
+      "type": "trios",
       "needsAnotherStep": false
     },
     "plainDownload": {
       "url": "https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 2,
@@ -43,18 +43,20 @@
     "addedOn": "2026-05-02",
     "threadLastPostOn": "2026-11-11",
     "editedOn": "2026-11-11",
-    "needs": [
-      {
-        "name": "LazyLib",
-        "id": "lazylib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
+        }
+      ]
+    }
   },
   "description": "In Game Log\n\nDependencies are automatically downloaded when installing with TriOS\nManual download\nRequires LazyLib\nOlder versions and changelogs\nView logs from starsector.log inside the game.\n\nView logs on the top left of the screen via a scroller text renderer, accompanied by sound effects when they appear.\n\nView logs in the console of the Console Commands mod.\n\nConfigurable.\nIntended to assist mod developers. To see an error log exactly when it happens, in the game.\n\nAI use disclaimer\nClaude was used in code to make two classes in this mod.\n1. ParseLog: The class which reads starsector.log files and converts them back into LoggingEvents to be replayed.\n2. ErrToLog4jStream: The class which converts STDERR into LoggingEvents and logs them.",
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\"><b>In Game Log</b></span><br><br><a href=\"https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FS-Numan%2FLogViewer%2Fmaster%2Flogviewer.version%22%2C%22id%22%3A%22SN_InGameLog%22%2C%22version%22%3A%221.3.0%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FLazyWizard%2Flazylib%2Freleases%2Fdownload%2F3.0%2FLazyLib.3.0.zip%22%2C%22id%22%3A%22lw_lazylib%22%7D\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://trilink.wispborne.com/badges/install-badge-forthebadge.svg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><span class=\"size-small\">Dependencies are automatically downloaded when installing with TriOS</span><br><span class=\"size-small\"><a href=\"https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip\" rel=\"nofollow noopener\" target=\"_blank\"><b>Manual download</b></a></span><br><span class=\"size-small\">Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a> </span><br><span class=\"size-small\"><a href=\"https://github.com/S-Numan/LogViewer\" rel=\"nofollow noopener\" target=\"_blank\">Older versions and changelogs</a></span><br><hr>View logs from starsector.log inside the game.<br><br>View logs on the top left of the screen via a scroller text renderer, accompanied by sound effects when they appear.<br><img src=\"https://i.imgur.com/37bdtXY.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br>View logs in the console of the Console Commands mod.<br><img src=\"https://i.imgur.com/ukKJtS0.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br>Configurable.<br>Intended to assist mod developers. To see an error log exactly when it happens, in the game.<br><br><details class=\"spoiler\"><summary>AI use disclaimer</summary>Claude was used in code to make two classes in this mod.<br>1. ParseLog: The class which reads starsector.log files and converts them back into LoggingEvents to be replayed.<br>2. ErrToLog4jStream: The class which converts STDERR into LoggingEvents and logs them.</details></div>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Shows starsector.log entries via a scroller text renderer with sound effects. It also displays logs in the Console Commands mod's console. The feature is configurable and intended to help developers see error logs immediately as they occur.",
+  "aiDescription": "Shows logs from starsector.log via a scroller text renderer on the top left of the screen. Includes sound effects when new logs appear and integrates with the Console Commands mod. Designed to help mod developers view error logs immediately as they occur.",
   "aiUse": {
     "quote": "Claude was used in code to make two classes in this mod.\n1. ParseLog: The class which reads starsector.log files and converts them back into LoggingEvents to be replayed.\n2. ErrToLog4jStream: The class which converts STDERR into LoggingEvents and logs them.",
     "usesAi": true,
@@ -95,7 +97,7 @@
     {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FS-Numan%2FLogViewer%2Fmaster%2Flogviewer.version%22%2C%22id%22%3A%22SN_InGameLog%22%2C%22version%22%3A%221.3.0%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FLazyWizard%2Flazylib%2Freleases%2Fdownload%2F3.0%2FLazyLib.3.0.zip%22%2C%22id%22%3A%22lw_lazylib%22%7D",
       "directUrl": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FS-Numan%2FLogViewer%2Fmaster%2Flogviewer.version%22%2C%22id%22%3A%22SN_InGameLog%22%2C%22version%22%3A%221.3.0%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FLazyWizard%2Flazylib%2Freleases%2Fdownload%2F3.0%2FLazyLib.3.0.zip%22%2C%22id%22%3A%22lw_lazylib%22%7D",
-      "kind": "trios",
+      "type": "trios",
       "label": "",
       "host": "trilink.wispborne.com",
       "needsAnotherStep": false
@@ -104,7 +106,7 @@
       "url": "https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip",
       "directUrl": "https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip",
       "fileName": "LogViewer.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "Manual download",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -113,7 +115,6 @@
   "changelog": {
     "1.4.0": "- Updated to 0.98.5a\n- Improve STDERR feature\n- Migrate settings userSettings.json\n- Now parses all logs even before onApplicationLoad\n- Minor improvements to how messages render on screen."
   },
-  "changelogUrl": "https://github.com/S-Numan/LogViewer",
   "sourceCodeUrl": "https://github.com/S-Numan/LogViewer",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35325.0",
@@ -130,5 +131,13 @@
   ],
   "threadLastPostOn": "2026-11-11",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      }
+    ]
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "postmodern-carriers",
     "name": "Postmodern Carriers",
@@ -21,15 +21,19 @@
     "gameVersion": "0.98a",
     "modVersion": "1.3.0",
     "imageUrl": "https://cdn.discordapp.com/attachments/1570176810497609889/1570176810820444260/su_mc_ico.png?ex=6af6249c&is=6af4d31c&hm=6eaeacdfae243850a7a3d36db57c23a3050ad9e515093a5f9f2fb511b475be9d&",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355606302151278813/1381767360104366230/demo.png?ex=6af79422&is=6af642a2&hm=8e8e9e5742d4333697a53f7dc9457632c1a881cd07bf66fe1e92b11243aa65cb&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355606302151278813/1381767360104366230/demo.png?ex=6af83ce2&is=6af6eb62&hm=88da264d0f925418a8d9ba1506b7399118dd32c82c3c8f1ffd60c354b5d1df07&",
     "summary": "A semi-continuation of Modern Carriers",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds various carrier hullmods and configurable fighter behavior settings.",
-    "saveCompatible": true,
+    "aiSummary": "Adds numerous hullmods and configurable settings to enhance carrier and fighter performance, including auto-return, formation control, and stat modifications.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://www.dropbox.com/scl/fi/d0xjb4hrlz9pzyofaup4m/Postmodern-Carriers.zip?rlkey=q5yfuias7retb1kk02j8hm574&st=l9qa2gee&dl=1",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -40,30 +44,39 @@
     "addedOn": "2024-11-22",
     "threadLastPostOn": "2026-07-07",
     "editedOn": "2026-05-04",
-    "needs": [
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib",
-        "via": "LunaLib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "LunaLib"
+        }
+      ]
+    }
   },
   "description": "A semi-continuation of Modern Carriers\n\nThe Concord dependency has been removed, and with it certain hullmods that depended on it.\n\nIncluded Hullmods\n- Swarm Carrier Core: More fighter bays at the expense of shorter engagement range and increased crew requirement.\n\n- Ace Carrier Core: Limits the carrier to one significantly buffed fighter wing with an increased OP cost.\n\n- Skirmish Carrier Core: Increased fighter mobility at the cost of weapons' range and missile tracking.\n\n- Command Carrier Core: Increased fighter range and vision range for the carrier, as well as better command point regen when installed on the flagship. Comes with the downside of removing some of the carrier's top speed and converting it into its zero-flux bonus.\n\n- Support Carrier Core: Every fighter gives fleet-wide bonuses based on its class, and allows them to repair their hull and armor while in the vicinity of their carrier.\n\n- Avatar Carrier Core: Fighters copy the skills of their carrier's captain. Certain effects that can't be modified mid-battle will not apply, such as combat readiness and increased ammo.\n\n- Bastion Carrier Core: Drastically reduces the max range of fighters but increases their damage resistance, non-missile weapon range, and missile speed.\n\n- Fighter Command Overclock - Replacement rate isn't decreased by fighter loss, instead it converts into reserve deployment wings. This comes at the cost of reduced PPT and fighter engagement range.\n\n- Manufactory Load Balance: Redistributes replacement rate between fighter bays.\n\n- Gunship Heavy Ordnance: Increased fighters' rate-of-fire and flux dissipation at the cost of movement speed.\n\n- Bomber External Hardpoint: Grants bombers additional (and weaker) bombs at the cost of reduced speed while before discharging the extra ordinance.\n\n- Advanced Fighter Command: Faster replacement as fighters are lost - these accelerated reinforcements will cost additional replacement rate.\n- Fighter Armor Removal: Removes all of the armor from the carrier's fighter in exchange for increased flux and mobility.\n\n- Disposable Fighter Shield Emitter: Fighters will 'discard' their shields if they are overloaded and immediately vent flux. Grants the fighter a shield if it didn't previously have one.\n\n- Targeting Data Link: Increased either carrier or fighter non-missile weapon range, depending on whether the carrier has any weapons' range enhancing hullmods.\n\n- Steady Bombing Protocol: Causes bombers to slow down on their approach to the target, ideally resulting in all bombs being deployed so as to reduce the frequency of additional run-bys in certain situations.\n\n- Conservative Deployment: When falling below a certain replacement threshold, the carrier will automatically regroup all of it's fighters, only re-engaging when the replacement rate recovers to a certain theshold. (Thresholds are definable in the Lunaconfig menu).\n\nConfigurable non-hullmod features\n- Fighter Auto-Return: Allows individual fighters to automatically return to their carrier for repair when they suffer a certain amount of damage.\n\n- Formation Fighters: Applies various tags to all wings to cause them to go on repeated attack runs instead of swarming their target and stick together more cohesively. Results may vary.\n\n- Hardy Fighters: Adds Insulated Engine Assembly to all fighters that don't already have it, and S-Mods it for those that do.\n\n- Carrier Auto-Regroup: A setting that causes carriers to automatically regroup when a certain percentage of their wings are either destroyed or already rebasing with the carrier.\n\n- Faster Fighters: Various settings that allow you to add speed, maneuverability, and range to all fighters.\n\nShips that are meant to behave like fighters, such as those found in Armaa, are accounted for. Their wingmen will not auto-return, the \"strikecraft\" type ship will not auto-regroup, and all relevant settings from Faster Fighters will apply to them as well.\n\nSafe to add to a save, not safe to remove.\n\nRequires LunaLib\nDownload Postmodern Carriers\n\nPostmodern Carriers Lite\nIf the non-hullmod features sound interesting to you, but you find the hullmods to be disruptive or overpowered, I also maintain a version of this mod that removes the hullmods (with the exceptions of Steady Bombing Protocol and Conservative Deployment).\nDownload Postmodern Carriers Lite",
   "descriptionHtml": "A semi-continuation of <a href=\"https://fractalsoftworks.com/forum/index.php?topic=21569.0\" rel=\"nofollow noopener\" target=\"_blank\">Modern Carriers</a><br><br>The Concord dependency has been removed, and with it certain hullmods that depended on it.<br><br><details class=\"spoiler\"><summary>Included Hullmods</summary>- <b>Swarm Carrier Core</b>: More fighter bays at the expense of shorter engagement range and increased crew requirement.<br><br>- <b>Ace Carrier Core</b>: Limits the carrier to one significantly buffed fighter wing with an increased OP cost.<br><br>- <b>Skirmish Carrier Core</b>: Increased fighter mobility at the cost of weapons' range and missile tracking.<br><br>- <b>Command Carrier Core</b>: Increased fighter range and vision range for the carrier, as well as better command point regen when installed on the flagship. Comes with the downside of removing some of the carrier's top speed and converting it into its zero-flux bonus.<br><br>- <b>Support Carrier Core</b>: Every fighter gives fleet-wide bonuses based on its class, and allows them to repair their hull and armor while in the vicinity of their carrier.<br><br>- <b>Avatar Carrier Core</b>: Fighters copy the skills of their carrier's captain. Certain effects that can't be modified mid-battle will not apply, such as combat readiness and increased ammo.<br><br>- <b>Bastion Carrier Core</b>: Drastically reduces the max range of fighters but increases their damage resistance, non-missile weapon range, and missile speed.<br><br><hr><br><br>- <b>Fighter Command Overclock</b> - Replacement rate isn't decreased by fighter loss, instead it converts into reserve deployment wings. This comes at the cost of reduced PPT and fighter engagement range.<br><br>- <b>Manufactory Load Balance</b>: Redistributes replacement rate between fighter bays.<br><br>- <b>Gunship Heavy Ordnance</b>: Increased fighters' rate-of-fire and flux dissipation at the cost of movement speed.<br><br>- <b>Bomber External Hardpoint</b>: Grants bombers additional (and weaker) bombs at the cost of reduced speed while before discharging the extra ordinance.<br><br>- <b>Advanced Fighter Command</b>: Faster replacement as fighters are lost - these accelerated reinforcements will cost additional replacement rate.<br>- <b>Fighter Armor Removal</b>: Removes all of the armor from the carrier's fighter in exchange for increased flux and mobility.<br><br>- <b>Disposable Fighter Shield Emitter</b>: Fighters will 'discard' their shields if they are overloaded and immediately vent flux. Grants the fighter a shield if it didn't previously have one.<br><br>- <b>Targeting Data Link</b>: Increased either carrier or fighter non-missile weapon range, depending on whether the carrier has any weapons' range enhancing hullmods.<br><br><hr><br><br>- <b>Steady Bombing Protocol</b>: Causes bombers to slow down on their approach to the target, ideally resulting in all bombs being deployed so as to reduce the frequency of additional run-bys in certain situations.<br><br>- <b>Conservative Deployment</b>: When falling below a certain replacement threshold, the carrier will automatically regroup all of it's fighters, only re-engaging when the replacement rate recovers to a certain theshold. (Thresholds are definable in the Lunaconfig menu).</details><br><details class=\"spoiler\"><summary>Configurable non-hullmod features</summary>- <b>Fighter Auto-Return</b>: Allows individual fighters to automatically return to their carrier for repair when they suffer a certain amount of damage.<br><br>- <b>Formation Fighters</b>: Applies various tags to all wings to cause them to go on repeated attack runs instead of swarming their target and stick together more cohesively. Results may vary.<br><br>- <b>Hardy Fighters</b>: Adds Insulated Engine Assembly to all fighters that don't already have it, and S-Mods it for those that do.<br><br>- <b>Carrier Auto-Regroup</b>: A setting that causes carriers to automatically regroup when a certain percentage of their wings are either destroyed or already rebasing with the carrier.<br><br>- <b>Faster Fighters</b>: Various settings that allow you to add speed, maneuverability, and range to all fighters.<br><br>Ships that are meant to behave like fighters, such as those found in Armaa, are accounted for. Their wingmen will not auto-return, the \"strikecraft\" type ship will not auto-regroup, and all relevant settings from Faster Fighters will apply to them as well.</details><br>Safe to add to a save, not safe to remove.<br><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a><br><span class=\"size-big\"><a href=\"https://www.dropbox.com/scl/fi/d0xjb4hrlz9pzyofaup4m/Postmodern-Carriers.zip?rlkey=q5yfuias7retb1kk02j8hm574&amp;st=l9qa2gee&amp;dl=1\" rel=\"nofollow noopener\" target=\"_blank\">Download Postmodern Carriers</a></span><br><br><details class=\"spoiler\"><summary>Postmodern Carriers Lite</summary>If the non-hullmod features sound interesting to you, but you find the hullmods to be disruptive or overpowered, I also maintain a version of this mod that removes the hullmods (with the exceptions of Steady Bombing Protocol and Conservative Deployment).<br><a href=\"https://www.dropbox.com/scl/fi/ogf2gy1ozoaz6mb67odd4/Postmodern-Carriers-Lite.zip?rlkey=6zsc9zkhvy2u4f6p1csnribnc&amp;st=b2sktbxi&amp;dl=0\" rel=\"nofollow noopener\" target=\"_blank\">Download Postmodern Carriers Lite</a></details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p>A semi-continuation of Modern Carriers</p><p><a href=\"https://fractalsoftworks.com/forum/index.php?topic=31038.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=31038.0</a></p>",
-  "aiDescription": "Introduces new carrier cores that alter fighter deployment, range, and support capabilities. Includes options for automatic fighter return, formation adjustments, speed modifications, and carrier regrouping logic. The mod allows for detailed customization of fighter engagement and maintenance behaviors through a configuration menu.",
-  "saveCompatibilityText": "Safe to add to a save",
-  "updateCompatibilityText": "Recompiled for 0.98.5a (not compatible with earlier versions)",
-  "removalCompatibilityText": "not safe to remove.",
-  "canAdd": "yes",
-  "canUpdate": "no",
-  "canRemove": "no",
+  "aiDescription": "Adds a suite of hullmods that alter carrier fighter bays, fighter stats, and deployment behavior. Includes configurable features for fighter auto-return, formation cohesion, and speed adjustments. Supports strikecraft and other fighter-like ships with specific handling for auto-return and regrouping.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Safe to add to a save",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "not safe to remove",
+      "answer": "no"
+    },
+    "latestUpdateNote": {
+      "quote": "Recompiled for 0.98.5a (not compatible with earlier versions)",
+      "answer": "no"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Content Expansions",
@@ -72,7 +85,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1355606302151278813/1381767360104366230/demo.png?ex=6af79422&is=6af642a2&hm=8e8e9e5742d4333697a53f7dc9457632c1a881cd07bf66fe1e92b11243aa65cb&",
+      "url": "https://cdn.discordapp.com/attachments/1355606302151278813/1381767360104366230/demo.png?ex=6af83ce2&is=6af6eb62&hm=88da264d0f925418a8d9ba1506b7399118dd32c82c3c8f1ffd60c354b5d1df07&",
       "aiCaption": "A configuration menu showing options for Fighter Behavior, Carrier Behavior, and Faster Fighters.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -84,7 +97,7 @@
       "url": "https://www.dropbox.com/scl/fi/d0xjb4hrlz9pzyofaup4m/Postmodern-Carriers.zip?rlkey=q5yfuias7retb1kk02j8hm574&st=l9qa2gee&dl=1",
       "directUrl": "https://www.dropbox.com/scl/fi/d0xjb4hrlz9pzyofaup4m/Postmodern-Carriers.zip?rlkey=q5yfuias7retb1kk02j8hm574&st=l9qa2gee&dl=1",
       "fileName": "Postmodern-Carriers.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "Download Postmodern Carriers",
       "host": "Dropbox",
       "needsAnotherStep": false
@@ -110,12 +123,25 @@
           "url": "https://www.dropbox.com/scl/fi/ogf2gy1ozoaz6mb67odd4/Postmodern-Carriers-Lite.zip?rlkey=6zsc9zkhvy2u4f6p1csnribnc&st=b2sktbxi&dl=0",
           "directUrl": "https://www.dropbox.com/scl/fi/ogf2gy1ozoaz6mb67odd4/Postmodern-Carriers-Lite.zip?rlkey=6zsc9zkhvy2u4f6p1csnribnc&st=b2sktbxi&dl=1",
           "fileName": "Postmodern-Carriers-Lite.zip",
-          "kind": "direct",
+          "type": "direct",
           "label": "Download Postmodern Carriers Lite",
           "host": "Dropbox",
           "needsAnotherStep": false
         }
       ]
     }
-  ]
+  ],
+  "requirements": {
+    "required": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "LunaLib"
+      }
+    ]
+  }
 }

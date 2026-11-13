@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "political-map",
     "name": "Political Map",
@@ -13,26 +13,35 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "0.2.1",
-    "imageUrl": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/map-screen.png",
+    "imageUrl": "https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/always-has-been.png",
     "summary": "Sector Map Layers (colloquially known as the map mod) is an overlay for the map screen (Tab, Q), the intel screen (E, 1), the minimap in the bottom right corner of the screen (replaces the vanilla radar) if you have Random Assortment of Things installed.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a political map overlay to the sector and intel screens that visualizes faction territory, presence, and claims.",
-    "saveCompatible": true,
+    "aiSummary": "Adds a political map layer to the sector and intel screens that visualizes faction territory, presence, and claims based on game data.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FKlark-Morrigan%2FStarsector-Mod-KMU%2Freleases%2Flatest%2Fdownload%2Fkmu-en.version%22%2C%22id%22%3A%22kmu%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FKlark-Morrigan%2FStarsector-Mod-KMLib%2Freleases%2Flatest%2Fdownload%2Fkmlib-en.version%22%2C%22id%22%3A%22kmlib%22%7D",
-      "kind": "trios",
+      "type": "trios",
       "needsAnotherStep": false
     },
     "plainDownload": {
       "url": "https://github.com/Klark-Morrigan/Starsector-Mod-KMU/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": true
     },
     "downloadCount": 2,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36029.0",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "nicknames": [
+      "Sector Map Layers",
+      "map mod",
+      "KMU"
+    ],
     "usesAi": true,
     "aiUses": [
       {
@@ -47,27 +56,35 @@
     "addedOn": "2026-09-16",
     "threadLastPostOn": "2026-11-11",
     "editedOn": "2026-11-02",
-    "needs": [
-      {
-        "name": "LazyLib",
-        "id": "lazylib"
-      },
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      }
-    ],
+    "requirements": {
+      "required": [
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
+        },
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        }
+      ]
+    },
     "partOfThreadTitle": "[0.98a] Political Map - Sector Map Layers - KMU 0.2.1"
   },
   "description": "Sector Map Layers (colloquially known as the map mod) is an overlay for the map screen (Tab, Q), the intel screen (E, 1), the minimap in the bottom right corner of the screen (replaces the vanilla radar) if you have Random Assortment of Things installed.\n\nExamples\n\nMap screen.\n\nIntel screen.\n\nRandom Assortment of Things minimap.\n\nShort video showcase by Bishop1664.\n\nEverything is calculated and drawn off of game data, and it gets updated as the state of the sector changes. Map layers don't alter any of the data being used to draw it, making map layers read-only by design.",
   "descriptionHtml": "<hr><span class=\"author-colour\" style=\"--c:#800000\"><b>Sector Map Layers</b></span> (colloquially known as the <span class=\"author-colour\" style=\"--c:#800000\"><b>map mod</b></span>) is an overlay for the map screen <b>(Tab, Q)</b>, the intel screen <b>(E, 1)</b>, the minimap in the bottom right corner of the screen (replaces the vanilla radar) if you have <b>Random Assortment of Things</b> installed.<br><br><details class=\"spoiler\"><summary>Examples</summary><div class=\"align-center\"><div class=\"table-scroll\"><table><tbody><tr><td><div class=\"align-center\"><img src=\"https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/map-screen.png\" alt=\"\" height=\"250\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br>Map screen.</div></td><td><div class=\"align-center\"><img src=\"https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/intel-screen.png\" alt=\"\" height=\"250\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br>Intel screen.</div></td><td><div class=\"align-center\"><img src=\"https://raw.githubusercontent.com/Klark-Morrigan/Starsector-Mod-KMU/refs/heads/master/promo/en/random-assortment-of-things-minimap.png\" alt=\"\" height=\"250\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><b>Random Assortment of Things</b> minimap.</div></td></tr></tbody></table></div><br><a href=\"https://www.youtube.com/watch?v=3BoDbbFrMPo\" rel=\"nofollow noopener\" target=\"_blank\">Short video showcase by Bishop1664.</a></div></details><br>Everything is calculated and drawn off of game data, and it gets updated as the state of the sector changes. Map layers don't alter any of the data being used to draw it, making map layers <b>read-only</b> by design.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Displays faction borders and control on the map screen, intel screen, and minimap. It offers views for factions, alliances, and claims, using a custom domination algorithm or vanilla claim mechanics. The mod includes spoiler protection and extensive settings for visuals and behavior.",
-  "saveCompatibilityText": "It's safe to install mid-run",
-  "removalCompatibilityText": "there's a short uninstall procedure you will need to follow if you decide to keep your save after uninstalling the mod.",
-  "canAdd": "yes",
-  "canRemove": "depends",
+  "aiDescription": "Overlays faction territories, presence ribbons, and claim information onto the sector map, intel screen, and minimap. Includes views for Factions, Alliances, and Claims with customizable domination algorithms and spoiler protection.",
+  "saveCompat": {
+    "adding": {
+      "quote": "It's safe to install mid-run",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "there's a short uninstall procedure you will need to follow if you decide to keep your save after uninstalling the mod.",
+      "answer": "depends"
+    }
+  },
   "aiUse": {
     "quote": "this mod has been made with usage of LLMs - for research, brainstorming, code generation, code review, code refactoring, translation. Each step was performed with human oversight and playtesting, with as much human code review as can be reasonably performed for a mod project.",
     "usesAi": true,
@@ -223,14 +240,14 @@
   "downloads": [
     {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FKlark-Morrigan%2FStarsector-Mod-KMU%2Freleases%2Flatest%2Fdownload%2Fkmu-en.version%22%2C%22id%22%3A%22kmu%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FKlark-Morrigan%2FStarsector-Mod-KMLib%2Freleases%2Flatest%2Fdownload%2Fkmlib-en.version%22%2C%22id%22%3A%22kmlib%22%7D",
-      "kind": "trios",
+      "type": "trios",
       "label": "",
       "host": "trilink.wispborne.com",
       "needsAnotherStep": true
     },
     {
       "url": "https://github.com/Klark-Morrigan/Starsector-Mod-KMU/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "label": "",
       "host": "github.com",
       "needsAnotherStep": true
@@ -244,23 +261,17 @@
   "threadLastPostOn": "2026-11-11",
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "Nexerelin",
-      "id": "nexerelin"
-    },
-    {
-      "name": "Fast Rendering",
-      "id": "fast-rendering"
-    },
-    {
-      "name": "Random Assortment of Things",
-      "id": "random-assortment-of-things"
-    },
-    {
-      "name": "Console Commands",
-      "id": "console-commands"
-    }
-  ],
+  "requirements": {
+    "required": [
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      },
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ]
+  },
   "partOfThreadTitle": "[0.98a] Political Map - Sector Map Layers - KMU 0.2.1"
 }

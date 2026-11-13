@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "holy-covenant-of-kemet",
     "name": "Holy Covenant of Kemet 0.0.4f",
@@ -22,27 +22,34 @@
     "summary": "An isolationist, strictly hierarchical polity with a strong emphasis on high tech weaponry and incredibly garish ship designs, this Egyptian-themed faction is slowly emerging onto the wider Persean scene with strong suspicions by the hegemony of rampant AI utilisation.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds an Egyptian-themed faction with high-tech weaponry and distinctive ship designs.",
+    "saveCompat": {
+      "adding": {
+        "answer": "depends"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/holy_covenant_of_kemet_0_0_4f.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
     "discordUrl": "https://discord.com/channels/187635036525166592/1206069792625266758/1206069792625266758",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
-    "addedOn": "2024-02-11",
-    "needs": []
+    "addedOn": "2024-02-11"
   },
   "description": "Introduces a new isolationist faction characterized by strict hierarchy and garish aesthetics. The faction features unique weapons like Ka and Ma'at, along with the Seshat Systems perk which boosts energy projectile range. It includes optional content for Industrial Evolution users.",
   "descriptionHtml": "<p>Introduces a new isolationist faction characterized by strict hierarchy and garish aesthetics. The faction features unique weapons like Ka and Ma'at, along with the Seshat Systems perk which boosts energy projectile range. It includes optional content for Industrial Evolution users.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "discordPostHtml": "<p>An isolationist, strictly hierarchical polity with a strong emphasis on high tech weaponry and incredibly garish ship designs, this Egyptian-themed faction is slowly emerging onto the wider Persean scene with strong suspicions by the hegemony of rampant AI utilisation.</p><pre><code>-Updated for 0.97a\n-Seshat Systems, in addition to giving Ka and Ma'at weapons a 200 range boost, now also gives a 100 unit range boost for all other energy projectile weapons. This should, hopefully, make using non-Kemet weaponry on Kemet ships more attractive.\n-Added some content if Industrial Evolution is also installed.\n-May have tweaked some stats to fix some AI issues.</code></pre><pre><code>Of Dubious Savegame Compatibility</code></pre><p>Download: <a href=\"https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/holy_covenant_of_kemet_0_0_4f.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/holy_covenant_of_kemet_0_0_4f.zip</a></p>",
   "aiDescription": "Introduces a new isolationist faction characterized by strict hierarchy and garish aesthetics. The faction features unique weapons like Ka and Ma'at, along with the Seshat Systems perk which boosts energy projectile range. It includes optional content for Industrial Evolution users.",
-  "saveCompatibilityText": "Of Dubious Savegame Compatibility",
-  "canAdd": "depends",
+  "saveCompat": {
+    "adding": {
+      "quote": "Of Dubious Savegame Compatibility",
+      "answer": "depends"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Weapon/Fighter Pack",
@@ -63,7 +70,7 @@
       "url": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/holy_covenant_of_kemet_0_0_4f.zip",
       "directUrl": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/holy_covenant_of_kemet_0_0_4f.zip",
       "fileName": "holy_covenant_of_kemet_0_0_4f.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "https://bitbucket.org/King_Alfonzo/i-will-make-sindria-great-again/downloads/holy_covenant_of_kemet_0_0_4f.zip",
       "host": "Bitbucket",
       "needsAnotherStep": false
@@ -76,10 +83,12 @@
   "releases": [],
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "Industrial.Evolution",
-      "id": "industrial-evolution"
-    }
-  ]
+  "requirements": {
+    "optional": [
+      {
+        "name": "Industrial.Evolution",
+        "id": "industrial-evolution"
+      }
+    ]
+  }
 }

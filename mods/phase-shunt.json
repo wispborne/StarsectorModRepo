@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "phase-shunt",
     "name": "Phase Shunt",
@@ -16,11 +16,11 @@
     "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_21710_1793055411.png",
     "summary": "Adds phase shunt hullmod that works just like the shield shunt one except for phase ships. There is a settings file to modify the values. You can set it to a percentage or flat bonus for it and the bonus when S-modded.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a hullmod for phase ships that provides armor or deployment benefits similar to the shield shunt.",
+    "aiSummary": "Adds a phase shunt hullmod for phase ships, with configurable percentage or flat bonuses for the effect and its S-modded state.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://gitlab.com/starsector/phase_shunt/-/archive/0.0.2/phase_shunt-0.0.2.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 2,
@@ -30,19 +30,19 @@
     "lastReleaseDate": "2026-10-08T00:00:00.000Z",
     "addedOn": "2026-10-02",
     "threadLastPostOn": "2026-10-07",
-    "editedOn": "2026-10-26",
-    "needs": []
+    "editedOn": "2026-10-26"
   },
   "description": "Adds phase shunt hullmod that works just like the shield shunt one except for phase ships. There is a settings file to modify the values.\nYou can set it to a percentage or flat bonus for it and the bonus when S-modded.\n\nIncompatible with AI tweaks. Hopefully this will be fixed soon\n\nDownload:\nThere are currently two good versions. Pick which one you like. They have the same hullmod ID so you can swap them.\n0.0.2:\nEffect: increased armor\nS-mod effect: increased armor\nhttps://gitlab.com/starsector/phase_shunt/-/archive/0.0.2/phase_shunt-0.0.2.zip\n\n0.0.3:\nEffect: increased armor\nS-mod effect: reduced CR to deploy\nhttps://gitlab.com/starsector/phase_shunt/-/archive/0.0.3/phase_shunt-0.0.3.zip\n\nIt should be unavailable to NPCs, so if is not installed on any ships you should be able to disable the mod.",
   "descriptionHtml": "Adds phase shunt hullmod that works just like the shield shunt one except for phase ships. There is a settings file to modify the values.<br>You can set it to a percentage or flat bonus for it and the bonus when S-modded.<br><br>Incompatible with AI tweaks. Hopefully this will be fixed soon<br><br>Download:<br>There are currently two good versions. Pick which one you like. They have the same hullmod ID so you can swap them.<br>0.0.2: <br>Effect: increased armor <br>S-mod effect: increased armor<br><a href=\"https://gitlab.com/starsector/phase_shunt/-/archive/0.0.2/phase_shunt-0.0.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://gitlab.com/starsector/phase_shunt/-/archive/0.0.2/phase_shunt-0.0.2.zip<br></a><br>0.0.3:<br>Effect: increased armor<br>S-mod effect: reduced CR to deploy<br><a href=\"https://gitlab.com/starsector/phase_shunt/-/archive/0.0.3/phase_shunt-0.0.3.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://gitlab.com/starsector/phase_shunt/-/archive/0.0.3/phase_shunt-0.0.3.zip<br></a><br>It should be unavailable to NPCs, so if is not installed on any ships you should be able to disable the mod.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Provides a hullmod specifically for phase ships, offering effects like increased armor or reduced CR to deploy. Users can customize values via a settings file, choosing between percentage or flat bonuses for both standard and S-modded states.",
-  "saveCompatibilityText": "It should be unavailable to NPCs, so if is not installed on any ships you should be able to disable the mod.",
-  "updateCompatibilityText": "The original S-mod effect was removed for a new one in the new version.",
-  "removalCompatibilityText": "It should be unavailable to NPCs, so if is not installed on any ships you should be able to disable the mod.",
-  "canUpdate": "no",
-  "canRemove": "depends",
+  "aiDescription": "Adds a phase shunt hullmod that functions similarly to the shield shunt but is designed for phase ships. Includes a settings file to modify values, allowing the bonus to be set as a percentage or flat amount for both the base effect and the S-modded effect.",
+  "saveCompat": {
+    "removing": {
+      "quote": "if is not installed on any ships you should be able to disable the mod",
+      "answer": "depends"
+    }
+  },
   "aiUse": {},
   "rawCategories": [],
   "gallery": [],
@@ -51,7 +51,7 @@
       "url": "https://gitlab.com/starsector/phase_shunt/-/archive/0.0.2/phase_shunt-0.0.2.zip",
       "directUrl": "https://gitlab.com/starsector/phase_shunt/-/archive/0.0.2/phase_shunt-0.0.2.zip",
       "fileName": "phase_shunt-0.0.2.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "https://gitlab.com/starsector/phase_shunt/-/archive/0.0.2/phase_shunt-0.0.2.zip",
       "host": "gitlab.com",
       "needsAnotherStep": false
@@ -60,16 +60,13 @@
       "url": "https://gitlab.com/starsector/phase_shunt/-/archive/0.0.3/phase_shunt-0.0.3.zip",
       "directUrl": "https://gitlab.com/starsector/phase_shunt/-/archive/0.0.3/phase_shunt-0.0.3.zip",
       "fileName": "phase_shunt-0.0.3.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "https://gitlab.com/starsector/phase_shunt/-/archive/0.0.3/phase_shunt-0.0.3.zip",
       "host": "gitlab.com",
       "needsAnotherStep": false
     }
   ],
-  "changelog": {
-    "0.0.3": "updated to 0.0.3. The original S-mod effect was removed for a new one in the new version.",
-    "0.0.2": "Effect: increased armor S-mod effect: increased armor"
-  },
+  "changelog": {},
   "sourceCodeUrl": "https://gitlab.com/starsector/phase_shunt",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36108.0",
@@ -81,9 +78,7 @@
       "oldVersion": "0.0.2",
       "newVersion": "0.0.3",
       "gameVersion": "0.98a",
-      "changelogNotes": "updated to 0.0.3. The original S-mod effect was removed for a new one in the new version. 0.0.2 is still good though so I am keeping the link up here",
-      "updateCompatibilityText": "The original S-mod effect was removed for a new one in the new version.",
-      "canUpdate": "no"
+      "changelogNotes": "updated to 0.0.3. The original S-mod effect was removed for a new one in the new version. 0.0.2 is still good though so I am keeping the link up here"
     }
   ],
   "threadLastPostOn": "2026-10-07",
@@ -94,7 +89,7 @@
       "name": "AI Tweaks",
       "id": "ai-tweaks",
       "quote": "Incompatible with AI tweaks. Hopefully this will be fixed soon",
-      "kind": "technical"
+      "type": "technical"
     }
   ]
 }

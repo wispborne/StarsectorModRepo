@@ -120,7 +120,7 @@ export function isIncompatible(kind) {
 /// The other mod uses the warning colour when incompatible.
 /// Otherwise, it uses the link colour.
 export function conflictChip(conflict) {
-  const kind = `chip needed conflict${isIncompatible(conflict.kind) ? '' : ' calm'}`;
+  const kind = `chip needed conflict${isIncompatible(conflict.type) ? '' : ' calm'}`;
   return conflict.id
     ? el('a', { class: kind, href: modHref(conflict.id), text: conflict.name })
     : el('span', {
@@ -136,13 +136,13 @@ export function conflictChip(conflict) {
 /// kinds the hover also starts with the kind's full name.
 /// A conflict with no kind shows only the name.
 export function conflictPill(conflict) {
-  const known = CONFLICT_KINDS[conflict.kind];
+  const known = CONFLICT_KINDS[conflict.type];
   const kind = known
     ? quickTip(el('span', { class: 'conflict-kind', text: known[3] }),
       known[2] ? `${known[0]}. ${known[1]}` : known[1])
     : null;
   return el('span', {
-    class: `conflict-pill${isIncompatible(conflict.kind) ? '' : ' calm'}`,
+    class: `conflict-pill${isIncompatible(conflict.type) ? '' : ' calm'}`,
   }, [conflictChip(conflict), kind]);
 }
 
@@ -1710,7 +1710,7 @@ export function favoritesHref(ids) {
 /// file, and a link to somebody's download page. A mod with no download at all
 /// is answered by [downloadButton], which offers the mod's own page instead.
 function downloadLabel(best) {
-  if (best.kind === 'trios') return 'Install with TriOS';
+  if (best.type === 'trios') return 'Install with TriOS';
   return best.needsAnotherStep ? 'Download page' : 'Download';
 }
 
@@ -1966,7 +1966,7 @@ function downloadIconButton(mod, best) {
   }, [
     el('span', {
       class: 'original-page-icon',
-      html: best.kind === 'trios' ? TRIOS_ICON_SMALL : DOWNLOAD_ICON,
+      html: best.type === 'trios' ? TRIOS_ICON_SMALL : DOWNLOAD_ICON,
       'aria-hidden': 'true',
     }),
   ]);
@@ -1985,7 +1985,7 @@ function wideButton(mod, best, originalPage, big) {
   // opens the forum thread or Discord post, so it carries that site's icon
   // like the mod page's button does.
   const triosIcon = big ? TRIOS_ICON : TRIOS_ICON_SMALL;
-  const icon = best ? (best.kind === 'trios' ? triosIcon : null) : originalPage.icon;
+  const icon = best ? (best.type === 'trios' ? triosIcon : null) : originalPage.icon;
   const button = el('a', {
     class: `btn btn-primary download-btn${big ? ' btn-big' : ''}${icon ? ' btn-with-icon' : ''}`,
     href,
@@ -2061,6 +2061,16 @@ export function neededModKey(name) {
   return String(name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 }
 
+/// The mods [mod] will not run without: `requirements.required`, or none.
+export const requiredModsOf = (mod) => mod?.requirements?.required || [];
+
+/// The optional mods on a mod's own page: `requirements.optional`, or none.
+export const optionalModsOf = (detail) => detail?.requirements?.optional || [];
+
+/// True when the entry is a program run beside the game. A missing `types`
+/// means a plain mod.
+export const isTool = (mod) => (mod?.types || []).includes('tool');
+
 /// Count how many mods need each mod, highest count first.
 /// Use the most common spelling of each name.
 /// Keep the id if any entry links to the mod's page.
@@ -2068,7 +2078,7 @@ export function requiredModCounts(mods) {
   const groups = new Map();
   for (const mod of mods || []) {
     const counted = new Set();
-    for (const need of mod.needs || []) {
+    for (const need of requiredModsOf(mod)) {
       const key = neededModKey(need.name);
       if (!key || counted.has(key)) continue;
       counted.add(key);

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "adjustable-s-mods",
     "name": "Adjustable S-Mods 1.1.2",
@@ -24,7 +24,7 @@
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/AudaxLudos/adjustable-s-mods/releases/download/1.1.2/AdjustableSMods-1.1.2.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -33,28 +33,35 @@
     "isWorkInProgress": false,
     "addedOn": "2024-06-26",
     "editedOn": "2024-06-26",
-    "needs": [
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib",
-        "via": "LunaLib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "LunaLib"
+        }
+      ]
+    }
   },
   "description": "Provides options to uninstall specific S-Mods from a vessel. It also lets players raise the cap on how many S-Mods can be equipped at once.",
   "descriptionHtml": "<p>Provides options to uninstall specific S-Mods from a vessel. It also lets players raise the cap on how many S-Mods can be equipped at once.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "discordPostHtml": "<p>A mod for Starsector that allows the player to remove s-mods or to increase the max s-mod limit of a ship.</p><p><strong>Requirements:</strong></p><ul><li>Lunalib</li></ul><p><strong>Compatibility:</strong></p><ul><li>Should be compatible with most mods</li><li>Not safe to remove from an ongoing campaign</li><li>Not save compatible with versions below 1.0.0</li></ul><p>For mod changes check out the changelog link.</p><p><strong>Download:</strong> <a href=\"https://github.com/AudaxLudos/adjustable-s-mods/releases/download/1.1.2/AdjustableSMods-1.1.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/AudaxLudos/adjustable-s-mods/releases/download/1.1.2/AdjustableSMods-1.1.2.zip</a><br><strong>Changelog:</strong> <a href=\"https://raw.githubusercontent.com/AudaxLudos/adjustable-s-mods/main/CHANGELOG.txt\" rel=\"nofollow noopener\" target=\"_blank\">https://raw.githubusercontent.com/AudaxLudos/adjustable-s-mods/main/CHANGELOG.txt</a><br><strong>Old Versions:</strong> <a href=\"https://github.com/AudaxLudos/adjustable-s-mods/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/AudaxLudos/adjustable-s-mods/releases</a></p>",
   "aiDescription": "Provides options to uninstall specific S-Mods from a vessel. It also lets players raise the cap on how many S-Mods can be equipped at once.",
-  "updateCompatibilityText": "Not save compatible with versions below 1.0.0",
-  "removalCompatibilityText": "Not safe to remove from an ongoing campaign",
-  "canUpdate": "depends",
-  "canRemove": "no",
+  "saveCompat": {
+    "removing": {
+      "quote": "Not safe to remove from an ongoing campaign",
+      "answer": "no"
+    },
+    "latestUpdateNote": {
+      "quote": "Not save compatible with versions below 1.0.0",
+      "answer": "depends"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Other/Misc."
@@ -73,7 +80,7 @@
       "url": "https://github.com/AudaxLudos/adjustable-s-mods/releases/download/1.1.2/AdjustableSMods-1.1.2.zip",
       "directUrl": "https://github.com/AudaxLudos/adjustable-s-mods/releases/download/1.1.2/AdjustableSMods-1.1.2.zip",
       "fileName": "AdjustableSMods-1.1.2.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "https://github.com/AudaxLudos/adjustable-s-mods/releases/download/1.1.2/AdjustableSMods-1.1.2.zip",
       "host": "GitHub",
       "needsAnotherStep": false
@@ -86,5 +93,18 @@
   "discordUrl": "https://discord.com/channels/187635036525166592/1255421874075336824/1255421874075336824",
   "releases": [],
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "LunaLib"
+      }
+    ]
+  }
 }

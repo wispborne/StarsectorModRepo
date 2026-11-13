@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "trueweaponstats",
     "name": "(KTZ) TrueWeaponStats v1.2",
@@ -22,7 +22,7 @@
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/keltuze/TrueWeaponStats",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": true
     },
     "downloadCount": 1,
@@ -33,14 +33,12 @@
       "TWS"
     ],
     "addedOn": "2026-11-11",
-    "editedOn": "2026-11-11",
-    "needs": []
+    "editedOn": "2026-11-11"
   },
   "description": "Shows live combat statistics for mounted weapons, including built-ins and unique hulls. It uses runtime bytecode inspection to support multiple languages without configuration. Holding ALT toggles between modified stats and clean vanilla aesthetics.",
   "descriptionHtml": "<p>Shows live combat statistics for mounted weapons, including built-ins and unique hulls. It uses runtime bytecode inspection to support multiple languages without configuration. Holding ALT toggles between modified stats and clean vanilla aesthetics.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "discordPostHtml": "<h5>🚀 TrueWeaponStats (v1.0.0) for Starsector 0.98a (I had to delete the old post to make the home page look nice. Sorry!)</h5><p>Hey everyone! 👋</p><p>Many will remember <strong>Unthemed Weapons Utilities</strong> by <strong>qcwxezda</strong> — a great QoL mod that showed calculated weapon stats in Refit. With 0.98a engine changes breaking the original, I modernized and resolved its edge cases under <strong>CC BY-NC-SA 4.0</strong> as an enhanced continuation: <strong>True Weapon Stats</strong>.</p><p>---</p><h5>🛠 What’s New &amp; Improved:</h5><ul><li><strong>Starsector 0.98a Compatible:</strong>  </li></ul><p>Re-architected UI discovery for 0.98a. Hooks seamlessly from the Fleet screen (<code>[F]</code>), docked at stations, and in planetary menus.</p><ul><li><strong>Live Weapon Resolution (Built-ins &amp; Unique Hulls):</strong>  </li></ul><p>Queries the actual mounted weapon on the ship instead of isolated mock objects. Fully accounts for built-in superweapons, phase hulls, and slot-specific perks (<em>Ballistic Rangefinder</em>).</p><ul><li><strong>Clean [ALT] Toggle (Vanilla Aesthetics):</strong>  </li></ul><p>Clean, color-coded combat stats in tooltips. Simply <strong>hold [ALT]</strong> at any time to instantly view factory vanilla stats without UI clutter.</p><ul><li><strong>Zero-Config Multilingual Discovery:</strong>  </li></ul><p>Uses runtime JVM bytecode inspection (<code>CargoTooltipFactory.class</code>) to discover localized UI tokens. Works out-of-the-box across all translations (EN, CN, RU, etc.).</p><ul><li><strong>Refined Combat Math &amp; Safety:</strong>  </li></ul><p>Recalculates flux efficiency (Flux/Damage) against damage buffs, evaluates modifiers multiplicatively matching native engine rules, and guards against zero-division (<code>NaN</code>) crashes.</p><p><a href=\"https://github.com/keltuze/TrueWeaponStats\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/keltuze/TrueWeaponStats</a><br>---</p><h5>📜 Credits &amp; License</h5><ul><li><strong>qcwxezda</strong> — for the original concept, reflection hooks, and foundational calculation logic in <em>Unthemed Weapons Utilities</em>.</li><li>Released under <strong>CC BY-NC-SA 4.0</strong>.</li></ul><p>The creator of the original idea can take whatever they want from this mod to improve their own mod!</p>",
   "aiDescription": "Shows live combat statistics for mounted weapons, including built-ins and unique hulls. It uses runtime bytecode inspection to support multiple languages without configuration. Holding ALT toggles between modified stats and clean vanilla aesthetics.",
   "aiUse": {},
   "rawCategories": [
@@ -50,7 +48,7 @@
   "downloads": [
     {
       "url": "https://github.com/keltuze/TrueWeaponStats",
-      "kind": "direct",
+      "type": "direct",
       "label": "",
       "host": "GitHub",
       "needsAnotherStep": true

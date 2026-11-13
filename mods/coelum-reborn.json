@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "coelum-reborn",
     "name": "Coelum Reborn",
@@ -13,13 +13,13 @@
     ],
     "gameVersion": "0.98",
     "modVersion": "1.0",
-    "summary": "This mod adds Coelum back. Can be found in [COMSEC REDACTED] Systems.",
-    "summaryIsGenerated": false,
-    "aiSummary": "Adds the Coelum faction back into the game.",
+    "summary": "Adds the Coelum faction back into the game, available in specific systems.",
+    "summaryIsGenerated": true,
+    "aiSummary": "Adds the Coelum faction back into the game, available in specific systems.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/eddy0529/Coelum-Returns",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": true
     },
     "downloadCount": 1,
@@ -29,7 +29,51 @@
     "addedOn": "2026-07-08",
     "threadLastPostOn": "2026-07-09",
     "editedOn": "2026-07-09",
-    "needs": [
+    "requirements": {
+      "required": [
+        {
+          "name": "Hazard Mining Incorporated",
+          "id": "hazard-mining-incorporated"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "Hazard Mining Incorporated"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib",
+          "via": "Hazard Mining Incorporated"
+        }
+      ]
+    }
+  },
+  "description": "This mod adds Coelum back. Can be found in [COMSEC REDACTED] Systems.\n\nDownload\n\nDependencies: HMI\n\nCredits\nKing Alfonzo- Necessary Files",
+  "descriptionHtml": "<div class=\"align-center\">This mod adds Coelum back. Can be found in [COMSEC REDACTED] Systems.</div><br><div class=\"align-center\"><a href=\"https://github.com/eddy0529/Coelum-Returns\" rel=\"nofollow noopener\" target=\"_blank\">Download</a></div><br><div class=\"align-center\"><span class=\"size-big\"><span class=\"author-colour\" style=\"--c:#ff0000\">Dependencies:</span> </span> HMI<br><br><b>Credits</b><br>King Alfonzo- Necessary Files</div>",
+  "descriptionIsGenerated": false,
+  "descriptionIsForumPost": true,
+  "aiUse": {},
+  "rawCategories": [],
+  "gallery": [],
+  "downloads": [
+    {
+      "url": "https://github.com/eddy0529/Coelum-Returns",
+      "type": "direct",
+      "label": "Download",
+      "host": "github.com",
+      "needsAnotherStep": true
+    }
+  ],
+  "changelog": {},
+  "sourceCodeUrl": "https://github.com/eddy0529/Coelum-Returns",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35700.0",
+  "releases": [],
+  "threadLastPostOn": "2026-07-09",
+  "sameNameMods": [],
+  "addons": [],
+  "requirements": {
+    "required": [
       {
         "name": "Hazard Mining Incorporated",
         "id": "hazard-mining-incorporated"
@@ -45,30 +89,5 @@
         "via": "Hazard Mining Incorporated"
       }
     ]
-  },
-  "description": "This mod adds Coelum back. Can be found in [COMSEC REDACTED] Systems.\n\nDownload\n\nDependencies: HMI\n\nCredits\nKing Alfonzo- Necessary Files",
-  "descriptionHtml": "<div class=\"align-center\">This mod adds Coelum back. Can be found in [COMSEC REDACTED] Systems.</div><br><div class=\"align-center\"><a href=\"https://github.com/eddy0529/Coelum-Returns\" rel=\"nofollow noopener\" target=\"_blank\">Download</a></div><br><div class=\"align-center\"><span class=\"size-big\"><span class=\"author-colour\" style=\"--c:#ff0000\">Dependencies:</span> </span> HMI<br><br><b>Credits</b><br>King Alfonzo- Necessary Files</div>",
-  "descriptionIsGenerated": false,
-  "descriptionIsForumPost": true,
-  "aiDescription": "Restores the Coelum faction to the game. The faction can be found in specific systems marked as redacted.",
-  "aiUse": {},
-  "rawCategories": [],
-  "gallery": [],
-  "downloads": [
-    {
-      "url": "https://github.com/eddy0529/Coelum-Returns",
-      "kind": "direct",
-      "label": "Download",
-      "host": "github.com",
-      "needsAnotherStep": true
-    }
-  ],
-  "changelog": {},
-  "sourceCodeUrl": "https://github.com/eddy0529/Coelum-Returns",
-  "supportLinks": [],
-  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35700.0",
-  "releases": [],
-  "threadLastPostOn": "2026-07-09",
-  "sameNameMods": [],
-  "addons": []
+  }
 }

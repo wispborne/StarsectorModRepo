@@ -24,7 +24,7 @@
         "hasDirectDownload": true,
         "bestDownload": {
           "url": "http://avatar.home.xs4all.nl/downloads/Starsector/Bushi_062a_v111.rar",
-          "kind": "direct",
+          "type": "direct",
           "needsAnotherStep": false
         },
         "downloadCount": 1,
@@ -34,12 +34,14 @@
         "addedOn": "2013-07-15",
         "threadLastPostOn": "2023-03-10",
         "editedOn": "2021-05-07",
-        "needs": [
-          {
-            "name": "LazyLib",
-            "id": "lazylib"
-          }
-        ]
+        "requirements": {
+          "required": [
+            {
+              "name": "LazyLib",
+              "id": "lazylib"
+            }
+          ]
+        }
       },
       {
         "id": "hiigaran-descendants",
@@ -64,7 +66,7 @@
         "hasDirectDownload": true,
         "bestDownload": {
           "url": "https://www.dropbox.com/s/y8cp988gyxk1rfk/Hiigaran%20Descendants2.1.zip?dl=1",
-          "kind": "direct",
+          "type": "direct",
           "needsAnotherStep": false
         },
         "downloadCount": 4,
@@ -74,16 +76,18 @@
         "addedOn": "2013-06-26",
         "threadLastPostOn": "2025-10-26",
         "editedOn": "2022-08-03",
-        "needs": [
-          {
-            "name": "MagicLib",
-            "id": "magiclib"
-          },
-          {
-            "name": "LazyLib",
-            "id": "lazylib"
-          }
-        ]
+        "requirements": {
+          "required": [
+            {
+              "name": "MagicLib",
+              "id": "magiclib"
+            },
+            {
+              "name": "LazyLib",
+              "id": "lazylib"
+            }
+          ]
+        }
       }
     ]
   }

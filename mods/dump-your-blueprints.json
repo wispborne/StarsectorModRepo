@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "dump-your-blueprints",
     "name": "Dump Your Blueprints",
@@ -18,30 +18,38 @@
     "summary": "REEEEEEE, I HATE GREMLINS!",
     "summaryIsGenerated": false,
     "aiSummary": "Lets you remove unwanted ship blueprints from your knowledge.",
-    "saveCompatible": true,
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/AlbertHiisky/DumpYourBlueprints/releases/latest/download/DumpYourBlueprints.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
     "discordUrl": "https://discord.com/channels/187635036525166592/1448560188792770570/1448560188792770570",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
-    "addedOn": "2025-12-11",
-    "needs": []
+    "addedOn": "2025-12-11"
   },
   "description": "Adds an ability to discard specific ship blueprints that you have learned but no longer want. This allows players to clean up their blueprint list by removing entries they regret acquiring.",
   "descriptionHtml": "<p>Adds an ability to discard specific ship blueprints that you have learned but no longer want. This allows players to clean up their blueprint list by removing entries they regret acquiring.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "discordPostHtml": "<p><a href=\"https://github.com/AlbertHiisky/DumpYourBlueprints/releases/latest/download/DumpYourBlueprints.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/AlbertHiisky/DumpYourBlueprints/releases/latest/download/DumpYourBlueprints.zip</a></p><p>REEEEEEE, I HATE GREMLINS!</p><p>Okay, feelings aside, there are many situations when you think to yourself: \"Damn, I wish I didn't learn that Hound(69) blueprint, I wish I could get rid of it\". Now you can.</p>",
   "aiDescription": "Adds an ability to discard specific ship blueprints that you have learned but no longer want. This allows players to clean up their blueprint list by removing entries they regret acquiring.",
-  "saveCompatibilityText": "Use command\n runcode Global.getSector().getCharacterData().addAbility(\"dumpblueprintdatabase\")\n to add the ability into existing save",
-  "updateCompatibilityText": "Absolutely 0 functional changes since 0.97, except ability now autoadded on existing savefiles (probably).",
-  "canAdd": "yes",
-  "canUpdate": "yes",
+  "saveCompat": {
+    "adding": {
+      "quote": "Use command\n runcode Global.getSector().getCharacterData().addAbility(\"dumpblueprintdatabase\")\n to add the ability into existing save",
+      "answer": "yes"
+    },
+    "latestUpdateNote": {
+      "quote": "Absolutely 0 functional changes since 0.97, except ability now autoadded on existing savefiles (probably).",
+      "answer": "yes"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Utility mods",
@@ -53,7 +61,7 @@
       "url": "https://github.com/AlbertHiisky/DumpYourBlueprints/releases/latest/download/DumpYourBlueprints.zip",
       "directUrl": "https://github.com/AlbertHiisky/DumpYourBlueprints/releases/latest/download/DumpYourBlueprints.zip",
       "fileName": "DumpYourBlueprints.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "https://github.com/AlbertHiisky/DumpYourBlueprints/releases/latest/download/DumpYourBlueprints.zip",
       "host": "GitHub",
       "needsAnotherStep": false

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "landlordsector",
     "name": "Landlordsector",
@@ -14,34 +14,54 @@
     "imageUrl": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-landlordsector/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
     "summary": "Buy homes on the worlds you visit, from shacks to estates, and rent them out. Rent comes in every month. Keep them in repair, set the rent, sell when the price is right. Needs OddiszCommons.",
     "summaryIsGenerated": false,
-    "aiSummary": "Lets you buy and rent out properties on visited worlds for monthly income.",
+    "aiSummary": "Adds a real estate system where players can buy, rent out, maintain, and sell homes on visited worlds.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": true
     },
     "downloadCount": 1,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36175.0",
-    "sourceIsPublic": false,
+    "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "other",
+        "how": "generated",
+        "extent": "all"
+      }
+    ],
     "addedOn": "2026-10-20",
     "threadLastPostOn": "2026-10-20",
     "editedOn": "2026-11-11",
-    "needs": [
-      {
-        "name": "Library - OddiszCommons",
-        "id": "library-oddiszcommons"
-      }
-    ],
+    "requirements": {
+      "required": [
+        {
+          "name": "Library - OddiszCommons",
+          "id": "library-oddiszcommons"
+        }
+      ]
+    },
     "partOfThreadTitle": "Oddish's Mods"
   },
   "description": "Buy homes on the worlds you visit, from shacks to estates, and rent\nthem out. Rent comes in every month. Keep them in repair, set the\nrent, sell when the price is right. Needs OddiszCommons.",
   "descriptionHtml": "Buy homes on the worlds you visit, from shacks to estates, and rent<br>them out. Rent comes in every month. Keep them in repair, set the<br>rent, sell when the price is right. Needs OddiszCommons.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Allows purchasing various types of homes, from shacks to estates, on planets you visit. You can set rents, maintain repairs, and sell properties when prices are favorable. Rent payments are collected every month.",
-  "aiUse": {},
+  "aiDescription": "Allows players to purchase residential properties on visited worlds, ranging from shacks to estates. Properties generate monthly rent income, require maintenance, and can be sold when market conditions are favorable.",
+  "aiUse": {
+    "quote": "I ONLY make mods using AI. I am way too tired to learn starsector modding after my day job. I make mods for myself, and post them here if people want to grab them.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "other",
+        "how": "generated",
+        "extent": "all"
+      }
+    ]
+  },
   "rawCategories": [],
   "gallery": [
     {
@@ -322,33 +342,27 @@
   "downloads": [
     {
       "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "label": "Landlordsector",
       "host": "github.com",
       "needsAnotherStep": true
     }
   ],
   "changelog": {},
+  "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-landlordsector",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36175.0",
   "releases": [],
   "threadLastPostOn": "2026-10-20",
   "sameNameMods": [],
-  "addons": [
-    {
-      "name": "Toolbox Economy Curves",
-      "role": "addon",
-      "requires": "AoTD - Theory of Toolbox",
-      "downloads": [
-        {
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=36178",
-          "kind": "direct",
-          "label": "Toolbox Economy Curves",
-          "host": "fractalsoftworks.com",
-          "needsAnotherStep": true
-        }
-      ]
-    }
-  ],
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "Library - OddiszCommons",
+        "id": "library-oddiszcommons"
+      }
+    ]
+  },
   "partOfThreadTitle": "Oddish's Mods"
 }

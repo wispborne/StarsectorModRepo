@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "mayasuran-fighter-expansion",
     "name": "Mayasuran Fighter Expansion",
@@ -22,7 +22,7 @@
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://drive.google.com/uc?export=download&id=1ns_LeWQup1Jz6fmuLLsS0yPu5qSSOhav",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -35,26 +35,28 @@
     "addedOn": "2022-06-23",
     "threadLastPostOn": "2023-08-09",
     "editedOn": "2024-09-26",
-    "needs": [
-      {
-        "name": "Mayasuran Navy",
-        "id": "mayasuran-navy"
-      },
-      {
-        "name": "Arma Armatura",
-        "id": "arma-armatura"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib",
-        "via": "Mayasuran Navy"
-      },
-      {
-        "name": "MagicLib",
-        "id": "magiclib",
-        "via": "Arma Armatura"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "Mayasuran Navy",
+          "id": "mayasuran-navy"
+        },
+        {
+          "name": "Arma Armatura",
+          "id": "arma-armatura"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "Mayasuran Navy"
+        },
+        {
+          "name": "MagicLib",
+          "id": "magiclib",
+          "via": "Arma Armatura"
+        }
+      ]
+    }
   },
   "description": ">>Download Mayasuran Fighter Expansion<<\nDownload Mayasuran-Kadur Fighter Expansion submod.\n\nLinks broken, add-ons broken, but I am working on restoring them. Need to deal with IRL stuff first though.\n\nAdd-on mod for Mayasuran Navy adding 14 pilotable strikecrafts, 2 new fighter wings and 3 corvettes that bridge gap between strikecraft and frigates.\nAdditionally, optional Kadur Remnant submod is included in the zip that adds 2 pilotable variants of Kadur-Mayasuran strikecraft.\nFeedback is very welcome!\n\nRequirements:\nMayasuran Navy\nhttps://fractalsoftworks.com/forum/index.php?topic=13239.0\nArma Armatura\nhttps://fractalsoftworks.com/forum/index.php?topic=18751.0\n\nSpecial thanks:\nKing Chase for permission to use Mayasuran assets.\ngettag for answering my questions regarding ARMAA and being absolute champ with adding strikecraft_medium and strikecraft_large tags\n\nChangelog:\n\nSpoiler\nMFE v1.2\n====================================================\n-Added Shri Mining Barge\n-Added Kali Interceptor Corvette\n-Renamed Shri Patrol Corvette to Shri (M) Patrol Corvette",
   "descriptionHtml": "<a href=\"https://drive.google.com/file/d/1ns_LeWQup1Jz6fmuLLsS0yPu5qSSOhav/view\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://media.discordapp.net/attachments/825068217361760306/996414105588072528/unknown.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><s><u><span class=\"size-bigger\"><b><a href=\"https://drive.google.com/file/d/1ns_LeWQup1Jz6fmuLLsS0yPu5qSSOhav/view\" rel=\"nofollow noopener\" target=\"_blank\">&gt;&gt;Download Mayasuran Fighter Expansion&lt;&lt;</a><br><a href=\"https://drive.google.com/file/d/1HgPuof-GIwuxdhfPi0NES7x-9-BbyBQp/view\" rel=\"nofollow noopener\" target=\"_blank\">Download Mayasuran-Kadur Fighter Expansion submod.</a></b></span></u></s><br><br><b><span class=\"size-biggest\">Links broken, add-ons broken, but I am working on restoring them. Need to deal with IRL stuff first though.<br></span></b><br><br>Add-on mod for Mayasuran Navy adding 14 pilotable strikecrafts, 2 new fighter wings and 3 corvettes that bridge gap between strikecraft and frigates.<br>Additionally, optional Kadur Remnant submod is included in the zip that adds 2 pilotable variants of Kadur-Mayasuran strikecraft.<br>Feedback is very welcome!<br><br><span class=\"size-bigger\">Requirements:</span><br><b>Mayasuran Navy</b><br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=13239.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=13239.0</a><br><b>Arma Armatura</b><br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=18751.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=18751.0</a><br><br><span class=\"size-bigger\">Special thanks:</span><br><b>King Chase</b> for permission to use Mayasuran assets.<br><b>gettag</b> for answering my questions regarding ARMAA and being absolute champ with adding strikecraft_medium and strikecraft_large tags<br><br><b>Changelog:</b><br><details class=\"spoiler\"><summary>Spoiler</summary><code>MFE v1.2<br>====================================================<br>-Added Shri Mining Barge<br>-Added Kali Interceptor Corvette<br>-Renamed Shri Patrol Corvette to Shri (M) Patrol Corvette</code></details>",
@@ -75,7 +77,7 @@
     {
       "url": "https://drive.google.com/file/d/1ns_LeWQup1Jz6fmuLLsS0yPu5qSSOhav/view",
       "directUrl": "https://drive.google.com/uc?export=download&id=1ns_LeWQup1Jz6fmuLLsS0yPu5qSSOhav",
-      "kind": "direct",
+      "type": "direct",
       "label": "",
       "host": "Google Drive",
       "needsAnotherStep": false
@@ -93,17 +95,39 @@
     {
       "name": "Mayasuran-Kadur Fighter Expansion",
       "role": "addon",
-      "requires": "Mayasuran Fighter Expansion",
+      "parentMod": "Mayasuran Fighter Expansion",
       "downloads": [
         {
           "url": "https://drive.google.com/file/d/1HgPuof-GIwuxdhfPi0NES7x-9-BbyBQp/view",
           "directUrl": "https://drive.google.com/uc?export=download&id=1HgPuof-GIwuxdhfPi0NES7x-9-BbyBQp",
-          "kind": "direct",
+          "type": "direct",
           "label": "Download Mayasuran-Kadur Fighter Expansion submod.",
           "host": "Google Drive",
           "needsAnotherStep": false
         }
       ]
     }
-  ]
+  ],
+  "requirements": {
+    "required": [
+      {
+        "name": "Mayasuran Navy",
+        "id": "mayasuran-navy"
+      },
+      {
+        "name": "Arma Armatura",
+        "id": "arma-armatura"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "Mayasuran Navy"
+      },
+      {
+        "name": "MagicLib",
+        "id": "magiclib",
+        "via": "Arma Armatura"
+      }
+    ]
+  }
 }

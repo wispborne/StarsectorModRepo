@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "library-oddiszcommons",
     "name": "Library - OddiszCommons",
@@ -16,12 +16,16 @@
     "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_29380_1786313917.png",
     "summary": "Parts that several of my mods share, kept in one place. Install it when one of my mods asks for it. On its own it adds nothing you will notice.",
     "summaryIsGenerated": false,
-    "aiSummary": "Provides shared code and a unified management interface for other mods by the same author.",
-    "saveCompatible": true,
+    "aiSummary": "Provides shared code and a Manage button interface for other mods by the same author.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/andrzejsokolowski/starsector-oddisz-commons/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": true
     },
     "downloadCount": 1,
@@ -41,18 +45,23 @@
     ],
     "addedOn": "2026-11-09",
     "threadLastPostOn": "2026-11-10",
-    "editedOn": "2026-11-09",
-    "needs": []
+    "editedOn": "2026-11-09"
   },
   "description": "This becomes a standard library for my mods because I am duplicating code.\n\nOddiszCommons\n\nWHAT DOES THIS MOD DO?\nParts that several of my mods share, kept in one place.\nInstall it when one of my mods asks for it. On its own it adds nothing you will notice.\n\nRequires nothing.\n\nNeeded By\nOmega Core Everywhere 1.2.3 and newer\nAstral Ascension Renewed 1.0.2 and newer\nToolbox Economy Curves 1.0.3 and newer\n\nFor Modders\nAdd a page: Manage.addPage(modId, tabName, page) in onApplicationLoad, with a class that builds its own panel each time the tab opens.\nDetails and examples are in the README.\n\nCompatibility\nSafe to add to a game in progress.\nRemove the mods that need it before removing it.\n\nAI use disclaimer\nSome or all assets and code in this mod were created using AI tools:\nCode: Claude Code (Claude Opus 5.5)\nText (readme and this post): Claude Code (Claude Opus 5.5)\n\nLicense\nThis mod is under the CC0 (Creative Commons Zero) License, allowing you to do whatever you want with the code, without giving any credit to anyone.\n\nVersion log\n0.2.1\nAdded the forum topic link for Version Checker.\n\n0.2.0\nAdded a shared colony ledger that Omega Core Everywhere, Astral Ascension Renewed and Toolbox Economy Curves now use to keep, undo and clean up their colony changes before every save.\n\n0.1.0\nFirst version: a Manage button on the campaign bottom bar (shortcut Y) where Oddisz's mods keep their own pages, one tab per mod. Shares one button with Project Arondight, Captain's Quarters and Liminal when those are installed.",
   "descriptionHtml": "This becomes a standard library for my mods because I am duplicating code.  <br><br><div class=\"align-center\"><span class=\"size-biggest\"><a href=\"https://github.com/andrzejsokolowski/starsector-oddisz-commons/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><b>OddiszCommons</b></a></span><br><a href=\"https://github.com/andrzejsokolowski/starsector-oddisz-commons/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/downloads/andrzejsokolowski/starsector-oddisz-commons/total?style=for-the-badge&amp;label=download\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a>  <a href=\"https://github.com/andrzejsokolowski/starsector-oddisz-commons\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/v/release/andrzejsokolowski/starsector-oddisz-commons?display_name=tag&amp;sort=semver&amp;style=for-the-badge&amp;label=source\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></div><div class=\"align-center\"><b><br>WHAT DOES THIS MOD DO?<br>Parts that several of my mods share, kept in one place.<br>Install it when one of my mods asks for it. On its own it adds nothing you will notice.<br><br><span class=\"author-colour\" style=\"--c:#ff0000\">Requires nothing.</span><br></b></div><div class=\"align-center\"><hr><div class=\"align-center\"><span class=\"size-big\"><b>Needed By</b></span></div><hr><ul><li><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36168\" rel=\"nofollow noopener\" target=\"_blank\">Omega Core Everywhere</a> 1.2.3 and newer</li><li><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36167\" rel=\"nofollow noopener\" target=\"_blank\">Astral Ascension Renewed</a> 1.0.2 and newer</li><li><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36178\" rel=\"nofollow noopener\" target=\"_blank\">Toolbox Economy Curves</a> 1.0.3 and newer</li></ul><br><hr><div class=\"align-center\"><span class=\"size-big\"><b>For Modders</b></span></div><hr><ul><li>Add a page: <b>Manage.addPage(modId, tabName, page)</b> in onApplicationLoad, with a class that builds its own panel each time the tab opens.</li><li>Details and examples are in the <a href=\"https://github.com/andrzejsokolowski/starsector-oddisz-commons\" rel=\"nofollow noopener\" target=\"_blank\">README</a>.</li></ul><br><hr><div class=\"align-center\"><span class=\"size-big\"><b>Compatibility</b></span></div><hr><ul><li>Safe to add to a game in progress.</li><li>Remove the mods that need it before removing it.</li></ul></div><br><details class=\"spoiler\"><summary>AI use disclaimer</summary>Some or all assets and code in this mod were created using AI tools:<br><ul><li>Code: Claude Code (Claude Opus 5.5)</li><li>Text (readme and this post): Claude Code (Claude Opus 5.5)</li></ul></details><br><details class=\"spoiler\"><summary>License</summary>This mod is under the CC0 (Creative Commons Zero) License, allowing you to do whatever you want with the code, without giving any credit to anyone.</details><br><details class=\"spoiler\"><summary>Version log</summary><b>0.2.1</b><br><ul><li>Added the forum topic link for Version Checker.</li></ul><b>0.2.0</b><br><ul><li>Added a shared colony ledger that Omega Core Everywhere, Astral Ascension Renewed and Toolbox Economy Curves now use to keep, undo and clean up their colony changes before every save.</li></ul><b>0.1.0</b><br><ul><li>First version: a Manage button on the campaign bottom bar (shortcut Y) where Oddisz's mods keep their own pages, one tab per mod. Shares one button with Project Arondight, Captain's Quarters and Liminal when those are installed.</li></ul></details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Acts as a central library holding parts that several mods share. It adds a Manage button to the campaign bottom bar where dependent mods keep their own pages. The mod itself adds no visible content unless required by another mod.",
-  "saveCompatibilityText": "Safe to add to a game in progress.",
-  "removalCompatibilityText": "Remove the mods that need it before removing it.",
-  "canAdd": "yes",
-  "canRemove": "depends",
+  "aiDescription": "Contains shared components used by other mods from the author, such as a colony ledger and a Manage button on the campaign bar. It adds no visible content on its own and is required by specific companion mods.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Safe to add to a game in progress.",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "Remove the mods that need it before removing it.",
+      "answer": "depends"
+    }
+  },
   "aiUse": {
     "quote": "Some or all assets and code in this mod were created using AI tools:\nCode: Claude Code (Claude Opus 5.5)\nText (readme and this post): Claude Code (Claude Opus 5.5)",
     "usesAi": true,
@@ -67,7 +76,8 @@
       }
     ],
     "tools": [
-      "Claude Code (Claude Opus 5.5)"
+      "Claude Code",
+      "Claude Opus 5.5"
     ]
   },
   "rawCategories": [],
@@ -86,7 +96,7 @@
   "downloads": [
     {
       "url": "https://github.com/andrzejsokolowski/starsector-oddisz-commons/releases/latest",
-      "kind": "direct",
+      "type": "direct",
       "label": "OddiszCommons",
       "host": "github.com",
       "needsAnotherStep": true

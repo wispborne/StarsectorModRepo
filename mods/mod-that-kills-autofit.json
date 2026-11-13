@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "mod-that-kills-autofit",
     "name": "Mod that kills autofit",
@@ -22,11 +22,11 @@
     "gameVersion": "0.98a",
     "summary": "Requires nothing, uses a FleetInflationListener to overwrite what autofit fits",
     "summaryIsGenerated": false,
-    "aiSummary": "Overwrites autofit configurations to enforce specific hullmod installations and preserve existing ship modifications.",
+    "aiSummary": "Overwrites autofit results by copying s mods from the base fit and installing specific s mods in a defined order.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/gordonheroa/mod-that-kills-autofit/archive/refs/heads/main.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -37,17 +37,19 @@
     "usesAi": false,
     "addedOn": "2026-10-23",
     "threadLastPostOn": "2026-11-10",
-    "editedOn": "2026-11-07",
-    "needs": []
+    "editedOn": "2026-11-07"
   },
   "description": "I accidentally put it in a zip inside a folder inside a zip\n\nDownload link\n\nRequires nothing, uses a FleetInflationListener to overwrite what autofit fits\n\nCopies fit s mods if there are any, tries to match amount of s mods if the base fit has less smods than the autofit.\n\nInstalls s mod in this order: sARU, expmags if base on fit, reinforced bulkheads, flux distributor, and insulated with no checks.\n\nDoes check original variants\n\nGame doesn't crash when removed\n\nNo ai used",
   "descriptionHtml": "I accidentally put it in a zip inside a folder inside a zip<br><br><a href=\"https://github.com/gordonheroa/mod-that-kills-autofit/archive/refs/heads/main.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download link</a><br><br>Requires nothing, uses a FleetInflationListener to overwrite what autofit fits<br><br>Copies fit s mods if there are any, tries to match amount of s mods if the base fit has less smods than the autofit.<br><br>Installs s mod in this order: sARU, expmags if base on fit, reinforced bulkheads, flux distributor, and insulated with no checks.<br><br>Does check original variants<br><br>Game doesn't crash when removed<br><br>No ai used",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p>Kills enemy autofit on the campaign layer (they now use the fits the mod author gave them)</p><p><a href=\"https://discord.com/channels/187635036525166592/1563265773395378377/1563656278230835431\" rel=\"nofollow noopener\" target=\"_blank\">https://discord.com/channels/187635036525166592/1563265773395378377/1563656278230835431</a></p>",
-  "aiDescription": "Uses a FleetInflationListener to override what the game's autofit feature installs. It preserves existing hullmods from the base fit and attempts to match the number of special mods if the autofit provides fewer. The mod installs specific hullmods in a set order, including sARU, reinforced bulkheads, flux distributors, and insulated.",
-  "removalCompatibilityText": "Game doesn't crash when removed",
-  "canRemove": "yes",
+  "aiDescription": "Uses a FleetInflationListener to overwrite what autofit fits. Copies s mods if there are any, trying to match the amount of s mods if the base fit has fewer than the autofit. Installs s mods in this order: sARU, expmags if base on fit, reinforced bulkheads, flux distributor, and insulated with no checks. Does check original variants.",
+  "saveCompat": {
+    "removing": {
+      "quote": "Game doesn't crash when removed",
+      "answer": "yes"
+    }
+  },
   "aiUse": {
     "quote": "No ai used",
     "usesAi": false
@@ -62,7 +64,7 @@
       "url": "https://github.com/gordonheroa/mod-that-kills-autofit/archive/refs/heads/main.zip",
       "directUrl": "https://github.com/gordonheroa/mod-that-kills-autofit/archive/refs/heads/main.zip",
       "fileName": "main.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "Download link",
       "host": "GitHub",
       "needsAnotherStep": false

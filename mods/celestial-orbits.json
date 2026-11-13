@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "celestial-orbits",
     "name": "Celestial Orbits",
@@ -24,12 +24,16 @@
     "imageUrl": "https://i.ibb.co/N6ZYz1dq/pn-celestial-orbits-v2-150.png",
     "summary": "By default, this mod allows you to learn and see the orbital trajectory of planetary bodies upon doing a full survey of a planet. Why a full survey of a planet?",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds visual orbital trajectory lines for planets, stations, and other celestial objects in the system map.",
-    "saveCompatible": true,
+    "aiSummary": "Adds visual orbital trajectory lines for celestial bodies, stations, and gates, with multiple unlock methods and customization options.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "http://github.com/NebulaModLab/PN-Celestial-Orbits/releases/latest/download/PN-Celestial-Orbits.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -42,30 +46,39 @@
     "addedOn": "2026-11-01",
     "threadLastPostOn": "2026-11-08",
     "editedOn": "2026-11-07",
-    "needs": [
-      {
-        "name": "LunaLib",
-        "id": "lunalib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib",
-        "via": "LunaLib"
-      }
-    ]
+    "requirements": {
+      "required": [
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "LunaLib"
+        }
+      ]
+    }
   },
   "description": "Celestial Orbits\nMapping orbital paths? In your Starsector? With this mod, you can do that!\n\nDependencies: LunaLib (for LunaSettings)\n\nWhat does this mod do?\nBy default, this mod allows you to learn and see the orbital trajectory of planetary bodies upon doing a full survey of a planet. Why a full survey of a planet? For gameplay ease-of-use reasons and not requiring you to stay in-system for the duration of a planets full rotation around its orbital focus, be it a star or another planet. Although, this is a setting you can enable, if you want a more semi-realistic way of surveying a planet's orbital trajectory.\n\nFeatures\nA full list\nVisualizing orbital trajectories of planetary bodies, stations, gates, and jump-points within a system.\n\"Course focus\", highlights or only shows the orbit of the course destination object. (Useful for intercepting. Can be switched between or disabled in settings.)\nA wide array of settings:\n\nChange which celestial objects can show their orbit:\n\nOnly planetary bodies (default)\nStations included\nAll celestial objects\n\nChange the learning/unlocking behavior:\n\n\"On Full Survey\": Requires the player to fully survey a planet. (default)\n\"Always show\": Shows every orbital trajectory.\n\"Preliminary\": Preliminary survey a planet to know its orbit (Has an extra setting 'Auto Preliminary Survey' in the 'Extras' tab)\n\"Passively\": Discover orbits passively as you spend time within a system.\n\nExtra setting: Choice between full, half, and third of the witnessed rotation time required.\n\n\"Orbital\": Discover orbits by hanging out in a planets orbit for some time. When done on a planet with moons, also discovers the orbits of those moons.\n\nChange the \"Course focus\" behavior:\n\n\"Highlight\": Highlights the course target's orbit. (default)\n\"Filter\": Filters out the course target's orbit, showing only that orbit.\n\"Disabled\": Disabled the functionality\"\n\nExtra setting: Choice between full, half, and third of the witnessed rotation time required.\n\nMultiple customization options that change the color of orbital trajectories, from faction colors, to a custom color of your choosing.\n\nIs it save-compatible?\nIt can be added mid-save just fine. However, removing it mid save works a bit different. You must either be in hyperspace when saving and quiting the game, or have disabled the mod through LunaSettings.\n\nWhy was this made?\n\"I kinda wish we had an orbital trajectory line for anything we lock onto in the map\"\n- S0medudewhodoesthings, KMB \"starsector-general\" chat\nThat message is what got me going down a rabbit hole, although in the end not as deep as I thought, on how to make orbital trajectory lines show up for things that orbit around celestial objects. And thus, \"Celestial Orbits\" was born.\n\nMedia\nDefault color, faction colors, a custom color\n\nAI use disclaimer\nNo AI was used for this mod's code or graphical assets\n\nCredits\nFractal Softworks - The amazing team behind our beloved game Starsector\nS0medudewhodoesthings - Saying something that gave me the idea to make this mod\n\nAsk before using any code.",
   "descriptionHtml": "<div class=\"align-center\"><img src=\"https://i.ibb.co/N6ZYz1dq/pn-celestial-orbits-v2-150.png\" alt=\"\" width=\"150\" height=\"150\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><span class=\"size-biggest\">Celestial Orbits</span><br>Mapping orbital paths? In your Starsector? With this mod, you can do that!<br><a href=\"http://github.com/NebulaModLab/PN-Celestial-Orbits/releases/latest/download/PN-Celestial-Orbits.zip\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/downloads/NebulaModLab/PN-Celestial-Orbits/total?style=for-the-badge&amp;logo=github&amp;label=Download&amp;color=D6D19B\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a> <a href=\"https://github.com/NebulaModLab/PN-Celestial-Orbits/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/v/release/NebulaModLab/PN-Celestial-Orbits?display_name=tag&amp;color=95D78F&amp;sort=semver&amp;style=for-the-badge&amp;logo=github&amp;label=changelog\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a> <br><a href=\"https://github.com/NebulaModLab/PN-Celestial-Orbits\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Source_Code-GitHub-24292f?style=for-the-badge&amp;color=2B291F&amp;logo=github\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br>Dependencies: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a> (for LunaSettings)<br><br><hr><br><br><div class=\"table-scroll\"><table style=\"--round:5px;--w:50%\"><tbody><tr><td><span class=\"size-bigger\">What does this mod do?</span></td></tr><tr><td>By default, this mod allows you to learn and see the orbital trajectory of planetary bodies upon doing a full survey of a planet. Why a full survey of a planet? For gameplay ease-of-use reasons and not requiring you to stay in-system for the duration of a planets full rotation around its orbital focus, be it a star or another planet. Although, <i>this <b>is</b> a setting you can enable</i>, if you want a more semi-realistic way of surveying a planet's orbital trajectory.</td></tr></tbody></table></div><br><br><div class=\"table-scroll\"><table style=\"--round:5px;--w:50%\"><tbody><tr><td><span class=\"size-bigger\">Features</span></td></tr><tr><td><details class=\"spoiler\"><summary>A full list</summary><ul><li> Visualizing orbital trajectories of planetary bodies, stations, gates, and jump-points within a system.</li><li>\"Course focus\", highlights or only shows the orbit of the course destination object. (Useful for intercepting. Can be switched between or disabled in settings.)</li><li>A wide array of settings:</li><br><ul><li> Change which celestial objects can show their orbit:</li><br><ul><li> Only planetary bodies <b>(default)</b></li><li>Stations included</li><li>All celestial objects</li><br></ul><br><li>Change the learning/unlocking behavior:</li><br><ul><li> \"On Full Survey\": Requires the player to fully survey a planet. <b>(default)</b></li><li>\"Always show\": Shows every orbital trajectory.</li><li>\"Preliminary\": Preliminary survey a planet to know its orbit (Has an extra setting 'Auto Preliminary Survey' in the 'Extras' tab)</li><li>\"Passively\": Discover orbits passively as you spend time within a system.</li><br><ul><li> <b>Extra setting:</b> Choice between full, half, and third of the witnessed rotation time required.</li></ul><li>\"Orbital\": Discover orbits by hanging out in a planets orbit for some time. When done on a planet with moons, also discovers the orbits of those moons.</li></ul><br><li>Change the \"Course focus\" behavior:</li><br><ul><li> \"Highlight\": Highlights the course target's orbit. <b>(default)</b></li><li>\"Filter\": Filters out the course target's orbit, showing only that orbit.</li><li>\"Disabled\": Disabled the functionality\"</li><br><ul><li> <b>Extra setting:</b> Choice between full, half, and third of the witnessed rotation time required.</li></ul></ul><br><li>Multiple customization options that change the color of orbital trajectories, from faction colors, to a custom color of your choosing.</li><br></ul><br></ul></details></td></tr></tbody></table></div><br><br><div class=\"table-scroll\"><table style=\"--round:5px;--w:50%\"><tbody><tr><td><span class=\"size-bigger\">Is it save-compatible?</span></td></tr><tr><td>It can be added mid-save just fine. However, removing it mid save works a bit different. You must either be in hyperspace when saving and quiting the game, or have disabled the mod through LunaSettings.</td></tr></tbody></table></div><br><br><div class=\"table-scroll\"><table style=\"--round:5px;--w:50%\"><tbody><tr><td><span class=\"size-bigger\">Why was this made?</span></td></tr><tr><td><blockquote>\"I kinda wish we had an orbital trajectory line for anything we lock onto in the map\"<br>- S0medudewhodoesthings, KMB \"starsector-general\" chat</blockquote>That message is what got me going down a rabbit hole, although in the end not as deep as I thought, on how to make orbital trajectory lines show up for things that orbit around celestial objects. And thus, \"Celestial Orbits\" was born.</td></tr></tbody></table></div><br><hr><br><br><div class=\"table-scroll\"><table style=\"--round:5px;--w:50%\"><tbody><tr><td><span class=\"size-bigger\">Media</span></td></tr><tr><td><details class=\"spoiler\"><summary>Default color, faction colors, a custom color</summary><img src=\"https://i.ibb.co/fdKp2dVw/Celestial-Orbits-1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.ibb.co/cSY9wddf/Celestial-Orbits-2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><img src=\"https://i.ibb.co/6c0cmyQG/Celestial-Orbits-3.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></details></td></tr></tbody></table></div><br><hr><br><span class=\"size-bigger\">AI use disclaimer</span><br>No AI was used for this mod's code or graphical assets<br><br><span class=\"size-bigger\">Credits</span><br><span class=\"author-colour\" style=\"--c:#203d8a\">Fractal Softworks</span> - The amazing team behind our beloved game Starsector<br>S0medudewhodoesthings - Saying something that gave me the idea to make this mod<br><br><a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br>Ask before using any code.</div>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p><strong>Forum link:</strong> <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36243\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=36243</a></p><h4>What does this mod do?</h4><p>By default, this mod allows you to learn and see the orbital trajectory of planetary bodies upon doing a full survey of a planet. Why a full survey of a planet? For gameplay ease-of-use reasons and not requiring you to stay in-system for the duration of a planets full rotation around its orbital focus, be it a star or another planet.<br>Although, <em>this <strong>is</strong> a setting you can enable</em>, if you want a more semi-realistic way of surveying a planet's orbital trajectory.</p><h4>Features</h4><ul><li>Visualising orbital trajectories of planetary bodies, stations, gates, and </li></ul><p>jump-points within a system.</p><ul><li>\"Course focus\", highlights or only shows the orbit of the course destination object. (Useful for intercepting. Can be switched between or disabled in settings.)</li><li>A wide array of settings:<ul><li>Change which celestial objects can show their orbit:<ul><li>Only planetary bodies <strong>(default)</strong></li><li>Stations included</li><li>All celestial objects</li></ul></li><li>Change the learning/unlocking behavior:<ul><li>\"On Full Survey\": Requires the player to fully survey a planet. <strong>(default)</strong></li><li>\"Preliminary\": Preliminary survey a planet to know its orbit (Has an extra setting 'Auto Preliminary Survey' in the 'Extras' tab)</li><li>\"Always show\": Shows every orbital trajectory.</li><li>\"Passively\": Discover orbits passively as you spend time within a system.<ul><li><strong>Extra setting:</strong> Choice between full, half, and third of the witnessed </li></ul></li></ul></li></ul></li></ul><p>rotation time required.</p><ul><li>\"Orbital\": Discover orbits by hanging out in a planets orbit for some time. When done on a planet with moons, also</li></ul><p>discovers the orbits of those moons.</p><ul><li>Change the \"Course focus\" behavior:<ul><li>\"Highlight\": Highlights the course target's orbit. <strong>(default)</strong></li><li>\"Filter\": Filters out the course target's orbit, showing only that orbit.</li><li>\"Disabled\": Disabled the functionality.</li></ul></li><li>Change the color of trajectories:<ul><li>Switch option to enable/disable faction coloring.<ul><li>If a planet/station has a faction owner, change color to the faction's.</li></ul></li><li>Switch option to enable/disable custom coloring.<ul><li>Built-in LunaSetting color picker</li></ul></li><li>Slider option to change the alpha level of the trajectories, controlling the transparency/opacity</li></ul></li></ul><h4>F.A.Q.</h4><blockquote><p>Q: Can this be removed mid-save?<br>A: Yes, <strong>BUT</strong> with a requirement, being ONE of the following:</p><ol><li>You have left your save in hyperspace and not within a star system.</li><li>You disabled the mod through LunaSettings.</li></ol></blockquote><h5>AI use disclaimer</h5><p>No AI was used in the creation of this mod's code or graphical assets</p>",
-  "aiDescription": "Displays orbital paths for planetary bodies, stations, gates, and jump-points after surveying them. Includes a course focus feature to highlight or filter orbits for navigation targets. Offers extensive settings to customize which objects show orbits, how they are unlocked, and their visual appearance.",
-  "saveCompatibilityText": "It can be added mid-save just fine.",
-  "updateCompatibilityText": "In testing it showed no issues updating to this version and using existing saves with v1.0.0, BUT as always I suggest to backup your save either way whenever updating your mods in case something does go wrong!",
-  "removalCompatibilityText": "However, removing it mid save works a bit different. You must either be in hyperspace when saving and quiting the game, or have disabled the mod through LunaSettings.",
-  "canAdd": "yes",
-  "canUpdate": "yes",
-  "canRemove": "depends",
+  "aiDescription": "Adds visual orbital trajectory lines for planets, stations, gates, and jump points. Orbits can be unlocked through full surveys, preliminary surveys, passive discovery, or time spent in orbit. Includes settings to customize which objects show orbits, how they are unlocked, and their colors.",
+  "saveCompat": {
+    "adding": {
+      "quote": "It can be added mid-save just fine.",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "removing it mid save works a bit different. You must either be in hyperspace when saving and quiting the game, or have disabled the mod through LunaSettings.",
+      "answer": "depends"
+    },
+    "latestUpdateNote": {
+      "quote": "In testing it showed no issues updating to this version and using existing saves with v1.0.0, BUT as always I suggest to backup your save either way whenever updating your mods in case something does go wrong!",
+      "answer": "yes"
+    }
+  },
   "aiUse": {
     "quote": "No AI was used for this mod's code or graphical assets",
     "usesAi": false
@@ -76,7 +89,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1566603365591416832/1566603365897736282/PN_CelestialOrbits_icon.png?ex=6af7a514&is=6af65394&hm=20471888048086472d0d0fad6b15fb56d70bf28261861b7f6ad68fee966cd5f7&",
+      "url": "https://cdn.discordapp.com/attachments/1566603365591416832/1566603365897736282/PN_CelestialOrbits_icon.png?ex=6af84dd4&is=6af6fc54&hm=ed9e98b8e728ba8a85f7aab5c1d8d6e54b36425a1e2191ea63ba9c4af2fb774a&",
       "aiCaption": "A dark grid background with faint orbital lines and two small, blurry ship sprites.",
       "aiKind": "screenshot",
       "aiFit": "poor",
@@ -141,14 +154,15 @@
       "url": "http://github.com/NebulaModLab/PN-Celestial-Orbits/releases/latest/download/PN-Celestial-Orbits.zip",
       "directUrl": "http://github.com/NebulaModLab/PN-Celestial-Orbits/releases/latest/download/PN-Celestial-Orbits.zip",
       "fileName": "PN-Celestial-Orbits.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "",
       "host": "GitHub",
       "needsAnotherStep": false
     }
   ],
-  "changelog": {},
-  "changelogUrl": "https://github.com/NebulaModLab/PN-Celestial-Orbits/releases/latest",
+  "changelog": {
+    "1.1.0": "Added \"Preliminary\" research behaviour - Preliminary survey a planet to know its orbit\n Added an extra setting 'Auto Preliminary Survey' in the 'Extras' tab (Default: False), can help when paired with the new research behaviour.\n Added \"Orbital\" research behaviour - Discover orbits by hanging out in a planet's orbit for some time, also discovering that of the surrounding connected planets.\n Changes:\n \"Witnessed\" research behaviour: Changed name to \"Passively\", requires choosing it again if you were using \"Witnessed\" before.\n Now shows text above fleet and campaign intel message on the left upon discovering orbits\n\n Fixes:\n Fixed .version file\n Fixed Coronal Tap showing its orbit (also when not discovered)\n Fixed mid-save safe removal through \"disable mod\" LunaSetting"
+  },
   "license": "CC BY-NC-ND 4.0",
   "sourceCodeUrl": "https://github.com/NebulaModLab/PN-Celestial-Orbits",
   "supportLinks": [],
@@ -162,11 +176,26 @@
       "oldVersion": "1.0.0",
       "newVersion": "1.1.0",
       "gameVersion": "0.98a",
-      "updateCompatibilityText": "In testing it showed no issues updating to this version and using existing saves with v1.0.0, BUT as always I suggest to backup your save either way whenever updating your mods in case something does go wrong!",
-      "canUpdate": "yes"
+      "updateNote": {
+        "quote": "In testing it showed no issues updating to this version and using existing saves with v1.0.0, BUT as always I suggest to backup your save either way whenever updating your mods in case something does go wrong!",
+        "answer": "yes"
+      }
     }
   ],
   "threadLastPostOn": "2026-11-08",
   "sameNameMods": [],
-  "addons": []
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "LunaLib"
+      }
+    ]
+  }
 }

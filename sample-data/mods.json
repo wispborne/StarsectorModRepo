@@ -24,16 +24,20 @@
       "summary": "Adds diplomacy, invasions and a full 4X layer on top of the campaign.",
       "summaryIsGenerated": false,
       "aiSummary": "A campaign overhaul: alliances, invasions, diplomacy and a start of your own choosing.",
-      "saveCompatible": false,
+      "saveCompat": {
+        "adding": {
+          "answer": "no"
+        }
+      },
       "hasDirectDownload": true,
       "bestDownload": {
         "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FHistidine91%2FNexerelin%2Fmaster%2Fnexerelin.version%22%2C%22id%22%3A%22nexerelin%22%2C%22version%22%3A%220.12.2%22%7D",
-        "kind": "trios",
+        "type": "trios",
         "needsAnotherStep": false
       },
       "plainDownload": {
         "url": "https://github.com/Histidine91/Nexerelin/releases/download/v0.12.2/Nexerelin_0.12.2.zip",
-        "kind": "direct",
+        "type": "direct",
         "needsAnotherStep": false
       },
       "downloadCount": 3,
@@ -50,11 +54,13 @@
       },
       "threadLastPostOn": "2026-08-14",
       "addedOn": "2024-03-11",
-      "needs": [
-        {
-          "name": "LazyLib"
-        }
-      ]
+      "requirements": {
+        "required": [
+          {
+            "name": "LazyLib"
+          }
+        ]
+      }
     },
     {
       "id": "quality-captains",
@@ -76,7 +82,7 @@
       "hasDirectDownload": true,
       "bestDownload": {
         "url": "https://cdn.discordapp.com/attachments/1090000000/1090000003/QualityCaptains.zip",
-        "kind": "direct",
+        "type": "direct",
         "needsAnotherStep": false
       },
       "downloadCount": 1,
@@ -86,21 +92,27 @@
       "otherAuthorNames": {},
       "usesAi": false,
       "addedOn": "2026-06-02",
-      "needs": [
-        {
-          "name": "LunaLib"
-        },
-        {
-          "name": "Nexerelin",
-          "id": "nexerelin"
-        },
-        {
-          "name": "LazyLib",
-          "via": "Nexerelin"
-        }
-      ],
+      "requirements": {
+        "required": [
+          {
+            "name": "LunaLib"
+          },
+          {
+            "name": "Nexerelin",
+            "id": "nexerelin"
+          },
+          {
+            "name": "LazyLib",
+            "via": "Nexerelin"
+          }
+        ]
+      },
       "modVersion": "1.3",
-      "saveCompatible": true
+      "saveCompat": {
+        "adding": {
+          "answer": "yes"
+        }
+      }
     },
     {
       "id": "industrial-evolution",
@@ -122,11 +134,15 @@
       "imageUrl": "https://fractalsoftworks.com/forum/index.php?action=dlattach;topic=15380.0;attach=70011;image",
       "summary": "Adds new industries, colony structures and a set of quests around them.",
       "summaryIsGenerated": false,
-      "saveCompatible": true,
+      "saveCompat": {
+        "adding": {
+          "answer": "yes"
+        }
+      },
       "hasDirectDownload": true,
       "bestDownload": {
         "url": "https://github.com/SirHartley/IndEvo/releases/download/3.5.2g/Industrial.Evolution.3.5.2g.zip",
-        "kind": "direct",
+        "type": "direct",
         "needsAnotherStep": false
       },
       "downloadCount": 1,
@@ -142,7 +158,7 @@
         {
           "area": "portraits",
           "how": "edited",
-          "optional": true
+          "isOptional": true
         }
       ],
       "lastReleaseDate": "2026-08-11T00:00:00.000Z",
@@ -153,14 +169,16 @@
       },
       "threadLastPostOn": "2026-07-30",
       "addedOn": "2024-08-19",
-      "needs": [
-        {
-          "name": "LazyLib"
-        },
-        {
-          "name": "MagicLib"
-        }
-      ]
+      "requirements": {
+        "required": [
+          {
+            "name": "LazyLib"
+          },
+          {
+            "name": "MagicLib"
+          }
+        ]
+      }
     },
     {
       "id": "lost-sector",
@@ -182,7 +200,7 @@
       "hasDirectDownload": true,
       "bestDownload": {
         "url": "https://github.com/SirHartley/lost-sector/releases/download/1.0.2/Lost.Sector.1.0.2.zip",
-        "kind": "direct",
+        "type": "direct",
         "needsAnotherStep": false
       },
       "downloadCount": 1,
@@ -196,11 +214,13 @@
       },
       "threadLastPostOn": "2026-06-11",
       "addedOn": "2025-11-04",
-      "needs": [
-        {
-          "name": "LazyLib"
-        }
-      ],
+      "requirements": {
+        "required": [
+          {
+            "name": "LazyLib"
+          }
+        ]
+      },
       "partOfThreadTitle": "Hartley's Miscellaneous Mods"
     },
     {
@@ -224,7 +244,7 @@
       "hasDirectDownload": false,
       "bestDownload": {
         "url": "https://www.mediafire.com/file/lost_sector_04/LOST_SECTOR.zip",
-        "kind": "direct",
+        "type": "direct",
         "needsAnotherStep": true
       },
       "downloadCount": 1,
@@ -232,8 +252,7 @@
       "sourceIsPublic": false,
       "isWorkInProgress": false,
       "threadLastPostOn": "2015-03-04",
-      "addedOn": "2015-01-18",
-      "needs": []
+      "addedOn": "2015-01-18"
     }
   ]
 }

@@ -75,10 +75,10 @@ export const SWITCHES = [
     title: 'Only mods the author says are safe to add mid-game.',
     notLabel: 'Not safe to add mid-game',
     notTitle: 'Only mods the author says are not safe to add mid-game.',
-    keep: (mod) => mod.saveCompatible === true,
+    keep: (mod) => mod.saveCompat?.adding?.answer === 'yes',
     // Most mods never say. "Not" means the author said no, not that nobody
     // said anything.
-    keepWhenNot: (mod) => mod.saveCompatible === false,
+    keepWhenNot: (mod) => mod.saveCompat?.adding?.answer === 'no',
   },
   {
     key: 'nowip',

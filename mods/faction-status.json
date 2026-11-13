@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "faction-status",
     "name": "Faction Status",
@@ -15,12 +15,16 @@
     "modVersion": "1.0.0",
     "summary": "Faction Status is a lightweight quality-of-life mod. It dynamically modifies faction display names to include the player's current numerical relation and exact status level when hovering over planets, markets, or star systems on the map.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds player relations and status levels to faction names in tooltips.",
-    "saveCompatible": true,
+    "aiSummary": "Dynamically modifies faction display names to include the player's current numerical relation and exact status level in map tooltips.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/BornToBeBad/Faction-Status/releases/download/v1.0.0/Faction-Status-v1.0.0.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
     "downloadCount": 1,
@@ -29,18 +33,23 @@
     "isWorkInProgress": false,
     "addedOn": "2026-08-29",
     "threadLastPostOn": "2026-10-25",
-    "editedOn": "2026-08-29",
-    "needs": []
+    "editedOn": "2026-08-29"
   },
   "description": "Faction Status v1.0.0\n\nDescription:\nFaction Status is a lightweight quality-of-life mod. It dynamically modifies faction display names to include the player's current numerical relation and exact status level when hovering over planets, markets, or star systems on the map.\n\nFeatures:\n* Dynamically appends current player relations (e.g., +100, -65) directly to faction display names in market and sector tooltips.\n* Shows the exact relationship status level (e.g., Hostile, Neutral, Cooperative) pulled straight from the game engine.\n* Updates in real-time as your reputation with factions changes.\n\nDownload:\nDownload Faction Status v1.0.0\n\nSource Code:\nGitHub Repository\n\nCompatibility:\n* Starsector 0.98a-RC8\n* Compatible with existing save games.\n* Safe to add or remove at any time.",
   "descriptionHtml": "<span class=\"size-bigger\"><b>Faction Status v1.0.0</b></span><br><br><b>Description:</b><br>Faction Status is a lightweight quality-of-life mod. It dynamically modifies faction display names to include the player's current numerical relation and exact status level when hovering over planets, markets, or star systems on the map.<br><br><b>Features:</b><br>* Dynamically appends current player relations (e.g., <b>+100</b>, <b>-65</b>) directly to faction display names in market and sector tooltips.<br>* Shows the exact relationship status level (e.g., Hostile, Neutral, Cooperative) pulled straight from the game engine.<br>* Updates in real-time as your reputation with factions changes.<br><br><b>Download:</b><br><a href=\"https://github.com/BornToBeBad/Faction-Status/releases/download/v1.0.0/Faction-Status-v1.0.0.zip\" rel=\"nofollow noopener\" target=\"_blank\">Download Faction Status v1.0.0</a><br><br><b>Source Code:</b><br><a href=\"https://github.com/BornToBeBad/Faction-Status\" rel=\"nofollow noopener\" target=\"_blank\">GitHub Repository</a><br><br><b>Compatibility:</b><br>* Starsector 0.98a-RC8<br>* Compatible with existing save games.<br>* Safe to add or remove at any time.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Dynamically appends current numerical relations and exact relationship status levels to faction display names. These updates occur in real-time as reputation changes when hovering over planets, markets, or star systems.",
-  "saveCompatibilityText": "Compatible with existing save games.",
-  "removalCompatibilityText": "Safe to add or remove at any time.",
-  "canAdd": "yes",
-  "canRemove": "yes",
+  "aiDescription": "Dynamically modifies faction display names to include the player's current numerical relation and exact status level when hovering over planets, markets, or star systems. It appends current player relations directly to faction display names in market and sector tooltips. The mod updates in real-time as the player's reputation with factions changes.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Safe to add or remove at any time.",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "Safe to add or remove at any time.",
+      "answer": "yes"
+    }
+  },
   "aiUse": {},
   "rawCategories": [],
   "gallery": [],
@@ -49,7 +58,7 @@
       "url": "https://github.com/BornToBeBad/Faction-Status/releases/download/v1.0.0/Faction-Status-v1.0.0.zip",
       "directUrl": "https://github.com/BornToBeBad/Faction-Status/releases/download/v1.0.0/Faction-Status-v1.0.0.zip",
       "fileName": "Faction-Status-v1.0.0.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "Download Faction Status v1.0.0",
       "host": "GitHub",
       "needsAnotherStep": false

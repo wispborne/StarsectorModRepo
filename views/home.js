@@ -317,12 +317,12 @@ function releaseRow(release, byId) {
 /// their own words on hover. Only drawn where the post has a note for this
 /// version and a plain answer was read off it.
 function updateBadge(release) {
-  const words = release.updateCompatibilityText;
+  const words = release.updateNote?.quote;
   const kind = {
     yes: ['save-ok', 'Save compatible update'],
     no: ['save-no', 'Breaks existing saves'],
     depends: ['', 'Existing saves: it depends'],
-  }[release.canUpdate];
+  }[release.updateNote?.answer];
   if (!words || !kind) return null;
   return el('span', {
     class: `badge ${kind[0]}`.trim(),

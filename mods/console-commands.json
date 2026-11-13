@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "listing": {
     "id": "console-commands",
     "name": "Console Commands",
@@ -27,37 +27,45 @@
     "gameVersion": "0.98a",
     "modVersion": "2024.10.04",
     "imageUrl": "https://imgur.com/zoCketX.gif",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6af7fb61&is=6af6a9e1&hm=10526d3f7c77ad90e255311be99d04bb694fe7bb358dbe1ed025c5becc1718ac&",
-    "summary": "An official update to console commands that overhauls the interface to feel more modern and provide additional quality of life.",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6af8a421&is=6af752a1&hm=fc7313dfe306c0f0f1ae445401ee3306ba2dc1a4e60b86be1a48788fc67ec834&",
+    "summary": "An unofficial developer's console",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds an in-game developer console for entering commands to modify game state.",
-    "saveCompatible": true,
+    "aiSummary": "Adds an in-game developer console with a large list of commands and the ability to run custom code.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip",
-      "kind": "direct",
+      "type": "direct",
       "needsAnotherStep": false
     },
-    "downloadCount": 2,
+    "downloadCount": 1,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=4106.0",
     "discordUrl": "https://discord.com/channels/187635036525166592/1419747750987173908/1419747750987173908",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2012-08-23",
     "threadLastPostOn": "2026-11-03",
-    "editedOn": "2025-10-26",
-    "needs": []
+    "editedOn": "2025-10-26"
   },
   "description": "Console Commands\nAn unofficial developer's console\n\nChangelogs & older versions\nView Javadoc\nView progress and source code on GitHub\nArchive of old versions (pre 0.98)\nSupports Version Checker\n\nInstructions\nThis is installed just like any regular mod. Put it in the mods folder and make sure it's tagged in Starsector's launcher. Once in the game, you can summon the console with control+backspace and enter your commands. While the commands themselves aren't case sensitive, arguments are. For a full list of supported commands enter 'help' in the console. For more information on a specific command use 'help <command>'.\n\nYou can enter multiple commands by separating them with a semicolon. For example, \"god;nocooldown;reveal;infiniteflux;infiniteammo\" would run all of these combat cheats in a row. RunCode is an exception and can't be used with the command separator.\n\nIf you want to change the key that summons the console or the command separator, you can change these and several other console settings by using the \"settings\" command during a campaign.\n\nCurrent features:\n\nInput commands using a custom overlay\nA large list of included commands, and the ability to add your own custom commands to the console\nWrite, compile and run code in-game using the Janino library\nDoesn't require a new game, and can be safely untagged from a running game without issues\nShould be compatible with all mods, even total conversions\n\nKeybinds:\n\nCTRL + Backspace: open console\nEnter: confirm command\nLeft/Right: move cursor\nUp/Down: Scroll through command history/select autocompletion\nTab: confirm autocompletion\n\nIncluded commands:\n\nSpoiler\nUniversal commands (14):\n\nAlias, BugReport, Clear, DevMode, DumpHeap, Help, History, List, ModInfo, Reload, RunCode, Settings, SourceOf, Status\n\nCampaign commands (49):\n\nAddCredits, AddCrew, AddFuel, AddHullmod, AddItem, AddMarines, AddOfficer, AddOrdnancePoints, AddShip, AddSkillPoints, AddSpecial, AddSupplies, AddWeapon, AddWing, AddXP, AdjustRelation, AllBlueprints, AllCommodities, AllHullmods, AllHulls, AllWeapons, AllWings, FactionInfo, FindItem, FindShip, ForceDismissDialog, ForceMarketUpdate, GoTo, Hide, Home, InfiniteFuel, InfiniteSupplies, Jump, Kill, List, OpenMarket, PlanetList, Repair, Respec, Reveal, SetCommission, SetHome, SetRelation, ShowLoc, SpawnDerelict, SpawnFleet, Storage, Suicide, Survey\n\nCombat commands (23):\n\nAddCommandPoints, BlockRetreat, EndCombat, Flameout, ForceDeployAll, God, InfiniteAmmo, InfiniteCR, InfiniteFlux, Kill, NoCooldown, Nuke, RemoveHulks, Repair, Reveal, Rout, ShowAI, ShowBounds, ShowLoc, SpawnAsteroids, Suicide, ToggleAI, Traitor\n\nSome commands are listed under both campaign and combat. These work in both contexts, but function in different ways.\n\nUpcoming/planned features:\nMore commands! If you have any requests let me know in this thread and I'll try to add them to the next version.\n\nLegacy Console\nWith version 4.0, the console's UI has been replaced with a new revamped design and additional features.\nIf you prefer the prior version, go to ConsoleCommands/data/console/console_settings.json and set \"enableLegacyConsole\" from false to true.\nNone of the new utilities are available in the legacy version.\n\nOne final note:\nWhile I've tried to keep everything as user-friendly as possible, this is primarily intended as a tool to aid mod development. This means it does require some knowledge of Starsector's inner workings. Most importantly, you will need to know the internal IDs of various objects in order to use any commands dealing with them. The command \"list\" will help with this; alternatively these IDs can be found in the data files, usually in the CSVs or variant files.\n\nUsing this mod as a cheating tool will suck all of the fun out of Starsector for you. You have been warned. :)",
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\">Console Commands</span><br><span class=\"size-bigger\">An unofficial developer's console</span><br><br><a href=\"https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/v/release/LazyWizard/console-commands?label=Download%20Latest&amp;style=for-the-badge\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><b><a href=\"https://github.com/LazyWizard/console-commands/releases\" rel=\"nofollow noopener\" target=\"_blank\">Changelogs &amp; older versions</a></b><br><b><a href=\"https://lazywizard.github.io/console-commands/\" rel=\"nofollow noopener\" target=\"_blank\">View Javadoc</a></b><br><b><a href=\"https://github.com/LazyWizard/console-commands\" rel=\"nofollow noopener\" target=\"_blank\">View progress and source code on GitHub</a></b><br><b><a href=\"https://www.mediafire.com/folder/ccj840yz8jkfp/Console\" rel=\"nofollow noopener\" target=\"_blank\">Archive of old versions (pre 0.98)</a></b><br><b>Supports <a href=\"http://fractalsoftworks.com/forum/index.php?topic=8181\" rel=\"nofollow noopener\" target=\"_blank\">Version Checker</a></b></div><br><div class=\"align-center\"><img src=\"https://imgur.com/zoCketX.gif\" alt=\"\" width=\"1000\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><br><b>Instructions</b><br>This is installed just like any regular mod. Put it in the mods folder and make sure it's tagged in Starsector's launcher. Once in the game, you can summon the console with <b>control+backspace</b> and enter your commands. While the commands themselves aren't case sensitive, arguments <i>are</i>. For a full list of supported commands enter 'help' in the console. For more information on a specific command use 'help &lt;command&gt;'.<br><br>You can enter multiple commands by separating them with a semicolon. For example, \"god;nocooldown;reveal;infiniteflux;infiniteammo\" would run all of these combat cheats in a row. RunCode is an exception and can't be used with the command separator.<br><br>If you want to change the key that summons the console or the command separator, you can change these and several other console settings by using the \"settings\" command during a campaign.<br><br><b>Current features:</b><br><ul><br><li>Input commands using a custom overlay</li><li>A large list of included commands, and the ability to add your own custom commands to the console</li><li>Write, compile and run code in-game using the Janino library</li><li>Doesn't require a new game, and can be safely untagged from a running game without issues</li><li>Should be compatible with all mods, even total conversions</li></ul><br><b>Keybinds:</b><br><ul><br><li><b>CTRL + Backspace</b>: open console</li><li><b>Enter</b>: confirm command</li><li><b>Left/Right</b>: move cursor</li><li><b>Up/Down</b>: Scroll through command history/select autocompletion</li><li><b>Tab</b>: confirm autocompletion</li></ul><br><b>Included commands:</b><br><details class=\"spoiler\"><summary>Spoiler</summary>Universal commands (14):<br><ul><br><li>Alias, BugReport, Clear, DevMode, DumpHeap, Help, History, List, ModInfo, Reload, RunCode, Settings, SourceOf, Status</li></ul><br>Campaign commands (49):<br><ul><br><li>AddCredits, AddCrew, AddFuel, AddHullmod, AddItem, AddMarines, AddOfficer, AddOrdnancePoints, AddShip, AddSkillPoints, AddSpecial, AddSupplies, AddWeapon, AddWing, AddXP, AdjustRelation, AllBlueprints, AllCommodities, AllHullmods, AllHulls, AllWeapons, AllWings, FactionInfo, FindItem, FindShip, ForceDismissDialog, ForceMarketUpdate, GoTo, Hide, Home, InfiniteFuel, InfiniteSupplies, Jump, Kill, List, OpenMarket, PlanetList, Repair, Respec, Reveal, SetCommission, SetHome, SetRelation, ShowLoc, SpawnDerelict, SpawnFleet, Storage, Suicide, Survey</li></ul><br>Combat commands (23):<br><ul><br><li>AddCommandPoints, BlockRetreat, EndCombat, Flameout, ForceDeployAll, God, InfiniteAmmo, InfiniteCR, InfiniteFlux, Kill, NoCooldown, Nuke, RemoveHulks, Repair, Reveal, Rout, ShowAI, ShowBounds, ShowLoc, SpawnAsteroids, Suicide, ToggleAI, Traitor</li></ul><br>Some commands are listed under both campaign and combat. These work in both contexts, but function in different ways.</details><br><b>Upcoming/planned features:</b><br>More commands! If you have any requests let me know in this thread and I'll try to add them to the next version.<br><br><b>Legacy Console</b><br>With version 4.0, the console's UI has been replaced with a new revamped design and additional features.<br>If you prefer the prior version, go to ConsoleCommands/data/console/console_settings.json and set \"enableLegacyConsole\" from false to true.<br>None of the new utilities are available in the legacy version.<br><br><b>One final note:</b><br>While I've tried to keep everything as user-friendly as possible, this is primarily intended as a tool to aid mod development. This means it does require some knowledge of Starsector's inner workings. Most importantly, you will need to know the internal IDs of various objects in order to use any commands dealing with them. The command \"list\" will help with this; alternatively these IDs can be found in the data files, usually in the CSVs or variant files.<br><br>Using this mod as a cheating tool <i>will</i> suck all of the fun out of Starsector for you. You have been warned. :)",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "discordPostHtml": "<p>An official update to console commands that overhauls the interface to feel more modern and provide additional quality of life.</p><p><strong>Download</strong>: <a href=\"https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip</a><br><strong>Forum Page</strong>: <a href=\"https://fractalsoftworks.com/forum/index.php?topic=4106.0\" rel=\"nofollow noopener\" target=\"_blank\">https://fractalsoftworks.com/forum/index.php?topic=4106.0</a><br><strong>Changelog &amp; Previous versions</strong>: <a href=\"https://github.com/LazyWizard/console-commands/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://github.com/LazyWizard/console-commands/releases</a></p><pre><code>Version 4.0.0\n\n- Complete visual overhaul of the legacy UI.\n- Added command and argument autocompletion &amp; suggestion.\n- Added syntax hints for command parameters.\n- Now remembers the last 30 commands, even across game restarts.\n- The runcode command now displays live compile error warnings.\n- Reverted the mods version system back to the original format.\n- Added version checker changelog &amp; download support.\n- Added \"History\" command.\n\nKeybinds\n\n- CTRL + Backspace: open console\n- Enter: confirm command\n- Left/Right: move cursor\n- Up/Down: Scroll through command history/select autocompletion\n- Tab: confirm autocompletion\n\nLegacy UI\n\n- The legacy UI can still be re-enabled in \"ConsoleCommands/data/console/console_settings.json\".\n- New features added with this version are not available in the legacy UI.\n\nFor Modders\n\n- Added \"BaseCommandWithSuggestion\". Implement it to create a command with autocomplete suggestions.\n- Use the \"getSuggestions\" method to return a list of the provided suggestions for your command.\n- \"parameter\" tells you which parameter the suggestions are for (0 is the first arg).\n- \"previous\" are the other arguments the user entered before the current one.</code></pre>",
-  "aiDescription": "Provides a custom overlay for inputting commands during campaigns and combat. Includes numerous built-in commands for adding resources, spawning ships, and debugging, as well as support for user-created scripts and in-game code compilation.",
-  "saveCompatibilityText": "Doesn't require a new game, and can be safely untagged from a running game without issues",
-  "removalCompatibilityText": "Doesn't require a new game, and can be safely untagged from a running game without issues",
-  "canAdd": "yes",
-  "canRemove": "yes",
+  "aiDescription": "Adds an in-game developer console accessible via a keybind, allowing users to input commands for debugging and modding. Includes a large library of built-in commands for campaign and combat, as well as the ability to write, compile, and run custom Java code directly in the game.",
+  "saveCompat": {
+    "adding": {
+      "quote": "Doesn't require a new game",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "can be safely untagged from a running game without issues",
+      "answer": "yes"
+    }
+  },
   "aiUse": {},
   "rawCategories": [
     "Misc. Campaign Mods",
@@ -67,21 +75,21 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6af7fb61&is=6af6a9e1&hm=10526d3f7c77ad90e255311be99d04bb694fe7bb358dbe1ed025c5becc1718ac&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6af8a421&is=6af752a1&hm=fc7313dfe306c0f0f1ae445401ee3306ba2dc1a4e60b86be1a48788fc67ec834&",
       "aiCaption": "A dark game screen showing the text 'Console loaded, summon with CONTROL+BACKSPACE.' and a command prompt.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1422651666393600030/image.png?ex=6af7ffdc&is=6af6ae5c&hm=098584be6a76fd4110b246a990f546cc448ff6d081ee9835b7d48c695ef62a51&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1422651666393600030/image.png?ex=6af8a89c&is=6af7571c&hm=42302918bfbb4aeca5b2565b1889e86a7e54e8906ce12e59058dc7cda47a8407&",
       "aiCaption": "A console interface displaying instructions for commands like Enter, Tab, Left/Right, Up/Down, and an example command 'AddSpecial <specialId>'.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1423713681312583851/image.png?ex=6af7e870&is=6af696f0&hm=e786c0ee2d83fe7328940b0abe35f29b1132b0293fe4aff856ca155603789ea6&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1423713681312583851/image.png?ex=6af89130&is=6af73fb0&hm=9e64b6477d0552ba4386574e965ca522f4316207b0173340a8c06f210bcd1e45&",
       "aiCaption": "A screenshot of a console window showing code with the command 'runcode' and a loop using Console.showMessage.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -105,18 +113,10 @@
       "url": "https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip",
       "directUrl": "https://github.com/LazyWizard/console-commands/releases/latest/download/ConsoleCommands.zip",
       "fileName": "ConsoleCommands.zip",
-      "kind": "direct",
+      "type": "direct",
       "label": "",
       "host": "GitHub",
       "needsAnotherStep": false
-    },
-    {
-      "url": "https://www.mediafire.com/folder/ccj840yz8jkfp/Console",
-      "directUrl": "https://www.mediafire.com/folder/ccj840yz8jkfp/Console",
-      "kind": "mirror",
-      "label": "Archive of old versions (pre 0.98)",
-      "host": "MediaFire",
-      "needsAnotherStep": true
     }
   ],
   "changelog": {},
@@ -129,24 +129,26 @@
   "threadLastPostOn": "2026-11-03",
   "sameNameMods": [],
   "addons": [],
-  "optionalNeeds": [
-    {
-      "name": "Version Checker",
-      "id": "version-checker"
-    }
-  ],
+  "requirements": {
+    "optional": [
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      }
+    ]
+  },
   "conflicts": [
     {
       "name": "Halo - United Nations Space Command (UNSC)",
       "id": "halo-united-nations-space-command",
       "quote": "If your having an issue where the game only opens the Legacy Console, remove the \"Halo - United Nations Space Command (UNSC)\" mod if you have it. It appears that the mod ships a whole copy of an old version of Console commands, which overwrites all updated code.",
-      "kind": "technical"
+      "type": "technical"
     },
     {
       "name": "Realistic Combat",
       "id": "realistic-combat",
       "quote": "God mode and similar commands do not work Awaiting the return of Console Commands author LazyWizard to the forum.",
-      "kind": "technical",
+      "type": "technical",
       "fromOtherMod": true
     }
   ]

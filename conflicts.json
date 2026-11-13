@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T07:08:14.656839Z",
+  "generatedAt": "2026-11-13T19:27:27.555170Z",
   "mods": [
     {
       "modId": "a-vanilla-balance-tweak",
@@ -9,7 +9,7 @@
           "name": "Emergent Threats",
           "id": "emergent-threats",
           "quote": "Known to be incompatible with Emergent Threats",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -18,20 +18,9 @@
       "modName": "Abyves - Abyssal Vestiges - Small ship mod",
       "conflicts": [
         {
-          "name": "Galatia Academy",
+          "name": "Any mod changing the Galatia Academy or removing it outright",
           "quote": "Any mod changing the Galatia Academy or removing it outright will not be compatible, as the one quest of this mod requires the player to go there.",
-          "kind": "technical"
-        }
-      ]
-    },
-    {
-      "modId": "additional-portraits",
-      "modName": "Additional Portraits",
-      "conflicts": [
-        {
-          "name": "other portrait replacements",
-          "quote": "May conflict with other portrait replacements",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -43,7 +32,7 @@
           "name": "Grand Sector",
           "id": "grand-sector",
           "quote": "This mod incompatible with Grand Sector, since it does the same thing and more.",
-          "kind": "gameplay"
+          "type": "gameplay"
         }
       ]
     },
@@ -55,13 +44,13 @@
           "name": "RTSAssist",
           "id": "rtsassist",
           "quote": "Combat GUI causes camera issues when in RTSAssist mode (RTSAssist mod).",
-          "kind": "withNotes"
+          "type": "withNotes"
         },
         {
           "name": "Cooperative Multiplayer Combat",
           "id": "cooperative-multiplayer-combat",
           "quote": "Incompatibility with Cooperative Multiplayer mod (only when using ship modes or the ForceAF tag on the ship controlled by player 2)",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -72,7 +61,7 @@
         {
           "name": "other mods that change those skills",
           "quote": "Replaces the skill files for Support Doctrine, Carrier Group, Fighter Uplink, Coordinated Maneuvers and Wolfpack Tactics, so it will conflict with other mods that change those skills.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -83,55 +72,8 @@
         {
           "name": "AdvancedGunneryControl",
           "id": "advanced-gunnery-control",
-          "quote": "When running AI Tweaks along with Advanced Gunnery Control, make sure to install AGC 1.19.1 or later. Earlier AGC versions may disable certain AI Tweaks features.",
-          "kind": "withNotes"
-        },
-        {
-          "name": "Starship Legends",
-          "id": "starship-legends",
-          "quote": "NOTE: Uninstalling AI Tweaks from a save that also uses Starship Legends may result in save game corruption. Otherwise, AI Tweaks and Starship Legends are fully compatible.",
-          "kind": "withNotes"
-        }
-      ]
-    },
-    {
-      "modId": "aliceworks-hull-mods",
-      "modName": "Aliceworks Hull Mods",
-      "conflicts": [
-        {
-          "name": "Advanced Armor",
-          "quote": "Incompatible with Advanced Armor and Reinforced Bulkheads.",
-          "kind": "gameplay"
-        },
-        {
-          "name": "Reinforced Bulkheads",
-          "quote": "Incompatible with Advanced Armor and Reinforced Bulkheads.",
-          "kind": "gameplay"
-        },
-        {
-          "name": "Augmented Drive Field",
-          "quote": "Incompatible with Augmented Drive Field and Efficiency Overhaul.",
-          "kind": "gameplay"
-        },
-        {
-          "name": "Efficiency Overhaul",
-          "quote": "Incompatible with Augmented Drive Field and Efficiency Overhaul.",
-          "kind": "gameplay"
-        },
-        {
-          "name": "Unstable Injector",
-          "quote": "Doesn't stack with Unstable Injector and offers +1 burn speed out of combat.",
-          "kind": "gameplay"
-        },
-        {
-          "name": "Heavy Armor",
-          "quote": "Incompatible with Heavy Armor and Triprismatic Armor.",
-          "kind": "gameplay"
-        },
-        {
-          "name": "Solar Shielding",
-          "quote": "Incompatible with Heavy Armor, Advanced Armor, and Solar Shielding.",
-          "kind": "gameplay"
+          "quote": "When running AI Tweaks along with Advanced Gunnery Control, make sure to install AGC 1.19.1 [link: https://github.com/DesperatePeter/starsector-advanced-weapon-control/releases/tag/1.19.1] or later. Earlier AGC versions may disable certain AI Tweaks features.",
+          "type": "withNotes"
         }
       ]
     },
@@ -143,7 +85,19 @@
           "name": "Domain Explorarium Expansion",
           "id": "domain-explorarium-expansion",
           "quote": "Posted a wee update that should fix the issue mentioned here (an issue that arises with DEX):",
-          "kind": "withNotes"
+          "type": "withNotes"
+        }
+      ]
+    },
+    {
+      "modId": "arc-light-bureau-english-translation-3en1",
+      "modName": "Arc Light Bureau English Translation - .3en1",
+      "conflicts": [
+        {
+          "name": "Random Sector",
+          "id": "random-sector",
+          "quote": "Random Sector is not recommended. Some faction-specific structures and content may not generate correctly, which can make certain ships or other content unavailable.",
+          "type": "withNotes"
         }
       ]
     },
@@ -155,7 +109,7 @@
           "name": "Dassault-Mikoyan Engineering",
           "id": "dassault-mikoyan-engineering",
           "quote": "the aforementioned crash is due to a faulty variant in Dassault-Mikoyan. Be advised that if you are using a bootleg of that mod it will not be compatible",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -166,7 +120,7 @@
         {
           "name": "Any mod that also changes the UI",
           "quote": "Incompatible mods Any mod that also changes the UI (Probably wouldn't crash but, issues would most likely appear)",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -178,7 +132,7 @@
           "name": "Terraforming and Station Construction",
           "id": "terraforming-and-station-construction",
           "quote": "the code that handles planet transformation cannot handle TASC Stations, likely due to their different nature to standard Starsector planets.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -189,19 +143,7 @@
         {
           "name": "Augmented Drive Field",
           "quote": "The hullmod cannot be installed together with Augmented Drive Field, and will occupy a Logistic slot on the ship it is installed on.",
-          "kind": "gameplay"
-        }
-      ]
-    },
-    {
-      "modId": "balanced-commerce",
-      "modName": "Balanced Commerce",
-      "conflicts": [
-        {
-          "name": "Industrial.Evolution",
-          "id": "industrial-evolution",
-          "quote": "It should work if you disable Industrial Evolution's changes to Commerce through its Lunalib settings.",
-          "kind": "withNotes"
+          "type": "gameplay"
         }
       ]
     },
@@ -212,7 +154,7 @@
         {
           "name": "any mod that modifies the vanilla hullmods",
           "quote": "It does conflict with any mod that modifies the vanilla hullmods, but I have not found any so far.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -223,7 +165,7 @@
         {
           "name": "Nex Random Sector",
           "quote": "Currently breaks with Nex Random Sector (still haven't fixed this), a fix will be out eventually.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -235,7 +177,7 @@
           "name": "Halo Dynamics Ship Industry",
           "id": "halo-dynamics-ship-industry",
           "quote": "please note that the the new Halo Dynamics 1.8.0 update (which isnt translated at the moment) conflicts with CJY.",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -247,7 +189,7 @@
           "name": "Halo - United Nations Space Command (UNSC)",
           "id": "halo-united-nations-space-command",
           "quote": "If your having an issue where the game only opens the Legacy Console, remove the \"Halo - United Nations Space Command (UNSC)\" mod if you have it. It appears that the mod ships a whole copy of an old version of Console commands, which overwrites all updated code.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -258,7 +200,7 @@
         {
           "name": "Explore the Galaxy",
           "quote": "Not compatible with original \"Explore the Galaxy\"",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -269,19 +211,7 @@
         {
           "name": "mod that change the start",
           "quote": "Compatible with all mod except mod that change the start.",
-          "kind": "technical"
-        }
-      ]
-    },
-    {
-      "modId": "customdeployment-deployment-presets-fleet-sorting",
-      "modName": "CustomDeployment - Deployment Presets & Fleet Sorting",
-      "conflicts": [
-        {
-          "name": "SweetFleet",
-          "id": "sweetfleet-0-5-7-fleet-sorting-logistics-analysis-officer-fit",
-          "quote": "This can be used to avoid UI conflicts with mods such as SweetFleet",
-          "kind": "withNotes"
+          "type": "technical"
         }
       ]
     },
@@ -292,7 +222,7 @@
         {
           "name": "Mods that change the Missions",
           "quote": "It might be incompatible to all Mods that change the Missions (when encounters bugs and problems feel free to pm me)",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -303,7 +233,7 @@
         {
           "name": "modded ship using modular hidden mounts",
           "quote": "Some of Diable Avionic's weapons are incompatible with any modded ship using modular hidden mounts . This type of mount is supposed to only be used with built-in weapons on fighters and causes a plethora of issues with animations, muzzle effects and barrel offsets.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -315,7 +245,7 @@
           "name": "Phillip Andrada Gas Station Manager",
           "id": "phillip-andrada-gas-station-manager",
           "quote": "ADVISORY - PAGSM versions 1.11 and above are compatible ONLY with DE versions 1.2.0f and above. Earlier versions will crash with PAGSM 1.11+.",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -327,13 +257,13 @@
           "name": "A small mod regarding lobster proliferation",
           "id": "lobster-proliferation",
           "quote": "the way DNEEP adds new demands to the population and infrastructure industry conflicts and in my testing, overwrites lobster proliferation or caused instability in the game. I am currently looking for a fix to this.",
-          "kind": "technical"
+          "type": "technical"
         },
         {
           "name": "Nexerelin",
           "id": "nexerelin",
           "quote": "The way DNEEP spawns industries and conditions conflicts with Nexerelin's random core sector, otherwise works fine with Nex.",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -345,7 +275,7 @@
           "name": "The Domain Reformed",
           "id": "the-domain-reformed",
           "quote": "Main reason for this update is to fix a bug that LordKhorne's mod 'The Domain Reformed' has a star system named 'Mirfak' since April 2024. It could cause some potential bugs if you have both mods active.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -356,7 +286,7 @@
         {
           "name": "other portrait replacements",
           "quote": "May conflict with other portrait replacements",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -367,7 +297,7 @@
         {
           "name": "other mods",
           "quote": "The mod is a total conversion, so don't look for vanilla stuff and don't try to integrate with other mods.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -378,7 +308,7 @@
         {
           "name": "total conversion",
           "quote": "Maybe not compatible with total conversion.",
-          "kind": "other"
+          "type": "other"
         }
       ]
     },
@@ -390,7 +320,7 @@
           "name": "Second Wave Options",
           "id": "second-wave-options",
           "quote": "This likely won't play nice with any mod that tries to change faction doctrines midgame (Second Wave Options is the only one that I know of). Depending on load order, one will override the other's changes.",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -402,13 +332,13 @@
           "name": "Better Deserved S-Mods",
           "id": "better-deserved-s-mods",
           "quote": "Using Better Deserved S Mods or Progressive S Mods reduce the effectiveness to 25%; Using both nullifies the mod.",
-          "kind": "gameplay"
+          "type": "gameplay"
         },
         {
           "name": "Progressive S-Mods",
           "id": "progressive-s-mods",
           "quote": "Using Better Deserved S Mods or Progressive S Mods reduce the effectiveness to 25%; Using both nullifies the mod.",
-          "kind": "gameplay"
+          "type": "gameplay"
         }
       ]
     },
@@ -420,24 +350,13 @@
           "name": "BoxUtil",
           "id": "box-util",
           "quote": "BoxUtil versions 1.6.0 and later are compatible only on a GPU that supports OpenGL 4.5.",
-          "kind": "withNotes"
+          "type": "withNotes"
         },
         {
           "name": "Particle Engine",
           "id": "particle-engine",
           "quote": "Particle Engine may rarely crash in very large battles. The issue is difficult to trigger and can be safely ignored for typical gameplay.",
-          "kind": "withNotes"
-        }
-      ]
-    },
-    {
-      "modId": "finer-ship-collisions",
-      "modName": "Finer Ship Collisions",
-      "conflicts": [
-        {
-          "name": "other mods",
-          "quote": "If any of the vanilla ships are overridden by other mods, the game has a tendency to load in elements from both mods rather than selecting one of them.",
-          "kind": "technical"
+          "type": "withNotes"
         }
       ]
     },
@@ -449,13 +368,13 @@
           "name": "Nomadic Survival",
           "id": "nomadic-survival",
           "quote": "Compatible with all mods except for Nomadic Survival and Perilous Expanse, which already include the ability from this mod.",
-          "kind": "gameplay"
+          "type": "gameplay"
         },
         {
           "name": "Perilous Expanse",
           "id": "perilous-expanse",
           "quote": "Compatible with all mods except for Nomadic Survival and Perilous Expanse, which already include the ability from this mod.",
-          "kind": "gameplay"
+          "type": "gameplay"
         }
       ]
     },
@@ -466,7 +385,7 @@
         {
           "name": "other music mods",
           "quote": "it should be fine as long as no other music mods supercede it.",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -477,8 +396,8 @@
         {
           "name": "StarSECTOR Plus",
           "id": "starfarer-plus",
-          "quote": "This mod will NOT work with Starsector+.  If you use Starsector+, continue to use ShaderLib.",
-          "kind": "technical"
+          "quote": "This mod will NOT work with Starsector+.",
+          "type": "technical"
         }
       ]
     },
@@ -489,7 +408,7 @@
         {
           "name": "TT-station & Junk Pirates",
           "quote": "I might have to end up waiting for the next version of starfarer though because it would otherwise conflict with TT-station & Junk Pirates.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -500,7 +419,7 @@
         {
           "name": "tritachyon faction",
           "quote": "Note that it won't be compatible with any mod that edits the tritachyon faction, or the sectorgen file. (No longer edits the main sectorgen file as of 1.02, but still requires the convoys in the tritachyon.faction file).",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -512,18 +431,7 @@
           "name": "Second-in-Command",
           "id": "second-in-command",
           "quote": "Second-in-Command may make Humanity less useful because of the way it changes or removes Neural Link behavior.",
-          "kind": "withNotes"
-        },
-        {
-          "name": "Industrial.Evolution",
-          "id": "industrial-evolution",
-          "quote": "If yer really scared, avoid IndEvo or Terraforming or anything else that touches the planets in general",
-          "kind": "other"
-        },
-        {
-          "name": "Terraforming",
-          "quote": "If yer really scared, avoid IndEvo or Terraforming or anything else that touches the planets in general",
-          "kind": "other"
+          "type": "gameplay"
         }
       ]
     },
@@ -535,37 +443,13 @@
           "name": "Halo HomeSystems",
           "id": "halo-homesystems",
           "quote": "This fork is not compatabile with Halo HomeSystems or UNSC Reborn.",
-          "kind": "technical"
+          "type": "technical"
         },
         {
           "name": "Halo - UNSC Reborn",
           "id": "halo-unsc-reborn",
           "quote": "This fork is not compatabile with Halo HomeSystems or UNSC Reborn.",
-          "kind": "technical"
-        }
-      ]
-    },
-    {
-      "modId": "halo-unsc-reborn",
-      "modName": "Halo - UNSC Reborn",
-      "conflicts": [
-        {
-          "name": "Halo - United Nations Space Command (UNSC)",
-          "id": "halo-united-nations-space-command",
-          "quote": "not save-compatible with the original UNSC mod, and not meant to be run alongside it - both define the same faction and the same ship IDs.",
-          "kind": "technical"
-        },
-        {
-          "name": "Halo - United Nations Space Command: Core Continued (UNSC)",
-          "id": "halo-united-nations-space-command-continued-unsc-legacy",
-          "quote": "not save-compatible with the original UNSC mod, and not meant to be run alongside it - both define the same faction and the same ship IDs.",
-          "kind": "technical"
-        },
-        {
-          "name": "Halo - United Nations Space Command: Continued (UNSC) (LEGACY)",
-          "id": "united-nations-space-command-continued",
-          "quote": "not save-compatible with the original UNSC mod, and not meant to be run alongside it - both define the same faction and the same ship IDs.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -574,16 +458,34 @@
       "modName": "Halo HomeSystems",
       "conflicts": [
         {
+          "name": "Halo - United Nations Space Command (UNSC)",
+          "id": "halo-united-nations-space-command",
+          "quote": "NOT COMPATIBLE WITH ORIGINAL OR EXPANDED UNSC MOD.",
+          "type": "technical"
+        },
+        {
+          "name": "Halo - UNSC Reborn",
+          "id": "halo-unsc-reborn",
+          "quote": "NOT COMPATIBLE WITH ORIGINAL OR EXPANDED UNSC MOD.",
+          "type": "technical"
+        },
+        {
           "name": "Halo - United Nations Space Command: Core Continued (UNSC)",
           "id": "halo-united-nations-space-command-continued-unsc-legacy",
           "quote": "NOT COMPATIBLE WITH ORIGINAL OR EXPANDED UNSC MOD.",
-          "kind": "technical"
+          "type": "technical"
+        },
+        {
+          "name": "Halo - United Nations Space Command: Continued (UNSC) (LEGACY)",
+          "id": "united-nations-space-command-continued",
+          "quote": "NOT COMPATIBLE WITH ORIGINAL OR EXPANDED UNSC MOD.",
+          "type": "technical"
         },
         {
           "name": "Simple Java Upgrader",
           "id": "simple-java-upgrader-hotfix-2",
           "quote": "Not compatible with Simple Java Upgrader mod as of now.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -595,13 +497,13 @@
           "name": "Ironclads",
           "id": "ironclads",
           "quote": "Incompatible - All total conversions, such as Ironclads and Vacuum",
-          "kind": "technical"
+          "type": "technical"
         },
         {
           "name": "Vacuum - Build a Stellar Empire. (0.62a ALPHA build 34) (TC Mod)",
           "id": "vacuum",
           "quote": "Incompatible - All total conversions, such as Ironclads and Vacuum",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -612,7 +514,7 @@
         {
           "name": "mods that change Remnant/Omega/Derelict factions",
           "quote": "It's strongly incompatible with mods that change Remnant/Omega/Derelict factions (just be warned that it's can be caused by this pack).",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -623,7 +525,7 @@
         {
           "name": "Indevo Supercomputer",
           "quote": "Frontier Command Center currently incompatible with Indevo Supercomputer when used together in the same Colony in SS 9.7",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -634,7 +536,7 @@
         {
           "name": "AoTD Governments",
           "quote": "Limited compatibility with AoTD Governments",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -646,7 +548,7 @@
           "name": "Animated Colony Items (Vanilla edition)",
           "id": "animated-colony-items",
           "quote": "Currently incompatible with Animated Colony Items. I’ve contacted Kaysaar but an easy fix in the meantime is to remove the story items from the Animated Colony Items special_items.csv, they’re vestigial anyway as far as I understand.",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -657,7 +559,7 @@
         {
           "name": "colony overhaul mods",
           "quote": "This mod overrides vanilla's Fuel Production industry and is probably not compatible with any of the colony overhaul mods.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -669,7 +571,7 @@
           "name": "Extra System Reloaded - Oddisz Edition",
           "id": "extra-systems-reloaded-oddisz-rewrite",
           "quote": "Incompatible with Extra Sytems Reloaded (Issue with Exotica integration that wil never be fixed)",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -681,7 +583,7 @@
           "name": "JaydeePiracy",
           "id": "jaydeepiracy",
           "quote": "there is currently a crash with jaydeepiracy for now",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -693,25 +595,25 @@
           "name": "Starpocalypse Revengeance - more apocalyptic settings",
           "id": "starpocalypse-revengeance-more-apocalyptic-settings",
           "quote": "Starpocalypse Revengeance (overrides submarkets)",
-          "kind": "technical"
+          "type": "technical"
         },
         {
           "name": "Grand.Colonies",
           "id": "grand-colonies",
           "quote": "Grand.Colonies (Built-in scrollbar makes it redundant)",
-          "kind": "gameplay"
-        },
-        {
-          "name": "Ashes Of The Domain",
-          "id": "ashes-of-the-domain",
-          "quote": "Ashes of The Domain (has its own economic overhaul)",
-          "kind": "gameplay"
+          "type": "gameplay"
         },
         {
           "name": "Astral Ascension",
           "id": "astral-ascension",
           "quote": "Astral Ascension (technically works but numbers get ridiculous)",
-          "kind": "withNotes"
+          "type": "gameplay"
+        },
+        {
+          "name": "Ashes Of The Domain",
+          "id": "ashes-of-the-domain",
+          "quote": "Ashes of The Domain (has its own economic overhaul)",
+          "type": "gameplay"
         }
       ]
     },
@@ -723,7 +625,7 @@
           "name": "Nexerelin",
           "id": "nexerelin",
           "quote": "If playing with Nexerelin, the randomized sector option will make most assistants unobtainable (it is fine to use Nex, there is a unique start to go with it, just avoid randomized sector)",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -734,13 +636,13 @@
         {
           "name": "Industry Evolution Academies",
           "quote": "No known mod conflicts, but the unique admin can sometime be trained by the Industry Evolution Academies.",
-          "kind": "gameplay"
+          "type": "gameplay"
         },
         {
           "name": "Nexerelin",
           "id": "nexerelin",
           "quote": "If playing with Nexerelin, the randomized sector option will make most assistants unobtainable (it is fine to use Nex, there is a unique start to go with it, just avoid randomized sector)",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -751,7 +653,7 @@
         {
           "name": "any mod that alters impl.campaign.econ.impl.ItemEffectsRepo , impl.campaign.econ.impl.HeavyIndustry and data/campaign/special_items.csv",
           "quote": "will likely cause issues with any mod that alters impl.campaign.econ.impl.ItemEffectsRepo , impl.campaign.econ.impl.HeavyIndustry and data/campaign/special_items.csv .",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -761,8 +663,8 @@
       "conflicts": [
         {
           "name": "Ashes of The Domain Vaults of Knowledge",
-          "quote": "This mod is incompatible with Ashes of The Domain Vaults of Knowledge and any other that modifies the same entries.",
-          "kind": "technical"
+          "quote": "This mod is incompatible with Ashes of The Domain Vaults of Knowledge and any other that modifies the same entries. Although compatibility can be easily achieved by combining the entries added by AoTD-VoK and my mod, in both mods, in the file \"salvage_entity_gen_data\", rows \"station_research/mining/habitat_remnant\", column \"drop_random\". Here [link: https://www.mediafire.com/file/nenk1sytphjy4ft/Compatibility_files.rar/file] you can download the files with the entries combited, to make it more easy for you. Treat that archive like an example and don't just drag and drop the files to your mod directory because it can be outdated.",
+          "type": "withNotes"
         }
       ]
     },
@@ -774,18 +676,7 @@
           "name": "Custom Battle Music",
           "id": "custom-battle-music",
           "quote": "Compatible with other music packs, but not mods that modify the music plugin (currently the only known one is Custom Battle Music ).",
-          "kind": "technical"
-        }
-      ]
-    },
-    {
-      "modId": "n84phasepack",
-      "modName": "N84PhasePack",
-      "conflicts": [
-        {
-          "name": "Phase Anchor",
-          "quote": "This mod modifies the Phase Anchor hullmod.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -797,7 +688,7 @@
           "name": "Nexerelin",
           "id": "nexerelin",
           "quote": "fixed incompatibility with Nexerilin's randomized sector",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -809,7 +700,7 @@
           "name": "Yuri Expedition",
           "id": "yuri-expedition",
           "quote": "Important : Do not use this mod with any lower version of YRXP.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -821,13 +712,13 @@
           "name": "Fuel Siphoning",
           "id": "fuel-siphoning",
           "quote": "Compatible with all mods except for Fuel Siphoning and Perilous Expanse (due to overlapping functionality)",
-          "kind": "gameplay"
+          "type": "gameplay"
         },
         {
           "name": "Perilous Expanse",
           "id": "perilous-expanse",
           "quote": "Perilous Expanse is an alternative version of this mod, so only one should be used at a time. It's safe to switch between them.",
-          "kind": "gameplay"
+          "type": "gameplay"
         }
       ]
     },
@@ -838,7 +729,7 @@
         {
           "name": "other mods",
           "quote": "Note: Obsidian Void is a total conversion. This will not work in conjunction with other mods.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -849,8 +740,8 @@
         {
           "name": "Fleet Size By DP",
           "id": "fleet-size-by-dp",
-          "quote": "this mod is apparently incompatible with \"Fleet Size by DP\". Currently, a possible solution is to remove the line modifying player fleet size (\"maxShipsInFleet\":whatever you changed this to,) in the settings.json of Omega's External Settings, due to the fact that this mod is somehow overriding Fleet Size by DP.",
-          "kind": "withNotes"
+          "quote": "Not an actual update, just a post to alert people that this mod is apparently incompatible with \"Fleet Size by DP\". Currently, a possible solution is to remove the line modifying player fleet size (\"maxShipsInFleet\":whatever you changed this to,) in the settings.json of Omega's External Settings, due to the fact that this mod is somehow overriding Fleet Size by DP.",
+          "type": "withNotes"
         }
       ]
     },
@@ -861,7 +752,7 @@
         {
           "name": "Chinese release",
           "quote": "For obvious reasons, this is not compatible with the Chinese release and only one language version can be in your mod folder at any given time.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -872,19 +763,7 @@
         {
           "name": "totalconversions",
           "quote": "This mod does not work with totalconversions",
-          "kind": "technical"
-        }
-      ]
-    },
-    {
-      "modId": "ore-refinery",
-      "modName": "Ore Refinery",
-      "conflicts": [
-        {
-          "name": "Ashes Of The Domain",
-          "id": "ashes-of-the-domain",
-          "quote": "If using AOTD then click here, d/l this file and replace commodities.csv in \\mods\\Ore Refinery 1.0\\data\\campaign with this file to fix the inflation issue when using both mods",
-          "kind": "withNotes"
+          "type": "technical"
         }
       ]
     },
@@ -895,8 +774,8 @@
         {
           "name": "Nexerelin",
           "id": "nexerelin",
-          "quote": "Does not work with Nexerlin random sector.",
-          "kind": "withNotes"
+          "quote": "Does not work with Nexerlin random sector",
+          "type": "withNotes"
         }
       ]
     },
@@ -908,7 +787,7 @@
           "name": "Mikohime Unofficial Java 28+ & FR Resource Cache & OpenAL Add-on",
           "id": "mikohime-unofficial-java-28-configurator",
           "quote": "This mod is currently not compatible with mods that upgrade the games java version from 17 to 25+ (like Mikohime 28). However, the \"Fast Rendering\" mod fixes the issue that causes this incompatibility, so you can use that to prevent this issue.",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -920,13 +799,13 @@
           "name": "Fuel Siphoning",
           "id": "fuel-siphoning",
           "quote": "Compatible with all mods except for Fuel Siphoning and Nomadic Survival (due to overlapping functionality)",
-          "kind": "gameplay"
+          "type": "gameplay"
         },
         {
           "name": "Nomadic Survival",
           "id": "nomadic-survival",
           "quote": "Nomadic Survival is an alternative version of this mod, so only one should be used at a time.",
-          "kind": "gameplay"
+          "type": "gameplay"
         }
       ]
     },
@@ -938,7 +817,7 @@
           "name": "Nexerelin",
           "id": "nexerelin",
           "quote": "Nexerelin's random systems (Corvus Mode) is not supported for 'Telos' and the quest will not appear.",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -950,7 +829,7 @@
           "name": "AI Tweaks",
           "id": "ai-tweaks",
           "quote": "Incompatible with AI tweaks. Hopefully this will be fixed soon",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -961,7 +840,7 @@
         {
           "name": "Mods that affect the Sindrian Diktat .faction file",
           "quote": "Mods that affect the Sindrian Diktat .faction file may cause crashes.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -973,24 +852,13 @@
           "name": "Nexerelin",
           "id": "nexerelin",
           "quote": "Fixed a bug where the combination of Nexerelin random mode and the Industrial Evolution mod caused PS:AC to crash with a null pointer exception.",
-          "kind": "withNotes"
+          "type": "withNotes"
         },
         {
           "name": "Industrial.Evolution",
           "id": "industrial-evolution",
           "quote": "Fixed a bug where the combination of Nexerelin random mode and the Industrial Evolution mod caused PS:AC to crash with a null pointer exception.",
-          "kind": "withNotes"
-        }
-      ]
-    },
-    {
-      "modId": "portrait-changer-1-0-7b-updated-english-version",
-      "modName": "Portrait Changer",
-      "conflicts": [
-        {
-          "name": "Starsector or other mods",
-          "quote": "Changing story-critical or otherwise important NPCs may interfere with scripts from Starsector or other mods.",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -1001,7 +869,7 @@
         {
           "name": "Tiandong",
           "quote": "Removed compatibility with Tiandong.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1013,7 +881,7 @@
           "name": "Divisions: Command and Control | Combat AI Overhaul",
           "id": "divisions-command-and-control-combat-ai-overhaul",
           "quote": "Incompatible if used simultaneously with Divisions: Command and Control, though you can toggle between enabling them for your fleet without any problems.",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -1024,7 +892,7 @@
         {
           "name": "Ashes of the Domain - Questions of Loyalty",
           "quote": "Not compatible with \"Ashes of the Domain - Questions of Loyalty\". Other ashes modules are compatible.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1036,13 +904,13 @@
           "name": "Adjusted Sector",
           "id": "adjusted-sector",
           "quote": "It is incompatible with Adjusted Sector and Wide Horizons .",
-          "kind": "technical"
+          "type": "technical"
         },
         {
           "name": "Wide Horizons",
           "id": "wide-horizons",
           "quote": "It is incompatible with Adjusted Sector and Wide Horizons .",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1053,7 +921,7 @@
         {
           "name": "total conversions",
           "quote": "Fully compatible with other mods, except for total conversions (Does work with Uomoz's Sector! Although blueprints for Batavian ships are lacking)",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1065,43 +933,19 @@
           "name": "Console Commands",
           "id": "console-commands",
           "quote": "God mode and similar commands do not work Awaiting the return of Console Commands author LazyWizard to the forum.",
-          "kind": "technical"
+          "type": "technical"
         },
         {
           "name": "Fleet Action History",
           "id": "fleet-action-history",
           "quote": "Fleet action history does not work if Realistic Combat Damage Model is enabled Awaiting Fleet Action History mod author briansd9's reply to my request to fix the incompatibility together.",
-          "kind": "technical"
+          "type": "technical"
         },
         {
           "name": "GraphicsLib",
           "id": "graphicslib",
           "quote": "Running the included radar alongside GraphicsLib on an AMD GPU blackens the screen. Disable the included radar by changing the associated field from true to false in Toggles.json",
-          "kind": "withNotes"
-        }
-      ]
-    },
-    {
-      "modId": "realistic-tariffs",
-      "modName": "Realistic Tariffs",
-      "conflicts": [
-        {
-          "name": "Nexerelin",
-          "id": "nexerelin",
-          "quote": "Yes, from my limited testing it works as intended due to telling in mod_info.json to run after nexerelin, nexerelin also modifies tariffs but as this mod runs after it nullfies nexerelin mod changes.",
-          "kind": "withNotes"
-        }
-      ]
-    },
-    {
-      "modId": "refit-filters-weapon-class",
-      "modName": "Refit Filters (Weapon Class)",
-      "conflicts": [
-        {
-          "name": "Refit Filters",
-          "id": "refit-filters",
-          "quote": "This replaces Refit Filters: enable one or the other, not both. If both are enabled, the fork detects it and stands down.",
-          "kind": "technical"
+          "type": "withNotes"
         }
       ]
     },
@@ -1113,7 +957,7 @@
           "name": "TriOS: Launcher/Mod Manager/Toolkit",
           "id": "trios-launcher-mod-manager-toolkit",
           "quote": "Not compatible with Trios -- you'll need manual installation.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1124,7 +968,7 @@
         {
           "name": "Advanced Gunnery AI",
           "quote": "Known Incompatibility: Advanced Gunnery AI is it compatible with some weapon in this mod due to those having custom AI of their own",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -1135,7 +979,7 @@
         {
           "name": "mods that modify the ID of a base-game industry type",
           "quote": "Synergy Conditions may or may not work with mods that modify the ID of a base-game industry type (Feel free to comment and let me know which mods I can put a fix in for this)",
-          "kind": "other"
+          "type": "other"
         }
       ]
     },
@@ -1145,15 +989,15 @@
       "conflicts": [
         {
           "name": "Diable Avionics",
-          "id": "diable-avionics-4",
+          "id": "diable-avionics-2",
           "quote": "Diable Avionics: All ship systems that switch player control to fighters, under certain conditions, will CTD.",
-          "kind": "technical"
+          "type": "technical"
         },
         {
           "name": "SpeedUp",
           "id": "speedup",
           "quote": "SpeedUp: Bullet time is not supported.",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -1165,7 +1009,7 @@
           "name": "LunaLib",
           "id": "lunalib",
           "quote": "However, it will not work with a LunaLib version less than v1.7.4.",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
@@ -1177,36 +1021,25 @@
           "name": "Quality Captains",
           "id": "quality-captains",
           "quote": "Notably, this mod is not compatible with most other mods that perform changes to vanilla skills or the system. Those are currently: Quality Captains , A New Level of Confidence , Truly Automated Ships & Adjustable Skill Thresholds .",
-          "kind": "technical"
+          "type": "technical"
         },
         {
           "name": "A New Level (Of Confidence, and Power)",
           "id": "a-new-level",
           "quote": "Notably, this mod is not compatible with most other mods that perform changes to vanilla skills or the system. Those are currently: Quality Captains , A New Level of Confidence , Truly Automated Ships & Adjustable Skill Thresholds .",
-          "kind": "technical"
+          "type": "technical"
         },
         {
           "name": "Truly Automated Ships",
           "id": "truly-automated-ships",
           "quote": "Notably, this mod is not compatible with most other mods that perform changes to vanilla skills or the system. Those are currently: Quality Captains , A New Level of Confidence , Truly Automated Ships & Adjustable Skill Thresholds .",
-          "kind": "technical"
+          "type": "technical"
         },
         {
           "name": "Adjustable Skill Threshold",
           "id": "adjustable-skill-threshold",
           "quote": "Notably, this mod is not compatible with most other mods that perform changes to vanilla skills or the system. Those are currently: Quality Captains , A New Level of Confidence , Truly Automated Ships & Adjustable Skill Thresholds .",
-          "kind": "technical"
-        }
-      ]
-    },
-    {
-      "modId": "shroudedknowledge-endgame",
-      "modName": "ShroudedKnowledge endgame",
-      "conflicts": [
-        {
-          "name": "mods that alter Shroud fleets",
-          "quote": "there might be some incompatibilities with mods that alter Shroud fleets, as the code relies on them to award points.",
-          "kind": "withNotes"
+          "type": "technical"
         }
       ]
     },
@@ -1218,7 +1051,7 @@
           "name": "Starsector+",
           "id": "starsector",
           "quote": "The mod probably isn't compatible with mods that modify the core Vanilla weapon values, like SS+, unfortunately",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1230,18 +1063,18 @@
           "name": "DynaSector",
           "id": "dynasector",
           "quote": "Simulator opponent unlocking is disabled when playing with DynaSector due to that mod's randomized variants. All other features are still enabled, however.",
-          "kind": "withNotes"
+          "type": "withNotes"
         }
       ]
     },
     {
-      "modId": "ssmp-star-sector-multiplayer-1-5-2-pre-release-testing",
-      "modName": "SSMP - Star Sector Multiplayer",
+      "modId": "sol-solar-system",
+      "modName": "Sol Solar System",
       "conflicts": [
         {
-          "name": "all other mods",
-          "quote": "Open your game and enable SSMP, then disable all other mods",
-          "kind": "technical"
+          "name": "CSS version",
+          "quote": "Incompatible with the CSS version above!",
+          "type": "technical"
         }
       ]
     },
@@ -1252,7 +1085,7 @@
         {
           "name": "MMM",
           "quote": "There is a known incompatibility with MMM, since they overwrite some base game missions in a way which lords cannot give those missions. Accepting these missions will cause CTD.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1263,7 +1096,7 @@
         {
           "name": "MMM",
           "quote": "There is a known incompatibility with MMM, since they overwrite some base game missions in a way which lords cannot give those missions. Accepting these missions will cause CTD.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1274,8 +1107,8 @@
         {
           "name": "Omega's Minimash .54 compatible Thanks to xenoargh",
           "id": "omega-s-minimash",
-          "quote": "No Omega's Minimash already contains these ships or soon will.",
-          "kind": "gameplay"
+          "quote": "-No Omega's Minimash already contains these ships or soon will.",
+          "type": "gameplay"
         }
       ]
     },
@@ -1286,18 +1119,7 @@
         {
           "name": "Uomoz Corvus 16.5: Power Blocks",
           "quote": "Compaitible:\n Uomoz Corvus 16.5: Power Blocks (and associated individual mods.)",
-          "kind": "withNotes"
-        }
-      ]
-    },
-    {
-      "modId": "starsector-co-op",
-      "modName": "Starsector Co-op",
-      "conflicts": [
-        {
-          "name": "this",
-          "quote": "Main difference from this mod is that my mod focuses entierly on co-op aspect with 0 PvP by design.",
-          "kind": "gameplay"
+          "type": "withNotes"
         }
       ]
     },
@@ -1308,7 +1130,7 @@
         {
           "name": "mods that change core properties of Vanilla weapons",
           "quote": "it won't get along with mods that change core properties of Vanilla weapons (i.e., modifications of the WPN or PROJ files).",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1319,7 +1141,7 @@
         {
           "name": "total conversions",
           "quote": "Not compatible with total conversions",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1330,19 +1152,7 @@
         {
           "name": "EMH",
           "quote": "it is COMPLETELY INCOMPATIBLE you annto use station refitting with emh",
-          "kind": "technical"
-        }
-      ]
-    },
-    {
-      "modId": "stepspeedup",
-      "modName": "StepSpeedup",
-      "conflicts": [
-        {
-          "name": "SpeedUp",
-          "id": "speedup",
-          "quote": "SpeedUp by DarkRevenant is the established speed mod, and it works well. It is built around separate hotkeys that each hold or toggle a fixed multiplier, and multipliers from several active hotkeys stack together.",
-          "kind": "gameplay"
+          "type": "technical"
         }
       ]
     },
@@ -1353,7 +1163,7 @@
         {
           "name": "mods that replace vanilla leveling or install custom LevelupPlugins",
           "quote": "Don't run with mods that replace vanilla leveling or install custom LevelupPlugins without checking first. Leveling overhauls will conflict.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1365,7 +1175,7 @@
           "name": "Arma Armatura",
           "id": "arma-armatura",
           "quote": "Do NOT run this mod alongside armaa, use one or the other. Besides there being no reason to do so as armaa contains everything in this mod to start with, the two will also crash the game if used alongside eachother.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1377,7 +1187,7 @@
           "name": "Capture Officers and Crew",
           "id": "capture-officers-and-crew",
           "quote": "It is probably incompatible with Capture Officers and Crew, but doesn't have other known incompatibilities.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1388,7 +1198,7 @@
         {
           "name": "Epta",
           "quote": "It should be compatible with Epta in the sense that it won't crash, however, I would not recommend using the two together.",
-          "kind": "gameplay"
+          "type": "gameplay"
         }
       ]
     },
@@ -1399,7 +1209,7 @@
         {
           "name": "Tritachyon+",
           "quote": "Tritachyon+ (deprecated since 2023) - Not compatible, causes CTD.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1411,29 +1221,7 @@
           "name": "Thule Legacy",
           "id": "thule-legacy",
           "quote": "Note - The purple guys are from the Thule Legacy, I was running that mod at the time.",
-          "kind": "other"
-        }
-      ]
-    },
-    {
-      "modId": "the-everything-shop",
-      "modName": "The Everything Shop",
-      "conflicts": [
-        {
-          "name": "Extra Submarkets",
-          "quote": "This mod idea grew out of Extra Submarkets, but it is a separate mod now. You can run both but they will overlap in functionality.",
-          "kind": "gameplay"
-        }
-      ]
-    },
-    {
-      "modId": "threat-tech",
-      "modName": "THREAT TECH",
-      "conflicts": [
-        {
-          "name": "mods that alter the vanilla threat weapons",
-          "quote": "Any mods that alter the vanilla threat weapons in any way would necessarily be incompatible with this mod, and there's nothing I can reasonably do about that.",
-          "kind": "technical"
+          "type": "other"
         }
       ]
     },
@@ -1444,7 +1232,7 @@
         {
           "name": "total conversions",
           "quote": "Fully compatible with other mods, except for total conversions",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1456,30 +1244,7 @@
           "name": "StarSECTOR Plus",
           "id": "starfarer-plus",
           "quote": "Tradewinds II is currently incompatible with Starsector+, as we both modify the same core files.",
-          "kind": "technical"
-        }
-      ]
-    },
-    {
-      "modId": "tradu-o-pt-br-do-starsector-portugu-s-do-brasil",
-      "modName": "Tradução PT-BR do Starsector",
-      "conflicts": [
-        {
-          "name": "VRAM Optimizer",
-          "id": "vram-optimizer",
-          "quote": "Fontes quebradas com o VRAM Optimizer (causa não confirmada): o cache de texturas pode estar guardando a versão antiga das fontes. Para testar, desative o VRAM Optimizer, ou rode o DDSCreator.exe dele com Purge Metadata e depois ProcessMods.",
-          "kind": "withNotes"
-        }
-      ]
-    },
-    {
-      "modId": "trios-launcher-mod-manager-toolkit",
-      "modName": "TriOS: Launcher/Mod Manager/Toolkit",
-      "conflicts": [
-        {
-          "name": "MOSS",
-          "quote": "MOSS may complain about duplicate mods, however, because TriOS/SMOL allow multiple versions and MOSS doesn't (as of 2024).",
-          "kind": "withNotes"
+          "type": "technical"
         }
       ]
     },
@@ -1491,7 +1256,7 @@
           "name": "StarSECTOR Plus",
           "id": "starfarer-plus",
           "quote": "DOES NOT WORK WITH STARSECTOR+",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1502,7 +1267,7 @@
         {
           "name": "FairyEmpire",
           "quote": "NEVER COMPATIBLE WITH FAIRYEMPIRE, THANKS",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1513,7 +1278,18 @@
         {
           "name": "anything that changes any of the AI ships",
           "quote": "This mod will probably conflict with anything that changes any of the AI ships.",
-          "kind": "technical"
+          "type": "technical"
+        }
+      ]
+    },
+    {
+      "modId": "useful-planetary-shield",
+      "modName": "Useful Planetary Shield",
+      "conflicts": [
+        {
+          "name": "any mod that replaces the vanilla planetaryshield industry plugin",
+          "quote": "Conflicts with any mod that replaces the vanilla planetaryshield industry plugin.",
+          "type": "technical"
         }
       ]
     },
@@ -1524,13 +1300,13 @@
         {
           "name": "utility mods",
           "quote": "Please disable all other mods, including \"utility\" and \"helper\" mods such as LazyLib before playing; the mod already has a custom version of Combat Radar and ShaderLib installed, and isn't generally compatible with \"utility\" mods.",
-          "kind": "technical"
+          "type": "technical"
         },
         {
           "name": "Fleet Control Mod",
           "id": "fleet-control-mod-incomplete-test-version-available-please-help",
           "quote": "Running this mod with any mods that attempt to significantly utilize Java code to do big gamecode stuff, such as with the Fleet Control Mod, is not recommended , due to the large under-the-hood changes that were made to make this mod functional.",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     },
@@ -1542,7 +1318,7 @@
           "name": "Progressive S-Mods",
           "id": "progressive-s-mods",
           "quote": "Don't use it together with Progressive S-Mods. Both raise the same S-mod limit stat.",
-          "kind": "gameplay"
+          "type": "gameplay"
         }
       ]
     },
@@ -1553,18 +1329,7 @@
         {
           "name": "WhichTMI - Bugatti's fork version",
           "quote": "Incomparability with WhichTMI - Bugatti's fork version",
-          "kind": "technical"
-        }
-      ]
-    },
-    {
-      "modId": "vulpoids-lost-project",
-      "modName": "Vulpoids - Lost Project",
-      "conflicts": [
-        {
-          "name": "mods that remove the Core Worlds",
-          "quote": "Some features will not be accessible with mods that remove the Core Worlds.",
-          "kind": "withNotes"
+          "type": "technical"
         }
       ]
     },
@@ -1576,7 +1341,7 @@
           "name": "Nexerelin",
           "id": "nexerelin",
           "quote": "I will be honest, i havent really checked if this is compatible with giant mods like say, Nexerelin. I have 0 clue if it will work with that, and its not something i plan to look into any time soon.",
-          "kind": "other"
+          "type": "other"
         }
       ]
     },
@@ -1588,7 +1353,7 @@
           "name": "XIII Vanilla Ships",
           "id": "xiii-vanilla-ships",
           "quote": "INCOMPATIBLE WITH XIII VANILLA SHIPS SUBMOD",
-          "kind": "technical"
+          "type": "technical"
         }
       ]
     }
