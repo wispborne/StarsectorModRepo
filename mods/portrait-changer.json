@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T19:27:27.555170Z",
+  "generatedAt": "2026-11-14T09:27:19.983776Z",
   "listing": {
     "id": "portrait-changer",
     "name": "Portrait Changer",
@@ -23,10 +23,10 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1322443173712105572/1322443173917757542/115-1720838306-841180897.webp?ex=6af5fdee&is=6af4ac6e&hm=67ae024f862ecd1ff914347509f77b20e29028e14cc0313b409d5f3e77b2619d&",
     "summary": "Change your own or other's look on the go with this wonderful quality of life mod. This allows you to alter Player, Officer and Administrator appearances but probably not any unique stuff that other mods have created.",
     "summaryIsGenerated": false,
-    "aiSummary": "Allows players to change the appearance of their character, officers, and administrators during gameplay.",
+    "aiSummary": "Allows players to alter their own, officer, and administrator appearances during gameplay.",
     "saveCompat": {
       "adding": {
-        "answer": "depends"
+        "answer": "yes"
       }
     },
     "hasDirectDownload": true,
@@ -43,7 +43,8 @@
     "usesAi": true,
     "aiUses": [
       {
-        "area": "portraits"
+        "area": "portraits",
+        "how": "generated"
       }
     ],
     "addedOn": "2023-06-20",
@@ -67,11 +68,11 @@
   "descriptionHtml": "<div class=\"align-center\"><a href=\"https://www.patreon.com/posts/84871036\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/GnOOjnU.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><span class=\"size-bigger\"><br><a href=\"https://drive.google.com/file/d/1NZDVAR3EmMVjQmy8jBIcud3zNw7SJYEO/view?usp=sharing\" rel=\"nofollow noopener\" target=\"_blank\">Click here or the banner to download the mod!</a></span><br><br><span class=\"size-biggest\">The mod requires;<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">Lunalib</a></span><br><br><img src=\"https://i.imgur.com/ncD4CRU.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><span class=\"author-colour\" style=\"--c:#0000ff\"><i>\"Fancy a haircut, Starfarer?\"</i></span><br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=12709.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/77UIrz2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><span class=\"author-colour\" style=\"--c:#0000ff\"><i>A stray faction far away from home in a place where they don't truly belong.</i></span><br><br>Change your own or other's look on the go with this wonderful quality of life mod. This allows you to alter Player, Officer and Administrator appearances but probably not any unique stuff that other mods have created. I initially commissioned this in order to have improved interaction between me and my viewers on Twitch streams. However, during the creation of this mod - we both agreed to simply distribute this mod freely to the community for everyone to use. So here we are!<br><br><div class=\"align-center\"><span class=\"size-bigger\"><b>Change Logs</b></span></div></div><details class=\"spoiler\"><summary>Spoiler</summary><b>V1.0.1</b><br><i>- Save Compatible, it fixes an issue where the players portrait will reset to its initial one when you reload a save/game. It may require the player to do this with Console Command mod;<br>1.Update the mod<br>2. Run this runcode with console commands. It will remove the Portrait changer intel.</i><br><br><blockquote>runcode<br>import com.fs.starfarer.api.Global;<br>import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;<br>import java.util.ArrayList;<br>import portrait_changer.PortraitChangerIntel;<br><br> for (IntelInfoPlugin intel : new ArrayList&lt;IntelInfoPlugin&gt;(Global.getSector().getIntelManager().getIntel()))<br>        {<br>            if (intel instanceof PortraitChangerIntel)<br>            {<br>                Global.getSector().getIntelManager().removeIntel(intel);<br>            }<br>        }</blockquote><br><i>3. Save after having the intel removed.<br>4. Reload save, which should re-add the updated version of the Portrait Changer Intel tab.</i></details><br><div class=\"align-center\"><span class=\"size-bigger\"><b>Possible Frequently Asked Questions;</b></span></div><details class=\"spoiler\"><summary>Spoiler</summary><b>1.How to use the mod?</b><br><br><img src=\"https://imgur.com/N8y6t0O.gif\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br>-Simply go to <span class=\"author-colour\" style=\"--c:#0000ff\">Intel tab &gt; Personal &gt; Change Portrait</span> and have fun.<br><br><b>2. Why aren't there any filters for example, Vanilla / Modiverse? .. and why is there a special UAF tab?</b><br>- After posting the mod publicly, I have discussed with him over the UAF discord regarding this matter. According to lukas04, he is unable to distinguish the two in the coding department, kinda inconvenient to put it simply. The UAF tab is simply there because I personally requested for it for my own convenience and anyone who have the UAF installed for the portraits. <span class=\"author-colour\" style=\"--c:#ff0000\">It will disappear if UAF is not installed.</span><br><br><b>3. Is it safe to add mid-game? or save compatible even?</b><br>- No idea honestly, do feel free to reply down below if you have tested. I will edit this FAQ later for everyone to see.<br><br><b>4. How do I add my own custom portrait?</b><br>- You can do that by;<br><br>a1. First, you must include your custom portrait into the <span class=\"author-colour\" style=\"--c:#0000ff\">graphics/portraits and copy its navigation link along with the portrait name</span>.<br>a2. Secondly, go to <span class=\"author-colour\" style=\"--c:#0000ff\">data/world/factions and you may find player.faction file</span>. Paste the copied link into the <span class=\"author-colour\" style=\"--c:#0000ff\">\"portraits\"</span> section.<br><br><b>5. I'd like to commission a portrait from an artist, do you know anyone that can do it? Are you open as well?</b> <span class=\"author-colour\" style=\"--c:#ff0000\"><b>// WIP!</b></span><br><br>1. <a href=\"https://twitter.com/ServicedHair/status/1671712166767108096\" rel=\"nofollow noopener\" target=\"_blank\">Serviced Hair</a><br>2. <a href=\"https://twitter.com/quacken_art/status/1613878078882684932/photo/1\" rel=\"nofollow noopener\" target=\"_blank\">Quacken</a><br>3. <a href=\"https://twitter.com/sumogarts/status/1653473204248166400\" rel=\"nofollow noopener\" target=\"_blank\">Sumoga</a><br>4. <a href=\"https://twitter.com/MirageComedy/status/1627491279277015040\" rel=\"nofollow noopener\" target=\"_blank\">MirageComedy</a><br>5. <a href=\"https://twitter.com/nachtness4/status/1650780995111784448\" rel=\"nofollow noopener\" target=\"_blank\">Nachtness</a><br>6. <a href=\"https://twitter.com/rilegerard/status/1669103150958014465\" rel=\"nofollow noopener\" target=\"_blank\">Gwyvern</a><br>7. <a href=\"https://twitter.com/haonfest/status/1670605680519028737\" rel=\"nofollow noopener\" target=\"_blank\">Haon</a></details><br><i><b>All credits goes to,</b></i><br><br>Special thanks to <b>Lukas04</b> for accepting my mod commission request and creating this.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Provides a menu option to alter the portraits of the player, officers, and administrators. It includes support for custom portraits and integrates with specific faction mods if installed.",
+  "aiDescription": "Lets you change the portraits of your character, officers, and administrators on the fly. It includes a specific tab for United Aurora Federation portraits if that mod is installed.",
   "saveCompat": {
     "adding": {
-      "quote": "No idea honestly, do feel free to reply down below if you have tested.",
-      "answer": "depends"
+      "quote": "Can add mid game",
+      "answer": "yes"
     },
     "latestUpdateNote": {
       "quote": "Save Compatible, it fixes an issue where the players portrait will reset to its initial one when you reload a save/game.",
@@ -83,7 +84,8 @@
     "usesAi": true,
     "uses": [
       {
-        "area": "portraits"
+        "area": "portraits",
+        "how": "generated"
       }
     ]
   },
@@ -140,7 +142,7 @@
     }
   ],
   "changelog": {
-    "1.0.1": "- Save Compatible, it fixes an issue where the players portrait will reset to its initial one when you reload a save/game. It may require the player to do this with Console Command mod;"
+    "1.0.1": "- Save Compatible, it fixes an issue where the players portrait will reset to its initial one when you reload a save/game. It may require the player to do this with Console Command mod;\n1.Update the mod\n2. Run this runcode with console commands. It will remove the Portrait changer intel.\n\n Quote runcode\nimport com.fs.starfarer.api.Global;\nimport com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;\nimport java.util.ArrayList;\nimport portrait_changer.PortraitChangerIntel;\n\n for (IntelInfoPlugin intel : new ArrayList<IntelInfoPlugin>(Global.getSector().getIntelManager().getIntel()))\n        {\n            if (intel instanceof PortraitChangerIntel)\n            {\n                Global.getSector().getIntelManager().removeIntel(intel);\n            }\n        }\n\n 3. Save after having the intel removed.\n4. Reload save, which should re-add the updated version of the Portrait Changer Intel tab."
   },
   "supportLinks": [
     {
@@ -177,11 +179,6 @@
         "name": "LazyLib",
         "id": "lazylib",
         "via": "LunaLib"
-      }
-    ],
-    "optional": [
-      {
-        "name": "https://fractalsoftworks.com/forum/index.php?topic=27381.0"
       }
     ]
   }

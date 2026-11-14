@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T19:27:27.555170Z",
+  "generatedAt": "2026-11-14T09:27:19.983776Z",
   "listing": {
     "id": "cooperative-multiplayer-combat",
     "name": "Cooperative Multiplayer Combat",
@@ -23,10 +23,10 @@
     "gameVersion": "0.98a",
     "modVersion": "3.10",
     "imageUrl": "http://i.imgur.com/DNfK33q.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1361105155608678592/1361105155801481257/coop.png?ex=6af83735&is=6af6e5b5&hm=9f790237484927c5f429e5a56541c6057e727d536222b8735121a5c449eec025&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1361105155608678592/1361105155801481257/coop.png?ex=6af8dff5&is=6af78e75&hm=ab0ceee61c6a77992c69a72540ee67470a89755975d113db3d0e482afb6266c1&",
     "summary": "Now your friends can help out in combat with this shared screen/couch co-op/multiplayer mod",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds shared-screen cooperative play to combat, allowing up to three friends to control ships simultaneously.",
+    "aiSummary": "Enables local cooperative play for up to three players during ship-to-ship combat.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://raw.githubusercontent.com/Nickwwest/StarSectorMods/main/mods/CoOpCombat.3.10.zip",
@@ -59,14 +59,14 @@
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\">Cooperative Multiplayer Combat v3.10</span><br><span class=\"size-biggest\"><a href=\"https://raw.githubusercontent.com/Nickwwest/StarSectorMods/main/mods/CoOpCombat.3.10.zip\" rel=\"nofollow noopener\" target=\"_blank\">-=Download=-</a></span><br><br>(Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a>)</div><br><br>Now your friends can help out in combat with this shared screen/couch co-op/multiplayer mod<br><br><div class=\"table-scroll\"><table><tbody><tr><td><a href=\"https://www.youtube.com/watch?v=WLHARMaR1uU\" rel=\"nofollow noopener\" target=\"_blank\">Wolf</a> </td><td><a href=\"https://www.youtube.com/watch?v=Yu1nPrlll44\" rel=\"nofollow noopener\" target=\"_blank\">Scarab</a></td></tr></tbody></table></div><br><br>New UI Elements<br><img src=\"http://i.imgur.com/DNfK33q.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br>Readiness color key:<br><ul><br><li>Green = ready</li><li>Yellow = almost ready</li><li>Orange = not close to ready</li><li>Red = out of ammo</li></ul><br><b>Features:</b><br><ul><br><li>Enjoy shared screen cooperative play with up to three friends</li><li>New UI elements to support weapon and system cool downs</li><li>Pushbutton targeting of nearby ships</li><li>Shield AI to manage shield facing</li><li>Works with just about any mod</li><li>Mission Support!</li></ul><br><b>How to use</b><br>1. Download &amp; install this mod<br>2. Make sure this mod is enabled<br>3. Configure your keys via the in game Luna UI<br>4. When combat starts and ships are deployed, have your friend press the Select Ship key ('Insert' by default for player 2)<br>5. If sharing a keyboard is hard (or awkward), use a second keyboard or a game pad that can emulate keys.<br>6. When combat starts, zoom out more than usual so your friends show up on the screen<br>7. -optional- Install the Detailed Combat Results mod (<a href=\"http://fractalsoftworks.com/forum/index.php?topic=11551.0\" rel=\"nofollow noopener\" target=\"_blank\">http://fractalsoftworks.com/forum/index.php?topic=11551.0</a>) so you can see who's better.<br> <br><b>Player-game interface changes / Known Issues</b><br><ul><br><li>No mouse to control where a shield faces, instead an AI is used to \"aim\" the shield</li><li>No mouse to control where weapons aim, weapons can only aim directly forward.  Mitigate this by using in your group 1 only weapons that fire directly forward</li><li>No mouse to select targets for weapons, instead a new \"cycle targets\" command has been added which cycles through nearby targets</li><li>Camera/view-port stays centered on Player1, to compensate zoom out level has been greatly increased</li></ul><br><b>How To: Controller Support (optional)</b><br><ul><br><li>Use JoyToKey: <a href=\"https://joytokey.net/en/\" rel=\"nofollow noopener\" target=\"_blank\">https://joytokey.net/en/</a></li><li>Have it emit/emulate the keys configured in their PlayerConfig#.json</li></ul><br><b>How To: Internet/Remote Play</b><br>Install a game streaming app (like <a href=\"https://parsecgaming.com/\" rel=\"nofollow noopener\" target=\"_blank\">Parsec.tv</a>), you'll need a decent internet connection to pull this off.<br><br><b>Mod compatibility</b><br><ul><br><li>Requires no extra mods/libs to function</li><li>should work with any mod that doesn't assign very high priority AIs</li><li>Tested with nexerlin, lots of ships &amp; factions</li></ul><br><b>What this mod is not and will not be (even though it might be cool)</b><br><ul><br><li>An MMO</li><li>Allow you and a friend to both have different fleets on the campaign map</li></ul><br><b>Using this mod in other mods</b><br>This mod is covered by the MIT license, you can do what ever you want with this, no need to ask.  Just be nice and mention that this mod exists and where you got it from<br><br><b>Acknowledgements</b><br>Some code related to rendering was taken from the excellent Leading Pip Mod, attribution is here by granted to Magehand LLC per licensing.<br><br><b>Change Log</b><br><details class=\"spoiler\"><summary>Spoiler</summary>3.10<br> * Players and Targets now have a flux bar rendered<br> * Autofire bugs should be fixed<br> * When using a ship system, the system target is set to the ships target (should fix Doom mines not spawning anywhere useful)<br><br>3.9<br> * Updated for StarSector .98a<br> * Restored support for up to 3 total players<br><br>3.8<br> * Updated for StarSector .96a<br> * Now uses LunaLib for key configuration<br><br>3.7<br> * Updated for StarSector .95a<br> * Backwards compatible<br> * Added PREV_TARGET key, so it's now possible to cycle through targets both directions<br><br>3.6<br> * Players can now change which ship they are controlling during battle ('Insert' key by default for player 2)<br> * Players can now retreat. Simply order a retreat and switch ships until no one is controlling any retreating ships.<br> * Changed how keys are configured to be a bit simpler to add additional players<br> * Backwards compatible<br><br>3.5<br> * Made many values configurable in the CoOpCombatSettings.json<br> * Increased lock-on range<br> * Added engage/regroup toggle for carriers<br> * Player 2+ aiming reticles are larger<br> * Attempts at fixing Auto-Fire issue.<br><br>3.4<br> * Add ability to toggle phase-cloak<br><br>3.3<br> * Prevent exception when transferring command<br><br>3.2<br> * Now works with Starsector .9a<br><br>3.1<br> * Add mission support, just edit the variant of a ship to be \"player#\" like you would with the ship name<br> * Added experimental PvP mission (Doing anything more interesting would require work)<br><br>3.0 - Now works with Starsector .8.1a, minor graphical improvements<br><br>2.0 - UI elements for:<br>        * Selected weapon group<br>        * Weapon cooldown<br>        * System cooldown<br>        * Weapons have their own targeting lane<br>        * Switching between weapon groups now works (had to disable autofire)<br><br> 1.0 - Created</details><br>Forum: <a href=\"http://fractalsoftworks.com/forum/index.php?topic=11598.0\" rel=\"nofollow noopener\" target=\"_blank\">http://fractalsoftworks.com/forum/index.php?topic=11598.0</a><br>Source: <a href=\"https://bitbucket.org/NickWWest/starsectorcoopcombat\" rel=\"nofollow noopener\" target=\"_blank\">https://bitbucket.org/NickWWest/starsectorcoopcombat</a><br>License: MIT License (Do what ever you want, creators not liable)",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Enables local multiplayer in battles by letting additional players join via keyboard or gamepad. It introduces new UI elements for weapon and system cooldowns, pushbutton targeting, and shield management AI. The mod supports mission integration and is compatible with most other mods.",
+  "aiDescription": "Allows multiple players to control ships in the same battle using shared screen or couch co-op. Adds new UI elements for weapon and system cooldowns, pushbutton targeting, and shield AI management. Supports mission integration and works with most other mods.",
   "aiUse": {},
   "rawCategories": [
     "Utility mods"
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1361105155608678592/1361105155801481257/coop.png?ex=6af83735&is=6af6e5b5&hm=9f790237484927c5f429e5a56541c6057e727d536222b8735121a5c449eec025&",
+      "url": "https://cdn.discordapp.com/attachments/1361105155608678592/1361105155801481257/coop.png?ex=6af8dff5&is=6af78e75&hm=ab0ceee61c6a77992c69a72540ee67470a89755975d113db3d0e482afb6266c1&",
       "aiCaption": "Two armored soldier sprites standing side by side.",
       "aiKind": "art",
       "aiFit": "good",
@@ -96,7 +96,7 @@
     "3.9": "* Updated for StarSector .98a\n * Restored support for up to 3 total players",
     "3.8": "* Updated for StarSector .96a\n * Now uses LunaLib for key configuration"
   },
-  "license": "MIT License (Do what ever you want, creators not liable)",
+  "license": "MIT License",
   "sourceCodeUrl": "https://bitbucket.org/NickWWest/starsectorcoopcombat",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=11598.0",
@@ -115,12 +115,6 @@
         "name": "LazyLib",
         "id": "lazylib",
         "via": "LunaLib"
-      }
-    ],
-    "optional": [
-      {
-        "name": "Detailed Combat Results",
-        "id": "detailed-combat-results"
       }
     ]
   }

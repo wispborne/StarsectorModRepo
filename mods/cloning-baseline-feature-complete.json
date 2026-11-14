@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T19:27:27.555170Z",
+  "generatedAt": "2026-11-14T09:27:19.983776Z",
   "listing": {
     "id": "cloning-baseline-feature-complete",
     "name": "Cloning",
@@ -16,10 +16,10 @@
     ],
     "gameVersion": "0.98a",
     "modVersion": "0.2.1",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965820922368030/colony_growths.png?ex=6af502a8&is=6af3b128&hm=949148e8aca84ea1a166d18c74895e67ea03beee9b8905d769d66d59465f3395&",
+    "imageUrl": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965820922368030/colony_growths.png?ex=6af8f728&is=6af7a5a8&hm=b391bad45e2aa0909dde2af422228d22d9956ac458eed94c16e46b7636029ecb&",
     "summary": "Adds a three-tier cloning industry that massively boosts population growth — at a cost to stability.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a three-tier cloning industry that significantly boosts population growth at the cost of stability.",
+    "aiSummary": "Adds a three-tier cloning industry chain that significantly increases colony population growth while imposing stability penalties and high upkeep costs.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/andrzejsokolowski/starsector-cloning/releases/latest",
@@ -60,7 +60,7 @@
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\"><a href=\"https://github.com/andrzejsokolowski/starsector-cloning/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><b>Cloning</b></a></span><br><a href=\"https://github.com/andrzejsokolowski/starsector-cloning/releases/latest\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/downloads/andrzejsokolowski/starsector-cloning/total?style=for-the-badge&amp;label=download\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a>  <a href=\"https://github.com/andrzejsokolowski/starsector-cloning\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/v/release/andrzejsokolowski/starsector-cloning?display_name=tag&amp;sort=semver&amp;style=for-the-badge&amp;label=source\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></div><br><div class=\"align-center\"><b><br>Ever installed Astral Ascension but found you would need to wait years for a size 9 colony in the first place?<br>Ever wanted to see those cool multipliers from having a <i>Fractal Ecumenopolis</i> — whatever that is, because you've never seen it without using console commands?<br>Ever installed Vulpoids and saw your celebrities produce 0.6% growth on a size 8?<br><br>Well, look no more.<br><br>Adds a three-tier cloning industry that massively boosts population growth — at a cost to stability.<br><br>This forum post is a duplicate of 35129 , since the previous one got a database error.<br><br>The code is fully open source under a license of \"do whatever you want to do with it\". You don't have to credit me, as claude code built this anyway.<br><br><span class=\"author-colour\" style=\"--c:#ff0000\">Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\"><u>LunaLib</u></a>.</span><br></b></div><br><div class=\"align-center\"><div class=\"table-scroll\"><table><tbody><tr><td><hr><div class=\"align-center\"><span class=\"size-big\"><b>Industry Chain</b></span></div><hr><br><ul><br><li>Adds a new industry available from the start, occupying an industry slot.</li><li>Three upgrade tiers, each producing more population growth than the last:<br><ul><br><li><b>Clone Vat Experiments</b> — entry-level, produces some population growth.</li><li><b>Cloning Industry</b> — upgrade, produces more population growth.</li><li><b>Cloning Megafactory</b> — top tier, produces a large amount of population growth. Tons of upkeep, credits and stability. Be prepared.</li></ul></li><li>Growth scales with colony size when an Alpha or Omega core is installed, or when a pristine nanoforge is installed.</li><li>All tiers apply a stability penalty that scales with colony size — there are consequences for cutting corners on biology.</li></ul><br><hr><div class=\"align-center\"><span class=\"size-big\"><b>AI Core Effects</b></span></div><hr><br><ul><br><li><b>Gamma core</b> — reduces upkeep. Cloning is expensive; every bit helps.</li><li><b>Beta core</b> — reduces upkeep and produces crew and marines alongside population growth.</li><li><b>Alpha core</b> — reduces upkeep, produces crew and marines, and growth now scales with colony size.</li><li><b>Omega core</b> <i>(Astral Ascension)</i> — all Alpha benefits, plus doubled colony size scaling. Expect extremely large numbers. Go wild.</li></ul><br><hr><div class=\"align-center\"><span class=\"size-big\"><b>Configuration</b></span></div><hr><br><ul><br><li>Uses <a href=\"https://fractalsoftworks.com/forum/index.php?topic=21022.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a> for in-game settings.</li><li>Configurable values: base growth per tier, colony size scaling factor, and a global multiplier.</li><li>Players without LunaLib will use the built-in defaults.</li></ul></td></tr></tbody></table></div></div><br><details class=\"spoiler\"><summary>FAQ</summary><b>Is this mod overpowered?</b><br>Definitely yes, until I manage to balance it somehow. And I mean <i>really</i> overpowered — hitting over a thousand growth points on a size 7 colony is entirely possible right now.<br><br><b>What is planned?</b><br><ul><br><li>DONE - Colony item integration.</li><li>TBA - Bigger penalties to match the big bonuses.</li><li>TBA - A way to acquire the Cloning blueprint from a difficult fight — maybe a Dorito.</li><li>TBA - Integration with AOTD (VOK)'s research system, involving the player in unlocking stat boosts while fighting for databanks.</li></ul><br><b>Compatibility?</b><br><ul><br><li>Should be compatible with everything. Tested with the Build Menu Overhaul from AOTD.</li><li>Tested on a 250-mod modpack with no crashes.</li></ul></details><br><details class=\"spoiler\"><summary>Version log</summary>0.1.0<br>Initial Release<br>0.1.1<br>Fixed infinite recursion bug. Now playable.<br>0.2.1<br>Added support for story point improvement as well as two colony items:<br>Biofactory embryos and pristine nanoforge.</details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Introduces Clone Vat Experiments, Cloning Industry, and Cloning Megafactory industries. Growth scales with colony size when specific cores or items are installed, while all tiers apply stability penalties. AI cores provide various benefits like reduced upkeep and crew production.",
+  "aiDescription": "Introduces Clone Vat Experiments, Cloning Industry, and Cloning Megafactory industries to boost population growth. Growth scales with colony size when specific cores or items are installed, and AI cores provide additional benefits like reduced upkeep and crew production. All tiers apply stability penalties that increase with colony size.",
   "aiUse": {
     "quote": "You don't have to credit me, as claude code built this anyway.",
     "usesAi": true,
@@ -80,35 +80,35 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487910221962674436/image.png?ex=6af81aa0&is=6af6c920&hm=868aa49595903cb122d5ae86f83ed9bdb77e6bd919e265b75f2357e03ab7b7b1&",
+      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487910221962674436/image.png?ex=6af8c360&is=6af771e0&hm=16eca1cf21fd75d8163fb47dafde5b1c5ed479dfda9e5963b188c49921236e11&",
       "aiCaption": "A Fractal Softworks Forum Database Error notice.",
       "aiKind": "missing",
       "aiFit": "poor",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965819999883294/cloning-stability-storypoint.png?ex=6af84e68&is=6af6fce8&hm=dbea4e8789e0c850e83d111977d929630f302211bccd674a70d25449af9da3bf&",
+      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965819999883294/cloning-stability-storypoint.png?ex=6af8f728&is=6af7a5a8&hm=edd28afdf9960ff228cd8781e1fd22622eaff65d6b7fab0433d7b8ab6de347a1&",
       "aiCaption": "A game menu showing 'Improving Clone Vat Experiments' with text descriptions and Confirm/Cancel buttons.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965820402405396/cloning-_AI_cores.png?ex=6af84e68&is=6af6fce8&hm=2eeaaffe9a4af26e1b82ad8a7a4500563645b65fd6a0eba5d5abc46069d95a55&",
+      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965820402405396/cloning-_AI_cores.png?ex=6af8f728&is=6af7a5a8&hm=bc89ffd88ead81a09beb3889519c0c8bf0c3f20552774321270213e5331dad5d&",
       "aiCaption": "A selection menu titled 'Select AI core to assign to Clone Vat Experiments' listing various AI cores.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965820922368030/colony_growths.png?ex=6af84e68&is=6af6fce8&hm=4d955828ff783e745cc86bd9286c8a755d0b4733624565440273f0e26571089f&",
+      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965820922368030/colony_growths.png?ex=6af8f728&is=6af7a5a8&hm=b391bad45e2aa0909dde2af422228d22d9956ac458eed94c16e46b7636029ecb&",
       "aiCaption": "A colony management screen displaying stats and a facility labeled 'Cloning Megafactory'.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965821467623434/cloning-colony-items.png?ex=6af84e68&is=6af6fce8&hm=10205d68a935cc16ae9103034778b4fd3b2c5541723bc926f41f0baff2dbc4a4&",
+      "url": "https://cdn.discordapp.com/attachments/1487879107445522633/1487965821467623434/cloning-colony-items.png?ex=6af8f728&is=6af7a5a8&hm=e8e748bce8042f73e66c93ac7fd4d34a993d1794abbc9a03a8cd6fe10d254b42&",
       "aiCaption": "A selection menu titled 'Select item to install for Clone Vat Experiments' showing two upgrade options.",
       "aiKind": "screenshot",
       "aiFit": "okay",

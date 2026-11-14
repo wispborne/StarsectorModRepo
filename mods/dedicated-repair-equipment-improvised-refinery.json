@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T19:27:27.555170Z",
+  "generatedAt": "2026-11-14T09:27:19.983776Z",
   "listing": {
     "id": "dedicated-repair-equipment-improvised-refinery",
     "name": "Dedicated Repair Equipment & Improvised Refinery | v0.0.1",
@@ -18,7 +18,7 @@
     "modVersion": "0.0.1",
     "summary": "2 small mods that add their respective hullmods.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a built-in hullmod for the Salvage Rig that speeds up repairs on one other ship while reducing supply costs and draining metals.",
+    "aiSummary": "Adds a built-in hullmod for the Salvage Rig that increases repair speed and reduces supply costs for a target ship while draining metals.",
     "saveCompat": {
       "adding": {
         "answer": "yes"
@@ -35,26 +35,13 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2024-07-29",
-    "editedOn": "2024-07-29",
-    "requirements": {
-      "required": [
-        {
-          "name": "LunaLib",
-          "id": "lunalib"
-        },
-        {
-          "name": "LazyLib",
-          "id": "lazylib",
-          "via": "LunaLib"
-        }
-      ]
-    }
+    "editedOn": "2024-07-29"
   },
-  "description": "This hullmod is built into the Salvage Rig and cannot be installed elsewhere. It increases repair speed for a single target ship within the fleet, though it does not affect CR recovery speed. While active, it reduces the cost of recovery supplies but drains metals proportional to that cost.",
-  "descriptionHtml": "<p>This hullmod is built into the Salvage Rig and cannot be installed elsewhere. It increases repair speed for a single target ship within the fleet, though it does not affect CR recovery speed. While active, it reduces the cost of recovery supplies but drains metals proportional to that cost.</p>",
+  "description": "Adds a hullmod that aids in repairing a single other ship within the fleet. It increases repair speed but not CR recovery speed, and reduces recovery supply costs while active. The effect drains metals proportional to the target's recovery cost. This hullmod is built-in on the Salvage Rig and cannot be installed elsewhere.",
+  "descriptionHtml": "<p>Adds a hullmod that aids in repairing a single other ship within the fleet. It increases repair speed but not CR recovery speed, and reduces recovery supply costs while active. The effect drains metals proportional to the target's recovery cost. This hullmod is built-in on the Salvage Rig and cannot be installed elsewhere.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "aiDescription": "This hullmod is built into the Salvage Rig and cannot be installed elsewhere. It increases repair speed for a single target ship within the fleet, though it does not affect CR recovery speed. While active, it reduces the cost of recovery supplies but drains metals proportional to that cost.",
+  "aiDescription": "Adds a hullmod that aids in repairing a single other ship within the fleet. It increases repair speed but not CR recovery speed, and reduces recovery supply costs while active. The effect drains metals proportional to the target's recovery cost. This hullmod is built-in on the Salvage Rig and cannot be installed elsewhere.",
   "saveCompat": {
     "adding": {
       "quote": "safe to add/remove from the ongoing game",
@@ -89,15 +76,10 @@
   "sameNameMods": [],
   "addons": [],
   "requirements": {
-    "required": [
+    "optional": [
       {
         "name": "LunaLib",
         "id": "lunalib"
-      },
-      {
-        "name": "LazyLib",
-        "id": "lazylib",
-        "via": "LunaLib"
       }
     ]
   }

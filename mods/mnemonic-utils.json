@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T19:27:27.555170Z",
+  "generatedAt": "2026-11-14T09:27:19.983776Z",
   "listing": {
     "id": "mnemonic-utils",
     "name": "Mnemonic Utils",
@@ -25,7 +25,7 @@
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1212144548462198894/1212144553386049576/mnemonic_sensors.gif?ex=6af58256&is=6af430d6&hm=58870c4d251e446bc6f3b70e28fb98419289b8bfe41064a73fe2e9d4540a5a1c&",
     "summary": "A mod containing exploration-themed QoL improvements. Please check the readme for details!",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds exploration-themed quality-of-life features like gate markers, mnemonic sensors, and trash disposal.",
+    "aiSummary": "Adds exploration-themed quality-of-life features such as gate markers, mnemonic sensors, trash disposal, and grid removal.",
     "saveCompat": {
       "adding": {
         "answer": "yes"
@@ -76,7 +76,7 @@
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\"><b>Mnemonic Utils</b></span></div><br><div class=\"align-center\"><a href=\"https://github.com/DesperatePeter/mnemonic-sensors/releases\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://github.com/DesperatePeter/mnemonic-sensors/raw/master/imgs/mnemonic_sensors.gif\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></div><div class=\"align-center\"><span class=\"size-small\"><i>Click the image to download</i></span></div><br><div class=\"align-center\"><a href=\"https://github.com/DesperatePeter/mnemonic-sensors#mnemonic-utils\" rel=\"nofollow noopener\" target=\"_blank\"><span class=\"size-bigger\"><b>&gt;&gt;&gt;README&lt;&lt;&lt;</b></span></a></div><div class=\"align-center\">Requires LazyLib, MagicLib and LunaLib</div><br><br><div class=\"align-center\"><i>\"Sensor Officer, is that sensor blip in the distance valuable salvage, or the cargo pods containing metal we dumped earlier?\"</i></div><div class=\"align-center\"><i>\"Sorry Captain, without mnemonic sensors installed, there is absolutely no way to tell these two options apart!\"</i></div><div class=\"align-center\">  - Captain's Log, May 3<sup>rd</sup>, 217<sup>th</sup> Cycle</div><br>A mod containing exploration-themed QoL improvements. Please check the readme for details!<br><ul><br><li>Gate Markers</li><li>Mnemonic Sensors</li><li>Trash Disposal</li><li>System &amp; Hyperspace Grid Removal</li><li>Garage for Rent</li><li>A few small features</li><li>Can be added to and removed from ongoing campaigns. If removal doesn't work, disable all features via LunaSettings, save the game and then remove the mod.</li><li>Fully customizable via LunaSettings</li></ul><br>Note: This mod was originally called MnemonicSensors and only contained that feature.<br>Disclaimer: The image used for Garage for Rent was generated using Craiyon (craiyon.com)<br><br><details class=\"spoiler\"><summary>Credits</summary><ul><br><li>Many thanks to Genir for suggesting and providing sample implementation for system &amp; hyperspace grid removal!</li><li>Many thanks to Tesser for contributing much prettier icons!</li><li>Many thanks to Mythic for sponsoring the Garage for Rent feature</li></ul></details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Includes tools to distinguish valuable salvage from dumped cargo, remove system grids, and manage garage rentals. Features are fully customizable via LunaSettings and can be toggled individually.",
+  "aiDescription": "Adds exploration-themed quality-of-life features including gate markers, mnemonic sensors to distinguish salvage from trash, trash disposal, system and hyperspace grid removal, and a garage for rent feature. Includes several small additional features and is fully customizable via LunaSettings.",
   "saveCompat": {
     "adding": {
       "quote": "Can be added to and removed from ongoing campaigns.",
@@ -93,8 +93,7 @@
     "uses": [
       {
         "area": "illustrations",
-        "how": "generated",
-        "extent": "some"
+        "how": "generated"
       }
     ],
     "tools": [
@@ -138,8 +137,9 @@
       "needsAnotherStep": false
     }
   ],
-  "changelog": {},
-  "changelogUrl": "https://github.com/DesperatePeter/mnemonic-sensors/releases",
+  "changelog": {
+    "0.4.0": "fix: direct download link for lunalib mod updater and forum thread ID\nfeat: Add Garage for Rent feature, that allows you to park your fleet at your colonies to pass time\nfeat: add option to disable the warning about PPT being at 30s"
+  },
   "sourceCodeUrl": "https://github.com/DesperatePeter/mnemonic-sensors",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29517.0",
