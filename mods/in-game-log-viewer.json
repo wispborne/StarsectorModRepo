@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T09:27:19.983776Z",
+  "generatedAt": "2026-11-14T19:08:39.962986Z",
   "listing": {
     "id": "in-game-log-viewer",
     "name": "In Game Log",
@@ -16,7 +16,7 @@
     "imageUrl": "https://i.imgur.com/37bdtXY.png",
     "summary": "View logs from starsector.log inside the game.",
     "summaryIsGenerated": false,
-    "aiSummary": "Displays starsector.log entries on-screen and in the console with sound effects.",
+    "aiSummary": "Displays starsector.log entries on screen or in the console with sound effects.",
     "hasDirectDownload": true,
     "bestDownload": {
       "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FS-Numan%2FLogViewer%2Fmaster%2Flogviewer.version%22%2C%22id%22%3A%22SN_InGameLog%22%2C%22version%22%3A%221.3.0%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FLazyWizard%2Flazylib%2Freleases%2Fdownload%2F3.0%2FLazyLib.3.0.zip%22%2C%22id%22%3A%22lw_lazylib%22%7D",
@@ -36,7 +36,7 @@
     "aiUses": [
       {
         "area": "code",
-        "how": "generated"
+        "how": "assisted"
       }
     ],
     "lastReleaseDate": "2026-11-12T00:00:00.000Z",
@@ -56,14 +56,14 @@
   "descriptionHtml": "<div class=\"align-center\"><span class=\"size-biggest\"><b>In Game Log</b></span><br><br><a href=\"https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FS-Numan%2FLogViewer%2Fmaster%2Flogviewer.version%22%2C%22id%22%3A%22SN_InGameLog%22%2C%22version%22%3A%221.3.0%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FLazyWizard%2Flazylib%2Freleases%2Fdownload%2F3.0%2FLazyLib.3.0.zip%22%2C%22id%22%3A%22lw_lazylib%22%7D\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://trilink.wispborne.com/badges/install-badge-forthebadge.svg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><span class=\"size-small\">Dependencies are automatically downloaded when installing with TriOS</span><br><span class=\"size-small\"><a href=\"https://github.com/S-Numan/LogViewer/releases/latest/download/LogViewer.zip\" rel=\"nofollow noopener\" target=\"_blank\"><b>Manual download</b></a></span><br><span class=\"size-small\">Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a> </span><br><span class=\"size-small\"><a href=\"https://github.com/S-Numan/LogViewer\" rel=\"nofollow noopener\" target=\"_blank\">Older versions and changelogs</a></span><br><hr>View logs from starsector.log inside the game.<br><br>View logs on the top left of the screen via a scroller text renderer, accompanied by sound effects when they appear.<br><img src=\"https://i.imgur.com/37bdtXY.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br>View logs in the console of the Console Commands mod.<br><img src=\"https://i.imgur.com/ukKJtS0.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br>Configurable.<br>Intended to assist mod developers. To see an error log exactly when it happens, in the game.<br><br><details class=\"spoiler\"><summary>AI use disclaimer</summary>Claude was used in code to make two classes in this mod.<br>1. ParseLog: The class which reads starsector.log files and converts them back into LoggingEvents to be replayed.<br>2. ErrToLog4jStream: The class which converts STDERR into LoggingEvents and logs them.</details></div>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Shows logs from starsector.log via a scroller text renderer on the top left of the screen. Includes sound effects when new logs appear and integrates with the Console Commands mod. Designed to help mod developers view error logs immediately as they occur.",
+  "aiDescription": "Shows log messages from starsector.log directly in the game using a scroller text renderer with sound effects. Also allows viewing logs in the Console Commands mod console. Designed to help mod developers see error logs exactly when they occur.",
   "aiUse": {
     "quote": "Claude was used in code to make two classes in this mod.\n1. ParseLog: The class which reads starsector.log files and converts them back into LoggingEvents to be replayed.\n2. ErrToLog4jStream: The class which converts STDERR into LoggingEvents and logs them.",
     "usesAi": true,
     "uses": [
       {
         "area": "code",
-        "how": "generated",
+        "how": "assisted",
         "extent": "some"
       }
     ],
@@ -113,8 +113,9 @@
     }
   ],
   "changelog": {
-    "1.4.0": "- Updated to 0.98.5a\n- Improve STDERR feature\n- Migrate settings userSettings.json\n- Now parses all logs even before onApplicationLoad\n- Minor improvements to how messages render on screen."
+    "1.4.0": "- Updated to 0.98.5a\n- Improve STDERR feature\n- Migrate settings to userSettings.json\n- Now parses all logs even before onApplicationLoad\n- Minor improvements to how messages render on screen."
   },
+  "changelogUrl": "https://github.com/S-Numan/LogViewer",
   "sourceCodeUrl": "https://github.com/S-Numan/LogViewer",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35325.0",

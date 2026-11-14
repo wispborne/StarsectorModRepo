@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T09:27:19.983776Z",
+  "generatedAt": "2026-11-14T19:08:39.962986Z",
   "listing": {
     "id": "3d-sector-2",
     "name": "3D Sector V0.3.5",
@@ -22,7 +22,7 @@
     "gameVersion": "0.98a",
     "modVersion": "0.3.8",
     "imageUrl": "https://raw.githubusercontent.com/winters791/starsector-3d/refs/heads/main/screenshots/aurora_doom.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1559645440188874795/1559645440969019453/screenshot010.png?ex=6af8b301&is=6af76181&hm=9cfda4a9f2c0bb3a26d287bd452d3076857aac0fe085b0f74beb30136561015c&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1559645440188874795/1559645440969019453/screenshot010.png?ex=6af95bc1&is=6af80a41&hm=74c7000e1a2e705415eecb2ba02f87edcd67de761c9b8835062583fb56656558&",
     "summary": "A Utility/Conversion Mod for starsector, it is still a work in progress, especially on the graphical end since there are no premade assets, but otherwise it should be playable from start to finish.",
     "summaryIsGenerated": false,
     "aiSummary": "Converts Starsector battles into 3D with dynamic shields, tactical maps, and configurable flight controls.",
@@ -51,6 +51,7 @@
     ],
     "lastReleaseDate": "2026-10-21T00:00:00.000Z",
     "addedOn": "2026-10-13",
+    "threadLastPostOn": "2026-11-13",
     "editedOn": "2026-10-23"
   },
   "description": "3D Sector\n\nRequired mods: None\nCan be added Mid-Game?: Yes\nRemoving from an ongoing game: Safe\n\nWhat is this?\nA Utility/Conversion Mod for starsector, it is still a work in progress, especially on the graphical end since there are no premade assets, but otherwise it should be playable from start to finish.\n\nAll the weapons and systems are implemented according to vanilla values and behaviour\nShields become 3D cones. Omni shields turn toward threats on their own.\nAll vanilla ship systems should work with 3D VFX.\nOfficer skills do carry over similar to vanilla.\nCommand view (T) 3D tactical map, replace the vanilla \"TAB\" button map, uses cp just like the original with more features to suit 3D look.\nSettings - Everything is in [tt]data/config/s3d_tuning.json[/tt]: key bindings, flight feel, ranges, AI and other things for fine tuning.\n\nScreenshots\n\nControls\n\nMouse: steer\nLeft click: fire the selected group\nRight click: shield / phase\n1-7: select weapon group, Ctrl/Cmd + 1-7: toggle autofire\nW / S: throttle, X: all stop\nA / D: strafe, Space / Shift: up / down\nQ / E: roll, L: auto-level\nF: ship system, V: vent, R: lock target, Z: fighters engage / regroup\nHold Alt or middle mouse: look around, Mouse wheel: zoom\nT: command view, J: spectate ([ and ] to switch ships)\nTap Cmd (Mac) or Ctrl: pause\nTab: vanilla command map (deploy reserves, full retreat)\nF11: hide HUD, F9 twice: finish the battle in vanilla 2D\n\nCompatibility and known issues\nOther mods: Modded hulls, weapons and hullmods are read from the game's own data, so most of them work without changes. If 3D doesn't know a modded ship system or weapon script, the weapon still fires and deals its normal damage, but the special effect is missing. Each time the game starts, it writes [tt]saves/common/s3d_compatibility.txt.data[/tt], a list of anything from your enabled mods that doesn't fully work in 3D.\nFor modders: You can add support with three small CSV files. No Java is needed, and your mod won't depend on this one. See [tt]MODDING.md[/tt] in the download.\n\nOfficer personalities don't change how AI ships fight yet.\nThis is a beta. If a battle goes wrong, press F9 twice to finish it in 2D.\n\nFAQ\nDoes this change the campaign?\nNo. Only the battles change. Nothing is stored in your save.\n\nCan I play some battles in 2D?\nPress F9 twice during a battle to finish it in vanilla 2D, or set battle.enabled to false in s3d_tuning.json to turn 3D off completely.\n\nWhy do the ships look like that?\nEach ship's 3D shape is built from its 2D sprite when the battle loads, so every vanilla and modded ship works without needing a separate model. If you prefer a lower-fidelity look, try the retro filter.\n\nThe game runs slowly in big battles.\nPress I to show the performance readout, and include it in your bug report along with the files listed below.\n\nLooking for 3D artists\nI'd love help from people who model. Ship models go into an open-source add-on, Starsector 3D - Ship Models, with your name in its credits. One ship or twenty, any help counts.\n\nI have made some AI assisted custom models for some of the ships (around 40 in total), but to avoid the use of AI generated art i'm making this an open project where anyone can contribute to make 3D models for the ships, see the github for more info.\n[/list]\n\nWhat a model needs\nIt matches the ship's sprite seen from above, because weapons, engines and shields sit where the sprite says. A Blender script fits and scales your model to the sprite for you and reports how well it lines up.\nNo modelled guns. The game draws each ship's actual loadout on its mounts, so leave the mounts empty or flat.\nTriangle budget: up to 80k for capitals, 40k for cruisers, 20k for destroyers, 10k for frigates.\nSTL, OBJ or GLB. Untextured is fine (the game paints it with the ship's sprite); a textured GLB keeps its own paint.\nIt's your own work, or its license allows sharing. Contributions are published under CC BY 4.0, or CC0 if you prefer.\n\nHow to take part\nIf you use GitHub: follow CONTRIBUTING.md and open a pull request.\nIf you'd rather not touch git: post a link to your model here or send me a PM with the ship and the license, and I'll fit it and add it with credit.\n\nSay in this thread which ship you're working on, so two people don't model the same one.\n\nQuestions and ideas are welcome below.\n\nDownload Starsector 3D | Ship models repository\n\nAttribution / Acknowledgement\nHalke     The ship AI borrows ideas from AI Tweaks, rebuilt for 3D. No code was copied.\nAlex and Fractal Softworks     Starsector. All ship art, sounds and fonts come from the game at runtime and are not redistributed.\n\nAI use disclaimer\nAI was used to create the Mesh Rendering and Simulation engine for the Mod, and to create Fleet AI used for 3D.\nCode: Claude (Anthropic), through Claude Code\n\nThere are no AI-generated images: ship shapes are built from the vanilla sprites while the game runs.\nEdit: There are at this point 57 Custom hull models made by Hyper3D rodin all of which are due to be replaced once actual human generated Models are received\n\nPermissions\nCode: Feel free to use/share it however you want.\nFeedback and bug reports\nFeedback and suggestions are very welcome.\nFor bugs, post here or report an issue. Please include your game and mod versions, your enabled mods and what happened. Attach these files from [tt]saves/common/[/tt]: [tt]s3d_last_battle.txt.data[/tt], plus [tt]s3d_last_error.txt.data[/tt] if it exists. Together they contain the battle log, your mod list and your system info.\nThanks for playing!",
@@ -87,77 +88,77 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1559645440969019453/screenshot010.png?ex=6af8b301&is=6af76181&hm=9cfda4a9f2c0bb3a26d287bd452d3076857aac0fe085b0f74beb30136561015c&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1559645440969019453/screenshot010.png?ex=6af95bc1&is=6af80a41&hm=74c7000e1a2e705415eecb2ba02f87edcd67de761c9b8835062583fb56656558&",
       "aiCaption": "A screenshot of a large orange 3D ship model in the game interface.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1559899973544448000/screenshot032.png?ex=6af8f74f&is=6af7a5cf&hm=5d340530bd6957573631bcb64df581da98af1c7855c028b55d79ce37a71d094d&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1559899973544448000/screenshot032.png?ex=6af9a00f&is=6af84e8f&hm=7bd2d2f1cc56359558ef8b08cec23288873df307b3060a3c71de999a9796437d&",
       "aiCaption": "A render of an orange and grey 3D ship model against a starfield background.",
       "aiKind": "art",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679907648573601/odyssey.png?ex=6af8d980&is=6af78800&hm=a46a2fc5d7d268d1ef5e4874bfc5c0d300ce4463982502297d0f4fa2c5d11ad4&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679907648573601/odyssey.png?ex=6af98240&is=6af830c0&hm=a4ece72a76ca2c55cddb1b9ad68b1b3ed4691537af208126ffaa1dccf5336f98&",
       "aiCaption": "A screenshot showing a white and blue 3D ship model with the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679908671987793/conquest.png?ex=6af8d980&is=6af78800&hm=4688c5446ebea0fa668a86d82464e7fbb2e74ac94b2dbaac64dfd0bdfd65e015&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679908671987793/conquest.png?ex=6af98240&is=6af830c0&hm=9d149cdab7b59dab7842394aadba68bcbe8ee311434ea093f8732885df40db45&",
       "aiCaption": "A screenshot of a beige 3D ship model with the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679909208719421/retribution.png?ex=6af8d980&is=6af78800&hm=f4315f1b8455964ba25855ac12edcd7a1630f1a4879a6b8483ff7ccd1b107388&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679909208719421/retribution.png?ex=6af98240&is=6af830c0&hm=8b7bf60b5ff91d717358deff91c7f3b136d712de4592507d5b6a5b83eccbf28e&",
       "aiCaption": "A screenshot of an orange 3D ship model with the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679909984796772/grendel.png?ex=6af8d981&is=6af78801&hm=66f089214af54e654fd64517cf05012d28518a149b6b9b992e70cf984ea40d06&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679909984796772/grendel.png?ex=6af98241&is=6af830c1&hm=99d017c86ff7172a2b099106c9b4a955c9c51432848f8a9abf3c43f1118ba132&",
       "aiCaption": "A screenshot of a circular beige 3D ship model with the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679910668603513/mora.png?ex=6af8d981&is=6af78801&hm=eb535e34b1add3d5bc87d29d1e462300fb6c959dab67f80fa15a47d84e5fc78b&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679910668603513/mora.png?ex=6af98241&is=6af830c1&hm=2054efbe9c79a1dcda6a181e328e95904cccc167824c5d4e38f0209b17c9ad9c&",
       "aiCaption": "A screenshot of a reddish-brown 3D ship model with the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679911482302494/gryphon.png?ex=6af8d981&is=6af78801&hm=7a98656f16488c452f99fd9108d7ff7146152c5aab04750f1d92627327bf21e9&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679911482302494/gryphon.png?ex=6af98241&is=6af830c1&hm=b27e951402fc3ecd3d9d03bc28bcc3dbc76afa590107959de6a0865493220388&",
       "aiCaption": "A screenshot of a beige 3D ship model with engine trails and the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679912140800060/falcon.png?ex=6af8d981&is=6af78801&hm=01aac738c37b64bbf22a1c2fa09f2532c1019352a37daf006cd40f0651040187&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679912140800060/falcon.png?ex=6af98241&is=6af830c1&hm=7cc5e9e463638f1d399824dcc5a3d6d61b6df9b1f9dd988947a84946e7332278&",
       "aiCaption": "A screenshot of a white twin-hull 3D ship model with the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679913034055720/venture.png?ex=6af8d981&is=6af78801&hm=a854ad8df9ea82cb311f00107bdda80d11d61bba8f99c095cb3c7264e12f3349&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679913034055720/venture.png?ex=6af98241&is=6af830c1&hm=016f0bbe865e6d6ad9b079c1f191249fd31a95ea1b7a836af1801e272a2993e9&",
       "aiCaption": "A screenshot showing a large beige 3D ship launching smaller ships with the text 'Paused. Press Space to unpause.'",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679913516408953/starliner.png?ex=6af8d981&is=6af78801&hm=f83229bc4e95b96f5c9d44b48bd2e0b9f1e52067c48236ea9f40ffbd1dd3cd3d&",
+      "url": "https://cdn.discordapp.com/attachments/1559645440188874795/1561679913516408953/starliner.png?ex=6af98241&is=6af830c1&hm=2dacdf888cb5cb9edc2664b2f0e4cd7610c97bb4866584148418d4a8516c646f&",
       "source": "discord"
     },
     {
@@ -244,6 +245,7 @@
       "gameVersion": "0.98"
     }
   ],
+  "threadLastPostOn": "2026-11-13",
   "sameNameMods": [],
   "addons": []
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T09:27:19.983776Z",
+  "generatedAt": "2026-11-14T19:08:39.962986Z",
   "listing": {
     "id": "trios-launcher-mod-manager-toolkit",
     "name": "TriOS: Launcher/Mod Manager/Toolkit",
@@ -22,7 +22,7 @@
     "onModIndex": true,
     "modVersion": "1.6.0",
     "imageUrl": "https://github.com/wispborne/TriOS/raw/main/assets/images/telos_faction_crest.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355300468968001586/1355300469232238662/image.png?ex=6af8d9ec&is=6af7886c&hm=22965a1e21755ed7bb324fcef6459ccfd2cba82d041912512cc2691f4decb2bf&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1355300468968001586/1355300469232238662/image.png?ex=6af982ac&is=6af8312c&hm=19e590b49f1dec102e7bf49efa14ca70ae12fc33bfb5006590357564aac3772e&",
     "summary": "All-in-one Starsector launcher, mod manager, and toolkit. For Windows, Linux, and MacOS",
     "summaryIsGenerated": false,
     "aiSummary": "Provides an all-in-one launcher, mod manager, and toolkit for managing game files and mods.",
@@ -33,7 +33,7 @@
       "needsAnotherStep": false
     },
     "downloadCount": 4,
-    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29674",
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29674.0",
     "discordUrl": "https://discord.com/channels/187635036525166592/1355300468968001586/1355300468968001586",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
@@ -48,7 +48,6 @@
       }
     ],
     "addedOn": "2024-03-31",
-    "threadLastPostOn": "2026-11-12",
     "editedOn": "2026-09-07"
   },
   "description": "TriOS\nAll-in-one Starsector launcher, mod manager, and toolkit.\nFor Windows, Linux, and MacOS\nTested up to Starsector 0.98a\n\nIf TriOS is lagging a lot, disable \"Check if game is running\" in the Settings.\n\n18mb download for Windows\nrequires Visual C++ redistributables\nIf it won't launch, make sure GPU/iGPU drivers are updated\n\n23mb download for Linux\nAUR (unofficial)\nSee Known Issues section!\nTested on Ubuntu\n\n32mb download for MacOS\nIntel build\nSee Known Issues section!\n\nPreview Versions\nThere is a checkbox on the Settings page to switch to the Preview. Previews are generally stable but may contain unpolished new features.\n\nTested only on the latest OS versions. Compatibility info.\n\nLinks\nDev Log/Patreon • Ko-Fi\nSource Code • Changelog\n\n(download count includes self-updates)\n\nInstallation\n1. Download and extract wherever you want. `C:\\Program Files (x86)\\Fractal Softworks\\TriOS` works well.\n2. Launch using TriOS.exe. Windows SmartScreen will probably warn you, just bypass that (More Info -> Run Anyway).\n\nOptional: when TriOS is running, right-click it on the taskbar and pin it.\n\nFeatures\n- Launcher/Dashboard: Alternative game launcher. Not needed to launch the game.\n- Version Checker: View mod updates and download them.\n- Mod Manager: Swap mod versions on a large grid view. Auto-enables/disables mods based on dependencies. More features coming.\n- RAM changer: Quickly change how much RAM is assigned to the game (Windows-only).\n- Mod Catalog: Browse & download mods that are on the forum and USC Discord.\n- Ship/Weapon/Hullmod/Faction Viewers: In-game codex, out of game.\n- Mod Profiles: Save and load your mod loadouts. Create profiles from save games.\n- Tip Manager: View tips added by mods and delete them.\n- Portrait Replacer: View and replace in-game portraits.\n- rules.csv Autoreloader: Hot reload for your mod rules.csv. Enable it, turn on devmode ingame, and your rules.csv will reload on save.\n- Self-update: no need to redownload. One click to update.\n- Log Viewer: Highlights errors that are likely from a mod.\n- VRAM Estimator: Estimate how much VRAM each mod uses.\n- Themes: Not all pretty, not all usable, but they're there, imported from SMOL.\n\nScreenshots\nLauncher\n\nMod Manager\n\nMore Screenshots\nMod Profiles\n\nMod Browser\n\nShip Viewer\n\nWeapon Viewer\n\nHullmod Viewer\n\nTip Viewer\n\nPortrait Viewer\n\nPortrait Replacer\n\nLog Viewer\n\nrules.csv autoreload\n\nKnown issues\n- MacOS/Linux: modifying vmparams via TriOS is only supported on Windows.\n- MacOS: Self-update doesn't work. You'll need to manually download new versions.\n- MacOS: Changing launch params on MacOS doesn't do anything.\n- MacOS: Drop'n'drop to install mods doesn't work.\n- Bug tracker\n\nCommon Problems\n\nNo TriOS update is showing up\nMake sure you aren't connected to a VPN or Cloudflare WARP. You might be getting rate limited by GitHub.\n\nFAQ\nI don't need a mod manager?\nNope! But it's still useful for updating mods because it's way quicker than doing it manually.\nAnd when the game crashes, it has a quick way to check the log.\nAnd dragging a download link from the forum into TriOS is quicker than installing manually...\n\nAm I locked into using TriOS?\nNo!\nYou can swap between TriOS and manually doing everything at will. This isn't a mod loader. Update a mod through TriOS, install one manually, change RAM allocation through TriOS and then tweak it again manually, then launch the game normally. That's how it's meant to be used - by automating annoying parts of mod management, not by forcing you to use it for everything.\n\nHow does updating mods work?\nTriOS uses the same mechanisms for update checking as the Version Checker mod.\nIt does not rely on the forum at all. Instead, it relies on mod authors adding a file to their mod that has a link to an online text file with the current latest version of their mod. They need to keep that file updated when they update their mod, and they can add a download link and changelog to it.\n\nThis version checker system predates TriOS by 11 years :)\n\nWhat mods are in the Catalog?\nNote: this relates to downloading new mods via the Catalog page in TriOS. It is unrelated to updating mods you already have.\n\nMods in the Catalog are from the Fractal Softworks Forum and from the Unofficial Starsector Chat (USC) Discord server. The list is updated twice a day.\n\nWhat does the \"TriOS Companion Mod\" do?\nThis 15kb mod is what makes the Portrait Replacer feature work. It replaces portraits that the game has loaded into memory with ones of your choosing. By doing it in-game, TriOS doesn't have to change your mods' files.\nThe companion mod has almost no effect on loading time or performance.\nCompanion Mod source code\n\nOther Questions\nWhich mod manager should I use?\nTriOS, MOSS, and SMOL all work together. You can use whichever, and swap as you like - though SMOL won't be getting further updates.\nMOSS may complain about duplicate mods, however, because TriOS/SMOL allow multiple versions and MOSS doesn't (as of 2024).\n\nHow is this different from the other mod managers?\nThere's a handy feature-by-feature comparison to MOSS and SMOL right here. Wow!\nhttps://docs.google.com/spreadsheets/d/1vOKXZ8Ahlt-UqFBKJr2yO3z3ffWXFjsS0WA0BCPagKA/edit?gid=0#gid=0\n\nWhy not just work on SMOL (or MOSS)?\nSMOL is big and slow and there's nothing I can do to fix that except rewrite it in something faster. Even the simplest program possible is big and slow in the framework SMOL is written with.\nMOSS is light and fast, but it doesn't come with much to make it easily look good, and I do not really want to use Rust. The developer experience of Flutter is also far superior (changing the code doesn't require restarting the program to see how it affects the app)\nTriOS is written using Flutter, which isn't quite as light or fast as MOSS, but is close enough.\n\nFor Mod Authors\ntldr: nothing required, but please set up Version Checker and add an icon!\n\nSpoiler\nMod Authors don't need to do anything to support TriOS.\nIt should work with all mods, and if it doesn't then please let me know.\n\nThat said, there are a few things that you can do for better integration.\n\n- Set up Version Checker. TriOS uses the standard Version Checker format, same as LunaLib and others. Please set it up for your mod! There is a guide here: https://starsector.wiki.gg/wiki/Version_Checker\n\n- Add direct download and changelog links to your .version file. These will also be used by MOSS/SMOL/LunaLib/etc: https://github.com/wispborne/Starsector-IntelliJ-Template/blob/main/yourName_uniqueid.version#L48\n\n- Add an icon to the root of your mod folder (must be named \"icon.[png|jpg|webp|ico]\"\nOR add an icon to LunaSettings.\n\nPrivacy Policy\nNo personal information is ever collected.\n\nIf you choose to allow it, device information (e.g. OS and screen resolution), mod list, and TriOS errors will be collected and uploaded to servers managed by Sentry.io. The information is associated with a randomly generated id and is used to fix bugs. Example of collected data: https://i.imgur.com/k9E6zxO.png.\nIf you click the \"Report Bug\" button, then you may choose to send a screenshot of TriOS (not your whole screen) with your report. This is kept on Sentry.io.\n\nIf you do not choose to allow this, TriOS only uses the internet for obvious things like version checker updates, mod updates, etc.\n\nAI Use\nTriOS's code is written with the use of LLMs; Claude and Codex's various models.\n\nCredits\nAtlanticAccent: For pushing me to do the best I can. Go and check out MOSS!\ntomatopaste: For suggesting the TriOS name.\nVexlia for the updated icon in v1.7.0.\nThank you to everyone who has given bug reports, suggestions, and feature requests!\n\nThe Unwitting QA\nAstarat: For using tabs in the mod_info.json file (my fault for using a yaml parser).\nceruleanpancake: For the infinitely looping direct download link in SCVE - very useful for testing download error handling.\nHatter: For using // as comments instead of # in their Epitaph Frost mod_info.json.\nLukas04: For releasing SiC and showing that TriOS thinks \"1.0.0beta\" is newer than \"1.0.0\" (but \"1.0.0b\" is newer than \"1.0.0\"!)\nKnight Chase: For adding a space in front of the \"name\" column header in the Mayasuran Navy ship_data.csv.\nNia: For using Bitbucket for version checker, which showed a bug.\nTimid: For version names like 1.1813ae and 1.193aj.\ntheDragn: For putting a link to a website where the Version checker .zip download link should be.\nshoi: For putting two mods and a text file in the Arma Armatura download.\nYui: For putting \"null\" as the Version Checker download link.\n\n------------\n\nLicensed under GPLv3, meaning anyone may use this code, but only to GPLv3 projects (cannot create a closed-source version of TriOS).\nIndividual code snippets are totally fine to use without asking or copylefting the license - I only mean to protect the greater program itself from being forked to closed-source.",
@@ -77,70 +76,70 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1355300469232238662/image.png?ex=6af8d9ec&is=6af7886c&hm=22965a1e21755ed7bb324fcef6459ccfd2cba82d041912512cc2691f4decb2bf&",
+      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1355300469232238662/image.png?ex=6af982ac&is=6af8312c&hm=19e590b49f1dec102e7bf49efa14ca70ae12fc33bfb5006590357564aac3772e&",
       "aiCaption": "A blue circular emblem featuring a stylized triangular symbol with a central cluster of dots.",
       "aiKind": "logo",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1489797381095559168/image.png?ex=6af9096e&is=6af7b7ee&hm=d2b38b57a4845095bf7c371f0019dcbe93a7afbc3c126e86e0fa8c2ce2445a1a&",
+      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1489797381095559168/image.png?ex=6af9b22e&is=6af860ae&hm=1f62633df0cfc82c48674695a9dc3fe9770dbd564ef05d4587b81c9edaa893b8&",
       "aiCaption": "A detailed ship statistics screen for the 'Alysse' Fast Battleship showing logistical data and combat performance.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1489797381754064976/image.png?ex=6af9096e&is=6af7b7ee&hm=9bb09e2588abbe9eb66dcac8a019d88042f47da620d9e8338e388cd8030c59bf&",
+      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1489797381754064976/image.png?ex=6af9b22e&is=6af860ae&hm=d0f000e7c864da1449391bc3cfbc69ce9994d79b39a31e1855e1765eef6845c5&",
       "aiCaption": "Top-down technical schematic of a large capital ship with green hull plating and red core components.",
       "aiKind": "art",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1489797382093930516/image.png?ex=6af9096e&is=6af7b7ee&hm=91f8950ff351b88996f384e330e577858fb59f90199523c9fd8632bb21b3c81f&",
+      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1489797382093930516/image.png?ex=6af9b22e&is=6af860ae&hm=1c8f6928d6cb844d051538395e64d74ffab9d0037815cc59d4bf5177d5b183a0&",
       "aiCaption": "A weapon data panel for the 'Acacia Launcher' displaying primary role, damage, and ancillary stats.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1518073400902287471/8tVdPpB.png?ex=6af91287&is=6af7c107&hm=6cc00a9b8e2bb87bac3ba7e22f75c0b67407daea7615be0947f46979ef5d8031&",
+      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1518073400902287471/8tVdPpB.png?ex=6af9bb47&is=6af869c7&hm=2acdb8dc99fa2b4e9e36f3b1afea96521d10fee857a817d5c56e4f696045e6ac&",
       "aiCaption": "The TriOS v1.6.0 interface showing a grid of faction cards including Independent ISS, Persean League, and Hegemony.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1518073401259069561/vRo57Lp.png?ex=6af91287&is=6af7c107&hm=e1c0ad871a92bbb975c36a6b67e972c68dc538178bc3dca9c450aaf94891451c&",
+      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1518073401259069561/vRo57Lp.png?ex=6af9bb47&is=6af869c7&hm=64b29683a78cc6a0adb8290e1786217eb5caa8ff9bf12ed0430a9699ce463bc8&",
       "aiCaption": "A button labeled 'INSTALL WITH TRIOS'.",
       "aiKind": "button",
       "aiFit": "poor",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1518073401716113428/image.png?ex=6af91287&is=6af7c107&hm=cb0c02aa00970199d175fa8b92a4419cb13172944fb19da8c837f922522bbee9&",
+      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1518073401716113428/image.png?ex=6af9bb47&is=6af869c7&hm=be0bbf91e3145349fb7111e4bde8a1524b25c10a9d09b4f8bc3da25f9a14ae8b&",
       "aiCaption": "An 'Installation Activity' log listing various mods such as Brighton Federation and Aptly Simple Hullmods with timestamps.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1518073402097930310/image.png?ex=6af91287&is=6af7c107&hm=bb358752d9f468db47792f4e175214f2718585e70710c5c42386c0e6732a2316&",
+      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1518073402097930310/image.png?ex=6af9bb47&is=6af869c7&hm=7d17441c5008a20e5f55daf71688d9e3995510591190e313175adf6a86dfee97&",
       "aiCaption": "A weapon selection list showing icons for Hypervelocity Driver, Heavy Needler, and Gauss Cannon.",
       "aiKind": "screenshot",
       "aiFit": "poor",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1518073402534002881/image.png?ex=6af91287&is=6af7c107&hm=dd279f877ed6af14142eb9a942beedfb9cf5d0a535b08c13654cc16a3671ee46&",
+      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1518073402534002881/image.png?ex=6af9bb47&is=6af869c7&hm=3d3481012203b01b744f5cf620aae746562c203ea69da729bd9953beeb32dd4f&",
       "aiCaption": "A ship selection menu displaying entries for 'Gargoyle' and 'Ravelin' with their respective icons.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1543652186846662696/image.png?ex=6af92ee1&is=6af7dd61&hm=bacc9f85860f17dd24cb60a92b07a276cb1b49ddc6db0251c3d99d2726a19be7&",
+      "url": "https://cdn.discordapp.com/attachments/1355300468968001586/1543652186846662696/image.png?ex=6af9d7a1&is=6af88621&hm=8f89df7ce7230056d4bf9ca9cd5f655356fd845cae82ea2716d24d10089ed90b&",
       "source": "discord"
     },
     {
@@ -305,10 +304,9 @@
       "label": "Ko-fi"
     }
   ],
-  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29674",
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29674.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1355300468968001586/1355300468968001586",
   "releases": [],
-  "threadLastPostOn": "2026-11-12",
   "sameNameMods": [],
   "addons": [],
   "conflicts": [
