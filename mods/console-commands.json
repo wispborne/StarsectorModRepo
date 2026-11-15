@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T11:04:41.271392Z",
+  "generatedAt": "2026-11-15T19:11:38.998302Z",
   "listing": {
     "id": "console-commands",
     "name": "Console Commands",
@@ -27,7 +27,7 @@
     "gameVersion": "0.98a",
     "modVersion": "2024.10.04",
     "imageUrl": "https://imgur.com/zoCketX.gif",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6afa9e61&is=6af94ce1&hm=8c9d643e335c43b331c802cdbb89966c1bf85c77425fbcf3e7643b9905f667de&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6afb4721&is=6af9f5a1&hm=74cc3fa50252fa0518053a5bfd8563c719583c23a6ee5f95b8f9318c57356b28&",
     "summary": "An unofficial developer's console",
     "summaryIsGenerated": false,
     "aiSummary": "Adds an in-game developer console with a large list of commands and the ability to run custom code.",
@@ -48,7 +48,6 @@
     "sourceIsPublic": true,
     "isWorkInProgress": false,
     "addedOn": "2012-08-23",
-    "threadLastPostOn": "2026-11-03",
     "editedOn": "2025-10-26"
   },
   "description": "Console Commands\nAn unofficial developer's console\n\nChangelogs & older versions\nView Javadoc\nView progress and source code on GitHub\nArchive of old versions (pre 0.98)\nSupports Version Checker\n\nInstructions\nThis is installed just like any regular mod. Put it in the mods folder and make sure it's tagged in Starsector's launcher. Once in the game, you can summon the console with control+backspace and enter your commands. While the commands themselves aren't case sensitive, arguments are. For a full list of supported commands enter 'help' in the console. For more information on a specific command use 'help <command>'.\n\nYou can enter multiple commands by separating them with a semicolon. For example, \"god;nocooldown;reveal;infiniteflux;infiniteammo\" would run all of these combat cheats in a row. RunCode is an exception and can't be used with the command separator.\n\nIf you want to change the key that summons the console or the command separator, you can change these and several other console settings by using the \"settings\" command during a campaign.\n\nCurrent features:\n\nInput commands using a custom overlay\nA large list of included commands, and the ability to add your own custom commands to the console\nWrite, compile and run code in-game using the Janino library\nDoesn't require a new game, and can be safely untagged from a running game without issues\nShould be compatible with all mods, even total conversions\n\nKeybinds:\n\nCTRL + Backspace: open console\nEnter: confirm command\nLeft/Right: move cursor\nUp/Down: Scroll through command history/select autocompletion\nTab: confirm autocompletion\n\nIncluded commands:\n\nSpoiler\nUniversal commands (14):\n\nAlias, BugReport, Clear, DevMode, DumpHeap, Help, History, List, ModInfo, Reload, RunCode, Settings, SourceOf, Status\n\nCampaign commands (49):\n\nAddCredits, AddCrew, AddFuel, AddHullmod, AddItem, AddMarines, AddOfficer, AddOrdnancePoints, AddShip, AddSkillPoints, AddSpecial, AddSupplies, AddWeapon, AddWing, AddXP, AdjustRelation, AllBlueprints, AllCommodities, AllHullmods, AllHulls, AllWeapons, AllWings, FactionInfo, FindItem, FindShip, ForceDismissDialog, ForceMarketUpdate, GoTo, Hide, Home, InfiniteFuel, InfiniteSupplies, Jump, Kill, List, OpenMarket, PlanetList, Repair, Respec, Reveal, SetCommission, SetHome, SetRelation, ShowLoc, SpawnDerelict, SpawnFleet, Storage, Suicide, Survey\n\nCombat commands (23):\n\nAddCommandPoints, BlockRetreat, EndCombat, Flameout, ForceDeployAll, God, InfiniteAmmo, InfiniteCR, InfiniteFlux, Kill, NoCooldown, Nuke, RemoveHulks, Repair, Reveal, Rout, ShowAI, ShowBounds, ShowLoc, SpawnAsteroids, Suicide, ToggleAI, Traitor\n\nSome commands are listed under both campaign and combat. These work in both contexts, but function in different ways.\n\nUpcoming/planned features:\nMore commands! If you have any requests let me know in this thread and I'll try to add them to the next version.\n\nLegacy Console\nWith version 4.0, the console's UI has been replaced with a new revamped design and additional features.\nIf you prefer the prior version, go to ConsoleCommands/data/console/console_settings.json and set \"enableLegacyConsole\" from false to true.\nNone of the new utilities are available in the legacy version.\n\nOne final note:\nWhile I've tried to keep everything as user-friendly as possible, this is primarily intended as a tool to aid mod development. This means it does require some knowledge of Starsector's inner workings. Most importantly, you will need to know the internal IDs of various objects in order to use any commands dealing with them. The command \"list\" will help with this; alternatively these IDs can be found in the data files, usually in the CSVs or variant files.\n\nUsing this mod as a cheating tool will suck all of the fun out of Starsector for you. You have been warned. :)",
@@ -75,21 +74,21 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6afa9e61&is=6af94ce1&hm=8c9d643e335c43b331c802cdbb89966c1bf85c77425fbcf3e7643b9905f667de&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1419747751624835195/Console.gif?ex=6afb4721&is=6af9f5a1&hm=74cc3fa50252fa0518053a5bfd8563c719583c23a6ee5f95b8f9318c57356b28&",
       "aiCaption": "A dark game screen showing the text 'Console loaded, summon with CONTROL+BACKSPACE.' and a command prompt.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1422651666393600030/image.png?ex=6afaa2dc&is=6af9515c&hm=f199bfc3143762862a7b599ef45d323f6f8ecc06fff66f3f99481fbdae1a734b&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1422651666393600030/image.png?ex=6afb4b9c&is=6af9fa1c&hm=6bb28febd843bc0a77dc63d19c6175916ca0533fd2b3922a0021d5c85ff0d3de&",
       "aiCaption": "A console interface displaying instructions for commands like Enter, Tab, Left/Right, Up/Down, and an example command 'AddSpecial <specialId>'.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1423713681312583851/image.png?ex=6afa8b70&is=6af939f0&hm=f25e44d37ea242700f962c553c8cd94b1dc548156ada7fa93ba0ef8d657df595&",
+      "url": "https://cdn.discordapp.com/attachments/1419747750987173908/1423713681312583851/image.png?ex=6afb3430&is=6af9e2b0&hm=526d265b7d8659b59f3a5e5e616eb3a659741b2e0f8ef3fb5f9141c1c94b5b60&",
       "aiCaption": "A screenshot of a console window showing code with the command 'runcode' and a loop using Console.showMessage.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -126,7 +125,6 @@
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=4106.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1419747750987173908/1419747750987173908",
   "releases": [],
-  "threadLastPostOn": "2026-11-03",
   "sameNameMods": [],
   "addons": [],
   "conflicts": [
