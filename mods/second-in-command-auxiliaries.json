@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T19:08:39.962986Z",
+  "generatedAt": "2026-11-15T07:16:49.682415Z",
   "listing": {
     "id": "second-in-command-auxiliaries",
     "name": "Second-in-Command: Auxiliaries",
@@ -16,9 +16,9 @@
       "discord"
     ],
     "gameVersion": "0.98a",
-    "modVersion": "1.4.0",
+    "modVersion": "2.0.0",
     "imageUrl": "https://gitlab.com/starsector-public/sic-auxiliaries/-/raw/main/graphics/icon/logo-sic-auxiliaries.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717094768148670/logo-sic-auxiliaries.png?ex=6af9feef&is=6af8ad6f&hm=8e03bc100949a833dd8de2f6a6eb8e19a0640f773eec8d05c0ece619e0cbb33a&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717094768148670/logo-sic-auxiliaries.png?ex=6afaa7af&is=6af9562f&hm=6c60ab6d2fabce0af115b8506d78275b0029b609587c4bf36802dac3d637224c&",
     "summary": "Adds multiple new executive officers, exploration focused milestones as well as some QoL utilities for for the player.",
     "summaryIsGenerated": false,
     "aiSummary": "Adds new executive officers, exploration milestones, and quality-of-life utilities to the Second-in-Command mod.",
@@ -53,19 +53,24 @@
           "id": "lunalib"
         },
         {
-          "name": "ShaderLib",
-          "id": "shaderlib",
-          "via": "Second-in-Command"
-        },
-        {
           "name": "MagicLib",
           "id": "magiclib",
           "via": "Second-in-Command"
         },
         {
+          "name": "PatchLib",
+          "id": "patchlib",
+          "via": "Second-in-Command"
+        },
+        {
+          "name": "GraphicsLib",
+          "id": "graphicslib",
+          "via": "Second-in-Command"
+        },
+        {
           "name": "LazyLib",
           "id": "lazylib",
-          "via": "Second-in-Command"
+          "via": "LunaLib"
         }
       ]
     }
@@ -79,6 +84,10 @@
     "adding": {
       "quote": "Can be added to an ongoing save, though it can take up to a month before the new executive officers spawn.",
       "answer": "yes"
+    },
+    "latestUpdateNote": {
+      "quote": "NOT COMPATIBLE WITH OLDER VERSIONS",
+      "answer": "no"
     }
   },
   "aiUse": {},
@@ -89,7 +98,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717094768148670/logo-sic-auxiliaries.png?ex=6af9feef&is=6af8ad6f&hm=8e03bc100949a833dd8de2f6a6eb8e19a0640f773eec8d05c0ece619e0cbb33a&",
+      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717094768148670/logo-sic-auxiliaries.png?ex=6afaa7af&is=6af9562f&hm=6c60ab6d2fabce0af115b8506d78275b0029b609587c4bf36802dac3d637224c&",
       "aiCaption": "A stylized portrait of a female officer with a winged emblem above her head.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -97,35 +106,35 @@
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717095107760138/aptitude-valkyrie.png?ex=6af9feef&is=6af8ad6f&hm=264738235bcf74ed1889df6aec3fd35ce48b2f3fe595396b2b78416a12fac2af&",
+      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717095107760138/aptitude-valkyrie.png?ex=6afaa7af&is=6af9562f&hm=34d5c538f38cf49f73164574ce7e291aff88ae5c141df0712b6a22943dd32ce5&",
       "aiCaption": "A skill tree diagram showing various fighter wing abilities like Fighter Wings, Bomber Wings, and Interceptor Wings.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717095510282531/milestone-explorer.png?ex=6af9feef&is=6af8ad6f&hm=1437c612cddaf5352b642bce4408f727614755e1a71361858f577cefb04da4f3&",
+      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1510717095510282531/milestone-explorer.png?ex=6afaa7af&is=6af9562f&hm=81ebdc32d86377cbb7bf26a24f2e526500833b7678054a45807d55892ad46242&",
       "aiCaption": "The game's codex interface displaying 'Executive Officers' and 'Non-Executive Skills' tabs with a quote from Lieutenant Pitr.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1527982614114471986/image.png?ex=6af986b3&is=6af83533&hm=7f0277efa9769aac3beef1cf497fdcfb800d0ed976e2ab6dd577d2786c31442f&",
+      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1527982614114471986/image.png?ex=6afa2f73&is=6af8ddf3&hm=0fb877fbe0f3248cf8939c5030760c0dd5a0d2ebab9c9efcfb6e614c1904e111&",
       "aiCaption": "A skill tree diagram detailing abilities for ships with fighter bays, such as Tungsten Plates and Expanded Hangars.",
       "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1538595434950434948/image.png?ex=6af9e729&is=6af895a9&hm=0d88459ce00c88e8848857605ebbc89036b8bd6cbbe5fe7512eb0732a4fa570f&",
+      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1538595434950434948/image.png?ex=6afa8fe9&is=6af93e69&hm=b4ae9de257596c5a3113fa2300fedf86d0433fdbb6a77156573225acb3024727&",
       "aiCaption": "Two capital ships in space combat displaying status bars for Flux, Hull, Friendly CR, and Fighters.",
       "aiKind": "screenshot",
       "aiFit": "good",
       "source": "discord"
     },
     {
-      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1538595435420192840/image.png?ex=6af9e729&is=6af895a9&hm=ff59ff729041a888747bbfd81e0c79857e67d39114825324164a6648039c5630&",
+      "url": "https://cdn.discordapp.com/attachments/1510717094231019541/1538595435420192840/image.png?ex=6afa8fe9&is=6af93e69&hm=f375ed1897c8d5bcb9c0dc042bb17243755ceaabaa86ed114c031c8b28db3774&",
       "aiCaption": "A skill tree diagram showing abilities related to the Raptor drone ship, including Storm and Drone Synergy.",
       "aiKind": "screenshot",
       "aiFit": "okay",
@@ -280,19 +289,24 @@
         "id": "lunalib"
       },
       {
-        "name": "ShaderLib",
-        "id": "shaderlib",
-        "via": "Second-in-Command"
-      },
-      {
         "name": "MagicLib",
         "id": "magiclib",
         "via": "Second-in-Command"
       },
       {
+        "name": "PatchLib",
+        "id": "patchlib",
+        "via": "Second-in-Command"
+      },
+      {
+        "name": "GraphicsLib",
+        "id": "graphicslib",
+        "via": "Second-in-Command"
+      },
+      {
         "name": "LazyLib",
         "id": "lazylib",
-        "via": "Second-in-Command"
+        "via": "LunaLib"
       }
     ]
   }

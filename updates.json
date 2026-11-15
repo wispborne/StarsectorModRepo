@@ -1,6 +1,28 @@
 {
-  "generatedAt": "2026-11-14T19:08:39.962986Z",
+  "generatedAt": "2026-11-15T07:16:49.682415Z",
   "releases": [
+    {
+      "modId": "wide-horizons",
+      "modName": "Wide Horizons",
+      "seenOn": "2026-11-15",
+      "oldVersion": "1.4.2c",
+      "newVersion": "1.5.0",
+      "gameVersion": "0.98.5a",
+      "changelogNotes": "Not Save compatible with 1.4.x\n\nIMPORTANT: Please reset the settings when starting a new game, as some values have changed to their default settings\n\nModified:\n Migrated Wide Horizons to Java 17\n Split Wide Horizons into Core and an optional Content module\n Core includes sector generation and scaling and can be used on its own\n Content requires Core and adds missions, Dark Star systems, and Eidolon content\n Removed the countdown from the third Strange Hyperspace mission, which has no time limit\n\nFixed:\n Sector generation no longer stalls if derelict probes or survey ships cannot be placed\n Fixed hyperspace terrain clearing around fixed star systems when scaling the sector\n The research team now waits for the decoder before starting its analysis and delivers the results only once\n The follow-up contact now verifies that the correct market is still available\n The final briefing can be retried if the decoder could not be awarded\n Salvage bonuses now update when scaling settings change\n Disabling fuel scaling clears leftover fuel modifiers from Wide Horizons\n Loading a campaign now restores missing scripts that keep campaign bonuses up to date\n Eidolon Server Hub bonuses now pause during construction or disruption\n Duplicate AI cores no longer stack their bonuses\n The salvage reset command now clears Wide Horizons bonuses from both the fleet and the player while preserving bonuses from other mods",
+      "updateNote": {
+        "quote": "Not Save compatible with 1.4.x",
+        "answer": "no"
+      }
+    },
+    {
+      "modId": "wingman-project-online-combat-co-op-battles-for-starsector-beta",
+      "modName": "Wingman Project: Online Combat Co-op battles for Starsector.(BETA)",
+      "seenOn": "2026-11-15",
+      "oldVersion": "0.9.2-beta",
+      "newVersion": "0.9.3-beta",
+      "gameVersion": "0.98.5a-RC5",
+      "changelogNotes": "updated for Starsector 0.98.5a. won't run on 0.98a anymore.\n [NEW] wish lists. joiners wish for weapons and wings, host sees them on the campaign map (WISH LISTS), buys with one click, and it's set aside in cargo for that player.\n [NEW] saved refits, up to 3 per ship.\n [NEW] refit can change weapon groups now, and shows flux, shields, weapon flux and damage like the game's refit screen.\n [NEW] joiners' controls now come straight from the game, so the fire key works wherever you bind it and quick taps don't get lost.\n [NEW] if a mod's battle script crashes a joiner's game, next time it runs guarded on that PC. if it errors again it just turns off for that battle instead of closing the game. F5 in the CO-OP panel undoes it.\n [TWEAK] the .bat for the agent is now in the zip, next to the Wingman folder. put it in your Starsector folder. works with Fast Rendering 1.0, and falls back to the normal game if it can't.\n [TWEAK] long market names fit now.\n [FIX] joiner freezing when joining with Second in Command and a big fleet.\n [FIX] venting a freshly rebuilt ship stopping co-op.\n\n tested plenty, still might be bugs anyway.\n\n ▲ Host and joiners should both update."
+    },
     {
       "modId": "rogue-planets",
       "modName": "Rogue Planets",
@@ -107,22 +129,30 @@
       "gameVersion": "0.98a-RC8"
     },
     {
-      "modId": "lancer-rpg-battlegroup-0-0-2-wip",
-      "modName": "Lancer RPG/Battlegroup",
+      "modId": "navarchy-of-tania",
+      "modName": "Navarchy of Tania",
       "seenOn": "2026-11-12",
-      "oldVersion": "0.0.2",
-      "newVersion": "0.0.2.2",
-      "gameVersion": "0.98.a",
-      "changelogNotes": "Minor balance tweaks to Thoreau, Caspian Sea, and the Short-cycle Primary Lance.\nAdded Main Menu testing mission.\nUpdated mod_info.json to new game version."
+      "oldVersion": "1.3.1",
+      "newVersion": "1.4.0",
+      "gameVersion": "0.98.5a-RC4"
     },
     {
-      "modId": "onslaught-sleek-2",
-      "modName": "Onslaught Sleek +Other Bounties",
+      "modId": "wide-horizons",
+      "modName": "Wide Horizons",
       "seenOn": "2026-11-12",
-      "oldVersion": "1.5",
-      "newVersion": "2.1",
-      "gameVersion": "0.98a-RC8",
-      "changelogNotes": "just updated it to 98.5 thats it"
+      "oldVersion": "1.4.2b",
+      "newVersion": "1.4.2c",
+      "gameVersion": "0.98.5a",
+      "changelogNotes": "Save compatible with 1.4.x\n\nModified:\n    Updated Wide Horizons for the latest Starsector release, including Survival Mode.\n    Derelict ships now follow Survival Mode's recovery and condition rules.\n    Remnant systems are less likely to be skipped during sector generation.\n\nFixed:\n    Coronal Taps can now spawn in fallback systems when preferred systems are unavailable.\n    Fixed a map rendering issue affecting Strange Hyperspace.\n    Fixed a bug that could apply Strange Void or Strange Pulse effects more than once.\n\nNote:\n    I'm counting on your feedback to help me adjust the default settings for the current system sizes."
+    },
+    {
+      "modId": "tradu-o-pt-br-do-starsector-portugu-s-do-brasil",
+      "modName": "Tradução PT-BR do Starsector",
+      "seenOn": "2026-11-12",
+      "oldVersion": "1.1.0",
+      "newVersion": "1.3.0",
+      "gameVersion": "0.98.5a-RC4",
+      "changelogNotes": "Compatibilidade com o Starsector 0.98.5a-RC4.\n 1.697 textos novos ou alterados nesta versão; agora são 24.746 textos no total.\n Textos e classes de interface atualizados para a API do RC4."
     },
     {
       "modId": "plasma-burn-escape",
@@ -143,23 +173,6 @@
       "changelogNotes": "only googledrive 2.0.65 vers\nhttps://drive.google.com/drive/folders/1gEQWJM_GFgX6X_ozRUzgdiGJPdnN-53T?usp=sharing\nI haven't figured out the official version for the new game yet, so I've uploaded the fix separately to Google Drive. As soon as I finish fixing the bugs, I'll upload a new patch to GitHub for both the new and old versions of the game."
     },
     {
-      "modId": "customizable-star-systems",
-      "modName": "Customizable Star Systems",
-      "seenOn": "2026-11-12",
-      "oldVersion": "v3.0.2",
-      "newVersion": "4.0.0",
-      "gameVersion": "0.98.5a"
-    },
-    {
-      "modId": "tradu-o-pt-br-do-starsector-portugu-s-do-brasil",
-      "modName": "Tradução PT-BR do Starsector",
-      "seenOn": "2026-11-12",
-      "oldVersion": "1.1.0",
-      "newVersion": "1.3.0",
-      "gameVersion": "0.98.5a-RC4",
-      "changelogNotes": "Compatibilidade com o Starsector 0.98.5a-RC4.\n 1.697 textos novos ou alterados nesta versão; agora são 24.746 textos no total.\n Textos e classes de interface atualizados para a API do RC4."
-    },
-    {
       "modId": "sea-of-stars-0-5-1-go-beyond-the-persean-sector",
       "modName": "Sea of Stars",
       "seenOn": "2026-11-12",
@@ -172,13 +185,24 @@
       }
     },
     {
-      "modId": "wide-horizons",
-      "modName": "Wide Horizons",
+      "modId": "seed-reporter",
+      "modName": "SEED Reporter",
       "seenOn": "2026-11-12",
-      "oldVersion": "1.4.2b",
-      "newVersion": "1.4.2c",
+      "oldVersion": "v1.1.0",
+      "newVersion": "2.0.0",
       "gameVersion": "0.98.5a",
-      "changelogNotes": "Save compatible with 1.4.x\n\nModified:\n    Updated Wide Horizons for the latest Starsector release, including Survival Mode.\n    Derelict ships now follow Survival Mode's recovery and condition rules.\n    Remnant systems are less likely to be skipped during sector generation.\n\nFixed:\n    Coronal Taps can now spawn in fallback systems when preferred systems are unavailable.\n    Fixed a map rendering issue affecting Strange Hyperspace.\n    Fixed a bug that could apply Strange Void or Strange Pulse effects more than once.\n\nNote:\n    I'm counting on your feedback to help me adjust the default settings for the current system sizes."
+      "updateNote": {
+        "quote": "save-compatible with previous versions",
+        "answer": "yes"
+      }
+    },
+    {
+      "modId": "customizable-star-systems",
+      "modName": "Customizable Star Systems",
+      "seenOn": "2026-11-12",
+      "oldVersion": "v3.0.2",
+      "newVersion": "4.0.0",
+      "gameVersion": "0.98.5a"
     },
     {
       "modId": "a-fleet-testing-mod",
@@ -223,6 +247,15 @@
       "changelogNotes": "new \"speech\" choice under \"Who reads what\": only what characters say is read, and the narrator stays silent (requested by Rook999). Where narration between two lines is skipped there's a short pause, adjustable under \"Pause for skipped narration\" (0 turns it off). Works with the system voice and AI voices; update both zips to get the pause with AI voices."
     },
     {
+      "modId": "onslaught-sleek-2",
+      "modName": "Onslaught Sleek +Other Bounties",
+      "seenOn": "2026-11-12",
+      "oldVersion": "1.5",
+      "newVersion": "2.1",
+      "gameVersion": "0.98a-RC8",
+      "changelogNotes": "just updated it to 98.5 thats it"
+    },
+    {
       "modId": "mikohime-unofficial-java-28-configurator",
       "modName": "Mikohime Unofficial Java 28+ & FR Resource Cache & OpenAL Add-on",
       "seenOn": "2026-11-12",
@@ -230,6 +263,15 @@
       "newVersion": "0.8.3",
       "gameVersion": "0.98a-RC8",
       "changelogNotes": "Added support for Fast Rendering 1.0.0 and newer on Windows and the single-agent Linux fork\n Retained compatibility with older Fast Rendering versions\n Updated FR Resource Cache arguments: versions 0.6.0 and newer use the default memory-cache setting\n Older or unrecognized FR Resource Cache versions retain the 128 MiB memory-cache setting"
+    },
+    {
+      "modId": "lancer-rpg-battlegroup-0-0-2-wip",
+      "modName": "Lancer RPG/Battlegroup",
+      "seenOn": "2026-11-12",
+      "oldVersion": "0.0.2",
+      "newVersion": "0.0.2.2",
+      "gameVersion": "0.98.a",
+      "changelogNotes": "Minor balance tweaks to Thoreau, Caspian Sea, and the Short-cycle Primary Lance.\nAdded Main Menu testing mission.\nUpdated mod_info.json to new game version."
     },
     {
       "modId": "arma-armatura",
@@ -244,54 +286,12 @@
       }
     },
     {
-      "modId": "navarchy-of-tania",
-      "modName": "Navarchy of Tania",
-      "seenOn": "2026-11-12",
-      "oldVersion": "1.3.1",
-      "newVersion": "1.4.0",
-      "gameVersion": "0.98.5a-RC4"
-    },
-    {
       "modId": "fast-rendering",
       "modName": "Fast Rendering",
       "seenOn": "2026-11-12",
       "oldVersion": "0.9.8",
       "newVersion": "1.0.0",
       "gameVersion": "0.98a-RC8"
-    },
-    {
-      "modId": "seed-reporter",
-      "modName": "SEED Reporter",
-      "seenOn": "2026-11-12",
-      "oldVersion": "v1.1.0",
-      "newVersion": "2.0.0",
-      "gameVersion": "0.98.5a",
-      "updateNote": {
-        "quote": "save-compatible with previous versions",
-        "answer": "yes"
-      }
-    },
-    {
-      "modId": "escape-velocity-classic",
-      "modName": "Escape Velocity Classic",
-      "seenOn": "2026-11-11",
-      "oldVersion": "0.5.0",
-      "newVersion": "0.5.1",
-      "gameVersion": "0.98a",
-      "changelogNotes": "Hotfix New Providence market to have +1 industry slot and prevent it stuck at 0 stability."
-    },
-    {
-      "modId": "emergent-threats",
-      "modName": "Emergent Threats",
-      "seenOn": "2026-11-11",
-      "oldVersion": "1.4.3",
-      "newVersion": "1.4.4",
-      "gameVersion": "0.98a",
-      "changelogNotes": "should be compatible with v1.1+\n\n Emergent Threats\n Ships\n-Chevalier/Chevalier (R) bounty ship flux dissipation increased from 600 to 700, OP increased from 180 to 200, ship variants updated",
-      "updateNote": {
-        "quote": "v1.4.4 should be compatible with v1.1+",
-        "answer": "depends"
-      }
     },
     {
       "modId": "divisions-command-and-control-combat-ai-overhaul",
@@ -303,25 +303,44 @@
       "changelogNotes": "Properly integrated pursuit battles with the mod."
     },
     {
+      "modId": "detailed-combat-results",
+      "modName": "Detailed Combat Results",
+      "seenOn": "2026-11-11",
+      "oldVersion": "5.4.5",
+      "newVersion": "6.0.0",
+      "gameVersion": "0.98.5a",
+      "changelogNotes": "Updated for Starsector 0.98.5a Damage is now measured where the game applies it (requires PatchLib), far more accurate than before New PatchLib based instrumentation is between 10 and 100x faster New \"Negated\" column in the received summary: damage blocked by armor Ships with modules or built-in weapons are drawn whole in the report DCR no longer replaces any game files, and mods no longer need DCRIntegration to report damage"
+    },
+    {
       "modId": "emergent-threats",
       "modName": "Emergent Threats",
       "seenOn": "2026-11-11",
-      "oldVersion": "1.4.2",
-      "newVersion": "1.4.3",
+      "oldVersion": "1.4.3",
+      "newVersion": "1.4.4",
       "gameVersion": "0.98a",
+      "changelogNotes": "should be compatible with v1.1+\n\n Emergent Threats\n Ships\n-Chevalier/Chevalier (R) bounty ship flux dissipation increased from 600 to 700, OP increased from 180 to 200, ship variants updated",
       "updateNote": {
-        "quote": "v1.4.3 should be compatible with v1.1+",
-        "answer": "depends"
+        "quote": "v1.4.4 should be compatible with v1.1+",
+        "answer": "yes"
       }
     },
     {
-      "modId": "hillock-prototype-and-station-tech-pack",
-      "modName": "Hillock Prototype and Station Tech Pack",
+      "modId": "dynamic-asteroids-1-0-0-living-asteroid-belts-combat-hazards",
+      "modName": "Dynamic Asteroids",
       "seenOn": "2026-11-11",
-      "oldVersion": "1.5.5",
-      "newVersion": "1.5.6",
-      "gameVersion": "0.98.5a",
-      "changelogNotes": "I swear I was going to add weapons this patch but AC8 and WoWF happened...\"\n\n-Updated for 98.5a\n-Added Coast Mk.II\n-Reverted Coast\n-Removed leftover unused hullmods from fighters"
+      "oldVersion": "2.0.6",
+      "newVersion": "2.0.62",
+      "gameVersion": "0.98a-RC8",
+      "changelogNotes": "• Colossal Megaliths: Introduced giant planetoid-scale boulders (diameters up to 1100u) with pushable Newtonian physics and curved gravitational slingshot orbits.\n• Megalith Shatter Loot: Shattering giant megaliths drops high-tier Domain caches (20%), preserved fighter LPC chips (1.5%), or entombed derelict hulls (0.1%).\n• Station Deflection Domes: Orbital stations project deflector fields that part asteroid streams. Module flux overload or destruction collapses the shield, leaving the station exposed.\n• Deployment Grace Period: Added 7 seconds of collision damage immunity upon entering battle with deflector visual cues.\n• Formation Wave Density Buff: \"Expanding Fan\" and \"Dual Rails\" formations reinforced with +20 to +40 asteroids per stream with tighter firing cadence.\n• Campaign Map Detection Fix: Battles in empty ring gaps or non-hazardous fine dust rings no longer trigger asteroid hazards — only physical asteroid fields do.\n• Fixed Left Border Flickering Line: Resolved engine reflection conflict with obfuscated classes, permanently clearing vanilla 1-pixel border asteroid generators.\n• Repellor Boundary Sync: Asteroids and debris drifting past combat border repellors now cleanly despawn after 5 seconds."
+    },
+    {
+      "modId": "escape-velocity-classic",
+      "modName": "Escape Velocity Classic",
+      "seenOn": "2026-11-11",
+      "oldVersion": "0.5.0",
+      "newVersion": "0.5.1",
+      "gameVersion": "0.98a",
+      "changelogNotes": "Hotfix New Providence market to have +1 industry slot and prevent it stuck at 0 stability."
     },
     {
       "modId": "ed-shipyard",
@@ -333,22 +352,16 @@
       "changelogNotes": "- Updated for Starsector 0.98.5a\n- Better Train retreat behavior\n- Dobermann's Grand Salvo stays pointed at its target\n- Combat performance improvements\n- MAW no longer appears in station loot tables\n- Fixed problems when the game is localized"
     },
     {
-      "modId": "detailed-combat-results",
-      "modName": "Detailed Combat Results",
+      "modId": "emergent-threats",
+      "modName": "Emergent Threats",
       "seenOn": "2026-11-11",
-      "oldVersion": "5.4.5",
-      "newVersion": "6.0.0",
-      "gameVersion": "0.98.5a",
-      "changelogNotes": "Updated for Starsector 0.98.5a Damage is now measured where the game applies it (requires PatchLib), far more accurate than before New PatchLib based instrumentation is between 10 and 100x faster New \"Negated\" column in the received summary: damage blocked by armor Ships with modules or built-in weapons are drawn whole in the report DCR no longer replaces any game files, and mods no longer need DCRIntegration to report damage"
-    },
-    {
-      "modId": "dynamic-asteroids-1-0-0-living-asteroid-belts-combat-hazards",
-      "modName": "Dynamic Asteroids",
-      "seenOn": "2026-11-11",
-      "oldVersion": "2.0.6",
-      "newVersion": "2.0.62",
-      "gameVersion": "0.98a-RC8",
-      "changelogNotes": "• Colossal Megaliths: Introduced giant planetoid-scale boulders (diameters up to 1100u) with pushable Newtonian physics and curved gravitational slingshot orbits.\n• Megalith Shatter Loot: Shattering giant megaliths drops high-tier Domain caches (20%), preserved fighter LPC chips (1.5%), or entombed derelict hulls (0.1%).\n• Station Deflection Domes: Orbital stations project deflector fields that part asteroid streams. Module flux overload or destruction collapses the shield, leaving the station exposed.\n• Deployment Grace Period: Added 7 seconds of collision damage immunity upon entering battle with deflector visual cues.\n• Formation Wave Density Buff: \"Expanding Fan\" and \"Dual Rails\" formations reinforced with +20 to +40 asteroids per stream with tighter firing cadence.\n• Campaign Map Detection Fix: Battles in empty ring gaps or non-hazardous fine dust rings no longer trigger asteroid hazards — only physical asteroid fields do.\n• Fixed Left Border Flickering Line: Resolved engine reflection conflict with obfuscated classes, permanently clearing vanilla 1-pixel border asteroid generators.\n• Repellor Boundary Sync: Asteroids and debris drifting past combat border repellors now cleanly despawn after 5 seconds."
+      "oldVersion": "1.4.2",
+      "newVersion": "1.4.3",
+      "gameVersion": "0.98a",
+      "updateNote": {
+        "quote": "v1.4.3 should be compatible with v1.1+",
+        "answer": "yes"
+      }
     },
     {
       "modId": "secrets-of-the-frontier",
@@ -366,6 +379,15 @@
       "oldVersion": "5.0",
       "newVersion": "5.1",
       "gameVersion": "0.98.5a"
+    },
+    {
+      "modId": "hillock-prototype-and-station-tech-pack",
+      "modName": "Hillock Prototype and Station Tech Pack",
+      "seenOn": "2026-11-11",
+      "oldVersion": "1.5.5",
+      "newVersion": "1.5.6",
+      "gameVersion": "0.98.5a",
+      "changelogNotes": "I swear I was going to add weapons this patch but AC8 and WoWF happened...\"\n\n-Updated for 98.5a\n-Added Coast Mk.II\n-Reverted Coast\n-Removed leftover unused hullmods from fighters"
     },
     {
       "modId": "onslaught-sleek-2",
@@ -386,6 +408,22 @@
       "seenOn": "2026-11-10",
       "oldVersion": "2.45.1",
       "newVersion": "2.45.2",
+      "gameVersion": "0.98a"
+    },
+    {
+      "modId": "dynamic-asteroids-1-0-0-living-asteroid-belts-combat-hazards",
+      "modName": "Dynamic Asteroids",
+      "seenOn": "2026-11-09",
+      "oldVersion": "1.0.0",
+      "newVersion": "2.0.6",
+      "gameVersion": "0.98a-RC8"
+    },
+    {
+      "modId": "auto-colonies",
+      "modName": "Auto Colonies",
+      "seenOn": "2026-11-09",
+      "oldVersion": "2.40.1",
+      "newVersion": "2.45.1",
       "gameVersion": "0.98a"
     },
     {
@@ -410,14 +448,6 @@
       }
     },
     {
-      "modId": "auto-colonies",
-      "modName": "Auto Colonies",
-      "seenOn": "2026-11-09",
-      "oldVersion": "2.40.1",
-      "newVersion": "2.45.1",
-      "gameVersion": "0.98a"
-    },
-    {
       "modId": "the-abyssal-war",
       "modName": "The Abyssal War",
       "seenOn": "2026-11-09",
@@ -438,6 +468,15 @@
       "newVersion": "0.5",
       "gameVersion": "0.98a",
       "changelogNotes": "reworked saturn and yaeweh class new art deco art style for mythic manufactoring ships changed thelb to independent"
+    },
+    {
+      "modId": "the-domain-reformed",
+      "modName": "The Domain Reformed",
+      "seenOn": "2026-11-09",
+      "oldVersion": "24",
+      "newVersion": "25",
+      "gameVersion": "0.98a",
+      "changelogNotes": "added minest to some of the frigates,\nadded mines to the submarines\nadded mines to most destroyers\nadded quest to find out why there are navy ships in space\nchaned yamto three universal gu\ntype 94 changed to a lootable weapon,\nyamoto universal heavy mounts"
     },
     {
       "modId": "celestial-orbits",
@@ -461,21 +500,12 @@
       "changelogNotes": "- messed up the AdvPhaseThrusters fix now it should be fixed"
     },
     {
-      "modId": "dynamic-asteroids-1-0-0-living-asteroid-belts-combat-hazards",
-      "modName": "Dynamic Asteroids",
-      "seenOn": "2026-11-09",
-      "oldVersion": "1.0.0",
-      "newVersion": "2.0.6",
+      "modId": "fast-rendering",
+      "modName": "Fast Rendering",
+      "seenOn": "2026-11-06",
+      "oldVersion": "0.9.7",
+      "newVersion": "0.9.8",
       "gameVersion": "0.98a-RC8"
-    },
-    {
-      "modId": "the-domain-reformed",
-      "modName": "The Domain Reformed",
-      "seenOn": "2026-11-09",
-      "oldVersion": "24",
-      "newVersion": "25",
-      "gameVersion": "0.98a",
-      "changelogNotes": "added minest to some of the frigates,\nadded mines to the submarines\nadded mines to most destroyers\nadded quest to find out why there are navy ships in space\nchaned yamto three universal gu\ntype 94 changed to a lootable weapon,\nyamoto universal heavy mounts"
     },
     {
       "modId": "emergent-threats",
@@ -485,14 +515,6 @@
       "newVersion": "1.4.2",
       "gameVersion": "0.98a",
       "changelogNotes": "should be compatible with v1.1+\n\n Emergent Threats\n Misc\n-Fixed a bug where attacking the Diamond Nexus fleet in A Thousand Cuts while never even starting a conversation with it will cause the enemy fleet to not drop the Cyanine Core\n-The mission Thousand Cuts now offers the greatest amount of loot through fighting (Salvageable Nephos destroyers and Mokosh, Nemesis Doctrine biochip, Nephos blueprint, Remnant rare fighters blueprint, Temporal Desynchronizer, Cyanine Core and shards) while each of the peaceful paths offer only a subset of the loot (ships and core, or biochip and blueprint, plus Temporal Desynchronizer)\n-The Temporal Desynchronizer item will now be detached when handed out to players so they won't miss it if they forego salvaging the Mokosh, and it will always be received on each mission outcome aside from leaving and asking for nothing\n\n Hullmods\n-Mokosh hullmods Stabilized Temporal Shell and Temporal Desynchronizer text slightly updated for better clarity\n\n IX Revival]\n Misc\n-Fixed a crash issue with running IX Revival without Nexerelin\n\nTranslator notes are on GitHub\n\nv1.4.1 should be compatible with v1.1+\n\n Emergent Threats\n Misc\n-Minor refactoring for ease of translation\n-New AI administrator skill requires PatchLib to work, so please install with the mod update\n\n Colonies\n-The Cyanine Immutable AI core obtained from the mission A Thousand Cuts can now be used as a colony administrator, and possesses a special skill that makes it not receive Hegemony or Pather scrutiny\n\n Industry\n-Added a version of the Surveillance Center from IX Revival to Emergent Threats that is only buildable when IX Revival is not enabled, does not come with Panopticon mechanics but will accept Cyanine Core/Shard in additional to standard cores (+2 stability, extra +2 alpha/Cyanine core, +1 beta/Cyanine shard)\n\n Ships\n-Equalizer (EX) forward point defense turret arcs updated to cover forward arc\n\n Weapons\n-Hydromagnetic Cannon updated on-hit graphics and text\n-Warp Drone Assembler/Constructor damage lowered from 800 Kinetic + 400 Energy to 600 Kinetic + 200 Energy\n\n Hullmods\n-Updated some sprite swapping hullmods to reduce graphics load\n\n IX Revival\n Misc\n-Minor refactoring for ease of translation\n-Added new LunaLib graphics options for swapping ship sprites, located in the Visuals tab\n-(Nex) reverted vassal mechanics between Trinity Worlds and IX Battlegroup to a standard alliance, this fix only applies to new games, will be updated again after Nexerelin patches the current bug when an alliance vassal's destruction crashes the game\n-Fixed several bugs related to the panopticon core/node structure logic after a foreign conquest, thanks to Bass for the coding help\n-Added a compatibility fix so update is now properly backwards compatible with v1.1+ saves"
-    },
-    {
-      "modId": "fast-rendering",
-      "modName": "Fast Rendering",
-      "seenOn": "2026-11-06",
-      "oldVersion": "0.9.7",
-      "newVersion": "0.9.8",
-      "gameVersion": "0.98a-RC8"
     },
     {
       "modId": "divisions-command-and-control-combat-ai-overhaul",
@@ -613,14 +635,6 @@
       "gameVersion": "0.98a-RC8"
     },
     {
-      "modId": "arma-armatura",
-      "modName": "Arma Armatura",
-      "seenOn": "2026-10-30",
-      "oldVersion": "3.3.7",
-      "newVersion": "3.3.8",
-      "gameVersion": "0.98a"
-    },
-    {
       "modId": "logistics-notifications",
       "modName": "Logistics Notifications",
       "seenOn": "2026-10-30",
@@ -628,6 +642,15 @@
       "newVersion": "1.7.2",
       "gameVersion": "0.98a",
       "changelogNotes": "Fixed crashes when supply or fuel usage is 0."
+    },
+    {
+      "modId": "battle-for-raka-a-foxhole-inspired-mod",
+      "modName": "Battle For raka - A Foxhole inspired mod",
+      "seenOn": "2026-10-30",
+      "oldVersion": "0.4.0",
+      "newVersion": "0.5.0",
+      "gameVersion": "0.98a",
+      "changelogNotes": "Quest placeholder and 1st balance pass update\n\n- Added placeholder quest to get the blueprint package of both faction\n- Myrmidon rework, now fire a single high damage Shrike Bomb\n- Balance change\n    - Toxot / Myrmidon / White rave / Man-o-war\n        - Nerfed overhaul survivability\n    -Callahan class Battleship\n        - Hitpoints reduced from 20000 to 18000\n        - Armor reduced from 1800 to 1700\n    - Titan class Battlecruiser\n        - Hitpoints reduced from 18000 to 17000\n        - Top speed increased from 35 to 40\n    - Blacksteel class Cruiser\n        - Hitpoints increased from 8500 to 9000\n        - Flux dissipassion decreased from 600 to 500\n        - Price increased from 85000 to 90000\n    - Conqueror class Cruiser\n        - System change from Fast missile rack to Missile nanoforge\n        - Hitpoints increased from 7500 to 8500\n        - Armor reduced from 1000 to 800\n    - 150mm Main gun\n        - Price increased from 4000 to 8000\n    - Ares Battery\n        -Price increased from 5000 to 9000"
     },
     {
       "modId": "wide-horizons",
@@ -648,20 +671,11 @@
       "changelogNotes": "Biggest Change is I adding a \"Easy Mode\", when building the station it will now ask you what mode you want use, Current there is Easy and Starfarer, I am working on a Visual mode that uses a colony style interface instead, Easy Mode only uses resources to build the station it self, everything else is just credits but can't use Shopping\nList or Courier Charters."
     },
     {
-      "modId": "battle-for-raka-a-foxhole-inspired-mod",
-      "modName": "Battle For raka - A Foxhole inspired mod",
+      "modId": "arma-armatura",
+      "modName": "Arma Armatura",
       "seenOn": "2026-10-30",
-      "oldVersion": "0.4.0",
-      "newVersion": "0.5.0",
-      "gameVersion": "0.98a",
-      "changelogNotes": "Quest placeholder and 1st balance pass update\n\n- Added placeholder quest to get the blueprint package of both faction\n- Myrmidon rework, now fire a single high damage Shrike Bomb\n- Balance change\n    - Toxot / Myrmidon / White rave / Man-o-war\n        - Nerfed overhaul survivability\n    -Callahan class Battleship\n        - Hitpoints reduced from 20000 to 18000\n        - Armor reduced from 1800 to 1700\n    - Titan class Battlecruiser\n        - Hitpoints reduced from 18000 to 17000\n        - Top speed increased from 35 to 40\n    - Blacksteel class Cruiser\n        - Hitpoints increased from 8500 to 9000\n        - Flux dissipassion decreased from 600 to 500\n        - Price increased from 85000 to 90000\n    - Conqueror class Cruiser\n        - System change from Fast missile rack to Missile nanoforge\n        - Hitpoints increased from 7500 to 8500\n        - Armor reduced from 1000 to 800\n    - 150mm Main gun\n        - Price increased from 4000 to 8000\n    - Ares Battery\n        -Price increased from 5000 to 9000"
-    },
-    {
-      "modId": "commerce-wars",
-      "modName": "Commerce Wars",
-      "seenOn": "2026-10-27",
-      "oldVersion": "v0.2.0",
-      "newVersion": "0.3.1",
+      "oldVersion": "3.3.7",
+      "newVersion": "3.3.8",
       "gameVersion": "0.98a"
     },
     {
@@ -752,6 +766,14 @@
       "newVersion": "1.0.2",
       "gameVersion": "0.98a",
       "changelogNotes": "Added the mod icon, which now also shows next to the mod in LunaLib's settings menu."
+    },
+    {
+      "modId": "commerce-wars",
+      "modName": "Commerce Wars",
+      "seenOn": "2026-10-27",
+      "oldVersion": "v0.2.0",
+      "newVersion": "0.3.1",
+      "gameVersion": "0.98a"
     },
     {
       "modId": "luddic-path-retrofitting",
@@ -931,6 +953,15 @@
       "changelogNotes": "Save compatible with 1.4.x\n\nModified:\n   The Core World Scaler has been improved\n\nFixed:\n   The WWLB magnetar system is now being moved correctly\n   \n   \nNote:\n   I'm counting on your feedback to help me adjust the default settings for the current system sizes."
     },
     {
+      "modId": "play-hq-1-7-2-mod",
+      "modName": "Play HQ 1.7.7 [Mod]",
+      "seenOn": "2026-10-18",
+      "oldVersion": "1.7.2",
+      "newVersion": "1.7.5",
+      "gameVersion": "0.98a",
+      "changelogNotes": "Fixed the bug where the courier was taking all your crew when transferring just some of them.\nCourier fleets now need a transport as well to handle crew.\nIf the HQ is already at its max crew or marines when transferring them to the courier, they will be sold at base price instead.\nAdded the ability to send ships with the courier fleet back to HQ\nReworked the courier charter to be more useful, instead of having supply and request planets, it will now allow you to pick a charter route where the first one in line that needs something will send a courier fleet, this allows both courier fleets to be more consistent with actually moving stuff around.\n\nAdded to the Call Fleet ability, you can now pick to call a Patrol Fleet to join you, they will dock with the station and if all their ships are ready they will start a 7 day prep period, both fleets can be called but both fleets will need to be at the station and have all their ships before the 7 day prep time starts, once the 7 days is up they will lauch and orbit the station for a day before heading to your location, the 30 days doesn't start till they meet up with you, Patrol Fleets will need 2 Tankers and 2 Freighters to be eligible to be called, they can still be crewed with out them but won't be able to be called."
+    },
+    {
       "modId": "the-abyssal-war",
       "modName": "The Abyssal War",
       "seenOn": "2026-10-18",
@@ -938,14 +969,6 @@
       "newVersion": "0.8.1",
       "gameVersion": "0.98a",
       "changelogNotes": "Fixed a crash when a Scouting Swarm was sent to an abyssal \"Deep Space\" system. Scouting Swarms now skip abyssal systems, as human scouts and Patrol Swarms already did. Saves that crashed load again."
-    },
-    {
-      "modId": "faces-in-the-void-updated",
-      "modName": "Faces in the Void",
-      "seenOn": "2026-10-18",
-      "oldVersion": "v0.5",
-      "newVersion": "0.6",
-      "gameVersion": "0.98a"
     },
     {
       "modId": "thunder-s-flag-pack",
@@ -957,13 +980,12 @@
       "changelogNotes": "Freeless Freedom"
     },
     {
-      "modId": "play-hq-1-7-2-mod",
-      "modName": "Play HQ 1.7.7 [Mod]",
+      "modId": "faces-in-the-void-updated",
+      "modName": "Faces in the Void",
       "seenOn": "2026-10-18",
-      "oldVersion": "1.7.2",
-      "newVersion": "1.7.5",
-      "gameVersion": "0.98a",
-      "changelogNotes": "Fixed the bug where the courier was taking all your crew when transferring just some of them.\nCourier fleets now need a transport as well to handle crew.\nIf the HQ is already at its max crew or marines when transferring them to the courier, they will be sold at base price instead.\nAdded the ability to send ships with the courier fleet back to HQ\nReworked the courier charter to be more useful, instead of having supply and request planets, it will now allow you to pick a charter route where the first one in line that needs something will send a courier fleet, this allows both courier fleets to be more consistent with actually moving stuff around.\n\nAdded to the Call Fleet ability, you can now pick to call a Patrol Fleet to join you, they will dock with the station and if all their ships are ready they will start a 7 day prep period, both fleets can be called but both fleets will need to be at the station and have all their ships before the 7 day prep time starts, once the 7 days is up they will lauch and orbit the station for a day before heading to your location, the 30 days doesn't start till they meet up with you, Patrol Fleets will need 2 Tankers and 2 Freighters to be eligible to be called, they can still be crewed with out them but won't be able to be called."
+      "oldVersion": "v0.5",
+      "newVersion": "0.6",
+      "gameVersion": "0.98a"
     },
     {
       "modId": "better-combat",
@@ -975,14 +997,6 @@
       "changelogNotes": "added missileLaunchSpeedMult\nchanged missileRangeMultiplier to missileTimeToLive to reflect what it is, and fixed it being applied multiple times for some missiles."
     },
     {
-      "modId": "sagitarius-concordat",
-      "modName": "Sagitarius Concordat",
-      "seenOn": "2026-10-17",
-      "oldVersion": "1.1",
-      "newVersion": "1.3",
-      "gameVersion": "0.98a"
-    },
-    {
       "modId": "cjy-s-toy-box",
       "modName": "CJY's Toy Box",
       "seenOn": "2026-10-17",
@@ -992,29 +1006,12 @@
       "changelogNotes": "Updated to CN ver 0.5.7c (Long log, please see Github)\nBug fixes, some QoL improvements and substantially increased skill progression for the SSR officer."
     },
     {
-      "modId": "fast-rendering",
-      "modName": "Fast Rendering",
-      "seenOn": "2026-10-12",
-      "oldVersion": "0.9.1",
-      "newVersion": "0.9.3",
-      "gameVersion": "0.98a-RC8"
-    },
-    {
-      "modId": "frontier-cooperations-ship-pack",
-      "modName": "Frontier Cooperations Ship Pack",
-      "seenOn": "2026-10-12",
-      "oldVersion": "0.0.1a",
-      "newVersion": "0.0.2",
+      "modId": "sagitarius-concordat",
+      "modName": "Sagitarius Concordat",
+      "seenOn": "2026-10-17",
+      "oldVersion": "1.1",
+      "newVersion": "1.3",
       "gameVersion": "0.98a"
-    },
-    {
-      "modId": "cjy-s-toy-box",
-      "modName": "CJY's Toy Box",
-      "seenOn": "2026-10-12",
-      "oldVersion": "0.5.7",
-      "newVersion": "0.5.7b",
-      "gameVersion": "0.98",
-      "changelogNotes": "Updated for CN Version 0.5.7b\n\nAdded New SSR Officer from the Officer Hiring Function from Bella (Chara from a cn webnovel) with unique mechanic:\n\nShe will gain exp in each of her skill, this prevent her from learning vanilla skill, but her own skill will improve over time (and also begin shifting aspect of her AI to be more brave despite her nature, for the most part)\n\nHer skill will also improve through repeated use, some with unique cooldown that could last past the current battle.\n\nBug Fixes\nFixed some tag issue with survivor homesystem selection (A new mod setting option is also added to allow player to designate specific system tag to blacklist)\n\nFixed bug issue with survivor fleet vision range.\n\nFixed abnormal speed of AP shell after penetration.\n\nAPCBC hullmod isnt automatically given, will need to be purchased from the Survivors/Convenient Store\n\nNew Lunalib Option\nAdded radar marking render setting, allow player to turn off the circle and square visual of radar.\n\nAdded option to adjust SSR officer apperance rate.\n\nNote: Added some additional bugfix and tl fix from Discord Pre-Release Version"
     },
     {
       "modId": "exiled-sector",
@@ -1026,6 +1023,23 @@
       "changelogNotes": "New Hull Upgrades, one per hull size, drop from salvage, Tech Mining and battles from level 15. Click the ship card in the skill tree to zoom in on the ship and install one from the Hull Upgrades panel. Each gives the ship a point (up to 4) to unlock a socket type around the hull.\nNine new socket types: Bridge, Crew Quarters, Engine Room, Reactor, Armor Plating, Weapon Mount, Shield Generator, Phase Coil and Flight Deck, each with its own socketables. Shield Generator, Phase Coil and Flight Deck need shields, a phase cloak or fighter bays.\nTree sockets are now Subroutine Sockets and only take subroutines. Officers, crews and other specialists already socketed there go back to Socket Storage when you load your save.\nHalf of NPC flagships from level 15 have 2 to 4 sockets unlocked, and destroying one has a 10% chance to drop a Hull Upgrade.\nSubroutine values are down about 15%. Socketables for the new socket types are at least 20% stronger than the matching subroutine modifiers.\nDisassembly gives 3 parts for a common and 5 for a rare.\nSocket Storage has socket type filter chips, and Ctrl-clicking a Subroutine Socket shows only subroutines.\nNew LunaLib settings: keep parts and kernels in Socket Storage, average modifier rolls, and a switch for all skill tree sounds.\nEnergy chain and ballistic pierce drones fire a single pellet from shotgun weapons instead of the whole salvo.\nLion's Gaze beam splits no longer target fighters.\nWhen a hull mod that can't be removed strips a node's hull mod, as some Safety Overrides combinations do, that node is now refused on that ship and refunded on yours."
     },
     {
+      "modId": "fast-rendering",
+      "modName": "Fast Rendering",
+      "seenOn": "2026-10-12",
+      "oldVersion": "0.9.1",
+      "newVersion": "0.9.3",
+      "gameVersion": "0.98a-RC8"
+    },
+    {
+      "modId": "cjy-s-toy-box",
+      "modName": "CJY's Toy Box",
+      "seenOn": "2026-10-12",
+      "oldVersion": "0.5.7",
+      "newVersion": "0.5.7b",
+      "gameVersion": "0.98",
+      "changelogNotes": "Updated for CN Version 0.5.7b\n\nAdded New SSR Officer from the Officer Hiring Function from Bella (Chara from a cn webnovel) with unique mechanic:\n\nShe will gain exp in each of her skill, this prevent her from learning vanilla skill, but her own skill will improve over time (and also begin shifting aspect of her AI to be more brave despite her nature, for the most part)\n\nHer skill will also improve through repeated use, some with unique cooldown that could last past the current battle.\n\nBug Fixes\nFixed some tag issue with survivor homesystem selection (A new mod setting option is also added to allow player to designate specific system tag to blacklist)\n\nFixed bug issue with survivor fleet vision range.\n\nFixed abnormal speed of AP shell after penetration.\n\nAPCBC hullmod isnt automatically given, will need to be purchased from the Survivors/Convenient Store\n\nNew Lunalib Option\nAdded radar marking render setting, allow player to turn off the circle and square visual of radar.\n\nAdded option to adjust SSR officer apperance rate.\n\nNote: Added some additional bugfix and tl fix from Discord Pre-Release Version"
+    },
+    {
       "modId": "play-hq-1-7-2-mod",
       "modName": "Play HQ 1.7.7 [Mod]",
       "seenOn": "2026-10-12",
@@ -1033,6 +1047,15 @@
       "newVersion": "1.7.2",
       "gameVersion": "0.98a",
       "changelogNotes": "Mining and Salvage fleets where moved to the Fleet HQ but still require the Material Acquisition Hub to be build.\n\nReworked the cost of the Player HQ and all the modals.\n\nThe Manufactorium now produces all the items with out special items at 2x the cost, only exception to this is Heavy Armaments, Domestic/Luxury Goods which are 3x standard, 2x with corrupted and 1x with pristine and only produce a max of 50 per month.\n\nFixed a bug where the resupply and courier fleet would not head to you once in system making it where you had to find it, now it will travel to you in system as well.\nCourier fleet can now have up to 5 freighters.\n\nCleaned up the main menu and added a line for what is being produced atm.\n\nBio-Dome no longer requires a Fusion Lamp to build but production is limited, added a new upgrade that adds the Fusion lamp to improve production, Fusion Lamp and Soil Nanites upgrades will return it to the old output."
+    },
+    {
+      "modId": "elite-ships-and-variants",
+      "modName": "Elite Ships and Variants",
+      "seenOn": "2026-10-12",
+      "oldVersion": "1.7.3",
+      "newVersion": "1.7.5",
+      "gameVersion": "0.98a",
+      "changelogNotes": "-Added a COMBAT tag to the HINTS of Tarsus EX and HERON EX. May make them more aggressive; need feedback from you guys."
     },
     {
       "modId": "refit-filters-weapon-class",
@@ -1044,13 +1067,12 @@
       "changelogNotes": "- Added a Weapon Size filter row (Small / Medium / Large) for slots that accept several sizes. Off by default, enable it in the settings."
     },
     {
-      "modId": "elite-ships-and-variants",
-      "modName": "Elite Ships and Variants",
+      "modId": "frontier-cooperations-ship-pack",
+      "modName": "Frontier Cooperations Ship Pack",
       "seenOn": "2026-10-12",
-      "oldVersion": "1.7.3",
-      "newVersion": "1.7.5",
-      "gameVersion": "0.98a",
-      "changelogNotes": "-Added a COMBAT tag to the HINTS of Tarsus EX and HERON EX. May make them more aggressive; need feedback from you guys."
+      "oldVersion": "0.0.1a",
+      "newVersion": "0.0.2",
+      "gameVersion": "0.98a"
     },
     {
       "modId": "carter-s-freetraders",
@@ -1064,6 +1086,23 @@
         "quote": "Save game compatible",
         "answer": "yes"
       }
+    },
+    {
+      "modId": "crab-shack",
+      "modName": "Crab Shack",
+      "seenOn": "2026-10-10",
+      "oldVersion": "0.5.511",
+      "newVersion": "0.5.5111",
+      "gameVersion": "0.98a",
+      "changelogNotes": "Fixed listener crash when interacting with nothing"
+    },
+    {
+      "modId": "draconis-fleet-wip",
+      "modName": "Draconis Fleet",
+      "seenOn": "2026-10-10",
+      "oldVersion": "0.7.7",
+      "newVersion": "0.7.9",
+      "gameVersion": "0.98a"
     },
     {
       "modId": "portrait-changer-1-0-7b-updated-english-version",
@@ -1087,39 +1126,13 @@
       "changelogNotes": "Added all the changes that where suppose to be in the previous patches, messed up and was working on two different versions of the game.\n\nRemoved 2 Mining Fleets and added 2 Salvage Fleets to the MAH, They will launch and search for debris fields and derelict ships, they will ignore ships with guards.\n\nAdded a Winter Resort to the Resort.\nVR Suites now give a bonus % based off the hazard rating of the planet over 100%.\nBeach Resort now gives a bonus for cold, very cold and planets with no atmosphere that are also cold.\nWinter Resort give bonuses to hot and very hot planets.\n\nFixed where you can now produce fighters at the HQ.\n\nReworked the Courier's mechanic. (Forgot to actually add it but made a better version.)\nCouriers will now return to the HQ as soon as the screen is closed.\nThere is now a Charter option on the main menu that allows you to set supply colonies and request colonies for the courier.\n\nIf the player has the automated ship skill they can use automated ships in the patrol HQ.\n\nAdded a Shopping List feature that allows your trade ship to buy equipment and ships from the market they are visiting."
     },
     {
-      "modId": "crab-shack",
-      "modName": "Crab Shack",
-      "seenOn": "2026-10-10",
-      "oldVersion": "0.5.511",
-      "newVersion": "0.5.5111",
-      "gameVersion": "0.98a",
-      "changelogNotes": "Fixed listener crash when interacting with nothing"
-    },
-    {
-      "modId": "draconis-fleet-wip",
-      "modName": "Draconis Fleet",
-      "seenOn": "2026-10-10",
-      "oldVersion": "0.7.7",
-      "newVersion": "0.7.9",
-      "gameVersion": "0.98a"
-    },
-    {
-      "modId": "detailed-combat-results",
-      "modName": "Detailed Combat Results",
+      "modId": "play-hq-1-7-2-mod",
+      "modName": "Play HQ 1.7.7 [Mod]",
       "seenOn": "2026-10-09",
-      "oldVersion": "5.4.4",
-      "newVersion": "5.4.5",
+      "oldVersion": "1.6.3",
+      "newVersion": "1.7.0",
       "gameVersion": "0.98a",
-      "changelogNotes": "Fixed error (NoSuchMethodError) in missile interception tracking that could occur after a Starsector update"
-    },
-    {
-      "modId": "refit-filters-weapon-class",
-      "modName": "Refit Filters (Weapon Class)",
-      "seenOn": "2026-10-09",
-      "oldVersion": "3.2.5",
-      "newVersion": "3.2.7",
-      "gameVersion": "0.98a",
-      "changelogNotes": "- The class row now also works in the fighter wing picker."
+      "changelogNotes": "Removed 2 Mining Fleets and added 2 Salvage Fleets to the MAH, They will launch and search for debris fields and derelict ships, they will ignore ships with guards.\n\nAdded a Winter Resort to the Resort.\nVR Suites now give a bonus % based off the hazard rating of the planet over 100%.\nBeach Resort now gives a bonus for cold, very cold and planets with no atmosphere that are also cold.\nWinter Resort give bonuses to hot and very hot planets.\n\nFixed where you can now produce fighters at the HQ.\n\nReworked the Courier's mechanic. (Forgot to actually add it but made a better version.)\nCouriers will now return to the HQ as soon as the screen is closed.\nThere is now a Charter option on the main menu that allows you to set supply colonies and request colonies for the courier.\n\nIf the player has the automated ship skill they can use automated ships in the patrol HQ.\n\nAdded a Shopping List feature that allows your trade ship to buy equipment and ships from the market they are visiting."
     },
     {
       "modId": "crab-shack",
@@ -1131,13 +1144,22 @@
       "changelogNotes": "Fixed listener crash when interacting with nothing"
     },
     {
-      "modId": "play-hq-1-7-2-mod",
-      "modName": "Play HQ 1.7.7 [Mod]",
+      "modId": "refit-filters-weapon-class",
+      "modName": "Refit Filters (Weapon Class)",
       "seenOn": "2026-10-09",
-      "oldVersion": "1.6.3",
-      "newVersion": "1.7.0",
+      "oldVersion": "3.2.5",
+      "newVersion": "3.2.7",
       "gameVersion": "0.98a",
-      "changelogNotes": "Removed 2 Mining Fleets and added 2 Salvage Fleets to the MAH, They will launch and search for debris fields and derelict ships, they will ignore ships with guards.\n\nAdded a Winter Resort to the Resort.\nVR Suites now give a bonus % based off the hazard rating of the planet over 100%.\nBeach Resort now gives a bonus for cold, very cold and planets with no atmosphere that are also cold.\nWinter Resort give bonuses to hot and very hot planets.\n\nFixed where you can now produce fighters at the HQ.\n\nReworked the Courier's mechanic. (Forgot to actually add it but made a better version.)\nCouriers will now return to the HQ as soon as the screen is closed.\nThere is now a Charter option on the main menu that allows you to set supply colonies and request colonies for the courier.\n\nIf the player has the automated ship skill they can use automated ships in the patrol HQ.\n\nAdded a Shopping List feature that allows your trade ship to buy equipment and ships from the market they are visiting."
+      "changelogNotes": "- The class row now also works in the fighter wing picker."
+    },
+    {
+      "modId": "detailed-combat-results",
+      "modName": "Detailed Combat Results",
+      "seenOn": "2026-10-09",
+      "oldVersion": "5.4.4",
+      "newVersion": "5.4.5",
+      "gameVersion": "0.98a",
+      "changelogNotes": "Fixed error (NoSuchMethodError) in missile interception tracking that could occur after a Starsector update"
     },
     {
       "modId": "fast-rendering",
@@ -1146,33 +1168,6 @@
       "oldVersion": "0.9.0",
       "newVersion": "0.9.1",
       "gameVersion": "0.98a-RC8"
-    },
-    {
-      "modId": "lancer-rpg-battlegroup-0-0-2-wip",
-      "modName": "Lancer RPG/Battlegroup",
-      "seenOn": "2026-10-08",
-      "oldVersion": "0.0.1",
-      "newVersion": "0.0.2",
-      "gameVersion": "0.98",
-      "changelogNotes": "Added Union as a faction.\nAdded the Thoreau-class battleship along with the superheavy spinal 3x3 Block Short-Spool Cannons."
-    },
-    {
-      "modId": "united-nations-space-command-continued",
-      "modName": "Halo - United Nations Space Command: Continued (UNSC) (LEGACY)",
-      "seenOn": "2026-10-08",
-      "oldVersion": "1.03",
-      "newVersion": "1.3.1",
-      "gameVersion": "0.98a",
-      "changelogNotes": "Added Treasure Hunt 2.3.0 integration for the UNSC Blueprint Package one-time reward pool.\nAdded custom descriptions for Epsilon Eridani I, Circumstance, Beta Gabriel, Tantalus, and Site 17.\nAdded a 128x128 project icon for TriOS and similar launchers/managers.\nRemoved dead UNSC_hullconstruction description-parameter code without changing the hullmod's gameplay effects.\nNormalized the public and Version Checker version identity to 1.3.1."
-    },
-    {
-      "modId": "4-0-0-ship-weapon-editor",
-      "modName": "4.0.0 Ship&Weapon Editor",
-      "seenOn": "2026-10-08",
-      "oldVersion": "3.7.8",
-      "newVersion": "3.7.9",
-      "gameVersion": "0.98a",
-      "changelogNotes": "A familiar editor with a few new tricks.\n\n The source has been updated to work with the newest BlitzMax Compilers.\nRuns under Windows, Wine/Linux and the native Linux version.\n\n Some of the bigger added features:\n\n-Station/Multipart Vessel Mode\n-Screenshot Mode\n-Skin and Skin Variant Mode\n-Multi Mod de/activatior\n-Linux installation Path support\n-Damage Mode\n-Drag & Drop\n\n Screenshots of some added functions\n Skin Ship and Variant editor\n\n Combined, Module Center and Station Module on Parent position adjuster\n\n Raw File editor\n\n [close]\n\n Noteable bugfixes\n Fixed Station Module mount function. Does not crash and works instead.\nFixed a t behing added to the first line after opening any csv editor."
     },
     {
       "modId": "exiled-sector",
@@ -1184,15 +1179,6 @@
       "changelogNotes": "Socket Modification workbench\nNew Modify button in Socket Storage opens a workbench for crafting and modifying socketables.\nSynthesise new common subroutines from Socketable Parts.\nThree new kernels: Augmentation adds an effect, Recalibration rerolls values, and Transposition swaps a unique for another.\nSocketables\nDestroying a socketable is now disassembling it into Socketable Parts.\nDisassembly mode breaks down several socketables at once.\nParts and kernels drop wherever socketables do, and won battles drop parts\nNew fighter-focused Management Domain Subroutine.\nShip levels\nNew ships start at your character level instead of 0.\nLower-level ships earn catch-up XP."
     },
     {
-      "modId": "free-frontier-allience",
-      "modName": "Free Frontier Allience",
-      "seenOn": "2026-10-08",
-      "oldVersion": "V0.3",
-      "newVersion": "V0.4",
-      "gameVersion": "0.98a",
-      "changelogNotes": "reworked saturn and yaeweh class\nnew art deco art style for mythic manufactoring ships\nchanged thelb to independent"
-    },
-    {
       "modId": "phase-shunt",
       "modName": "Phase Shunt",
       "seenOn": "2026-10-08",
@@ -1202,24 +1188,48 @@
       "changelogNotes": "updated to 0.0.3. The original S-mod effect was removed for a new one in the new version. 0.0.2 is still good though so I am keeping the link up here"
     },
     {
+      "modId": "united-nations-space-command-continued",
+      "modName": "Halo - United Nations Space Command: Continued (UNSC) (LEGACY)",
+      "seenOn": "2026-10-08",
+      "oldVersion": "1.03",
+      "newVersion": "1.3.1",
+      "gameVersion": "0.98a",
+      "changelogNotes": "Added Treasure Hunt 2.3.0 integration for the UNSC Blueprint Package one-time reward pool.\nAdded custom descriptions for Epsilon Eridani I, Circumstance, Beta Gabriel, Tantalus, and Site 17.\nAdded a 128x128 project icon for TriOS and similar launchers/managers.\nRemoved dead UNSC_hullconstruction description-parameter code without changing the hullmod's gameplay effects.\nNormalized the public and Version Checker version identity to 1.3.1."
+    },
+    {
+      "modId": "lancer-rpg-battlegroup-0-0-2-wip",
+      "modName": "Lancer RPG/Battlegroup",
+      "seenOn": "2026-10-08",
+      "oldVersion": "0.0.1",
+      "newVersion": "0.0.2",
+      "gameVersion": "0.98",
+      "changelogNotes": "Added Union as a faction.\nAdded the Thoreau-class battleship along with the superheavy spinal 3x3 Block Short-Spool Cannons."
+    },
+    {
+      "modId": "free-frontier-allience",
+      "modName": "Free Frontier Allience",
+      "seenOn": "2026-10-08",
+      "oldVersion": "V0.3",
+      "newVersion": "V0.4",
+      "gameVersion": "0.98a",
+      "changelogNotes": "reworked saturn and yaeweh class\nnew art deco art style for mythic manufactoring ships\nchanged thelb to independent"
+    },
+    {
+      "modId": "4-0-0-ship-weapon-editor",
+      "modName": "4.0.0 Ship&Weapon Editor",
+      "seenOn": "2026-10-08",
+      "oldVersion": "3.7.8",
+      "newVersion": "3.7.9",
+      "gameVersion": "0.98a",
+      "changelogNotes": "A familiar editor with a few new tricks.\n\n The source has been updated to work with the newest BlitzMax Compilers.\nRuns under Windows, Wine/Linux and the native Linux version.\n\n Some of the bigger added features:\n\n-Station/Multipart Vessel Mode\n-Screenshot Mode\n-Skin and Skin Variant Mode\n-Multi Mod de/activatior\n-Linux installation Path support\n-Damage Mode\n-Drag & Drop\n\n Screenshots of some added functions\n Skin Ship and Variant editor\n\n Combined, Module Center and Station Module on Parent position adjuster\n\n Raw File editor\n\n [close]\n\n Noteable bugfixes\n Fixed Station Module mount function. Does not crash and works instead.\nFixed a t behing added to the first line after opening any csv editor."
+    },
+    {
       "modId": "reverse-engineered-private-arsenal",
       "modName": "Reverse Engineered Private Arsenal",
       "seenOn": "2026-10-07",
       "oldVersion": "1.2.4",
       "newVersion": "1.3.0",
       "gameVersion": "0.98a"
-    },
-    {
-      "modId": "ship-capture",
-      "modName": "Ship Capture",
-      "seenOn": "2026-10-07",
-      "oldVersion": "3.0.1",
-      "newVersion": "3.0.3",
-      "gameVersion": "0.98a",
-      "updateNote": {
-        "quote": "Initial release - no older versions to update from.",
-        "answer": "depends"
-      }
     },
     {
       "modId": "halo-unsc-reborn",
@@ -1235,13 +1245,16 @@
       }
     },
     {
-      "modId": "halo-unsc-reborn",
-      "modName": "Halo - UNSC Reborn",
-      "seenOn": "2026-10-06",
-      "oldVersion": "0.6.3",
-      "newVersion": "v0.6.4",
+      "modId": "ship-capture",
+      "modName": "Ship Capture",
+      "seenOn": "2026-10-07",
+      "oldVersion": "3.0.1",
+      "newVersion": "3.0.3",
       "gameVersion": "0.98a",
-      "changelogNotes": "Fixed: prize crews tried to board Remnant and THREAT hulls, which the base game never lets anybody board - they are automated, so there is no crew to overpower. The marines sent at them died for nothing. Automated, unboardable, unrecoverable and station hulls are now never attempted\nAdded: a Prize crews setting, because the mechanic spent marines after every won battle with no way to decline it. On by default; a LunaLib checkbox under Campaign Rules, or one line in data/config/settings.json\nIncreased: a Covenant suppression force from 70/110/160 fleet points to 200/320/450, with a floor of 5/6/8 hulls, because Covenant hulls cost 30 to 60 points each - a glassing fleet really was one carrier and an escort\nAdded: the world's own navy now answers a glassing. A military response is raised over the target and renewed monthly for as long as the force is there, because nothing in the mod had ever told the defenders that anything was happening\nAdded: an orbital siege phase, because a station in orbit counted for nothing. The force engages the platform first, the surface clock does not start until it stops firing, and a platform still firing after twelve days is reduced and out of the sky for ninety\nChanged: the force now sails with its transponder lit and can be detected from a very long way out while the projectors charge, with a danger ping at the target every three days, because it used to cross the sector dark and nothing ever lit up\nFixed: the Suppression Force and Section Zero Retirement Detail entries pointed the map at a fleet outside your sensor range, which draws nothing at all. Both now point at the system the fleet is in and name it, and the suppression entry says how many hulls and which phase it is in\nChanged: the excavation under Sanctum from three in-game years to two, and relics to halve it from 31 to 24, because it was too slow to release the Flood\nAdded: the pacing numbers are now readable from data/config/settings.json, so a player without LunaLib can also set the dig length, the relic discount and the Flood's growth rate\nAdded: codex entries for how a glassing actually runs and what every setting does, and loading tips naming both, because none of it was written down anywhere"
+      "updateNote": {
+        "quote": "Initial release - no older versions to update from.",
+        "answer": "depends"
+      }
     },
     {
       "modId": "truly-automated-ships",
@@ -1251,6 +1264,15 @@
       "newVersion": "v2.0",
       "gameVersion": "0.98a-RC8",
       "changelogNotes": "Removed the previous downside for AI cores on automated ships (increased supply maintenance costs). It wasn't fun, just boring\nAdded downside of increased CR cost for deployment\nAdded downside of reduced PPT\nAdded downside of increased CR consumption during combat after PPT has expired"
+    },
+    {
+      "modId": "halo-unsc-reborn",
+      "modName": "Halo - UNSC Reborn",
+      "seenOn": "2026-10-06",
+      "oldVersion": "0.6.3",
+      "newVersion": "v0.6.4",
+      "gameVersion": "0.98a",
+      "changelogNotes": "Fixed: prize crews tried to board Remnant and THREAT hulls, which the base game never lets anybody board - they are automated, so there is no crew to overpower. The marines sent at them died for nothing. Automated, unboardable, unrecoverable and station hulls are now never attempted\nAdded: a Prize crews setting, because the mechanic spent marines after every won battle with no way to decline it. On by default; a LunaLib checkbox under Campaign Rules, or one line in data/config/settings.json\nIncreased: a Covenant suppression force from 70/110/160 fleet points to 200/320/450, with a floor of 5/6/8 hulls, because Covenant hulls cost 30 to 60 points each - a glassing fleet really was one carrier and an escort\nAdded: the world's own navy now answers a glassing. A military response is raised over the target and renewed monthly for as long as the force is there, because nothing in the mod had ever told the defenders that anything was happening\nAdded: an orbital siege phase, because a station in orbit counted for nothing. The force engages the platform first, the surface clock does not start until it stops firing, and a platform still firing after twelve days is reduced and out of the sky for ninety\nChanged: the force now sails with its transponder lit and can be detected from a very long way out while the projectors charge, with a danger ping at the target every three days, because it used to cross the sector dark and nothing ever lit up\nFixed: the Suppression Force and Section Zero Retirement Detail entries pointed the map at a fleet outside your sensor range, which draws nothing at all. Both now point at the system the fleet is in and name it, and the suppression entry says how many hulls and which phase it is in\nChanged: the excavation under Sanctum from three in-game years to two, and relics to halve it from 31 to 24, because it was too slow to release the Flood\nAdded: the pacing numbers are now readable from data/config/settings.json, so a player without LunaLib can also set the dig length, the relic discount and the Flood's growth rate\nAdded: codex entries for how a glassing actually runs and what every setting does, and loading tips naming both, because none of it was written down anywhere"
     },
     {
       "modId": "the-abyssal-war",
@@ -1286,14 +1308,6 @@
       "gameVersion": "0.98a-RC8"
     },
     {
-      "modId": "black-halo-coven",
-      "modName": "Black Halo Coven",
-      "seenOn": "2026-10-04",
-      "oldVersion": "1.0.4",
-      "newVersion": "1.0.5",
-      "changelogNotes": "• Added BHC Kite, Wolf, Mule and Apogee refits with custom sprites and faction variants\n• Added Captain Raid Iant the Human’s bounty\n• Increased Pilgrim Heavy Fighter wing cost to 14 OP\n• Rebalanced all ship variants to use their full OP budgets\n• Fixed weapon slot compatibility on Radiant and Seraph variants\n• Updated Halo Missile AI behavior"
-    },
-    {
       "modId": "4-0-0-ship-weapon-editor",
       "modName": "4.0.0 Ship&Weapon Editor",
       "seenOn": "2026-10-04",
@@ -1303,6 +1317,14 @@
       "changelogNotes": "A familiar editor with a few new tricks.\n\n The source has been updated to work with the newest BlitzMax Compilers.\nRuns under Windows, Wine/Linux and the native Linux version.\n\n Some of the bigger added features:\n\n-Station/Multipart Vessel Mode\n-Screenshot Mode\n-Skin and Skin Variant Mode\n-Multi Mod de/activatior\n-Linux installation Path support\n\n Screenshots of some added functions\n Skin Ship and Variant editor\n\n Combined, Module Center and Station Module on Parent position adjuster\n\n Raw File editor\n\n [close]\n\n Noteable bugfixes\n Fixed Station Module mount function. Does not crash and works instead.\nFixed a t behing added to the first line after opening any csv editor."
     },
     {
+      "modId": "black-halo-coven",
+      "modName": "Black Halo Coven",
+      "seenOn": "2026-10-04",
+      "oldVersion": "1.0.4",
+      "newVersion": "1.0.5",
+      "changelogNotes": "• Added BHC Kite, Wolf, Mule and Apogee refits with custom sprites and faction variants\n• Added Captain Raid Iant the Human’s bounty\n• Increased Pilgrim Heavy Fighter wing cost to 14 OP\n• Rebalanced all ship variants to use their full OP budgets\n• Fixed weapon slot compatibility on Radiant and Seraph variants\n• Updated Halo Missile AI behavior"
+    },
+    {
       "modId": "play-hq-1-7-2-mod",
       "modName": "Play HQ 1.7.7 [Mod]",
       "seenOn": "2026-10-02",
@@ -1310,6 +1332,15 @@
       "newVersion": "1.6.2",
       "gameVersion": "0.98a",
       "changelogNotes": "Added the ability to pause production in the Manufactorium.\n\nCleaned up text to make everything as clean and understandable as possible.\n\nRemoved the ability to use Capitals in the Resupply/Trade/Courier/Mining fleets. (Before updating make sure to remove any Capitals)\n\nAdded 2 lines in the income screen under player hq that shows the upkeep for marines and crew in the HQ."
+    },
+    {
+      "modId": "exiled-sector",
+      "modName": "Exiled Sector",
+      "seenOn": "2026-10-02",
+      "oldVersion": "0.4.0",
+      "newVersion": "0.5.0",
+      "gameVersion": "0.98a",
+      "changelogNotes": "Features\nYou can now save a ship's skill tree as a named template and load it onto any other ship with the same starting node. A loaded template shows its path as green connectors, and the Auto-allocate button fills it in for you, skipping any nodes that are blocked or cost items.\nShips now earn more XP from harder fights, using the same difficulty rating vanilla shows before combat. It only ever adds XP, the post-battle report tells you how much, and you can adjust its strength and cap in LunaLib.\nImproved allocation animations\nIf a future update removes nodes from the tree, your ships get back the OP and free allocations they spent on them. If a ship's starting root is removed, its tree is reset so you can pick a new one, and it keeps its level, XP and banked allocations. Hopefully this makes skill tree iterations not break your saves.\n\nBug fixes\nNodes could end up costing no OP. The hidden hull mods that reserve OP for skill nodes leaked until they ran out, and after that new ships reserved nothing.\nA giant stretched ship hull could sometimes appear across the skill tree (the HOUND bug).\nSkills that add OP to every ship in the fleet only counted toward the flagship's skill tree budget. They now count for every ship.\nNodes allocated on a ship you had just bought could give no bonuses and reserve no OP. Not 100% sure this is fixed yet.\nPressing Escape in the search box closed the whole panel; now it just clears the search."
     },
     {
       "modId": "play-hq-1-7-2-mod",
@@ -1331,11 +1362,11 @@
     {
       "modId": "exiled-sector",
       "modName": "Exiled Sector",
-      "seenOn": "2026-10-02",
-      "oldVersion": "0.4.0",
-      "newVersion": "0.5.0",
+      "seenOn": "2026-10-01",
+      "oldVersion": "0.3.0",
+      "newVersion": "0.4.0",
       "gameVersion": "0.98a",
-      "changelogNotes": "Features\nYou can now save a ship's skill tree as a named template and load it onto any other ship with the same starting node. A loaded template shows its path as green connectors, and the Auto-allocate button fills it in for you, skipping any nodes that are blocked or cost items.\nShips now earn more XP from harder fights, using the same difficulty rating vanilla shows before combat. It only ever adds XP, the post-battle report tells you how much, and you can adjust its strength and cap in LunaLib.\nImproved allocation animations\nIf a future update removes nodes from the tree, your ships get back the OP and free allocations they spent on them. If a ship's starting root is removed, its tree is reset so you can pick a new one, and it keeps its level, XP and banked allocations. Hopefully this makes skill tree iterations not break your saves.\n\nBug fixes\nNodes could end up costing no OP. The hidden hull mods that reserve OP for skill nodes leaked until they ran out, and after that new ships reserved nothing.\nA giant stretched ship hull could sometimes appear across the skill tree (the HOUND bug).\nSkills that add OP to every ship in the fleet only counted toward the flagship's skill tree budget. They now count for every ship.\nNodes allocated on a ship you had just bought could give no bonuses and reserve no OP. Not 100% sure this is fixed yet.\nPressing Escape in the search box closed the whole panel; now it just clears the search."
+      "changelogNotes": "New features\nSome nodes are now limited to certain hull sizes, like their vanilla hull mods.\nNew split notables for things like Expanded Magazines.\nBalance changes to several nodes.\nMassive improvements to performance.\n\nBug fixes\nFixed nodes allocated right after choosing a starting point costing no OP.\nMissile Autoloader and Neural Interface nodes now work in combat.\nShared Fate and High Scatter Amp now work as described.\nShield Shunt can no longer be taken on phase ships or unshielded ships.\nUI and tooltip fixes."
     },
     {
       "modId": "play-hq-1-7-2-mod",
@@ -1355,13 +1386,13 @@
       "changelogNotes": "• Completely reworked the Acolyte, including a new sprite and redesigned hull layout\n• Added the Pilgrim Heavy Fighter\n• Added the Missionary Torpedo Bomber\n• Added the Halo Missile family: Halo Missile (Single), Halo Missile Rack and Halo SRM Pod\n• Added the Black Halo Coven Blueprint Package\n• Added Version Checker support\n• Added Black Halo Coven faction music to fleet encounters\n• Increased all Luminarch base values to 45,000 credits\n• Increased the Ascendant base value to 270,000 credits\n• Fixed the Acolyte Vanguard variant registration\n• Removed Hammer torpedoes from Black Halo Coven faction weapon access and selection"
     },
     {
-      "modId": "exiled-sector",
-      "modName": "Exiled Sector",
-      "seenOn": "2026-10-01",
-      "oldVersion": "0.3.0",
-      "newVersion": "0.4.0",
+      "modId": "play-hq-1-7-2-mod",
+      "modName": "Play HQ 1.7.7 [Mod]",
+      "seenOn": "2026-09-30",
+      "oldVersion": "1.5",
+      "newVersion": "1.6",
       "gameVersion": "0.98a",
-      "changelogNotes": "New features\nSome nodes are now limited to certain hull sizes, like their vanilla hull mods.\nNew split notables for things like Expanded Magazines.\nBalance changes to several nodes.\nMassive improvements to performance.\n\nBug fixes\nFixed nodes allocated right after choosing a starting point costing no OP.\nMissile Autoloader and Neural Interface nodes now work in combat.\nShared Fate and High Scatter Amp now work as described.\nShield Shunt can no longer be taken on phase ships or unshielded ships.\nUI and tooltip fixes."
+      "changelogNotes": "Forgot to track changes so I might of missed some\n\nFriendly stations in the system will now send out a SOS that will be added to a list, any active patrol fleets will book it to that station to help with defense before moving on to the next station that needs help, when the list is clear fleet will return to normal\n\nAdd different options to dedicated AI system, now offering 3 tires, Gamma, Beta and Alpha each offering a better reduction and credit pool increase per month.\nChanged the bonuses for the corrupt and pristine forge in the strategic assembly and giving them a bonus to production pool income per month.\n\nMade it where mining fleets will now target planets with resources that the HQ needs the most.\n\nI know I fixed a few bugs but can't remember what they where. (Sorry)\n\nThinking of redoing the fleets but need your opinions, Was thinking of removing a Patrol fleet and turning it into a Strike Fleet that you can order to attack something and a Grand Defender Fleet that will allow you to build only 1 patrol fleet but have up to 30 ships making it more of a boss fleet.\nWas thinking of removing 2 courier fleets as I personally don't often use more then two anyway but add a Trade Fleet that will trade excess wares from the station for you.\nWas thinking of making the Expedition Fleets to be allowed to go to different systems with a increased chance of finding loot but also require you to fund the expeditions with credits, supplies and fuel. (Let me know what you think)"
     },
     {
       "modId": "exiled-sector",
@@ -1373,13 +1404,12 @@
       "changelogNotes": "Features\nFirst draft Simplified Chinese translation of the whole mod. Node search also matches English names and ids, so you can still search while playing in Chinese.\nOther languages can now be added more easily.\n\nBug fixes\nFixed a crash to desktop when opening the NPC Scaling tab in the LunaLib settings.\nFixed the post-battle salvage bonus not dropping after the ship or node providing it was lost, sold or removed.\nTerrifying Presence's enemy accuracy penalty now shows in green, since it helps you.\nVery small numbers no longer display in scientific notation (e.g. 1.0E-4)."
     },
     {
-      "modId": "play-hq-1-7-2-mod",
-      "modName": "Play HQ 1.7.7 [Mod]",
-      "seenOn": "2026-09-30",
-      "oldVersion": "1.5",
-      "newVersion": "1.6",
-      "gameVersion": "0.98a",
-      "changelogNotes": "Forgot to track changes so I might of missed some\n\nFriendly stations in the system will now send out a SOS that will be added to a list, any active patrol fleets will book it to that station to help with defense before moving on to the next station that needs help, when the list is clear fleet will return to normal\n\nAdd different options to dedicated AI system, now offering 3 tires, Gamma, Beta and Alpha each offering a better reduction and credit pool increase per month.\nChanged the bonuses for the corrupt and pristine forge in the strategic assembly and giving them a bonus to production pool income per month.\n\nMade it where mining fleets will now target planets with resources that the HQ needs the most.\n\nI know I fixed a few bugs but can't remember what they where. (Sorry)\n\nThinking of redoing the fleets but need your opinions, Was thinking of removing a Patrol fleet and turning it into a Strike Fleet that you can order to attack something and a Grand Defender Fleet that will allow you to build only 1 patrol fleet but have up to 30 ships making it more of a boss fleet.\nWas thinking of removing 2 courier fleets as I personally don't often use more then two anyway but add a Trade Fleet that will trade excess wares from the station for you.\nWas thinking of making the Expedition Fleets to be allowed to go to different systems with a increased chance of finding loot but also require you to fund the expeditions with credits, supplies and fuel. (Let me know what you think)"
+      "modId": "fast-rendering",
+      "modName": "Fast Rendering",
+      "seenOn": "2026-09-28",
+      "oldVersion": "0.8.9",
+      "newVersion": "0.8.10",
+      "gameVersion": "0.98a-RC8"
     },
     {
       "modId": "free-cam-2025",
@@ -1389,14 +1419,6 @@
       "newVersion": "0.2.4",
       "gameVersion": "0.98a",
       "changelogNotes": "made bug fix automatic, removing the setting"
-    },
-    {
-      "modId": "fast-rendering",
-      "modName": "Fast Rendering",
-      "seenOn": "2026-09-28",
-      "oldVersion": "0.8.9",
-      "newVersion": "0.8.10",
-      "gameVersion": "0.98a-RC8"
     },
     {
       "modId": "nexerelin",
@@ -1493,6 +1515,14 @@
       "changelogNotes": "Cleaned up info text, fixed typos and removed personal notes.\n\nAdded fuel production via the installation of a Synchrotron Core.\n\nReduced the Bio-Dome output some more, now 600 Food and 300 Organics, Soil Nanites now give a flat 200 more of each when installed.\n\nRemoved the Combat Drone Replicator station upgrade(Make sure to uninstall it before updating) and now the colony gets a 0.50x bonus to defense and +1 Stability if you build the Military Hub.\n\nAdded a 500 Crew cost for the Resort.\n\nGot the intel report to look cleaner and be more useful.\n\nTraining Expeditions now orbit for 8 days before moving on to a new planet and will prioritize planets with ruins first.\n\nAdded the ability to pick what ships you want to crew the bays with in the Expedition HQ\n\nAdded a Market Place upgrade the station upgrades, when build it will unlock a market that will sell weapons, wings and rarely blueprints and hullmods, it will allow you to sell your excess equipment, hullmods and blueprints but a random number will be picked between 0 and 1,000,000 and that is the amount that be able to be sold that month, there is a second inventory of the station where you place your items you want to sell and the pricey ones will be sold first, if you buy anything off the market it will be added to the total amount.\n\nWorking on a blacklist for things that mods add that shouldn't be in the market place.\n\nWorking on a new upgrade that will allow you to request a fleet via a ability to get Supplies, Crew and Fuel.\n\nWill add mod support for items if there is a request for them."
     },
     {
+      "modId": "fast-rendering",
+      "modName": "Fast Rendering",
+      "seenOn": "2026-09-22",
+      "oldVersion": "0.8.8",
+      "newVersion": "0.8.9",
+      "gameVersion": "0.98a-RC8"
+    },
+    {
       "modId": "persean-separatists",
       "modName": "Persean Separatists",
       "seenOn": "2026-09-22",
@@ -1502,14 +1532,6 @@
       "changelogNotes": "- Fixed loading error related to version_files.csv\n- Added mod thread id to version file\n- Added Lunalib change log for in-game display"
     },
     {
-      "modId": "fast-rendering",
-      "modName": "Fast Rendering",
-      "seenOn": "2026-09-22",
-      "oldVersion": "0.8.8",
-      "newVersion": "0.8.9",
-      "gameVersion": "0.98a-RC8"
-    },
-    {
       "modId": "second-in-command-auxiliaries",
       "modName": "Second-in-Command: Auxiliaries",
       "seenOn": "2026-09-21",
@@ -1517,6 +1539,15 @@
       "newVersion": "1.4.0",
       "gameVersion": "0.98a",
       "changelogNotes": "- Updated the Cadet aptitude, now it has a slider in LunaSettings for setting the effect multiplier of all the skills, defaults to 75% of vanilla, but can be changed to the previous 100% behavior if you want.\n- Fixed the Energy Weapon Mastery from Cadet, was never applying its bonus damage, whops...\n- Fixed Perfect Construction crashing when enabling after disabling the aptitude. Reported by Minh.\n- Fixed texts."
+    },
+    {
+      "modId": "play-hq-1-7-2-mod",
+      "modName": "Play HQ 1.7.7 [Mod]",
+      "seenOn": "2026-09-20",
+      "oldVersion": "1.0",
+      "newVersion": "1.1",
+      "gameVersion": "0.98a",
+      "changelogNotes": "Did general clean up of descriptions and info text.\n\nFixed not getting the ability when adding mod to existing save, tested it even with removing the mod, remember when removing to make sure to dismantle the station before saving and removing the mod.\n\nFixed the High tech version needing a beta and the Low tech needing a Gamma. (should of been the other way around)\n\nAdded a accessibility mechanic to the station that starts at 25% meaning you only earn 25% of the credits the Resort would be earning, at 100% you will gain the full amount of credits for the Resort and any % over that will give you a bonus, Added Station Upgrades to improve accessibility.\n(The player skill Industrial Planning will now give a 15% accessibility bonus to the station.)\n\nAdded a new upgrade to the Military Paradigm that requires you to build it with ships that will let your crew and marines go on expeditions. (4 bays in total)\nFleets will actually spawn from your station using the ships you gave them that can not be attack and will go around the system orbiting planets for a while before returning to the station, if the planet has ruins there is a chance that they will return with weapons/wings/blueprints/special items and even ships.\n(If the player has the skill Salvaging then there will be a improved chance to find rare stuff.)\n\nAdded info showing cost and production for things in the Manufactorium.\n\nReduced the Bio-Sphere as I found it was rivaling the production of a planet.\n\nInstall Nanoforge in the Strategic Assembly now lets you pick between corrupt and pristine instead of auto picking.\n\nAdded a better intel report under the \"Personal\" tab of the intel screen telling you where the station is and what it produced last month as well.\n\nMarine XP gained from them training at the station will now be transferred to your fleet. (sense they are training under your style of leadership)\n\nAdded asteroid belts to the Materials Acquisition Hub, each belt now gives ore, rare ore and volatiles."
     },
     {
       "modId": "pirate-utility-pack",
@@ -1532,13 +1563,12 @@
       }
     },
     {
-      "modId": "play-hq-1-7-2-mod",
-      "modName": "Play HQ 1.7.7 [Mod]",
-      "seenOn": "2026-09-20",
-      "oldVersion": "1.0",
-      "newVersion": "1.1",
-      "gameVersion": "0.98a",
-      "changelogNotes": "Did general clean up of descriptions and info text.\n\nFixed not getting the ability when adding mod to existing save, tested it even with removing the mod, remember when removing to make sure to dismantle the station before saving and removing the mod.\n\nFixed the High tech version needing a beta and the Low tech needing a Gamma. (should of been the other way around)\n\nAdded a accessibility mechanic to the station that starts at 25% meaning you only earn 25% of the credits the Resort would be earning, at 100% you will gain the full amount of credits for the Resort and any % over that will give you a bonus, Added Station Upgrades to improve accessibility.\n(The player skill Industrial Planning will now give a 15% accessibility bonus to the station.)\n\nAdded a new upgrade to the Military Paradigm that requires you to build it with ships that will let your crew and marines go on expeditions. (4 bays in total)\nFleets will actually spawn from your station using the ships you gave them that can not be attack and will go around the system orbiting planets for a while before returning to the station, if the planet has ruins there is a chance that they will return with weapons/wings/blueprints/special items and even ships.\n(If the player has the skill Salvaging then there will be a improved chance to find rare stuff.)\n\nAdded info showing cost and production for things in the Manufactorium.\n\nReduced the Bio-Sphere as I found it was rivaling the production of a planet.\n\nInstall Nanoforge in the Strategic Assembly now lets you pick between corrupt and pristine instead of auto picking.\n\nAdded a better intel report under the \"Personal\" tab of the intel screen telling you where the station is and what it produced last month as well.\n\nMarine XP gained from them training at the station will now be transferred to your fleet. (sense they are training under your style of leadership)\n\nAdded asteroid belts to the Materials Acquisition Hub, each belt now gives ore, rare ore and volatiles."
+      "modId": "everybody-loves-the-ko-combine",
+      "modName": "Everybody Loves the Ko Combine",
+      "seenOn": "2026-09-19",
+      "oldVersion": "1.05.49a",
+      "newVersion": "1.05.50a",
+      "gameVersion": "0.98a"
     },
     {
       "modId": "wide-horizons",
@@ -1550,11 +1580,11 @@
       "changelogNotes": "Save compatible with 1.4.x\n\nIMPORTANT: Please reset the settings when starting a new game, as some values have changed to their default settings\n\nModified:\n  New adjustments to the Realistic System Generator\n  New settings for all vanilla star systems based on the number of planets\n  System post-processing is no longer handled individually but is now passed to the Vanilla API\n\nFixed:\n  Issues with planetary bodies have been fixed\n  There are no longer any gas/ice giants that are too small; size data now comes from the Vanilla API\n  System sizes are now calculated correctly so that no planetary objects overlap\n\nNote:\n  I'm counting on your feedback to help me adjust the default settings for the current system sizes."
     },
     {
-      "modId": "everybody-loves-the-ko-combine",
-      "modName": "Everybody Loves the Ko Combine",
-      "seenOn": "2026-09-19",
-      "oldVersion": "1.05.49a",
-      "newVersion": "1.05.50a",
+      "modId": "detailed-combat-results",
+      "modName": "Detailed Combat Results",
+      "seenOn": "2026-09-15",
+      "oldVersion": "5.4.3",
+      "newVersion": "5.4.4",
       "gameVersion": "0.98a"
     },
     {
@@ -1564,6 +1594,15 @@
       "oldVersion": "2.7.2",
       "newVersion": "2.7.3",
       "gameVersion": "0.98a"
+    },
+    {
+      "modId": "red-neck-engineering-arcade-mode-0-1-2-f1",
+      "modName": "RedNeckEngineering - ArcadeMode",
+      "seenOn": "2026-09-15",
+      "oldVersion": "0.1.1",
+      "newVersion": "0.1.2",
+      "gameVersion": "0.98",
+      "changelogNotes": "Added:\n- LunaLib settings icon\n- Salvaging modifier\n\nModified:\n- Increased max CR degradation amount in settings\n- Zip generator to exclude one more file\n\nFixed:\n- CTD When going to the mod's LunaLib configs (Reported by HoeHarto [kecoasetan])"
     },
     {
       "modId": "tri-tac-special-circumstances",
@@ -1576,23 +1615,6 @@
         "quote": "Save Compatible",
         "answer": "yes"
       }
-    },
-    {
-      "modId": "detailed-combat-results",
-      "modName": "Detailed Combat Results",
-      "seenOn": "2026-09-15",
-      "oldVersion": "5.4.3",
-      "newVersion": "5.4.4",
-      "gameVersion": "0.98a"
-    },
-    {
-      "modId": "red-neck-engineering-arcade-mode-0-1-2-f1",
-      "modName": "RedNeckEngineering - ArcadeMode",
-      "seenOn": "2026-09-15",
-      "oldVersion": "0.1.1",
-      "newVersion": "0.1.2",
-      "gameVersion": "0.98",
-      "changelogNotes": "Added:\n- LunaLib settings icon\n- Salvaging modifier\n\nModified:\n- Increased max CR degradation amount in settings\n- Zip generator to exclude one more file\n\nFixed:\n- CTD When going to the mod's LunaLib configs (Reported by HoeHarto [kecoasetan])"
     },
     {
       "modId": "mikohime-unofficial-java-28-configurator",
@@ -1613,14 +1635,6 @@
       "changelogNotes": "- Ironed out Sins of Lilith interaction\n    - Fixed a bug where Phase 6’s start option did not activate even after requisites were met\n    - Fixed a bug where Myla would have Phase 6 start option during Phase 7\n    - Fixed a bug where Myla’s post-SoL greeting(or a lack of one) didn’t fire after completing SoL\n    - Fixed a bug where Sierra’s Lionhusk hub didn’t have a leave option\n    - Rebalanced Phase 5 and 6 requirements around actual drop rates for the respective items(weapon platform interaction also changed to follow this)\n    - Highlighted requirements for items and also put them in tooltips\n- Fixed a crash with the Gamaliel’s shipsystem\n- Made Gamaliel use its shipsystem more aggressively\n- Made a Sagittarii AI that actually allowed it to use its shipsystem efficiently(it was utterly broken last time)\n- Added text to Special Modification Resonator explaining what it does\n- Changed shipsystem descriptions to be more mechanically useful\n- Fixed an issue where Regulus(LG) ring graphic remained after death and even applied to ship debris\n- Gave Regulus a unique bridge and repainted Regulus(LG)\n- Buffed several ships across the board\n    - Regulus and Regulus(LG): Supps/month and DP reduced to 7 and 10 respectively\n    - Koel: Supps/month and DP reduced to 6\n    - Drongo: Supps/month and DP reduced to 7\n    - Impinge(LG): Conduit shroud now reduces kinetic and HE damage by 80%, does not lower shields, increase cooldown to 10 seconds\n    - Vanquisher(LG): Capacitor Discharge no longer lowers shields\n    - Sagittarii: Vector Manipulator now increases ballistic firerate to 300%, energy damage to 200%, and reduces all weapon flux to 10%"
     },
     {
-      "modId": "diy-planets",
-      "modName": "DIY Planets",
-      "seenOn": "2026-09-13",
-      "oldVersion": "1.0.30",
-      "newVersion": "v1.0.31",
-      "gameVersion": "0.98a"
-    },
-    {
       "modId": "threat-tech",
       "modName": "THREAT TECH",
       "seenOn": "2026-09-13",
@@ -1639,17 +1653,12 @@
       "changelogNotes": "New Portraits Added."
     },
     {
-      "modId": "red-neck-engineering-arcade-mode-0-1-2-f1",
-      "modName": "RedNeckEngineering - ArcadeMode",
-      "seenOn": "2026-09-12",
-      "oldVersion": "0.1.0",
-      "newVersion": "0.1.1",
-      "gameVersion": "0.98",
-      "changelogNotes": "Added:\n- Versioning file\n- Changelog file\n- Update checker\n- Placeholder mod image for TriOS\n- Python script that makes a zip of the mod (Used ChatGPT because idk python)\n\nModified:\n- Revamped LunaLib settings\n- Revamped how the mod uses the settings\n- Made the mod a utility mod\n- Modified the README.md\n- Modified the hullmod descriptions\n\nFixed:\n- Lots of errors while Revamping\n\n!Unknown compatibility with 0.1.0 and bellow!\n!Unknown if you can disable the mod once you use it in a save!",
-      "updateNote": {
-        "quote": "Unknown compatibility with 0.1.0 and bellow",
-        "answer": "depends"
-      }
+      "modId": "diy-planets",
+      "modName": "DIY Planets",
+      "seenOn": "2026-09-13",
+      "oldVersion": "1.0.30",
+      "newVersion": "v1.0.31",
+      "gameVersion": "0.98a"
     },
     {
       "modId": "fast-rendering",
@@ -1667,6 +1676,19 @@
       "newVersion": "0.6.3",
       "gameVersion": "0.98a",
       "changelogNotes": "Fixed: Covenant salvage said to take it to Section One, which accepts nothing. The tooltip, the post-battle notification and the counter itself now name Section Three, and the menu option says \"salvage\" instead of not saying it\nFixed: the three ONI programme rewards could not be equipped - they were flagged hidden while costing ordnance points, which makes the refit screen drop them. Up to 34 crates bought nothing\nFixed: buying a programme you cannot afford did nothing at all, silently. It now says whether the crates or the intelligence are short\nFixed: Titanium-A Battle Plate, the MAC Capacitor Bank and Shaw-Fujikawa Drive Tuning had no interface category, so they vanished the moment you clicked a filter\nFixed: three weapons fired their whole burst in one frame - medium point defence, the Talon and the light coilgun. They now wait between rounds, like every weapon in the base game. This is most of why Covenant plasma torpedoes never seemed to arrive\nFixed: six Flood hulls took 1.6x damage when venting, paying the Covenant screen penalty for a screen they had shunted\nFixed: the MAC skipped its firing solution in the simulator, so the weapon you tested was not the weapon you flew\nIncreased: armour on 14 UNSC capitals, because they sat below the floor of the base game's own capital spread against large guns. The Tours carried two thirds of what the weakest vanilla capital does. Each is raised to that floor and no further\nAdded: 15% high-explosive resistance to UNSC hulls, because that is where the fragility actually was. Against kinetics they are the most durable faction in the game; against high explosive they were a fifth of vanilla. The Flood are excluded on purpose\nChanged: the Archer's missile trails, because they were drawing 88 segments per missile against the base game's 13 for its own mass-launch weapon, on a weapon mounted 143 times. A capital engagement drew 48,000 trail segments and now draws about 11,000\nFixed: every Archer tooltip promised a 32-missile salvo. The burst is 8\nAdded: a spinal MAC to the Epoch, which was the only UNSC combat capital without one, and gun emplacements down both flanks painted into the hull art. Added the mirrored pod pair the Charon's upper booms were missing, and two more to match the 2022 Encyclopedia's armament for the class\nChanged: four ship descriptions that promised shields on hulls that have none, and two faction blurbs that placed the UNSC in the Persean Sector. Hull Construction now describes the ship it is actually on\nAdded: a description for Infestation Bloom, which was the only ship system of thirteen without one, and loading tips, which the mod never had"
+    },
+    {
+      "modId": "red-neck-engineering-arcade-mode-0-1-2-f1",
+      "modName": "RedNeckEngineering - ArcadeMode",
+      "seenOn": "2026-09-12",
+      "oldVersion": "0.1.0",
+      "newVersion": "0.1.1",
+      "gameVersion": "0.98",
+      "changelogNotes": "Added:\n- Versioning file\n- Changelog file\n- Update checker\n- Placeholder mod image for TriOS\n- Python script that makes a zip of the mod (Used ChatGPT because idk python)\n\nModified:\n- Revamped LunaLib settings\n- Revamped how the mod uses the settings\n- Made the mod a utility mod\n- Modified the README.md\n- Modified the hullmod descriptions\n\nFixed:\n- Lots of errors while Revamping\n\n!Unknown compatibility with 0.1.0 and bellow!\n!Unknown if you can disable the mod once you use it in a save!",
+      "updateNote": {
+        "quote": "Unknown compatibility with 0.1.0 and bellow",
+        "answer": "depends"
+      }
     },
     {
       "modId": "stop-bloating-me",
@@ -1703,15 +1725,6 @@
       "changelogNotes": "Threat Incursion is now The Abyssal War. The mod id is unchanged, so existing saves keep working.\n\nGround war\nEradication is a ground campaign, not a decline timer: land marines, take the strata, kill the Fabrication Core.\nGround fronts push, dig in or withdraw; armaments burn per marine per day, so what a front carries is how long it lasts.\nFronts push the moment troops land at holding strength; a dug-in front stays dug in until the next landing.\nSieges fight for the orbit first. Bombardment wears fortification to a floor and no further - a front on the ground takes it the rest of the way.\nThreat strikes land fronts of their own on inhabited worlds, dig in, then make a final push.\nColony defense is garrison troops times fortification, each worn down separately, with an orbital floor under the structures.\nMarines arm over weeks, take casualties, count toward counter-attacks, and carry veterancy both ways with your fleet's marine pool.\nSupport and Defend fleet orders: hold the orbit, run the siege slice, or fight only while the front cannot hold.\nA Defend fleet at the orbital floor can break up its own hulls into troops for the front.\nPlanetary shields buy real cover against orbital bombardment.\nThe hive scours an unopposed enemy front after three days.\n\nStrategy layer\nNPC factions enter war mode when the Threat strikes them; you mobilise or stand down yourself.\nEvery colony banks a visible reserve of marines, heavy armaments, fuel and supplies.\nConvoys carry that stock physically - escort them, or let the swarm's raiders have them.\nFleet orders from the board: guard, stage, intercept, support, defend, siege, recall.\nGuarding your own colony stages the fleet there: its strength counts at the host and folds into sorties.\nFaction view shows any mobilised faction's colonies, reserves and fleets, with a totals row and a colour key.\nMin / Med / Max load ladders on sieges, supply runs and convoy loads.\nRecalled and expired fleets sail home and return their surviving cargo.\nSieges are leashed to the contested orbit; strays are recalled instead of chasing across the sector.\n\nPlayer aid and outposts\nNPC factions are autonomous now: you aid them, you do not command them.\nSend Defend, Resupply, Reinforce or Strike from your own colonies, gated by a capacity ledger and reserve stock, earning standing on arrival.\nFactions post their needs as ordinary missions - deliver by colony fleet, or in person at the dock.\nAllies send each other aid by standing, without you.\nBuild an outpost over any uncolonised world, or take one free by ground victory. Dock at it for storage, or decommission it.\nA later colony on that world inherits the outpost.\n\nEconomy\nWar reserves are the colony's real resource stockpile, not a separate hidden ledger.\nMobilised colonies carry the War Footing condition, so the war shows as genuine demand and a real shortage on the colony screen.\nDepots cover the colony's own shortages before they fund anything else.\nConvoys land as trade at the receiving colony.\nBases need a Waystation; NPC mobilisation builds them.\n\nEscalation\nGrudge and alarm: the swarm answers whoever hurts it most, and alarm speeds hive fabrication.\nA ground victory draws retaliation from the nearest hive.\nCoalition fleets answer a mobilised faction's call during a siege.\nDefense Swarms detach to raid convoys, then return to their garrison.\n\nBoard\nGround Fronts table, per system, with order buttons on every front.\nPer-fleet rows with Recall and Intercept.\nColony rows open vanilla's own colony screen.\nPurge commissions removed; sieges launch from the faction view.\nTooltips rewritten: one line per fact, and every button says what pressing it does - or why it cannot be pressed.\nThe intel list row reads at vanilla's own size now, next to Colony Crises.\n\nTesting\nInstant War (LunaLib, Debug): stands up a mature sector-wide war on a fresh save in one toggle."
     },
     {
-      "modId": "autopilot-with-gates",
-      "modName": "Autopilot With Gates",
-      "seenOn": "2026-09-09",
-      "oldVersion": "0.1.4",
-      "newVersion": "0.1.4a",
-      "gameVersion": "0.98a-RC8",
-      "changelogNotes": "- Improved gate blacklist hidden systems sub-dialog fidelity with dynamic sector map\n- Hardened version/plaform compatibility in the case of fast rendering/mikohime 27/28 java agents enabled"
-    },
-    {
       "modId": "fast-rendering",
       "modName": "Fast Rendering",
       "seenOn": "2026-09-09",
@@ -1720,12 +1733,13 @@
       "gameVersion": "0.98a-RC8"
     },
     {
-      "modId": "remnant-retribution-colony-crisis",
-      "modName": "Remnant Retribution",
+      "modId": "autopilot-with-gates",
+      "modName": "Autopilot With Gates",
       "seenOn": "2026-09-09",
-      "oldVersion": "0.3.0",
-      "newVersion": "0.3.1",
-      "gameVersion": "0.98a"
+      "oldVersion": "0.1.4",
+      "newVersion": "0.1.4a",
+      "gameVersion": "0.98a-RC8",
+      "changelogNotes": "- Improved gate blacklist hidden systems sub-dialog fidelity with dynamic sector map\n- Hardened version/plaform compatibility in the case of fast rendering/mikohime 27/28 java agents enabled"
     },
     {
       "modId": "terraforming-made-easy",
@@ -1738,6 +1752,14 @@
         "quote": "Not save compatible for versions below 2.9.0",
         "answer": "no"
       }
+    },
+    {
+      "modId": "remnant-retribution-colony-crisis",
+      "modName": "Remnant Retribution",
+      "seenOn": "2026-09-09",
+      "oldVersion": "0.3.0",
+      "newVersion": "0.3.1",
+      "gameVersion": "0.98a"
     },
     {
       "modId": "carter-s-freetraders",
@@ -2202,15 +2224,6 @@
       "changelogNotes": "Eastern Epics"
     },
     {
-      "modId": "wide-horizons",
-      "modName": "Wide Horizons",
-      "seenOn": "2026-08-19",
-      "oldVersion": "1.4.0",
-      "newVersion": "1.4.1a",
-      "gameVersion": "0.98a",
-      "changelogNotes": "Save compatible with 1.4.x\n\nIMPORTANT: Please reset the settings when starting a new game, as some values have changed to their default settings\n\nModified:\nRemnant generation adjusted and improved\nAdded mod support for \"Project MISTRAL\" to add scaling\n\nFixed:\nFixed Remnant generation with the Beacons"
-    },
-    {
       "modId": "mindforge-conglomerate-faction",
       "modName": "Mindforge Conglomerate - Faction",
       "seenOn": "2026-08-19",
@@ -2231,6 +2244,15 @@
         "quote": "ONLY SAVE COMPATIBLE with 1.3.5 and 1.3.6",
         "answer": "depends"
       }
+    },
+    {
+      "modId": "wide-horizons",
+      "modName": "Wide Horizons",
+      "seenOn": "2026-08-19",
+      "oldVersion": "1.4.0",
+      "newVersion": "1.4.1a",
+      "gameVersion": "0.98a",
+      "changelogNotes": "Save compatible with 1.4.x\n\nIMPORTANT: Please reset the settings when starting a new game, as some values have changed to their default settings\n\nModified:\nRemnant generation adjusted and improved\nAdded mod support for \"Project MISTRAL\" to add scaling\n\nFixed:\nFixed Remnant generation with the Beacons"
     },
     {
       "modId": "the-shadow-order",
