@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T14:55:40.712241Z",
+  "generatedAt": "2026-11-16T19:12:13.028913Z",
   "listing": {
     "id": "yuki-s-tactical-display",
     "name": "Yuki's Tactical Display",
@@ -17,7 +17,6 @@
     "sources": [
       "forum"
     ],
-    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "1.1.3",
     "imageUrl": "https://i.imgur.com/ODhsOr5.png",
@@ -44,7 +43,7 @@
       "required": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
         },
         {
           "name": "LunaLib",
@@ -53,7 +52,7 @@
         {
           "name": "LazyLib",
           "id": "lazylib",
-          "via": "LunaLib"
+          "via": "MagicLib"
         }
       ]
     }
@@ -65,7 +64,7 @@
   "aiDescription": "Adds a tactical display widget to the combat UI anchored to the left side of the screen with configurable position. It displays your fleet's assignments, status, flux bars, and CR/PPT visually, with sprites turning red as hull damage is taken. Players can use it to issue orders such as retreat, seek escorts, or search & destroy without entering the command UI.",
   "aiUse": {},
   "rawCategories": [
-    "Utility mods"
+    "Standalone Utilities"
   ],
   "gallery": [
     {
@@ -110,7 +109,7 @@
     "required": [
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
       },
       {
         "name": "LunaLib",
@@ -119,7 +118,7 @@
       {
         "name": "LazyLib",
         "id": "lazylib",
-        "via": "LunaLib"
+        "via": "MagicLib"
       }
     ]
   }

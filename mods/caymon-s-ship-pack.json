@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T14:55:40.712241Z",
+  "generatedAt": "2026-11-16T19:12:13.028913Z",
   "listing": {
     "id": "caymon-s-ship-pack",
     "name": "Caymon's Ship Pack",
@@ -16,7 +16,7 @@
       "discord"
     ],
     "onModIndex": true,
-    "gameVersion": "0.98a",
+    "gameVersion": "0.98",
     "modVersion": "1.2.5",
     "imageUrl": "https://i.imgur.com/4WHllc4.png",
     "announcementImageUrl": "https://cdn.discordapp.com/attachments/1380902687997952082/1380902688228905115/space_ops.png?ex=6afbaf18&is=6afa5d98&hm=2074e65e1cab9f3f1984b520ee39be92a762ff89f68626fe3adcfb4b5c42d7e7&",
@@ -41,7 +41,12 @@
       "required": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     }
@@ -439,7 +444,12 @@
     "required": [
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "MagicLib"
       }
     ]
   }

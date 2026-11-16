@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T14:55:40.712241Z",
+  "generatedAt": "2026-11-16T19:12:13.028913Z",
   "listing": {
     "id": "take-no-prisoners",
     "name": "Take No Prisoners",
@@ -13,13 +13,10 @@
         "wisp"
       ]
     },
-    "categories": [
-      "Miscellaneous"
-    ],
+    "categories": [],
     "sources": [
       "forum"
     ],
-    "onModIndex": true,
     "gameVersion": "0.98a",
     "modVersion": "0.17.1",
     "imageUrl": "https://i.imgur.com/FC6Q683.png",
@@ -48,7 +45,12 @@
       "required": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     }
@@ -69,9 +71,7 @@
     }
   },
   "aiUse": {},
-  "rawCategories": [
-    "Miscellaneous Mods"
-  ],
+  "rawCategories": [],
   "gallery": [
     {
       "url": "https://img.shields.io/github/downloads/wispborne/takenoprisoners/total?color=blue&logo=github&label=total%20downloads",
@@ -128,7 +128,12 @@
     "required": [
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "MagicLib"
       }
     ]
   },

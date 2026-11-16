@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T14:55:40.712241Z",
+  "generatedAt": "2026-11-16T19:12:13.028913Z",
   "listing": {
     "id": "chronozumi3-s-ship-pack",
     "name": "chronozumi3's ship pack",
@@ -35,7 +35,12 @@
       "required": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     }
@@ -127,7 +132,12 @@
     "required": [
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "MagicLib"
       }
     ]
   }
