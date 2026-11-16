@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T07:20:36.050159Z",
+  "generatedAt": "2026-11-16T14:55:40.712241Z",
   "listing": {
     "id": "refit-filters",
     "name": "Refit Filters",
@@ -50,6 +50,7 @@
         "how": "generated"
       }
     ],
+    "lastReleaseDate": "2026-11-16T00:00:00.000Z",
     "addedOn": "2024-02-28",
     "editedOn": "2025-04-08",
     "requirements": {
@@ -207,7 +208,17 @@
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29327.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1358857374554915037/1358857374554915037",
-  "releases": [],
+  "releases": [
+    {
+      "modId": "refit-filters",
+      "modName": "Refit Filters",
+      "seenOn": "2026-11-16",
+      "oldVersion": "3.1.3",
+      "newVersion": "4.0.0",
+      "gameVersion": "0.98.5a",
+      "changelogNotes": "- Rebuilt on StarUILib, now requires StarUILib, PatchLib and LazyLib\n- Hooks the weapon and fighter pickers directly instead of checking every frame, so the filters are there the moment the picker opens\n- Added a Sort row under the filters\n  + Weapons by Name, OP, Range, Damage, DPS or Flux Efficiency\n  + Fighters by Name, OP, Range, Refit Time or Wing Size\n  + Click the active one again to reverse it\n- The slider can filter more than range: click its label to switch\n  + Weapons: Range, DPS, Damage per shot, Flux Efficiency\n  + Fighters: Range, Refit Time, Wing Size\n  + Every limit you set applies at once, Reset Filters clears them all\n- New settings: default sort, sort order and slider for weapons and fighters, the slider's max for each stat, and the Sort row on or off\n- Removed the min range setting, the slider starts at 0\n- Updated for 0.98.5a-RC6"
+    }
+  ],
   "sameNameMods": [
     {
       "title": "Refit Filters (Weapon Class)",

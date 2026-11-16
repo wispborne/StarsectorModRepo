@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T07:20:36.050159Z",
+  "generatedAt": "2026-11-16T14:55:40.712241Z",
   "listing": {
     "id": "more-military-missions",
     "name": "More Military Missions",
@@ -44,13 +44,14 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1355335903505158406/1355335903505158406",
     "sourceIsPublic": false,
     "isWorkInProgress": false,
+    "lastReleaseDate": "2026-11-16T00:00:00.000Z",
     "addedOn": "2023-05-17",
     "editedOn": "2025-05-17",
     "requirements": {
       "required": [
         {
           "name": "MagicLib",
-          "id": "magiclib"
+          "id": "magiclib-2"
         },
         {
           "name": "LunaLib",
@@ -59,7 +60,7 @@
         {
           "name": "LazyLib",
           "id": "lazylib",
-          "via": "MagicLib"
+          "via": "LunaLib"
         }
       ]
     }
@@ -142,14 +143,24 @@
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=26880",
   "discordUrl": "https://discord.com/channels/187635036525166592/1355335903505158406/1355335903505158406",
-  "releases": [],
+  "releases": [
+    {
+      "modId": "more-military-missions",
+      "modName": "More Military Missions",
+      "seenOn": "2026-11-16",
+      "oldVersion": "0.5.0",
+      "newVersion": "0.5.1",
+      "gameVersion": "0.98a.5a",
+      "changelogNotes": "- Military Custom Bounty:\n - disable non-vanilla code if max difficulty is only 10\n- Procurement Mission: contacts can now reliably give remote procurement missions\n- Scavenger Trading:\n - updated traded intel icons to match vanilla\n - limit commodities offered to 8 max\n- Defense Mission:\n - scale down Omega fleet sizes more\n - abandoning the mission no longer causes the invasion fleet to stick around\n- Escort Mission\n - reduced extra commodities available at market after completing delivery to match vanilla change to Delivery bar mission\n- Pick Your Ships: added a check for fleet without any crewed ships\n- recompiled for 0.98.5a"
+    }
+  ],
   "sameNameMods": [],
   "addons": [],
   "requirements": {
     "required": [
       {
         "name": "MagicLib",
-        "id": "magiclib"
+        "id": "magiclib-2"
       },
       {
         "name": "LunaLib",
@@ -158,7 +169,7 @@
       {
         "name": "LazyLib",
         "id": "lazylib",
-        "via": "MagicLib"
+        "via": "LunaLib"
       }
     ]
   }
