@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T19:11:38.998302Z",
+  "generatedAt": "2026-11-16T07:20:36.050159Z",
   "listing": {
     "id": "grand-colonies",
     "name": "Grand.Colonies",
@@ -17,12 +17,12 @@
     ],
     "onModIndex": true,
     "gameVersion": "0.98a",
-    "modVersion": "2.1.b",
+    "modVersion": "2.1.c",
     "imageUrl": "https://i.imgur.com/xb2DfcA.png",
-    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1356007403543330948/1356007403677814964/mod_post_icon_grand_colonies.png?ex=6afac38e&is=6af9720e&hm=2dad25435e205c9163842b99f8fe421a82250ba5ebb7a0d594e3b846f2ac786b&",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1356007403543330948/1356007403677814964/mod_post_icon_grand_colonies.png?ex=6afb6c4e&is=6afa1ace&hm=a01e4ef024335357542f478547a0630c498d3ff73f5d154d732d9eb19d62d151&",
     "summary": "This mod allows you to build more buildings on a colony by adding a scroll bar to the \"buildings\" screen. You can build more than 12 buildings by installing this mod. The Mod uncaps the amount of structures you can add to a planet. It does not not change the industry limits.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a scrollbar to the colony building screen, allowing unlimited construction beyond the vanilla limit of 12 buildings.",
+    "aiSummary": "Adds a scrollbar to the colony building screen, allowing placement of more than 12 structures per planet.",
     "saveCompat": {
       "adding": {
         "answer": "yes"
@@ -30,12 +30,12 @@
     },
     "hasDirectDownload": true,
     "bestDownload": {
-      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSirHartley%2FGrand.Colonies%2Fmaster%2FGrandColonies.version%22%2C%22id%22%3A%22GrandColonies%22%2C%22version%22%3A%222.1.b%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FMagicLibStarsector%2FMagicLib%2Fmaster%2Fmagiclib.version%22%2C%22id%22%3A%22lw_lazylib%22%2C%22version%22%3A%223.0%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%2C%22version%22%3A%222.0.5%22%7D",
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSirHartley%2FGrand.Colonies%2Fmaster%2FGrandColonies.version%22%2C%22id%22%3A%22GrandColonies%22%2C%22version%22%3A%222.1.c%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%2C%22version%22%3A%223.0.0%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%2C%22version%22%3A%222.0.5%22%7D",
       "type": "trios",
       "needsAnotherStep": false
     },
     "plainDownload": {
-      "url": "https://github.com/SirHartley/Grand.Colonies/releases/download/2.1.b/Grand.Colonies2.1.b.zip",
+      "url": "https://github.com/SirHartley/Grand.Colonies/releases/download/2.1.c/Grand.Colonies-2.1.c.zip",
       "type": "direct",
       "needsAnotherStep": false
     },
@@ -44,9 +44,14 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1356007403543330948/1356007403543330948",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
     "addedOn": "2021-04-14",
-    "threadLastPostOn": "2026-04-02",
-    "editedOn": "2026-06-21",
     "requirements": {
       "required": [
         {
@@ -60,22 +65,34 @@
       ]
     }
   },
-  "description": "I'd like to thank Lukas04 for his implementation of the scroll bar.\n\nSave Compatible\n\nManual Download\nRequires LazyLib\nRequires LunaLib\n\nDependencies are automatically downloaded when installing with TriOS\nOlder versions and changelogs\n\nOr support me on Ko-Fi\n\nThis mod allows you to build more buildings on a colony by adding a scroll bar to the \"buildings\" screen.\nYou can build more than 12 buildings by installing this mod. The Mod uncaps the amount of structures you can add to a planet. It does not not change the industry limits.\n\nWith the base settings, there is a 10% compounding upkeep penalty for every building above 12 - this can be adjusted or disabled, check the FAQ.\n\nTo install the mod, simply download the .zip file from the link above, unzip it in your Starsector mods directory, and enable it in the launcher.\n\nThis is safe to add to ongoing games, and it will break saves if removed.\n\nYou will notice no change until you build your 12th building. Once you add the 13th, a scrollbar will appear.\n\nThe amount you can add is not limited, but exceeding the vanilla limits comes with a penalty. This can be toggled off in the settings.\n\nFAQ\nHow does this work?\nThe mod adds a scrollbar to the industry screen. When you get to the last row, it'll be available to scroll down. Simple as!\n\nWhat does \"Cramped Infrastructure\" do?\nIf you build more than 12 buildings in a colony, you will get an upkeep penalty. \"Cramped Infrastructure\" is the condition that tells you how much it is. Penalty applies to the total upkeep paid in the colony. This can be disabled or changed in the settings.\n\nHow does that penalty calculate?\nPenalty ^ Amount of Buildings over the limit (example: penalty 10%, 5 buildings over the limit, 1.1^5 = 1.61, which is 61% more upkeep)\n\nHow do I disable the penalty?\nEdit the setting in the LunLib setting menu in-game. Set the penalty setting to \"false\". Do note that I personally found the penalty feature rather interesting, since it makes you re-think your placements on high hazard planets.\n\nDoes this mod increase the industries I can build?\nNo. This mod increases the amount of buildings you can place on a colony (Default: 12 including Population & Infrastructure). It does not increase the industry slots a colony offers (by default: 4 on a size 6 colony), you can do that yourself in the settings.json offered by the main game.\n\nDoes this mod allow a colony to grow past size 6?\nNo. This mod increases the amount of buildings you can place on a colony, which is always 12 in vanilla, at any colony size.\n\nChangelog\nView on Github\n\nAttribution / Acknowledgement\nLukas04     Made the scrollbar implementation, bringing the mod into the modern age.\nfloat     Contributed fixes for some very complex problems.\n\nAsk before using my code.",
-  "descriptionHtml": "<div class=\"align-center\"><img src=\"https://i.imgur.com/xb2DfcA.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"> </div><div class=\"align-center\"><span class=\"size-small\">I'd like to thank Lukas04 for his implementation of the scroll bar.</span></div><br><hr><br><div class=\"align-center\"><b><span class=\"size-big\"><span class=\"author-colour\" style=\"--c:#008000\">Save Compatible</span></span></b></div><hr><br><br><div class=\"align-center\"><a href=\"https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSirHartley%2FGrand.Colonies%2Fmaster%2FGrandColonies.version%22%2C%22id%22%3A%22GrandColonies%22%2C%22version%22%3A%222.1.b%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FMagicLibStarsector%2FMagicLib%2Fmaster%2Fmagiclib.version%22%2C%22id%22%3A%22lw_lazylib%22%2C%22version%22%3A%223.0%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%2C%22version%22%3A%222.0.5%22%7D\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://trilink.wispborne.com/badges/install-badge-forthebadge.svg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br><span class=\"size-small\"><b><a href=\"https://github.com/SirHartley/Grand.Colonies/releases/download/2.1.b/Grand.Colonies2.1.b.zip\" rel=\"nofollow noopener\" target=\"_blank\">Manual Download</a></b></span><br><span class=\"size-small\">Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a> </span> <br><span class=\"size-small\">Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a> </span> <br><br><span class=\"size-small\">Dependencies are automatically downloaded when installing with TriOS</span><br><span class=\"size-small\"><a href=\"https://github.com/SirHartley/Grand.Colonies/releases\" rel=\"nofollow noopener\" target=\"_blank\">Older versions and changelogs</a></span><br><br><div class=\"align-center\"><a href=\"https://www.patreon.com/join/SirHartley\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/xQodpET.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><span class=\"size-small\">Or support me on <a href=\"https://ko-fi.com/sirhartley\" rel=\"nofollow noopener\" target=\"_blank\">Ko-Fi</a></span></div></div><br><hr><br><br><div class=\"align-center\">This mod allows you to <b>build more buildings on a colony</b> by adding a scroll bar to the \"buildings\" screen. <br>You can build <b>more than 12 buildings</b> by installing this mod. The Mod uncaps the amount of structures you can add to a planet. It <b>does not not change the industry limits</b>.<br><br>With the base settings, there is a 10% compounding upkeep penalty for every building above 12 - this can be adjusted or disabled, check the FAQ.<br><br>To install the mod, simply download the .zip file from the link above, unzip it in your Starsector mods directory, and enable it in the launcher.<br><br>This is safe to add to ongoing games, and it <span class=\"author-colour\" style=\"--c:#ff0000\">will break saves if removed</span>.</div><br><hr><br><br><div class=\"align-center\">You will notice no change until you build your 12th building. Once you add the 13th, a scrollbar will appear.<br><br><img src=\"https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2dpOTh4bDZ3eDJ2czV5Z211cGwxZmZweTZpdTl6ZnFiY2xyZnZjbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Kab8MtzFVPP3WgmICp/giphy.gif\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br>The amount you can add is not limited, but exceeding the vanilla limits comes with a penalty. <b>This can be toggled off in the settings.</b><br><br><img src=\"https://i.imgur.com/tAWNcsL.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><br><hr><br><br><details class=\"spoiler\"><summary>FAQ</summary><div class=\"table-scroll\"><table><tbody><tr><td> <b>How does this work?</b></td></tr><tr><td>The mod adds a scrollbar to the industry screen. When you get to the last row, it'll be available to scroll down. Simple as! </td></tr></tbody></table></div><hr><br><div class=\"table-scroll\"><table><tbody><tr><td> <b>What does \"Cramped Infrastructure\" do?</b></td></tr><tr><td> If you build more than 12 buildings in a colony, you will get an upkeep penalty. \"Cramped Infrastructure\" is the condition that tells you how much it is. Penalty applies to the total upkeep paid in the colony. This can be disabled or changed in the settings.</td></tr></tbody></table></div><hr><br><div class=\"table-scroll\"><table><tbody><tr><td> <b>How does that penalty calculate?</b></td></tr><tr><td> Penalty ^ Amount of Buildings over the limit (example: penalty 10%, 5 buildings over the limit, 1.1^5 = 1.61, which is 61% more upkeep)</td></tr></tbody></table></div><hr><br><div class=\"table-scroll\"><table><tbody><tr><td> <b>How do I disable the penalty?</b></td></tr><tr><td> Edit the setting in the LunLib setting menu in-game. Set the penalty setting to \"false\". Do note that I personally found the penalty feature rather interesting, since it makes you re-think your placements on high hazard planets.</td></tr></tbody></table></div><hr><br><div class=\"table-scroll\"><table><tbody><tr><td> <b>Does this mod increase the industries I can build?</b></td></tr><tr><td> No. This mod increases the amount of buildings you can place on a colony (Default: 12 including Population &amp; Infrastructure). It does not increase the industry slots a colony offers (by default: 4 on a size 6 colony), you can do that yourself in the settings.json offered by the main game.</td></tr></tbody></table></div><hr><br><div class=\"table-scroll\"><table><tbody><tr><td> <b>Does this mod allow a colony to grow past size 6?</b></td></tr><tr><td> No. This mod increases the amount of buildings you can place on a colony, which is always 12 in vanilla, at any colony size.</td></tr></tbody></table></div></details><details class=\"spoiler\"><summary>Changelog</summary><a href=\"https://raw.githubusercontent.com/SirHartley/Grand.Colonies/refs/heads/master/Changelog\" rel=\"nofollow noopener\" target=\"_blank\"><span class=\"size-big\"><i><b>View on Github</b></i></span></a></details><details class=\"spoiler\"><summary>Attribution / Acknowledgement</summary><div class=\"table-scroll\"><table><tbody><tr><td> Lukas04</td><td>   </td><td> Made the scrollbar implementation, bringing the mod into the modern age. </td></tr><tr><td> float</td><td>   </td><td> Contributed fixes for some very complex problems. </td></tr></tbody></table></div></details><br><div class=\"align-center\"><a href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br>Ask before using my code.</div>",
+  "description": "I'd like to thank Lukas04 for his implementation of the scroll bar.\n\nSafe to add mid-game\n\nBreaks saves if removed\n\nSurvival mode ready\n\nRequires LazyLib | Requires LunaLib\nDependencies are automatically downloaded when installing with TriOS\nOlder versions and changelogs\n\nDescription\n\nThis mod allows you to build more buildings on a colony by adding a scroll bar to the \"buildings\" screen.\nYou can build more than 12 buildings by installing this mod. The Mod uncaps the amount of structures you can add to a planet. It does not not change the industry limits.\n\nWith the base settings, there is a 10% compounding upkeep penalty for every building above 12 - this can be adjusted or disabled, check the FAQ.\n\nYou will notice no change until you build your 12th building. Once you add the 13th, a scrollbar will appear.\n\nThe amount you can add is not limited, but exceeding the vanilla limits comes with a penalty. This can be toggled off in the settings.\n\nFAQ\nHow does this work?\nThe mod adds a scrollbar to the industry screen. When you get to the last row, it'll be available to scroll down. Simple as!\n\nWhat does \"Cramped Infrastructure\" do?\nIf you build more than 12 buildings in a colony, you will get an upkeep penalty. \"Cramped Infrastructure\" is the condition that tells you how much it is. Penalty applies to the total upkeep paid in the colony. This can be disabled or changed in the settings.\n\nHow does that penalty calculate?\nPenalty ^ Amount of Buildings over the limit (example: penalty 10%, 5 buildings over the limit, 1.1^5 = 1.61, which is 61% more upkeep)\n\nHow do I disable the penalty?\nEdit the setting in the LunLib setting menu in-game. Set the penalty setting to \"false\". Do note that I personally found the penalty feature rather interesting, since it makes you re-think your placements on high hazard planets.\n\nDoes this mod increase the industries I can build?\nNo. This mod increases the amount of buildings you can place on a colony (Default: 12 including Population & Infrastructure). It does not increase the industry slots a colony offers (by default: 4 on a size 6 colony), you can do that yourself in the settings.json offered by the main game.\n\nDoes this mod allow a colony to grow past size 6?\nNo. This mod increases the amount of buildings you can place on a colony, which is always 12 in vanilla, at any colony size.\n\nChangelog\nView on Github\n\nAttribution / Acknowledgement\nLukas04       Made the scrollbar implementation, bringing the mod into the modern age.\nfloat       Contributed fixes for some very complex problems.\n\nAI use disclaimer\nSome or all assets and code in this mod were created using AI tools:\nCode: Claude Opus 5.5, from 2.1.c onwards\nImages: Completely hand-made\n\nThis mod started out made completely by hand. With the growing maturity of AI coding tools, I've come to rely on them for menial tasks and code work.\nLast completely hand-made release: 2.1.b\n\nInstallation\n\nNew to mods? See the install guide:\nAdding mods to your game:\nFirst Steps\n\nSupport\n\nWant to show support for my work?\n\nOr support me on Ko-Fi\n\nLicense\n\nAsk before using my code.\n\nMy other mods",
+  "descriptionHtml": "<div class=\"align-center\"><img src=\"https://i.imgur.com/xb2DfcA.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><span class=\"size-small\">I'd like to thank Lukas04 for his implementation of the scroll bar.</span></div><hr><div class=\"align-center\"><div class=\"table-scroll\"><table><tbody><tr><td><table style=\"--bg:#d6e8d4;--pad:3px 10px;--round:12px\"><tbody><tr><td class=\"author-colour\" style=\"--c:#1d5e1d\"><span class=\"size-small\"><b>Safe to add mid-game</b></span></td></tr></tbody></table></td><td><table style=\"--bg:#efd0d0;--pad:3px 10px;--round:12px\"><tbody><tr><td class=\"author-colour\" style=\"--c:#7a1717\"><span class=\"size-small\"><b>Breaks saves if removed</b></span></td></tr></tbody></table></td></tr></tbody></table></div></div><div class=\"align-center\"><div class=\"table-scroll\"><table><tbody><tr><td><table style=\"--bg:#e3d6ef;--pad:3px 10px;--round:12px\"><tbody><tr><td class=\"author-colour\" style=\"--c:#4b2a6b\"><span class=\"size-small\"><b>Survival mode ready</b></span></td></tr></tbody></table></td></tr></tbody></table></div></div><hr><div class=\"align-center\"><a href=\"https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSirHartley%2FGrand.Colonies%2Fmaster%2FGrandColonies.version%22%2C%22id%22%3A%22GrandColonies%22%2C%22version%22%3A%222.1.c%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%2C%22version%22%3A%223.0.0%22%7D&amp;dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%2C%22version%22%3A%222.0.5%22%7D\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://trilink.wispborne.com/badges/install-badge-forthebadge.svg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><a href=\"https://github.com/SirHartley/Grand.Colonies/releases/download/2.1.c/Grand.Colonies-2.1.c.zip\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Manual_Download-GitHub-24292f?style=for-the-badge&amp;logo=github\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><span class=\"size-small\">Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a></span> | <span class=\"size-small\">Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25658.0\" rel=\"nofollow noopener\" target=\"_blank\">LunaLib</a></span><br><span class=\"size-small\">Dependencies are automatically downloaded when installing with TriOS</span><br><span class=\"size-small\"><a href=\"https://github.com/SirHartley/Grand.Colonies/releases\" rel=\"nofollow noopener\" target=\"_blank\">Older versions and changelogs</a></span></div><hr><br><div class=\"align-center\"><div class=\"table-scroll\"><table style=\"--bg:#ecebe7;--pad:8px 18px;--w:100%\"><tbody><tr style=\"--row-bg:#dfddd4\"><td><div class=\"align-center\"><b>Description</b></div></td></tr><tr><td><div class=\"align-center\">This mod allows you to <b>build more buildings on a colony</b> by adding a scroll bar to the \"buildings\" screen.<br>You can build <b>more than 12 buildings</b> by installing this mod. The Mod uncaps the amount of structures you can add to a planet. It <b>does not not change the industry limits</b>.<br><br>With the base settings, there is a 10% compounding upkeep penalty for every building above 12 - this can be adjusted or disabled, check the FAQ.</div></td></tr></tbody></table></div></div><br><div class=\"align-center\">You will notice no change until you build your 12th building. Once you add the 13th, a scrollbar will appear.<br><br><img src=\"https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2dpOTh4bDZ3eDJ2czV5Z211cGwxZmZweTZpdTl6ZnFiY2xyZnZjbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Kab8MtzFVPP3WgmICp/giphy.gif\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br>The amount you can add is not limited, but exceeding the vanilla limits comes with a penalty. <b>This can be toggled off in the settings.</b><br><br><img src=\"https://i.imgur.com/tAWNcsL.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></div><hr><details class=\"spoiler\"><summary>FAQ</summary><div class=\"table-scroll\"><table><tbody><tr><td><b>How does this work?</b></td></tr><tr><td>The mod adds a scrollbar to the industry screen. When you get to the last row, it'll be available to scroll down. Simple as!</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>What does \"Cramped Infrastructure\" do?</b></td></tr><tr><td>If you build more than 12 buildings in a colony, you will get an upkeep penalty. \"Cramped Infrastructure\" is the condition that tells you how much it is. Penalty applies to the total upkeep paid in the colony. This can be disabled or changed in the settings.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>How does that penalty calculate?</b></td></tr><tr><td>Penalty ^ Amount of Buildings over the limit (example: penalty 10%, 5 buildings over the limit, 1.1^5 = 1.61, which is 61% more upkeep)</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>How do I disable the penalty?</b></td></tr><tr><td>Edit the setting in the LunLib setting menu in-game. Set the penalty setting to \"false\". Do note that I personally found the penalty feature rather interesting, since it makes you re-think your placements on high hazard planets.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>Does this mod increase the industries I can build?</b></td></tr><tr><td>No. This mod increases the amount of buildings you can place on a colony (Default: 12 including Population &amp; Infrastructure). It does not increase the industry slots a colony offers (by default: 4 on a size 6 colony), you can do that yourself in the settings.json offered by the main game.</td></tr></tbody></table></div><hr><div class=\"table-scroll\"><table><tbody><tr><td><b>Does this mod allow a colony to grow past size 6?</b></td></tr><tr><td>No. This mod increases the amount of buildings you can place on a colony, which is always 12 in vanilla, at any colony size.</td></tr></tbody></table></div></details><details class=\"spoiler\"><summary>Changelog</summary><a href=\"https://raw.githubusercontent.com/SirHartley/Grand.Colonies/refs/heads/master/Changelog\" rel=\"nofollow noopener\" target=\"_blank\"><span class=\"size-big\"><i><b>View on Github</b></i></span></a></details><details class=\"spoiler\"><summary>Attribution / Acknowledgement</summary><div class=\"table-scroll\"><table><tbody><tr><td><b>Lukas04</b></td><td>      </td><td>Made the scrollbar implementation, bringing the mod into the modern age.</td></tr><tr><td><b>float</b></td><td>      </td><td>Contributed fixes for some very complex problems.</td></tr></tbody></table></div></details><details class=\"spoiler\"><summary>AI use disclaimer</summary>Some or all assets and code in this mod were created using AI tools:<br><ul><li>Code: Claude Opus 5.5, from 2.1.c onwards</li><li>Images: Completely hand-made</li></ul><br><b>This mod started out made completely by hand.</b> With the growing maturity of AI coding tools, I've come to rely on them for menial tasks and code work.<br>Last completely hand-made release: <a href=\"https://github.com/SirHartley/Grand.Colonies/releases/tag/2.1.b\" rel=\"nofollow noopener\" target=\"_blank\">2.1.b</a></details><hr><div class=\"table-scroll\"><table style=\"--w:100%\"><tbody><tr><td style=\"--cell-bg:#ececec;--cell-pad:0px;--w:32%\"><table style=\"--pad:6px 14px;--w:100%\"><tbody><tr style=\"--row-bg:#dcdcdc\"><td><div class=\"align-center\"><b>Installation</b></div></td></tr><tr><td><div class=\"align-center\">New to mods? See the install guide:<br><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25974.0\" rel=\"nofollow noopener\" target=\"_blank\">Adding mods to your game:<br>First Steps</a></div></td></tr></tbody></table></td><td style=\"--cell-pad:0px;--w:12px\"></td><td style=\"--cell-bg:#ececec;--cell-pad:0px;--w:32%\"><table style=\"--pad:6px 14px;--w:100%\"><tbody><tr style=\"--row-bg:#dcdcdc\"><td><div class=\"align-center\"><b>Support</b></div></td></tr><tr><td><div class=\"align-center\">Want to show support for my work?<br><a href=\"https://www.patreon.com/join/SirHartley\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/xQodpET.png\" alt=\"\" height=\"32\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><span class=\"size-small\">Or support me on <a href=\"https://ko-fi.com/sirhartley\" rel=\"nofollow noopener\" target=\"_blank\">Ko-Fi</a></span></div></td></tr></tbody></table></td><td style=\"--cell-pad:0px;--w:12px\"></td><td style=\"--cell-bg:#ececec;--cell-pad:0px;--w:32%\"><table style=\"--pad:6px 14px;--w:100%\"><tbody><tr style=\"--row-bg:#dcdcdc\"><td><div class=\"align-center\"><b>License</b></div></td></tr><tr><td><div class=\"align-center\"><a href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br>Ask before using my code.</div></td></tr></tbody></table></td></tr></tbody></table></div><br><div class=\"table-scroll\"><table style=\"--bg:#ececec;--pad:6px 14px;--w:100%\"><tbody><tr style=\"--row-bg:#dcdcdc\"><td><div class=\"align-center\"><b>My other mods</b></div></td></tr><tr><td style=\"--cell-pad:14px\"><div class=\"align-center\"><table style=\"--pad:0px 4px\"><tbody><tr><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=18011.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/k6jGVS8.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=25649.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/nLpPQnc.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=24378.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/ORHTmT9.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=31416.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/sV98XzC.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=31738.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/YHTKOwn.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=19210.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/rubUJxU.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=35125.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/AO9LQbl.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=36236.0\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/Y4pEqw4.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=34161.0#:~:text=%5B0.98.5a%5D%20Useful.Tithes\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/Wn6fJRQ.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=34161.0#:~:text=%5B0.98.5a%5D%20Big%20Pilum%20Energy\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/foNUf16.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=34161.0#:~:text=%5B0.98a%5D%20Lost.Sector\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/nGcxyQ8.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td><td style=\"--w:48px\"><a href=\"https://fractalsoftworks.com/forum/index.php?topic=34161.0#:~:text=%5B0.98.5a%5D%20Disco.Balls\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.imgur.com/4rVRIke.png\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a></td></tr></tbody></table></div></td></tr></tbody></table></div>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Adds a scrollbar to the colony building screen, allowing unlimited construction beyond the vanilla limit of 12 buildings. Includes an optional compounding upkeep penalty for exceeding the standard limit, which can be adjusted or disabled in settings.",
+  "aiDescription": "Adds a scrollbar to the colony building screen, allowing placement of more than 12 structures per planet. Includes an optional compounding upkeep penalty for buildings exceeding the vanilla limit, which can be adjusted or disabled in settings.",
   "saveCompat": {
     "adding": {
-      "quote": "Save Compatible",
+      "quote": "Safe to add mid-game",
       "answer": "yes"
     },
     "removing": {
-      "quote": "it will break saves if removed",
+      "quote": "Breaks saves if removed",
       "answer": "no"
     }
   },
-  "aiUse": {},
+  "aiUse": {
+    "quote": "Some or all assets and code in this mod were created using AI tools:\nCode: Claude Opus 5.5, from 2.1.c onwards\nImages: Completely hand-made",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
+    "tools": [
+      "Claude Opus 5.5"
+    ]
+  },
   "rawCategories": [
     "Colonies",
     "Misc. Campaign Mods",
@@ -83,7 +100,7 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1356007403543330948/1356007403677814964/mod_post_icon_grand_colonies.png?ex=6afac38e&is=6af9720e&hm=2dad25435e205c9163842b99f8fe421a82250ba5ebb7a0d594e3b846f2ac786b&",
+      "url": "https://cdn.discordapp.com/attachments/1356007403543330948/1356007403677814964/mod_post_icon_grand_colonies.png?ex=6afb6c4e&is=6afa1ace&hm=a01e4ef024335357542f478547a0630c498d3ff73f5d154d732d9eb19d62d151&",
       "aiCaption": "A logo featuring a gear with a plus sign inside it.",
       "aiKind": "logo",
       "aiFit": "good",
@@ -103,10 +120,8 @@
       "source": "forum"
     },
     {
-      "url": "https://i.imgur.com/xQodpET.png",
-      "aiCaption": "An orange button labeled 'Become a patron'.",
-      "aiKind": "button",
-      "aiFit": "poor",
+      "url": "https://img.shields.io/badge/Manual_Download-GitHub-24292f?style=for-the-badge&logo=github",
+      "small": true,
       "source": "forum"
     },
     {
@@ -124,35 +139,123 @@
       "source": "forum"
     },
     {
+      "url": "https://i.imgur.com/xQodpET.png",
+      "aiCaption": "An orange button labeled 'Become a patron'.",
+      "aiKind": "button",
+      "aiFit": "poor",
+      "source": "forum"
+    },
+    {
       "url": "https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png",
       "aiCaption": "A Creative Commons license badge with the text 'CC BY-NC ND'.",
       "aiKind": "badge",
       "aiFit": "poor",
       "small": true,
       "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/k6jGVS8.png",
+      "aiCaption": "A gear icon with a central circle.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/nLpPQnc.png",
+      "aiCaption": "An icon of two overlapping rectangular shapes.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/ORHTmT9.png",
+      "aiCaption": "An icon of three circles of varying sizes.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/sV98XzC.png",
+      "aiCaption": "An icon of two triangles pointing in opposite directions.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/YHTKOwn.png",
+      "aiCaption": "A four-pointed star icon with smaller stars.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/rubUJxU.png",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/AO9LQbl.png",
+      "aiCaption": "A gear shape with square blocks arranged around it.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/Y4pEqw4.png",
+      "aiCaption": "A black and white octagonal icon featuring a central fan or turbine-like symbol.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/Wn6fJRQ.png",
+      "aiCaption": "A stylized black hand holding a red dot.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/foNUf16.png",
+      "aiCaption": "Three black bird-like shapes flying in formation.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/nGcxyQ8.png",
+      "aiCaption": "A stylized orbital symbol with a central dot.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/4rVRIke.png",
+      "aiCaption": "A large letter C accompanied by a gear icon.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
     }
   ],
   "downloads": [
     {
-      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSirHartley%2FGrand.Colonies%2Fmaster%2FGrandColonies.version%22%2C%22id%22%3A%22GrandColonies%22%2C%22version%22%3A%222.1.b%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FMagicLibStarsector%2FMagicLib%2Fmaster%2Fmagiclib.version%22%2C%22id%22%3A%22lw_lazylib%22%2C%22version%22%3A%223.0%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%2C%22version%22%3A%222.0.5%22%7D",
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSirHartley%2FGrand.Colonies%2Fmaster%2FGrandColonies.version%22%2C%22id%22%3A%22GrandColonies%22%2C%22version%22%3A%222.1.c%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%2C%22version%22%3A%223.0.0%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%2C%22version%22%3A%222.0.5%22%7D",
       "type": "trios",
       "label": "",
       "host": "trilink.wispborne.com",
       "needsAnotherStep": true
     },
     {
-      "url": "https://github.com/SirHartley/Grand.Colonies/releases/download/2.1.b/Grand.Colonies2.1.b.zip",
-      "directUrl": "https://github.com/SirHartley/Grand.Colonies/releases/download/2.1.b/Grand.Colonies2.1.b.zip",
-      "fileName": "Grand.Colonies2.1.b.zip",
+      "url": "https://github.com/SirHartley/Grand.Colonies/releases/download/2.1.c/Grand.Colonies-2.1.c.zip",
+      "directUrl": "https://github.com/SirHartley/Grand.Colonies/releases/download/2.1.c/Grand.Colonies-2.1.c.zip",
+      "fileName": "Grand.Colonies-2.1.c.zip",
       "type": "direct",
-      "label": "Manual Download",
+      "label": "",
       "host": "GitHub",
       "needsAnotherStep": false
     }
   ],
   "changelog": {},
   "changelogUrl": "https://raw.githubusercontent.com/SirHartley/Grand.Colonies/refs/heads/master/Changelog",
-  "license": "CC BY-NC ND 4.0",
+  "license": "CC BY-NC ND",
   "sourceCodeUrl": "https://github.com/SirHartley/Grand.Colonies",
   "supportLinks": [
     {
@@ -169,7 +272,6 @@
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=20986.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1356007403543330948/1356007403543330948",
   "releases": [],
-  "threadLastPostOn": "2026-04-02",
   "sameNameMods": [],
   "addons": [],
   "requirements": {

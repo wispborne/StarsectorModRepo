@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-15T19:11:38.998302Z",
+  "generatedAt": "2026-11-16T07:20:36.050159Z",
   "listing": {
     "id": "tidy-panels",
     "name": "Tidy.Panels",
     "authors": [
-      "sirhartley"
+      "SirHartley"
     ],
     "otherAuthorNames": {},
     "categories": [
@@ -13,14 +13,16 @@
       "Miscellaneous"
     ],
     "sources": [
+      "forum",
       "discord"
     ],
     "gameVersion": "0.98a",
-    "modVersion": "1.0.b",
-    "imageUrl": "https://cdn.discordapp.com/attachments/1566985555701407904/1566985555982688286/mod_alignedbuttonsicon.png?ex=6afb0345&is=6af9b1c5&hm=01d7f2150e603f4348835431cfeb142662ad3619cba9225453593fe90f9aae71&",
+    "modVersion": "1.1.a",
+    "imageUrl": "https://i.imgur.com/KJEQGu7.png",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1566985555701407904/1566985555982688286/mod_alignedbuttonsicon.png?ex=6afbac05&is=6afa5a85&hm=4ff4b2fdb54e20d1c51e47ad5cab9e40487b339637a11d737d59bb1b68c55028&",
     "summary": "QOL UI fixes, starting with the market / cargo list.",
     "summaryIsGenerated": false,
-    "aiSummary": "Collapses cargo buttons to save space and extends them on hover to fix UI alignment issues.",
+    "aiSummary": "Fixes UI alignment issues in the market and cargo list by collapsing and extending buttons on hover.",
     "saveCompat": {
       "adding": {
         "answer": "yes"
@@ -28,33 +30,52 @@
     },
     "hasDirectDownload": true,
     "bestDownload": {
-      "url": "https://github.com/SirHartley/Tidy.Panels/releases/download/1.0.a/Tidy.Panels-1.0.a.zip",
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSirHartley%2FTidy.Panels%2Fmaster%2FTidyPanels.version%22%2C%22id%22%3A%22tidypanels%22%2C%22version%22%3A%221.1.a%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FPatchLib%2Fmaster%2FPatchLib.version%22%2C%22id%22%3A%22patchlib%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%2C%22version%22%3A%222.0.5%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%2C%22version%22%3A%223.0.0%22%7D",
+      "type": "trios",
+      "needsAnotherStep": false
+    },
+    "plainDownload": {
+      "url": "https://github.com/SirHartley/Tidy.Panels/releases/download/1.1.a/Tidy.Panels-1.1.a.zip",
       "type": "direct",
       "needsAnotherStep": false
     },
-    "downloadCount": 1,
+    "downloadCount": 2,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34161.0",
     "discordUrl": "https://discord.com/channels/187635036525166592/1566985555701407904/1566985555701407904",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
-    "addedOn": "2026-11-03",
+    "addedOn": "2025-10-04",
     "editedOn": "2026-11-04",
     "requirements": {
       "required": [
         {
           "name": "PatchLib",
           "id": "patchlib"
+        },
+        {
+          "name": "LunaLib",
+          "id": "lunalib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
         }
       ]
-    }
+    },
+    "partOfThreadTitle": "[0.98a] Hartley's Mods"
   },
-  "description": "Collapses all cargo buttons and extends them on hover, making space for 9 buttons in one row. This fixes the misalignment of the player storage button in the market and cargo list interfaces.",
-  "descriptionHtml": "<p>Collapses all cargo buttons and extends them on hover, making space for 9 buttons in one row. This fixes the misalignment of the player storage button in the market and cargo list interfaces.</p>",
+  "description": "QOL UI fixes, starting with the market / cargo list. Collapses all cargo buttons and extends them on hover, making space for 9 buttons in one row. Stops the player storage button from getting misaligned.",
+  "descriptionHtml": "<p>QOL UI fixes, starting with the market / cargo list. Collapses all cargo buttons and extends them on hover, making space for 9 buttons in one row. Stops the player storage button from getting misaligned.</p>",
   "descriptionIsGenerated": true,
   "descriptionIsForumPost": false,
-  "aiDescription": "Collapses all cargo buttons and extends them on hover, making space for 9 buttons in one row. This fixes the misalignment of the player storage button in the market and cargo list interfaces.",
+  "aiDescription": "QOL UI fixes, starting with the market / cargo list. Collapses all cargo buttons and extends them on hover, making space for 9 buttons in one row. Stops the player storage button from getting misaligned.",
   "saveCompat": {
     "adding": {
-      "quote": "Save compatible",
+      "quote": "Safe to add mid-game",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "Safe to remove mid-game",
       "answer": "yes"
     }
   },
@@ -66,18 +87,132 @@
   ],
   "gallery": [
     {
-      "url": "https://cdn.discordapp.com/attachments/1566985555701407904/1566985555982688286/mod_alignedbuttonsicon.png?ex=6afb0345&is=6af9b1c5&hm=01d7f2150e603f4348835431cfeb142662ad3619cba9225453593fe90f9aae71&",
+      "url": "https://cdn.discordapp.com/attachments/1566985555701407904/1566985555982688286/mod_alignedbuttonsicon.png?ex=6afbac05&is=6afa5a85&hm=4ff4b2fdb54e20d1c51e47ad5cab9e40487b339637a11d737d59bb1b68c55028&",
       "small": true,
       "source": "discord"
+    },
+    {
+      "url": "https://i.imgur.com/k6jGVS8.png",
+      "aiCaption": "A gear icon with a central circle.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/nGcxyQ8.png",
+      "aiCaption": "A stylized orbital symbol with a central dot.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/tJ7FHHT.png",
+      "aiCaption": "A gear icon containing a plus sign.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/nLpPQnc.png",
+      "aiCaption": "An icon of two overlapping rectangular shapes.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/YHTKOwn.png",
+      "aiCaption": "A four-pointed star icon with smaller stars.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/ORHTmT9.png",
+      "aiCaption": "An icon of three circles of varying sizes.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/AO9LQbl.png",
+      "aiCaption": "A gear shape with square blocks arranged around it.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/Wn6fJRQ.png",
+      "aiCaption": "A stylized black hand holding a red dot.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/4rVRIke.png",
+      "aiCaption": "A large letter C accompanied by a gear icon.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/sV98XzC.png",
+      "aiCaption": "An icon of two triangles pointing in opposite directions.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/Y4pEqw4.png",
+      "aiCaption": "A black and white octagonal icon featuring a central fan or turbine-like symbol.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/KJEQGu7.png",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/rubUJxU.png",
+      "source": "forum"
+    },
+    {
+      "url": "https://i.imgur.com/foNUf16.png",
+      "aiCaption": "Three black bird-like shapes flying in formation.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "forum"
+    },
+    {
+      "url": "https://trilink.wispborne.com/badges/install-badge-forthebadge.svg",
+      "small": true,
+      "source": "forum"
+    },
+    {
+      "url": "https://img.shields.io/badge/Forum_Thread-Fractal_Softworks-1f3a66?style=for-the-badge",
+      "small": true,
+      "source": "forum"
+    },
+    {
+      "url": "https://img.shields.io/badge/Download-GitHub-24292f?style=for-the-badge&logo=github",
+      "small": true,
+      "source": "forum"
     }
   ],
   "downloads": [
     {
-      "url": "https://github.com/SirHartley/Tidy.Panels/releases/download/1.0.a/Tidy.Panels-1.0.a.zip",
-      "directUrl": "https://github.com/SirHartley/Tidy.Panels/releases/download/1.0.a/Tidy.Panels-1.0.a.zip",
-      "fileName": "Tidy.Panels-1.0.a.zip",
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FSirHartley%2FTidy.Panels%2Fmaster%2FTidyPanels.version%22%2C%22id%22%3A%22tidypanels%22%2C%22version%22%3A%221.1.a%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FPatchLib%2Fmaster%2FPatchLib.version%22%2C%22id%22%3A%22patchlib%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%2C%22version%22%3A%222.0.5%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%2C%22version%22%3A%223.0.0%22%7D",
+      "type": "trios",
+      "label": "",
+      "host": "trilink.wispborne.com",
+      "needsAnotherStep": true
+    },
+    {
+      "url": "https://github.com/SirHartley/Tidy.Panels/releases/download/1.1.a/Tidy.Panels-1.1.a.zip",
+      "directUrl": "https://github.com/SirHartley/Tidy.Panels/releases/download/1.1.a/Tidy.Panels-1.1.a.zip",
+      "fileName": "Tidy.Panels-1.1.a.zip",
       "type": "direct",
-      "label": "Download",
+      "label": "",
       "host": "GitHub",
       "needsAnotherStep": false
     }
@@ -93,6 +228,7 @@
       "label": "Patreon"
     }
   ],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34161.0",
   "discordUrl": "https://discord.com/channels/187635036525166592/1566985555701407904/1566985555701407904",
   "releases": [],
   "sameNameMods": [],
@@ -102,7 +238,16 @@
       {
         "name": "PatchLib",
         "id": "patchlib"
+      },
+      {
+        "name": "LunaLib",
+        "id": "lunalib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
       }
     ]
-  }
+  },
+  "partOfThreadTitle": "[0.98a] Hartley's Mods"
 }

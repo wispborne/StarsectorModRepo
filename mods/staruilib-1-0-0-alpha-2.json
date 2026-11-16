@@ -1,0 +1,172 @@
+{
+  "generatedAt": "2026-11-16T07:20:36.050159Z",
+  "listing": {
+    "id": "staruilib-1-0-0-alpha-2",
+    "name": "StarUILib -alpha.2",
+    "authors": [
+      "starficz"
+    ],
+    "otherAuthorNames": {},
+    "categories": [
+      "Libraries"
+    ],
+    "sources": [
+      "forum",
+      "discord"
+    ],
+    "gameVersion": "0.98.5a",
+    "modVersion": "1.0.0-alpha.2",
+    "imageUrl": "https://i.imgur.com/oVpaDS6.png",
+    "announcementImageUrl": "https://cdn.discordapp.com/attachments/1571643742685892608/1571643743050932274/2026-11-15_16-50-37.png?ex=6afb7acc&is=6afa294c&hm=f234b4e288f4ced55cf652ff5f754ca737c9ffb5076b5b284d50a44016eccc20&",
+    "summary": "A Kotlin UI library for Starsector mods",
+    "summaryIsGenerated": false,
+    "aiSummary": "Provides a Kotlin DSL for building vanilla-style UI objects with flexible layouts and components.",
+    "saveCompat": {
+      "adding": {
+        "answer": "yes"
+      }
+    },
+    "hasDirectDownload": true,
+    "bestDownload": {
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FStarficz%2FStarUILib%2Frefs%2Fheads%2Fmaster%2Fstaruilib.version%22%2C%22id%22%3A%22staruilib%22%7D",
+      "type": "trios",
+      "needsAnotherStep": false
+    },
+    "plainDownload": {
+      "url": "https://github.com/Starficz/StarUILib/releases/latest/download/StarUILib.zip",
+      "type": "direct",
+      "needsAnotherStep": false
+    },
+    "downloadCount": 2,
+    "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36412.0",
+    "discordUrl": "https://discord.com/channels/187635036525166592/1571643742685892608/1571643742685892608",
+    "sourceIsPublic": true,
+    "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
+    "addedOn": "2026-11-15",
+    "editedOn": "2026-11-15",
+    "requirements": {
+      "required": [
+        {
+          "name": "LazyLib",
+          "id": "lazylib"
+        },
+        {
+          "name": "PatchLib",
+          "id": "patchlib"
+        }
+      ]
+    }
+  },
+  "description": "StarUILib\n\nA Kotlin UI library for Starsector mods\nOnly install it if a mod requires it. It does nothing on its own, saves nothing, and is safe to add or remove mid-save.\n\nRequires LazyLib 3.1 and PatchLib.\n\nFor mod authors\n\nBuilding UI in Starsector usually means TooltipMakerAPI, CustomPanelAPI and a bunch of manual pixel peaping. StarUILib is a Kotlin DSL in the style of Jetpack Compose, written to build vanilla UI objects. Highly flexible layout, input, rendering, and state updates are added to those objects through PatchLib, so any UI is as close to vanilla as possible.\n\nWhat's in it\nColumn, Row, Box and AnchorPanel layouts, with sizes per axis (exact, fill, wrap), padding, margins and spacers\nScrolling on any container, per axis, and LazyColumn / LazyRow for long lists\nButtons, checkboxes, radio groups, text fields, sliders, progress bars, sortable tables and tooltips\nVanilla parts as components: stat grids, fleet and cargo lists, skill panels / icons, planet info, the sector map and more\nDialogs, overlays and toasts that work on any screen\nUI on the title screen, the campaign, combat and every core tab, or inject() is anywhere else (PatchLib hook recommended)\nfindAll() and dumpLayout() to read any panel's tree, vanilla's included, for debugging and tests\n\nGetting started\nPress Ctrl + Shift + U in game (title screen, campaign or combat) for the showcase: every feature with a live demo next to the code that makes it. The samples and showcase are CC0, copy them freely.\nAdd staruilib to your mod_info.json dependencies.\nWiki coming... When I get around to it.\n\nThis is an alpha. The API might change before 1.0 (although very unlikely).\nFeedback and bug reports are very welcome, here or on the USC Discord.\n\nSource\n\ngithub.com/Starficz/StarUILib\n\nCredits\n\nAlex: for making the game.\nLukas04: for PatchLib, which every StarUILib hook runs on.\nLazyWizard: for LazyLib and its Kotlin runtime.\n\nAI use disclaimer\nA lot of code in this mod was created/modified/refactored using AI tools (Claude Code)\nEverything has been unit tested, with manual checking for all features.\nA UI Lib was something I have always been wanting to make, but of course never had time to do so.\nUsing LLM's to finish this project that's been on the backburner was a reasonable choice for me.\n\nChangelog\nVersion 1.0.0-alpha.2\n- Renamed from StarUIFramework to StarUILib (mod id staruilib)\n- Requires LazyLib 3.1\n- AnchorPanel, dialogs that size to their content, findAll, TooltipMakerPanel, SkillIcon, Modifier.hoverState\n- Fixes for injections\n\nVersion 1.0.0-alpha\n- First alpha testing release",
+  "descriptionHtml": "<div class=\"align-center\"><img src=\"https://i.imgur.com/oVpaDS6.png\" alt=\"\" width=\"128\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"><br><br><span class=\"size-biggest\"><b>StarUILib</b></span><br><br>A Kotlin UI library for Starsector mods<br>Only install it if a mod requires it. It does nothing on its own, saves nothing, and is safe to add or remove mid-save.<br><br><a href=\"https://github.com/Starficz/StarUILib/releases/latest/download/StarUILib.zip\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/downloads/Starficz/StarUILib/total?style=for-the-badge&amp;label=Download%20StarUILib&amp;logo=github\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a> <a href=\"https://github.com/Starficz/StarUILib/releases\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://img.shields.io/github/v/release/Starficz/StarUILib?style=for-the-badge&amp;label=Changelog%20%2F%20Older%20versions\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><a href=\"https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FStarficz%2FStarUILib%2Frefs%2Fheads%2Fmaster%2Fstaruilib.version%22%2C%22id%22%3A%22staruilib%22%7D\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://trilink.wispborne.com/badges/install-badge-forthebadge-gray-blue.svg\" alt=\"\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib 3.1</a> and <a href=\"https://fractalsoftworks.com/forum/index.php?topic=36191.0\" rel=\"nofollow noopener\" target=\"_blank\">PatchLib</a>.<br><br><a class=\"video-link\" href=\"https://www.youtube.com/watch?v=7f8pxqxqeV8\" rel=\"nofollow noopener\" target=\"_blank\"><img src=\"https://i.ytimg.com/vi/7f8pxqxqeV8/hqdefault.jpg\" alt=\"Video on YouTube\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"></a><br><hr><br><span class=\"size-bigger\"><b>For mod authors</b></span></div><div class=\"table-scroll\"><table style=\"--pad:0px;--w:100%\"><tbody><tr><td style=\"--w:18%\"></td><td>Building UI in Starsector usually means TooltipMakerAPI, CustomPanelAPI and a bunch of manual pixel peaping. StarUILib is a Kotlin DSL in the style of Jetpack Compose, written to build vanilla UI objects. Highly flexible layout, input, rendering, and state updates are added to those objects through PatchLib, so any UI is as close to vanilla as possible.<br><br><b>What's in it</b><br><ul><li>Column, Row, Box and AnchorPanel layouts, with sizes per axis (exact, fill, wrap), padding, margins and spacers</li><li>Scrolling on any container, per axis, and LazyColumn / LazyRow for long lists</li><li>Buttons, checkboxes, radio groups, text fields, sliders, progress bars, sortable tables and tooltips</li><li>Vanilla parts as components: stat grids, fleet and cargo lists, skill panels / icons, planet info, the sector map and more</li><li>Dialogs, overlays and toasts that work on any screen</li><li>UI on the title screen, the campaign, combat and every core tab, or inject() is anywhere else (PatchLib hook recommended)</li><li>findAll() and dumpLayout() to read any panel's tree, vanilla's included, for debugging and tests</li></ul><br><b>Getting started</b><br><ul><li>Press <b>Ctrl + Shift + U</b> in game (title screen, campaign or combat) for the showcase: every feature with a live demo next to the code that makes it. The samples and showcase are CC0, copy them freely.</li><li>Add <b>staruilib</b> to your mod_info.json dependencies.</li><li>Wiki coming... When I get around to it.</li></ul></td><td style=\"--w:18%\"></td></tr></tbody></table></div><br><div class=\"align-center\"><b>This is an alpha.</b> The API might change before 1.0 (although very unlikely).<br>Feedback and bug reports are very welcome, here or on the USC Discord.<br><br><hr><br><span class=\"size-bigger\"><b>Source</b></span><br><br><a href=\"https://github.com/Starficz/StarUILib\" rel=\"nofollow noopener\" target=\"_blank\">github.com/Starficz/StarUILib</a><br><br><span class=\"size-bigger\"><b>Credits</b></span><br><br><b>Alex</b>: for making the game.<br><b>Lukas04</b>: for PatchLib, which every StarUILib hook runs on.<br><b>LazyWizard</b>: for LazyLib and its Kotlin runtime.<br><br><details class=\"spoiler\"><summary>AI use disclaimer</summary>A lot of code in this mod was created/modified/refactored using AI tools (Claude Code)<br>Everything has been unit tested, with manual checking for all features.<br>A UI Lib was something I have always been wanting to make, but of course never had time to do so.<br>Using LLM's to finish this project that's been on the backburner was a reasonable choice for me.</details><br><details class=\"spoiler\"><summary>Changelog</summary><b>Version 1.0.0-alpha.2</b><br>- Renamed from StarUIFramework to StarUILib (mod id staruilib)<br>- Requires LazyLib 3.1<br>- AnchorPanel, dialogs that size to their content, findAll, TooltipMakerPanel, SkillIcon, Modifier.hoverState<br>- Fixes for injections<br><br><b>Version 1.0.0-alpha</b><br>- First alpha testing release</details></div>",
+  "descriptionIsGenerated": false,
+  "descriptionIsForumPost": true,
+  "aiDescription": "Offers a Kotlin DSL in the style of Jetpack Compose to build vanilla UI objects. Includes layouts, scrolling containers, common widgets, and vanilla parts as components. Adds features like dialogs, overlays, and debugging tools through PatchLib hooks.",
+  "saveCompat": {
+    "adding": {
+      "quote": "safe to add or remove mid-save",
+      "answer": "yes"
+    },
+    "removing": {
+      "quote": "safe to add or remove mid-save",
+      "answer": "yes"
+    }
+  },
+  "aiUse": {
+    "quote": "A lot of code in this mod was created/modified/refactored using AI tools (Claude Code)\nEverything has been unit tested, with manual checking for all features.\nA UI Lib was something I have always been wanting to make, but of course never had time to do so.\nUsing LLM's to finish this project that's been on the backburner was a reasonable choice for me.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "generated",
+        "extent": "some"
+      }
+    ],
+    "tools": [
+      "Claude Code"
+    ]
+  },
+  "rawCategories": [
+    "Libraries"
+  ],
+  "gallery": [
+    {
+      "url": "https://cdn.discordapp.com/attachments/1571643742685892608/1571643743050932274/2026-11-15_16-50-37.png?ex=6afb7acc&is=6afa294c&hm=f234b4e288f4ced55cf652ff5f754ca737c9ffb5076b5b284d50a44016eccc20&",
+      "aiCaption": "A yellow star icon containing the text 'UI'.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "source": "discord"
+    },
+    {
+      "url": "https://i.imgur.com/oVpaDS6.png",
+      "aiCaption": "A yellow star icon containing the text 'UI' on a dark background.",
+      "aiKind": "logo",
+      "aiFit": "good",
+      "small": true,
+      "source": "forum"
+    },
+    {
+      "url": "https://img.shields.io/github/downloads/Starficz/StarUILib/total?style=for-the-badge&label=Download%20StarUILib&logo=github",
+      "small": true,
+      "source": "forum"
+    },
+    {
+      "url": "https://img.shields.io/github/v/release/Starficz/StarUILib?style=for-the-badge&label=Changelog%20%2F%20Older%20versions",
+      "small": true,
+      "source": "forum"
+    },
+    {
+      "url": "https://trilink.wispborne.com/badges/install-badge-forthebadge-gray-blue.svg",
+      "small": true,
+      "source": "forum"
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FStarficz%2FStarUILib%2Frefs%2Fheads%2Fmaster%2Fstaruilib.version%22%2C%22id%22%3A%22staruilib%22%7D",
+      "type": "trios",
+      "label": "",
+      "host": "trilink.wispborne.com",
+      "needsAnotherStep": true
+    },
+    {
+      "url": "https://github.com/Starficz/StarUILib/releases/latest/download/StarUILib.zip",
+      "directUrl": "https://github.com/Starficz/StarUILib/releases/latest/download/StarUILib.zip",
+      "fileName": "StarUILib.zip",
+      "type": "direct",
+      "label": "",
+      "host": "GitHub",
+      "needsAnotherStep": false
+    }
+  ],
+  "changelog": {
+    "1.0.0-alpha.2": "- Renamed from StarUIFramework to StarUILib (mod id staruilib)\n- Requires LazyLib 3.1\n- AnchorPanel, dialogs that size to their content, findAll, TooltipMakerPanel, SkillIcon, Modifier.hoverState\n- Fixes for injections",
+    "1.0.0-alpha": "First alpha testing release"
+  },
+  "sourceCodeUrl": "https://github.com/Starficz/StarUILib",
+  "supportLinks": [],
+  "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36412.0",
+  "discordUrl": "https://discord.com/channels/187635036525166592/1571643742685892608/1571643742685892608",
+  "releases": [],
+  "sameNameMods": [],
+  "addons": [],
+  "requirements": {
+    "required": [
+      {
+        "name": "LazyLib",
+        "id": "lazylib"
+      },
+      {
+        "name": "PatchLib",
+        "id": "patchlib"
+      }
+    ]
+  }
+}
