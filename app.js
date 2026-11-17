@@ -27,6 +27,7 @@ import * as author from './views/author.js';
 import * as about from './views/about.js';
 import * as favoritesView from './views/favorites.js';
 import * as guide from './views/guide.js';
+import * as privacy from './views/privacy.js';
 import * as reports from './views/reports.js';
 import * as changelog from './views/changelog.js';
 import * as notFound from './views/not_found.js';
@@ -57,6 +58,7 @@ const ROUTES = {
   reports: (root) => reports.render(root),
   changelog: (root) => changelog.render(root),
   [guide.GUIDE_ROUTE]: (root) => guide.render(root),
+  [privacy.PRIVACY_ROUTE]: (root) => privacy.render(root),
   // The old address for the favorites page. Shared links carry it, so it has to
   // keep working.
   list: (root, parts) => favoritesView.render(root, parts),

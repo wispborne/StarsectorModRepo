@@ -5,6 +5,7 @@ import {
     clear, el, formatDay, modList, PROBLEM_REPORT_CHOOSER, SITE_CODE_URL, takedownButton,
 } from '../lib.js';
 import { GUIDE_ICON, GUIDE_ROUTE, GUIDE_TITLE, openGuide } from './guide.js';
+import { PRIVACY_ROUTE, PRIVACY_TITLE } from './privacy.js';
 
 const MOD_REPO_URL = 'https://github.com/wispborne/StarsectorModRepo';
 const SCRAPER_URL = SITE_CODE_URL;
@@ -51,6 +52,7 @@ export async function render(root) {
             guideButton(),
             iconButton('updates.xml', FEED_ICON, 'Release feed'),
             iconButton('#/changelog', CHANGELOG_ICON, 'Changelog'),
+            iconButton(`${PRIVACY_ROUTE}/`, PRIVACY_ICON, PRIVACY_TITLE),
             // The site's own code.
             el('a', {
                 class: 'btn btn-with-icon',
@@ -190,7 +192,9 @@ function aboutLines(paragraphs) {
     ));
 }
 
-// Tabler icons (MIT): rss, history and message-report.
+// Tabler icons (MIT): rss, history, lock and message-report.
+const PRIVACY_ICON = tablerIcon('<path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"/>'
+    + '<path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"/><path d="M8 11v-4a4 4 0 1 1 8 0v4"/>');
 const FEED_ICON = tablerIcon('<path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>'
     + '<path d="M4 4a16 16 0 0 1 16 16"/><path d="M4 11a9 9 0 0 1 9 9"/>');
 const CHANGELOG_ICON = tablerIcon('<path d="M12 8l0 4l2 2"/>'

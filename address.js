@@ -18,7 +18,7 @@
 
 /// The site's pages that are a folder of their own at the top level, beside
 /// `mods/`. Each one's folder name is also its route.
-export const PAGE_FOLDERS = ['how-to-install-mods'];
+export const PAGE_FOLDERS = ['how-to-install-mods', 'privacy'];
 
 /// The route parts of a hash like `#/foo/bar?x=1`: ['foo','bar'].
 function partsOfHash(hash) {

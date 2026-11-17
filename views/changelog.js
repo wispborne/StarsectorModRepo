@@ -37,7 +37,7 @@ export async function render(root) {
   root.append(el('div', { class: 'stack' }, [
     el('div', { class: 'page-head' }, [
       el('h1', { text: 'Changelog' }),
-      el('p', { class: 'changelog-warning' }, [
+      el('p', { class: 'ai-warning' }, [
         el('span', { class: 'warning-icon', html: WARNING_ICON }),
         el('span', { text: 'Warning: the changelog is all AI slop.' }),
       ]),

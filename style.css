@@ -518,6 +518,11 @@ h3 { font-size: var(--type-big); line-height: 1.25; margin: 0 0 6px; }
 .guide h2 { font-size: var(--type-big); }
 .guide h2:not(:first-child) { margin-top: var(--gap); }
 .guide ol { padding: 0 0 0 calc(var(--gap) * 2); display: flex; flex-direction: column; gap: var(--gap); }
+/* The privacy policy uses the guide's look, with smaller headings inside a
+   section and its date dimmed. */
+.policy ul { padding: 0 0 0 calc(var(--gap) * 2); display: flex; flex-direction: column; gap: calc(var(--gap) / 2); }
+.policy h3 { font-size: inherit; }
+.policy-date { color: var(--text-dim); font-size: var(--type-small); }
 
 /* The note above a list, saying where the list came from. The amber edge is
    the same one the site uses for anything a reader should weigh before
@@ -1762,7 +1767,7 @@ button.check-row { align-items: center; }
 .settings-icon,
 .ai-banner-hide-icon,
 .post-switch-icon,
-.changelog-warning .warning-icon,
+.ai-warning .warning-icon,
 .side-icon,
 .nav-guide-icon { transform: translateY(round(0.06em, 1px)); }
 /* The speech bubble's tail makes it reach further down than up, so it sits a
@@ -2160,14 +2165,14 @@ a.chip.needed.conflict.calm:hover { background: var(--primary-soft); }
 .changelog-entry h3 { margin: 0 0 4px; }
 .changelog-entry p, .changelog-entry ul { margin: 0 0 6px; }
 .changelog-build { color: var(--text-dim); font-size: var(--type-tiny); }
-/* The note at the top of the changelog, in the warning colour so it is not
-   missed. */
-.changelog-warning {
+/* The note at the top of the changelog and the privacy policy that AI wrote
+   them, in the warning colour so it is not missed. */
+.ai-warning {
   display: flex; align-items: center; gap: 8px; margin: 0;
   padding: var(--pad-cell); color: var(--warning); font-weight: 600;
   background: var(--warning-wash); border-left: 3px solid var(--warning);
 }
-.changelog-warning .warning-icon { display: inline-flex; font-size: var(--type-big); }
+.ai-warning .warning-icon { display: inline-flex; font-size: var(--type-big); }
 
 /* A mod's name is plain text until you point at it. Said once here rather than
    four times, once per place a name turns up. */
