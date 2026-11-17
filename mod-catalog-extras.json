@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-17T00:08:18.905897Z",
+  "generatedAt": "2026-11-17T07:08:39.575291Z",
   "mods": {
     "outdated-the-thule-legacy": {
       "summary": "MY BROTHERS. WE WERE FORGED IN VICTORY. A VICTORY THAT ENDED THE GREAT WAR AND BROUGHT",
@@ -237,7 +237,7 @@
     },
     "dynamic-asteroids-1-0-0-living-asteroid-belts-combat-hazards": {
       "displayName": "Dynamic Asteroids",
-      "summary": "In vanilla Starsector, asteroids just hang motionless in space as static environmental obstacles.",
+      "summary": "Breathes kinetic life into static asteroid belts & deep space combat!",
       "categories": [
         "Utilities",
         "Miscellaneous"
@@ -247,7 +247,7 @@
         "Utility mods"
       ],
       "addedOn": "2026-11-04",
-      "editedOn": "2026-11-12",
+      "editedOn": "2026-11-15",
       "lastReleaseDate": "2026-11-12T00:00:00.000Z",
       "releases": [
         {
@@ -295,16 +295,16 @@
       ],
       "saveCompat": {
         "adding": {
-          "quote": "Safe to add or remove mid-campaign.",
+          "quote": "100% safe to add or remove mid-campaign.",
           "answer": "yes"
         },
         "removing": {
-          "quote": "Safe to add or remove mid-campaign.",
+          "quote": "100% safe to add or remove mid-campaign.",
           "answer": "yes"
         }
       },
       "aiUse": {
-        "quote": "All Java code in this mod was machine-generated through iterative architectural prompting and dialogue with an AI assistant (Google Antigravity / Gemini). The human author acted as creative director, game designer, and QA tester: designing mechanics, diagnosing engine collision quirks, directing physics models, fine-tuning gameplay balance, and overseeing save compatibility.",
+        "quote": "In full transparency: All Java code in this mod was machine-generated through iterative architectural prompting and dialogue with an AI assistant (Google Antigravity / Gemini). The human author acted as creative director, game designer, and QA tester: designing mechanics, diagnosing engine collision quirks, directing physics models, fine-tuning gameplay balance, and overseeing save compatibility.",
         "usesAi": true,
         "uses": [
           {
@@ -7448,7 +7448,7 @@
           },
           {
             "name": "Unknown Skies",
-            "id": "unknown-skies-2"
+            "id": "unknown-skies"
           },
           {
             "name": "Ruthless Sector",
@@ -9175,12 +9175,12 @@
       ],
       "saveCompat": {
         "adding": {
-          "quote": "Can I add it to an existing save? Yes.",
+          "quote": "Can I add it to an existing save?\nYes.",
           "answer": "yes"
         },
         "removing": {
           "quote": "Not once a colony has an Omega core administrator or has grown past size 10.",
-          "answer": "no"
+          "answer": "depends"
         }
       },
       "aiUse": {
@@ -9197,10 +9197,6 @@
           },
           {
             "area": "icons",
-            "how": "generated"
-          },
-          {
-            "area": "illustrations",
             "how": "generated"
           }
         ],
@@ -9444,7 +9440,7 @@
           },
           {
             "name": "Unknown Skies",
-            "id": "unknown-skies-2"
+            "id": "unknown-skies"
           },
           {
             "name": "What we left behind",
@@ -9486,7 +9482,7 @@
           },
           {
             "name": "Kadur Remnant",
-            "id": "kadur-remnant-2"
+            "id": "kadur-remnant"
           },
           {
             "name": "JaydeePiracy",
@@ -9713,6 +9709,66 @@
         "mod"
       ],
       "aiUse": {}
+    },
+    "auto-er-pilot": {
+      "summary": "Basically, when your fleet is flying itself somewhere (a laid-in course, or you clicked a planet, star, jump point or gate), this makes it steer more like the NPC fleets do.",
+      "addedOn": "2026-11-17",
+      "requirements": {
+        "optional": [
+          {
+            "name": "LunaLib",
+            "id": "lunalib"
+          }
+        ]
+      },
+      "types": [
+        "mod"
+      ],
+      "saveCompat": {
+        "adding": {
+          "quote": "Safe to add mid-game",
+          "answer": "yes"
+        },
+        "removing": {
+          "quote": "Safe to remove mid-game",
+          "answer": "yes"
+        },
+        "latestUpdateNote": {
+          "quote": "Updating: Extract the new zip over the Auto-er Pilot folder in mods/. Saves and settings carry over.",
+          "answer": "yes"
+        }
+      },
+      "aiUse": {
+        "quote": "Some or all assets and code in this mod were created using AI tools:\nCode, docs and offline build checks: Claude Opus 5.5 (through Claude Code).\nDesign and in-game testing: Mjolniar.\nTraining data: None added. Art: None.",
+        "usesAi": true,
+        "uses": [
+          {
+            "area": "code",
+            "how": "generated",
+            "extent": "some"
+          }
+        ],
+        "tools": [
+          "Claude Opus 5.5"
+        ]
+      },
+      "gallery": [
+        {
+          "url": "https://trilink.wispborne.com/badges/install-badge-forthebadge.svg",
+          "small": true,
+          "source": "forum"
+        },
+        {
+          "url": "https://img.shields.io/badge/Download-GitHub-blue?style=for-the-badge&logo=github",
+          "small": true,
+          "source": "forum"
+        },
+        {
+          "url": "https://img.shields.io/badge/Changelog-All_versions-gray?style=for-the-badge&logo=github",
+          "small": true,
+          "source": "forum"
+        }
+      ]
     },
     "autoattack-patrol": {
       "summary": "Tired of chasing down pirates one burn at a time? Sick of flying directly into suns and black holes? Let AutoAttack/Patrol do the heavy flying! So you can sit back, sip some coffee, and watch the kills rack up.",
@@ -15246,10 +15302,12 @@
       "displayName": "BoxUtil",
       "summary": "Based around Instantiated rendering and GPU calculation, it allows for more efficient rendering option of higher quality, while still being usable on most player's setups.",
       "categories": [
-        "Factions"
+        "Utilities",
+        "Libraries"
       ],
       "rawCategories": [
-        "Faction Mods"
+        "Libraries",
+        "Utility mods"
       ],
       "otherAuthorNames": {
         "Mycophobia": [
@@ -15284,6 +15342,20 @@
       },
       "aiUse": {},
       "gallery": [
+        {
+          "url": "https://cdn.discordapp.com/attachments/1356164516458528888/1356164516752396408/164853shhu89h0bu8un08k.png?ex=6afb55e1&is=6afa0461&hm=5077bf5905583eb31fc909d6ea30f34f18da04550a8a1f533e8186bcf7056dd3&",
+          "aiCaption": "A green neon logo featuring a stylized box shape and the letters 'BX'.",
+          "aiKind": "logo",
+          "aiFit": "good",
+          "source": "discord"
+        },
+        {
+          "url": "https://cdn.discordapp.com/attachments/1356164516458528888/1356910586750832731/wXK85Hp.png?ex=6afb69b6&is=6afa1836&hm=b07e438ba74cb3df797d087c8ddcaf5331e9c5043d00ddcedad56e8046069038&",
+          "aiCaption": "A technical diagram showing class inheritance and interfaces such as InstanceDataAPI, RenderDataAPI, and CombatRenderingManager.",
+          "aiKind": "other",
+          "aiFit": "okay",
+          "source": "discord"
+        },
         {
           "url": "https://i.imgur.com/IG2PGdD.png",
           "aiCaption": "A green neon logo featuring a stylized box shape and the letters 'BX'.",
@@ -17146,7 +17218,7 @@
         "Ship Pack"
       ],
       "addedOn": "2021-01-22",
-      "editedOn": "2026-06-17",
+      "editedOn": "2026-06-16",
       "requirements": {
         "required": [
           {
@@ -17163,12 +17235,6 @@
       "types": [
         "mod"
       ],
-      "saveCompat": {
-        "latestUpdateNote": {
-          "quote": "NOT SAVE COMPATIBLE",
-          "answer": "no"
-        }
-      },
       "aiUse": {},
       "gallery": [
         {
@@ -18682,6 +18748,33 @@
       ],
       "aiUse": {}
     },
+    "combat-alarm-sounds-2": {
+      "summary": "Description: CAS adds a variety of warning sounds triggered by things that are happening to your ship in combat (ex.: high flux, low hull, engines disabled etc.).",
+      "categories": [
+        "Utilities"
+      ],
+      "rawCategories": [
+        "Standalone Utilities"
+      ],
+      "addedOn": "2016-08-05",
+      "editedOn": "2021-08-23",
+      "types": [
+        "mod"
+      ],
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Combat Alarm Sounds",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=31870.0",
+          "id": "combat-alarm-sounds",
+          "authors": [
+            "AyyLuska"
+          ],
+          "gameVersion": "0.98a",
+          "modVersion": "1.4"
+        }
+      ]
+    },
     "combat-alarm-sounds": {
       "summary": "Description: Combat Alarm Sounds (CAS for short) adds personalized audio queues to in-combat situations, like high flux, hull health, highly damaging impacts, and flameouts. Pressing \"O\" shuts off continuous alarms until you receive damage again.",
       "categories": [
@@ -18709,33 +18802,6 @@
           "gameVersion": "0.95a",
           "modVersion": "1.4",
           "threadLastPostOn": "2025-03-06"
-        }
-      ]
-    },
-    "combat-alarm-sounds-2": {
-      "summary": "Description: CAS adds a variety of warning sounds triggered by things that are happening to your ship in combat (ex.: high flux, low hull, engines disabled etc.).",
-      "categories": [
-        "Utilities"
-      ],
-      "rawCategories": [
-        "Standalone Utilities"
-      ],
-      "addedOn": "2016-08-05",
-      "editedOn": "2021-08-23",
-      "types": [
-        "mod"
-      ],
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Combat Alarm Sounds",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=31870.msg468795#msg468795",
-          "id": "combat-alarm-sounds",
-          "authors": [
-            "AyyLuska"
-          ],
-          "gameVersion": "0.98a",
-          "modVersion": "1.4"
         }
       ]
     },
@@ -22080,17 +22146,7 @@
         "required": [
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-2"
-          },
-          {
-            "name": "LazyLib",
-            "id": "lazylib",
-            "via": "Diable Avionics"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib",
-            "via": "Diable Avionics"
+            "id": "diable-avionics-3"
           }
         ]
       },
@@ -22423,7 +22479,7 @@
           },
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-2"
+            "id": "diable-avionics-3"
           }
         ]
       },
@@ -23977,7 +24033,7 @@
         "required": [
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-2"
+            "id": "diable-avionics-3"
           },
           {
             "name": "Arma Armatura",
@@ -24014,6 +24070,184 @@
         {
           "url": "https://trilink.wispborne.com/badges/install-badge-red.svg",
           "small": true,
+          "source": "forum"
+        }
+      ]
+    },
+    "diable-avionics-3": {
+      "addedOn": "2014-08-03",
+      "editedOn": "2015-12-01",
+      "types": [
+        "mod"
+      ],
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Diable Avionics",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=29432.0",
+          "id": "diable-avionics",
+          "authors": [
+            "Caymon Joestar",
+            "Tartiflette"
+          ],
+          "gameVersion": "0.98a",
+          "modVersion": "2.9.5.3 Joestar Edition",
+          "threadLastPostOn": "2026-10-07"
+        },
+        {
+          "title": "Diable Avionics",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=10046.0",
+          "id": "diable-avionics-2",
+          "authors": [
+            "FlashFrozen",
+            "ruddygreat",
+            "Tartiflette"
+          ],
+          "gameVersion": "0.95.1a",
+          "modVersion": "2.70rc3",
+          "threadLastPostOn": "2024-08-23"
+        },
+        {
+          "title": "Diable Avionics",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=29302.0",
+          "id": "diable-avionics-4",
+          "authors": [
+            "presidentmattdamon"
+          ],
+          "gameVersion": "0.97a",
+          "modVersion": "2.8.4",
+          "threadLastPostOn": "2024-03-08"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "http://i.imgur.com/sYS3oSa.png",
+          "aiCaption": "A stylized logo featuring a red silhouette against a blue and red background.",
+          "aiKind": "logo",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/GuzWdst.png",
+          "aiCaption": "A showcase of various red ship sprites from the mod arranged on a starfield background.",
+          "aiKind": "screenshot",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/0qI3m15.png",
+          "aiCaption": "A small sprite of a red and black ship component.",
+          "aiKind": "art",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/qR93IfR.png",
+          "aiCaption": "A small sprite of a red and black ship component.",
+          "aiKind": "art",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/U6rKa4T.png",
+          "aiCaption": "A small sprite of a red and black ship component.",
+          "aiKind": "art",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/e5OakyB.png",
+          "aiCaption": "A tall, vertical red ship sprite with white stripes.",
+          "aiKind": "art",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/eBva5hr.png",
+          "aiCaption": "A wide, winged red ship sprite.",
+          "aiKind": "art",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/627ptDz.png",
+          "aiCaption": "A small, compact red ship sprite with yellow accents.",
+          "aiKind": "art",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/IC7g8WL.png",
+          "aiCaption": "A tall, vertical red ship sprite with white stripes.",
+          "aiKind": "art",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/2HE5azh.png",
+          "aiCaption": "A wide, winged red ship sprite.",
+          "aiKind": "art",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/jfNIuoc.png",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/JW60Uhr.png",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/ASoPrOS.png",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/omLStan.png",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/UfQ5hnM.png",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/BKmMxSz.png",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/ZM3R8iN.png",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/7QZrrQ7.png",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/IixAre1.png",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/yqHdMRh.png",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/C2J7ms3.png",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/Te5TYKn.png",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/yaEm2xH.png",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/MFe0mPP.png",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/wRxNx74.png",
           "source": "forum"
         }
       ]
@@ -24334,184 +24568,6 @@
         },
         {
           "url": "http://i.imgur.com/GtFknuW.gif",
-          "source": "forum"
-        }
-      ]
-    },
-    "diable-avionics-3": {
-      "addedOn": "2014-08-03",
-      "editedOn": "2015-12-01",
-      "types": [
-        "mod"
-      ],
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Diable Avionics",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=29432.0",
-          "id": "diable-avionics",
-          "authors": [
-            "Caymon Joestar",
-            "Tartiflette"
-          ],
-          "gameVersion": "0.98a",
-          "modVersion": "2.9.5.3 Joestar Edition",
-          "threadLastPostOn": "2026-10-07"
-        },
-        {
-          "title": "Diable Avionics",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=10046.0",
-          "id": "diable-avionics-2",
-          "authors": [
-            "FlashFrozen",
-            "ruddygreat",
-            "Tartiflette"
-          ],
-          "gameVersion": "0.95.1a",
-          "modVersion": "2.70rc3",
-          "threadLastPostOn": "2024-08-23"
-        },
-        {
-          "title": "Diable Avionics",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=29302.0",
-          "id": "diable-avionics-4",
-          "authors": [
-            "presidentmattdamon"
-          ],
-          "gameVersion": "0.97a",
-          "modVersion": "2.8.4",
-          "threadLastPostOn": "2024-03-08"
-        }
-      ],
-      "gallery": [
-        {
-          "url": "http://i.imgur.com/sYS3oSa.png",
-          "aiCaption": "A stylized logo featuring a red silhouette against a blue and red background.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/GuzWdst.png",
-          "aiCaption": "A showcase of various red ship sprites from the mod arranged on a starfield background.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/0qI3m15.png",
-          "aiCaption": "A small sprite of a red and black ship component.",
-          "aiKind": "art",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/qR93IfR.png",
-          "aiCaption": "A small sprite of a red and black ship component.",
-          "aiKind": "art",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/U6rKa4T.png",
-          "aiCaption": "A small sprite of a red and black ship component.",
-          "aiKind": "art",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/e5OakyB.png",
-          "aiCaption": "A tall, vertical red ship sprite with white stripes.",
-          "aiKind": "art",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/eBva5hr.png",
-          "aiCaption": "A wide, winged red ship sprite.",
-          "aiKind": "art",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/627ptDz.png",
-          "aiCaption": "A small, compact red ship sprite with yellow accents.",
-          "aiKind": "art",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/IC7g8WL.png",
-          "aiCaption": "A tall, vertical red ship sprite with white stripes.",
-          "aiKind": "art",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/2HE5azh.png",
-          "aiCaption": "A wide, winged red ship sprite.",
-          "aiKind": "art",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/jfNIuoc.png",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/JW60Uhr.png",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/ASoPrOS.png",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/omLStan.png",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/UfQ5hnM.png",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/BKmMxSz.png",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/ZM3R8iN.png",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/7QZrrQ7.png",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/IixAre1.png",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/yqHdMRh.png",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/C2J7ms3.png",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/Te5TYKn.png",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/yaEm2xH.png",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/MFe0mPP.png",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/wRxNx74.png",
           "source": "forum"
         }
       ]
@@ -24884,17 +24940,7 @@
         "required": [
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-2"
-          },
-          {
-            "name": "LazyLib",
-            "id": "lazylib",
-            "via": "Diable Avionics"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib",
-            "via": "Diable Avionics"
+            "id": "diable-avionics-3"
           }
         ]
       },
@@ -29843,56 +29889,6 @@
         }
       ]
     },
-    "exotica-technologies": {
-      "summary": "Inspired by Extra Systems Reloaded, Exotica Technologies offers an RPG element to Starsector that makes your ships AND enemies harder, better, faster, stronger through upgrades and exotics! These upgrades do not take OP or hullmod slots!",
-      "categories": [
-        "Campaign and exploration",
-        "Content expansions",
-        "Miscellaneous"
-      ],
-      "rawCategories": [
-        "Content Expansions",
-        "Misc. Campaign Mods",
-        "Other/Misc."
-      ],
-      "addedOn": "2025-04-05",
-      "editedOn": "2025-04-25",
-      "types": [
-        "mod"
-      ],
-      "saveCompat": {
-        "adding": {
-          "quote": "Save Compatible",
-          "answer": "yes"
-        }
-      },
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Exotica Technologies",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=29538.msg432789#new",
-          "id": "exotica-technologies-2",
-          "authors": [
-            "Kaysaar",
-            "presidentmattdamon"
-          ],
-          "gameVersion": "0.97a",
-          "modVersion": "1.8.6",
-          "threadLastPostOn": "2025-03-27"
-        },
-        {
-          "title": "Exotica Technologies",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=24660.0",
-          "id": "exotica-technologies-4",
-          "authors": [
-            "presidentmattdamon"
-          ],
-          "gameVersion": "0.96a",
-          "modVersion": "1.8.5",
-          "threadLastPostOn": "2024-03-08"
-        }
-      ]
-    },
     "exotica-technologies-2": {
       "summary": "Inspired by Extra Systems Reloaded, Exotica Technologies offers an RPG element to Starsector that makes your ships AND enemies harder, better, faster, stronger through upgrades and exotics! These upgrades do not take OP or hullmod slots!",
       "categories": [
@@ -30021,6 +30017,56 @@
           "aiKind": "badge",
           "aiFit": "poor",
           "source": "forum"
+        }
+      ]
+    },
+    "exotica-technologies": {
+      "summary": "Inspired by Extra Systems Reloaded, Exotica Technologies offers an RPG element to Starsector that makes your ships AND enemies harder, better, faster, stronger through upgrades and exotics! These upgrades do not take OP or hullmod slots!",
+      "categories": [
+        "Campaign and exploration",
+        "Content expansions",
+        "Miscellaneous"
+      ],
+      "rawCategories": [
+        "Content Expansions",
+        "Misc. Campaign Mods",
+        "Other/Misc."
+      ],
+      "addedOn": "2025-04-05",
+      "editedOn": "2025-04-25",
+      "types": [
+        "mod"
+      ],
+      "saveCompat": {
+        "adding": {
+          "quote": "Save Compatible",
+          "answer": "yes"
+        }
+      },
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Exotica Technologies",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=29538.msg432789#new",
+          "id": "exotica-technologies-2",
+          "authors": [
+            "Kaysaar",
+            "presidentmattdamon"
+          ],
+          "gameVersion": "0.97a",
+          "modVersion": "1.8.6",
+          "threadLastPostOn": "2025-03-27"
+        },
+        {
+          "title": "Exotica Technologies",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=24660.0",
+          "id": "exotica-technologies-4",
+          "authors": [
+            "presidentmattdamon"
+          ],
+          "gameVersion": "0.96a",
+          "modVersion": "1.8.5",
+          "threadLastPostOn": "2024-03-08"
         }
       ]
     },
@@ -33623,82 +33669,6 @@
         }
       ]
     },
-    "forge-production-2": {
-      "summary": "Acquire production hullmods from derelict mothership.",
-      "addedOn": "2021-11-14",
-      "editedOn": "2024-04-17",
-      "types": [
-        "mod"
-      ],
-      "saveCompat": {
-        "removing": {
-          "quote": "Cannot be removed from games in which it was already used.",
-          "answer": "no"
-        }
-      },
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Forge Production",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=29778.msg436803#msg436803",
-          "id": "forge-production",
-          "authors": [
-            "alaricdragon",
-            "Ontheheavens"
-          ],
-          "gameVersion": "0.98a",
-          "modVersion": "1.1.13",
-          "threadLastPostOn": "2026-11-11"
-        }
-      ],
-      "gallery": [
-        {
-          "url": "https://raw.githubusercontent.com/Ontheheavens/Forge-Production/main/images/Title.png",
-          "aiCaption": "The mod title 'Forge Production' in blue neon text.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://raw.githubusercontent.com/Ontheheavens/Forge-Production/main/images/Art.png",
-          "aiCaption": "A banner showing a ship and industrial scenes with the text 'Version 1.1.0'.",
-          "aiKind": "banner",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://img.shields.io/github/downloads/Ontheheavens/Forge-Production/total?color=beige&label=Download%20Forge%20Production%20v.1.1.3&style=for-the-badge",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://img.shields.io/github/stars/Ontheheavens/Forge-Production?color=orange&label=Star%20Repository&style=for-the-badge",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://raw.githubusercontent.com/Ontheheavens/Forge-Production/main/images/Content%20Preview.png",
-          "aiCaption": "A complex collage of game interface screenshots detailing hullmods, abilities, and production reports.",
-          "aiKind": "other",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://raw.githubusercontent.com/Ontheheavens/Forge-Production/main/images/Acquisition.png",
-          "aiCaption": "Two event screens titled 'Locate Domain-era mothership' and 'Investigate and recover autoforge tech' with text options.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://raw.githubusercontent.com/Ontheheavens/Forge-Production/main/images/Conversions%20Spreadsheet.png",
-          "aiCaption": "A detailed spreadsheet table showing processing capacities by modules and goods processed for one cycle.",
-          "aiKind": "other",
-          "aiFit": "poor",
-          "source": "forum"
-        }
-      ]
-    },
     "forge-production": {
       "summary": "Acquire production hullmods from derelict mothership.",
       "categories": [
@@ -33768,6 +33738,82 @@
           "aiCaption": "A banner showing a ship and industrial scenes with the text 'Version 1.1.0'.",
           "aiKind": "banner",
           "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Ontheheavens/Forge-Production/main/images/Content%20Preview.png",
+          "aiCaption": "A complex collage of game interface screenshots detailing hullmods, abilities, and production reports.",
+          "aiKind": "other",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Ontheheavens/Forge-Production/main/images/Acquisition.png",
+          "aiCaption": "Two event screens titled 'Locate Domain-era mothership' and 'Investigate and recover autoforge tech' with text options.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Ontheheavens/Forge-Production/main/images/Conversions%20Spreadsheet.png",
+          "aiCaption": "A detailed spreadsheet table showing processing capacities by modules and goods processed for one cycle.",
+          "aiKind": "other",
+          "aiFit": "poor",
+          "source": "forum"
+        }
+      ]
+    },
+    "forge-production-2": {
+      "summary": "Acquire production hullmods from derelict mothership.",
+      "addedOn": "2021-11-14",
+      "editedOn": "2024-04-17",
+      "types": [
+        "mod"
+      ],
+      "saveCompat": {
+        "removing": {
+          "quote": "Cannot be removed from games in which it was already used.",
+          "answer": "no"
+        }
+      },
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Forge Production",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=29778.msg436803#msg436803",
+          "id": "forge-production",
+          "authors": [
+            "alaricdragon",
+            "Ontheheavens"
+          ],
+          "gameVersion": "0.98a",
+          "modVersion": "1.1.13",
+          "threadLastPostOn": "2026-11-11"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "https://raw.githubusercontent.com/Ontheheavens/Forge-Production/main/images/Title.png",
+          "aiCaption": "The mod title 'Forge Production' in blue neon text.",
+          "aiKind": "logo",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Ontheheavens/Forge-Production/main/images/Art.png",
+          "aiCaption": "A banner showing a ship and industrial scenes with the text 'Version 1.1.0'.",
+          "aiKind": "banner",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "https://img.shields.io/github/downloads/Ontheheavens/Forge-Production/total?color=beige&label=Download%20Forge%20Production%20v.1.1.3&style=for-the-badge",
+          "small": true,
+          "source": "forum"
+        },
+        {
+          "url": "https://img.shields.io/github/stars/Ontheheavens/Forge-Production?color=orange&label=Star%20Repository&style=for-the-badge",
+          "small": true,
           "source": "forum"
         },
         {
@@ -36566,7 +36612,17 @@
           },
           {
             "name": "Unknown Skies",
-            "id": "unknown-skies-2"
+            "id": "unknown-skies"
+          },
+          {
+            "name": "LunaLib",
+            "id": "lunalib",
+            "via": "Unknown Skies"
+          },
+          {
+            "name": "LazyLib",
+            "id": "lazylib",
+            "via": "LunaLib"
           }
         ]
       },
@@ -38552,7 +38608,7 @@
         ]
       },
       "addedOn": "2026-07-19",
-      "editedOn": "2026-11-12",
+      "editedOn": "2026-11-01",
       "requirements": {
         "optional": [
           {
@@ -38586,7 +38642,7 @@
           "name": "Second-in-Command",
           "id": "second-in-command",
           "quote": "Second-in-Command may make Humanity less useful because of the way it changes or removes Neural Link behavior.",
-          "type": "gameplay"
+          "type": "withNotes"
         }
       ],
       "types": [
@@ -38598,12 +38654,12 @@
           "answer": "yes"
         },
         "latestUpdateNote": {
-          "quote": "As always with a major mod update, keeping a backup save is recommended.",
-          "answer": "depends"
+          "quote": "This is a save-compatible asset update.",
+          "answer": "yes"
         }
       },
       "aiUse": {
-        "quote": "OpenAI Codex 5.6 Sol was used to help with programming, debugging, and editing. Artwork was created through a combination of Photoshop and Gemini. Don't worry, I'm a professional.",
+        "quote": "OpenAI Codex 5.6 Sol was used to help with programming, debugging, and editing. Artwork was created through a combination of Photoshop and Gemini.",
         "usesAi": true,
         "uses": [
           {
@@ -40534,7 +40590,6 @@
         "Standalone Utilities"
       ],
       "addedOn": "2020-07-29",
-      "editedOn": "2025-07-10",
       "requirements": {
         "optional": [
           {
@@ -44254,11 +44309,11 @@
         "Standalone Utilities"
       ],
       "addedOn": "2026-06-14",
-      "editedOn": "2026-06-30",
+      "editedOn": "2026-11-13",
       "requirements": {
         "required": [
           {
-            "name": "WrapUI"
+            "name": "NativeUI"
           }
         ],
         "optional": [
@@ -44285,7 +44340,10 @@
           "answer": "yes"
         }
       },
-      "aiUse": {},
+      "aiUse": {
+        "quote": "None",
+        "usesAi": false
+      },
       "gallery": [
         {
           "url": "https://raw.githubusercontent.com/WolframSegler/ItemMarkers/main/item_markers.png",
@@ -45841,251 +45899,6 @@
       },
       "aiUse": {}
     },
-    "kadur-remnant-2": {
-      "summary": "Hello! I have obtained permission to bring Kadur Remnant into a relative 0.98a-RC8 support! However, these changes may or may not reflect Vayra's intent, but I hope it makes the Kadur Remnants more playable and brings a better experience!",
-      "categories": [
-        "Factions",
-        "Content expansions"
-      ],
-      "rawCategories": [
-        "Content Expansions",
-        "Faction Mods"
-      ],
-      "otherAuthorNames": {
-        "Timid": [
-          "techpriest"
-        ]
-      },
-      "addedOn": "2026-04-02",
-      "editedOn": "2026-10-07",
-      "requirements": {
-        "optional": [
-          {
-            "name": "Vayra's Sector",
-            "id": "vayra-s-sector"
-          }
-        ]
-      },
-      "types": [
-        "mod"
-      ],
-      "saveCompat": {
-        "latestUpdateNote": {
-          "quote": "Save-game compatible with 3.2.4support1 and 3.2.4support2 saves",
-          "answer": "yes"
-        }
-      },
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Kadur Remnant",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=6649.0",
-          "id": "kadur-remnant",
-          "authors": [
-            "Vayra"
-          ],
-          "gameVersion": "0.95a",
-          "modVersion": "3.2.3",
-          "threadLastPostOn": "2024-11-27"
-        }
-      ],
-      "gallery": [
-        {
-          "url": "https://cdn.discordapp.com/attachments/1489194723024310382/1489194723229962432/image.png?ex=6afb7569&is=6afa23e9&hm=47ef13678b1b2d17f7717d426971754f57d06fed65ce5e67afc00f5708fb8e8d&",
-          "aiCaption": "A wide title picture showing large ships firing weapons in space with the text \"Kadur Remnant\" at the bottom.",
-          "aiKind": "banner",
-          "aiFit": "good",
-          "source": "discord"
-        },
-        {
-          "url": "https://i.imgur.com/AFZAQiL.png",
-          "aiCaption": "A title image showing ships in combat with the text 'Kadur Remnant'.",
-          "aiKind": "banner",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://img.shields.io/github/downloads/TechpriestEnginseer/solid-vayra/total?color=%232299EE&label=Download%203.2.4support%21&style=for-the-badge",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/l2lnlyW.png",
-          "aiCaption": "A row of five ship sprites on a dark background.",
-          "aiKind": "art",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/bL9g5ja.png",
-          "aiCaption": "A row of five ship sprites on a dark background.",
-          "aiKind": "art",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/gTxho7P.png",
-          "aiCaption": "A grid of seven ship sprites on a dark background.",
-          "aiKind": "art",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/brolqY0.png",
-          "aiCaption": "Three large ship sprites arranged side-by-side.",
-          "aiKind": "art",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/jUBgjP7.png",
-          "aiCaption": "A detailed illustration of a large, complex ship hull with attached modules.",
-          "aiKind": "art",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/IwnXYdi.png",
-          "aiCaption": "A small, blurry icon resembling a shield or emblem.",
-          "aiKind": "other",
-          "aiFit": "poor",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/qwV3IEK.png",
-          "aiCaption": "A small, blurry icon resembling a computer terminal or console.",
-          "aiKind": "other",
-          "aiFit": "poor",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/J2Qx10q.png",
-          "aiCaption": "A small, blurry icon resembling a bottle or canister.",
-          "aiKind": "other",
-          "aiFit": "poor",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/P5WsR9l.png",
-          "aiCaption": "A small, pixelated image of a humanoid figure or ship component on a dark background.",
-          "aiKind": "art",
-          "aiFit": "poor",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/63ipDfV.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/0AugCR2.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/GJAar8o.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/jtMh6wr.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/rJul0yJ.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/m5FageG.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/DqFH6Rh.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/pt1Pzl7.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/XEehBKC.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/zZ3f1nc.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/soCOIfO.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/V1Tdyjp.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/yfuZRbp.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/4YvAJmE.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/2WtwzRJ.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/UTHrqWl.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/L5xRSeY.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/pEWcgDg.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/CFVGVGN.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/nbm2NcW.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/Mg5J32c.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/y5UKfJh.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/wfdbx4b.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/0qZfpcT.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/OKpAMxC.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/gkpmszU.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/1pOHTwv.png",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/sFusSVJ.png",
-          "source": "forum"
-        }
-      ]
-    },
     "kadur-remnant": {
       "summary": "New starting options when used with Vayra's Sector, including a starting option aligned with the Kadur Remnant",
       "addedOn": "2013-09-14",
@@ -46327,6 +46140,251 @@
           "aiCaption": "An orange button with the text 'Become a Patron'.",
           "aiKind": "button",
           "aiFit": "poor",
+          "source": "forum"
+        }
+      ]
+    },
+    "kadur-remnant-2": {
+      "summary": "Hello! I have obtained permission to bring Kadur Remnant into a relative 0.98a-RC8 support! However, these changes may or may not reflect Vayra's intent, but I hope it makes the Kadur Remnants more playable and brings a better experience!",
+      "categories": [
+        "Factions",
+        "Content expansions"
+      ],
+      "rawCategories": [
+        "Content Expansions",
+        "Faction Mods"
+      ],
+      "otherAuthorNames": {
+        "Timid": [
+          "techpriest"
+        ]
+      },
+      "addedOn": "2026-04-02",
+      "editedOn": "2026-10-07",
+      "requirements": {
+        "optional": [
+          {
+            "name": "Vayra's Sector",
+            "id": "vayra-s-sector"
+          }
+        ]
+      },
+      "types": [
+        "mod"
+      ],
+      "saveCompat": {
+        "latestUpdateNote": {
+          "quote": "Save-game compatible with 3.2.4support1 and 3.2.4support2 saves",
+          "answer": "yes"
+        }
+      },
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Kadur Remnant",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=6649.0",
+          "id": "kadur-remnant",
+          "authors": [
+            "Vayra"
+          ],
+          "gameVersion": "0.95a",
+          "modVersion": "3.2.3",
+          "threadLastPostOn": "2024-11-27"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "https://cdn.discordapp.com/attachments/1489194723024310382/1489194723229962432/image.png?ex=6afb7569&is=6afa23e9&hm=47ef13678b1b2d17f7717d426971754f57d06fed65ce5e67afc00f5708fb8e8d&",
+          "aiCaption": "A wide title picture showing large ships firing weapons in space with the text \"Kadur Remnant\" at the bottom.",
+          "aiKind": "banner",
+          "aiFit": "good",
+          "source": "discord"
+        },
+        {
+          "url": "https://i.imgur.com/AFZAQiL.png",
+          "aiCaption": "A title image showing ships in combat with the text 'Kadur Remnant'.",
+          "aiKind": "banner",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "https://img.shields.io/github/downloads/TechpriestEnginseer/solid-vayra/total?color=%232299EE&label=Download%203.2.4support%21&style=for-the-badge",
+          "small": true,
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/l2lnlyW.png",
+          "aiCaption": "A row of five ship sprites on a dark background.",
+          "aiKind": "art",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/bL9g5ja.png",
+          "aiCaption": "A row of five ship sprites on a dark background.",
+          "aiKind": "art",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/gTxho7P.png",
+          "aiCaption": "A grid of seven ship sprites on a dark background.",
+          "aiKind": "art",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/brolqY0.png",
+          "aiCaption": "Three large ship sprites arranged side-by-side.",
+          "aiKind": "art",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/jUBgjP7.png",
+          "aiCaption": "A detailed illustration of a large, complex ship hull with attached modules.",
+          "aiKind": "art",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/IwnXYdi.png",
+          "aiCaption": "A small, blurry icon resembling a shield or emblem.",
+          "aiKind": "other",
+          "aiFit": "poor",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/qwV3IEK.png",
+          "aiCaption": "A small, blurry icon resembling a computer terminal or console.",
+          "aiKind": "other",
+          "aiFit": "poor",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/J2Qx10q.png",
+          "aiCaption": "A small, blurry icon resembling a bottle or canister.",
+          "aiKind": "other",
+          "aiFit": "poor",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/P5WsR9l.png",
+          "aiCaption": "A small, pixelated image of a humanoid figure or ship component on a dark background.",
+          "aiKind": "art",
+          "aiFit": "poor",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/63ipDfV.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/0AugCR2.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/GJAar8o.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/jtMh6wr.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/rJul0yJ.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/m5FageG.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/DqFH6Rh.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/pt1Pzl7.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/XEehBKC.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/zZ3f1nc.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/soCOIfO.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/V1Tdyjp.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/yfuZRbp.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/4YvAJmE.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/2WtwzRJ.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/UTHrqWl.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/L5xRSeY.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/pEWcgDg.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/CFVGVGN.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/nbm2NcW.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/Mg5J32c.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/y5UKfJh.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/wfdbx4b.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/0qZfpcT.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/OKpAMxC.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/gkpmszU.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/1pOHTwv.png",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/sFusSVJ.png",
           "source": "forum"
         }
       ]
@@ -46769,64 +46827,6 @@
         }
       ]
     },
-    "kazeron-navarchy": {
-      "summary": "\"Adds several skins to the Persean League, each with the Kazeron Navarchy hullmod built in. They appear occasionally in Persean League markets and fleets.",
-      "categories": [
-        "Content expansions",
-        "Sound and graphics"
-      ],
-      "rawCategories": [
-        "Audio/Visual",
-        "Content Expansions"
-      ],
-      "otherAuthorNames": {
-        "Bangle": [
-          "bangle_bangle"
-        ]
-      },
-      "addedOn": "2024-02-05",
-      "editedOn": "2026-06-08",
-      "types": [
-        "mod"
-      ],
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Kazeron Navarchy",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=21554.0",
-          "id": "kazeron-navarchy-2",
-          "authors": [
-            "PeachPatrol"
-          ],
-          "gameVersion": "0.95a",
-          "modVersion": "1.2",
-          "threadLastPostOn": "2024-05-25"
-        }
-      ],
-      "gallery": [
-        {
-          "url": "https://i.imgur.com/6XYzxio.png",
-          "aiCaption": "A stylized emblem featuring a blue triangle with yellow geometric patterns and five yellow squares on the right.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://imgur.com/67g2Fxe.png",
-          "aiCaption": "A game interface showing ship statistics and description text for 'Kazeron Navarchy'.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/MZbfz8U.png",
-          "aiCaption": "A collection of various spaceship sprites in blue, white, and yellow colors arranged on a black background.",
-          "aiKind": "art",
-          "aiFit": "good",
-          "source": "forum"
-        }
-      ]
-    },
     "kazeron-navarchy-2": {
       "summary": "Adds several skins to the Persean League, each with the Kazeron Navarchy hullmod built in. They appear occasionally in Persean League markets and fleets.",
       "categories": [
@@ -46935,6 +46935,64 @@
         },
         {
           "url": "https://i.imgur.com/vyZZFyy.png",
+          "source": "forum"
+        }
+      ]
+    },
+    "kazeron-navarchy": {
+      "summary": "\"Adds several skins to the Persean League, each with the Kazeron Navarchy hullmod built in. They appear occasionally in Persean League markets and fleets.",
+      "categories": [
+        "Content expansions",
+        "Sound and graphics"
+      ],
+      "rawCategories": [
+        "Audio/Visual",
+        "Content Expansions"
+      ],
+      "otherAuthorNames": {
+        "Bangle": [
+          "bangle_bangle"
+        ]
+      },
+      "addedOn": "2024-02-05",
+      "editedOn": "2026-06-08",
+      "types": [
+        "mod"
+      ],
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Kazeron Navarchy",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=21554.0",
+          "id": "kazeron-navarchy-2",
+          "authors": [
+            "PeachPatrol"
+          ],
+          "gameVersion": "0.95a",
+          "modVersion": "1.2",
+          "threadLastPostOn": "2024-05-25"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "https://i.imgur.com/6XYzxio.png",
+          "aiCaption": "A stylized emblem featuring a blue triangle with yellow geometric patterns and five yellow squares on the right.",
+          "aiKind": "logo",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "https://imgur.com/67g2Fxe.png",
+          "aiCaption": "A game interface showing ship statistics and description text for 'Kazeron Navarchy'.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/MZbfz8U.png",
+          "aiCaption": "A collection of various spaceship sprites in blue, white, and yellow colors arranged on a black background.",
+          "aiKind": "art",
+          "aiFit": "good",
           "source": "forum"
         }
       ]
@@ -48152,7 +48210,7 @@
           },
           {
             "name": "Exotica Technologies",
-            "id": "exotica-technologies"
+            "id": "exotica-technologies-2"
           }
         ]
       },
@@ -49882,66 +49940,6 @@
         }
       ]
     },
-    "loadout-sharing": {
-      "summary": "Utility mod that lets you copy and paste ship variants as json data into your clipboard.",
-      "addedOn": "2026-06-28",
-      "editedOn": "2026-07-08",
-      "requirements": {
-        "required": [
-          {
-            "name": "WrapUI"
-          }
-        ]
-      },
-      "types": [
-        "mod"
-      ],
-      "saveCompat": {
-        "adding": {
-          "quote": "Can be added mid-save",
-          "answer": "yes"
-        },
-        "removing": {
-          "quote": "Can be removed mid-save",
-          "answer": "yes"
-        },
-        "latestUpdateNote": {
-          "quote": "Releases are always compatible with previous ones",
-          "answer": "yes"
-        }
-      },
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Loadout Sharing",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=36358.0",
-          "id": "loadout-sharing-2",
-          "authors": [
-            "WolframSegler"
-          ],
-          "gameVersion": "0.98.5a"
-        }
-      ],
-      "gallery": [
-        {
-          "url": "https://raw.githubusercontent.com/WolframSegler/LoadoutSharing/main/loadout_sharing.png",
-          "aiCaption": "A teal logo featuring a stylized ship schematic with a white square icon in the top left corner.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://img.shields.io/github/downloads/WolframSegler/LoadoutSharing/total?label=Download%20Latest&style=for-the-badge",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://img.shields.io/github/v/release/WolframSegler/LoadoutSharing?label=Other%20Versions&style=for-the-badge",
-          "small": true,
-          "source": "forum"
-        }
-      ]
-    },
     "loadout-sharing-2": {
       "summary": "Utility mod that lets you copy and paste ship variants as json data into your clipboard.",
       "addedOn": "2026-06-28",
@@ -49984,6 +49982,66 @@
           ],
           "gameVersion": "0.98a",
           "threadLastPostOn": "2026-06-28"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "https://raw.githubusercontent.com/WolframSegler/LoadoutSharing/main/loadout_sharing.png",
+          "aiCaption": "A teal logo featuring a stylized ship schematic with a white square icon in the top left corner.",
+          "aiKind": "logo",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "https://img.shields.io/github/downloads/WolframSegler/LoadoutSharing/total?label=Download%20Latest&style=for-the-badge",
+          "small": true,
+          "source": "forum"
+        },
+        {
+          "url": "https://img.shields.io/github/v/release/WolframSegler/LoadoutSharing?label=Other%20Versions&style=for-the-badge",
+          "small": true,
+          "source": "forum"
+        }
+      ]
+    },
+    "loadout-sharing": {
+      "summary": "Utility mod that lets you copy and paste ship variants as json data into your clipboard.",
+      "addedOn": "2026-06-28",
+      "editedOn": "2026-07-08",
+      "requirements": {
+        "required": [
+          {
+            "name": "WrapUI"
+          }
+        ]
+      },
+      "types": [
+        "mod"
+      ],
+      "saveCompat": {
+        "adding": {
+          "quote": "Can be added mid-save",
+          "answer": "yes"
+        },
+        "removing": {
+          "quote": "Can be removed mid-save",
+          "answer": "yes"
+        },
+        "latestUpdateNote": {
+          "quote": "Releases are always compatible with previous ones",
+          "answer": "yes"
+        }
+      },
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Loadout Sharing",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=36358.0",
+          "id": "loadout-sharing-2",
+          "authors": [
+            "WolframSegler"
+          ],
+          "gameVersion": "0.98.5a"
         }
       ],
       "gallery": [
@@ -50213,7 +50271,6 @@
         "Standalone Utilities"
       ],
       "addedOn": "2019-12-02",
-      "editedOn": "2026-10-29",
       "lastReleaseDate": "2026-10-30T00:00:00.000Z",
       "releases": [
         {
@@ -51099,17 +51156,7 @@
         "required": [
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-2"
-          },
-          {
-            "name": "LazyLib",
-            "id": "lazylib",
-            "via": "Diable Avionics"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib",
-            "via": "Diable Avionics"
+            "id": "diable-avionics-3"
           }
         ]
       },
@@ -51923,6 +51970,24 @@
         }
       ]
     },
+    "metelson-industries": {
+      "addedOn": "2014-06-30",
+      "editedOn": "2024-03-12",
+      "sameNameMods": [
+        {
+          "title": "Metelson Industries",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=29549.0",
+          "id": "metelson-industries-2",
+          "authors": [
+            "Knight Chase",
+            "Petra aka Az the Squishy"
+          ],
+          "gameVersion": "0.97a",
+          "modVersion": "2.0.3",
+          "threadLastPostOn": "2026-09-26"
+        }
+      ]
+    },
     "metelson-industries-2": {
       "summary": "Metelson Industries boasts a lengthy history, yet it was only in the last 300 cycles that it evolved to compete with Tri-Tachyon.",
       "categories": [
@@ -51977,24 +52042,6 @@
           "aiKind": "logo",
           "aiFit": "good",
           "source": "forum"
-        }
-      ]
-    },
-    "metelson-industries": {
-      "addedOn": "2014-06-30",
-      "editedOn": "2024-03-12",
-      "sameNameMods": [
-        {
-          "title": "Metelson Industries",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=29549.0",
-          "id": "metelson-industries-2",
-          "authors": [
-            "Knight Chase",
-            "Petra aka Az the Squishy"
-          ],
-          "gameVersion": "0.97a",
-          "modVersion": "2.0.3",
-          "threadLastPostOn": "2026-09-26"
         }
       ]
     },
@@ -55118,7 +55165,7 @@
         }
       ]
     },
-    "my-little-pony-19": {
+    "my-little-pony-21": {
       "summary": "So it's finally happening. Be it your worst fear or your dream of a pony mod is coming to Starfarer come true.",
       "addedOn": "2012-05-17",
       "editedOn": "2012-07-07",
@@ -56543,601 +56590,6 @@
       ]
     },
     "new-galactic-order": {},
-    "new-game-plus-renewed": {
-      "summary": "Every level you gain, in any save, earns career points. Every new game opens a store next to your starting fleet where those points buy a head start: story points, skill points, levels, credits, supplies and more.",
-      "addedOn": "2026-10-20",
-      "types": [
-        "mod"
-      ],
-      "aiUse": {
-        "quote": "I ONLY make mods using AI.",
-        "usesAi": true,
-        "uses": [
-          {
-            "area": "other"
-          }
-        ]
-      },
-      "gallery": [
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-oddisz-commons/main/icon.png&w=128&h=128&fit=contain&cbg=00000000&output=png&v=3",
-          "aiCaption": "A gold geometric emblem resembling a network or circuit on a dark blue background.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://img.shields.io/github/downloads/andrzejsokolowski/starsector-oddisz-commons/total?style=for-the-badge&label=download",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://img.shields.io/github/v/release/andrzejsokolowski/starsector-oddisz-commons?display_name=tag&sort=semver&style=for-the-badge&label=version",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-astral-ascension-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "aiCaption": "A stylized gold icon of a ringed planet with a small moon.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/docs/screenshot-hyper-ecumenopolis.png?raw=true",
-          "aiCaption": "A game screen showing 'Aquamarine, Ecumenopolis World' with descriptive text.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/docs/arcology-world.png?raw=true",
-          "aiCaption": "Art of a planet covered in city grids and lights.",
-          "aiKind": "art",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/docs/ecumenopolis.png?raw=true",
-          "aiCaption": "Art of a planet covered in city grids and lights.",
-          "aiKind": "art",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/docs/hyper-ecumenopolis.png?raw=true",
-          "aiCaption": "Art of a planet with rings covered in city grids and lights.",
-          "aiKind": "art",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/screenshots/01-omega-admin-acumenious-oracle.webp?raw=true",
-          "aiUnreadable": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-omega-core-everywhere/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "aiCaption": "A gold industrial-style logo featuring factory silhouettes and an Omega symbol.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-omega-core-everywhere/blob/main/screenshots/01-omega-core-drop.png?raw=true",
-          "aiCaption": "A game inventory screen showing a row of items under the label 'Salvaged'.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-omega-core-everywhere/blob/main/screenshots/02-omega-core-farming.png?raw=true",
-          "aiCaption": "A game menu showing an 'Omega Core' assignment screen with options to unassign or select a Gamma-level AI core.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-omega-core-everywhere/blob/main/screenshots/03-omega-core-academy-picker.png?raw=true",
-          "aiCaption": "An in-game menu showing the selection of an 'Omega Core' to assign to an Academy, listing its effects like 'maximum level' and 'Hypercognition'.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-omega-core-everywhere/blob/main/screenshots/04-size-10-omega-farming-output.webp?raw=true",
-          "aiCaption": "A colony management screen for 'Earth, Capital World' displaying various buildings such as the Academy and Marine Sim:Cloning alongside market data.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-cloning/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "aiCaption": "A gold stylized skull icon with a halo and heart-shaped eyes.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-cloning/blob/main/screenshots/01-marine-sim-cloning.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-cloning/blob/main/screenshots/02-cloning-megafactory-items.png?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-cloning/blob/main/screenshots/03-clone-vat-hullmod.png?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-cloning/blob/main/screenshots/04-marine-sim-cloning-organ-shortage.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-landlordsector/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "aiCaption": "A gold house icon containing a copyright symbol.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/01-listing-amber-place.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/02-location-tooltip.png?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/03-comfort-tooltip.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/04-climate-tooltip.png?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/05-home-details.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/06-headhunter-offer.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/07-headhunters-tab.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/08-tenants-found-message.png?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/09-tenant-pool-prosperous.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/10-tenant-pool-history-buff.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/11-furniture-storage.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/12-upgrades.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/13-tenants-from-pool.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/14-tenant-moved-in.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/15-tenant-happiness.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/16-tenant-health.png?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/17-area-tooltip.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-private-arsenal/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "aiCaption": "A gold magnifying glass inspecting a cluster of dots next to a rectangular device.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-private-arsenal/blob/main/private-arsenal-1.0.0.png?raw=true",
-          "aiCaption": "A screenshot of the Reverse Engineering Hub II interface showing research options and item details.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-toolbox-economy-curves/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-toolbox-economy-curves/blob/main/screenshots/01-size-10-food-output.webp?raw=true",
-          "aiCaption": "A screenshot of the colony management screen for 'Earth, Capital World' showing market data and production details.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-toolbox-economy-curves/blob/main/screenshots/02-settings-size-curve.webp?raw=true",
-          "aiCaption": "The 'Mod Settings' menu displaying configuration options for 'Toolbox Economy Curves'.",
-          "aiKind": "screenshot",
-          "aiFit": "poor",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-weapon-designer/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-sol-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-sol-renewed/blob/main/sol-renewed-planets.png?raw=true",
-          "aiCaption": "A screenshot of the Sol star system information screen displaying planetary data and a map.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-sol-renewed/blob/main/sol-renewed-system.png?raw=true",
-          "aiCaption": "A mostly empty picture showing a sparse orbital diagram on a black background.",
-          "aiKind": "screenshot",
-          "aiFit": "poor",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-gambling-den/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-gambling-den/blob/main/screenshots/01-visit-the-den.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-gambling-den/blob/main/screenshots/02-slots.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-gambling-den/blob/main/screenshots/03-blackjack.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-gambling-den/blob/main/screenshots/04-relic-jackpot.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-the-everything-shop/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-the-everything-shop/blob/main/screenshots/01-the-treasury.webp?raw=true",
-          "aiCaption": "A screenshot of the 'The Treasury' market interface showing various ship components and resources.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-the-everything-shop/blob/main/screenshots/02-ballistic-arsenal.webp?raw=true",
-          "aiCaption": "A screenshot of the 'Ballistic Arsenal' market interface displaying a selection of large ballistic weapons.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-extra-system-reloaded-oddisz/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-newgameplus-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/01-legacy-station-map.png?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/02-store-command.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/03-store-shipyard.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/04-store-ng-perks.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/05-store-fighter-perks.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/06-store-armory.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/07-legacy-station-intel.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-rulebook-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-rulebook-renewed/blob/main/screenshots/01-rule-book-screen.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-rulebook-renewed/blob/main/screenshots/02-challenges-in-achievements-renewed.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-achievements-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-achievements-renewed/blob/main/screenshots/01-list-vaults-of-knowledge.webp?raw=true",
-          "aiCaption": "A screenshot of the in-game achievements menu showing a list of completed and incomplete objectives.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-achievements-renewed/blob/main/screenshots/02-list-secret-achievements.webp?raw=true",
-          "aiCaption": "The achievements interface displaying 'Quality Perks' with several entries marked as 'Secret Achievement'.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-achievements-renewed/blob/main/screenshots/03-list-domain-phase-lab-career-points.webp?raw=true",
-          "aiCaption": "A view of the achievements menu listing specific tasks for the 'Domain Phase Lab' category.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-achievements-renewed/blob/main/screenshots/04-list-liminal.webp?raw=true",
-          "aiCaption": "The achievements screen showing a long list of mod categories on the left sidebar and two entries on the right.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-achievements-renewed/blob/main/screenshots/05-list-rule-book-challenges.webp?raw=true",
-          "aiCaption": "A screenshot of the 'Rule Book - Renewed' section within the achievements menu, listing various challenges.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-achievements-renewed/blob/main/screenshots/06-ability-button.png?raw=true",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-missions-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-missions-renewed/blob/main/screenshots/01-famous-ship-lead.webp?raw=true",
-          "aiCaption": "A mission dialog showing details for a Tier 3 famous ship lead involving the ISS No Night In Space.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-missions-renewed/blob/main/screenshots/02-mission-board.png?raw=true",
-          "aiCaption": "A menu listing various mission options such as salvage leads and crew transport.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-missions-renewed/blob/main/screenshots/03-crew-transport-offer.webp?raw=true",
-          "aiCaption": "A contract details screen for a Tier 7 crew transport mission featuring Maya Nye.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-peerless-skills-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=4",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-peerless-skills-renewed/blob/main/screenshots/01-peerless-character-skill.webp?raw=true",
-          "aiCaption": "A screenshot of the officer skills menu showing a tooltip for 'Energy Weapon Mastery' with a 'Peerless' bonus description.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-peerless-skills-renewed/blob/main/screenshots/02-peerless-officers.png?raw=true",
-          "aiCaption": "A menu titled 'Peerless officers' displaying an officer portrait and skill upgrade options.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-hullmods-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-hullmods-renewed/blob/main/Hullmods-renewed-1.0.0.png?raw=true",
-          "aiCaption": "The Hullmods Renewed interface showing a list of available mods and filters.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-intel-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-intel-renewed/blob/main/screenshots/01-intel-screen-search.webp?raw=true",
-          "aiCaption": "The game's intel screen showing a star map and various mission categories like 'Important' and 'Story'.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-intel-renewed/blob/main/screenshots/02-customize-window.webp?raw=true",
-          "aiCaption": "A customization menu for the intel screen listing many categories and entry types with visibility options.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-stopbloatingme/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-stopbloatingme/blob/main/bloat1.png?raw=true",
-          "aiCaption": "The mod's settings menu showing a list of ships with the 'Atlas Mk. II' selected and marked as blocked.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-stopbloatingme/blob/main/bloat2.png?raw=true",
-          "aiCaption": "The mod's settings menu displaying a list of weapons with the 'Arcstorm Canister Pod' selected.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-stopbloatingme/blob/main/bloat3.png?raw=true",
-          "aiCaption": "The mod's settings menu showing a list of fighters with the 'Fioh Wing' selected and marked as allowed.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-stopstackingme/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-object-analysis-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=1",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-skipclicks/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-skipclicks/blob/main/screenshots/01-fast-survey-option.webp?raw=true",
-          "aiCaption": "A game menu screen titled 'You decide to...' with options for surveying the planet Glacier.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-skipclicks/blob/main/screenshots/02-fast-survey-result.webp?raw=true",
-          "aiCaption": "A text-heavy screen displaying survey results and conditions for the planet Glacier.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-starterpack/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-starterpack/blob/main/starter1.png?raw=true",
-          "aiCaption": "The mod's template configuration menu showing options for applying templates automatically.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-starterpack/blob/main/starter2.png?raw=true",
-          "aiCaption": "A ship loadout editor screen displaying weapon slots and hullmods for a Hammerhead class ship.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-starterpack/blob/main/starter3.png?raw=true",
-          "aiCaption": "The cargo configuration tab listing commodities, loose weapons, fighter wings, and special items to add.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-starterpack/blob/main/starter4.png?raw=true",
-          "aiCaption": "The character settings tab allowing the user to set starting credits, skill points, and story points.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-starterpack/blob/main/starter5.png?raw=true",
-          "aiCaption": "The hotbar configuration screen showing slots for abilities like Abyssal Burn and Transponder.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-discord-rich-presence/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-discord-rich-presence/blob/main/banner.png?raw=true",
-          "aiCaption": "A Discord status card showing 'Playing Starsector' with game details like 'Cmdr drp test2 Lvl 1 | ISS 7000 Lightyea...' and 'Corvus Star System · 5 ships · 50,000 ¢'.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-mod-checker/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        }
-      ]
-    },
     "nexerelin": {
       "summary": "4X game features in Starsector",
       "categories": [
@@ -58294,7 +57746,7 @@
         "optional": [
           {
             "name": "Forge Production",
-            "id": "forge-production-2"
+            "id": "forge-production"
           },
           {
             "name": "Nijigen Extend || Standalone Pack || Update 08/31 [YREX]",
@@ -62961,17 +62413,11 @@
         ]
       },
       "addedOn": "2026-11-06",
-      "editedOn": "2026-11-07",
       "requirements": {
-        "required": [
+        "optional": [
           {
             "name": "LunaLib",
             "id": "lunalib"
-          },
-          {
-            "name": "LazyLib",
-            "id": "lazylib",
-            "via": "LunaLib"
           }
         ]
       },
@@ -62993,8 +62439,7 @@
         "uses": [
           {
             "area": "code",
-            "how": "generated",
-            "extent": "all"
+            "how": "generated"
           }
         ],
         "tools": [
@@ -68136,7 +67581,7 @@
           },
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-2"
+            "id": "diable-avionics-3"
           },
           {
             "name": "MagicLib",
@@ -69367,7 +68812,7 @@
         },
         {
           "name": "Diable Avionics",
-          "id": "diable-avionics-2",
+          "id": "diable-avionics-3",
           "quote": "Diable Avionics: All ship systems that switch player control to fighters, under certain conditions, will CTD.",
           "type": "withNotes"
         },
@@ -73060,7 +72505,7 @@
       "conflicts": [
         {
           "name": "Unknown Skies",
-          "id": "unknown-skies-2",
+          "id": "unknown-skies",
           "quote": "Unknown Skies - Rogue Planets runs after normal sector generation. Its new planet types are made by converting existing worlds, so they appear alongside Unknown Skies' types rather than competing with them, and its conditions can roll on Unknown Skies planets too. Mods that replace the whole sector layout haven't been tested.",
           "type": "withNotes"
         }
@@ -73391,601 +72836,6 @@
           "aiCaption": "A Creative Commons license badge showing 'CC BY-NC-SA' icons.",
           "aiKind": "badge",
           "aiFit": "poor",
-          "small": true,
-          "source": "forum"
-        }
-      ]
-    },
-    "rule-book-renewed": {
-      "summary": "Per-campaign rules, each with its own level: negative rules make the game harder and give points, positive rules cost them. Change them at any time, and unlock more through achievements and challenges.",
-      "addedOn": "2026-10-20",
-      "types": [
-        "mod"
-      ],
-      "aiUse": {
-        "quote": "I ONLY make mods using AI.",
-        "usesAi": true,
-        "uses": [
-          {
-            "area": "other"
-          }
-        ]
-      },
-      "gallery": [
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-oddisz-commons/main/icon.png&w=128&h=128&fit=contain&cbg=00000000&output=png&v=3",
-          "aiCaption": "A gold geometric emblem resembling a network or circuit on a dark blue background.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://img.shields.io/github/downloads/andrzejsokolowski/starsector-oddisz-commons/total?style=for-the-badge&label=download",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://img.shields.io/github/v/release/andrzejsokolowski/starsector-oddisz-commons?display_name=tag&sort=semver&style=for-the-badge&label=version",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-astral-ascension-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "aiCaption": "A stylized gold icon of a ringed planet with a small moon.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/docs/screenshot-hyper-ecumenopolis.png?raw=true",
-          "aiCaption": "A game screen showing 'Aquamarine, Ecumenopolis World' with descriptive text.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/docs/arcology-world.png?raw=true",
-          "aiCaption": "Art of a planet covered in city grids and lights.",
-          "aiKind": "art",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/docs/ecumenopolis.png?raw=true",
-          "aiCaption": "Art of a planet covered in city grids and lights.",
-          "aiKind": "art",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/docs/hyper-ecumenopolis.png?raw=true",
-          "aiCaption": "Art of a planet with rings covered in city grids and lights.",
-          "aiKind": "art",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/screenshots/01-omega-admin-acumenious-oracle.webp?raw=true",
-          "aiUnreadable": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-omega-core-everywhere/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "aiCaption": "A gold industrial-style logo featuring factory silhouettes and an Omega symbol.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-omega-core-everywhere/blob/main/screenshots/01-omega-core-drop.png?raw=true",
-          "aiCaption": "A game inventory screen showing a row of items under the label 'Salvaged'.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-omega-core-everywhere/blob/main/screenshots/02-omega-core-farming.png?raw=true",
-          "aiCaption": "A game menu showing an 'Omega Core' assignment screen with options to unassign or select a Gamma-level AI core.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-omega-core-everywhere/blob/main/screenshots/03-omega-core-academy-picker.png?raw=true",
-          "aiCaption": "An in-game menu showing the selection of an 'Omega Core' to assign to an Academy, listing its effects like 'maximum level' and 'Hypercognition'.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-omega-core-everywhere/blob/main/screenshots/04-size-10-omega-farming-output.webp?raw=true",
-          "aiCaption": "A colony management screen for 'Earth, Capital World' displaying various buildings such as the Academy and Marine Sim:Cloning alongside market data.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-cloning/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "aiCaption": "A gold stylized skull icon with a halo and heart-shaped eyes.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-cloning/blob/main/screenshots/01-marine-sim-cloning.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-cloning/blob/main/screenshots/02-cloning-megafactory-items.png?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-cloning/blob/main/screenshots/03-clone-vat-hullmod.png?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-cloning/blob/main/screenshots/04-marine-sim-cloning-organ-shortage.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-landlordsector/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "aiCaption": "A gold house icon containing a copyright symbol.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/01-listing-amber-place.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/02-location-tooltip.png?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/03-comfort-tooltip.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/04-climate-tooltip.png?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/05-home-details.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/06-headhunter-offer.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/07-headhunters-tab.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/08-tenants-found-message.png?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/09-tenant-pool-prosperous.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/10-tenant-pool-history-buff.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/11-furniture-storage.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/12-upgrades.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/13-tenants-from-pool.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/14-tenant-moved-in.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/15-tenant-happiness.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/16-tenant-health.png?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-landlordsector/blob/main/screenshots/17-area-tooltip.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-private-arsenal/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "aiCaption": "A gold magnifying glass inspecting a cluster of dots next to a rectangular device.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-private-arsenal/blob/main/private-arsenal-1.0.0.png?raw=true",
-          "aiCaption": "A screenshot of the Reverse Engineering Hub II interface showing research options and item details.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-toolbox-economy-curves/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-toolbox-economy-curves/blob/main/screenshots/01-size-10-food-output.webp?raw=true",
-          "aiCaption": "A screenshot of the colony management screen for 'Earth, Capital World' showing market data and production details.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-toolbox-economy-curves/blob/main/screenshots/02-settings-size-curve.webp?raw=true",
-          "aiCaption": "The 'Mod Settings' menu displaying configuration options for 'Toolbox Economy Curves'.",
-          "aiKind": "screenshot",
-          "aiFit": "poor",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-weapon-designer/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-sol-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-sol-renewed/blob/main/sol-renewed-planets.png?raw=true",
-          "aiCaption": "A screenshot of the Sol star system information screen displaying planetary data and a map.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-sol-renewed/blob/main/sol-renewed-system.png?raw=true",
-          "aiCaption": "A mostly empty picture showing a sparse orbital diagram on a black background.",
-          "aiKind": "screenshot",
-          "aiFit": "poor",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-gambling-den/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-gambling-den/blob/main/screenshots/01-visit-the-den.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-gambling-den/blob/main/screenshots/02-slots.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-gambling-den/blob/main/screenshots/03-blackjack.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-gambling-den/blob/main/screenshots/04-relic-jackpot.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-the-everything-shop/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-the-everything-shop/blob/main/screenshots/01-the-treasury.webp?raw=true",
-          "aiCaption": "A screenshot of the 'The Treasury' market interface showing various ship components and resources.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-the-everything-shop/blob/main/screenshots/02-ballistic-arsenal.webp?raw=true",
-          "aiCaption": "A screenshot of the 'Ballistic Arsenal' market interface displaying a selection of large ballistic weapons.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-extra-system-reloaded-oddisz/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-newgameplus-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/01-legacy-station-map.png?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/02-store-command.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/03-store-shipyard.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/04-store-ng-perks.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/05-store-fighter-perks.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/06-store-armory.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/07-legacy-station-intel.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-rulebook-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-rulebook-renewed/blob/main/screenshots/01-rule-book-screen.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-rulebook-renewed/blob/main/screenshots/02-challenges-in-achievements-renewed.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-achievements-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-achievements-renewed/blob/main/screenshots/01-list-vaults-of-knowledge.webp?raw=true",
-          "aiCaption": "A screenshot of the in-game achievements menu showing a list of completed and incomplete objectives.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-achievements-renewed/blob/main/screenshots/02-list-secret-achievements.webp?raw=true",
-          "aiCaption": "The achievements interface displaying 'Quality Perks' with several entries marked as 'Secret Achievement'.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-achievements-renewed/blob/main/screenshots/03-list-domain-phase-lab-career-points.webp?raw=true",
-          "aiCaption": "A view of the achievements menu listing specific tasks for the 'Domain Phase Lab' category.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-achievements-renewed/blob/main/screenshots/04-list-liminal.webp?raw=true",
-          "aiCaption": "The achievements screen showing a long list of mod categories on the left sidebar and two entries on the right.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-achievements-renewed/blob/main/screenshots/05-list-rule-book-challenges.webp?raw=true",
-          "aiCaption": "A screenshot of the 'Rule Book - Renewed' section within the achievements menu, listing various challenges.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-achievements-renewed/blob/main/screenshots/06-ability-button.png?raw=true",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-missions-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-missions-renewed/blob/main/screenshots/01-famous-ship-lead.webp?raw=true",
-          "aiCaption": "A mission dialog showing details for a Tier 3 famous ship lead involving the ISS No Night In Space.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-missions-renewed/blob/main/screenshots/02-mission-board.png?raw=true",
-          "aiCaption": "A menu listing various mission options such as salvage leads and crew transport.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-missions-renewed/blob/main/screenshots/03-crew-transport-offer.webp?raw=true",
-          "aiCaption": "A contract details screen for a Tier 7 crew transport mission featuring Maya Nye.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-peerless-skills-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=4",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-peerless-skills-renewed/blob/main/screenshots/01-peerless-character-skill.webp?raw=true",
-          "aiCaption": "A screenshot of the officer skills menu showing a tooltip for 'Energy Weapon Mastery' with a 'Peerless' bonus description.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-peerless-skills-renewed/blob/main/screenshots/02-peerless-officers.png?raw=true",
-          "aiCaption": "A menu titled 'Peerless officers' displaying an officer portrait and skill upgrade options.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-hullmods-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-hullmods-renewed/blob/main/Hullmods-renewed-1.0.0.png?raw=true",
-          "aiCaption": "The Hullmods Renewed interface showing a list of available mods and filters.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-intel-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-intel-renewed/blob/main/screenshots/01-intel-screen-search.webp?raw=true",
-          "aiCaption": "The game's intel screen showing a star map and various mission categories like 'Important' and 'Story'.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-intel-renewed/blob/main/screenshots/02-customize-window.webp?raw=true",
-          "aiCaption": "A customization menu for the intel screen listing many categories and entry types with visibility options.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-stopbloatingme/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-stopbloatingme/blob/main/bloat1.png?raw=true",
-          "aiCaption": "The mod's settings menu showing a list of ships with the 'Atlas Mk. II' selected and marked as blocked.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-stopbloatingme/blob/main/bloat2.png?raw=true",
-          "aiCaption": "The mod's settings menu displaying a list of weapons with the 'Arcstorm Canister Pod' selected.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-stopbloatingme/blob/main/bloat3.png?raw=true",
-          "aiCaption": "The mod's settings menu showing a list of fighters with the 'Fioh Wing' selected and marked as allowed.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-stopstackingme/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-object-analysis-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=1",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-skipclicks/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-skipclicks/blob/main/screenshots/01-fast-survey-option.webp?raw=true",
-          "aiCaption": "A game menu screen titled 'You decide to...' with options for surveying the planet Glacier.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-skipclicks/blob/main/screenshots/02-fast-survey-result.webp?raw=true",
-          "aiCaption": "A text-heavy screen displaying survey results and conditions for the planet Glacier.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-starterpack/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-starterpack/blob/main/starter1.png?raw=true",
-          "aiCaption": "The mod's template configuration menu showing options for applying templates automatically.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-starterpack/blob/main/starter2.png?raw=true",
-          "aiCaption": "A ship loadout editor screen displaying weapon slots and hullmods for a Hammerhead class ship.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-starterpack/blob/main/starter3.png?raw=true",
-          "aiCaption": "The cargo configuration tab listing commodities, loose weapons, fighter wings, and special items to add.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-starterpack/blob/main/starter4.png?raw=true",
-          "aiCaption": "The character settings tab allowing the user to set starting credits, skill points, and story points.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-starterpack/blob/main/starter5.png?raw=true",
-          "aiCaption": "The hotbar configuration screen showing slots for abilities like Abyssal Burn and Transponder.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-discord-rich-presence/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-discord-rich-presence/blob/main/banner.png?raw=true",
-          "aiCaption": "A Discord status card showing 'Playing Starsector' with game details like 'Cmdr drp test2 Lvl 1 | ISS 7000 Lightyea...' and 'Corvus Star System · 5 ships · 50,000 ¢'.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-mod-checker/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
           "small": true,
           "source": "forum"
         }
@@ -75431,6 +74281,31 @@
         }
       ]
     },
+    "starsector-ship-weapon-editor": {
+      "summary": "This is an update of Trylobot's ship editor, forked from Trylobot's original works.",
+      "categories": [
+        "Utilities"
+      ],
+      "addedOn": "2016-12-13",
+      "editedOn": "2022-05-06",
+      "types": [
+        "tool"
+      ],
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "STARSECTOR Ship&Weapon Editor",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=375.0",
+          "id": "starsector-ship-weapon-editor-v",
+          "authors": [
+            "Trylobot"
+          ],
+          "gameVersion": "0.8.1a",
+          "modVersion": "2.7.4",
+          "threadLastPostOn": "2022-02-04"
+        }
+      ]
+    },
     "starsector-ship-weapon-editor-v": {
       "categories": [
         "Utilities"
@@ -75475,31 +74350,6 @@
           "aiKind": "screenshot",
           "aiFit": "good",
           "source": "forum"
-        }
-      ]
-    },
-    "starsector-ship-weapon-editor": {
-      "summary": "This is an update of Trylobot's ship editor, forked from Trylobot's original works.",
-      "categories": [
-        "Utilities"
-      ],
-      "addedOn": "2016-12-13",
-      "editedOn": "2022-05-06",
-      "types": [
-        "tool"
-      ],
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "STARSECTOR Ship&Weapon Editor",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=375.0",
-          "id": "starsector-ship-weapon-editor-v",
-          "authors": [
-            "Trylobot"
-          ],
-          "gameVersion": "0.8.1a",
-          "modVersion": "2.7.4",
-          "threadLastPostOn": "2022-02-04"
         }
       ]
     },
@@ -77215,13 +76065,6 @@
           "id": "adjustable-skill-threshold",
           "quote": "Notably, this mod is not compatible with most other mods that perform changes to vanilla skills or the system. Those are currently: Quality Captains , A New Level of Confidence , Truly Automated Ships & Adjustable Skill Thresholds .",
           "type": "technical"
-        },
-        {
-          "name": "Hall of Triumph",
-          "id": "hall-of-triumph-2-0-new-questline-structure-system-ships-and-more",
-          "quote": "Second-in-Command may make Humanity less useful because of the way it changes or removes Neural Link behavior.",
-          "type": "gameplay",
-          "fromOtherMod": true
         }
       ],
       "types": [
@@ -80825,7 +79668,7 @@
           },
           {
             "name": "Unknown Skies",
-            "id": "unknown-skies-2"
+            "id": "unknown-skies"
           },
           {
             "name": "Hyperdrive",
@@ -87135,39 +85978,6 @@
         }
       ]
     },
-    "threat-detected": {
-      "summary": "||THREAT DETECTED|| ||THREAT DETECTED||",
-      "categories": [
-        "Miscellaneous"
-      ],
-      "rawCategories": [
-        "Other/Misc."
-      ],
-      "otherAuthorNames": {
-        "gord": [
-          "gord_f"
-        ]
-      },
-      "addedOn": "2025-03-30",
-      "editedOn": "2025-03-31",
-      "types": [
-        "mod"
-      ],
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "THREAT DETECTED",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=32565.0",
-          "id": "threat-detected-2",
-          "authors": [
-            "banano of doom"
-          ],
-          "gameVersion": "0.98a",
-          "modVersion": "20260110",
-          "threadLastPostOn": "2026-01-10"
-        }
-      ]
-    },
     "threat-detected-2": {
       "summary": "silly little sidbar plugin that helps locating threat fleets only enabled enabled after finding the onslaught mk1, or obtaining threat detection mem flag through other means only active when panel is added to sidebar, remove panel to turn it off when active will check current system for any threat fleets in it will beep at you if there are any in system will beep faster the closer you are to any of them only tracks one closest fleet at a time",
       "addedOn": "2025-04-16",
@@ -87202,6 +86012,39 @@
           "aiKind": "banner",
           "aiFit": "good",
           "source": "forum"
+        }
+      ]
+    },
+    "threat-detected": {
+      "summary": "||THREAT DETECTED|| ||THREAT DETECTED||",
+      "categories": [
+        "Miscellaneous"
+      ],
+      "rawCategories": [
+        "Other/Misc."
+      ],
+      "otherAuthorNames": {
+        "gord": [
+          "gord_f"
+        ]
+      },
+      "addedOn": "2025-03-30",
+      "editedOn": "2025-03-31",
+      "types": [
+        "mod"
+      ],
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "THREAT DETECTED",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=32565.0",
+          "id": "threat-detected-2",
+          "authors": [
+            "banano of doom"
+          ],
+          "gameVersion": "0.98a",
+          "modVersion": "20260110",
+          "threadLastPostOn": "2026-01-10"
         }
       ]
     },
@@ -89150,7 +87993,7 @@
         "optional": [
           {
             "name": "Exotica Technologies",
-            "id": "exotica-technologies"
+            "id": "exotica-technologies-2"
           }
         ]
       },
@@ -93477,7 +92320,7 @@
           },
           {
             "name": "Unknown Skies",
-            "id": "unknown-skies-2"
+            "id": "unknown-skies"
           },
           {
             "name": "Upgraded Rotary Weapons",
@@ -97612,6 +96455,110 @@
         }
       ]
     },
+    "unknown-skies": {
+      "summary": "An update to Tartiflette's amazing mod, significantly expanding the variety of systems and planets encountered while exploring.",
+      "categories": [
+        "Campaign and exploration",
+        "Sound and graphics"
+      ],
+      "rawCategories": [
+        "Audio/Visual",
+        "Exploration"
+      ],
+      "addedOn": "2024-05-04",
+      "editedOn": "2025-08-04",
+      "requirements": {
+        "required": [
+          {
+            "name": "LunaLib",
+            "id": "lunalib"
+          },
+          {
+            "name": "LazyLib",
+            "id": "lazylib",
+            "via": "LunaLib"
+          }
+        ],
+        "optional": [
+          {
+            "name": "Nexerelin",
+            "id": "nexerelin"
+          }
+        ]
+      },
+      "types": [
+        "mod"
+      ],
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Unknown Skies",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=12041.0",
+          "id": "unknown-skies-2",
+          "authors": [
+            "Tartiflette"
+          ],
+          "gameVersion": "0.95.1a",
+          "modVersion": "1.00rc2",
+          "threadLastPostOn": "2025-12-10"
+        },
+        {
+          "title": "Unknown Skies",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=29288.0",
+          "id": "unknown-skies-3",
+          "authors": [
+            "presidentmattdamon"
+          ],
+          "gameVersion": "0.97a",
+          "modVersion": "1.0.3",
+          "threadLastPostOn": "2024-03-08"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "https://cdn.discordapp.com/attachments/1358489947614740762/1358489947874525314/FZ8D8Gm.jpg?ex=6afbe29b&is=6afa911b&hm=60acd10847fe8a341191b0994dc999b9e407f6c24002b629642bd4a732b6abc5&",
+          "aiCaption": "A wide title banner with the text 'UNKNOWN SKIES' in large white letters over a space-themed background.",
+          "aiKind": "banner",
+          "aiFit": "good",
+          "source": "discord"
+        },
+        {
+          "url": "http://i.imgur.com/FZ8D8Gm.jpg",
+          "aiCaption": "A title banner with the text 'UNKNOWN SKIES' in large white letters against a space background.",
+          "aiKind": "banner",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/ijcYsuF.png",
+          "aiCaption": "A button graphic labeled 'Download' with the subtitle 'Pioneer the new Frontiers'.",
+          "aiKind": "button",
+          "aiFit": "poor",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/NrqyfZN.jpg",
+          "aiCaption": "A screenshot of a space scene featuring a large planet, an asteroid belt, and a black hole or dark object on the left.",
+          "aiKind": "screenshot",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/hD7VqEl.jpg",
+          "aiCaption": "A screenshot showing a red star and a planet with a text box titled 'Zeta Bentzon Disk I, Dust World' describing the planet's conditions.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/g4jKULI.jpg",
+          "aiCaption": "A screenshot of the planetary survey interface for 'Epsilon Kardashev I, Methane World', showing hazard ratings and resource requirements.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        }
+      ]
+    },
     "unknown-skies-2": {
       "summary": "This mod significantly expands the variety of systems and planets you'll encounter while exploring.",
       "addedOn": "2017-04-26",
@@ -97748,110 +96695,6 @@
           "aiCaption": "A wide title banner with the text 'UNKNOWN SKIES' in large white letters over a space background.",
           "aiKind": "banner",
           "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/NrqyfZN.jpg",
-          "aiCaption": "A screenshot of a space scene featuring a large planet, an asteroid belt, and a black hole or dark object on the left.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/hD7VqEl.jpg",
-          "aiCaption": "A screenshot showing a red star and a planet with a text box titled 'Zeta Bentzon Disk I, Dust World' describing the planet's conditions.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/g4jKULI.jpg",
-          "aiCaption": "A screenshot of the planetary survey interface for 'Epsilon Kardashev I, Methane World', showing hazard ratings and resource requirements.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        }
-      ]
-    },
-    "unknown-skies": {
-      "summary": "An update to Tartiflette's amazing mod, significantly expanding the variety of systems and planets encountered while exploring.",
-      "categories": [
-        "Campaign and exploration",
-        "Sound and graphics"
-      ],
-      "rawCategories": [
-        "Audio/Visual",
-        "Exploration"
-      ],
-      "addedOn": "2024-05-04",
-      "editedOn": "2025-08-04",
-      "requirements": {
-        "required": [
-          {
-            "name": "LunaLib",
-            "id": "lunalib"
-          },
-          {
-            "name": "LazyLib",
-            "id": "lazylib",
-            "via": "LunaLib"
-          }
-        ],
-        "optional": [
-          {
-            "name": "Nexerelin",
-            "id": "nexerelin"
-          }
-        ]
-      },
-      "types": [
-        "mod"
-      ],
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Unknown Skies",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=12041.0",
-          "id": "unknown-skies-2",
-          "authors": [
-            "Tartiflette"
-          ],
-          "gameVersion": "0.95.1a",
-          "modVersion": "1.00rc2",
-          "threadLastPostOn": "2025-12-10"
-        },
-        {
-          "title": "Unknown Skies",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=29288.0",
-          "id": "unknown-skies-3",
-          "authors": [
-            "presidentmattdamon"
-          ],
-          "gameVersion": "0.97a",
-          "modVersion": "1.0.3",
-          "threadLastPostOn": "2024-03-08"
-        }
-      ],
-      "gallery": [
-        {
-          "url": "https://cdn.discordapp.com/attachments/1358489947614740762/1358489947874525314/FZ8D8Gm.jpg?ex=6afbe29b&is=6afa911b&hm=60acd10847fe8a341191b0994dc999b9e407f6c24002b629642bd4a732b6abc5&",
-          "aiCaption": "A wide title banner with the text 'UNKNOWN SKIES' in large white letters over a space-themed background.",
-          "aiKind": "banner",
-          "aiFit": "good",
-          "source": "discord"
-        },
-        {
-          "url": "http://i.imgur.com/FZ8D8Gm.jpg",
-          "aiCaption": "A title banner with the text 'UNKNOWN SKIES' in large white letters against a space background.",
-          "aiKind": "banner",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/ijcYsuF.png",
-          "aiCaption": "A button graphic labeled 'Download' with the subtitle 'Pioneer the new Frontiers'.",
-          "aiKind": "button",
-          "aiFit": "poor",
           "source": "forum"
         },
         {
@@ -101770,47 +100613,6 @@
           "source": "forum"
         },
         {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-astral-ascension-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "aiCaption": "A stylized gold icon of a ringed planet with a small moon.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/docs/screenshot-hyper-ecumenopolis.png?raw=true",
-          "aiCaption": "A game screen showing 'Aquamarine, Ecumenopolis World' with descriptive text.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/docs/arcology-world.png?raw=true",
-          "aiCaption": "Art of a planet covered in city grids and lights.",
-          "aiKind": "art",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/docs/ecumenopolis.png?raw=true",
-          "aiCaption": "Art of a planet covered in city grids and lights.",
-          "aiKind": "art",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/docs/hyper-ecumenopolis.png?raw=true",
-          "aiCaption": "Art of a planet with rings covered in city grids and lights.",
-          "aiKind": "art",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-astral-ascension-renewed/blob/main/screenshots/01-omega-admin-acumenious-oracle.webp?raw=true",
-          "aiUnreadable": true,
-          "source": "forum"
-        },
-        {
           "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-omega-core-everywhere/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
           "aiCaption": "A gold industrial-style logo featuring factory silhouettes and an Omega symbol.",
           "aiKind": "logo",
@@ -101856,6 +100658,9 @@
         },
         {
           "url": "https://github.com/andrzejsokolowski/starsector-cloning/blob/main/screenshots/01-marine-sim-cloning.webp?raw=true",
+          "aiCaption": "A screenshot of the 'Marine Sim-Cloning' industry menu showing effects and descriptions.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
           "source": "forum"
         },
         {
@@ -101986,25 +100791,6 @@
           "source": "forum"
         },
         {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-sol-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-sol-renewed/blob/main/sol-renewed-planets.png?raw=true",
-          "aiCaption": "A screenshot of the Sol star system information screen displaying planetary data and a map.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-sol-renewed/blob/main/sol-renewed-system.png?raw=true",
-          "aiCaption": "A mostly empty picture showing a sparse orbital diagram on a black background.",
-          "aiKind": "screenshot",
-          "aiFit": "poor",
-          "source": "forum"
-        },
-        {
           "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-gambling-den/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
           "small": true,
           "source": "forum"
@@ -102047,52 +100833,6 @@
         {
           "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-extra-system-reloaded-oddisz/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
           "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-newgameplus-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/01-legacy-station-map.png?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/02-store-command.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/03-store-shipyard.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/04-store-ng-perks.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/05-store-fighter-perks.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/06-store-armory.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed/blob/main/screenshots/07-legacy-station-intel.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-rulebook-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-rulebook-renewed/blob/main/screenshots/01-rule-book-screen.webp?raw=true",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-rulebook-renewed/blob/main/screenshots/02-challenges-in-achievements-renewed.webp?raw=true",
           "source": "forum"
         },
         {
@@ -102167,25 +100907,6 @@
           "source": "forum"
         },
         {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-peerless-skills-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=4",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-peerless-skills-renewed/blob/main/screenshots/01-peerless-character-skill.webp?raw=true",
-          "aiCaption": "A screenshot of the officer skills menu showing a tooltip for 'Energy Weapon Mastery' with a 'Peerless' bonus description.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://github.com/andrzejsokolowski/starsector-peerless-skills-renewed/blob/main/screenshots/02-peerless-officers.png?raw=true",
-          "aiCaption": "A menu titled 'Peerless officers' displaying an officer portrait and skill upgrade options.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
           "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-hullmods-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
           "small": true,
           "source": "forum"
@@ -102248,8 +100969,7 @@
           "source": "forum"
         },
         {
-          "url": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-object-analysis-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=1",
-          "small": true,
+          "url": "https://github.com/andrzejsokolowski/starsector-stopstackingme/blob/main/screenshots/01-one-sprite-per-stack.png?raw=true",
           "source": "forum"
         },
         {
@@ -102904,7 +101624,7 @@
         "Other/Misc."
       ],
       "addedOn": "2025-06-11",
-      "editedOn": "2026-11-14",
+      "editedOn": "2026-10-27",
       "lastReleaseDate": "2026-11-15T00:00:00.000Z",
       "releases": [
         {
@@ -102914,11 +101634,7 @@
           "oldVersion": "1.4.2c",
           "newVersion": "1.5.0",
           "gameVersion": "0.98.5a",
-          "changelogNotes": "Not Save compatible with 1.4.x\n\nIMPORTANT: Please reset the settings when starting a new game, as some values have changed to their default settings\n\nModified:\n Migrated Wide Horizons to Java 17\n Split Wide Horizons into Core and an optional Content module\n Core includes sector generation and scaling and can be used on its own\n Content requires Core and adds missions, Dark Star systems, and Eidolon content\n Removed the countdown from the third Strange Hyperspace mission, which has no time limit\n\nFixed:\n Sector generation no longer stalls if derelict probes or survey ships cannot be placed\n Fixed hyperspace terrain clearing around fixed star systems when scaling the sector\n The research team now waits for the decoder before starting its analysis and delivers the results only once\n The follow-up contact now verifies that the correct market is still available\n The final briefing can be retried if the decoder could not be awarded\n Salvage bonuses now update when scaling settings change\n Disabling fuel scaling clears leftover fuel modifiers from Wide Horizons\n Loading a campaign now restores missing scripts that keep campaign bonuses up to date\n Eidolon Server Hub bonuses now pause during construction or disruption\n Duplicate AI cores no longer stack their bonuses\n The salvage reset command now clears Wide Horizons bonuses from both the fleet and the player while preserving bonuses from other mods",
-          "updateNote": {
-            "quote": "Not Save compatible with 1.4.x",
-            "answer": "no"
-          }
+          "changelogNotes": "Not Save compatible with 1.4.x\n\nIMPORTANT: Please reset the settings when starting a new game, as some values have changed to their default settings\n\nModified:\n Migrated Wide Horizons to Java 17\n Split Wide Horizons into Core and an optional Content module\n Core includes sector generation and scaling and can be used on its own\n Content requires Core and adds missions, Dark Star systems, and Eidolon content\n Removed the countdown from the third Strange Hyperspace mission, which has no time limit\n\nFixed:\n Sector generation no longer stalls if derelict probes or survey ships cannot be placed\n Fixed hyperspace terrain clearing around fixed star systems when scaling the sector\n The research team now waits for the decoder before starting its analysis and delivers the results only once\n The follow-up contact now verifies that the correct market is still available\n The final briefing can be retried if the decoder could not be awarded\n Salvage bonuses now update when scaling settings change\n Disabling fuel scaling clears leftover fuel modifiers from Wide Horizons\n Loading a campaign now restores missing scripts that keep campaign bonuses up to date\n Eidolon Server Hub bonuses now pause during construction or disruption\n Duplicate AI cores no longer stack their bonuses\n The salvage reset command now clears Wide Horizons bonuses from both the fleet and the player while preserving bonuses from other mods"
         },
         {
           "modId": "wide-horizons",
@@ -102977,9 +101693,27 @@
             "id": "graphicslib"
           },
           {
+            "name": "Particle Engine",
+            "id": "particle-engine"
+          },
+          {
             "name": "LazyLib",
             "id": "lazylib",
             "via": "LunaLib"
+          }
+        ],
+        "optional": [
+          {
+            "name": "Nexerelin",
+            "id": "nexerelin"
+          },
+          {
+            "name": "United Aurora Federation",
+            "id": "united-aurora-federation"
+          },
+          {
+            "name": "Customizable Star Systems",
+            "id": "customizable-star-systems"
           }
         ]
       },
@@ -103002,12 +101736,12 @@
       ],
       "saveCompat": {
         "latestUpdateNote": {
-          "quote": "Not Save compatible with 1.4.x",
-          "answer": "no"
+          "quote": "Save compatible with 1.5.x",
+          "answer": "yes"
         }
       },
       "aiUse": {
-        "quote": "The graphics have been enhanced with AI but were not generated entirely by AI. Some of these graphics are still partially placeholders.",
+        "quote": "Graphics: The graphics have been enhanced with AI but were not generated entirely by AI. Some of these graphics are still partially placeholders.",
         "usesAi": true,
         "uses": [
           {
@@ -103574,21 +102308,52 @@
         }
       ]
     },
-    "xhan-empire-2": {
-      "addedOn": "2020-02-13",
-      "editedOn": "2025-04-21",
+    "xhan-empire": {
+      "summary": "Two factions, one a fully fledged militaristic and zealous faction focused on heavy armor and formation warfare. Ships and weapons that range from utilitarian to exotic with their own internally consistent design philosophy and tech levels.",
+      "addedOn": "2025-04-19",
+      "editedOn": "2025-04-27",
+      "requirements": {
+        "required": [
+          {
+            "name": "LazyLib",
+            "id": "lazylib"
+          },
+          {
+            "name": "MagicLib",
+            "id": "magiclib"
+          }
+        ],
+        "optional": [
+          {
+            "name": "GraphicsLib",
+            "id": "graphicslib"
+          },
+          {
+            "name": "Nexerelin",
+            "id": "nexerelin"
+          }
+        ]
+      },
+      "types": [
+        "mod"
+      ],
+      "saveCompat": {
+        "latestUpdateNote": {
+          "quote": "(Please note that this version is not save-compatible with pre-v3 releases)",
+          "answer": "no"
+        }
+      },
+      "aiUse": {},
       "sameNameMods": [
         {
           "title": "Xhan Empire",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=32663.0",
-          "id": "xhan-empire",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=17972.0",
+          "id": "xhan-empire-2",
           "authors": [
-            "Peplat",
-            "Xaiier"
+            "Peplat"
           ],
-          "gameVersion": "0.98a",
-          "modVersion": "3.0.1",
-          "threadLastPostOn": "2026-08-25"
+          "gameVersion": "0.97a",
+          "threadLastPostOn": "2025-05-20"
         }
       ],
       "gallery": [
@@ -103768,52 +102533,21 @@
         }
       ]
     },
-    "xhan-empire": {
-      "summary": "Two factions, one a fully fledged militaristic and zealous faction focused on heavy armor and formation warfare. Ships and weapons that range from utilitarian to exotic with their own internally consistent design philosophy and tech levels.",
-      "addedOn": "2025-04-19",
-      "editedOn": "2025-04-27",
-      "requirements": {
-        "required": [
-          {
-            "name": "LazyLib",
-            "id": "lazylib"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib"
-          }
-        ],
-        "optional": [
-          {
-            "name": "GraphicsLib",
-            "id": "graphicslib"
-          },
-          {
-            "name": "Nexerelin",
-            "id": "nexerelin"
-          }
-        ]
-      },
-      "types": [
-        "mod"
-      ],
-      "saveCompat": {
-        "latestUpdateNote": {
-          "quote": "(Please note that this version is not save-compatible with pre-v3 releases)",
-          "answer": "no"
-        }
-      },
-      "aiUse": {},
+    "xhan-empire-2": {
+      "addedOn": "2020-02-13",
+      "editedOn": "2025-04-21",
       "sameNameMods": [
         {
           "title": "Xhan Empire",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=17972.0",
-          "id": "xhan-empire-2",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=32663.0",
+          "id": "xhan-empire",
           "authors": [
-            "Peplat"
+            "Peplat",
+            "Xaiier"
           ],
-          "gameVersion": "0.97a",
-          "threadLastPostOn": "2025-05-20"
+          "gameVersion": "0.98a",
+          "modVersion": "3.0.1",
+          "threadLastPostOn": "2026-08-25"
         }
       ],
       "gallery": [
