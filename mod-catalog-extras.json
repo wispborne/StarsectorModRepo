@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-17T19:09:28.875805Z",
+  "generatedAt": "2026-11-18T07:07:24.135090Z",
   "mods": {
     "outdated-the-thule-legacy": {
       "summary": "MY BROTHERS. WE WERE FORGED IN VICTORY. A VICTORY THAT ENDED THE GREAT WAR AND BROUGHT",
@@ -7447,7 +7447,7 @@
           },
           {
             "name": "Unknown Skies",
-            "id": "unknown-skies"
+            "id": "unknown-skies-3"
           },
           {
             "name": "Ruthless Sector",
@@ -9089,13 +9089,6 @@
           "id": "terraforming-and-station-construction",
           "quote": "the code that handles planet transformation cannot handle TASC Stations, likely due to their different nature to standard Starsector planets.",
           "type": "technical"
-        },
-        {
-          "name": "LTV_Economy | An economy overhaul with population mechanics",
-          "id": "ltv-economy-an-economy-overhaul-with-population-mechanics",
-          "quote": "Astral Ascension (technically works but numbers get ridiculous)",
-          "type": "gameplay",
-          "fromOtherMod": true
         }
       ],
       "types": [
@@ -9369,7 +9362,6 @@
     "auto-colonies": {
       "summary": "Automatic Faction and Colony management for Starsector 0.98a+0.98.5a.",
       "addedOn": "2026-11-05",
-      "editedOn": "2026-11-16",
       "lastReleaseDate": "2026-11-10T00:00:00.000Z",
       "releases": [
         {
@@ -9440,7 +9432,7 @@
           },
           {
             "name": "Unknown Skies",
-            "id": "unknown-skies"
+            "id": "unknown-skies-3"
           },
           {
             "name": "What we left behind",
@@ -9564,6 +9556,10 @@
         "removing": {
           "quote": "Safe to remove after Prepare for removal",
           "answer": "depends"
+        },
+        "latestUpdateNote": {
+          "quote": "Updating: Delete the old folder in mods/ and extract the new one, or just use TriOS. Saves and settings carry over.",
+          "answer": "yes"
         }
       },
       "aiUse": {
@@ -9653,7 +9649,7 @@
           },
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-4"
+            "id": "diable-avionics-3"
           },
           {
             "name": "The Knights of Ludd",
@@ -9995,36 +9991,6 @@
       ],
       "aiUse": {}
     },
-    "autonomous-ships": {
-      "summary": "This mod adds new hullmods that allow the player to set predefined battle commands for AI-piloted ships in their fleet. e.g. The Auto retreat command hullmod will force the ship to retreat when below a certain hull integrity level.",
-      "addedOn": "2018-01-06",
-      "editedOn": "2018-01-17",
-      "requirements": {
-        "optional": [
-          {
-            "name": "Version Checker",
-            "id": "version-checker"
-          }
-        ]
-      },
-      "types": [
-        "mod"
-      ],
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Autonomous Ships",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=10856.0",
-          "id": "autonomous-ships-2",
-          "authors": [
-            "hqz"
-          ],
-          "gameVersion": "0.7.2a",
-          "modVersion": "0.4.1",
-          "threadLastPostOn": "2018-01-06"
-        }
-      ]
-    },
     "autonomous-ships-2": {
       "summary": "This mod adds new hullmods that allow the player to set predefined battle commands for AI-piloted ships in their fleet. e.g. The Auto retreat command hullmod will force the ship to retreat when below a certain hull integrity level.",
       "addedOn": "2016-03-15",
@@ -10053,6 +10019,36 @@
           "gameVersion": "0.8.1a",
           "modVersion": "0.6.1",
           "threadLastPostOn": "2018-11-24"
+        }
+      ]
+    },
+    "autonomous-ships": {
+      "summary": "This mod adds new hullmods that allow the player to set predefined battle commands for AI-piloted ships in their fleet. e.g. The Auto retreat command hullmod will force the ship to retreat when below a certain hull integrity level.",
+      "addedOn": "2018-01-06",
+      "editedOn": "2018-01-17",
+      "requirements": {
+        "optional": [
+          {
+            "name": "Version Checker",
+            "id": "version-checker"
+          }
+        ]
+      },
+      "types": [
+        "mod"
+      ],
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Autonomous Ships",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=10856.0",
+          "id": "autonomous-ships-2",
+          "authors": [
+            "hqz"
+          ],
+          "gameVersion": "0.7.2a",
+          "modVersion": "0.4.1",
+          "threadLastPostOn": "2018-01-06"
         }
       ]
     },
@@ -15440,12 +15436,10 @@
       "displayName": "BoxUtil",
       "summary": "Based around Instantiated rendering and GPU calculation, it allows for more efficient rendering option of higher quality, while still being usable on most player's setups.",
       "categories": [
-        "Utilities",
-        "Libraries"
+        "Factions"
       ],
       "rawCategories": [
-        "Libraries",
-        "Utility mods"
+        "Faction Mods"
       ],
       "otherAuthorNames": {
         "Mycophobia": [
@@ -15480,20 +15474,6 @@
       },
       "aiUse": {},
       "gallery": [
-        {
-          "url": "https://cdn.discordapp.com/attachments/1356164516458528888/1356164516752396408/164853shhu89h0bu8un08k.png?ex=6afb55e1&is=6afa0461&hm=5077bf5905583eb31fc909d6ea30f34f18da04550a8a1f533e8186bcf7056dd3&",
-          "aiCaption": "A green neon logo featuring a stylized box shape and the letters 'BX'.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "source": "discord"
-        },
-        {
-          "url": "https://cdn.discordapp.com/attachments/1356164516458528888/1356910586750832731/wXK85Hp.png?ex=6afb69b6&is=6afa1836&hm=b07e438ba74cb3df797d087c8ddcaf5331e9c5043d00ddcedad56e8046069038&",
-          "aiCaption": "A technical diagram showing class inheritance and interfaces such as InstanceDataAPI, RenderDataAPI, and CombatRenderingManager.",
-          "aiKind": "other",
-          "aiFit": "okay",
-          "source": "discord"
-        },
         {
           "url": "https://i.imgur.com/IG2PGdD.png",
           "aiCaption": "A green neon logo featuring a stylized box shape and the letters 'BX'.",
@@ -18897,6 +18877,34 @@
       ],
       "aiUse": {}
     },
+    "combat-alarm-sounds-2": {
+      "summary": "Description: CAS adds a variety of warning sounds triggered by things that are happening to your ship in combat (ex.: high flux, low hull, engines disabled etc.).",
+      "categories": [
+        "Utilities"
+      ],
+      "rawCategories": [
+        "Standalone Utilities"
+      ],
+      "addedOn": "2016-08-05",
+      "editedOn": "2021-08-23",
+      "types": [
+        "mod"
+      ],
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Combat Alarm Sounds",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=31870.0",
+          "id": "combat-alarm-sounds",
+          "authors": [
+            "AyyLuska"
+          ],
+          "gameVersion": "0.98a",
+          "modVersion": "1.4",
+          "threadLastPostOn": "2026-11-16"
+        }
+      ]
+    },
     "combat-alarm-sounds": {
       "summary": "Description: Combat Alarm Sounds (CAS for short) adds personalized audio queues to in-combat situations, like high flux, hull health, highly damaging impacts, and flameouts. Pressing \"O\" shuts off continuous alarms until you receive damage again.",
       "categories": [
@@ -18924,34 +18932,6 @@
           "gameVersion": "0.95a",
           "modVersion": "1.4",
           "threadLastPostOn": "2025-03-06"
-        }
-      ]
-    },
-    "combat-alarm-sounds-2": {
-      "summary": "Description: CAS adds a variety of warning sounds triggered by things that are happening to your ship in combat (ex.: high flux, low hull, engines disabled etc.).",
-      "categories": [
-        "Utilities"
-      ],
-      "rawCategories": [
-        "Standalone Utilities"
-      ],
-      "addedOn": "2016-08-05",
-      "editedOn": "2021-08-23",
-      "types": [
-        "mod"
-      ],
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Combat Alarm Sounds",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=31870.0",
-          "id": "combat-alarm-sounds",
-          "authors": [
-            "AyyLuska"
-          ],
-          "gameVersion": "0.98a",
-          "modVersion": "1.4",
-          "threadLastPostOn": "2026-11-16"
         }
       ]
     },
@@ -22296,17 +22276,7 @@
         "required": [
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-4"
-          },
-          {
-            "name": "LazyLib",
-            "id": "lazylib",
-            "via": "Diable Avionics"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib",
-            "via": "Diable Avionics"
+            "id": "diable-avionics-3"
           }
         ]
       },
@@ -22639,7 +22609,7 @@
           },
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-4"
+            "id": "diable-avionics-3"
           }
         ]
       },
@@ -23471,7 +23441,7 @@
         "Misc. Campaign Mods"
       ],
       "addedOn": "2024-06-15",
-      "editedOn": "2024-06-17",
+      "editedOn": "2024-06-16",
       "types": [
         "mod"
       ],
@@ -23488,43 +23458,29 @@
       "aiUse": {},
       "gallery": [
         {
-          "url": "https://cdn.discordapp.com/attachments/1251742399512838205/1251742399701454940/ai_cores_delta.png?ex=6af5dd34&is=6af48bb4&hm=926661840838c81b74bbfd547e525c75f3cc3cbece589cbdd01c52baabb9bb99&",
-          "aiCaption": "A cluster of colorful, glowing spheres connected by wires, representing a Delta Core.",
+          "url": "https://cdn.discordapp.com/attachments/1251741935903838229/1251742010440941589/1.png?ex=6af5dcd7&is=6af48b57&hm=7cebe8d7097446afbf51e0f3c2f8b4ece5e3d892957ea7e4e058735bd2fdb174&",
+          "aiCaption": "A game interface showing the 'Delta Core' AI core details, including its personality and description.",
+          "aiKind": "screenshot",
+          "aiFit": "good",
+          "source": "discord"
+        },
+        {
+          "url": "https://cdn.discordapp.com/attachments/1251741935903838229/1251742010680021022/2.png?ex=6af5dcd7&is=6af48b57&hm=d7e4738f35be29112cc0be4e7c6aa66de0029af4ec927d327198e977bd041c2b&",
+          "aiCaption": "A row of four different AI core sprites with quantity numbers above them.",
           "aiKind": "art",
           "aiFit": "good",
           "source": "discord"
         },
         {
-          "url": "https://cdn.discordapp.com/attachments/1251742399512838205/1251742505225945158/portrait_ai0.png?ex=6af5dd4d&is=6af48bcd&hm=7d3ce5343c47df9b9d34fa9ccaee39fef46a759ae83c89cf001783de64dbad16&",
-          "aiCaption": "A glitchy, abstract digital graphic featuring red and white shapes against a noisy background.",
-          "aiKind": "logo",
-          "aiFit": "okay",
-          "source": "discord"
-        },
-        {
-          "url": "https://cdn.discordapp.com/attachments/1251742399512838205/1251742505678934079/1.png?ex=6af5dd4d&is=6af48bcd&hm=4e6219b771ca53a1f8dc245ec4ed24c7c4077caca53ddec0885c802ec2a56c72&",
-          "aiCaption": "The in-game tooltip for the 'Delta Core', showing its stats such as 'Personality: steady' and 'Automated Points Multiplier: 0x'.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "discord"
-        },
-        {
-          "url": "https://cdn.discordapp.com/attachments/1251742399512838205/1251742506010542150/2.png?ex=6af5dd4d&is=6af48bcd&hm=651d6981049ac502eefa7b13a588ed84dacf9d69b801fc4f8fc136c3fdf9457c&",
-          "aiCaption": "A row of four different AI core items from the game inventory, including the Delta Core on the far left.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "discord"
-        },
-        {
-          "url": "https://cdn.discordapp.com/attachments/1251742399512838205/1251742506291298354/3.png?ex=6af5dd4d&is=6af48bcd&hm=5dcb94ffbebba91632f4d8d5a4c18aeab6167bf99b0e2b3497c209b2db50aab7&",
-          "aiCaption": "A text-heavy screen displaying details for 'Automated Ships' and '[REDACTED]', listing effects like '+100% combat readiness'.",
+          "url": "https://cdn.discordapp.com/attachments/1251741935903838229/1251742010943996025/3.png?ex=6af5dcd7&is=6af48b57&hm=5871ca75cc6e4894952309bb142ca3966b06b3e62149bfc8b59d4ad0b31ee23a&",
+          "aiCaption": "A text-heavy game screen displaying details for the 'Automated Ships' skill, marked as '[REDACTED]'.",
           "aiKind": "screenshot",
           "aiFit": "okay",
           "source": "discord"
         },
         {
-          "url": "https://cdn.discordapp.com/attachments/1251742399512838205/1251742506626846852/4.png?ex=6af5dd4d&is=6af48bcd&hm=3dd82c73fe2255a80ce7069cd21040482fae944c691b2bfd95ff209cc982cbf7&",
-          "aiCaption": "A description panel for the 'Delta Core', explaining its lore and stating a base value of '2,500¢ per unit'.",
+          "url": "https://cdn.discordapp.com/attachments/1251741935903838229/1251742011220824104/4.png?ex=6af5dcd7&is=6af48b57&hm=a4fa0fd60666f6fc65f5610f18126c26b67b1bc5a3d1a7648ae2cfea24f3699b&",
+          "aiCaption": "A game interface showing the description and base value for the 'Delta Core' item.",
           "aiKind": "screenshot",
           "aiFit": "okay",
           "source": "discord"
@@ -24193,7 +24149,7 @@
         "required": [
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-4"
+            "id": "diable-avionics-3"
           },
           {
             "name": "Arma Armatura",
@@ -24230,326 +24186,6 @@
         {
           "url": "https://trilink.wispborne.com/badges/install-badge-red.svg",
           "small": true,
-          "source": "forum"
-        }
-      ]
-    },
-    "diable-avionics-4": {
-      "summary": "The Diable Avionics Corporation plays similarly to Mid-tech: they use their superior mobility to choose their engagements and overwhelm isolated targets.",
-      "addedOn": "2024-02-26",
-      "editedOn": "2024-03-08",
-      "requirements": {
-        "required": [
-          {
-            "name": "LazyLib",
-            "id": "lazylib"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib"
-          }
-        ]
-      },
-      "types": [
-        "mod"
-      ],
-      "saveCompat": {
-        "adding": {
-          "quote": "Earliest save-compatible version: 2.70",
-          "answer": "depends"
-        }
-      },
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Diable Avionics",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=29432.0",
-          "id": "diable-avionics",
-          "authors": [
-            "Caymon Joestar",
-            "Tartiflette"
-          ],
-          "gameVersion": "0.98a",
-          "modVersion": "2.9.5.3 Joestar Edition",
-          "threadLastPostOn": "2026-10-07"
-        },
-        {
-          "title": "Diable Avionics",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=10046.0",
-          "id": "diable-avionics-2",
-          "authors": [
-            "FlashFrozen",
-            "ruddygreat",
-            "Tartiflette"
-          ],
-          "gameVersion": "0.95.1a",
-          "modVersion": "2.70rc3",
-          "threadLastPostOn": "2024-08-23"
-        },
-        {
-          "title": "Diable Avionics",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=8147.0",
-          "id": "diable-avionics-3",
-          "authors": [
-            "FlashFrozen"
-          ],
-          "gameVersion": "0.65.1a",
-          "modVersion": "1.05",
-          "threadLastPostOn": "2015-12-19"
-        }
-      ],
-      "gallery": [
-        {
-          "url": "https://i.imgur.com/81PQJJdh.png",
-          "aiCaption": "A banner featuring the 'Diable Avionics' logo and signature.",
-          "aiKind": "banner",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/xuaQHch.gif",
-          "aiCaption": "A screenshot of a large red spaceship against a starry background.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/XVMGrtC.gif",
-          "aiCaption": "A screenshot showing multiple red ships in formation against a dark space background.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/GG7XXH7.gif",
-          "aiCaption": "A screenshot of a large red ship with blue engine lights against a starry background.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://imgur.com/hmLIsZ3.gif",
-          "aiCaption": "A screenshot of a red ship firing weapons in a dark space environment.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://imgur.com/KUKuZId.gif",
-          "aiCaption": "A screenshot showing a small red ship against a vast, dark starry background.",
-          "aiKind": "screenshot",
-          "aiFit": "poor",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/YtNXmWb.jpg",
-          "aiCaption": "A gameplay screenshot showing a ship firing weapons with detailed status overlays.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/Vhg1jae.jpg",
-          "aiCaption": "A vertical gameplay screenshot of ships engaging in combat.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/qlvjzf6.png",
-          "aiCaption": "A gameplay screenshot showing a large ship firing at an enemy station.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/xLtStPZ.png",
-          "aiCaption": "A banner for 'Addonskinmods' featuring a hexagonal pattern background.",
-          "aiKind": "banner",
-          "aiFit": "poor",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/hX9ZSQHh.jpg",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/GtFknuW.gif",
-          "source": "forum"
-        }
-      ]
-    },
-    "diable-avionics-2": {
-      "summary": "The Diable Avionics Corporation plays similarly to Mid-tech: they use their superior mobility to choose their engagements and overwhelm isolated targets.",
-      "categories": [
-        "Factions"
-      ],
-      "rawCategories": [
-        "Faction Mods"
-      ],
-      "addedOn": "2015-11-30",
-      "editedOn": "2024-03-08",
-      "requirements": {
-        "required": [
-          {
-            "name": "LazyLib",
-            "id": "lazylib"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib"
-          }
-        ]
-      },
-      "types": [
-        "mod"
-      ],
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Diable Avionics",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=29432.0",
-          "id": "diable-avionics",
-          "authors": [
-            "Caymon Joestar",
-            "Tartiflette"
-          ],
-          "gameVersion": "0.98a",
-          "modVersion": "2.9.5.3 Joestar Edition",
-          "threadLastPostOn": "2026-10-07"
-        },
-        {
-          "title": "Diable Avionics",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=29302.0",
-          "id": "diable-avionics-4",
-          "authors": [
-            "presidentmattdamon"
-          ],
-          "gameVersion": "0.97a",
-          "modVersion": "2.8.4",
-          "threadLastPostOn": "2024-03-08"
-        },
-        {
-          "title": "Diable Avionics",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=8147.0",
-          "id": "diable-avionics-3",
-          "authors": [
-            "FlashFrozen"
-          ],
-          "gameVersion": "0.65.1a",
-          "modVersion": "1.05",
-          "threadLastPostOn": "2015-12-19"
-        }
-      ],
-      "gallery": [
-        {
-          "url": "https://cdn.discordapp.com/attachments/1215721642450489524/1215721644182609950/dacrest.png?ex=6af5ff82&is=6af4ae02&hm=3a9927f950d0831d7c8b47f5c10c3bd81b459c93fe09490b6637f96ba5f39095&",
-          "aiCaption": "A logo featuring the letters 'DA' in a stylized font with speed lines, set against a background of red and blue stripes with white stars.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "source": "discord"
-        },
-        {
-          "url": "https://cdn.discordapp.com/attachments/1215721642450489524/1215742483615711252/image.png?ex=6af612eb&is=6af4c16b&hm=028a364591b48e9773b490b9647543ff8d2eba4dc64a35821f33ffc0bc9f6235&",
-          "source": "discord"
-        },
-        {
-          "url": "https://i.imgur.com/81PQJJdh.png",
-          "aiCaption": "A banner featuring the 'Diable Avionics' logo and signature.",
-          "aiKind": "banner",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://imgur.com/puXqg0M.png",
-          "aiCaption": "A banner featuring a large 'DA' logo and the text 'Enlist TODAY!'.",
-          "aiKind": "banner",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/xuaQHch.gif",
-          "aiCaption": "A screenshot of a large red spaceship against a starry background.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/XVMGrtC.gif",
-          "aiCaption": "A screenshot showing multiple red ships in formation against a dark space background.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/GG7XXH7.gif",
-          "aiCaption": "A screenshot of a large red ship with blue engine lights against a starry background.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://imgur.com/hmLIsZ3.gif",
-          "aiCaption": "A screenshot of a red ship firing weapons in a dark space environment.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://imgur.com/KUKuZId.gif",
-          "aiCaption": "A screenshot showing a small red ship against a vast, dark starry background.",
-          "aiKind": "screenshot",
-          "aiFit": "poor",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/YtNXmWb.jpg",
-          "aiCaption": "A gameplay screenshot showing a ship firing weapons with detailed status overlays.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/Vhg1jae.jpg",
-          "aiCaption": "A vertical gameplay screenshot of ships engaging in combat.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/qlvjzf6.png",
-          "aiCaption": "A gameplay screenshot showing a large ship firing at an enemy station.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/xLtStPZ.png",
-          "aiCaption": "A banner for 'Addonskinmods' featuring a hexagonal pattern background.",
-          "aiKind": "banner",
-          "aiFit": "poor",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/hX9ZSQHh.jpg",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/GtFknuW.gif",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/bAIZOoi.png",
-          "aiCaption": "A blue button labeled 'Paypal'.",
-          "aiKind": "button",
-          "aiFit": "poor",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/odD0uZQ.png",
-          "aiCaption": "An orange button labeled 'Patreon'.",
-          "aiKind": "button",
-          "aiFit": "poor",
           "source": "forum"
         }
       ]
@@ -24902,6 +24538,326 @@
         }
       ]
     },
+    "diable-avionics-2": {
+      "summary": "The Diable Avionics Corporation plays similarly to Mid-tech: they use their superior mobility to choose their engagements and overwhelm isolated targets.",
+      "categories": [
+        "Factions"
+      ],
+      "rawCategories": [
+        "Faction Mods"
+      ],
+      "addedOn": "2015-11-30",
+      "editedOn": "2024-03-08",
+      "requirements": {
+        "required": [
+          {
+            "name": "LazyLib",
+            "id": "lazylib"
+          },
+          {
+            "name": "MagicLib",
+            "id": "magiclib"
+          }
+        ]
+      },
+      "types": [
+        "mod"
+      ],
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Diable Avionics",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=29432.0",
+          "id": "diable-avionics",
+          "authors": [
+            "Caymon Joestar",
+            "Tartiflette"
+          ],
+          "gameVersion": "0.98a",
+          "modVersion": "2.9.5.3 Joestar Edition",
+          "threadLastPostOn": "2026-10-07"
+        },
+        {
+          "title": "Diable Avionics",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=29302.0",
+          "id": "diable-avionics-4",
+          "authors": [
+            "presidentmattdamon"
+          ],
+          "gameVersion": "0.97a",
+          "modVersion": "2.8.4",
+          "threadLastPostOn": "2024-03-08"
+        },
+        {
+          "title": "Diable Avionics",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=8147.0",
+          "id": "diable-avionics-3",
+          "authors": [
+            "FlashFrozen"
+          ],
+          "gameVersion": "0.65.1a",
+          "modVersion": "1.05",
+          "threadLastPostOn": "2015-12-19"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "https://cdn.discordapp.com/attachments/1215721642450489524/1215721644182609950/dacrest.png?ex=6af5ff82&is=6af4ae02&hm=3a9927f950d0831d7c8b47f5c10c3bd81b459c93fe09490b6637f96ba5f39095&",
+          "aiCaption": "A logo featuring the letters 'DA' in a stylized font with speed lines, set against a background of red and blue stripes with white stars.",
+          "aiKind": "logo",
+          "aiFit": "good",
+          "source": "discord"
+        },
+        {
+          "url": "https://cdn.discordapp.com/attachments/1215721642450489524/1215742483615711252/image.png?ex=6af612eb&is=6af4c16b&hm=028a364591b48e9773b490b9647543ff8d2eba4dc64a35821f33ffc0bc9f6235&",
+          "source": "discord"
+        },
+        {
+          "url": "https://i.imgur.com/81PQJJdh.png",
+          "aiCaption": "A banner featuring the 'Diable Avionics' logo and signature.",
+          "aiKind": "banner",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "https://imgur.com/puXqg0M.png",
+          "aiCaption": "A banner featuring a large 'DA' logo and the text 'Enlist TODAY!'.",
+          "aiKind": "banner",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/xuaQHch.gif",
+          "aiCaption": "A screenshot of a large red spaceship against a starry background.",
+          "aiKind": "screenshot",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/XVMGrtC.gif",
+          "aiCaption": "A screenshot showing multiple red ships in formation against a dark space background.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/GG7XXH7.gif",
+          "aiCaption": "A screenshot of a large red ship with blue engine lights against a starry background.",
+          "aiKind": "screenshot",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "https://imgur.com/hmLIsZ3.gif",
+          "aiCaption": "A screenshot of a red ship firing weapons in a dark space environment.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://imgur.com/KUKuZId.gif",
+          "aiCaption": "A screenshot showing a small red ship against a vast, dark starry background.",
+          "aiKind": "screenshot",
+          "aiFit": "poor",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/YtNXmWb.jpg",
+          "aiCaption": "A gameplay screenshot showing a ship firing weapons with detailed status overlays.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/Vhg1jae.jpg",
+          "aiCaption": "A vertical gameplay screenshot of ships engaging in combat.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/qlvjzf6.png",
+          "aiCaption": "A gameplay screenshot showing a large ship firing at an enemy station.",
+          "aiKind": "screenshot",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/xLtStPZ.png",
+          "aiCaption": "A banner for 'Addonskinmods' featuring a hexagonal pattern background.",
+          "aiKind": "banner",
+          "aiFit": "poor",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/hX9ZSQHh.jpg",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/GtFknuW.gif",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/bAIZOoi.png",
+          "aiCaption": "A blue button labeled 'Paypal'.",
+          "aiKind": "button",
+          "aiFit": "poor",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/odD0uZQ.png",
+          "aiCaption": "An orange button labeled 'Patreon'.",
+          "aiKind": "button",
+          "aiFit": "poor",
+          "source": "forum"
+        }
+      ]
+    },
+    "diable-avionics-4": {
+      "summary": "The Diable Avionics Corporation plays similarly to Mid-tech: they use their superior mobility to choose their engagements and overwhelm isolated targets.",
+      "addedOn": "2024-02-26",
+      "editedOn": "2024-03-08",
+      "requirements": {
+        "required": [
+          {
+            "name": "LazyLib",
+            "id": "lazylib"
+          },
+          {
+            "name": "MagicLib",
+            "id": "magiclib"
+          }
+        ]
+      },
+      "types": [
+        "mod"
+      ],
+      "saveCompat": {
+        "adding": {
+          "quote": "Earliest save-compatible version: 2.70",
+          "answer": "depends"
+        }
+      },
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Diable Avionics",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=29432.0",
+          "id": "diable-avionics",
+          "authors": [
+            "Caymon Joestar",
+            "Tartiflette"
+          ],
+          "gameVersion": "0.98a",
+          "modVersion": "2.9.5.3 Joestar Edition",
+          "threadLastPostOn": "2026-10-07"
+        },
+        {
+          "title": "Diable Avionics",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=10046.0",
+          "id": "diable-avionics-2",
+          "authors": [
+            "FlashFrozen",
+            "ruddygreat",
+            "Tartiflette"
+          ],
+          "gameVersion": "0.95.1a",
+          "modVersion": "2.70rc3",
+          "threadLastPostOn": "2024-08-23"
+        },
+        {
+          "title": "Diable Avionics",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=8147.0",
+          "id": "diable-avionics-3",
+          "authors": [
+            "FlashFrozen"
+          ],
+          "gameVersion": "0.65.1a",
+          "modVersion": "1.05",
+          "threadLastPostOn": "2015-12-19"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "https://i.imgur.com/81PQJJdh.png",
+          "aiCaption": "A banner featuring the 'Diable Avionics' logo and signature.",
+          "aiKind": "banner",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/xuaQHch.gif",
+          "aiCaption": "A screenshot of a large red spaceship against a starry background.",
+          "aiKind": "screenshot",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/XVMGrtC.gif",
+          "aiCaption": "A screenshot showing multiple red ships in formation against a dark space background.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/GG7XXH7.gif",
+          "aiCaption": "A screenshot of a large red ship with blue engine lights against a starry background.",
+          "aiKind": "screenshot",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "https://imgur.com/hmLIsZ3.gif",
+          "aiCaption": "A screenshot of a red ship firing weapons in a dark space environment.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://imgur.com/KUKuZId.gif",
+          "aiCaption": "A screenshot showing a small red ship against a vast, dark starry background.",
+          "aiKind": "screenshot",
+          "aiFit": "poor",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/YtNXmWb.jpg",
+          "aiCaption": "A gameplay screenshot showing a ship firing weapons with detailed status overlays.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/Vhg1jae.jpg",
+          "aiCaption": "A vertical gameplay screenshot of ships engaging in combat.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/qlvjzf6.png",
+          "aiCaption": "A gameplay screenshot showing a large ship firing at an enemy station.",
+          "aiKind": "screenshot",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/xLtStPZ.png",
+          "aiCaption": "A banner for 'Addonskinmods' featuring a hexagonal pattern background.",
+          "aiKind": "banner",
+          "aiFit": "poor",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/hX9ZSQHh.jpg",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/GtFknuW.gif",
+          "source": "forum"
+        }
+      ]
+    },
     "diable-avionics-original-flavor": {
       "summary": "A different, more hardcore take on Diable Avionics, with tighter combat balance, roster-wide viability, additional polish, and a few tentative story additions.",
       "categories": [
@@ -25100,17 +25056,7 @@
         "required": [
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-4"
-          },
-          {
-            "name": "LazyLib",
-            "id": "lazylib",
-            "via": "Diable Avionics"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib",
-            "via": "Diable Avionics"
+            "id": "diable-avionics-3"
           }
         ]
       },
@@ -26096,7 +26042,6 @@
     "divisions-command-and-control-combat-ai-overhaul": {
       "summary": "This mod is an out-of-the-box upgrade for the combat AI for both the player and NPC factions. It makes the game easier and harder in many places, and tries to make battles more interesting and spectacular.",
       "addedOn": "2026-11-02",
-      "editedOn": "2026-11-16",
       "lastReleaseDate": "2026-11-13T00:00:00.000Z",
       "releases": [
         {
@@ -26167,11 +26112,15 @@
         }
       },
       "aiUse": {
-        "quote": "Almost all of this mod has been vibecoded under my orchestration using several frontier models.",
+        "quote": "Almost all of this mod has been vibecoded under my orchestration using several frontier models.\nUser Interface: Gemini 4 Argon, Gemini 4 Carbon",
         "usesAi": true,
         "uses": [
           {
-            "area": "other",
+            "area": "icons",
+            "how": "generated"
+          },
+          {
+            "area": "code",
             "how": "generated",
             "extent": "most"
           }
@@ -26204,6 +26153,13 @@
         {
           "url": "https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github",
           "small": true,
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/YdJSKQU.png",
+          "aiCaption": "A promotional banner showing ships in combat with the text 'v1.2 LIGHT FORCES AND STRIKE WARFARE'.",
+          "aiKind": "banner",
+          "aiFit": "good",
           "source": "forum"
         },
         {
@@ -27970,8 +27926,17 @@
       ],
       "addedOn": "2023-06-14",
       "editedOn": "2026-11-11",
-      "lastReleaseDate": "2026-11-15T00:00:00.000Z",
+      "lastReleaseDate": "2026-11-18T00:00:00.000Z",
       "releases": [
+        {
+          "modId": "emergent-threats",
+          "modName": "Emergent Threats",
+          "seenOn": "2026-11-18",
+          "oldVersion": "1.4.5",
+          "newVersion": "1.5.0",
+          "gameVersion": "0.98a",
+          "changelogNotes": "-Candor (TT) added to high tech blueprint\n\n Hullmods\n-Work Orders should no longer drop as loot"
+        },
         {
           "modId": "emergent-threats",
           "modName": "Emergent Threats",
@@ -29302,6 +29267,17 @@
     "eventlogger": {
       "summary": "A small utility mod that adds a searchable event log to the Intel screen that captures the ongoing in-game event corner pop-ups.",
       "addedOn": "2026-11-15",
+      "lastReleaseDate": "2026-11-18T00:00:00.000Z",
+      "releases": [
+        {
+          "modId": "eventlogger",
+          "modName": "EventLogger",
+          "seenOn": "2026-11-18",
+          "oldVersion": "1.5.2",
+          "newVersion": "1.6.1",
+          "gameVersion": "0.98.5a"
+        }
+      ],
       "requirements": {
         "required": [
           {
@@ -30042,6 +30018,56 @@
         }
       ]
     },
+    "exotica-technologies": {
+      "summary": "Inspired by Extra Systems Reloaded, Exotica Technologies offers an RPG element to Starsector that makes your ships AND enemies harder, better, faster, stronger through upgrades and exotics! These upgrades do not take OP or hullmod slots!",
+      "categories": [
+        "Campaign and exploration",
+        "Content expansions",
+        "Miscellaneous"
+      ],
+      "rawCategories": [
+        "Content Expansions",
+        "Misc. Campaign Mods",
+        "Other/Misc."
+      ],
+      "addedOn": "2025-04-05",
+      "editedOn": "2025-04-25",
+      "types": [
+        "mod"
+      ],
+      "saveCompat": {
+        "adding": {
+          "quote": "Save Compatible",
+          "answer": "yes"
+        }
+      },
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Exotica Technologies",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=29538.msg432789#new",
+          "id": "exotica-technologies-2",
+          "authors": [
+            "Kaysaar",
+            "presidentmattdamon"
+          ],
+          "gameVersion": "0.97a",
+          "modVersion": "1.8.6",
+          "threadLastPostOn": "2025-03-27"
+        },
+        {
+          "title": "Exotica Technologies",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=24660.0",
+          "id": "exotica-technologies-4",
+          "authors": [
+            "presidentmattdamon"
+          ],
+          "gameVersion": "0.96a",
+          "modVersion": "1.8.5",
+          "threadLastPostOn": "2024-03-08"
+        }
+      ]
+    },
     "exotica-technologies-2": {
       "summary": "Inspired by Extra Systems Reloaded, Exotica Technologies offers an RPG element to Starsector that makes your ships AND enemies harder, better, faster, stronger through upgrades and exotics! These upgrades do not take OP or hullmod slots!",
       "categories": [
@@ -30170,56 +30196,6 @@
           "aiKind": "badge",
           "aiFit": "poor",
           "source": "forum"
-        }
-      ]
-    },
-    "exotica-technologies": {
-      "summary": "Inspired by Extra Systems Reloaded, Exotica Technologies offers an RPG element to Starsector that makes your ships AND enemies harder, better, faster, stronger through upgrades and exotics! These upgrades do not take OP or hullmod slots!",
-      "categories": [
-        "Campaign and exploration",
-        "Content expansions",
-        "Miscellaneous"
-      ],
-      "rawCategories": [
-        "Content Expansions",
-        "Misc. Campaign Mods",
-        "Other/Misc."
-      ],
-      "addedOn": "2025-04-05",
-      "editedOn": "2025-04-25",
-      "types": [
-        "mod"
-      ],
-      "saveCompat": {
-        "adding": {
-          "quote": "Save Compatible",
-          "answer": "yes"
-        }
-      },
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Exotica Technologies",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=29538.msg432789#new",
-          "id": "exotica-technologies-2",
-          "authors": [
-            "Kaysaar",
-            "presidentmattdamon"
-          ],
-          "gameVersion": "0.97a",
-          "modVersion": "1.8.6",
-          "threadLastPostOn": "2025-03-27"
-        },
-        {
-          "title": "Exotica Technologies",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=24660.0",
-          "id": "exotica-technologies-4",
-          "authors": [
-            "presidentmattdamon"
-          ],
-          "gameVersion": "0.96a",
-          "modVersion": "1.8.5",
-          "threadLastPostOn": "2024-03-08"
         }
       ]
     },
@@ -31984,8 +31960,16 @@
         ]
       },
       "addedOn": "2025-08-19",
-      "lastReleaseDate": "2026-11-12T00:00:00.000Z",
+      "lastReleaseDate": "2026-11-18T00:00:00.000Z",
       "releases": [
+        {
+          "modId": "fast-rendering",
+          "modName": "Fast Rendering",
+          "seenOn": "2026-11-18",
+          "oldVersion": "1.0.0",
+          "newVersion": "1.0.1",
+          "gameVersion": "0.98a-RC8"
+        },
         {
           "modId": "fast-rendering",
           "modName": "Fast Rendering",
@@ -34192,7 +34176,7 @@
         "Weapon/Fighter Pack"
       ],
       "addedOn": "2026-11-10",
-      "editedOn": "2026-11-14",
+      "editedOn": "2026-11-10",
       "requirements": {
         "required": [
           {
@@ -34229,7 +34213,7 @@
         "usesAi": true,
         "uses": [
           {
-            "area": "writing",
+            "area": "translation",
             "how": "assisted"
           }
         ]
@@ -36764,17 +36748,7 @@
           },
           {
             "name": "Unknown Skies",
-            "id": "unknown-skies"
-          },
-          {
-            "name": "LunaLib",
-            "id": "lunalib",
-            "via": "Unknown Skies"
-          },
-          {
-            "name": "LazyLib",
-            "id": "lazylib",
-            "via": "LunaLib"
+            "id": "unknown-skies-3"
           }
         ]
       },
@@ -38760,7 +38734,7 @@
         ]
       },
       "addedOn": "2026-07-19",
-      "editedOn": "2026-11-01",
+      "editedOn": "2026-11-16",
       "requirements": {
         "optional": [
           {
@@ -39967,37 +39941,6 @@
         }
       ]
     },
-    "hegemony-expeditionary-auxiliary-fleet": {
-      "summary": "Reskinned Venture, Mule, and Sheppherd class ships with hegemony upgrades upgraded variants and campaign integration",
-      "addedOn": "2017-04-24",
-      "editedOn": "2017-05-16",
-      "types": [
-        "mod"
-      ],
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Hegemony Expeditionary Auxiliary Fleet",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=19440.0",
-          "id": "hegemony-expeditionary-auxiliary-fleet-2",
-          "authors": [
-            "Retry"
-          ],
-          "gameVersion": "0.95a",
-          "modVersion": "0.95",
-          "threadLastPostOn": "2024-04-25"
-        }
-      ],
-      "gallery": [
-        {
-          "url": "https://i.imgur.com/JDbniQO.png",
-          "aiCaption": "A fleet of Hegemony ships in space.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        }
-      ]
-    },
     "hegemony-expeditionary-auxiliary-fleet-2": {
       "summary": "Hegemony Expeditionary Auxiliary variants of both civillian ships and armed freighters. \"Expeditionary\" upgrades go a bit further than the typical Auxiliary upgrade package. Expeditionary Auxiliary ships include: Shepherd, Cerberus, Mule, and Venture.",
       "categories": [
@@ -40031,6 +39974,37 @@
           "gameVersion": "0.8a",
           "modVersion": "1.1",
           "threadLastPostOn": "2022-07-19"
+        }
+      ]
+    },
+    "hegemony-expeditionary-auxiliary-fleet": {
+      "summary": "Reskinned Venture, Mule, and Sheppherd class ships with hegemony upgrades upgraded variants and campaign integration",
+      "addedOn": "2017-04-24",
+      "editedOn": "2017-05-16",
+      "types": [
+        "mod"
+      ],
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Hegemony Expeditionary Auxiliary Fleet",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=19440.0",
+          "id": "hegemony-expeditionary-auxiliary-fleet-2",
+          "authors": [
+            "Retry"
+          ],
+          "gameVersion": "0.95a",
+          "modVersion": "0.95",
+          "threadLastPostOn": "2024-04-25"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "https://i.imgur.com/JDbniQO.png",
+          "aiCaption": "A fleet of Hegemony ships in space.",
+          "aiKind": "screenshot",
+          "aiFit": "good",
+          "source": "forum"
         }
       ]
     },
@@ -44902,6 +44876,10 @@
       ],
       "saveCompat": {
         "adding": {
+          "quote": "THIS DOES NOT REPLACE VANILLA JAVA, ITS STANDALONE AND DOES NOT BREAK SAVE, MODS, OR ANY KIND",
+          "answer": "yes"
+        },
+        "latestUpdateNote": {
           "quote": "No, changing java does not affect your ongoing saves at all",
           "answer": "yes"
         }
@@ -46992,6 +46970,75 @@
         }
       ]
     },
+    "kazeron-navarchy": {
+      "summary": "\"Adds several skins to the Persean League, each with the Kazeron Navarchy hullmod built in. They appear occasionally in Persean League markets and fleets.",
+      "categories": [
+        "Content expansions",
+        "Sound and graphics"
+      ],
+      "rawCategories": [
+        "Audio/Visual",
+        "Content Expansions"
+      ],
+      "otherAuthorNames": {
+        "Bangle": [
+          "bangle_bangle"
+        ]
+      },
+      "addedOn": "2024-02-05",
+      "lastReleaseDate": "2026-11-18T00:00:00.000Z",
+      "releases": [
+        {
+          "modId": "kazeron-navarchy",
+          "modName": "Kazeron Navarchy",
+          "seenOn": "2026-11-18",
+          "oldVersion": "1.8.0",
+          "newVersion": "1.8.1",
+          "gameVersion": "0.98.5a",
+          "changelogNotes": "- Basic version change to 0.98.5a\n- Fixed PL fighters being duplicated as ship BP"
+        }
+      ],
+      "types": [
+        "mod"
+      ],
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Kazeron Navarchy",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=21554.0",
+          "id": "kazeron-navarchy-2",
+          "authors": [
+            "PeachPatrol"
+          ],
+          "gameVersion": "0.95a",
+          "modVersion": "1.2",
+          "threadLastPostOn": "2024-05-25"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "https://i.imgur.com/6XYzxio.png",
+          "aiCaption": "A stylized emblem featuring a blue triangle with yellow geometric patterns and five yellow squares on the right.",
+          "aiKind": "logo",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "https://imgur.com/67g2Fxe.png",
+          "aiCaption": "A game interface showing ship statistics and description text for 'Kazeron Navarchy'.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://i.imgur.com/MZbfz8U.png",
+          "aiCaption": "A collection of various spaceship sprites in blue, white, and yellow colors arranged on a black background.",
+          "aiKind": "art",
+          "aiFit": "good",
+          "source": "forum"
+        }
+      ]
+    },
     "kazeron-navarchy-2": {
       "summary": "Adds several skins to the Persean League, each with the Kazeron Navarchy hullmod built in. They appear occasionally in Persean League markets and fleets.",
       "categories": [
@@ -47099,63 +47146,6 @@
         },
         {
           "url": "https://i.imgur.com/vyZZFyy.png",
-          "source": "forum"
-        }
-      ]
-    },
-    "kazeron-navarchy": {
-      "summary": "\"Adds several skins to the Persean League, each with the Kazeron Navarchy hullmod built in. They appear occasionally in Persean League markets and fleets.",
-      "categories": [
-        "Content expansions",
-        "Sound and graphics"
-      ],
-      "rawCategories": [
-        "Audio/Visual",
-        "Content Expansions"
-      ],
-      "otherAuthorNames": {
-        "Bangle": [
-          "bangle_bangle"
-        ]
-      },
-      "addedOn": "2024-02-05",
-      "types": [
-        "mod"
-      ],
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Kazeron Navarchy",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=21554.0",
-          "id": "kazeron-navarchy-2",
-          "authors": [
-            "PeachPatrol"
-          ],
-          "gameVersion": "0.95a",
-          "modVersion": "1.2",
-          "threadLastPostOn": "2024-05-25"
-        }
-      ],
-      "gallery": [
-        {
-          "url": "https://i.imgur.com/6XYzxio.png",
-          "aiCaption": "A stylized emblem featuring a blue triangle with yellow geometric patterns and five yellow squares on the right.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://imgur.com/67g2Fxe.png",
-          "aiCaption": "A game interface showing ship statistics and description text for 'Kazeron Navarchy'.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://i.imgur.com/MZbfz8U.png",
-          "aiCaption": "A collection of various spaceship sprites in blue, white, and yellow colors arranged on a black background.",
-          "aiKind": "art",
-          "aiFit": "good",
           "source": "forum"
         }
       ]
@@ -48373,7 +48363,7 @@
           },
           {
             "name": "Exotica Technologies",
-            "id": "exotica-technologies-2"
+            "id": "exotica-technologies"
           }
         ]
       },
@@ -48508,7 +48498,7 @@
     "ltv-economy-an-economy-overhaul-with-population-mechanics": {
       "summary": "A deep overhaul of Starsector's economy and additional colony systems. LTV-Economy replaces abstract production values with a unit-based simulation where production and trade correspond to actual cargo units. The mod deepens economic simulation by introducing workers as a production factor.",
       "addedOn": "2025-12-15",
-      "editedOn": "2026-07-13",
+      "editedOn": "2026-11-12",
       "lastReleaseDate": "2026-07-21T00:00:00.000Z",
       "releases": [
         {
@@ -48548,16 +48538,16 @@
           "type": "gameplay"
         },
         {
-          "name": "Astral Ascension",
-          "id": "astral-ascension",
-          "quote": "Astral Ascension (technically works but numbers get ridiculous)",
-          "type": "gameplay"
-        },
-        {
           "name": "Ashes Of The Domain",
           "id": "ashes-of-the-domain",
           "quote": "Ashes of The Domain (has its own economic overhaul)",
           "type": "gameplay"
+        },
+        {
+          "name": "Astral Ascension",
+          "id": "astral-ascension",
+          "quote": "Astral Ascension (technically works but numbers get ridiculous)",
+          "type": "withNotes"
         }
       ],
       "types": [
@@ -48573,7 +48563,21 @@
           "answer": "no"
         }
       },
-      "aiUse": {},
+      "aiUse": {
+        "quote": "Mild AI usage for programming. This project was my entry into Java, so I relied on it more at the beginning. Now, to so much.\nI make heavy use of AI for debugging and scanning the code for logical errors.\nI read every line it writes twice, which is more than how many times I read my own code. Consequently, I have complete understanding of the codebase.\nThere still are some slop AI assets I'm trying to replace with human slop.",
+        "usesAi": true,
+        "uses": [
+          {
+            "area": "code",
+            "how": "assisted"
+          },
+          {
+            "area": "sprites",
+            "how": "generated",
+            "extent": "some"
+          }
+        ]
+      },
       "gallery": [
         {
           "url": "https://raw.githubusercontent.com/WolframSegler/LTV_Economy/main/graphics/forum/TitleImage.png",
@@ -50103,6 +50107,66 @@
         }
       ]
     },
+    "loadout-sharing": {
+      "summary": "Utility mod that lets you copy and paste ship variants as json data into your clipboard.",
+      "addedOn": "2026-06-28",
+      "editedOn": "2026-07-08",
+      "requirements": {
+        "required": [
+          {
+            "name": "WrapUI"
+          }
+        ]
+      },
+      "types": [
+        "mod"
+      ],
+      "saveCompat": {
+        "adding": {
+          "quote": "Can be added mid-save",
+          "answer": "yes"
+        },
+        "removing": {
+          "quote": "Can be removed mid-save",
+          "answer": "yes"
+        },
+        "latestUpdateNote": {
+          "quote": "Releases are always compatible with previous ones",
+          "answer": "yes"
+        }
+      },
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Loadout Sharing",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=36358.0",
+          "id": "loadout-sharing-2",
+          "authors": [
+            "WolframSegler"
+          ],
+          "gameVersion": "0.98.5a"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "https://raw.githubusercontent.com/WolframSegler/LoadoutSharing/main/loadout_sharing.png",
+          "aiCaption": "A teal logo featuring a stylized ship schematic with a white square icon in the top left corner.",
+          "aiKind": "logo",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "https://img.shields.io/github/downloads/WolframSegler/LoadoutSharing/total?label=Download%20Latest&style=for-the-badge",
+          "small": true,
+          "source": "forum"
+        },
+        {
+          "url": "https://img.shields.io/github/v/release/WolframSegler/LoadoutSharing?label=Other%20Versions&style=for-the-badge",
+          "small": true,
+          "source": "forum"
+        }
+      ]
+    },
     "loadout-sharing-2": {
       "summary": "Utility mod that lets you copy and paste ship variants as json data into your clipboard.",
       "addedOn": "2026-06-28",
@@ -50145,66 +50209,6 @@
           ],
           "gameVersion": "0.98a",
           "threadLastPostOn": "2026-06-28"
-        }
-      ],
-      "gallery": [
-        {
-          "url": "https://raw.githubusercontent.com/WolframSegler/LoadoutSharing/main/loadout_sharing.png",
-          "aiCaption": "A teal logo featuring a stylized ship schematic with a white square icon in the top left corner.",
-          "aiKind": "logo",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://img.shields.io/github/downloads/WolframSegler/LoadoutSharing/total?label=Download%20Latest&style=for-the-badge",
-          "small": true,
-          "source": "forum"
-        },
-        {
-          "url": "https://img.shields.io/github/v/release/WolframSegler/LoadoutSharing?label=Other%20Versions&style=for-the-badge",
-          "small": true,
-          "source": "forum"
-        }
-      ]
-    },
-    "loadout-sharing": {
-      "summary": "Utility mod that lets you copy and paste ship variants as json data into your clipboard.",
-      "addedOn": "2026-06-28",
-      "editedOn": "2026-07-08",
-      "requirements": {
-        "required": [
-          {
-            "name": "WrapUI"
-          }
-        ]
-      },
-      "types": [
-        "mod"
-      ],
-      "saveCompat": {
-        "adding": {
-          "quote": "Can be added mid-save",
-          "answer": "yes"
-        },
-        "removing": {
-          "quote": "Can be removed mid-save",
-          "answer": "yes"
-        },
-        "latestUpdateNote": {
-          "quote": "Releases are always compatible with previous ones",
-          "answer": "yes"
-        }
-      },
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Loadout Sharing",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=36358.0",
-          "id": "loadout-sharing-2",
-          "authors": [
-            "WolframSegler"
-          ],
-          "gameVersion": "0.98.5a"
         }
       ],
       "gallery": [
@@ -51329,17 +51333,7 @@
         "required": [
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-4"
-          },
-          {
-            "name": "LazyLib",
-            "id": "lazylib",
-            "via": "Diable Avionics"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib",
-            "via": "Diable Avionics"
+            "id": "diable-avionics-3"
           }
         ]
       },
@@ -52154,24 +52148,6 @@
         }
       ]
     },
-    "metelson-industries": {
-      "addedOn": "2014-06-30",
-      "editedOn": "2024-03-12",
-      "sameNameMods": [
-        {
-          "title": "Metelson Industries",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=29549.0",
-          "id": "metelson-industries-2",
-          "authors": [
-            "Knight Chase",
-            "Petra aka Az the Squishy"
-          ],
-          "gameVersion": "0.97a",
-          "modVersion": "2.0.3",
-          "threadLastPostOn": "2026-09-26"
-        }
-      ]
-    },
     "metelson-industries-2": {
       "summary": "Metelson Industries boasts a lengthy history, yet it was only in the last 300 cycles that it evolved to compete with Tri-Tachyon.",
       "categories": [
@@ -52226,6 +52202,24 @@
           "aiKind": "logo",
           "aiFit": "good",
           "source": "forum"
+        }
+      ]
+    },
+    "metelson-industries": {
+      "addedOn": "2014-06-30",
+      "editedOn": "2024-03-12",
+      "sameNameMods": [
+        {
+          "title": "Metelson Industries",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=29549.0",
+          "id": "metelson-industries-2",
+          "authors": [
+            "Knight Chase",
+            "Petra aka Az the Squishy"
+          ],
+          "gameVersion": "0.97a",
+          "modVersion": "2.0.3",
+          "threadLastPostOn": "2026-09-26"
         }
       ]
     },
@@ -55350,7 +55344,7 @@
         }
       ]
     },
-    "my-little-pony-23": {
+    "my-little-pony-25": {
       "summary": "So it's finally happening. Be it your worst fear or your dream of a pony mod is coming to Starfarer come true.",
       "addedOn": "2012-05-17",
       "editedOn": "2012-07-07",
@@ -57000,7 +56994,7 @@
         ]
       },
       "addedOn": "2025-03-29",
-      "editedOn": "2026-08-23",
+      "editedOn": "2026-11-12",
       "lastReleaseDate": "2026-08-25T00:00:00.000Z",
       "releases": [
         {
@@ -62598,6 +62592,7 @@
         ]
       },
       "addedOn": "2026-11-06",
+      "editedOn": "2026-11-16",
       "requirements": {
         "optional": [
           {
@@ -64716,7 +64711,7 @@
         "Faction Mods"
       ],
       "addedOn": "2026-10-31",
-      "editedOn": "2026-11-10",
+      "editedOn": "2026-11-16",
       "requirements": {
         "required": [
           {
@@ -64742,12 +64737,16 @@
       ],
       "saveCompat": {
         "adding": {
-          "quote": "Not compatible with existing saves! A new save will be required to experience this mod.",
+          "quote": "(Not compatible with existing saves! A new save will be required to experience this mod.)",
+          "answer": "no"
+        },
+        "latestUpdateNote": {
+          "quote": "(new save required)",
           "answer": "no"
         }
       },
       "aiUse": {
-        "quote": "No AI has been used in any area of this project!",
+        "quote": "(No AI has been used in any area of this project! If there is AI content anywhere, I didn't put it there, and please let me know so I can get rid of it.)",
         "usesAi": false
       },
       "gallery": [
@@ -67769,7 +67768,7 @@
           },
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-4"
+            "id": "diable-avionics-3"
           },
           {
             "name": "MagicLib",
@@ -69000,7 +68999,7 @@
         },
         {
           "name": "Diable Avionics",
-          "id": "diable-avionics-4",
+          "id": "diable-avionics-3",
           "quote": "Diable Avionics: All ship systems that switch player control to fighters, under certain conditions, will CTD.",
           "type": "withNotes"
         },
@@ -72693,7 +72692,7 @@
       "conflicts": [
         {
           "name": "Unknown Skies",
-          "id": "unknown-skies",
+          "id": "unknown-skies-3",
           "quote": "Unknown Skies - Rogue Planets runs after normal sector generation. Its new planet types are made by converting existing worlds, so they appear alongside Unknown Skies' types rather than competing with them, and its conditions can roll on Unknown Skies planets too. Mods that replace the whole sector layout haven't been tested.",
           "type": "withNotes"
         }
@@ -73204,7 +73203,6 @@
         "Utility mods"
       ],
       "addedOn": "2019-04-14",
-      "editedOn": "2026-11-14",
       "lastReleaseDate": "2026-11-15T00:00:00.000Z",
       "releases": [
         {
@@ -75790,7 +75788,7 @@
         ]
       },
       "addedOn": "2026-10-07",
-      "editedOn": "2026-11-14",
+      "editedOn": "2026-10-28",
       "lastReleaseDate": "2026-11-12T00:00:00.000Z",
       "releases": [
         {
@@ -75832,7 +75830,7 @@
       "saveCompat": {
         "adding": {
           "quote": "No, there are some mod incompatibility issues that have to be identified. Add to your midsave files at your own risk.",
-          "answer": "no"
+          "answer": "depends"
         },
         "latestUpdateNote": {
           "quote": "Not mid-save compatible - upadting from 0.5.X to 0.6.0 will likely brick your save.",
@@ -75848,12 +75846,12 @@
             "how": "assisted"
           },
           {
-            "area": "sprites",
+            "area": "illustrations",
             "how": "edited"
           }
         ],
         "tools": [
-          "5.6 and 6.1 Sol",
+          "Sol",
           "Codex"
         ]
       },
@@ -79856,7 +79854,7 @@
           },
           {
             "name": "Unknown Skies",
-            "id": "unknown-skies"
+            "id": "unknown-skies-3"
           },
           {
             "name": "Hyperdrive",
@@ -81180,87 +81178,6 @@
         }
       ]
     },
-    "star-lords-2": {
-      "summary": "Star Lords attempts to bring the world of Starsector to life with many character-centric features. No longer will your only allies be nameless faction fleets who you'll meet once and never again.",
-      "categories": [
-        "Total conversions"
-      ],
-      "rawCategories": [
-        "Megamods"
-      ],
-      "addedOn": "2024-08-25",
-      "editedOn": "2024-10-25",
-      "requirements": {
-        "optional": [
-          {
-            "name": "Nexerelin",
-            "id": "nexerelin"
-          }
-        ]
-      },
-      "conflicts": [
-        {
-          "name": "MMM",
-          "quote": "There is a known incompatibility with MMM, since they overwrite some base game missions in a way which lords cannot give those missions. Accepting these missions will cause CTD.",
-          "type": "technical"
-        }
-      ],
-      "types": [
-        "mod"
-      ],
-      "saveCompat": {
-        "adding": {
-          "quote": "This mod may be added to existing savegames, but may not be removed after being added.",
-          "answer": "yes"
-        },
-        "removing": {
-          "quote": "may not be removed after being added",
-          "answer": "no"
-        },
-        "latestUpdateNote": {
-          "quote": "All updates are save-compatible unless stated otherwise.",
-          "answer": "yes"
-        }
-      },
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Star Lords",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=34114.0",
-          "id": "star-lords",
-          "authors": [
-            "alaricdragon",
-            "Deluth"
-          ],
-          "gameVersion": "0.98a",
-          "modVersion": "0.3.78",
-          "threadLastPostOn": "2026-11-05"
-        }
-      ],
-      "gallery": [
-        {
-          "url": "https://raw.githubusercontent.com/Deluth-git/Starlords/master/example/starlords_readme1.PNG",
-          "aiCaption": "A character profile screen showing COO Valeria Melci with a list of lords and fleet composition.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "https://raw.githubusercontent.com/Deluth-git/Starlords/master/example/starlords_readme5.PNG",
-          "aiCaption": "Fleets moving through hyperspace lanes near a large red star.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "https://raw.githubusercontent.com/Deluth-git/Starlords/master/example/starlords_readme3.PNG",
-          "aiCaption": "A Hegemony Council voting chamber screen showing a vote on tariff levels with various lords voting Aye or Nay.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        }
-      ]
-    },
     "star-lords": {
       "summary": "Star Lords attempts to bring the world of Starsector to life with many character-centric features. No longer will your only allies be nameless faction fleets who you'll meet once and never again.",
       "categories": [
@@ -81331,6 +81248,87 @@
           "gameVersion": "0.97a",
           "modVersion": "0.3.2",
           "threadLastPostOn": "2025-11-20"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "https://raw.githubusercontent.com/Deluth-git/Starlords/master/example/starlords_readme1.PNG",
+          "aiCaption": "A character profile screen showing COO Valeria Melci with a list of lords and fleet composition.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Deluth-git/Starlords/master/example/starlords_readme5.PNG",
+          "aiCaption": "Fleets moving through hyperspace lanes near a large red star.",
+          "aiKind": "screenshot",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Deluth-git/Starlords/master/example/starlords_readme3.PNG",
+          "aiCaption": "A Hegemony Council voting chamber screen showing a vote on tariff levels with various lords voting Aye or Nay.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        }
+      ]
+    },
+    "star-lords-2": {
+      "summary": "Star Lords attempts to bring the world of Starsector to life with many character-centric features. No longer will your only allies be nameless faction fleets who you'll meet once and never again.",
+      "categories": [
+        "Total conversions"
+      ],
+      "rawCategories": [
+        "Megamods"
+      ],
+      "addedOn": "2024-08-25",
+      "editedOn": "2024-10-25",
+      "requirements": {
+        "optional": [
+          {
+            "name": "Nexerelin",
+            "id": "nexerelin"
+          }
+        ]
+      },
+      "conflicts": [
+        {
+          "name": "MMM",
+          "quote": "There is a known incompatibility with MMM, since they overwrite some base game missions in a way which lords cannot give those missions. Accepting these missions will cause CTD.",
+          "type": "technical"
+        }
+      ],
+      "types": [
+        "mod"
+      ],
+      "saveCompat": {
+        "adding": {
+          "quote": "This mod may be added to existing savegames, but may not be removed after being added.",
+          "answer": "yes"
+        },
+        "removing": {
+          "quote": "may not be removed after being added",
+          "answer": "no"
+        },
+        "latestUpdateNote": {
+          "quote": "All updates are save-compatible unless stated otherwise.",
+          "answer": "yes"
+        }
+      },
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Star Lords",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=34114.0",
+          "id": "star-lords",
+          "authors": [
+            "alaricdragon",
+            "Deluth"
+          ],
+          "gameVersion": "0.98a",
+          "modVersion": "0.3.78",
+          "threadLastPostOn": "2026-11-05"
         }
       ],
       "gallery": [
@@ -84033,7 +84031,7 @@
         "Quality of Life"
       ],
       "addedOn": "2026-08-30",
-      "editedOn": "2026-10-25",
+      "editedOn": "2026-11-16",
       "lastReleaseDate": "2026-10-27T00:00:00.000Z",
       "releases": [
         {
@@ -84089,9 +84087,6 @@
           }
         ],
         "tools": [
-          "Claude Code",
-          "Claude Opus 5",
-          "Claude Opus 5.5",
           "Gemini"
         ]
       },
@@ -84118,10 +84113,11 @@
           "source": "discord"
         },
         {
-          "url": "https://github.com/andrzejsokolowski/starsector-stopstackingme/blob/main/StopStackingMeIconBig.png?raw=true",
-          "aiCaption": "A logo showing a ship sprite with multiple weapon mounts crossed out by a large red X.",
+          "url": "https://raw.githubusercontent.com/andrzejsokolowski/starsector-stopstackingme/main/icon.png",
+          "aiCaption": "A gold emblem featuring a crossed-out symbol over ship silhouettes on a dark blue background.",
           "aiKind": "logo",
           "aiFit": "good",
+          "small": true,
           "source": "forum"
         },
         {
@@ -84132,6 +84128,10 @@
         {
           "url": "https://img.shields.io/github/v/release/andrzejsokolowski/starsector-stopstackingme?display_name=tag&sort=semver&style=for-the-badge&label=source",
           "small": true,
+          "source": "forum"
+        },
+        {
+          "url": "https://github.com/andrzejsokolowski/starsector-stopstackingme/blob/main/screenshots/01-one-sprite-per-stack.png?raw=true",
           "source": "forum"
         }
       ]
@@ -85457,6 +85457,61 @@
         }
       ]
     },
+    "survival-dial": {
+      "summary": "Make Starsector's Survival / Extended mode as forgiving or demanding as you like. Pick a preset, or optionally customize it with explained sliders. Normal mode is unchanged. No other mods required. Designed to be save-game compatible.",
+      "addedOn": "2026-11-18",
+      "types": [
+        "mod"
+      ],
+      "saveCompat": {
+        "adding": {
+          "quote": "Designed to be save-game compatible.",
+          "answer": "yes"
+        },
+        "removing": {
+          "quote": "Removal testing is still pending, so back up your save first. Hyperspace cloud changes made at new-game generation stay on the map if the mod is removed.",
+          "answer": "depends"
+        }
+      },
+      "aiUse": {
+        "quote": "Some or all of the code in this mod was created using AI tools:\nCode: most of the code was written with AI assistance, then reviewed and tested by me.\nThe mod includes automated behavioral tests that run on every build, and releases go through a playtest checklist before publishing.",
+        "usesAi": true,
+        "uses": [
+          {
+            "area": "code",
+            "how": "assisted",
+            "extent": "most"
+          }
+        ]
+      },
+      "gallery": [
+        {
+          "url": "https://img.shields.io/badge/Download-GitHub-0a84d6?style=for-the-badge&logo=github",
+          "small": true,
+          "source": "forum"
+        },
+        {
+          "url": "https://img.shields.io/badge/Changelog-All_Versions-555555?style=for-the-badge&logo=github",
+          "small": true,
+          "source": "forum"
+        },
+        {
+          "url": "https://img.shields.io/badge/Safe_to_add_mid--game-c8e6c9?style=flat",
+          "small": true,
+          "source": "forum"
+        },
+        {
+          "url": "https://img.shields.io/badge/Removal_not_yet_tested-ffe0a3?style=flat",
+          "small": true,
+          "source": "forum"
+        },
+        {
+          "url": "https://img.shields.io/badge/Normal_mode_unchanged-c9d8f0?style=flat",
+          "small": true,
+          "source": "forum"
+        }
+      ]
+    },
     "survival-mode-lite": {
       "summary": "Keeps everything the 0.98.5a Survival mode does, with every penalty halfway to vanilla. With LunaLib you set each number yourself.",
       "addedOn": "2026-11-17",
@@ -86232,6 +86287,39 @@
         }
       ]
     },
+    "threat-detected": {
+      "summary": "||THREAT DETECTED|| ||THREAT DETECTED||",
+      "categories": [
+        "Miscellaneous"
+      ],
+      "rawCategories": [
+        "Other/Misc."
+      ],
+      "otherAuthorNames": {
+        "gord": [
+          "gord_f"
+        ]
+      },
+      "addedOn": "2025-03-30",
+      "editedOn": "2025-03-31",
+      "types": [
+        "mod"
+      ],
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "THREAT DETECTED",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=32565.0",
+          "id": "threat-detected-2",
+          "authors": [
+            "banano of doom"
+          ],
+          "gameVersion": "0.98a",
+          "modVersion": "20260110",
+          "threadLastPostOn": "2026-01-10"
+        }
+      ]
+    },
     "threat-detected-2": {
       "summary": "silly little sidbar plugin that helps locating threat fleets only enabled enabled after finding the onslaught mk1, or obtaining threat detection mem flag through other means only active when panel is added to sidebar, remove panel to turn it off when active will check current system for any threat fleets in it will beep at you if there are any in system will beep faster the closer you are to any of them only tracks one closest fleet at a time",
       "addedOn": "2025-04-16",
@@ -86266,39 +86354,6 @@
           "aiKind": "banner",
           "aiFit": "good",
           "source": "forum"
-        }
-      ]
-    },
-    "threat-detected": {
-      "summary": "||THREAT DETECTED|| ||THREAT DETECTED||",
-      "categories": [
-        "Miscellaneous"
-      ],
-      "rawCategories": [
-        "Other/Misc."
-      ],
-      "otherAuthorNames": {
-        "gord": [
-          "gord_f"
-        ]
-      },
-      "addedOn": "2025-03-30",
-      "editedOn": "2025-03-31",
-      "types": [
-        "mod"
-      ],
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "THREAT DETECTED",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=32565.0",
-          "id": "threat-detected-2",
-          "authors": [
-            "banano of doom"
-          ],
-          "gameVersion": "0.98a",
-          "modVersion": "20260110",
-          "threadLastPostOn": "2026-01-10"
         }
       ]
     },
@@ -87059,7 +87114,7 @@
       ]
     },
     "terraforming-made-easy": {
-      "summary": "Another mod that I privately use for my Starsector campaigns since 0.95a. The mod adds a bunch of structures that allow you to terraform your planets.",
+      "summary": "A mod that adds new structures that can terraform planets, change the visuals of a planet, and construct megastructures like orbital stations. Adds an option to build domain satellites like nav buoys on stable points.",
       "categories": [
         "Campaign and exploration"
       ],
@@ -87074,7 +87129,7 @@
         ]
       },
       "addedOn": "2024-03-09",
-      "editedOn": "2026-09-28",
+      "editedOn": "2026-06-23",
       "lastReleaseDate": "2026-09-09T00:00:00.000Z",
       "releases": [
         {
@@ -87083,11 +87138,7 @@
           "seenOn": "2026-09-09",
           "oldVersion": "2.9.3",
           "newVersion": "2.9.8",
-          "gameVersion": "0.98a",
-          "updateNote": {
-            "quote": "Not save compatible for versions below 2.9.0",
-            "answer": "no"
-          }
+          "gameVersion": "0.98a"
         }
       ],
       "requirements": {
@@ -87095,6 +87146,9 @@
           {
             "name": "LunaLib",
             "id": "lunalib"
+          },
+          {
+            "name": "AotD-VoK"
           }
         ]
       },
@@ -87103,16 +87157,16 @@
       ],
       "saveCompat": {
         "adding": {
-          "quote": "Safe to add from an ongoing campaign",
+          "quote": "Safe to add mid-game",
           "answer": "yes"
         },
         "removing": {
-          "quote": "Not safe to remove from an ongoing campaign",
+          "quote": "Not safe to remove mid-game",
           "answer": "no"
         },
         "latestUpdateNote": {
-          "quote": "Not save compatible for versions below 2.9.0",
-          "answer": "no"
+          "quote": "Not compatible with saves on 2.9.8 and below",
+          "answer": "depends"
         }
       },
       "aiUse": {},
@@ -88247,7 +88301,7 @@
         "optional": [
           {
             "name": "Exotica Technologies",
-            "id": "exotica-technologies-2"
+            "id": "exotica-technologies"
           }
         ]
       },
@@ -92574,7 +92628,7 @@
           },
           {
             "name": "Unknown Skies",
-            "id": "unknown-skies"
+            "id": "unknown-skies-3"
           },
           {
             "name": "Upgraded Rotary Weapons",
@@ -96710,6 +96764,76 @@
         }
       ]
     },
+    "unknown-skies-3": {
+      "summary": "Explore new systems, with more varied planets and backgrounds.",
+      "addedOn": "2024-02-26",
+      "editedOn": "2024-03-08",
+      "types": [
+        "mod"
+      ],
+      "saveCompat": {
+        "adding": {
+          "quote": "Interestingly, this means US can be added mid-playthrough and it will add the new backgrounds.",
+          "answer": "yes"
+        }
+      },
+      "aiUse": {},
+      "sameNameMods": [
+        {
+          "title": "Unknown Skies",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=29876.0",
+          "id": "unknown-skies",
+          "authors": [
+            "JamesTripleQ",
+            "Tartiflette"
+          ],
+          "gameVersion": "0.98a",
+          "modVersion": "3.0.3",
+          "threadLastPostOn": "2026-11-04"
+        },
+        {
+          "title": "Unknown Skies",
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=12041.0",
+          "id": "unknown-skies-2",
+          "authors": [
+            "Tartiflette"
+          ],
+          "gameVersion": "0.95.1a",
+          "modVersion": "1.00rc2",
+          "threadLastPostOn": "2025-12-10"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "https://i.imgur.com/0OFyLKT.png",
+          "aiCaption": "A wide title banner with the text 'UNKNOWN SKIES' in large white letters over a space background.",
+          "aiKind": "banner",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/NrqyfZN.jpg",
+          "aiCaption": "A screenshot of a space scene featuring a large planet, an asteroid belt, and a black hole or dark object on the left.",
+          "aiKind": "screenshot",
+          "aiFit": "good",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/hD7VqEl.jpg",
+          "aiCaption": "A screenshot showing a red star and a planet with a text box titled 'Zeta Bentzon Disk I, Dust World' describing the planet's conditions.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        },
+        {
+          "url": "http://i.imgur.com/g4jKULI.jpg",
+          "aiCaption": "A screenshot of the planetary survey interface for 'Epsilon Kardashev I, Methane World', showing hazard ratings and resource requirements.",
+          "aiKind": "screenshot",
+          "aiFit": "okay",
+          "source": "forum"
+        }
+      ]
+    },
     "unknown-skies": {
       "summary": "An update to Tartiflette's amazing mod, significantly expanding the variety of systems and planets encountered while exploring.",
       "categories": [
@@ -96901,76 +97025,6 @@
           "aiCaption": "An orange button labeled 'Patreon'.",
           "aiKind": "button",
           "aiFit": "poor",
-          "source": "forum"
-        }
-      ]
-    },
-    "unknown-skies-3": {
-      "summary": "Explore new systems, with more varied planets and backgrounds.",
-      "addedOn": "2024-02-26",
-      "editedOn": "2024-03-08",
-      "types": [
-        "mod"
-      ],
-      "saveCompat": {
-        "adding": {
-          "quote": "Interestingly, this means US can be added mid-playthrough and it will add the new backgrounds.",
-          "answer": "yes"
-        }
-      },
-      "aiUse": {},
-      "sameNameMods": [
-        {
-          "title": "Unknown Skies",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=29876.0",
-          "id": "unknown-skies",
-          "authors": [
-            "JamesTripleQ",
-            "Tartiflette"
-          ],
-          "gameVersion": "0.98a",
-          "modVersion": "3.0.3",
-          "threadLastPostOn": "2026-11-04"
-        },
-        {
-          "title": "Unknown Skies",
-          "url": "https://fractalsoftworks.com/forum/index.php?topic=12041.0",
-          "id": "unknown-skies-2",
-          "authors": [
-            "Tartiflette"
-          ],
-          "gameVersion": "0.95.1a",
-          "modVersion": "1.00rc2",
-          "threadLastPostOn": "2025-12-10"
-        }
-      ],
-      "gallery": [
-        {
-          "url": "https://i.imgur.com/0OFyLKT.png",
-          "aiCaption": "A wide title banner with the text 'UNKNOWN SKIES' in large white letters over a space background.",
-          "aiKind": "banner",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/NrqyfZN.jpg",
-          "aiCaption": "A screenshot of a space scene featuring a large planet, an asteroid belt, and a black hole or dark object on the left.",
-          "aiKind": "screenshot",
-          "aiFit": "good",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/hD7VqEl.jpg",
-          "aiCaption": "A screenshot showing a red star and a planet with a text box titled 'Zeta Bentzon Disk I, Dust World' describing the planet's conditions.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
-          "source": "forum"
-        },
-        {
-          "url": "http://i.imgur.com/g4jKULI.jpg",
-          "aiCaption": "A screenshot of the planetary survey interface for 'Epsilon Kardashev I, Methane World', showing hazard ratings and resource requirements.",
-          "aiKind": "screenshot",
-          "aiFit": "okay",
           "source": "forum"
         }
       ]
@@ -100836,6 +100890,7 @@
     "weapon-designer": {
       "summary": "Design your own weapons at a colony whose Orbital Works holds a",
       "addedOn": "2026-10-20",
+      "editedOn": "2026-11-16",
       "types": [
         "mod"
       ],
