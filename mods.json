@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T07:07:24.135090Z",
+  "generatedAt": "2026-11-18T19:08:32.001785Z",
   "mods": [
     {
       "id": "outdated-the-thule-legacy",
@@ -243,12 +243,12 @@
         "discord"
       ],
       "gameVersion": "0.98a",
-      "modVersion": "0.3.8",
+      "modVersion": "0.3.8.2",
       "imageUrl": "https://raw.githubusercontent.com/winters791/starsector-3d/refs/heads/main/screenshots/aurora_doom.png",
       "announcementImageUrl": "https://cdn.discordapp.com/attachments/1559645440188874795/1559645440969019453/screenshot010.png?ex=6afb5601&is=6afa0481&hm=e56c000177b8afe159f114d906bce3036ecddb1377e19d62adb4d554773f0ebd&",
       "summary": "A Utility/Conversion Mod for starsector, it is still a work in progress, especially on the graphical end since there are no premade assets, but otherwise it should be playable from start to finish.",
       "summaryIsGenerated": false,
-      "aiSummary": "Converts Starsector battles into 3D with dynamic shields, tactical maps, and configurable flight controls.",
+      "aiSummary": "Converts battles into 3D with dynamic shields and tactical maps while keeping campaign data unchanged.",
       "saveCompat": {
         "adding": {
           "answer": "yes"
@@ -274,7 +274,7 @@
       ],
       "lastReleaseDate": "2026-10-21T00:00:00.000Z",
       "addedOn": "2026-10-13",
-      "editedOn": "2026-10-23"
+      "editedOn": "2026-10-19"
     },
     {
       "id": "4-0-0-ship-weapon-editor",
@@ -926,7 +926,6 @@
       "isWorkInProgress": false,
       "lastReleaseDate": "2026-08-28T00:00:00.000Z",
       "addedOn": "2019-11-25",
-      "threadLastPostOn": "2026-10-22",
       "editedOn": "2026-07-15"
     },
     {
@@ -1050,6 +1049,7 @@
       "usesAi": false,
       "lastReleaseDate": "2026-11-16T00:00:00.000Z",
       "addedOn": "2026-10-28",
+      "editedOn": "2026-11-17",
       "requirements": {
         "required": [
           {
@@ -2451,6 +2451,29 @@
       }
     },
     {
+      "id": "apex-design-collective-2",
+      "name": "Apex Design Collective",
+      "authors": [
+        "theDragn"
+      ],
+      "otherAuthorNames": {
+        "theDragn": [
+          "iryx.gay"
+        ]
+      },
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.95.1a",
+      "summaryIsGenerated": false,
+      "hasDirectDownload": false,
+      "downloadCount": 0,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22704.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false
+    },
+    {
       "id": "apex-design-collective",
       "name": "Apex Design Collective",
       "authors": [
@@ -2517,29 +2540,6 @@
       }
     },
     {
-      "id": "apex-design-collective-2",
-      "name": "Apex Design Collective",
-      "authors": [
-        "theDragn"
-      ],
-      "otherAuthorNames": {
-        "theDragn": [
-          "iryx.gay"
-        ]
-      },
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.95.1a",
-      "summaryIsGenerated": false,
-      "hasDirectDownload": false,
-      "downloadCount": 0,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22704.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false
-    },
-    {
       "id": "apex-design-collective-skin-basalt",
       "name": "Apex Design Collective Skin - Basalt",
       "displayName": "Apex Design Collective Skin - BASALT",
@@ -2587,27 +2587,7 @@
         "required": [
           {
             "name": "Apex Design Collective",
-            "id": "apex-design-collective"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib",
-            "via": "Apex Design Collective"
-          },
-          {
-            "name": "LazyLib",
-            "id": "lazylib",
-            "via": "Apex Design Collective"
-          },
-          {
-            "name": "GraphicsLib",
-            "id": "graphicslib",
-            "via": "Apex Design Collective"
-          },
-          {
-            "name": "LunaLib",
-            "id": "lunalib",
-            "via": "Apex Design Collective"
+            "id": "apex-design-collective-2"
           }
         ]
       }
@@ -2661,27 +2641,7 @@
         "required": [
           {
             "name": "Apex Design Collective",
-            "id": "apex-design-collective"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib",
-            "via": "Apex Design Collective"
-          },
-          {
-            "name": "LazyLib",
-            "id": "lazylib",
-            "via": "Apex Design Collective"
-          },
-          {
-            "name": "GraphicsLib",
-            "id": "graphicslib",
-            "via": "Apex Design Collective"
-          },
-          {
-            "name": "LunaLib",
-            "id": "lunalib",
-            "via": "Apex Design Collective"
+            "id": "apex-design-collective-2"
           }
         ]
       }
@@ -3640,6 +3600,7 @@
       "sourceIsPublic": false,
       "isWorkInProgress": false,
       "addedOn": "2023-03-17",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-10-24"
     },
     {
@@ -4074,7 +4035,7 @@
       "imageUrl": "https://raw.githubusercontent.com/Mjolniar/auto-colonies/5eb4ce7ca86109a69283a5d5aeee59efff32c690/docs/images/banner.png",
       "summary": "Automatic Faction and Colony management for Starsector 0.98a+0.98.5a.",
       "summaryIsGenerated": false,
-      "aiSummary": "Automates faction and colony management, handling building, items, money, war, security, and new colonies.",
+      "aiSummary": "Automates faction and colony management, handling building, items, economy, war, and security with optional story progression.",
       "saveCompat": {
         "adding": {
           "answer": "yes"
@@ -4111,7 +4072,8 @@
         }
       ],
       "lastReleaseDate": "2026-11-10T00:00:00.000Z",
-      "addedOn": "2026-11-05"
+      "addedOn": "2026-11-05",
+      "threadLastPostOn": "2026-11-17"
     },
     {
       "id": "auto-outfitting",
@@ -4128,7 +4090,7 @@
       "imageUrl": "https://raw.githubusercontent.com/Mjolniar/auto-outfitting/main/docs/images/optimize-fleet.png",
       "summary": "\"Optimal\" autofit for Starsector 0.98a+0.98.5a.",
       "summaryIsGenerated": false,
-      "aiSummary": "Provides an optimal autofit algorithm for balancing entire fleets based on ship roles, available weapons, and hullmods.",
+      "aiSummary": "Provides optimal fleet fitting and optimization based on combat stats and AI behavior.",
       "saveCompat": {
         "adding": {
           "answer": "yes"
@@ -4157,7 +4119,8 @@
         }
       ],
       "addedOn": "2026-11-14",
-      "editedOn": "2026-11-16"
+      "threadLastPostOn": "2026-11-17",
+      "editedOn": "2026-11-17"
     },
     {
       "id": "auto-continue-inator",
@@ -4208,9 +4171,9 @@
       ],
       "gameVersion": "0.98.5a-RC7",
       "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_38488_1794498482.png",
-      "summary": "Basically, when your fleet is flying itself somewhere (a laid-in course, or you clicked a planet, star, jump point or gate), this makes it steer more like the NPC fleets do.",
+      "summary": "When your fleet flies itself somewhere, it steers more like the NPC fleets do. It slows down in storms and asteroid fields, rides slipstreams going your way, and goes around coronas, black holes and stronger fleets. It skips the jump dialog when it's safe, and it uses gates when that's shorter.",
       "summaryIsGenerated": false,
-      "aiSummary": "Improves autopilot steering to mimic NPC fleets by navigating hazards and optimizing routes.",
+      "aiSummary": "Improves autopilot steering to mimic NPC behavior by avoiding hazards and optimizing routes.",
       "saveCompat": {
         "adding": {
           "answer": "yes"
@@ -4238,7 +4201,9 @@
           "how": "generated"
         }
       ],
-      "addedOn": "2026-11-16"
+      "addedOn": "2026-11-16",
+      "threadLastPostOn": "2026-11-17",
+      "editedOn": "2026-11-17"
     },
     {
       "id": "autoattack-patrol",
@@ -5435,6 +5400,7 @@
       "isWorkInProgress": false,
       "lastReleaseDate": "2026-11-15T00:00:00.000Z",
       "addedOn": "2026-07-15",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-11-14"
     },
     {
@@ -6415,7 +6381,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36030.0",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36030.msg530171#msg530171",
       "discordUrl": "https://discord.com/channels/187635036525166592/1550217113665405050/1550217113665405050",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -6821,6 +6787,7 @@
       "sourceIsPublic": true,
       "isWorkInProgress": false,
       "addedOn": "2025-03-31",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-03-22"
     },
     {
@@ -7025,11 +6992,11 @@
       "onModIndex": true,
       "gameVersion": "0.98a",
       "modVersion": "0.0.4a",
-      "imageUrl": "https://i.imgur.com/ESBJTp7.png",
+      "imageUrl": "https://i.imgur.com/wATdWsI.png",
       "announcementImageUrl": "https://cdn.discordapp.com/attachments/1365923731083362334/1365923731502923858/brighton.png?ex=6afbe71b&is=6afa959b&hm=f684f90732d05e8f103016e3daeafdc9bfc3340af2be76dfebf5b90297ae0548&",
       "summary": "A collection of refugees from some terrible disaster, the Brighton Federation is a desperate polity.",
       "summaryIsGenerated": false,
-      "aiSummary": "Adds the Brighton Federation faction with scavenged and cheaply built hulls.",
+      "aiSummary": "Adds a desperate polity relying on scavenged and converted hulls with high missile capacity but poor durability.",
       "saveCompat": {
         "adding": {
           "answer": "no"
@@ -7048,7 +7015,7 @@
       "isWorkInProgress": false,
       "addedOn": "2018-01-26",
       "threadLastPostOn": "2026-11-15",
-      "editedOn": "2026-10-23",
+      "editedOn": "2026-11-17",
       "requirements": {
         "required": [
           {
@@ -8963,44 +8930,6 @@
       "partOfThreadTitle": "MOD -  The TINY MOD collection. Mods without graphics. (178+ mods)"
     },
     {
-      "id": "combat-alarm-sounds",
-      "name": "Combat Alarm Sounds",
-      "authors": [
-        "AyyLuska"
-      ],
-      "otherAuthorNames": {},
-      "categories": [
-        "Utilities",
-        "Sound and graphics"
-      ],
-      "sources": [
-        "forum",
-        "discord"
-      ],
-      "gameVersion": "0.98a",
-      "modVersion": "1.4",
-      "summary": "Description: Combat Alarm Sounds (CAS for short) adds personalized audio queues to in-combat situations, like high flux, hull health, highly damaging impacts, and flameouts. Pressing \"O\" shuts off continuous alarms until you receive damage again.",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds personalized audio cues for in-combat situations such as high flux, hull health, damaging impacts, and flameouts.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://drive.google.com/uc?export=download&id=1-wh5y6y-8t4kG_uBiPjIT_BMROOfBHWB",
-        "type": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=31870.0",
-      "discordUrl": "https://discord.com/channels/187635036525166592/1355010562139885748/1355010562139885748",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "nicknames": [
-        "CAS"
-      ],
-      "addedOn": "2025-03-27",
-      "threadLastPostOn": "2026-11-16",
-      "editedOn": "2025-03-28"
-    },
-    {
       "id": "combat-alarm-sounds-2",
       "name": "Combat Alarm Sounds",
       "authors": [
@@ -9034,6 +8963,44 @@
       "addedOn": "2016-08-05",
       "threadLastPostOn": "2025-03-06",
       "editedOn": "2021-08-23"
+    },
+    {
+      "id": "combat-alarm-sounds",
+      "name": "Combat Alarm Sounds",
+      "authors": [
+        "AyyLuska"
+      ],
+      "otherAuthorNames": {},
+      "categories": [
+        "Utilities",
+        "Sound and graphics"
+      ],
+      "sources": [
+        "forum",
+        "discord"
+      ],
+      "gameVersion": "0.98a",
+      "modVersion": "1.4",
+      "summary": "Description: Combat Alarm Sounds (CAS for short) adds personalized audio queues to in-combat situations, like high flux, hull health, highly damaging impacts, and flameouts. Pressing \"O\" shuts off continuous alarms until you receive damage again.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds personalized audio cues for in-combat situations such as high flux, hull health, damaging impacts, and flameouts.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://drive.google.com/uc?export=download&id=1-wh5y6y-8t4kG_uBiPjIT_BMROOfBHWB",
+        "type": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=31870.msg468795#msg468795",
+      "discordUrl": "https://discord.com/channels/187635036525166592/1355010562139885748/1355010562139885748",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "nicknames": [
+        "CAS"
+      ],
+      "addedOn": "2025-03-27",
+      "threadLastPostOn": "2026-11-16",
+      "editedOn": "2025-03-28"
     },
     {
       "id": "combat-background-enhanced",
@@ -9256,7 +9223,6 @@
       "sourceIsPublic": true,
       "isWorkInProgress": false,
       "addedOn": "2024-10-18",
-      "threadLastPostOn": "2025-08-06",
       "editedOn": "2025-01-14",
       "partOfThreadTitle": "[0.97a] Shoey's Assorted Stuff - Misc Mods (2025/01/15)"
     },
@@ -9425,7 +9391,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=16677.0",
+      "forumUrl": "http://fractalsoftworks.com/forum/index.php?topic=16677",
       "discordUrl": "https://discord.com/channels/187635036525166592/1440879527193739336/1440879527193739336",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -10605,6 +10571,7 @@
       "sourceIsPublic": false,
       "isWorkInProgress": false,
       "addedOn": "2026-07-31",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-08-12"
     },
     {
@@ -10643,7 +10610,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 2,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35653.0",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35653.msg523767",
       "discordUrl": "https://discord.com/channels/187635036525166592/1520569228938182817/1520569228938182817",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -10823,7 +10790,17 @@
         "required": [
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-3"
+            "id": "diable-avionics-4"
+          },
+          {
+            "name": "LazyLib",
+            "id": "lazylib",
+            "via": "Diable Avionics"
+          },
+          {
+            "name": "MagicLib",
+            "id": "magiclib",
+            "via": "Diable Avionics"
           }
         ]
       }
@@ -10865,7 +10842,7 @@
           },
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-3"
+            "id": "diable-avionics-4"
           }
         ]
       }
@@ -11464,7 +11441,7 @@
       "gameVersion": "0.97a",
       "modVersion": "1.0",
       "imageUrl": "https://i.imgur.com/sLHOOLJ.png",
-      "announcementImageUrl": "https://cdn.discordapp.com/attachments/1251741935903838229/1251742010440941589/1.png?ex=6af5dcd7&is=6af48b57&hm=7cebe8d7097446afbf51e0f3c2f8b4ece5e3d892957ea7e4e058735bd2fdb174&",
+      "announcementImageUrl": "https://cdn.discordapp.com/attachments/1251742399512838205/1251742399701454940/ai_cores_delta.png?ex=6af5dd34&is=6af48bb4&hm=926661840838c81b74bbfd547e525c75f3cc3cbece589cbdd01c52baabb9bb99&",
       "summary": "Adds Delta AI Cores!",
       "summaryIsGenerated": false,
       "aiSummary": "Adds Delta level AI cores that have no skills or value but contribute a 0x multiplier to automated ships.",
@@ -11481,11 +11458,11 @@
       },
       "downloadCount": 1,
       "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30126.0",
-      "discordUrl": "https://discord.com/channels/187635036525166592/1251741935903838229/1251742011430801448",
+      "discordUrl": "https://discord.com/channels/187635036525166592/1251742399512838205/1251742399512838205",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
       "addedOn": "2024-06-15",
-      "editedOn": "2024-06-16"
+      "editedOn": "2024-06-17"
     },
     {
       "id": "deluxe-flag-pack",
@@ -11564,7 +11541,6 @@
       ],
       "lastReleaseDate": "2026-11-16T00:00:00.000Z",
       "addedOn": "2025-01-20",
-      "threadLastPostOn": "2026-11-16",
       "editedOn": "2026-11-15"
     },
     {
@@ -11763,6 +11739,7 @@
       ],
       "lastReleaseDate": "2026-11-11T00:00:00.000Z",
       "addedOn": "2017-01-10",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-11-15",
       "requirements": {
         "required": [
@@ -11824,12 +11801,62 @@
         "required": [
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-3"
+            "id": "diable-avionics-4"
           },
           {
             "name": "Arma Armatura",
             "id": "arma-armatura"
           },
+          {
+            "name": "LazyLib",
+            "id": "lazylib"
+          },
+          {
+            "name": "MagicLib",
+            "id": "magiclib"
+          }
+        ]
+      }
+    },
+    {
+      "id": "diable-avionics-2",
+      "name": "Diable Avionics",
+      "authors": [
+        "FlashFrozen",
+        "ruddygreat",
+        "Tartiflette"
+      ],
+      "otherAuthorNames": {},
+      "categories": [
+        "Factions"
+      ],
+      "sources": [
+        "forum",
+        "discord"
+      ],
+      "gameVersion": "0.95.1a",
+      "modVersion": "2.70rc3",
+      "imageUrl": "https://i.imgur.com/81PQJJdh.png",
+      "announcementImageUrl": "https://cdn.discordapp.com/attachments/1215721642450489524/1215721644182609950/dacrest.png?ex=6af5ff82&is=6af4ae02&hm=3a9927f950d0831d7c8b47f5c10c3bd81b459c93fe09490b6637f96ba5f39095&",
+      "summary": "The Diable Avionics Corporation plays similarly to Mid-tech: they use their superior mobility to choose their engagements and overwhelm isolated targets.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds a faction featuring transforming ships and mech-like strike-craft called Wanzers that overwhelm isolated targets with superior mobility and missile swarms.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://www.patreon.com/posts/81270023",
+        "type": "direct",
+        "needsAnotherStep": true
+      },
+      "downloadCount": 2,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=10046.0",
+      "discordUrl": "https://discord.com/channels/187635036525166592/1215721642450489524/1215721642450489524",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2015-11-30",
+      "threadLastPostOn": "2024-08-23",
+      "editedOn": "2024-03-08",
+      "requirements": {
+        "required": [
           {
             "name": "LazyLib",
             "id": "lazylib"
@@ -11884,54 +11911,35 @@
       "editedOn": "2026-06-15"
     },
     {
-      "id": "diable-avionics-2",
+      "id": "diable-avionics-3",
       "name": "Diable Avionics",
       "authors": [
-        "FlashFrozen",
-        "ruddygreat",
-        "Tartiflette"
+        "FlashFrozen"
       ],
       "otherAuthorNames": {},
-      "categories": [
-        "Factions"
-      ],
+      "categories": [],
       "sources": [
-        "forum",
-        "discord"
+        "forum"
       ],
-      "gameVersion": "0.95.1a",
-      "modVersion": "2.70rc3",
-      "imageUrl": "https://i.imgur.com/81PQJJdh.png",
-      "announcementImageUrl": "https://cdn.discordapp.com/attachments/1215721642450489524/1215721644182609950/dacrest.png?ex=6af5ff82&is=6af4ae02&hm=3a9927f950d0831d7c8b47f5c10c3bd81b459c93fe09490b6637f96ba5f39095&",
-      "summary": "The Diable Avionics Corporation plays similarly to Mid-tech: they use their superior mobility to choose their engagements and overwhelm isolated targets.",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds a faction featuring transforming ships and mech-like strike-craft called Wanzers that overwhelm isolated targets with superior mobility and missile swarms.",
+      "gameVersion": "0.65.1a",
+      "modVersion": "1.05",
+      "imageUrl": "http://i.imgur.com/sYS3oSa.png",
+      "summary": "Adds a faction of red ships and weapons including frigates, destroyers, cruisers, capitals, and various missiles and ballistics.",
+      "summaryIsGenerated": true,
+      "aiSummary": "Adds a faction of red ships and weapons including frigates, destroyers, cruisers, capitals, and various missiles and ballistics.",
       "hasDirectDownload": true,
       "bestDownload": {
-        "url": "https://www.patreon.com/posts/81270023",
+        "url": "http://download1529.mediafire.com/udttk1r2xqxgNGbzOhgcc1-Z7LSBPs7ZTUSdGjmCJorfZfCUlvYN_LC5gX_3jUp6eBROk6dEOH0RJG2yS4F1CN3M-EG8lZmGkgcJeRophzThw2JIYLsBHhmRLOiqrKDeiJ9JNFDR32cKb4XoJmecPzJUcIPibvRDe8LtbCSWvzJs/689jq1dndcdx5r1/Diable+Avionics+1.05.zip",
         "type": "direct",
-        "needsAnotherStep": true
+        "needsAnotherStep": false
       },
-      "downloadCount": 2,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=10046.0",
-      "discordUrl": "https://discord.com/channels/187635036525166592/1215721642450489524/1215721642450489524",
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=8147.0",
       "sourceIsPublic": false,
       "isWorkInProgress": false,
-      "addedOn": "2015-11-30",
-      "threadLastPostOn": "2024-08-23",
-      "editedOn": "2024-03-08",
-      "requirements": {
-        "required": [
-          {
-            "name": "LazyLib",
-            "id": "lazylib"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib"
-          }
-        ]
-      }
+      "addedOn": "2014-08-03",
+      "threadLastPostOn": "2015-12-19",
+      "editedOn": "2015-12-01"
     },
     {
       "id": "diable-avionics-4",
@@ -11982,37 +11990,6 @@
       }
     },
     {
-      "id": "diable-avionics-3",
-      "name": "Diable Avionics",
-      "authors": [
-        "FlashFrozen"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.65.1a",
-      "modVersion": "1.05",
-      "imageUrl": "http://i.imgur.com/sYS3oSa.png",
-      "summary": "Adds a faction of red ships and weapons including frigates, destroyers, cruisers, capitals, and various missiles and ballistics.",
-      "summaryIsGenerated": true,
-      "aiSummary": "Adds a faction of red ships and weapons including frigates, destroyers, cruisers, capitals, and various missiles and ballistics.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "http://download1529.mediafire.com/udttk1r2xqxgNGbzOhgcc1-Z7LSBPs7ZTUSdGjmCJorfZfCUlvYN_LC5gX_3jUp6eBROk6dEOH0RJG2yS4F1CN3M-EG8lZmGkgcJeRophzThw2JIYLsBHhmRLOiqrKDeiJ9JNFDR32cKb4XoJmecPzJUcIPibvRDe8LtbCSWvzJs/689jq1dndcdx5r1/Diable+Avionics+1.05.zip",
-        "type": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=8147.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2014-08-03",
-      "threadLastPostOn": "2015-12-19",
-      "editedOn": "2015-12-01"
-    },
-    {
       "id": "diable-avionics-skin-luxurious-bronze",
       "name": "Diable Avionics Skin - Luxurious Bronze",
       "displayName": "Diable Avionics Skin - LUXURIOUS BRONZE",
@@ -12061,7 +12038,17 @@
         "required": [
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-3"
+            "id": "diable-avionics-4"
+          },
+          {
+            "name": "LazyLib",
+            "id": "lazylib",
+            "via": "Diable Avionics"
+          },
+          {
+            "name": "MagicLib",
+            "id": "magiclib",
+            "via": "Diable Avionics"
           }
         ]
       }
@@ -12497,8 +12484,10 @@
           "how": "generated"
         }
       ],
-      "lastReleaseDate": "2026-11-13T00:00:00.000Z",
-      "addedOn": "2026-11-02"
+      "lastReleaseDate": "2026-11-18T00:00:00.000Z",
+      "addedOn": "2026-11-02",
+      "threadLastPostOn": "2026-11-17",
+      "editedOn": "2026-11-17"
     },
     {
       "id": "diy-planets",
@@ -13549,6 +13538,50 @@
       "editedOn": "2012-04-02"
     },
     {
+      "id": "ed-shipyard-2",
+      "name": "ED Shipyard",
+      "authors": [
+        "Ed"
+      ],
+      "otherAuthorNames": {},
+      "categories": [
+        "Content expansions"
+      ],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.9.1a",
+      "modVersion": "2.1.2",
+      "imageUrl": "https://i.imgur.com/By3Wye0.png",
+      "summary": "This mod adds some high tech ships and weapons to Independents (and pirates), there is no real theme behind them other than the naming convention and color scheme, those are just ships i would find useful in my fleets or fun to play with.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds high-tech ships and weapons for Independents and pirates, featuring unique designs with balanced strengths and flaws.",
+      "hasDirectDownload": false,
+      "downloadCount": 0,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=16479.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2019-09-07",
+      "threadLastPostOn": "2022-07-24",
+      "editedOn": "2022-08-21",
+      "requirements": {
+        "required": [
+          {
+            "name": "LazyLib",
+            "id": "lazylib"
+          },
+          {
+            "name": "GraphicsLib",
+            "id": "graphicslib"
+          },
+          {
+            "name": "MagicLib",
+            "id": "magiclib"
+          }
+        ]
+      }
+    },
+    {
       "id": "ed-shipyard",
       "name": "ED Shipyard",
       "authors": [
@@ -13600,50 +13633,6 @@
       "addedOn": "2022-07-24",
       "threadLastPostOn": "2026-11-15",
       "editedOn": "2026-11-11",
-      "requirements": {
-        "required": [
-          {
-            "name": "LazyLib",
-            "id": "lazylib"
-          },
-          {
-            "name": "GraphicsLib",
-            "id": "graphicslib"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib"
-          }
-        ]
-      }
-    },
-    {
-      "id": "ed-shipyard-2",
-      "name": "ED Shipyard",
-      "authors": [
-        "Ed"
-      ],
-      "otherAuthorNames": {},
-      "categories": [
-        "Content expansions"
-      ],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.9.1a",
-      "modVersion": "2.1.2",
-      "imageUrl": "https://i.imgur.com/By3Wye0.png",
-      "summary": "This mod adds some high tech ships and weapons to Independents (and pirates), there is no real theme behind them other than the naming convention and color scheme, those are just ships i would find useful in my fleets or fun to play with.",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds high-tech ships and weapons for Independents and pirates, featuring unique designs with balanced strengths and flaws.",
-      "hasDirectDownload": false,
-      "downloadCount": 0,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=16479.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2019-09-07",
-      "threadLastPostOn": "2022-07-24",
-      "editedOn": "2022-08-21",
       "requirements": {
         "required": [
           {
@@ -13876,8 +13865,7 @@
       ],
       "lastReleaseDate": "2026-11-18T00:00:00.000Z",
       "addedOn": "2023-06-14",
-      "threadLastPostOn": "2026-11-15",
-      "editedOn": "2026-11-11",
+      "editedOn": "2026-11-17",
       "requirements": {
         "required": [
           {
@@ -14489,6 +14477,7 @@
       ],
       "lastReleaseDate": "2026-11-18T00:00:00.000Z",
       "addedOn": "2026-11-15",
+      "editedOn": "2026-11-17",
       "requirements": {
         "required": [
           {
@@ -14880,56 +14869,48 @@
       }
     },
     {
-      "id": "exotica-technologies-4",
+      "id": "exotica-technologies",
       "name": "Exotica Technologies",
       "authors": [
+        "Lukas04",
         "presidentmattdamon"
       ],
       "otherAuthorNames": {},
       "categories": [
-        "Content expansions"
+        "Campaign and exploration",
+        "Content expansions",
+        "Miscellaneous"
       ],
       "sources": [
-        "forum"
+        "forum",
+        "discord"
       ],
-      "gameVersion": "0.96a",
-      "modVersion": "1.8.5",
-      "imageUrl": "https://i.imgur.com/T5VS6oG.png",
-      "summary": "Adds RPG-style upgrades and exotics to ships without using OP or hullmod slots.",
-      "summaryIsGenerated": true,
-      "aiSummary": "Adds RPG-style upgrades and exotics to ships without using OP or hullmod slots.",
+      "onModIndex": true,
+      "gameVersion": "0.98a",
+      "modVersion": "1.8.7",
+      "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_7678_1627094850.png",
+      "summary": "Inspired by Extra Systems Reloaded, Exotica Technologies offers an RPG element to Starsector that makes your ships AND enemies harder, better, faster, stronger through upgrades and exotics! These upgrades do not take OP or hullmod slots!",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds an RPG-style upgrade system that strengthens ships and enemies without using OP or hullmod slots.",
       "saveCompat": {
         "adding": {
           "answer": "yes"
         }
       },
-      "hasDirectDownload": false,
-      "downloadCount": 0,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=24660.0",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://drive.google.com/uc?export=download&id=1Mze9Mn5LDkYuhPxoNTr_mcD4ZB0Ra3fT",
+        "type": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=32811.0",
+      "discordUrl": "https://discord.com/channels/187635036525166592/1358184499791397206/1358184499791397206",
       "sourceIsPublic": false,
       "isWorkInProgress": false,
-      "addedOn": "2022-05-28",
-      "threadLastPostOn": "2024-03-08",
-      "editedOn": "2024-03-08",
-      "requirements": {
-        "required": [
-          {
-            "name": "LunaLib",
-            "id": "lunalib"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib"
-          },
-          {
-            "name": "LazyLib",
-            "id": "lazylib"
-          },
-          {
-            "name": "Combat Activators"
-          }
-        ]
-      }
+      "addedOn": "2025-04-05",
+      "threadLastPostOn": "2026-04-28",
+      "editedOn": "2025-04-25"
     },
     {
       "id": "exotica-technologies-2",
@@ -14992,48 +14973,56 @@
       }
     },
     {
-      "id": "exotica-technologies",
+      "id": "exotica-technologies-4",
       "name": "Exotica Technologies",
       "authors": [
-        "Lukas04",
         "presidentmattdamon"
       ],
       "otherAuthorNames": {},
       "categories": [
-        "Campaign and exploration",
-        "Content expansions",
-        "Miscellaneous"
+        "Content expansions"
       ],
       "sources": [
-        "forum",
-        "discord"
+        "forum"
       ],
-      "onModIndex": true,
-      "gameVersion": "0.98a",
-      "modVersion": "1.8.7",
-      "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_7678_1627094850.png",
-      "summary": "Inspired by Extra Systems Reloaded, Exotica Technologies offers an RPG element to Starsector that makes your ships AND enemies harder, better, faster, stronger through upgrades and exotics! These upgrades do not take OP or hullmod slots!",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds an RPG-style upgrade system that strengthens ships and enemies without using OP or hullmod slots.",
+      "gameVersion": "0.96a",
+      "modVersion": "1.8.5",
+      "imageUrl": "https://i.imgur.com/T5VS6oG.png",
+      "summary": "Adds RPG-style upgrades and exotics to ships without using OP or hullmod slots.",
+      "summaryIsGenerated": true,
+      "aiSummary": "Adds RPG-style upgrades and exotics to ships without using OP or hullmod slots.",
       "saveCompat": {
         "adding": {
           "answer": "yes"
         }
       },
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://drive.google.com/uc?export=download&id=1Mze9Mn5LDkYuhPxoNTr_mcD4ZB0Ra3fT",
-        "type": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=32811.0",
-      "discordUrl": "https://discord.com/channels/187635036525166592/1358184499791397206/1358184499791397206",
+      "hasDirectDownload": false,
+      "downloadCount": 0,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=24660.0",
       "sourceIsPublic": false,
       "isWorkInProgress": false,
-      "addedOn": "2025-04-05",
-      "threadLastPostOn": "2026-04-28",
-      "editedOn": "2025-04-25"
+      "addedOn": "2022-05-28",
+      "threadLastPostOn": "2024-03-08",
+      "editedOn": "2024-03-08",
+      "requirements": {
+        "required": [
+          {
+            "name": "LunaLib",
+            "id": "lunalib"
+          },
+          {
+            "name": "MagicLib",
+            "id": "magiclib"
+          },
+          {
+            "name": "LazyLib",
+            "id": "lazylib"
+          },
+          {
+            "name": "Combat Activators"
+          }
+        ]
+      }
     },
     {
       "id": "expanded-administrators",
@@ -16114,7 +16103,9 @@
       "sourceIsPublic": true,
       "isWorkInProgress": false,
       "lastReleaseDate": "2026-11-18T00:00:00.000Z",
-      "addedOn": "2025-08-19"
+      "addedOn": "2025-08-19",
+      "threadLastPostOn": "2026-11-17",
+      "editedOn": "2026-11-17"
     },
     {
       "id": "fight-for-universe-sector-xplo",
@@ -16685,7 +16676,6 @@
       "sourceIsPublic": true,
       "isWorkInProgress": false,
       "addedOn": "2021-07-03",
-      "threadLastPostOn": "2026-11-16",
       "editedOn": "2025-06-02"
     },
     {
@@ -16869,7 +16859,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 2,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=33414",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=33414.0",
       "discordUrl": "https://discord.com/channels/187635036525166592/1413395448370167879/1413395448370167879",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -17163,37 +17153,6 @@
       "editedOn": "2026-10-31"
     },
     {
-      "id": "forge-production-2",
-      "name": "Forge Production",
-      "authors": [
-        "Ontheheavens"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.96a",
-      "modVersion": "1.1.3",
-      "imageUrl": "https://raw.githubusercontent.com/Ontheheavens/Forge-Production/main/images/Title.png",
-      "summary": "Acquire production hullmods from derelict mothership.",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds production hullmods acquired from derelict motherships that convert raw resources into supplies, fuel, machinery, and ships.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://github.com/Ontheheavens/Forge-Production/releases/download/v1.1.3/Forge.Production.1.1.3.zip",
-        "type": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22961.0",
-      "sourceIsPublic": true,
-      "isWorkInProgress": false,
-      "addedOn": "2021-11-14",
-      "threadLastPostOn": "2024-04-17",
-      "editedOn": "2024-04-17"
-    },
-    {
       "id": "forge-production",
       "name": "Forge Production",
       "authors": [
@@ -17234,51 +17193,35 @@
       "editedOn": "2026-07-13"
     },
     {
-      "id": "foundation-of-borken",
-      "name": "Foundation Of Borken",
+      "id": "forge-production-2",
+      "name": "Forge Production",
       "authors": [
-        "Originem"
+        "Ontheheavens"
       ],
       "otherAuthorNames": {},
       "categories": [],
       "sources": [
         "forum"
       ],
-      "gameVersion": "0.9a",
-      "modVersion": "0.2.4-RC3",
-      "imageUrl": "https://i.imgur.com/cqEjE0K.png",
-      "summary": "No one understood the rise of ApproLight which was so abrupt and unexpected. But Borken does--- They are ApproLight's shareholder, supporter and \"enemy\" that rivals and instigates them via proxy behind the scenes.",
+      "gameVersion": "0.96a",
+      "modVersion": "1.1.3",
+      "imageUrl": "https://raw.githubusercontent.com/Ontheheavens/Forge-Production/main/images/Title.png",
+      "summary": "Acquire production hullmods from derelict mothership.",
       "summaryIsGenerated": false,
-      "aiSummary": "Adds a faction featuring alien ships with phase cloaks and regenerative armor, along with unique services like remote storage and personality adjustment therapy.",
+      "aiSummary": "Adds production hullmods acquired from derelict motherships that convert raw resources into supplies, fuel, machinery, and ships.",
       "hasDirectDownload": true,
       "bestDownload": {
-        "url": "https://www.dropbox.com/s/hl2qcw3fz8iyu1r/Foundation%20Of%20Borken.zip?dl=1",
+        "url": "https://github.com/Ontheheavens/Forge-Production/releases/download/v1.1.3/Forge.Production.1.1.3.zip",
         "type": "direct",
         "needsAnotherStep": false
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=13213.0",
-      "sourceIsPublic": false,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22961.0",
+      "sourceIsPublic": true,
       "isWorkInProgress": false,
-      "addedOn": "2018-01-15",
-      "threadLastPostOn": "2026-11-12",
-      "editedOn": "2019-02-10",
-      "requirements": {
-        "required": [
-          {
-            "name": "LazyLib",
-            "id": "lazylib"
-          },
-          {
-            "name": "GraphicsLib",
-            "id": "graphicslib"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib"
-          }
-        ]
-      }
+      "addedOn": "2021-11-14",
+      "threadLastPostOn": "2024-04-17",
+      "editedOn": "2024-04-17"
     },
     {
       "id": "foundation-of-borken-0-9-0-english-version",
@@ -17333,6 +17276,53 @@
           {
             "name": "GraphicsLib",
             "id": "graphicslib"
+          }
+        ]
+      }
+    },
+    {
+      "id": "foundation-of-borken",
+      "name": "Foundation Of Borken",
+      "authors": [
+        "Originem"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.9a",
+      "modVersion": "0.2.4-RC3",
+      "imageUrl": "https://i.imgur.com/cqEjE0K.png",
+      "summary": "No one understood the rise of ApproLight which was so abrupt and unexpected. But Borken does--- They are ApproLight's shareholder, supporter and \"enemy\" that rivals and instigates them via proxy behind the scenes.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds a faction featuring alien ships with phase cloaks and regenerative armor, along with unique services like remote storage and personality adjustment therapy.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://www.dropbox.com/s/hl2qcw3fz8iyu1r/Foundation%20Of%20Borken.zip?dl=1",
+        "type": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=13213.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2018-01-15",
+      "threadLastPostOn": "2026-11-12",
+      "editedOn": "2019-02-10",
+      "requirements": {
+        "required": [
+          {
+            "name": "LazyLib",
+            "id": "lazylib"
+          },
+          {
+            "name": "GraphicsLib",
+            "id": "graphicslib"
+          },
+          {
+            "name": "MagicLib",
+            "id": "magiclib"
           }
         ]
       }
@@ -17433,7 +17423,7 @@
         }
       ],
       "addedOn": "2026-11-10",
-      "editedOn": "2026-11-10",
+      "editedOn": "2026-11-17",
       "requirements": {
         "required": [
           {
@@ -18229,7 +18219,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=20463",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=20463.0",
       "discordUrl": "https://discord.com/channels/187635036525166592/1203898704562753586/1203898704562753586",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -18383,6 +18373,7 @@
       ],
       "lastReleaseDate": "2026-08-28T00:00:00.000Z",
       "addedOn": "2025-04-07",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-11-14",
       "requirements": {
         "required": [
@@ -18827,7 +18818,7 @@
           },
           {
             "name": "Unknown Skies",
-            "id": "unknown-skies-3"
+            "id": "unknown-skies-2"
           }
         ]
       }
@@ -19111,46 +19102,6 @@
       "addedOn": "2024-02-11"
     },
     {
-      "id": "gladiator-society-2",
-      "name": "Gladiator Society",
-      "authors": [
-        "Snrasha"
-      ],
-      "otherAuthorNames": {
-        "Snrasha": [
-          "snrasha, the tinkerer"
-        ]
-      },
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.95a",
-      "modVersion": "1.3 beta",
-      "imageUrl": "https://i.imgur.com/HHBLgFF.png",
-      "summary": "The Gladiator Society gives you the option to put your life on the line to become popular. Each Gladiator match is being broadcasted on every inhabited planet and station in the Sector.",
-      "summaryIsGenerated": false,
-      "aiSummary": "Lets players subscribe to interstellar gladiator battles at Com Relays, offering unique bounties and endless fleet combat for rewards.",
-      "saveCompat": {
-        "adding": {
-          "answer": "yes"
-        }
-      },
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://github.com/Snrasha/GladiatorSociety/releases/download/1_3beta/GladiatorSociety1_3beta.zip",
-        "type": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=13457.0",
-      "sourceIsPublic": true,
-      "isWorkInProgress": false,
-      "addedOn": "2018-06-05",
-      "threadLastPostOn": "2023-07-22",
-      "editedOn": "2021-05-22"
-    },
-    {
       "id": "gladiator-society",
       "name": "Gladiator Society",
       "authors": [
@@ -19217,6 +19168,46 @@
           }
         ]
       }
+    },
+    {
+      "id": "gladiator-society-2",
+      "name": "Gladiator Society",
+      "authors": [
+        "Snrasha"
+      ],
+      "otherAuthorNames": {
+        "Snrasha": [
+          "snrasha, the tinkerer"
+        ]
+      },
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.95a",
+      "modVersion": "1.3 beta",
+      "imageUrl": "https://i.imgur.com/HHBLgFF.png",
+      "summary": "The Gladiator Society gives you the option to put your life on the line to become popular. Each Gladiator match is being broadcasted on every inhabited planet and station in the Sector.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Lets players subscribe to interstellar gladiator battles at Com Relays, offering unique bounties and endless fleet combat for rewards.",
+      "saveCompat": {
+        "adding": {
+          "answer": "yes"
+        }
+      },
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://github.com/Snrasha/GladiatorSociety/releases/download/1_3beta/GladiatorSociety1_3beta.zip",
+        "type": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=13457.0",
+      "sourceIsPublic": true,
+      "isWorkInProgress": false,
+      "addedOn": "2018-06-05",
+      "threadLastPostOn": "2023-07-22",
+      "editedOn": "2021-05-22"
     },
     {
       "id": "goathead-aviation-bureau-en-edition",
@@ -20366,7 +20357,6 @@
         }
       ],
       "addedOn": "2025-06-28",
-      "threadLastPostOn": "2026-11-14",
       "editedOn": "2026-07-05",
       "requirements": {
         "required": [
@@ -20418,7 +20408,7 @@
         "needsAnotherStep": true
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=28804.0",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=28804.msg423601#msg423601",
       "discordUrl": "https://discord.com/channels/187635036525166592/1203906866560630815/1203906866560630815",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -20625,7 +20615,7 @@
       "announcementImageUrl": "https://cdn.discordapp.com/attachments/1365922680871583796/1365922681203068928/hmi.png?ex=6afbe620&is=6afa94a0&hm=2930ac2ccbce8c8de5b5dc453faffd6b57bc9a2bb318618c34328d4fe1856408&",
       "summary": "Many cycles ago, a daring space miner called Haseo 'Hazard' Fuyutsuki set out into the Outer Rim to make his fortune with nothing by a Shepherd, some loose change and a dream. Today, the Company he founded holds an iron grip beyond the Core Worlds, always seeking more profit.",
       "summaryIsGenerated": false,
-      "aiSummary": "Adds the Hazard Mining Incorporated faction with junker ships, techmined hulls, and unique commodities.",
+      "aiSummary": "Adds a faction known for unethical practices and cheap, durable Junker ships that improve with damage.",
       "saveCompat": {
         "adding": {
           "answer": "no"
@@ -20647,7 +20637,7 @@
       ],
       "addedOn": "2018-01-26",
       "threadLastPostOn": "2026-11-15",
-      "editedOn": "2026-10-24",
+      "editedOn": "2026-11-17",
       "requirements": {
         "required": [
           {
@@ -20676,10 +20666,10 @@
       ],
       "onModIndex": true,
       "gameVersion": "0.98a",
-      "imageUrl": "https://i.imgur.com/ZatV7qe.png",
+      "imageUrl": "https://i.imgur.com/CYBp9uJ.png",
       "summary": "The Draco Group and the Fang Society are two truly deranged factions that inhabit the south-western part of the sector. Both organisations suffer from an obsession with gene-modding to go above conventional humanity in strength, speed, intelligence - and cruelty.",
       "summaryIsGenerated": false,
-      "aiSummary": "Adds the Draco Group and Fang Society factions with gene-modded crews and unique ships.",
+      "aiSummary": "Adds two hostile factions obsessed with gene-modding, featuring high-tech and brutal ship designs.",
       "saveCompat": {
         "adding": {
           "answer": "no"
@@ -20697,7 +20687,7 @@
       "isWorkInProgress": false,
       "addedOn": "2018-01-26",
       "threadLastPostOn": "2026-11-15",
-      "editedOn": "2026-10-23",
+      "editedOn": "2026-11-17",
       "requirements": {
         "required": [
           {
@@ -20711,37 +20701,6 @@
         ]
       },
       "partOfThreadTitle": "Re: [0.98a] Hazard Mining Incorporated (Getting Messy Ed., 0.5.0e)"
-    },
-    {
-      "id": "hegemony-expeditionary-auxiliary-fleet",
-      "name": "Hegemony Expeditionary Auxiliary Fleet",
-      "authors": [
-        "PCCL"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.8a",
-      "modVersion": "1.1",
-      "imageUrl": "https://i.imgur.com/JDbniQO.png",
-      "summary": "Reskinned Venture, Mule, and Sheppherd class ships with hegemony upgrades upgraded variants and campaign integration",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds reskinned Venture, Mule, and Sheppherd ships with Hegemony upgrades and a mission involving the HSS Steadfast.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://drive.google.com/uc?export=download&id=0B_OhTOqryTT0bUp3Vlh1VmYzNDg",
-        "type": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=11948.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2017-04-24",
-      "threadLastPostOn": "2022-07-19",
-      "editedOn": "2017-05-16"
     },
     {
       "id": "hegemony-expeditionary-auxiliary-fleet-2",
@@ -20777,6 +20736,37 @@
       "addedOn": "2020-11-25",
       "threadLastPostOn": "2024-04-25",
       "editedOn": "2021-04-12"
+    },
+    {
+      "id": "hegemony-expeditionary-auxiliary-fleet",
+      "name": "Hegemony Expeditionary Auxiliary Fleet",
+      "authors": [
+        "PCCL"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.8a",
+      "modVersion": "1.1",
+      "imageUrl": "https://i.imgur.com/JDbniQO.png",
+      "summary": "Reskinned Venture, Mule, and Sheppherd class ships with hegemony upgrades upgraded variants and campaign integration",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds reskinned Venture, Mule, and Sheppherd ships with Hegemony upgrades and a mission involving the HSS Steadfast.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://drive.google.com/uc?export=download&id=0B_OhTOqryTT0bUp3Vlh1VmYzNDg",
+        "type": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=11948.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2017-04-24",
+      "threadLastPostOn": "2022-07-19",
+      "editedOn": "2017-05-16"
     },
     {
       "id": "hegemony-fleet-expansion",
@@ -21238,7 +21228,6 @@
       "isWorkInProgress": false,
       "lastReleaseDate": "2026-11-17T00:00:00.000Z",
       "addedOn": "2020-07-29",
-      "threadLastPostOn": "2026-11-16",
       "editedOn": "2026-11-16"
     },
     {
@@ -22580,6 +22569,7 @@
       "sourceIsPublic": true,
       "isWorkInProgress": false,
       "addedOn": "2020-04-01",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2025-03-17",
       "requirements": {
         "required": [
@@ -23309,7 +23299,51 @@
       ],
       "lastReleaseDate": "2026-11-16T00:00:00.000Z",
       "addedOn": "2021-10-14",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-11-15",
+      "requirements": {
+        "required": [
+          {
+            "name": "LazyLib",
+            "id": "lazylib"
+          },
+          {
+            "name": "MagicLib",
+            "id": "magiclib"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kadur-remnant",
+      "name": "Kadur Remnant",
+      "authors": [
+        "Vayra"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.95a",
+      "modVersion": "3.2.3",
+      "imageUrl": "https://i.imgur.com/AFZAQiL.png",
+      "summary": "New starting options when used with Vayra's Sector, including a starting option aligned with the Kadur Remnant",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds the Kadur Remnant faction with new ships, weapons, and two core star systems.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://drive.google.com/uc?authuser=0&id=1cBtUSfKUNf3NM7sL-5JrDasWWaj1OfDo&export=download",
+        "type": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 2,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=6649.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2013-09-14",
+      "threadLastPostOn": "2024-11-27",
+      "editedOn": "2021-04-10",
       "requirements": {
         "required": [
           {
@@ -23364,49 +23398,6 @@
       "addedOn": "2026-04-02",
       "threadLastPostOn": "2026-10-02",
       "editedOn": "2026-10-07"
-    },
-    {
-      "id": "kadur-remnant",
-      "name": "Kadur Remnant",
-      "authors": [
-        "Vayra"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.95a",
-      "modVersion": "3.2.3",
-      "imageUrl": "https://i.imgur.com/AFZAQiL.png",
-      "summary": "New starting options when used with Vayra's Sector, including a starting option aligned with the Kadur Remnant",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds the Kadur Remnant faction with new ships, weapons, and two core star systems.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://drive.google.com/uc?authuser=0&id=1cBtUSfKUNf3NM7sL-5JrDasWWaj1OfDo&export=download",
-        "type": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 2,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=6649.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2013-09-14",
-      "threadLastPostOn": "2024-11-27",
-      "editedOn": "2021-04-10",
-      "requirements": {
-        "required": [
-          {
-            "name": "LazyLib",
-            "id": "lazylib"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib"
-          }
-        ]
-      }
     },
     {
       "id": "kaleidoscope",
@@ -23588,6 +23579,47 @@
       "editedOn": "2026-10-25"
     },
     {
+      "id": "kazeron-navarchy",
+      "name": "Kazeron Navarchy",
+      "authors": [
+        "Bangle"
+      ],
+      "otherAuthorNames": {
+        "Bangle": [
+          "bangle_bangle"
+        ]
+      },
+      "categories": [
+        "Content expansions",
+        "Sound and graphics"
+      ],
+      "sources": [
+        "forum",
+        "discord"
+      ],
+      "onModIndex": true,
+      "gameVersion": "0.98.5a",
+      "modVersion": "1.8.1",
+      "imageUrl": "https://i.imgur.com/6XYzxio.png",
+      "summary": "\"Adds several skins to the Persean League, each with the Kazeron Navarchy hullmod built in. They appear occasionally in Persean League markets and fleets.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds colorful ship skins to the Persean League that include a special hullmod and appear in markets and fleets.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://github.com/RaMK5Bangle/Kazeron-Navarchy/releases/download/1.8.1/Kazeron.Navarchy.1.8.1.zip",
+        "type": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=28861.0",
+      "discordUrl": "https://discord.com/channels/187635036525166592/1362768500061638877/1376995225297358969",
+      "sourceIsPublic": true,
+      "isWorkInProgress": false,
+      "lastReleaseDate": "2026-11-18T00:00:00.000Z",
+      "addedOn": "2024-02-05",
+      "threadLastPostOn": "2026-11-17"
+    },
+    {
       "id": "kazeron-navarchy-2",
       "name": "Kazeron Navarchy",
       "authors": [
@@ -23619,46 +23651,6 @@
       "addedOn": "2021-05-08",
       "threadLastPostOn": "2024-05-25",
       "editedOn": "2021-05-11"
-    },
-    {
-      "id": "kazeron-navarchy",
-      "name": "Kazeron Navarchy",
-      "authors": [
-        "Bangle"
-      ],
-      "otherAuthorNames": {
-        "Bangle": [
-          "bangle_bangle"
-        ]
-      },
-      "categories": [
-        "Content expansions",
-        "Sound and graphics"
-      ],
-      "sources": [
-        "forum",
-        "discord"
-      ],
-      "onModIndex": true,
-      "gameVersion": "0.98.5a",
-      "modVersion": "1.8.1",
-      "imageUrl": "https://i.imgur.com/6XYzxio.png",
-      "summary": "\"Adds several skins to the Persean League, each with the Kazeron Navarchy hullmod built in. They appear occasionally in Persean League markets and fleets.",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds colorful ship skins and a unique hullmod to the Persean League faction.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://github.com/RaMK5Bangle/Kazeron-Navarchy/releases/download/1.8.1/Kazeron.Navarchy.1.8.1.zip",
-        "type": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=28861.0",
-      "discordUrl": "https://discord.com/channels/187635036525166592/1362768500061638877/1376995225297358969",
-      "sourceIsPublic": true,
-      "isWorkInProgress": false,
-      "lastReleaseDate": "2026-11-18T00:00:00.000Z",
-      "addedOn": "2024-02-05"
     },
     {
       "id": "keruvim-shipyards",
@@ -26094,7 +26086,17 @@
         "required": [
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-3"
+            "id": "diable-avionics-4"
+          },
+          {
+            "name": "LazyLib",
+            "id": "lazylib",
+            "via": "Diable Avionics"
+          },
+          {
+            "name": "MagicLib",
+            "id": "magiclib",
+            "via": "Diable Avionics"
           }
         ]
       }
@@ -26251,7 +26253,6 @@
         }
       ],
       "addedOn": "2023-01-08",
-      "threadLastPostOn": "2026-11-11",
       "editedOn": "2026-11-11",
       "requirements": {
         "required": [
@@ -26438,6 +26439,7 @@
         }
       ],
       "addedOn": "2026-10-31",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-11-06"
     },
     {
@@ -28040,7 +28042,7 @@
       "gameVersion": "0.98.5a",
       "modVersion": "1.0.0",
       "imageUrl": "https://i.imgur.com/X3ZAb08.png",
-      "summary": "Prevents explosions from bypassing applicable modular armor and prevents the modular armor from being treated as a separate target to shoot at. Additionally adds a modular armor preview to the MK.1 to observe how damaged your modular armor is.",
+      "summary": "Prevents explosions from bypassing applicable modular armor and prevents modular armor from being treated as a separate target to shoot at. Additionally adds a modular armor preview to the MK.1 to observe how damaged your modular armor is.",
       "summaryIsGenerated": false,
       "aiSummary": "Prevents explosions from bypassing modular armor and stops enemies from targeting it separately, while adding a damage preview to the MK.1.",
       "saveCompat": {
@@ -28065,7 +28067,6 @@
       "isWorkInProgress": false,
       "addedOn": "2026-11-15",
       "threadLastPostOn": "2026-11-15",
-      "editedOn": "2026-11-15",
       "requirements": {
         "required": [
           {
@@ -28352,7 +28353,7 @@
       "lastReleaseDate": "2026-11-16T00:00:00.000Z",
       "addedOn": "2023-05-17",
       "threadLastPostOn": "2026-11-15",
-      "editedOn": "2026-11-15",
+      "editedOn": "2026-11-17",
       "requirements": {
         "required": [
           {
@@ -28853,7 +28854,7 @@
       "editedOn": "2026-02-15"
     },
     {
-      "id": "my-little-pony-25",
+      "id": "my-little-pony-27",
       "name": "My Little Pony",
       "authors": [
         "Vandala"
@@ -29399,7 +29400,6 @@
       "sourceIsPublic": true,
       "isWorkInProgress": false,
       "addedOn": "2024-10-18",
-      "threadLastPostOn": "2025-08-06",
       "editedOn": "2025-01-14",
       "requirements": {
         "required": [
@@ -29704,7 +29704,8 @@
       "isWorkInProgress": false,
       "usesAi": false,
       "lastReleaseDate": "2026-08-25T00:00:00.000Z",
-      "addedOn": "2025-03-29",
+      "addedOn": "2025-03-30",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-11-12",
       "requirements": {
         "required": [
@@ -30071,7 +30072,6 @@
       "sourceIsPublic": true,
       "isWorkInProgress": false,
       "addedOn": "2023-03-07",
-      "threadLastPostOn": "2026-11-16",
       "editedOn": "2025-04-10"
     },
     {
@@ -30656,6 +30656,7 @@
       "sourceIsPublic": true,
       "isWorkInProgress": false,
       "addedOn": "2022-01-26",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-11-15"
     },
     {
@@ -31923,6 +31924,52 @@
       "editedOn": "2023-05-10"
     },
     {
+      "id": "outer-rim-alliance-2",
+      "name": "Outer Rim Alliance",
+      "authors": [
+        "Tartiflette"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.95.1a",
+      "modVersion": "0.95rc1",
+      "imageUrl": "http://i.imgur.com/3F2EkQB.jpg",
+      "summary": "Welcome to the Outer Rim Alliance, a growing force of good in these dire times. One of the few groups, if not the only one, able to reverse the spiral of destruction that plagued our Sector since the Great Collapse.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds a high-tech faction composed of broadside ships that rely on energy weapons and long-range artillery.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://www.patreon.com/posts/outer-rim-0-76912647",
+        "type": "direct",
+        "needsAnotherStep": true
+      },
+      "downloadCount": 2,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=11646.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "nicknames": [
+        "O.R.A."
+      ],
+      "addedOn": "2017-02-27",
+      "threadLastPostOn": "2025-07-23",
+      "editedOn": "2023-01-07",
+      "requirements": {
+        "required": [
+          {
+            "name": "LazyLib",
+            "id": "lazylib"
+          },
+          {
+            "name": "MagicLib",
+            "id": "magiclib"
+          }
+        ]
+      }
+    },
+    {
       "id": "outer-rim-alliance",
       "name": "Outer Rim Alliance",
       "authors": [
@@ -31956,52 +32003,6 @@
       "addedOn": "2025-07-08",
       "threadLastPostOn": "2026-08-01",
       "editedOn": "2025-09-02",
-      "requirements": {
-        "required": [
-          {
-            "name": "LazyLib",
-            "id": "lazylib"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib"
-          }
-        ]
-      }
-    },
-    {
-      "id": "outer-rim-alliance-2",
-      "name": "Outer Rim Alliance",
-      "authors": [
-        "Tartiflette"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.95.1a",
-      "modVersion": "0.95rc1",
-      "imageUrl": "http://i.imgur.com/3F2EkQB.jpg",
-      "summary": "Welcome to the Outer Rim Alliance, a growing force of good in these dire times. One of the few groups, if not the only one, able to reverse the spiral of destruction that plagued our Sector since the Great Collapse.",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds a high-tech faction composed of broadside ships that rely on energy weapons and long-range artillery.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://www.patreon.com/posts/outer-rim-0-76912647",
-        "type": "direct",
-        "needsAnotherStep": true
-      },
-      "downloadCount": 2,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=11646.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "nicknames": [
-        "O.R.A."
-      ],
-      "addedOn": "2017-02-27",
-      "threadLastPostOn": "2025-07-23",
-      "editedOn": "2023-01-07",
       "requirements": {
         "required": [
           {
@@ -33296,7 +33297,6 @@
       "sourceIsPublic": false,
       "isWorkInProgress": false,
       "addedOn": "2019-01-24",
-      "threadLastPostOn": "2026-05-24",
       "editedOn": "2025-04-04"
     },
     {
@@ -35087,7 +35087,7 @@
           },
           {
             "name": "Diable Avionics",
-            "id": "diable-avionics-3"
+            "id": "diable-avionics-4"
           },
           {
             "name": "MagicLib",
@@ -36108,7 +36108,7 @@
       "sourceIsPublic": true,
       "isWorkInProgress": false,
       "addedOn": "2023-03-08",
-      "threadLastPostOn": "2026-11-13",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-11-14",
       "requirements": {
         "required": [
@@ -36625,6 +36625,7 @@
       ],
       "lastReleaseDate": "2026-08-25T00:00:00.000Z",
       "addedOn": "2026-03-01",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-08-01",
       "requirements": {
         "required": [
@@ -37293,6 +37294,7 @@
       ],
       "lastReleaseDate": "2026-09-09T00:00:00.000Z",
       "addedOn": "2026-08-28",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-09-01"
     },
     {
@@ -38149,6 +38151,7 @@
       "sourceIsPublic": false,
       "isWorkInProgress": false,
       "usesAi": false,
+      "lastReleaseDate": "2026-11-18T00:00:00.000Z",
       "addedOn": "2026-10-31",
       "threadLastPostOn": "2026-11-01",
       "editedOn": "2026-11-16",
@@ -38617,6 +38620,8 @@
       "isWorkInProgress": false,
       "lastReleaseDate": "2026-11-15T00:00:00.000Z",
       "addedOn": "2019-04-14",
+      "threadLastPostOn": "2026-11-17",
+      "editedOn": "2026-11-17",
       "requirements": {
         "required": [
           {
@@ -39400,6 +39405,59 @@
       "editedOn": "2012-07-05"
     },
     {
+      "id": "scy",
+      "name": "SCY",
+      "authors": [
+        "starficz"
+      ],
+      "otherAuthorNames": {},
+      "categories": [
+        "Factions"
+      ],
+      "sources": [
+        "forum",
+        "discord"
+      ],
+      "gameVersion": "0.98a",
+      "modVersion": "1.11.1",
+      "imageUrl": "https://i.imgur.com/CvRLf7Q.png",
+      "announcementImageUrl": "https://cdn.discordapp.com/attachments/1359298072999493693/1359298073309876404/banner.png?ex=6afb877b&is=6afa35fb&hm=8b5a626e17aed59effaee37a6701a7021eedf553f161be6bb6d62a1740f6b1f1&",
+      "summary": "Skirmisher to the core, Scyan ships have a deep flux pool to make the most out of an hit-run, and slightly better speed to manage to disengage. On the other hand they have slightly more fragile hulls, narrow shields, terrible flux dissipation (relying on venting instead) and fewer weapon mounts.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds the Scy Nation faction with skirmisher-focused ships featuring deep flux pools, modular armor, and unique weapons like teleporting guns and phase missiles.",
+      "saveCompat": {
+        "adding": {
+          "answer": "yes"
+        }
+      },
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://github.com/Starficz/scy-nation/releases/latest/download/ScyNation.zip",
+        "type": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29535.0",
+      "discordUrl": "https://discord.com/channels/187635036525166592/1359298072999493693/1359298072999493693",
+      "sourceIsPublic": true,
+      "isWorkInProgress": false,
+      "addedOn": "2024-03-15",
+      "threadLastPostOn": "2026-09-08",
+      "editedOn": "2025-05-13",
+      "requirements": {
+        "required": [
+          {
+            "name": "LazyLib",
+            "id": "lazylib"
+          },
+          {
+            "name": "MagicLib",
+            "id": "magiclib"
+          }
+        ]
+      }
+    },
+    {
       "id": "scy-2",
       "name": "Scy",
       "authors": [
@@ -39440,59 +39498,6 @@
       "addedOn": "2014-05-23",
       "threadLastPostOn": "2025-05-11",
       "editedOn": "2024-12-04",
-      "requirements": {
-        "required": [
-          {
-            "name": "LazyLib",
-            "id": "lazylib"
-          },
-          {
-            "name": "MagicLib",
-            "id": "magiclib"
-          }
-        ]
-      }
-    },
-    {
-      "id": "scy",
-      "name": "SCY",
-      "authors": [
-        "starficz"
-      ],
-      "otherAuthorNames": {},
-      "categories": [
-        "Factions"
-      ],
-      "sources": [
-        "forum",
-        "discord"
-      ],
-      "gameVersion": "0.98a",
-      "modVersion": "1.11.1",
-      "imageUrl": "https://i.imgur.com/CvRLf7Q.png",
-      "announcementImageUrl": "https://cdn.discordapp.com/attachments/1359298072999493693/1359298073309876404/banner.png?ex=6afb877b&is=6afa35fb&hm=8b5a626e17aed59effaee37a6701a7021eedf553f161be6bb6d62a1740f6b1f1&",
-      "summary": "Skirmisher to the core, Scyan ships have a deep flux pool to make the most out of an hit-run, and slightly better speed to manage to disengage. On the other hand they have slightly more fragile hulls, narrow shields, terrible flux dissipation (relying on venting instead) and fewer weapon mounts.",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds the Scy Nation faction with skirmisher-focused ships featuring deep flux pools, modular armor, and unique weapons like teleporting guns and phase missiles.",
-      "saveCompat": {
-        "adding": {
-          "answer": "yes"
-        }
-      },
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://github.com/Starficz/scy-nation/releases/latest/download/ScyNation.zip",
-        "type": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29535.0",
-      "discordUrl": "https://discord.com/channels/187635036525166592/1359298072999493693/1359298072999493693",
-      "sourceIsPublic": true,
-      "isWorkInProgress": false,
-      "addedOn": "2024-03-15",
-      "threadLastPostOn": "2026-09-08",
-      "editedOn": "2025-05-13",
       "requirements": {
         "required": [
           {
@@ -39874,7 +39879,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 2,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30407",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30407.0",
       "discordUrl": "https://discord.com/channels/187635036525166592/1354933898462625873/1354933898462625873",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -39948,7 +39953,6 @@
       "usesAi": false,
       "lastReleaseDate": "2026-11-16T00:00:00.000Z",
       "addedOn": "2026-05-31",
-      "threadLastPostOn": "2026-11-14",
       "editedOn": "2026-11-14",
       "requirements": {
         "required": [
@@ -40126,6 +40130,7 @@
         "SOTFECO"
       ],
       "addedOn": "2025-04-11",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-02-23",
       "requirements": {
         "required": [
@@ -40301,38 +40306,6 @@
       }
     },
     {
-      "id": "seeker-unidentified-contact",
-      "name": "Seeker - Unidentified Contact",
-      "authors": [
-        "s_numan"
-      ],
-      "otherAuthorNames": {},
-      "categories": [
-        "Ships and weapons",
-        "Campaign and exploration"
-      ],
-      "sources": [
-        "discord"
-      ],
-      "gameVersion": "0.98a",
-      "modVersion": "0.65",
-      "summary": "Update for a mod by Tartiflette",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds exploration content, bosses, bounties, and faction adjustments.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip",
-        "type": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "discordUrl": "https://discord.com/channels/187635036525166592/1370652306214883368/1370652306214883368",
-      "sourceIsPublic": true,
-      "isWorkInProgress": false,
-      "addedOn": "2025-05-10",
-      "editedOn": "2026-03-07"
-    },
-    {
       "id": "seeker-unidentified-contact-3",
       "name": "SEEKER - Unidentified Contact",
       "authors": [
@@ -40374,6 +40347,38 @@
           }
         ]
       }
+    },
+    {
+      "id": "seeker-unidentified-contact",
+      "name": "Seeker - Unidentified Contact",
+      "authors": [
+        "s_numan"
+      ],
+      "otherAuthorNames": {},
+      "categories": [
+        "Ships and weapons",
+        "Campaign and exploration"
+      ],
+      "sources": [
+        "discord"
+      ],
+      "gameVersion": "0.98a",
+      "modVersion": "0.65",
+      "summary": "Update for a mod by Tartiflette",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds exploration content, bosses, bounties, and faction adjustments.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://github.com/S-Numan/Seeker/releases/latest/download/SEEKER.zip",
+        "type": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "discordUrl": "https://discord.com/channels/187635036525166592/1370652306214883368/1370652306214883368",
+      "sourceIsPublic": true,
+      "isWorkInProgress": false,
+      "addedOn": "2025-05-10",
+      "editedOn": "2026-03-07"
     },
     {
       "id": "seeker-unknown-contact",
@@ -42633,6 +42638,44 @@
       "editedOn": "2017-06-27"
     },
     {
+      "id": "star-lords-2",
+      "name": "Star Lords",
+      "authors": [
+        "Deluth"
+      ],
+      "otherAuthorNames": {},
+      "categories": [
+        "Total conversions"
+      ],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.97a",
+      "modVersion": "0.3.2",
+      "imageUrl": "https://raw.githubusercontent.com/Deluth-git/Starlords/master/example/starlords_readme5.PNG",
+      "summary": "Star Lords attempts to bring the world of Starsector to life with many character-centric features. No longer will your only allies be nameless faction fleets who you'll meet once and never again.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds dozens of unique Lords with personalities, fleets, and agendas who roam the map, manage fiefs, and engage in political schemes.",
+      "saveCompat": {
+        "adding": {
+          "answer": "yes"
+        }
+      },
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://github.com/Deluth-git/Starlords/archive/refs/tags/v0.3.2.zip",
+        "type": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 2,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30548.0",
+      "sourceIsPublic": true,
+      "isWorkInProgress": false,
+      "addedOn": "2024-08-25",
+      "threadLastPostOn": "2025-11-20",
+      "editedOn": "2024-10-25"
+    },
+    {
       "id": "star-lords",
       "name": "Star Lords",
       "authors": [
@@ -42672,44 +42715,6 @@
       "addedOn": "2025-09-27",
       "threadLastPostOn": "2026-11-05",
       "editedOn": "2026-08-22"
-    },
-    {
-      "id": "star-lords-2",
-      "name": "Star Lords",
-      "authors": [
-        "Deluth"
-      ],
-      "otherAuthorNames": {},
-      "categories": [
-        "Total conversions"
-      ],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.97a",
-      "modVersion": "0.3.2",
-      "imageUrl": "https://raw.githubusercontent.com/Deluth-git/Starlords/master/example/starlords_readme5.PNG",
-      "summary": "Star Lords attempts to bring the world of Starsector to life with many character-centric features. No longer will your only allies be nameless faction fleets who you'll meet once and never again.",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds dozens of unique Lords with personalities, fleets, and agendas who roam the map, manage fiefs, and engage in political schemes.",
-      "saveCompat": {
-        "adding": {
-          "answer": "yes"
-        }
-      },
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://github.com/Deluth-git/Starlords/archive/refs/tags/v0.3.2.zip",
-        "type": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 2,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=30548.0",
-      "sourceIsPublic": true,
-      "isWorkInProgress": false,
-      "addedOn": "2024-08-25",
-      "threadLastPostOn": "2025-11-20",
-      "editedOn": "2024-10-25"
     },
     {
       "id": "star-lords-mount-blade-campaign-in-space-update-deluth-alaricdragon",
@@ -43049,7 +43054,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22966.0",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=22966.msg345175#msg345175",
       "discordUrl": "https://discord.com/channels/187635036525166592/1363273985625952386/1363273985625952386",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -43873,42 +43878,6 @@
       "editedOn": "2014-05-09"
     },
     {
-      "id": "starsector-ship-weapon-editor",
-      "name": "STARSECTOR Ship&Weapon Editor",
-      "authors": [
-        "Deathfly"
-      ],
-      "otherAuthorNames": {},
-      "categories": [
-        "Utilities"
-      ],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.95a",
-      "modVersion": "3.0.0-alpha-11",
-      "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_4820.png",
-      "summary": "This is an update of Trylobot's ship editor, forked from Trylobot's original works.",
-      "summaryIsGenerated": false,
-      "aiSummary": "Updates Trylobot's ship editor for Starsector 0.95a with new weapon types, fighter bay support, and bug fixes.",
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://github.com/Deathfly/sf-ship-ed/releases/download/3.0.0/sf-ship-ed.3.0.0-alpha-11.exe",
-        "type": "direct",
-        "needsAnotherStep": false
-      },
-      "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=11491.0",
-      "sourceIsPublic": true,
-      "isWorkInProgress": false,
-      "types": [
-        "tool"
-      ],
-      "addedOn": "2016-12-13",
-      "threadLastPostOn": "2026-07-31",
-      "editedOn": "2022-05-06"
-    },
-    {
       "id": "starsector-ship-weapon-editor-v",
       "name": "STARSECTOR Ship&Weapon Editor",
       "authors": [
@@ -43943,6 +43912,42 @@
       "addedOn": "2011-09-27",
       "threadLastPostOn": "2022-02-04",
       "editedOn": "2017-07-23"
+    },
+    {
+      "id": "starsector-ship-weapon-editor",
+      "name": "STARSECTOR Ship&Weapon Editor",
+      "authors": [
+        "Deathfly"
+      ],
+      "otherAuthorNames": {},
+      "categories": [
+        "Utilities"
+      ],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.95a",
+      "modVersion": "3.0.0-alpha-11",
+      "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_4820.png",
+      "summary": "This is an update of Trylobot's ship editor, forked from Trylobot's original works.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Updates Trylobot's ship editor for Starsector 0.95a with new weapon types, fighter bay support, and bug fixes.",
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://github.com/Deathfly/sf-ship-ed/releases/download/3.0.0/sf-ship-ed.3.0.0-alpha-11.exe",
+        "type": "direct",
+        "needsAnotherStep": false
+      },
+      "downloadCount": 1,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=11491.0",
+      "sourceIsPublic": true,
+      "isWorkInProgress": false,
+      "types": [
+        "tool"
+      ],
+      "addedOn": "2016-12-13",
+      "threadLastPostOn": "2026-07-31",
+      "editedOn": "2022-05-06"
     },
     {
       "id": "starsector",
@@ -44366,7 +44371,6 @@
         }
       ],
       "addedOn": "2026-11-15",
-      "threadLastPostOn": "2026-11-16",
       "editedOn": "2026-11-15",
       "requirements": {
         "required": [
@@ -44525,13 +44529,13 @@
         "forum",
         "discord"
       ],
-      "gameVersion": "0.98a",
+      "gameVersion": "0.98.5a-RC4",
       "modVersion": "1.0.1",
       "imageUrl": "https://cdn.discordapp.com/attachments/1437171102626611282/1437171103691702272/screenshot079.png?ex=6af8bee4&is=6af76d64&hm=71b48f0b815d31fa2697ded76e1a51bb45e2ecfbaf1ea7677b653cb9a2c5f58d&",
       "announcementImageUrl": "https://cdn.discordapp.com/attachments/1437171102626611282/1437171103691702272/screenshot079.png?ex=6afb61e4&is=6afa1064&hm=57153f3adf6d4d3ab557d2d7771a4197a3655aa4e979f3510fd16b01d094878d&",
       "summary": "Enables station refitting. Variants save across upgrades, damage, and are only lost if the station is deconstructed.",
       "summaryIsGenerated": false,
-      "aiSummary": "Enables station refitting while preserving variants through upgrades and damage.",
+      "aiSummary": "Enables station refitting while preserving variants across upgrades and damage, and autogenerates OP costs for stations including modded ones.",
       "saveCompat": {
         "adding": {
           "answer": "yes"
@@ -44549,8 +44553,7 @@
       "sourceIsPublic": true,
       "isWorkInProgress": false,
       "addedOn": "2025-11-08",
-      "threadLastPostOn": "2026-08-03",
-      "editedOn": "2026-06-19"
+      "editedOn": "2026-11-12"
     },
     {
       "id": "station-stocks-mod-bundle",
@@ -45241,7 +45244,7 @@
       "announcementImageUrl": "https://cdn.discordapp.com/attachments/1450521320755560528/1450521320986116307/preivew_sss_2.png?ex=6afbd480&is=6afa8300&hm=19de1999d8ec52f538322d319522d0ad6155494100b3742217318523f6da1624&",
       "summary": "A mod that adds three star systems to explore and conquer. The first is a perfect star system with planets optimized for colonization. The second is a remnant star system perfect for farming AI cores and experience. The last is a [SUPER REDACTED] system perfect for farming unique weapons.",
       "summaryIsGenerated": false,
-      "aiSummary": "Adds three star systems optimized for colonization, AI core farming, and unique weapon acquisition.",
+      "aiSummary": "Adds three new star systems optimized for colonization, AI core farming, and unique weapon acquisition.",
       "saveCompat": {
         "adding": {
           "answer": "no"
@@ -45261,7 +45264,7 @@
       "lastReleaseDate": "2026-11-16T00:00:00.000Z",
       "addedOn": "2022-10-01",
       "threadLastPostOn": "2026-11-15",
-      "editedOn": "2026-11-16"
+      "editedOn": "2026-11-17"
     },
     {
       "id": "sundiving",
@@ -45660,7 +45663,9 @@
           "how": "assisted"
         }
       ],
-      "addedOn": "2026-11-18"
+      "addedOn": "2026-11-17",
+      "threadLastPostOn": "2026-11-17",
+      "editedOn": "2026-11-17"
     },
     {
       "id": "survival-mode-lite",
@@ -45709,7 +45714,9 @@
           "how": "generated"
         }
       ],
-      "addedOn": "2026-11-17"
+      "addedOn": "2026-11-17",
+      "threadLastPostOn": "2026-11-17",
+      "editedOn": "2026-11-17"
     },
     {
       "id": "swagify",
@@ -45823,6 +45830,7 @@
         }
       ],
       "addedOn": "2026-08-05",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-08-09",
       "requirements": {
         "required": [
@@ -46048,6 +46056,7 @@
       "sourceIsPublic": true,
       "isWorkInProgress": false,
       "addedOn": "2023-11-21",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-03-20",
       "requirements": {
         "required": [
@@ -46618,9 +46627,10 @@
       "discordUrl": "https://discord.com/channels/187635036525166592/1452169576854065203/1452169576854065203",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
-      "lastReleaseDate": "2026-09-09T00:00:00.000Z",
+      "lastReleaseDate": "2026-11-18T00:00:00.000Z",
       "addedOn": "2024-03-09",
-      "editedOn": "2026-06-23"
+      "threadLastPostOn": "2026-11-17",
+      "editedOn": "2026-11-17"
     },
     {
       "id": "tesseract-prototype",
@@ -46730,6 +46740,7 @@
       ],
       "lastReleaseDate": "2026-11-09T00:00:00.000Z",
       "addedOn": "2026-08-30",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-11-08"
     },
     {
@@ -47372,7 +47383,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 2,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29124.0",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29124",
       "discordUrl": "https://discord.com/channels/187635036525166592/1208245045497438288/1208245045497438288",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -48798,35 +48809,6 @@
       }
     },
     {
-      "id": "threat-detected",
-      "name": "THREAT DETECTED",
-      "authors": [
-        "gord"
-      ],
-      "otherAuthorNames": {
-        "gord": [
-          "gord_f"
-        ]
-      },
-      "categories": [
-        "Miscellaneous"
-      ],
-      "sources": [
-        "discord"
-      ],
-      "gameVersion": "0.98a",
-      "summary": "||THREAT DETECTED|| ||THREAT DETECTED||",
-      "summaryIsGenerated": false,
-      "aiSummary": "Adds a challenging fleet encounter featuring Fabricators that explode if more than two are present.",
-      "hasDirectDownload": false,
-      "downloadCount": 0,
-      "discordUrl": "https://discord.com/channels/187635036525166592/1356047242837884979/1356047242837884979",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2025-03-30",
-      "editedOn": "2025-03-31"
-    },
-    {
       "id": "threat-detected-2",
       "name": "THREAT DETECTED",
       "authors": [
@@ -48864,6 +48846,35 @@
           }
         ]
       }
+    },
+    {
+      "id": "threat-detected",
+      "name": "THREAT DETECTED",
+      "authors": [
+        "gord"
+      ],
+      "otherAuthorNames": {
+        "gord": [
+          "gord_f"
+        ]
+      },
+      "categories": [
+        "Miscellaneous"
+      ],
+      "sources": [
+        "discord"
+      ],
+      "gameVersion": "0.98a",
+      "summary": "||THREAT DETECTED|| ||THREAT DETECTED||",
+      "summaryIsGenerated": false,
+      "aiSummary": "Adds a challenging fleet encounter featuring Fabricators that explode if more than two are present.",
+      "hasDirectDownload": false,
+      "downloadCount": 0,
+      "discordUrl": "https://discord.com/channels/187635036525166592/1356047242837884979/1356047242837884979",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2025-03-30",
+      "editedOn": "2025-03-31"
     },
     {
       "id": "threat-start",
@@ -49382,7 +49393,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 2,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=25485",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=25485.0",
       "discordUrl": "https://discord.com/channels/187635036525166592/1388797312696057918/1388797312696057918",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -49803,7 +49814,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 1,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34672.msg506364#new",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=34672.0",
       "discordUrl": "https://discord.com/channels/187635036525166592/1452415261079507065/1452415261079507065",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -50432,7 +50443,7 @@
         "needsAnotherStep": false
       },
       "downloadCount": 4,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29674",
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=29674.0",
       "discordUrl": "https://discord.com/channels/187635036525166592/1355300468968001586/1355300468968001586",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
@@ -50616,10 +50627,10 @@
         "forum"
       ],
       "gameVersion": "0.97a",
-      "imageUrl": "https://fractalsoftworks.com/forum/index.php?action=dlattach;attach=12574;type=avatar",
+      "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_29613_1732992744.png",
       "summary": "Description: Transverse Jump will no longer disable other abilities when activated; Sustained Burn most notably. A message will also be shown telling you what planet a gravity well belongs to when you stop in it and you will be prompted to turn on your transponder if jumping into non-hostile space.",
       "summaryIsGenerated": false,
-      "aiSummary": "Allows Transverse Jump to be used alongside other abilities and adds prompts for gravity well locations and transponders.",
+      "aiSummary": "Allows Transverse Jump to be used alongside other abilities and adds prompts for gravity wells and transponders.",
       "hasDirectDownload": true,
       "bestDownload": {
         "url": "https://github.com/MildlyFootwear/starsector-SASTransverse/releases/download/1.1.5/SASTransverse.1.1.5.zip",
@@ -50631,7 +50642,6 @@
       "sourceIsPublic": true,
       "isWorkInProgress": false,
       "addedOn": "2024-10-18",
-      "threadLastPostOn": "2025-08-06",
       "editedOn": "2025-01-14",
       "partOfThreadTitle": "[0.97a] Shoey's Assorted Stuff - Misc Mods (2025/01/15)"
     },
@@ -51060,7 +51070,8 @@
       "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=35744.0",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
-      "addedOn": "2026-07-16"
+      "addedOn": "2026-07-16",
+      "threadLastPostOn": "2026-11-17"
     },
     {
       "id": "unconventional-armaments",
@@ -51178,7 +51189,6 @@
         "UAF"
       ],
       "addedOn": "2017-06-20",
-      "threadLastPostOn": "2026-11-12",
       "editedOn": "2026-08-14",
       "requirements": {
         "required": [
@@ -51364,6 +51374,42 @@
       "editedOn": "2026-10-09"
     },
     {
+      "id": "unknown-skies-2",
+      "name": "Unknown Skies",
+      "authors": [
+        "Tartiflette"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.95.1a",
+      "modVersion": "1.00rc2",
+      "imageUrl": "http://i.imgur.com/FZ8D8Gm.jpg",
+      "summary": "This mod significantly expands the variety of systems and planets you'll encounter while exploring.",
+      "summaryIsGenerated": false,
+      "aiSummary": "Expands system and planet variety by adding new backgrounds, planet types, and planetary conditions without altering overall sector quality.",
+      "saveCompat": {
+        "adding": {
+          "answer": "yes"
+        }
+      },
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://www.patreon.com/posts/80147964",
+        "type": "direct",
+        "needsAnotherStep": true
+      },
+      "downloadCount": 2,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=12041.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2017-04-26",
+      "threadLastPostOn": "2025-12-10",
+      "editedOn": "2023-03-19"
+    },
+    {
       "id": "unknown-skies-3",
       "name": "Unknown Skies",
       "authors": [
@@ -51455,42 +51501,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "unknown-skies-2",
-      "name": "Unknown Skies",
-      "authors": [
-        "Tartiflette"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.95.1a",
-      "modVersion": "1.00rc2",
-      "imageUrl": "http://i.imgur.com/FZ8D8Gm.jpg",
-      "summary": "This mod significantly expands the variety of systems and planets you'll encounter while exploring.",
-      "summaryIsGenerated": false,
-      "aiSummary": "Expands system and planet variety by adding new backgrounds, planet types, and planetary conditions without altering overall sector quality.",
-      "saveCompat": {
-        "adding": {
-          "answer": "yes"
-        }
-      },
-      "hasDirectDownload": true,
-      "bestDownload": {
-        "url": "https://www.patreon.com/posts/80147964",
-        "type": "direct",
-        "needsAnotherStep": true
-      },
-      "downloadCount": 2,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=12041.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2017-04-26",
-      "threadLastPostOn": "2025-12-10",
-      "editedOn": "2023-03-19"
     },
     {
       "id": "unoffical-captions-log-printer",
@@ -51713,12 +51723,12 @@
         "forum"
       ],
       "onModIndex": true,
-      "gameVersion": "0.98a",
-      "modVersion": "0.7.4",
+      "gameVersion": "0.98.5a",
+      "modVersion": "0.7.6",
       "imageUrl": "https://raw.githubusercontent.com/qcwxezda/Starsector-Unthemed-Weapons/main/graphics/weapons/ballistic/wpnxt_lightrailburst_turret.png",
       "summary": "Weapon pack. No factions, no ships*, no faction-themed stuff. Adds 42 weapons to the game. Also adds fortified caches and a few secrets.",
       "summaryIsGenerated": false,
-      "aiSummary": "Adds 42 unthemed weapons, procedurally generated fortified caches with defenders, and utilities that update refit screen statistics.",
+      "aiSummary": "Adds 42 unthemed weapons, procedurally generated fortified caches with defenders, and optional cache regeneration.",
       "hasDirectDownload": true,
       "bestDownload": {
         "url": "https://github.com/qcwxezda/Starsector-Unthemed-Weapons/releases/latest/download/Unthemed.Weapons.Collection.zip",
@@ -51729,9 +51739,7 @@
       "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=27074.0",
       "sourceIsPublic": true,
       "isWorkInProgress": false,
-      "addedOn": "2023-05-29",
-      "threadLastPostOn": "2026-03-30",
-      "editedOn": "2025-08-11"
+      "addedOn": "2023-05-29"
     },
     {
       "id": "true-weapon-stats",
@@ -52156,6 +52164,7 @@
         }
       ],
       "addedOn": "2024-08-27",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2025-07-02",
       "requirements": {
         "required": [
@@ -53264,7 +53273,6 @@
       "sourceIsPublic": true,
       "isWorkInProgress": false,
       "addedOn": "2026-07-25",
-      "threadLastPostOn": "2026-11-16",
       "editedOn": "2026-11-12"
     },
     {
@@ -53552,8 +53560,67 @@
         }
       ],
       "addedOn": "2026-10-20",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-11-16",
       "partOfThreadTitle": "Oddish's Mods"
+    },
+    {
+      "id": "weapon-tooltip-preview-pew-pew-on-the-fly",
+      "name": "Weapon Tooltip Preview - Pew pew on the fly",
+      "authors": [
+        "buche"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.98.5a",
+      "modVersion": "0.4.0",
+      "imageUrl": "https://i.imgur.com/3KcYC2i.png",
+      "summary": "Lets you preview weapon firing patterns by hovering over them in tooltips.",
+      "summaryIsGenerated": true,
+      "aiSummary": "Lets you preview weapon firing patterns by hovering over them in tooltips.",
+      "saveCompat": {
+        "adding": {
+          "answer": "yes"
+        }
+      },
+      "hasDirectDownload": true,
+      "bestDownload": {
+        "url": "https://trilink.wispborne.com/open.html?mod=%7B%22url%22%3A%22https%3A%2F%2Fgithub.com%2FBucheGithub%2FWeaponTooltipPreview%2Freleases%2Fdownload%2Fv0.4.0%2FWeaponTooltipPreview.zip%22%2C%22id%22%3A%22WeaponTooltipPreview%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLazyWizard%2Flazylib%2Fmaster%2Fmod%2Flazylib.version%22%2C%22id%22%3A%22lw_lazylib%22%7D&dep=%7B%22url%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2FLukas22041%2FLunaLib%2Fmain%2FLunaLib.version%22%2C%22id%22%3A%22lunalib%22%7D",
+        "type": "trios",
+        "needsAnotherStep": false
+      },
+      "plainDownload": {
+        "url": "https://github.com/BucheGithub/WeaponTooltipPreview/releases/latest",
+        "type": "direct",
+        "needsAnotherStep": true
+      },
+      "downloadCount": 2,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36470.0",
+      "sourceIsPublic": true,
+      "isWorkInProgress": false,
+      "usesAi": true,
+      "aiUses": [
+        {
+          "area": "code",
+          "how": "generated"
+        }
+      ],
+      "addedOn": "2026-11-18",
+      "requirements": {
+        "required": [
+          {
+            "name": "LunaLib",
+            "id": "lunalib"
+          },
+          {
+            "name": "LazyLib",
+            "id": "lazylib"
+          }
+        ]
+      }
     },
     {
       "id": "weapons-group-controls",
@@ -53881,6 +53948,7 @@
       ],
       "lastReleaseDate": "2026-08-25T00:00:00.000Z",
       "addedOn": "2022-08-27",
+      "threadLastPostOn": "2026-11-17",
       "editedOn": "2026-07-29"
     },
     {
@@ -54482,6 +54550,29 @@
       "editedOn": "2025-11-10"
     },
     {
+      "id": "xhan-empire-2",
+      "name": "Xhan Empire",
+      "authors": [
+        "Peplat"
+      ],
+      "otherAuthorNames": {},
+      "categories": [],
+      "sources": [
+        "forum"
+      ],
+      "gameVersion": "0.97a",
+      "imageUrl": "https://i.imgur.com/IfwL7xU.png",
+      "summaryIsGenerated": false,
+      "hasDirectDownload": false,
+      "downloadCount": 0,
+      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=17972.0",
+      "sourceIsPublic": false,
+      "isWorkInProgress": false,
+      "addedOn": "2020-02-13",
+      "threadLastPostOn": "2025-05-20",
+      "editedOn": "2025-04-21"
+    },
+    {
       "id": "xhan-empire",
       "name": "Xhan Empire",
       "authors": [
@@ -54524,29 +54615,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "xhan-empire-2",
-      "name": "Xhan Empire",
-      "authors": [
-        "Peplat"
-      ],
-      "otherAuthorNames": {},
-      "categories": [],
-      "sources": [
-        "forum"
-      ],
-      "gameVersion": "0.97a",
-      "imageUrl": "https://i.imgur.com/IfwL7xU.png",
-      "summaryIsGenerated": false,
-      "hasDirectDownload": false,
-      "downloadCount": 0,
-      "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=17972.0",
-      "sourceIsPublic": false,
-      "isWorkInProgress": false,
-      "addedOn": "2020-02-13",
-      "threadLastPostOn": "2025-05-20",
-      "editedOn": "2025-04-21"
     },
     {
       "id": "xiii-vanilla-ships",
