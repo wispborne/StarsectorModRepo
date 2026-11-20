@@ -1,8 +1,9 @@
 {
-  "generatedAt": "2026-11-19T19:21:24.218163Z",
+  "generatedAt": "2026-11-20T07:08:09.314236Z",
   "listing": {
     "id": "free-cam-2025",
-    "name": "Free Cam 2025",
+    "name": "Free Cam 2025 0.2.4",
+    "displayName": "Free Cam 2025",
     "authors": [
       "willthefunperson"
     ],
@@ -16,11 +17,11 @@
       "discord"
     ],
     "gameVersion": "0.98a",
-    "modVersion": "0.2.4",
+    "modVersion": "0.3.2",
     "imageUrl": "https://fractalsoftworks.com/forum/custom_avatar/avatar_21710_1793055411.png",
     "summary": "Working scroll wheel",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds a free camera mode with scroll wheel support, fog of war, and ally ship switching.",
+    "aiSummary": "Adds a free camera mode with fog of war support, ally ship cycling, and customizable controls.",
     "saveCompat": {
       "adding": {
         "answer": "yes"
@@ -28,7 +29,7 @@
     },
     "hasDirectDownload": true,
     "bestDownload": {
-      "url": "https://gitlab.com/starsector/free_cam_2025/-/archive/0.2.4/free_cam_2025-0.2.4.zip",
+      "url": "https://gitlab.com/starsector/free_cam_2025/-/archive/0.3.2/free_cam_2025-0.3.2.zip",
       "type": "direct",
       "needsAnotherStep": false
     },
@@ -37,9 +38,15 @@
     "discordUrl": "https://discord.com/channels/187635036525166592/1355576805293162689/1355576805293162689",
     "sourceIsPublic": true,
     "isWorkInProgress": false,
+    "usesAi": true,
+    "aiUses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
     "lastReleaseDate": "2026-09-28T00:00:00.000Z",
     "addedOn": "2025-02-19",
-    "threadLastPostOn": "2026-09-27",
     "editedOn": "2026-09-28",
     "requirements": {
       "required": [
@@ -55,22 +62,34 @@
       ]
     }
   },
-  "description": "download:\nhttps://gitlab.com/starsector/free_cam_2025/-/archive/0.2.4/free_cam_2025-0.2.4.zip\nprevious versions:\nhttps://gitlab.com/starsector/free_cam_2025/-/releases\n\nSafe to add and remove, integrated with lunalib\n\nFeatures:\nWorking scroll wheel\nHold button or toggle control scheme\nFog of war for free cam (works by rendering black squares over the battle map)\nHotkey to switch between allied ships.\nMost things are customizable with lunalib and the settings file\n\ndefault key for activation is left alt\ndefault key for ally cam is M\n\nChangelog:\n0.2.2\nUI scaling now keeps the mouse control centered.\n0.2.3\nfixed small fog squares with fullscreen with low resolution. Optional as starsector does not always do this\n0.2.4\nmade bug fix automatic, removing the setting\nEarlier Changelogs:\n\nSpoiler\n0.0.1\nInitial release\n0.0.2\nadded setting for fog square size\nfixed lunalib default options\n0.1.0\nremoved fog color option due to rendering issue. You can still replace the sprite to recolor the fog\nadded scroll wheel functionality\nremoved scroll keys due to scroll wheel working\nremoved use scroll option due to scroll working\nadded deadzone multiplier for panning the camera\nadded advanced options, exposing all the constants\nchanged default activate key to left alt, because tilde key is taken by show weapon arcs.\nimproved flickering on the fog of war\nfixed issue with free cam being controllable when looking at the tactical map\nadded message that tells you when free cam is enabled and disabled only when hold mode is off\n0.1.1\nfixed issue where activating free cam in the loading screen would crash\ndisabled free cam in the main menu\n0.1.2\nupdated to starsector 0.98a\n0.2.0\nadded cycle ally cam, which focuses the free cam on one of your ships, in order when free cam is active. Default key is 'M'\nadded outside of the map reveled option, which makes it so out of bounds counts as outside of the fog of war rather than inside it.\n0.2.1\nmodules no longer count as ships for ally cam",
-  "descriptionHtml": "<span class=\"size-bigger\">download:</span><br><a href=\"https://gitlab.com/starsector/free_cam_2025/-/archive/0.2.4/free_cam_2025-0.2.4.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://gitlab.com/starsector/free_cam_2025/-/archive/0.2.4/free_cam_2025-0.2.4.zip</a><br><span class=\"size-bigger\">previous versions:</span><br><a href=\"https://gitlab.com/starsector/free_cam_2025/-/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://gitlab.com/starsector/free_cam_2025/-/releases</a><br><br>Safe to add and remove, integrated with lunalib<br><br><span class=\"size-bigger\">Features:</span><br>Working scroll wheel<br>Hold button or toggle control scheme<br>Fog of war for free cam (works by rendering black squares over the battle map)<br>Hotkey to switch between allied ships.<br>Most things are customizable with lunalib and the settings file<br><br><span class=\"size-bigger\">default key for activation is left alt<br>default key for ally cam is M</span><br><br>Changelog:<br>0.2.2<br>UI scaling now keeps the mouse control centered.<br>0.2.3<br>fixed small fog squares with fullscreen with low resolution. Optional as starsector does not always do this<br>0.2.4<br>made bug fix automatic, removing the setting<br>Earlier Changelogs:<br><details class=\"spoiler\"><summary>Spoiler</summary>0.0.1<br>Initial release<br>0.0.2<br>added setting for fog square size<br>fixed lunalib default options<br>0.1.0<br>removed fog color option due to rendering issue. You can still replace the sprite to recolor the fog<br>added scroll wheel functionality<br>removed scroll keys due to scroll wheel working<br>removed use scroll option due to scroll working<br>added deadzone multiplier for panning the camera<br>added advanced options, exposing all the constants<br>changed default activate key to left alt, because tilde key is taken by show weapon arcs.<br>improved flickering on the fog of war<br>fixed issue with free cam being controllable when looking at the tactical map<br>added message that tells you when free cam is enabled and disabled only when hold mode is off<br>0.1.1<br>fixed issue where activating free cam in the loading screen would crash<br>disabled free cam in the main menu<br>0.1.2<br>updated to starsector 0.98a<br>0.2.0<br>added cycle ally cam, which focuses the free cam on one of your ships, in order when free cam is active. Default key is 'M'<br>added outside of the map reveled option, which makes it so out of bounds counts as outside of the fog of war rather than inside it.<br>0.2.1<br>modules no longer count as ships for ally cam</details>",
+  "description": "download:\nhttps://gitlab.com/starsector/free_cam_2025/-/archive/0.3.2/free_cam_2025-0.3.2.zip\nprevious versions:\nhttps://gitlab.com/starsector/free_cam_2025/-/releases\n\nSafe to add and remove, integrated with lunalib\n\nFeatures:\nWorking scroll wheel\nHold button or toggle control scheme\nFog of war for free cam\nHotkey to switch between allied ships.\nMost things are customizable with lunalib and the settings file\n\ndefault key for activation is left alt\ndefault key for ally cam is M\n\nChangelog:\n0.3.0\nupdated to starsector 0.98.5a\nupdated graphics and added color setting\nthis is the first version made with AI assistance. The model used is Opus 5.5\n0.3.1\nadded FOG_FADE_DISTANCE and FOG_VISION_BONUS settings to customize the new look.\nupdated graphics even more\nnow draws fog over graphicslib emblums\n0.3.2\nadded texture and frame buffer unloading\nmade FOG_FADE_DISTANCE not require restart\n\nEarlier Changelogs\n0.0.1\nInitial release\n0.0.2\nadded setting for fog square size\nfixed lunalib default options\n0.1.0\nremoved fog color option due to rendering issue. You can still replace the sprite to recolor the fog\nadded scroll wheel functionality\nremoved scroll keys due to scroll wheel working\nremoved use scroll option due to scroll working\nadded deadzone multiplier for panning the camera\nadded advanced options, exposing all the constants\nchanged default activate key to left alt, because tilde key is taken by show weapon arcs.\nimproved flickering on the fog of war\nfixed issue with free cam being controllable when looking at the tactical map\nadded message that tells you when free cam is enabled and disabled only when hold mode is off\n0.1.1\nfixed issue where activating free cam in the loading screen would crash\ndisabled free cam in the main menu\n0.1.2\nupdated to starsector 0.98a\n0.2.0\nadded cycle ally cam, which focuses the free cam on one of your ships, in order when free cam is active. Default key is 'M'\nadded outside of the map reveled option, which makes it so out of bounds counts as outside of the fog of war rather than inside it.\n0.2.1\nmodules no longer count as ships for ally cam\n0.2.2\nUI scaling now keeps the mouse control centered.\n0.2.3\nfixed small fog squares with fullscreen with low resolution. Optional as starsector does not always do this\n0.2.4\nmade bug fix automatic, removing the setting\n\nAI use disclaimer\nas of 0.3.0, the fog of war rendering code was generated using Opus 5.5.",
+  "descriptionHtml": "<span class=\"size-bigger\">download:</span><br><a href=\"https://gitlab.com/starsector/free_cam_2025/-/archive/0.3.2/free_cam_2025-0.3.2.zip\" rel=\"nofollow noopener\" target=\"_blank\">https://gitlab.com/starsector/free_cam_2025/-/archive/0.3.2/free_cam_2025-0.3.2.zip</a><br><span class=\"size-bigger\">previous versions:</span><br><a href=\"https://gitlab.com/starsector/free_cam_2025/-/releases\" rel=\"nofollow noopener\" target=\"_blank\">https://gitlab.com/starsector/free_cam_2025/-/releases</a><br><br>Safe to add and remove, integrated with lunalib<br><br><span class=\"size-bigger\">Features:</span><br>Working scroll wheel<br>Hold button or toggle control scheme<br>Fog of war for free cam<br>Hotkey to switch between allied ships.<br>Most things are customizable with lunalib and the settings file<br><br><span class=\"size-bigger\">default key for activation is left alt<br>default key for ally cam is M</span><br><br>Changelog:<br>0.3.0<br>updated to starsector 0.98.5a<br>updated graphics and added color setting<br>this is the first version made with AI assistance. The model used is Opus 5.5 <br>0.3.1<br>added FOG_FADE_DISTANCE and FOG_VISION_BONUS settings to customize the new look.<br>updated graphics even more<br>now draws fog over graphicslib emblums<br>0.3.2<br>added texture and frame buffer unloading<br>made FOG_FADE_DISTANCE not require restart<br><details class=\"spoiler\"><summary>Earlier Changelogs</summary>0.0.1<br>Initial release<br>0.0.2<br>added setting for fog square size<br>fixed lunalib default options<br>0.1.0<br>removed fog color option due to rendering issue. You can still replace the sprite to recolor the fog<br>added scroll wheel functionality<br>removed scroll keys due to scroll wheel working<br>removed use scroll option due to scroll working<br>added deadzone multiplier for panning the camera<br>added advanced options, exposing all the constants<br>changed default activate key to left alt, because tilde key is taken by show weapon arcs.<br>improved flickering on the fog of war<br>fixed issue with free cam being controllable when looking at the tactical map<br>added message that tells you when free cam is enabled and disabled only when hold mode is off<br>0.1.1<br>fixed issue where activating free cam in the loading screen would crash<br>disabled free cam in the main menu<br>0.1.2<br>updated to starsector 0.98a<br>0.2.0<br>added cycle ally cam, which focuses the free cam on one of your ships, in order when free cam is active. Default key is 'M'<br>added outside of the map reveled option, which makes it so out of bounds counts as outside of the fog of war rather than inside it.<br>0.2.1<br>modules no longer count as ships for ally cam<br>0.2.2<br>UI scaling now keeps the mouse control centered.<br>0.2.3<br>fixed small fog squares with fullscreen with low resolution. Optional as starsector does not always do this<br>0.2.4<br>made bug fix automatic, removing the setting</details><br><details class=\"spoiler\"><summary>AI use disclaimer</summary>as of 0.3.0, the fog of war rendering code was generated using Opus 5.5.</details>",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Adds a free camera mode that supports scroll wheel control, hold or toggle activation, and a fog of war effect. Includes a hotkey to cycle through allied ships and offers customization options via lunalib and a settings file.",
+  "aiDescription": "Provides a free camera feature that allows players to move around the map independently. It includes options for scroll wheel navigation, toggling or holding activation keys, and switching focus between allied ships. Fog of war rendering is integrated, with settings available via Lunalib to customize visibility and appearance.",
   "saveCompat": {
     "adding": {
-      "quote": "Safe to add and remove",
+      "quote": "Safe to add and remove, integrated with lunalib",
       "answer": "yes"
     },
     "removing": {
-      "quote": "Safe to add and remove",
+      "quote": "Safe to add and remove, integrated with lunalib",
       "answer": "yes"
     }
   },
-  "aiUse": {},
+  "aiUse": {
+    "quote": "as of 0.3.0, the fog of war rendering code was generated using Opus 5.5.",
+    "usesAi": true,
+    "uses": [
+      {
+        "area": "code",
+        "how": "generated"
+      }
+    ],
+    "tools": [
+      "Opus 5.5"
+    ]
+  },
   "rawCategories": [
     "Other/Misc.",
     "Quality of Life"
@@ -78,20 +97,21 @@
   "gallery": [],
   "downloads": [
     {
-      "url": "https://gitlab.com/starsector/free_cam_2025/-/archive/0.2.4/free_cam_2025-0.2.4.zip",
-      "directUrl": "https://gitlab.com/starsector/free_cam_2025/-/archive/0.2.4/free_cam_2025-0.2.4.zip",
-      "fileName": "free_cam_2025-0.2.4.zip",
+      "url": "https://gitlab.com/starsector/free_cam_2025/-/archive/0.3.2/free_cam_2025-0.3.2.zip",
+      "directUrl": "https://gitlab.com/starsector/free_cam_2025/-/archive/0.3.2/free_cam_2025-0.3.2.zip",
+      "fileName": "free_cam_2025-0.3.2.zip",
       "type": "direct",
-      "label": "https://gitlab.com/starsector/free_cam_2025/-/archive/0.2.4/free_cam_2025-0.2.4.zip",
+      "label": "https://gitlab.com/starsector/free_cam_2025/-/archive/0.3.2/free_cam_2025-0.3.2.zip",
       "host": "gitlab.com",
       "needsAnotherStep": false
     }
   ],
   "changelog": {
-    "0.2.4": "made bug fix automatic, removing the setting",
-    "0.2.3": "fixed small fog squares with fullscreen with low resolution. Optional as starsector does not always do this",
-    "0.2.2": "UI scaling now keeps the mouse control centered."
+    "0.3.2": "added texture and frame buffer unloading\nmade FOG_FADE_DISTANCE not require restart",
+    "0.3.1": "added FOG_FADE_DISTANCE and FOG_VISION_BONUS settings to customize the new look.\nupdated graphics even more\nnow draws fog over graphicslib emblums",
+    "0.3.0": "updated to starsector 0.98.5a\nupdated graphics and added color setting\nthis is the first version made with AI assistance. The model used is Opus 5.5"
   },
+  "changelogUrl": "https://gitlab.com/starsector/free_cam_2025/-/releases",
   "sourceCodeUrl": "https://gitlab.com/starsector/free_cam_2025",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=31629.0",
@@ -116,7 +136,6 @@
       "changelogNotes": "modules no longer count as ships for ally cam"
     }
   ],
-  "threadLastPostOn": "2026-09-27",
   "sameNameMods": [],
   "addons": [],
   "requirements": {
