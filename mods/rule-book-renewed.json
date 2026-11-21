@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T07:07:43.446315Z",
+  "generatedAt": "2026-11-21T19:11:07.271737Z",
   "listing": {
     "id": "rule-book-renewed",
     "name": "Rule Book - Renewed",
@@ -14,7 +14,7 @@
     "imageUrl": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-rulebook-renewed/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
     "summary": "Per-campaign rules, each with its own level: negative rules make the game harder and give points, positive rules cost them. Change them at any time, and unlock more through achievements and challenges.",
     "summaryIsGenerated": false,
-    "aiSummary": "Adds customizable per-campaign rules that adjust difficulty and reward points.",
+    "aiSummary": "Adds customizable per-campaign rules that adjust difficulty and reward points for unlocking more options.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/andrzejsokolowski/starsector-rulebook-renewed/releases/latest",
@@ -23,30 +23,34 @@
     },
     "downloadCount": 1,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36175.0",
-    "sourceIsPublic": true,
+    "sourceIsPublic": false,
     "isWorkInProgress": false,
     "usesAi": true,
     "aiUses": [
       {
-        "area": "other"
+        "area": "code",
+        "how": "generated",
+        "extent": "all"
       }
     ],
     "addedOn": "2026-10-20",
     "threadLastPostOn": "2026-11-19",
-    "editedOn": "2026-11-19",
+    "editedOn": "2026-11-20",
     "partOfThreadTitle": "Oddish's Mods"
   },
   "description": "Per-campaign rules, each with its own level: negative rules make the game\nharder and give points, positive rules cost them. Change them at any time,\nand unlock more through achievements and challenges.",
   "descriptionHtml": "Per-campaign rules, each with its own level: negative rules make the game<br>harder and give points, positive rules cost them. Change them at any time,<br>and unlock more through achievements and challenges.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Negative rules increase difficulty and grant points, while positive rules cost them. Rules can be changed at any time and unlocked via achievements.",
+  "aiDescription": "Introduces a system of campaign-specific rules. Negative rules increase difficulty and grant points, while positive rules cost points. Players can change these settings at any time and unlock new rules via achievements.",
   "aiUse": {
-    "quote": "I ONLY make mods using AI.",
+    "quote": "I ONLY make mods using AI. I am way too tired to learn starsector modding after my day job.",
     "usesAi": true,
     "uses": [
       {
-        "area": "other"
+        "area": "code",
+        "how": "generated",
+        "extent": "all"
       }
     ]
   },
@@ -103,13 +107,6 @@
       "url": "https://github.com/andrzejsokolowski/starsector-colonial-hypergrowth/blob/main/screenshots/04-hyper-ecumenopolis.png?raw=true",
       "aiCaption": "A render of the ecumenopolis planet surrounded by orbital rings.",
       "aiKind": "art",
-      "aiFit": "okay",
-      "source": "forum"
-    },
-    {
-      "url": "https://github.com/andrzejsokolowski/starsector-colonial-hypergrowth/blob/main/screenshots/05-omega-admin-acumenious-oracle.webp?raw=true",
-      "aiCaption": "A game interface showing details for 'Acumenious Oracle' and its effects on a colony.",
-      "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "forum"
     },
@@ -692,12 +689,25 @@
     }
   ],
   "changelog": {},
-  "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-rulebook-renewed",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36175.0",
   "releases": [],
   "threadLastPostOn": "2026-11-19",
   "sameNameMods": [],
-  "addons": [],
+  "addons": [
+    {
+      "name": "Toolbox Economy Curves",
+      "role": "addon",
+      "downloads": [
+        {
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=36178",
+          "type": "direct",
+          "label": "Toolbox Economy Curves",
+          "host": "fractalsoftworks.com",
+          "needsAnotherStep": true
+        }
+      ]
+    }
+  ],
   "partOfThreadTitle": "Oddish's Mods"
 }

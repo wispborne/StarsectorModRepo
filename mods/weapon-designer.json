@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T07:07:43.446315Z",
+  "generatedAt": "2026-11-21T19:11:07.271737Z",
   "listing": {
     "id": "weapon-designer",
     "name": "Weapon Designer",
@@ -14,7 +14,7 @@
     "imageUrl": "https://wsrv.nl/?url=raw.githubusercontent.com/andrzejsokolowski/starsector-weapon-designer/main/icon.png&w=96&h=96&fit=contain&cbg=00000000&output=png&v=3",
     "summary": "Design your own weapons at a colony whose Orbital Works holds a",
     "summaryIsGenerated": false,
-    "aiSummary": "Allows designing custom weapons with adjustable stats and scripts using design points.",
+    "aiSummary": "Allows you to design custom weapons with specific stats and scripts using design points.",
     "hasDirectDownload": false,
     "bestDownload": {
       "url": "https://github.com/andrzejsokolowski/starsector-weapon-designer/releases/latest",
@@ -23,30 +23,34 @@
     },
     "downloadCount": 1,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36175.0",
-    "sourceIsPublic": true,
+    "sourceIsPublic": false,
     "isWorkInProgress": false,
     "usesAi": true,
     "aiUses": [
       {
-        "area": "other"
+        "area": "code",
+        "how": "generated",
+        "extent": "all"
       }
     ],
     "addedOn": "2026-10-20",
     "threadLastPostOn": "2026-11-19",
-    "editedOn": "2026-11-19",
+    "editedOn": "2026-11-20",
     "partOfThreadTitle": "Oddish's Mods"
   },
   "description": "Design your own weapons at a colony whose Orbital Works holds a\nPristine Nanoforge. Pick size, mount, damage type and projectile, buy\nuncapped stats and scripts like lightning arcs with design points, then\nbuild it through custom production.",
   "descriptionHtml": "Design your own weapons at a colony whose Orbital Works holds a<br>Pristine Nanoforge. Pick size, mount, damage type and projectile, buy<br>uncapped stats and scripts like lightning arcs with design points, then<br>build it through custom production.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Requires a Pristine Nanoforge in an Orbital Works. Players can select size, mount, damage type, and projectile, then purchase uncapped stats and special effects like lightning arcs.",
+  "aiDescription": "Enables weapon creation at colonies with an Orbital Works holding a Pristine Nanoforge. You can choose size, mount, damage type, and projectile, then buy uncapped stats and special scripts like lightning arcs.",
   "aiUse": {
-    "quote": "I ONLY make mods using AI.",
+    "quote": "I ONLY make mods using AI. I am way too tired to learn starsector modding after my day job.",
     "usesAi": true,
     "uses": [
       {
-        "area": "other"
+        "area": "code",
+        "how": "generated",
+        "extent": "all"
       }
     ]
   },
@@ -103,13 +107,6 @@
       "url": "https://github.com/andrzejsokolowski/starsector-colonial-hypergrowth/blob/main/screenshots/04-hyper-ecumenopolis.png?raw=true",
       "aiCaption": "A render of the ecumenopolis planet surrounded by orbital rings.",
       "aiKind": "art",
-      "aiFit": "okay",
-      "source": "forum"
-    },
-    {
-      "url": "https://github.com/andrzejsokolowski/starsector-colonial-hypergrowth/blob/main/screenshots/05-omega-admin-acumenious-oracle.webp?raw=true",
-      "aiCaption": "A game interface showing details for 'Acumenious Oracle' and its effects on a colony.",
-      "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "forum"
     },
@@ -692,12 +689,25 @@
     }
   ],
   "changelog": {},
-  "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-weapon-designer",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36175.0",
   "releases": [],
   "threadLastPostOn": "2026-11-19",
   "sameNameMods": [],
-  "addons": [],
+  "addons": [
+    {
+      "name": "Toolbox Economy Curves",
+      "role": "addon",
+      "downloads": [
+        {
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=36178",
+          "type": "direct",
+          "label": "Toolbox Economy Curves",
+          "host": "fractalsoftworks.com",
+          "needsAnotherStep": true
+        }
+      ]
+    }
+  ],
   "partOfThreadTitle": "Oddish's Mods"
 }

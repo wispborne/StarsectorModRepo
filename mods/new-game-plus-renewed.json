@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T07:07:43.446315Z",
+  "generatedAt": "2026-11-21T19:11:07.271737Z",
   "listing": {
     "id": "new-game-plus-renewed",
     "name": "New Game Plus - Renewed",
@@ -23,30 +23,34 @@
     },
     "downloadCount": 1,
     "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36175.0",
-    "sourceIsPublic": true,
+    "sourceIsPublic": false,
     "isWorkInProgress": false,
     "usesAi": true,
     "aiUses": [
       {
-        "area": "other"
+        "area": "code",
+        "how": "generated",
+        "extent": "all"
       }
     ],
     "addedOn": "2026-10-20",
     "threadLastPostOn": "2026-11-19",
-    "editedOn": "2026-11-19",
+    "editedOn": "2026-11-20",
     "partOfThreadTitle": "Oddish's Mods"
   },
   "description": "Every level you gain, in any save, earns career points. Every new game\nopens a store next to your starting fleet where those points buy a head\nstart: story points, skill points, levels, credits, supplies and more.",
   "descriptionHtml": "Every level you gain, in any save, earns career points. Every new game<br>opens a store next to your starting fleet where those points buy a head<br>start: story points, skill points, levels, credits, supplies and more.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Career points are earned by leveling up in any save. In new games, these points can be used at a store to buy story points, skill points, credits, and other advantages.",
+  "aiDescription": "Tracks player levels across all saves to award career points. In new games, these points can be used at a store next to the starting fleet to buy story points, skills, credits, and other advantages.",
   "aiUse": {
-    "quote": "I ONLY make mods using AI.",
+    "quote": "I ONLY make mods using AI. I am way too tired to learn starsector modding after my day job.",
     "usesAi": true,
     "uses": [
       {
-        "area": "other"
+        "area": "code",
+        "how": "generated",
+        "extent": "all"
       }
     ]
   },
@@ -103,13 +107,6 @@
       "url": "https://github.com/andrzejsokolowski/starsector-colonial-hypergrowth/blob/main/screenshots/04-hyper-ecumenopolis.png?raw=true",
       "aiCaption": "A render of the ecumenopolis planet surrounded by orbital rings.",
       "aiKind": "art",
-      "aiFit": "okay",
-      "source": "forum"
-    },
-    {
-      "url": "https://github.com/andrzejsokolowski/starsector-colonial-hypergrowth/blob/main/screenshots/05-omega-admin-acumenious-oracle.webp?raw=true",
-      "aiCaption": "A game interface showing details for 'Acumenious Oracle' and its effects on a colony.",
-      "aiKind": "screenshot",
       "aiFit": "okay",
       "source": "forum"
     },
@@ -692,12 +689,25 @@
     }
   ],
   "changelog": {},
-  "sourceCodeUrl": "https://github.com/andrzejsokolowski/starsector-newgameplus-renewed",
   "supportLinks": [],
   "forumUrl": "https://fractalsoftworks.com/forum/index.php?topic=36175.0",
   "releases": [],
   "threadLastPostOn": "2026-11-19",
   "sameNameMods": [],
-  "addons": [],
+  "addons": [
+    {
+      "name": "Toolbox Economy Curves",
+      "role": "addon",
+      "downloads": [
+        {
+          "url": "https://fractalsoftworks.com/forum/index.php?topic=36178",
+          "type": "direct",
+          "label": "Toolbox Economy Curves",
+          "host": "fractalsoftworks.com",
+          "needsAnotherStep": true
+        }
+      ]
+    }
+  ],
   "partOfThreadTitle": "Oddish's Mods"
 }
