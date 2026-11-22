@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T19:11:07.271737Z",
+  "generatedAt": "2026-11-22T07:07:34.739453Z",
   "listing": {
     "id": "locked-and-loaded",
     "name": "Locked and Loaded",
@@ -34,7 +34,12 @@
       "required": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     }
@@ -76,7 +81,12 @@
     "required": [
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "MagicLib"
       }
     ]
   }
