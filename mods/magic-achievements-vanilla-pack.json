@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T15:39:14.229492Z",
+  "generatedAt": "2026-11-24T19:08:29.216502Z",
   "listing": {
     "id": "magic-achievements-vanilla-pack",
     "name": "Magic Achievements: Vanilla Pack",
@@ -39,7 +39,12 @@
       "required": [
         {
           "name": "MagicLib",
-          "id": "magiclib-2"
+          "id": "magiclib"
+        },
+        {
+          "name": "LazyLib",
+          "id": "lazylib",
+          "via": "MagicLib"
         }
       ]
     }
@@ -97,7 +102,12 @@
     "required": [
       {
         "name": "MagicLib",
-        "id": "magiclib-2"
+        "id": "magiclib"
+      },
+      {
+        "name": "LazyLib",
+        "id": "lazylib",
+        "via": "MagicLib"
       }
     ]
   }
