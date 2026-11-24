@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T19:09:50.074085Z",
+  "generatedAt": "2026-11-24T07:08:02.596713Z",
   "mods": [
     {
       "modId": "a-vanilla-balance-tweak",
@@ -117,8 +117,7 @@
       "modName": "Astral Ascension",
       "conflicts": [
         {
-          "name": "Terraforming and Station Construction",
-          "id": "terraforming-and-station-construction",
+          "name": "TASC",
           "quote": "the code that handles planet transformation cannot handle TASC Stations, likely due to their different nature to standard Starsector planets.",
           "type": "technical"
         }
@@ -183,6 +182,18 @@
         {
           "name": "Explore the Galaxy",
           "quote": "Not compatible with original \"Explore the Galaxy\"",
+          "type": "technical"
+        }
+      ]
+    },
+    {
+      "modId": "core-world-systems-rework",
+      "modName": "Core World systems rework",
+      "conflicts": [
+        {
+          "name": "The Knights of Ludd",
+          "id": "the-knights-of-ludd",
+          "quote": "This will disrupt mods that override the systems themselves, such as Knights of Ludd, as it will conflict with this mod's overwrite",
           "type": "technical"
         }
       ]
@@ -882,7 +893,7 @@
       "conflicts": [
         {
           "name": "Unknown Skies",
-          "id": "unknown-skies-2",
+          "id": "unknown-skies-3",
           "quote": "Unknown Skies - Rogue Planets runs after normal sector generation. Its new planet types are made by converting existing worlds, so they appear alongside Unknown Skies' types rather than competing with them, and its conditions can roll on Unknown Skies planets too. Mods that replace the whole sector layout haven't been tested.",
           "type": "withNotes"
         }
@@ -978,7 +989,7 @@
       ]
     },
     {
-      "modId": "star-lords",
+      "modId": "star-lords-2",
       "modName": "Star Lords",
       "conflicts": [
         {
@@ -989,7 +1000,7 @@
       ]
     },
     {
-      "modId": "star-lords-2",
+      "modId": "star-lords",
       "modName": "Star Lords",
       "conflicts": [
         {
@@ -1078,17 +1089,6 @@
           "id": "epta-consortium",
           "quote": "It should be compatible with Epta in the sense that it won't crash, however, I would not recommend using the two together.",
           "type": "gameplay"
-        }
-      ]
-    },
-    {
-      "modId": "terraforming-and-station-construction",
-      "modName": "Terraforming and Station Construction",
-      "conflicts": [
-        {
-          "name": "Tritachyon+",
-          "quote": "Tritachyon+ (deprecated since 2023) - Not compatible, causes CTD.",
-          "type": "technical"
         }
       ]
     },

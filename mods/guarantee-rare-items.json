@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T19:09:50.074085Z",
+  "generatedAt": "2026-11-24T07:08:02.596713Z",
   "listing": {
     "id": "guarantee-rare-items",
     "name": "Guarantee Rare Items",
@@ -12,10 +12,10 @@
       "forum"
     ],
     "gameVersion": "0.98.5a",
-    "modVersion": "0.5.0",
+    "modVersion": "0.6.1",
     "summary": "This ensures that there is one salvageable instance of every special colony item in the whole sector upon sector generation. They'll be scattered across Research Stations, Mining Stations, and Orbital Habitats.",
     "summaryIsGenerated": false,
-    "aiSummary": "Ensures one salvageable instance of every special colony item exists in the sector during generation.",
+    "aiSummary": "Ensures at least one recoverable instance of every special colony item and XIV Legion ship exists during sector generation.",
     "saveCompat": {
       "adding": {
         "answer": "no"
@@ -23,7 +23,7 @@
     },
     "hasDirectDownload": true,
     "bestDownload": {
-      "url": "https://github.com/cypai/GuaranteeRareItems/releases/download/0.5.0/GuaranteeRareItems.7z",
+      "url": "https://github.com/cypai/GuaranteeRareItems/releases/download/0.6.1/GuaranteeRareItems.7z",
       "type": "direct",
       "needsAnotherStep": false
     },
@@ -33,8 +33,6 @@
     "isWorkInProgress": false,
     "lastReleaseDate": "2026-11-14T00:00:00.000Z",
     "addedOn": "2023-03-03",
-    "threadLastPostOn": "2026-11-16",
-    "editedOn": "2026-11-12",
     "requirements": {
       "required": [
         {
@@ -43,16 +41,16 @@
         },
         {
           "name": "MagicLib",
-          "id": "magiclib"
+          "id": "magiclib-2"
         }
       ]
     }
   },
-  "description": "Guarantee Rare Items\n\nDownload\nGithub\n\nRequires LazyLib and MagicLib\n\nNow compatible with Version Checker.\n\nThis ensures that there is one salvageable instance of every special colony item in the whole sector upon sector generation. They'll be scattered across Research Stations, Mining Stations, and Orbital Habitats.\n\nWon't do anything for old saves, because it only adds the salvage during sector generation.\n\nComes with Industrial Evolution compatibility and JSON configuration. You can add or remove specific items and other salvage types by editing modSettings.json.",
-  "descriptionHtml": "<span class=\"size-biggest\"><b>Guarantee Rare Items</b></span><br><br><a href=\"https://github.com/cypai/GuaranteeRareItems/releases/download/0.5.0/GuaranteeRareItems.7z\" rel=\"nofollow noopener\" target=\"_blank\">Download</a><br><a href=\"https://github.com/cypai/GuaranteeRareItems\" rel=\"nofollow noopener\" target=\"_blank\">Github</a><br><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a> and <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25868.90\" rel=\"nofollow noopener\" target=\"_blank\">MagicLib</a><br><br>Now compatible with Version Checker.<br><br>This ensures that there is one salvageable instance of every special colony item in the whole sector upon sector generation. They'll be scattered across Research Stations, Mining Stations, and Orbital Habitats.<br><br>Won't do anything for old saves, because it only adds the salvage during sector generation.<br><br>Comes with Industrial Evolution compatibility and JSON configuration. You can add or remove specific items and other salvage types by editing modSettings.json.",
+  "description": "Guarantee Rare Items\n\nDownload\nGithub\n\nRequires LazyLib and MagicLib\n\nNow compatible with Version Checker.\n\nThis ensures that there is one salvageable instance of every special colony item in the whole sector upon sector generation. They'll be scattered across Research Stations, Mining Stations, and Orbital Habitats.\n\nAlso, guarantees that at least 1 instance of the XIV Legions spawned in the Sector are recoverable. Story points are required.\n\nWon't do anything for old saves, because it only adds the salvage during sector generation.\n\nComes with Industrial Evolution compatibility and JSON configuration. You can add or remove specific items and other salvage types by editing modSettings.json.\n\nYou can also add other hull types to guarantee at least 1 of them to be recoverable. But note that this only runs on worldgen, so it won't affect anything created after the New Game.",
+  "descriptionHtml": "<span class=\"size-biggest\"><b>Guarantee Rare Items</b></span><br><br><a href=\"https://github.com/cypai/GuaranteeRareItems/releases/download/0.6.1/GuaranteeRareItems.7z\" rel=\"nofollow noopener\" target=\"_blank\">Download</a><br><a href=\"https://github.com/cypai/GuaranteeRareItems\" rel=\"nofollow noopener\" target=\"_blank\">Github</a><br><br>Requires <a href=\"https://fractalsoftworks.com/forum/index.php?topic=5444.0\" rel=\"nofollow noopener\" target=\"_blank\">LazyLib</a> and <a href=\"https://fractalsoftworks.com/forum/index.php?topic=25868.90\" rel=\"nofollow noopener\" target=\"_blank\">MagicLib</a><br><br>Now compatible with Version Checker.<br><br>This ensures that there is one salvageable instance of every special colony item in the whole sector upon sector generation. They'll be scattered across Research Stations, Mining Stations, and Orbital Habitats.<br><br>Also, guarantees that at least 1 instance of the XIV Legions spawned in the Sector are recoverable. Story points are required.<br><br>Won't do anything for old saves, because it only adds the salvage during sector generation.<br><br>Comes with Industrial Evolution compatibility and JSON configuration. You can add or remove specific items and other salvage types by editing modSettings.json.<br><br>You can also add other hull types to guarantee at least 1 of them to be recoverable. But note that this only runs on worldgen, so it won't affect anything created after the New Game.",
   "descriptionIsGenerated": false,
   "descriptionIsForumPost": true,
-  "aiDescription": "Scatters one salvageable copy of each special colony item across Research Stations, Mining Stations, and Orbital Habitats when a new sector is generated. Includes compatibility with Industrial Evolution and allows customization of items and salvage types via JSON configuration.",
+  "aiDescription": "Guarantees that one salvageable instance of each special colony item is scattered across stations and habitats when a new sector is created. It also ensures at least one XIV Legion ship is recoverable, requiring story points to retrieve. The mod includes JSON configuration options to customize which items and hull types are guaranteed.",
   "saveCompat": {
     "adding": {
       "quote": "Won't do anything for old saves, because it only adds the salvage during sector generation.",
@@ -64,8 +62,8 @@
   "gallery": [],
   "downloads": [
     {
-      "url": "https://github.com/cypai/GuaranteeRareItems/releases/download/0.5.0/GuaranteeRareItems.7z",
-      "directUrl": "https://github.com/cypai/GuaranteeRareItems/releases/download/0.5.0/GuaranteeRareItems.7z",
+      "url": "https://github.com/cypai/GuaranteeRareItems/releases/download/0.6.1/GuaranteeRareItems.7z",
+      "directUrl": "https://github.com/cypai/GuaranteeRareItems/releases/download/0.6.1/GuaranteeRareItems.7z",
       "fileName": "GuaranteeRareItems.7z",
       "type": "direct",
       "label": "Download",
@@ -87,7 +85,6 @@
       "gameVersion": "0.98.5a"
     }
   ],
-  "threadLastPostOn": "2026-11-16",
   "sameNameMods": [],
   "addons": [],
   "requirements": {
@@ -98,7 +95,7 @@
       },
       {
         "name": "MagicLib",
-        "id": "magiclib"
+        "id": "magiclib-2"
       }
     ]
   }
