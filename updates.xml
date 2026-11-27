@@ -4,9 +4,61 @@
   <subtitle>Mods whose version really moved forward, newest first.</subtitle>
   <id>tag:starmodder,2026:releases</id>
   <author><name>Starmodder</name></author>
-  <updated>2026-11-26T19:08:16Z</updated>
+  <updated>2026-11-27T07:07:17Z</updated>
   <link rel="self" href="updates.xml"/>
   <link rel="alternate" type="text/html" href="index.html"/>
+  <entry>
+    <title>Divisions: Command and Control | Combat AI Overhaul 1.25</title>
+    <id>tag:starmodder,2026:release/divisions-command-and-control-combat-ai-overhaul/1.25</id>
+    <updated>2026-11-27T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/divisions-command-and-control-combat-ai-overhaul"/>
+    <content type="text">Divisions: Command and Control | Combat AI Overhaul went from 1.2a to 1.25.
+
+The same behaviors with D:CC in vanilla can now be seen while using it alongside willthefunperson's Better Combat mod.
+ Ship Captain AI: A new AI script for the C2 stack that sits below the Division Leader and sits above the Basic Ship AI for better helmsmanship and fire control.
+ New: Light or Medium Battlecarrier Division archetypes, also known as "Aviation Cruisers."
+ You can choose whether or not to consider Combat Freighters as warships for auto-assignment purposes in the new Division Creation screen.
+ Added a short guided tutorial using the game's native tooltips.
+ Added a few Codex entries that hopefully help to explain some mod concepts.
+
+ Changes:
+ Division Defaults has been renamed to "Division Creation"
+ Fixed a few bugs that prevented massed first strikes with strike craft from happening.
+ A lot of stuff under the hood that overall should make the AI more effective.
+ Auto-assign logic now prefers to group the same hulls together in a division rather than distributing ships randomly.</content>
+  </entry>
+  <entry>
+    <title>Advanced Modifications 1.4</title>
+    <id>tag:starmodder,2026:release/advanced-modifications/1.4</id>
+    <updated>2026-11-27T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/advanced-modifications"/>
+    <content type="text">Advanced Modifications went from 1.3.1 to 1.4.
+
+- Hypervelocity Acceleration:
+ Alpha upgrade no longer grants extra hit Strength against Armor for damage reduction calculation.
+ Alpha upgrade now causes increases and reductions to Projectile speed to also apply to damage against Armor at 50% the value, this is generally a buff when used by itself but the player can no longer stack large amount of increased hit Strength against Armor when used with other systems like Combat Analyzer.
+ Reworked how Alpha upgrade works on a fundamental level, it now runs at weapon level rather than ship level allowing each individual weapon to have it's own value adjusted separately.
+ Fixed a bug with Alpha upgrade that caused Missile weapons to also benefit from the Hullmod.
+ - Dedicated Weapons CPU:
+ Fixed a silly bug that caused Alpha upgrade to not apply at all.
+ - Delta Shield:
+ Reduced total flux bonus to 20%(from 25%).
+ Reduced SMod flux value to 10%(from 15%).
+ - Crystalized Armor:
+ Total speed reduction Increased to -30%(from -25%).
+ - Flux Shield Matrix:
+ AI will now attempt to be smarter at deciding when to activate System (only when Alpha upgraded).
+ -Tooltip changes and code optimizations.</content>
+  </entry>
+  <entry>
+    <title>Advanced Modifications 1.3.1</title>
+    <id>tag:starmodder,2026:release/advanced-modifications/1.3.1</id>
+    <updated>2026-11-26T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/advanced-modifications"/>
+    <content type="text">Advanced Modifications went from 1.2a to 1.3.1.
+
+Crash hotfix.</content>
+  </entry>
   <entry>
     <title>Terraforming and Station Construction 11.0.0</title>
     <id>tag:starmodder,2026:release/terraforming-and-station-construction/11.0.0</id>
@@ -65,15 +117,6 @@ Updated for Starsector 0.98.5a</content>
 - Added new option to attempt drawing pips for guided missiles, the same way they are drawn for rocket-type missiles
   * Usually pointless, but sometimes helpful for missiles with very poor guidance
   * Applies to: MISSILE, MIRV, CIRCLE_TARGET, HEATSEEKER, MISSILE_TWO_STAGE_SECOND_UNGUIDED</content>
-  </entry>
-  <entry>
-    <title>Advanced Modifications 1.3.1</title>
-    <id>tag:starmodder,2026:release/advanced-modifications/1.3.1</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/advanced-modifications"/>
-    <content type="text">Advanced Modifications went from 1.2a to 1.3.1.
-
-Crash hotfix.</content>
   </entry>
   <entry>
     <title>Wingman Project: Online Combat Co-op battles for Starsector.(BETA) 0.9.4-beta</title>
@@ -258,13 +301,6 @@ PD weapons that only shot down missiles or fighters are no longer hidden from th
  Ships killed or assisted are drawn with their modules</content>
   </entry>
   <entry>
-    <title>Celestial Orbits 1.2.1</title>
-    <id>tag:starmodder,2026:release/celestial-orbits/1.2.1</id>
-    <updated>2026-11-23T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/celestial-orbits"/>
-    <content type="text">Celestial Orbits went from 1.2.0 to 1.2.1.</content>
-  </entry>
-  <entry>
     <title>Frontier Cooperations Ship Pack 0.1.0</title>
     <id>tag:starmodder,2026:release/frontier-cooperations-ship-pack/0.1.0</id>
     <updated>2026-11-23T00:00:00Z</updated>
@@ -274,13 +310,33 @@ PD weapons that only shot down missiles or fighters are no longer hidden from th
 Saves: If you had an older version installed it is fine for your save unless otherwise stated to update; following the guidlines laid out in the next sentence. Updates are save compatible unless stated otherwise.</content>
   </entry>
   <entry>
-    <title>Nexerelin 0.12.3</title>
-    <id>tag:starmodder,2026:release/nexerelin/0.12.3</id>
+    <title>Celestial Orbits 1.2.1</title>
+    <id>tag:starmodder,2026:release/celestial-orbits/1.2.1</id>
     <updated>2026-11-23T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/nexerelin"/>
-    <content type="text">Nexerelin went from 0.12.2d to 0.12.3.
+    <link rel="alternate" type="text/html" href="index.html#/mods/celestial-orbits"/>
+    <content type="text">Celestial Orbits went from 1.2.0 to 1.2.1.</content>
+  </entry>
+  <entry>
+    <title>Faces in the Void 0.75</title>
+    <id>tag:starmodder,2026:release/faces-in-the-void-updated/0.75</id>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/faces-in-the-void-updated"/>
+    <content type="text">Faces in the Void went from 0.6 to 0.75.
 
-Saves: Updates will almost always be save-compatible for several versions.</content>
+Starsector 0.98.5a compatible
+    NEW PORTRAITS:
+        Luddic Church:  Now adds 18 male and 15 female bonus portraits exclusive to the Luddic Church (up from 1 male and 2 female).
+        Luddic Path:    Now adds 17 male and 13 female bonus portraits exclusive to the Luddic Path (up from 3 male and 2 female).
+
+    0.98.5a New Portraits redone for Faces in the Void:
+        3 new Tritachyon portraits
+        8 new Defactioned portraits
+        13 new Character portraits
+        1 adjusted Sindrian Diktat portrait
+
+    EDITED:
+        Touched up several of the existing portraits in the process of redoing the new 98.5a portraits.
+        Removed more bloom. Continuing to find more... so much bloom...</content>
   </entry>
   <entry>
     <title>Strike Craft Expansion 2.1.0</title>
@@ -314,26 +370,13 @@ changed DEM beam stats to be based on the DEM beam id in custom stats
    updated to be on Starsector version 0.98.5a</content>
   </entry>
   <entry>
-    <title>Faces in the Void 0.75</title>
-    <id>tag:starmodder,2026:release/faces-in-the-void-updated/0.75</id>
+    <title>Nexerelin 0.12.3</title>
+    <id>tag:starmodder,2026:release/nexerelin/0.12.3</id>
     <updated>2026-11-23T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/faces-in-the-void-updated"/>
-    <content type="text">Faces in the Void went from 0.6 to 0.75.
+    <link rel="alternate" type="text/html" href="index.html#/mods/nexerelin"/>
+    <content type="text">Nexerelin went from 0.12.2d to 0.12.3.
 
-Starsector 0.98.5a compatible
-    NEW PORTRAITS:
-        Luddic Church:  Now adds 18 male and 15 female bonus portraits exclusive to the Luddic Church (up from 1 male and 2 female).
-        Luddic Path:    Now adds 17 male and 13 female bonus portraits exclusive to the Luddic Path (up from 3 male and 2 female).
-
-    0.98.5a New Portraits redone for Faces in the Void:
-        3 new Tritachyon portraits
-        8 new Defactioned portraits
-        13 new Character portraits
-        1 adjusted Sindrian Diktat portrait
-
-    EDITED:
-        Touched up several of the existing portraits in the process of redoing the new 98.5a portraits.
-        Removed more bloom. Continuing to find more... so much bloom...</content>
+Saves: Updates will almost always be save-compatible for several versions.</content>
   </entry>
   <entry>
     <title>Weapon Tooltip Preview - Pew pew on the fly 0.4.2</title>
@@ -376,6 +419,15 @@ Starsector 0.98.5a compatible
 - Plasma Drive reworked to be more of a general movement system to support a stick-and-move play style</content>
   </entry>
   <entry>
+    <title>Truly Automated Ships 2.0.1</title>
+    <id>tag:starmodder,2026:release/truly-automated-ships/2.0.1</id>
+    <updated>2026-11-21T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/truly-automated-ships"/>
+    <content type="text">Truly Automated Ships went from v2.0 to 2.0.1.
+
+Ensured the mod works with the new game version 0.98.5a-RC8</content>
+  </entry>
+  <entry>
     <title>Hull Mod Industrial Services 1.1.0</title>
     <id>tag:starmodder,2026:release/hull-mod-industrial-services/1.1.0</id>
     <updated>2026-11-21T00:00:00Z</updated>
@@ -392,15 +444,6 @@ Starsector 0.98.5a compatible
 Saves: can be installed over any prior updates of the same mod</content>
   </entry>
   <entry>
-    <title>Truly Automated Ships 2.0.1</title>
-    <id>tag:starmodder,2026:release/truly-automated-ships/2.0.1</id>
-    <updated>2026-11-21T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/truly-automated-ships"/>
-    <content type="text">Truly Automated Ships went from v2.0 to 2.0.1.
-
-Ensured the mod works with the new game version 0.98.5a-RC8</content>
-  </entry>
-  <entry>
     <title>Phase Shunt 0.0.5</title>
     <id>tag:starmodder,2026:release/phase-shunt/0.0.5</id>
     <updated>2026-11-21T00:00:00Z</updated>
@@ -411,20 +454,14 @@ added compatibility for phase anchor.
 added custom hullmod icon</content>
   </entry>
   <entry>
-    <title>Roider Union 2.3.2</title>
-    <id>tag:starmodder,2026:release/roider-union/2.3.2</id>
+    <title>Planetary Shield: Access Control 1.8</title>
+    <id>tag:starmodder,2026:release/planetary-shield-access-control/1.8</id>
     <updated>2026-11-20T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/roider-union"/>
-    <content type="text">Roider Union went from 2.3.1 to 2.3.2.
+    <link rel="alternate" type="text/html" href="index.html#/mods/planetary-shield-access-control"/>
+    <content type="text">Planetary Shield: Access Control went from 1.7 to 1.8.
 
-Saves: Save compatibility: v2.3.2 or later
-
-- Updated to 0.98.5a
- - Desperado is now a powerful phase frigate.
-
- Bug Fixes
- - Fixed battlestation citadel having a large mount in place of a small.
- - Fixed conversions for early pirate Gambit.</content>
+Updated for Starsector 0.98.5a
+ Fixed a bug that caused the planetary shield industry to be visible in the codex even if you haven't encountered it yet.</content>
   </entry>
   <entry>
     <title>Celestial Orbits 1.2.0</title>
@@ -475,28 +512,20 @@ made FOG_FADE_DISTANCE not require restart</content>
     <content type="text">D-MOD Services went from v3.2.0 to 4.0.0.</content>
   </entry>
   <entry>
-    <title>Planetary Shield: Access Control 1.8</title>
-    <id>tag:starmodder,2026:release/planetary-shield-access-control/1.8</id>
+    <title>Roider Union 2.3.2</title>
+    <id>tag:starmodder,2026:release/roider-union/2.3.2</id>
     <updated>2026-11-20T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/planetary-shield-access-control"/>
-    <content type="text">Planetary Shield: Access Control went from 1.7 to 1.8.
+    <link rel="alternate" type="text/html" href="index.html#/mods/roider-union"/>
+    <content type="text">Roider Union went from 2.3.1 to 2.3.2.
 
-Updated for Starsector 0.98.5a
- Fixed a bug that caused the planetary shield industry to be visible in the codex even if you haven't encountered it yet.</content>
-  </entry>
-  <entry>
-    <title>Unthemed Weapons Collection 0.7.6</title>
-    <id>tag:starmodder,2026:release/unthemed-weapons-collection/0.7.6</id>
-    <updated>2026-11-19T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/unthemed-weapons-collection"/>
-    <content type="text">Unthemed Weapons Collection went from 0.7.4 to 0.7.6.</content>
-  </entry>
-  <entry>
-    <title>3D Sector 0.3.8.2</title>
-    <id>tag:starmodder,2026:release/3d-sector-2/0.3.8.2</id>
-    <updated>2026-11-19T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/3d-sector-2"/>
-    <content type="text">3D Sector went from 0.3.8 to 0.3.8.2.</content>
+Saves: Save compatibility: v2.3.2 or later
+
+- Updated to 0.98.5a
+ - Desperado is now a powerful phase frigate.
+
+ Bug Fixes
+ - Fixed battlestation citadel having a large mount in place of a small.
+ - Fixed conversions for early pirate Gambit.</content>
   </entry>
   <entry>
     <title>Fast Rendering 1.0.2</title>
@@ -513,6 +542,13 @@ Updated for Starsector 0.98.5a
     <content type="text">Survival Dial went from 0.1.2 to 0.1.3.</content>
   </entry>
   <entry>
+    <title>3D Sector 0.3.8.2</title>
+    <id>tag:starmodder,2026:release/3d-sector-2/0.3.8.2</id>
+    <updated>2026-11-19T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/3d-sector-2"/>
+    <content type="text">3D Sector went from 0.3.8 to 0.3.8.2.</content>
+  </entry>
+  <entry>
     <title>Station Refitting 1.0.1</title>
     <id>tag:starmodder,2026:release/station-refitting/1.0.1</id>
     <updated>2026-11-19T00:00:00Z</updated>
@@ -527,6 +563,43 @@ Update to 0.98.5a-RC4
 
 Arkoship compat
 Roider station compat</content>
+  </entry>
+  <entry>
+    <title>Unthemed Weapons Collection 0.7.6</title>
+    <id>tag:starmodder,2026:release/unthemed-weapons-collection/0.7.6</id>
+    <updated>2026-11-19T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/unthemed-weapons-collection"/>
+    <content type="text">Unthemed Weapons Collection went from 0.7.4 to 0.7.6.</content>
+  </entry>
+  <entry>
+    <title>Terraforming Made Easy 2.10.6</title>
+    <id>tag:starmodder,2026:release/terraforming-made-easy/2.10.6</id>
+    <updated>2026-11-18T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/terraforming-made-easy"/>
+    <content type="text">Terraforming Made Easy went from 2.9.8 to 2.10.6.
+
+Saves: Not compatible with saves on 2.9.8 and below</content>
+  </entry>
+  <entry>
+    <title>Emergent Threats 1.5.0</title>
+    <id>tag:starmodder,2026:release/emergent-threats/1.5.0</id>
+    <updated>2026-11-18T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/emergent-threats"/>
+    <content type="text">Emergent Threats went from 1.4.5 to 1.5.0.
+
+-Candor (TT) added to high tech blueprint
+
+ Hullmods
+-Work Orders should no longer drop as loot</content>
+  </entry>
+  <entry>
+    <title>Divisions: Command and Control | Combat AI Overhaul 1.2a</title>
+    <id>tag:starmodder,2026:release/divisions-command-and-control-combat-ai-overhaul/1.2a</id>
+    <updated>2026-11-18T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/divisions-command-and-control-combat-ai-overhaul"/>
+    <content type="text">Divisions: Command and Control | Combat AI Overhaul went from 1.1.2c to 1.2a.
+
+Restored default Simulation deployment window.</content>
   </entry>
   <entry>
     <title>Rise of the Concordact Navy 0.3.0</title>
@@ -548,32 +621,6 @@ Recategorised the Radiant (CN): now acquired via the Lazarus Site, no longer spa
 - General bug fixes</content>
   </entry>
   <entry>
-    <title>EventLogger 1.6.1</title>
-    <id>tag:starmodder,2026:release/eventlogger/1.6.1</id>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/eventlogger"/>
-    <content type="text">EventLogger went from 1.5.2 to 1.6.1.</content>
-  </entry>
-  <entry>
-    <title>Fast Rendering 1.0.1</title>
-    <id>tag:starmodder,2026:release/fast-rendering/1.0.1</id>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/fast-rendering"/>
-    <content type="text">Fast Rendering went from 1.0.0 to 1.0.1.</content>
-  </entry>
-  <entry>
-    <title>Emergent Threats 1.5.0</title>
-    <id>tag:starmodder,2026:release/emergent-threats/1.5.0</id>
-    <updated>2026-11-18T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/emergent-threats"/>
-    <content type="text">Emergent Threats went from 1.4.5 to 1.5.0.
-
--Candor (TT) added to high tech blueprint
-
- Hullmods
--Work Orders should no longer drop as loot</content>
-  </entry>
-  <entry>
     <title>Kazeron Navarchy 1.8.1</title>
     <id>tag:starmodder,2026:release/kazeron-navarchy/1.8.1</id>
     <updated>2026-11-18T00:00:00Z</updated>
@@ -584,41 +631,18 @@ Recategorised the Radiant (CN): now acquired via the Lazarus Site, no longer spa
 - Fixed PL fighters being duplicated as ship BP</content>
   </entry>
   <entry>
-    <title>Terraforming Made Easy 2.10.6</title>
-    <id>tag:starmodder,2026:release/terraforming-made-easy/2.10.6</id>
+    <title>Fast Rendering 1.0.1</title>
+    <id>tag:starmodder,2026:release/fast-rendering/1.0.1</id>
     <updated>2026-11-18T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/terraforming-made-easy"/>
-    <content type="text">Terraforming Made Easy went from 2.9.8 to 2.10.6.
-
-Saves: Not compatible with saves on 2.9.8 and below</content>
+    <link rel="alternate" type="text/html" href="index.html#/mods/fast-rendering"/>
+    <content type="text">Fast Rendering went from 1.0.0 to 1.0.1.</content>
   </entry>
   <entry>
-    <title>Divisions: Command and Control | Combat AI Overhaul 1.2a</title>
-    <id>tag:starmodder,2026:release/divisions-command-and-control-combat-ai-overhaul/1.2a</id>
+    <title>EventLogger 1.6.1</title>
+    <id>tag:starmodder,2026:release/eventlogger/1.6.1</id>
     <updated>2026-11-18T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/divisions-command-and-control-combat-ai-overhaul"/>
-    <content type="text">Divisions: Command and Control | Combat AI Overhaul went from 1.1.2c to 1.2a.
-
-Restored default Simulation deployment window.</content>
-  </entry>
-  <entry>
-    <title>More Bar Missions 0.0.8</title>
-    <id>tag:starmodder,2026:release/more-bar-missions/0.0.8</id>
-    <updated>2026-11-17T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/more-bar-missions"/>
-    <content type="text">More Bar Missions went from 0.0.7 to 0.0.8.
-
-- added a console command (mbm_Missions) to list supported missions and force mission to be active
-- fixed an issue with DeliveryBarEvent (old-style delivery event) not showing up as frequently as expected</content>
-  </entry>
-  <entry>
-    <title>Logistics Notifications 1.7.3</title>
-    <id>tag:starmodder,2026:release/logistics-notifications/1.7.3</id>
-    <updated>2026-11-17T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/logistics-notifications"/>
-    <content type="text">Logistics Notifications went from 1.7.2 to 1.7.3.
-
-Update to 0.98.5</content>
+    <link rel="alternate" type="text/html" href="index.html#/mods/eventlogger"/>
+    <content type="text">EventLogger went from 1.5.2 to 1.6.1.</content>
   </entry>
   <entry>
     <title>Hostile Intercept 1.6.2</title>
@@ -629,13 +653,6 @@ Update to 0.98.5</content>
 
 - Update to 0.98.5a
 - Fixed a hard LunaLib dependency</content>
-  </entry>
-  <entry>
-    <title>Caymon's Ship Pack 1.2.6</title>
-    <id>tag:starmodder,2026:release/caymon-s-ship-pack/1.2.6</id>
-    <updated>2026-11-17T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/caymon-s-ship-pack"/>
-    <content type="text">Caymon's Ship Pack went from 1.2.5 to 1.2.6.</content>
   </entry>
   <entry>
     <title>Wide Horizons 1.5.1a</title>
@@ -666,25 +683,30 @@ Strange Hyperspace and Black Project mission entries now show their faction cres
 Black Project now marks the correct destination for each leg and clears the marker when the deadline expires.</content>
   </entry>
   <entry>
-    <title>Refit Filters 4.0.0</title>
-    <id>tag:starmodder,2026:release/refit-filters/4.0.0</id>
-    <updated>2026-11-16T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/refit-filters"/>
-    <content type="text">Refit Filters went from 3.1.3 to 4.0.0.
+    <title>More Bar Missions 0.0.8</title>
+    <id>tag:starmodder,2026:release/more-bar-missions/0.0.8</id>
+    <updated>2026-11-17T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/more-bar-missions"/>
+    <content type="text">More Bar Missions went from 0.0.7 to 0.0.8.
 
-- Rebuilt on StarUILib, now requires StarUILib, PatchLib and LazyLib
-- Hooks the weapon and fighter pickers directly instead of checking every frame, so the filters are there the moment the picker opens
-- Added a Sort row under the filters
-  + Weapons by Name, OP, Range, Damage, DPS or Flux Efficiency
-  + Fighters by Name, OP, Range, Refit Time or Wing Size
-  + Click the active one again to reverse it
-- The slider can filter more than range: click its label to switch
-  + Weapons: Range, DPS, Damage per shot, Flux Efficiency
-  + Fighters: Range, Refit Time, Wing Size
-  + Every limit you set applies at once, Reset Filters clears them all
-- New settings: default sort, sort order and slider for weapons and fighters, the slider's max for each stat, and the Sort row on or off
-- Removed the min range setting, the slider starts at 0
-- Updated for 0.98.5a-RC6</content>
+- added a console command (mbm_Missions) to list supported missions and force mission to be active
+- fixed an issue with DeliveryBarEvent (old-style delivery event) not showing up as frequently as expected</content>
+  </entry>
+  <entry>
+    <title>Logistics Notifications 1.7.3</title>
+    <id>tag:starmodder,2026:release/logistics-notifications/1.7.3</id>
+    <updated>2026-11-17T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/logistics-notifications"/>
+    <content type="text">Logistics Notifications went from 1.7.2 to 1.7.3.
+
+Update to 0.98.5</content>
+  </entry>
+  <entry>
+    <title>Caymon's Ship Pack 1.2.6</title>
+    <id>tag:starmodder,2026:release/caymon-s-ship-pack/1.2.6</id>
+    <updated>2026-11-17T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/caymon-s-ship-pack"/>
+    <content type="text">Caymon's Ship Pack went from 1.2.5 to 1.2.6.</content>
   </entry>
   <entry>
     <title>Demand Indicators 1.0.g</title>
@@ -692,13 +714,6 @@ Black Project now marks the correct destination for each leg and clears the mark
     <updated>2026-11-16T00:00:00Z</updated>
     <link rel="alternate" type="text/html" href="index.html#/mods/demand-indicators"/>
     <content type="text">Demand Indicators went from 1.0.f to 1.0.g.</content>
-  </entry>
-  <entry>
-    <title>Radial.Menu 1.0.c</title>
-    <id>tag:starmodder,2026:release/radial-menu/1.0.c</id>
-    <updated>2026-11-16T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/radial-menu"/>
-    <content type="text">Radial.Menu went from 1.0.b to 1.0.c.</content>
   </entry>
   <entry>
     <title>Second-in-Command: Auxiliaries 2.0.0</title>
@@ -715,11 +730,133 @@ Saves: not compatible with versions: 1.x.y
 NOT COMPATIBLE WITH OLDER VERSIONS</content>
   </entry>
   <entry>
+    <title>Advanced Modifications 1.2a</title>
+    <id>tag:starmodder,2026:release/advanced-modifications/1.2a</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/advanced-modifications"/>
+    <content type="text">Advanced Modifications went from 1.2 to 1.2a.
+
+-Advanced Hullmods with item requirements can now be installed for free on modules (Parent ship(s) are unaffected by this change).
+ -Many code optimizations.</content>
+  </entry>
+  <entry>
     <title>Diable Avionics: Original Flavor 3.0.7.beta</title>
     <id>tag:starmodder,2026:release/diable-avionics-original-flavor/3.0.7.beta</id>
     <updated>2026-11-16T00:00:00Z</updated>
     <link rel="alternate" type="text/html" href="index.html#/mods/diable-avionics-original-flavor"/>
     <content type="text">Diable Avionics: Original Flavor went from 3.0.4 to 3.0.7.beta.</content>
+  </entry>
+  <entry>
+    <title>ClearCommands 1.0.h</title>
+    <id>tag:starmodder,2026:release/clearcommands/1.0.h</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/clearcommands"/>
+    <content type="text">ClearCommands went from 1.0.g to 1.0.h.
+
+Saves: SAVE COMPATIBLE with any prior version</content>
+  </entry>
+  <entry>
+    <title>Ore Refinery 1.0.1</title>
+    <id>tag:starmodder,2026:release/ore-refinery/1.0.1</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/ore-refinery"/>
+    <content type="text">Ore Refinery went from 1.0 to 1.0.1.
+
+Saves: Save game compatible</content>
+  </entry>
+  <entry>
+    <title>Carter's Freetraders 3.3.2</title>
+    <id>tag:starmodder,2026:release/carter-s-freetraders/3.3.2</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/carter-s-freetraders"/>
+    <content type="text">Carter's Freetraders went from 3.3.1 to 3.3.2.
+
+Saves: Save game compatible
+
+-Added a new ship, The Krage: A fast lightly armorer cruiser with good pd coverage designed to chase down and engage smaller prey - Added as a TY to KalHirol
+   -Carronade line: Increased the ammo counts - S from 6 to 8 - M 20 to 30 - L 60 to 80 - As a spammable frag torp line they drained too quickly
+   -Blackburn Wing: Increased the armor from 450 to 650 - Ty KalHirol for making the point that it gets killed before being able to fully use its' weapons
+   -Updated the mod for 0.98.5a-RC3 compatibility</content>
+  </entry>
+  <entry>
+    <title>Terraforming and Station Construction 10.1.0</title>
+    <id>tag:starmodder,2026:release/terraforming-and-station-construction/10.1.0</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/terraforming-and-station-construction"/>
+    <content type="text">Terraforming and Station Construction went from 10.0.9 to 10.1.0.
+
+Saves: not backwards compatible
+
+- Updated TASC for Starsector 0.98.5a-RC5.
+- Fixed a crash that could occur under certain circumstances when the player opened the command menu after losing a colony (due to abandonment, capture, decivilization, etc.). Thanks Hexxod for reporting this and providing detailed instructions for reproducing it!
+- Added support for planet types from Bultach Coalition. Thanks potatopants123 for bringing this to my attention!
+- Added or updated terraforming support for colonizable planet types from Nightcross Armory Corporation, FSF Military Corporation, Halo Dynamics Ship Industry, Xhan Empire, Secrets of the Frontier, the Tellasian League, and Unknown Skies.
+- CHAMELEON now cannot be built on a colony controlled by a Rampant Military Core from Random Assortment of Things. Thanks Active Ink for bringing this interaction to my attention!</content>
+  </entry>
+  <entry>
+    <title>Additional Console Commands 1.4.2</title>
+    <id>tag:starmodder,2026:release/additional-console-commands/1.4.2</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/additional-console-commands"/>
+    <content type="text">Additional Console Commands went from 1.3.16 to 1.4.2.
+
+- AddPermaMod and RemoveHullmod
+   - Now can be used without specifying a ship to apply to the one currently selected in the refit menu.
+      - This can be used to apply the commands to ship modules.
+         - Using "All" as an argument will not apply changes to ship modules; they must be done individually.</content>
+  </entry>
+  <entry>
+    <title>Grand.Colonies 2.1.c</title>
+    <id>tag:starmodder,2026:release/grand-colonies/2.1.c</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/grand-colonies"/>
+    <content type="text">Grand.Colonies went from 2.1.b to 2.1.c.</content>
+  </entry>
+  <entry>
+    <title>Radial.Menu 1.0.c</title>
+    <id>tag:starmodder,2026:release/radial-menu/1.0.c</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/radial-menu"/>
+    <content type="text">Radial.Menu went from 1.0.b to 1.0.c.</content>
+  </entry>
+  <entry>
+    <title>Corrupt.Officials 1.0.c</title>
+    <id>tag:starmodder,2026:release/corrupt-officials-lower-colony-income-more-rewarding-growth/1.0.c</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/corrupt-officials-lower-colony-income-more-rewarding-growth"/>
+    <content type="text">Corrupt.Officials went from 1.0.b to 1.0.c.</content>
+  </entry>
+  <entry>
+    <title>Pirate Utility Pack 0.6.1</title>
+    <id>tag:starmodder,2026:release/pirate-utility-pack/0.6.1</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/pirate-utility-pack"/>
+    <content type="text">Pirate Utility Pack went from v0.6 to 0.6.1.
+
+Saves: Save Compatible
+
+-Updated the mod for 0.98.5a-RC3 compatibility
+   -Avast: Redrew the boundary lines and re-centered the shields - TY Szasz for informing me there was an issue with collisions</content>
+  </entry>
+  <entry>
+    <title>Kaleidoscope 1.0.f</title>
+    <id>tag:starmodder,2026:release/kaleidoscope/1.0.f</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/kaleidoscope"/>
+    <content type="text">Kaleidoscope went from 1.0.e to 1.0.f.
+
+Saves: Unsafe to update mid-game</content>
+  </entry>
+  <entry>
+    <title>Tri-Tachyon Expansion 0.9.9</title>
+    <id>tag:starmodder,2026:release/tri-tachyon-expansion/0.9.9</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/tri-tachyon-expansion"/>
+    <content type="text">Tri-Tachyon Expansion went from 0.9.8 to 0.9.9.
+
+Saves: Save Game compatible
+
+Updated the mod for 0.98.5a-RC3 compatibility</content>
   </entry>
   <entry>
     <title>Apex Design Collective 1.2.16</title>
@@ -739,29 +876,25 @@ NOT COMPATIBLE WITH OLDER VERSIONS</content>
 - Downgraded the Collective's nanoforge to a corrupted one; slightly rewrote lore to match.</content>
   </entry>
   <entry>
-    <title>Advanced Modifications 1.2a</title>
-    <id>tag:starmodder,2026:release/advanced-modifications/1.2a</id>
+    <title>Refit Filters 4.0.0</title>
+    <id>tag:starmodder,2026:release/refit-filters/4.0.0</id>
     <updated>2026-11-16T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/advanced-modifications"/>
-    <content type="text">Advanced Modifications went from 1.2 to 1.2a.
+    <link rel="alternate" type="text/html" href="index.html#/mods/refit-filters"/>
+    <content type="text">Refit Filters went from 3.1.3 to 4.0.0.
 
--Advanced Hullmods with item requirements can now be installed for free on modules (Parent ship(s) are unaffected by this change).
- -Many code optimizations.</content>
-  </entry>
-  <entry>
-    <title>Terraforming and Station Construction 10.1.0</title>
-    <id>tag:starmodder,2026:release/terraforming-and-station-construction/10.1.0</id>
-    <updated>2026-11-16T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/terraforming-and-station-construction"/>
-    <content type="text">Terraforming and Station Construction went from 10.0.9 to 10.1.0.
-
-Saves: not backwards compatible
-
-- Updated TASC for Starsector 0.98.5a-RC5.
-- Fixed a crash that could occur under certain circumstances when the player opened the command menu after losing a colony (due to abandonment, capture, decivilization, etc.). Thanks Hexxod for reporting this and providing detailed instructions for reproducing it!
-- Added support for planet types from Bultach Coalition. Thanks potatopants123 for bringing this to my attention!
-- Added or updated terraforming support for colonizable planet types from Nightcross Armory Corporation, FSF Military Corporation, Halo Dynamics Ship Industry, Xhan Empire, Secrets of the Frontier, the Tellasian League, and Unknown Skies.
-- CHAMELEON now cannot be built on a colony controlled by a Rampant Military Core from Random Assortment of Things. Thanks Active Ink for bringing this interaction to my attention!</content>
+- Rebuilt on StarUILib, now requires StarUILib, PatchLib and LazyLib
+- Hooks the weapon and fighter pickers directly instead of checking every frame, so the filters are there the moment the picker opens
+- Added a Sort row under the filters
+  + Weapons by Name, OP, Range, Damage, DPS or Flux Efficiency
+  + Fighters by Name, OP, Range, Refit Time or Wing Size
+  + Click the active one again to reverse it
+- The slider can filter more than range: click its label to switch
+  + Weapons: Range, DPS, Damage per shot, Flux Efficiency
+  + Fighters: Range, Refit Time, Wing Size
+  + Every limit you set applies at once, Reset Filters clears them all
+- New settings: default sort, sort order and slider for weapons and fighters, the slider's max for each stat, and the Sort row on or off
+- Removed the min range setting, the slider starts at 0
+- Updated for 0.98.5a-RC6</content>
   </entry>
   <entry>
     <title>More Military Missions 0.5.1</title>
@@ -785,39 +918,6 @@ Saves: not backwards compatible
 - recompiled for 0.98.5a</content>
   </entry>
   <entry>
-    <title>Carter's Freetraders 3.3.2</title>
-    <id>tag:starmodder,2026:release/carter-s-freetraders/3.3.2</id>
-    <updated>2026-11-16T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/carter-s-freetraders"/>
-    <content type="text">Carter's Freetraders went from 3.3.1 to 3.3.2.
-
-Saves: Save game compatible
-
--Added a new ship, The Krage: A fast lightly armorer cruiser with good pd coverage designed to chase down and engage smaller prey - Added as a TY to KalHirol
-   -Carronade line: Increased the ammo counts - S from 6 to 8 - M 20 to 30 - L 60 to 80 - As a spammable frag torp line they drained too quickly
-   -Blackburn Wing: Increased the armor from 450 to 650 - Ty KalHirol for making the point that it gets killed before being able to fully use its' weapons
-   -Updated the mod for 0.98.5a-RC3 compatibility</content>
-  </entry>
-  <entry>
-    <title>Grand.Colonies 2.1.c</title>
-    <id>tag:starmodder,2026:release/grand-colonies/2.1.c</id>
-    <updated>2026-11-16T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/grand-colonies"/>
-    <content type="text">Grand.Colonies went from 2.1.b to 2.1.c.</content>
-  </entry>
-  <entry>
-    <title>Pirate Utility Pack 0.6.1</title>
-    <id>tag:starmodder,2026:release/pirate-utility-pack/0.6.1</id>
-    <updated>2026-11-16T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/pirate-utility-pack"/>
-    <content type="text">Pirate Utility Pack went from v0.6 to 0.6.1.
-
-Saves: Save Compatible
-
--Updated the mod for 0.98.5a-RC3 compatibility
-   -Avast: Redrew the boundary lines and re-centered the shields - TY Szasz for informing me there was an issue with collisions</content>
-  </entry>
-  <entry>
     <title>Carter's Junk Hull Mods 1.0.2b</title>
     <id>tag:starmodder,2026:release/carter-s-junk-hull-mods/1.0.2b</id>
     <updated>2026-11-16T00:00:00Z</updated>
@@ -825,13 +925,13 @@ Saves: Save Compatible
     <content type="text">Carter's Junk Hull Mods went from 1.0.2a to 1.0.2b.</content>
   </entry>
   <entry>
-    <title>Kaleidoscope 1.0.f</title>
-    <id>tag:starmodder,2026:release/kaleidoscope/1.0.f</id>
+    <title>Illustrated.Entities 2.1.a</title>
+    <id>tag:starmodder,2026:release/illustrated-entities/2.1.a</id>
     <updated>2026-11-16T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/kaleidoscope"/>
-    <content type="text">Kaleidoscope went from 1.0.e to 1.0.f.
+    <link rel="alternate" type="text/html" href="index.html#/mods/illustrated-entities"/>
+    <content type="text">Illustrated.Entities went from 2.0.c to 2.1.a.
 
-Saves: Unsafe to update mid-game</content>
+Saves: Save compatible with 2.0</content>
   </entry>
   <entry>
     <title>Junk Yard Dogs 3.7.1</title>
@@ -845,40 +945,6 @@ Saves: Save Compatible
 Updated the mod for 0.98.5a-RC3 compatibility</content>
   </entry>
   <entry>
-    <title>Corrupt.Officials 1.0.c</title>
-    <id>tag:starmodder,2026:release/corrupt-officials-lower-colony-income-more-rewarding-growth/1.0.c</id>
-    <updated>2026-11-16T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/corrupt-officials-lower-colony-income-more-rewarding-growth"/>
-    <content type="text">Corrupt.Officials went from 1.0.b to 1.0.c.</content>
-  </entry>
-  <entry>
-    <title>ClearCommands 1.0.h</title>
-    <id>tag:starmodder,2026:release/clearcommands/1.0.h</id>
-    <updated>2026-11-16T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/clearcommands"/>
-    <content type="text">ClearCommands went from 1.0.g to 1.0.h.
-
-Saves: SAVE COMPATIBLE with any prior version</content>
-  </entry>
-  <entry>
-    <title>Suitable Star Systems 2.5.0</title>
-    <id>tag:starmodder,2026:release/suitable-star-systems/2.5.0</id>
-    <updated>2026-11-16T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/suitable-star-systems"/>
-    <content type="text">Suitable Star Systems went from 2.4.4d to 2.5.0.
-
-Saves: Not compatible with saves on 2.4.4j and below</content>
-  </entry>
-  <entry>
-    <title>Ore Refinery 1.0.1</title>
-    <id>tag:starmodder,2026:release/ore-refinery/1.0.1</id>
-    <updated>2026-11-16T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/ore-refinery"/>
-    <content type="text">Ore Refinery went from 1.0 to 1.0.1.
-
-Saves: Save game compatible</content>
-  </entry>
-  <entry>
     <title>Hiver Swarm 1.3.8</title>
     <id>tag:starmodder,2026:release/hiver-swarm/1.3.8</id>
     <updated>2026-11-16T00:00:00Z</updated>
@@ -890,6 +956,15 @@ Saves: Save compatible
 -Updated the mod for 0.98.5a-RC3 compatibility</content>
   </entry>
   <entry>
+    <title>Suitable Star Systems 2.5.0</title>
+    <id>tag:starmodder,2026:release/suitable-star-systems/2.5.0</id>
+    <updated>2026-11-16T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/suitable-star-systems"/>
+    <content type="text">Suitable Star Systems went from 2.4.4d to 2.5.0.
+
+Saves: Not compatible with saves on 2.4.4j and below</content>
+  </entry>
+  <entry>
     <title>Progressive S-Mods 1.2.1</title>
     <id>tag:starmodder,2026:release/progressive-s-mods/1.2.1</id>
     <updated>2026-11-16T00:00:00Z</updated>
@@ -897,36 +972,13 @@ Saves: Save compatible
     <content type="text">Progressive S-Mods went from 1.2.0 to 1.2.1.</content>
   </entry>
   <entry>
-    <title>Illustrated.Entities 2.1.a</title>
-    <id>tag:starmodder,2026:release/illustrated-entities/2.1.a</id>
-    <updated>2026-11-16T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/illustrated-entities"/>
-    <content type="text">Illustrated.Entities went from 2.0.c to 2.1.a.
+    <title>More Bar Missions 0.0.7</title>
+    <id>tag:starmodder,2026:release/more-bar-missions/0.0.7</id>
+    <updated>2026-11-15T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/more-bar-missions"/>
+    <content type="text">More Bar Missions went from 0.0.6 to 0.0.7.
 
-Saves: Save compatible with 2.0</content>
-  </entry>
-  <entry>
-    <title>Additional Console Commands 1.4.2</title>
-    <id>tag:starmodder,2026:release/additional-console-commands/1.4.2</id>
-    <updated>2026-11-16T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/additional-console-commands"/>
-    <content type="text">Additional Console Commands went from 1.3.16 to 1.4.2.
-
-- AddPermaMod and RemoveHullmod
-   - Now can be used without specifying a ship to apply to the one currently selected in the refit menu.
-      - This can be used to apply the commands to ship modules.
-         - Using "All" as an argument will not apply changes to ship modules; they must be done individually.</content>
-  </entry>
-  <entry>
-    <title>Tri-Tachyon Expansion 0.9.9</title>
-    <id>tag:starmodder,2026:release/tri-tachyon-expansion/0.9.9</id>
-    <updated>2026-11-16T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/tri-tachyon-expansion"/>
-    <content type="text">Tri-Tachyon Expansion went from 0.9.8 to 0.9.9.
-
-Saves: Save Game compatible
-
-Updated the mod for 0.98.5a-RC3 compatibility</content>
+recompiled for 0.98.5a; no other changes</content>
   </entry>
   <entry>
     <title>Emergent Threats 1.4.5</title>
@@ -1024,6 +1076,29 @@ v1.4.3 should be compatible with v1.1+
 -Electronic Warfare Suite should no longer target fighter wrecks</content>
   </entry>
   <entry>
+    <title>Ruthless Sector 1.8.0</title>
+    <id>tag:starmodder,2026:release/ruthless-sector/1.8.0</id>
+    <updated>2026-11-15T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/ruthless-sector"/>
+    <content type="text">Ruthless Sector went from 1.7.0 to 1.8.0.</content>
+  </entry>
+  <entry>
+    <title>Another Portrait Pack 1.6</title>
+    <id>tag:starmodder,2026:release/another-portrait-pack/1.6</id>
+    <updated>2026-11-15T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/another-portrait-pack"/>
+    <content type="text">Another Portrait Pack went from 1.5 to 1.6.
+
+Updated for game version 0.98.5a.</content>
+  </entry>
+  <entry>
+    <title>Battlegroup XVI 1.0.4</title>
+    <id>tag:starmodder,2026:release/battlegroup-xvi/1.0.4</id>
+    <updated>2026-11-15T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/battlegroup-xvi"/>
+    <content type="text">Battlegroup XVI went from 1.0 to 1.0.4.</content>
+  </entry>
+  <entry>
     <title>Wingman Project: Online Combat Co-op battles for Starsector.(BETA) 0.9.3-beta</title>
     <id>tag:starmodder,2026:release/wingman-project-online-combat-co-op-battles-for-starsector-beta/0.9.3-beta</id>
     <updated>2026-11-15T00:00:00Z</updated>
@@ -1046,50 +1121,13 @@ updated for Starsector 0.98.5a. won't run on 0.98a anymore.
  ▲ Host and joiners should both update.</content>
   </entry>
   <entry>
-    <title>Another Portrait Pack 1.6</title>
-    <id>tag:starmodder,2026:release/another-portrait-pack/1.6</id>
+    <title>Retrofitted Bridge 0.0.5</title>
+    <id>tag:starmodder,2026:release/retrofitted-bridge/0.0.5</id>
     <updated>2026-11-15T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/another-portrait-pack"/>
-    <content type="text">Another Portrait Pack went from 1.5 to 1.6.
+    <link rel="alternate" type="text/html" href="index.html#/mods/retrofitted-bridge"/>
+    <content type="text">Retrofitted Bridge went from v0.0.4 to 0.0.5.
 
-Updated for game version 0.98.5a.</content>
-  </entry>
-  <entry>
-    <title>Ruthless Sector 1.8.0</title>
-    <id>tag:starmodder,2026:release/ruthless-sector/1.8.0</id>
-    <updated>2026-11-15T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/ruthless-sector"/>
-    <content type="text">Ruthless Sector went from 1.7.0 to 1.8.0.</content>
-  </entry>
-  <entry>
-    <title>New Beginnings 1.6.0</title>
-    <id>tag:starmodder,2026:release/new-beginnings/1.6.0</id>
-    <updated>2026-11-15T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/new-beginnings"/>
-    <content type="text">New Beginnings went from 1.5.0 to 1.6.0.</content>
-  </entry>
-  <entry>
-    <title>Starship Legends 2.7.1</title>
-    <id>tag:starmodder,2026:release/starship-legends/2.7.1</id>
-    <updated>2026-11-15T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/starship-legends"/>
-    <content type="text">Starship Legends went from 2.6.0 to 2.7.1.
-
-Saves: All updates are save-compatible unless stated otherwise.</content>
-  </entry>
-  <entry>
-    <title>Hyperdrive 2.7.0</title>
-    <id>tag:starmodder,2026:release/hyperdrive/2.7.0</id>
-    <updated>2026-11-15T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/hyperdrive"/>
-    <content type="text">Hyperdrive went from 2.6.0 to 2.7.0.</content>
-  </entry>
-  <entry>
-    <title>Flux Reticle 1.5.0</title>
-    <id>tag:starmodder,2026:release/flux-reticle/1.5.0</id>
-    <updated>2026-11-15T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/flux-reticle"/>
-    <content type="text">Flux Reticle went from 1.4.0 to 1.5.0.</content>
+- removed code to make automated ships recoverable by default as that's already in vanilla as of 0.08.5a</content>
   </entry>
   <entry>
     <title>Realistic Combat 2.17.0</title>
@@ -1101,13 +1139,34 @@ Saves: All updates are save-compatible unless stated otherwise.</content>
 Now supporting version 0.98.5a!</content>
   </entry>
   <entry>
-    <title>Retrofitted Bridge 0.0.5</title>
-    <id>tag:starmodder,2026:release/retrofitted-bridge/0.0.5</id>
+    <title>Flux Reticle 1.5.0</title>
+    <id>tag:starmodder,2026:release/flux-reticle/1.5.0</id>
     <updated>2026-11-15T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/retrofitted-bridge"/>
-    <content type="text">Retrofitted Bridge went from v0.0.4 to 0.0.5.
+    <link rel="alternate" type="text/html" href="index.html#/mods/flux-reticle"/>
+    <content type="text">Flux Reticle went from 1.4.0 to 1.5.0.</content>
+  </entry>
+  <entry>
+    <title>Hyperdrive 2.7.0</title>
+    <id>tag:starmodder,2026:release/hyperdrive/2.7.0</id>
+    <updated>2026-11-15T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/hyperdrive"/>
+    <content type="text">Hyperdrive went from 2.6.0 to 2.7.0.</content>
+  </entry>
+  <entry>
+    <title>Starship Legends 2.7.1</title>
+    <id>tag:starmodder,2026:release/starship-legends/2.7.1</id>
+    <updated>2026-11-15T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/starship-legends"/>
+    <content type="text">Starship Legends went from 2.6.0 to 2.7.1.
 
-- removed code to make automated ships recoverable by default as that's already in vanilla as of 0.08.5a</content>
+Saves: All updates are save-compatible unless stated otherwise.</content>
+  </entry>
+  <entry>
+    <title>New Beginnings 1.6.0</title>
+    <id>tag:starmodder,2026:release/new-beginnings/1.6.0</id>
+    <updated>2026-11-15T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/new-beginnings"/>
+    <content type="text">New Beginnings went from 1.5.0 to 1.6.0.</content>
   </entry>
   <entry>
     <title>Wide Horizons 1.5.0</title>
@@ -1141,29 +1200,6 @@ Fixed:
  The salvage reset command now clears Wide Horizons bonuses from both the fleet and the player while preserving bonuses from other mods</content>
   </entry>
   <entry>
-    <title>More Bar Missions 0.0.7</title>
-    <id>tag:starmodder,2026:release/more-bar-missions/0.0.7</id>
-    <updated>2026-11-15T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/more-bar-missions"/>
-    <content type="text">More Bar Missions went from 0.0.6 to 0.0.7.
-
-recompiled for 0.98.5a; no other changes</content>
-  </entry>
-  <entry>
-    <title>Battlegroup XVI 1.0.4</title>
-    <id>tag:starmodder,2026:release/battlegroup-xvi/1.0.4</id>
-    <updated>2026-11-15T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/battlegroup-xvi"/>
-    <content type="text">Battlegroup XVI went from 1.0 to 1.0.4.</content>
-  </entry>
-  <entry>
-    <title>RotcesRats 0.3.5</title>
-    <id>tag:starmodder,2026:release/rotcesrats/0.3.5</id>
-    <updated>2026-11-14T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/rotcesrats"/>
-    <content type="text">RotcesRats went from 0.3.4 to 0.3.5.</content>
-  </entry>
-  <entry>
     <title>Amazigh's Ship Foundry 1.8.0</title>
     <id>tag:starmodder,2026:release/amazigh-s-ship-foundry/1.8.0</id>
     <updated>2026-11-14T00:00:00Z</updated>
@@ -1171,22 +1207,11 @@ recompiled for 0.98.5a; no other changes</content>
     <content type="text">Amazigh's Ship Foundry went from v1.7.1 to 1.8.0.</content>
   </entry>
   <entry>
-    <title>Rogue Planets 1.0.1</title>
-    <id>tag:starmodder,2026:release/rogue-planets/1.0.1</id>
+    <title>RotcesRats 0.3.5</title>
+    <id>tag:starmodder,2026:release/rotcesrats/0.3.5</id>
     <updated>2026-11-14T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/rogue-planets"/>
-    <content type="text">Rogue Planets went from 1.0.0 to 1.0.1.
-
-Saves: Save compatible with 1.0.0 no new game required.
-
-In-game Codex functionality added, certain event timings modified. Save compatible with 1.0.0 no new game required.</content>
-  </entry>
-  <entry>
-    <title>Draconis Fleet 0.7.91</title>
-    <id>tag:starmodder,2026:release/draconis-fleet-wip/0.7.91</id>
-    <updated>2026-11-14T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/draconis-fleet-wip"/>
-    <content type="text">Draconis Fleet went from 0.7.9 to 0.7.91.</content>
+    <link rel="alternate" type="text/html" href="index.html#/mods/rotcesrats"/>
+    <content type="text">RotcesRats went from 0.3.4 to 0.3.5.</content>
   </entry>
   <entry>
     <title>Advanced Modifications 1.2</title>
@@ -1221,6 +1246,31 @@ In-game Codex functionality added, certain event timings modified. Save compatib
  -Fixed a bug that forced the player to re-invest materials for installing Advanced Hullmods that were already installed on ships recovered from enemy fleets.</content>
   </entry>
   <entry>
+    <title>Guarantee Rare Items 0.5.0</title>
+    <id>tag:starmodder,2026:release/guarantee-rare-items/0.5.0</id>
+    <updated>2026-11-14T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/guarantee-rare-items"/>
+    <content type="text">Guarantee Rare Items went from 0.4.0 to 0.5.0.</content>
+  </entry>
+  <entry>
+    <title>Rogue Planets 1.0.1</title>
+    <id>tag:starmodder,2026:release/rogue-planets/1.0.1</id>
+    <updated>2026-11-14T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/rogue-planets"/>
+    <content type="text">Rogue Planets went from 1.0.0 to 1.0.1.
+
+Saves: Save compatible with 1.0.0 no new game required.
+
+In-game Codex functionality added, certain event timings modified. Save compatible with 1.0.0 no new game required.</content>
+  </entry>
+  <entry>
+    <title>Draconis Fleet 0.7.91</title>
+    <id>tag:starmodder,2026:release/draconis-fleet-wip/0.7.91</id>
+    <updated>2026-11-14T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/draconis-fleet-wip"/>
+    <content type="text">Draconis Fleet went from 0.7.9 to 0.7.91.</content>
+  </entry>
+  <entry>
     <title>Domain Terraforming Initiative 0.4.5</title>
     <id>tag:starmodder,2026:release/domain-terraforming-initiative/0.4.5</id>
     <updated>2026-11-14T00:00:00Z</updated>
@@ -1231,13 +1281,6 @@ Before and after: when DTI changes a planet's type, its entry in the planet hist
  Planet history is easier to read: the date, a title, then one line for each change.
  Achievements (with MagicLib; DTI still runs without it): World Shaper, Second Terra, and two hidden ones.
  Ecology events: sometimes a long project gets an event with a choice, in the Terraforming tab of the Intel screen: 16 events, good, bad and disasters. After you finish 3 projects of a structure, its crews know the work: disasters are rarer, good news more common, and the costs lower. With no answer in 30 days, the last choice applies. A LunaLib setting turns them off.</content>
-  </entry>
-  <entry>
-    <title>Guarantee Rare Items 0.5.0</title>
-    <id>tag:starmodder,2026:release/guarantee-rare-items/0.5.0</id>
-    <updated>2026-11-14T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/guarantee-rare-items"/>
-    <content type="text">Guarantee Rare Items went from 0.4.0 to 0.5.0.</content>
   </entry>
   <entry>
     <title>Divisions: Command and Control | Combat AI Overhaul 1.1.2c</title>
@@ -1260,21 +1303,6 @@ Completely overhauled voidstrike system. Strike craft missions are divorced from
  Reworked Nomenclatures and made Luddic fleets sound less chuuni.</content>
   </entry>
   <entry>
-    <title>Niko's Scavengable Industries 1.0.1</title>
-    <id>tag:starmodder,2026:release/niko-s-scavengable-industries/1.0.1</id>
-    <updated>2026-11-13T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/niko-s-scavengable-industries"/>
-    <content type="text">Niko's Scavengable Industries went from 1.0.0 to 1.0.1.
-
-Saves: SAVE COMPATIBLE
-
-SAVE COMPATIBLE
-
-Update to 0.98.5a-RC4
-
-Tripled training camp marine xp rate</content>
-  </entry>
-  <entry>
     <title>Content Unlocking Missions 1.15b</title>
     <id>tag:starmodder,2026:release/content-unlocking-missions/1.15b</id>
     <updated>2026-11-13T00:00:00Z</updated>
@@ -1291,6 +1319,28 @@ Tripled training camp marine xp rate</content>
 Saves: It usually is not safe to upgrade the mod version mid-save.</content>
   </entry>
   <entry>
+    <title>Niko's Scavengable Industries 1.0.1</title>
+    <id>tag:starmodder,2026:release/niko-s-scavengable-industries/1.0.1</id>
+    <updated>2026-11-13T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/niko-s-scavengable-industries"/>
+    <content type="text">Niko's Scavengable Industries went from 1.0.0 to 1.0.1.
+
+Saves: SAVE COMPATIBLE
+
+SAVE COMPATIBLE
+
+Update to 0.98.5a-RC4
+
+Tripled training camp marine xp rate</content>
+  </entry>
+  <entry>
+    <title>Navarchy of Tania 1.4.0</title>
+    <id>tag:starmodder,2026:release/navarchy-of-tania/1.4.0</id>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/navarchy-of-tania"/>
+    <content type="text">Navarchy of Tania went from 1.3.1 to 1.4.0.</content>
+  </entry>
+  <entry>
     <title>Arma Armatura 3.3.9</title>
     <id>tag:starmodder,2026:release/arma-armatura/3.3.9</id>
     <updated>2026-11-12T00:00:00Z</updated>
@@ -1300,11 +1350,104 @@ Saves: It usually is not safe to upgrade the mod version mid-save.</content>
 Saves: Not all updates are save-compatible. check the changelog.</content>
   </entry>
   <entry>
+    <title>Lancer RPG/Battlegroup 0.0.2.2</title>
+    <id>tag:starmodder,2026:release/lancer-rpg-battlegroup-0-0-2-wip/0.0.2.2</id>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/lancer-rpg-battlegroup-0-0-2-wip"/>
+    <content type="text">Lancer RPG/Battlegroup went from 0.0.2 to 0.0.2.2.
+
+Minor balance tweaks to Thoreau, Caspian Sea, and the Short-cycle Primary Lance.
+Added Main Menu testing mission.
+Updated mod_info.json to new game version.</content>
+  </entry>
+  <entry>
+    <title>In Game Log 1.4.0</title>
+    <id>tag:starmodder,2026:release/in-game-log-viewer/1.4.0</id>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/in-game-log-viewer"/>
+    <content type="text">In Game Log went from 1.3.0 to 1.4.0.
+
+- Updated to 0.98.5a
+- Improve STDERR feature
+- Migrate settings userSettings.json
+- Now parses all logs even before onApplicationLoad
+- Minor improvements to how messages render on screen.</content>
+  </entry>
+  <entry>
+    <title>Mikohime Unofficial Java 28+ &amp; FR Resource Cache &amp; OpenAL Add-on 0.8.3</title>
+    <id>tag:starmodder,2026:release/mikohime-unofficial-java-28-configurator/0.8.3</id>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/mikohime-unofficial-java-28-configurator"/>
+    <content type="text">Mikohime Unofficial Java 28+ &amp; FR Resource Cache &amp; OpenAL Add-on went from 0.8.1 to 0.8.3.
+
+Added support for Fast Rendering 1.0.0 and newer on Windows and the single-agent Linux fork
+ Retained compatibility with older Fast Rendering versions
+ Updated FR Resource Cache arguments: versions 0.6.0 and newer use the default memory-cache setting
+ Older or unrecognized FR Resource Cache versions retain the 128 MiB memory-cache setting</content>
+  </entry>
+  <entry>
+    <title>Onslaught Sleek +Other Bounties 2.1</title>
+    <id>tag:starmodder,2026:release/onslaught-sleek-2/2.1</id>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/onslaught-sleek-2"/>
+    <content type="text">Onslaught Sleek +Other Bounties went from 1.5 to 2.1.
+
+just updated it to 98.5 thats it</content>
+  </entry>
+  <entry>
+    <title>Read Aloud 0.2.0 Alpha</title>
+    <id>tag:starmodder,2026:release/read-aloud-alpha-experimental/0.2.0 Alpha</id>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/read-aloud-alpha-experimental"/>
+    <content type="text">Read Aloud went from 0.1.0 to 0.2.0 Alpha.
+
+new "speech" choice under "Who reads what": only what characters say is read, and the narrator stays silent (requested by Rook999). Where narration between two lines is skipped there's a short pause, adjustable under "Pause for skipped narration" (0 turns it off). Works with the system voice and AI voices; update both zips to get the pause with AI voices.</content>
+  </entry>
+  <entry>
+    <title>Diktat Enhancement 1.3.0b</title>
+    <id>tag:starmodder,2026:release/diktat-enhancement/1.3.0b</id>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/diktat-enhancement"/>
+    <content type="text">Diktat Enhancement went from 1.3.0a to 1.3.0b.</content>
+  </entry>
+  <entry>
     <title>Adversary 8.0.0</title>
     <id>tag:starmodder,2026:release/adversary/8.0.0</id>
     <updated>2026-11-12T00:00:00Z</updated>
     <link rel="alternate" type="text/html" href="index.html#/mods/adversary"/>
     <content type="text">Adversary went from v7.1.2 to 8.0.0.</content>
+  </entry>
+  <entry>
+    <title>A Fleet Testing Mod 2.0.0</title>
+    <id>tag:starmodder,2026:release/a-fleet-testing-mod/2.0.0</id>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/a-fleet-testing-mod"/>
+    <content type="text">A Fleet Testing Mod went from 1.3.0 to 2.0.0.</content>
+  </entry>
+  <entry>
+    <title>Customizable Star Systems 4.0.0</title>
+    <id>tag:starmodder,2026:release/customizable-star-systems/4.0.0</id>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/customizable-star-systems"/>
+    <content type="text">Customizable Star Systems went from v3.0.2 to 4.0.0.</content>
+  </entry>
+  <entry>
+    <title>SEED Reporter 2.0.0</title>
+    <id>tag:starmodder,2026:release/seed-reporter/2.0.0</id>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/seed-reporter"/>
+    <content type="text">SEED Reporter went from v1.1.0 to 2.0.0.
+
+Saves: save-compatible with previous versions</content>
+  </entry>
+  <entry>
+    <title>Sea of Stars 0.6.0</title>
+    <id>tag:starmodder,2026:release/sea-of-stars-0-5-1-go-beyond-the-persean-sector/0.6.0</id>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/sea-of-stars-0-5-1-go-beyond-the-persean-sector"/>
+    <content type="text">Sea of Stars went from 0.5.1 to 0.6.0.
+
+Saves: Not mid-save compatible - upadting from 0.5.X to 0.6.0 will likely brick your save.</content>
   </entry>
   <entry>
     <title>Wide Horizons 1.4.2c</title>
@@ -1336,59 +1479,15 @@ Note:
     <content type="text">Fast Rendering went from 0.9.8 to 1.0.0.</content>
   </entry>
   <entry>
-    <title>In Game Log 1.4.0</title>
-    <id>tag:starmodder,2026:release/in-game-log-viewer/1.4.0</id>
+    <title>Tradução PT-BR do Starsector 1.3.0</title>
+    <id>tag:starmodder,2026:release/tradu-o-pt-br-do-starsector-portugu-s-do-brasil/1.3.0</id>
     <updated>2026-11-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/in-game-log-viewer"/>
-    <content type="text">In Game Log went from 1.3.0 to 1.4.0.
+    <link rel="alternate" type="text/html" href="index.html#/mods/tradu-o-pt-br-do-starsector-portugu-s-do-brasil"/>
+    <content type="text">Tradução PT-BR do Starsector went from 1.1.0 to 1.3.0.
 
-- Updated to 0.98.5a
-- Improve STDERR feature
-- Migrate settings userSettings.json
-- Now parses all logs even before onApplicationLoad
-- Minor improvements to how messages render on screen.</content>
-  </entry>
-  <entry>
-    <title>Sea of Stars 0.6.0</title>
-    <id>tag:starmodder,2026:release/sea-of-stars-0-5-1-go-beyond-the-persean-sector/0.6.0</id>
-    <updated>2026-11-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/sea-of-stars-0-5-1-go-beyond-the-persean-sector"/>
-    <content type="text">Sea of Stars went from 0.5.1 to 0.6.0.
-
-Saves: Not mid-save compatible - upadting from 0.5.X to 0.6.0 will likely brick your save.</content>
-  </entry>
-  <entry>
-    <title>Navarchy of Tania 1.4.0</title>
-    <id>tag:starmodder,2026:release/navarchy-of-tania/1.4.0</id>
-    <updated>2026-11-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/navarchy-of-tania"/>
-    <content type="text">Navarchy of Tania went from 1.3.1 to 1.4.0.</content>
-  </entry>
-  <entry>
-    <title>Diktat Enhancement 1.3.0b</title>
-    <id>tag:starmodder,2026:release/diktat-enhancement/1.3.0b</id>
-    <updated>2026-11-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/diktat-enhancement"/>
-    <content type="text">Diktat Enhancement went from 1.3.0a to 1.3.0b.</content>
-  </entry>
-  <entry>
-    <title>Read Aloud 0.2.0 Alpha</title>
-    <id>tag:starmodder,2026:release/read-aloud-alpha-experimental/0.2.0 Alpha</id>
-    <updated>2026-11-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/read-aloud-alpha-experimental"/>
-    <content type="text">Read Aloud went from 0.1.0 to 0.2.0 Alpha.
-
-new "speech" choice under "Who reads what": only what characters say is read, and the narrator stays silent (requested by Rook999). Where narration between two lines is skipped there's a short pause, adjustable under "Pause for skipped narration" (0 turns it off). Works with the system voice and AI voices; update both zips to get the pause with AI voices.</content>
-  </entry>
-  <entry>
-    <title>Plasma Burn Escape 0.1.1</title>
-    <id>tag:starmodder,2026:release/plasma-burn-escape/0.1.1</id>
-    <updated>2026-11-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/plasma-burn-escape"/>
-    <content type="text">Plasma Burn Escape went from 0.1.0 to 0.1.1.
-
-Added: the three ships now adjust their approach angle according to their own hard flux level.
- Fixed: escape is now judged on hard flux instead of total flux.</content>
+Compatibilidade com o Starsector 0.98.5a-RC4.
+ 1.697 textos novos ou alterados nesta versão; agora são 24.746 textos no total.
+ Textos e classes de interface atualizados para a API do RC4.</content>
   </entry>
   <entry>
     <title>Dynamic Asteroids 2.0.65</title>
@@ -1402,84 +1501,32 @@ https://drive.google.com/drive/folders/1gEQWJM_GFgX6X_ozRUzgdiGJPdnN-53T?usp=sha
 I haven't figured out the official version for the new game yet, so I've uploaded the fix separately to Google Drive. As soon as I finish fixing the bugs, I'll upload a new patch to GitHub for both the new and old versions of the game.</content>
   </entry>
   <entry>
-    <title>Tradução PT-BR do Starsector 1.3.0</title>
-    <id>tag:starmodder,2026:release/tradu-o-pt-br-do-starsector-portugu-s-do-brasil/1.3.0</id>
+    <title>Plasma Burn Escape 0.1.1</title>
+    <id>tag:starmodder,2026:release/plasma-burn-escape/0.1.1</id>
     <updated>2026-11-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/tradu-o-pt-br-do-starsector-portugu-s-do-brasil"/>
-    <content type="text">Tradução PT-BR do Starsector went from 1.1.0 to 1.3.0.
+    <link rel="alternate" type="text/html" href="index.html#/mods/plasma-burn-escape"/>
+    <content type="text">Plasma Burn Escape went from 0.1.0 to 0.1.1.
 
-Compatibilidade com o Starsector 0.98.5a-RC4.
- 1.697 textos novos ou alterados nesta versão; agora são 24.746 textos no total.
- Textos e classes de interface atualizados para a API do RC4.</content>
+Added: the three ships now adjust their approach angle according to their own hard flux level.
+ Fixed: escape is now judged on hard flux instead of total flux.</content>
   </entry>
   <entry>
-    <title>SEED Reporter 2.0.0</title>
-    <id>tag:starmodder,2026:release/seed-reporter/2.0.0</id>
-    <updated>2026-11-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/seed-reporter"/>
-    <content type="text">SEED Reporter went from v1.1.0 to 2.0.0.
-
-Saves: save-compatible with previous versions</content>
-  </entry>
-  <entry>
-    <title>Customizable Star Systems 4.0.0</title>
-    <id>tag:starmodder,2026:release/customizable-star-systems/4.0.0</id>
-    <updated>2026-11-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/customizable-star-systems"/>
-    <content type="text">Customizable Star Systems went from v3.0.2 to 4.0.0.</content>
-  </entry>
-  <entry>
-    <title>A Fleet Testing Mod 2.0.0</title>
-    <id>tag:starmodder,2026:release/a-fleet-testing-mod/2.0.0</id>
-    <updated>2026-11-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/a-fleet-testing-mod"/>
-    <content type="text">A Fleet Testing Mod went from 1.3.0 to 2.0.0.</content>
-  </entry>
-  <entry>
-    <title>Onslaught Sleek +Other Bounties 2.1</title>
-    <id>tag:starmodder,2026:release/onslaught-sleek-2/2.1</id>
-    <updated>2026-11-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/onslaught-sleek-2"/>
-    <content type="text">Onslaught Sleek +Other Bounties went from 1.5 to 2.1.
-
-just updated it to 98.5 thats it</content>
-  </entry>
-  <entry>
-    <title>Mikohime Unofficial Java 28+ &amp; FR Resource Cache &amp; OpenAL Add-on 0.8.3</title>
-    <id>tag:starmodder,2026:release/mikohime-unofficial-java-28-configurator/0.8.3</id>
-    <updated>2026-11-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/mikohime-unofficial-java-28-configurator"/>
-    <content type="text">Mikohime Unofficial Java 28+ &amp; FR Resource Cache &amp; OpenAL Add-on went from 0.8.1 to 0.8.3.
-
-Added support for Fast Rendering 1.0.0 and newer on Windows and the single-agent Linux fork
- Retained compatibility with older Fast Rendering versions
- Updated FR Resource Cache arguments: versions 0.6.0 and newer use the default memory-cache setting
- Older or unrecognized FR Resource Cache versions retain the 128 MiB memory-cache setting</content>
-  </entry>
-  <entry>
-    <title>Lancer RPG/Battlegroup 0.0.2.2</title>
-    <id>tag:starmodder,2026:release/lancer-rpg-battlegroup-0-0-2-wip/0.0.2.2</id>
-    <updated>2026-11-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/lancer-rpg-battlegroup-0-0-2-wip"/>
-    <content type="text">Lancer RPG/Battlegroup went from 0.0.2 to 0.0.2.2.
-
-Minor balance tweaks to Thoreau, Caspian Sea, and the Short-cycle Primary Lance.
-Added Main Menu testing mission.
-Updated mod_info.json to new game version.</content>
-  </entry>
-  <entry>
-    <title>Hillock Prototype and Station Tech Pack 1.5.6</title>
-    <id>tag:starmodder,2026:release/hillock-prototype-and-station-tech-pack/1.5.6</id>
+    <title>Divisions: Command and Control | Combat AI Overhaul 1.1.1d</title>
+    <id>tag:starmodder,2026:release/divisions-command-and-control-combat-ai-overhaul/1.1.1d</id>
     <updated>2026-11-11T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/hillock-prototype-and-station-tech-pack"/>
-    <content type="text">Hillock Prototype and Station Tech Pack went from 1.5.5 to 1.5.6.
+    <link rel="alternate" type="text/html" href="index.html#/mods/divisions-command-and-control-combat-ai-overhaul"/>
+    <content type="text">Divisions: Command and Control | Combat AI Overhaul went from 1.1.0 to 1.1.1d.
 
-I swear I was going to add weapons this patch but AC8 and WoWF happened..."
+Properly integrated pursuit battles with the mod.</content>
+  </entry>
+  <entry>
+    <title>Escape Velocity Classic 0.5.1</title>
+    <id>tag:starmodder,2026:release/escape-velocity-classic/0.5.1</id>
+    <updated>2026-11-11T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/escape-velocity-classic"/>
+    <content type="text">Escape Velocity Classic went from 0.5.0 to 0.5.1.
 
--Updated for 98.5a
--Added Coast Mk.II
--Reverted Coast
--Removed leftover unused hullmods from fighters</content>
+Hotfix New Providence market to have +1 industry slot and prevent it stuck at 0 stability.</content>
   </entry>
   <entry>
     <title>Emergent Threats 1.4.3</title>
@@ -1500,54 +1547,6 @@ should be compatible with v1.1+
  Emergent Threats
  Ships
 -Chevalier/Chevalier (R) bounty ship flux dissipation increased from 600 to 700, OP increased from 180 to 200, ship variants updated</content>
-  </entry>
-  <entry>
-    <title>Divisions: Command and Control | Combat AI Overhaul 1.1.1d</title>
-    <id>tag:starmodder,2026:release/divisions-command-and-control-combat-ai-overhaul/1.1.1d</id>
-    <updated>2026-11-11T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/divisions-command-and-control-combat-ai-overhaul"/>
-    <content type="text">Divisions: Command and Control | Combat AI Overhaul went from 1.1.0 to 1.1.1d.
-
-Properly integrated pursuit battles with the mod.</content>
-  </entry>
-  <entry>
-    <title>ED Shipyard 2.8.0</title>
-    <id>tag:starmodder,2026:release/ed-shipyard/2.8.0</id>
-    <updated>2026-11-11T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/ed-shipyard"/>
-    <content type="text">ED Shipyard went from 2.7.3 to 2.8.0.
-
-- Updated for Starsector 0.98.5a
-- Better Train retreat behavior
-- Dobermann's Grand Salvo stays pointed at its target
-- Combat performance improvements
-- MAW no longer appears in station loot tables
-- Fixed problems when the game is localized</content>
-  </entry>
-  <entry>
-    <title>Dynamic Asteroids 2.0.62</title>
-    <id>tag:starmodder,2026:release/dynamic-asteroids-1-0-0-living-asteroid-belts-combat-hazards/2.0.62</id>
-    <updated>2026-11-11T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/dynamic-asteroids-1-0-0-living-asteroid-belts-combat-hazards"/>
-    <content type="text">Dynamic Asteroids went from 2.0.6 to 2.0.62.
-
-• Colossal Megaliths: Introduced giant planetoid-scale boulders (diameters up to 1100u) with pushable Newtonian physics and curved gravitational slingshot orbits.
-• Megalith Shatter Loot: Shattering giant megaliths drops high-tier Domain caches (20%), preserved fighter LPC chips (1.5%), or entombed derelict hulls (0.1%).
-• Station Deflection Domes: Orbital stations project deflector fields that part asteroid streams. Module flux overload or destruction collapses the shield, leaving the station exposed.
-• Deployment Grace Period: Added 7 seconds of collision damage immunity upon entering battle with deflector visual cues.
-• Formation Wave Density Buff: "Expanding Fan" and "Dual Rails" formations reinforced with +20 to +40 asteroids per stream with tighter firing cadence.
-• Campaign Map Detection Fix: Battles in empty ring gaps or non-hazardous fine dust rings no longer trigger asteroid hazards — only physical asteroid fields do.
-• Fixed Left Border Flickering Line: Resolved engine reflection conflict with obfuscated classes, permanently clearing vanilla 1-pixel border asteroid generators.
-• Repellor Boundary Sync: Asteroids and debris drifting past combat border repellors now cleanly despawn after 5 seconds.</content>
-  </entry>
-  <entry>
-    <title>Detailed Combat Results 6.0.0</title>
-    <id>tag:starmodder,2026:release/detailed-combat-results/6.0.0</id>
-    <updated>2026-11-11T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/detailed-combat-results"/>
-    <content type="text">Detailed Combat Results went from 5.4.5 to 6.0.0.
-
-Updated for Starsector 0.98.5a Damage is now measured where the game applies it (requires PatchLib), far more accurate than before New PatchLib based instrumentation is between 10 and 100x faster New "Negated" column in the received summary: damage blocked by armor Ships with modules or built-in weapons are drawn whole in the report DCR no longer replaces any game files, and mods no longer need DCRIntegration to report damage</content>
   </entry>
   <entry>
     <title>Secrets of the Frontier 0.15.2</title>
@@ -1638,15 +1637,6 @@ Updated for Starsector 0.98.5a Damage is now measured where the game applies it 
 - Fixed inverted range check on Dustkeeper betrayal taking over allied autoships and possible concurrent modification exception</content>
   </entry>
   <entry>
-    <title>Escape Velocity Classic 0.5.1</title>
-    <id>tag:starmodder,2026:release/escape-velocity-classic/0.5.1</id>
-    <updated>2026-11-11T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/escape-velocity-classic"/>
-    <content type="text">Escape Velocity Classic went from 0.5.0 to 0.5.1.
-
-Hotfix New Providence market to have +1 industry slot and prevent it stuck at 0 stability.</content>
-  </entry>
-  <entry>
     <title>CuratedShips 5.1</title>
     <id>tag:starmodder,2026:release/curatedships/5.1</id>
     <updated>2026-11-11T00:00:00Z</updated>
@@ -1654,11 +1644,57 @@ Hotfix New Providence market to have +1 industry slot and prevent it stuck at 0 
     <content type="text">CuratedShips went from 5.0 to 5.1.</content>
   </entry>
   <entry>
-    <title>Auto Colonies 2.45.2</title>
-    <id>tag:starmodder,2026:release/auto-colonies/2.45.2</id>
-    <updated>2026-11-10T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/auto-colonies"/>
-    <content type="text">Auto Colonies went from 2.45.1 to 2.45.2.</content>
+    <title>ED Shipyard 2.8.0</title>
+    <id>tag:starmodder,2026:release/ed-shipyard/2.8.0</id>
+    <updated>2026-11-11T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/ed-shipyard"/>
+    <content type="text">ED Shipyard went from 2.7.3 to 2.8.0.
+
+- Updated for Starsector 0.98.5a
+- Better Train retreat behavior
+- Dobermann's Grand Salvo stays pointed at its target
+- Combat performance improvements
+- MAW no longer appears in station loot tables
+- Fixed problems when the game is localized</content>
+  </entry>
+  <entry>
+    <title>Detailed Combat Results 6.0.0</title>
+    <id>tag:starmodder,2026:release/detailed-combat-results/6.0.0</id>
+    <updated>2026-11-11T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/detailed-combat-results"/>
+    <content type="text">Detailed Combat Results went from 5.4.5 to 6.0.0.
+
+Updated for Starsector 0.98.5a Damage is now measured where the game applies it (requires PatchLib), far more accurate than before New PatchLib based instrumentation is between 10 and 100x faster New "Negated" column in the received summary: damage blocked by armor Ships with modules or built-in weapons are drawn whole in the report DCR no longer replaces any game files, and mods no longer need DCRIntegration to report damage</content>
+  </entry>
+  <entry>
+    <title>Hillock Prototype and Station Tech Pack 1.5.6</title>
+    <id>tag:starmodder,2026:release/hillock-prototype-and-station-tech-pack/1.5.6</id>
+    <updated>2026-11-11T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/hillock-prototype-and-station-tech-pack"/>
+    <content type="text">Hillock Prototype and Station Tech Pack went from 1.5.5 to 1.5.6.
+
+I swear I was going to add weapons this patch but AC8 and WoWF happened..."
+
+-Updated for 98.5a
+-Added Coast Mk.II
+-Reverted Coast
+-Removed leftover unused hullmods from fighters</content>
+  </entry>
+  <entry>
+    <title>Dynamic Asteroids 2.0.62</title>
+    <id>tag:starmodder,2026:release/dynamic-asteroids-1-0-0-living-asteroid-belts-combat-hazards/2.0.62</id>
+    <updated>2026-11-11T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/dynamic-asteroids-1-0-0-living-asteroid-belts-combat-hazards"/>
+    <content type="text">Dynamic Asteroids went from 2.0.6 to 2.0.62.
+
+• Colossal Megaliths: Introduced giant planetoid-scale boulders (diameters up to 1100u) with pushable Newtonian physics and curved gravitational slingshot orbits.
+• Megalith Shatter Loot: Shattering giant megaliths drops high-tier Domain caches (20%), preserved fighter LPC chips (1.5%), or entombed derelict hulls (0.1%).
+• Station Deflection Domes: Orbital stations project deflector fields that part asteroid streams. Module flux overload or destruction collapses the shield, leaving the station exposed.
+• Deployment Grace Period: Added 7 seconds of collision damage immunity upon entering battle with deflector visual cues.
+• Formation Wave Density Buff: "Expanding Fan" and "Dual Rails" formations reinforced with +20 to +40 asteroids per stream with tighter firing cadence.
+• Campaign Map Detection Fix: Battles in empty ring gaps or non-hazardous fine dust rings no longer trigger asteroid hazards — only physical asteroid fields do.
+• Fixed Left Border Flickering Line: Resolved engine reflection conflict with obfuscated classes, permanently clearing vanilla 1-pixel border asteroid generators.
+• Repellor Boundary Sync: Asteroids and debris drifting past combat border repellors now cleanly despawn after 5 seconds.</content>
   </entry>
   <entry>
     <title>Onslaught Sleek +Other Bounties 1.5</title>
@@ -1672,20 +1708,27 @@ Saves: NOTE VERSION 1.5 IS NOT SAVE COMPATIBLE WITH VERSIONS 1.0 THROUGH 1.4
 Ship polygons have been edited to look nicer and added 4 new bounties to the sector so go out there and end their chaos and claim em for your own! NOTE VERSION 1.5 IS NOT SAVE COMPATIBLE WITH VERSIONS 1.0 THROUGH 1.4 I AM SORRY I NEEDED TO ORGANIZE THE FILE NAMES</content>
   </entry>
   <entry>
-    <title>N84PhasePack 0.2.10</title>
-    <id>tag:starmodder,2026:release/n84phasepack/0.2.10</id>
-    <updated>2026-11-09T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/n84phasepack"/>
-    <content type="text">N84PhasePack went from 0.2.8 to 0.2.10.
-
-- messed up the AdvPhaseThrusters fix now it should be fixed</content>
+    <title>Auto Colonies 2.45.2</title>
+    <id>tag:starmodder,2026:release/auto-colonies/2.45.2</id>
+    <updated>2026-11-10T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/auto-colonies"/>
+    <content type="text">Auto Colonies went from 2.45.1 to 2.45.2.</content>
   </entry>
   <entry>
-    <title>Dynamic Asteroids 2.0.6</title>
-    <id>tag:starmodder,2026:release/dynamic-asteroids-1-0-0-living-asteroid-belts-combat-hazards/2.0.6</id>
+    <title>Free Frontier Allience 0.5</title>
+    <id>tag:starmodder,2026:release/free-frontier-allience/0.5</id>
     <updated>2026-11-09T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/dynamic-asteroids-1-0-0-living-asteroid-belts-combat-hazards"/>
-    <content type="text">Dynamic Asteroids went from 1.0.0 to 2.0.6.</content>
+    <link rel="alternate" type="text/html" href="index.html#/mods/free-frontier-allience"/>
+    <content type="text">Free Frontier Allience went from V0.4 to 0.5.
+
+reworked saturn and yaeweh class new art deco art style for mythic manufactoring ships changed thelb to independent</content>
+  </entry>
+  <entry>
+    <title>AI Tweaks 2.2.11</title>
+    <id>tag:starmodder,2026:release/ai-tweaks/2.2.11</id>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/ai-tweaks"/>
+    <content type="text">AI Tweaks went from 2.2.10 to 2.2.11.</content>
   </entry>
   <entry>
     <title>The Abyssal War 0.9.3</title>
@@ -1705,6 +1748,15 @@ The Planetary Shield is vanilla's again, which fixes a crash at sector generatio
  Removed from settings.json: threatinc_shieldAbsorbEnabled, threatinc_shieldAbsorbMax, threatinc_shieldSoakMult, threatinc_shieldDefenseBonus</content>
   </entry>
   <entry>
+    <title>Celestial Orbits 1.1.0</title>
+    <id>tag:starmodder,2026:release/celestial-orbits/1.1.0</id>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/celestial-orbits"/>
+    <content type="text">Celestial Orbits went from 1.0.0 to 1.1.0.
+
+Saves: In testing it showed no issues updating to this version and using existing saves with v1.0.0, BUT as always I suggest to backup your save either way whenever updating your mods in case something does go wrong!</content>
+  </entry>
+  <entry>
     <title>The Domain Reformed 25</title>
     <id>tag:starmodder,2026:release/the-domain-reformed/25</id>
     <updated>2026-11-09T00:00:00Z</updated>
@@ -1718,38 +1770,6 @@ added quest to find out why there are navy ships in space
 chaned yamto three universal gu
 type 94 changed to a lootable weapon,
 yamoto universal heavy mounts</content>
-  </entry>
-  <entry>
-    <title>AI Tweaks 2.2.11</title>
-    <id>tag:starmodder,2026:release/ai-tweaks/2.2.11</id>
-    <updated>2026-11-09T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/ai-tweaks"/>
-    <content type="text">AI Tweaks went from 2.2.10 to 2.2.11.</content>
-  </entry>
-  <entry>
-    <title>Auto Colonies 2.45.1</title>
-    <id>tag:starmodder,2026:release/auto-colonies/2.45.1</id>
-    <updated>2026-11-09T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/auto-colonies"/>
-    <content type="text">Auto Colonies went from 2.40.1 to 2.45.1.</content>
-  </entry>
-  <entry>
-    <title>Free Frontier Allience 0.5</title>
-    <id>tag:starmodder,2026:release/free-frontier-allience/0.5</id>
-    <updated>2026-11-09T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/free-frontier-allience"/>
-    <content type="text">Free Frontier Allience went from V0.4 to 0.5.
-
-reworked saturn and yaeweh class new art deco art style for mythic manufactoring ships changed thelb to independent</content>
-  </entry>
-  <entry>
-    <title>Celestial Orbits 1.1.0</title>
-    <id>tag:starmodder,2026:release/celestial-orbits/1.1.0</id>
-    <updated>2026-11-09T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/celestial-orbits"/>
-    <content type="text">Celestial Orbits went from 1.0.0 to 1.1.0.
-
-Saves: In testing it showed no issues updating to this version and using existing saves with v1.0.0, BUT as always I suggest to backup your save either way whenever updating your mods in case something does go wrong!</content>
   </entry>
   <entry>
     <title>The Abyssal War 0.9.2</title>
@@ -1879,11 +1899,43 @@ The settings menu (LunaLib, Shift+F2) holds the knobs that matter; the rest live
  Raids and bombardment of a hive close only while the swarm holds its orbit, and the menu lists every fleet holding it, so Engage can always reach what closes them. A garrison from a neighbouring moon no longer closes bombardment while the menu says there are no nearby fleets</content>
   </entry>
   <entry>
-    <title>Alp Tweaks 1.5</title>
-    <id>tag:starmodder,2026:release/alp-tweaks/1.5</id>
+    <title>Auto Colonies 2.45.1</title>
+    <id>tag:starmodder,2026:release/auto-colonies/2.45.1</id>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/auto-colonies"/>
+    <content type="text">Auto Colonies went from 2.40.1 to 2.45.1.</content>
+  </entry>
+  <entry>
+    <title>N84PhasePack 0.2.10</title>
+    <id>tag:starmodder,2026:release/n84phasepack/0.2.10</id>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/n84phasepack"/>
+    <content type="text">N84PhasePack went from 0.2.8 to 0.2.10.
+
+- messed up the AdvPhaseThrusters fix now it should be fixed</content>
+  </entry>
+  <entry>
+    <title>Dynamic Asteroids 2.0.6</title>
+    <id>tag:starmodder,2026:release/dynamic-asteroids-1-0-0-living-asteroid-belts-combat-hazards/2.0.6</id>
+    <updated>2026-11-09T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/dynamic-asteroids-1-0-0-living-asteroid-belts-combat-hazards"/>
+    <content type="text">Dynamic Asteroids went from 1.0.0 to 2.0.6.</content>
+  </entry>
+  <entry>
+    <title>Divisions: Command and Control | Combat AI Overhaul 1.1.0</title>
+    <id>tag:starmodder,2026:release/divisions-command-and-control-combat-ai-overhaul/1.1.0</id>
     <updated>2026-11-06T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/alp-tweaks"/>
-    <content type="text">Alp Tweaks went from 1.0 to 1.5.</content>
+    <link rel="alternate" type="text/html" href="index.html#/mods/divisions-command-and-control-combat-ai-overhaul"/>
+    <content type="text">Divisions: Command and Control | Combat AI Overhaul went from 1.0.4d to 1.1.0.
+
+Improved UI clarity and added tooltips (slopped for now).
+ More aggressive behavior on Full Assault.
+ Improved obedience to player orders in general.
+ Fixed campaign fleet tooltip crash.
+ Improved helmsmanship and division cohesion.
+ Cross-mod campaign UI fixes with regards to the Fleet Organization and Fleet Doctrine buttons.
+ Added doctrinal and organizational options for ramming as a type of attack.
+ Stations as a concept are now properly understood as a concept for OTC and Division AI.</content>
   </entry>
   <entry>
     <title>Fast Rendering 0.9.8</title>
@@ -1948,20 +2000,11 @@ v1.4.1 should be compatible with v1.1+
 -Added a compatibility fix so update is now properly backwards compatible with v1.1+ saves</content>
   </entry>
   <entry>
-    <title>Divisions: Command and Control | Combat AI Overhaul 1.1.0</title>
-    <id>tag:starmodder,2026:release/divisions-command-and-control-combat-ai-overhaul/1.1.0</id>
+    <title>Alp Tweaks 1.5</title>
+    <id>tag:starmodder,2026:release/alp-tweaks/1.5</id>
     <updated>2026-11-06T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/divisions-command-and-control-combat-ai-overhaul"/>
-    <content type="text">Divisions: Command and Control | Combat AI Overhaul went from 1.0.4d to 1.1.0.
-
-Improved UI clarity and added tooltips (slopped for now).
- More aggressive behavior on Full Assault.
- Improved obedience to player orders in general.
- Fixed campaign fleet tooltip crash.
- Improved helmsmanship and division cohesion.
- Cross-mod campaign UI fixes with regards to the Fleet Organization and Fleet Doctrine buttons.
- Added doctrinal and organizational options for ramming as a type of attack.
- Stations as a concept are now properly understood as a concept for OTC and Division AI.</content>
+    <link rel="alternate" type="text/html" href="index.html#/mods/alp-tweaks"/>
+    <content type="text">Alp Tweaks went from 1.0 to 1.5.</content>
   </entry>
   <entry>
     <title>Divisions: Command and Control | Combat AI Overhaul 1.0.4d</title>
@@ -2012,15 +2055,6 @@ Code: Claude Opus 5.5, from 1.1.e onwards
 Last completely hand-made release: 1.1.d</content>
   </entry>
   <entry>
-    <title>The Abyssal War 0.9.0</title>
-    <id>tag:starmodder,2026:release/the-abyssal-war/0.9.0</id>
-    <updated>2026-11-01T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/the-abyssal-war"/>
-    <content type="text">The Abyssal War went from 0.8.1 to 0.9.0.
-
-The Threat is rebuilt around one number. Before, a hive was a vanilla-style colony with batteries, a military organ, a standing garrison of Defense Swarms and a supplies upkeep. Now a hive is its strata, and everything it does is strata changing form. Saves from 0.8.2 load and carry on (see the end).</content>
-  </entry>
-  <entry>
     <title>AI Girls in Starsector 0.3.1</title>
     <id>tag:starmodder,2026:release/ai-girls-in-starsector/0.3.1</id>
     <updated>2026-11-01T00:00:00Z</updated>
@@ -2052,6 +2086,15 @@ I haven't been able to test the visual portion of the mod as extensively as the 
 - Improved preloading logic when dealing with skins of (mostly) vanilla hulls/weapons</content>
   </entry>
   <entry>
+    <title>The Abyssal War 0.9.0</title>
+    <id>tag:starmodder,2026:release/the-abyssal-war/0.9.0</id>
+    <updated>2026-11-01T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/the-abyssal-war"/>
+    <content type="text">The Abyssal War went from 0.8.1 to 0.9.0.
+
+The Threat is rebuilt around one number. Before, a hive was a vanilla-style colony with batteries, a military organ, a standing garrison of Defense Swarms and a supplies upkeep. Now a hive is its strata, and everything it does is strata changing form. Saves from 0.8.2 load and carry on (see the end).</content>
+  </entry>
+  <entry>
     <title>Carter's Freetraders 3.3.1</title>
     <id>tag:starmodder,2026:release/carter-s-freetraders/3.3.1</id>
     <updated>2026-10-31T00:00:00Z</updated>
@@ -2061,32 +2104,6 @@ I haven't been able to test the visual portion of the mod as extensively as the 
 Saves: Save game compatible
 
 Save game compatible</content>
-  </entry>
-  <entry>
-    <title>Arma Armatura 3.3.8</title>
-    <id>tag:starmodder,2026:release/arma-armatura/3.3.8</id>
-    <updated>2026-10-30T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/arma-armatura"/>
-    <content type="text">Arma Armatura went from 3.3.7 to 3.3.8.</content>
-  </entry>
-  <entry>
-    <title>Play HQ 1.7.7 [Mod] 1.7.6</title>
-    <id>tag:starmodder,2026:release/play-hq-1-7-2-mod/1.7.6</id>
-    <updated>2026-10-30T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/play-hq-1-7-2-mod"/>
-    <content type="text">Play HQ 1.7.7 [Mod] went from 1.7.5 to 1.7.6.
-
-Biggest Change is I adding a "Easy Mode", when building the station it will now ask you what mode you want use, Current there is Easy and Starfarer, I am working on a Visual mode that uses a colony style interface instead, Easy Mode only uses resources to build the station it self, everything else is just credits but can't use Shopping
-List or Courier Charters.</content>
-  </entry>
-  <entry>
-    <title>Logistics Notifications 1.7.2</title>
-    <id>tag:starmodder,2026:release/logistics-notifications/1.7.2</id>
-    <updated>2026-10-30T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/logistics-notifications"/>
-    <content type="text">Logistics Notifications went from 1.7.1 to 1.7.2.
-
-Fixed crashes when supply or fuel usage is 0.</content>
   </entry>
   <entry>
     <title>Battle For raka - A Foxhole inspired mod 0.5.0</title>
@@ -2146,13 +2163,30 @@ Note:
    I'm counting on your feedback to help me adjust the default settings for the current system sizes.</content>
   </entry>
   <entry>
-    <title>Luddic Retrofitting 0.5.3</title>
-    <id>tag:starmodder,2026:release/luddic-path-retrofitting/0.5.3</id>
-    <updated>2026-10-27T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/luddic-path-retrofitting"/>
-    <content type="text">Luddic Retrofitting went from 0.4.0 to 0.5.3.
+    <title>Play HQ 1.7.7 [Mod] 1.7.6</title>
+    <id>tag:starmodder,2026:release/play-hq-1-7-2-mod/1.7.6</id>
+    <updated>2026-10-30T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/play-hq-1-7-2-mod"/>
+    <content type="text">Play HQ 1.7.7 [Mod] went from 1.7.5 to 1.7.6.
 
-Added Luddic Church shipwright with separate handling for cosmetic retrofits and rebuilds. Added compatibility for BigBeans Ship Compilation. Added Vali (LP) compatibility from latest KoC update.</content>
+Biggest Change is I adding a "Easy Mode", when building the station it will now ask you what mode you want use, Current there is Easy and Starfarer, I am working on a Visual mode that uses a colony style interface instead, Easy Mode only uses resources to build the station it self, everything else is just credits but can't use Shopping
+List or Courier Charters.</content>
+  </entry>
+  <entry>
+    <title>Arma Armatura 3.3.8</title>
+    <id>tag:starmodder,2026:release/arma-armatura/3.3.8</id>
+    <updated>2026-10-30T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/arma-armatura"/>
+    <content type="text">Arma Armatura went from 3.3.7 to 3.3.8.</content>
+  </entry>
+  <entry>
+    <title>Logistics Notifications 1.7.2</title>
+    <id>tag:starmodder,2026:release/logistics-notifications/1.7.2</id>
+    <updated>2026-10-30T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/logistics-notifications"/>
+    <content type="text">Logistics Notifications went from 1.7.1 to 1.7.2.
+
+Fixed crashes when supply or fuel usage is 0.</content>
   </entry>
   <entry>
     <title>Strike Craft Expansion 2.0.5g</title>
@@ -2160,6 +2194,62 @@ Added Luddic Church shipwright with separate handling for cosmetic retrofits and
     <updated>2026-10-27T00:00:00Z</updated>
     <link rel="alternate" type="text/html" href="index.html#/mods/strike-craft-expansion"/>
     <content type="text">Strike Craft Expansion went from 2.0.5e to 2.0.5g.</content>
+  </entry>
+  <entry>
+    <title>Elite Ships and Variants 1.8.5</title>
+    <id>tag:starmodder,2026:release/elite-ships-and-variants/1.8.5</id>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/elite-ships-and-variants"/>
+    <content type="text">Elite Ships and Variants went from 1.7.5 to 1.8.5.
+
+-Visual correction of the engines of the Silverfire.</content>
+  </entry>
+  <entry>
+    <title>Girls' Frontline Portraits Megapack 1.1.3</title>
+    <id>tag:starmodder,2026:release/girls-frontline-portraits-megapack-2/1.1.3</id>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/girls-frontline-portraits-megapack-2"/>
+    <content type="text">Girls' Frontline Portraits Megapack went from 1.1.2 to 1.1.3.
+
+Added 1 portrait to the Base pack.
+Added 3 flags for the following squads: AR Team, 404, DEFY
+Added 3 portraits to the Skins pack.</content>
+  </entry>
+  <entry>
+    <title>Girls' Frontline 2: Exilium Portraits Pack 1.4.0</title>
+    <id>tag:starmodder,2026:release/girls-frontline-2-exilium-portraits-pack/1.4.0</id>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/girls-frontline-2-exilium-portraits-pack"/>
+    <content type="text">Girls' Frontline 2: Exilium Portraits Pack went from 1.3.0 to 1.4.0.
+
+Saves: Would recommend against trying to tamper with your save this time.
+
+Catch-up / Igla Patch Update
+
+    Added 16 portraits to the Base pack.
+    Added 11 flags to the Base pack
+    Added 25 portraits to the Outfit Boutique pack. (2 moved from White Zone pack)
+    Added 31 portraits to the White Zone Pack.
+    Added 4 portraits to the Bounty Hunted Pack.
+    Several portraits have been renamed based on EN's story progression and understanding.
+
+5 months of content added to the best of my knowledge.
+Would recommend against trying to tamper with your save this time.
+Did you manage to find this yet, anon-chan?</content>
+  </entry>
+  <entry>
+    <title>ExchangeRefit Advanced Ship Layout Copier/Paster &amp; Player Sharing 1.4.1</title>
+    <id>tag:starmodder,2026:release/exchangerefit-advanced-ship-layout-copier-paster-player-sharing/1.4.1</id>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/exchangerefit-advanced-ship-layout-copier-paster-player-sharing"/>
+    <content type="text">ExchangeRefit Advanced Ship Layout Copier/Paster &amp; Player Sharing went from 1.0.0 to 1.4.1.</content>
+  </entry>
+  <entry>
+    <title>Commerce Wars 0.3.1</title>
+    <id>tag:starmodder,2026:release/commerce-wars/0.3.1</id>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/commerce-wars"/>
+    <content type="text">Commerce Wars went from v0.2.0 to 0.3.1.</content>
   </entry>
   <entry>
     <title>Universal Missile Regeneration 1.0.1</title>
@@ -2185,46 +2275,6 @@ Added Lancer-class Heavy Escort Attack Corvette. [StargazerRJL]
  Minor naming and presentation cleanup for the new content.</content>
   </entry>
   <entry>
-    <title>ExchangeRefit Advanced Ship Layout Copier/Paster &amp; Player Sharing 1.4.1</title>
-    <id>tag:starmodder,2026:release/exchangerefit-advanced-ship-layout-copier-paster-player-sharing/1.4.1</id>
-    <updated>2026-10-27T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/exchangerefit-advanced-ship-layout-copier-paster-player-sharing"/>
-    <content type="text">ExchangeRefit Advanced Ship Layout Copier/Paster &amp; Player Sharing went from 1.0.0 to 1.4.1.</content>
-  </entry>
-  <entry>
-    <title>Girls' Frontline 2: Exilium Portraits Pack 1.4.0</title>
-    <id>tag:starmodder,2026:release/girls-frontline-2-exilium-portraits-pack/1.4.0</id>
-    <updated>2026-10-27T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/girls-frontline-2-exilium-portraits-pack"/>
-    <content type="text">Girls' Frontline 2: Exilium Portraits Pack went from 1.3.0 to 1.4.0.
-
-Saves: Would recommend against trying to tamper with your save this time.
-
-Catch-up / Igla Patch Update
-
-    Added 16 portraits to the Base pack.
-    Added 11 flags to the Base pack
-    Added 25 portraits to the Outfit Boutique pack. (2 moved from White Zone pack)
-    Added 31 portraits to the White Zone Pack.
-    Added 4 portraits to the Bounty Hunted Pack.
-    Several portraits have been renamed based on EN's story progression and understanding.
-
-5 months of content added to the best of my knowledge.
-Would recommend against trying to tamper with your save this time.
-Did you manage to find this yet, anon-chan?</content>
-  </entry>
-  <entry>
-    <title>Girls' Frontline Portraits Megapack 1.1.3</title>
-    <id>tag:starmodder,2026:release/girls-frontline-portraits-megapack-2/1.1.3</id>
-    <updated>2026-10-27T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/girls-frontline-portraits-megapack-2"/>
-    <content type="text">Girls' Frontline Portraits Megapack went from 1.1.2 to 1.1.3.
-
-Added 1 portrait to the Base pack.
-Added 3 flags for the following squads: AR Team, 404, DEFY
-Added 3 portraits to the Skins pack.</content>
-  </entry>
-  <entry>
     <title>Onslaught Sleek +Other Bounties 1.4</title>
     <id>tag:starmodder,2026:release/onslaught-sleek-2/1.4</id>
     <updated>2026-10-27T00:00:00Z</updated>
@@ -2236,27 +2286,32 @@ Saves: still save compatible
 Even more balancing bounty's have there own custom portraits NEW BOUNTY SHIP TO FIGHT AND OBTAIN still save compatible</content>
   </entry>
   <entry>
-    <title>Elite Ships and Variants 1.8.5</title>
-    <id>tag:starmodder,2026:release/elite-ships-and-variants/1.8.5</id>
-    <updated>2026-10-27T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/elite-ships-and-variants"/>
-    <content type="text">Elite Ships and Variants went from 1.7.5 to 1.8.5.
-
--Visual correction of the engines of the Silverfire.</content>
-  </entry>
-  <entry>
-    <title>Commerce Wars 0.3.1</title>
-    <id>tag:starmodder,2026:release/commerce-wars/0.3.1</id>
-    <updated>2026-10-27T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/commerce-wars"/>
-    <content type="text">Commerce Wars went from v0.2.0 to 0.3.1.</content>
-  </entry>
-  <entry>
     <title>Frontier Cooperations Ship Pack 0.0.2c</title>
     <id>tag:starmodder,2026:release/frontier-cooperations-ship-pack/0.0.2c</id>
     <updated>2026-10-27T00:00:00Z</updated>
     <link rel="alternate" type="text/html" href="index.html#/mods/frontier-cooperations-ship-pack"/>
     <content type="text">Frontier Cooperations Ship Pack went from 0.0.2 to 0.0.2c.</content>
+  </entry>
+  <entry>
+    <title>Luddic Retrofitting 0.5.3</title>
+    <id>tag:starmodder,2026:release/luddic-path-retrofitting/0.5.3</id>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/luddic-path-retrofitting"/>
+    <content type="text">Luddic Retrofitting went from 0.4.0 to 0.5.3.
+
+Added Luddic Church shipwright with separate handling for cosmetic retrofits and rebuilds. Added compatibility for BigBeans Ship Compilation. Added Vali (LP) compatibility from latest KoC update.</content>
+  </entry>
+  <entry>
+    <title>Worldsmith Console Commands 1.3.0</title>
+    <id>tag:starmodder,2026:release/worldsmith-console-commands/1.3.0</id>
+    <updated>2026-10-26T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/worldsmith-console-commands"/>
+    <content type="text">Worldsmith Console Commands went from 1.2.0 to 1.3.0.
+
+exportsystem : saves a star system to a JSON file with everything it's made of, so modders can build it into their own mod.
+ importsystem : rebuilds a saved system in hyperspace, in any save, so you can share your systems with others. Alone, it lists your exports.
+ addwreck : a derelict ship to salvage or recover, by size, faction or exact ship (e.g. addwreck paragon ).
+ warfocus : a faction aims all its Nexerelin invasions and raids at one enemy (e.g. warfocus hegemony tritachyon ).</content>
   </entry>
   <entry>
     <title>War Room 0.15.0</title>
@@ -2276,18 +2331,6 @@ New: the line under the title shows what happened since your last look. Hover it
  Fixed: the intercept line names both sides of a peace and no longer repeats a faction's loss.
  Fixed: sorting of alliance wars, and colours of older wars on the Archive timeline.
  Other: lighter on the game while the Intel screen is open.</content>
-  </entry>
-  <entry>
-    <title>Worldsmith Console Commands 1.3.0</title>
-    <id>tag:starmodder,2026:release/worldsmith-console-commands/1.3.0</id>
-    <updated>2026-10-26T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/worldsmith-console-commands"/>
-    <content type="text">Worldsmith Console Commands went from 1.2.0 to 1.3.0.
-
-exportsystem : saves a star system to a JSON file with everything it's made of, so modders can build it into their own mod.
- importsystem : rebuilds a saved system in hyperspace, in any save, so you can share your systems with others. Alone, it lists your exports.
- addwreck : a derelict ship to salvage or recover, by size, faction or exact ship (e.g. addwreck paragon ).
- warfocus : a faction aims all its Nexerelin invasions and raids at one enemy (e.g. warfocus hegemony tritachyon ).</content>
   </entry>
   <entry>
     <title>Mikohime Unofficial Java 28+ &amp; FR Resource Cache &amp; OpenAL Add-on 0.8.1</title>
@@ -2332,6 +2375,17 @@ expeditions : set any faction's share of Nexerelin's colony expeditions in perce
 resizeplanet works in percent now.</content>
   </entry>
   <entry>
+    <title>Black Halo Coven 1.0.7</title>
+    <id>tag:starmodder,2026:release/black-halo-coven/1.0.7</id>
+    <updated>2026-10-21T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/black-halo-coven"/>
+    <content type="text">Black Halo Coven went from 1.0.6 to 1.0.7.
+
+- Fixed the BHC Radiant hull, weapon slots, and loadout; increased shield coverage to 360 degrees.
+- Nerfed the Kirbo-pattern Luminarch: flux capacity reduced from 7,000 to 5,500.
+- Added Ascension Gate to the Empyrean star system.</content>
+  </entry>
+  <entry>
     <title>Black Halo Coven 1.0.6</title>
     <id>tag:starmodder,2026:release/black-halo-coven/1.0.6</id>
     <updated>2026-10-21T00:00:00Z</updated>
@@ -2349,13 +2403,6 @@ resizeplanet works in percent now.</content>
     <updated>2026-10-21T00:00:00Z</updated>
     <link rel="alternate" type="text/html" href="index.html#/mods/exiled-sector"/>
     <content type="text">Exiled Sector went from 0.8.0 to 0.9.0.</content>
-  </entry>
-  <entry>
-    <title>3D Sector 0.3.8</title>
-    <id>tag:starmodder,2026:release/3d-sector-2/0.3.8</id>
-    <updated>2026-10-21T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/3d-sector-2"/>
-    <content type="text">3D Sector went from 0.3.0 to 0.3.8.</content>
   </entry>
   <entry>
     <title>Emergent Threats 1.4.0</title>
@@ -2445,30 +2492,20 @@ v1.4.0 should be compatible with v1.1+
 -Modernized Rangefinder added to IX Battlegroup known hullmods for sale on their markets</content>
   </entry>
   <entry>
-    <title>Black Halo Coven 1.0.7</title>
-    <id>tag:starmodder,2026:release/black-halo-coven/1.0.7</id>
+    <title>3D Sector 0.3.8</title>
+    <id>tag:starmodder,2026:release/3d-sector-2/0.3.8</id>
     <updated>2026-10-21T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/black-halo-coven"/>
-    <content type="text">Black Halo Coven went from 1.0.6 to 1.0.7.
-
-- Fixed the BHC Radiant hull, weapon slots, and loadout; increased shield coverage to 360 degrees.
-- Nerfed the Kirbo-pattern Luminarch: flux capacity reduced from 7,000 to 5,500.
-- Added Ascension Gate to the Empyrean star system.</content>
+    <link rel="alternate" type="text/html" href="index.html#/mods/3d-sector-2"/>
+    <content type="text">3D Sector went from 0.3.0 to 0.3.8.</content>
   </entry>
   <entry>
-    <title>Play HQ 1.7.7 [Mod] 1.7.5</title>
-    <id>tag:starmodder,2026:release/play-hq-1-7-2-mod/1.7.5</id>
+    <title>The Abyssal War 0.8.1</title>
+    <id>tag:starmodder,2026:release/the-abyssal-war/0.8.1</id>
     <updated>2026-10-18T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/play-hq-1-7-2-mod"/>
-    <content type="text">Play HQ 1.7.7 [Mod] went from 1.7.2 to 1.7.5.
+    <link rel="alternate" type="text/html" href="index.html#/mods/the-abyssal-war"/>
+    <content type="text">The Abyssal War went from 0.7.0 to 0.8.1.
 
-Fixed the bug where the courier was taking all your crew when transferring just some of them.
-Courier fleets now need a transport as well to handle crew.
-If the HQ is already at its max crew or marines when transferring them to the courier, they will be sold at base price instead.
-Added the ability to send ships with the courier fleet back to HQ
-Reworked the courier charter to be more useful, instead of having supply and request planets, it will now allow you to pick a charter route where the first one in line that needs something will send a courier fleet, this allows both courier fleets to be more consistent with actually moving stuff around.
-
-Added to the Call Fleet ability, you can now pick to call a Patrol Fleet to join you, they will dock with the station and if all their ships are ready they will start a 7 day prep period, both fleets can be called but both fleets will need to be at the station and have all their ships before the 7 day prep time starts, once the 7 days is up they will lauch and orbit the station for a day before heading to your location, the 30 days doesn't start till they meet up with you, Patrol Fleets will need 2 Tankers and 2 Freighters to be eligible to be called, they can still be crewed with out them but won't be able to be called.</content>
+Fixed a crash when a Scouting Swarm was sent to an abyssal "Deep Space" system. Scouting Swarms now skip abyssal systems, as human scouts and Patrol Swarms already did. Saves that crashed load again.</content>
   </entry>
   <entry>
     <title>Wide Horizons 1.4.2a</title>
@@ -2490,11 +2527,11 @@ Note:
    I'm counting on your feedback to help me adjust the default settings for the current system sizes.</content>
   </entry>
   <entry>
-    <title>Faces in the Void 0.6</title>
-    <id>tag:starmodder,2026:release/faces-in-the-void-updated/0.6</id>
+    <title>Fast Rendering 0.9.5</title>
+    <id>tag:starmodder,2026:release/fast-rendering/0.9.5</id>
     <updated>2026-10-18T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/faces-in-the-void-updated"/>
-    <content type="text">Faces in the Void went from v0.5 to 0.6.</content>
+    <link rel="alternate" type="text/html" href="index.html#/mods/fast-rendering"/>
+    <content type="text">Fast Rendering went from 0.9.3 to 0.9.5.</content>
   </entry>
   <entry>
     <title>Thunder's Flag Pack 6.0a</title>
@@ -2506,20 +2543,36 @@ Note:
 Freeless Freedom</content>
   </entry>
   <entry>
-    <title>Fast Rendering 0.9.5</title>
-    <id>tag:starmodder,2026:release/fast-rendering/0.9.5</id>
+    <title>Play HQ 1.7.7 [Mod] 1.7.5</title>
+    <id>tag:starmodder,2026:release/play-hq-1-7-2-mod/1.7.5</id>
     <updated>2026-10-18T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/fast-rendering"/>
-    <content type="text">Fast Rendering went from 0.9.3 to 0.9.5.</content>
+    <link rel="alternate" type="text/html" href="index.html#/mods/play-hq-1-7-2-mod"/>
+    <content type="text">Play HQ 1.7.7 [Mod] went from 1.7.2 to 1.7.5.
+
+Fixed the bug where the courier was taking all your crew when transferring just some of them.
+Courier fleets now need a transport as well to handle crew.
+If the HQ is already at its max crew or marines when transferring them to the courier, they will be sold at base price instead.
+Added the ability to send ships with the courier fleet back to HQ
+Reworked the courier charter to be more useful, instead of having supply and request planets, it will now allow you to pick a charter route where the first one in line that needs something will send a courier fleet, this allows both courier fleets to be more consistent with actually moving stuff around.
+
+Added to the Call Fleet ability, you can now pick to call a Patrol Fleet to join you, they will dock with the station and if all their ships are ready they will start a 7 day prep period, both fleets can be called but both fleets will need to be at the station and have all their ships before the 7 day prep time starts, once the 7 days is up they will lauch and orbit the station for a day before heading to your location, the 30 days doesn't start till they meet up with you, Patrol Fleets will need 2 Tankers and 2 Freighters to be eligible to be called, they can still be crewed with out them but won't be able to be called.</content>
   </entry>
   <entry>
-    <title>The Abyssal War 0.8.1</title>
-    <id>tag:starmodder,2026:release/the-abyssal-war/0.8.1</id>
+    <title>Faces in the Void 0.6</title>
+    <id>tag:starmodder,2026:release/faces-in-the-void-updated/0.6</id>
     <updated>2026-10-18T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/the-abyssal-war"/>
-    <content type="text">The Abyssal War went from 0.7.0 to 0.8.1.
+    <link rel="alternate" type="text/html" href="index.html#/mods/faces-in-the-void-updated"/>
+    <content type="text">Faces in the Void went from v0.5 to 0.6.</content>
+  </entry>
+  <entry>
+    <title>Better Combat 0.5.1</title>
+    <id>tag:starmodder,2026:release/better-combat/0.5.1</id>
+    <updated>2026-10-17T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="index.html#/mods/better-combat"/>
+    <content type="text">Better Combat went from 0.4.6 to 0.5.1.
 
-Fixed a crash when a Scouting Swarm was sent to an abyssal "Deep Space" system. Scouting Swarms now skip abyssal systems, as human scouts and Patrol Swarms already did. Saves that crashed load again.</content>
+added missileLaunchSpeedMult
+changed missileRangeMultiplier to missileTimeToLive to reflect what it is, and fixed it being applied multiple times for some missiles.</content>
   </entry>
   <entry>
     <title>Sagitarius Concordat 1.3</title>
@@ -2539,60 +2592,12 @@ Updated to CN ver 0.5.7c (Long log, please see Github)
 Bug fixes, some QoL improvements and substantially increased skill progression for the SSR officer.</content>
   </entry>
   <entry>
-    <title>Better Combat 0.5.1</title>
-    <id>tag:starmodder,2026:release/better-combat/0.5.1</id>
-    <updated>2026-10-17T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/better-combat"/>
-    <content type="text">Better Combat went from 0.4.6 to 0.5.1.
-
-added missileLaunchSpeedMult
-changed missileRangeMultiplier to missileTimeToLive to reflect what it is, and fixed it being applied multiple times for some missiles.</content>
-  </entry>
-  <entry>
-    <title>CJY's Toy Box 0.5.7b</title>
-    <id>tag:starmodder,2026:release/cjy-s-toy-box/0.5.7b</id>
+    <title>Elite Ships and Variants 1.7.5</title>
+    <id>tag:starmodder,2026:release/elite-ships-and-variants/1.7.5</id>
     <updated>2026-10-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/cjy-s-toy-box"/>
-    <content type="text">CJY's Toy Box went from 0.5.7 to 0.5.7b.
+    <link rel="alternate" type="text/html" href="index.html#/mods/elite-ships-and-variants"/>
+    <content type="text">Elite Ships and Variants went from 1.7.3 to 1.7.5.
 
-Updated for CN Version 0.5.7b
-
-Added New SSR Officer from the Officer Hiring Function from Bella (Chara from a cn webnovel) with unique mechanic:
-
-She will gain exp in each of her skill, this prevent her from learning vanilla skill, but her own skill will improve over time (and also begin shifting aspect of her AI to be more brave despite her nature, for the most part)
-
-Her skill will also improve through repeated use, some with unique cooldown that could last past the current battle.
-
-Bug Fixes
-Fixed some tag issue with survivor homesystem selection (A new mod setting option is also added to allow player to designate specific system tag to blacklist)
-
-Fixed bug issue with survivor fleet vision range.
-
-Fixed abnormal speed of AP shell after penetration.
-
-APCBC hullmod isnt automatically given, will need to be purchased from the Survivors/Convenient Store
-
-New Lunalib Option
-Added radar marking render setting, allow player to turn off the circle and square visual of radar.
-
-Added option to adjust SSR officer apperance rate.
-
-Note: Added some additional bugfix and tl fix from Discord Pre-Release Version</content>
-  </entry>
-  <entry>
-    <title>Refit Filters (Weapon Class) 3.2.8</title>
-    <id>tag:starmodder,2026:release/refit-filters-weapon-class/3.2.8</id>
-    <updated>2026-10-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/refit-filters-weapon-class"/>
-    <content type="text">Refit Filters (Weapon Class) went from 3.2.7 to 3.2.8.
-
-- Added a Weapon Size filter row (Small / Medium / Large) for slots that accept several sizes. Off by default, enable it in the settings.</content>
-  </entry>
-  <entry>
-    <title>Frontier Cooperations Ship Pack 0.0.2</title>
-    <id>tag:starmodder,2026:release/frontier-cooperations-ship-pack/0.0.2</id>
-    <updated>2026-10-12T00:00:00Z</updated>
-    <link rel="alternate" type="text/html" href="index.html#/mods/frontier-cooperations-ship-pack"/>
-    <content type="text">Frontier Cooperations Ship Pack went from 0.0.1a to 0.0.2.</content>
+-Added a COMBAT tag to the HINTS of Tarsus EX and HERON EX. May make them more aggressive; need feedback from you guys.</content>
   </entry>
 </feed>
